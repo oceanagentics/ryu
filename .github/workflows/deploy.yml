@@ -35,9 +35,11 @@ jobs:
 
       - name: Build and Deploy
         run: |
+          set -euo pipefail
+
           # Use GitHub's native environment variable for the SHA to avoid git shallow clone issues
           SHA=${GITHUB_SHA::7}
-          
+
           echo "================================================="
           echo "Building Public and Admin Images via Cloud Build..."
           echo "================================================="
@@ -47,7 +49,7 @@ jobs:
             --config cloudbuild.release.yaml \
             --substitutions _PUBLIC_IMAGE=us-east4-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/explorer-public:${SHA},_PUBLIC_CACHE_IMAGE=us-east4-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/explorer-public:latest,_ADMIN_IMAGE=us-east4-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/explorer-admin:${SHA},_ADMIN_CACHE_IMAGE=us-east4-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/explorer-admin:latest \
             .
-          
+
           echo "================================================="
           echo "Building API Image via Cloud Build..."
           echo "================================================="
@@ -57,7 +59,7 @@ jobs:
             --config cloudbuild.yaml \
             --substitutions _IMAGE=us-east4-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/explorer-api:${SHA},_CACHE_IMAGE=us-east4-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/explorer-api:latest,_APP_BASE_PATH=/,_VITE_APP_MODE=public,_VITE_CAN_REVIEW_NODES=false \
             .
-          
+
           echo "================================================="
           echo "Deploying all 3 services to Cloud Run..."
           echo "================================================="
@@ -66,15 +68,72 @@ jobs:
             --region $REGION \
             --image us-east4-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/explorer-public:${SHA} \
             --quiet
-            
+
           gcloud run deploy explorer-admin \
             --project $PROJECT_ID \
             --region $REGION \
             --image us-east4-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/explorer-admin:${SHA} \
             --quiet
-            
+
           gcloud run deploy explorer-api \
             --project $PROJECT_ID \
             --region $REGION \
             --image us-east4-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/explorer-api:${SHA} \
             --quiet
+
+      - name: Post-Deploy Smoke Checks
+        run: |
+          set -euo pipefail
+
+          echo "================================================="
+          echo "Running Post-Deploy Smoke Checks"
+          echo "================================================="
+
+          check_status() {
+            local url="$1"
+            local expected="$2"
+            local label="$3"
+            local status
+
+            status=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+            if [[ "$status" =~ $expected ]]; then
+              echo "OK [HTTP $status] $label"
+            else
+              echo "ERROR [HTTP $status] $label failed at $url"
+              exit 1
+            fi
+          }
+
+          check_status "https://chm.oceanagentics.org/explorer" "^(200|301)$" "public Explorer path"
+          check_status "https://chm.oceanagentics.org/explorer/" "^200$" "public Explorer page"
+          check_status "https://chm.oceanagentics.org/explorer/admin" "^302$" "admin IAP redirect"
+          check_status "https://chm.oceanagentics.org/explorer/api/graph/bootstrap" "^200$" "public bootstrap JSON"
+
+          api_url="https://chm.oceanagentics.org/api/records"
+          missing_body=$(mktemp)
+          missing_status=$(curl -sS -o "$missing_body" -w "%{http_code}" "$api_url")
+          if [ "$missing_status" = "401" ] && grep -q '"missing_bearer_token"' "$missing_body"; then
+            echo "OK [HTTP 401] $api_url rejects missing bearer token"
+          else
+            echo "ERROR [HTTP $missing_status] $api_url did not reject missing bearer token as expected"
+            cat "$missing_body"
+            rm -f "$missing_body"
+            exit 1
+          fi
+          rm -f "$missing_body"
+
+          invalid_body=$(mktemp)
+          invalid_status=$(
+            curl -sS -o "$invalid_body" -w "%{http_code}" \
+              -H "Authorization: Bearer invalid" \
+            "$api_url"
+          )
+          if [ "$invalid_status" = "403" ] && grep -q '"invalid_bearer_token"' "$invalid_body"; then
+            echo "OK [HTTP 403] $api_url rejects invalid bearer token"
+          else
+            echo "ERROR [HTTP $invalid_status] $api_url did not reject invalid bearer token as expected"
+            cat "$invalid_body"
+            rm -f "$invalid_body"
+            exit 1
+          fi
+          rm -f "$invalid_body"
