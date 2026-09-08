@@ -11,22 +11,24 @@ import {
   DeploymentUnitOutlined,
   GlobalOutlined,
   PartitionOutlined,
+  SearchOutlined,
 } from "@ant-design/icons";
 import {
   Alert,
   Button,
   Flex,
   Layout,
-  Select,
   Spin,
 } from "antd";
 
-import { supportedLocales } from "../../../shared/localization";
-import { fetchBootstrap } from "./api";
+import { fetchBootstrap, fetchGraphSearch } from "./api";
 import { EntityDetailsPanel } from "./components/EntityDetailsPanel";
+import { GraphLanguageSelector } from "./components/GraphLanguageSelector";
+import { LegendPanel } from "./components/LegendPanel";
 import { SystemDirectoryView } from "./components/SystemDirectoryView";
 import type { NodeMap3dArrangement } from "./graph/nodeMap3dLayout";
-import { facetLabel, localeNativeNames, t } from "./i18n";
+import { facetLabel, t } from "./i18n";
+import { countActiveFilters } from "./search";
 import { useGraphStore } from "./state/graphStore";
 
 const ForceGraphCanvas = lazy(() =>
@@ -63,11 +65,6 @@ const nodeMap3dArrangementOptions: Array<{
 ];
 
 const nodeRouteParam = "node";
-const localeOptions = supportedLocales.map((locale) => ({
-  label: localeNativeNames[locale],
-  value: locale,
-}));
-
 function clampPaneWidth(paneId: ResizablePaneId, width: number): number {
   const size = paneSize[paneId];
   return Math.min(size.maxWidth, Math.max(size.minWidth, width));
@@ -117,6 +114,7 @@ export function App() {
     search: true,
     graph: true,
   });
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [paneWidths, setPaneWidths] = useState<PaneWidthState>({
     search: paneSize.search.defaultWidth,
     details: paneSize.details.defaultWidth,
@@ -125,6 +123,9 @@ export function App() {
   const loading = useGraphStore((state) => state.loading);
   const error = useGraphStore((state) => state.error);
   const selectedEntityId = useGraphStore((state) => state.selectedEntityId);
+  const searchQuery = useGraphStore((state) => state.searchQuery);
+  const searchFilters = useGraphStore((state) => state.searchFilters);
+  const searchAllLanguages = useGraphStore((state) => state.searchAllLanguages);
   const locale = useGraphStore((state) => state.locale);
   const setBootstrap = useGraphStore((state) => state.setBootstrap);
   const setError = useGraphStore((state) => state.setError);
@@ -134,8 +135,30 @@ export function App() {
   const setCountryDisplayMode = useGraphStore((state) => state.setCountryDisplayMode);
   const setFocusEntityId = useGraphStore((state) => state.setFocusEntityId);
   const setSelectedEntityId = useGraphStore((state) => state.setSelectedEntityId);
-  const setLocale = useGraphStore((state) => state.setLocale);
   const resetSelection = useGraphStore((state) => state.resetSelection);
+
+  useEffect(() => {
+    if (!graph) return;
+    const controller = new AbortController();
+    const active = Boolean(searchQuery.trim()) || countActiveFilters(searchFilters) > 0;
+    useGraphStore.setState({ searchLoading: true, searchError: null, searchResult: null,
+      searchEntityIds: active ? new Set() : null });
+    const timer = setTimeout(() => {
+      fetchGraphSearch({ query: searchQuery, filters: searchFilters, searchAllLanguages }, locale, controller.signal)
+        .then(result => {
+          if (!controller.signal.aborted) useGraphStore.setState({
+            searchResult: result, searchEntityIds: active ? new Set(result.matchingIds) : null,
+            searchLoading: false,
+          });
+        })
+        .catch(error => {
+          if (!controller.signal.aborted) useGraphStore.setState({
+            searchLoading: false, searchError: error instanceof Error ? error.message : String(error),
+          });
+        });
+    }, 200);
+    return () => { clearTimeout(timer); controller.abort(); };
+  }, [graph, locale, searchQuery, searchFilters, searchAllLanguages]);
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -243,6 +266,11 @@ export function App() {
     setOpenPanes((current) => ({ ...current, [paneId]: open }));
   }
 
+  function openSearchPane() {
+    setOpenPanes((current) => ({ ...current, graph: true, search: true }));
+    setMobileSearchOpen(true);
+  }
+
   function adjacentCollapsiblePane(paneId: PaneId): CollapsiblePaneId {
     const paneIndex = paneOrder.indexOf(paneId);
     const adjacentPanes = [paneOrder[paneIndex + 1], paneOrder[paneIndex - 1]];
@@ -257,6 +285,10 @@ export function App() {
   function closePane(paneId: PaneId) {
     const shouldOpenAdjacentPane = openPaneCount <= 1;
     const adjacentPane = adjacentCollapsiblePane(paneId);
+
+    if (paneId === "search") {
+      setMobileSearchOpen(false);
+    }
 
     if (paneId === "details") {
       if (shouldOpenAdjacentPane) {
@@ -278,6 +310,7 @@ export function App() {
       search: paneId === "search",
       graph: paneId === "graph",
     });
+    setMobileSearchOpen(paneId === "search");
     if (paneId !== "details") {
       resetSelection();
     }
@@ -373,23 +406,9 @@ export function App() {
           ) : (
             <span className="workspace-pane-title">{paneLabel}</span>
           )}
-          {paneId === "search" ? renderLocaleControl() : null}
         </Flex>
         {renderPaneActions(paneId)}
       </div>
-    );
-  }
-
-  function renderLocaleControl() {
-    return (
-      <Select
-        aria-label={t(locale, "app.language")}
-        className="app-locale-select"
-        options={localeOptions}
-        size="small"
-        value={locale}
-        onChange={(value) => setLocale(value)}
-      />
     );
   }
 
@@ -439,6 +458,7 @@ export function App() {
       <div className="workspace-pane-actions">
         <Button
           aria-label={t(locale, "app.expandPane", { pane: paneLabel })}
+          className="workspace-pane-action-expand"
           disabled={!canExpand}
           icon={<ArrowsAltOutlined />}
           size="small"
@@ -448,6 +468,7 @@ export function App() {
         />
         <Button
           aria-label={t(locale, "app.closePane", { pane: paneLabel })}
+          className="workspace-pane-action-close"
           icon={<CloseOutlined />}
           size="small"
           title={paneId === "details" ? t(locale, "app.closeDetailsTitle") : t(locale, "app.closePaneTitle")}
@@ -462,13 +483,17 @@ export function App() {
     const isResizable = resizablePaneIds.has(paneId);
     const resizeEdge = paneId === "details" ? "left" : "right";
     const paneLabel = facetLabel(locale, "pane", paneId);
+    const paneClassName = [
+      "workspace-pane",
+      `workspace-pane-${paneId}`,
+      shouldFillPane(paneId) ? "is-fill" : "",
+      paneId === "search" && mobileSearchOpen ? "is-mobile-active" : "",
+    ].filter(Boolean).join(" ");
 
     return (
       <section
         key={paneId}
-        className={`workspace-pane workspace-pane-${paneId}${
-          shouldFillPane(paneId) ? " is-fill" : ""
-        }`}
+        className={paneClassName}
         style={paneStyle(paneId)}
       >
         {paneId === "details" ? null : renderPaneHeader(paneId)}
@@ -500,6 +525,10 @@ export function App() {
   }
 
   function renderCollapsedPane(paneId: CollapsiblePaneId) {
+    if (paneId === "search") {
+      return null;
+    }
+
     if (paneId === "graph") {
       return (
         <div
@@ -526,6 +555,32 @@ export function App() {
       >
         <span className="workspace-pane-collapsed-title">
           {facetLabel(locale, "pane", paneId)}
+        </span>
+      </button>
+    );
+  }
+
+  function renderSearchLauncher() {
+    const searchPaneLabel = facetLabel(locale, "pane", "search");
+    const trimmedSearchQuery = searchQuery.trim();
+    const launcherClassName = [
+      "graph-search-launcher",
+      openPanes.search ? "is-search-pane-open" : "",
+      mobileSearchOpen ? "is-mobile-search-open" : "",
+      trimmedSearchQuery ? "has-query" : "",
+    ].filter(Boolean).join(" ");
+
+    return (
+      <button
+        aria-label={t(locale, "app.openPane", { pane: searchPaneLabel })}
+        className={launcherClassName}
+        title={t(locale, "app.openPaneTitle", { pane: searchPaneLabel })}
+        type="button"
+        onClick={openSearchPane}
+      >
+        <SearchOutlined className="graph-search-launcher-icon" />
+        <span className="graph-search-launcher-text">
+          {trimmedSearchQuery || t(locale, "directory.searchPlaceholder")}
         </span>
       </button>
     );
@@ -564,6 +619,7 @@ export function App() {
           <SystemDirectoryView
             variant="rail"
             showTitle={false}
+            onSelectSystem={() => setMobileSearchOpen(false)}
           />,
         )}
         {renderPaneSlot(
@@ -578,6 +634,13 @@ export function App() {
             >
               <ForceGraphCanvas arrangement={nodeMap3dArrangement} />
             </Suspense>
+            <div className="graph-legend-overlay">
+              <LegendPanel />
+            </div>
+            <div className="graph-language-overlay">
+              <GraphLanguageSelector />
+            </div>
+            {renderSearchLauncher()}
           </div>
         )}
         {showEntityDetails

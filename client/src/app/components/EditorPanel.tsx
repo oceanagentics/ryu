@@ -25,9 +25,11 @@ import type {
   GraphEdge,
   GraphNode,
   GraphNodeKind,
+  Source,
   SupportedLocale,
 } from "../../../../shared/domain";
 import { fetchBootstrap } from "../api";
+import { resolveSourceLocalization } from "../../../../shared/localization";
 import { nodeTitle } from "../localization";
 import { useGraphStore } from "../state/graphStore";
 
@@ -164,25 +166,17 @@ function relationshipToDraft(relationship: GraphEdge): RelationshipDraft {
   };
 }
 
-function sourceToDraft(source: {
-  title: string;
-  sourceType: string;
-  url: string | null;
-  localPath: string | null;
-  publisher: string | null;
-  publishedAt: string | null;
-  accessedAt: string | null;
-  note: string | null;
-}): SourceDraft {
+function sourceToDraft(source: Source, locale: SupportedLocale): SourceDraft {
+  const localization = resolveSourceLocalization(source, locale);
   return {
-    title: source.title,
+    title: localization?.title ?? source.id,
     sourceType: source.sourceType,
     url: source.url ?? "",
     localPath: source.localPath ?? "",
     publisher: source.publisher ?? "",
     publishedAt: source.publishedAt ?? "",
     accessedAt: source.accessedAt ?? "",
-    note: source.note ?? "",
+    note: localization?.note ?? "",
   };
 }
 
@@ -213,10 +207,10 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
     () =>
       graph
         ? [...graph.sources]
-          .sort((a, b) => a.title.localeCompare(b.title))
-            .map((source) => ({ label: source.title, value: source.id }))
+            .map((source) => ({ label: resolveSourceLocalization(source, locale)?.title ?? source.id, value: source.id }))
+            .sort((a, b) => a.label.localeCompare(b.label))
         : [],
-    [graph],
+    [graph, locale],
   );
   const entityOptions = useMemo(
     () =>
@@ -271,9 +265,9 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
     }
 
     setMode("source");
-    sourceForm.setFieldsValue(sourceToDraft(source));
+    sourceForm.setFieldsValue(sourceToDraft(source, locale));
     setMessage(null);
-  }, [graph, sourceEditorId, sourceForm]);
+  }, [graph, locale, sourceEditorId, sourceForm]);
 
   if (!graph) {
     return null;
@@ -288,6 +282,7 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
   const viewingEntity = mode === "entity" ? selectedEntity : null;
   const viewingRelationship = mode === "relationship" ? selectedRelationship : null;
   const viewingSource = mode === "source" ? selectedSource : null;
+  const sourceLocalization = viewingSource ? resolveSourceLocalization(viewingSource, locale) : undefined;
 
   const entityProperties = viewingEntity ? toPropertyDrafts(viewingEntity.properties ?? {}) : [];
   const relationshipProperties = viewingRelationship
@@ -320,7 +315,7 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
     }
 
     if (viewingSource) {
-      sourceForm.setFieldsValue(sourceToDraft(viewingSource));
+      sourceForm.setFieldsValue(sourceToDraft(viewingSource, locale));
       return;
     }
 
@@ -396,7 +391,7 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
     : viewingRelationship
       ? `${isEditing ? "Editing" : "Viewing"} edge: ${viewingRelationship.kind}`
       : viewingSource
-        ? `${isEditing ? "Editing" : "Viewing"} source: ${viewingSource.title}`
+        ? `${isEditing ? "Editing" : "Viewing"} source: ${sourceLocalization?.title ?? viewingSource.id}`
         : isEditing
           ? mode === "relationship"
             ? "Creating a new edge."
@@ -539,8 +534,8 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
               viewingSource.accessedAt
                 ? { key: "accessed", label: "Accessed", children: viewingSource.accessedAt }
                 : null,
-              viewingSource.note
-                ? { key: "note", label: "Note", children: viewingSource.note }
+              sourceLocalization?.note
+                ? { key: "note", label: "Note", children: sourceLocalization.note }
                 : null,
             ].filter(Boolean) as NonNullable<Parameters<typeof Descriptions>[0]["items"]>}
           />

@@ -40,7 +40,6 @@ export type MigratedNodeContent = {
     summary: string | null;
     description: string | null;
     detailsJson: NodeLocalizationDetails;
-    sourceExcerpt: string | null;
     translatedFromLocale: null;
     contentUpdatedAt: string;
     reviewState: ReviewState;
@@ -80,12 +79,11 @@ export function normalizeAccessType(value: unknown): SystemAccessType | null {
 
 function readSourceRef(value: unknown): SourceRef {
   if (!isRecord(value)) {
-    return { id: "", title: "Source not recorded", url: "" };
+    return { id: "", url: "" };
   }
 
   return {
     id: normalizeString(value.id) ?? "",
-    title: normalizeString(value.title) ?? "Source not recorded",
     url: normalizeString(value.url) ?? "",
   };
 }
@@ -344,7 +342,6 @@ export function splitLegacyNodeContent(row: LegacyNodeRow): MigratedNodeContent 
       summary: row.summary,
       description: row.description,
       detailsJson: localizedDetails,
-      sourceExcerpt: null,
       translatedFromLocale: null,
       contentUpdatedAt: row.updated_at,
       reviewState: isReviewState(row.review_state) ? row.review_state : "agent_researched",

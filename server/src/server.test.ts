@@ -22,9 +22,12 @@ import type {
   RecordMutationOptions,
   RecordPatchInput,
   RecordSearchQuery,
+  RecordSourceInput,
   RecordValidationResult,
+  ReviewHistoryEvent,
+  SourceLocalizationContentInput,
 } from "../../shared/recordApi";
-import { defaultLocale, emptyLocalizationDetails } from "../../shared/localization";
+import { defaultLocale, emptyLocalizationDetails, supportedLocales } from "../../shared/localization";
 import type { GraphRepository } from "./graphRepository";
 import { ApiRequestError } from "./recordContracts";
 import {
@@ -86,7 +89,6 @@ function createFakeLocalization(
     summary: null,
     description: null,
     details: emptyLocalizationDetails(),
-    sourceExcerpt: null,
     translatedFromLocale: null,
     contentUpdatedAt: "2026-08-27T00:00:00.000Z",
     reviewState: "agent_researched",
@@ -95,6 +97,36 @@ function createFakeLocalization(
     lastReviewed: null,
     createdAt: "2026-08-27T00:00:00.000Z",
     updatedAt: "2026-08-27T00:00:00.000Z",
+    ...overrides,
+  };
+}
+
+function fullSourceLocalizations(
+  title = "Source",
+  note: string | null = null,
+): Record<SupportedLocale, SourceLocalizationContentInput> {
+  return Object.fromEntries(
+    supportedLocales.map((locale) => [
+      locale,
+      {
+        title,
+        note,
+        translatedFromLocale: locale === defaultLocale ? null : defaultLocale,
+      },
+    ]),
+  ) as Record<SupportedLocale, SourceLocalizationContentInput>;
+}
+
+function sourcePayload(overrides: Record<string, unknown> = {}): Record<string, unknown> {
+  return {
+    id: "src-test",
+    sourceType: "web",
+    url: "https://example.com/source",
+    localPath: null,
+    publisher: "Example publisher",
+    publishedAt: null,
+    accessedAt: "2026-09-07",
+    localizations: fullSourceLocalizations(),
     ...overrides,
   };
 }
@@ -135,7 +167,7 @@ class FakeRepository implements GraphRepository {
   private node: GraphNode;
   private deleted = false;
 
-  constructor(node = createFakeNode()) {
+  constructor(node = createFakeNode(), private readonly reviewHistory: ReviewHistoryEvent[] = []) {
     this.node = node;
   }
 
@@ -160,6 +192,8 @@ class FakeRepository implements GraphRepository {
     return {
       records: this.deleted ? [] : [this.recordAggregate()],
       nextCursor: null,
+      total: this.deleted ? 0 : 1,
+      ...(query.include.includes("matchingIds") ? { matchingIds: this.deleted ? [] : [this.recordAggregate().node.id] } : {}),
     };
   }
 
@@ -309,14 +343,13 @@ class FakeRepository implements GraphRepository {
   getSource(id: string): Source {
     return {
       id,
-      title: "Source",
       sourceType: "web",
       url: null,
       localPath: `/private/${id}.md`,
       publisher: null,
       publishedAt: null,
       accessedAt: null,
-      note: null,
+      localizations: { en: { locale: "en", title: "Source", note: null, translatedFromLocale: null, contentUpdatedAt: recordUpdatedAt, createdAt: recordUpdatedAt, updatedAt: recordUpdatedAt } },
     };
   }
 
@@ -360,19 +393,19 @@ class FakeRepository implements GraphRepository {
 
   private recordAggregate(overrides: Partial<GraphNode> = {}): RecordAggregate {
     return {
+      reviewHistory: this.reviewHistory,
       node: createFakeNode({ ...this.node, ...overrides }),
       edges: [],
       sources: [
         {
           id: "src-test",
-          title: "Source",
           sourceType: "web",
           url: "https://example.com/source",
           localPath: "/private/source.md",
           publisher: null,
           publishedAt: null,
           accessedAt: null,
-          note: null,
+          localizations: this.getSource("src-test").localizations,
         },
       ],
       routes: [
@@ -465,14 +498,13 @@ test("redacts private review fields from public bootstrap payloads", () => {
     sources: [
       {
         id: "source-1",
-        title: "Source",
         sourceType: "web",
         url: "https://example.com",
         localPath: "/private/source.md",
         publisher: null,
         publishedAt: null,
         accessedAt: null,
-        note: null,
+        localizations: { en: { locale: "en", title: "Source", note: null, translatedFromLocale: null, contentUpdatedAt: recordUpdatedAt, createdAt: recordUpdatedAt, updatedAt: recordUpdatedAt } },
       },
     ],
     ryuRoutes: [
@@ -565,6 +597,50 @@ test("serves public record details with allowlisted DTO fields", async () => {
   }, { repository: new FakeRepository(node) });
 });
 
+test("returns opt-in review history across locales with public metadata redaction", async () => {
+  const history: ReviewHistoryEvent[] = [
+    { locale: "en", kind: "baseline", from: null, to: "human_reviewed",
+      actor: "old@example.org", at: null, note: "Earlier review", contentUpdatedAt: null },
+    { locale: "fr", kind: "review", from: "agent_researched", to: "needs_revision",
+      actor: "reviewer@example.org", at: recordUpdatedAt, note: "Private correction",
+      contentUpdatedAt: recordUpdatedAt },
+  ];
+  for (const mode of ["public", "api"] as const) {
+    await withServer(mode, async (baseUrl) => {
+      const headers = mode === "api" ? authHeaders() : {};
+      const ordinary = await fetch(`${baseUrl}/explorer/api/records/node-1`, { headers });
+      assert.equal(ordinary.status, 200);
+      const ordinaryBody = await ordinary.json() as Record<string, unknown>;
+      assert.equal("reviewHistory" in ordinaryBody, false);
+
+      for (const path of ["node-1", ""]) {
+        const response = await fetch(`${baseUrl}/explorer/api/records/${path}?include=reviewHistory`, { headers });
+        assert.equal(response.status, 200);
+        const body = await response.json() as Record<string, any>;
+        const events = path ? body.reviewHistory : body.records[0].reviewHistory;
+        assert.deepEqual(events, mode === "api" ? history : [
+          { locale: "en", kind: "baseline", from: null, to: "human_reviewed" },
+          { locale: "fr", kind: "review", from: "agent_researched", to: "needs_revision" },
+        ]);
+      }
+    }, { repository: new FakeRepository(createFakeNode(), history) });
+  }
+});
+
+test("rejects client-supplied review history in content and review writes", async () => {
+  await withServer("api", async (baseUrl) => {
+    for (const suffix of ["", "/review"]) {
+      const response = await fetch(`${baseUrl}/explorer/api/records/node-1${suffix}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json", ...authHeaders(reviewerToken, true) },
+        body: JSON.stringify({ ...(suffix ? { locale: "en" } : {}), reviewHistory: [] }),
+      });
+      assert.equal(response.status, 400);
+      assert.match((await response.json() as { error: string }).error, /reviewHistory/);
+    }
+  });
+});
+
 test("requires bearer token for private record reads", async () => {
   await withServer("api", async (baseUrl) => {
     const response = await fetch(`${baseUrl}/explorer/api/records/node-1`);
@@ -639,7 +715,7 @@ test("parses the full record search filter set", async () => {
 
   await withServer("public", async (baseUrl) => {
     const response = await fetch(
-      `${baseUrl}/explorer/api/records?q=fish&kind=system,country&geography=global&dataType=geojson&recordDepth=rich&reviewState=agent_researched&locale=fr&localeMode=all_locales&localeAvailability=missing&reviewLocale=any&routeStatus=active&routeCapability=download&accessType=read&accessMethod=api&include=localizations,routes,matchReasons&limit=7`,
+      `${baseUrl}/explorer/api/records?q=fish&kind=system,country&geography=global&dataType=geojson&recordDepth=rich&reviewState=agent_researched&locale=fr&localeMode=all_locales&localeAvailability=missing&reviewLocale=any&routeStatus=active&routeCapability=download&accessType=read&accessMethod=api&role=aggregator&countryCode=CAN&disciplineFamily=biodiversity&dataFormat=geojson&dataStandard=dwc&include=localizations,routes,matchReasons,matchingIds&limit=7`,
     );
 
     assert.equal(response.status, 200);
@@ -657,7 +733,16 @@ test("parses the full record search filter set", async () => {
     assert.deepEqual(repository.lastRecordQuery?.routeCapability, ["download"]);
     assert.deepEqual(repository.lastRecordQuery?.accessType, ["read"]);
     assert.deepEqual(repository.lastRecordQuery?.accessMethod, ["api"]);
-    assert.deepEqual(repository.lastRecordQuery?.include, ["localizations", "routes", "matchReasons"]);
+    assert.deepEqual(repository.lastRecordQuery?.include, ["localizations", "routes", "matchReasons", "matchingIds"]);
+    assert.deepEqual(repository.lastRecordQuery?.role, ["aggregator"]);
+    assert.deepEqual(repository.lastRecordQuery?.countryCode, ["CAN"]);
+    assert.deepEqual(repository.lastRecordQuery?.disciplineFamily, ["biodiversity"]);
+    assert.deepEqual(repository.lastRecordQuery?.dataFormat, ["geojson"]);
+    assert.deepEqual(repository.lastRecordQuery?.dataStandard, ["dwc"]);
+    assert.equal(repository.lastRecordQuery?.scope, "public");
+    const body = await response.json() as { total: number; matchingIds: string[] };
+    assert.equal(body.total, 1);
+    assert.deepEqual(body.matchingIds, ["node-1"]);
     assert.equal(repository.lastRecordQuery?.limit, 7);
   }, { repository });
 });
@@ -770,6 +855,179 @@ test("rejects review fields in content upserts", async () => {
     assert.equal(response.status, 400);
     assert.deepEqual(await response.json(), {
       error: "review/audit fields are not allowed in localizations.en: reviewState",
+    });
+  });
+});
+
+test("rejects removed source excerpt fields in content upserts", async () => {
+  await withServer("api", async (baseUrl) => {
+    const response = await fetch(`${baseUrl}/explorer/api/records/node-1`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        ...authHeaders(writerToken, true),
+      },
+      body: JSON.stringify({
+        id: "node-1",
+        record: { kind: "system" },
+        localizations: {
+          en: {
+            title: "Test System",
+            sourceExcerpt: "Removed field",
+          },
+        },
+      }),
+    });
+
+    assert.equal(response.status, 400);
+    assert.deepEqual(await response.json(), {
+      error: "unsupported localizations.en fields: sourceExcerpt",
+    });
+  });
+});
+
+test("accepts source writes without source localizations", async () => {
+  await withServer("api", async (baseUrl) => {
+    const source = sourcePayload();
+    delete source.localizations;
+    const response = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        ...authHeaders(),
+      },
+      body: JSON.stringify({
+        id: "node-1",
+        record: { kind: "system" },
+        localizations: {
+          en: {
+            title: "Test System",
+          },
+        },
+        sources: {
+          upsert: [source],
+        },
+      }),
+    });
+
+    assert.equal(response.status, 200);
+    assert.deepEqual(await response.json(), {
+      valid: true,
+      recordId: "node-1",
+      issues: [],
+      recordUpdatedAt,
+    });
+  });
+});
+
+test("accepts a single source localization in content upserts", async () => {
+  await withServer("api", async (baseUrl) => {
+    const response = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        ...authHeaders(),
+      },
+      body: JSON.stringify({
+        id: "node-1",
+        record: { kind: "system" },
+        localizations: {
+          en: {
+            title: "Test System",
+          },
+        },
+        sources: {
+          upsert: [
+            sourcePayload({
+              localizations: {
+                en: {
+                  title: "Source",
+                  translatedFromLocale: null,
+                },
+              },
+            }),
+          ],
+        },
+      }),
+    });
+
+    assert.equal(response.status, 200);
+    assert.deepEqual(await response.json(), {
+      valid: true,
+      recordId: "node-1",
+      issues: [],
+      recordUpdatedAt,
+    });
+  });
+});
+
+test("rejects source text outside localizations", async () => {
+  await withServer("api", async (baseUrl) => {
+    for (const field of ["title", "note"]) {
+      const response = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          ...authHeaders(),
+        },
+        body: JSON.stringify({
+          id: "node-1",
+          record: { kind: "system" },
+          localizations: {
+            en: {
+              title: "Test System",
+            },
+          },
+          sources: {
+            upsert: [
+              sourcePayload({
+                [field]: "Text belongs in a localization",
+              }),
+            ],
+          },
+        }),
+      });
+
+      assert.equal(response.status, 400);
+      assert.deepEqual(await response.json(), {
+        error: `unsupported sources.upsert[0] fields: ${field}`,
+      });
+    }
+  });
+});
+
+test("accepts fully localized source content upserts", async () => {
+  await withServer("api", async (baseUrl) => {
+    const response = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        ...authHeaders(),
+      },
+      body: JSON.stringify({
+        id: "node-1",
+        record: { kind: "system" },
+        localizations: {
+          en: {
+            title: "Test System",
+          },
+        },
+        sources: {
+          upsert: [
+            sourcePayload({
+              localizations: fullSourceLocalizations("Source", "Localized source note"),
+            }),
+          ],
+        },
+      }),
+    });
+
+    assert.equal(response.status, 200);
+    assert.deepEqual(await response.json(), {
+      valid: true,
+      recordId: "node-1",
+      issues: [],
+      recordUpdatedAt,
     });
   });
 });
@@ -1032,4 +1290,25 @@ test("does not expose broad node writes", async () => {
 
     assert.equal(response.status, 404);
   });
+});
+
+
+test("returns field-level quality failures with 422 on apply and 200 on dry run", async () => {
+  const repository = new FakeRepository();
+  const invalid: RecordValidationResult = {
+    valid: false, recordId: "node-1", issues: [{ path: "localizations.en.summary", message: "non-empty text is required" }],
+  };
+  repository.upsertRecord = () => invalid;
+  repository.patchRecord = () => invalid;
+  await withServer("api", async baseUrl => {
+    for (const method of ["PUT", "PATCH"]) for (const validateOnly of [true, false]) {
+      const response = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=${validateOnly}`, {
+        method,
+        headers: { "Content-Type": "application/json", ...authHeaders(writerToken, true) },
+        body: JSON.stringify({ record: method === "PUT" ? { kind: "system", recordDepth: "rich" } : { recordDepth: "rich" } }),
+      });
+      assert.equal(response.status, validateOnly ? 200 : 422);
+      assert.deepEqual(await response.json(), invalid);
+    }
+  }, { repository });
 });

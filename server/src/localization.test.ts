@@ -11,7 +11,6 @@ function localization(locale: SupportedLocale, title: string): NodeLocalization 
     summary: null,
     description: null,
     details: emptyLocalizationDetails(),
-    sourceExcerpt: null,
     translatedFromLocale: null,
     contentUpdatedAt: "2026-09-01T00:00:00.000Z",
     reviewState: "agent_researched",

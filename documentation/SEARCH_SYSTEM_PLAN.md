@@ -6,17 +6,34 @@ Build one extensible search and filter system that drives both the Systems pane 
 
 ## Current Server API Status
 
-Explorer now exposes SQL-backed record search at `GET /api/records`. The
-endpoint supports the full record filter set used by the API refactor plan:
-`q`, `kind`, `geography`, `dataType`, `recordDepth`, `reviewState`, `locale`,
-`localeMode`, `localeAvailability`, `reviewLocale`, `routeStatus`,
-`routeCapability`, `accessType`, `accessMethod`, `include`, `limit`, and
-`cursor`.
+`GET /api/records` owns matching, aliases, locale fallback, filters, relevance ranking,
+word/prefix/substring/one-edit typo matching, and match explanations. The matcher
+lives in `server/src/recordSearch.ts` and reads the current Postgres graph. It
+currently evaluates the graph in server memory for each request; SQL search
+indexing can replace that execution strategy while preserving the API behavior.
 
-The existing Systems pane may continue using bootstrap-backed client search for
-small local graphs, but new agent and service integrations should prefer
-`GET /api/records` so pagination, localization coverage, route filters, and
-access filters execute against Postgres.
+The browser sends its query, locale, language mode, and filters once through
+`App` and stores the response in `useGraphStore`. The directory and both graph
+views consume that shared result. Browser code only formats records and filter
+options; it does not match, rank, or apply search filters.
+
+The endpoint accepts `q`, `kind`, `countryCode`, `role`, `disciplineFamily`,
+`geography`, `dataType`, `dataFormat`, `dataStandard`, `recordDepth`, `reviewState`,
+`locale`, `localeMode`, `localeAvailability`, `reviewLocale`, `routeStatus`,
+`routeCapability`, `accessType`, `accessMethod`, `include`, `limit`, and `cursor`.
+Filters intersect across groups; selections within a group are alternatives.
+
+Responses include `total` and an opaque cursor ordered by score, displayed title,
+and ID. `include=matchingIds` returns the entire matching ID set independently of
+pagination; `include=matchReasons` returns field, label, value, token, and score.
+The directory loads the ordered API pages once and retains its local table
+pagination. The graph uses the complete API ID set. Query changes cancel obsolete
+requests and cannot publish an older response over a newer result.
+
+Aliases work for countries, organizations, and systems. Default matching searches
+the displayed record localization, including English fallback. Source titles and
+notes resolve their own selected locale with English fallback. Other stored
+languages are searched through the explicit all-language mode.
 
 ## Design Principles
 
@@ -66,7 +83,7 @@ The search system should have three layers:
 
 ## MVP
 
-The MVP should stay client-side and reuse the existing bootstrap graph data.
+The API executes search against Postgres data; the browser keeps the bootstrap graph for rendering topology and record details.
 
 ### MVP Scope
 
@@ -74,7 +91,7 @@ The MVP should stay client-side and reuse the existing bootstrap graph data.
   - query text
   - existing system filters
   - clear/reset actions
-- Extract the current Systems pane record/search logic into a reusable search module.
+- Keep matching and ranking in the server search module; share only graph, localization, and presentation utilities with the browser.
 - Define per-kind search field extractors for systems, organizations, and countries.
 - Replace loose subsequence fuzzy matching with field-aware matching:
   - high weight: name, aliases, country code, kind, subtype
@@ -95,7 +112,7 @@ The MVP should stay client-side and reuse the existing bootstrap graph data.
 - Clearing the search restores the current graph view.
 - Existing view modes still work.
 - Existing selection behavior still works when the selected node remains visible.
-- No server or database schema changes are required.
+- Search consolidation requires API and client deployment together; it needs no database schema change.
 
 ## Phase 1: Shared Search State
 
@@ -125,7 +142,7 @@ The MVP should stay client-side and reuse the existing bootstrap graph data.
 - Avoid persisted per-node search documents.
 - Keep field definitions close to the domain data they describe.
 - Let the resolver derive match candidates from canonical graph data at query time.
-- Memoize derived runtime fields only as an implementation optimization, invalidated when the graph bootstrap changes.
+- Memoize derived runtime fields only as an implementation optimization, invalidated when canonical graph data changes.
 - Start with systems, countries, and organizations using current bootstrap fields.
 
 ## Phase 3: Graph Filtering

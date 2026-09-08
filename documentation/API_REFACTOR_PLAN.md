@@ -36,9 +36,9 @@ noted.
   table names, arbitrary JSON Patch paths, or untyped nested JSON merges.
 - Return explicit public, admin, and private response DTOs. Do not serialize raw
   repository/database rows and rely on post-serialization redaction.
-- Implement record list/search with SQL-backed filtering and cursor pagination
-  from day one. Do not extend the current bootstrap-loaded in-memory filtering
-  pattern for this endpoint.
+- The record API owns matching, ranking, language fallback, and filters, with
+  cursor pagination and complete matching IDs for graph consumers. The server
+  evaluates current Postgres graph data using the shared directory search behavior.
 - Use deterministic caller-supplied IDs for record writes. Do not add
   idempotency tables; standard transactional upserts are enough when
   repeated requests carry the same explicit IDs.
@@ -108,7 +108,7 @@ Relevant current files:
 - `shared/domain.ts`
 - `shared/localization.ts`
 - `client/src/app/api.ts`
-- `client/src/app/search.ts`
+- `server/src/recordSearch.ts`
 - `client/src/app/components/SystemDirectoryView.tsx`
 - `client/src/app/components/EntityDetailsPanel.tsx`
 - `client/src/app/components/EditorPanel.tsx`
@@ -133,7 +133,7 @@ Use this checklist for the implementation pass.
 - [x] Add Explorer-side auth helpers for authenticated OA editor access and
   admin-only destructive actions.
 - [x] Add per-route JSON body limits for review, patch, and full record upsert.
-- [x] Implement SQL-backed `GET /api/records` with the full filter set: `q`,
+- [x] Implement Postgres-backed `GET /api/records` with the full filter set: `q`,
   `kind`, `geography`, `dataType`, `recordDepth`, `reviewState`, `locale`,
   `localeMode`, `localeAvailability`, `reviewLocale`, `routeStatus`,
   `routeCapability`, `accessType`, `accessMethod`, `include`, `limit`, and
@@ -209,19 +209,21 @@ limit
 cursor
 ```
 
-The first implementation should execute these filters in Postgres through
-repository methods built for record search. Avoid implementing this route by
-calling `getBootstrap()` and filtering in memory. Required query behavior:
+The repository reads the current Postgres graph and evaluates it with the server-only
+matcher in `server/src/recordSearch.ts`. This preserves field weighting, typo
+tolerance, aliases, and explanations in one implementation. Search currently loads
+the graph per request; a future indexed implementation must preserve these behaviors.
 
-- Default and maximum `limit` values should be explicit.
-- Cursors should be opaque and based on a stable sort tuple, not offset-only
-  pagination.
-- Filters involving locale coverage, review state, routes, access paths, and
-  descriptors should be pushed into SQL joins, JSONB predicates, or bounded
-  subqueries.
-- `q` can start with simple SQL-backed text matching over typed fields. Do not
-  add full-text indexes in this refactor unless simple matching fails acceptance
-  tests.
+- The default page limit is 50; the maximum is 100.
+- Cursors use score, displayed title, and ID for deterministic ranking and pagination.
+- `total` counts all matches; `include=matchingIds` returns every matching ID even
+  when the `records` page is limited.
+- `include=matchReasons` returns structured field, label, value, token, and score.
+- `countryCode`, `role`, `disciplineFamily`, `dataFormat`, and `dataStandard` cover
+  the directory's remaining filters. Descriptor and access filters match their
+  respective typed fields.
+- The browser sends search intent to this endpoint and uses its ordering and
+  matching IDs for both the directory and graph; it has no separate matcher.
 
 Supported `localeMode` values:
 
@@ -352,7 +354,7 @@ Content input rules:
 
 - `RecordAggregate` localizations must use a content-only input type, not the
   full read DTO. Allowed localization content fields are `title`, `summary`,
-  `description`, `details`, `sourceExcerpt`, and `translatedFromLocale`.
+  `description`, `details`, and `translatedFromLocale`.
 - Content writes must reject review and audit fields, including `reviewState`,
   `reviewerNote`, `reviewer`, `lastReviewed`, `contentUpdatedAt`, `createdAt`,
   and `updatedAt`.
@@ -364,8 +366,8 @@ Upsert semantics:
 
 - `record` replaces the neutral node fields for that record.
 - `localizations` is authoritative for the localization rows supplied by a full
-  record write. `rich` records require all six supported locales unless the body
-  explicitly marks the record incomplete.
+  record write. `rich` records require complete content in all six supported locales in the
+  resulting aggregate. Incomplete work must use `stub` or `thin`.
 - `edges` upserts only the supplied incident edges. Every edge must have
   `sourceNodeId` or `targetNodeId` equal to `:id`; omitted incident edges are
   unchanged.
@@ -381,8 +383,8 @@ Upsert semantics:
 
 Validation rules:
 
-- `rich` and other full-record writes should require all six supported
-  localizations unless the request explicitly marks the record as incomplete.
+- `rich` writes must pass the content and source-completeness gates in
+  `RICH_RESEARCH_RECORDS.md` on the resulting aggregate, for both PUT and PATCH.
 - `stub` writes may include only minimal metadata and one localization.
 - Unknown fields should be rejected.
 - Writes should run in one transaction.
@@ -517,6 +519,17 @@ The pre-launch node-localization review route should be removed from the launch
 surface. Human browser review and agent review both use this record-oriented
 path.
 
+Review history is available through `GET /api/records/:id?include=reviewHistory`
+(also supported on record lists). It is opt-in and contains one ordered event
+array across the node's locales. Each event has `locale`, `kind`, `from`, and
+`to`; authenticated responses also include `actor`, `at`, `note`, and
+`contentUpdatedAt`. Public responses omit those review metadata fields.
+History cannot be supplied through content or review writes. The localization
+trigger appends initial states and review metadata changes atomically to the
+node's single `node_review_history` row. Apply `002_node_review_history.sql`
+before deploying this feature. Existing rows get labeled baselines; historical
+content snapshots are not reconstructed.
+
 Review-state permissions:
 
 - `writer` tokens may set `agent_researched` or `needs_revision`.
@@ -604,7 +617,8 @@ runtime checks, not in markdown rule tables. Required behavior:
 - full-write and patch payloads satisfy the strict typed contracts and reject
   unknown fields at every level
 - path `:id` matches any body id, route `nodeId`, and all affected route rows
-- rich records include all supported localizations unless `incomplete=true`
+- rich records include complete supported node/source localizations;
+  `incomplete=true` cannot bypass the rich gate
 - localization source refs in `details`, node source refs in `properties`,
   edge source refs, and route source refs either already exist or are included in
   `sources.upsert`
@@ -615,7 +629,7 @@ runtime checks, not in markdown rule tables. Required behavior:
 - active routes include a non-empty `target`, non-empty `capabilities`, and a
   valid `contractRef` when the route depends on a documented contract
 - local `contractRef` paths resolve under `documentation/contracts`
-- source upserts have deterministic ids and usable title/type fields
+- source upserts have deterministic ids, a source type, and titles/notes only in `localizations`; source references carry `id` and `url`
 - a provided `recordUpdatedAt` precondition still matches the current record
   version
 
@@ -912,7 +926,8 @@ Every write route should support strict schema validation.
 
 Use structured application logs for audit. Do not log plaintext tokens, full
 request bodies, full record payloads, or URLs containing credentials. Do not add
-an audit or idempotency table in this refactor.
+an audit or idempotency table in this refactor. The Phase 1
+`node_review_history` table is product review history, separate from request logs.
 
 Patch writes, full writes, review writes, and delete applies must use optimistic
 concurrency. The simple `recordUpdatedAt` precondition is enough.
@@ -940,7 +955,7 @@ Server:
   types.
 - [x] Add Explorer-side direct IAP human authorization and bearer-token agent
   authorization.
-- [x] Add SQL-backed repository methods for `GET /api/records`.
+- [x] Add Postgres-backed repository methods for `GET /api/records`.
 - [x] Add `GET /api/records`.
 - [x] Add `GET /api/records/:id`.
 - [x] Add `PUT /api/records/:id`.
@@ -976,8 +991,8 @@ Client:
 
 - [x] Replace stale broad CRUD helpers in `client/src/app/api.ts` with the record
   API helpers.
-- [ ] Switch `SystemDirectoryView` off bootstrap search where practical and onto
-  `GET /api/records`.
+- [x] Switch `SystemDirectoryView` and both graph views to shared `GET /api/records`
+  results, preserving ranking, typo tolerance, match explanations, and all matching IDs.
 - [x] Keep `EntityDetailsPanel` review behavior, but update the endpoint if the
   review path moves.
 - [x] Rewire or hide `EditorPanel` until it uses the new record API.
@@ -1007,9 +1022,9 @@ Docs:
 ## Suggested Implementation Order
 
 1. Define record contracts, response DTOs, and authorization access levels.
-2. Add read-only SQL-backed `GET /api/records` and `GET /api/records/:id` with
+2. Add read-only Postgres-backed `GET /api/records` and `GET /api/records/:id` with
    localization and review filters.
-3. Switch the browser search/directory to the read API where practical.
+3. Use the read API for browser search, directory ordering, and graph matching IDs.
 4. Add private `PATCH /api/records/:id` for targeted updates.
 5. Add `PUT /api/records/:id` for full record writes.
 6. Add delete with admin-only, mandatory dry-run behavior.

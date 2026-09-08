@@ -1,3 +1,4 @@
+import type { SearchMatchReason } from "./searchPresentation";
 import type {
   GraphEdge,
   GraphEdgeKind,
@@ -21,7 +22,9 @@ export type RecordInclude =
   | "edges"
   | "sources"
   | "routes"
-  | "matchReasons";
+  | "reviewHistory"
+  | "matchReasons"
+  | "matchingIds";
 
 export type LocaleMode =
   | "locale_only"
@@ -38,12 +41,19 @@ export type LocaleAvailability =
 export type ReviewLocaleMode = "requested" | "displayed" | "any";
 
 export interface RecordSearchCursor {
+  score?: number;
   title: string;
   id: string;
 }
 
 export interface RecordSearchQuery {
   q?: string;
+  scope?: RecordDtoScope;
+  role: string[];
+  countryCode: string[];
+  disciplineFamily: string[];
+  dataFormat: string[];
+  dataStandard: string[];
   kind: GraphNodeKind[];
   geography: string[];
   dataType: string[];
@@ -67,12 +77,31 @@ export interface RecordAggregate {
   edges: GraphEdge[];
   sources: Source[];
   routes: RyuRoute[];
-  matchReasons: string[];
+  matchReasons: SearchMatchReason[];
+  score?: number;
+  matchedLocale?: SupportedLocale | null;
+  reviewHistory?: ReviewHistoryEvent[];
+}
+
+export interface PublicReviewHistoryEvent {
+  locale: SupportedLocale;
+  kind: "baseline" | "initial" | "review";
+  from: ReviewState | null;
+  to: ReviewState;
+}
+
+export interface ReviewHistoryEvent extends PublicReviewHistoryEvent {
+  actor: string | null;
+  at: string | null;
+  note: string | null;
+  contentUpdatedAt: string | null;
 }
 
 export interface RecordListResult {
   records: RecordAggregate[];
   nextCursor: string | null;
+  total: number;
+  matchingIds?: string[];
 }
 
 export interface RecordNeutralDto {
@@ -104,7 +133,9 @@ export interface RecordSummaryDto {
   isLocaleFallback: boolean;
   updatedAt: string;
   recordUpdatedAt: string;
-  matchReasons?: string[];
+  matchReasons?: SearchMatchReason[];
+  score?: number;
+  matchedLocale?: SupportedLocale | null;
 }
 
 export interface PublicRecordLocalizationDto {
@@ -113,7 +144,6 @@ export interface PublicRecordLocalizationDto {
   summary: string | null;
   description: string | null;
   details: NodeLocalizationDetails;
-  sourceExcerpt: string | null;
   translatedFromLocale: SupportedLocale | null;
   contentUpdatedAt: string;
   reviewState: ReviewState;
@@ -166,16 +196,20 @@ export type RecordSourceDto = PublicSourceDto | AdminSourceDto | PrivateSourceDt
 export type RecordRouteDto = PublicRouteDto | AdminRouteDto | PrivateRouteDto;
 
 export interface RecordDetailDto extends RecordSummaryDto {
+  sourceCompleteness?: RecordSourceCompleteness;
   record: RecordNeutralDto;
   localizations?: Partial<Record<SupportedLocale, RecordLocalizationDto>>;
   edges?: GraphEdge[];
   sources?: RecordSourceDto[];
   routes?: RecordRouteDto[];
+  reviewHistory?: (PublicReviewHistoryEvent | ReviewHistoryEvent)[];
 }
 
 export interface RecordListDto {
   records: RecordSummaryDto[];
   nextCursor: string | null;
+  total: number;
+  matchingIds?: string[];
 }
 
 export interface LocalizationContentInput {
@@ -183,7 +217,6 @@ export interface LocalizationContentInput {
   summary?: string | null;
   description?: string | null;
   details?: NodeLocalizationDetails;
-  sourceExcerpt?: string | null;
   translatedFromLocale?: SupportedLocale | null;
 }
 
@@ -205,7 +238,15 @@ export interface RecordEdgeInput {
   properties?: Record<string, unknown>;
 }
 
-export interface RecordSourceInput extends Source {}
+export interface SourceLocalizationContentInput {
+  title: string;
+  note?: string | null;
+  translatedFromLocale?: SupportedLocale | null;
+}
+
+export interface RecordSourceInput extends Omit<Source, "localizations"> {
+  localizations?: Partial<Record<SupportedLocale, SourceLocalizationContentInput>>;
+}
 
 export interface RecordRouteInput {
   id: string;
@@ -282,9 +323,17 @@ export interface RecordMutationOptions {
 }
 
 export interface RecordValidationIssue {
+  path?: string;
   index?: number;
   recordId?: string;
   message: string;
+}
+
+export interface RecordSourceCompleteness {
+  status: "complete" | "partial" | "missing";
+  referencedSources: number;
+  resolvedSources: number;
+  issues: RecordValidationIssue[];
 }
 
 export interface RecordValidationResult {
@@ -294,6 +343,7 @@ export interface RecordValidationResult {
   warnings?: string[];
   affectedSections?: string[];
   recordUpdatedAt?: string | null;
+  sourceCompleteness?: RecordSourceCompleteness;
 }
 
 export interface BulkRecordValidationInput {

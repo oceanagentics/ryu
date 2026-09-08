@@ -1,3 +1,4 @@
+import type { GraphSearchIntent } from "../../../shared/searchPresentation";
 import type {
   GraphBootstrapPayload,
   GraphNode,
@@ -42,9 +43,42 @@ export function fetchBootstrap(): Promise<GraphBootstrapPayload> {
   return request<GraphBootstrapPayload>(bootstrapPath);
 }
 
-export function fetchRecords(params = new URLSearchParams()): Promise<RecordListDto> {
+export function fetchRecords(params = new URLSearchParams(), signal?: AbortSignal): Promise<RecordListDto> {
   const query = params.toString();
-  return request<RecordListDto>(appPath(`/api/records${query ? `?${query}` : ""}`));
+  return request<RecordListDto>(appPath(`/api/records${query ? `?${query}` : ""}`), { signal });
+}
+
+// The directory paginates these ordered records locally. Matching IDs are returned
+// for the entire query, independently of the API's record-page limit.
+export async function fetchGraphSearch(
+  intent: GraphSearchIntent,
+  locale: SupportedLocale,
+  signal: AbortSignal,
+): Promise<RecordListDto> {
+  const filters = intent.filters;
+  const params = new URLSearchParams({
+    q: intent.query, locale,
+    localeMode: intent.searchAllLanguages ? "all_locales" : "display_locale",
+    reviewLocale: "requested", include: "matchReasons,matchingIds", limit: "100",
+  });
+  for (const [key, values] of Object.entries({
+    role: filters.role, countryCode: filters.countryCode, disciplineFamily: filters.disciplineFamily,
+    dataType: filters.dataClaims.type, dataFormat: filters.dataClaims.format, dataStandard: filters.dataClaims.standard,
+    accessType: filters.accessTypes, accessMethod: filters.accessMethods, reviewState: filters.reviewState,
+  })) values.forEach(value => params.append(key, value));
+  if (filters.localizationCoverage.length === 1) {
+    params.set("localeAvailability", filters.localizationCoverage[0] === "current_locale" ? "available" : "missing");
+  }
+  const result = await fetchRecords(params, signal);
+  let cursor = result.nextCursor;
+  while (cursor) {
+    params.set("cursor", cursor);
+    params.set("include", "matchReasons");
+    const page = await fetchRecords(params, signal);
+    result.records.push(...page.records);
+    cursor = page.nextCursor;
+  }
+  return { ...result, nextCursor: null };
 }
 
 export function fetchRecord(

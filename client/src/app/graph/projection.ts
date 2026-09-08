@@ -1,9 +1,16 @@
 /**
  * Structural projection turns scoped graph data into visible nodes and edges.
  */
-import type { GraphEdge, GraphNode, SupportedLocale, ViewMode } from "../../../../shared/domain";
+import type {
+  GraphEdge,
+  GraphNode,
+  GraphNodeKind,
+  SupportedLocale,
+  ViewMode,
+} from "../../../../shared/domain";
+import { defaultLocale } from "../../../../shared/localization";
 import { facetLabel } from "../i18n";
-import { nodeTitle } from "../localization";
+import { nodeTitle, resolveNodeDisplay } from "../localization";
 import type { CountryDisplayMode } from "../state/graphStore";
 import { buildLabel, getLayoutBand, getNodeDimensions, type NodeGeometry } from "./geometry";
 import type { IndexedGraph } from "./indexGraph";
@@ -20,6 +27,7 @@ export interface ProjectionInput {
   focusEntityId: string | null;
   locale: SupportedLocale;
   searchEntityIds?: ReadonlySet<string> | null;
+  hiddenNodeKinds?: readonly GraphNodeKind[];
 }
 
 export type GovernanceBlock = "national" | "international" | null;
@@ -28,6 +36,7 @@ export interface GraphProjectionNode extends NodeGeometry {
   id: string;
   label: string;
   simpleLabel: string;
+  secondaryLabel: string | null;
   kind: GraphNode["kind"];
   subtype: string | null;
   countryCode: string | null;
@@ -89,11 +98,13 @@ function buildProjectionNode(
   locale: SupportedLocale,
 ): GraphProjectionNode {
   const label = buildLabel(node, locale);
+  const simpleLabel = nodeTitle(node, locale);
 
   return {
     id: node.id,
     label,
-    simpleLabel: nodeTitle(node, locale),
+    simpleLabel,
+    secondaryLabel: secondaryNodeLabel(node, locale, simpleLabel),
     kind: node.kind,
     subtype: node.subtype,
     countryCode: node.countryCode,
@@ -101,6 +112,33 @@ function buildProjectionNode(
     layoutBand,
     ...getNodeDimensions(node.kind, label),
   };
+}
+
+function normalizedLabel(value: string): string {
+  return value.trim().toLocaleLowerCase();
+}
+
+function secondaryNodeLabel(
+  node: GraphNode,
+  locale: SupportedLocale,
+  title: string,
+): string | null {
+  const titleKey = normalizedLabel(title);
+  const localization = resolveNodeDisplay(node, locale);
+  const alias = localization.details.aliases.find(
+    (candidate) => normalizedLabel(candidate) !== titleKey,
+  );
+
+  if (alias) {
+    return alias;
+  }
+
+  if (locale === defaultLocale) {
+    return null;
+  }
+
+  const englishTitle = nodeTitle(node, defaultLocale);
+  return normalizedLabel(englishTitle) === titleKey ? null : englishTitle;
 }
 
 function edgeLabel(kind: GraphProjectionEdgeType, locale: SupportedLocale): string {
@@ -114,7 +152,9 @@ export function projectGraph(input: ProjectionInput): GraphProjection {
     focusEntityId,
     locale,
     searchEntityIds = null,
+    hiddenNodeKinds = [],
   } = input;
+  const hiddenKindSet = new Set(hiddenNodeKinds);
 
   const defaultCountry = graph.nodes.find((node) => node.kind === "country")?.id ?? null;
   const defaultSystem = graph.nodes.find((node) => node.kind === "system")?.id ?? null;
@@ -132,7 +172,9 @@ export function projectGraph(input: ProjectionInput): GraphProjection {
     includedIds = getTechnicalIds(graph, effectiveFocusEntityId);
   }
 
-  const includedNodes = graph.nodes.filter((node) => includedIds.has(node.id));
+  const includedNodes = graph.nodes.filter(
+    (node) => includedIds.has(node.id) && !hiddenKindSet.has(node.kind),
+  );
   const visibleIds = new Set(includedNodes.map((node) => node.id));
   const governanceInternationalIds = new Set<string>();
 

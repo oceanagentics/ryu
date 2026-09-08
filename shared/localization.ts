@@ -2,6 +2,7 @@ import type {
   GraphNode,
   NodeLocalizationDetails,
   ResolvedNodeLocalization,
+  Source,
   SupportedLocale,
 } from "./domain";
 
@@ -54,7 +55,6 @@ export function resolveNodeLocalization(
     summary: localization?.summary ?? null,
     description: localization?.description ?? null,
     details: localization?.details ?? emptyLocalizationDetails(),
-    sourceExcerpt: localization?.sourceExcerpt ?? null,
     translatedFromLocale: localization?.translatedFromLocale ?? null,
     contentUpdatedAt: localization?.contentUpdatedAt ?? null,
     reviewState: localization?.reviewState ?? null,
@@ -71,4 +71,11 @@ export function nodeDisplayTitle(
   requestedLocale: SupportedLocale = defaultLocale,
 ): string {
   return resolveNodeLocalization(node, requestedLocale).title;
+}
+
+export function resolveSourceLocalization(
+  source: Source,
+  requestedLocale: SupportedLocale = defaultLocale,
+) {
+  return source.localizations[requestedLocale] ?? source.localizations[defaultLocale];
 }

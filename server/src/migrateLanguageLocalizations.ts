@@ -119,6 +119,66 @@ async function createMigrationTables(client: PoolClient) {
   `);
 
   await client.query(`
+    CREATE TABLE sources_localizations (
+      source_id text NOT NULL REFERENCES sources(id) ON DELETE CASCADE,
+      locale text NOT NULL REFERENCES supported_locales(locale),
+      title text NOT NULL CHECK (btrim(title) <> ''),
+      note text,
+      translated_from_locale text REFERENCES supported_locales(locale)
+        CHECK (translated_from_locale IS NULL OR translated_from_locale <> locale),
+      content_updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      created_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      PRIMARY KEY (source_id, locale)
+    )
+  `);
+
+  await client.query("CREATE INDEX idx_sources_localizations_locale ON sources_localizations (locale)");
+
+  await client.query(`
+    INSERT INTO sources_localizations (
+      source_id, locale, title, note, translated_from_locale
+    )
+    SELECT
+      sources.id,
+      'en',
+      sources.title,
+      sources.note,
+      NULL
+    FROM sources
+  `);
+
+  await client.query(`
+    CREATE OR REPLACE FUNCTION set_sources_localization_content_updated_at()
+    RETURNS trigger AS $$
+    BEGIN
+      IF NEW.title IS DISTINCT FROM OLD.title
+        OR NEW.note IS DISTINCT FROM OLD.note
+        OR NEW.translated_from_locale IS DISTINCT FROM OLD.translated_from_locale THEN
+        NEW.content_updated_at = CURRENT_TIMESTAMP;
+      END IF;
+
+      RETURN NEW;
+    END;
+    $$ LANGUAGE plpgsql
+  `);
+
+  await client.query(`
+    CREATE TRIGGER trg_sources_localizations_content_updated_at
+    BEFORE UPDATE ON sources_localizations
+    FOR EACH ROW
+    EXECUTE FUNCTION set_sources_localization_content_updated_at()
+  `);
+
+  await client.query(`
+    CREATE TRIGGER trg_sources_localizations_updated_at
+    BEFORE UPDATE ON sources_localizations
+    FOR EACH ROW
+    WHEN (NEW.updated_at = OLD.updated_at)
+    EXECUTE FUNCTION set_updated_at_timestamp()
+  `);
+
+  await client.query(`
     CREATE TABLE node_localizations (
       node_id text NOT NULL REFERENCES nodes(id) ON DELETE CASCADE,
       locale text NOT NULL REFERENCES supported_locales(locale),
@@ -126,7 +186,6 @@ async function createMigrationTables(client: PoolClient) {
       summary text,
       description text,
       details_json jsonb NOT NULL DEFAULT '{}'::jsonb,
-      source_excerpt text,
       translated_from_locale text REFERENCES supported_locales(locale)
         CHECK (translated_from_locale IS NULL OR translated_from_locale <> locale),
       content_updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -153,7 +212,6 @@ async function createMigrationTables(client: PoolClient) {
         OR NEW.summary IS DISTINCT FROM OLD.summary
         OR NEW.description IS DISTINCT FROM OLD.description
         OR NEW.details_json IS DISTINCT FROM OLD.details_json
-        OR NEW.source_excerpt IS DISTINCT FROM OLD.source_excerpt
         OR NEW.translated_from_locale IS DISTINCT FROM OLD.translated_from_locale THEN
         NEW.content_updated_at = CURRENT_TIMESTAMP;
       END IF;
@@ -215,15 +273,15 @@ async function backfillLocalizations(client: PoolClient) {
       `
         INSERT INTO node_localizations (
           node_id, locale, title, summary, description, details_json,
-          source_excerpt, translated_from_locale, content_updated_at,
+          translated_from_locale, content_updated_at,
           review_state, reviewer_note, reviewer, last_reviewed,
           created_at, updated_at
         )
         VALUES (
           $1, $2, $3, $4, $5, $6::jsonb,
-          $7, $8, $9::timestamptz,
-          $10, $11, $12, $13::timestamptz,
-          $14::timestamptz, $15::timestamptz
+          $7, $8::timestamptz,
+          $9, $10, $11, $12::timestamptz,
+          $13::timestamptz, $14::timestamptz
         )
       `,
       [
@@ -233,7 +291,6 @@ async function backfillLocalizations(client: PoolClient) {
         content.localization.summary,
         content.localization.description,
         JSON.stringify(content.localization.detailsJson),
-        content.localization.sourceExcerpt,
         content.localization.translatedFromLocale,
         content.localization.contentUpdatedAt,
         content.localization.reviewState,
@@ -277,6 +334,7 @@ async function validatePostflight(client: PoolClient) {
 }
 
 async function dropObsoleteColumns(client: PoolClient) {
+  await client.query("ALTER TABLE sources DROP COLUMN title, DROP COLUMN note");
   await client.query("DROP INDEX IF EXISTS idx_nodes_review_state");
   await client.query(`
     ALTER TABLE nodes
@@ -294,16 +352,16 @@ async function grantAccess(client: PoolClient) {
     DO $$
     BEGIN
       IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'explorer_read') THEN
-        GRANT SELECT ON supported_locales, node_localizations TO explorer_read;
+        GRANT SELECT ON supported_locales, node_localizations, sources_localizations TO explorer_read;
       END IF;
 
       IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'explorer_write') THEN
         GRANT SELECT ON supported_locales TO explorer_write;
-        GRANT SELECT, INSERT, UPDATE, DELETE ON node_localizations TO explorer_write;
+        GRANT SELECT, INSERT, UPDATE, DELETE ON node_localizations, sources_localizations TO explorer_write;
       END IF;
 
       IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'explorer_schema_admin') THEN
-        GRANT ALL PRIVILEGES ON supported_locales, node_localizations TO explorer_schema_admin;
+        GRANT ALL PRIVILEGES ON supported_locales, node_localizations, sources_localizations TO explorer_schema_admin;
       END IF;
     END $$;
   `);

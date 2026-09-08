@@ -23,6 +23,7 @@ import {
   emptyLocalizationDetails,
   normalizeLocale,
   resolveNodeLocalization,
+  resolveSourceLocalization,
   supportedLocales,
 } from "../../shared/localization";
 
@@ -47,7 +48,6 @@ export type RawNodeLocalization = {
   summary: string | null;
   description: string | null;
   details_json: string | null;
-  source_excerpt: string | null;
   translated_from_locale: SupportedLocale | null;
   content_updated_at: string;
   review_state: ReviewState;
@@ -255,7 +255,6 @@ export function mapNodeLocalization(row: RawNodeLocalization): NodeLocalization 
     summary: row.summary,
     description: row.description,
     details: normalizeLocalizationDetails(parseJson(row.details_json)),
-    sourceExcerpt: row.source_excerpt,
     translatedFromLocale: row.translated_from_locale
       ? normalizeLocale(row.translated_from_locale)
       : null,
@@ -334,14 +333,13 @@ export function mapEdge(row: RawEdge): GraphEdge {
 export function mapSource(row: Record<string, unknown>): Source {
   return {
     id: String(row.id),
-    title: String(row.title),
     sourceType: String(row.source_type),
     url: (row.url as string | null) ?? null,
     localPath: (row.local_path as string | null) ?? null,
     publisher: (row.publisher as string | null) ?? null,
     publishedAt: (row.published_at as string | null) ?? null,
     accessedAt: (row.accessed_at as string | null) ?? null,
-    note: (row.note as string | null) ?? null,
+    localizations: (row.localizations as Source["localizations"]) ?? {},
   };
 }
 
@@ -468,6 +466,10 @@ export function collectSourceIds(value: unknown, results = new Set<string>()): S
     results.add(value.id);
   }
 
+  if (isRecord(value.source) && typeof value.source.id === "string") {
+    results.add(value.source.id);
+  }
+
   if (Array.isArray(value.sourceRefs)) {
     value.sourceRefs
       .map((item) => normalizeString(item))
@@ -558,7 +560,7 @@ export function mapPortalRoute(route: RyuRoute): RyuPortalRoute {
 export function mapPortalSource(source: Source): RyuPortalSource {
   return {
     ryuSourceId: source.id,
-    title: source.title,
+    title: resolveSourceLocalization(source)?.title ?? source.id,
     sourceType: source.sourceType,
     provider: source.publisher,
     originalUrl: source.url,

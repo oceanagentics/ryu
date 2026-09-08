@@ -32,12 +32,12 @@ import {
   type GraphProjectionEdgeType,
   type GraphProjectionNode,
 } from "../graph/projection";
-import { resolveGraphSearch } from "../search";
 import { useGraphStore } from "../state/graphStore";
 
 type ForceGraphNode = {
   id: string;
   label: string;
+  secondaryLabel: string | null;
   kind: GraphProjectionNode["kind"];
   governanceBlock: GraphProjectionNode["governanceBlock"];
   layoutBand: number;
@@ -63,11 +63,15 @@ type ForceGraphHandle = ForceGraphMethods<ForceGraphNode, ForceGraphLink>;
 type LabelPlacement = {
   id: string;
   label: string;
+  secondaryLabel: string | null;
+  expanded: boolean;
   opacity: number;
   x: number;
   y: number;
   width: number;
+  height: number;
   selected: boolean;
+  hovered: boolean;
   focused: boolean;
   neighbor: boolean;
   kind: ForceGraphNode["kind"];
@@ -209,6 +213,7 @@ function buildForceGraphData(projection: GraphProjection): ForceGraphData {
       return {
         id: node.id,
         label: node.simpleLabel,
+        secondaryLabel: node.secondaryLabel,
         kind: node.kind,
         governanceBlock: node.governanceBlock,
         layoutBand: node.layoutBand,
@@ -270,8 +275,15 @@ function getHighlightedGraphState(
   return { linkIds, nodeIds };
 }
 
-function estimateLabelWidth(label: string, selected: boolean): number {
-  return Math.min(selected ? 280 : 220, Math.max(56, label.length * 7.1 + 18));
+function estimateLabelWidth(
+  label: string,
+  secondaryLabel: string | null,
+  expanded: boolean,
+): number {
+  const longestLabel = expanded && secondaryLabel && secondaryLabel.length > label.length
+    ? secondaryLabel
+    : label;
+  return Math.min(expanded ? 340 : 220, Math.max(56, longestLabel.length * 7.1 + 18));
 }
 
 function getCameraDepth(camera: THREE.Camera, coords: Coords): number {
@@ -735,11 +747,16 @@ function areLabelPlacementsEqual(
     const rightPlacement = right[index];
     return (
       leftPlacement.id === rightPlacement.id &&
+      leftPlacement.label === rightPlacement.label &&
+      leftPlacement.secondaryLabel === rightPlacement.secondaryLabel &&
+      leftPlacement.expanded === rightPlacement.expanded &&
       leftPlacement.opacity === rightPlacement.opacity &&
       leftPlacement.x === rightPlacement.x &&
       leftPlacement.y === rightPlacement.y &&
       leftPlacement.width === rightPlacement.width &&
+      leftPlacement.height === rightPlacement.height &&
       leftPlacement.selected === rightPlacement.selected &&
+      leftPlacement.hovered === rightPlacement.hovered &&
       leftPlacement.focused === rightPlacement.focused &&
       leftPlacement.neighbor === rightPlacement.neighbor
     );
@@ -752,6 +769,7 @@ function buildLabelPlacements(
   size: Size,
   selectedEntityId: string | null,
   focusedEntityId: string | null,
+  hoveredEntityId: string | null,
   connectedNodeIds: Set<string>,
 ): LabelPlacement[] {
   const camera = graph.camera();
@@ -769,11 +787,13 @@ function buildLabelPlacements(
       const nodeId = String(node.id);
       const selected = selectedEntityId === nodeId;
       const focused = focusedEntityId === nodeId;
+      const hovered = hoveredEntityId === nodeId;
       const neighbor = connectedNodeIds.has(nodeId) && !selected;
       const screenPosition = graph.graph2ScreenCoords(node.x, node.y, node.z);
       const cameraDepth = getCameraDepth(camera, node);
-      const width = estimateLabelWidth(node.label, selected);
-      const height = selected || focused ? 24 : 21;
+      const expanded = Boolean(node.secondaryLabel && (selected || focused || hovered));
+      const width = estimateLabelWidth(node.label, node.secondaryLabel, expanded);
+      const height = expanded ? 39 : selected || focused ? 24 : 21;
       const offset = selected || focused ? 14 : 10;
       const placeRight = screenPosition.x < size.width * 0.68;
       const rawX = placeRight
@@ -800,7 +820,7 @@ function buildLabelPlacements(
           Math.max(6, size.height - height - 6),
         ),
       );
-      const required = selected || focused;
+      const required = selected || focused || hovered;
       const visible =
         rawRect.right >= 0 &&
         rawRect.left <= size.width &&
@@ -809,16 +829,20 @@ function buildLabelPlacements(
 
       return {
         focused,
+        expanded,
         height,
+        hovered,
         id: nodeId,
         kind: node.kind,
         label: node.label,
+        secondaryLabel: node.secondaryLabel,
         neighbor,
         cameraDepth,
         priority:
           node.priority +
           (selected ? 10000 : 0) +
           (focused ? 8000 : 0) +
+          (hovered ? 6000 : 0) +
           (neighbor ? 1200 : 0),
         rect: {
           bottom: y + height - labelCollisionInset,
@@ -876,9 +900,13 @@ function buildLabelPlacements(
 
     placements.push({
       focused: candidate.focused,
+      expanded: candidate.expanded,
+      height: candidate.height,
+      hovered: candidate.hovered,
       id: candidate.id,
       kind: candidate.kind,
       label: candidate.label,
+      secondaryLabel: candidate.expanded ? candidate.secondaryLabel : null,
       neighbor: candidate.neighbor,
       opacity: collided ? 0 : candidate.opacity,
       selected: candidate.selected,
@@ -897,9 +925,8 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
   const countryDisplayMode = useGraphStore((state) => state.countryDisplayMode);
   const focusEntityId = useGraphStore((state) => state.focusEntityId);
   const locale = useGraphStore((state) => state.locale);
-  const searchQuery = useGraphStore((state) => state.searchQuery);
-  const searchAllLanguages = useGraphStore((state) => state.searchAllLanguages);
-  const searchFilters = useGraphStore((state) => state.searchFilters);
+  const searchEntityIds = useGraphStore((state) => state.searchEntityIds);
+  const hiddenNodeKinds = useGraphStore((state) => state.hiddenNodeKinds);
   const selectedEntityId = useGraphStore((state) => state.selectedEntityId);
   const selectedRelationshipId = useGraphStore((state) => state.selectedRelationshipId);
   const setSelectedEntityId = useGraphStore((state) => state.setSelectedEntityId);
@@ -913,17 +940,8 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
   const [container, setContainer] = useState<HTMLDivElement | null>(null);
   const [size, setSize] = useState<Size>({ height: 1, width: 1 });
   const [labelPlacements, setLabelPlacements] = useState<LabelPlacement[]>([]);
+  const [hoveredEntityId, setHoveredEntityId] = useState<string | null>(null);
 
-  const resolvedSearch = useMemo(
-    () => (graph
-      ? resolveGraphSearch(
-          graph,
-          { query: searchQuery, filters: searchFilters, searchAllLanguages },
-          locale,
-        )
-      : null),
-    [graph, locale, searchAllLanguages, searchFilters, searchQuery],
-  );
 
   const projection = useMemo(() => {
     if (!graph) {
@@ -936,11 +954,18 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
       countryDisplayMode,
       focusEntityId: viewMode === "governance" ? null : focusEntityId,
       locale,
-      searchEntityIds: resolvedSearch?.active
-        ? resolvedSearch.matchingEntityIds
-        : null,
+      hiddenNodeKinds,
+      searchEntityIds,
     });
-  }, [countryDisplayMode, focusEntityId, graph, locale, resolvedSearch, viewMode]);
+  }, [
+    countryDisplayMode,
+    focusEntityId,
+    graph,
+    hiddenNodeKinds,
+    locale,
+    searchEntityIds,
+    viewMode,
+  ]);
 
   const graphData = useMemo<ForceGraphData>(
     () => (projection ? buildForceGraphData(projection) : { nodes: [], links: [] }),
@@ -1372,6 +1397,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
           size,
           selectedEntityId,
           focusEntityId,
+          hoveredEntityId,
           highlighted.nodeIds,
         );
         setLabelPlacements((previousLabels) =>
@@ -1395,6 +1421,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
     focusEntityId,
     graphData.nodes,
     highlighted.nodeIds,
+    hoveredEntityId,
     selectedEntityId,
     size,
   ]);
@@ -1552,7 +1579,9 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
         linkThreeObject={arrangement === "globe" ? linkThreeObject : undefined}
         linkWidth={linkWidth}
         nodeColor={nodeColor}
-        nodeLabel={(node) => node.label}
+        nodeLabel={(node) =>
+          node.secondaryLabel ? `${node.label} · ${node.secondaryLabel}` : node.label
+        }
         nodeRelSize={3.2}
         nodeResolution={16}
         nodeVal={nodeValue}
@@ -1569,6 +1598,9 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
             setSelectedEntityId(String(node.id));
           }
         }}
+        onNodeHover={(node) => {
+          setHoveredEntityId(node?.id == null ? null : String(node.id));
+        }}
         showNavInfo={false}
         warmupTicks={48}
         width={size.width}
@@ -1581,6 +1613,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
               `is-${label.kind}`,
               label.selected ? "is-selected" : "",
               label.focused ? "is-focused" : "",
+              label.expanded ? "is-expanded" : "",
               label.neighbor ? "is-neighbor" : "",
             ]
               .filter(Boolean)
@@ -1591,14 +1624,22 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
               pointerEvents: label.opacity > 0.05 ? "auto" : "none",
               transform: `translate3d(${label.x}px, ${label.y}px, 0)`,
               width: label.width,
+              height: label.height,
             }}
             aria-hidden={label.opacity <= 0.05}
+            dir="auto"
+            lang={locale}
             onClick={() => setSelectedEntityId(label.id)}
+            onMouseEnter={() => setHoveredEntityId(label.id)}
+            onMouseLeave={() => setHoveredEntityId(null)}
             onWheel={forwardLabelWheel}
             tabIndex={label.opacity > 0.05 ? 0 : -1}
             type="button"
           >
-            {label.label}
+            <span className="force-graph-label-primary">{label.label}</span>
+            {label.secondaryLabel ? (
+              <span className="force-graph-label-secondary">{label.secondaryLabel}</span>
+            ) : null}
           </button>
         ))}
       </div>

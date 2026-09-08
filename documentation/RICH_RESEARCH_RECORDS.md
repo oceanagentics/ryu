@@ -21,7 +21,8 @@ The lean graph schema uses:
 
 - `nodes`: one row per country, organization, or system.
 - `edges`: explicit graph relationships, including `governs`, `operates`, `part_of`, `publishes_to`, and `syncs_to`.
-- `sources`: source records used by rich details.
+- `sources`: shared source IDs, types, URLs, publishers, and dates.
+- `sources_localizations`: per-language source title/note text.
 - `node_localizations`: per-language user-facing record text, localized details, and review state.
 - `ryu_routes`: compact operational route rows for machine access.
 - `saved_views`: app state.
@@ -48,6 +49,107 @@ Do not reintroduce removed tables or fields:
 - No identifiers section, confidence fields, duplicate system IDs, or generic evidence-link layer.
 - No hidden parent field. Use an explicit `part_of` edge.
 
+## Rich Status And Source Completeness
+
+`recordDepth` describes research depth. Localization `reviewState` describes acceptance;
+`rich` does not imply `human_reviewed`. Human review still checks whether evidence
+actually supports the claims and whether translations are accurate.
+
+The record API evaluates the **resulting aggregate**, including existing rows and
+supplied changes, on both PUT and PATCH. `validateOnly=true` runs the same checks
+and preconditions without writes. Semantic validation failures on apply return HTTP 422 with
+`valid: false` and field-level `issues`; dry runs return the same issues with HTTP
+200. Request-shape errors return HTTP 400. Correct the issues before applying. A rich record cannot bypass checks with
+`incomplete=true`. Save incomplete work as `thin`, explicitly changing depth when
+an edit removes required content. Omitted PUT relationships, sources, routes, and
+localizations remain stored; omission never acts as deletion.
+
+A rich system must have:
+
+- A canonical HTTP(S) URL; role, discipline family, and geographic scope; and an
+  incoming `operates` edge from an existing organization.
+- All six supported node localizations, with non-empty title, summary, description,
+  and explicit `details.profile.sourceRefs` supporting the prose and shared metadata.
+- Source-backed `type` and `format` descriptors. Include applicable `standard`
+  descriptors, or explain their absence in `details.researchGaps.standards`.
+- At least one actual `read` access path, with mechanism, URL, evidence, localized
+  label and description. Explain authentication, licensing, restrictions, and
+  contribution arrangements in the profile/access prose as applicable.
+- Matching, unique neutral/localized item IDs. Descriptors need localized labels
+  and descriptions; access paths need labels and descriptions; gallery items
+  need titles and captions; metrics need localized descriptions.
+- Source-backed metrics with finite non-negative values, units, and observation
+  dates (YYYY, YYYY-MM, or YYYY-MM-DD). Storage values use bytes. When record count,
+  storage size, or usage metrics cannot be found, omit the values and explain each
+  gap in every locale's `details.researchGaps.recordCount`, `storageSize`, or `usage`.
+- Evidence on each relationship and route, using embedded source objects or
+  `properties.sourceRefs`. Source references must resolve to stored sources or
+  `sources.upsert`; embedded source URLs must match the source's canonical URL.
+
+Gallery and machine routes are optional. No approved route produces a warning;
+do not invent one. When present, gallery assets must exist or have HTTP(S) URLs.
+Active routes need a target, capabilities, and a contract reference. Local contract
+references must resolve under `documentation/contracts`. Network liveness checks
+remain outside the write transaction; follow URL Validation below.
+
+`sourceCompleteness` is returned with record details when sources are included and
+with content-validation results. It reports `complete`, `partial`, or `missing`,
+reference/resolution counts, and field-level evidence issues. It measures the
+record's evidence coverage, not completeness of the upstream database. This is
+computed from content, not an author-controlled badge or a separate source registry.
+
+- Systems need evidence for their profile, data, access, quantitative claims,
+  relationships, and routes.
+- Organizations need evidence for identity, jurisdiction/role, and asserted
+  relationships. They do not need system descriptors, metrics, or galleries.
+- Countries need evidence for identity and asserted governance relationships.
+- Minimal country/organization records may be source-complete and remain `stub`
+  or `thin`. The richer system checklist is not applied to those node kinds.
+
+Referenced sources need a title, type, publisher, public provenance URL, and access
+date. Publication/paper/journal-article and dataset-snapshot sources additionally
+need a publication or release date. Other publication dates are optional, but must
+be valid when present. Do not invent unavailable bibliographic details.
+
+Store all source titles and notes, including English, in `sources_localizations`,
+keyed by `(source_id, locale)`. Source rows and embedded references have no title
+or note fields. Display and search use the selected source localization, falling
+back to English when it is missing. Review the displayed source text and citations
+as part of the record's localization review, with state on `node_localizations` and history in
+`node_review_history`. Source writes may include only the localization rows being
+changed. Rich record completeness requires every referenced source to have all six
+supported languages; if any source localization has a note/caveat, each required
+locale must include it. Content writes accept only `title`,
+`note`, and `translatedFromLocale` in these rows, never review or audit fields.
+Existing missing translations remain missing during validation; fallback
+presentation cannot make a source complete. A translated citation still
+references the same underlying source, not a translated publication or a new ID.
+For non-rich records, completeness assesses their existing node locales; richness
+requires the full six-language set.
+
+Substantive record edits invalidate affected `human_reviewed` localizations to
+`needs_revision`; edits to an original localization also invalidate its translated
+dependents. Shared neutral/relationship/route changes invalidate all node locales.
+Shared source edits invalidate all locales on every referencing record and advance
+those records' versions, so earlier preconditions become stale. A shared source
+edit that would break another rich record is rejected with that record's issues.
+These are record-API guarantees; deliberate direct database repairs must handle
+validation and review invalidation explicitly. No-op content edits preserve review
+acceptance. Review history retains the previous human decision.
+
+## Executable Example
+
+`server/src/fixtures/rich-record.json` is a compact FishBase content payload derived
+from the canonical record API. Its adjacent README records the snapshot and
+fixture-only additions. It is a test/documentation artifact, never a production
+source of truth or a payload to apply unchanged.
+
+`server/src/postgresGraphRepository.test.ts` loads the fixture, checks invalid
+variants, and uses PGlite (PostgreSQL in process) to exercise the actual schema,
+transactional PUT/PATCH, localization round-trips, dry runs, review invalidation,
+and shared-source behavior. Run `npm --workspace server test`; tests require no
+production database, credentials, or network access.
+
 ## Research Standard
 
 Prefer official and primary sources:
@@ -60,7 +162,8 @@ Prefer official and primary sources:
 
 For facts that may change, use current web research and record an `accessed_at` date in `sources`. Do not rely on memory for current counts, operator names, URLs, access rules, or pricing.
 
-Every important claim should be traceable to a `sources` row. Put source references directly on the relevant `nodes.properties_json` or `node_localizations.details_json` items by embedding a `source` object with `id`, `title`, and `url`.
+Every important claim should be traceable to a `sources` row. Put source references directly on the relevant `nodes.properties_json` or `node_localizations.details_json` items by embedding a `source` object with `id` and `url`. Resolve its title from `sources_localizations`.
+Use `sources_localizations` for localized source-facing titles and notes.
 
 ## URL Validation
 
@@ -105,7 +208,7 @@ Categories:
 - `format`: how the data is exposed or stored, such as web pages, CSV, parquet, API JSON, Darwin Core Archive, RDF, or relational database tables.
 - `standard`: identifiers, vocabularies, schemas, licenses, or protocols used by the database.
 
-Each neutral descriptor should have `id`, `category`, `label`, and optional `source`. Each localized descriptor entry should have the same `id` and a localized `description`.
+Each neutral descriptor should have `id`, `category`, `label`, and optional `source`. Each localized descriptor entry should have the same `id`, a localized `label`, and a localized `description`.
 
 Keep descriptors broad enough to scan. Do not create one descriptor per table unless table-level detail is essential.
 
@@ -137,7 +240,7 @@ Each neutral access path should have:
 - `type`: `read`, `submit`, or `partner_sync`.
 - `method`: lower_snake_case access mechanism.
 - `url`: direct portal, docs, contact, download, API, or terms page.
-- `source`: source object with `id`, `title`, and `url`.
+- `source`: source object with `id` and `url`; its title comes from `sources_localizations`.
 
 Each localized access path should have the same `id` plus:
 
@@ -211,11 +314,11 @@ Use a single Postgres transaction for each system backfill when practical.
 
 Recommended order:
 
-1. Upsert `sources`.
+1. Upsert `sources` together with any ready `sources_localizations` through `sources.upsert`.
 2. Upsert any new `nodes` for operators.
 3. Update `edges` for operator/governance/part-of links.
 4. Update the system row in `nodes`, including `url`, `record_depth`, and neutral `properties_json`.
-5. Upsert the target row in `node_localizations`, including `title`, `summary`, `description`, localized `details_json`, and localization review fields.
+5. Upsert the target row in `node_localizations`, including `title`, `summary`, `description`, and localized `details_json`. Use the dedicated review endpoint for review decisions.
 6. Update `ryu_routes` when the system has an approved operational route.
 7. Regenerate `client/public/bootstrap.public.json`.
 8. Run validation.

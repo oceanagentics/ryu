@@ -6,6 +6,8 @@ import {
   TableOutlined,
 } from "@ant-design/icons";
 import {
+  Alert,
+  Spin,
   Button,
   Empty,
   Flex,
@@ -23,7 +25,7 @@ import {
   countActiveFilters,
   getSystemFilterOptions,
   localizationCoverageFilterOptions,
-  resolveGraphSearch,
+  buildSystemRecords,
   reviewStateFilterOptions,
   type ClaimFilterKey,
   type GraphSearchFilters,
@@ -94,6 +96,9 @@ export function SystemDirectoryView({
   variant?: SystemDirectoryVariant;
 }) {
   const graph = useGraphStore((state) => state.graph);
+  const searchResult = useGraphStore((state) => state.searchResult);
+  const searchLoading = useGraphStore((state) => state.searchLoading);
+  const searchError = useGraphStore((state) => state.searchError);
   const selectedEntityId = useGraphStore((state) => state.selectedEntityId);
   const locale = useGraphStore((state) => state.locale);
   const searchAllLanguages = useGraphStore((state) => state.searchAllLanguages);
@@ -107,18 +112,21 @@ export function SystemDirectoryView({
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [mode, setMode] = useState<DirectoryMode>("cards");
 
-  const resolvedSearch = useMemo(
-    () => (graph
-      ? resolveGraphSearch(
-          graph,
-          { query, filters, searchAllLanguages },
-          locale,
-        )
-      : null),
-    [filters, graph, locale, query, searchAllLanguages],
-  );
-  const records = resolvedSearch?.systemRecords ?? [];
-  const filteredRecords = resolvedSearch?.filteredSystemRecords ?? [];
+  const records = useMemo(() => graph ? buildSystemRecords(graph, locale) : [], [graph, locale]);
+  const filteredRecords = useMemo(() => {
+    const byId = new Map(records.map(record => [record.entity.id, record]));
+    return (searchResult?.records ?? []).flatMap(match => {
+      const record = byId.get(match.id);
+      return record ? [{ ...record, title: match.title, summary: match.summary,
+        score: match.score ?? 0, matchReasons: match.matchReasons ?? [],
+        localization: { ...record.localization, title: match.title, summary: match.summary,
+          requestedLocale: match.requestedLocale, displayLocale: match.displayLocale,
+          isLocaleFallback: match.isLocaleFallback },
+        hasCurrentLocale: match.availableLocales.includes(locale),
+        currentLocaleReviewState: match.reviewStatesByLocale[locale] ?? null,
+      }] : [];
+    });
+  }, [locale, records, searchResult]);
   const filterOptions = useMemo(
     () => getSystemFilterOptions(records, locale),
     [locale, records],
@@ -366,7 +374,11 @@ export function SystemDirectoryView({
           </div>
         ) : null}
 
-        {filteredRecords.length === 0 ? (
+        {searchError ? (
+          <Alert type="error" showIcon message={searchError} />
+        ) : searchLoading ? (
+          <Spin />
+        ) : filteredRecords.length === 0 ? (
           <Empty description={t(locale, "directory.noSystemsMatch")} />
         ) : displayMode === "cards" ? (
           <div className="systems-card-grid">

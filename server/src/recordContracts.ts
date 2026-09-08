@@ -1,4 +1,7 @@
 import crypto from "node:crypto";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 import type {
   GraphEdge,
@@ -38,6 +41,7 @@ import type {
   RecordEdgeInput,
   RecordInclude,
   RecordListDto,
+  RecordListResult,
   RecordNeutralContentInput,
   RecordNeutralPatchInput,
   RecordPatchInput,
@@ -45,10 +49,12 @@ import type {
   RecordRouteInput,
   RecordSearchCursor,
   RecordSearchQuery,
+  RecordSourceInput,
   RecordSummaryDto,
   RecordValidationIssue,
   RecordValidationResult,
   ReviewLocaleMode,
+  SourceLocalizationContentInput,
 } from "../../shared/recordApi";
 import {
   isEdgeKind,
@@ -56,6 +62,7 @@ import {
   isRecord,
   isRecordDepth,
   isReviewState,
+  collectSourceIds,
   normalizeString,
 } from "./graphRepositorySupport";
 
@@ -64,6 +71,11 @@ const maxRecordLimit = 100;
 
 const queryFields = new Set([
   "q",
+  "role",
+  "countryCode",
+  "disciplineFamily",
+  "dataFormat",
+  "dataStandard",
   "kind",
   "geography",
   "dataType",
@@ -88,6 +100,8 @@ const recordIncludes = new Set<RecordInclude>([
   "sources",
   "routes",
   "matchReasons",
+  "matchingIds",
+  "reviewHistory",
 ]);
 const localeModes = new Set<LocaleMode>([
   "locale_only",
@@ -132,9 +146,10 @@ export function decodeRecordCursor(value: string): RecordSearchCursor {
     if (
       isRecord(parsed) &&
       typeof parsed.title === "string" &&
-      typeof parsed.id === "string"
+      typeof parsed.id === "string" &&
+      (parsed.score === undefined || (typeof parsed.score === "number" && Number.isFinite(parsed.score) && parsed.score >= 0))
     ) {
-      return { title: parsed.title, id: parsed.id };
+      return { title: parsed.title, id: parsed.id, score: parsed.score as number | undefined };
     }
   } catch {
     // handled below
@@ -186,6 +201,12 @@ export function readRecordSearchQuery(input: Record<string, unknown>): RecordSea
       readEnumValue(value, isNodeKind, "kind"),
     ),
     geography: readList(input.geography, "geography"),
+    role: readList(input.role, "role"),
+    countryCode: readList(input.countryCode, "countryCode"),
+    disciplineFamily: readList(input.disciplineFamily, "disciplineFamily"),
+    dataFormat: readList(input.dataFormat, "dataFormat"),
+    dataStandard: readList(input.dataStandard, "dataStandard"),
+
     dataType: readList(input.dataType, "dataType"),
     recordDepth: readList(input.recordDepth, "recordDepth").map((value) =>
       readEnumValue(value, isRecordDepth, "recordDepth"),
@@ -261,14 +282,10 @@ export function readRecordAggregateContentInput(
     ? readRequiredBoolean(body.incomplete, "incomplete")
     : undefined;
 
-  if (
-    record.recordDepth === "rich" &&
-    incomplete !== true &&
-    supportedLocales.some((locale) => !localizations?.[locale])
-  ) {
+  if (record.recordDepth === "rich" && incomplete === true) {
     throw new ApiRequestError(
       400,
-      "rich records require all supported localizations unless incomplete is true",
+      "incomplete records must use stub or thin recordDepth",
     );
   }
 
@@ -358,6 +375,206 @@ export function validateRecordAggregateContentInput(
   }
 }
 
+// Validate the merged, stored shape; PUT/PATCH request fragments are not records.
+export type RecordQualityInput = Omit<RecordAggregateContentInput, "sources"> & {
+  sources?: { upsert?: (Source | RecordSourceInput)[] };
+};
+
+export function validateRecordQuality(id: string, input: RecordQualityInput): RecordValidationResult {
+  const issues: RecordValidationIssue[] = [];
+  const sourceIssues: RecordValidationIssue[] = [];
+  const warnings: string[] = [];
+  const rich = input.record.recordDepth === "rich";
+  const sources = new Map((input.sources?.upsert ?? []).map(source => [source.id, source]));
+  const refs = collectSourceIds(input.record.properties);
+  const add = (field: string, message: string, evidence = false) => {
+    const issue = { recordId: id, path: field, message };
+    if (evidence) sourceIssues.push(issue);
+    if (rich) issues.push(issue);
+  };
+  const text = (value: unknown): value is string => typeof value === "string" && value.trim().length > 0;
+  const object = (value: unknown): Record<string, unknown> => isRecord(value) ? value : {};
+  const array = (value: unknown): Record<string, unknown>[] => Array.isArray(value) ? value.map(object) : [];
+  const requireText = (value: unknown, field: string) => {
+    if (!text(value)) add(field, "non-empty text is required");
+  };
+  const httpUrl = (value: unknown) => {
+    try { return text(value) && ["http:", "https:"].includes(new URL(value).protocol); }
+    catch { return false; }
+  };
+  const date = (value: unknown) => text(value) && /^\d{4}(-\d{2})?(-\d{2})?$/.test(value) &&
+    !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().startsWith(value);
+  const citation = (value: unknown, field: string) => {
+    const ref = object(value);
+    if (!text(ref.id)) add(field, "a source reference is required", true);
+    else {
+      refs.add(ref.id);
+      if (!httpUrl(ref.url)) add(field, "source HTTP(S) URL is required", true);
+      const source = sources.get(ref.id);
+      if (source && ref.url !== source.url) add(`${field}.url`, "must match the canonical source URL", true);
+    }
+  };
+  const citedProfile = (value: unknown, field: string) => {
+    const ids = object(value).sourceRefs;
+    if (!Array.isArray(ids) || ids.length === 0 || ids.some(ref => !text(ref))) {
+      add(`${field}.sourceRefs`, "profile source references are required", true);
+    }
+  };
+  const p = object(input.record.properties);
+  const data = object(p.data);
+  const descriptors = array(data.descriptors);
+  const access = array(p.access);
+  const gallery = array(p.gallery);
+  const usage = array(p.usage);
+  for (const [field, value] of [["access", p.access], ["gallery", p.gallery], ["usage", p.usage], ["data.descriptors", data.descriptors]] as const) {
+    if (value != null && (!Array.isArray(value) || value.some(item => !isRecord(item)))) add(`record.properties.${field}`, "must be an array of objects");
+  }
+  for (const key of ["recordCount", "storageSize"]) {
+    if (data[key] != null && !isRecord(data[key])) add(`record.properties.data.${key}`, "must be a metric object or null");
+  }
+  const metric = (item: Record<string, unknown>, field: string) => {
+    for (const key of ["id", "key", "unit"]) requireText(item[key], `${field}.${key}`);
+    if (typeof item.value !== "number" || !Number.isFinite(item.value) || item.value < 0) add(`${field}.value`, "a finite non-negative value is required");
+    if (!date(item.observedAt)) add(`${field}.observedAt`, "an observation date (YYYY, YYYY-MM, or YYYY-MM-DD) is required", true);
+    citation(item.source, `${field}.source`);
+  };
+  const asset = (value: unknown, field: string) => {
+    if (text(value) && value.startsWith("/gallery/")) {
+      const root = fileURLToPath(new URL("../../client/public/gallery/", import.meta.url));
+      const target = path.resolve(root, value.slice("/gallery/".length));
+      if (!target.startsWith(root) || !fs.existsSync(target)) add(field, "gallery asset must exist under client/public/gallery");
+    } else if (!httpUrl(value)) add(field, "a usable HTTP(S) URL or local gallery asset is required");
+  };
+
+  if (rich && !httpUrl(input.record.url)) add("record.url", "a canonical HTTP(S) URL is required");
+  if (input.record.kind === "system") {
+    for (const key of ["role", "disciplineFamily", "geographicScope"]) requireText(p[key], `record.properties.${key}`);
+    for (const category of ["type", "format"]) {
+      if (!descriptors.some(item => item.category === category)) add("record.properties.data.descriptors", `at least one ${category} descriptor is required`);
+    }
+    if (!access.some(item => item.type === "read")) add("record.properties.access", "at least one actual read access path is required");
+    if (!input.edges?.some(edge => edge.kind === "operates" && edge.targetNodeId === id)) add("edges", "an incoming operates relationship is required");
+  }
+  descriptors.forEach((item, i) => {
+    requireText(item.label, `record.properties.data.descriptors[${i}].label`);
+    if (!["type", "format", "standard"].includes(String(item.category))) add(`record.properties.data.descriptors[${i}].category`, "invalid descriptor category");
+    citation(item.source, `record.properties.data.descriptors[${i}].source`);
+  });
+  access.forEach((item, i) => {
+    const field = `record.properties.access[${i}]`;
+    if (!["read", "submit", "partner_sync"].includes(String(item.type))) add(`${field}.type`, "invalid access type");
+    if (!text(item.method) || !/^[a-z][a-z0-9_]*$/.test(item.method)) add(`${field}.method`, "a lower_snake_case method is required");
+    if (!httpUrl(item.url)) add(`${field}.url`, "an HTTP(S) URL is required");
+    citation(item.source, `${field}.source`);
+  });
+  gallery.forEach((item, i) => {
+    const field = `record.properties.gallery[${i}]`;
+    if (!["image", "embed"].includes(String(item.type))) add(`${field}.type`, "invalid gallery type");
+    asset(item.url, `${field}.url`);
+    if (item.type === "image" || item.thumbnailUrl != null) asset(item.thumbnailUrl, `${field}.thumbnailUrl`);
+    citation(item.source, `${field}.source`);
+  });
+  for (const key of ["recordCount", "storageSize"]) {
+    if (data[key] != null) metric(object(data[key]), `record.properties.data.${key}`);
+  }
+  if (data.storageSize != null && object(data.storageSize).unit !== "bytes") add("record.properties.data.storageSize.unit", "storage size must be stored in bytes");
+  usage.forEach((item, i) => metric(item, `record.properties.usage[${i}]`));
+
+  const locales = rich ? supportedLocales : Object.keys(input.localizations ?? {}) as SupportedLocale[];
+  for (const locale of locales) {
+    const l = input.localizations?.[locale];
+    const field = `localizations.${locale}`;
+    if (!l) { add(field, "a complete localization is required"); continue; }
+    requireText(l.title, `${field}.title`);
+    if (input.record.kind === "system") {
+      requireText(l.summary, `${field}.summary`);
+      requireText(l.description, `${field}.description`);
+    }
+    if (l.translatedFromLocale === locale || (l.translatedFromLocale && !input.localizations?.[l.translatedFromLocale])) add(`${field}.translatedFromLocale`, "must refer to a different existing localization");
+    const details = object(l.details);
+    collectSourceIds(details, refs);
+    citedProfile(details.profile, `${field}.details.profile`);
+    const localizedData = object(details.data);
+    const sections: [string, Record<string, unknown>[], unknown, string[]][] = [
+      ["data.descriptors", descriptors, localizedData.descriptors, ["label", "description"]],
+      ["access", access, details.access, ["label", "description"]],
+      ["gallery", gallery, details.gallery, ["title", "caption"]],
+      ["usage", usage, details.usage, ["description"]],
+    ];
+    for (const [section, neutral, localized, fields] of sections) {
+      const rows = array(localized);
+      const ids = new Set(neutral.map(item => item.id));
+      if (ids.size !== neutral.length || neutral.some(item => !text(item.id))) add(`record.properties.${section}`, "item IDs must be present and unique");
+      if (rows.length !== neutral.length || new Set(rows.map(item => item.id)).size !== rows.length || rows.some(item => !ids.has(item.id))) add(`${field}.details.${section}`, "localized item IDs must exactly match neutral item IDs");
+      for (const item of neutral) {
+        const translated = rows.find(row => row.id === item.id) ?? {};
+        for (const key of fields) requireText(translated[key], `${field}.details.${section}.${item.id}.${key}`);
+      }
+    }
+    for (const key of ["recordCount", "storageSize"]) {
+      if (data[key] != null) {
+        const translated = object(localizedData[key]);
+        if (translated.id !== object(data[key]).id) add(`${field}.details.data.${key}.id`, "must match the neutral metric ID");
+        requireText(translated.description, `${field}.details.data.${key}.description`);
+      } else if (localizedData[key] != null) add(`${field}.details.data.${key}`, "localized metric has no neutral metric");
+    }
+    if (input.record.kind === "system") {
+      for (const [key, present] of [["recordCount", data.recordCount != null], ["storageSize", data.storageSize != null], ["usage", usage.length > 0], ["standards", descriptors.some(item => item.category === "standard")]] as const) {
+        if (!present && !text(object(details.researchGaps)[key])) add(`${field}.details.researchGaps.${key}`, "document the research gap when this information is unavailable");
+      }
+    }
+  }
+  for (const edge of input.edges ?? []) {
+    collectSourceIds(edge.properties, refs);
+    if (collectSourceIds(edge.properties).size === 0) add(`edges.${edge.id}.properties.sourceRefs`, "relationship evidence is required", true);
+  }
+  for (const route of input.routes ?? []) {
+    collectSourceIds(route.properties, refs);
+    if (collectSourceIds(route.properties).size === 0) add(`routes.${route.id}.properties.sourceRefs`, "route evidence is required", true);
+    if (!["active", "planned", "deprecated", "blocked"].includes(route.status)) add(`routes.${route.id}.status`, "invalid route status");
+    if (route.status === "active") {
+      requireText(route.target, `routes.${route.id}.target`);
+      if (!route.capabilities?.length) add(`routes.${route.id}.capabilities`, "active routes require capabilities");
+      requireText(route.contractRef, `routes.${route.id}.contractRef`);
+    }
+    if (route.contractRef && !httpUrl(route.contractRef)) {
+      const root = fileURLToPath(new URL("../../documentation/contracts/", import.meta.url));
+      const target = path.resolve(root, route.contractRef.replace(/^documentation\/contracts\//, ""));
+      if (!route.contractRef.startsWith("documentation/contracts/") || !target.startsWith(root) || !fs.existsSync(target)) add(`routes.${route.id}.contractRef`, "local contracts must resolve under documentation/contracts");
+    }
+  }
+  for (const ref of refs) {
+    const source = sources.get(ref);
+    const field = `sources.${ref}`;
+    if (!source) { add(field, "referenced source does not exist or appear in sources.upsert", true); continue; }
+    if (!text(source.sourceType) || !text(source.publisher)) add(field, "source type and publisher are required", true);
+    if (!httpUrl(source.url)) add(`${field}.url`, "a public HTTP(S) provenance URL is required", true);
+    if (!date(source.accessedAt)) add(`${field}.accessedAt`, "an access date is required", true);
+    if (source.publishedAt != null && !date(source.publishedAt)) add(`${field}.publishedAt`, "invalid publication date", true);
+    if (["publication", "paper", "journal_article", "dataset_snapshot"].includes(source.sourceType) && !date(source.publishedAt)) add(`${field}.publishedAt`, "publication/snapshot sources require a publication or release date", true);
+    for (const locale of locales) {
+      const localization = source.localizations?.[locale];
+      if (!localization || !text(localization.title)) add(`${field}.localizations.${locale}.title`, "localized source title is required; fallback does not count", true);
+      if (Object.values(source.localizations ?? {}).some(value => text(value?.note)) && !text(localization?.note)) add(`${field}.localizations.${locale}.note`, "localize the source note/caveat", true);
+      if (localization?.translatedFromLocale && (localization.translatedFromLocale === locale || !source.localizations?.[localization.translatedFromLocale])) add(`${field}.localizations.${locale}.translatedFromLocale`, "must refer to a different existing source localization", true);
+    }
+  }
+  if (rich && input.record.kind === "system") {
+    if (!gallery.length) warnings.push("No gallery: acceptable when no useful, accessible capture is available.");
+    if (!input.routes?.length) warnings.push("No approved machine route is recorded.");
+    if (Object.values(input.localizations ?? {}).some(l => Object.keys(l?.details?.researchGaps ?? {}).length)) warnings.push("Documented research gaps remain; omitted values have not been invented.");
+  }
+  return {
+    valid: issues.length === 0, recordId: id, issues, warnings,
+    sourceCompleteness: {
+      status: refs.size === 0 ? "missing" : sourceIssues.length ? "partial" : "complete",
+      referencedSources: refs.size,
+      resolvedSources: [...refs].filter(ref => sources.has(ref)).length,
+      issues: sourceIssues,
+    },
+  };
+}
+
 export function validateBulkRecordPayload(input: BulkRecordValidationInput): BulkRecordValidationResult {
   return {
     valid: true,
@@ -367,8 +584,7 @@ export function validateBulkRecordPayload(input: BulkRecordValidationInput): Bul
 }
 
 export function toRecordListDto(
-  records: RecordAggregate[],
-  nextCursor: string | null,
+  { records, nextCursor, total, matchingIds }: RecordListResult,
   scope: RecordDtoScope,
   include: RecordInclude[],
   locale: SupportedLocale,
@@ -377,6 +593,7 @@ export function toRecordListDto(
     item === "localizations" ||
     item === "edges" ||
     item === "sources" ||
+    item === "reviewHistory" ||
     item === "routes",
   );
 
@@ -387,6 +604,8 @@ export function toRecordListDto(
         : toRecordSummaryDto(record, include, locale),
     ),
     nextCursor,
+    total,
+    ...(matchingIds ? { matchingIds } : {}),
   };
 }
 
@@ -401,6 +620,7 @@ export function toRecordDetailDto(
 
   return {
     ...toRecordSummaryDto(aggregate, include, locale),
+    ...(includeSet.has("sources") ? { sourceCompleteness: validateRecordQuality(node.id, recordContent(aggregate)).sourceCompleteness } : {}),
     record: {
       id: node.id,
       kind: node.kind,
@@ -422,6 +642,24 @@ export function toRecordDetailDto(
     ...(includeSet.has("routes")
       ? { routes: aggregate.routes.map((route) => mapRouteDto(route, scope)) }
       : {}),
+    ...(includeSet.has("reviewHistory")
+      ? { reviewHistory: (aggregate.reviewHistory ?? []).map((event) =>
+          scope === "public"
+            ? { locale: event.locale, kind: event.kind, from: event.from, to: event.to }
+            : event,
+        ) }
+      : {}),
+  };
+}
+
+export function recordContent(aggregate: RecordAggregate): RecordQualityInput {
+  return {
+    id: aggregate.node.id,
+    record: aggregate.node,
+    localizations: aggregate.node.localizations,
+    edges: aggregate.edges,
+    sources: { upsert: aggregate.sources },
+    routes: aggregate.routes,
   };
 }
 
@@ -472,6 +710,7 @@ export function toRecordSummaryDto(
     isLocaleFallback: localization.isLocaleFallback,
     updatedAt: node.updatedAt,
     recordUpdatedAt,
+    ...(aggregate.score !== undefined ? { score: aggregate.score, matchedLocale: aggregate.matchedLocale } : {}),
     ...(include.includes("matchReasons") ? { matchReasons: aggregate.matchReasons } : {}),
   };
 }
@@ -517,7 +756,6 @@ function mapLocalizationDto(
     summary: localization.summary,
     description: localization.description,
     details: localization.details,
-    sourceExcerpt: localization.sourceExcerpt,
     translatedFromLocale: localization.translatedFromLocale,
     contentUpdatedAt: localization.contentUpdatedAt,
     reviewState: localization.reviewState,
@@ -661,7 +899,7 @@ function readLocalizationContentInput(input: unknown, path: string): Localizatio
   assertNoReviewAuditFields(body, path);
   assertAllowedFields(
     body,
-    new Set(["title", "summary", "description", "details", "sourceExcerpt", "translatedFromLocale"]),
+    new Set(["title", "summary", "description", "details", "translatedFromLocale"]),
     path,
   );
 
@@ -673,9 +911,6 @@ function readLocalizationContentInput(input: unknown, path: string): Localizatio
       : undefined,
     details: hasOwn(body, "details")
       ? readJsonObject(body.details, `${path}.details`) as NodeLocalizationDetails
-      : undefined,
-    sourceExcerpt: hasOwn(body, "sourceExcerpt")
-      ? readNullableString(body.sourceExcerpt, `${path}.sourceExcerpt`)
       : undefined,
     translatedFromLocale: hasOwn(body, "translatedFromLocale")
       ? readOptionalEnum(body.translatedFromLocale, isSupportedLocale, `${path}.translatedFromLocale`) ?? null
@@ -694,7 +929,7 @@ function readLocalizationPatchInput(input: unknown, path: string): LocalizationP
   if (mode === "replace") {
     assertAllowedFields(
       body,
-      new Set(["mode", "title", "summary", "description", "details", "sourceExcerpt", "translatedFromLocale"]),
+      new Set(["mode", "title", "summary", "description", "details", "translatedFromLocale"]),
       path,
     );
     const content = readLocalizationContentInput(
@@ -706,7 +941,7 @@ function readLocalizationPatchInput(input: unknown, path: string): LocalizationP
 
   assertAllowedFields(
     body,
-    new Set(["mode", "title", "summary", "description", "detailsReplace", "sourceExcerpt", "translatedFromLocale"]),
+    new Set(["mode", "title", "summary", "description", "detailsReplace", "translatedFromLocale"]),
     path,
   );
   if (Object.keys(body).length === 1) {
@@ -722,9 +957,6 @@ function readLocalizationPatchInput(input: unknown, path: string): LocalizationP
       : undefined,
     detailsReplace: hasOwn(body, "detailsReplace")
       ? readJsonObject(body.detailsReplace, `${path}.detailsReplace`) as NodeLocalizationDetails
-      : undefined,
-    sourceExcerpt: hasOwn(body, "sourceExcerpt")
-      ? readNullableString(body.sourceExcerpt, `${path}.sourceExcerpt`)
       : undefined,
     translatedFromLocale: hasOwn(body, "translatedFromLocale")
       ? readOptionalEnum(body.translatedFromLocale, isSupportedLocale, `${path}.translatedFromLocale`) ?? null
@@ -785,30 +1017,72 @@ function readEdgeInput(input: unknown, recordId: string, path: string): RecordEd
   return edge;
 }
 
-function readSourceInputs(input: unknown, path: string) {
+function readSourceInputs(input: unknown, path: string): RecordSourceInput[] {
   if (!Array.isArray(input)) {
     throw new ApiRequestError(400, `${path} must be an array`);
   }
 
   return input.map((item, index) => {
-    const body = readObject(item, `${path}[${index}]`);
+    const itemPath = `${path}[${index}]`;
+    const body = readObject(item, itemPath);
     assertAllowedFields(
       body,
-      new Set(["id", "title", "sourceType", "url", "localPath", "publisher", "publishedAt", "accessedAt", "note"]),
-      `${path}[${index}]`,
+      new Set(["id", "sourceType", "url", "localPath", "publisher", "publishedAt", "accessedAt", "localizations"]),
+      itemPath,
     );
     return {
-      id: readRequiredId(body.id, `${path}[${index}].id`),
-      title: readRequiredString(body.title, `${path}[${index}].title`),
-      sourceType: readRequiredString(body.sourceType, `${path}[${index}].sourceType`),
-      url: readNullableString(body.url, `${path}[${index}].url`),
-      localPath: readNullableString(body.localPath, `${path}[${index}].localPath`),
-      publisher: readNullableString(body.publisher, `${path}[${index}].publisher`),
-      publishedAt: readNullableString(body.publishedAt, `${path}[${index}].publishedAt`),
-      accessedAt: readNullableString(body.accessedAt, `${path}[${index}].accessedAt`),
-      note: readNullableString(body.note, `${path}[${index}].note`),
+      id: readRequiredId(body.id, `${itemPath}.id`),
+      sourceType: readRequiredString(body.sourceType, `${itemPath}.sourceType`),
+      url: readNullableString(body.url, `${itemPath}.url`),
+      localPath: readNullableString(body.localPath, `${itemPath}.localPath`),
+      publisher: readNullableString(body.publisher, `${itemPath}.publisher`),
+      publishedAt: readNullableString(body.publishedAt, `${itemPath}.publishedAt`),
+      accessedAt: readNullableString(body.accessedAt, `${itemPath}.accessedAt`),
+      ...(hasOwn(body, "localizations")
+        ? { localizations: readSourceLocalizationInputs(body.localizations, `${itemPath}.localizations`) }
+        : {}),
     };
   });
+}
+
+function readSourceLocalizationInputs(
+  input: unknown,
+  path: string,
+): RecordSourceInput["localizations"] {
+  const body = readObject(input, path);
+  const unsupported = Object.keys(body).filter((locale) => !isSupportedLocale(locale));
+  if (unsupported.length > 0) {
+    throw new ApiRequestError(400, `unsupported source locale: ${unsupported.join(", ")}`);
+  }
+
+  return Object.fromEntries(
+    Object.entries(body).map(([locale, value]) => [
+      locale,
+      readSourceLocalizationInput(value, `${path}.${locale}`, locale as SupportedLocale),
+    ]),
+  ) as RecordSourceInput["localizations"];
+}
+
+function readSourceLocalizationInput(
+  input: unknown,
+  path: string,
+  locale: SupportedLocale,
+): SourceLocalizationContentInput {
+  const body = readObject(input, path);
+  assertNoReviewAuditFields(body, path);
+  assertAllowedFields(body, new Set(["title", "note", "translatedFromLocale"]), path);
+  const translatedFromLocale =
+    readOptionalEnum(body.translatedFromLocale, isSupportedLocale, `${path}.translatedFromLocale`) ?? null;
+  if (translatedFromLocale === locale) {
+    throw new ApiRequestError(400, `${path}.translatedFromLocale must differ from locale`);
+  }
+  const note = hasOwn(body, "note") ? readNullableString(body.note, `${path}.note`) : null;
+
+  return {
+    title: readRequiredString(body.title, `${path}.title`),
+    note,
+    translatedFromLocale,
+  };
 }
 
 function readRouteInputs(input: unknown, recordId: string, path: string): RecordRouteInput[] {
@@ -991,6 +1265,18 @@ function readJsonObject(value: unknown, path: string): Record<string, unknown> {
     throw new ApiRequestError(400, `${path} must be a JSON object`);
   }
 
+  const checkSourceRefs = (item: unknown, itemPath: string, sourceRef = false) => {
+    if (Array.isArray(item)) {
+      item.forEach((child, index) => checkSourceRefs(child, `${itemPath}[${index}]`));
+    } else if (isRecord(item)) {
+      if ((sourceRef || (typeof item.id === "string" && item.id.startsWith("src-"))) &&
+        (hasOwn(item, "title") || hasOwn(item, "note"))) {
+        throw new ApiRequestError(400, `${itemPath}: source title/note belong in sources.upsert[].localizations`);
+      }
+      Object.entries(item).forEach(([key, child]) => checkSourceRefs(child, `${itemPath}.${key}`, key === "source"));
+    }
+  };
+  checkSourceRefs(value, path);
   return value;
 }
 

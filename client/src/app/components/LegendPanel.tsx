@@ -1,49 +1,64 @@
 import { Card, Flex, Tag, Typography } from "antd";
 
+import type { GraphNodeKind } from "../../../../shared/domain";
 import { facetLabel, t } from "../i18n";
 import { useGraphStore } from "../state/graphStore";
 
-const nodeItems = [
-  { className: "governance", kind: "country" },
-  { className: "technical", kind: "organization" },
-  { className: "platform", kind: "system" },
-];
-
-const edgeItems = [
-  { className: "hierarchy", kind: "part_of" },
-  { className: "governs", kind: "governs" },
-  { className: "operates", kind: "operates" },
-  { className: "publishes", kind: "publishes_to" },
-  { className: "syncs", kind: "syncs_to" },
-];
+const nodeItems: GraphNodeKind[] = ["country", "organization", "system"];
 
 export function LegendPanel() {
   const locale = useGraphStore((state) => state.locale);
+  const hiddenNodeKinds = useGraphStore((state) => state.hiddenNodeKinds);
+  const toggleNodeKindVisibility = useGraphStore(
+    (state) => state.toggleNodeKindVisibility,
+  );
+  const resetNodeKindFilters = useGraphStore((state) => state.resetNodeKindFilters);
+  const hiddenKindSet = new Set(hiddenNodeKinds);
+  const hasHiddenNodeKinds = hiddenNodeKinds.length > 0;
 
   return (
-    <Card size="small" title={t(locale, "graph.legend")}>
-      <Flex gap={24} align="flex-start" wrap>
+    <Card
+      size="small"
+      title={t(locale, "graph.legend")}
+      extra={
+        hasHiddenNodeKinds ? (
+          <button
+            className="legend-reset"
+            type="button"
+            onClick={resetNodeKindFilters}
+          >
+            {t(locale, "directory.reset")}
+          </button>
+        ) : null
+      }
+    >
+      <Flex vertical gap={10} align="stretch">
         <Flex vertical gap={8} className="legend-column">
           <Typography.Text strong>{t(locale, "graph.nodes")}</Typography.Text>
-          {nodeItems.map((item) => (
-            <Flex key={item.kind} align="center" gap={8}>
-              <span className={`legend-chip ${item.className}`} />
-              <Typography.Text>{facetLabel(locale, "nodeKind", item.kind)}</Typography.Text>
-            </Flex>
+          {nodeItems.map((kind) => (
+            <button
+              aria-pressed={!hiddenKindSet.has(kind)}
+              className={[
+                "legend-node-filter",
+                hiddenKindSet.has(kind) ? "is-inactive" : "",
+              ].filter(Boolean).join(" ")}
+              key={kind}
+              title={t(
+                locale,
+                hiddenKindSet.has(kind)
+                  ? "graph.showNodeKind"
+                  : "graph.hideNodeKind",
+                { kind: facetLabel(locale, "nodeKind", kind) },
+              )}
+              type="button"
+              onClick={() => toggleNodeKindVisibility(kind)}
+            >
+              <span className={`legend-chip ${kind}`} />
+              <span className="legend-node-filter-label">
+                {facetLabel(locale, "nodeKind", kind)}
+              </span>
+            </button>
           ))}
-        </Flex>
-        <Flex vertical gap={8} className="legend-column">
-          <Typography.Text strong>{t(locale, "graph.edges")}</Typography.Text>
-          {edgeItems.map((item) => (
-            <Flex key={item.kind} align="center" gap={8}>
-              <span className={`legend-chip ${item.className}`} />
-              <Typography.Text>{facetLabel(locale, "edgeKind", item.kind)}</Typography.Text>
-            </Flex>
-          ))}
-          <Flex align="center" gap={8}>
-            <span className="legend-chip planned" />
-            <Typography.Text>{t(locale, "graph.plannedRelationships")}</Typography.Text>
-          </Flex>
         </Flex>
         <Tag bordered={false} color="default" className="legend-note">
           {t(locale, "graph.legendNote")}

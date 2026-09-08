@@ -18,7 +18,7 @@ Use this checklist to track the one-go implementation.
 - [x] Confirm production Cloud SQL schema immediately before the migration job runs.
 - [x] Add a checked-in migration runner for this change.
 - [x] Add hardened `supported_locales` and `node_localizations` DDL.
-- [x] Backfill one source localization per node.
+- [x] Backfill one English node localization per node.
 - [x] Remove node-level `name`, `summary`, `description`, `details_json`, `review_state`, and `review_json`.
 - [x] Move all user-facing record text and review fields to `node_localizations`.
 - [x] Remove identifiers from the record model, UI, search, and reviewer docs.
@@ -151,7 +151,7 @@ Do not make production data edits by hand from CHM unless they are part of a del
 
 ## Localization Coverage API
 
-Localization coverage is now part of SQL-backed record search, not a separate
+Localization coverage is now part of API-owned record search, not a separate
 coverage endpoint. Use `GET /api/records` with:
 
 - `localeAvailability=available`: the requested `locale` row exists.
@@ -457,7 +457,6 @@ title
 summary
 description
 details_json
-source_excerpt
 translated_from_locale
 content_updated_at
 review_state
@@ -479,7 +478,6 @@ CREATE TABLE node_localizations (
   summary TEXT,
   description TEXT,
   details_json JSONB NOT NULL DEFAULT '{}'::jsonb,
-  source_excerpt TEXT,
   translated_from_locale TEXT REFERENCES supported_locales(locale)
     CHECK (translated_from_locale IS NULL OR translated_from_locale <> locale),
   content_updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -509,7 +507,6 @@ BEGIN
     OR NEW.summary IS DISTINCT FROM OLD.summary
     OR NEW.description IS DISTINCT FROM OLD.description
     OR NEW.details_json IS DISTINCT FROM OLD.details_json
-    OR NEW.source_excerpt IS DISTINCT FROM OLD.source_excerpt
     OR NEW.translated_from_locale IS DISTINCT FROM OLD.translated_from_locale THEN
     NEW.content_updated_at = CURRENT_TIMESTAMP;
   END IF;
@@ -707,13 +704,33 @@ Move localized connection summaries or explanations into `node_localizations.det
 
 ### Sources
 
-Keep source records in `sources`.
+Keep shared source metadata in `sources`. Store all source titles and notes,
+including English, in `sources_localizations`. Embedded source references carry
+`id` and `url`; their displayed titles resolve from the selected source locale,
+with English fallback. Source content writes reject top-level titles/notes and
+embedded copies of those fields.
 
-Localized source excerpts for a node can live in `node_localizations.source_excerpt`.
+For existing databases, `server/schema/004_source_text_in_localizations.sql`
+preserves existing localized text, moves legacy source text into a matching locale
+or a missing English row, and removes `sources.title`, `sources.note`, and embedded
+citation labels. Conflicting source text stops and rolls back the migration so it
+can be placed in the appropriate localization without overwriting translations.
+The migration is transactional and safe to rerun; record review state/history
+remain intact. Coordinate this migration with the application release: old
+instances require the removed columns, and new source writes require the new
+schema. Regenerate the public export from the migrated database.
 
 ## Review Model
 
-Review should move to the localization level.
+Review each record in a given language, including its claims, citations, and
+displayed source titles/notes. Review state belongs to `node_localizations`;
+source localizations store translated text without separate review state.
+
+For existing databases, deploy the updated source write path before applying
+`server/schema/003_drop_source_localization_review.sql` with schema-capable
+credentials. The migration is transactional and safe to rerun. It removes the
+source review columns and their indexes while preserving source text and record
+review history.
 
 Instead of reviewing the node as a whole:
 
@@ -732,6 +749,23 @@ node_localizations.last_reviewed
 ```
 
 `review_state` sits on `node_localizations`, not on the language-neutral `nodes` row. API responses can expose it as `reviewState` to match the existing camelCase contract.
+
+`node_review_history` keeps one row per node, with a chronological `history_json`
+array covering all its localizations. Each event contains `locale`, `kind`
+(`baseline`, `initial`, or `review`), `from`, `to`, `actor`, `at`, `note`, and
+`contentUpdatedAt`. Baselines preserve the latest known review metadata without
+inventing earlier transitions or the content version previously reviewed.
+Localization inserts and review metadata updates append events through a Postgres
+trigger in the same transaction. Content edits that leave review metadata unchanged
+do not append review events. There is no client history-replacement API.
+
+Before deploying history reads, apply `server/schema/002_node_review_history.sql`
+with schema-capable credentials. It is transactional and safe to rerun; the full
+reference schema includes the same table and trigger. Node deletion cascades to
+its history. `GET /api/records/:id?include=reviewHistory` returns all locale events;
+the details UI filters by displayed language or shows all languages. Public
+events expose only locale, event kind, and states; actor, note, review timestamp,
+and reviewed content timestamp remain authenticated fields.
 
 If current review metadata is stored inside `nodes.review_json`, split the existing note, reviewer, and timestamp values into `node_localizations.reviewer_note`, `node_localizations.reviewer`, and `node_localizations.last_reviewed` during backfill. Keep the API names `reviewState`, `reviewerNote`, `reviewer`, and `lastReviewed` as JSON field names for localization objects, not as node-level fields.
 
@@ -810,7 +844,6 @@ Example node response shape:
       "summary": "...",
       "description": "...",
       "details": {},
-      "sourceExcerpt": null,
       "translatedFromLocale": null,
       "contentUpdatedAt": "2026-08-31T19:45:32.457Z",
       "reviewState": "human_reviewed",
@@ -823,7 +856,6 @@ Example node response shape:
       "summary": "...",
       "description": "...",
       "details": {},
-      "sourceExcerpt": null,
       "reviewState": "agent_researched",
       "translatedFromLocale": "en"
     }
@@ -849,7 +881,7 @@ Treat search as a localization-aware index over localization rows plus language-
 Ground-up search model:
 
 - Search documents are keyed by `(node_id, locale)`.
-- Localized text comes only from `node_localizations`.
+- Record text comes from `node_localizations`; source titles and notes come from `sources_localizations`, resolved independently with English fallback.
 - Language-neutral filters and facets come from `nodes`, `edges`, `ryu_routes`, and `nodes.properties_json`.
 - Browse/list views resolve the displayed localization for each node with the same fallback chain used by details and graph labels.
 - Query matching in default mode searches the resolved display localization for each node, not only rows whose locale equals the requested UI locale.
@@ -858,7 +890,7 @@ Ground-up search model:
 - Optional "search all languages" mode may search every stored localization and must report which locale matched.
 - Search results must carry both `displayLocale` and `matchedLocale`.
 
-For the first release, keep the current bootstrap/client-side search model if record count remains small, but rebuild it around explicit localization search documents:
+The record API owns matching, aliases, fallback, filters, ranking, and explanations. The browser sends search intent and shares the API result between its directory and graph. Search evaluates these fields:
 
 - Language-neutral fields from `nodes` and other operational tables: `id`, `kind`, `subtype`, `country_code`, `record_depth`, route status, access types, and stable facet codes.
 - Localized fields from `node_localizations`: `title`, `summary`, `description`, localized details prose, `locale`, and `review_state`.
@@ -899,7 +931,7 @@ Tokenizer behavior:
 - Use Unicode-aware normalization and tokenization, not ASCII-only token rules.
 - Preserve Arabic, Chinese, Cyrillic, accented Latin, and mixed-script names.
 - Use locale-aware case folding where available.
-- Use `Intl.Segmenter` when running client-side search. For Chinese, segment by word when possible and fall back to short character n-grams if segmentation is unavailable.
+- Use `Intl.Segmenter` in the server matcher. For Chinese, segment by word when possible and fall back to short character n-grams if segmentation is unavailable.
 - Keep exact node-id matching as a separate language-neutral affordance for reviewer workflows, but do not let id matching stand in for translated record text.
 
 Good first-pass filters:
@@ -1051,7 +1083,7 @@ The migration runner should:
 - Confirm required trigger functions and roles exist before applying DDL.
 - Create `supported_locales`.
 - Create `node_localizations`.
-- Backfill one source localization row per node.
+- Backfill one English node localization row per node.
 - Move `name`, `summary`, `description`, `details_json`, and review fields into that localization row.
 - Remove `details_json.identifiers` during the backfill.
 - Normalize access type values during the backfill.

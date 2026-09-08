@@ -1,3 +1,4 @@
+import type { RecordListDto } from "../../../../shared/recordApi";
 /**
  * Zustand state for graph data, view intent, selection state, and saved view metadata.
  */
@@ -6,6 +7,7 @@ import { create } from "zustand";
 import type {
   GraphBootstrapPayload,
   GraphNode,
+  GraphNodeKind,
   SavedView,
   SupportedLocale,
   ViewMode,
@@ -35,6 +37,8 @@ export const graphLayouts = [
 export type GraphLayout = (typeof graphLayouts)[number];
 export type CountryDisplayMode = "node" | "engulf";
 export type GraphDisplayMode = "graph" | "globe";
+
+const filterableNodeKinds: GraphNodeKind[] = ["country", "organization", "system"];
 
 function getInitialDisplayMode(): GraphDisplayMode {
   if (typeof window === "undefined") {
@@ -69,6 +73,11 @@ interface GraphState {
   searchQuery: string;
   searchAllLanguages: boolean;
   searchFilters: GraphSearchFilters;
+  searchResult: RecordListDto | null;
+  searchEntityIds: Set<string> | null;
+  searchLoading: boolean;
+  searchError: string | null;
+  hiddenNodeKinds: GraphNodeKind[];
   setBootstrap: (payload: GraphBootstrapPayload) => void;
   setSavedViews: (savedViews: SavedView[]) => void;
   updateNode: (node: GraphNode) => void;
@@ -86,6 +95,8 @@ interface GraphState {
   setSearchQuery: (searchQuery: string) => void;
   setSearchAllLanguages: (searchAllLanguages: boolean) => void;
   setSearchFilters: (searchFilters: GraphSearchFilters) => void;
+  toggleNodeKindVisibility: (nodeKind: GraphNodeKind) => void;
+  resetNodeKindFilters: () => void;
   resetSearchFilters: () => void;
   resetSearch: () => void;
   resetSelection: () => void;
@@ -108,6 +119,11 @@ export const useGraphStore = create<GraphState>((set) => ({
   searchQuery: "",
   searchAllLanguages: false,
   searchFilters: emptySearchFilters(),
+  searchResult: null,
+  searchEntityIds: null,
+  searchLoading: false,
+  searchError: null,
+  hiddenNodeKinds: [],
   setBootstrap: (payload) =>
     set({
       graph: indexGraph(payload),
@@ -162,6 +178,22 @@ export const useGraphStore = create<GraphState>((set) => ({
   setSearchQuery: (searchQuery) => set({ searchQuery }),
   setSearchAllLanguages: (searchAllLanguages) => set({ searchAllLanguages }),
   setSearchFilters: (searchFilters) => set({ searchFilters }),
+  toggleNodeKindVisibility: (nodeKind) =>
+    set((state) => {
+      const hiddenNodeKinds = new Set(state.hiddenNodeKinds);
+      if (hiddenNodeKinds.has(nodeKind)) {
+        hiddenNodeKinds.delete(nodeKind);
+      } else {
+        hiddenNodeKinds.add(nodeKind);
+      }
+
+      return {
+        hiddenNodeKinds: filterableNodeKinds.filter((kind) =>
+          hiddenNodeKinds.has(kind),
+        ),
+      };
+    }),
+  resetNodeKindFilters: () => set({ hiddenNodeKinds: [] }),
   resetSearchFilters: () => set({ searchFilters: emptySearchFilters() }),
   resetSearch: () =>
     set({

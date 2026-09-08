@@ -7,7 +7,6 @@ import { projectCytoscapeGraph } from "../graph/layout";
 import { projectGraph } from "../graph/projection";
 import { useCytoscapeController } from "../graph/useCytoscapeController";
 import type { GraphDisplayMode } from "../graph/cytoscapeStyles";
-import { resolveGraphSearch } from "../search";
 import { useGraphStore } from "../state/graphStore";
 
 interface GraphCanvasProps {
@@ -22,23 +21,12 @@ export function GraphCanvas({ displayMode = "diagram" }: GraphCanvasProps) {
   const focusEntityId = useGraphStore((state) => state.focusEntityId);
   const selectedEntityId = useGraphStore((state) => state.selectedEntityId);
   const locale = useGraphStore((state) => state.locale);
-  const searchQuery = useGraphStore((state) => state.searchQuery);
-  const searchAllLanguages = useGraphStore((state) => state.searchAllLanguages);
-  const searchFilters = useGraphStore((state) => state.searchFilters);
+  const searchEntityIds = useGraphStore((state) => state.searchEntityIds);
+  const hiddenNodeKinds = useGraphStore((state) => state.hiddenNodeKinds);
 
   const [container, setContainer] = useState<HTMLDivElement | null>(null);
   const structuralFocusEntityId =
     viewMode === "governance" ? null : focusEntityId;
-  const resolvedSearch = useMemo(
-    () => (graph
-      ? resolveGraphSearch(
-          graph,
-          { query: searchQuery, filters: searchFilters, searchAllLanguages },
-          locale,
-        )
-      : null),
-    [graph, locale, searchAllLanguages, searchFilters, searchQuery],
-  );
 
   const projection = useMemo(() => {
     if (!graph) {
@@ -51,11 +39,18 @@ export function GraphCanvas({ displayMode = "diagram" }: GraphCanvasProps) {
       countryDisplayMode,
       focusEntityId: structuralFocusEntityId,
       locale,
-      searchEntityIds: resolvedSearch?.active
-        ? resolvedSearch.matchingEntityIds
-        : null,
+      hiddenNodeKinds,
+      searchEntityIds,
     });
-  }, [countryDisplayMode, graph, locale, resolvedSearch, structuralFocusEntityId, viewMode]);
+  }, [
+    countryDisplayMode,
+    graph,
+    hiddenNodeKinds,
+    locale,
+    searchEntityIds,
+    structuralFocusEntityId,
+    viewMode,
+  ]);
 
   const cytoscapeProjection = useMemo(() => {
     if (!projection) {

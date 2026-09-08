@@ -583,9 +583,9 @@ export function createApp(options: CreateAppOptions = {}) {
   router.get("/api/records", recordReadAccess, async (request, response) => {
     try {
       const query = readRecordSearchQuery(request.query);
-      const result = await repository.listRecords(query);
+      const result = await repository.listRecords({ ...query, scope: recordDtoScope });
       response.json(
-        toRecordListDto(result.records, result.nextCursor, recordDtoScope, query.include, query.locale),
+        toRecordListDto(result, recordDtoScope, query.include, query.locale),
       );
     } catch (error) {
       sendError(response, error);
@@ -616,7 +616,7 @@ export function createApp(options: CreateAppOptions = {}) {
           ? result.recordUpdatedAt ?? null
           : buildRecordUpdatedAt(result),
       });
-      response.json(
+      response.status(!validateOnly && isRecordValidationResult(result) && !result.valid ? 422 : 200).json(
         isRecordValidationResult(result)
           ? result
           : toDefaultRecordDetailDto(result, recordDtoScope, [], defaultLocale),
@@ -641,7 +641,7 @@ export function createApp(options: CreateAppOptions = {}) {
           ? result.recordUpdatedAt ?? null
           : buildRecordUpdatedAt(result),
       });
-      response.json(
+      response.status(!validateOnly && isRecordValidationResult(result) && !result.valid ? 422 : 200).json(
         isRecordValidationResult(result)
           ? result
           : toDefaultRecordDetailDto(result, recordDtoScope, [], defaultLocale),

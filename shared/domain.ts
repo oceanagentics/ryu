@@ -21,21 +21,29 @@ export type ReviewState =
 
 export type SupportedLocale = "ar" | "zh" | "en" | "fr" | "ru" | "es";
 
+export interface SourceLocalization {
+  locale: SupportedLocale;
+  title: string;
+  note: string | null;
+  translatedFromLocale: SupportedLocale | null;
+  contentUpdatedAt: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface Source {
   id: string;
-  title: string;
   sourceType: string;
   url: string | null;
   localPath: string | null;
   publisher: string | null;
   publishedAt: string | null;
   accessedAt: string | null;
-  note: string | null;
+  localizations: Partial<Record<SupportedLocale, SourceLocalization>>;
 }
 
 export interface SourceRef {
   id: string;
-  title: string;
   url: string;
 }
 
@@ -128,6 +136,8 @@ export interface LocalizedNodeDataDetails {
 }
 
 export interface NodeLocalizationDetails extends Record<string, unknown> {
+  profile?: { sourceRefs: string[] };
+  researchGaps?: Partial<Record<"recordCount" | "storageSize" | "usage" | "standards", string>>;
   aliases: string[];
   gallery: LocalizedSystemGalleryItem[];
   data: LocalizedNodeDataDetails;
@@ -151,7 +161,6 @@ export interface NodeLocalization {
   summary: string | null;
   description: string | null;
   details: NodeLocalizationDetails;
-  sourceExcerpt: string | null;
   translatedFromLocale: SupportedLocale | null;
   contentUpdatedAt: string;
   reviewState: ReviewState;
@@ -173,7 +182,6 @@ export interface ResolvedNodeLocalization {
   summary: string | null;
   description: string | null;
   details: NodeLocalizationDetails;
-  sourceExcerpt: string | null;
   translatedFromLocale: SupportedLocale | null;
   contentUpdatedAt: string | null;
   reviewState: ReviewState | null;

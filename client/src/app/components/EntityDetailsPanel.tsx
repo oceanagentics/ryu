@@ -28,7 +28,9 @@ import type {
   SupportedLocale,
   SystemDataDescriptorCategory,
 } from "../../../../shared/domain";
-import { updateNodeLocalizationReview } from "../api";
+import type { RecordDetailDto } from "../../../../shared/recordApi";
+import { resolveSourceLocalization } from "../../../../shared/localization";
+import { fetchRecord, updateNodeLocalizationReview } from "../api";
 import { appPath, canReviewNodes } from "../config";
 import {
   facetLabel,
@@ -125,10 +127,13 @@ function DetailSection({
 function SourceLink({ source }: { source: SourceRef }) {
   const locale = useGraphStore((state) => state.locale);
   const fullSource = useGraphStore((state) => state.graph?.sourceById[source.id]);
+  const localizedSource = fullSource ? resolveSourceLocalization(fullSource, locale) : undefined;
+  const sourceTitle = localizedSource?.title ?? source.id;
+  const sourceNote = localizedSource?.note;
   const sourceUrl = fullSource?.url ?? source.url;
   const tooltip = fullSource ? (
     <Flex className="source-record-tooltip" vertical gap={2}>
-      <Typography.Text strong>{fullSource.title}</Typography.Text>
+      <Typography.Text strong>{sourceTitle}</Typography.Text>
       <Typography.Text>{t(locale, "source.id")}: {fullSource.id}</Typography.Text>
       <Typography.Text>
         {t(locale, "source.type")}: {facetLabel(locale, "sourceType", fullSource.sourceType)}
@@ -148,7 +153,7 @@ function SourceLink({ source }: { source: SourceRef }) {
       {fullSource.localPath ? (
         <Typography.Text>{t(locale, "source.localPath")}: {fullSource.localPath}</Typography.Text>
       ) : null}
-      {fullSource.note ? <Typography.Text>{fullSource.note}</Typography.Text> : null}
+      {sourceNote ? <Typography.Text>{sourceNote}</Typography.Text> : null}
     </Flex>
   ) : (
     t(locale, "source.notLoaded", { id: source.id })
@@ -157,7 +162,7 @@ function SourceLink({ source }: { source: SourceRef }) {
   return (
     <span className="source-record-link">
       <Typography.Link href={sourceUrl} target="_blank" rel="noreferrer">
-        {source.title}
+        {sourceTitle}
       </Typography.Link>
       <Tooltip title={tooltip}>
         <InfoCircleOutlined className="source-record-info-icon" />
@@ -451,6 +456,23 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
   const [reviewerNote, setReviewerNote] = useState(localization.reviewerNote ?? "");
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
+  const [reviewHistory, setReviewHistory] = useState<RecordDetailDto["reviewHistory"]>();
+  const [historyError, setHistoryError] = useState(false);
+  const [historyScope, setHistoryScope] = useState<"displayed" | "all">("displayed");
+
+  useEffect(() => {
+    let active = true;
+    setReviewHistory(undefined);
+    setHistoryError(false);
+    fetchRecord(entity.id, new URLSearchParams({ include: "reviewHistory" }))
+      .then((record) => {
+        if (active) setReviewHistory(record.reviewHistory ?? []);
+      })
+      .catch(() => {
+        if (active) setHistoryError(true);
+      });
+    return () => { active = false; };
+  }, [entity.id, entity.localizations]);
 
   useEffect(() => {
     setReviewState(currentReviewState);
@@ -554,6 +576,60 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
           </Button>
         </Flex>
       ) : null}
+      <Flex vertical gap={8}>
+        <Flex align="center" justify="space-between" gap={8} wrap>
+          <Typography.Text strong>{t(locale, "details.reviewHistory")}</Typography.Text>
+          <Select
+            aria-label={t(locale, "details.reviewHistory")}
+            size="small"
+            value={historyScope}
+            options={[
+              { value: "displayed", label: reviewLocale
+                ? localeName(reviewLocale, locale)
+                : t(locale, "details.displayedLocale") },
+              { value: "all", label: t(locale, "directory.allLanguages") },
+            ]}
+            onChange={setHistoryScope}
+          />
+        </Flex>
+        {historyError ? (
+          <Alert message={t(locale, "details.reviewHistoryFailed")} type="error" showIcon />
+        ) : (
+          <List
+            size="small"
+            loading={reviewHistory === undefined}
+            locale={{ emptyText: t(locale, "details.noReviewHistory") }}
+            dataSource={(reviewHistory ?? [])
+              .filter((event) => historyScope === "all" || event.locale === reviewLocale)
+              .slice().reverse()}
+            renderItem={(event) => (
+              <List.Item>
+                <Flex vertical gap={4}>
+                  <div>
+                    <Tag>{localeName(event.locale, locale)}</Tag>
+                    <Typography.Text>
+                      {event.from ? `${facetLabel(locale, "reviewState", event.from)} → ` : ""}
+                      {facetLabel(locale, "reviewState", event.to)}
+                    </Typography.Text>
+                  </div>
+                  {event.kind !== "review" ? (
+                    <Typography.Text type="secondary">
+                      {t(locale, event.kind === "baseline"
+                        ? "details.reviewHistoryBaseline" : "details.reviewHistoryInitial")}
+                    </Typography.Text>
+                  ) : null}
+                  {"at" in event && (event.actor || event.at) ? (
+                    <Typography.Text type="secondary">
+                      {[event.actor, formatDateTime(event.at, locale)].filter(Boolean).join(" · ")}
+                    </Typography.Text>
+                  ) : null}
+                  {"note" in event && event.note ? <Typography.Text>{event.note}</Typography.Text> : null}
+                </Flex>
+              </List.Item>
+            )}
+          />
+        )}
+      </Flex>
     </DetailSection>
   );
 }
