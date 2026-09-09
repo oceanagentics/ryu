@@ -60,8 +60,8 @@ The details panel shows record and localization review state for selected nodes:
   users remain on the public read-only view.
 - Unauthenticated public Explorer deployments should omit `IAP_JWT_AUDIENCE`;
   that makes Explorer redact reviewer notes, reviewer identity, last-reviewed
-  timestamps, route targets, and local source paths from public
-  APIs.
+  timestamps and route targets from public APIs. Sources contain only
+  the four public citation fields.
 
 The browser review helper calls Explorer directly:
 
@@ -95,7 +95,7 @@ ID do not need a separate idempotency table. Applied writes require a
 `recordUpdatedAt` precondition. Deletes require writer access or higher, a fresh dry-run
 `impactHash`, and the same `recordUpdatedAt` precondition.
 
-## Current Deployment
+## Previous Deployment (historical)
 
 Last verified on 2026-09-03:
 
@@ -277,42 +277,58 @@ Agent API verification should use a bearer token against
 `https://chm.oceanagentics.org/api/records`. The signed-in browser check should
 exercise direct Explorer/IAP review at `/explorer/admin`.
 
-## Owned Sources Cutover
+## Current Deployment: Owned Sources Cutover
 
-`011_owned_sources.sql` adds dedicated `nodes.sources` and `edges.sources`, copies
-referenced legacy sources/title translations to their owners, converts embedded
-`{id,url}` citations to IDs, validates shape/reference/title coverage, and drops
-the global source tables. It rolls back on missing sources, conflicting URLs,
-invalid dates, or missing required translations; never manufacture missing data.
+Completed on 2026-09-09. Application commit `8edd379` on
+`codex/owned-sources-release` is deployed at 100% traffic on:
 
-Build and verify the matching API/public/admin images before the maintenance
-window. Back up Cloud SQL, stop content writers and traffic to old revisions,
-then apply 011 with schema credentials and deploy all three matching services.
-Do not serve the old app after dropping its source tables. Smoke-test record
-reads, localization/source writes and both endpoint views, then resume traffic
-and regenerate the public bootstrap export. Rolling back requires restoring the
-pre-cutover database along with the old application images.
+- Public: `explorer-sources-8edd379`
+- Admin: `explorer-admin-sources-8edd379`
+- API: `explorer-api-sources-8edd379`
 
-The application must fail fast if the owned source columns are missing; production
-must not fall back to the bootstrap export. Historical source metadata beyond the
-four retained fields is removed by this migration.
+Immutable images:
 
-Preflight on 2026-09-09 read the canonical public bootstrap: 146 nodes, 119
-edges, and 172 legacy sources. It found 357 owner/source pairs missing required
-title translations: 151 distinct sources need 755 source/locale translations.
-This is a public-data audit; route data is redacted. The
-configured bearer token returned HTTP 401 on the authenticated bootstrap, so the
-private-route audit and production migration remain pending. Complete the source
-title translations and authenticate the full audit before scheduling cutover.
-No production schema or source data was changed by this implementation.
+- Public: `us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-public@sha256:e91644c13fccdb6963336d4d502f7f19833d2f89d9670a30b63d02090cfa55ab`
+- Admin: `us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-admin@sha256:0b7c2bf46206e0861dbff483fec2ddfeeab13026c005f0f08b0220fd2b88945d`
+- API: `us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-api@sha256:690b365a9bf1c0020e111c4d795ff82dd913951b8c761e68b6e45425dbfc6f9f`
 
-The authenticated pre-cutover audit subsequently verified 134 nodes, 119 edges,
-659 localizations, and all 10 routes. The token works on `/api/records`; the
-earlier `/api/graph/bootstrap` request reached the CHM IAP route. The full audit
-confirmed 755 missing titles across 151 sources. `server/schema/011_source_titles.json`
-contains the translated titles plus the expected English text so the migration
-runner can reject concurrent changes. Insert only missing required translations,
-then apply 011 in the same transaction. Rehearse with rollback and compare all
-record content, review histories, source collections, and row counts before apply.
-The release also removes the already-retired node subtype column after legacy
-application traffic has stopped.
+Cloud SQL backup `1788982401684` completed successfully before the cutover.
+Migration execution `explorer-owned-sources-8edd379-vqqgp` committed at
+2026-09-09T19:42:13.505Z, recorded as `2026-09-09-owned-sources` in
+`schema_migrations`. A rehearsal first ran the same migration with rollback.
+Legacy application traffic was moved to temporary maintenance revisions during
+apply, then moved to the three prepared release revisions.
+
+The migration inserted 755 missing title translations across 151 sources, using
+`server/schema/011_source_titles.json`. Existing English titles were checked
+against the expected text, and existing translations were preserved. It then
+applied `011_owned_sources.sql` and removed the retired `nodes.subtype` column
+covered by migration 010. The separate 012 format-tag changes are not in this
+release.
+
+All 134 nodes, 119 edges, 659 localizations, 10 routes, two saved views, and
+review histories were preserved. The 153 referenced legacy source IDs were
+copied into their owning nodes and edges. FishBase retains 17 node-owned sources.
+The 19 unreferenced legacy sources and retired metadata fields were removed
+with the global source tables.
+
+Post-cutover database checks confirmed two non-null JSONB source columns,
+absence of `sources`, `sources_localizations`, and `nodes.subtype`, and complete
+source-reference and title coverage. Live API checks verified create,
+localization-only patch retention, rejection of dangling source references,
+explicit source replacement, and cleanup of the temporary verification record.
+Public HTML, public graph reads, authenticated record reads, and the admin IAP
+redirect passed. No browser UI testing was performed.
+
+The canonical public bootstrap export was refreshed after verification. The
+localhost proxy now forwards the new production shape directly; its temporary
+source-conversion logic was removed. Temporary migration/audit jobs and
+maintenance revisions were deleted after verification.
+
+The earlier bootstrap HTTP 401 was a routing issue: `/api/graph/bootstrap`
+reached CHM IAP. The configured bearer token works on the canonical agent record
+API `/api/records`, which was used to audit all private routes.
+
+Rollback of this breaking schema change requires restoring the pre-cutover
+Explorer database alongside the previous application images; do not route old
+application revisions to the new schema.
