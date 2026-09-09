@@ -2,6 +2,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { edgeKinds } from "../../shared/domain";
 
 import type {
   GraphEdge,
@@ -423,6 +424,9 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     }
   };
   const p = object(input.record.properties);
+  if (input.record.kind !== "country" && input.record.countryCode != null) {
+    issues.push({ recordId: id, path: "record.countryCode", message: "countryCode identifies country nodes only; organization and system country affiliations must use evidenced relationships" });
+  }
   for (const key of ["role", "disciplineFamily", "geographicScope"]) {
     if (hasOwn(p, key)) issues.push({ recordId: id, path: `record.properties.${key}`, message: "field removed" });
   }
@@ -509,6 +513,16 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     }
     collectSourceIds(details, refs);
     citedProfile(details.profile, `${field}.details.profile`);
+    const relationshipReview = object(details.relationshipReview);
+    if (rich || details.relationshipReview != null) {
+      citedProfile(relationshipReview, `${field}.details.relationshipReview`);
+      for (const kind of edgeKinds) {
+        requireText(object(relationshipReview.findings)[kind], `${field}.details.relationshipReview.findings.${kind}`);
+      }
+      for (const kind of Object.keys(object(relationshipReview.findings))) {
+        if (!edgeKinds.includes(kind as typeof edgeKinds[number])) issues.push({ recordId: id, path: `${field}.details.relationshipReview.findings.${kind}`, message: "unknown relationship type" });
+      }
+    }
     const localizedData = object(details.data);
     const sections: [string, Record<string, unknown>[], unknown, string[]][] = [
       ["data.descriptors", descriptors, localizedData.descriptors, ["label", "description"]],
@@ -544,6 +558,7 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     }
   }
   for (const edge of input.edges ?? []) {
+    if (!isEdgeKind(edge.kind)) issues.push({ recordId: id, path: `edges.${edge.id}.kind`, message: "unknown or retired relationship type" });
     collectSourceIds(edge.properties, refs);
     if (collectSourceIds(edge.properties).size === 0) add(`edges.${edge.id}.properties.sourceRefs`, "relationship evidence is required", true);
   }

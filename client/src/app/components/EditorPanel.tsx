@@ -29,6 +29,7 @@ import type {
   SupportedLocale,
 } from "../../../../shared/domain";
 import { fetchBootstrap } from "../api";
+import { edgeKinds } from "../../../../shared/domain";
 import { resolveSourceLocalization } from "../../../../shared/localization";
 import { nodeTitle } from "../localization";
 import { useGraphStore } from "../state/graphStore";
@@ -73,13 +74,6 @@ type SourceDraft = {
 };
 
 const entityKindOptions = ["country", "organization", "system"] as const;
-const relationshipTypeOptions = [
-  "governs",
-  "operates",
-  "part_of",
-  "publishes_to",
-  "syncs_to",
-] as const;
 
 const blankEntityDraft = (): EntityDraft => ({
   kind: "organization",
@@ -463,7 +457,7 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
               size="small"
               items={[
                 { key: "kind", label: "Kind", children: viewingEntity.kind },
-                viewingEntity.countryCode
+                viewingEntity.kind === "country" && viewingEntity.countryCode
                   ? { key: "country", label: "Country", children: viewingEntity.countryCode }
                   : null,
                 viewingEntity.subtype
@@ -555,8 +549,12 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
             >
               <Input />
             </Form.Item>
-            <Form.Item label="Country code" name="countryCode">
-              <Input />
+            <Form.Item noStyle shouldUpdate={(before, after) => before.kind !== after.kind}>
+              {({ getFieldValue }) => getFieldValue("kind") === "country" ? (
+                <Form.Item label="Country code" name="countryCode" preserve={false}>
+                  <Input />
+                </Form.Item>
+              ) : null}
             </Form.Item>
             <Form.Item label="Subtype" name="subtype">
               <Input />
@@ -583,7 +581,7 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
             </Form.Item>
             <Form.Item label="Type" name="kind" rules={[{ required: true }]}>
               <Select
-                options={relationshipTypeOptions.map((type) => ({
+                options={edgeKinds.map((type) => ({
                   label: type,
                   value: type,
                 }))}

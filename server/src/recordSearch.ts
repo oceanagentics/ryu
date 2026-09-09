@@ -255,17 +255,7 @@ const organizationFieldDefinitions = withCommonFields([
   },
 ]);
 
-const countryFieldDefinitions = withCommonFields([
-  {
-    field: "children",
-    label: "search.field.containedNode",
-    weight: 30,
-    getValues: (entity, graph, context) =>
-      graph.nodes
-        .filter((candidate) => candidate.countryCode === entity.countryCode)
-        .map((candidate) => nodeTitle(candidate, context.locale)),
-  },
-]);
+const countryFieldDefinitions = withCommonFields([]);
 
 const systemFieldDefinitions = withCommonFields([
   {
@@ -593,9 +583,7 @@ function matchesFilters(entity: GraphNode, graph: IndexedGraph, query: RecordSea
     : [localization.review?.state];
   const available = supportedLocales.filter(locale => entity.localizations[locale]).length;
   const availability = query.localeAvailability;
-  const countryCodes = [entity.countryCode ?? "", ...getRelationships(entity.id, graph)
-    .filter(edge => edge.kind === "operates" && edge.targetNodeId === entity.id)
-    .map(edge => graph.nodeById[edge.sourceNodeId]?.countryCode ?? "")];
+  const countryCodes = entity.kind === "country" && entity.countryCode ? [entity.countryCode] : [];
   return matchesAny([entity.kind], query.kind)
     && matchesAny([entity.recordDepth], query.recordDepth)
     && matchesAny(countryCodes, query.countryCode)

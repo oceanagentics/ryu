@@ -48,7 +48,8 @@
 ### Edge kinds
 - `governs`
 - `operates`
-- `part_of`
+- `funds`
+- `member_of`
 - `publishes_to`
 - `syncs_to`
 
@@ -60,11 +61,26 @@
 - If a natural slug collides across node kinds, keep the most queried entity on the natural slug and add a meaning-bearing suffix such as `-operator` to the other entity.
 
 ### Edges
-- `governs`: `country -> organization`
+- `governs`: `country|organization -> organization|system`
 - `operates`: `organization -> system`
-- `part_of`: `system -> system`
+- `funds`: `country|organization -> organization|system`
+- `member_of`: `country -> organization`, `organization -> organization`, or `system -> system`
 - `publishes_to`: `organization -> system`
 - `syncs_to`: `system -> system`
+- Use `shared/domain.ts` as the executable edge vocabulary and endpoint contract.
+- `member_of` means documented participation, not component hierarchy. `part_of`,
+  `manages`, `located_in`, and `advises` are not accepted edge types.
+- `governs` requires formal authority; `operates` includes management and operation;
+  `funds` requires evidence of financial support and its scope/period.
+- Never infer governance from funding, membership, shared infrastructure, an address,
+  or data coverage. Countries participating in a council do not each unilaterally
+  govern its institution. Record the collective authority when evidence supports it.
+- `countryCode` is an identity code for country nodes only. Do not set it on
+  organizations or systems, or recreate an Operator country field.
+- Before marking a record rich, review every incident edge and investigate all six
+  relationship types. Record source-backed findings for all six types in each
+  localization's `details.relationshipReview`; explicitly describe research gaps
+  or inapplicable relationships. Follow `documentation/RICH_RESEARCH_RECORDS.md`.
 
 ## Provenance and Metadata
 - Store source rows in `sources`.

@@ -50,15 +50,12 @@ function shouldUseEdgeForFlatTree(edge: GraphProjectionEdge): boolean {
   return (
     edge.type === "governs" ||
     edge.type === "operates" ||
-    edge.type === "part_of"
+    edge.type === "funds" ||
+    edge.type === "member_of"
   );
 }
 
 function getFlatTreeEndpoints(edge: GraphProjectionEdge): [string, string] {
-  if (edge.type === "part_of") {
-    return [edge.target, edge.source];
-  }
-
   return [edge.source, edge.target];
 }
 

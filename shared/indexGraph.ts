@@ -62,14 +62,3 @@ export function operatorNodesForSystem(graph: IndexedGraph, systemId: string): G
     .map((edge) => graph.nodeById[edge.sourceNodeId])
     .filter((node): node is GraphNode => Boolean(node));
 }
-
-export function parentSystemNodeForSystem(
-  graph: IndexedGraph,
-  systemId: string,
-): GraphNode | null {
-  const parentEdge = (graph.outgoingByNodeId[systemId] ?? [])
-    .map((edgeId) => graph.edgeById[edgeId])
-    .find((edge) => edge.kind === "part_of");
-
-  return parentEdge ? graph.nodeById[parentEdge.targetNodeId] ?? null : null;
-}

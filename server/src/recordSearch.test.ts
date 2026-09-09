@@ -74,7 +74,6 @@ test("ranking keeps exact, prefix and typo matches, requires every token and exp
 
 test("filters intersect across groups and OR within groups, using typed access and descriptor fields", () => {
   const record = node("filtered");
-  record.countryCode = "CAN";
   record.recordDepth = "rich";
   record.properties = { disciplines: ["ecology", "taxonomy"], geographicScope: "Global",
     access: [{ id: "api", type: "read", method: "api", url: "https://example.org", source: { id: "src-api", url: "https://example.org" } }],
@@ -84,8 +83,8 @@ test("filters intersect across groups and OR within groups, using typed access a
       { id: "standard", category: "standard", label: "dwc", source: { id: "src-api", url: "https://example.org" } },
     ] },
   };
-  const filters = { kind: "system", countryCode: "USA,CAN", disciplines: "ecology,genetics",
-    geography: "CAN", dataType: "occurrence_records", dataFormat: "geojson", dataStandard: "dwc", recordDepth: "rich",
+  const filters = { kind: "system", disciplines: "ecology,genetics",
+    dataType: "occurrence_records", dataFormat: "geojson", dataStandard: "dwc", recordDepth: "rich",
     accessType: "read", accessMethod: "api", locale: "fr", localeAvailability: "missing",
     reviewState: "agent_researched", reviewLocale: "displayed" };
   assert.equal(search([record], filters).length, 1);

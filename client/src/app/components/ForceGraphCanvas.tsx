@@ -152,7 +152,8 @@ const connectedOrange = "#ff785e";
 const linkColorByType = {
   governs: "#c8dfff",
   operates: "#9fe3d0",
-  part_of: "#8fb3db",
+  member_of: "#8fb3db",
+  funds: "#e9c46a",
   publishes_to: "#ff6b78",
   syncs_to: "#c99cff",
 } satisfies Record<GraphProjectionEdgeType, string>;
@@ -1098,7 +1099,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
     const linkForce = forceGraph.d3Force("link") as D3ForceLink | undefined;
     linkForce
       ?.distance((link) => {
-        if (link.type === "part_of") {
+        if (link.type === "member_of") {
           return 46;
         }
         if (link.type === "publishes_to" || link.type === "syncs_to") {
@@ -1562,7 +1563,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
         linkColor={linkColor}
         linkDirectionalArrowColor={linkColor}
         linkDirectionalArrowLength={(link) =>
-          arrangement === "globe" || link.isDerivedHierarchy || link.type === "part_of"
+          arrangement === "globe" || link.isDerivedHierarchy || link.type === "member_of"
             ? 0
             : 2.4
         }

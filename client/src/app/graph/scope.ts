@@ -43,18 +43,7 @@ export function getGovernanceIds(graph: IndexedGraph): Set<string> {
 }
 
 export function getCountryIds(graph: IndexedGraph, focusNodeId: string): Set<string> {
-  const focusNode = graph.nodeById[focusNodeId];
-  const seedIds = new Set<string>(
-    graph.nodes
-      .filter(
-        (node) =>
-          node.id === focusNodeId ||
-          (focusNode?.countryCode && node.countryCode === focusNode.countryCode),
-      )
-      .map((node) => node.id),
-  );
-
-  return expandNeighborhood(graph, seedIds, 3);
+  return expandNeighborhood(graph, new Set([focusNodeId]), 3);
 }
 
 export function getTechnicalIds(graph: IndexedGraph, focusNodeId: string): Set<string> {

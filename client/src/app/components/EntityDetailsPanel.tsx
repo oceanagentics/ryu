@@ -44,10 +44,7 @@ import {
   localeName,
   t,
 } from "../i18n";
-import {
-  operatorNodesForSystem,
-  parentSystemNodeForSystem,
-} from "../graph/indexGraph";
+import { operatorNodesForSystem } from "../graph/indexGraph";
 import {
   localizedMetricById,
   nodeTitle,
@@ -796,11 +793,7 @@ export function EntityDetailsPanel({
   const readAccessPaths = resolvedAccessPaths.filter((path) => path.type === "read");
   const writeAccessPaths = resolvedAccessPaths.filter((path) => path.type !== "read");
   const ryuRoutes = system ? graph.ryuRoutesByNodeId[entity.id] ?? [] : [];
-  const parentSystem = system ? parentSystemNodeForSystem(graph, system.id) : null;
   const operatorNodes = system ? operatorNodesForSystem(graph, system.id) : [];
-  const operatorCountryCodes = [
-    ...new Set(operatorNodes.map((node) => node.countryCode).filter(Boolean)),
-  ];
   const isSystem = Boolean(system);
   const userView = (
     <Flex vertical gap={16}>
@@ -818,9 +811,6 @@ export function EntityDetailsPanel({
           </InlineField>
           {isSystem && system ? (
             <>
-              <InlineField label={t(locale, "details.operatorCountry")}>
-                {operatorCountryCodes.length > 0 ? operatorCountryCodes.join(", ") : <EmptyValue />}
-              </InlineField>
               <InlineField label={t(locale, "details.discipline")}>
                 {system.properties.disciplines?.length ? (
                   <Flex gap={4} wrap>
@@ -832,9 +822,6 @@ export function EntityDetailsPanel({
                   <EmptyValue />
                 )}
               </InlineField>
-              <InlineField label={t(locale, "details.partOf")}>
-                {parentSystem ? nodeTitle(parentSystem, locale) : <EmptyValue />}
-              </InlineField>
               <InlineField label={t(locale, "details.aliases")}>
                 {systemLocalization?.details.aliases.length
                   ? systemLocalization.details.aliases.join(", ")
@@ -843,9 +830,11 @@ export function EntityDetailsPanel({
             </>
           ) : (
             <>
-              <InlineField label={t(locale, "details.country")}>
-                {entity.countryCode ?? <EmptyValue />}
-              </InlineField>
+              {entity.kind === "country" ? (
+                <InlineField label={t(locale, "details.country")}>
+                  {entity.countryCode ?? <EmptyValue />}
+                </InlineField>
+              ) : null}
               {entity.kind === "organization" ? (
                 <InlineField label={t(locale, "details.subtype")}>
                   {entity.subtype ? facetLabel(locale, "subtype", entity.subtype) : <EmptyValue />}

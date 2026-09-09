@@ -3,12 +3,21 @@ export type GraphNodeKind =
   | "organization"
   | "system";
 
-export type GraphEdgeKind =
-  | "governs"
-  | "operates"
-  | "part_of"
-  | "publishes_to"
-  | "syncs_to";
+export const edgeEndpointKinds = {
+  governs: ["country/organization", "country/system", "organization/organization", "organization/system"],
+  operates: ["organization/system"],
+  funds: ["country/organization", "country/system", "organization/organization", "organization/system"],
+  member_of: ["country/organization", "organization/organization", "system/system"],
+  publishes_to: ["organization/system"],
+  syncs_to: ["system/system"],
+} as const satisfies Record<string, readonly `${GraphNodeKind}/${GraphNodeKind}`[]>;
+
+export type GraphEdgeKind = keyof typeof edgeEndpointKinds;
+export const edgeKinds = Object.keys(edgeEndpointKinds) as GraphEdgeKind[];
+
+export function validEdgeEndpoints(kind: GraphEdgeKind, source: string | undefined, target: string | undefined): boolean {
+  return edgeEndpointKinds[kind]?.some(pair => pair === `${source}/${target}`) ?? false;
+}
 
 export type ViewMode = "governance" | "country" | "technical";
 
@@ -156,6 +165,7 @@ export interface LocalizedNodeDataDetails {
 
 export interface NodeLocalizationDetails extends Record<string, unknown> {
   profile?: { sourceRefs: string[] };
+  relationshipReview?: { sourceRefs: string[]; findings: Record<GraphEdgeKind, string> };
   researchGaps?: Partial<Record<"recordCount" | "storageSize" | "usage" | "standards", string>>;
   aliases: string[];
   gallery: LocalizedSystemGalleryItem[];
@@ -298,7 +308,6 @@ export interface RyuPortalRoute {
 export interface RyuSystemOperator {
   id: string;
   name: string;
-  countryCode: string | null;
 }
 
 export interface RyuSystemRecord {

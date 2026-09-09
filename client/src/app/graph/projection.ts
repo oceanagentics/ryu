@@ -61,36 +61,6 @@ export interface GraphProjection {
   effectiveFocusEntityId: string | null;
 }
 
-const governanceInternationalBandByKind = {
-  country: 5,
-  organization: 4,
-  system: 3,
-} satisfies Record<GraphNode["kind"], number>;
-
-function getProjectionLayoutBand(
-  node: GraphNode,
-  viewMode: ViewMode,
-  governanceInternationalIds: Set<string>,
-): number {
-  if (viewMode === "governance" && governanceInternationalIds.has(node.id)) {
-    return governanceInternationalBandByKind[node.kind];
-  }
-
-  return getLayoutBand(node.kind);
-}
-
-function getGovernanceBlock(
-  nodeId: string,
-  viewMode: ViewMode,
-  governanceInternationalIds: Set<string>,
-): GovernanceBlock {
-  if (viewMode !== "governance") {
-    return null;
-  }
-
-  return governanceInternationalIds.has(nodeId) ? "international" : "national";
-}
-
 function buildProjectionNode(
   node: GraphNode,
   governanceBlock: GovernanceBlock,
@@ -176,21 +146,11 @@ export function projectGraph(input: ProjectionInput): GraphProjection {
     (node) => includedIds.has(node.id) && !hiddenKindSet.has(node.kind),
   );
   const visibleIds = new Set(includedNodes.map((node) => node.id));
-  const governanceInternationalIds = new Set<string>();
-
-  if (viewMode === "governance") {
-    for (const node of includedNodes) {
-      if (node.countryCode === "INT") {
-        governanceInternationalIds.add(node.id);
-      }
-    }
-  }
-
   const nodes = includedNodes.map((node) =>
     buildProjectionNode(
       node,
-      getGovernanceBlock(node.id, viewMode, governanceInternationalIds),
-      getProjectionLayoutBand(node, viewMode, governanceInternationalIds),
+      null,
+      getLayoutBand(node.kind),
       locale,
     ),
   );

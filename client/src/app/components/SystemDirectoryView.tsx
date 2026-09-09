@@ -316,15 +316,6 @@ export function SystemDirectoryView({
                 allowClear
                 mode="multiple"
                 maxTagCount="responsive"
-                placeholder={t(locale, "directory.operatorCountry")}
-                value={filters.countryCode}
-                options={filterOptions.countryCode}
-                onChange={(value) => patchFilters({ countryCode: value })}
-              />
-              <Select
-                allowClear
-                mode="multiple"
-                maxTagCount="responsive"
                 placeholder={t(locale, "details.discipline")}
                 value={filters.disciplines}
                 options={filterOptions.disciplines}
@@ -416,7 +407,6 @@ export function SystemDirectoryView({
                   ) : null}
                   <MatchReasons reasons={record.matchReasons} />
                   <div className="systems-card-meta">
-                    <span>{record.countryCode || t(locale, "directory.noOperatorCountry")}</span>
                     <CompactTags values={record.disciplines} facetGroup="discipline" />
                     <span>
                       {t(locale, "directory.relationshipCount", {

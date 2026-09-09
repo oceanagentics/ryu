@@ -20,7 +20,7 @@ Use this guide when researching and backfilling rich database records for Ryu. T
 The lean graph schema uses:
 
 - `nodes`: one row per country, organization, or system.
-- `edges`: explicit graph relationships, including `governs`, `operates`, `part_of`, `publishes_to`, and `syncs_to`.
+- `edges`: explicit graph relationships: `governs`, `operates`, `funds`, `member_of`, `publishes_to`, and `syncs_to`.
 - `sources`: shared source IDs, types, URLs, publishers, and dates.
 - `sources_localizations`: per-language source title/note text.
 - `node_localizations`: per-language user-facing record text, localized details, and review state.
@@ -46,7 +46,10 @@ Do not reintroduce removed tables or fields:
 - No `system_profiles`, `system_data_descriptors`, `system_access_paths`, `system_gallery_items`, `system_metrics`, or `system_identifier_schemes`.
 - No `node_claims` unless a new use case proves it is needed.
 - No identifiers section, confidence fields, duplicate system IDs, or generic evidence-link layer.
-- No hidden parent field. Use an explicit `part_of` edge.
+- No hidden parent field or `part_of` edge. Use `member_of` only for documented
+  membership/participation, not service components or a shared operator.
+- No Operator country affiliation. `countryCode` identifies country nodes only;
+  organizations and systems express government relationships through edges.
 - No `geographicScope` tag. Structured geographic coverage is deferred; put
   relevant, source-backed geographic context in the profile prose.
 
@@ -87,6 +90,12 @@ A rich system must have:
 - Evidence on each relationship and route, using embedded source objects or
   `properties.sourceRefs`. Source references must resolve to stored sources or
   `sources.upsert`; embedded source URLs must match the source's canonical URL.
+- A relationship review in every localization's `details.relationshipReview`,
+  containing `sourceRefs` and `findings` with non-empty entries for all six edge
+  types. This applies to rich organizations and countries as well as systems.
+  Review all incoming and outgoing edges, find missing material relationships,
+  and document unsupported or unresolved claims. The API validates review coverage
+  and evidence; the agent must assess whether the sources support the semantics.
 
 Gallery and machine routes are optional. No approved route produces a warning;
 do not invent one. When present, gallery assets must exist or have HTTP(S) URLs.
@@ -199,7 +208,73 @@ Use the target `node_localizations` row, usually `locale='en'` for current backf
 - `details_json.aliases`: useful localized search/citation aliases.
 - `review_state`: set `agent_researched` after an agent completes a rich backfill, `human_reviewed` after human acceptance, or `needs_revision` when follow-up changes are required.
 
-Keep organization rows minimal: localized title, country code or `INT`, subtype such as `system_operator`, and `{}` properties unless richer organization modeling is explicitly requested.
+Keep organization rows minimal: localized identity, an accurate subtype, and
+source-backed relationships. Do not assign a country code or `INT`. Use actual
+responsible institutions; split combined operator labels when their members have
+different responsibilities. International collaborations and EU institutions are
+organizations, not placeholder countries.
+
+## Relationship Review
+
+The shared endpoint contract is in `shared/domain.ts`; the record API and PostgreSQL
+enforce it, including when an existing node's kind changes. Self-links, duplicate
+kind/source/target triples, unknown types, and retired `part_of` are rejected.
+
+| Type | Allowed endpoints | Authoring criterion |
+| --- | --- | --- |
+| `governs` | country/organization -> organization/system | Formal decision authority, with scope stated. |
+| `operates` | organization -> system | Management or ongoing operation; include every evidenced operator. |
+| `funds` | country/organization -> organization/system | Financial support for the named recipient/activity; state current or historical period when known. |
+| `member_of` | country -> organization; organization -> organization; system -> system | Documented membership or participating service; no automatic component hierarchy. |
+| `publishes_to` | organization -> system | An evidenced publication/submission relationship. |
+| `syncs_to` | system -> system | An evidenced transfer, with direction and active/planned status made clear. |
+
+For each record, agents must:
+
+1. Read the complete record and its incident edges; inspect the connected nodes to
+   verify their identities and kinds. A consortium label does not establish its members.
+2. Research governance, operation, funding, membership, publication, and synchronization
+   using primary sources. Distinguish national, subnational, institutional, and
+   collective authority. Funding a dataset does not necessarily fund its repository.
+3. Check every asserted edge's direction, endpoints, meaning, provenance, and time
+   scope. Attach supporting source refs to the edge itself. Review existing edges
+   as critically as new ones; do not accept geographic grouping as governance.
+4. Add verified missing relationships and remove unsupported assertions through
+   `PATCH /api/records/:id`. Do not invent authority, contributors, grants, or
+   memberships to fill the graph. Keep uncertainty explicit in the review findings.
+5. Record localized findings under all six keys in `details.relationshipReview.findings`,
+   with `details.relationshipReview.sourceRefs` supporting the investigation.
+   Findings should say what is established, inapplicable, historical, planned, or
+   still unknown. A missing edge alone does not demonstrate that a type was reviewed.
+6. Run `validateOnly=true` on the resulting aggregate before applying; re-read to
+   verify both endpoints and confirm the final edge set. Reassess these findings
+   whenever relationships or their supporting evidence change.
+
+Example shape (illustrative findings, never boilerplate to copy into live records):
+
+```json
+{
+  "relationshipReview": {
+    "sourceRefs": ["official-operator-page"],
+    "findings": {
+      "governs": "Describe the evidenced governing authority, or the research gap.",
+      "operates": "Identify the organizations responsible for this system.",
+      "funds": "Describe supported funding relationships and their periods, or unresolved funding.",
+      "member_of": "Identify documented memberships, or explain why none were established.",
+      "publishes_to": "Identify confirmed publication relationships, or their absence.",
+      "syncs_to": "Identify confirmed transfer destinations, direction, and status, or their absence."
+    }
+  }
+}
+```
+
+For existing databases, apply `server/schema/009_relationship_contract.sql` with
+the release, after reviewing/removing legacy `part_of` edges using the record API.
+It refuses an automatic rename, clears non-country affiliation codes, installs
+the six-type/endpoint constraints, and returns previously rich records lacking
+relationship-review coverage to `thin`. Review history is preserved and affected
+localizations require revision. Promote records through the API only after the
+complete current rich criteria pass. Regenerate the public bootstrap from Postgres.
 
 ## Disciplines
 

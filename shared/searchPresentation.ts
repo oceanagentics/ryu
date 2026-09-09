@@ -29,7 +29,6 @@ export type LocalizationCoverageFilter =
   | "missing_current_locale";
 
 export type GraphSearchFilters = {
-  countryCode: string[];
   disciplines: Discipline[];
   dataClaims: Record<ClaimFilterKey, string[]>;
   accessTypes: string[];
@@ -59,7 +58,6 @@ export type SystemSearchRecord = {
   summary: string | null;
   localization: ResolvedNodeLocalization;
   operatorName: string;
-  countryCode: string;
   disciplines: Discipline[];
   dataTypes: string[];
   dataFormats: string[];
@@ -110,7 +108,6 @@ export function reviewStateFilterOptions(
 }
 
 export const emptySearchFilters = (): GraphSearchFilters => ({
-  countryCode: [],
   disciplines: [],
   dataClaims: {
     type: [],
@@ -145,7 +142,6 @@ export function selectOptions(
 
 export function countActiveFilters(filters: GraphSearchFilters): number {
   return [
-    filters.countryCode,
     filters.disciplines,
     filters.accessTypes,
     filters.accessMethods,
@@ -230,7 +226,6 @@ export function buildSystemRecord(
   const relationships = getRelationships(entity.id, graph);
   const connectedNames = getConnectedNames(entity, graph, locale);
   const operatorNodes = operatorNodesForSystem(graph, entity.id);
-  const operatorCountryCodes = uniqueSorted(operatorNodes.map((node) => node.countryCode));
   const dataTypes = descriptorLabels(system, "type");
   const dataFormats = descriptorLabels(system, "format");
   const dataStandards = descriptorLabels(system, "standard");
@@ -243,7 +238,6 @@ export function buildSystemRecord(
     summary: localization.summary,
     localization,
     operatorName: uniqueSorted(operatorNodes.map((node) => nodeTitle(node, locale))).join(", "),
-    countryCode: system.countryCode ?? operatorCountryCodes[0] ?? "",
     disciplines: system.properties.disciplines ?? [],
     dataTypes,
     dataFormats,
@@ -286,7 +280,6 @@ export function getSystemFilterOptions(
   locale: SupportedLocale,
 ) {
   return {
-    countryCode: selectOptions(records.map((record) => record.countryCode), locale),
     disciplines: selectOptions(
       records.flatMap((record) => record.disciplines),
       locale,

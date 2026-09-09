@@ -62,7 +62,7 @@ export async function fetchGraphSearch(
     reviewLocale: "requested", include: "matchReasons,matchingIds", limit: "100",
   });
   for (const [key, values] of Object.entries({
-    countryCode: filters.countryCode, disciplines: filters.disciplines,
+    disciplines: filters.disciplines,
     dataType: filters.dataClaims.type, dataFormat: filters.dataClaims.format, dataStandard: filters.dataClaims.standard,
     accessType: filters.accessTypes, accessMethod: filters.accessMethods, reviewState: filters.reviewState,
   })) values.forEach(value => params.append(key, value));

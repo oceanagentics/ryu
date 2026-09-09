@@ -21,7 +21,7 @@ import type {
   Source,
   SupportedLocale,
 } from "../../shared/domain";
-import { dataTypes, disciplines } from "../../shared/domain";
+import { dataTypes, disciplines, edgeKinds } from "../../shared/domain";
 import {
   defaultLocale,
   emptyLocalizationDetails,
@@ -88,7 +88,6 @@ export type RawRyuRoute = {
 };
 
 const nodeKinds = ["country", "organization", "system"] as const;
-const edgeKinds = ["governs", "operates", "part_of", "publishes_to", "syncs_to"] as const;
 const recordDepths = ["stub", "thin", "rich"] as const;
 const reviewStates = [
   "agent_researched",

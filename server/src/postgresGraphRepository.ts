@@ -1,4 +1,5 @@
 import { indexGraph } from "../../shared/indexGraph";
+import { validEdgeEndpoints } from "../../shared/domain";
 import { searchRecords } from "./recordSearch";
 import type { Pool, PoolClient } from "pg";
 import { isDeepStrictEqual } from "node:util";
@@ -819,13 +820,16 @@ export class PostgresGraphRepository implements GraphRepository {
     if (edges.length) {
       const ids = [...new Set(edges.flatMap(edge => [edge.sourceNodeId, edge.targetNodeId]))];
       const rows = await this.query("SELECT id, kind FROM nodes WHERE id = ANY($1::text[])", [ids], client);
-      const kinds = new Map(rows.map(row => [String(row.id), row.kind]));
+      const kinds = new Map(rows.map(row => [String(row.id), String(row.kind)]));
       kinds.set(id, candidate.record.kind);
-      const allowed = { governs: "country/organization", operates: "organization/system", part_of: "system/system", publishes_to: "organization/system", syncs_to: "system/system" };
+      const relationships = new Set<string>();
       for (const edge of edges) {
-        if (edge.sourceNodeId === edge.targetNodeId || `${kinds.get(edge.sourceNodeId)}/${kinds.get(edge.targetNodeId)}` !== allowed[edge.kind]) {
+        if (edge.sourceNodeId === edge.targetNodeId || !validEdgeEndpoints(edge.kind, kinds.get(edge.sourceNodeId), kinds.get(edge.targetNodeId))) {
           validation.issues.push({ recordId: id, path: `edges.${edge.id}`, message: "edge endpoints must exist and match the relationship kind" });
         }
+        const key = JSON.stringify([edge.kind, edge.sourceNodeId, edge.targetNodeId]);
+        if (relationships.has(key)) validation.issues.push({ recordId: id, path: `edges.${edge.id}`, message: "duplicate relationship; put multiple sources or funding periods on the existing edge" });
+        relationships.add(key);
       }
     }
     if (patch) {
@@ -1319,7 +1323,6 @@ export class PostgresGraphRepository implements GraphRepository {
           ]),
           geographies: uniqueStrings([
             ...readStringArray(node.properties, "geographies"),
-            node.countryCode,
           ]),
           capabilities: uniqueStrings([
             ...readStringArray(node.properties, "capabilities"),
@@ -1361,7 +1364,6 @@ export class PostgresGraphRepository implements GraphRepository {
     return {
       id: operator.id,
       name: resolveNodeLocalization(operator, locale).title,
-      countryCode: operator.countryCode,
     };
   }
 

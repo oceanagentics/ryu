@@ -50,7 +50,8 @@ const diagramStyles: cytoscape.StylesheetJson = [
   },
   { selector: 'edge[type = "governs"]', style: { "line-color": "#b28a23", "target-arrow-color": "#b28a23" } },
   { selector: 'edge[type = "operates"]', style: { "line-color": "#3f8d72", "target-arrow-color": "#3f8d72" } },
-  { selector: 'edge[type = "part_of"]', style: { "line-color": "#7d8797", "target-arrow-color": "#7d8797", "line-style": "dashed", width: 1.8 } },
+  { selector: 'edge[type = "funds"]', style: { "line-color": "#b88a24", "target-arrow-color": "#b88a24" } },
+  { selector: 'edge[type = "member_of"]', style: { "line-color": "#7d8797", "target-arrow-color": "#7d8797", "line-style": "dashed", width: 1.8 } },
   { selector: 'edge[type = "publishes_to"]', style: { "line-color": "#2d6cc9", "target-arrow-color": "#2d6cc9", width: 3 } },
   { selector: 'edge[type = "syncs_to"]', style: { "line-color": "#8a59b7", "target-arrow-color": "#8a59b7", width: 3 } },
   {
@@ -136,7 +137,7 @@ const nodeMapStyles: cytoscape.StylesheetJson = [
   },
   { selector: 'edge[type = "governs"]', style: { "line-color": "#c8dfff", "line-opacity": 0.28 } },
   { selector: 'edge[type = "operates"]', style: { "line-color": "#9fe3d0", "line-opacity": 0.32 } },
-  { selector: 'edge[type = "part_of"]', style: { "line-color": "#8fb3db", "line-style": "dotted", "line-opacity": 0.28 } },
+  { selector: 'edge[type = "member_of"]', style: { "line-color": "#8fb3db", "line-style": "dotted", "line-opacity": 0.28 } },
   { selector: 'edge[type = "publishes_to"]', style: { "line-color": "#ff5f6d", "line-opacity": 0.62, width: 1.2 } },
   { selector: 'edge[type = "syncs_to"]', style: { "line-color": "#c99cff", "line-opacity": 0.56, width: 1.2 } },
   {
