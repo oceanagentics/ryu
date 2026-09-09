@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   CloseOutlined,
   InfoCircleOutlined,
@@ -9,12 +9,14 @@ import {
   Alert,
   Button,
   Card,
+  Collapse,
   ConfigProvider,
+  Drawer,
   Flex,
   Input,
   List,
   Select,
-  Tabs,
+  Spin,
   Tag,
   Tooltip,
   Typography,
@@ -30,10 +32,10 @@ import type {
   SupportedLocale,
   SystemDataDescriptorCategory,
 } from "../../../../shared/domain";
-import type { RecordLocalizationDto } from "../../../../shared/recordApi";
+import type { RecordDetailDto, RecordLocalizationDto } from "../../../../shared/recordApi";
 import { resolveSourceLocalization } from "../../../../shared/localization";
 import { fetchRecord, updateNodeLocalizationReview } from "../api";
-import { appPath, canReviewNodes } from "../config";
+import { appPath, canReviewNodes, isPublicApp } from "../config";
 import {
   facetLabel,
   formatDateTime,
@@ -60,8 +62,6 @@ import {
   type ResolvedSystemGalleryItem,
 } from "../localization";
 import { useGraphStore } from "../state/graphStore";
-
-type DetailTabKey = "user" | "raw";
 
 function tagColor(value: string): string | undefined {
   if (value === "rich" || value === "human_reviewed") {
@@ -633,7 +633,7 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
   );
 }
 
-function RawSystemDump({
+function RawRecordFields({
   entity,
   relationships,
   ryuRoutes,
@@ -642,55 +642,108 @@ function RawSystemDump({
   relationships: GraphEdge[];
   ryuRoutes: RyuRoute[];
 }) {
-  const rawDump = {
-    nodes: {
-      id: entity.id,
-      kind: entity.kind,
-      country_code: entity.countryCode,
-      subtype: entity.subtype,
-      url: entity.url,
-      record_depth: entity.recordDepth,
-      properties: entity.properties,
-      created_at: entity.createdAt,
-      updated_at: entity.updatedAt,
-      localizations: entity.localizations,
-      available_locales: entity.availableLocales,
-      requested_locale: entity.requestedLocale,
-      display_locale: entity.displayLocale,
-      is_locale_fallback: entity.isLocaleFallback,
-    },
-    ryu_routes: ryuRoutes.map((route) => ({
+  const locale = useGraphStore((state) => state.locale);
+  const sourceById = useGraphStore((state) => state.graph?.sourceById);
+  const [record, setRecord] = useState<RecordDetailDto>();
+  const [failed, setFailed] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    fetchRecord(entity.id, new URLSearchParams({ include: "localizations,reviewHistory,edges,routes,sources" }))
+      .then((result) => { if (active) setRecord(result); })
+      .catch(() => { if (active) setFailed(true); });
+    return () => { active = false; };
+  }, [entity.id]);
+
+  if (failed) return <Alert message={t(locale, "details.rawFieldsFailed")} type="error" showIcon />;
+  if (!record) return <Spin />;
+
+  const node = record.record;
+  const tables = {
+    nodes: [{
+      id: node.id,
+      kind: node.kind,
+      country_code: node.countryCode,
+      subtype: node.subtype,
+      url: node.url,
+      record_depth: node.recordDepth,
+      properties_json: node.properties ?? entity.properties,
+      created_at: node.createdAt,
+      updated_at: node.updatedAt,
+    }],
+    node_localizations: Object.values(record.localizations ?? {}).flatMap((localization) => localization ? [{
+      node_id: node.id,
+      locale: localization.locale,
+      title: localization.title,
+      summary: localization.summary,
+      description: localization.description,
+      details_json: localization.details,
+      translated_from_locale: localization.translatedFromLocale,
+      content_updated_at: localization.contentUpdatedAt,
+      review_json: { history: localization.review.history },
+      created_at: localization.createdAt,
+      updated_at: localization.updatedAt,
+    }] : []),
+    ryu_routes: (record.routes ?? ryuRoutes).map((route) => ({
       id: route.id,
       node_id: route.nodeId,
       status: route.status,
       mode: route.mode,
       priority: route.priority,
-      capabilities: route.capabilities,
-      target: route.target,
-      upstream: route.upstream,
+      capabilities_json: route.capabilities,
+      target: "target" in route ? route.target : undefined,
+      upstream: "upstream" in route ? route.upstream : undefined,
       format: route.format,
       contract_ref: route.contractRef,
       caveat: route.caveat,
-      properties: route.properties,
+      properties_json: "properties" in route ? route.properties : ryuRoutes.find((row) => row.id === route.id)?.properties,
       created_at: route.createdAt,
       updated_at: route.updatedAt,
     })),
-    edges: relationships.map((relationship) => ({
+    edges: (record.edges ?? relationships).map((relationship) => ({
       id: relationship.id,
       source_node_id: relationship.sourceNodeId,
       target_node_id: relationship.targetNodeId,
       kind: relationship.kind,
       note: relationship.note,
-      properties: relationship.properties,
+      properties_json: relationship.properties,
       created_at: relationship.createdAt,
       updated_at: relationship.updatedAt,
     })),
+    sources: (record.sources ?? []).map((source) => ({
+      id: source.id,
+      source_type: source.sourceType,
+      url: source.url,
+      local_path: "localPath" in source ? source.localPath : sourceById?.[source.id]?.localPath,
+      publisher: source.publisher,
+      published_at: source.publishedAt,
+      accessed_at: source.accessedAt,
+    })),
+    sources_localizations: (record.sources ?? []).flatMap((source) =>
+      Object.values(source.localizations).flatMap((localization) => localization ? [{
+        source_id: source.id,
+        locale: localization.locale,
+        title: localization.title,
+        note: localization.note,
+        translated_from_locale: localization.translatedFromLocale,
+        content_updated_at: localization.contentUpdatedAt,
+        created_at: localization.createdAt,
+        updated_at: localization.updatedAt,
+      }] : [])),
   };
 
   return (
-    <pre className="entity-raw-dump">
-      {JSON.stringify(rawDump, null, 2)}
-    </pre>
+    <Collapse
+      defaultActiveKey={[`nodes:${node.id}`]}
+      items={Object.entries(tables).flatMap(([table, rows]) => rows.map((row) => {
+        const id = "id" in row ? row.id : `${"node_id" in row ? row.node_id : row.source_id} / ${row.locale}`;
+        return {
+          key: `${table}:${id}`,
+          label: `${table} · ${id}`,
+          children: <pre className="entity-raw-dump">{JSON.stringify(row, null, 2)}</pre>,
+        };
+      }))}
+    />
   );
 }
 
@@ -703,12 +756,15 @@ export function EntityDetailsPanel({
   onClose?: () => void;
   showCloseButton?: boolean;
 }) {
-  const [activeDetailTab, setActiveDetailTab] = useState<DetailTabKey>("user");
+  const [rawFieldsOpen, setRawFieldsOpen] = useState(false);
+  const panelRef = useRef<HTMLDivElement>(null);
   const graph = useGraphStore((state) => state.graph);
   const locale = useGraphStore((state) => state.locale);
   const selectedEntityId = useGraphStore((state) => state.selectedEntityId);
   const resetSelection = useGraphStore((state) => state.resetSelection);
   const entity = selectedEntityId && graph ? graph.nodeById[selectedEntityId] : null;
+
+  useEffect(() => { setRawFieldsOpen(false); }, [selectedEntityId]);
 
   if (!graph || !entity) {
     return null;
@@ -746,31 +802,6 @@ export function EntityDetailsPanel({
     ...new Set(operatorNodes.map((node) => node.countryCode).filter(Boolean)),
   ];
   const isSystem = Boolean(system);
-  const showRawFields = isSystem && canReviewNodes;
-  const title = showRawFields ? (
-    <Flex className="entity-details-header-title" align="center" gap={12}>
-      <span className="entity-details-title-text">{localization.title}</span>
-      <Tabs
-        activeKey={activeDetailTab}
-        className="entity-details-header-tabs"
-        items={[
-          {
-            key: "user",
-            label: t(locale, "details.userView"),
-            children: null,
-          },
-          {
-            key: "raw",
-            label: t(locale, "details.rawFields"),
-            children: null,
-          },
-        ]}
-        onChange={(key) => setActiveDetailTab(key as DetailTabKey)}
-      />
-    </Flex>
-  ) : (
-    localization.title
-  );
   const userView = (
     <Flex vertical gap={16}>
       {isSystem && system ? <SystemIntro operatorNodes={operatorNodes} system={system} /> : null}
@@ -946,15 +977,26 @@ export function EntityDetailsPanel({
           size="small"
         />
       </DetailSection>
+      {!isPublicApp ? (
+        <Button
+          type="link"
+          size="small"
+          style={{ alignSelf: "flex-start", padding: 0 }}
+          onClick={() => setRawFieldsOpen(true)}
+        >
+          {t(locale, "details.rawFields")}
+        </Button>
+      ) : null}
     </Flex>
   );
 
   return (
     <ConfigProvider theme={{ algorithm: theme.defaultAlgorithm, token: { fontSize: 14 } }}>
       <Card
+        ref={panelRef}
         className="entity-details-panel"
         size="small"
-        title={title}
+        title={localization.title}
         extra={
           extraActions ??
           (showCloseButton ? (
@@ -968,16 +1010,27 @@ export function EntityDetailsPanel({
           ) : null)
         }
       >
-        {showRawFields && system && activeDetailTab === "raw" ? (
-          <RawSystemDump
+        {userView}
+      </Card>
+      {!isPublicApp ? (
+        <Drawer
+          title={`${t(locale, "details.rawFields")} · ${localization.title}`}
+          open={rawFieldsOpen}
+          onClose={() => setRawFieldsOpen(false)}
+          getContainer={() => panelRef.current?.closest<HTMLElement>(".workspace-pane") ?? document.body}
+          rootStyle={{ position: "absolute" }}
+          size="100%"
+          closable={{ placement: "end" }}
+          destroyOnHidden
+        >
+          <RawRecordFields
+            key={entity.id}
             entity={entity}
             relationships={relationships}
             ryuRoutes={ryuRoutes}
           />
-        ) : (
-          userView
-        )}
-      </Card>
+        </Drawer>
+      ) : null}
     </ConfigProvider>
   );
 }

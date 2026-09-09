@@ -1,4 +1,6 @@
-export const appMode = import.meta.env.VITE_APP_MODE === "public" ? "public" : "author";
+export const appMode = import.meta.env.VITE_APP_MODE === "public" || (
+  import.meta.env.DEV && typeof window !== "undefined" && !/\/admin(?:\/|$)/.test(window.location.pathname)
+) ? "public" : "author";
 export const isPublicApp = appMode === "public";
 export const canReviewNodes = import.meta.env.VITE_CAN_REVIEW_NODES === "false"
   ? false
