@@ -17,6 +17,7 @@ import {
   emptyLocalizationDetails,
   resolveNodeLocalization,
 } from "./localization";
+import { facetLabel } from "./i18n";
 
 export type ResolvedSystemAccessPath = SystemAccessPath & {
   label: string;
@@ -109,7 +110,9 @@ export function systemDataDescriptors(
     const localized = localizedById[descriptor.id];
     return {
       ...descriptor,
-      localizedLabel: localized?.label ?? null,
+      localizedLabel: descriptor.category === "type"
+        ? facetLabel(localization.requestedLocale, "descriptorLabel", descriptor.label)
+        : localized?.label ?? null,
       description: localized?.description ?? null,
     };
   });

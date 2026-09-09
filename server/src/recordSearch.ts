@@ -278,30 +278,12 @@ const systemFieldDefinitions = withCommonFields([
   },
 
   {
-    field: "system.role",
-    label: "search.field.role",
-    weight: 65,
-    getValues: (entity, graph, context) => {
-      const value = graph.nodeById[entity.id]?.properties.role;
-      return [value, value ? facetLabel(context.locale, "systemRole", value) : null];
-    },
-  },
-  {
-    field: "system.disciplineFamily",
+    field: "system.disciplines",
     label: "search.field.discipline",
     weight: 62,
     getValues: (entity, graph, context) => {
-      const value = graph.nodeById[entity.id]?.properties.disciplineFamily;
-      return [value, value ? facetLabel(context.locale, "disciplineFamily", value) : null];
-    },
-  },
-  {
-    field: "system.geographicScope",
-    label: "search.field.geographicScope",
-    weight: 58,
-    getValues: (entity, graph, context) => {
-      const value = graph.nodeById[entity.id]?.properties.geographicScope;
-      return [value, value ? facetLabel(context.locale, "geographicScope", value) : null];
+      const values = graph.nodeById[entity.id]?.properties.disciplines ?? [];
+      return values.flatMap(value => [value, facetLabel(context.locale, "discipline", value)]);
     },
   },
 
@@ -606,9 +588,9 @@ function matchesFilters(entity: GraphNode, graph: IndexedGraph, query: RecordSea
   const routes = graph.ryuRoutesByNodeId[entity.id] ?? [];
   const localization = resolveNodeDisplay(entity, query.locale);
   const requested = entity.localizations[query.locale];
-  const reviewStates = query.reviewLocale === "requested" ? [requested?.reviewState]
-    : query.reviewLocale === "any" ? Object.values(entity.localizations).map(value => value?.reviewState)
-    : [localization.reviewState];
+  const reviewStates = query.reviewLocale === "requested" ? [requested?.review.state]
+    : query.reviewLocale === "any" ? Object.values(entity.localizations).map(value => value?.review.state)
+    : [localization.review?.state];
   const available = supportedLocales.filter(locale => entity.localizations[locale]).length;
   const availability = query.localeAvailability;
   const countryCodes = [entity.countryCode ?? "", ...getRelationships(entity.id, graph)
@@ -616,11 +598,10 @@ function matchesFilters(entity: GraphNode, graph: IndexedGraph, query: RecordSea
     .map(edge => graph.nodeById[edge.sourceNodeId]?.countryCode ?? "")];
   return matchesAny([entity.kind], query.kind)
     && matchesAny([entity.recordDepth], query.recordDepth)
-    && matchesAny([properties.role ?? ""], query.role)
     && matchesAny(countryCodes, query.countryCode)
-    && matchesAny([properties.disciplineFamily ?? ""], query.disciplineFamily)
+    && matchesAny(properties.disciplines ?? [], query.disciplines)
     && (query.geography.length === 0 || query.geography.some(value =>
-      collectText([entity.countryCode, properties.geographicScope, properties.geographies])
+      collectText([entity.countryCode, properties.geographies])
         .some(candidate => normalizeSearchValue(candidate).includes(normalizeSearchValue(value)))))
     && ([["type", query.dataType], ["format", query.dataFormat], ["standard", query.dataStandard]] as const)
       .every(([category, selected]) => matchesAny(

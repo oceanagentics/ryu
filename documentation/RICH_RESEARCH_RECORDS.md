@@ -31,12 +31,11 @@ For system nodes:
 
 - Use `nodes.url` for the primary public URL.
 - Use `nodes.record_depth` to track `stub`, `thin`, or `rich`.
-- Use `nodes.properties_json` for language-neutral operational facts: operator summary, role, discipline family, geographic scope, gallery asset URLs, data descriptor structure, access mechanics, and usage metric values.
+- Use `nodes.properties_json` for language-neutral operational facts: approved discipline IDs, gallery asset URLs, data descriptor structure, access mechanics, and usage metric values.
 - Use `node_localizations.title`, `summary`, and `description` for the public prose profile in each locale.
 - Use `node_localizations.details_json` for localized details: aliases, gallery titles/captions, descriptor descriptions, access labels/descriptions/instructions, usage descriptions, and other language-specific prose.
-- Use `node_localizations.review_state` for review queues: `agent_researched`, `human_reviewed`, or `needs_revision`.
-- Use `node_localizations.reviewer_note`, `reviewer`, and `last_reviewed` for review metadata.
-- The details UI shows `recordDepth` and the resolved localization's `reviewState` for all users. In authenticated/author mode, it lets users update only `reviewState` and `reviewerNote`; `reviewer` and `lastReviewed` are set by the server.
+- Store review snapshots in `node_localizations.review_json.history`. Each snapshot has `state`, `reviewer`, `date`, and `note`; the final entry defines current review state (`agent_researched`, `human_reviewed`, or `needs_revision`).
+- The details UI shows `recordDepth` and the resolved localization's `review.state` for all users. In authenticated/author mode, it lets users update only `reviewState` and `reviewerNote`; snapshot `reviewer` and `date` are set by the server.
 - Do not set review metadata in record content writes. Review state and reviewer
   notes belong in the dedicated review endpoint so the server can set reviewer
   identity and timestamps.
@@ -48,10 +47,12 @@ Do not reintroduce removed tables or fields:
 - No `node_claims` unless a new use case proves it is needed.
 - No identifiers section, confidence fields, duplicate system IDs, or generic evidence-link layer.
 - No hidden parent field. Use an explicit `part_of` edge.
+- No `geographicScope` tag. Structured geographic coverage is deferred; put
+  relevant, source-backed geographic context in the profile prose.
 
 ## Rich Status And Source Completeness
 
-`recordDepth` describes research depth. Localization `reviewState` describes acceptance;
+`recordDepth` describes research depth. Localization `review.state` describes acceptance;
 `rich` does not imply `human_reviewed`. Human review still checks whether evidence
 actually supports the claims and whether translations are accurate.
 
@@ -66,17 +67,18 @@ localizations remain stored; omission never acts as deletion.
 
 A rich system must have:
 
-- A canonical HTTP(S) URL; role, discipline family, and geographic scope; and an
+- A canonical HTTP(S) URL and an
   incoming `operates` edge from an existing organization.
 - All six supported node localizations, with non-empty title, summary, description,
   and explicit `details.profile.sourceRefs` supporting the prose and shared metadata.
-- Source-backed `type` and `format` descriptors. Include applicable `standard`
+- Source-backed `format` descriptors and justified approved `type` descriptors. Include applicable `standard`
   descriptors, or explain their absence in `details.researchGaps.standards`.
 - At least one actual `read` access path, with mechanism, URL, evidence, localized
   label and description. Explain authentication, licensing, restrictions, and
   contribution arrangements in the profile/access prose as applicable.
-- Matching, unique neutral/localized item IDs. Descriptors need localized labels
-  and descriptions; access paths need labels and descriptions; gallery items
+- Matching, unique neutral/localized item IDs. Descriptors need localized
+  descriptions; format and standard descriptors also need localized labels.
+  Type labels come from the shared vocabulary. Access paths need labels and descriptions; gallery items
   need titles and captions; metrics need localized descriptions.
 - Source-backed metrics with finite non-negative values, units, and observation
   dates (YYYY, YYYY-MM, or YYYY-MM-DD). Storage values use bytes. When record count,
@@ -115,8 +117,7 @@ Store all source titles and notes, including English, in `sources_localizations`
 keyed by `(source_id, locale)`. Source rows and embedded references have no title
 or note fields. Display and search use the selected source localization, falling
 back to English when it is missing. Review the displayed source text and citations
-as part of the record's localization review, with state on `node_localizations` and history in
-`node_review_history`. Source writes may include only the localization rows being
+as part of the record's localization review, with current state derived from `node_localizations.review_json.history`. Source writes may include only the localization rows being
 changed. Rich record completeness requires every referenced source to have all six
 supported languages; if any source localization has a note/caveat, each required
 locale must include it. Content writes accept only `title`,
@@ -135,7 +136,8 @@ those records' versions, so earlier preconditions become stale. A shared source
 edit that would break another rich record is rejected with that record's issues.
 These are record-API guarantees; deliberate direct database repairs must handle
 validation and review invalidation explicitly. No-op content edits preserve review
-acceptance. Review history retains the previous human decision.
+acceptance. Review history retains activity dates, actors, and notes; current
+review status remains on each localization.
 
 ## Executable Example
 
@@ -186,7 +188,8 @@ Use these neutral node fields:
 
 - `url`: canonical homepage, portal, or primary record entry point.
 - `record_depth`: `rich` only when the system has a full researched record, not merely imported identifiers or tags.
-- `properties_json.operator`, `role`, `disciplineFamily`, and `geographicScope`: stable record metadata.
+- `properties_json.disciplines`: approved discipline IDs.
+- Model the operator through an incoming `operates` edge.
 
 Use the target `node_localizations` row, usually `locale='en'` for current backfills, for:
 
@@ -198,19 +201,145 @@ Use the target `node_localizations` row, usually `locale='en'` for current backf
 
 Keep organization rows minimal: localized title, country code or `INT`, subtype such as `system_operator`, and `{}` properties unless richer organization modeling is explicitly requested.
 
+## Disciplines
+
+Use `properties.disciplines` as an array of unique IDs from `shared/domain.ts`.
+The API rejects unknown IDs, duplicates, non-array values, and the retired `role`
+and `disciplineFamily` properties at every record depth. Labels are translated
+in `shared/i18n.ts`; do not store labels or translated IDs in records.
+
+Use the smallest set that adequately describes substantial, documented coverage.
+Support assignments with the profile's source references. Do not infer disciplines
+from an operator's name, incidental holdings, data formats, techniques, or possible
+downstream uses. Coordinates alone do not justify Geography. Avoid tagging every
+possible subject in generalist repositories such as Dryad, Zenodo, or re3data.
+Use `[]` when no specific discipline is justified and explain the system's scope
+in its profile. Countries do not need discipline tags. Do not invent tags to fill
+a rich-record requirement; there is no minimum tag count.
+
+| ID | Meaning |
+| --- | --- |
+| `agronomy` | Crop production and agricultural soil management. |
+| `botany` | Plant science. |
+| `chemistry` | Composition, properties, and reactions of matter. |
+| `climatology` | Climate patterns, variability, and long-term change. |
+| `ecology` | Relationships among organisms and their environment. |
+| `economics` | Production, consumption, allocation, and economic value. |
+| `fisheries_science` | Fishery resources, harvests, aquaculture, and management. |
+| `genetics` | Genes, heredity, genetic variation, and genomes. |
+| `geography` | Places, spatial relationships, and geographic representation, including cartography. |
+| `geology` | Earth's rocks, sediments, structure, and history. |
+| `geophysics` | Physical properties and processes of Earth. |
+| `glaciology` | Glaciers, ice sheets, and other natural ice. |
+| `hydrology` | Water movement, storage, distribution, and the water cycle. |
+| `law` | Legal rules, instruments, rights, and obligations. |
+| `marine_biology` | Organisms and biological processes in marine environments. |
+| `meteorology` | Atmospheric processes and weather. |
+| `microbiology` | Microorganisms and their biology. |
+| `mycology` | Fungi and their biology. |
+| `oceanography` | Ocean properties, circulation, and physical, chemical, biological, and geological processes. |
+| `paleontology` | Past life studied through fossils and their geological context. |
+| `spatial_planning` | Planning the use and development of land and marine space. |
+| `taxonomy` | Naming, identifying, and classifying organisms. |
+| `zoology` | Animal science. |
+
+**Adding a discipline requires human approval in the authoring chat.** First check
+the list and definitions, including whether a broader existing discipline fits.
+If none fits, ask the human with the proposed name, a short definition, the affected
+record and source, and why existing tags are insufficient. Wait for explicit
+approval; silence and approval of the record generally are not approval of a new
+discipline. After approval, update the shared vocabulary and all six translated
+labels. Release the updated service before using the new ID through the API.
+Do not create a proposal record, approval flag, or automatic vocabulary-writing
+endpoint. Ordinary record writes cannot extend the vocabulary.
+
+For existing databases, apply `server/schema/005_disciplines.sql` with the service
+release. It removes role, preserves explicit new tags and direct legacy equivalents,
+and leaves ambiguous classifications empty for later source-backed authoring.
+It does not expand a legacy label into inferred subject coverage. Historical
+language imports must also run this migration before export. Regenerate the public
+bootstrap from the migrated Postgres database; never hand-edit the export.
+
+Also apply `server/schema/006_remove_geographic_scope.sql` with the release and
+after historical language imports. It removes the retired `geographicScope`
+property from nodes and localized details; the API rejects new writes of that
+field at every record depth. It does not introduce replacement coverage fields.
+
 ## Data Descriptors
 
 Use `nodes.properties_json.data.descriptors` for compact, source-backed data descriptor structure. Put localized descriptor descriptions in `node_localizations.details_json.data.descriptors` with matching descriptor ids.
 
 Categories:
 
-- `type`: what data the database contains, such as taxonomy, occurrence records, traits, imagery, references, metrics, sequence records, or model outputs.
+- `type`: an approved data type ID from `dataTypes` in `shared/domain.ts`, describing records or products a user can retrieve.
 - `format`: how the data is exposed or stored, such as web pages, CSV, parquet, API JSON, Darwin Core Archive, RDF, or relational database tables.
 - `standard`: identifiers, vocabularies, schemas, licenses, or protocols used by the database.
 
-Each neutral descriptor should have `id`, `category`, `label`, and optional `source`. Each localized descriptor entry should have the same `id`, a localized `label`, and a localized `description`.
+Each neutral descriptor should have `id`, `category`, `label`, and optional `source`
+(required for rich records). For category `type`, `label` stores the canonical ID;
+its translated display name comes from `shared/i18n.ts`. Keep its localized entry's
+`id` and `description`, and omit `label`. Format and standard descriptors still
+use localized labels and descriptions.
 
 Keep descriptors broad enough to scan. Do not create one descriptor per table unless table-level detail is essential.
+
+### Approved Data Types
+
+Use each type at most once per record. The API rejects unknown IDs, duplicate
+types, and localized type-label overrides at every record depth on PUT and PATCH.
+The `dataType` search filter also accepts only canonical IDs.
+
+| ID | Label | Meaning |
+| --- | --- | --- |
+| `taxonomic_records` | Taxonomic records | Scientific names, synonyms, classifications, and naming authorities. |
+| `occurrence_records` | Occurrence records | Records of organisms found at particular places and times. |
+| `survey_records` | Survey records | Sampling events, methods, effort, counts, and associated observations. |
+| `biological_traits` | Biological traits | Characteristics such as size, growth, maturity, reproduction, and longevity. |
+| `biological_interactions` | Biological interactions | Relationships between organisms, including predation, parasitism, and symbiosis. |
+| `sample_records` | Sample records | Records describing specimens, tissues, extracts, and their collection or preservation. |
+| `sequence_data` | Sequence data | Nucleotide or protein sequences, assemblies, and associated annotations. |
+| `environmental_measurements` | Environmental measurements | Observed physical and chemical quantities, including temperature, salinity, and oxygen. |
+| `model_outputs` | Model outputs | Predictions, simulations, forecasts, and reanalyses. |
+| `fisheries_statistics` | Fisheries statistics | Catch, effort, landings, aquaculture production, and associated economic values. |
+| `geographic_reference_data` | Geographic reference data | Named places, boundaries, shorelines, delineated areas, and basemaps. |
+| `bathymetry` | Bathymetry | Seafloor depths and terrain surfaces. |
+| `platform_records` | Platform records | Observing platforms, instruments, deployments, trajectories, and operational status. |
+| `media` | Media | Photographs, illustrations, video, and audio. |
+| `bibliographic_records` | Bibliographic records | Structured references to publications and other literature. |
+| `catalogue_records` | Catalogue records | Descriptions of datasets, repositories, and services available for discovery. |
+| `documents` | Documents | Full publications, reports, manuals, and other textual works. |
+| `software` | Software | Source code, scripts, packages, and software releases. |
+
+Use the smallest supported set. Each assignment must identify actual retrievable
+records, a collection, or a product, supported by its source and description.
+Website illustrations, citations, maps, metadata, and helper scripts do not by
+themselves justify Media, Bibliographic records, Geographic reference data,
+Catalogue records, or Software. Coordinates do not make an occurrence record
+geographic reference data. A model consuming observations does not automatically
+provide observation records. Links to sequence archives do not establish that a
+sample catalogue supplies sequence data. Keep parameters, layouts (profiles,
+time series, grids), and product-specific detail in descriptions.
+
+Use no type descriptors when no specific type is justified, including generalist
+repositories with unreviewed holdings. There is no minimum type count for rich
+records. Do not invent a generic type to fill the field or assign every possible
+type to Dryad, Zenodo, or PANGAEA. Planned content belongs in profile/route prose;
+it does not establish a currently retrievable data type.
+
+**Adding a data type requires human approval in the authoring chat.** Check the
+approved definitions first. If none fits, present the proposed name, definition,
+record and source, and why existing types do not fit. Wait for explicit approval
+before changing `dataTypes` and all six translations. Approval of a record or
+silence does not approve a vocabulary addition. Release the vocabulary update
+before using the new ID through the API. Do not add a proposal system, approval
+flag, or vocabulary-writing endpoint.
+
+Apply `server/schema/007_data_types.sql` with the service release and after
+historical language imports, before regenerating the bootstrap export. It maps
+documented equivalents, keeps one existing descriptor and its source/localizations
+per type (preferring canonical and sourced entries), and removes ambiguous or
+duplicate descriptors. It does not certify the retained assignments as reviewed
+or backfill absent evidence. Review those assignments during subsequent authoring.
 
 ## Metrics
 

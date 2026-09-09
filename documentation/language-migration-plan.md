@@ -88,10 +88,7 @@ sources
 The current review path appears to update node-level review fields:
 
 ```text
-reviewState
-reviewerNote
-reviewer
-lastReviewed
+review { state, reviewer, date, note, history? }
 ```
 
 The current Ryu schema stores user-facing record content directly on `nodes`:
@@ -459,16 +456,13 @@ description
 details_json
 translated_from_locale
 content_updated_at
-review_state
-reviewer_note
-reviewer
-last_reviewed
+review_json
 created_at
 updated_at
 PRIMARY KEY (node_id, locale)
 ```
 
-Draft SQL shape:
+SQL shape (the validation function and append-only trigger are defined in the reference schema):
 
 ```sql
 CREATE TABLE node_localizations (
@@ -481,11 +475,9 @@ CREATE TABLE node_localizations (
   translated_from_locale TEXT REFERENCES supported_locales(locale)
     CHECK (translated_from_locale IS NULL OR translated_from_locale <> locale),
   content_updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  review_state TEXT NOT NULL DEFAULT 'agent_researched'
-    CHECK (review_state IN ('agent_researched', 'human_reviewed', 'needs_revision')),
-  reviewer_note TEXT,
-  reviewer TEXT,
-  last_reviewed TIMESTAMPTZ,
+  review_json JSONB NOT NULL DEFAULT jsonb_build_object('history', jsonb_build_array(
+    jsonb_build_object('state', 'agent_researched', 'reviewer', NULL, 'date', CURRENT_TIMESTAMP, 'note', NULL)))
+    CHECK (valid_localization_review(review_json)),
   created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (node_id, locale)
@@ -495,10 +487,10 @@ CREATE INDEX idx_node_localizations_locale
   ON node_localizations (locale);
 
 CREATE INDEX idx_node_localizations_review_state
-  ON node_localizations (review_state);
+  ON node_localizations ((review_json #>> '{history,-1,state}'));
 
 CREATE INDEX idx_node_localizations_locale_review_state
-  ON node_localizations (locale, review_state);
+  ON node_localizations (locale, (review_json #>> '{history,-1,state}'));
 
 CREATE OR REPLACE FUNCTION set_node_localization_content_updated_at()
 RETURNS trigger AS $$
@@ -562,7 +554,7 @@ Each localization row has language-scoped timestamps. Use `node_localizations.co
 
 If a target localization has `translated_from_locale = 'en'` and the English localization's `content_updated_at` is later than the target localization's `content_updated_at`, the target localization should be treated as potentially stale and surfaced for review.
 
-Review-only writes should update review fields, `last_reviewed`, and row-level `updated_at`, but they should not update `content_updated_at`. A reviewer changing a note must not make translated content appear current.
+Review-only writes append a complete snapshot to `review_json.history` and update row-level `updated_at`, but they should not update `content_updated_at`. A reviewer changing a note must not make translated content appear current.
 
 Do not add a separate translated-from date or source hash in this migration.
 
@@ -739,35 +731,38 @@ nodes.review_state
 nodes.review_json
 ```
 
-Review each language version:
+Review each language version through `node_localizations.review_json`:
 
-```text
-node_localizations.review_state
-node_localizations.reviewer_note
-node_localizations.reviewer
-node_localizations.last_reviewed
+```json
+{"history":[{"state":"agent_researched","reviewer":null,"date":null,"note":null}]}
 ```
 
-`review_state` sits on `node_localizations`, not on the language-neutral `nodes` row. API responses can expose it as `reviewState` to match the existing camelCase contract.
+Each entry is a complete review-state snapshot; the last entry is the current
+state. API localizations expose it as `review`, with `review.history` added by
+`include=reviewHistory`. Locale is supplied by the localization row, not repeated
+in every snapshot. Public snapshots contain `state` and `date`; `reviewer` and
+`note` remain authenticated fields.
 
-`node_review_history` keeps one row per node, with a chronological `history_json`
-array covering all its localizations. Each event contains `locale`, `kind`
-(`baseline`, `initial`, or `review`), `from`, `to`, `actor`, `at`, `note`, and
-`contentUpdatedAt`. Baselines preserve the latest known review metadata without
-inventing earlier transitions or the content version previously reviewed.
-Localization inserts and review metadata updates append events through a Postgres
-trigger in the same transaction. Content edits that leave review metadata unchanged
-do not append review events. There is no client history-replacement API.
+A new localization starts with one `agent_researched` snapshot dated at creation.
+Review saves and automatic invalidations append a complete snapshot atomically.
+Content-only edits do not append history unless they invalidate review. JSON
+shape, allowed states, value types, and timestamp validity are checked by the
+database. A trigger rejects rewriting or deleting earlier snapshots, appending
+multiple snapshots in one update, or appending an undated snapshot. Null dates
+remain allowed on seeded current states with no known review date.
 
-Before deploying history reads, apply `server/schema/002_node_review_history.sql`
-with schema-capable credentials. It is transactional and safe to rerun; the full
-reference schema includes the same table and trigger. Node deletion cascades to
-its history. `GET /api/records/:id?include=reviewHistory` returns all locale events;
-the details UI filters by displayed language or shows all languages. Public
-events expose only locale, event kind, and states; actor, note, review timestamp,
-and reviewed content timestamp remain authenticated fields.
+Apply `server/schema/008_localization_reviews.sql` with schema-capable credentials
+before deploying the updated API. It replaces the four loose review columns and
+the `node_review_history` table, discards old history, and seeds one snapshot from
+each localization's current review fields. It accepts either the original
+`last_reviewed` or intermediate `review_date` column and is safe to rerun without
+resetting histories. The reference schema uses the final shape directly.
+The older language-import steps below describe the initial migration; existing
+installations finish with this localization-review migration.
 
-If current review metadata is stored inside `nodes.review_json`, split the existing note, reviewer, and timestamp values into `node_localizations.reviewer_note`, `node_localizations.reviewer`, and `node_localizations.last_reviewed` during backfill. Keep the API names `reviewState`, `reviewerNote`, `reviewer`, and `lastReviewed` as JSON field names for localization objects, not as node-level fields.
+The details UI combines localization snapshots to show one latest review activity
+across all languages, with a link below it to expand older history. Every entry
+shows its actual status and review date.
 
 The review write endpoint should be localization-aware from the start:
 
@@ -777,7 +772,7 @@ PATCH /api/records/:id/review
 
 The request body contains `locale`, `reviewState`, and `reviewerNote`.
 Explorer sets `reviewer` from direct IAP identity or token owner and sets
-`lastReviewed` server-side. Do not keep the old node-level review endpoint as a
+snapshot `date` server-side. Do not keep the old node-level review endpoint as a
 long-term path.
 
 Use the current review-state values:
@@ -788,7 +783,7 @@ human_reviewed
 needs_revision
 ```
 
-At the database layer, type this as constrained text unless the project already has a reusable database enum pattern. At the TypeScript/API layer, use the existing review-state type or an equivalent literal union:
+At the database layer, validate this status within each JSON snapshot. At the TypeScript/API layer, use the existing review-state type or an equivalent literal union:
 
 ```ts
 type ReviewState = "agent_researched" | "human_reviewed" | "needs_revision";
@@ -846,17 +841,14 @@ Example node response shape:
       "details": {},
       "translatedFromLocale": null,
       "contentUpdatedAt": "2026-08-31T19:45:32.457Z",
-      "reviewState": "human_reviewed",
-      "reviewerNote": null,
-      "reviewer": null,
-      "lastReviewed": null
+      "review": { "state": "human_reviewed", "reviewer": null, "date": null, "note": null }
     },
     "fr": {
       "title": "FishBase",
       "summary": "...",
       "description": "...",
       "details": {},
-      "reviewState": "agent_researched",
+      "review": { "state": "agent_researched", "reviewer": null, "date": null, "note": null },
       "translatedFromLocale": "en"
     }
   }
@@ -872,7 +864,7 @@ Recommended localization resolution behavior:
 
 The UI should clearly show which language is being displayed if a fallback is used. Showing English under a French locale has review implications and must be visible rather than silent. Because public reads return available data regardless of review state, the UI should not imply that non-`human_reviewed` content is hidden.
 
-Public redaction still applies. Public payloads may expose `reviewState`, but reviewer notes, reviewer identity, and last-reviewed timestamps should be redacted unless the request is authenticated for author/reviewer use.
+Public redaction still applies. Public payloads expose `review.state` and `review.date`; reviewer identity and notes require authentication, including within history.
 
 ## Search Migration
 
@@ -1115,7 +1107,7 @@ Repository responses should return nodes with `localizations`, `availableLocales
 
 Update portal-facing contracts at the same time. `RyuSystemRecord` and any portal response shape should either become locale-aware or expose resolved localization fields explicitly; do not keep a parallel portal contract that still depends on `name`, `summary`, `description`, or node-level `reviewState`.
 
-Public redaction should operate on localization fields. Public reads can expose localization `reviewState`, but should redact `reviewerNote`, `reviewer`, and `lastReviewed`.
+Public redaction should operate on localization fields. Public reads expose localization `review.state` and `review.date`, but redact `review.reviewer` and `review.note`, including within history.
 
 Add tests or fixture checks proving public bootstrap/API responses redact reviewer note, reviewer, and last-reviewed metadata for every localization row, not just the old node-level fields.
 

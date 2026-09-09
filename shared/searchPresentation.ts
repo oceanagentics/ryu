@@ -1,4 +1,5 @@
 import type {
+  Discipline,
   GraphEdge,
   GraphNode,
   ResolvedNodeLocalization,
@@ -28,9 +29,8 @@ export type LocalizationCoverageFilter =
   | "missing_current_locale";
 
 export type GraphSearchFilters = {
-  role: string[];
   countryCode: string[];
-  disciplineFamily: string[];
+  disciplines: Discipline[];
   dataClaims: Record<ClaimFilterKey, string[]>;
   accessTypes: string[];
   accessMethods: string[];
@@ -60,9 +60,7 @@ export type SystemSearchRecord = {
   localization: ResolvedNodeLocalization;
   operatorName: string;
   countryCode: string;
-  role: string;
-  disciplineFamily: string;
-  geographicScope: string;
+  disciplines: Discipline[];
   dataTypes: string[];
   dataFormats: string[];
   dataStandards: string[];
@@ -112,9 +110,8 @@ export function reviewStateFilterOptions(
 }
 
 export const emptySearchFilters = (): GraphSearchFilters => ({
-  role: [],
   countryCode: [],
-  disciplineFamily: [],
+  disciplines: [],
   dataClaims: {
     type: [],
     format: [],
@@ -148,9 +145,8 @@ export function selectOptions(
 
 export function countActiveFilters(filters: GraphSearchFilters): number {
   return [
-    filters.role,
     filters.countryCode,
-    filters.disciplineFamily,
+    filters.disciplines,
     filters.accessTypes,
     filters.accessMethods,
     filters.localizationCoverage,
@@ -248,9 +244,7 @@ export function buildSystemRecord(
     localization,
     operatorName: uniqueSorted(operatorNodes.map((node) => nodeTitle(node, locale))).join(", "),
     countryCode: system.countryCode ?? operatorCountryCodes[0] ?? "",
-    role: system.properties.role ?? "",
-    disciplineFamily: system.properties.disciplineFamily ?? "",
-    geographicScope: system.properties.geographicScope ?? "",
+    disciplines: system.properties.disciplines ?? [],
     dataTypes,
     dataFormats,
     dataStandards,
@@ -262,7 +256,7 @@ export function buildSystemRecord(
         : path.label,
     )),
     hasCurrentLocale: Boolean(currentLocalization),
-    currentLocaleReviewState: currentLocalization?.reviewState ?? null,
+    currentLocaleReviewState: currentLocalization?.review.state ?? null,
     sourceTitles: uniqueSorted(sourceRefs(system, graph).map((source) => {
       const fullSource = graph.sourceById[source.id];
       return (fullSource ? resolveSourceLocalization(fullSource, locale)?.title : null) ?? source.id;
@@ -292,12 +286,11 @@ export function getSystemFilterOptions(
   locale: SupportedLocale,
 ) {
   return {
-    role: selectOptions(records.map((record) => record.role), locale, "systemRole"),
     countryCode: selectOptions(records.map((record) => record.countryCode), locale),
-    disciplineFamily: selectOptions(
-      records.map((record) => record.disciplineFamily),
+    disciplines: selectOptions(
+      records.flatMap((record) => record.disciplines),
       locale,
-      "disciplineFamily",
+      "discipline",
     ),
     dataClaims: {
       type: selectOptions(records.flatMap((record) => record.dataTypes), locale, "descriptorLabel"),
@@ -308,4 +301,3 @@ export function getSystemFilterOptions(
     accessMethods: selectOptions(records.flatMap((record) => record.accessMethods), locale, "accessMethod"),
   };
 }
-

@@ -327,7 +327,7 @@ browser click-through for the signed-in review form:
    - Exercise a real `PATCH /api/explorer/nodes/:id/localizations/:locale/review` action.
    - Confirm `explorer-api` receives the call.
    - Confirm write audit logging includes CHM service account and user identity.
-   - Confirm `reviewState`, `reviewerNote`, `reviewer`, and `lastReviewed` land in Cloud SQL through `explorer_write`.
+   - Confirm complete `state`, `note`, `reviewer`, and `date` snapshots append to `node_localizations.review_json.history` through `explorer_write`.
    - Use only the current review states: `agent_researched`,
      `human_reviewed`, and `needs_revision`.
 
@@ -385,7 +385,7 @@ CHM repo:
 Explorer/Ryu repo:
 
 - Current Ryu changes are intentional launch work: Cloud Run packaging, Postgres runtime, runtime modes, Postgres schema reference, IAP/review-path handling, seed/bootstrap data, route contracts, map assets, and gallery asset relocation.
-- The local Explorer server contract and Postgres repository now expose only the node review mutation for writes: `reviewState` and `reviewerNote` in the request, with `reviewer` and `lastReviewed` set by the server.
+- The local Explorer server contract and Postgres repository now expose only the node review mutation for writes: `reviewState` and `reviewerNote` in the request, with snapshot `reviewer` and `date` set by the server.
 - The local Explorer details UI now shows record depth and review state, and in authenticated/author mode lets users update review state and reviewer note through the CHM review API path.
 - Production dependency posture is Postgres-only: `better-sqlite3` is removed from production package dependencies and lockfile, the deployed image does not copy `data/`, and local ignored SQLite database files have been deleted.
 - Obsolete VM/static publishing infrastructure has been removed.

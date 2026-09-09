@@ -1,8 +1,12 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import type { GraphNode, GraphNodeKind, RyuRoute, SupportedLocale } from "../../shared/domain";
+import { dataTypes } from "../../shared/domain";
+import { facetLabel } from "../../shared/i18n";
 import { indexGraph } from "../../shared/indexGraph";
-import { emptyLocalizationDetails } from "../../shared/localization";
+import { emptyLocalizationDetails, resolveNodeLocalization, supportedLocales } from "../../shared/localization";
+import { systemDataDescriptors } from "../../shared/recordDisplay";
+import { buildSystemRecords, getSystemFilterOptions } from "../../shared/searchPresentation";
 import { readRecordSearchQuery } from "./recordContracts";
 import { searchRecords } from "./recordSearch";
 
@@ -12,7 +16,7 @@ function node(id: string, kind: GraphNodeKind = "system", title = id): GraphNode
     createdAt: "2026-09-07", updatedAt: "2026-09-07", properties: {}, availableLocales: ["en"], requestedLocale: "en", displayLocale: "en", isLocaleFallback: false,
     localizations: { en: { locale: "en", title, summary: null, description: null,
       details: emptyLocalizationDetails(), translatedFromLocale: null, contentUpdatedAt: "2026-09-07",
-      reviewState: "agent_researched", reviewerNote: null, reviewer: null, lastReviewed: null,
+      review: { state: "agent_researched", note: null, reviewer: null, date: null },
       createdAt: "2026-09-07", updatedAt: "2026-09-07",
     } },
   };
@@ -72,24 +76,33 @@ test("filters intersect across groups and OR within groups, using typed access a
   const record = node("filtered");
   record.countryCode = "CAN";
   record.recordDepth = "rich";
-  record.properties = { role: "aggregator", disciplineFamily: "biodiversity", geographicScope: "Global",
+  record.properties = { disciplines: ["ecology", "taxonomy"], geographicScope: "Global",
     access: [{ id: "api", type: "read", method: "api", url: "https://example.org", source: { id: "src-api", url: "https://example.org" } }],
     data: { recordCount: null, storageSize: null, descriptors: [
-      { id: "type", category: "type", label: "occurrence", source: { id: "src-api", url: "https://example.org" } },
+      { id: "type", category: "type", label: "occurrence_records", source: { id: "src-api", url: "https://example.org" } },
       { id: "format", category: "format", label: "geojson", source: { id: "src-api", url: "https://example.org" } },
       { id: "standard", category: "standard", label: "dwc", source: { id: "src-api", url: "https://example.org" } },
     ] },
   };
-  const filters = { kind: "system", countryCode: "USA,CAN", role: "aggregator", disciplineFamily: "biodiversity",
-    geography: "global", dataType: "occurrence", dataFormat: "geojson", dataStandard: "dwc", recordDepth: "rich",
+  const filters = { kind: "system", countryCode: "USA,CAN", disciplines: "ecology,genetics",
+    geography: "CAN", dataType: "occurrence_records", dataFormat: "geojson", dataStandard: "dwc", recordDepth: "rich",
     accessType: "read", accessMethod: "api", locale: "fr", localeAvailability: "missing",
     reviewState: "agent_researched", reviewLocale: "displayed" };
   assert.equal(search([record], filters).length, 1);
-  for (const key of ["role", "countryCode", "disciplineFamily", "geography", "dataType", "dataFormat", "dataStandard", "accessType", "accessMethod"]) {
+  assert.equal(search([record], { geography: "global" }).length, 0);
+  assert.equal(search([record], { q: "global" }).length, 0);
+  assert.equal(search([record], { ...filters, disciplines: "taxonomy" }).length, 1);
+  assert.equal(search([record], { ...filters, disciplines: "chemistry" }).length, 0);
+  assert.throws(() => readRecordSearchQuery({ disciplines: "fish_biodiversity" }), /disciplines/);
+  assert.throws(() => readRecordSearchQuery({ role: "aggregator" }), /unsupported/);
+  assert.throws(() => readRecordSearchQuery({ disciplineFamily: "biodiversity" }), /unsupported/);
+  for (const key of ["countryCode", "geography", "dataFormat", "dataStandard", "accessType", "accessMethod"]) {
     assert.equal(search([record], { ...filters, [key]: "not-a-match" }).length, 0, key);
   }
   assert.equal(search([record], { ...filters, accessType: "api" }).length, 0);
-  assert.equal(search([record], { ...filters, dataType: "geojson" }).length, 0);
+  assert.equal(search([record], { ...filters, dataType: "sequence_data" }).length, 0);
+  assert.equal(search([record], { ...filters, dataType: "sequence_data,occurrence_records" }).length, 1);
+  assert.throws(() => readRecordSearchQuery({ dataType: "geojson" }), /dataType/);
   assert.equal(search([record], { ...filters, reviewLocale: "requested" }).length, 0);
   assert.equal(search([record], { ...filters, reviewLocale: "any" }).length, 1);
   for (const [localeAvailability, count] of [["available", 0], ["missing", 1], ["partial", 1], ["complete", 0]] as const) {
@@ -100,6 +113,47 @@ test("filters intersect across groups and OR within groups, using typed access a
   }
   assert.equal(search([record], { localeAvailability: "complete" }).length, 1);
   assert.equal(search([record], { localeAvailability: "partial" }).length, 0);
+});
+
+test("discipline tags are independently searchable and produce localized, deduplicated filter options", () => {
+  const first = node("first");
+  first.properties.disciplines = ["ecology", "taxonomy"];
+  const second = node("second");
+  second.properties.disciplines = ["taxonomy", "marine_biology"];
+  const graph = indexGraph({ nodes: [first, second, node("generalist")], edges: [], sources: [], ryuRoutes: [], savedViews: [] });
+  const records = buildSystemRecords(graph, "fr");
+  assert.deepEqual(records.map(record => record.disciplines), [["ecology", "taxonomy"], ["taxonomy", "marine_biology"], []]);
+  assert.deepEqual(getSystemFilterOptions(records, "fr").disciplines, [
+    { value: "ecology", label: "Écologie" },
+    { value: "marine_biology", label: "Biologie marine" },
+    { value: "taxonomy", label: "Taxonomie" },
+  ]);
+  first.localizations.fr = { ...first.localizations.en!, locale: "fr" };
+  const matches = search([first], { q: "taxonomie", locale: "fr" });
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].reasons[0].field, "system.disciplines");
+});
+
+test("data type search and display use canonical translations and preserve record-specific descriptions", () => {
+  const record = node("taxonomy");
+  record.properties.data = { recordCount: null, storageSize: null, descriptors: [
+    { id: "type", category: "type", label: "taxonomic_records", source: null },
+  ] };
+  record.localizations.en!.details.data.descriptors = [{ id: "type", label: "LegacyOverrideMarker", description: "Nomenclatural evidence" }];
+  const resolved = systemDataDescriptors(record, resolveNodeLocalization(record, "fr"))[0];
+  assert.equal(resolved.localizedLabel, "Registres taxonomiques");
+  assert.equal(resolved.description, "Nomenclatural evidence");
+  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], sources: [], ryuRoutes: [], savedViews: [] });
+  assert.deepEqual(getSystemFilterOptions(buildSystemRecords(graph, "fr"), "fr").dataClaims.type, [
+    { value: "taxonomic_records", label: "Registres taxonomiques" },
+  ]);
+  const matches = search([record], { q: "Registres taxonomiques", locale: "fr" });
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].reasons[0].field, "data.descriptors.type");
+  assert.equal(search([record], { q: "Nomenclatural evidence" }).length, 1);
+  for (const locale of supportedLocales) {
+    for (const type of dataTypes) assert.notEqual(facetLabel(locale, "descriptorLabel", type), type, `${locale}/${type}`);
+  }
 });
 
 test("route matching respects DTO visibility and route filters", () => {

@@ -152,7 +152,7 @@ function readDescriptor(value: unknown): SystemDataDescriptor | null {
     category,
     label,
     source: isRecord(value.source) ? readSourceRef(value.source) : null,
-  };
+  } as SystemDataDescriptor; // Historical labels are converted by 007_data_types.sql after import.
 }
 
 function readDescriptorText(value: unknown) {

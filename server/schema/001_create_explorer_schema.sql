@@ -106,6 +106,39 @@ FOR EACH ROW
 WHEN (NEW.updated_at = OLD.updated_at)
 EXECUTE FUNCTION set_updated_at_timestamp();
 
+CREATE OR REPLACE FUNCTION valid_localization_review(value jsonb)
+RETURNS boolean LANGUAGE plpgsql IMMUTABLE AS $$
+DECLARE
+  snapshot jsonb;
+  field text;
+BEGIN
+  IF jsonb_typeof(value) IS DISTINCT FROM 'object' OR value - 'history' <> '{}'::jsonb THEN
+    RETURN FALSE;
+  END IF;
+  IF jsonb_typeof(value->'history') IS DISTINCT FROM 'array' THEN RETURN FALSE; END IF;
+  IF jsonb_array_length(value->'history') = 0 THEN RETURN FALSE; END IF;
+  FOR snapshot IN SELECT * FROM jsonb_array_elements(value->'history') LOOP
+    IF jsonb_typeof(snapshot) IS DISTINCT FROM 'object' THEN RETURN FALSE; END IF;
+    IF NOT snapshot ?& ARRAY['state', 'reviewer', 'date', 'note']
+      OR snapshot - ARRAY['state', 'reviewer', 'date', 'note'] <> '{}'::jsonb
+      OR jsonb_typeof(snapshot->'state') IS DISTINCT FROM 'string'
+      OR snapshot->>'state' NOT IN ('agent_researched', 'human_reviewed', 'needs_revision') THEN
+      RETURN FALSE;
+    END IF;
+    FOREACH field IN ARRAY ARRAY['reviewer', 'date', 'note'] LOOP
+      IF jsonb_typeof(snapshot->field) NOT IN ('string', 'null') THEN RETURN FALSE; END IF;
+    END LOOP;
+    IF snapshot->>'date' IS NOT NULL THEN
+      IF snapshot->>'date' !~ '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$'
+        OR NOT isfinite((snapshot->>'date')::timestamptz) THEN RETURN FALSE; END IF;
+    END IF;
+  END LOOP;
+  RETURN TRUE;
+EXCEPTION WHEN invalid_datetime_format OR datetime_field_overflow THEN
+  RETURN FALSE;
+END;
+$$;
+
 CREATE TABLE IF NOT EXISTS node_localizations (
   node_id text NOT NULL REFERENCES nodes(id) ON DELETE CASCADE,
   locale text NOT NULL REFERENCES supported_locales(locale),
@@ -116,11 +149,9 @@ CREATE TABLE IF NOT EXISTS node_localizations (
   translated_from_locale text REFERENCES supported_locales(locale)
     CHECK (translated_from_locale IS NULL OR translated_from_locale <> locale),
   content_updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  review_state text NOT NULL DEFAULT 'agent_researched'
-    CHECK (review_state IN ('agent_researched', 'human_reviewed', 'needs_revision')),
-  reviewer_note text,
-  reviewer text,
-  last_reviewed timestamptz,
+  review_json jsonb NOT NULL DEFAULT jsonb_build_object('history', jsonb_build_array(jsonb_build_object(
+    'state', 'agent_researched', 'reviewer', NULL, 'date', CURRENT_TIMESTAMP, 'note', NULL)))
+    CONSTRAINT node_localizations_review_json_check CHECK (valid_localization_review(review_json)),
   created_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (node_id, locale)
@@ -132,9 +163,9 @@ ALTER TABLE node_localizations
 CREATE INDEX IF NOT EXISTS idx_node_localizations_locale
   ON node_localizations(locale);
 CREATE INDEX IF NOT EXISTS idx_node_localizations_review_state
-  ON node_localizations(review_state);
+  ON node_localizations((review_json #>> '{history,-1,state}'));
 CREATE INDEX IF NOT EXISTS idx_node_localizations_locale_review_state
-  ON node_localizations(locale, review_state);
+  ON node_localizations(locale, (review_json #>> '{history,-1,state}'));
 
 CREATE OR REPLACE FUNCTION set_node_localization_content_updated_at()
 RETURNS trigger AS $$
@@ -164,72 +195,26 @@ FOR EACH ROW
 WHEN (NEW.updated_at = OLD.updated_at)
 EXECUTE FUNCTION set_updated_at_timestamp();
 
-CREATE TABLE IF NOT EXISTS node_review_history (
-  node_id text PRIMARY KEY REFERENCES nodes(id) ON DELETE CASCADE,
-  history_json jsonb NOT NULL DEFAULT '[]'::jsonb
-    CHECK (jsonb_typeof(history_json) = 'array')
-);
-
--- Preserve only the latest known review metadata; earlier transitions are unknown.
-INSERT INTO node_review_history (node_id, history_json)
-SELECT n.id, coalesce(
-  jsonb_agg(jsonb_build_object(
-    'locale', l.locale,
-    'kind', 'baseline',
-    'from', NULL,
-    'to', l.review_state,
-    'actor', l.reviewer,
-    'at', l.last_reviewed,
-    'note', l.reviewer_note,
-    'contentUpdatedAt', NULL
-  ) ORDER BY l.last_reviewed NULLS FIRST, l.locale)
-    FILTER (WHERE l.locale IS NOT NULL),
-  '[]'::jsonb
-)
-FROM nodes n
-LEFT JOIN node_localizations l ON l.node_id = n.id
-GROUP BY n.id
-ON CONFLICT (node_id) DO NOTHING;
-
-CREATE OR REPLACE FUNCTION append_node_review_history()
-RETURNS trigger AS $$
+CREATE OR REPLACE FUNCTION guard_localization_review_history()
+RETURNS trigger LANGUAGE plpgsql AS $$
 BEGIN
-  IF TG_OP = 'UPDATE' AND
-    ROW(NEW.review_state, NEW.reviewer_note, NEW.reviewer, NEW.last_reviewed)
-    IS NOT DISTINCT FROM
-    ROW(OLD.review_state, OLD.reviewer_note, OLD.reviewer, OLD.last_reviewed) THEN
-    RETURN NEW;
+  IF NOT valid_localization_review(NEW.review_json) THEN
+    RAISE EXCEPTION 'invalid localization review' USING ERRCODE = '23514';
   END IF;
-
-  INSERT INTO node_review_history (node_id, history_json)
-  VALUES (NEW.node_id, jsonb_build_array(jsonb_build_object(
-    'locale', NEW.locale,
-    'kind', CASE WHEN TG_OP = 'INSERT' THEN 'initial' ELSE 'review' END,
-    'from', CASE WHEN TG_OP = 'INSERT' THEN NULL ELSE OLD.review_state END,
-    'to', NEW.review_state,
-    'actor', CASE WHEN TG_OP = 'INSERT' OR
-      ROW(NEW.reviewer, NEW.last_reviewed) IS DISTINCT FROM ROW(OLD.reviewer, OLD.last_reviewed)
-      THEN NEW.reviewer ELSE NULL END,
-    'at', CASE WHEN TG_OP = 'INSERT' THEN NEW.created_at ELSE clock_timestamp() END,
-    'note', CASE WHEN TG_OP = 'INSERT' OR
-      ROW(NEW.reviewer_note, NEW.reviewer, NEW.last_reviewed)
-      IS DISTINCT FROM ROW(OLD.reviewer_note, OLD.reviewer, OLD.last_reviewed)
-      THEN NEW.reviewer_note ELSE NULL END,
-    'contentUpdatedAt', NEW.content_updated_at
-  )))
-  ON CONFLICT (node_id) DO UPDATE
-  SET history_json = node_review_history.history_json || EXCLUDED.history_json;
-
+  IF jsonb_array_length(NEW.review_json->'history') <> jsonb_array_length(OLD.review_json->'history') + 1
+    OR (NEW.review_json->'history') - (jsonb_array_length(NEW.review_json->'history') - 1) <> OLD.review_json->'history'
+    OR NEW.review_json #>> '{history,-1,date}' IS NULL THEN
+    RAISE EXCEPTION 'review history must append one dated snapshot without changing earlier snapshots' USING ERRCODE = '23514';
+  END IF;
   RETURN NEW;
 END;
-$$ LANGUAGE plpgsql;
+$$;
 
 DROP TRIGGER IF EXISTS trg_node_localizations_review_history ON node_localizations;
 CREATE TRIGGER trg_node_localizations_review_history
-AFTER INSERT OR UPDATE OF review_state, reviewer_note, reviewer, last_reviewed
-ON node_localizations
-FOR EACH ROW
-EXECUTE FUNCTION append_node_review_history();
+BEFORE UPDATE OF review_json ON node_localizations
+FOR EACH ROW WHEN (NEW.review_json IS DISTINCT FROM OLD.review_json)
+EXECUTE FUNCTION guard_localization_review_history();
 
 CREATE TABLE IF NOT EXISTS edges (
   id text PRIMARY KEY,

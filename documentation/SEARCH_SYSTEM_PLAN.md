@@ -17,11 +17,19 @@ The browser sends its query, locale, language mode, and filters once through
 views consume that shared result. Browser code only formats records and filter
 options; it does not match, rank, or apply search filters.
 
-The endpoint accepts `q`, `kind`, `countryCode`, `role`, `disciplineFamily`,
+The endpoint accepts `q`, `kind`, `countryCode`, `disciplines`,
 `geography`, `dataType`, `dataFormat`, `dataStandard`, `recordDepth`, `reviewState`,
 `locale`, `localeMode`, `localeAvailability`, `reviewLocale`, `routeStatus`,
 `routeCapability`, `accessType`, `accessMethod`, `include`, `limit`, and `cursor`.
 Filters intersect across groups; selections within a group are alternatives.
+`disciplines=ecology,taxonomy` matches either approved tag. Use canonical IDs from
+`shared/domain.ts`; unknown IDs and the retired `role`/`disciplineFamily` query
+parameters are rejected. Text search also matches localized discipline labels.
+The retired `geographicScope` property is excluded from text and geography searches.
+`dataType` accepts approved IDs from `dataTypes` in `shared/domain.ts`, for example
+`dataType=occurrence_records,sequence_data`. Unknown IDs are rejected. Type names
+in results and search come from the shared translations, with record-specific
+detail in descriptor descriptions.
 
 Responses include `total` and an opaque cursor ordered by score, displayed title,
 and ID. `include=matchingIds` returns the entire matching ID set independently of
@@ -95,7 +103,7 @@ The API executes search against Postgres data; the browser keeps the bootstrap g
 - Define per-kind search field extractors for systems, organizations, and countries.
 - Replace loose subsequence fuzzy matching with field-aware matching:
   - high weight: name, aliases, country code, kind, subtype
-  - medium weight: descriptions, role, discipline, data descriptor labels, access labels
+  - medium weight: descriptions, disciplines, data descriptor labels, access labels
   - low weight: source titles, source notes, relationship notes, connected node names
 - Return ranked system records and matching entity ids from the same resolver.
 - Have the Systems pane render the shared filtered/ranked system result set.

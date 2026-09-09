@@ -112,9 +112,7 @@ export function toPublicBootstrap(payload: GraphBootstrapPayload): GraphBootstra
           localization
             ? {
                 ...localization,
-                reviewerNote: null,
-                reviewer: null,
-                lastReviewed: null,
+                review: { state: localization.review.state, date: localization.review.date, reviewer: null, note: null },
               }
             : localization,
         ]),

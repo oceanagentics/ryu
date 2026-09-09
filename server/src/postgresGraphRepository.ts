@@ -34,7 +34,6 @@ import type {
   RecordSearchQuery,
   RecordSourceInput,
   RecordValidationResult,
-  ReviewHistoryEvent,
   SourceLocalizationContentInput,
 } from "../../shared/recordApi";
 import type { GraphRepository } from "./graphRepository";
@@ -121,7 +120,6 @@ function mapPostgresNodeLocalization(row: Record<string, unknown>): NodeLocaliza
     ...(row as RawNodeLocalization),
     details_json: jsonText(row.details_json),
     content_updated_at: timestampText(row.content_updated_at),
-    last_reviewed: row.last_reviewed == null ? null : timestampText(row.last_reviewed),
     created_at: timestampText(row.created_at),
     updated_at: timestampText(row.updated_at),
   });
@@ -242,7 +240,7 @@ export class PostgresGraphRepository implements GraphRepository {
           match.entity.id.localeCompare(cursor.id) > 0)
       ))) : matches;
     const page = remaining.slice(0, query.limit);
-    const records = await this.getRecordAggregatesByIds(page.map(match => match.entity.id), query.locale, query);
+    const records = await this.getRecordAggregatesByIds(page.map(match => match.entity.id), query.locale);
     const last = page.at(-1);
     return {
       records: records.map((record, index) => ({ ...record,
@@ -257,7 +255,7 @@ export class PostgresGraphRepository implements GraphRepository {
   }
 
   async getRecord(id: string, query: RecordSearchQuery): Promise<RecordAggregate> {
-    const [record] = await this.getRecordAggregatesByIds([id], query.locale, query);
+    const [record] = await this.getRecordAggregatesByIds([id], query.locale);
     if (!record) {
       throw new Error(`record not found: ${id}`);
     }
@@ -504,19 +502,18 @@ export class PostgresGraphRepository implements GraphRepository {
     await this.withTransaction(async (client) => {
       await this.requireExistingRecordPrecondition(client, id, options);
       const existing = await this.getNodeLocalization(id, locale, client);
-      const reviewState = hasReviewState ? input.reviewState : existing.reviewState;
+      const reviewState = hasReviewState ? input.reviewState : existing.review.state;
       const reviewerNote = hasReviewerNote
         ? normalizeString(input.reviewerNote)
-        : existing.reviewerNote;
-      const lastReviewed = new Date().toISOString();
+        : existing.review.note;
+      const reviewDate = new Date().toISOString();
 
       await client.query(
         `
           UPDATE node_localizations
-          SET review_state = $2,
-              reviewer_note = $3,
-              reviewer = $4,
-              last_reviewed = $5
+          SET review_json = jsonb_build_object('history', review_json->'history' || jsonb_build_array(
+            jsonb_build_object('state', $2::text, 'note', $3::text, 'reviewer', $4::text, 'date', $5::text)
+          ))
           WHERE node_id = $1
             AND locale = $6
         `,
@@ -525,7 +522,7 @@ export class PostgresGraphRepository implements GraphRepository {
           reviewState,
           reviewerNote,
           normalizedReviewer,
-          lastReviewed,
+          reviewDate,
           locale,
         ],
       );
@@ -563,7 +560,6 @@ export class PostgresGraphRepository implements GraphRepository {
   private async getRecordAggregatesByIds(
     ids: string[],
     requestedLocale: SupportedLocale,
-    query?: RecordSearchQuery,
     client: Pool | PoolClient = this.pool,
   ): Promise<RecordAggregate[]> {
     if (ids.length === 0) {
@@ -571,7 +567,7 @@ export class PostgresGraphRepository implements GraphRepository {
     }
 
     const queryRows = (sql: string, params: unknown[]) => this.query(sql, params, client);
-    const [nodeRows, localizationRows, edgeRows, routeRows, historyRows] = await Promise.all([
+    const [nodeRows, localizationRows, edgeRows, routeRows] = await Promise.all([
       queryRows("SELECT * FROM nodes WHERE id = ANY($1::text[])", [ids]),
       queryRows(
         "SELECT * FROM node_localizations WHERE node_id = ANY($1::text[]) ORDER BY node_id, locale",
@@ -591,13 +587,7 @@ export class PostgresGraphRepository implements GraphRepository {
         "SELECT * FROM ryu_routes WHERE node_id = ANY($1::text[]) ORDER BY node_id, priority, id",
         [ids],
       ),
-      query?.include.includes("reviewHistory")
-        ? queryRows("SELECT * FROM node_review_history WHERE node_id = ANY($1::text[])", [ids])
-        : [],
     ]);
-    const historyByNodeId = new Map(historyRows.map((row) =>
-      [String(row.node_id), row.history_json as ReviewHistoryEvent[]],
-    ));
     const localizationsByNodeId = new Map<string, NodeLocalization[]>();
     for (const row of localizationRows) {
       const nodeId = String(row.node_id);
@@ -661,9 +651,6 @@ export class PostgresGraphRepository implements GraphRepository {
           .map((sourceId) => sourcesById.get(sourceId))
           .filter((source): source is Source => Boolean(source)),
         matchReasons: [],
-        ...(query?.include.includes("reviewHistory")
-          ? { reviewHistory: historyByNodeId.get(id) ?? [] }
-          : {}),
       }];
     });
   }
@@ -769,7 +756,7 @@ export class PostgresGraphRepository implements GraphRepository {
     input: RecordAggregateContentInput | RecordPatchInput,
     patch: boolean,
   ) {
-    const [existing] = await this.getRecordAggregatesByIds([id], defaultLocale, undefined, client);
+    const [existing] = await this.getRecordAggregatesByIds([id], defaultLocale, client);
     const before = existing ? recordContent(existing) : undefined;
     const full = input as RecordAggregateContentInput;
     const changes = input as RecordPatchInput;
@@ -900,7 +887,7 @@ export class PostgresGraphRepository implements GraphRepository {
     }
     if (relatedIds.size) {
       await client.query("SELECT id FROM nodes WHERE id = ANY($1::text[]) ORDER BY id FOR UPDATE", [[...relatedIds]]);
-      const related = await this.getRecordAggregatesByIds([...relatedIds], defaultLocale, undefined, client);
+      const related = await this.getRecordAggregatesByIds([...relatedIds], defaultLocale, client);
       for (const record of related) {
         if (!edgeRecordIds.has(record.node.id) && !this.collectRecordSourceIds(record).some(ref => changedIds.has(ref))) continue;
         invalidate(record.node.id, [...supportedLocales]);
@@ -921,10 +908,13 @@ export class PostgresGraphRepository implements GraphRepository {
     for (const [id, locales] of invalidations) {
       await client.query("UPDATE nodes SET updated_at = clock_timestamp() WHERE id = $1", [id]);
       await client.query(`
-        UPDATE node_localizations SET review_state = 'needs_revision',
-          reviewer = NULL, last_reviewed = clock_timestamp(),
-          reviewer_note = 'Content or cited evidence changed; review is required.'
-        WHERE node_id = $1 AND locale = ANY($2::text[]) AND review_state = 'human_reviewed'
+        UPDATE node_localizations
+        SET review_json = jsonb_build_object('history', review_json->'history' || jsonb_build_array(
+          jsonb_build_object('state', 'needs_revision', 'reviewer', NULL, 'date', clock_timestamp(),
+            'note', 'Content or cited evidence changed; review is required.')
+        ))
+        WHERE node_id = $1 AND locale = ANY($2::text[])
+          AND review_json #>> '{history,-1,state}' = 'human_reviewed'
       `, [id, [...locales]]);
     }
   }
@@ -1061,10 +1051,9 @@ export class PostgresGraphRepository implements GraphRepository {
           summary,
           description,
           details_json,
-          translated_from_locale,
-          review_state
+          translated_from_locale
         )
-        VALUES ($1, $2, $3, $4, $5, $6::jsonb, $7, 'agent_researched')
+        VALUES ($1, $2, $3, $4, $5, $6::jsonb, $7)
         ON CONFLICT (node_id, locale) DO UPDATE
         SET title = EXCLUDED.title,
             summary = EXCLUDED.summary,
@@ -1326,12 +1315,10 @@ export class PostgresGraphRepository implements GraphRepository {
             ...readStringArray(node.properties, "domains"),
             ...readStringArray(node.properties, "families"),
             node.subtype,
-            node.properties.role,
-            node.properties.disciplineFamily,
+            ...node.properties.disciplines ?? [],
           ]),
           geographies: uniqueStrings([
             ...readStringArray(node.properties, "geographies"),
-            node.properties.geographicScope,
             node.countryCode,
           ]),
           capabilities: uniqueStrings([
@@ -1351,7 +1338,7 @@ export class PostgresGraphRepository implements GraphRepository {
             ...readStringArray(node.properties, "caveats"),
           ]),
           recordDepth: node.recordDepth,
-          reviewState: localization.reviewState,
+          reviewState: localization.review?.state ?? null,
           updatedAt: node.updatedAt,
         };
       });

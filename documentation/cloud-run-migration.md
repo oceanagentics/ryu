@@ -46,14 +46,14 @@ review API.
 The details panel shows record and localization review state for selected nodes:
 
 - `recordDepth` is read-only and visible to all users.
-- The resolved localization's `reviewState` is visible to all users.
-- Valid `reviewState` values are `agent_researched`, `human_reviewed`, and
+- The resolved localization's `review.state` is visible to all users.
+- Valid review state values are `agent_researched`, `human_reviewed`, and
   `needs_revision`.
-- Authenticated/author builds render `reviewState` as a dropdown.
+- Authenticated/author builds render `review.state` as a dropdown.
 - Authenticated/author builds show `reviewerNote`, `reviewer`, and
-  `lastReviewed` in the embedded review form.
+  `review.date` in the embedded review form.
 - The form sends `locale`, `reviewState`, and `reviewerNote`; Explorer sets
-  `reviewer` from direct IAP identity and `lastReviewed` server-side.
+  snapshot `reviewer` from direct IAP identity and `date` server-side.
 - The public build checks the `chm_admin_hint` cookie before mounting React. If
   the cookie is present, `/explorer` redirects to `/explorer/admin` while
   preserving the current query string and hash. Without the cookie, anonymous

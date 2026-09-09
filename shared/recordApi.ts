@@ -1,10 +1,14 @@
 import type { SearchMatchReason } from "./searchPresentation";
 import type {
+  DataType,
+  Discipline,
   GraphEdge,
   GraphEdgeKind,
   GraphNode,
   GraphNodeKind,
   NodeLocalization,
+  LocalizationReview,
+  ReviewSnapshot,
   NodeLocalizationDetails,
   NodeProperties,
   RecordDepth,
@@ -49,14 +53,13 @@ export interface RecordSearchCursor {
 export interface RecordSearchQuery {
   q?: string;
   scope?: RecordDtoScope;
-  role: string[];
   countryCode: string[];
-  disciplineFamily: string[];
+  disciplines: Discipline[];
   dataFormat: string[];
   dataStandard: string[];
   kind: GraphNodeKind[];
   geography: string[];
-  dataType: string[];
+  dataType: DataType[];
   recordDepth: RecordDepth[];
   reviewState: ReviewState[];
   locale: SupportedLocale;
@@ -80,21 +83,6 @@ export interface RecordAggregate {
   matchReasons: SearchMatchReason[];
   score?: number;
   matchedLocale?: SupportedLocale | null;
-  reviewHistory?: ReviewHistoryEvent[];
-}
-
-export interface PublicReviewHistoryEvent {
-  locale: SupportedLocale;
-  kind: "baseline" | "initial" | "review";
-  from: ReviewState | null;
-  to: ReviewState;
-}
-
-export interface ReviewHistoryEvent extends PublicReviewHistoryEvent {
-  actor: string | null;
-  at: string | null;
-  note: string | null;
-  contentUpdatedAt: string | null;
 }
 
 export interface RecordListResult {
@@ -146,15 +134,13 @@ export interface PublicRecordLocalizationDto {
   details: NodeLocalizationDetails;
   translatedFromLocale: SupportedLocale | null;
   contentUpdatedAt: string;
-  reviewState: ReviewState;
+  review: Pick<ReviewSnapshot, "state" | "date"> & { history?: Pick<ReviewSnapshot, "state" | "date">[] };
   createdAt: string;
   updatedAt: string;
 }
 
 export interface AdminRecordLocalizationDto extends PublicRecordLocalizationDto {
-  reviewerNote: string | null;
-  reviewer: string | null;
-  lastReviewed: string | null;
+  review: LocalizationReview;
 }
 
 export type PrivateRecordLocalizationDto = NodeLocalization;
@@ -202,7 +188,6 @@ export interface RecordDetailDto extends RecordSummaryDto {
   edges?: GraphEdge[];
   sources?: RecordSourceDto[];
   routes?: RecordRouteDto[];
-  reviewHistory?: (PublicReviewHistoryEvent | ReviewHistoryEvent)[];
 }
 
 export interface RecordListDto {

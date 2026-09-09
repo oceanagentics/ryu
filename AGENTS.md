@@ -30,7 +30,7 @@
   verifies `/api/records` without printing the token.
 - Do not use CHM proxy routes or `x-chm-*` forwarded identity headers for Explorer authorization.
 - Human browser authoring goes directly through the IAP-protected Explorer admin app at `/explorer/admin`, which calls its own `/api/records` routes.
-- The details UI shows `recordDepth` plus the resolved localization's `reviewState` for all users. Authenticated/author mode renders the review state dropdown and reviewer-note form for that localization.
+- The details UI shows `recordDepth` plus the resolved localization's `review.state` for all users. Authenticated/author mode renders the review state dropdown and reviewer-note form for that localization.
 - Record reads are `GET /api/records` and `GET /api/records/:id`.
 - Record writes are `PUT /api/records/:id`, `PATCH /api/records/:id`, `PATCH /api/records/:id/review`, and admin-only `DELETE /api/records/:id`.
 - Applied writes against existing records must include `x-ryu-record-updated-at` from a fresh read. Create-only writes must include `x-ryu-create-only: true`.
@@ -73,6 +73,17 @@
 - Do not add or preserve identifier lists in the record model.
 - Edge metadata such as `transferMethod`, `format`, `standard`, and `artifact` belongs in `edges.properties_json`.
 - Keep node/edge edits minimal in the editor; rich research backfills should update the JSON record deliberately.
+- Use only the approved `disciplines` IDs in `shared/domain.ts`. Never add a
+  discipline without explicit human approval in the current authoring chat.
+  Explain the uncovered subject and why existing tags do not fit, then wait for
+  approval before updating the vocabulary. Follow the discipline rules in
+  `documentation/RICH_RESEARCH_RECORDS.md`; do not recreate `role` or `disciplineFamily`.
+- Do not author `geographicScope` tags. Structured geographic coverage is deferred;
+  include relevant, source-backed geographic context in the profile prose.
+- Use only approved `dataTypes` IDs from `shared/domain.ts` as the label of a
+  `data.descriptors` item with category `type`. New data types require explicit
+  human approval in the current authoring chat, followed by a vocabulary and
+  translation update. Do not introduce free-text or localized type names.
 
 ## Ryu Access Routes
 - Treat `ryu_routes` as the first-class operational route index for agents.

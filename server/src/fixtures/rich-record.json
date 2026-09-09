@@ -29,7 +29,7 @@
           },
           {
             "id": "fishbase-data-type-taxonomy",
-            "label": "Taxonomy / nomenclature",
+            "label": "taxonomic_records",
             "source": {
               "id": "src-fishbase-home",
               "url": "https://fishbase.se/home.htm"
@@ -60,7 +60,6 @@
           "observedAt": "2026-07-21"
         }
       },
-      "role": "reference_backbone",
       "usage": [
         {
           "id": "fishbase-metric-species-count",
@@ -109,8 +108,12 @@
           "thumbnailUrl": "/gallery/fishbase/species-summary-gadus-morhua-thumb.png"
         }
       ],
-      "geographicScope": "global",
-      "disciplineFamily": "fish_biodiversity"
+      "disciplines": [
+        "zoology",
+        "taxonomy",
+        "ecology",
+        "fisheries_science"
+      ]
     }
   },
   "localizations": {
@@ -133,8 +136,7 @@
             },
             {
               "id": "fishbase-data-type-taxonomy",
-              "description": "الأسماء المقبولة، والمرادفات، والتصنيف، والسلطات التصنيفية، وروابط موارد الفهرسة للأسماك الزعنفية.",
-              "label": "التصنيف والتسمية"
+              "description": "الأسماء المقبولة، والمرادفات، والتصنيف، والسلطات التصنيفية، وروابط موارد الفهرسة للأسماك الزعنفية."
             }
           ],
           "recordCount": {
@@ -209,8 +211,7 @@
             },
             {
               "id": "fishbase-data-type-taxonomy",
-              "description": "Accepted names, synonyms, classification, taxonomic authorities, and links to cataloging resources for finfishes.",
-              "label": "Taxonomy / nomenclature"
+              "description": "Accepted names, synonyms, classification, taxonomic authorities, and links to cataloging resources for finfishes."
             }
           ],
           "recordCount": {
@@ -284,8 +285,7 @@
             },
             {
               "id": "fishbase-data-type-taxonomy",
-              "description": "Nombres aceptados, sinónimos, clasificación, autoridades taxonómicas y enlaces a recursos de catalogación para peces con aletas.",
-              "label": "Taxonomía y nomenclatura"
+              "description": "Nombres aceptados, sinónimos, clasificación, autoridades taxonómicas y enlaces a recursos de catalogación para peces con aletas."
             }
           ],
           "recordCount": {
@@ -360,8 +360,7 @@
             },
             {
               "id": "fishbase-data-type-taxonomy",
-              "description": "Noms acceptés, synonymes, classification, autorités taxonomiques et liens vers des ressources de catalogage pour les poissons à nageoires.",
-              "label": "Taxonomie et nomenclature"
+              "description": "Noms acceptés, synonymes, classification, autorités taxonomiques et liens vers des ressources de catalogage pour les poissons à nageoires."
             }
           ],
           "recordCount": {
@@ -436,8 +435,7 @@
             },
             {
               "id": "fishbase-data-type-taxonomy",
-              "description": "Принятые названия, синонимы, классификация, таксономические авторитеты и ссылки на каталожные ресурсы для лучеперых рыб.",
-              "label": "Таксономия и номенклатура"
+              "description": "Принятые названия, синонимы, классификация, таксономические авторитеты и ссылки на каталожные ресурсы для лучеперых рыб."
             }
           ],
           "recordCount": {
@@ -512,8 +510,7 @@
             },
             {
               "id": "fishbase-data-type-taxonomy",
-              "description": "有鳍鱼类的接受名、同物异名、分类、分类学权威以及编目资源链接。",
-              "label": "分类与命名"
+              "description": "有鳍鱼类的接受名、同物异名、分类、分类学权威以及编目资源链接。"
             }
           ],
           "recordCount": {

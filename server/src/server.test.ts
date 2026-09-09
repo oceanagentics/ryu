@@ -24,7 +24,6 @@ import type {
   RecordSearchQuery,
   RecordSourceInput,
   RecordValidationResult,
-  ReviewHistoryEvent,
   SourceLocalizationContentInput,
 } from "../../shared/recordApi";
 import { defaultLocale, emptyLocalizationDetails, supportedLocales } from "../../shared/localization";
@@ -91,10 +90,7 @@ function createFakeLocalization(
     details: emptyLocalizationDetails(),
     translatedFromLocale: null,
     contentUpdatedAt: "2026-08-27T00:00:00.000Z",
-    reviewState: "agent_researched",
-    reviewerNote: null,
-    reviewer: null,
-    lastReviewed: null,
+    review: { state: "agent_researched", note: null, reviewer: null, date: null },
     createdAt: "2026-08-27T00:00:00.000Z",
     updatedAt: "2026-08-27T00:00:00.000Z",
     ...overrides,
@@ -141,9 +137,7 @@ function createFakeNode(overrides: Partial<GraphNode> = {}): GraphNode {
     url: null,
     recordDepth: "stub",
     properties: {
-      role: null,
-      disciplineFamily: null,
-      geographicScope: null,
+      disciplines: [],
       gallery: [],
       data: { descriptors: [], recordCount: null, storageSize: null },
       access: [],
@@ -167,7 +161,7 @@ class FakeRepository implements GraphRepository {
   private node: GraphNode;
   private deleted = false;
 
-  constructor(node = createFakeNode(), private readonly reviewHistory: ReviewHistoryEvent[] = []) {
+  constructor(node = createFakeNode()) {
     this.node = node;
   }
 
@@ -316,16 +310,18 @@ class FakeRepository implements GraphRepository {
       return this.node;
     }
 
-    const lastReviewed = "2026-08-27T01:00:00.000Z";
+    const reviewDate = "2026-08-27T01:00:00.000Z";
     const existingLocalization =
       this.node.localizations[locale] ?? createFakeLocalization({ locale });
     const nextLocalization = createFakeLocalization({
       ...existingLocalization,
-      reviewState: input.reviewState ?? existingLocalization.reviewState,
-      reviewerNote: input.reviewerNote ?? existingLocalization.reviewerNote,
-      reviewer,
-      lastReviewed,
-      updatedAt: lastReviewed,
+      review: {
+        state: input.reviewState ?? existingLocalization.review.state,
+        note: input.reviewerNote === undefined ? existingLocalization.review.note : input.reviewerNote,
+        reviewer,
+        date: reviewDate,
+      },
+      updatedAt: reviewDate,
     });
     this.node = createFakeNode({
       ...this.node,
@@ -334,7 +330,7 @@ class FakeRepository implements GraphRepository {
         ...this.node.localizations,
         [locale]: nextLocalization,
       },
-      updatedAt: lastReviewed,
+      updatedAt: reviewDate,
     });
 
     return this.node;
@@ -393,7 +389,6 @@ class FakeRepository implements GraphRepository {
 
   private recordAggregate(overrides: Partial<GraphNode> = {}): RecordAggregate {
     return {
-      reviewHistory: this.reviewHistory,
       node: createFakeNode({ ...this.node, ...overrides }),
       edges: [],
       sources: [
@@ -488,9 +483,7 @@ test("redacts private review fields from public bootstrap payloads", () => {
       createFakeNode({
         localizations: {
           en: createFakeLocalization({
-            reviewerNote: "Private reviewer note",
-            reviewer: "danny@oceanagentics.com",
-            lastReviewed: "2026-08-31T00:00:00.000Z",
+            review: { state: "agent_researched", note: "Private reviewer note", reviewer: "danny@oceanagentics.com", date: "2026-08-31T00:00:00.000Z" },
           }),
         },
       }),
@@ -527,10 +520,10 @@ test("redacts private review fields from public bootstrap payloads", () => {
     ],
   });
 
-  assert.equal(publicBootstrap.nodes[0].localizations.en?.reviewState, "agent_researched");
-  assert.equal(publicBootstrap.nodes[0].localizations.en?.reviewerNote, null);
-  assert.equal(publicBootstrap.nodes[0].localizations.en?.reviewer, null);
-  assert.equal(publicBootstrap.nodes[0].localizations.en?.lastReviewed, null);
+  assert.equal(publicBootstrap.nodes[0].localizations.en?.review.state, "agent_researched");
+  assert.equal(publicBootstrap.nodes[0].localizations.en?.review.note, null);
+  assert.equal(publicBootstrap.nodes[0].localizations.en?.review.reviewer, null);
+  assert.equal(publicBootstrap.nodes[0].localizations.en?.review.date, "2026-08-31T00:00:00.000Z");
   assert.equal(publicBootstrap.sources[0].localPath, null);
   assert.deepEqual(publicBootstrap.ryuRoutes, []);
 });
@@ -572,9 +565,7 @@ test("serves public record details with allowlisted DTO fields", async () => {
   const node = createFakeNode({
     localizations: {
       en: createFakeLocalization({
-        reviewerNote: "Private reviewer note",
-        reviewer: "danny@oceanagentics.com",
-        lastReviewed: "2026-08-31T00:00:00.000Z",
+        review: { state: "agent_researched", note: "Private reviewer note", reviewer: "danny@oceanagentics.com", date: "2026-08-31T00:00:00.000Z" },
       }),
     },
   });
@@ -586,10 +577,10 @@ test("serves public record details with allowlisted DTO fields", async () => {
 
     assert.equal(response.status, 200);
     const body = await response.json() as Record<string, any>;
-    assert.equal(body.localizations.en.reviewState, "agent_researched");
+    assert.equal(body.localizations.en.review.state, "agent_researched");
     assert.equal("reviewerNote" in body.localizations.en, false);
     assert.equal("reviewer" in body.localizations.en, false);
-    assert.equal("lastReviewed" in body.localizations.en, false);
+    assert.equal("reviewDate" in body.localizations.en, false);
     assert.equal("localPath" in body.sources[0], false);
     assert.equal("target" in body.routes[0], false);
     assert.equal("upstream" in body.routes[0], false);
@@ -597,33 +588,38 @@ test("serves public record details with allowlisted DTO fields", async () => {
   }, { repository: new FakeRepository(node) });
 });
 
-test("returns opt-in review history across locales with public metadata redaction", async () => {
-  const history: ReviewHistoryEvent[] = [
-    { locale: "en", kind: "baseline", from: null, to: "human_reviewed",
-      actor: "old@example.org", at: null, note: "Earlier review", contentUpdatedAt: null },
-    { locale: "fr", kind: "review", from: "agent_researched", to: "needs_revision",
-      actor: "reviewer@example.org", at: recordUpdatedAt, note: "Private correction",
-      contentUpdatedAt: recordUpdatedAt },
+test("returns current review and opt-in localization histories with public metadata redaction", async () => {
+  const node = createFakeNode();
+  const history = [
+    { state: "agent_researched" as const, reviewer: "old@example.org", date: null, note: "Earlier review" },
+    { state: "human_reviewed" as const, reviewer: "reviewer@example.org", date: recordUpdatedAt, note: "Verified" },
   ];
+  node.localizations.en!.review = { ...history[1], history };
+  node.localizations.fr = createFakeLocalization({ locale: "fr", review: { ...history[0], history: [history[0]] } });
   for (const mode of ["public", "api"] as const) {
     await withServer(mode, async (baseUrl) => {
       const headers = mode === "api" ? authHeaders() : {};
       const ordinary = await fetch(`${baseUrl}/explorer/api/records/node-1`, { headers });
-      assert.equal(ordinary.status, 200);
-      const ordinaryBody = await ordinary.json() as Record<string, unknown>;
-      assert.equal("reviewHistory" in ordinaryBody, false);
-
+      const ordinaryBody = await ordinary.json() as Record<string, any>;
+      assert.equal(ordinaryBody.localizations.en.review.state, "human_reviewed");
+      assert.equal("history" in ordinaryBody.localizations.en.review, false);
+      assert.equal("reviewState" in ordinaryBody.localizations.en, false);
       for (const path of ["node-1", ""]) {
         const response = await fetch(`${baseUrl}/explorer/api/records/${path}?include=reviewHistory`, { headers });
         assert.equal(response.status, 200);
         const body = await response.json() as Record<string, any>;
-        const events = path ? body.reviewHistory : body.records[0].reviewHistory;
-        assert.deepEqual(events, mode === "api" ? history : [
-          { locale: "en", kind: "baseline", from: null, to: "human_reviewed" },
-          { locale: "fr", kind: "review", from: "agent_researched", to: "needs_revision" },
-        ]);
+        const record = path ? body : body.records[0];
+        assert.equal("reviewHistory" in record, false);
+        for (const locale of ["en", "fr"]) {
+          const expected = locale === "en" ? history : [history[0]];
+          assert.deepEqual(record.localizations[locale].review.history,
+            mode === "api" ? expected : expected.map(({ state, date }) => ({ state, date })));
+          const current = expected.at(-1)!;
+          const { history: _, ...review } = record.localizations[locale].review;
+          assert.deepEqual(review, mode === "api" ? current : { state: current.state, date: current.date });
+        }
       }
-    }, { repository: new FakeRepository(createFakeNode(), history) });
+    }, { repository: new FakeRepository(node) });
   }
 });
 
@@ -715,14 +711,14 @@ test("parses the full record search filter set", async () => {
 
   await withServer("public", async (baseUrl) => {
     const response = await fetch(
-      `${baseUrl}/explorer/api/records?q=fish&kind=system,country&geography=global&dataType=geojson&recordDepth=rich&reviewState=agent_researched&locale=fr&localeMode=all_locales&localeAvailability=missing&reviewLocale=any&routeStatus=active&routeCapability=download&accessType=read&accessMethod=api&role=aggregator&countryCode=CAN&disciplineFamily=biodiversity&dataFormat=geojson&dataStandard=dwc&include=localizations,routes,matchReasons,matchingIds&limit=7`,
+      `${baseUrl}/explorer/api/records?q=fish&kind=system,country&geography=global&dataType=occurrence_records&recordDepth=rich&reviewState=agent_researched&locale=fr&localeMode=all_locales&localeAvailability=missing&reviewLocale=any&routeStatus=active&routeCapability=download&accessType=read&accessMethod=api&countryCode=CAN&disciplines=ecology,taxonomy&dataFormat=geojson&dataStandard=dwc&include=localizations,routes,matchReasons,matchingIds&limit=7`,
     );
 
     assert.equal(response.status, 200);
     assert.equal(repository.lastRecordQuery?.q, "fish");
     assert.deepEqual(repository.lastRecordQuery?.kind, ["system", "country"]);
     assert.deepEqual(repository.lastRecordQuery?.geography, ["global"]);
-    assert.deepEqual(repository.lastRecordQuery?.dataType, ["geojson"]);
+    assert.deepEqual(repository.lastRecordQuery?.dataType, ["occurrence_records"]);
     assert.deepEqual(repository.lastRecordQuery?.recordDepth, ["rich"]);
     assert.deepEqual(repository.lastRecordQuery?.reviewState, ["agent_researched"]);
     assert.equal(repository.lastRecordQuery?.locale, "fr");
@@ -734,9 +730,8 @@ test("parses the full record search filter set", async () => {
     assert.deepEqual(repository.lastRecordQuery?.accessType, ["read"]);
     assert.deepEqual(repository.lastRecordQuery?.accessMethod, ["api"]);
     assert.deepEqual(repository.lastRecordQuery?.include, ["localizations", "routes", "matchReasons", "matchingIds"]);
-    assert.deepEqual(repository.lastRecordQuery?.role, ["aggregator"]);
     assert.deepEqual(repository.lastRecordQuery?.countryCode, ["CAN"]);
-    assert.deepEqual(repository.lastRecordQuery?.disciplineFamily, ["biodiversity"]);
+    assert.deepEqual(repository.lastRecordQuery?.disciplines, ["ecology", "taxonomy"]);
     assert.deepEqual(repository.lastRecordQuery?.dataFormat, ["geojson"]);
     assert.deepEqual(repository.lastRecordQuery?.dataStandard, ["dwc"]);
     assert.equal(repository.lastRecordQuery?.scope, "public");
@@ -786,8 +781,10 @@ test("allows record-oriented review writes in api mode", async () => {
 
     assert.equal(response.status, 200);
     const body = await response.json() as Record<string, any>;
-    assert.equal(body.localizations.en.reviewState, "human_reviewed");
-    assert.equal(body.localizations.en.reviewer, "reviewer@oceanagentics.com");
+    assert.equal(body.localizations.en.review.state, "human_reviewed");
+    assert.equal(body.localizations.en.review.reviewer, "reviewer@oceanagentics.com");
+    assert.ok(Number.isFinite(Date.parse(body.localizations.en.review.date)));
+    assert.equal("lastReviewed" in body.localizations.en, false);
   });
 });
 
@@ -808,8 +805,8 @@ test("dry-runs record review writes without mutating", async () => {
 
     assert.equal(response.status, 200);
     const body = await response.json() as Record<string, any>;
-    assert.equal(body.localizations.en.reviewState, "agent_researched");
-    assert.equal(body.localizations.en.reviewer, null);
+    assert.equal(body.localizations.en.review.state, "agent_researched");
+    assert.equal(body.localizations.en.review.reviewer, null);
   });
 });
 
@@ -832,30 +829,17 @@ test("prevents writer tokens from setting human_reviewed", async () => {
   });
 });
 
-test("rejects review fields in content upserts", async () => {
+test("rejects loose and nested review fields in content upserts", async () => {
   await withServer("api", async (baseUrl) => {
-    const response = await fetch(`${baseUrl}/explorer/api/records/node-1`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        ...authHeaders(writerToken, true),
-      },
-      body: JSON.stringify({
-        id: "node-1",
-        record: { kind: "system" },
-        localizations: {
-          en: {
-            title: "Test System",
-            reviewState: "human_reviewed",
-          },
-        },
-      }),
-    });
-
-    assert.equal(response.status, 400);
-    assert.deepEqual(await response.json(), {
-      error: "review/audit fields are not allowed in localizations.en: reviewState",
-    });
+    for (const [field, value] of [["reviewState", "human_reviewed"], ["review", { state: "human_reviewed", history: [] }]]) {
+      const response = await fetch(`${baseUrl}/explorer/api/records/node-1`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json", ...authHeaders(writerToken, true) },
+        body: JSON.stringify({ id: "node-1", record: { kind: "system" }, localizations: { en: { title: "Test System", [String(field)]: value } } }),
+      });
+      assert.equal(response.status, 400);
+      assert.deepEqual(await response.json(), { error: `review/audit fields are not allowed in localizations.en: ${field}` });
+    }
   });
 });
 
@@ -1235,9 +1219,9 @@ test("allows writer review changes below human_reviewed", async () => {
 
     assert.equal(response.status, 200);
     const body = await response.json() as Record<string, any>;
-    assert.equal(body.localizations.en.reviewState, "needs_revision");
-    assert.equal(body.localizations.en.reviewerNote, "Checked against source.");
-    assert.equal(body.localizations.en.reviewer, "writer@oceanagentics.com");
+    assert.equal(body.localizations.en.review.state, "needs_revision");
+    assert.equal(body.localizations.en.review.note, "Checked against source.");
+    assert.equal(body.localizations.en.review.reviewer, "writer@oceanagentics.com");
   });
 });
 

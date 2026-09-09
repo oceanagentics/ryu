@@ -57,6 +57,8 @@ import type {
   SourceLocalizationContentInput,
 } from "../../shared/recordApi";
 import {
+  isDiscipline,
+  isDataType,
   isEdgeKind,
   isNodeKind,
   isRecord,
@@ -71,9 +73,8 @@ const maxRecordLimit = 100;
 
 const queryFields = new Set([
   "q",
-  "role",
   "countryCode",
-  "disciplineFamily",
+  "disciplines",
   "dataFormat",
   "dataStandard",
   "kind",
@@ -117,10 +118,11 @@ const localeAvailabilityValues = new Set<LocaleAvailability>([
 ]);
 const reviewLocaleModes = new Set<ReviewLocaleMode>(["requested", "displayed", "any"]);
 const reviewAuditFields = new Set([
+  "review",
   "reviewState",
   "reviewerNote",
   "reviewer",
-  "lastReviewed",
+  "reviewDate",
   "contentUpdatedAt",
   "createdAt",
   "updatedAt",
@@ -201,13 +203,13 @@ export function readRecordSearchQuery(input: Record<string, unknown>): RecordSea
       readEnumValue(value, isNodeKind, "kind"),
     ),
     geography: readList(input.geography, "geography"),
-    role: readList(input.role, "role"),
     countryCode: readList(input.countryCode, "countryCode"),
-    disciplineFamily: readList(input.disciplineFamily, "disciplineFamily"),
+    disciplines: readList(input.disciplines, "disciplines").map(value =>
+      readEnumValue(value, isDiscipline, "disciplines")),
     dataFormat: readList(input.dataFormat, "dataFormat"),
     dataStandard: readList(input.dataStandard, "dataStandard"),
 
-    dataType: readList(input.dataType, "dataType"),
+    dataType: readList(input.dataType, "dataType").map(value => readEnumValue(value, isDataType, "dataType")),
     recordDepth: readList(input.recordDepth, "recordDepth").map((value) =>
       readEnumValue(value, isRecordDepth, "recordDepth"),
     ),
@@ -421,6 +423,12 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     }
   };
   const p = object(input.record.properties);
+  for (const key of ["role", "disciplineFamily", "geographicScope"]) {
+    if (hasOwn(p, key)) issues.push({ recordId: id, path: `record.properties.${key}`, message: "field removed" });
+  }
+  if (p.disciplines !== undefined && (!Array.isArray(p.disciplines) || p.disciplines.some(value => !isDiscipline(value)) || new Set(p.disciplines).size !== p.disciplines.length)) {
+    issues.push({ recordId: id, path: "record.properties.disciplines", message: "must be an array of unique approved discipline IDs; new disciplines require human approval in the authoring chat and an update to the shared vocabulary" });
+  }
   const data = object(p.data);
   const descriptors = array(data.descriptors);
   const access = array(p.access);
@@ -448,14 +456,18 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
 
   if (rich && !httpUrl(input.record.url)) add("record.url", "a canonical HTTP(S) URL is required");
   if (input.record.kind === "system") {
-    for (const key of ["role", "disciplineFamily", "geographicScope"]) requireText(p[key], `record.properties.${key}`);
-    for (const category of ["type", "format"]) {
-      if (!descriptors.some(item => item.category === category)) add("record.properties.data.descriptors", `at least one ${category} descriptor is required`);
-    }
+    if (!descriptors.some(item => item.category === "format")) add("record.properties.data.descriptors", "at least one format descriptor is required");
     if (!access.some(item => item.type === "read")) add("record.properties.access", "at least one actual read access path is required");
     if (!input.edges?.some(edge => edge.kind === "operates" && edge.targetNodeId === id)) add("edges", "an incoming operates relationship is required");
   }
+  const assignedDataTypes = new Set<unknown>();
   descriptors.forEach((item, i) => {
+    if (item.category === "type") {
+      if (!isDataType(item.label) || assignedDataTypes.has(item.label)) {
+        issues.push({ recordId: id, path: `record.properties.data.descriptors[${i}].label`, message: "must be a unique approved data type ID; additions require human approval in the authoring chat and an update to the shared vocabulary" });
+      }
+      assignedDataTypes.add(item.label);
+    }
     requireText(item.label, `record.properties.data.descriptors[${i}].label`);
     if (!["type", "format", "standard"].includes(String(item.category))) add(`record.properties.data.descriptors[${i}].category`, "invalid descriptor category");
     citation(item.source, `record.properties.data.descriptors[${i}].source`);
@@ -492,6 +504,9 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     }
     if (l.translatedFromLocale === locale || (l.translatedFromLocale && !input.localizations?.[l.translatedFromLocale])) add(`${field}.translatedFromLocale`, "must refer to a different existing localization");
     const details = object(l.details);
+    for (const key of ["role", "disciplineFamily", "geographicScope", "disciplines"]) {
+      if (hasOwn(details, key)) issues.push({ recordId: id, path: `${field}.details.${key}`, message: "field removed or misplaced; disciplines belong in record.properties.disciplines" });
+    }
     collectSourceIds(details, refs);
     citedProfile(details.profile, `${field}.details.profile`);
     const localizedData = object(details.data);
@@ -508,7 +523,11 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
       if (rows.length !== neutral.length || new Set(rows.map(item => item.id)).size !== rows.length || rows.some(item => !ids.has(item.id))) add(`${field}.details.${section}`, "localized item IDs must exactly match neutral item IDs");
       for (const item of neutral) {
         const translated = rows.find(row => row.id === item.id) ?? {};
-        for (const key of fields) requireText(translated[key], `${field}.details.${section}.${item.id}.${key}`);
+        for (const key of fields) {
+          if (section === "data.descriptors" && item.category === "type" && key === "label") {
+            if (translated.label != null) issues.push({ recordId: id, path: `${field}.details.${section}.${item.id}.label`, message: "data type labels come from the shared vocabulary; use description for record-specific detail" });
+          } else requireText(translated[key], `${field}.details.${section}.${item.id}.${key}`);
+        }
       }
     }
     for (const key of ["recordCount", "storageSize"]) {
@@ -632,8 +651,8 @@ export function toRecordDetailDto(
       createdAt: node.createdAt,
       updatedAt: node.updatedAt,
     },
-    ...(includeSet.has("localizations")
-      ? { localizations: mapLocalizations(node.localizations, scope) }
+    ...((includeSet.has("localizations") || includeSet.has("reviewHistory"))
+      ? { localizations: mapLocalizations(node.localizations, scope, includeSet.has("reviewHistory")) }
       : {}),
     ...(includeSet.has("edges") ? { edges: aggregate.edges.map(mapEdgeDto) } : {}),
     ...(includeSet.has("sources")
@@ -641,13 +660,6 @@ export function toRecordDetailDto(
       : {}),
     ...(includeSet.has("routes")
       ? { routes: aggregate.routes.map((route) => mapRouteDto(route, scope)) }
-      : {}),
-    ...(includeSet.has("reviewHistory")
-      ? { reviewHistory: (aggregate.reviewHistory ?? []).map((event) =>
-          scope === "public"
-            ? { locale: event.locale, kind: event.kind, from: event.from, to: event.to }
-            : event,
-        ) }
       : {}),
   };
 }
@@ -689,7 +701,7 @@ export function toRecordSummaryDto(
   const reviewStatesByLocale = Object.fromEntries(
     Object.entries(node.localizations).map(([key, value]) => [
       key,
-      value?.reviewState,
+      value?.review.state,
     ]),
   ) as RecordSummaryDto["reviewStatesByLocale"];
 
@@ -733,11 +745,12 @@ export function buildDeleteImpactHash(input: Omit<RecordDeleteImpact, "impactHas
 function mapLocalizations(
   localizations: GraphNode["localizations"],
   scope: RecordDtoScope,
+  includeHistory: boolean,
 ): RecordDetailDto["localizations"] {
   return Object.fromEntries(
     Object.entries(localizations).map(([locale, localization]) => [
       locale,
-      localization ? mapLocalizationDto(localization, scope) : localization,
+      localization ? mapLocalizationDto(localization, scope, includeHistory) : localization,
     ]),
   ) as RecordDetailDto["localizations"];
 }
@@ -745,12 +758,14 @@ function mapLocalizations(
 function mapLocalizationDto(
   localization: NodeLocalization,
   scope: RecordDtoScope,
+  includeHistory: boolean,
 ): PublicRecordLocalizationDto | AdminRecordLocalizationDto | NodeLocalization {
-  if (scope === "private") {
-    return localization;
+  const { history, ...current } = localization.review;
+  if (scope !== "public") {
+    return { ...localization, review: { ...current, ...(includeHistory ? { history: history ?? [] } : {}) } };
   }
 
-  const publicDto: PublicRecordLocalizationDto = {
+  return {
     locale: localization.locale,
     title: localization.title,
     summary: localization.summary,
@@ -758,20 +773,13 @@ function mapLocalizationDto(
     details: localization.details,
     translatedFromLocale: localization.translatedFromLocale,
     contentUpdatedAt: localization.contentUpdatedAt,
-    reviewState: localization.reviewState,
+    review: {
+      state: current.state,
+      date: current.date,
+      ...(includeHistory ? { history: (history ?? []).map(({ state, date }) => ({ state, date })) } : {}),
+    },
     createdAt: localization.createdAt,
     updatedAt: localization.updatedAt,
-  };
-
-  if (scope === "public") {
-    return publicDto;
-  }
-
-  return {
-    ...publicDto,
-    reviewerNote: localization.reviewerNote,
-    reviewer: localization.reviewer,
-    lastReviewed: localization.lastReviewed,
   };
 }
 

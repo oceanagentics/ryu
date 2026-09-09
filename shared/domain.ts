@@ -21,6 +21,27 @@ export type ReviewState =
 
 export type SupportedLocale = "ar" | "zh" | "en" | "fr" | "ru" | "es";
 
+// Additions require explicit human approval in the record-authoring chat.
+export const disciplines = [
+  "agronomy", "botany", "chemistry", "climatology", "ecology", "economics",
+  "fisheries_science", "genetics", "geography", "geology", "geophysics",
+  "glaciology", "hydrology", "law", "marine_biology", "meteorology",
+  "microbiology", "mycology", "oceanography", "paleontology", "spatial_planning",
+  "taxonomy", "zoology",
+] as const;
+
+export type Discipline = (typeof disciplines)[number];
+
+// Additions require explicit human approval in the record-authoring chat.
+export const dataTypes = [
+  "taxonomic_records", "occurrence_records", "survey_records", "biological_traits",
+  "biological_interactions", "sample_records", "sequence_data", "environmental_measurements",
+  "model_outputs", "fisheries_statistics", "geographic_reference_data", "bathymetry",
+  "platform_records", "media", "bibliographic_records", "catalogue_records", "documents", "software",
+] as const;
+
+export type DataType = (typeof dataTypes)[number];
+
 export interface SourceLocalization {
   locale: SupportedLocale;
   title: string;
@@ -49,12 +70,10 @@ export interface SourceRef {
 
 export type SystemDataDescriptorCategory = "type" | "format" | "standard";
 
-export interface SystemDataDescriptor {
+export type SystemDataDescriptor = {
   id: string;
-  category: SystemDataDescriptorCategory;
-  label: string;
   source: SourceRef | null;
-}
+} & ({ category: "type"; label: DataType } | { category: "format" | "standard"; label: string });
 
 export interface LocalizedSystemDataDescriptor {
   id: string;
@@ -146,13 +165,22 @@ export interface NodeLocalizationDetails extends Record<string, unknown> {
 }
 
 export interface NodeProperties extends Record<string, unknown> {
-  role?: string | null;
-  disciplineFamily?: string | null;
-  geographicScope?: string | null;
+  disciplines?: Discipline[];
   gallery?: SystemGalleryItem[];
   data?: NodeDataDetails;
   access?: SystemAccessPath[];
   usage?: SourcedMetric[];
+}
+
+export interface ReviewSnapshot {
+  state: ReviewState;
+  reviewer: string | null;
+  date: string | null;
+  note: string | null;
+}
+
+export interface LocalizationReview extends ReviewSnapshot {
+  history?: ReviewSnapshot[];
 }
 
 export interface NodeLocalization {
@@ -163,10 +191,7 @@ export interface NodeLocalization {
   details: NodeLocalizationDetails;
   translatedFromLocale: SupportedLocale | null;
   contentUpdatedAt: string;
-  reviewState: ReviewState;
-  reviewerNote: string | null;
-  reviewer: string | null;
-  lastReviewed: string | null;
+  review: LocalizationReview;
   createdAt: string;
   updatedAt: string;
 }
@@ -184,10 +209,7 @@ export interface ResolvedNodeLocalization {
   details: NodeLocalizationDetails;
   translatedFromLocale: SupportedLocale | null;
   contentUpdatedAt: string | null;
-  reviewState: ReviewState | null;
-  reviewerNote: string | null;
-  reviewer: string | null;
-  lastReviewed: string | null;
+  review: LocalizationReview | null;
   createdAt: string | null;
   updatedAt: string | null;
 }

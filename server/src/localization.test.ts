@@ -13,10 +13,7 @@ function localization(locale: SupportedLocale, title: string): NodeLocalization 
     details: emptyLocalizationDetails(),
     translatedFromLocale: null,
     contentUpdatedAt: "2026-09-01T00:00:00.000Z",
-    reviewState: "agent_researched",
-    reviewerNote: null,
-    reviewer: null,
-    lastReviewed: null,
+    review: { state: "agent_researched", note: null, reviewer: null, date: null },
     createdAt: "2026-09-01T00:00:00.000Z",
     updatedAt: "2026-09-01T00:00:00.000Z",
   };

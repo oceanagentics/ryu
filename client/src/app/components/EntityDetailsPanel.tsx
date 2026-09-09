@@ -9,6 +9,7 @@ import {
   Alert,
   Button,
   Card,
+  ConfigProvider,
   Flex,
   Input,
   List,
@@ -17,6 +18,7 @@ import {
   Tag,
   Tooltip,
   Typography,
+  theme,
 } from "antd";
 
 import type {
@@ -28,7 +30,7 @@ import type {
   SupportedLocale,
   SystemDataDescriptorCategory,
 } from "../../../../shared/domain";
-import type { RecordDetailDto } from "../../../../shared/recordApi";
+import type { RecordLocalizationDto } from "../../../../shared/recordApi";
 import { resolveSourceLocalization } from "../../../../shared/localization";
 import { fetchRecord, updateNodeLocalizationReview } from "../api";
 import { appPath, canReviewNodes } from "../config";
@@ -118,7 +120,7 @@ function DetailSection({
 }) {
   return (
     <section className="entity-detail-section">
-      <Typography.Text strong>{title}</Typography.Text>
+      <Typography.Text className="entity-detail-section-title" strong>{title}</Typography.Text>
       {children}
     </section>
   );
@@ -229,7 +231,7 @@ function MetricValue({ metric }: { metric: ResolvedSourcedMetric | null }) {
       {metric.description ? (
         <Typography.Text type="secondary">{metric.description}</Typography.Text>
       ) : null}
-      <Typography.Text type="secondary">
+      <Typography.Text className="entity-detail-caption" type="secondary">
         {t(locale, "common.source")}: <SourceLink source={metric.source} />
         {metric.observedAt
           ? ` · ${t(locale, "common.observed", { date: metric.observedAt })}`
@@ -256,7 +258,7 @@ function AccessDescription({ path }: { path: ResolvedSystemAccessPath }) {
       <Typography.Link href={path.url} target="_blank" rel="noreferrer">
         {path.url}
       </Typography.Link>
-      <Typography.Text type="secondary">
+      <Typography.Text className="entity-detail-caption" type="secondary">
         {t(locale, "common.source")}: <SourceLink source={path.source} />
       </Typography.Text>
     </Flex>
@@ -278,16 +280,16 @@ function RyuRouteDescription({ route }: { route: RyuRoute }) {
         ))}
       </Flex>
       {route.target ? (
-        <Typography.Text type="secondary">{t(locale, "details.target")}: {route.target}</Typography.Text>
+        <InlineField label={t(locale, "details.target")}>{route.target}</InlineField>
       ) : null}
       {route.upstream ? (
-        <Typography.Text type="secondary">{t(locale, "details.upstream")}: {route.upstream}</Typography.Text>
+        <InlineField label={t(locale, "details.upstream")}>{route.upstream}</InlineField>
       ) : null}
       {route.format ? (
-        <Typography.Text type="secondary">{t(locale, "details.format")}: {route.format}</Typography.Text>
+        <InlineField label={t(locale, "details.format")}>{route.format}</InlineField>
       ) : null}
       {route.contractRef ? (
-        <Typography.Text type="secondary">{t(locale, "details.contract")}: {route.contractRef}</Typography.Text>
+        <InlineField label={t(locale, "details.contract")}>{route.contractRef}</InlineField>
       ) : null}
       {route.caveat ? (
         <Typography.Text type="secondary">{route.caveat}</Typography.Text>
@@ -343,9 +345,9 @@ function Gallery({ items }: { items: ResolvedSystemGalleryItem[] }) {
         <figcaption>
           {activeItem.title ? <Typography.Text>{activeItem.title}</Typography.Text> : null}
           {activeItem.caption ? (
-            <Typography.Text type="secondary">{activeItem.caption}</Typography.Text>
+            <Typography.Text className="entity-detail-caption" type="secondary">{activeItem.caption}</Typography.Text>
           ) : null}
-          <Typography.Text type="secondary">
+          <Typography.Text className="entity-detail-caption" type="secondary">
             {t(locale, "common.source")}: <SourceLink source={activeItem.source} />
           </Typography.Text>
         </figcaption>
@@ -359,7 +361,7 @@ function Gallery({ items }: { items: ResolvedSystemGalleryItem[] }) {
             type="text"
             onClick={previousItem}
           />
-          <Typography.Text type="secondary">
+          <Typography.Text className="entity-detail-caption" type="secondary">
             {Math.min(activeIndex, items.length - 1) + 1} / {items.length}
           </Typography.Text>
           <Button
@@ -422,13 +424,13 @@ function SystemIntro({
         )}
       </Flex>
       {localization.summary ? (
-        <Typography.Paragraph className="entity-detail-note entity-system-short-description">
+        <Typography.Paragraph className="entity-detail-note">
           {localization.summary}
         </Typography.Paragraph>
       ) : null}
       <Gallery items={systemGallery(system, localization)} />
       {localization.description ? (
-        <Typography.Paragraph className="entity-detail-note entity-system-long-description">
+        <Typography.Paragraph className="entity-detail-note">
           {localization.description}
         </Typography.Paragraph>
       ) : null}
@@ -451,14 +453,18 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
   const locale = useGraphStore((state) => state.locale);
   const localization = resolveNodeDisplay(entity, locale);
   const reviewLocale = localization.displayLocale;
-  const currentReviewState = localization.reviewState ?? "agent_researched";
+  const currentReviewState = localization.review?.state ?? "agent_researched";
   const [reviewState, setReviewState] = useState<ReviewState>(currentReviewState);
-  const [reviewerNote, setReviewerNote] = useState(localization.reviewerNote ?? "");
+  const [reviewerNote, setReviewerNote] = useState(localization.review?.note ?? "");
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
-  const [reviewHistory, setReviewHistory] = useState<RecordDetailDto["reviewHistory"]>();
+  const [reviewHistory, setReviewHistory] = useState<(RecordLocalizationDto["review"] & { locale: SupportedLocale })[]>();
   const [historyError, setHistoryError] = useState(false);
-  const [historyScope, setHistoryScope] = useState<"displayed" | "all">("displayed");
+  const [showWholeHistory, setShowWholeHistory] = useState(false);
+  const historyNewestFirst = (reviewHistory ?? []).slice().reverse().sort((a, b) =>
+    (b.date ? Date.parse(b.date) : -Infinity) - (a.date ? Date.parse(a.date) : -Infinity));
+
+  useEffect(() => { setShowWholeHistory(false); }, [entity.id]);
 
   useEffect(() => {
     let active = true;
@@ -466,7 +472,8 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
     setHistoryError(false);
     fetchRecord(entity.id, new URLSearchParams({ include: "reviewHistory" }))
       .then((record) => {
-        if (active) setReviewHistory(record.reviewHistory ?? []);
+        if (active) setReviewHistory(Object.values(record.localizations ?? {}).flatMap(localization =>
+          localization?.review.history?.map(snapshot => ({ ...snapshot, locale: localization.locale })) ?? []));
       })
       .catch(() => {
         if (active) setHistoryError(true);
@@ -476,15 +483,15 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
 
   useEffect(() => {
     setReviewState(currentReviewState);
-    setReviewerNote(localization.reviewerNote ?? "");
+    setReviewerNote(localization.review?.note ?? "");
     setError(null);
     setSaving(false);
-  }, [currentReviewState, entity.id, localization.displayLocale, localization.reviewerNote]);
+  }, [currentReviewState, entity.id, localization.displayLocale, localization.review?.note]);
 
   const normalizedReviewerNote = reviewerNote.trim() || null;
   const hasChanges =
     reviewState !== currentReviewState ||
-    normalizedReviewerNote !== (localization.reviewerNote ?? null);
+    normalizedReviewerNote !== (localization.review?.note ?? null);
   const reviewStateOptions = reviewStates.map((value) => ({
     label: facetLabel(locale, "reviewState", value),
     value,
@@ -516,7 +523,17 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
 
   return (
     <DetailSection title={t(locale, "details.review")}>
-      <div className="entity-detail-grid">
+      {!canReviewNodes ? (
+        <InlineField label={t(locale, "details.reviewState")}>
+          {reviewLocale ? <Tag>{localeName(reviewLocale, locale)}</Tag> : null}
+          {localization.review?.state ? (
+            <Tag bordered={false} color={tagColor(localization.review?.state)}>
+              {facetLabel(locale, "reviewState", localization.review?.state)}
+            </Tag>
+          ) : <EmptyValue />}
+        </InlineField>
+      ) : null}
+      {canReviewNodes ? <div className="entity-detail-grid">
         <InlineField label={t(locale, "details.displayedLocale")}>
           {reviewLocale ? (
             <Tag bordered={false}>{localeName(reviewLocale, locale)}</Tag>
@@ -525,41 +542,29 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
           )}
         </InlineField>
         <InlineField label={t(locale, "details.reviewState")}>
-          {canReviewNodes ? (
-            <Select
-              className="entity-review-control"
-              options={reviewStateOptions}
-              size="small"
-              value={reviewState}
-              onChange={(value) => setReviewState(value)}
-            />
-          ) : (
-            <Tag bordered={false} color={tagColor(currentReviewState)}>
-              {facetLabel(locale, "reviewState", currentReviewState)}
-            </Tag>
-          )}
+          <Select
+            className="entity-review-control"
+            options={reviewStateOptions}
+            size="small"
+            value={reviewState}
+            onChange={(value) => setReviewState(value)}
+          />
         </InlineField>
-        {canReviewNodes ? (
-          <InlineField label={t(locale, "details.reviewerNote")}>
-            <Input.TextArea
-              autoSize={{ minRows: 3, maxRows: 7 }}
-              className="entity-review-note"
-              value={reviewerNote}
-              onChange={(event) => setReviewerNote(event.target.value)}
-            />
-          </InlineField>
-        ) : null}
-        {canReviewNodes ? (
-          <InlineField label={t(locale, "details.reviewer")}>
-            {localization.reviewer ?? <EmptyValue />}
-          </InlineField>
-        ) : null}
-        {canReviewNodes ? (
-          <InlineField label={t(locale, "details.lastReviewed")}>
-            {formatDateTime(localization.lastReviewed, locale) ?? <EmptyValue />}
-          </InlineField>
-        ) : null}
-      </div>
+        <InlineField label={t(locale, "details.reviewerNote")}>
+          <Input.TextArea
+            autoSize={{ minRows: 3, maxRows: 7 }}
+            className="entity-review-note"
+            value={reviewerNote}
+            onChange={(event) => setReviewerNote(event.target.value)}
+          />
+        </InlineField>
+        <InlineField label={t(locale, "details.reviewer")}>
+          {localization.review?.reviewer ?? <EmptyValue />}
+        </InlineField>
+        <InlineField label={t(locale, "details.reviewDate")}>
+          {formatDateTime(localization.review?.date ?? null, locale) ?? <EmptyValue />}
+        </InlineField>
+      </div> : null}
       {canReviewNodes ? (
         <Flex align="center" justify="space-between" gap={8}>
           {error ? (
@@ -577,58 +582,52 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
         </Flex>
       ) : null}
       <Flex vertical gap={8}>
-        <Flex align="center" justify="space-between" gap={8} wrap>
-          <Typography.Text strong>{t(locale, "details.reviewHistory")}</Typography.Text>
-          <Select
-            aria-label={t(locale, "details.reviewHistory")}
-            size="small"
-            value={historyScope}
-            options={[
-              { value: "displayed", label: reviewLocale
-                ? localeName(reviewLocale, locale)
-                : t(locale, "details.displayedLocale") },
-              { value: "all", label: t(locale, "directory.allLanguages") },
-            ]}
-            onChange={setHistoryScope}
-          />
-        </Flex>
-        {historyError ? (
+        <Button
+          type="link"
+          size="small"
+          style={{ alignSelf: "flex-start", padding: 0 }}
+          aria-expanded={showWholeHistory}
+          onClick={() => setShowWholeHistory(!showWholeHistory)}
+        >
+          {t(locale, "details.reviewHistory")}
+        </Button>
+        {showWholeHistory && (historyError ? (
           <Alert message={t(locale, "details.reviewHistoryFailed")} type="error" showIcon />
         ) : (
           <List
             size="small"
             loading={reviewHistory === undefined}
             locale={{ emptyText: t(locale, "details.noReviewHistory") }}
-            dataSource={(reviewHistory ?? [])
-              .filter((event) => historyScope === "all" || event.locale === reviewLocale)
-              .slice().reverse()}
+            dataSource={historyNewestFirst}
             renderItem={(event) => (
               <List.Item>
-                <Flex vertical gap={4}>
-                  <div>
-                    <Tag>{localeName(event.locale, locale)}</Tag>
-                    <Typography.Text>
-                      {event.from ? `${facetLabel(locale, "reviewState", event.from)} → ` : ""}
-                      {facetLabel(locale, "reviewState", event.to)}
-                    </Typography.Text>
-                  </div>
-                  {event.kind !== "review" ? (
-                    <Typography.Text type="secondary">
-                      {t(locale, event.kind === "baseline"
-                        ? "details.reviewHistoryBaseline" : "details.reviewHistoryInitial")}
-                    </Typography.Text>
+                <Flex className="entity-review-history-entry full-width" vertical gap={12}>
+                  <Flex wrap gap={16}>
+                    <InlineField label={t(locale, "details.localization")}>
+                      {localeName(event.locale, locale)}
+                    </InlineField>
+                    <InlineField label={t(locale, "details.state")}>
+                      {facetLabel(locale, "reviewState", event.state)}
+                    </InlineField>
+                    {canReviewNodes ? (
+                      <InlineField label={t(locale, "details.reviewer")}>
+                        {"reviewer" in event && event.reviewer ? event.reviewer : <EmptyValue />}
+                      </InlineField>
+                    ) : null}
+                    <InlineField label={t(locale, "details.reviewDate")}>
+                      {formatDateTime(event.date, locale) ?? <EmptyValue />}
+                    </InlineField>
+                  </Flex>
+                  {canReviewNodes ? (
+                    <InlineField label={t(locale, "details.reviewerNote")}>
+                      {"note" in event && event.note ? event.note : <EmptyValue />}
+                    </InlineField>
                   ) : null}
-                  {"at" in event && (event.actor || event.at) ? (
-                    <Typography.Text type="secondary">
-                      {[event.actor, formatDateTime(event.at, locale)].filter(Boolean).join(" · ")}
-                    </Typography.Text>
-                  ) : null}
-                  {"note" in event && event.note ? <Typography.Text>{event.note}</Typography.Text> : null}
                 </Flex>
               </List.Item>
             )}
           />
-        )}
+        ))}
       </Flex>
     </DetailSection>
   );
@@ -788,24 +787,16 @@ export function EntityDetailsPanel({
           </InlineField>
           {isSystem && system ? (
             <>
-              <InlineField label={t(locale, "details.role")}>
-                {system.properties.role
-                  ? facetLabel(locale, "systemRole", system.properties.role)
-                  : <EmptyValue />}
-              </InlineField>
               <InlineField label={t(locale, "details.operatorCountry")}>
                 {operatorCountryCodes.length > 0 ? operatorCountryCodes.join(", ") : <EmptyValue />}
               </InlineField>
               <InlineField label={t(locale, "details.discipline")}>
-                {system.properties.disciplineFamily ? (
-                  facetLabel(locale, "disciplineFamily", system.properties.disciplineFamily)
-                ) : (
-                  <EmptyValue />
-                )}
-              </InlineField>
-              <InlineField label={t(locale, "details.geographicScope")}>
-                {system.properties.geographicScope ? (
-                  facetLabel(locale, "geographicScope", system.properties.geographicScope)
+                {system.properties.disciplines?.length ? (
+                  <Flex gap={4} wrap>
+                    {system.properties.disciplines.map(discipline => (
+                      <Tag key={discipline}>{facetLabel(locale, "discipline", discipline)}</Tag>
+                    ))}
+                  </Flex>
                 ) : (
                   <EmptyValue />
                 )}
@@ -915,7 +906,7 @@ export function EntityDetailsPanel({
               renderItem={(metric) => (
                 <List.Item>
                   <Flex vertical gap={2}>
-                    <Typography.Text>
+                    <Typography.Text className="entity-detail-label">
                       {metric.label ?? facetLabel(locale, "metricKey", metric.key)}
                     </Typography.Text>
                     <MetricValue metric={metric} />
@@ -945,7 +936,7 @@ export function EntityDetailsPanel({
                   <Typography.Text>
                     {otherEntity ? nodeTitle(otherEntity, locale) : otherEntityId}
                   </Typography.Text>
-                  <Typography.Text type="secondary">
+                  <Typography.Text className="entity-detail-caption" type="secondary">
                     {relationshipLabel(relationship, entity.id, locale)}
                   </Typography.Text>
                 </Flex>
@@ -959,32 +950,34 @@ export function EntityDetailsPanel({
   );
 
   return (
-    <Card
-      className="entity-details-panel"
-      size="small"
-      title={title}
-      extra={
-        extraActions ??
-        (showCloseButton ? (
-          <Button
-            aria-label={t(locale, "details.closeEntityDetails")}
-            icon={<CloseOutlined />}
-            size="small"
-            type="text"
-            onClick={onClose ?? resetSelection}
+    <ConfigProvider theme={{ algorithm: theme.defaultAlgorithm, token: { fontSize: 14 } }}>
+      <Card
+        className="entity-details-panel"
+        size="small"
+        title={title}
+        extra={
+          extraActions ??
+          (showCloseButton ? (
+            <Button
+              aria-label={t(locale, "details.closeEntityDetails")}
+              icon={<CloseOutlined />}
+              size="small"
+              type="text"
+              onClick={onClose ?? resetSelection}
+            />
+          ) : null)
+        }
+      >
+        {showRawFields && system && activeDetailTab === "raw" ? (
+          <RawSystemDump
+            entity={entity}
+            relationships={relationships}
+            ryuRoutes={ryuRoutes}
           />
-        ) : null)
-      }
-    >
-      {showRawFields && system && activeDetailTab === "raw" ? (
-        <RawSystemDump
-          entity={entity}
-          relationships={relationships}
-          ryuRoutes={ryuRoutes}
-        />
-      ) : (
-        userView
-      )}
-    </Card>
+        ) : (
+          userView
+        )}
+      </Card>
+    </ConfigProvider>
   );
 }

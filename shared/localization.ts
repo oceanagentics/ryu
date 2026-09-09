@@ -57,10 +57,7 @@ export function resolveNodeLocalization(
     details: localization?.details ?? emptyLocalizationDetails(),
     translatedFromLocale: localization?.translatedFromLocale ?? null,
     contentUpdatedAt: localization?.contentUpdatedAt ?? null,
-    reviewState: localization?.reviewState ?? null,
-    reviewerNote: localization?.reviewerNote ?? null,
-    reviewer: localization?.reviewer ?? null,
-    lastReviewed: localization?.lastReviewed ?? null,
+    review: localization?.review ?? null,
     createdAt: localization?.createdAt ?? null,
     updatedAt: localization?.updatedAt ?? null,
   };

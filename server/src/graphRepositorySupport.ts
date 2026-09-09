@@ -1,4 +1,6 @@
 import type {
+  DataType,
+  Discipline,
   GraphEdge,
   GraphEdgeKind,
   GraphNode,
@@ -8,6 +10,7 @@ import type {
   NodeProperties,
   RecordDepth,
   ReviewState,
+  ReviewSnapshot,
   RyuPortalRoute,
   RyuPortalSource,
   RyuRoute,
@@ -18,6 +21,7 @@ import type {
   Source,
   SupportedLocale,
 } from "../../shared/domain";
+import { dataTypes, disciplines } from "../../shared/domain";
 import {
   defaultLocale,
   emptyLocalizationDetails,
@@ -50,10 +54,7 @@ export type RawNodeLocalization = {
   details_json: string | null;
   translated_from_locale: SupportedLocale | null;
   content_updated_at: string;
-  review_state: ReviewState;
-  reviewer_note: string | null;
-  reviewer: string | null;
-  last_reviewed: string | null;
+  review_json: { history: ReviewSnapshot[] };
   created_at: string;
   updated_at: string;
 };
@@ -97,9 +98,7 @@ const reviewStates = [
 
 export function emptyNodeProperties(): NodeProperties {
   return {
-    role: null,
-    disciplineFamily: null,
-    geographicScope: null,
+    disciplines: [],
     gallery: [],
     data: {
       descriptors: [],
@@ -190,12 +189,13 @@ export function normalizeNodeProperties(value: unknown): NodeProperties {
   const data = isRecord(value.data) ? value.data : {};
   const properties = { ...value };
   delete properties.operator;
+  delete properties.role;
+  delete properties.disciplineFamily;
+  delete properties.geographicScope;
 
   return {
     ...properties,
-    role: normalizeString(value.role),
-    disciplineFamily: normalizeString(value.disciplineFamily),
-    geographicScope: normalizeString(value.geographicScope),
+    disciplines: Array.isArray(value.disciplines) ? value.disciplines.filter(isDiscipline) : [],
     gallery: Array.isArray(value.gallery)
       ? value.gallery as NodeProperties["gallery"]
       : [],
@@ -221,6 +221,14 @@ function isString(value: unknown): value is string {
   return typeof value === "string";
 }
 
+export function isDiscipline(value: unknown): value is Discipline {
+  return typeof value === "string" && disciplines.includes(value as Discipline);
+}
+
+export function isDataType(value: unknown): value is DataType {
+  return typeof value === "string" && dataTypes.includes(value as DataType);
+}
+
 export function isNodeKind(value: unknown): value is GraphNodeKind {
   return typeof value === "string" && nodeKinds.includes(value as GraphNodeKind);
 }
@@ -235,10 +243,6 @@ export function isRecordDepth(value: unknown): value is RecordDepth {
 
 export function isReviewState(value: unknown): value is ReviewState {
   return typeof value === "string" && reviewStates.includes(value as ReviewState);
-}
-
-function readNullableString(value: unknown): string | null {
-  return typeof value === "string" && value.trim() ? value : null;
 }
 
 function localeSortValue(locale: SupportedLocale): number {
@@ -259,10 +263,7 @@ export function mapNodeLocalization(row: RawNodeLocalization): NodeLocalization 
       ? normalizeLocale(row.translated_from_locale)
       : null,
     contentUpdatedAt: row.content_updated_at,
-    reviewState: isReviewState(row.review_state) ? row.review_state : "agent_researched",
-    reviewerNote: readNullableString(row.reviewer_note),
-    reviewer: readNullableString(row.reviewer),
-    lastReviewed: readNullableString(row.last_reviewed),
+    review: { ...row.review_json.history.at(-1)!, history: row.review_json.history },
     createdAt: row.created_at,
     updatedAt: row.updated_at,
   };

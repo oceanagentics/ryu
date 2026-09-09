@@ -769,6 +769,12 @@ body {
   gap: 8px;
 }
 
+.entity-detail-section-title.ant-typography {
+  color: var(--ant-color-text-heading);
+  font-size: var(--ant-font-size-lg);
+  line-height: var(--ant-line-height-lg);
+}
+
 .entity-detail-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -784,13 +790,23 @@ body {
   border-bottom: 1px solid rgba(19, 32, 51, 0.07);
 }
 
-.entity-detail-label {
-  color: #52606f;
-  font-size: 12px;
+.entity-detail-label.ant-typography {
+  color: var(--ant-color-text-label);
+  font-size: var(--ant-font-size-sm);
+  line-height: var(--ant-line-height-sm);
+}
+
+.entity-detail-caption.ant-typography,
+.entity-detail-caption .ant-typography {
+  font-size: var(--ant-font-size-sm);
+  line-height: var(--ant-line-height-sm);
 }
 
 .entity-detail-value {
   min-width: 0;
+  color: var(--ant-color-text);
+  font-size: var(--ant-font-size);
+  line-height: var(--ant-line-height);
   overflow-wrap: anywhere;
 }
 
@@ -800,6 +816,15 @@ body {
 
 .entity-review-note {
   width: 100%;
+}
+
+.entity-review-history-entry .entity-detail-item {
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
+  max-width: 100%;
+  gap: 2px;
+  padding: 0;
+  border: 0;
 }
 
 .entity-review-error {
@@ -820,8 +845,8 @@ body {
 
 .source-record-info-icon {
   flex: 0 0 auto;
-  color: #69798c;
-  font-size: 12px;
+  color: var(--ant-color-text-description);
+  font-size: var(--ant-font-size-sm);
 }
 
 .source-record-tooltip {
@@ -835,7 +860,7 @@ body {
 
 .entity-detail-note {
   margin-bottom: 0;
-  color: #3c4b60;
+  color: var(--ant-color-text);
 }
 
 .entity-system-intro {
@@ -850,33 +875,14 @@ body {
 
 .entity-system-name.ant-typography {
   margin: 0;
-  color: #132033;
-  font-size: 24px;
-  line-height: 1.16;
 }
 
 .entity-system-operator {
-  color: #3c4b60;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.35;
+  font-weight: var(--ant-font-weight-strong);
 }
 
 .entity-system-url {
-  font-size: 13px;
-  line-height: 1.35;
   overflow-wrap: anywhere;
-}
-
-.entity-system-short-description.ant-typography {
-  color: #26384d;
-  font-size: 14px;
-  line-height: 1.45;
-}
-
-.entity-system-long-description.ant-typography {
-  font-size: 13px;
-  line-height: 1.55;
 }
 
 .entity-gallery-slider {
@@ -941,8 +947,8 @@ body {
   border-radius: 6px;
   background: #0f1724;
   color: #d7e2f0;
-  font-size: 12px;
-  line-height: 1.45;
+  font-size: var(--ant-font-size-sm);
+  line-height: var(--ant-line-height-sm);
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
@@ -1155,10 +1161,6 @@ body {
 
   .systems-directory-rail .systems-controls {
     gap: 8px;
-  }
-
-  .entity-system-name.ant-typography {
-    font-size: 21px;
   }
 
   .entity-detail-item {

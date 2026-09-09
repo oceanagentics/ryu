@@ -78,7 +78,7 @@ The pre-launch browser-mediated write route is:
 - `PATCH /api/nodes/:id/localizations/:locale/review`
 
 That review route accepts only `reviewState` and `reviewerNote`. The server sets
-`reviewer` and `lastReviewed` from CHM/IAP context.
+snapshot `reviewer` from authentication and `date` from the server clock.
 
 The launch server keeps `GET /api/graph/bootstrap` as a UI bootstrap support
 route for the current browser app. It is not an agent API surface.
@@ -219,7 +219,7 @@ the graph per request; a future indexed implementation must preserve these behav
 - `total` counts all matches; `include=matchingIds` returns every matching ID even
   when the `records` page is limited.
 - `include=matchReasons` returns structured field, label, value, token, and score.
-- `countryCode`, `role`, `disciplineFamily`, `dataFormat`, and `dataStandard` cover
+- `countryCode`, `disciplines`, `dataFormat`, and `dataStandard` cover
   the directory's remaining filters. Descriptor and access filters match their
   respective typed fields.
 - The browser sends search intent to this endpoint and uses its ordering and
@@ -355,8 +355,8 @@ Content input rules:
 - `RecordAggregate` localizations must use a content-only input type, not the
   full read DTO. Allowed localization content fields are `title`, `summary`,
   `description`, `details`, and `translatedFromLocale`.
-- Content writes must reject review and audit fields, including `reviewState`,
-  `reviewerNote`, `reviewer`, `lastReviewed`, `contentUpdatedAt`, `createdAt`,
+- Content writes must reject review and audit fields, including `review`, `reviewState`,
+  `reviewerNote`, `reviewer`, `reviewDate`, `contentUpdatedAt`, `createdAt`,
   and `updatedAt`.
 - New localization rows created by content writes should default to
   `reviewState='agent_researched'`, with reviewer metadata unset. Review state
@@ -519,16 +519,25 @@ The pre-launch node-localization review route should be removed from the launch
 surface. Human browser review and agent review both use this record-oriented
 path.
 
-Review history is available through `GET /api/records/:id?include=reviewHistory`
-(also supported on record lists). It is opt-in and contains one ordered event
-array across the node's locales. Each event has `locale`, `kind`, `from`, and
-`to`; authenticated responses also include `actor`, `at`, `note`, and
-`contentUpdatedAt`. Public responses omit those review metadata fields.
-History cannot be supplied through content or review writes. The localization
-trigger appends initial states and review metadata changes atomically to the
-node's single `node_review_history` row. Apply `002_node_review_history.sql`
-before deploying this feature. Existing rows get labeled baselines; historical
-content snapshots are not reconstructed.
+Review state and history are stored together in `node_localizations.review_json`:
+`{"history":[{"state":"agent_researched","reviewer":null,"date":null,"note":null}]}`.
+The last complete snapshot defines the current state. API localizations expose
+that snapshot as `review`; `include=reviewHistory` adds `review.history` inside
+each localization, including on list responses. There is no node-level history
+array or separate history table. Public snapshots expose `state` and `date`;
+reviewer identity and notes require authentication. Dates may be null in seeded
+current states when the original review date is unknown.
+
+New localizations start with one `agent_researched` snapshot dated at creation.
+Review writes and automatic invalidations append complete snapshots atomically;
+content changes that do not affect review state do not append snapshots.
+A database CHECK validates the JSON shape, statuses, types, and dates; a trigger
+requires each review update to append one dated snapshot without rewriting the
+existing prefix. The API controls reviewer permissions, identity, and timestamps.
+Apply `008_localization_reviews.sql` before deploying: it seeds each history from
+current localization review fields, removes those columns, and drops the obsolete
+`node_review_history` table and its trigger function. Old history is discarded.
+The migration is safe to rerun without resetting the new histories.
 
 Review-state permissions:
 
@@ -927,7 +936,7 @@ Every write route should support strict schema validation.
 Use structured application logs for audit. Do not log plaintext tokens, full
 request bodies, full record payloads, or URLs containing credentials. Do not add
 an audit or idempotency table in this refactor. The Phase 1
-`node_review_history` table is product review history, separate from request logs.
+`node_localizations.review_json.history` array is product review history, separate from request logs.
 
 Patch writes, full writes, review writes, and delete applies must use optimistic
 concurrency. The simple `recordUpdatedAt` precondition is enough.

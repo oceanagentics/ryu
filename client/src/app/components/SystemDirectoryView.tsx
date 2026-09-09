@@ -202,12 +202,11 @@ export function SystemDirectoryView({
       ),
     },
     {
-      title: t(locale, "directory.role"),
-      key: "role",
-      render: (_: unknown, record: SystemSearchRecord) =>
-        record.role
-          ? <Tag>{facetLabel(locale, "systemRole", record.role)}</Tag>
-          : <Typography.Text type="secondary">{t(locale, "directory.notSet")}</Typography.Text>,
+      title: t(locale, "details.discipline"),
+      key: "disciplines",
+      render: (_: unknown, record: SystemSearchRecord) => (
+        <CompactTags values={record.disciplines} facetGroup="discipline" />
+      ),
     },
     {
       title: t(locale, "directory.data"),
@@ -317,15 +316,6 @@ export function SystemDirectoryView({
                 allowClear
                 mode="multiple"
                 maxTagCount="responsive"
-                placeholder={t(locale, "directory.role")}
-                value={filters.role}
-                options={filterOptions.role}
-                onChange={(value) => patchFilters({ role: value })}
-              />
-              <Select
-                allowClear
-                mode="multiple"
-                maxTagCount="responsive"
                 placeholder={t(locale, "directory.operatorCountry")}
                 value={filters.countryCode}
                 options={filterOptions.countryCode}
@@ -336,9 +326,9 @@ export function SystemDirectoryView({
                 mode="multiple"
                 maxTagCount="responsive"
                 placeholder={t(locale, "details.discipline")}
-                value={filters.disciplineFamily}
-                options={filterOptions.disciplineFamily}
-                onChange={(value) => patchFilters({ disciplineFamily: value })}
+                value={filters.disciplines}
+                options={filterOptions.disciplines}
+                onChange={(value) => patchFilters({ disciplines: value })}
               />
               {claimFilterKeys.map((key) => (
                 <Select
@@ -427,16 +417,7 @@ export function SystemDirectoryView({
                   <MatchReasons reasons={record.matchReasons} />
                   <div className="systems-card-meta">
                     <span>{record.countryCode || t(locale, "directory.noOperatorCountry")}</span>
-                    <span>
-                      {record.role
-                        ? facetLabel(locale, "systemRole", record.role)
-                        : t(locale, "directory.noRole")}
-                    </span>
-                    <span>
-                      {record.disciplineFamily
-                        ? facetLabel(locale, "disciplineFamily", record.disciplineFamily)
-                        : t(locale, "directory.noDiscipline")}
-                    </span>
+                    <CompactTags values={record.disciplines} facetGroup="discipline" />
                     <span>
                       {t(locale, "directory.relationshipCount", {
                         count: record.relationships.length,
