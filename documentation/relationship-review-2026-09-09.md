@@ -1,8 +1,25 @@
 # Relationship review — 9 September 2026
 
-Status: reviewed correction plan; production application and verification pending.
+Status: schema, UI/API deployment and relationship backfill applied and verified. Retirement of 12 obsolete nodes is blocked by the current API token’s deletion scope; their incident edges have already been removed.
 
 Scope: all 117 canonical PostgreSQL records (60 systems, 51 organizations, 6 country/context records) and all 139 incident relationships, fetched through the authenticated Record API. This is a dated audit, not another canonical registry.
+
+## Applied result and remaining access requirement
+
+- Reviewed all 117 original nodes and all 139 original edges.
+- Removed 80 original edges, retained and cited 59, and established 60 new edges: **119 validated relationships** in total.
+- Added 29 separately identified organizations and corrected `eur` to organization. There are currently **146 records**, including 12 disconnected records pending deletion. Removing them yields 134 records (60 systems, 70 organizations, 4 countries).
+- Persisted English findings for all six relationship types on the 134 retained/new records. Each edge has source references. Full multilingual rich backfills and complete international membership/funding rosters remain separate work.
+- Verified the final edge IDs, endpoints, notes and metadata against the reviewed plan; no organization or system retains a country code.
+- The Record API returned `403 wrong_scope` for the deletion dry run. Do not bypass this with direct SQL. Complete the retirements through the supported Record API when appropriately scoped access is available, using a fresh impact hash and record version.
+
+Pending retirement: `awi-and-marum`, `bold-systems`, `cern-and-openaire`, `copernicus-marine-service`, `european-commission-and-thematic-consortia`, `int`, `mercator-ocean-international-and-eu`, `molluscabase-editors-and-vliz`, `re3data-consortium`, `vliz-and-lifewatch-belgium`, `whoi-and-partner-institutions`, `wmo-and-ioc-unesco`.
+
+## Release and verification
+
+Application commit: `796e858`. Cloud SQL migration `009_relationship_contract.sql` was rehearsed with rollback and then applied. Pre-change backup: `1788978276767` on instance `chm` (successful). The one-off migration job was removed after completion.
+
+Released revisions: `explorer-00025-42k`, `explorer-admin-00018-2fg`, `explorer-api-00023-5xd`. All 79 tests and the production build passed. Production validate-only checks accepted all six types at permitted endpoints, rejected invalid endpoints and `part_of`, rejected system country codes, and refused rich promotion without the required relationship review. Dry runs left the record version unchanged. The browser confirmed removal of Operator country and Part of from Profile and displayed both AWI and MARUM as PANGAEA operators. The launch export was regenerated from the canonical public API.
 
 ## Contract
 
@@ -29,7 +46,7 @@ Multiple relationships can coexist. Membership does not imply unilateral governa
 
 ## Limits and follow-up
 
-Every existing node and edge has a disposition below. This review does not establish a complete global member-country or funder census. The graph contains four actual country records; membership edges are partial even where authoritative full rosters exist. Research must still expand those rosters deliberately, distinguish full/associate/observer status, and establish award periods and governance mandates where the reviewed sources are historical.
+Every existing node and edge has a disposition below. This review does not establish a complete global member-country or funder census. The graph contains four actual country records plus the disconnected legacy `int` record pending retirement; membership edges are partial even where authoritative full rosters exist. Research must still expand those rosters deliberately, distinguish full/associate/observer status, and establish award periods and governance mandates where the reviewed sources are historical.
 
 AlgaeBase, GO-SHIP, OceanSITES, SeaDataNet and Argovis have historical or undated organizational evidence. The reviewed team/programme scope is retained with that limitation; current mandate and funding details remain open. The BBNJ record describes a planned implementation: treaty responsibility does not establish a live implementation operator or data feed.
 
@@ -83,7 +100,7 @@ All existing rich records must pass the new six-relationship assessment and the 
 | `oceansites` | Steering Committee and Data Management Team coordinate distributed observatories; GDACs are at NOAA NDBC and IFREMER. Governance document is historical (2016). | [OceanSITES organization and governance](https://www.ocean-ops.org/oceansites/documents/Organization_and_Governance_17Mar2016.pdf) |
 | `odfw-commercial-landings` | Oregon Department of Fish and Wildlife operates the statistics service. It is a state agency, not a federal agency. | [ODFW commercial fishery statistics](https://www.dfw.state.or.us/fish/commercial/statistics.asp) |
 | `odis` | IODE coordinates distributed infrastructure under IOC; independent connected systems retain their own governance. | [Ocean Data and Information System](https://oceaninfohub.org/odis/) |
-| `ooi-data` | WHOI, Oregon State and University of Washington operate different OOI components under NSF Award 2244833; coordination does not imply a sole operator. | [About OOI](https://oceanobservatories.org/about-ooi/) |
+| `ooi-data` | OSU manages the data cyberinfrastructure. WHOI, OSU and UW provide array data through their operations centres; NSF funds the programme. Array operation is distinct from portal operation. | [About OOI](https://oceanobservatories.org/about-ooi/) |
 | `openstreetmap-standard-raster-tiles` | OSMF operates the standard tile service. Volunteer map contributors and UK incorporation do not establish UK government control. | [OSMF tile usage policy](https://operations.osmfoundation.org/policies/tiles/) |
 | `oregon-dlcd-coastal-gis` | Oregon DLCD/OCMP operates coastal GIS services; state authority must not be substituted with US federal governance. | [DLCD maps and data tools](https://www.oregon.gov/lcd/about/pages/maps-data-tools.aspx) |
 | `pangaea` | AWI and MARUM jointly host and operate PANGAEA. Mixed institutional support must remain visible instead of one composite German operator. | [About PANGAEA](https://www.pangaea.de/about/) |
@@ -331,6 +348,7 @@ Retained edges receive source references and scoped notes. Removed edge IDs rema
 | `marum` | MARUM, University of Bremen | [About PANGAEA](https://www.pangaea.de/about/) |
 | `meopar` | Marine Environmental Observation, Prediction and Response Network | [About CIOOS](https://cioos.ca/about-us/) |
 | `mercator-ocean-international` | Mercator Ocean International | [Copernicus Marine service](https://www.copernicus.eu/en/copernicus-services/marine) |
+| `nrl-marine-meteorology` | Naval Research Laboratory Marine Meteorology Division | [Argo data system](https://argo.ucsd.edu/organization/argo-data-system/) |
 | `nsf` | US National Science Foundation | [About the US National Science Foundation](https://www.nsf.gov/about) |
 | `observations-coordination-group` | GOOS Observations Coordination Group | [WMO marine observations](https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/marine-services/marine-observations) |
 | `oceanops-centre` | OceanOPS coordination centre | [WMO marine observations](https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/marine-services/marine-observations) |
@@ -338,13 +356,12 @@ Retained edges receive source references and scoped notes. Removed edge IDs rema
 | `oregon-state-university` | Oregon State University | [About OOI](https://oceanobservatories.org/about-ooi/) |
 | `purdue-university-libraries` | Purdue University Libraries | [About re3data](https://www.re3data.org/about) |
 | `university-of-washington` | University of Washington | [About OOI](https://oceanobservatories.org/about-ooi/) |
-| `us-godae` | US GODAE GDAC | [Argo data system](https://argo.ucsd.edu/organization/argo-data-system/) |
 | `whoi` | Woods Hole Oceanographic Institution | [About BCO-DMO](https://www.bco-dmo.org/about) |
 | `worms-steering-committee` | WoRMS Steering Committee | [WoRMS terms of reference](https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf) |
 
 ## Reviewed final edge inventory
 
-Expected after applying this plan: 134 nodes (60 systems, 70 organizations, 4 countries), 117 edges (66 operates, 20 governs, 10 funds, 10 member_of, 10 syncs_to, 1 publishes_to).
+Expected after applying this plan: 134 nodes (60 systems, 70 organizations, 4 countries), 119 edges (64 operates, 21 governs, 10 funds, 10 member_of, 10 syncs_to, 4 publishes_to).
 
 | Relationship | Source |
 |---|---|
@@ -376,6 +393,7 @@ Expected after applying this plan: 134 nodes (60 systems, 70 organizations, 4 co
 | `usa → governs → noaa-ncei` | [NOAA NCEI marine data](https://www.ncei.noaa.gov/products/marine) |
 | `usa → governs → noaa-office-for-coastal-management` | [NOAA biologically important areas](https://www.fisheries.noaa.gov/inport/item/23643) |
 | `usa → governs → noaa-office-of-response-and-restoration` | [NOAA ESI maps](https://www.fisheries.noaa.gov/inport/item/55730) |
+| `usa → governs → nrl-marine-meteorology` | [US Navy GODAE server](https://nrlgodae1.nrlmry.navy.mil/) |
 | `usa → governs → nsf` | [About the US National Science Foundation](https://www.nsf.gov/about) |
 | `worms-steering-committee → governs → worms` | [WoRMS terms of reference](https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf) |
 | `bioinformation-and-ddbj-center-nig → member_of → insdc-members` | [INSDC membership and exchange](https://www.insdc.org/about-insdc/) |
@@ -435,12 +453,13 @@ Expected after applying this plan: 134 nodes (60 systems, 70 organizations, 4 co
 | `noaa-ncei → operates → noaa-ncei-marine` | [NOAA NCEI marine data](https://www.ncei.noaa.gov/products/marine) |
 | `noaa-office-for-coastal-management → operates → noaa-cetacean-bia` | [NOAA biologically important areas](https://www.fisheries.noaa.gov/inport/item/23643) |
 | `noaa-office-of-response-and-restoration → operates → noaa-esi-wa-or-marine-mammals` | [NOAA ESI maps](https://www.fisheries.noaa.gov/inport/item/55730) |
+| `nrl-marine-meteorology → operates → argo-gdac` | [Argo data system](https://argo.ucsd.edu/organization/argo-data-system/) |
 | `oceanops-centre → operates → oceanops` | [WMO marine observations](https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/marine-services/marine-observations) |
 | `oceansites-programme → operates → oceansites` | [OceanSITES organization and governance](https://www.ocean-ops.org/oceansites/documents/Organization_and_Governance_17Mar2016.pdf) |
 | `openstreetmap-foundation → operates → openstreetmap-standard-raster-tiles` | [OSMF tile usage policy](https://operations.osmfoundation.org/policies/tiles/) |
 | `oregon-department-of-fish-and-wildlife → operates → odfw-commercial-landings` | [ODFW commercial fishery statistics](https://www.dfw.state.or.us/fish/commercial/statistics.asp) |
 | `oregon-dlcd → operates → oregon-dlcd-coastal-gis` | [DLCD maps and data tools](https://www.oregon.gov/lcd/about/pages/maps-data-tools.aspx) |
-| `oregon-state-university → operates → ooi-data` | [About OOI](https://oceanobservatories.org/about-ooi/) |
+| `oregon-state-university → operates → ooi-data` | [OOI cyberinfrastructure](https://oceanobservatories.org/cyberinfrastructure/) |
 | `protomaps → operates → protomaps-basemap` | [About Protomaps](https://protomaps.com/about) |
 | `purdue-university-libraries → operates → re3data` | [About re3data](https://www.re3data.org/about) |
 | `q-quatics → operates → fishbase` | [FishBase homepage](https://fishbase.se/home.htm) |
@@ -450,11 +469,11 @@ Expected after applying this plan: 134 nodes (60 systems, 70 organizations, 4 co
 | `seadatanet-consortium → operates → seadatanet-cdi` | [SeaDataNet CDI manual](https://www.seadatanet.org/content/download/599/file/SDN2_D57_TC_UserManualforUpdatingCDI-Data-Access-Service.pdf) |
 | `socat-community → operates → socat` | [About SOCAT](https://socat.info/index.php/about/) |
 | `university-of-colorado-boulder-and-collaborators → operates → argovis` | [Argovis project presentation](https://argovis.colorado.edu/Argovis_hackathon_S2024_Giglio.pdf) |
-| `university-of-washington → operates → ooi-data` | [About OOI](https://oceanobservatories.org/about-ooi/) |
-| `us-godae → operates → argo-gdac` | [Argo data system](https://argo.ucsd.edu/organization/argo-data-system/) |
 | `whoi → operates → bco-dmo` | [About BCO-DMO](https://www.bco-dmo.org/about) |
-| `whoi → operates → ooi-data` | [About OOI](https://oceanobservatories.org/about-ooi/) |
 | `jamstec → publishes_to → bismal` | [JAMSTEC databases](https://www.jamstec.go.jp/e/database/) |
+| `oregon-state-university → publishes_to → ooi-data` | [OOI cyberinfrastructure](https://oceanobservatories.org/cyberinfrastructure/) |
+| `university-of-washington → publishes_to → ooi-data` | [OOI cyberinfrastructure](https://oceanobservatories.org/cyberinfrastructure/) |
+| `whoi → publishes_to → ooi-data` | [OOI cyberinfrastructure](https://oceanobservatories.org/cyberinfrastructure/) |
 | `bco-dmo → syncs_to → noaa-ncei-marine` | [About BCO-DMO](https://www.bco-dmo.org/about) |
 | `bismal → syncs_to → platform-obis` | [About BISMaL / J-OBIS](https://www.godac.jamstec.go.jp/bismal/e/about.html) |
 | `ddbj → syncs_to → ena` | [INSDC membership and exchange](https://www.insdc.org/about-insdc/) |
