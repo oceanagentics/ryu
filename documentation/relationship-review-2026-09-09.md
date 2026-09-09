@@ -1,19 +1,19 @@
 # Relationship review — 9 September 2026
 
-Status: schema, UI/API deployment and relationship backfill applied and verified. Retirement of 12 obsolete nodes is blocked by the current API token’s deletion scope; their incident edges have already been removed.
+Status: schema, UI/API deployment, relationship backfill and retirement of all 12 obsolete nodes are applied and verified.
 
 Scope: all 117 canonical PostgreSQL records (60 systems, 51 organizations, 6 country/context records) and all 139 incident relationships, fetched through the authenticated Record API. This is a dated audit, not another canonical registry.
 
-## Applied result and remaining access requirement
+## Applied result
 
 - Reviewed all 117 original nodes and all 139 original edges.
 - Removed 80 original edges, retained and cited 59, and established 60 new edges: **119 validated relationships** in total.
-- Added 29 separately identified organizations and corrected `eur` to organization. There are currently **146 records**, including 12 disconnected records pending deletion. Removing them yields 134 records (60 systems, 70 organizations, 4 countries).
+- Added 29 separately identified organizations and corrected `eur` to organization. After deleting the 12 obsolete disconnected records, there are **134 records** (60 systems, 70 organizations, 4 countries).
 - Persisted English findings for all six relationship types on the 134 retained/new records. Each edge has source references. Full multilingual rich backfills and complete international membership/funding rosters remain separate work.
 - Verified the final edge IDs, endpoints, notes and metadata against the reviewed plan; no organization or system retains a country code.
-- The Record API returned `403 wrong_scope` for the deletion dry run. Do not bypass this with direct SQL. Complete the retirements through the supported Record API when appropriately scoped access is available, using a fresh impact hash and record version.
+- The earlier `403 wrong_scope` blocker is resolved. All 12 retirements were applied through the supported Record API on 9 September 2026, after fresh reads and deletion dry runs, with matching impact hashes and record versions. Each deletion removed one node and its six localizations; no edges, routes, saved views or orphaned source candidates were affected. All 12 subsequent reads returned 404. The 134 retained records and all 119 relationships were unchanged in the before/after API comparison.
 
-Pending retirement: `awi-and-marum`, `bold-systems`, `cern-and-openaire`, `copernicus-marine-service`, `european-commission-and-thematic-consortia`, `int`, `mercator-ocean-international-and-eu`, `molluscabase-editors-and-vliz`, `re3data-consortium`, `vliz-and-lifewatch-belgium`, `whoi-and-partner-institutions`, `wmo-and-ioc-unesco`.
+Retired: `awi-and-marum`, `bold-systems`, `cern-and-openaire`, `copernicus-marine-service`, `european-commission-and-thematic-consortia`, `int`, `mercator-ocean-international-and-eu`, `molluscabase-editors-and-vliz`, `re3data-consortium`, `vliz-and-lifewatch-belgium`, `whoi-and-partner-institutions`, `wmo-and-ioc-unesco`.
 
 ## Release and verification
 
@@ -38,7 +38,7 @@ Multiple relationships can coexist. Membership does not imply unilateral governa
 
 - The 50 old `governs` edges mixed real public authority with location and an invented “International” governor. Retain 7 documented national institutional ties, remove 43 unsupported geographic assertions, and add evidenced governing bodies.
 - Remove all 10 `part_of` edges. Re-establish only the three INSDC archive participation relationships as `member_of`; component services remain described in profile prose.
-- Replace composite or duplicate operator labels with actual institutions, keeping genuine programme/team organizations. Retire 11 obsolete composite/duplicate organization records and the fake International country; keep their prior identities in this audit and the pre-change backup.
+- Replace composite or duplicate operator labels with actual institutions, keeping genuine programme/team organizations. Retired 11 obsolete composite/duplicate organization records and the fake International country; keep their prior identities in this audit and the pre-change backup.
 - Correct European Union from country to organization. Country codes identify actual country nodes only.
 - Review every data edge. Keep documented preservation and biodiversity feeds, represent reciprocal INSDC exchange explicitly, and reverse ENA → MGnify. Remove speculative federation and reference/display relationships that do not establish synchronization.
 - Do not create a current sync merely because a historical method used a dataset, a product catalogue contains Argo products, or two services share infrastructure.
@@ -46,7 +46,7 @@ Multiple relationships can coexist. Membership does not imply unilateral governa
 
 ## Limits and follow-up
 
-Every existing node and edge has a disposition below. This review does not establish a complete global member-country or funder census. The graph contains four actual country records plus the disconnected legacy `int` record pending retirement; membership edges are partial even where authoritative full rosters exist. Research must still expand those rosters deliberately, distinguish full/associate/observer status, and establish award periods and governance mandates where the reviewed sources are historical.
+Every existing node and edge has a disposition below. This review does not establish a complete global member-country or funder census. The graph contains four actual country records; the legacy `int` record has been deleted, and membership edges are partial even where authoritative full rosters exist. Research must still expand those rosters deliberately, distinguish full/associate/observer status, and establish award periods and governance mandates where the reviewed sources are historical.
 
 AlgaeBase, GO-SHIP, OceanSITES, SeaDataNet and Argovis have historical or undated organizational evidence. The reviewed team/programme scope is retained with that limitation; current mandate and funding details remain open. The BBNJ record describes a planned implementation: treaty responsibility does not establish a live implementation operator or data feed.
 
@@ -124,14 +124,14 @@ All existing rich records must pass the new six-relationship assessment and the 
 | `algaebase-operator` | Retain identity; review incoming authority and outgoing roles. | See system review: `algaebase` |
 | `aquamaps-collaboration` | Retain identity; review incoming authority and outgoing roles. | See system review: `aquamaps` |
 | `argo-data-management-team` | Retain identity; review incoming authority and outgoing roles. | See system review: `argo-gdac` |
-| `awi-and-marum` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `pangaea` |
+| `awi-and-marum` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `pangaea` |
 | `bio-oracle-team` | Retain identity; review incoming authority and outgoing roles. | See system review: `bio-oracle` |
 | `bioinformation-and-ddbj-center-nig` | Retain identity; review incoming authority and outgoing roles. | See system review: `ddbj` |
-| `bold-systems` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `bold` |
+| `bold-systems` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `bold` |
 | `can` | Retain identity; review incoming authority and outgoing roles. | Country identity retained. Review all incident relationships; citizenship, headquarters and geographic coverage do not establish government control. Membership and funding are separately evidenced. |
-| `cern-and-openaire` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `zenodo` |
+| `cern-and-openaire` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `zenodo` |
 | `cioos-operator` | Retain identity; review incoming authority and outgoing roles. | See system review: `cioos` |
-| `copernicus-marine-service` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `cmems-datastore` |
+| `copernicus-marine-service` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `cmems-datastore` |
 | `deu` | Retain identity; review incoming authority and outgoing roles. | Country identity retained. Review all incident relationships; citizenship, headquarters and geographic coverage do not establish government control. Membership and funding are separately evidenced. |
 | `dryad-operator` | Retain identity; review incoming authority and outgoing roles. | See system review: `dryad` |
 | `ecotrust` | Retain identity; review incoming authority and outgoing roles. | See system review: `ecotrust-oregon-fisheries-uses-values` |
@@ -139,7 +139,7 @@ All existing rich records must pass the new six-relationship assessment and the 
 | `emodnet-biology-consortium` | Retain identity; review incoming authority and outgoing roles. | See system review: `emodnet-biology` |
 | `eur` | Correct kind to organization; clear country code. | Correct kind to organization: the European Union is not a country. Remove inherited location-based governance; retain only documented programme funding. |
 | `euro-argo-eric` | Retain identity; review incoming authority and outgoing roles. | See system review: `euro-argo` |
-| `european-commission-and-thematic-consortia` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `emodnet` |
+| `european-commission-and-thematic-consortia` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `emodnet` |
 | `fao` | Retain identity; review incoming authority and outgoing roles. | See system review: `fao-fishstat` |
 | `fishbase-consortium` | Retain identity; review incoming authority and outgoing roles. | Scientific advisory body described by FishBase; advisory status alone does not establish binding governance. No governs edge asserted. |
 | `flanders-marine-institute` | Retain identity; review incoming authority and outgoing roles. | See system review: `marine-regions`, `worms` |
@@ -150,13 +150,13 @@ All existing rich records must pass the new six-relationship assessment and the 
 | `glodap-community` | Retain identity; review incoming authority and outgoing roles. | See system review: `glodap` |
 | `ices` | Retain identity; review incoming authority and outgoing roles. | See system review: `datras`, `ices-data`, `intercatch`, `rdbes` |
 | `insdc-members` | Retain identity; review incoming authority and outgoing roles. | See system review: `insdc` |
-| `int` | Retire obsolete grouping/composite; replace with evidenced actors. | Retire the International grouping node and all its governs edges. It is neither a country nor a real governing organization. |
+| `int` | Retired obsolete grouping/composite; replaced with evidenced actors. | Retired the International grouping node and removed all its governs edges. It is neither a country nor a real governing organization. |
 | `international-go-ship-community` | Retain identity; review incoming authority and outgoing roles. | See system review: `go-ship` |
 | `ioc-unesco-iode` | Retain identity; review incoming authority and outgoing roles. | See system review: `platform-obis`, `odis`, `oceaninfohub` |
 | `jamstec` | Retain identity; review incoming authority and outgoing roles. | See system review: `bismal` |
 | `jpn` | Retain identity; review incoming authority and outgoing roles. | Country identity retained. Review all incident relationships; citizenship, headquarters and geographic coverage do not establish government control. Membership and funding are separately evidenced. |
-| `mercator-ocean-international-and-eu` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `copernicus-marine` |
-| `molluscabase-editors-and-vliz` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `molluscabase` |
+| `mercator-ocean-international-and-eu` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `copernicus-marine` |
+| `molluscabase-editors-and-vliz` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `molluscabase` |
 | `ncbi-united-states` | Retain identity; review incoming authority and outgoing roles. | See system review: `genbank` |
 | `noaa-ioos` | Retain identity; review incoming authority and outgoing roles. | See system review: `ioos` |
 | `noaa-ncei` | Retain identity; review incoming authority and outgoing roles. | See system review: `noaa-ncei-marine` |
@@ -169,15 +169,15 @@ All existing rich records must pass the new six-relationship assessment and the 
 | `oregon-dlcd` | Retain identity; review incoming authority and outgoing roles. | See system review: `oregon-dlcd-coastal-gis` |
 | `protomaps` | Retain identity; review incoming authority and outgoing roles. | See system review: `protomaps-basemap` |
 | `q-quatics` | Retain identity; review incoming authority and outgoing roles. | See system review: `fishbase`, `sealifebase` |
-| `re3data-consortium` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `re3data` |
+| `re3data-consortium` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `re3data` |
 | `sea-around-us-operator` | Retain identity; review incoming authority and outgoing roles. | See system review: `sea-around-us` |
 | `seadatanet-consortium` | Retain identity; review incoming authority and outgoing roles. | See system review: `seadatanet`, `seadatanet-cdi` |
 | `socat-community` | Retain identity; review incoming authority and outgoing roles. | See system review: `socat` |
 | `university-of-colorado-boulder-and-collaborators` | Retain identity; review incoming authority and outgoing roles. | See system review: `argovis` |
 | `usa` | Retain identity; review incoming authority and outgoing roles. | Country identity retained. Review all incident relationships; citizenship, headquarters and geographic coverage do not establish government control. Membership and funding are separately evidenced. |
-| `vliz-and-lifewatch-belgium` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `eurobis` |
-| `whoi-and-partner-institutions` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `bco-dmo` |
-| `wmo-and-ioc-unesco` | Retire obsolete grouping/composite; replace with evidenced actors. | See system review: `oceanops` |
+| `vliz-and-lifewatch-belgium` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `eurobis` |
+| `whoi-and-partner-institutions` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `bco-dmo` |
+| `wmo-and-ioc-unesco` | Retired obsolete grouping/composite; replaced with evidenced actors. | See system review: `oceanops` |
 
 ## Every original edge
 
@@ -361,7 +361,7 @@ Retained edges receive source references and scoped notes. Removed edge IDs rema
 
 ## Reviewed final edge inventory
 
-Expected after applying this plan: 134 nodes (60 systems, 70 organizations, 4 countries), 119 edges (64 operates, 21 governs, 10 funds, 10 member_of, 10 syncs_to, 4 publishes_to).
+Verified after applying this plan and completing retirements: 134 nodes (60 systems, 70 organizations, 4 countries), 119 edges (64 operates, 21 governs, 10 funds, 10 member_of, 10 syncs_to, 4 publishes_to).
 
 | Relationship | Source |
 |---|---|
