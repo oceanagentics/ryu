@@ -845,8 +845,6 @@ export function EntityDetailsPanel({
         </div>
       </DetailSection>
 
-      <ReviewSection entity={entity} />
-
       {isSystem && system ? (
         <>
           <DetailSection title={t(locale, "details.data")}>
@@ -877,6 +875,27 @@ export function EntityDetailsPanel({
                 />
               </InlineField>
             </div>
+          </DetailSection>
+
+          <DetailSection title={t(locale, "details.usage")}>
+            <List<ResolvedSourcedMetric>
+              className="entity-detail-list"
+              dataSource={(system.properties.usage ?? []).map((metric) =>
+                resolveMetric(metric, localizedMetrics[metric.id]),
+              ).filter((metric): metric is ResolvedSourcedMetric => Boolean(metric))}
+              locale={{ emptyText: t(locale, "details.noUsageMetric") }}
+              renderItem={(metric) => (
+                <List.Item>
+                  <Flex vertical gap={2}>
+                    <Typography.Text className="entity-detail-label">
+                      {metric.label ?? facetLabel(locale, "metricKey", metric.key)}
+                    </Typography.Text>
+                    <MetricValue metric={metric} />
+                  </Flex>
+                </List.Item>
+              )}
+              size="small"
+            />
           </DetailSection>
 
           <DetailSection title={t(locale, "details.readAccess")}>
@@ -915,27 +934,6 @@ export function EntityDetailsPanel({
               />
             </DetailSection>
           ) : null}
-
-          <DetailSection title={t(locale, "details.usage")}>
-            <List<ResolvedSourcedMetric>
-              className="entity-detail-list"
-              dataSource={(system.properties.usage ?? []).map((metric) =>
-                resolveMetric(metric, localizedMetrics[metric.id]),
-              ).filter((metric): metric is ResolvedSourcedMetric => Boolean(metric))}
-              locale={{ emptyText: t(locale, "details.noUsageMetric") }}
-              renderItem={(metric) => (
-                <List.Item>
-                  <Flex vertical gap={2}>
-                    <Typography.Text className="entity-detail-label">
-                      {metric.label ?? facetLabel(locale, "metricKey", metric.key)}
-                    </Typography.Text>
-                    <MetricValue metric={metric} />
-                  </Flex>
-                </List.Item>
-              )}
-              size="small"
-            />
-          </DetailSection>
         </>
       ) : null}
 
@@ -966,15 +964,19 @@ export function EntityDetailsPanel({
           size="small"
         />
       </DetailSection>
+      <ReviewSection entity={entity} />
+
       {!isPublicApp ? (
-        <Button
-          type="link"
-          size="small"
-          style={{ alignSelf: "flex-start", padding: 0 }}
-          onClick={() => setRawFieldsOpen(true)}
-        >
-          {t(locale, "details.rawFields")}
-        </Button>
+        <DetailSection title={t(locale, "details.rawFields")}>
+          <Button
+            type="link"
+            size="small"
+            style={{ alignSelf: "flex-start", padding: 0 }}
+            onClick={() => setRawFieldsOpen(true)}
+          >
+            {t(locale, "details.rawFields")}
+          </Button>
+        </DetailSection>
       ) : null}
     </Flex>
   );
