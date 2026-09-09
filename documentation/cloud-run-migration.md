@@ -277,10 +277,10 @@ Agent API verification should use a bearer token against
 `https://chm.oceanagentics.org/api/records`. The signed-in browser check should
 exercise direct Explorer/IAP review at `/explorer/admin`.
 
-## Current Deployment: Owned Sources Cutover
+## Owned Sources Cutover
 
 Completed on 2026-09-09. Application commit `8edd379` on
-`codex/owned-sources-release` is deployed at 100% traffic on:
+`codex/owned-sources-release` was deployed at 100% traffic on:
 
 - Public: `explorer-sources-8edd379`
 - Admin: `explorer-admin-sources-8edd379`
@@ -332,3 +332,44 @@ API `/api/records`, which was used to audit all private routes.
 Rollback of this breaking schema change requires restoring the pre-cutover
 Explorer database alongside the previous application images; do not route old
 application revisions to the new schema.
+
+## Current Deployment: Combined Sources, Formats, and Details
+
+Completed on 2026-09-09 from application commit `3fe8992`, merged and pushed to
+`main`. This includes the owned-source release, approved translated Formats
+vocabulary, detail-pane ordering and raw-fields heading, and the completed
+relationship-retirement audit.
+
+All three services serve the combined release at 100% traffic:
+
+- Public: `explorer-combined-3fe8992`
+- Admin: `explorer-admin-combined-3fe8992`
+- API: `explorer-api-combined-3fe8992`
+
+Immutable images:
+
+- Public: `us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-public@sha256:747839efbb8cc7f3d6bea5875d5f9a61ed3f155390297a965ff647cc735c38de`
+- Admin: `us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-admin@sha256:e72af517f51b87af20be19cb9dfbe99adb88139a0dedb1b20fa3f09a75441798`
+- API: `us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-api@sha256:fe5ff1e50fe01ddd111b347aa9b03d9f4edb21dc86fe9efda3e50ca51a140473`
+
+Cloud Build runs `c7246988-ad56-413f-b5e0-389441bb3044` (public/admin) and
+`d0a5af81-923b-4676-981c-24ef861720d0` (API) succeeded. The combined tree passed
+all 79 tests and the production build. Each revision passed startup and resource
+health checks at a temporary zero-traffic URL before production traffic moved.
+The temporary tags were removed afterward.
+
+No additional production schema migration was applied. Format data was cleaned
+through 56 validated Record API patches with version preconditions; migration
+012 remains available for historical/import conversion. Production retains
+134 nodes, 119 edges, 659 localizations, and 25 canonical format assignments.
+The committed public bootstrap exactly matches the live export. FishBase keeps
+all 17 sources and the `csv`, `parquet`, `xml`, and `html` format tags.
+
+Live and independent API checks confirmed resolved citation references,
+complete source-title coverage, translated format search labels, valid format
+filtering, and HTTP 400 for unknown or noncanonical format filters. Validation-only
+content checks rejected unknown formats, duplicate assignments, and localized
+label overrides; FishBase and its review history remained unchanged. Public
+HTML and its new JavaScript asset returned 200, admin redirected through IAP,
+and private review metadata and routes remained redacted from public responses.
+No browser UI testing was performed for this release.
