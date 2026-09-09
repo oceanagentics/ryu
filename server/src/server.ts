@@ -94,13 +94,6 @@ function sendHealth(_request: Request, response: Response) {
   response.json({ ok: true });
 }
 
-function withoutLocalPath<T extends { localPath: string | null }>(source: T): T {
-  return {
-    ...source,
-    localPath: null,
-  };
-}
-
 export function toPublicBootstrap(payload: GraphBootstrapPayload): GraphBootstrapPayload {
   return {
     ...payload,
@@ -118,7 +111,6 @@ export function toPublicBootstrap(payload: GraphBootstrapPayload): GraphBootstra
         ]),
       ) as typeof node.localizations,
     })),
-    sources: payload.sources.map(withoutLocalPath),
     ryuRoutes: [],
   };
 }

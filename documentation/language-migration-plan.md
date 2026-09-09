@@ -1,5 +1,7 @@
 # Language Migration Plan
 
+Source storage in this historical migration plan is superseded by `011_owned_sources.sql`: source collections now live in `nodes.sources` and `edges.sources`, with translated `title` maps. Follow `RICH_RESEARCH_RECORDS.md` for current authoring. The completed `migrate:language` runner has been retired.
+
 Draft date: 2026-08-31
 
 ## Purpose
@@ -376,7 +378,6 @@ Keep:
 id
 kind
 country_code
-subtype
 url
 record_depth, unless we later decide depth is localization-specific
 properties_json
@@ -412,7 +413,6 @@ Long-term `GraphNode` contract:
 id
 kind
 countryCode
-subtype
 url
 recordDepth
 properties
@@ -825,7 +825,6 @@ Example node response shape:
   "id": "fishbase",
   "kind": "system",
   "countryCode": null,
-  "subtype": "source_database",
   "url": "https://fishbase.se/",
   "recordDepth": "rich",
   "properties": {},
@@ -884,7 +883,7 @@ Ground-up search model:
 
 The record API owns matching, aliases, fallback, filters, ranking, and explanations. The browser sends search intent and shares the API result between its directory and graph. Search evaluates these fields:
 
-- Language-neutral fields from `nodes` and other operational tables: `id`, `kind`, `subtype`, `country_code`, `record_depth`, route status, access types, and stable facet codes.
+- Language-neutral fields from `nodes` and other operational tables: `id`, `kind`, `country_code`, `record_depth`, route status, access types, and stable facet codes.
 - Localized fields from `node_localizations`: `title`, `summary`, `description`, localized details prose, `locale`, and `review_state`.
 - Display metadata: requested locale, displayed locale, matched locale, fallback state, and available locales.
 

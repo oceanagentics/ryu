@@ -13,7 +13,7 @@ noted.
 ## Design Decisions
 
 - Use `records` as the public API concept. Internally, a record is backed by a
-  `nodes` row plus localization rows, edges, sources, and `ryu_routes`.
+  `nodes` row (including `sources`) plus localization rows, source-owning edges, and `ryu_routes`.
 - Use one canonical API family: `/api/records`. Do not add or preserve separate
   node, source, graph, or ryu CRUD APIs for launch.
 - Keep API paths the same across human and token-authenticated Explorer API
@@ -142,7 +142,7 @@ Use this checklist for the implementation pass.
 - [x] Add `PATCH /api/records/:id/review` as the record-oriented review endpoint,
   and make it the only launch review write path.
 - [x] Add private `PATCH /api/records/:id` for targeted content, edge, route, and
-  source upserts/deletes according to the section-aware patch rules.
+  owned source collection replacements according to the section-aware patch rules.
 - [x] Add `PUT /api/records/:id` as a deterministic-ID content upsert, not a
   delete-by-omission replacement.
 - [x] Add tests for public redaction, admin/private DTO shape, auth denial,
@@ -283,21 +283,21 @@ Example public summary response shape:
 - `localizationSummary`
 - `localizations`
 - `edges`
-- `sources`
+- `sources` (includes `record.sources`; edge sources accompany their edge)
 - `routes`
 - `matchReasons`
 
 Response redaction should be expressed as separate DTOs:
 
 - Public DTOs: no reviewer notes, reviewer identity, last-reviewed timestamp,
-  local source paths, private route targets, route upstreams, raw route
+  private route targets, route upstreams, raw route
   properties, or other non-public operational details. Public reads may filter by
   public-safe route metadata without returning internal route fields. Current
   route status and capability values are treated as public-safe only when they do
   not encode private partners, credentials, security posture, or unreleased
   commercial plans.
 - Admin DTOs: may include reviewer metadata and authoring status, but should
-  still omit local filesystem paths and secrets. Route fields should be
+  still omit secrets. Route fields should be
   allowlisted, not copied wholesale from `ryu_routes.properties_json`.
 - Private DTOs: may include full record aggregates needed for trusted service
   workflows. Generic record DTOs must not return secrets; secret delivery must
@@ -315,7 +315,7 @@ PUT /api/records/:id
 ```
 
 The request body should contain the complete record aggregate, with supporting
-source upserts:
+sources owned by the node and edges:
 
 ```json
 {
@@ -323,10 +323,10 @@ source upserts:
   "record": {
     "kind": "system",
     "countryCode": null,
-    "subtype": null,
     "url": "https://www.fishbase.org",
     "recordDepth": "rich",
-    "properties": {}
+    "properties": {},
+    "sources": {}
   },
   "localizations": {
     "en": {},
@@ -337,9 +337,6 @@ source upserts:
     "ru": {}
   },
   "edges": [],
-  "sources": {
-    "upsert": []
-  },
   "routes": []
 }
 ```
@@ -372,9 +369,7 @@ Upsert semantics:
   unchanged.
 - `routes` upserts only supplied `ryu_routes` rows whose `node_id` is `:id`;
   omitted routes are unchanged.
-- `sources.upsert` is upsert-only in full record writes. Source rows are shared
-  provenance records, so omission from one record aggregate must not delete a
-  source row.
+- `record.sources` and each edge's `sources` replace that owner's source collection when supplied. Omission preserves the collection. References must resolve in the resulting record.
 - Relationship and route removals should use explicit `PATCH` delete operations
   by id. Do not implement delete-by-omission for `PUT`.
 - This is intentionally not strict REST-style full replacement semantics. Missing
@@ -473,9 +468,6 @@ Patch related rows:
     "upsert": [],
     "delete": []
   },
-  "sources": {
-    "upsert": []
-  },
   "routes": {
     "upsert": [],
     "delete": []
@@ -493,8 +485,7 @@ Additional relationship rules:
   `targetNodeId` is `:id`.
 - `routes.upsert` and `routes.delete` may only affect routes where `nodeId` is
   `:id`.
-- `sources.upsert` may create or update cited source rows by id, but must not
-  remove or rewrite source rows that are still referenced by other records.
+- `record.sourcesReplace` explicitly replaces the node's sources. Edge upserts accept `sources`. Sources omitted from a patch remain intact; dangling references are rejected.
 
 ### Review State
 
@@ -569,7 +560,6 @@ The dry-run response should report the impact before applying the delete:
 - inbound and outbound edges
 - `ryu_routes`
 - affected saved views, if any
-- orphaned source candidates, if any
 
 Delete dry-runs and applies require `writer` access or higher, including
 authenticated OA browser editors. The apply request should include both a fresh dry-run
@@ -624,11 +614,9 @@ runtime checks, not in markdown rule tables. Required behavior:
 - full-write and patch payloads satisfy the strict typed contracts and reject
   unknown fields at every level
 - path `:id` matches any body id, route `nodeId`, and all affected route rows
-- rich records include complete supported node/source localizations;
+- rich records include complete supported node localizations and source title translations;
   `incomplete=true` cannot bypass the rich gate
-- localization source refs in `details`, node source refs in `properties`,
-  edge source refs, and route source refs either already exist or are included in
-  `sources.upsert`
+- node/localization/route citation IDs resolve against `record.sources`; edge citation IDs resolve against that edge's `sources`
 - edge endpoint nodes exist, edge ids are deterministic, edges are incident to
   the target record, self-edges are rejected, and edge kinds follow the canonical
   graph rules
@@ -636,7 +624,7 @@ runtime checks, not in markdown rule tables. Required behavior:
 - active routes include a non-empty `target`, non-empty `capabilities`, and a
   valid `contractRef` when the route depends on a documented contract
 - local `contractRef` paths resolve under `documentation/contracts`
-- source upserts have deterministic ids, a source type, and titles/notes only in `localizations`; source references carry `id` and `url`
+- owned sources have exactly `id`, `url`, `title` (locale map), and `accessedAt` (YYYY-MM-DD), with object keys matching IDs; references contain source IDs only
 - a provided `recordUpdatedAt` precondition still matches the current record
   version
 
@@ -651,9 +639,7 @@ All `GET /api/records/:id` detail responses and successful mutation responses
 must include `recordUpdatedAt`.
 
 `recordUpdatedAt` is the max `updated_at` timestamp across the record's node row,
-localization rows, incident edge rows, and route rows. Source rows are not part
-of the launch concurrency version because the current `sources` table has no
-`updated_at`.
+localization rows, incident edge rows, and route rows. Source changes update their owning node/edge timestamp and participate in this version.
 
 Applied mutations against an existing record must require an explicit
 `recordUpdatedAt` precondition. Missing preconditions should return

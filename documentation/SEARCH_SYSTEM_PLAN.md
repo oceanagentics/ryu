@@ -39,8 +39,7 @@ pagination. The graph uses the complete API ID set. Query changes cancel obsolet
 requests and cannot publish an older response over a newer result.
 
 Aliases work for countries, organizations, and systems. Default matching searches
-the displayed record localization, including English fallback. Source titles and
-notes resolve their own selected locale with English fallback. Other stored
+the displayed record localization, including English fallback. Source titles use the selected locale from the owner's title map; missing source translations are never presented as English translations. Other stored
 languages are searched through the explicit all-language mode.
 
 ## Design Principles
@@ -102,9 +101,9 @@ The API executes search against Postgres data; the browser keeps the bootstrap g
 - Keep matching and ranking in the server search module; share only graph, localization, and presentation utilities with the browser.
 - Define per-kind search field extractors for systems, organizations, and countries.
 - Replace loose subsequence fuzzy matching with field-aware matching:
-  - high weight: name, aliases, country code, kind, subtype
+  - high weight: name, aliases, country code, kind
   - medium weight: descriptions, disciplines, data descriptor labels, access labels
-  - low weight: source titles, source notes, relationship notes, connected node names
+  - low weight: source titles, relationship notes, connected node names
 - Return ranked system records and matching entity ids from the same resolver.
 - Have the Systems pane render the shared filtered/ranked system result set.
 - Have graph projection receive matching entity ids and filter visible nodes.

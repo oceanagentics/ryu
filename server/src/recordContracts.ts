@@ -12,7 +12,7 @@ import type {
   NodeLocalizationReviewInput,
   ReviewState,
   RyuRoute,
-  Source,
+  SourceCollection,
   SupportedLocale,
 } from "../../shared/domain";
 import {
@@ -33,7 +33,6 @@ import type {
   PrivateRouteDto,
   PublicRecordLocalizationDto,
   PublicRouteDto,
-  PublicSourceDto,
   RecordAggregate,
   RecordAggregateContentInput,
   RecordDeleteImpact,
@@ -50,12 +49,10 @@ import type {
   RecordRouteInput,
   RecordSearchCursor,
   RecordSearchQuery,
-  RecordSourceInput,
   RecordSummaryDto,
   RecordValidationIssue,
   RecordValidationResult,
   ReviewLocaleMode,
-  SourceLocalizationContentInput,
 } from "../../shared/recordApi";
 import {
   isDiscipline,
@@ -270,7 +267,7 @@ export function readRecordAggregateContentInput(
   const body = readObject(input, "body");
   assertAllowedFields(
     body,
-    new Set(["id", "record", "localizations", "edges", "sources", "routes", "incomplete"]),
+    new Set(["id", "record", "localizations", "edges", "routes", "incomplete"]),
     "body",
   );
   if (hasOwn(body, "id") && readRequiredString(body.id, "id") !== recordId) {
@@ -297,7 +294,6 @@ export function readRecordAggregateContentInput(
     record,
     ...(localizations ? { localizations } : {}),
     ...(hasOwn(body, "edges") ? { edges: readEdgeInputs(body.edges, recordId, "edges") } : {}),
-    ...(hasOwn(body, "sources") ? { sources: readSourceSection(body.sources, "sources") } : {}),
     ...(hasOwn(body, "routes") ? { routes: readRouteInputs(body.routes, recordId, "routes") } : {}),
     ...(hasOwn(body, "incomplete") ? { incomplete } : {}),
   };
@@ -305,7 +301,7 @@ export function readRecordAggregateContentInput(
 
 export function readRecordPatchInput(recordId: string, input: unknown): RecordPatchInput {
   const body = readObject(input, "body");
-  assertAllowedFields(body, new Set(["record", "localizations", "edges", "sources", "routes"]), "body");
+  assertAllowedFields(body, new Set(["record", "localizations", "edges", "routes"]), "body");
 
   if (Object.keys(body).length === 0) {
     throw new ApiRequestError(400, "patch body must include at least one section");
@@ -317,7 +313,6 @@ export function readRecordPatchInput(recordId: string, input: unknown): RecordPa
       ? { localizations: readLocalizationPatchMap(body.localizations, "localizations") }
       : {}),
     ...(hasOwn(body, "edges") ? { edges: readEdgePatchSection(body.edges, recordId, "edges") } : {}),
-    ...(hasOwn(body, "sources") ? { sources: readSourceSection(body.sources, "sources") } : {}),
     ...(hasOwn(body, "routes")
       ? { routes: readRoutePatchSection(body.routes, recordId, "routes") }
       : {}),
@@ -379,16 +374,14 @@ export function validateRecordAggregateContentInput(
 }
 
 // Validate the merged, stored shape; PUT/PATCH request fragments are not records.
-export type RecordQualityInput = Omit<RecordAggregateContentInput, "sources"> & {
-  sources?: { upsert?: (Source | RecordSourceInput)[] };
-};
+export type RecordQualityInput = RecordAggregateContentInput;
 
 export function validateRecordQuality(id: string, input: RecordQualityInput): RecordValidationResult {
   const issues: RecordValidationIssue[] = [];
   const sourceIssues: RecordValidationIssue[] = [];
   const warnings: string[] = [];
   const rich = input.record.recordDepth === "rich";
-  const sources = new Map((input.sources?.upsert ?? []).map(source => [source.id, source]));
+  const sources = input.record.sources ?? {};
   const refs = collectSourceIds(input.record.properties);
   const add = (field: string, message: string, evidence = false) => {
     const issue = { recordId: id, path: field, message };
@@ -408,14 +401,8 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
   const date = (value: unknown) => text(value) && /^\d{4}(-\d{2})?(-\d{2})?$/.test(value) &&
     !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().startsWith(value);
   const citation = (value: unknown, field: string) => {
-    const ref = object(value);
-    if (!text(ref.id)) add(field, "a source reference is required", true);
-    else {
-      refs.add(ref.id);
-      if (!httpUrl(ref.url)) add(field, "source HTTP(S) URL is required", true);
-      const source = sources.get(ref.id);
-      if (source && ref.url !== source.url) add(`${field}.url`, "must match the canonical source URL", true);
-    }
+    if (!text(value)) add(field, "a source ID is required", true);
+    else refs.add(value);
   };
   const citedProfile = (value: unknown, field: string) => {
     const ids = object(value).sourceRefs;
@@ -559,7 +546,6 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
   }
   for (const edge of input.edges ?? []) {
     if (!isEdgeKind(edge.kind)) issues.push({ recordId: id, path: `edges.${edge.id}.kind`, message: "unknown or retired relationship type" });
-    collectSourceIds(edge.properties, refs);
     if (collectSourceIds(edge.properties).size === 0) add(`edges.${edge.id}.properties.sourceRefs`, "relationship evidence is required", true);
   }
   for (const route of input.routes ?? []) {
@@ -577,22 +563,34 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
       if (!route.contractRef.startsWith("documentation/contracts/") || !target.startsWith(root) || !fs.existsSync(target)) add(`routes.${route.id}.contractRef`, "local contracts must resolve under documentation/contracts");
     }
   }
-  for (const ref of refs) {
-    const source = sources.get(ref);
-    const field = `sources.${ref}`;
-    if (!source) { add(field, "referenced source does not exist or appear in sources.upsert", true); continue; }
-    if (!text(source.sourceType) || !text(source.publisher)) add(field, "source type and publisher are required", true);
-    if (!httpUrl(source.url)) add(`${field}.url`, "a public HTTP(S) provenance URL is required", true);
-    if (!date(source.accessedAt)) add(`${field}.accessedAt`, "an access date is required", true);
-    if (source.publishedAt != null && !date(source.publishedAt)) add(`${field}.publishedAt`, "invalid publication date", true);
-    if (["publication", "paper", "journal_article", "dataset_snapshot"].includes(source.sourceType) && !date(source.publishedAt)) add(`${field}.publishedAt`, "publication/snapshot sources require a publication or release date", true);
-    for (const locale of locales) {
-      const localization = source.localizations?.[locale];
-      if (!localization || !text(localization.title)) add(`${field}.localizations.${locale}.title`, "localized source title is required; fallback does not count", true);
-      if (Object.values(source.localizations ?? {}).some(value => text(value?.note)) && !text(localization?.note)) add(`${field}.localizations.${locale}.note`, "localize the source note/caveat", true);
-      if (localization?.translatedFromLocale && (localization.translatedFromLocale === locale || !source.localizations?.[localization.translatedFromLocale])) add(`${field}.localizations.${locale}.translatedFromLocale`, "must refer to a different existing source localization", true);
+  let referencedSources = 0;
+  let resolvedSources = 0;
+  const validateSources = (collection: SourceCollection, content: unknown, field: string) => {
+    try {
+      readSourceCollection(collection, field);
+      readJsonObject({ content }, field);
+    } catch (error) {
+      const issue = { recordId: id, path: field, message: error instanceof Error ? error.message : "invalid sources" };
+      issues.push(issue); sourceIssues.push(issue);
+      return;
     }
-  }
+    for (const source of Object.values(collection)) for (const locale of locales) {
+      if (!text(source.title[locale])) {
+        const issue = { recordId: id, path: `${field}.${source.id}.title.${locale}`, message: "source title is required for this localization" };
+        issues.push(issue); sourceIssues.push(issue);
+      }
+    }
+    for (const ref of collectSourceIds(content)) {
+      referencedSources++;
+      if (hasOwn(collection, ref)) resolvedSources++;
+      else {
+        const issue = { recordId: id, path: `${field}.${ref}`, message: "referenced source does not exist on its owner" };
+        issues.push(issue); sourceIssues.push(issue);
+      }
+    }
+  };
+  validateSources(sources, [input.record.properties, input.localizations, input.routes], "record.sources");
+  for (const edge of input.edges ?? []) validateSources(edge.sources ?? {}, edge.properties, `edges.${edge.id}.sources`);
   if (rich && input.record.kind === "system") {
     if (!gallery.length) warnings.push("No gallery: acceptable when no useful, accessible capture is available.");
     if (!input.routes?.length) warnings.push("No approved machine route is recorded.");
@@ -601,9 +599,9 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
   return {
     valid: issues.length === 0, recordId: id, issues, warnings,
     sourceCompleteness: {
-      status: refs.size === 0 ? "missing" : sourceIssues.length ? "partial" : "complete",
-      referencedSources: refs.size,
-      resolvedSources: [...refs].filter(ref => sources.has(ref)).length,
+      status: referencedSources === 0 ? "missing" : sourceIssues.length ? "partial" : "complete",
+      referencedSources,
+      resolvedSources,
       issues: sourceIssues,
     },
   };
@@ -659,9 +657,9 @@ export function toRecordDetailDto(
       id: node.id,
       kind: node.kind,
       countryCode: node.countryCode,
-      subtype: node.subtype,
       url: node.url,
       recordDepth: node.recordDepth,
+      ...(includeSet.has("sources") ? { sources: node.sources } : {}),
       ...(scope === "private" ? { properties: node.properties } : {}),
       createdAt: node.createdAt,
       updatedAt: node.updatedAt,
@@ -670,9 +668,6 @@ export function toRecordDetailDto(
       ? { localizations: mapLocalizations(node.localizations, scope, includeSet.has("reviewHistory")) }
       : {}),
     ...(includeSet.has("edges") ? { edges: aggregate.edges.map(mapEdgeDto) } : {}),
-    ...(includeSet.has("sources")
-      ? { sources: aggregate.sources.map((source) => mapSourceDto(source, scope)) }
-      : {}),
     ...(includeSet.has("routes")
       ? { routes: aggregate.routes.map((route) => mapRouteDto(route, scope)) }
       : {}),
@@ -685,7 +680,6 @@ export function recordContent(aggregate: RecordAggregate): RecordQualityInput {
     record: aggregate.node,
     localizations: aggregate.node.localizations,
     edges: aggregate.edges,
-    sources: { upsert: aggregate.sources },
     routes: aggregate.routes,
   };
 }
@@ -724,7 +718,6 @@ export function toRecordSummaryDto(
     id: node.id,
     kind: node.kind,
     countryCode: node.countryCode,
-    subtype: node.subtype,
     url: node.url,
     recordDepth: node.recordDepth,
     title: localization.title,
@@ -798,15 +791,6 @@ function mapLocalizationDto(
   };
 }
 
-function mapSourceDto(source: Source, scope: RecordDtoScope): Source | PublicSourceDto {
-  if (scope === "private") {
-    return source;
-  }
-
-  const { localPath: _localPath, ...publicSource } = source;
-  return publicSource;
-}
-
 function mapRouteDto(route: RyuRoute, scope: RecordDtoScope): PublicRouteDto | AdminRouteDto | PrivateRouteDto {
   if (scope === "private") {
     return route;
@@ -845,6 +829,7 @@ function mapEdgeDto(edge: GraphEdge): GraphEdge {
     kind: edge.kind,
     note: edge.note,
     properties: edge.properties,
+    sources: edge.sources,
     createdAt: edge.createdAt,
     updatedAt: edge.updatedAt,
   };
@@ -852,17 +837,17 @@ function mapEdgeDto(edge: GraphEdge): GraphEdge {
 
 function readRecordNeutralContentInput(input: unknown, path: string): RecordNeutralContentInput {
   const body = readObject(input, path);
-  assertAllowedFields(body, new Set(["kind", "countryCode", "subtype", "url", "recordDepth", "properties"]), path);
+  assertAllowedFields(body, new Set(["kind", "countryCode", "url", "recordDepth", "properties", "sources"]), path);
 
   return {
     kind: readRequiredEnum(body.kind, isNodeKind, `${path}.kind`),
     countryCode: hasOwn(body, "countryCode") ? readNullableCountryCode(body.countryCode, `${path}.countryCode`) : undefined,
-    subtype: hasOwn(body, "subtype") ? readNullableString(body.subtype, `${path}.subtype`) : undefined,
     url: hasOwn(body, "url") ? readNullableString(body.url, `${path}.url`) : undefined,
     recordDepth: hasOwn(body, "recordDepth")
       ? readRequiredEnum(body.recordDepth, isRecordDepth, `${path}.recordDepth`)
       : undefined,
     properties: hasOwn(body, "properties") ? readJsonObject(body.properties, `${path}.properties`) : undefined,
+    sources: hasOwn(body, "sources") ? readSourceCollection(body.sources, `${path}.sources`) : undefined,
   };
 }
 
@@ -870,7 +855,7 @@ function readRecordNeutralPatchInput(input: unknown, path: string): RecordNeutra
   const body = readObject(input, path);
   assertAllowedFields(
     body,
-    new Set(["kind", "countryCode", "subtype", "url", "recordDepth", "propertiesReplace"]),
+    new Set(["kind", "countryCode", "url", "recordDepth", "propertiesReplace", "sourcesReplace"]),
     path,
   );
   if (Object.keys(body).length === 0) {
@@ -880,11 +865,11 @@ function readRecordNeutralPatchInput(input: unknown, path: string): RecordNeutra
   return {
     kind: hasOwn(body, "kind") ? readRequiredEnum(body.kind, isNodeKind, `${path}.kind`) : undefined,
     countryCode: hasOwn(body, "countryCode") ? readNullableCountryCode(body.countryCode, `${path}.countryCode`) : undefined,
-    subtype: hasOwn(body, "subtype") ? readNullableString(body.subtype, `${path}.subtype`) : undefined,
     url: hasOwn(body, "url") ? readNullableString(body.url, `${path}.url`) : undefined,
     recordDepth: hasOwn(body, "recordDepth")
       ? readRequiredEnum(body.recordDepth, isRecordDepth, `${path}.recordDepth`)
       : undefined,
+    sourcesReplace: hasOwn(body, "sourcesReplace") ? readSourceCollection(body.sourcesReplace, `${path}.sourcesReplace`) : undefined,
     propertiesReplace: hasOwn(body, "propertiesReplace")
       ? readJsonObject(body.propertiesReplace, `${path}.propertiesReplace`)
       : undefined,
@@ -996,14 +981,6 @@ function readEdgePatchSection(input: unknown, recordId: string, path: string): N
   };
 }
 
-function readSourceSection(input: unknown, path: string): NonNullable<RecordPatchInput["sources"]> {
-  const body = readObject(input, path);
-  assertAllowedFields(body, new Set(["upsert"]), path);
-  return {
-    upsert: hasOwn(body, "upsert") ? readSourceInputs(body.upsert, `${path}.upsert`) : undefined,
-  };
-}
-
 function readRoutePatchSection(input: unknown, recordId: string, path: string): NonNullable<RecordPatchInput["routes"]> {
   const body = readObject(input, path);
   assertAllowedFields(body, new Set(["upsert", "delete"]), path);
@@ -1023,7 +1000,7 @@ function readEdgeInputs(input: unknown, recordId: string, path: string): RecordE
 
 function readEdgeInput(input: unknown, recordId: string, path: string): RecordEdgeInput {
   const body = readObject(input, path);
-  assertAllowedFields(body, new Set(["id", "sourceNodeId", "targetNodeId", "kind", "note", "properties"]), path);
+  assertAllowedFields(body, new Set(["id", "sourceNodeId", "targetNodeId", "kind", "note", "properties", "sources"]), path);
   const edge = {
     id: readRequiredId(body.id, `${path}.id`),
     sourceNodeId: readRequiredId(body.sourceNodeId, `${path}.sourceNodeId`),
@@ -1031,6 +1008,7 @@ function readEdgeInput(input: unknown, recordId: string, path: string): RecordEd
     kind: readRequiredEnum(body.kind, isEdgeKind, `${path}.kind`),
     note: hasOwn(body, "note") ? readNullableString(body.note, `${path}.note`) : undefined,
     properties: hasOwn(body, "properties") ? readJsonObject(body.properties, `${path}.properties`) : undefined,
+    sources: hasOwn(body, "sources") ? readSourceCollection(body.sources, `${path}.sources`) : undefined,
   };
 
   if (edge.sourceNodeId !== recordId && edge.targetNodeId !== recordId) {
@@ -1040,72 +1018,29 @@ function readEdgeInput(input: unknown, recordId: string, path: string): RecordEd
   return edge;
 }
 
-function readSourceInputs(input: unknown, path: string): RecordSourceInput[] {
-  if (!Array.isArray(input)) {
-    throw new ApiRequestError(400, `${path} must be an array`);
+function readSourceCollection(input: unknown, path: string): SourceCollection {
+  const collection = readObject(input, path);
+  for (const [key, value] of Object.entries(collection)) {
+    const field = `${path}.${key}`;
+    const source = readObject(value, field);
+    assertAllowedFields(source, new Set(["id", "url", "title", "accessedAt"]), field);
+    if (readRequiredId(source.id, `${field}.id`) !== key || source.id !== key) throw new ApiRequestError(400, `${field}.id must match its object key`);
+    const url = readRequiredString(source.url, `${field}.url`);
+    try {
+      if (url !== source.url || !/^https?:\/\/[^\s/?#]+[^\s]*$/.test(url) || !new URL(url).hostname) throw new Error();
+    } catch { throw new ApiRequestError(400, `${field}.url must be an absolute HTTP(S) URL`); }
+    const date = readRequiredString(source.accessedAt, `${field}.accessedAt`);
+    if (date !== source.accessedAt || !/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(Date.parse(date)) || new Date(date).toISOString().slice(0, 10) !== date || date.startsWith("0000")) {
+      throw new ApiRequestError(400, `${field}.accessedAt must be a valid YYYY-MM-DD date`);
+    }
+    const title = readObject(source.title, `${field}.title`);
+    if (!Object.keys(title).length) throw new ApiRequestError(400, `${field}.title requires at least one translation`);
+    for (const [locale, text] of Object.entries(title)) {
+      if (!isSupportedLocale(locale)) throw new ApiRequestError(400, `${field}.title: unsupported locale ${locale}`);
+      readRequiredString(text, `${field}.title.${locale}`);
+    }
   }
-
-  return input.map((item, index) => {
-    const itemPath = `${path}[${index}]`;
-    const body = readObject(item, itemPath);
-    assertAllowedFields(
-      body,
-      new Set(["id", "sourceType", "url", "localPath", "publisher", "publishedAt", "accessedAt", "localizations"]),
-      itemPath,
-    );
-    return {
-      id: readRequiredId(body.id, `${itemPath}.id`),
-      sourceType: readRequiredString(body.sourceType, `${itemPath}.sourceType`),
-      url: readNullableString(body.url, `${itemPath}.url`),
-      localPath: readNullableString(body.localPath, `${itemPath}.localPath`),
-      publisher: readNullableString(body.publisher, `${itemPath}.publisher`),
-      publishedAt: readNullableString(body.publishedAt, `${itemPath}.publishedAt`),
-      accessedAt: readNullableString(body.accessedAt, `${itemPath}.accessedAt`),
-      ...(hasOwn(body, "localizations")
-        ? { localizations: readSourceLocalizationInputs(body.localizations, `${itemPath}.localizations`) }
-        : {}),
-    };
-  });
-}
-
-function readSourceLocalizationInputs(
-  input: unknown,
-  path: string,
-): RecordSourceInput["localizations"] {
-  const body = readObject(input, path);
-  const unsupported = Object.keys(body).filter((locale) => !isSupportedLocale(locale));
-  if (unsupported.length > 0) {
-    throw new ApiRequestError(400, `unsupported source locale: ${unsupported.join(", ")}`);
-  }
-
-  return Object.fromEntries(
-    Object.entries(body).map(([locale, value]) => [
-      locale,
-      readSourceLocalizationInput(value, `${path}.${locale}`, locale as SupportedLocale),
-    ]),
-  ) as RecordSourceInput["localizations"];
-}
-
-function readSourceLocalizationInput(
-  input: unknown,
-  path: string,
-  locale: SupportedLocale,
-): SourceLocalizationContentInput {
-  const body = readObject(input, path);
-  assertNoReviewAuditFields(body, path);
-  assertAllowedFields(body, new Set(["title", "note", "translatedFromLocale"]), path);
-  const translatedFromLocale =
-    readOptionalEnum(body.translatedFromLocale, isSupportedLocale, `${path}.translatedFromLocale`) ?? null;
-  if (translatedFromLocale === locale) {
-    throw new ApiRequestError(400, `${path}.translatedFromLocale must differ from locale`);
-  }
-  const note = hasOwn(body, "note") ? readNullableString(body.note, `${path}.note`) : null;
-
-  return {
-    title: readRequiredString(body.title, `${path}.title`),
-    note,
-    translatedFromLocale,
-  };
+  return collection as SourceCollection;
 }
 
 function readRouteInputs(input: unknown, recordId: string, path: string): RecordRouteInput[] {
@@ -1288,15 +1223,14 @@ function readJsonObject(value: unknown, path: string): Record<string, unknown> {
     throw new ApiRequestError(400, `${path} must be a JSON object`);
   }
 
-  const checkSourceRefs = (item: unknown, itemPath: string, sourceRef = false) => {
-    if (Array.isArray(item)) {
-      item.forEach((child, index) => checkSourceRefs(child, `${itemPath}[${index}]`));
-    } else if (isRecord(item)) {
-      if ((sourceRef || (typeof item.id === "string" && item.id.startsWith("src-"))) &&
-        (hasOwn(item, "title") || hasOwn(item, "note"))) {
-        throw new ApiRequestError(400, `${itemPath}: source title/note belong in sources.upsert[].localizations`);
-      }
-      Object.entries(item).forEach(([key, child]) => checkSourceRefs(child, `${itemPath}.${key}`, key === "source"));
+  const checkSourceRefs = (item: unknown, itemPath: string) => {
+    if (Array.isArray(item)) item.forEach((child, index) => checkSourceRefs(child, `${itemPath}[${index}]`));
+    else if (isRecord(item)) for (const [key, child] of Object.entries(item)) {
+      const field = `${itemPath}.${key}`;
+      if (key === "sources") throw new ApiRequestError(400, `${field}: sources belong in the dedicated owner field`);
+      if (key === "source" && child !== null) readRequiredId(child, field);
+      else if (key === "sourceRefs") readIdList(child, field);
+      else checkSourceRefs(child, field);
     }
   };
   checkSourceRefs(value, path);

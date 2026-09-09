@@ -3,7 +3,6 @@
   "record": {
     "kind": "system",
     "countryCode": null,
-    "subtype": null,
     "url": "https://fishbase.se/home.htm",
     "recordDepth": "rich",
     "properties": {
@@ -12,28 +11,19 @@
           {
             "id": "fishbase-data-format-parquet-csv",
             "label": "CSV and parquet snapshots",
-            "source": {
-              "id": "src-fishbase-sourcecoop",
-              "url": "https://source.coop/cboettig/fishbase"
-            },
+            "source": "src-fishbase-sourcecoop",
             "category": "format"
           },
           {
             "id": "fishbase-data-standard-license",
             "label": "CC BY-NC 4.0 reuse terms",
-            "source": {
-              "id": "src-fishbase-citation",
-              "url": "https://www.fishbase.se/summary/citation.php"
-            },
+            "source": "src-fishbase-citation",
             "category": "standard"
           },
           {
             "id": "fishbase-data-type-taxonomy",
             "label": "taxonomic_records",
-            "source": {
-              "id": "src-fishbase-home",
-              "url": "https://fishbase.se/home.htm"
-            },
+            "source": "src-fishbase-home",
             "category": "type"
           }
         ],
@@ -42,10 +32,7 @@
           "key": "record_count",
           "unit": "records",
           "value": 3300000,
-          "source": {
-            "id": "src-fishbase-home",
-            "url": "https://fishbase.se/home.htm"
-          },
+          "source": "src-fishbase-home",
           "observedAt": "2026-02"
         },
         "storageSize": {
@@ -53,10 +40,7 @@
           "key": "storage_size_bytes",
           "unit": "bytes",
           "value": 194684778,
-          "source": {
-            "id": "src-fishbase-sourcecoop-s3-v2504",
-            "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v25.04/parquet/"
-          },
+          "source": "src-fishbase-sourcecoop-s3-v2504",
           "observedAt": "2026-07-21"
         }
       },
@@ -66,10 +50,7 @@
           "key": "species_count",
           "unit": "species",
           "value": 36535,
-          "source": {
-            "id": "src-fishbase-home",
-            "url": "https://fishbase.se/home.htm"
-          },
+          "source": "src-fishbase-home",
           "observedAt": "2026-02"
         }
       ],
@@ -79,20 +60,14 @@
           "url": "https://source.coop/cboettig/fishbase",
           "type": "read",
           "method": "cloud_table_snapshot",
-          "source": {
-            "id": "src-fishbase-sourcecoop",
-            "url": "https://source.coop/cboettig/fishbase"
-          }
+          "source": "src-fishbase-sourcecoop"
         },
         {
           "id": "fishbase-submit-collaborator",
           "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
           "type": "submit",
           "method": "curated_collaboration",
-          "source": {
-            "id": "src-fishbase-collaborator-guide",
-            "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm"
-          }
+          "source": "src-fishbase-collaborator-guide"
         }
       ],
       "gallery": [
@@ -100,10 +75,7 @@
           "id": "fishbase-gallery-species-summary",
           "url": "/gallery/fishbase/species-summary-gadus-morhua-high.png",
           "type": "image",
-          "source": {
-            "id": "src-fishbase-gadus-summary",
-            "url": "https://fishbase.se/summary/SpeciesSummary.php?id=69"
-          },
+          "source": "src-fishbase-gadus-summary",
           "sortOrder": 1,
           "thumbnailUrl": "/gallery/fishbase/species-summary-gadus-morhua-thumb.png"
         }
@@ -114,6 +86,86 @@
         "ecology",
         "fisheries_science"
       ]
+    },
+    "sources": {
+      "src-fishbase-citation": {
+        "id": "src-fishbase-citation",
+        "url": "https://www.fishbase.se/summary/citation.php",
+        "title": {
+          "en": "FishBase citation, copyright, and contact guidance",
+          "ar": "إرشادات الاستشهاد وحقوق النشر والاتصال في FishBase",
+          "zh": "FishBase 引用、版权和联系指南",
+          "fr": "Guide de citation, de droits d’auteur et de contact de FishBase",
+          "ru": "Рекомендации FishBase по цитированию, авторским правам и контактам",
+          "es": "Guía de citas, derechos de autor y contacto de FishBase"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-collaborator-guide": {
+        "id": "src-fishbase-collaborator-guide",
+        "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
+        "title": {
+          "en": "How to Become a FishBase Collaborator",
+          "ar": "كيف تصبح مساهماً في FishBase",
+          "zh": "如何成为 FishBase 协作者",
+          "fr": "Comment devenir collaborateur de FishBase",
+          "ru": "Как стать участником FishBase",
+          "es": "Cómo ser colaborador de FishBase"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-gadus-summary": {
+        "id": "src-fishbase-gadus-summary",
+        "url": "https://fishbase.se/summary/SpeciesSummary.php?id=69",
+        "title": {
+          "en": "FishBase species summary: Gadus morhua",
+          "ar": "ملخص النوع في FishBase: Gadus morhua",
+          "zh": "FishBase 物种概要：Gadus morhua",
+          "fr": "Fiche d’espèce FishBase : Gadus morhua",
+          "ru": "Сводка FishBase по виду Gadus morhua",
+          "es": "Resumen de especie de FishBase: Gadus morhua"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-home": {
+        "id": "src-fishbase-home",
+        "url": "https://fishbase.se/home.htm",
+        "title": {
+          "en": "FishBase homepage and data statistics",
+          "ar": "الصفحة الرئيسية وإحصاءات FishBase",
+          "zh": "FishBase 首页与数据统计",
+          "fr": "Accueil et statistiques de FishBase",
+          "ru": "Главная страница и статистика FishBase",
+          "es": "Página principal y estadísticas de FishBase"
+        },
+        "accessedAt": "2026-07-22"
+      },
+      "src-fishbase-sourcecoop": {
+        "id": "src-fishbase-sourcecoop",
+        "url": "https://source.coop/cboettig/fishbase",
+        "title": {
+          "en": "Parquet Snapshots of the FishBase Database",
+          "ar": "لقطات Parquet لقاعدة بيانات FishBase",
+          "zh": "FishBase 数据库的 Parquet 快照",
+          "fr": "Instantanés Parquet de la base FishBase",
+          "ru": "Снимки базы FishBase в формате Parquet",
+          "es": "Instantáneas Parquet de la base FishBase"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-sourcecoop-s3-v2504": {
+        "id": "src-fishbase-sourcecoop-s3-v2504",
+        "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v25.04/parquet/",
+        "title": {
+          "en": "FishBase v25.04 parquet S3 listing",
+          "ar": "قائمة S3 لملفات Parquet في FishBase v25.04",
+          "zh": "FishBase v25.04 Parquet 文件的 S3 列表",
+          "fr": "Liste S3 des fichiers Parquet de FishBase v25.04",
+          "ru": "Список S3 файлов Parquet FishBase v25.04",
+          "es": "Listado S3 de archivos Parquet de FishBase v25.04"
+        },
+        "accessedAt": "2026-07-21"
+      }
     }
   },
   "localizations": {
@@ -656,258 +708,23 @@
         "sourceRefs": [
           "src-fishbase-home"
         ]
+      },
+      "sources": {
+        "src-fishbase-home": {
+          "id": "src-fishbase-home",
+          "url": "https://fishbase.se/home.htm",
+          "title": {
+            "en": "FishBase homepage and data statistics",
+            "ar": "الصفحة الرئيسية وإحصاءات FishBase",
+            "zh": "FishBase 首页与数据统计",
+            "fr": "Accueil et statistiques de FishBase",
+            "ru": "Главная страница и статистика FishBase",
+            "es": "Página principal y estadísticas de FishBase"
+          },
+          "accessedAt": "2026-07-22"
+        }
       }
     }
   ],
-  "sources": {
-    "upsert": [
-      {
-        "id": "src-fishbase-home",
-        "sourceType": "official_docs",
-        "url": "https://fishbase.se/home.htm",
-        "localPath": null,
-        "publisher": "FishBase",
-        "publishedAt": "2026-02",
-        "accessedAt": "2026-07-22",
-        "localizations": {
-          "en": {
-            "title": "FishBase homepage and data statistics",
-            "note": "FishBase homepage. Use fishbase.se host because www.fishbase.org/home.php can return Cloudflare 403 to unauthenticated checks.",
-            "translatedFromLocale": null
-          },
-          "ar": {
-            "title": "الصفحة الرئيسية وإحصاءات FishBase",
-            "note": "الصفحة الرئيسية لـFishBase. استخدم fishbase.se؛ قد يعرض www.fishbase.org/home.php خطأ Cloudflare 403 عند الفحص دون مصادقة.",
-            "translatedFromLocale": "en"
-          },
-          "zh": {
-            "title": "FishBase 首页与数据统计",
-            "note": "FishBase 首页。请使用 fishbase.se；未经身份验证的检查访问 www.fishbase.org/home.php 时可能收到 Cloudflare 403。",
-            "translatedFromLocale": "en"
-          },
-          "fr": {
-            "title": "Accueil et statistiques de FishBase",
-            "note": "Page d’accueil de FishBase. Utiliser fishbase.se : www.fishbase.org/home.php peut renvoyer une erreur Cloudflare 403 lors de vérifications non authentifiées.",
-            "translatedFromLocale": "en"
-          },
-          "ru": {
-            "title": "Главная страница и статистика FishBase",
-            "note": "Главная страница FishBase. Используйте fishbase.se: при проверке без аутентификации www.fishbase.org/home.php может возвращать ошибку Cloudflare 403.",
-            "translatedFromLocale": "en"
-          },
-          "es": {
-            "title": "Página principal y estadísticas de FishBase",
-            "note": "Página principal de FishBase. Usar fishbase.se: www.fishbase.org/home.php puede devolver Cloudflare 403 en comprobaciones sin autenticación.",
-            "translatedFromLocale": "en"
-          }
-        }
-      },
-      {
-        "id": "src-fishbase-sourcecoop",
-        "sourceType": "data_repository",
-        "url": "https://source.coop/cboettig/fishbase",
-        "localPath": null,
-        "publisher": "Source Cooperative / Carl Boettiger",
-        "publishedAt": "2023-08-21",
-        "accessedAt": "2026-07-21",
-        "localizations": {
-          "en": {
-            "title": "Parquet Snapshots of the FishBase Database",
-            "note": "Public raw CSV and parquet exports from FishBase and SeaLifeBase backend MySQL databases.",
-            "translatedFromLocale": null
-          },
-          "ar": {
-            "title": "لقطات Parquet لقاعدة بيانات FishBase",
-            "note": "تصديرات عامة خام بصيغتي CSV وParquet من قواعد MySQL الخلفية لـFishBase وSeaLifeBase.",
-            "translatedFromLocale": "en"
-          },
-          "zh": {
-            "title": "FishBase 数据库的 Parquet 快照",
-            "note": "FishBase 和 SeaLifeBase 后端 MySQL 数据库的公开原始 CSV 和 Parquet 导出。",
-            "translatedFromLocale": "en"
-          },
-          "fr": {
-            "title": "Instantanés Parquet de la base FishBase",
-            "note": "Exports publics bruts CSV et Parquet des bases MySQL de FishBase et SeaLifeBase.",
-            "translatedFromLocale": "en"
-          },
-          "ru": {
-            "title": "Снимки базы FishBase в формате Parquet",
-            "note": "Открытые необработанные выгрузки CSV и Parquet из баз MySQL FishBase и SeaLifeBase.",
-            "translatedFromLocale": "en"
-          },
-          "es": {
-            "title": "Instantáneas Parquet de la base FishBase",
-            "note": "Exportaciones públicas sin procesar en CSV y Parquet de las bases MySQL de FishBase y SeaLifeBase.",
-            "translatedFromLocale": "en"
-          }
-        }
-      },
-      {
-        "id": "src-fishbase-citation",
-        "sourceType": "official_docs",
-        "url": "https://www.fishbase.se/summary/citation.php",
-        "localPath": null,
-        "publisher": "FishBase",
-        "publishedAt": "2026-02",
-        "accessedAt": "2026-07-21",
-        "localizations": {
-          "en": {
-            "title": "FishBase citation, copyright, and contact guidance",
-            "note": "Citation format, CC BY-NC reuse terms, photo copyright note, and contact guidance for pictures, data, or reprints.",
-            "translatedFromLocale": null
-          },
-          "ar": {
-            "title": "إرشادات الاستشهاد وحقوق النشر والاتصال في FishBase",
-            "note": "صيغة الاستشهاد وشروط إعادة الاستخدام CC BY-NC وحقوق الصور وإرشادات الاتصال بشأن الصور أو البيانات أو النسخ المعاد طبعها.",
-            "translatedFromLocale": "en"
-          },
-          "zh": {
-            "title": "FishBase 引用、版权和联系指南",
-            "note": "引用格式、CC BY-NC 再利用条款、照片版权说明，以及有关图片、数据或抽印本的联系指南。",
-            "translatedFromLocale": "en"
-          },
-          "fr": {
-            "title": "Guide de citation, de droits d’auteur et de contact de FishBase",
-            "note": "Format de citation, conditions CC BY-NC, droits des photographies et contacts pour les images, données ou tirés à part.",
-            "translatedFromLocale": "en"
-          },
-          "ru": {
-            "title": "Рекомендации FishBase по цитированию, авторским правам и контактам",
-            "note": "Формат цитирования, условия CC BY-NC, права на фотографии и контакты по вопросам изображений, данных и оттисков публикаций.",
-            "translatedFromLocale": "en"
-          },
-          "es": {
-            "title": "Guía de citas, derechos de autor y contacto de FishBase",
-            "note": "Formato de cita, condiciones CC BY-NC, derechos de las fotografías y contactos para imágenes, datos o separatas.",
-            "translatedFromLocale": "en"
-          }
-        }
-      },
-      {
-        "id": "src-fishbase-gadus-summary",
-        "sourceType": "data_portal",
-        "url": "https://fishbase.se/summary/SpeciesSummary.php?id=69",
-        "localPath": null,
-        "publisher": "FishBase",
-        "publishedAt": null,
-        "accessedAt": "2026-07-21",
-        "localizations": {
-          "en": {
-            "title": "FishBase species summary: Gadus morhua",
-            "note": "Example FishBase species summary page showing taxonomy, distribution, ecology, uses, tools, and downloadable views.",
-            "translatedFromLocale": null
-          },
-          "ar": {
-            "title": "ملخص النوع في FishBase: Gadus morhua",
-            "note": "صفحة نموذجية تعرض التصنيف والتوزيع والبيئة والاستخدامات والأدوات والعروض القابلة للتنزيل.",
-            "translatedFromLocale": "en"
-          },
-          "zh": {
-            "title": "FishBase 物种概要：Gadus morhua",
-            "note": "物种概要示例，展示分类、分布、生态、用途、工具和可下载视图。",
-            "translatedFromLocale": "en"
-          },
-          "fr": {
-            "title": "Fiche d’espèce FishBase : Gadus morhua",
-            "note": "Exemple de fiche présentant taxonomie, répartition, écologie, usages, outils et vues téléchargeables.",
-            "translatedFromLocale": "en"
-          },
-          "ru": {
-            "title": "Сводка FishBase по виду Gadus morhua",
-            "note": "Пример страницы с таксономией, распространением, экологией, использованием, инструментами и загружаемыми представлениями.",
-            "translatedFromLocale": "en"
-          },
-          "es": {
-            "title": "Resumen de especie de FishBase: Gadus morhua",
-            "note": "Página de ejemplo con taxonomía, distribución, ecología, usos, herramientas y vistas descargables.",
-            "translatedFromLocale": "en"
-          }
-        }
-      },
-      {
-        "id": "src-fishbase-collaborator-guide",
-        "sourceType": "official_docs",
-        "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
-        "localPath": null,
-        "publisher": "FishBase",
-        "publishedAt": null,
-        "accessedAt": "2026-07-21",
-        "localizations": {
-          "en": {
-            "title": "How to Become a FishBase Collaborator",
-            "note": "FishBase manual page describing collaborator credit and data contribution workflows.",
-            "translatedFromLocale": null
-          },
-          "ar": {
-            "title": "كيف تصبح مساهماً في FishBase",
-            "note": "صفحة من دليل FishBase تشرح إقرار مساهمات المتعاونين وإجراءات تقديم البيانات.",
-            "translatedFromLocale": "en"
-          },
-          "zh": {
-            "title": "如何成为 FishBase 协作者",
-            "note": "FishBase 手册页面，说明协作者署名和数据贡献流程。",
-            "translatedFromLocale": "en"
-          },
-          "fr": {
-            "title": "Comment devenir collaborateur de FishBase",
-            "note": "Page du manuel expliquant la reconnaissance des collaborateurs et les procédures de contribution de données.",
-            "translatedFromLocale": "en"
-          },
-          "ru": {
-            "title": "Как стать участником FishBase",
-            "note": "Страница руководства о признании вклада участников и порядке предоставления данных.",
-            "translatedFromLocale": "en"
-          },
-          "es": {
-            "title": "Cómo ser colaborador de FishBase",
-            "note": "Página del manual que explica el reconocimiento de colaboradores y los procedimientos para aportar datos.",
-            "translatedFromLocale": "en"
-          }
-        }
-      },
-      {
-        "id": "src-fishbase-sourcecoop-s3-v2504",
-        "sourceType": "data_repository",
-        "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v25.04/parquet/",
-        "localPath": null,
-        "publisher": "Source Cooperative",
-        "publishedAt": "2025-12-16",
-        "accessedAt": "2026-07-21",
-        "localizations": {
-          "en": {
-            "title": "FishBase v25.04 parquet S3 listing",
-            "note": "S3 ListObjectsV2 listing used to sum public FishBase v25.04 parquet object sizes.",
-            "translatedFromLocale": null
-          },
-          "ar": {
-            "title": "قائمة S3 لملفات Parquet في FishBase v25.04",
-            "note": "قائمة S3 ListObjectsV2 المستخدمة لجمع أحجام ملفات Parquet العامة في FishBase v25.04.",
-            "translatedFromLocale": "en"
-          },
-          "zh": {
-            "title": "FishBase v25.04 Parquet 文件的 S3 列表",
-            "note": "用于汇总 FishBase v25.04 公开 Parquet 对象大小的 S3 ListObjectsV2 列表。",
-            "translatedFromLocale": "en"
-          },
-          "fr": {
-            "title": "Liste S3 des fichiers Parquet de FishBase v25.04",
-            "note": "Liste S3 ListObjectsV2 utilisée pour additionner les tailles des objets Parquet publics de FishBase v25.04.",
-            "translatedFromLocale": "en"
-          },
-          "ru": {
-            "title": "Список S3 файлов Parquet FishBase v25.04",
-            "note": "Список S3 ListObjectsV2, использованный для суммирования размеров открытых объектов Parquet FishBase v25.04.",
-            "translatedFromLocale": "en"
-          },
-          "es": {
-            "title": "Listado S3 de archivos Parquet de FishBase v25.04",
-            "note": "Listado S3 ListObjectsV2 utilizado para sumar los tamaños de los objetos Parquet públicos de FishBase v25.04.",
-            "translatedFromLocale": "en"
-          }
-        }
-      }
-    ]
-  },
   "routes": []
 }

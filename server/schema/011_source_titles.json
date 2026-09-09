@@ -1,0 +1,1532 @@
+{
+  "src-algaebase-content": {
+    "expectedTitle": "AlgaeBase Content",
+    "title": {
+      "ar": "محتوى AlgaeBase",
+      "es": "Contenido de AlgaeBase",
+      "fr": "Contenu d’AlgaeBase",
+      "ru": "Содержимое AlgaeBase",
+      "zh": "AlgaeBase内容"
+    }
+  },
+  "src-aquamaps-about": {
+    "expectedTitle": "About AquaMaps",
+    "title": {
+      "ar": "حول AquaMaps",
+      "es": "Acerca de AquaMaps",
+      "fr": "À propos de AquaMaps",
+      "ru": "О AquaMaps",
+      "zh": "关于AquaMaps"
+    }
+  },
+  "src-argo-system": {
+    "expectedTitle": "Argo Data System",
+    "title": {
+      "ar": "نظام بيانات Argo",
+      "es": "Sistema de datos Argo",
+      "fr": "Système de données Argo",
+      "ru": "Система данных Argo",
+      "zh": "Argo数据系统"
+    }
+  },
+  "src-argovis-about": {
+    "expectedTitle": "Argovis platform slide deck",
+    "title": {
+      "ar": "شرائح عرض منصة Argovis",
+      "es": "Diapositivas de la plataforma Argovis",
+      "fr": "Diaporama de la plateforme Argovis",
+      "ru": "Презентация платформы Argovis",
+      "zh": "Argovis平台幻灯片"
+    }
+  },
+  "src-bcodmo-about": {
+    "expectedTitle": "BCO-DMO About",
+    "title": {
+      "ar": "حول BCO-DMO",
+      "es": "Acerca de BCO-DMO",
+      "fr": "À propos de BCO-DMO",
+      "ru": "О BCO-DMO",
+      "zh": "关于BCO-DMO"
+    }
+  },
+  "src-biooracle-home": {
+    "expectedTitle": "Bio-ORACLE",
+    "title": {
+      "ar": "Bio-ORACLE",
+      "es": "Bio-ORACLE",
+      "fr": "Bio-ORACLE",
+      "ru": "Bio-ORACLE",
+      "zh": "Bio-ORACLE"
+    }
+  },
+  "src-bismal-about": {
+    "expectedTitle": "About BISMaL",
+    "title": {
+      "ar": "حول BISMaL",
+      "es": "Acerca de BISMaL",
+      "fr": "À propos de BISMaL",
+      "ru": "О BISMaL",
+      "zh": "关于BISMaL"
+    }
+  },
+  "src-bold-api": {
+    "expectedTitle": "BOLD API",
+    "title": {
+      "ar": "واجهة برمجة تطبيقات BOLD",
+      "es": "API de BOLD",
+      "fr": "API de BOLD",
+      "ru": "API BOLD",
+      "zh": "BOLD应用程序编程接口"
+    }
+  },
+  "src-cioos-about": {
+    "expectedTitle": "About the Canadian Integrated Ocean Observing System Catalogue",
+    "title": {
+      "ar": "حول فهرس النظام الكندي المتكامل لرصد المحيطات",
+      "es": "Acerca del catálogo del Sistema Canadiense Integrado de Observación Oceánica",
+      "fr": "À propos du catalogue du Système intégré d’observation des océans du Canada",
+      "ru": "О каталоге Канадской комплексной системы наблюдения за океаном",
+      "zh": "关于加拿大综合海洋观测系统目录"
+    }
+  },
+  "src-cmems-about": {
+    "expectedTitle": "Copernicus Marine About",
+    "title": {
+      "ar": "حول Copernicus Marine",
+      "es": "Acerca de Copernicus Marine",
+      "fr": "À propos de Copernicus Marine",
+      "ru": "О Copernicus Marine",
+      "zh": "关于Copernicus Marine"
+    }
+  },
+  "src-cmems-argo": {
+    "expectedTitle": "Copernicus Marine use of Argo",
+    "title": {
+      "ar": "استخدام خدمة كوبرنيكوس البحرية لبيانات Argo",
+      "es": "Uso de Argo por el Servicio Marino de Copernicus",
+      "fr": "Utilisation d’Argo par le service marin Copernicus",
+      "ru": "Использование Argo Морской службой Copernicus",
+      "zh": "哥白尼海洋服务对Argo的使用"
+    }
+  },
+  "src-datras": {
+    "expectedTitle": "DATRAS",
+    "title": {
+      "ar": "DATRAS",
+      "es": "DATRAS",
+      "fr": "DATRAS",
+      "ru": "DATRAS",
+      "zh": "DATRAS"
+    }
+  },
+  "src-dlcd-maps-data-tools": {
+    "expectedTitle": "Oregon DLCD Maps, Data and Tools",
+    "title": {
+      "ar": "خرائط وبيانات وأدوات إدارة DLCD في أوريغون",
+      "es": "Mapas, datos y herramientas de DLCD de Oregón",
+      "fr": "Cartes, données et outils du DLCD de l’Oregon",
+      "ru": "Карты, данные и инструменты DLCD штата Орегон",
+      "zh": "俄勒冈州DLCD地图、数据与工具"
+    }
+  },
+  "src-dlcd-territorial-sea-mapserver": {
+    "expectedTitle": "Oregon Territorial Sea Plan ArcGIS MapServer",
+    "title": {
+      "ar": "خادم ArcGIS MapServer لخطة البحر الإقليمي في أوريغون",
+      "es": "ArcGIS MapServer del Plan del Mar Territorial de Oregón",
+      "fr": "ArcGIS MapServer du plan de la mer territoriale de l’Oregon",
+      "ru": "ArcGIS MapServer плана территориального моря штата Орегон",
+      "zh": "俄勒冈州领海规划ArcGIS MapServer"
+    }
+  },
+  "src-dryad-about": {
+    "expectedTitle": "Dryad Who we are",
+    "title": {
+      "ar": "Dryad: من نحن",
+      "es": "Dryad: quiénes somos",
+      "fr": "Dryad : qui sommes-nous",
+      "ru": "Dryad: кто мы",
+      "zh": "Dryad：关于我们"
+    }
+  },
+  "src-ecotrust-oregon-fisheries-uses-values": {
+    "expectedTitle": "Fishing | Ecotrust Uses and Values Project",
+    "title": {
+      "ar": "صيد الأسماك — مشروع الاستخدامات والقيم لدى Ecotrust",
+      "es": "Pesca — Proyecto de Usos y Valores de Ecotrust",
+      "fr": "Pêche — Projet Usages et Valeurs d’Ecotrust",
+      "ru": "Рыболовство — проект Ecotrust «Использование и ценность»",
+      "zh": "渔业——Ecotrust用途与价值项目"
+    }
+  },
+  "src-emodnet-about": {
+    "expectedTitle": "About EMODnet",
+    "title": {
+      "ar": "حول EMODnet",
+      "es": "Acerca de EMODnet",
+      "fr": "À propos de EMODnet",
+      "ru": "О EMODnet",
+      "zh": "关于EMODnet"
+    }
+  },
+  "src-ena-what": {
+    "expectedTitle": "What is ENA",
+    "title": {
+      "ar": "ما هو ENA",
+      "es": "Qué es ENA",
+      "fr": "Qu’est-ce que ENA",
+      "ru": "Что такое ENA",
+      "zh": "ENA是什么"
+    }
+  },
+  "src-euroargo-leaflet": {
+    "expectedTitle": "Euro-Argo leaflet",
+    "title": {
+      "ar": "نشرة Euro-Argo",
+      "es": "Folleto de Euro-Argo",
+      "fr": "Brochure Euro-Argo",
+      "ru": "Буклет Euro-Argo",
+      "zh": "Euro-Argo宣传册"
+    }
+  },
+  "src-eurobis-home": {
+    "expectedTitle": "Home EurOBIS",
+    "title": {
+      "ar": "الصفحة الرئيسية لـ EurOBIS",
+      "es": "Página de inicio de EurOBIS",
+      "fr": "Page d’accueil d’EurOBIS",
+      "ru": "Главная страница EurOBIS",
+      "zh": "EurOBIS主页"
+    }
+  },
+  "src-fao-fishstat": {
+    "expectedTitle": "FAO Fishery and Aquaculture Data Dissemination",
+    "title": {
+      "ar": "نشر بيانات مصايد الأسماك وتربية الأحياء المائية لدى الفاو",
+      "es": "Difusión de datos de pesca y acuicultura de la FAO",
+      "fr": "Diffusion des données de pêche et d’aquaculture de la FAO",
+      "ru": "Распространение данных ФАО о рыболовстве и аквакультуре",
+      "zh": "联合国粮农组织渔业与水产养殖数据发布"
+    }
+  },
+  "src-fishbase-citation": {
+    "expectedTitle": "FishBase citation, copyright, and contact guidance",
+    "title": {
+      "ar": "إرشادات FishBase للاستشهاد وحقوق النشر والتواصل",
+      "es": "Guía de citas, derechos de autor y contacto de FishBase",
+      "fr": "Guide de citation, de droits d’auteur et de contact de FishBase",
+      "ru": "Рекомендации FishBase по цитированию, авторским правам и контактам",
+      "zh": "FishBase引用、版权与联系指南"
+    }
+  },
+  "src-fishbase-citing-refs": {
+    "expectedTitle": "FishBase references citing FishBase",
+    "title": {
+      "ar": "قائمة المراجع التي تستشهد بـ FishBase",
+      "es": "Referencias que citan FishBase",
+      "fr": "Références citant FishBase",
+      "ru": "Публикации, цитирующие FishBase",
+      "zh": "引用FishBase的文献"
+    }
+  },
+  "src-fishbase-collaborator-guide": {
+    "expectedTitle": "How to Become a FishBase Collaborator",
+    "title": {
+      "ar": "كيف تصبح متعاونًا مع FishBase",
+      "es": "Cómo colaborar con FishBase",
+      "fr": "Comment devenir collaborateur de FishBase",
+      "ru": "Как стать участником FishBase",
+      "zh": "如何成为FishBase协作者"
+    }
+  },
+  "src-fishbase-downloads": {
+    "expectedTitle": "FishBase Download Section",
+    "title": {
+      "ar": "قسم التنزيلات في FishBase",
+      "es": "Sección de descargas de FishBase",
+      "fr": "Section de téléchargement de FishBase",
+      "ru": "Раздел загрузок FishBase",
+      "zh": "FishBase下载专区"
+    }
+  },
+  "src-fishbase-fishwatcher": {
+    "expectedTitle": "FishWatcher upload menu",
+    "title": {
+      "ar": "قائمة رفع الملفات في FishWatcher",
+      "es": "Menú de carga de FishWatcher",
+      "fr": "Menu de téléversement de FishWatcher",
+      "ru": "Меню загрузки FishWatcher",
+      "zh": "FishWatcher上传菜单"
+    }
+  },
+  "src-fishbase-gadus-summary": {
+    "expectedTitle": "FishBase species summary: Gadus morhua",
+    "title": {
+      "ar": "ملخص النوع Gadus morhua في FishBase",
+      "es": "Resumen de la especie Gadus morhua en FishBase",
+      "fr": "Fiche de l’espèce Gadus morhua dans FishBase",
+      "ru": "Сводка о виде Gadus morhua в FishBase",
+      "zh": "FishBase物种摘要：Gadus morhua"
+    }
+  },
+  "src-fishbase-home": {
+    "expectedTitle": "FishBase homepage and data statistics",
+    "title": {
+      "ar": "الصفحة الرئيسية وإحصاءات البيانات في FishBase",
+      "es": "Página de inicio y estadísticas de datos de FishBase",
+      "fr": "Page d’accueil et statistiques des données de FishBase",
+      "ru": "Главная страница и статистика данных FishBase",
+      "zh": "FishBase主页与数据统计"
+    }
+  },
+  "src-fishbase-home-rendered": {
+    "expectedTitle": "FishBase homepage",
+    "title": {
+      "ar": "الصفحة الرئيسية لـ FishBase",
+      "es": "Página de inicio de FishBase",
+      "fr": "Page d’accueil de FishBase",
+      "ru": "Главная страница FishBase",
+      "zh": "FishBase主页"
+    }
+  },
+  "src-fishbase-impact-study": {
+    "expectedTitle": "Measuring the scientific impact of FishBase after three decades",
+    "title": {
+      "ar": "قياس الأثر العلمي لـ FishBase بعد ثلاثة عقود",
+      "es": "Medición del impacto científico de FishBase tras tres décadas",
+      "fr": "Mesurer l’impact scientifique de FishBase après trois décennies",
+      "ru": "Оценка научного влияния FishBase спустя три десятилетия",
+      "zh": "衡量FishBase三十年后的科学影响"
+    }
+  },
+  "src-fishbase-photo-contrib": {
+    "expectedTitle": "FishBase needs your pictures",
+    "title": {
+      "ar": "FishBase يحتاج إلى صوركم",
+      "es": "FishBase necesita tus fotos",
+      "fr": "FishBase a besoin de vos photos",
+      "ru": "FishBase нужны ваши фотографии",
+      "zh": "FishBase需要您的照片"
+    }
+  },
+  "src-fishbase-photo-gallery": {
+    "expectedTitle": "FishBase Photo Gallery",
+    "title": {
+      "ar": "معرض صور FishBase",
+      "es": "Galería de fotos de FishBase",
+      "fr": "Galerie de photos de FishBase",
+      "ru": "Фотогалерея FishBase",
+      "zh": "FishBase图片库"
+    }
+  },
+  "src-fishbase-references-table": {
+    "expectedTitle": "FishBase manual: The REFERENCES Table",
+    "title": {
+      "ar": "دليل FishBase: جدول REFERENCES",
+      "es": "Manual de FishBase: tabla REFERENCES",
+      "fr": "Manuel FishBase : table REFERENCES",
+      "ru": "Руководство FishBase: таблица REFERENCES",
+      "zh": "FishBase手册：REFERENCES表"
+    }
+  },
+  "src-fishbase-rfishbase-docs": {
+    "expectedTitle": "rfishbase documentation",
+    "title": {
+      "ar": "وثائق rfishbase",
+      "es": "Documentación de rfishbase",
+      "fr": "Documentation de rfishbase",
+      "ru": "Документация rfishbase",
+      "zh": "rfishbase文档"
+    }
+  },
+  "src-fishbase-search": {
+    "expectedTitle": "FishBase Search",
+    "title": {
+      "ar": "البحث في FishBase",
+      "es": "Búsqueda en FishBase",
+      "fr": "Recherche dans FishBase",
+      "ru": "Поиск в FishBase",
+      "zh": "FishBase搜索"
+    }
+  },
+  "src-fishbase-sourcecoop": {
+    "expectedTitle": "Parquet Snapshots of the FishBase Database",
+    "title": {
+      "ar": "لقطات بصيغة Parquet لقاعدة بيانات FishBase",
+      "es": "Instantáneas Parquet de la base de datos FishBase",
+      "fr": "Instantanés Parquet de la base de données FishBase",
+      "ru": "Снимки базы данных FishBase в формате Parquet",
+      "zh": "FishBase数据库Parquet快照"
+    }
+  },
+  "src-fishbase-sourcecoop-s3-v2504": {
+    "expectedTitle": "FishBase v25.04 parquet S3 listing",
+    "title": {
+      "ar": "قائمة ملفات Parquet لإصدار FishBase v25.04 على S3",
+      "es": "Listado S3 de archivos Parquet de FishBase v25.04",
+      "fr": "Liste S3 des fichiers Parquet de FishBase v25.04",
+      "ru": "Список файлов Parquet FishBase v25.04 в S3",
+      "zh": "FishBase v25.04 Parquet文件S3列表"
+    }
+  },
+  "src-gbif-what-is": {
+    "expectedTitle": "GBIF technical documentation",
+    "title": {
+      "ar": "الوثائق التقنية لـ GBIF",
+      "es": "Documentación técnica de GBIF",
+      "fr": "Documentation technique de GBIF",
+      "ru": "Техническая документация GBIF",
+      "zh": "GBIF技术文档"
+    }
+  },
+  "src-gebco-wms": {
+    "expectedTitle": "GEBCO Web Map Service",
+    "title": {
+      "ar": "خدمة خرائط الويب GEBCO",
+      "es": "Servicio de mapas web de GEBCO",
+      "fr": "Service de cartographie web de GEBCO",
+      "ru": "Веб-картографический сервис GEBCO",
+      "zh": "GEBCO网络地图服务"
+    }
+  },
+  "src-geome-gsc": {
+    "expectedTitle": "Genomic Observatories Metadatabase",
+    "title": {
+      "ar": "قاعدة البيانات الوصفية للمراصد الجينومية",
+      "es": "Metabase de datos de observatorios genómicos",
+      "fr": "Métabase de données des observatoires génomiques",
+      "ru": "Метабаза данных геномных обсерваторий",
+      "zh": "基因组观测站元数据库"
+    }
+  },
+  "src-ggbn-about": {
+    "expectedTitle": "What is GGBN",
+    "title": {
+      "ar": "ما هو GGBN",
+      "es": "Qué es GGBN",
+      "fr": "Qu’est-ce que GGBN",
+      "ru": "Что такое GGBN",
+      "zh": "GGBN是什么"
+    }
+  },
+  "src-glodap-about": {
+    "expectedTitle": "Welcome to GLODAP",
+    "title": {
+      "ar": "مرحبًا بكم في GLODAP",
+      "es": "Bienvenidos a GLODAP",
+      "fr": "Bienvenue sur GLODAP",
+      "ru": "Добро пожаловать в GLODAP",
+      "zh": "欢迎访问GLODAP"
+    }
+  },
+  "src-ices-data": {
+    "expectedTitle": "ICES Marine Data",
+    "title": {
+      "ar": "البيانات البحرية لدى ICES",
+      "es": "Datos marinos de ICES",
+      "fr": "Données marines du CIEM",
+      "ru": "Морские данные ICES",
+      "zh": "ICES海洋数据"
+    }
+  },
+  "src-insdc-about": {
+    "expectedTitle": "About INSDC",
+    "title": {
+      "ar": "حول INSDC",
+      "es": "Acerca de INSDC",
+      "fr": "À propos de INSDC",
+      "ru": "О INSDC",
+      "zh": "关于INSDC"
+    }
+  },
+  "src-intercatch": {
+    "expectedTitle": "InterCatch",
+    "title": {
+      "ar": "InterCatch",
+      "es": "InterCatch",
+      "fr": "InterCatch",
+      "ru": "InterCatch",
+      "zh": "InterCatch"
+    }
+  },
+  "src-ioc-pitch": {
+    "expectedTitle": "Designing and implementing the BBNJ Clearing-House Mechanism (CHM): Contribution from the Intergovernmental Oceanographic Commission",
+    "title": {
+      "ar": "تصميم وتنفيذ آلية تبادل المعلومات لاتفاق BBNJ: مساهمة اللجنة الأوقيانوغرافية الحكومية الدولية",
+      "es": "Diseño e implementación del mecanismo de intercambio de información del BBNJ: contribución de la Comisión Oceanográfica Intergubernamental",
+      "fr": "Conception et mise en œuvre du mécanisme d’échange d’informations BBNJ : contribution de la Commission océanographique intergouvernementale",
+      "ru": "Разработка и внедрение механизма посредничества BBNJ: вклад Межправительственной океанографической комиссии",
+      "zh": "BBNJ信息交换机制的设计与实施：政府间海洋学委员会的贡献"
+    }
+  },
+  "src-ioos-about": {
+    "expectedTitle": "IOOS About Us",
+    "title": {
+      "ar": "حول IOOS",
+      "es": "Acerca de IOOS",
+      "fr": "À propos de IOOS",
+      "ru": "О IOOS",
+      "zh": "关于IOOS"
+    }
+  },
+  "src-marine-regions-about": {
+    "expectedTitle": "Marine Regions About",
+    "title": {
+      "ar": "حول Marine Regions",
+      "es": "Acerca de Marine Regions",
+      "fr": "À propos de Marine Regions",
+      "ru": "О Marine Regions",
+      "zh": "关于Marine Regions"
+    }
+  },
+  "src-mgnify-about": {
+    "expectedTitle": "About MGnify",
+    "title": {
+      "ar": "حول MGnify",
+      "es": "Acerca de MGnify",
+      "fr": "À propos de MGnify",
+      "ru": "О MGnify",
+      "zh": "关于MGnify"
+    }
+  },
+  "src-molluscabase-about": {
+    "expectedTitle": "MolluscaBase",
+    "title": {
+      "ar": "MolluscaBase",
+      "es": "MolluscaBase",
+      "fr": "MolluscaBase",
+      "ru": "MolluscaBase",
+      "zh": "MolluscaBase"
+    }
+  },
+  "src-ncei-marine": {
+    "expectedTitle": "NOAA NCEI Marine Products",
+    "title": {
+      "ar": "المنتجات البحرية لدى NOAA NCEI",
+      "es": "Productos marinos de NOAA NCEI",
+      "fr": "Produits marins de NOAA NCEI",
+      "ru": "Морские продукты NOAA NCEI",
+      "zh": "NOAA NCEI海洋产品"
+    }
+  },
+  "src-noaa-bia-feeding-mapserver": {
+    "expectedTitle": "NOAA OceanReports Cetacean Biologically Important Areas Feeding MapServer",
+    "title": {
+      "ar": "خادم خرائط مناطق تغذية الحيتانيات ذات الأهمية البيولوجية في NOAA OceanReports",
+      "es": "MapServer de áreas de alimentación de importancia biológica para cetáceos de NOAA OceanReports",
+      "fr": "MapServer des zones d’alimentation d’importance biologique pour les cétacés de NOAA OceanReports",
+      "ru": "MapServer биологически важных районов питания китообразных NOAA OceanReports",
+      "zh": "NOAA OceanReports鲸类生物重要觅食区域MapServer"
+    }
+  },
+  "src-noaa-bia-inport": {
+    "expectedTitle": "Biologically Important Areas for Cetaceans within U.S. Waters 2015-03-01 - Present",
+    "title": {
+      "ar": "المناطق ذات الأهمية البيولوجية للحيتانيات في مياه الولايات المتحدة من 2015-03-01 إلى الوقت الحاضر",
+      "es": "Áreas de importancia biológica para los cetáceos en aguas estadounidenses, 2015-03-01 hasta la actualidad",
+      "fr": "Zones d’importance biologique pour les cétacés dans les eaux américaines, du 2015-03-01 à aujourd’hui",
+      "ru": "Биологически важные районы для китообразных в водах США: с 2015-03-01 по настоящее время",
+      "zh": "美国水域鲸类生物重要区域：2015-03-01至今"
+    }
+  },
+  "src-noaa-bia-small-resident-mapserver": {
+    "expectedTitle": "NOAA OceanReports Cetacean Biologically Important Areas Small Resident MapServer",
+    "title": {
+      "ar": "خادم خرائط مناطق التجمعات المقيمة الصغيرة للحيتانيات ذات الأهمية البيولوجية في NOAA OceanReports",
+      "es": "MapServer de áreas de importancia biológica para pequeñas poblaciones residentes de cetáceos de NOAA OceanReports",
+      "fr": "MapServer des zones d’importance biologique pour les petites populations résidentes de cétacés de NOAA OceanReports",
+      "ru": "MapServer биологически важных районов малых оседлых популяций китообразных NOAA OceanReports",
+      "zh": "NOAA OceanReports鲸类小型定居种群生物重要区域MapServer"
+    }
+  },
+  "src-noaa-esi-downloads": {
+    "expectedTitle": "Download ESI Maps and GIS Data",
+    "title": {
+      "ar": "تنزيل خرائط ESI وبيانات نظم المعلومات الجغرافية",
+      "es": "Descarga de mapas ESI y datos SIG",
+      "fr": "Téléchargement de cartes ESI et de données SIG",
+      "ru": "Скачать карты ESI и данные ГИС",
+      "zh": "下载ESI地图与GIS数据"
+    }
+  },
+  "src-noaa-esi-wa-or-marine-mammals-inport": {
+    "expectedTitle": "Outer Coast of Washington and Oregon 2014 ESI MARINE MAMMAL Polygons",
+    "title": {
+      "ar": "مضلعات الثدييات البحرية لمؤشر ESI للساحل الخارجي لواشنطن وأوريغون لعام 2014",
+      "es": "Polígonos de mamíferos marinos ESI de la costa exterior de Washington y Oregón, 2014",
+      "fr": "Polygones de mammifères marins ESI de la côte extérieure de Washington et de l’Oregon, 2014",
+      "ru": "Полигоны морских млекопитающих ESI внешнего побережья Вашингтона и Орегона, 2014",
+      "zh": "华盛顿州与俄勒冈州外海岸2014年ESI海洋哺乳动物多边形数据"
+    }
+  },
+  "src-obis-ipt": {
+    "expectedTitle": "OBIS Manual IPT",
+    "title": {
+      "ar": "دليل OBIS: أداة IPT",
+      "es": "Manual de OBIS: IPT",
+      "fr": "Manuel OBIS : IPT",
+      "ru": "Руководство OBIS: IPT",
+      "zh": "OBIS手册：IPT"
+    }
+  },
+  "src-oceaninfohub-about": {
+    "expectedTitle": "Ocean InfoHub Project Overview",
+    "title": {
+      "ar": "نظرة عامة على مشروع Ocean InfoHub",
+      "es": "Descripción general del proyecto Ocean InfoHub",
+      "fr": "Présentation du projet Ocean InfoHub",
+      "ru": "Обзор проекта Ocean InfoHub",
+      "zh": "Ocean InfoHub项目概览"
+    }
+  },
+  "src-oceanops-ioc": {
+    "expectedTitle": "OceanOPS at IOC UNESCO",
+    "title": {
+      "ar": "OceanOPS لدى اللجنة الأوقيانوغرافية الحكومية الدولية لليونسكو",
+      "es": "OceanOPS en la COI de la UNESCO",
+      "fr": "OceanOPS à la COI de l’UNESCO",
+      "ru": "OceanOPS при МОК ЮНЕСКО",
+      "zh": "联合国教科文组织政府间海洋学委员会的OceanOPS"
+    }
+  },
+  "src-oceansites-format": {
+    "expectedTitle": "OceanSITES Data Format Reference Manual",
+    "title": {
+      "ar": "الدليل المرجعي لتنسيق بيانات OceanSITES",
+      "es": "Manual de referencia del formato de datos de OceanSITES",
+      "fr": "Manuel de référence du format de données OceanSITES",
+      "ru": "Справочное руководство по формату данных OceanSITES",
+      "zh": "OceanSITES数据格式参考手册"
+    }
+  },
+  "src-odfw-commercial-landings": {
+    "expectedTitle": "ODFW Commercial Landing Statistics",
+    "title": {
+      "ar": "إحصاءات إنزال المصيد التجاري لدى ODFW",
+      "es": "Estadísticas de desembarques comerciales de ODFW",
+      "fr": "Statistiques des débarquements commerciaux de l’ODFW",
+      "ru": "Статистика выгрузки промыслового улова ODFW",
+      "zh": "ODFW商业渔获卸载统计"
+    }
+  },
+  "src-odis": {
+    "expectedTitle": "ODIS",
+    "title": {
+      "ar": "ODIS",
+      "es": "ODIS",
+      "fr": "ODIS",
+      "ru": "ODIS",
+      "zh": "ODIS"
+    }
+  },
+  "src-ooi-data": {
+    "expectedTitle": "OOI Data Portal",
+    "title": {
+      "ar": "بوابة بيانات OOI",
+      "es": "Portal de datos de OOI",
+      "fr": "Portail de données OOI",
+      "ru": "Портал данных OOI",
+      "zh": "OOI数据门户"
+    }
+  },
+  "src-openstreetmap-copyright": {
+    "expectedTitle": "OpenStreetMap Copyright and License",
+    "title": {
+      "ar": "حقوق النشر والترخيص لدى OpenStreetMap",
+      "es": "Derechos de autor y licencia de OpenStreetMap",
+      "fr": "Droits d’auteur et licence d’OpenStreetMap",
+      "ru": "Авторские права и лицензия OpenStreetMap",
+      "zh": "OpenStreetMap版权与许可"
+    }
+  },
+  "src-openstreetmap-standard-tile-layer": {
+    "expectedTitle": "OpenStreetMap Standard Tile Layer",
+    "title": {
+      "ar": "طبقة مربعات الخرائط القياسية في OpenStreetMap",
+      "es": "Capa estándar de teselas de OpenStreetMap",
+      "fr": "Couche de tuiles standard d’OpenStreetMap",
+      "ru": "Стандартный тайловый слой OpenStreetMap",
+      "zh": "OpenStreetMap标准地图瓦片图层"
+    }
+  },
+  "src-pangaea-about": {
+    "expectedTitle": "PANGAEA About",
+    "title": {
+      "ar": "حول PANGAEA",
+      "es": "Acerca de PANGAEA",
+      "fr": "À propos de PANGAEA",
+      "ru": "О PANGAEA",
+      "zh": "关于PANGAEA"
+    }
+  },
+  "src-protomaps-basemap-downloads": {
+    "expectedTitle": "Protomaps Basemap Downloads",
+    "title": {
+      "ar": "تنزيلات خرائط الأساس من Protomaps",
+      "es": "Descargas de mapas base de Protomaps",
+      "fr": "Téléchargements de fonds de carte Protomaps",
+      "ru": "Загрузка базовых карт Protomaps",
+      "zh": "Protomaps底图下载"
+    }
+  },
+  "src-protomaps-docs": {
+    "expectedTitle": "Protomaps Docs",
+    "title": {
+      "ar": "وثائق Protomaps",
+      "es": "Documentación de Protomaps",
+      "fr": "Documentation de Protomaps",
+      "ru": "Документация Protomaps",
+      "zh": "Protomaps文档"
+    }
+  },
+  "src-rdbes": {
+    "expectedTitle": "Regional DataBase and Estimation System",
+    "title": {
+      "ar": "قاعدة البيانات الإقليمية ونظام التقدير",
+      "es": "Base de Datos Regional y Sistema de Estimación",
+      "fr": "Base de données régionale et système d’estimation",
+      "ru": "Региональная база данных и система оценки",
+      "zh": "区域数据库与估算系统"
+    }
+  },
+  "src-re3data-about": {
+    "expectedTitle": "re3data About",
+    "title": {
+      "ar": "حول re3data",
+      "es": "Acerca de re3data",
+      "fr": "À propos de re3data",
+      "ru": "О re3data",
+      "zh": "关于re3data"
+    }
+  },
+  "src-relationship-algaebase": {
+    "expectedTitle": "AlgaeBase team",
+    "title": {
+      "ar": "فريق AlgaeBase",
+      "es": "Equipo de AlgaeBase",
+      "fr": "Équipe d’AlgaeBase",
+      "ru": "Команда AlgaeBase",
+      "zh": "AlgaeBase团队"
+    }
+  },
+  "src-relationship-aquamaps": {
+    "expectedTitle": "AquaMaps about",
+    "title": {
+      "ar": "حول AquaMaps",
+      "es": "Acerca de AquaMaps",
+      "fr": "À propos de AquaMaps",
+      "ru": "О AquaMaps",
+      "zh": "关于AquaMaps"
+    }
+  },
+  "src-relationship-argo-gdac": {
+    "expectedTitle": "Argo data system",
+    "title": {
+      "ar": "نظام بيانات Argo",
+      "es": "Sistema de datos Argo",
+      "fr": "Système de données Argo",
+      "ru": "Система данных Argo",
+      "zh": "Argo数据系统"
+    }
+  },
+  "src-relationship-argovis": {
+    "expectedTitle": "Argovis project presentation",
+    "title": {
+      "ar": "عرض مشروع Argovis",
+      "es": "Presentación del proyecto Argovis",
+      "fr": "Présentation du projet Argovis",
+      "ru": "Презентация проекта Argovis",
+      "zh": "Argovis项目介绍"
+    }
+  },
+  "src-relationship-bco-dmo": {
+    "expectedTitle": "About BCO-DMO",
+    "title": {
+      "ar": "حول BCO-DMO",
+      "es": "Acerca de BCO-DMO",
+      "fr": "À propos de BCO-DMO",
+      "ru": "О BCO-DMO",
+      "zh": "关于BCO-DMO"
+    }
+  },
+  "src-relationship-bio-oracle": {
+    "expectedTitle": "Bio-ORACLE consortium",
+    "title": {
+      "ar": "ائتلاف Bio-ORACLE",
+      "es": "Consorcio Bio-ORACLE",
+      "fr": "Consortium Bio-ORACLE",
+      "ru": "Консорциум Bio-ORACLE",
+      "zh": "Bio-ORACLE联盟"
+    }
+  },
+  "src-relationship-bismal": {
+    "expectedTitle": "JAMSTEC databases",
+    "title": {
+      "ar": "قواعد بيانات JAMSTEC",
+      "es": "Bases de datos de JAMSTEC",
+      "fr": "Bases de données de JAMSTEC",
+      "ru": "Базы данных JAMSTEC",
+      "zh": "JAMSTEC数据库"
+    }
+  },
+  "src-relationship-bold": {
+    "expectedTitle": "BOLD contact",
+    "title": {
+      "ar": "معلومات الاتصال بـ BOLD",
+      "es": "Contacto de BOLD",
+      "fr": "Coordonnées de BOLD",
+      "ru": "Контакты BOLD",
+      "zh": "BOLD联系信息"
+    }
+  },
+  "src-relationship-cioos": {
+    "expectedTitle": "About CIOOS",
+    "title": {
+      "ar": "حول CIOOS",
+      "es": "Acerca de CIOOS",
+      "fr": "À propos de CIOOS",
+      "ru": "О CIOOS",
+      "zh": "关于CIOOS"
+    }
+  },
+  "src-relationship-cmems-datastore": {
+    "expectedTitle": "Copernicus Marine service",
+    "title": {
+      "ar": "خدمة كوبرنيكوس البحرية",
+      "es": "Servicio Marino de Copernicus",
+      "fr": "Service marin Copernicus",
+      "ru": "Морская служба Copernicus",
+      "zh": "哥白尼海洋服务"
+    }
+  },
+  "src-relationship-copernicus-marine": {
+    "expectedTitle": "Copernicus Marine service",
+    "title": {
+      "ar": "خدمة كوبرنيكوس البحرية",
+      "es": "Servicio Marino de Copernicus",
+      "fr": "Service marin Copernicus",
+      "ru": "Морская служба Copernicus",
+      "zh": "哥白尼海洋服务"
+    }
+  },
+  "src-relationship-datras": {
+    "expectedTitle": "ICES DATRAS",
+    "title": {
+      "ar": "ICES DATRAS",
+      "es": "ICES DATRAS",
+      "fr": "ICES DATRAS",
+      "ru": "ICES DATRAS",
+      "zh": "ICES DATRAS"
+    }
+  },
+  "src-relationship-ddbj": {
+    "expectedTitle": "INSDC membership and exchange",
+    "title": {
+      "ar": "العضوية وتبادل البيانات في INSDC",
+      "es": "Membresía e intercambio de datos de INSDC",
+      "fr": "Adhésion et échange de données au sein de l’INSDC",
+      "ru": "Членство и обмен данными в INSDC",
+      "zh": "INSDC成员与数据交换"
+    }
+  },
+  "src-relationship-dryad": {
+    "expectedTitle": "About Dryad",
+    "title": {
+      "ar": "حول Dryad",
+      "es": "Acerca de Dryad",
+      "fr": "À propos de Dryad",
+      "ru": "О Dryad",
+      "zh": "关于Dryad"
+    }
+  },
+  "src-relationship-ebi-leadership": {
+    "expectedTitle": "EMBL-EBI leadership",
+    "title": {
+      "ar": "قيادة EMBL-EBI",
+      "es": "Dirección de EMBL-EBI",
+      "fr": "Direction de l’EMBL-EBI",
+      "ru": "Руководство EMBL-EBI",
+      "zh": "EMBL-EBI领导层"
+    }
+  },
+  "src-relationship-ecotrust-oregon-fisheries-uses-values": {
+    "expectedTitle": "Ecotrust organization structure",
+    "title": {
+      "ar": "الهيكل التنظيمي لـ Ecotrust",
+      "es": "Estructura organizativa de Ecotrust",
+      "fr": "Structure organisationnelle d’Ecotrust",
+      "ru": "Организационная структура Ecotrust",
+      "zh": "Ecotrust组织结构"
+    }
+  },
+  "src-relationship-embl-governance": {
+    "expectedTitle": "EMBL governance",
+    "title": {
+      "ar": "حوكمة EMBL",
+      "es": "Gobernanza de EMBL",
+      "fr": "Gouvernance de l’EMBL",
+      "ru": "Управление EMBL",
+      "zh": "EMBL治理"
+    }
+  },
+  "src-relationship-embl-members": {
+    "expectedTitle": "EMBL member states",
+    "title": {
+      "ar": "الدول الأعضاء في EMBL",
+      "es": "Estados miembros de EMBL",
+      "fr": "États membres de l’EMBL",
+      "ru": "Государства — члены EMBL",
+      "zh": "EMBL成员国"
+    }
+  },
+  "src-relationship-emodnet": {
+    "expectedTitle": "About EMODnet",
+    "title": {
+      "ar": "حول EMODnet",
+      "es": "Acerca de EMODnet",
+      "fr": "À propos de EMODnet",
+      "ru": "О EMODnet",
+      "zh": "关于EMODnet"
+    }
+  },
+  "src-relationship-emodnet-biology": {
+    "expectedTitle": "EMODnet Biology",
+    "title": {
+      "ar": "EMODnet: علم الأحياء",
+      "es": "Biología de EMODnet",
+      "fr": "Biologie d’EMODnet",
+      "ru": "Биология EMODnet",
+      "zh": "EMODnet生物学"
+    }
+  },
+  "src-relationship-ena": {
+    "expectedTitle": "INSDC membership and exchange",
+    "title": {
+      "ar": "العضوية وتبادل البيانات في INSDC",
+      "es": "Membresía e intercambio de datos de INSDC",
+      "fr": "Adhésion et échange de données au sein de l’INSDC",
+      "ru": "Членство и обмен данными в INSDC",
+      "zh": "INSDC成员与数据交换"
+    }
+  },
+  "src-relationship-euro-argo": {
+    "expectedTitle": "Euro-Argo ERIC statutes",
+    "title": {
+      "ar": "النظام الأساسي لـ Euro-Argo ERIC",
+      "es": "Estatutos de Euro-Argo ERIC",
+      "fr": "Statuts d’Euro-Argo ERIC",
+      "ru": "Устав Euro-Argo ERIC",
+      "zh": "Euro-Argo ERIC章程"
+    }
+  },
+  "src-relationship-eurobis": {
+    "expectedTitle": "About EurOBIS",
+    "title": {
+      "ar": "حول EurOBIS",
+      "es": "Acerca de EurOBIS",
+      "fr": "À propos de EurOBIS",
+      "ru": "О EurOBIS",
+      "zh": "关于EurOBIS"
+    }
+  },
+  "src-relationship-fao-fishstat": {
+    "expectedTitle": "FAO governing bodies",
+    "title": {
+      "ar": "الأجهزة الرئاسية للفاو",
+      "es": "Órganos rectores de la FAO",
+      "fr": "Organes directeurs de la FAO",
+      "ru": "Руководящие органы ФАО",
+      "zh": "联合国粮农组织理事机构"
+    }
+  },
+  "src-relationship-fishbase": {
+    "expectedTitle": "FishBase homepage",
+    "title": {
+      "ar": "الصفحة الرئيسية لـ FishBase",
+      "es": "Página de inicio de FishBase",
+      "fr": "Page d’accueil de FishBase",
+      "ru": "Главная страница FishBase",
+      "zh": "FishBase主页"
+    }
+  },
+  "src-relationship-gbif": {
+    "expectedTitle": "What is GBIF",
+    "title": {
+      "ar": "ما هو GBIF",
+      "es": "Qué es GBIF",
+      "fr": "Qu’est-ce que GBIF",
+      "ru": "Что такое GBIF",
+      "zh": "GBIF是什么"
+    }
+  },
+  "src-relationship-gebco-web-services": {
+    "expectedTitle": "About GEBCO",
+    "title": {
+      "ar": "حول GEBCO",
+      "es": "Acerca de GEBCO",
+      "fr": "À propos de GEBCO",
+      "ru": "О GEBCO",
+      "zh": "关于GEBCO"
+    }
+  },
+  "src-relationship-genbank": {
+    "expectedTitle": "About NCBI",
+    "title": {
+      "ar": "حول NCBI",
+      "es": "Acerca de NCBI",
+      "fr": "À propos de NCBI",
+      "ru": "О NCBI",
+      "zh": "关于NCBI"
+    }
+  },
+  "src-relationship-geome": {
+    "expectedTitle": "GEOME documentation",
+    "title": {
+      "ar": "وثائق GEOME",
+      "es": "Documentación de GEOME",
+      "fr": "Documentation de GEOME",
+      "ru": "Документация GEOME",
+      "zh": "GEOME文档"
+    }
+  },
+  "src-relationship-ggbn": {
+    "expectedTitle": "GGBN governance",
+    "title": {
+      "ar": "حوكمة GGBN",
+      "es": "Gobernanza de GGBN",
+      "fr": "Gouvernance de GGBN",
+      "ru": "Управление GGBN",
+      "zh": "GGBN治理"
+    }
+  },
+  "src-relationship-glodap": {
+    "expectedTitle": "GLODAP",
+    "title": {
+      "ar": "GLODAP",
+      "es": "GLODAP",
+      "fr": "GLODAP",
+      "ru": "GLODAP",
+      "zh": "GLODAP"
+    }
+  },
+  "src-relationship-go-ship": {
+    "expectedTitle": "GO-SHIP programme paper",
+    "title": {
+      "ar": "ورقة بحثية عن برنامج GO-SHIP",
+      "es": "Artículo sobre el programa GO-SHIP",
+      "fr": "Article sur le programme GO-SHIP",
+      "ru": "Статья о программе GO-SHIP",
+      "zh": "GO-SHIP计划论文"
+    }
+  },
+  "src-relationship-ices-data": {
+    "expectedTitle": "ICES member countries",
+    "title": {
+      "ar": "الدول الأعضاء في ICES",
+      "es": "Países miembros de ICES",
+      "fr": "Pays membres du CIEM",
+      "ru": "Страны — члены ICES",
+      "zh": "ICES成员国"
+    }
+  },
+  "src-relationship-insdc": {
+    "expectedTitle": "INSDC membership and exchange",
+    "title": {
+      "ar": "العضوية وتبادل البيانات في INSDC",
+      "es": "Membresía e intercambio de datos de INSDC",
+      "fr": "Adhésion et échange de données au sein de l’INSDC",
+      "ru": "Членство и обмен данными в INSDC",
+      "zh": "INSDC成员与数据交换"
+    }
+  },
+  "src-relationship-intercatch": {
+    "expectedTitle": "ICES InterCatch",
+    "title": {
+      "ar": "ICES InterCatch",
+      "es": "ICES InterCatch",
+      "fr": "ICES InterCatch",
+      "ru": "ICES InterCatch",
+      "zh": "ICES InterCatch"
+    }
+  },
+  "src-relationship-ioos": {
+    "expectedTitle": "About US IOOS",
+    "title": {
+      "ar": "حول US IOOS",
+      "es": "Acerca de US IOOS",
+      "fr": "À propos de US IOOS",
+      "ru": "О US IOOS",
+      "zh": "关于US IOOS"
+    }
+  },
+  "src-relationship-j-obis": {
+    "expectedTitle": "About BISMaL / J-OBIS",
+    "title": {
+      "ar": "حول BISMaL / J-OBIS",
+      "es": "Acerca de BISMaL / J-OBIS",
+      "fr": "À propos de BISMaL / J-OBIS",
+      "ru": "О BISMaL / J-OBIS",
+      "zh": "关于BISMaL / J-OBIS"
+    }
+  },
+  "src-relationship-jamstec": {
+    "expectedTitle": "About JAMSTEC",
+    "title": {
+      "ar": "حول JAMSTEC",
+      "es": "Acerca de JAMSTEC",
+      "fr": "À propos de JAMSTEC",
+      "ru": "О JAMSTEC",
+      "zh": "关于JAMSTEC"
+    }
+  },
+  "src-relationship-marine-regions": {
+    "expectedTitle": "About Marine Regions",
+    "title": {
+      "ar": "حول Marine Regions",
+      "es": "Acerca de Marine Regions",
+      "fr": "À propos de Marine Regions",
+      "ru": "О Marine Regions",
+      "zh": "关于Marine Regions"
+    }
+  },
+  "src-relationship-mgnify": {
+    "expectedTitle": "MGnify data flow",
+    "title": {
+      "ar": "تدفق البيانات في MGnify",
+      "es": "Flujo de datos de MGnify",
+      "fr": "Flux de données de MGnify",
+      "ru": "Поток данных MGnify",
+      "zh": "MGnify数据流程"
+    }
+  },
+  "src-relationship-molluscabase": {
+    "expectedTitle": "About MolluscaBase",
+    "title": {
+      "ar": "حول MolluscaBase",
+      "es": "Acerca de MolluscaBase",
+      "fr": "À propos de MolluscaBase",
+      "ru": "О MolluscaBase",
+      "zh": "关于MolluscaBase"
+    }
+  },
+  "src-relationship-nig": {
+    "expectedTitle": "About DDBJ / NIG",
+    "title": {
+      "ar": "حول DDBJ / NIG",
+      "es": "Acerca de DDBJ / NIG",
+      "fr": "À propos de DDBJ / NIG",
+      "ru": "О DDBJ / NIG",
+      "zh": "关于DDBJ / NIG"
+    }
+  },
+  "src-relationship-noaa-cetacean-bia": {
+    "expectedTitle": "NOAA biologically important areas",
+    "title": {
+      "ar": "المناطق ذات الأهمية البيولوجية لدى NOAA",
+      "es": "Áreas de importancia biológica de NOAA",
+      "fr": "Zones d’importance biologique de la NOAA",
+      "ru": "Биологически важные районы NOAA",
+      "zh": "NOAA生物重要区域"
+    }
+  },
+  "src-relationship-noaa-esi-wa-or-marine-mammals": {
+    "expectedTitle": "NOAA ESI maps",
+    "title": {
+      "ar": "خرائط ESI لدى NOAA",
+      "es": "Mapas ESI de NOAA",
+      "fr": "Cartes ESI de la NOAA",
+      "ru": "Карты ESI NOAA",
+      "zh": "NOAA ESI地图"
+    }
+  },
+  "src-relationship-noaa-ncei-marine": {
+    "expectedTitle": "NOAA NCEI marine data",
+    "title": {
+      "ar": "البيانات البحرية لدى NOAA NCEI",
+      "es": "Datos marinos de NOAA NCEI",
+      "fr": "Données marines de NOAA NCEI",
+      "ru": "Морские данные NOAA NCEI",
+      "zh": "NOAA NCEI海洋数据"
+    }
+  },
+  "src-relationship-nrl-godae": {
+    "expectedTitle": "US Navy GODAE server",
+    "title": {
+      "ar": "خادم GODAE التابع للبحرية الأمريكية",
+      "es": "Servidor GODAE de la Armada de Estados Unidos",
+      "fr": "Serveur GODAE de la marine américaine",
+      "ru": "Сервер GODAE ВМС США",
+      "zh": "美国海军GODAE服务器"
+    }
+  },
+  "src-relationship-nsf": {
+    "expectedTitle": "About the US National Science Foundation",
+    "title": {
+      "ar": "حول المؤسسة الوطنية للعلوم في الولايات المتحدة",
+      "es": "Acerca de la Fundación Nacional de Ciencias de Estados Unidos",
+      "fr": "À propos de la Fondation nationale pour la science des États-Unis",
+      "ru": "О Национальном научном фонде США",
+      "zh": "关于美国国家科学基金会"
+    }
+  },
+  "src-relationship-oceaninfohub": {
+    "expectedTitle": "Ocean InfoHub project overview",
+    "title": {
+      "ar": "نظرة عامة على مشروع Ocean InfoHub",
+      "es": "Descripción general del proyecto Ocean InfoHub",
+      "fr": "Présentation du projet Ocean InfoHub",
+      "ru": "Обзор проекта Ocean InfoHub",
+      "zh": "Ocean InfoHub项目概览"
+    }
+  },
+  "src-relationship-oceanops": {
+    "expectedTitle": "WMO marine observations",
+    "title": {
+      "ar": "الرصد البحري لدى المنظمة العالمية للأرصاد الجوية",
+      "es": "Observaciones marinas de la OMM",
+      "fr": "Observations marines de l’OMM",
+      "ru": "Морские наблюдения ВМО",
+      "zh": "世界气象组织海洋观测"
+    }
+  },
+  "src-relationship-oceansites": {
+    "expectedTitle": "OceanSITES organization and governance",
+    "title": {
+      "ar": "تنظيم وحوكمة OceanSITES",
+      "es": "Organización y gobernanza de OceanSITES",
+      "fr": "Organisation et gouvernance d’OceanSITES",
+      "ru": "Организация и управление OceanSITES",
+      "zh": "OceanSITES组织与治理"
+    }
+  },
+  "src-relationship-odfw-commercial-landings": {
+    "expectedTitle": "ODFW commercial fishery statistics",
+    "title": {
+      "ar": "إحصاءات المصايد التجارية لدى ODFW",
+      "es": "Estadísticas de pesca comercial de ODFW",
+      "fr": "Statistiques de la pêche commerciale de l’ODFW",
+      "ru": "Статистика коммерческого рыболовства ODFW",
+      "zh": "ODFW商业渔业统计"
+    }
+  },
+  "src-relationship-odis": {
+    "expectedTitle": "Ocean Data and Information System",
+    "title": {
+      "ar": "نظام بيانات ومعلومات المحيطات",
+      "es": "Sistema de Datos e Información Oceánicos",
+      "fr": "Système de données et d’informations océaniques",
+      "ru": "Система океанических данных и информации",
+      "zh": "海洋数据与信息系统"
+    }
+  },
+  "src-relationship-ooi-ci": {
+    "expectedTitle": "OOI cyberinfrastructure",
+    "title": {
+      "ar": "البنية التحتية الحاسوبية لـ OOI",
+      "es": "Ciberinfraestructura de OOI",
+      "fr": "Cyberinfrastructure d’OOI",
+      "ru": "Киберинфраструктура OOI",
+      "zh": "OOI网络信息基础设施"
+    }
+  },
+  "src-relationship-ooi-data": {
+    "expectedTitle": "About OOI",
+    "title": {
+      "ar": "حول OOI",
+      "es": "Acerca de OOI",
+      "fr": "À propos de OOI",
+      "ru": "О OOI",
+      "zh": "关于OOI"
+    }
+  },
+  "src-relationship-openstreetmap-standard-raster-tiles": {
+    "expectedTitle": "OSMF tile usage policy",
+    "title": {
+      "ar": "سياسة استخدام مربعات الخرائط لدى OSMF",
+      "es": "Política de uso de teselas de OSMF",
+      "fr": "Politique d’utilisation des tuiles de l’OSMF",
+      "ru": "Правила использования тайлов OSMF",
+      "zh": "OSMF地图瓦片使用政策"
+    }
+  },
+  "src-relationship-oregon-dlcd-coastal-gis": {
+    "expectedTitle": "DLCD maps and data tools",
+    "title": {
+      "ar": "خرائط وأدوات بيانات DLCD",
+      "es": "Mapas y herramientas de datos de DLCD",
+      "fr": "Cartes et outils de données de DLCD",
+      "ru": "Карты и инструменты работы с данными DLCD",
+      "zh": "DLCD地图与数据工具"
+    }
+  },
+  "src-relationship-oregon-government": {
+    "expectedTitle": "Oregon Governor",
+    "title": {
+      "ar": "حاكم ولاية أوريغون",
+      "es": "Gobernador de Oregón",
+      "fr": "Gouverneur de l’Oregon",
+      "ru": "Губернатор штата Орегон",
+      "zh": "俄勒冈州州长"
+    }
+  },
+  "src-relationship-pangaea": {
+    "expectedTitle": "About PANGAEA",
+    "title": {
+      "ar": "حول PANGAEA",
+      "es": "Acerca de PANGAEA",
+      "fr": "À propos de PANGAEA",
+      "ru": "О PANGAEA",
+      "zh": "关于PANGAEA"
+    }
+  },
+  "src-relationship-platform-bbnj-chm": {
+    "expectedTitle": "BBNJ Agreement",
+    "title": {
+      "ar": "اتفاق BBNJ",
+      "es": "Acuerdo BBNJ",
+      "fr": "Accord BBNJ",
+      "ru": "Соглашение BBNJ",
+      "zh": "BBNJ协定"
+    }
+  },
+  "src-relationship-platform-obis": {
+    "expectedTitle": "OBIS governance",
+    "title": {
+      "ar": "حوكمة OBIS",
+      "es": "Gobernanza de OBIS",
+      "fr": "Gouvernance d’OBIS",
+      "ru": "Управление OBIS",
+      "zh": "OBIS治理"
+    }
+  },
+  "src-relationship-protomaps-basemap": {
+    "expectedTitle": "About Protomaps",
+    "title": {
+      "ar": "حول Protomaps",
+      "es": "Acerca de Protomaps",
+      "fr": "À propos de Protomaps",
+      "ru": "О Protomaps",
+      "zh": "关于Protomaps"
+    }
+  },
+  "src-relationship-rdbes": {
+    "expectedTitle": "ICES RDBES",
+    "title": {
+      "ar": "ICES RDBES",
+      "es": "ICES RDBES",
+      "fr": "ICES RDBES",
+      "ru": "ICES RDBES",
+      "zh": "ICES RDBES"
+    }
+  },
+  "src-relationship-re3data": {
+    "expectedTitle": "About re3data",
+    "title": {
+      "ar": "حول re3data",
+      "es": "Acerca de re3data",
+      "fr": "À propos de re3data",
+      "ru": "О re3data",
+      "zh": "关于re3data"
+    }
+  },
+  "src-relationship-sea-around-us": {
+    "expectedTitle": "About Sea Around Us",
+    "title": {
+      "ar": "حول Sea Around Us",
+      "es": "Acerca de Sea Around Us",
+      "fr": "À propos de Sea Around Us",
+      "ru": "О Sea Around Us",
+      "zh": "关于Sea Around Us"
+    }
+  },
+  "src-relationship-seadatanet": {
+    "expectedTitle": "About SeaDataNet",
+    "title": {
+      "ar": "حول SeaDataNet",
+      "es": "Acerca de SeaDataNet",
+      "fr": "À propos de SeaDataNet",
+      "ru": "О SeaDataNet",
+      "zh": "关于SeaDataNet"
+    }
+  },
+  "src-relationship-seadatanet-cdi": {
+    "expectedTitle": "SeaDataNet CDI manual",
+    "title": {
+      "ar": "دليل SeaDataNet CDI",
+      "es": "Manual de SeaDataNet CDI",
+      "fr": "Manuel SeaDataNet CDI",
+      "ru": "Руководство SeaDataNet CDI",
+      "zh": "SeaDataNet CDI手册"
+    }
+  },
+  "src-relationship-sealifebase": {
+    "expectedTitle": "About SeaLifeBase",
+    "title": {
+      "ar": "حول SeaLifeBase",
+      "es": "Acerca de SeaLifeBase",
+      "fr": "À propos de SeaLifeBase",
+      "ru": "О SeaLifeBase",
+      "zh": "关于SeaLifeBase"
+    }
+  },
+  "src-relationship-socat": {
+    "expectedTitle": "About SOCAT",
+    "title": {
+      "ar": "حول SOCAT",
+      "es": "Acerca de SOCAT",
+      "fr": "À propos de SOCAT",
+      "ru": "О SOCAT",
+      "zh": "关于SOCAT"
+    }
+  },
+  "src-relationship-worms": {
+    "expectedTitle": "WoRMS terms of reference",
+    "title": {
+      "ar": "اختصاصات WoRMS",
+      "es": "Términos de referencia de WoRMS",
+      "fr": "Mandat de WoRMS",
+      "ru": "Положение о деятельности WoRMS",
+      "zh": "WoRMS职权范围"
+    }
+  },
+  "src-relationship-zenodo": {
+    "expectedTitle": "About Zenodo",
+    "title": {
+      "ar": "حول Zenodo",
+      "es": "Acerca de Zenodo",
+      "fr": "À propos de Zenodo",
+      "ru": "О Zenodo",
+      "zh": "关于Zenodo"
+    }
+  },
+  "src-seaaroundus-about": {
+    "expectedTitle": "Sea Around Us About",
+    "title": {
+      "ar": "حول Sea Around Us",
+      "es": "Acerca de Sea Around Us",
+      "fr": "À propos de Sea Around Us",
+      "ru": "О Sea Around Us",
+      "zh": "关于Sea Around Us"
+    }
+  },
+  "src-seadatanet-cdi": {
+    "expectedTitle": "SeaDataNet Common Data Index",
+    "title": {
+      "ar": "فهرس البيانات المشترك لـ SeaDataNet",
+      "es": "Índice Común de Datos de SeaDataNet",
+      "fr": "Index commun des données SeaDataNet",
+      "ru": "Общий индекс данных SeaDataNet",
+      "zh": "SeaDataNet公共数据索引"
+    }
+  },
+  "src-seadatanet-home": {
+    "expectedTitle": "SeaDataNet Home",
+    "title": {
+      "ar": "الصفحة الرئيسية لـ SeaDataNet",
+      "es": "Página de inicio de SeaDataNet",
+      "fr": "Page d’accueil de SeaDataNet",
+      "ru": "Главная страница SeaDataNet",
+      "zh": "SeaDataNet主页"
+    }
+  },
+  "src-sealifebase-live-ui-captures": {
+    "expectedTitle": "SeaLifeBase live UI captures",
+    "title": {
+      "ar": "لقطات واجهة SeaLifeBase الحية",
+      "es": "Capturas de la interfaz en vivo de SeaLifeBase",
+      "fr": "Captures de l’interface en ligne de SeaLifeBase",
+      "ru": "Снимки действующего интерфейса SeaLifeBase",
+      "zh": "SeaLifeBase在线界面截图"
+    }
+  },
+  "src-sealifebase-rfishbase-docs": {
+    "expectedTitle": "rfishbase documentation",
+    "title": {
+      "ar": "وثائق rfishbase",
+      "es": "Documentación de rfishbase",
+      "fr": "Documentation de rfishbase",
+      "ru": "Документация rfishbase",
+      "zh": "rfishbase文档"
+    }
+  },
+  "src-sealifebase-searchstats-v2504": {
+    "expectedTitle": "SeaLifeBase v25.04 search-page statistics table",
+    "title": {
+      "ar": "جدول إحصاءات صفحة البحث في SeaLifeBase v25.04",
+      "es": "Tabla de estadísticas de la página de búsqueda de SeaLifeBase v25.04",
+      "fr": "Table des statistiques de la page de recherche de SeaLifeBase v25.04",
+      "ru": "Таблица статистики страницы поиска SeaLifeBase v25.04",
+      "zh": "SeaLifeBase v25.04搜索页面统计表"
+    }
+  },
+  "src-sealifebase-sourcecoop": {
+    "expectedTitle": "Source Cooperative SeaLifeBase snapshots",
+    "title": {
+      "ar": "لقطات SeaLifeBase على Source Cooperative",
+      "es": "Instantáneas de SeaLifeBase en Source Cooperative",
+      "fr": "Instantanés SeaLifeBase sur Source Cooperative",
+      "ru": "Снимки SeaLifeBase в Source Cooperative",
+      "zh": "Source Cooperative上的SeaLifeBase快照"
+    }
+  },
+  "src-sealifebase-sourcecoop-s3-v2504": {
+    "expectedTitle": "SeaLifeBase v25.04 Source Cooperative listing",
+    "title": {
+      "ar": "قائمة إصدار SeaLifeBase v25.04 على Source Cooperative",
+      "es": "Listado de SeaLifeBase v25.04 en Source Cooperative",
+      "fr": "Liste SeaLifeBase v25.04 sur Source Cooperative",
+      "ru": "Каталог SeaLifeBase v25.04 в Source Cooperative",
+      "zh": "Source Cooperative上的SeaLifeBase v25.04列表"
+    }
+  },
+  "src-sealifebase-what": {
+    "expectedTitle": "Q-quatics About Us",
+    "title": {
+      "ar": "حول Q-quatics",
+      "es": "Acerca de Q-quatics",
+      "fr": "À propos de Q-quatics",
+      "ru": "О Q-quatics",
+      "zh": "关于Q-quatics"
+    }
+  },
+  "src-socat-about": {
+    "expectedTitle": "About SOCAT",
+    "title": {
+      "ar": "حول SOCAT",
+      "es": "Acerca de SOCAT",
+      "fr": "À propos de SOCAT",
+      "ru": "О SOCAT",
+      "zh": "关于SOCAT"
+    }
+  },
+  "src-us-goship-about": {
+    "expectedTitle": "U.S. GO-SHIP",
+    "title": {
+      "ar": "برنامج GO-SHIP الأمريكي",
+      "es": "GO-SHIP de Estados Unidos",
+      "fr": "GO-SHIP des États-Unis",
+      "ru": "Программа GO-SHIP США",
+      "zh": "美国GO-SHIP计划"
+    }
+  },
+  "src-worms-about": {
+    "expectedTitle": "WoRMS About",
+    "title": {
+      "ar": "حول WoRMS",
+      "es": "Acerca de WoRMS",
+      "fr": "À propos de WoRMS",
+      "ru": "О WoRMS",
+      "zh": "关于WoRMS"
+    }
+  },
+  "src-zenodo-about": {
+    "expectedTitle": "About Zenodo",
+    "title": {
+      "ar": "حول Zenodo",
+      "es": "Acerca de Zenodo",
+      "fr": "À propos de Zenodo",
+      "ru": "О Zenodo",
+      "zh": "关于Zenodo"
+    }
+  }
+}

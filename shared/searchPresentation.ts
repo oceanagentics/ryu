@@ -5,12 +5,10 @@ import type {
   ResolvedNodeLocalization,
   ReviewState,
   RyuRoute,
-  SourceRef,
   SupportedLocale,
   SystemDataDescriptorCategory,
 } from "./domain";
 import type { IndexedGraph } from "./indexGraph";
-import { resolveSourceLocalization } from "./localization";
 import { operatorNodesForSystem } from "./indexGraph";
 import {
   facetLabel,
@@ -178,27 +176,6 @@ export function getConnectedNames(
   );
 }
 
-function sourceRefs(system: GraphNode, graph: IndexedGraph): SourceRef[] {
-  const sourceIds = [
-    ...(Array.isArray(system.properties.sourceRefs) ? system.properties.sourceRefs : []),
-    ...Object.values(system.localizations).flatMap((localization) => localization?.details.profile?.sourceRefs ?? []),
-  ];
-  return [
-    ...sourceIds.flatMap((id) => {
-      const source = typeof id === "string" ? graph.sourceById[id] : null;
-      return source ? [{ id: source.id, url: source.url ?? "" }] : [];
-    }),
-    ...(system.properties.gallery ?? []).map((item) => item.source),
-    ...(system.properties.data?.descriptors ?? []).flatMap((descriptor) =>
-      descriptor.source ? [descriptor.source] : [],
-    ),
-    ...(system.properties.data?.recordCount ? [system.properties.data.recordCount.source] : []),
-    ...(system.properties.data?.storageSize ? [system.properties.data.storageSize.source] : []),
-    ...(system.properties.access ?? []).map((path) => path.source),
-    ...(system.properties.usage ?? []).map((metric) => metric.source),
-  ];
-}
-
 function descriptorLabels(
   system: GraphNode,
   category: SystemDataDescriptorCategory,
@@ -251,10 +228,10 @@ export function buildSystemRecord(
     )),
     hasCurrentLocale: Boolean(currentLocalization),
     currentLocaleReviewState: currentLocalization?.review.state ?? null,
-    sourceTitles: uniqueSorted(sourceRefs(system, graph).map((source) => {
-      const fullSource = graph.sourceById[source.id];
-      return (fullSource ? resolveSourceLocalization(fullSource, locale)?.title : null) ?? source.id;
-    })),
+    sourceTitles: uniqueSorted([
+      ...Object.values(system.sources),
+      ...getRelationships(system.id, graph).flatMap(edge => Object.values(edge.sources)),
+    ].map(source => source.title[locale] ?? source.id)),
     connectedNames,
     relationships,
     ryuRoutes,

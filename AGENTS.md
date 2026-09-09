@@ -15,7 +15,7 @@
 
 ## Research Import Workflow
 - Each research job may live in its own dated folder under `research/`.
-- A research job should include `systems.csv`, `system_links.csv`, `sources.csv`, and optional notes.
+- Historical CSV batches may include `systems.csv`, `system_links.csv`, and `sources.csv`. New imports must assemble the record API payload with sources on their owning nodes/edges; CSV source IDs are input references, not a global registry.
 - Port research imports to a Postgres-native path before using them against production data.
 - Research jobs may reference parent systems or workflow targets that were already imported by earlier jobs.
 - Do not create or maintain a separate merged central CSV registry.
@@ -55,7 +55,7 @@
 
 ## Validation Rules
 ### Nodes
-- `country`, `organization`, and `system` are flat node types.
+- `country`, `organization`, and `system` are flat node types. Do not add a `subtype` field.
 - Do not add hidden hierarchy fields. Use explicit edges for graph relationships.
 - Node IDs are globally unique, kindless slugs. Do not encode kind with prefixes such as `system-`, `org-`, or `country-`; use the `kind` field for type.
 - If a natural slug collides across node kinds, keep the most queried entity on the natural slug and add a meaning-bearing suffix such as `-operator` to the other entity.
@@ -83,8 +83,8 @@
   or inapplicable relationships. Follow `documentation/RICH_RESEARCH_RECORDS.md`.
 
 ## Provenance and Metadata
-- Store source rows in `sources`.
-- Store user-facing system prose in `node_localizations`, with embedded source refs on the relevant localized detail items.
+- Store sources in dedicated `nodes.sources` and `edges.sources` JSONB objects, keyed by owner-local source ID. Each source has exactly `id`, `url`, `title` (supported-locale map), and `accessedAt` (YYYY-MM-DD).
+- Store user-facing system prose in `node_localizations`, with source IDs on the relevant localized detail items, resolving against the node's sources. Edge citations resolve against the edge's sources; route citations resolve against the route node's sources.
 - Store language-neutral operational facts in `nodes.properties_json`.
 - Do not add or preserve identifier lists in the record model.
 - Edge metadata such as `transferMethod`, `format`, `standard`, and `artifact` belongs in `edges.properties_json`.

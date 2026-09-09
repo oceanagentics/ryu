@@ -4,13 +4,11 @@ import type {
   GraphNode,
   RyuRoute,
   SavedView,
-  Source,
 } from "./domain";
 
 export interface IndexedGraph extends GraphBootstrapPayload {
   nodeById: Record<string, GraphNode>;
   edgeById: Record<string, GraphEdge>;
-  sourceById: Record<string, Source>;
   ryuRoutesByNodeId: Record<string, RyuRoute[]>;
   outgoingByNodeId: Record<string, string[]>;
   incomingByNodeId: Record<string, string[]>;
@@ -22,7 +20,6 @@ export function indexGraph(payload: GraphBootstrapPayload): IndexedGraph {
   const edgeById = Object.fromEntries(
     payload.edges.map((edge) => [edge.id, edge]),
   );
-  const sourceById = Object.fromEntries(payload.sources.map((source) => [source.id, source]));
 
   const ryuRoutesByNodeId: Record<string, RyuRoute[]> = {};
   for (const route of payload.ryuRoutes) {
@@ -47,7 +44,6 @@ export function indexGraph(payload: GraphBootstrapPayload): IndexedGraph {
     ...payload,
     nodeById,
     edgeById,
-    sourceById,
     ryuRoutesByNodeId,
     outgoingByNodeId,
     incomingByNodeId,

@@ -43,16 +43,12 @@ function isHttpUrl(url: string): boolean {
 }
 
 function sourceUrlRecords(bootstrap: GraphBootstrapPayload): UrlRecord[] {
-  return bootstrap.sources
-    .filter((source) => source.url?.trim())
-    .sort((left, right) => left.id.localeCompare(right.id))
-    .map((source) => ({
-      tableName: "sources",
-      recordId: source.id,
-      fieldName: "url",
-      url: source.url ?? "",
-      description: null,
-    }));
+  return [...bootstrap.nodes.map(owner => ({ owner, tableName: "nodes" })),
+    ...bootstrap.edges.map(owner => ({ owner, tableName: "edges" }))]
+    .flatMap(({ owner, tableName }) => Object.values(owner.sources).map(source => ({
+      tableName, recordId: owner.id, fieldName: `sources.${source.id}.url`,
+      url: source.url, description: source.title[defaultLocale] ?? null,
+    })));
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {

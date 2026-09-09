@@ -5,7 +5,6 @@ import type {
   RyuSystemQuery,
   RyuSystemRecord,
   SavedView,
-  Source,
   SupportedLocale,
 } from "../../shared/domain";
 import type {
@@ -58,7 +57,6 @@ export interface GraphRepository {
     reviewer: string,
     options?: RecordMutationOptions,
   ): RepositoryResult<GraphNode>;
-  getSource(id: string): RepositoryResult<Source>;
   listSavedViews(): RepositoryResult<SavedView[]>;
   close?(): RepositoryResult<void>;
 }

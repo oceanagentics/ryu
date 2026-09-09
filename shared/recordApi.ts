@@ -14,7 +14,7 @@ import type {
   RecordDepth,
   ReviewState,
   RyuRoute,
-  Source,
+  SourceCollection,
   SupportedLocale,
 } from "./domain";
 
@@ -78,7 +78,6 @@ export interface RecordSearchQuery {
 export interface RecordAggregate {
   node: GraphNode;
   edges: GraphEdge[];
-  sources: Source[];
   routes: RyuRoute[];
   matchReasons: SearchMatchReason[];
   score?: number;
@@ -93,10 +92,10 @@ export interface RecordListResult {
 }
 
 export interface RecordNeutralDto {
+  sources?: SourceCollection;
   id: string;
   kind: GraphNodeKind;
   countryCode: string | null;
-  subtype: string | null;
   url: string | null;
   recordDepth: RecordDepth;
   properties?: NodeProperties | Record<string, unknown>;
@@ -108,7 +107,6 @@ export interface RecordSummaryDto {
   id: string;
   kind: GraphNodeKind;
   countryCode: string | null;
-  subtype: string | null;
   url: string | null;
   recordDepth: RecordDepth;
   title: string;
@@ -145,13 +143,6 @@ export interface AdminRecordLocalizationDto extends PublicRecordLocalizationDto 
 
 export type PrivateRecordLocalizationDto = NodeLocalization;
 
-export interface PublicSourceDto extends Omit<Source, "localPath"> {
-  localPath?: never;
-}
-
-export type AdminSourceDto = PublicSourceDto;
-export type PrivateSourceDto = Source;
-
 export interface PublicRouteDto {
   id: string;
   nodeId: string;
@@ -178,7 +169,6 @@ export type RecordLocalizationDto =
   | AdminRecordLocalizationDto
   | PrivateRecordLocalizationDto;
 
-export type RecordSourceDto = PublicSourceDto | AdminSourceDto | PrivateSourceDto;
 export type RecordRouteDto = PublicRouteDto | AdminRouteDto | PrivateRouteDto;
 
 export interface RecordDetailDto extends RecordSummaryDto {
@@ -186,7 +176,6 @@ export interface RecordDetailDto extends RecordSummaryDto {
   record: RecordNeutralDto;
   localizations?: Partial<Record<SupportedLocale, RecordLocalizationDto>>;
   edges?: GraphEdge[];
-  sources?: RecordSourceDto[];
   routes?: RecordRouteDto[];
 }
 
@@ -206,31 +195,22 @@ export interface LocalizationContentInput {
 }
 
 export interface RecordNeutralContentInput {
+  sources?: SourceCollection;
   kind: GraphNodeKind;
   countryCode?: string | null;
-  subtype?: string | null;
   url?: string | null;
   recordDepth?: RecordDepth;
   properties?: NodeProperties | Record<string, unknown>;
 }
 
 export interface RecordEdgeInput {
+  sources?: SourceCollection;
   id: string;
   sourceNodeId: string;
   targetNodeId: string;
   kind: GraphEdgeKind;
   note?: string | null;
   properties?: Record<string, unknown>;
-}
-
-export interface SourceLocalizationContentInput {
-  title: string;
-  note?: string | null;
-  translatedFromLocale?: SupportedLocale | null;
-}
-
-export interface RecordSourceInput extends Omit<Source, "localizations"> {
-  localizations?: Partial<Record<SupportedLocale, SourceLocalizationContentInput>>;
 }
 
 export interface RecordRouteInput {
@@ -253,17 +233,14 @@ export interface RecordAggregateContentInput {
   record: RecordNeutralContentInput;
   localizations?: Partial<Record<SupportedLocale, LocalizationContentInput>>;
   edges?: RecordEdgeInput[];
-  sources?: {
-    upsert?: RecordSourceInput[];
-  };
   routes?: RecordRouteInput[];
   incomplete?: boolean;
 }
 
 export interface RecordNeutralPatchInput {
+  sourcesReplace?: SourceCollection;
   kind?: GraphNodeKind;
   countryCode?: string | null;
-  subtype?: string | null;
   url?: string | null;
   recordDepth?: RecordDepth;
   propertiesReplace?: NodeProperties | Record<string, unknown>;
@@ -285,9 +262,6 @@ export interface RecordPatchInput {
   edges?: {
     upsert?: RecordEdgeInput[];
     delete?: string[];
-  };
-  sources?: {
-    upsert?: RecordSourceInput[];
   };
   routes?: {
     upsert?: RecordRouteInput[];
@@ -351,6 +325,5 @@ export interface RecordDeleteImpact {
   outboundEdges: number;
   routeRows: number;
   affectedSavedViews: string[];
-  orphanedSourceCandidates: string[];
   impactHash: string;
 }

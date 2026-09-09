@@ -12,8 +12,8 @@ import { searchRecords } from "./recordSearch";
 
 function node(id: string, kind: GraphNodeKind = "system", title = id): GraphNode {
   return {
-    id, kind, countryCode: null, subtype: null, url: null, recordDepth: "stub",
-    createdAt: "2026-09-07", updatedAt: "2026-09-07", properties: {}, availableLocales: ["en"], requestedLocale: "en", displayLocale: "en", isLocaleFallback: false,
+    id, kind, countryCode: null, url: null, recordDepth: "stub",
+    createdAt: "2026-09-07", updatedAt: "2026-09-07", properties: {}, sources: {}, availableLocales: ["en"], requestedLocale: "en", displayLocale: "en", isLocaleFallback: false,
     localizations: { en: { locale: "en", title, summary: null, description: null,
       details: emptyLocalizationDetails(), translatedFromLocale: null, contentUpdatedAt: "2026-09-07",
       review: { state: "agent_researched", note: null, reviewer: null, date: null },
@@ -23,7 +23,7 @@ function node(id: string, kind: GraphNodeKind = "system", title = id): GraphNode
 }
 
 function search(nodes: GraphNode[], input: Record<string, unknown>, routes: RyuRoute[] = []) {
-  return searchRecords(indexGraph({ nodes, edges: [], sources: [], ryuRoutes: routes, savedViews: [] }), readRecordSearchQuery(input));
+  return searchRecords(indexGraph({ nodes, edges: [], ryuRoutes: routes, savedViews: [] }), readRecordSearchQuery(input));
 }
 
 test("aliases match every record kind in the displayed localization, with English fallback", () => {
@@ -76,11 +76,11 @@ test("filters intersect across groups and OR within groups, using typed access a
   const record = node("filtered");
   record.recordDepth = "rich";
   record.properties = { disciplines: ["ecology", "taxonomy"], geographicScope: "Global",
-    access: [{ id: "api", type: "read", method: "api", url: "https://example.org", source: { id: "src-api", url: "https://example.org" } }],
+    access: [{ id: "api", type: "read", method: "api", url: "https://example.org", source: "src-api" }],
     data: { recordCount: null, storageSize: null, descriptors: [
-      { id: "type", category: "type", label: "occurrence_records", source: { id: "src-api", url: "https://example.org" } },
-      { id: "format", category: "format", label: "geojson", source: { id: "src-api", url: "https://example.org" } },
-      { id: "standard", category: "standard", label: "dwc", source: { id: "src-api", url: "https://example.org" } },
+      { id: "type", category: "type", label: "occurrence_records", source: "src-api" },
+      { id: "format", category: "format", label: "geojson", source: "src-api" },
+      { id: "standard", category: "standard", label: "dwc", source: "src-api" },
     ] },
   };
   const filters = { kind: "system", disciplines: "ecology,genetics",
@@ -119,7 +119,7 @@ test("discipline tags are independently searchable and produce localized, dedupl
   first.properties.disciplines = ["ecology", "taxonomy"];
   const second = node("second");
   second.properties.disciplines = ["taxonomy", "marine_biology"];
-  const graph = indexGraph({ nodes: [first, second, node("generalist")], edges: [], sources: [], ryuRoutes: [], savedViews: [] });
+  const graph = indexGraph({ nodes: [first, second, node("generalist")], edges: [], ryuRoutes: [], savedViews: [] });
   const records = buildSystemRecords(graph, "fr");
   assert.deepEqual(records.map(record => record.disciplines), [["ecology", "taxonomy"], ["taxonomy", "marine_biology"], []]);
   assert.deepEqual(getSystemFilterOptions(records, "fr").disciplines, [
@@ -142,7 +142,7 @@ test("data type search and display use canonical translations and preserve recor
   const resolved = systemDataDescriptors(record, resolveNodeLocalization(record, "fr"))[0];
   assert.equal(resolved.localizedLabel, "Registres taxonomiques");
   assert.equal(resolved.description, "Nomenclatural evidence");
-  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], sources: [], ryuRoutes: [], savedViews: [] });
+  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [], savedViews: [] });
   assert.deepEqual(getSystemFilterOptions(buildSystemRecords(graph, "fr"), "fr").dataClaims.type, [
     { value: "taxonomic_records", label: "Registres taxonomiques" },
   ]);
@@ -160,7 +160,7 @@ test("route matching respects DTO visibility and route filters", () => {
   const route: RyuRoute = { id: "route", nodeId: record.id, status: "active", mode: "live_api", priority: 1,
     target: "secretEndpointMarker", upstream: "privateUpstreamMarker", capabilities: ["download"], format: "netcdf",
     contractRef: null, caveat: null, properties: {}, createdAt: "2026-09-07", updatedAt: "2026-09-07" };
-  const graph = indexGraph({ nodes: [record], sources: [], edges: [], ryuRoutes: [route], savedViews: [] });
+  const graph = indexGraph({ nodes: [record], edges: [], ryuRoutes: [route], savedViews: [] });
   for (const q of ["secretEndpointMarker", "privateUpstreamMarker"]) {
     assert.equal(searchRecords(graph, { ...readRecordSearchQuery({ q }), scope: "public" }).length, 0);
     assert.equal(searchRecords(graph, { ...readRecordSearchQuery({ q }), scope: "admin" }).length, 1);

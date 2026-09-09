@@ -270,9 +270,49 @@ curl -sS https://chm.oceanagentics.org/explorer/api/graph/bootstrap
 
 Unauthenticated `/explorer` should return public read-only Explorer. The public
 bootstrap should return graph JSON with reviewer metadata, raw review JSON,
-route targets, and source local paths redacted. Unauthenticated
+and route targets redacted. Source collections contain only public citation fields. Unauthenticated
 `/explorer/admin` should redirect through IAP before reaching Explorer admin.
 
 Agent API verification should use a bearer token against
 `https://chm.oceanagentics.org/api/records`. The signed-in browser check should
 exercise direct Explorer/IAP review at `/explorer/admin`.
+
+## Owned Sources Cutover
+
+`011_owned_sources.sql` adds dedicated `nodes.sources` and `edges.sources`, copies
+referenced legacy sources/title translations to their owners, converts embedded
+`{id,url}` citations to IDs, validates shape/reference/title coverage, and drops
+the global source tables. It rolls back on missing sources, conflicting URLs,
+invalid dates, or missing required translations; never manufacture missing data.
+
+Build and verify the matching API/public/admin images before the maintenance
+window. Back up Cloud SQL, stop content writers and traffic to old revisions,
+then apply 011 with schema credentials and deploy all three matching services.
+Do not serve the old app after dropping its source tables. Smoke-test record
+reads, localization/source writes and both endpoint views, then resume traffic
+and regenerate the public bootstrap export. Rolling back requires restoring the
+pre-cutover database along with the old application images.
+
+The application must fail fast if the owned source columns are missing; production
+must not fall back to the bootstrap export. Historical source metadata beyond the
+four retained fields is removed by this migration.
+
+Preflight on 2026-09-09 read the canonical public bootstrap: 146 nodes, 119
+edges, and 172 legacy sources. It found 357 owner/source pairs missing required
+title translations: 151 distinct sources need 755 source/locale translations.
+This is a public-data audit; route data is redacted. The
+configured bearer token returned HTTP 401 on the authenticated bootstrap, so the
+private-route audit and production migration remain pending. Complete the source
+title translations and authenticate the full audit before scheduling cutover.
+No production schema or source data was changed by this implementation.
+
+The authenticated pre-cutover audit subsequently verified 134 nodes, 119 edges,
+659 localizations, and all 10 routes. The token works on `/api/records`; the
+earlier `/api/graph/bootstrap` request reached the CHM IAP route. The full audit
+confirmed 755 missing titles across 151 sources. `server/schema/011_source_titles.json`
+contains the translated titles plus the expected English text so the migration
+runner can reject concurrent changes. Insert only missing required translations,
+then apply 011 in the same transaction. Rehearse with rollback and compare all
+record content, review histories, source collections, and row counts before apply.
+The release also removes the already-retired node subtype column after legacy
+application traffic has stopped.

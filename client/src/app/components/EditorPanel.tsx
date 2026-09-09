@@ -25,16 +25,14 @@ import type {
   GraphEdge,
   GraphNode,
   GraphNodeKind,
-  Source,
   SupportedLocale,
 } from "../../../../shared/domain";
 import { fetchBootstrap } from "../api";
 import { edgeKinds } from "../../../../shared/domain";
-import { resolveSourceLocalization } from "../../../../shared/localization";
 import { nodeTitle } from "../localization";
 import { useGraphStore } from "../state/graphStore";
 
-type EditorMode = "entity" | "relationship" | "source";
+type EditorMode = "entity" | "relationship";
 
 type MessageState = {
   kind: "success" | "error";
@@ -50,7 +48,6 @@ type EntityDraft = {
   kind: GraphNodeKind;
   name: string;
   countryCode: string;
-  subtype: string;
   properties: PropertyDraft[];
 };
 
@@ -62,24 +59,12 @@ type RelationshipDraft = {
   properties: PropertyDraft[];
 };
 
-type SourceDraft = {
-  title: string;
-  sourceType: string;
-  url: string;
-  localPath: string;
-  publisher: string;
-  publishedAt: string;
-  accessedAt: string;
-  note: string;
-};
-
 const entityKindOptions = ["country", "organization", "system"] as const;
 
 const blankEntityDraft = (): EntityDraft => ({
   kind: "organization",
   name: "",
   countryCode: "",
-  subtype: "",
   properties: [],
 });
 
@@ -89,17 +74,6 @@ const blankRelationshipDraft = (): RelationshipDraft => ({
   kind: "publishes_to",
   note: "",
   properties: [],
-});
-
-const blankSourceDraft = (): SourceDraft => ({
-  title: "",
-  sourceType: "",
-  url: "",
-  localPath: "",
-  publisher: "",
-  publishedAt: "",
-  accessedAt: "",
-  note: "",
 });
 
 function toPropertyDrafts(properties: Record<string, unknown>): PropertyDraft[] {
@@ -145,7 +119,6 @@ function entityToDraft(entity: GraphNode, locale: SupportedLocale): EntityDraft 
     kind: entity.kind,
     name: nodeTitle(entity, locale),
     countryCode: entity.countryCode ?? "",
-    subtype: entity.subtype ?? "",
     properties: toPropertyDrafts(entity.properties ?? {}),
   };
 }
@@ -157,20 +130,6 @@ function relationshipToDraft(relationship: GraphEdge): RelationshipDraft {
     kind: relationship.kind,
     note: relationship.note ?? "",
     properties: toPropertyDrafts(relationship.properties ?? {}),
-  };
-}
-
-function sourceToDraft(source: Source, locale: SupportedLocale): SourceDraft {
-  const localization = resolveSourceLocalization(source, locale);
-  return {
-    title: localization?.title ?? source.id,
-    sourceType: source.sourceType,
-    url: source.url ?? "",
-    localPath: source.localPath ?? "",
-    publisher: source.publisher ?? "",
-    publishedAt: source.publishedAt ?? "",
-    accessedAt: source.accessedAt ?? "",
-    note: localization?.note ?? "",
   };
 }
 
@@ -189,23 +148,12 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
 
   const [entityForm] = Form.useForm<EntityDraft>();
   const [relationshipForm] = Form.useForm<RelationshipDraft>();
-  const [sourceForm] = Form.useForm<SourceDraft>();
 
   const [mode, setMode] = useState<EditorMode>("entity");
-  const [sourceEditorId, setSourceEditorId] = useState<string | null>(null);
   const [isEditing, setIsEditing] = useState(false);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<MessageState | null>(null);
 
-  const sourceOptions = useMemo(
-    () =>
-      graph
-        ? [...graph.sources]
-            .map((source) => ({ label: resolveSourceLocalization(source, locale)?.title ?? source.id, value: source.id }))
-            .sort((a, b) => a.label.localeCompare(b.label))
-        : [],
-    [graph, locale],
-  );
   const entityOptions = useMemo(
     () =>
       graph
@@ -248,21 +196,6 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
     setMessage(null);
   }, [graph, relationshipForm, selectedRelationshipId]);
 
-  useEffect(() => {
-    if (!graph || !sourceEditorId) {
-      return;
-    }
-
-    const source = graph.sourceById[sourceEditorId];
-    if (!source) {
-      return;
-    }
-
-    setMode("source");
-    sourceForm.setFieldsValue(sourceToDraft(source, locale));
-    setMessage(null);
-  }, [graph, locale, sourceEditorId, sourceForm]);
-
   if (!graph) {
     return null;
   }
@@ -271,18 +204,15 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
   const selectedRelationship = selectedRelationshipId
     ? graph.edgeById[selectedRelationshipId]
     : null;
-  const selectedSource = sourceEditorId ? graph.sourceById[sourceEditorId] : null;
 
   const viewingEntity = mode === "entity" ? selectedEntity : null;
   const viewingRelationship = mode === "relationship" ? selectedRelationship : null;
-  const viewingSource = mode === "source" ? selectedSource : null;
-  const sourceLocalization = viewingSource ? resolveSourceLocalization(viewingSource, locale) : undefined;
 
   const entityProperties = viewingEntity ? toPropertyDrafts(viewingEntity.properties ?? {}) : [];
   const relationshipProperties = viewingRelationship
     ? toPropertyDrafts(viewingRelationship.properties ?? {})
     : [];
-  const hasSelection = Boolean(viewingEntity || viewingRelationship || viewingSource);
+  const hasSelection = Boolean(viewingEntity || viewingRelationship);
 
   async function refreshGraph() {
     const payload = await fetchBootstrap();
@@ -308,20 +238,13 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
       return;
     }
 
-    if (viewingSource) {
-      sourceForm.setFieldsValue(sourceToDraft(viewingSource, locale));
-      return;
-    }
-
     entityForm.setFieldsValue(blankEntityDraft());
     relationshipForm.setFieldsValue(blankRelationshipDraft());
-    sourceForm.setFieldsValue(blankSourceDraft());
   }
 
   function startNewEntity() {
     setMode("entity");
     setIsEditing(true);
-    setSourceEditorId(null);
     setSelectedEntityId(null);
     setSelectedRelationshipId(null);
     entityForm.setFieldsValue(blankEntityDraft());
@@ -331,20 +254,9 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
   function startNewRelationship() {
     setMode("relationship");
     setIsEditing(true);
-    setSourceEditorId(null);
     setSelectedEntityId(null);
     setSelectedRelationshipId(null);
     relationshipForm.setFieldsValue(blankRelationshipDraft());
-    setMessage(null);
-  }
-
-  function startSourceEditor() {
-    setMode("source");
-    setIsEditing(!readOnly);
-    setSourceEditorId(null);
-    setSelectedEntityId(null);
-    setSelectedRelationshipId(null);
-    sourceForm.setFieldsValue(blankSourceDraft());
     setMessage(null);
   }
 
@@ -384,13 +296,9 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
     ? `${isEditing ? "Editing" : "Viewing"} node: ${nodeTitle(viewingEntity, locale)}`
     : viewingRelationship
       ? `${isEditing ? "Editing" : "Viewing"} edge: ${viewingRelationship.kind}`
-      : viewingSource
-        ? `${isEditing ? "Editing" : "Viewing"} source: ${sourceLocalization?.title ?? viewingSource.id}`
         : isEditing
           ? mode === "relationship"
             ? "Creating a new edge."
-            : mode === "source"
-              ? "Editing a source record."
               : "Creating a new node."
           : readOnly
             ? "Click a node or edge in the graph to inspect it here."
@@ -402,8 +310,7 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
 
   const canDelete =
     (mode === "entity" && Boolean(selectedEntityId)) ||
-    (mode === "relationship" && Boolean(selectedRelationshipId)) ||
-    (mode === "source" && Boolean(sourceEditorId));
+    (mode === "relationship" && Boolean(selectedRelationshipId));
 
   return (
     <Card
@@ -423,9 +330,6 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
               </Button>
               <Button size="small" onClick={startNewRelationship}>
                 New edge
-              </Button>
-              <Button size="small" onClick={startSourceEditor}>
-                Source
               </Button>
             </>
           ) : null}
@@ -459,9 +363,6 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
                 { key: "kind", label: "Kind", children: viewingEntity.kind },
                 viewingEntity.kind === "country" && viewingEntity.countryCode
                   ? { key: "country", label: "Country", children: viewingEntity.countryCode }
-                  : null,
-                viewingEntity.subtype
-                  ? { key: "subtype", label: "Subtype", children: viewingEntity.subtype }
                   : null,
               ].filter(Boolean) as NonNullable<
                 Parameters<typeof Descriptions>[0]["items"]
@@ -508,33 +409,6 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
           </Flex>
         ) : null}
 
-        {!isEditing && viewingSource ? (
-          <Descriptions
-            bordered
-            column={1}
-            size="small"
-            items={[
-              { key: "type", label: "Type", children: viewingSource.sourceType },
-              viewingSource.url ? { key: "url", label: "URL", children: viewingSource.url } : null,
-              viewingSource.localPath
-                ? { key: "path", label: "Local path", children: viewingSource.localPath }
-                : null,
-              viewingSource.publisher
-                ? { key: "publisher", label: "Publisher", children: viewingSource.publisher }
-                : null,
-              viewingSource.publishedAt
-                ? { key: "published", label: "Published", children: viewingSource.publishedAt }
-                : null,
-              viewingSource.accessedAt
-                ? { key: "accessed", label: "Accessed", children: viewingSource.accessedAt }
-                : null,
-              sourceLocalization?.note
-                ? { key: "note", label: "Note", children: sourceLocalization.note }
-                : null,
-            ].filter(Boolean) as NonNullable<Parameters<typeof Descriptions>[0]["items"]>}
-          />
-        ) : null}
-
         {!readOnly && isEditing && mode === "entity" ? (
           <Form form={entityForm} layout="vertical">
             <Form.Item label="Kind" name="kind" rules={[{ required: true }]}>
@@ -555,9 +429,6 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
                   <Input />
                 </Form.Item>
               ) : null}
-            </Form.Item>
-            <Form.Item label="Subtype" name="subtype">
-              <Input />
             </Form.Item>
             <PropertyEditor name="properties" emptyText="No properties for this node." />
           </Form>
@@ -591,60 +462,6 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
               <Input.TextArea rows={3} />
             </Form.Item>
             <PropertyEditor name="properties" emptyText="No properties for this edge." />
-          </Form>
-        ) : null}
-
-        {!readOnly && isEditing && mode === "source" ? (
-          <Form form={sourceForm} layout="vertical">
-            <Form.Item label="Edit source">
-              <Select
-                allowClear
-                value={sourceEditorId ?? undefined}
-                placeholder="New source"
-                options={sourceOptions}
-                onChange={(value) => {
-                  const nextId = value ?? null;
-                  setSourceEditorId(nextId);
-                  if (!nextId) {
-                    sourceForm.setFieldsValue(blankSourceDraft());
-                  }
-                }}
-              />
-            </Form.Item>
-            <Form.Item
-              label="Title"
-              name="title"
-              rules={[{ required: true, whitespace: true, message: "Enter a title." }]}
-            >
-              <Input />
-            </Form.Item>
-            <Form.Item
-              label="Source type"
-              name="sourceType"
-              rules={[{ required: true, whitespace: true, message: "Enter a source type." }]}
-            >
-              <Input />
-            </Form.Item>
-            <Form.Item label="URL" name="url">
-              <Input />
-            </Form.Item>
-            <Form.Item label="Local path" name="localPath">
-              <Input />
-            </Form.Item>
-            <Form.Item label="Publisher" name="publisher">
-              <Input />
-            </Form.Item>
-            <Flex gap={12}>
-              <Form.Item className="half-width" label="Published" name="publishedAt">
-                <Input />
-              </Form.Item>
-              <Form.Item className="half-width" label="Accessed" name="accessedAt">
-                <Input />
-              </Form.Item>
-            </Flex>
-            <Form.Item label="Note" name="note">
-              <Input.TextArea rows={4} />
-            </Form.Item>
           </Form>
         ) : null}
 

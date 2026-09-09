@@ -29,11 +29,11 @@ import type {
   ReviewState,
   RyuRoute,
   SourceRef,
+  SourceCollection,
   SupportedLocale,
   SystemDataDescriptorCategory,
 } from "../../../../shared/domain";
 import type { RecordDetailDto, RecordLocalizationDto } from "../../../../shared/recordApi";
-import { resolveSourceLocalization } from "../../../../shared/localization";
 import { fetchRecord, updateNodeLocalizationReview } from "../api";
 import { appPath, canReviewNodes, isPublicApp } from "../config";
 import {
@@ -123,49 +123,23 @@ function DetailSection({
   );
 }
 
-function SourceLink({ source }: { source: SourceRef }) {
+function SourceLink({ source, sources }: { source: SourceRef; sources?: SourceCollection }) {
   const locale = useGraphStore((state) => state.locale);
-  const fullSource = useGraphStore((state) => state.graph?.sourceById[source.id]);
-  const localizedSource = fullSource ? resolveSourceLocalization(fullSource, locale) : undefined;
-  const sourceTitle = localizedSource?.title ?? source.id;
-  const sourceNote = localizedSource?.note;
-  const sourceUrl = fullSource?.url ?? source.url;
+  const nodeSource = useGraphStore((state) => state.selectedEntityId ? state.graph?.nodeById[state.selectedEntityId]?.sources[source] : undefined);
+  const fullSource = sources ? sources[source] : nodeSource;
+  const sourceTitle = fullSource?.title[locale] ?? source;
   const tooltip = fullSource ? (
     <Flex className="source-record-tooltip" vertical gap={2}>
       <Typography.Text strong>{sourceTitle}</Typography.Text>
       <Typography.Text>{t(locale, "source.id")}: {fullSource.id}</Typography.Text>
-      <Typography.Text>
-        {t(locale, "source.type")}: {facetLabel(locale, "sourceType", fullSource.sourceType)}
-      </Typography.Text>
-      {fullSource.publisher ? (
-        <Typography.Text>{t(locale, "source.publisher")}: {fullSource.publisher}</Typography.Text>
-      ) : null}
-      {fullSource.publishedAt ? (
-        <Typography.Text>{t(locale, "source.published")}: {fullSource.publishedAt}</Typography.Text>
-      ) : null}
-      {fullSource.accessedAt ? (
-        <Typography.Text>{t(locale, "source.accessed")}: {fullSource.accessedAt}</Typography.Text>
-      ) : null}
-      {fullSource.url ? (
-        <Typography.Text>{t(locale, "source.url")}: {fullSource.url}</Typography.Text>
-      ) : null}
-      {fullSource.localPath ? (
-        <Typography.Text>{t(locale, "source.localPath")}: {fullSource.localPath}</Typography.Text>
-      ) : null}
-      {sourceNote ? <Typography.Text>{sourceNote}</Typography.Text> : null}
+      <Typography.Text>{t(locale, "source.accessed")}: {fullSource.accessedAt}</Typography.Text>
+      <Typography.Text>{t(locale, "source.url")}: {fullSource.url}</Typography.Text>
     </Flex>
-  ) : (
-    t(locale, "source.notLoaded", { id: source.id })
-  );
-
+  ) : t(locale, "source.notLoaded", { id: source });
   return (
     <span className="source-record-link">
-      <Typography.Link href={sourceUrl} target="_blank" rel="noreferrer">
-        {sourceTitle}
-      </Typography.Link>
-      <Tooltip title={tooltip}>
-        <InfoCircleOutlined className="source-record-info-icon" />
-      </Tooltip>
+      <Typography.Link href={fullSource?.url} target="_blank" rel="noreferrer">{sourceTitle}</Typography.Link>
+      <Tooltip title={tooltip}><InfoCircleOutlined className="source-record-info-icon" /></Tooltip>
     </span>
   );
 }
@@ -640,7 +614,6 @@ function RawRecordFields({
   ryuRoutes: RyuRoute[];
 }) {
   const locale = useGraphStore((state) => state.locale);
-  const sourceById = useGraphStore((state) => state.graph?.sourceById);
   const [record, setRecord] = useState<RecordDetailDto>();
   const [failed, setFailed] = useState(false);
 
@@ -661,10 +634,10 @@ function RawRecordFields({
       id: node.id,
       kind: node.kind,
       country_code: node.countryCode,
-      subtype: node.subtype,
       url: node.url,
       record_depth: node.recordDepth,
       properties_json: node.properties ?? entity.properties,
+      sources: node.sources,
       created_at: node.createdAt,
       updated_at: node.updatedAt,
     }],
@@ -704,36 +677,17 @@ function RawRecordFields({
       kind: relationship.kind,
       note: relationship.note,
       properties_json: relationship.properties,
+      sources: relationship.sources,
       created_at: relationship.createdAt,
       updated_at: relationship.updatedAt,
     })),
-    sources: (record.sources ?? []).map((source) => ({
-      id: source.id,
-      source_type: source.sourceType,
-      url: source.url,
-      local_path: "localPath" in source ? source.localPath : sourceById?.[source.id]?.localPath,
-      publisher: source.publisher,
-      published_at: source.publishedAt,
-      accessed_at: source.accessedAt,
-    })),
-    sources_localizations: (record.sources ?? []).flatMap((source) =>
-      Object.values(source.localizations).flatMap((localization) => localization ? [{
-        source_id: source.id,
-        locale: localization.locale,
-        title: localization.title,
-        note: localization.note,
-        translated_from_locale: localization.translatedFromLocale,
-        content_updated_at: localization.contentUpdatedAt,
-        created_at: localization.createdAt,
-        updated_at: localization.updatedAt,
-      }] : [])),
   };
 
   return (
     <Collapse
       defaultActiveKey={[`nodes:${node.id}`]}
       items={Object.entries(tables).flatMap(([table, rows]) => rows.map((row) => {
-        const id = "id" in row ? row.id : `${"node_id" in row ? row.node_id : row.source_id} / ${row.locale}`;
+        const id = "id" in row ? row.id : `${row.node_id} / ${row.locale}`;
         return {
           key: `${table}:${id}`,
           label: `${table} · ${id}`,
@@ -833,11 +787,6 @@ export function EntityDetailsPanel({
               {entity.kind === "country" ? (
                 <InlineField label={t(locale, "details.country")}>
                   {entity.countryCode ?? <EmptyValue />}
-                </InlineField>
-              ) : null}
-              {entity.kind === "organization" ? (
-                <InlineField label={t(locale, "details.subtype")}>
-                  {entity.subtype ? facetLabel(locale, "subtype", entity.subtype) : <EmptyValue />}
                 </InlineField>
               ) : null}
             </>
@@ -959,6 +908,7 @@ export function EntityDetailsPanel({
                   <Typography.Text className="entity-detail-caption" type="secondary">
                     {relationshipLabel(relationship, entity.id, locale)}
                   </Typography.Text>
+                  {Object.keys(relationship.sources).map(id => <SourceLink key={id} source={id} sources={relationship.sources} />)}
                 </Flex>
               </List.Item>
             );

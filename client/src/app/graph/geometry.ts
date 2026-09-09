@@ -61,9 +61,7 @@ function italicSansDisplayText(value: string): string {
 }
 
 export function buildLabel(node: GraphNode, locale: SupportedLocale): string {
-  const typeLabel = node.subtype
-    ? facetLabel(locale, "subtype", node.subtype)
-    : facetLabel(locale, "nodeKind", node.kind);
+  const typeLabel = facetLabel(locale, "nodeKind", node.kind);
   return `${boldSansDisplayText(nodeTitle(node, locale))}\n${italicSansDisplayText(typeLabel)}`;
 }
 

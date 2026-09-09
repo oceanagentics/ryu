@@ -1,11 +1,10 @@
-import type { GraphNode, ResolvedNodeLocalization, SourceRef, SupportedLocale, SystemDataDescriptorCategory } from "../../shared/domain";
+import type { GraphNode, ResolvedNodeLocalization, Source, SupportedLocale, SystemDataDescriptorCategory } from "../../shared/domain";
 import type { IndexedGraph } from "../../shared/indexGraph";
 import type { RecordSearchQuery } from "../../shared/recordApi";
-import { defaultLocale, resolveSourceLocalization, supportedLocales } from "../../shared/localization";
+import { defaultLocale, supportedLocales } from "../../shared/localization";
 import { nodeTitle, resolveNodeDisplay, systemAccessPaths, systemDataDescriptors, systemGallery } from "../../shared/recordDisplay";
 import { facetLabel, t, type UiMessageKey } from "../../shared/i18n";
 import { buildSystemRecords, getRelationships, getConnectedNames, type SearchMatchReason, type SystemSearchRecord } from "../../shared/searchPresentation";
-import { collectSourceIds } from "./graphRepositorySupport";
 
 export type EntitySearchResult = {
   entity: GraphNode;
@@ -105,33 +104,12 @@ function getCountryValues(
   ]);
 }
 
-function sourceRefs(entity: GraphNode, graph: IndexedGraph): SourceRef[] {
-  const ids = new Set<string>();
-  collectSourceIds(entity.properties, ids);
-  Object.values(entity.localizations).forEach(value => collectSourceIds(value?.details, ids));
-  getRelationships(entity.id, graph).forEach(edge => collectSourceIds(edge.properties, ids));
-  (graph.ryuRoutesByNodeId[entity.id] ?? []).forEach(route => collectSourceIds(route.properties, ids));
-  return [...ids].flatMap(id => graph.sourceById[id] ? [{ id, url: graph.sourceById[id].url ?? "" }] : []);
+function sourceRefs(entity: GraphNode, graph: IndexedGraph): Source[] {
+  return [...Object.values(entity.sources), ...getRelationships(entity.id, graph).flatMap(edge => Object.values(edge.sources))];
 }
 
-function sourceValues(
-  source: SourceRef,
-  graph: IndexedGraph,
-  locale: SupportedLocale,
-  mode: RecordSearchQuery["localeMode"],
-): string[] {
-  const fullSource = graph.sourceById[source.id];
-  if (!fullSource) return [];
-  const localizations = mode === "display_locale"
-    ? [resolveSourceLocalization(fullSource, locale)]
-    : Object.values(fullSource.localizations).filter(value => value && (
-        mode === "all_locales" || value.locale === locale ||
-        (mode === "locale_with_fallbacks" && value.locale === defaultLocale)
-      ));
-  return collectText([
-    localizations.flatMap(value => [value?.title, value?.note]), source.url,
-    fullSource.sourceType, facetLabel(locale, "sourceType", fullSource.sourceType), fullSource.publisher,
-  ]);
+function sourceValues(source: Source, locale: SupportedLocale, mode: RecordSearchQuery["localeMode"]): string[] {
+  return collectText([source.url, mode === "all_locales" ? Object.values(source.title) : source.title[locale]]);
 }
 
 function descriptorValues(
@@ -179,20 +157,11 @@ function withCommonFields(
       getValues: (entity, graph, context) => getCountryValues(entity, graph, context.locale),
     },
     {
-      field: "subtype",
-      label: "search.field.subtype",
-      weight: 60,
-      getValues: (entity, _graph, context) => [
-        entity.subtype,
-        entity.subtype ? facetLabel(context.locale, "subtype", entity.subtype) : null,
-      ],
-    },
-    {
       field: "sources",
       label: "search.field.source",
       weight: 18,
       getValues: (entity, graph, context) => sourceRefs(entity, graph)
-        .flatMap((source) => sourceValues(source, graph, context.locale, context.localeMode)),
+        .flatMap((source) => sourceValues(source, context.locale, context.localeMode)),
     },
     {
       field: "aliases",

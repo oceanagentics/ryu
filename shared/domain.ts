@@ -51,31 +51,15 @@ export const dataTypes = [
 
 export type DataType = (typeof dataTypes)[number];
 
-export interface SourceLocalization {
-  locale: SupportedLocale;
-  title: string;
-  note: string | null;
-  translatedFromLocale: SupportedLocale | null;
-  contentUpdatedAt: string;
-  createdAt: string;
-  updatedAt: string;
-}
-
 export interface Source {
   id: string;
-  sourceType: string;
-  url: string | null;
-  localPath: string | null;
-  publisher: string | null;
-  publishedAt: string | null;
-  accessedAt: string | null;
-  localizations: Partial<Record<SupportedLocale, SourceLocalization>>;
+  url: string;
+  title: Partial<Record<SupportedLocale, string>>;
+  accessedAt: string;
 }
 
-export interface SourceRef {
-  id: string;
-  url: string;
-}
+export type SourceCollection = Record<string, Source>;
+export type SourceRef = string;
 
 export type SystemDataDescriptorCategory = "type" | "format" | "standard";
 
@@ -228,10 +212,10 @@ export interface GraphNode {
   id: string;
   kind: GraphNodeKind;
   countryCode: string | null;
-  subtype: string | null;
   url: string | null;
   recordDepth: RecordDepth;
   properties: NodeProperties;
+  sources: SourceCollection;
   createdAt: string;
   updatedAt: string;
   localizations: NodeLocalizationMap;
@@ -242,6 +226,7 @@ export interface GraphNode {
 }
 
 export interface GraphEdge {
+  sources: SourceCollection;
   id: string;
   sourceNodeId: string;
   targetNodeId: string;
@@ -267,21 +252,6 @@ export interface RyuRoute {
   properties: Record<string, unknown>;
   createdAt: string;
   updatedAt: string;
-}
-
-export interface RyuPortalSource {
-  ryuSourceId: string;
-  title: string;
-  sourceType: string;
-  provider: string | null;
-  originalUrl: string | null;
-  ryuUrl: string;
-  localPath: string | null;
-  citation: string | null;
-  license: string | null;
-  updateCadence: string | null;
-  accessedAt: string | null;
-  caveats: string[];
 }
 
 export interface RyuPortalRoute {
@@ -324,7 +294,7 @@ export interface RyuSystemRecord {
   geographies: string[];
   capabilities: string[];
   routes: RyuPortalRoute[];
-  sources: RyuPortalSource[];
+  sources: SourceCollection;
   caveats: string[];
   recordDepth: RecordDepth;
   reviewState: ReviewState | null;
@@ -356,7 +326,6 @@ export interface SavedView {
 export interface GraphBootstrapPayload {
   nodes: GraphNode[];
   edges: GraphEdge[];
-  sources: Source[];
   ryuRoutes: RyuRoute[];
   savedViews: SavedView[];
 }

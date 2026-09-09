@@ -5,12 +5,11 @@ import { PGlite } from "@electric-sql/pglite";
 
 import type { Pool } from "pg";
 
-import type { RecordAggregateContentInput, RecordSourceInput } from "../../shared/recordApi";
+import type { RecordAggregateContentInput } from "../../shared/recordApi";
 import { dataTypes } from "../../shared/domain";
 import { PostgresGraphRepository } from "./postgresGraphRepository";
 import { buildRecordUpdatedAt, readRecordAggregateContentInput, readRecordPatchInput, readRecordSearchQuery, toDefaultRecordDetailDto, validateRecordQuality } from "./recordContracts";
 import { collectSourceIds } from "./graphRepositorySupport";
-import { resolveSourceLocalization } from "../../shared/localization";
 
 class FakePoolClient {
   calls: string[] = [];
@@ -65,21 +64,6 @@ test("rolls back transactional record upserts when a related row write fails", a
   assert.equal(client.released, true);
 });
 
-test("upserts only explicitly supplied source localization rows", async () => {
-  const client = new FakePoolClient();
-  const repository = new PostgresGraphRepository({} as Pool);
-  const source: RecordSourceInput = structuredClone(richRecordFixture().sources.upsert[0]);
-  const english = source.localizations?.en;
-  assert.ok(english);
-  source.localizations = { en: english };
-  await (repository as unknown as {
-    upsertSources(client: unknown, sources: RecordSourceInput[]): Promise<void>;
-  }).upsertSources(client, [source]);
-  const writes = client.queries.filter(query => query.sql.includes("INSERT INTO sources_localizations"));
-  assert.equal(writes.length, 1);
-  assert.deepEqual(writes[0].params, [source.id, "en", english.title, english.note, english.translatedFromLocale]);
-});
-
 function richRecordFixture() {
   return JSON.parse(fs.readFileSync(new URL("./fixtures/rich-record.json", import.meta.url), "utf8"));
 }
@@ -100,9 +84,8 @@ test("stored rich example enforces content, evidence, localization and allowed g
     ["record.properties.data.recordCount.source", input => { delete input.record.properties.data.recordCount.source; }],
     ["record.properties.data.recordCount.observedAt", input => { input.record.properties.data.recordCount.observedAt = "2026-02-31"; }],
     ["localizations.es.details.access", input => { input.localizations.es.details.access[0].id = "different"; }],
-    ["sources.src-fishbase-home", input => { input.sources.upsert = input.sources.upsert.filter((s: RecordSourceInput) => s.id !== "src-fishbase-home"); }],
-    ["sources.src-fishbase-home.localizations.ar.title", input => { delete input.sources.upsert[0].localizations.ar; }],
-    ["sources.src-fishbase-home.localizations.ar.note", input => { input.sources.upsert[0].localizations.ar.note = null; }],
+    ["record.sources.src-fishbase-home", input => { delete input.record.sources["src-fishbase-home"]; }],
+    ["record.sources.src-fishbase-home.title.ar", input => { delete input.record.sources["src-fishbase-home"].title.ar; }],
     ["edges", input => { input.edges = []; }],
     ["record.properties.gallery[0].url", input => { input.record.properties.gallery[0].url = "/gallery/missing.png"; }],
     ["routes.example.target", input => { input.routes = [{ id: "example", status: "active", mode: "live_api", properties: { sourceRefs: ["src-fishbase-home"] } }]; }],
@@ -137,9 +120,9 @@ test("stored rich example enforces content, evidence, localization and allowed g
       { localizations: { fr: { mode: "patch", detailsReplace: { evidence: { source: reference } } } } },
       { edges: { upsert: [{ ...fixture.edges[0], properties: { source: reference } }] } },
       { routes: { upsert: [{ id: "route", status: "planned", mode: "api", properties: { source: reference } }] } },
-    ]) assert.throws(() => readRecordPatchInput(fixture.id, input), /source title\/note belong in/);
+    ]) assert.throws(() => readRecordPatchInput(fixture.id, input), /source must be a string/);
   }
-  assert.deepEqual([...collectSourceIds({ source: { id: "official-homepage" } })], ["official-homepage"]);
+  assert.deepEqual([...collectSourceIds({ source: "official-homepage" })], ["official-homepage"]);
   for (const kind of ["country", "organization"] as const) {
     const minimal = richRecordFixture();
     minimal.record.kind = kind;
@@ -211,7 +194,11 @@ test("data types reject invented names, duplicate assignments and localized over
 test("data type migration preserves evidence, removes ambiguous claims and duplicates, and is safe to rerun", async () => {
   const db = new PGlite();
   try {
-    await db.exec(fs.readFileSync(new URL("../schema/001_create_explorer_schema.sql", import.meta.url), "utf8"));
+    // Migration 007 consumes the citation format that predates owned sources.
+    await db.exec(`
+      CREATE TABLE nodes(id text PRIMARY KEY,kind text,properties_json jsonb);
+      CREATE TABLE node_localizations(node_id text,locale text,title text,details_json jsonb,review_json jsonb);
+    `);
     const source = { id: "official", url: "https://example.org" };
     const cases = [
       ["fishbase", ["Species biology profiles", "Life history and population dynamics", "Taxonomy / nomenclature", "taxonomic_records", "Fisheries and human uses"], [[1, "biological_traits"], [3, "taxonomic_records"]]],
@@ -278,6 +265,7 @@ test("discipline migration preserves new tags and unrelated content and is safe 
       await db.query("INSERT INTO nodes (id, kind, properties_json) VALUES ($1, 'system', $2)", [id, JSON.stringify({ disciplineFamily: family, role: "legacy", geographicScope: "global", custom: { preserve: true } })]);
     }
     await db.query("INSERT INTO nodes (id, kind, properties_json) VALUES ('already-tagged', 'system', $1)", [JSON.stringify({ disciplines: ["ecology", "taxonomy"], role: "legacy", disciplineFamily: "reference" })]);
+    await db.query("UPDATE nodes SET sources=$1 WHERE id='worms'", [JSON.stringify({ source: { id: "source", url: "https://example.org", title: { en: "Source" }, accessedAt: "2026-09-09" } })]);
     await db.query("INSERT INTO node_localizations (node_id, locale, title, details_json) VALUES ('worms', 'en', 'WoRMS', $1)", [JSON.stringify({ role: "legacy", disciplineFamily: "reference", profile: { sourceRefs: ["source"] } })]);
     const migration = fs.readFileSync(new URL("../schema/005_disciplines.sql", import.meta.url), "utf8");
     await db.exec(migration);
@@ -294,11 +282,45 @@ test("discipline migration preserves new tags and unrelated content and is safe 
   } finally { await db.close(); }
 });
 
+test("subtype removal preserves records and relationships and is safe to rerun", async () => {
+  const db = new PGlite();
+  try {
+    await db.exec(fs.readFileSync(new URL("../schema/001_create_explorer_schema.sql", import.meta.url), "utf8"));
+    await db.exec(`
+      ALTER TABLE nodes ADD COLUMN subtype text;
+      INSERT INTO nodes(id,kind,subtype,properties_json) VALUES
+        ('institute','organization','research_institute','{"disciplines":["ecology"]}'),
+        ('archive','system',NULL,'{}');
+      INSERT INTO node_localizations(node_id,locale,title) VALUES ('institute','en','Institute');
+      INSERT INTO edges(id,kind,source_node_id,target_node_id) VALUES ('operator','operates','institute','archive');
+    `);
+    const before = await db.query("SELECT to_jsonb(n) - 'subtype' AS node FROM nodes n ORDER BY id");
+    const localizations = await db.query("SELECT * FROM node_localizations");
+    const edges = await db.query("SELECT * FROM edges");
+    const migration = fs.readFileSync(new URL("../schema/010_remove_node_subtype.sql", import.meta.url), "utf8");
+    await db.exec(migration);
+    await db.exec(migration);
+    assert.deepEqual((await db.query("SELECT to_jsonb(n) AS node FROM nodes n ORDER BY id")).rows, before.rows);
+    assert.deepEqual((await db.query("SELECT * FROM node_localizations")).rows, localizations.rows);
+    assert.deepEqual((await db.query("SELECT * FROM edges")).rows, edges.rows);
+    await assert.rejects(db.query("SELECT subtype FROM nodes"), /does not exist/);
+  } finally { await db.close(); }
+});
+
+test("PUT and PATCH reject the retired subtype field, including null", () => {
+  for (const subtype of [null, "research_institute"]) {
+    const input = { record: { kind: "organization", subtype } };
+    assert.throws(() => readRecordAggregateContentInput("institute", input), /subtype/);
+    assert.throws(() => readRecordPatchInput("institute", input), /subtype/);
+  }
+});
+
 test("geographic scope migration preserves other metadata and prose and is safe to rerun", async () => {
   const db = new PGlite();
   try {
     await db.exec(fs.readFileSync(new URL("../schema/001_create_explorer_schema.sql", import.meta.url), "utf8"));
     await db.query("INSERT INTO nodes (id, kind, properties_json) VALUES ('fishbase', 'system', $1)", [JSON.stringify({ geographicScope: "global", disciplines: ["zoology"] })]);
+    await db.query("UPDATE nodes SET sources=$1 WHERE id='fishbase'", [JSON.stringify({ source: { id: "source", url: "https://example.org", title: { en: "Source" }, accessedAt: "2026-09-09" } })]);
     await db.query("INSERT INTO node_localizations (node_id, locale, title, description, details_json) VALUES ('fishbase', 'en', 'FishBase', 'Fish information from around the world.', $1)", [JSON.stringify({ geographicScope: "global", profile: { sourceRefs: ["source"] } })]);
     const migration = fs.readFileSync(new URL("../schema/006_remove_geographic_scope.sql", import.meta.url), "utf8");
     await db.exec(migration);
@@ -317,7 +339,14 @@ test("source text migration preserves localizations, removes duplicate fields, a
   const db = new PGlite();
   const migration = fs.readFileSync(new URL("../schema/004_source_text_in_localizations.sql", import.meta.url), "utf8");
   try {
-    await db.exec(fs.readFileSync(new URL("../schema/001_create_explorer_schema.sql", import.meta.url), "utf8"));
+    await db.exec(`
+      CREATE TABLE sources(id text PRIMARY KEY,source_type text);
+      CREATE TABLE sources_localizations(source_id text,locale text,title text,note text,translated_from_locale text,PRIMARY KEY(source_id,locale));
+      CREATE TABLE nodes(id text,kind text,properties_json jsonb DEFAULT '{}');
+      CREATE TABLE node_localizations(node_id text,locale text,title text,details_json jsonb DEFAULT '{}',review_json jsonb);
+      CREATE TABLE edges(id text,source_node_id text,target_node_id text,kind text,properties_json jsonb DEFAULT '{}');
+      CREATE TABLE ryu_routes(id text,node_id text,status text,mode text,properties_json jsonb DEFAULT '{}');
+    `);
     await db.exec(`
       ALTER TABLE sources ADD COLUMN title text, ADD COLUMN note text;
       INSERT INTO sources (id, source_type, title, note) VALUES
@@ -440,24 +469,23 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
     await t.test("dry run does not write and apply round-trips all source localizations", async () => {
       const dry = await repository.upsertRecord("fishbase", fixture, { createOnly: true, validateOnly: true });
       assert.ok("valid" in dry && dry.valid, JSON.stringify(dry));
-      assert.equal((await db.query("SELECT * FROM sources")).rows.length, 0);
+      assert.equal((await db.query("SELECT * FROM nodes WHERE id = 'fishbase'")).rows.length, 0);
       const applied = await repository.upsertRecord("fishbase", fixture, { createOnly: true });
       assert.ok("node" in applied);
       assert.equal(applied.node.recordDepth, "rich");
+      assert.equal("subtype" in applied.node, false);
       assert.deepEqual(applied.node.properties.disciplines, ["zoology", "taxonomy", "ecology", "fisheries_science"]);
       assert.equal("role" in applied.node.properties, false);
       assert.equal("disciplineFamily" in applied.node.properties, false);
       assert.equal("geographicScope" in applied.node.properties, false);
-      assert.equal(applied.sources.length, 6);
-      assert.equal(Object.keys(applied.sources[0].localizations ?? {}).length, 6);
-      assert.deepEqual(Object.fromEntries(Object.entries(applied.sources[0].localizations ?? {}).map(([locale, l]) => [locale, l?.title])),
-        Object.fromEntries(Object.entries(fixture.sources!.upsert!.find(s => s.id === applied.sources[0].id)!.localizations!).map(([locale, l]) => [locale, l?.title])));
+      assert.deepEqual(applied.node.sources, fixture.record.sources);
+      assert.deepEqual(applied.edges[0].sources, fixture.edges![0].sources);
       const dto = toDefaultRecordDetailDto(applied, "public", [], "fr");
+      assert.equal("subtype" in dto, false);
+      assert.equal("subtype" in dto.record, false);
       assert.equal(dto.sourceCompleteness?.status, "complete");
-      assert.equal("localPath" in dto.sources![0], false);
-      assert.equal("title" in dto.sources![0], false);
-      assert.equal("note" in dto.sources![0], false);
-      assert.equal("reviewer" in dto.sources![0].localizations!.fr!, false);
+      assert.deepEqual(dto.record.sources, fixture.record.sources);
+      assert.equal("sources" in dto, false);
     });
     await t.test("invalid vocabulary and retired fields cannot be written by PUT or PATCH even on thin records", async () => {
       const type = richRecordFixture().record.properties.data.descriptors.find((d: any) => d.category === "type");
@@ -491,79 +519,6 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
           assert.deepEqual((await read()).node, before.node);
         }
       }
-    });
-    await t.test("source review migration preserves translations and record review history on rerun", async () => {
-      const sources = await db.query<Record<string, unknown>>("SELECT * FROM sources_localizations ORDER BY source_id, locale");
-      assert.equal("review_state" in sources.rows[0], false);
-      await repository.updateNodeLocalizationReview("fishbase", "fr", { reviewState: "human_reviewed", reviewerNote: "Reviewed with citations." }, "reviewer@example.org", { recordUpdatedAt: await version() });
-      const localizations = await db.query("SELECT * FROM node_localizations ORDER BY node_id, locale");
-      const history = await db.query("SELECT node_id, locale, review_json FROM node_localizations ORDER BY node_id, locale");
-      await db.exec(`
-        ALTER TABLE sources_localizations
-          ADD COLUMN review_state text NOT NULL DEFAULT 'human_reviewed',
-          ADD COLUMN reviewer_note text,
-          ADD COLUMN reviewer text,
-          ADD COLUMN last_reviewed timestamptz;
-        CREATE INDEX idx_sources_localizations_review_state ON sources_localizations(review_state);
-        CREATE INDEX idx_sources_localizations_locale_review_state ON sources_localizations(locale, review_state);
-      `);
-      const migration = fs.readFileSync(new URL("../schema/003_drop_source_localization_review.sql", import.meta.url), "utf8");
-      await db.exec(migration);
-      await db.exec(migration);
-      assert.deepEqual((await db.query("SELECT * FROM sources_localizations ORDER BY source_id, locale")).rows, sources.rows);
-      assert.deepEqual((await db.query("SELECT * FROM node_localizations ORDER BY node_id, locale")).rows, localizations.rows);
-      assert.deepEqual((await db.query("SELECT node_id, locale, review_json FROM node_localizations ORDER BY node_id, locale")).rows, history.rows);
-      assert.equal((await db.query("SELECT indexname FROM pg_indexes WHERE tablename = 'sources_localizations' AND indexname LIKE '%review_state%'")).rows.length, 0);
-    });
-    await t.test("source text search resolves source languages independently of node languages", async () => {
-      await db.query("BEGIN");
-      try {
-        const source = { id: "src-search-probe", url: "https://example.org/source" };
-        const properties = { access: [{ id: "read", type: "read", method: "download", url: source.url, source }] };
-        await db.query("INSERT INTO nodes (id, kind, properties_json) VALUES ($1, $2, $3::jsonb)", ["search-probe", "system", JSON.stringify(properties)]);
-        await db.query("INSERT INTO node_localizations (node_id, locale, title) VALUES ($1, $2, $3)", ["search-probe", "en", "English record"]);
-        await db.query("INSERT INTO sources (id, source_type, url) VALUES ($1, $2, $3)", [source.id, "website", source.url]);
-        for (const [locale, title, note] of [["en", "EnglishTitleMarker", "EnglishNoteMarker"], ["fr", "FrenchTitleMarker", "FrenchNoteMarker"]]) {
-          await db.query("INSERT INTO sources_localizations (source_id, locale, title, note) VALUES ($1, $2, $3, $4)", [source.id, locale, title, note]);
-        }
-        await db.query("INSERT INTO sources (id, source_type) VALUES ($1, $2)", ["src-unlinked", "website"]);
-        await db.query("INSERT INTO sources_localizations (source_id, locale, title) VALUES ($1, $2, $3)", ["src-unlinked", "fr", "UnlinkedTranslationMarker"]);
-        for (const [locale, q, allLanguages, expected] of [
-          ["fr", "FrenchTitleMarker", false, true],
-          ["fr", "FrenchNoteMarker", false, true],
-          ["fr", "EnglishTitleMarker", false, false],
-          ["fr", "EnglishNoteMarker", false, false],
-          ["ru", "EnglishTitleMarker", false, true],
-          ["ru", "EnglishNoteMarker", false, true],
-          ["ru", "FrenchNoteMarker", true, true],
-          ["fr", "UnlinkedTranslationMarker", true, false],
-        ] as const) {
-          const query = readRecordSearchQuery({ locale, q, localeMode: allLanguages ? "all_locales" : "display_locale" });
-          const results = await repository.listRecords(query);
-          assert.deepEqual(results.records.map(record => record.node.id), expected ? ["search-probe"] : [], JSON.stringify(query));
-          const record = await repository.getRecord("search-probe", query);
-          const display = resolveSourceLocalization(record.sources[0], locale);
-          assert.equal(display?.title, locale === "fr" ? "FrenchTitleMarker" : "EnglishTitleMarker");
-        }
-        await db.query("DELETE FROM sources_localizations WHERE source_id = $1 AND locale = $2", [source.id, "fr"]);
-        const fallback = await repository.listRecords(readRecordSearchQuery({ locale: "fr", q: "EnglishNoteMarker" }));
-        assert.deepEqual(fallback.records.map(record => record.node.id), ["search-probe"]);
-        const strict = await repository.listRecords(readRecordSearchQuery({ locale: "fr", localeMode: "locale_only", q: "EnglishNoteMarker" }));
-        assert.deepEqual(strict.records, []);
-        assert.equal(resolveSourceLocalization(await repository.getSource(source.id), "fr")?.note, "EnglishNoteMarker");
-        for (const props of [{ sourceRefs: [source.id] }, { evidence: { source } }, { evidence: source }]) {
-          await db.query("UPDATE nodes SET properties_json = $2::jsonb WHERE id = $1", ["search-probe", JSON.stringify(props)]);
-          const results = await repository.listRecords(readRecordSearchQuery({ locale: "fr", q: "EnglishNoteMarker" }));
-          assert.deepEqual(results.records.map(record => record.node.id), ["search-probe"]);
-        }
-        await db.query("UPDATE nodes SET properties_json = '{}'::jsonb WHERE id = $1", ["search-probe"]);
-        await db.query("UPDATE node_localizations SET details_json = $2::jsonb WHERE node_id = $1", ["search-probe", JSON.stringify({ profile: { sourceRefs: [source.id] } })]);
-        const record = await repository.getRecord("search-probe", readRecordSearchQuery({ locale: "fr" }));
-        await db.query("DELETE FROM sources_localizations WHERE source_id = $1", [source.id]);
-        const missing = await repository.getRecord("search-probe", readRecordSearchQuery({}));
-        assert.equal(resolveSourceLocalization(missing.sources[0], "fr"), undefined);
-        assert.deepEqual((await repository.listRecords(readRecordSearchQuery({ locale: "fr", q: "EnglishNoteMarker" }))).records, []);
-      } finally { await db.query("ROLLBACK"); }
     });
     await t.test("ranked pagination returns all matching IDs and traverses equal titles and lower-score matches", async () => {
       await db.query("BEGIN");
@@ -611,7 +566,7 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
       const applied = await repository.upsertRecord("fishbase", { record: fixture.record }, { recordUpdatedAt: await version() });
       assert.ok("node" in applied, JSON.stringify(applied));
       assert.equal(applied.node.availableLocales.length, 6);
-      assert.equal(applied.sources.length, 6);
+      assert.equal(Object.keys(applied.node.sources).length, 6);
     });
     await t.test("note-only review saves append a full snapshot without changing content or sibling reviews", async () => {
       const before = (await read()).node;
@@ -642,59 +597,6 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
       assert.equal(history.at(-1)!.state, "needs_revision");
       assert.equal(history.at(-1)!.reviewer, null);
       assert.equal(history.at(-1)!.note, "Content or cited evidence changed; review is required.");
-    });
-    await t.test("shared source edits invalidate all affected records and advance their versions", async () => {
-      await db.query("INSERT INTO nodes (id, kind, properties_json) VALUES ('related', 'organization', $1::jsonb)", [JSON.stringify({ sourceRefs: ["src-fishbase-home"] })]);
-      await db.query("INSERT INTO node_localizations (node_id, locale, title, review_json) VALUES ('related', 'en', 'Related', '{\"history\":[{\"state\":\"human_reviewed\",\"reviewer\":null,\"date\":null,\"note\":null}]}')");
-      await repository.updateNodeLocalizationReview("fishbase", "en", { reviewState: "human_reviewed" }, "reviewer@example.org", { recordUpdatedAt: await version() });
-      const oldVersion = await version();
-      const source = structuredClone(fixture.sources!.upsert!.find(s => s.id === "src-fishbase-home")!);
-      source.accessedAt = "2026-09-07";
-      const applied = await repository.patchRecord("fishbase", { sources: { upsert: [source] } }, { recordUpdatedAt: oldVersion });
-      assert.ok("node" in applied, JSON.stringify(applied));
-      assert.equal(applied.node.localizations.en?.review.state, "needs_revision");
-      const related = await repository.getRecord("related", readRecordSearchQuery({}));
-      assert.equal(related.node.localizations.en?.review.state, "needs_revision");
-      assert.notEqual(await version(), oldVersion);
-      await assert.rejects(repository.patchRecord("fishbase", { record: { recordDepth: "thin" } }, { recordUpdatedAt: oldVersion }), /stale recordUpdatedAt/);
-    });
-    await t.test("source translation edits use record review state and retain previous review metadata", async () => {
-      await repository.updateNodeLocalizationReview("fishbase", "fr", { reviewState: "human_reviewed", reviewerNote: "Reviewed with citations." }, "reviewer@example.org", { recordUpdatedAt: await version() });
-      const source = structuredClone(fixture.sources!.upsert!.find(s => s.id === "src-fishbase-home")!);
-      source.accessedAt = (await repository.getSource(source.id)).accessedAt;
-      source.localizations = { fr: { ...source.localizations!.fr!, note: `${source.localizations!.fr!.note} Note révisée.` } };
-      const applied = await repository.patchRecord("fishbase", { sources: { upsert: [source] } }, { recordUpdatedAt: await version() });
-      assert.ok("node" in applied, JSON.stringify(applied));
-      assert.equal(applied.node.localizations.fr?.review.state, "needs_revision");
-      assert.equal(applied.sources.find(s => s.id === source.id)?.localizations?.fr?.note, source.localizations.fr!.note);
-      const frenchHistory = (await read()).node.localizations.fr!.review.history!;
-      assert.equal(frenchHistory.at(-2)!.reviewer, "reviewer@example.org");
-      assert.equal(frenchHistory.at(-2)!.note, "Reviewed with citations.");
-      assert.equal(frenchHistory.at(-1)!.reviewer, null);
-      assert.equal(frenchHistory.at(-1)!.note, "Content or cited evidence changed; review is required.");
-    });
-    await t.test("stored missing source translations are not filled by fallback", async () => {
-      await db.query("DELETE FROM sources_localizations WHERE source_id = 'src-fishbase-home' AND locale = 'ar'");
-      const stored = await read();
-      const dto = toDefaultRecordDetailDto(stored, "public", [], "ar");
-      assert.equal(dto.sourceCompleteness?.status, "partial");
-      const rejected = await repository.patchRecord("fishbase", { record: { recordDepth: "rich" } }, { recordUpdatedAt: await version(), validateOnly: true });
-      assert.ok("valid" in rejected && !rejected.valid);
-      assert.ok(rejected.issues.some(issue => issue.path === "sources.src-fishbase-home.localizations.ar.title"));
-      const source = fixture.sources!.upsert!.find(s => s.id === "src-fishbase-home")!;
-      const repaired = await repository.patchRecord("fishbase", { sources: { upsert: [source] } }, { recordUpdatedAt: await version() });
-      assert.ok("node" in repaired, JSON.stringify(repaired));
-    });
-    await t.test("a thin record cannot change shared evidence to break a rich record", async () => {
-      const related = await repository.getRecord("related", readRecordSearchQuery({}));
-      const source = structuredClone(fixture.sources!.upsert!.find(s => s.id === "src-fishbase-home")!);
-      source.url = "https://example.org/replaced-source";
-      const oldVersion = await version();
-      const rejected = await repository.patchRecord("related", { sources: { upsert: [source] } }, { recordUpdatedAt: buildRecordUpdatedAt(related) });
-      assert.ok("valid" in rejected && !rejected.valid);
-      assert.ok(rejected.issues.some(issue => issue.recordId === "fishbase"));
-      assert.equal(await version(), oldVersion);
-      assert.equal((await repository.getSource(source.id)).url, fixture.sources!.upsert!.find(s => s.id === source.id)!.url);
     });
     await t.test("operator-side relationship deletion cannot leave a rich system without an operator", async () => {
       const operator = await repository.getRecord("q-quatics", readRecordSearchQuery({}));

@@ -28,3 +28,5 @@ remains canonical. Change this fixture deliberately when the record contract
 changes; do not automatically refresh it from the live database during tests.
 
 See `documentation/RICH_RESEARCH_RECORDS.md` for the complete authoring standard.
+
+Sources use the current node/edge-owned four-field collections. Citation references are IDs; source titles are locale maps. The fixture remains an example, not production data.

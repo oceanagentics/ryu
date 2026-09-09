@@ -14,7 +14,6 @@ type GraphNodeData = {
   label: string;
   simpleLabel: string;
   kind: GraphNode["kind"];
-  subtype?: string | null;
   countryCode?: string | null;
   governanceBlock?: GovernanceBlock;
   layoutBand: number;
@@ -190,7 +189,6 @@ export function projectCytoscapeGraph(
       label: node.label,
       simpleLabel: node.simpleLabel,
       kind: node.kind,
-      subtype: node.subtype,
       countryCode: node.countryCode,
       governanceBlock: node.governanceBlock,
       layoutBand: node.layoutBand,

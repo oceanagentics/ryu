@@ -75,7 +75,7 @@ test("relationship migration refuses blind renaming, preserves review history, a
         '{"history":[{"state":"human_reviewed","reviewer":"reviewer","date":"2026-09-09T00:00:00Z","note":"Prior review"}]}');
       INSERT INTO edges(id,kind,source_node_id,target_node_id) VALUES ('legacy','part_of','archive','network');
     `);
-    const migration = fs.readFileSync(new URL("../schema/009_relationship_contract.sql", import.meta.url), "utf8");
+    const migration = fs.readFileSync(new URL("../schema/009_relationship_contract.sql", import.meta.url), "utf8").replace("BEGIN;", "BEGIN; SET CONSTRAINTS ALL IMMEDIATE;");
     await assert.rejects(db.exec(migration), /Review and remove legacy part_of/);
     await db.exec("ROLLBACK");
     assert.equal((await db.query("SELECT * FROM edges WHERE id='legacy'")).rows.length, 1);

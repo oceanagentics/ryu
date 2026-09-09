@@ -1,5 +1,7 @@
 # Ryu SQL-To-UI Cleanup Tracker
 
+Source-table inventory below is historical: source tooltips now read `id`, `url`, translated `title`, and `accessedAt` from `nodes.sources` or `edges.sources`.
+
 Use this file to track review-facing cleanup where data exists in Postgres, is available in the app object model, but is hidden, renamed unclearly, or only partly rendered in the UI.
 
 Terminology rule: name each item from the Postgres table, column, and JSON path first. UI labels are listed only as the place a reviewer should look.
@@ -192,7 +194,6 @@ Terminology rule: name each item from the Postgres table, column, and JSON path 
   - `Record depth`
   - `Review state`
   - `Country`
-  - `Subtype`
   - `Connections`
 - SQL storage:
   - table: `nodes`

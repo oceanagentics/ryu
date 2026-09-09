@@ -21,8 +21,7 @@ The lean graph schema uses:
 
 - `nodes`: one row per country, organization, or system.
 - `edges`: explicit graph relationships: `governs`, `operates`, `funds`, `member_of`, `publishes_to`, and `syncs_to`.
-- `sources`: shared source IDs, types, URLs, publishers, and dates.
-- `sources_localizations`: per-language source title/note text.
+- `nodes.sources` and `edges.sources`: source objects owned by each node or relationship, with translated titles.
 - `node_localizations`: per-language user-facing record text, localized details, and review state.
 - `ryu_routes`: compact operational route rows for machine access.
 - `saved_views`: app state.
@@ -87,9 +86,7 @@ A rich system must have:
   dates (YYYY, YYYY-MM, or YYYY-MM-DD). Storage values use bytes. When record count,
   storage size, or usage metrics cannot be found, omit the values and explain each
   gap in every locale's `details.researchGaps.recordCount`, `storageSize`, or `usage`.
-- Evidence on each relationship and route, using embedded source objects or
-  `properties.sourceRefs`. Source references must resolve to stored sources or
-  `sources.upsert`; embedded source URLs must match the source's canonical URL.
+- Evidence on each relationship and route, using a `source` ID or `properties.sourceRefs` IDs. Relationship references resolve against `edges.sources`; route references resolve against the route node's `nodes.sources`. References contain no duplicate URL.
 - A relationship review in every localization's `details.relationshipReview`,
   containing `sourceRefs` and `findings` with non-empty entries for all six edge
   types. This applies to rich organizations and countries as well as systems.
@@ -117,32 +114,31 @@ computed from content, not an author-controlled badge or a separate source regis
 - Minimal country/organization records may be source-complete and remain `stub`
   or `thin`. The richer system checklist is not applied to those node kinds.
 
-Referenced sources need a title, type, publisher, public provenance URL, and access
-date. Publication/paper/journal-article and dataset-snapshot sources additionally
-need a publication or release date. Other publication dates are optional, but must
-be valid when present. Do not invent unavailable bibliographic details.
+Each node and edge has a dedicated `sources` JSONB object keyed by source ID.
+Each entry has exactly `id`, `url`, `title`, and `accessedAt`. The key equals `id`;
+IDs are local to their owner. `url` is absolute HTTP(S), `accessedAt` is a valid
+`YYYY-MM-DD` date, and `title` maps supported locale codes to non-empty text.
+No source type, publisher, publication date, local path, note, or source audit fields.
 
-Store all source titles and notes, including English, in `sources_localizations`,
-keyed by `(source_id, locale)`. Source rows and embedded references have no title
-or note fields. Display and search use the selected source localization, falling
-back to English when it is missing. Review the displayed source text and citations
-as part of the record's localization review, with current state derived from `node_localizations.review_json.history`. Source writes may include only the localization rows being
-changed. Rich record completeness requires every referenced source to have all six
-supported languages; if any source localization has a note/caveat, each required
-locale must include it. Content writes accept only `title`,
-`note`, and `translatedFromLocale` in these rows, never review or audit fields.
-Existing missing translations remain missing during validation; fallback
-presentation cannot make a source complete. A translated citation still
-references the same underlying source, not a translated publication or a new ID.
-For non-rich records, completeness assesses their existing node locales; richness
-requires the full six-language set.
+Node/localization/route citations resolve against `nodes.sources`; edge citations
+resolve against that edge's `sources`, from either endpoint. Source references
+are strings (`source: "documentation"`) or lists (`sourceRefs: ["documentation"]`).
+There is no global source registry and no endpoint ownership field on citations.
+Every source needs titles for its node's existing localizations; edge sources
+cover localizations of both endpoints. Rich records require all six node locales.
+Missing source translations are validation errors, not English fallback.
+
+PUT accepts `record.sources` and `edges[].sources`. PATCH replaces a node collection
+explicitly with `record.sourcesReplace`; edge upserts accept `sources`. Omission
+preserves existing collections. A localization-only write never rewrites sources.
+Validation applies to the final merged record. The database checks source shape,
+reference resolution, and title coverage; a source cannot be removed while cited.
+Adding a localization and its required source titles can be one atomic record write.
 
 Substantive record edits invalidate affected `human_reviewed` localizations to
 `needs_revision`; edits to an original localization also invalidate its translated
 dependents. Shared neutral/relationship/route changes invalidate all node locales.
-Shared source edits invalidate all locales on every referencing record and advance
-those records' versions, so earlier preconditions become stale. A shared source
-edit that would break another rich record is rejected with that record's issues.
+Node source edits invalidate reviewed localizations on that node; edge evidence edits invalidate reviewed localizations of both endpoints. Other owners of the same source ID remain independent. Sources participate in owner timestamps and existing write preconditions.
 These are record-API guarantees; deliberate direct database repairs must handle
 validation and review invalidation explicitly. No-op content edits preserve review
 acceptance. Review history retains activity dates, actors, and notes; current
@@ -158,7 +154,7 @@ source of truth or a payload to apply unchanged.
 `server/src/postgresGraphRepository.test.ts` loads the fixture, checks invalid
 variants, and uses PGlite (PostgreSQL in process) to exercise the actual schema,
 transactional PUT/PATCH, localization round-trips, dry runs, review invalidation,
-and shared-source behavior. Run `npm --workspace server test`; tests require no
+and owner-scoped source behavior. Run `npm --workspace server test`; tests require no
 production database, credentials, or network access.
 
 ## Research Standard
@@ -171,10 +167,9 @@ Prefer official and primary sources:
 - Citation, terms, licensing, and contact pages.
 - Published impact, citation, or user-community studies when official usage numbers are not available.
 
-For facts that may change, use current web research and record an `accessed_at` date in `sources`. Do not rely on memory for current counts, operator names, URLs, access rules, or pricing.
+For facts that may change, use current web research and record an `accessedAt` date on the owned source. Do not rely on memory for current counts, operator names, URLs, access rules, or pricing.
 
-Every important claim should be traceable to a `sources` row. Put source references directly on the relevant `nodes.properties_json` or `node_localizations.details_json` items by embedding a `source` object with `id` and `url`. Resolve its title from `sources_localizations`.
-Use `sources_localizations` for localized source-facing titles and notes.
+Every important claim should cite an ID in its owner's `sources` column. Put citation IDs on the relevant content item; translated titles stay in the source's `title` map.
 
 ## URL Validation
 
@@ -182,7 +177,7 @@ Access and gallery URLs must be live enough for a researcher to use. Do not add 
 
 Before finalizing a record:
 
-- Run `npm --workspace server run validate:urls`. This command checks `sources.url`, `nodes.properties_json.access[].url`, and gallery image URLs.
+- Run `npm --workspace server run validate:urls`. This command checks node and edge `sources.*.url`, `nodes.properties_json.access[].url`, and gallery image URLs.
 - Check `nodes.url` in a browser when you add or change it; many official homepages block command-line validators even when the page is valid.
 - Treat `200`, stable `3xx` redirects, and intentional document downloads as usable.
 - Treat `403`, `404`, DNS failures, bot-challenge pages, login walls not described in access notes, and iframe-only failures as problems to fix or explicitly explain.
@@ -208,8 +203,7 @@ Use the target `node_localizations` row, usually `locale='en'` for current backf
 - `details_json.aliases`: useful localized search/citation aliases.
 - `review_state`: set `agent_researched` after an agent completes a rich backfill, `human_reviewed` after human acceptance, or `needs_revision` when follow-up changes are required.
 
-Keep organization rows minimal: localized identity, an accurate subtype, and
-source-backed relationships. Do not assign a country code or `INT`. Use actual
+Keep organization rows minimal: localized identity and source-backed relationships. Do not assign a country code or `INT`. Use actual
 responsible institutions; split combined operator labels when their members have
 different responsibilities. International collaborations and EU institutions are
 organizations, not placeholder countries.
@@ -428,7 +422,7 @@ Each neutral metric should include `id`, `key`, `value`, `unit`, `observedAt`, a
 
 Rules:
 
-- Every metric must have a source object.
+- Every metric must have a `source` ID resolving against `nodes.sources`.
 - Use `observedAt` for the date or version the number refers to.
 - Use localized descriptions to capture caveats, such as "compressed public snapshot, not live production DB".
 - Store storage in bytes even if the source reports MB/GB/TB. Convert carefully and describe the original source measurement.
@@ -444,7 +438,7 @@ Each neutral access path should have:
 - `type`: `read`, `submit`, or `partner_sync`.
 - `method`: lower_snake_case access mechanism.
 - `url`: direct portal, docs, contact, download, API, or terms page.
-- `source`: source object with `id` and `url`; its title comes from `sources_localizations`.
+- `source`: source ID resolving against `nodes.sources`, including its translated title.
 
 Each localized access path should have the same `id` plus:
 
@@ -514,18 +508,16 @@ Do not add identifier sections to Ryu records. The language migration removed le
 
 ## Updating The DB
 
-Use a single Postgres transaction for each system backfill when practical.
+Use the record API, which applies each record write in one Postgres transaction.
 
 Recommended order:
 
-1. Upsert `sources` together with any ready `sources_localizations` through `sources.upsert`.
-2. Upsert any new `nodes` for operators.
-3. Update `edges` for operator/governance/part-of links.
-4. Update the system row in `nodes`, including `url`, `record_depth`, and neutral `properties_json`.
-5. Upsert the target row in `node_localizations`, including `title`, `summary`, `description`, and localized `details_json`. Use the dedicated review endpoint for review decisions.
-6. Update `ryu_routes` when the system has an approved operational route.
-7. Regenerate `client/public/bootstrap.public.json`.
-8. Run validation.
+1. Create any missing operator records through `/api/records`.
+2. Read the system record and its current `recordUpdatedAt`.
+3. Assemble its neutral fields, localizations, routes, node-owned sources, and relationship updates with their edge-owned sources. Include required title translations in the same write as localization changes.
+4. Run `validateOnly=true`, resolve reported errors, then apply with the current record precondition. Use the dedicated review endpoint for review decisions.
+5. Regenerate `client/public/bootstrap.public.json` when updating the launch export.
+6. Run validation.
 
 Do not delete unrelated rows for other systems. Do not change existing user or agent work outside the target system unless required by a proven correction.
 

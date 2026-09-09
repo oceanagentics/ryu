@@ -78,14 +78,7 @@ export function normalizeAccessType(value: unknown): SystemAccessType | null {
 }
 
 function readSourceRef(value: unknown): SourceRef {
-  if (!isRecord(value)) {
-    return { id: "", url: "" };
-  }
-
-  return {
-    id: normalizeString(value.id) ?? "",
-    url: normalizeString(value.url) ?? "",
-  };
+  return isRecord(value) ? normalizeString(value.id) ?? "" : "";
 }
 
 function asStringArray(value: unknown): string[] {

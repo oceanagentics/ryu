@@ -144,7 +144,6 @@ export const useGraphStore = create<GraphState>((set) => ({
             existingNode.id === node.id ? node : existingNode,
           ),
           edges: state.graph.edges,
-          sources: state.graph.sources,
           ryuRoutes: state.graph.ryuRoutes,
           savedViews: state.graph.savedViews,
         }),

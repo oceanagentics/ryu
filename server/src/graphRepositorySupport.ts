@@ -12,13 +12,12 @@ import type {
   ReviewState,
   ReviewSnapshot,
   RyuPortalRoute,
-  RyuPortalSource,
   RyuRoute,
   RyuSystemOperator,
   RyuSystemQuery,
   RyuSystemRecord,
   SavedView,
-  Source,
+  SourceCollection,
   SupportedLocale,
 } from "../../shared/domain";
 import { dataTypes, disciplines, edgeKinds } from "../../shared/domain";
@@ -27,7 +26,6 @@ import {
   emptyLocalizationDetails,
   normalizeLocale,
   resolveNodeLocalization,
-  resolveSourceLocalization,
   supportedLocales,
 } from "../../shared/localization";
 
@@ -37,10 +35,10 @@ export type RawNode = {
   id: string;
   kind: GraphNodeKind;
   country_code: string | null;
-  subtype: string | null;
   url: string | null;
   record_depth: RecordDepth;
   properties_json: string | null;
+  sources: SourceCollection;
   created_at: string;
   updated_at: string;
 };
@@ -66,6 +64,7 @@ export type RawEdge = {
   kind: GraphEdgeKind;
   note: string | null;
   properties_json: string | null;
+  sources: SourceCollection;
   created_at: string;
   updated_at: string;
 };
@@ -273,6 +272,7 @@ export function mapNode(
   localizations: NodeLocalization[] = [],
   requestedLocale: SupportedLocale = defaultLocale,
 ): GraphNode {
+  if (!isRecord(row.sources)) throw new Error("nodes.sources is required; apply migration 011_owned_sources.sql before starting");
   const localizationMap = Object.fromEntries(
     localizations.map((localization) => [localization.locale, localization]),
   ) as GraphNode["localizations"];
@@ -284,10 +284,10 @@ export function mapNode(
       id: row.id,
       kind: row.kind,
       countryCode: row.country_code,
-      subtype: row.subtype,
       url: row.url,
       recordDepth: row.record_depth,
       properties: normalizeNodeProperties(parseJson(row.properties_json)),
+      sources: row.sources,
       createdAt: row.created_at,
       updatedAt: row.updated_at,
       localizations: localizationMap,
@@ -303,10 +303,10 @@ export function mapNode(
     id: row.id,
     kind: row.kind,
     countryCode: row.country_code,
-    subtype: row.subtype,
     url: row.url,
     recordDepth: row.record_depth,
     properties: normalizeNodeProperties(parseJson(row.properties_json)),
+      sources: row.sources,
     createdAt: row.created_at,
     updatedAt: row.updated_at,
     localizations: localizationMap,
@@ -318,6 +318,7 @@ export function mapNode(
 }
 
 export function mapEdge(row: RawEdge): GraphEdge {
+  if (!isRecord(row.sources)) throw new Error("edges.sources is required; apply migration 011_owned_sources.sql before starting");
   return {
     id: row.id,
     sourceNodeId: row.source_node_id,
@@ -325,21 +326,9 @@ export function mapEdge(row: RawEdge): GraphEdge {
     kind: row.kind,
     note: row.note,
     properties: parseJson(row.properties_json),
+    sources: row.sources,
     createdAt: row.created_at,
     updatedAt: row.updated_at,
-  };
-}
-
-export function mapSource(row: Record<string, unknown>): Source {
-  return {
-    id: String(row.id),
-    sourceType: String(row.source_type),
-    url: (row.url as string | null) ?? null,
-    localPath: (row.local_path as string | null) ?? null,
-    publisher: (row.publisher as string | null) ?? null,
-    publishedAt: (row.published_at as string | null) ?? null,
-    accessedAt: (row.accessed_at as string | null) ?? null,
-    localizations: (row.localizations as Source["localizations"]) ?? {},
   };
 }
 
@@ -462,13 +451,7 @@ export function collectSourceIds(value: unknown, results = new Set<string>()): S
     return results;
   }
 
-  if (typeof value.id === "string" && value.id.startsWith("src-")) {
-    results.add(value.id);
-  }
-
-  if (isRecord(value.source) && typeof value.source.id === "string") {
-    results.add(value.source.id);
-  }
+  if (typeof value.source === "string") results.add(value.source);
 
   if (Array.isArray(value.sourceRefs)) {
     value.sourceRefs
@@ -554,23 +537,6 @@ export function mapPortalRoute(route: RyuRoute): RyuPortalRoute {
     properties: route.properties,
     createdAt: route.createdAt,
     updatedAt: route.updatedAt,
-  };
-}
-
-export function mapPortalSource(source: Source): RyuPortalSource {
-  return {
-    ryuSourceId: source.id,
-    title: resolveSourceLocalization(source)?.title ?? source.id,
-    sourceType: source.sourceType,
-    provider: source.publisher,
-    originalUrl: source.url,
-    ryuUrl: `/sources/${encodeURIComponent(source.id)}`,
-    localPath: source.localPath,
-    citation: null,
-    license: null,
-    updateCadence: null,
-    accessedAt: source.accessedAt,
-    caveats: [],
   };
 }
 

@@ -8,18 +8,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE TABLE IF NOT EXISTS sources (
-  id text PRIMARY KEY,
-  source_type text NOT NULL,
-  url text,
-  local_path text,
-  publisher text,
-  published_at text,
-  accessed_at text
-);
-
-CREATE INDEX IF NOT EXISTS idx_sources_type ON sources(source_type);
-
 CREATE TABLE IF NOT EXISTS supported_locales (
   locale text PRIMARY KEY
     CHECK (locale IN ('ar', 'zh', 'en', 'fr', 'ru', 'es')),
@@ -41,57 +29,87 @@ SET language_name = EXCLUDED.language_name,
     direction = EXCLUDED.direction,
     sort_order = EXCLUDED.sort_order;
 
-CREATE TABLE IF NOT EXISTS sources_localizations (
-  source_id text NOT NULL REFERENCES sources(id) ON DELETE CASCADE,
-  locale text NOT NULL REFERENCES supported_locales(locale),
-  title text NOT NULL CHECK (btrim(title) <> ''),
-  note text,
-  translated_from_locale text REFERENCES supported_locales(locale)
-    CHECK (translated_from_locale IS NULL OR translated_from_locale <> locale),
-  content_updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  created_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (source_id, locale)
-);
-
-CREATE INDEX IF NOT EXISTS idx_sources_localizations_locale
-  ON sources_localizations(locale);
-
-CREATE OR REPLACE FUNCTION set_sources_localization_content_updated_at()
-RETURNS trigger AS $$
+-- Source records have one owner and one closed shape.
+CREATE OR REPLACE FUNCTION valid_owned_sources(value jsonb)
+RETURNS boolean LANGUAGE plpgsql IMMUTABLE AS $$
+DECLARE entry record; translation record; source jsonb; accessed text;
 BEGIN
-  IF NEW.title IS DISTINCT FROM OLD.title
-    OR NEW.note IS DISTINCT FROM OLD.note
-    OR NEW.translated_from_locale IS DISTINCT FROM OLD.translated_from_locale THEN
-    NEW.content_updated_at = CURRENT_TIMESTAMP;
-  END IF;
-
-  RETURN NEW;
+  IF jsonb_typeof(value) IS DISTINCT FROM 'object' THEN RETURN false; END IF;
+  FOR entry IN SELECT * FROM jsonb_each(value) LOOP
+    source := entry.value;
+    IF jsonb_typeof(source) IS DISTINCT FROM 'object'
+      OR NOT source ?& ARRAY['id','url','title','accessedAt']
+      OR source - ARRAY['id','url','title','accessedAt'] <> '{}'::jsonb
+      OR jsonb_typeof(source->'id') IS DISTINCT FROM 'string'
+      OR source->>'id' IS DISTINCT FROM entry.key
+      OR entry.key !~ '^[a-z0-9][a-z0-9._:-]*$'
+      OR jsonb_typeof(source->'url') IS DISTINCT FROM 'string'
+      OR source->>'url' !~ '^https?://[^[:space:]/?#]+[^[:space:]]*$'
+      OR jsonb_typeof(source->'accessedAt') IS DISTINCT FROM 'string'
+      OR jsonb_typeof(source->'title') IS DISTINCT FROM 'object'
+      OR source->'title' = '{}'::jsonb THEN RETURN false; END IF;
+    accessed := source->>'accessedAt';
+    IF accessed !~ '^\d{4}-\d{2}-\d{2}$' OR to_char(accessed::date, 'YYYY-MM-DD') <> accessed THEN RETURN false; END IF;
+    FOR translation IN SELECT * FROM jsonb_each(source->'title') LOOP
+      IF translation.key NOT IN ('ar','zh','en','fr','ru','es')
+        OR jsonb_typeof(translation.value) IS DISTINCT FROM 'string'
+        OR btrim(translation.value #>> '{}') = '' THEN RETURN false; END IF;
+    END LOOP;
+  END LOOP;
+  RETURN true;
+EXCEPTION WHEN invalid_datetime_format OR datetime_field_overflow THEN RETURN false;
 END;
-$$ LANGUAGE plpgsql;
+$$;
 
-DROP TRIGGER IF EXISTS trg_sources_localizations_content_updated_at ON sources_localizations;
-CREATE TRIGGER trg_sources_localizations_content_updated_at
-BEFORE UPDATE ON sources_localizations
-FOR EACH ROW
-EXECUTE FUNCTION set_sources_localization_content_updated_at();
+CREATE OR REPLACE FUNCTION source_reference_ids(value jsonb)
+RETURNS text[] LANGUAGE plpgsql IMMUTABLE AS $$
+DECLARE entry record; child jsonb; refs text[] := '{}'; ref text;
+BEGIN
+  IF jsonb_typeof(value) = 'array' THEN
+    FOR child IN SELECT * FROM jsonb_array_elements(value) LOOP
+      refs := refs || source_reference_ids(child);
+    END LOOP;
+  ELSIF jsonb_typeof(value) = 'object' THEN
+    FOR entry IN SELECT * FROM jsonb_each(value) LOOP
+      IF entry.key = 'sources' THEN
+        RAISE EXCEPTION 'sources belong in the dedicated owner column' USING ERRCODE = '23514';
+      ELSIF entry.key = 'source' AND entry.value <> 'null'::jsonb THEN
+        IF jsonb_typeof(entry.value) IS DISTINCT FROM 'string' OR entry.value #>> '{}' !~ '^[a-z0-9][a-z0-9._:-]*$' THEN
+          RAISE EXCEPTION 'source must be a source ID' USING ERRCODE = '23514';
+        END IF;
+        refs := array_append(refs, entry.value #>> '{}');
+      ELSIF entry.key = 'sourceRefs' THEN
+        IF jsonb_typeof(entry.value) IS DISTINCT FROM 'array' THEN RAISE EXCEPTION 'sourceRefs must be an array of IDs' USING ERRCODE = '23514'; END IF;
+        FOR child IN SELECT * FROM jsonb_array_elements(entry.value) LOOP
+          ref := child #>> '{}';
+          IF jsonb_typeof(child) IS DISTINCT FROM 'string' OR ref !~ '^[a-z0-9][a-z0-9._:-]*$' THEN
+            RAISE EXCEPTION 'sourceRefs must contain source IDs' USING ERRCODE = '23514';
+          END IF;
+          refs := array_append(refs, ref);
+        END LOOP;
+      ELSE refs := refs || source_reference_ids(entry.value);
+      END IF;
+    END LOOP;
+  END IF;
+  RETURN refs;
+END;
+$$;
 
-DROP TRIGGER IF EXISTS trg_sources_localizations_updated_at ON sources_localizations;
-CREATE TRIGGER trg_sources_localizations_updated_at
-BEFORE UPDATE ON sources_localizations
-FOR EACH ROW
-WHEN (NEW.updated_at = OLD.updated_at)
-EXECUTE FUNCTION set_updated_at_timestamp();
+CREATE OR REPLACE FUNCTION valid_owned_source_refs(content jsonb, sources jsonb)
+RETURNS boolean LANGUAGE sql IMMUTABLE AS $$
+  SELECT sources ?& source_reference_ids(content);
+$$;
 
 CREATE TABLE IF NOT EXISTS nodes (
   id text PRIMARY KEY,
   kind text NOT NULL CHECK (kind IN ('country', 'organization', 'system')),
   country_code text CHECK (country_code IS NULL OR length(country_code) = 3),
   CONSTRAINT nodes_country_identity_check CHECK (kind = 'country' OR country_code IS NULL),
-  subtype text,
   url text,
   record_depth text NOT NULL DEFAULT 'stub' CHECK (record_depth IN ('stub', 'thin', 'rich')),
   properties_json jsonb NOT NULL DEFAULT '{}'::jsonb,
+  sources jsonb NOT NULL DEFAULT '{}'::jsonb CHECK (valid_owned_sources(sources)),
+  CONSTRAINT nodes_source_refs_check CHECK (valid_owned_source_refs(properties_json, sources)),
   created_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -224,6 +242,8 @@ CREATE TABLE IF NOT EXISTS edges (
   kind text NOT NULL CHECK (kind IN ('governs', 'operates', 'funds', 'member_of', 'publishes_to', 'syncs_to')),
   note text,
   properties_json jsonb NOT NULL DEFAULT '{}'::jsonb,
+  sources jsonb NOT NULL DEFAULT '{}'::jsonb CHECK (valid_owned_sources(sources)),
+  CONSTRAINT edges_source_refs_check CHECK (valid_owned_source_refs(properties_json, sources)),
   created_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CHECK (source_node_id <> target_node_id)
@@ -320,6 +340,84 @@ BEFORE UPDATE ON ryu_routes
 FOR EACH ROW
 WHEN (NEW.updated_at = OLD.updated_at)
 EXECUTE FUNCTION set_updated_at_timestamp();
+
+-- Child writes serialize with owner edits before deferred checks read the final state.
+CREATE OR REPLACE FUNCTION lock_source_owners()
+RETURNS trigger LANGUAGE plpgsql AS $$
+DECLARE ids text[];
+BEGIN
+  IF TG_TABLE_NAME = 'edges' THEN
+    ids := ARRAY[NEW.source_node_id,NEW.target_node_id,OLD.source_node_id,OLD.target_node_id];
+  ELSE ids := ARRAY[NEW.node_id,OLD.node_id]; END IF;
+  PERFORM id FROM nodes WHERE id = ANY(ids) ORDER BY id FOR UPDATE;
+  RETURN coalesce(NEW,OLD);
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION assert_owned_source_links(ids text[])
+RETURNS void LANGUAGE plpgsql AS $$
+DECLARE owner record; loc record; edge record; source record;
+BEGIN
+  FOR owner IN SELECT * FROM nodes WHERE id = ANY(ids) LOOP
+    FOR loc IN SELECT * FROM node_localizations WHERE node_id = owner.id LOOP
+      IF NOT valid_owned_source_refs(loc.details_json, owner.sources) THEN
+        RAISE EXCEPTION 'localization %/% references a missing source',owner.id,loc.locale USING ERRCODE = '23514';
+      END IF;
+      FOR source IN SELECT * FROM jsonb_each(owner.sources) LOOP
+        IF NOT (source.value->'title') ? loc.locale THEN
+          RAISE EXCEPTION 'node % source % is missing title %',owner.id,source.key,loc.locale USING ERRCODE = '23514';
+        END IF;
+      END LOOP;
+    END LOOP;
+    IF EXISTS (SELECT 1 FROM ryu_routes r WHERE r.node_id = owner.id AND NOT valid_owned_source_refs(r.properties_json, owner.sources)) THEN
+      RAISE EXCEPTION 'route on node % references a missing source',owner.id USING ERRCODE = '23514';
+    END IF;
+    FOR edge IN SELECT * FROM edges WHERE source_node_id = owner.id OR target_node_id = owner.id LOOP
+      FOR source IN SELECT * FROM jsonb_each(edge.sources) LOOP
+        IF EXISTS (SELECT 1 FROM node_localizations l WHERE l.node_id IN (edge.source_node_id,edge.target_node_id)
+          AND NOT (source.value->'title') ? l.locale) THEN
+          RAISE EXCEPTION 'edge % source % is missing a title for an endpoint localization',edge.id,source.key USING ERRCODE = '23514';
+        END IF;
+      END LOOP;
+    END LOOP;
+  END LOOP;
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION check_owned_source_links()
+RETURNS trigger LANGUAGE plpgsql AS $$
+DECLARE ids text[];
+BEGIN
+  IF TG_TABLE_NAME = 'nodes' THEN ids := ARRAY[NEW.id,OLD.id];
+  ELSIF TG_TABLE_NAME = 'edges' THEN ids := ARRAY[NEW.source_node_id,NEW.target_node_id,OLD.source_node_id,OLD.target_node_id];
+  ELSE ids := ARRAY[NEW.node_id,OLD.node_id]; END IF;
+  PERFORM assert_owned_source_links(ids);
+  RETURN NULL;
+END;
+$$;
+
+DROP TRIGGER IF EXISTS trg_localizations_source_lock ON node_localizations;
+CREATE TRIGGER trg_localizations_source_lock BEFORE INSERT OR UPDATE OR DELETE ON node_localizations
+FOR EACH ROW EXECUTE FUNCTION lock_source_owners();
+DROP TRIGGER IF EXISTS trg_routes_source_lock ON ryu_routes;
+CREATE TRIGGER trg_routes_source_lock BEFORE INSERT OR UPDATE OR DELETE ON ryu_routes
+FOR EACH ROW EXECUTE FUNCTION lock_source_owners();
+DROP TRIGGER IF EXISTS trg_edges_source_lock ON edges;
+CREATE TRIGGER trg_edges_source_lock BEFORE INSERT OR UPDATE OR DELETE ON edges
+FOR EACH ROW EXECUTE FUNCTION lock_source_owners();
+
+DROP TRIGGER IF EXISTS trg_nodes_source_links ON nodes;
+CREATE CONSTRAINT TRIGGER trg_nodes_source_links AFTER INSERT OR UPDATE OR DELETE ON nodes
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_owned_source_links();
+DROP TRIGGER IF EXISTS trg_localizations_source_links ON node_localizations;
+CREATE CONSTRAINT TRIGGER trg_localizations_source_links AFTER INSERT OR UPDATE OR DELETE ON node_localizations
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_owned_source_links();
+DROP TRIGGER IF EXISTS trg_edges_source_links ON edges;
+CREATE CONSTRAINT TRIGGER trg_edges_source_links AFTER INSERT OR UPDATE OR DELETE ON edges
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_owned_source_links();
+DROP TRIGGER IF EXISTS trg_routes_source_links ON ryu_routes;
+CREATE CONSTRAINT TRIGGER trg_routes_source_links AFTER INSERT OR UPDATE OR DELETE ON ryu_routes
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_owned_source_links();
 
 CREATE TABLE IF NOT EXISTS saved_views (
   id text PRIMARY KEY,

@@ -22,9 +22,7 @@ import type {
   RecordMutationOptions,
   RecordPatchInput,
   RecordSearchQuery,
-  RecordSourceInput,
   RecordValidationResult,
-  SourceLocalizationContentInput,
 } from "../../shared/recordApi";
 import { defaultLocale, emptyLocalizationDetails, supportedLocales } from "../../shared/localization";
 import type { GraphRepository } from "./graphRepository";
@@ -40,7 +38,6 @@ import {
 const bootstrap: GraphBootstrapPayload = {
   nodes: [],
   edges: [],
-  sources: [],
   ryuRoutes: [],
   savedViews: [],
 };
@@ -105,34 +102,9 @@ function createFakeLocalization(
   };
 }
 
-function fullSourceLocalizations(
-  title = "Source",
-  note: string | null = null,
-): Record<SupportedLocale, SourceLocalizationContentInput> {
-  return Object.fromEntries(
-    supportedLocales.map((locale) => [
-      locale,
-      {
-        title,
-        note,
-        translatedFromLocale: locale === defaultLocale ? null : defaultLocale,
-      },
-    ]),
-  ) as Record<SupportedLocale, SourceLocalizationContentInput>;
-}
-
-function sourcePayload(overrides: Record<string, unknown> = {}): Record<string, unknown> {
-  return {
-    id: "src-test",
-    sourceType: "web",
-    url: "https://example.com/source",
-    localPath: null,
-    publisher: "Example publisher",
-    publishedAt: null,
-    accessedAt: "2026-09-07",
-    localizations: fullSourceLocalizations(),
-    ...overrides,
-  };
+function sourcePayload(overrides: Partial<Source> = {}): Source {
+  return { id: "src-test", url: "https://example.com/source", accessedAt: "2026-09-07",
+    title: Object.fromEntries(supportedLocales.map(locale => [locale, "Source"])), ...overrides };
 }
 
 function createFakeNode(overrides: Partial<GraphNode> = {}): GraphNode {
@@ -141,9 +113,9 @@ function createFakeNode(overrides: Partial<GraphNode> = {}): GraphNode {
     id: "node-1",
     kind: "system",
     countryCode: null,
-    subtype: null,
     url: null,
     recordDepth: "stub",
+    sources: { "src-test": sourcePayload() },
     properties: {
       disciplines: [],
       gallery: [],
@@ -233,9 +205,9 @@ class FakeRepository implements GraphRepository {
       id,
       kind: input.record.kind,
       countryCode: input.record.countryCode ?? null,
-      subtype: input.record.subtype ?? null,
       url: input.record.url ?? null,
       recordDepth: input.record.recordDepth ?? "stub",
+      sources: input.record.sources ?? this.node.sources,
       properties: (input.record.properties ?? {}) as GraphNode["properties"],
     });
     return this.recordAggregate();
@@ -256,9 +228,9 @@ class FakeRepository implements GraphRepository {
       id,
       kind: input.record?.kind ?? this.node.kind,
       countryCode: input.record?.countryCode ?? this.node.countryCode,
-      subtype: input.record?.subtype ?? this.node.subtype,
       url: input.record?.url ?? this.node.url,
       recordDepth: input.record?.recordDepth ?? this.node.recordDepth,
+      sources: input.record?.sourcesReplace ?? this.node.sources,
       properties: (input.record?.propertiesReplace ?? this.node.properties) as GraphNode["properties"],
     });
     return this.recordAggregate();
@@ -278,7 +250,6 @@ class FakeRepository implements GraphRepository {
       outboundEdges: 0,
       routeRows: 0,
       affectedSavedViews: [],
-      orphanedSourceCandidates: [],
       impactHash: "impact-1",
     };
   }
@@ -344,19 +315,6 @@ class FakeRepository implements GraphRepository {
     return this.node;
   }
 
-  getSource(id: string): Source {
-    return {
-      id,
-      sourceType: "web",
-      url: null,
-      localPath: `/private/${id}.md`,
-      publisher: null,
-      publishedAt: null,
-      accessedAt: null,
-      localizations: { en: { locale: "en", title: "Source", note: null, translatedFromLocale: null, contentUpdatedAt: recordUpdatedAt, createdAt: recordUpdatedAt, updatedAt: recordUpdatedAt } },
-    };
-  }
-
   listSavedViews(): SavedView[] {
     return [];
   }
@@ -399,18 +357,6 @@ class FakeRepository implements GraphRepository {
     return {
       node: createFakeNode({ ...this.node, ...overrides }),
       edges: [],
-      sources: [
-        {
-          id: "src-test",
-          sourceType: "web",
-          url: "https://example.com/source",
-          localPath: "/private/source.md",
-          publisher: null,
-          publishedAt: null,
-          accessedAt: null,
-          localizations: this.getSource("src-test").localizations,
-        },
-      ],
       routes: [
         {
           id: "route-1",
@@ -496,18 +442,6 @@ test("redacts private review fields from public bootstrap payloads", () => {
         },
       }),
     ],
-    sources: [
-      {
-        id: "source-1",
-        sourceType: "web",
-        url: "https://example.com",
-        localPath: "/private/source.md",
-        publisher: null,
-        publishedAt: null,
-        accessedAt: null,
-        localizations: { en: { locale: "en", title: "Source", note: null, translatedFromLocale: null, contentUpdatedAt: recordUpdatedAt, createdAt: recordUpdatedAt, updatedAt: recordUpdatedAt } },
-      },
-    ],
     ryuRoutes: [
       {
         id: "route-1",
@@ -532,7 +466,7 @@ test("redacts private review fields from public bootstrap payloads", () => {
   assert.equal(publicBootstrap.nodes[0].localizations.en?.review.note, null);
   assert.equal(publicBootstrap.nodes[0].localizations.en?.review.reviewer, null);
   assert.equal(publicBootstrap.nodes[0].localizations.en?.review.date, "2026-08-31T00:00:00.000Z");
-  assert.equal(publicBootstrap.sources[0].localPath, null);
+  assert.deepEqual(publicBootstrap.nodes[0].sources["src-test"], sourcePayload());
   assert.deepEqual(publicBootstrap.ryuRoutes, []);
 });
 
@@ -589,7 +523,7 @@ test("serves public record details with allowlisted DTO fields", async () => {
     assert.equal("reviewerNote" in body.localizations.en, false);
     assert.equal("reviewer" in body.localizations.en, false);
     assert.equal("reviewDate" in body.localizations.en, false);
-    assert.equal("localPath" in body.sources[0], false);
+    assert.equal("localPath" in body.record.sources["src-test"], false);
     assert.equal("target" in body.routes[0], false);
     assert.equal("upstream" in body.routes[0], false);
     assert.equal("properties" in body.routes[0], false);
@@ -691,7 +625,7 @@ test("serves private record details through bearer token auth", async () => {
 
     assert.equal(response.status, 200);
     const body = await response.json() as Record<string, any>;
-    assert.equal(body.sources[0].localPath, "/private/source.md");
+    assert.deepEqual(body.record.sources["src-test"], sourcePayload());
     assert.equal(body.routes[0].target, "https://private.example.com");
     assert.deepEqual(body.routes[0].properties, { secret: "do-not-leak" });
   });
@@ -878,149 +812,20 @@ test("rejects removed source excerpt fields in content upserts", async () => {
   });
 });
 
-test("accepts source writes without source localizations", async () => {
-  await withServer("api", async (baseUrl) => {
-    const source = sourcePayload();
-    delete source.localizations;
-    const response = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        ...authHeaders(),
-      },
-      body: JSON.stringify({
-        id: "node-1",
-        record: { kind: "system" },
-        localizations: {
-          en: {
-            title: "Test System",
-          },
-        },
-        sources: {
-          upsert: [source],
-        },
-      }),
+test("record writes accept owned sources and reject legacy or malformed source shapes", async () => {
+  await withServer("api", async baseUrl => {
+    const send = (body: unknown) => fetch(`${baseUrl}/explorer/api/records/node-1`, {
+      method: "PATCH", headers: { "Content-Type": "application/json", ...authHeaders(writerToken, true) }, body: JSON.stringify(body),
     });
-
-    assert.equal(response.status, 200);
-    assert.deepEqual(await response.json(), {
-      valid: true,
-      recordId: "node-1",
-      issues: [],
-      recordUpdatedAt,
-    });
-  });
-});
-
-test("accepts a single source localization in content upserts", async () => {
-  await withServer("api", async (baseUrl) => {
-    const response = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        ...authHeaders(),
-      },
-      body: JSON.stringify({
-        id: "node-1",
-        record: { kind: "system" },
-        localizations: {
-          en: {
-            title: "Test System",
-          },
-        },
-        sources: {
-          upsert: [
-            sourcePayload({
-              localizations: {
-                en: {
-                  title: "Source",
-                  translatedFromLocale: null,
-                },
-              },
-            }),
-          ],
-        },
-      }),
-    });
-
-    assert.equal(response.status, 200);
-    assert.deepEqual(await response.json(), {
-      valid: true,
-      recordId: "node-1",
-      issues: [],
-      recordUpdatedAt,
-    });
-  });
-});
-
-test("rejects source text outside localizations", async () => {
-  await withServer("api", async (baseUrl) => {
-    for (const field of ["title", "note"]) {
-      const response = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          ...authHeaders(),
-        },
-        body: JSON.stringify({
-          id: "node-1",
-          record: { kind: "system" },
-          localizations: {
-            en: {
-              title: "Test System",
-            },
-          },
-          sources: {
-            upsert: [
-              sourcePayload({
-                [field]: "Text belongs in a localization",
-              }),
-            ],
-          },
-        }),
-      });
-
-      assert.equal(response.status, 400);
-      assert.deepEqual(await response.json(), {
-        error: `unsupported sources.upsert[0] fields: ${field}`,
-      });
-    }
-  });
-});
-
-test("accepts fully localized source content upserts", async () => {
-  await withServer("api", async (baseUrl) => {
-    const response = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        ...authHeaders(),
-      },
-      body: JSON.stringify({
-        id: "node-1",
-        record: { kind: "system" },
-        localizations: {
-          en: {
-            title: "Test System",
-          },
-        },
-        sources: {
-          upsert: [
-            sourcePayload({
-              localizations: fullSourceLocalizations("Source", "Localized source note"),
-            }),
-          ],
-        },
-      }),
-    });
-
-    assert.equal(response.status, 200);
-    assert.deepEqual(await response.json(), {
-      valid: true,
-      recordId: "node-1",
-      issues: [],
-      recordUpdatedAt,
-    });
+    const valid = await send({ record: { sourcesReplace: { "src-test": sourcePayload() } } });
+    assert.equal(valid.status, 200);
+    assert.deepEqual((await valid.json() as any).record.sources["src-test"], sourcePayload());
+    for (const body of [
+      { sources: { upsert: [sourcePayload()] } },
+      ...[{ ...sourcePayload(), note: "removed" }, { ...sourcePayload(), accessedAt: "2026-02-30" },
+        { ...sourcePayload(), title: { xx: "unsupported" } }, { ...sourcePayload(), id: "different" },
+        { ...sourcePayload(), url: "not a URL" }].map(source => ({ record: { sourcesReplace: { "src-test": source } } })),
+    ]) assert.equal((await send(body)).status, 400, JSON.stringify(body));
   });
 });
 

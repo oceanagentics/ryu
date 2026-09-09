@@ -38,7 +38,6 @@ export interface GraphProjectionNode extends NodeGeometry {
   simpleLabel: string;
   secondaryLabel: string | null;
   kind: GraphNode["kind"];
-  subtype: string | null;
   countryCode: string | null;
   governanceBlock: GovernanceBlock;
   layoutBand: number;
@@ -76,7 +75,6 @@ function buildProjectionNode(
     simpleLabel,
     secondaryLabel: secondaryNodeLabel(node, locale, simpleLabel),
     kind: node.kind,
-    subtype: node.subtype,
     countryCode: node.countryCode,
     governanceBlock,
     layoutBand,
