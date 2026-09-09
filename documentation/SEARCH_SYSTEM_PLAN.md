@@ -30,6 +30,9 @@ The retired `geographicScope` property is excluded from text and geography searc
 `dataType=occurrence_records,sequence_data`. Unknown IDs are rejected. Type names
 in results and search come from the shared translations, with record-specific
 detail in descriptor descriptions.
+`dataFormat` likewise accepts only approved `dataFormats` IDs, for example
+`dataFormat=csv,parquet`. Shared translations supply format labels in search,
+filters, and details; localized descriptor labels cannot override them.
 
 Responses include `total` and an opaque cursor ordered by score, displayed title,
 and ID. `include=matchingIds` returns the entire matching ID set independently of

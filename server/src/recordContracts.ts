@@ -56,6 +56,7 @@ import type {
 } from "../../shared/recordApi";
 import {
   isDiscipline,
+  isDataFormat,
   isDataType,
   isEdgeKind,
   isNodeKind,
@@ -204,7 +205,7 @@ export function readRecordSearchQuery(input: Record<string, unknown>): RecordSea
     countryCode: readList(input.countryCode, "countryCode"),
     disciplines: readList(input.disciplines, "disciplines").map(value =>
       readEnumValue(value, isDiscipline, "disciplines")),
-    dataFormat: readList(input.dataFormat, "dataFormat"),
+    dataFormat: readList(input.dataFormat, "dataFormat").map(value => readEnumValue(value, isDataFormat, "dataFormat")),
     dataStandard: readList(input.dataStandard, "dataStandard"),
 
     dataType: readList(input.dataType, "dataType").map(value => readEnumValue(value, isDataType, "dataType")),
@@ -452,12 +453,19 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     if (!input.edges?.some(edge => edge.kind === "operates" && edge.targetNodeId === id)) add("edges", "an incoming operates relationship is required");
   }
   const assignedDataTypes = new Set<unknown>();
+  const assignedDataFormats = new Set<unknown>();
   descriptors.forEach((item, i) => {
     if (item.category === "type") {
       if (!isDataType(item.label) || assignedDataTypes.has(item.label)) {
         issues.push({ recordId: id, path: `record.properties.data.descriptors[${i}].label`, message: "must be a unique approved data type ID; additions require human approval in the authoring chat and an update to the shared vocabulary" });
       }
       assignedDataTypes.add(item.label);
+    }
+    if (item.category === "format") {
+      if (!isDataFormat(item.label) || assignedDataFormats.has(item.label)) {
+        issues.push({ recordId: id, path: `record.properties.data.descriptors[${i}].label`, message: "must be a unique approved data format ID; additions require human approval in the authoring chat and an update to the shared vocabulary" });
+      }
+      assignedDataFormats.add(item.label);
     }
     requireText(item.label, `record.properties.data.descriptors[${i}].label`);
     if (!["type", "format", "standard"].includes(String(item.category))) add(`record.properties.data.descriptors[${i}].category`, "invalid descriptor category");
@@ -525,8 +533,8 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
       for (const item of neutral) {
         const translated = rows.find(row => row.id === item.id) ?? {};
         for (const key of fields) {
-          if (section === "data.descriptors" && item.category === "type" && key === "label") {
-            if (translated.label != null) issues.push({ recordId: id, path: `${field}.details.${section}.${item.id}.label`, message: "data type labels come from the shared vocabulary; use description for record-specific detail" });
+          if (section === "data.descriptors" && (item.category === "type" || item.category === "format") && key === "label") {
+            if (translated.label != null) issues.push({ recordId: id, path: `${field}.details.${section}.${item.id}.label`, message: `data ${item.category} labels come from the shared vocabulary; use description for record-specific detail` });
           } else requireText(translated[key], `${field}.details.${section}.${item.id}.${key}`);
         }
       }

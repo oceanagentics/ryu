@@ -100,6 +100,11 @@
   `data.descriptors` item with category `type`. New data types require explicit
   human approval in the current authoring chat, followed by a vocabulary and
   translation update. Do not introduce free-text or localized type names.
+- Use only approved `dataFormats` IDs from `shared/domain.ts` as the label of a
+  `data.descriptors` item with category `format`, once per format per record.
+  New formats require explicit human approval in the current authoring chat and
+  a vocabulary/translation update. Keep interfaces, schemas, backend details,
+  and planned conversions out of Formats; retain sourced detail in descriptions.
 
 ## Ryu Access Routes
 - Treat `ryu_routes` as the first-class operational route index for agents.

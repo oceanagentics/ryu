@@ -6,7 +6,7 @@ import { PGlite } from "@electric-sql/pglite";
 import type { Pool } from "pg";
 
 import type { RecordAggregateContentInput } from "../../shared/recordApi";
-import { dataTypes } from "../../shared/domain";
+import { dataFormats, dataTypes } from "../../shared/domain";
 import { PostgresGraphRepository } from "./postgresGraphRepository";
 import { buildRecordUpdatedAt, readRecordAggregateContentInput, readRecordPatchInput, readRecordSearchQuery, toDefaultRecordDetailDto, validateRecordQuality } from "./recordContracts";
 import { collectSourceIds } from "./graphRepositorySupport";
@@ -162,27 +162,29 @@ test("discipline vocabulary and retired fields are validated at every record dep
   assert.equal(validateRecordQuality(generalist.id, generalist).valid, true);
 });
 
-test("data types reject invented names, duplicate assignments and localized overrides at every depth", () => {
-  for (const recordDepth of ["stub", "thin", "rich"]) {
-    for (const label of [null, 42, "invented_type", "Taxonomic records", ...dataTypes]) {
-      const input = richRecordFixture();
-      input.record.recordDepth = recordDepth;
-      const index = input.record.properties.data.descriptors.findIndex((d: any) => d.category === "type");
-      input.record.properties.data.descriptors[index].label = label;
-      const result = validateRecordQuality(input.id, input);
-      const approved = dataTypes.includes(label as typeof dataTypes[number]);
-      assert.equal(result.valid, approved, `${recordDepth}/${label}: ${JSON.stringify(result.issues)}`);
-      if (!approved) assert.ok(result.issues.some(issue => issue.path === `record.properties.data.descriptors[${index}].label`));
+test("data types and formats reject invented names, duplicate assignments and localized overrides at every depth", () => {
+  for (const [category, vocabulary] of [["type", dataTypes], ["format", dataFormats]] as const) {
+    for (const recordDepth of ["stub", "thin", "rich"]) {
+      for (const label of [null, 42, "invented_value", "Taxonomic records", "CSV and parquet snapshots", ...vocabulary]) {
+        const input = richRecordFixture();
+        input.record.recordDepth = recordDepth;
+        const index = input.record.properties.data.descriptors.findIndex((d: any) => d.category === category);
+        input.record.properties.data.descriptors[index].label = label;
+        const result = validateRecordQuality(input.id, input);
+        const approved = (vocabulary as readonly unknown[]).includes(label);
+        assert.equal(result.valid, approved, `${recordDepth}/${label}: ${JSON.stringify(result.issues)}`);
+        if (!approved) assert.ok(result.issues.some(issue => issue.path === `record.properties.data.descriptors[${index}].label`));
+      }
+      const duplicate = richRecordFixture();
+      duplicate.record.recordDepth = recordDepth;
+      const type = duplicate.record.properties.data.descriptors.find((d: any) => d.category === category);
+      duplicate.record.properties.data.descriptors.push({ ...type, id: "duplicate" });
+      assert.ok(validateRecordQuality(duplicate.id, duplicate).issues.some(issue => issue.message.includes(`unique approved data ${category}`)));
+      const override = richRecordFixture();
+      override.record.recordDepth = recordDepth;
+      override.localizations.en.details.data.descriptors.find((d: any) => d.id === type.id).label = "Invented type name";
+      assert.ok(validateRecordQuality(override.id, override).issues.some(issue => issue.message.includes("labels come from the shared vocabulary")));
     }
-    const duplicate = richRecordFixture();
-    duplicate.record.recordDepth = recordDepth;
-    const type = duplicate.record.properties.data.descriptors.find((d: any) => d.category === "type");
-    duplicate.record.properties.data.descriptors.push({ ...type, id: "duplicate" });
-    assert.ok(validateRecordQuality(duplicate.id, duplicate).issues.some(issue => issue.message.includes("unique approved data type")));
-    const override = richRecordFixture();
-    override.record.recordDepth = recordDepth;
-    override.localizations.en.details.data.descriptors.find((d: any) => d.id === type.id).label = "Invented type name";
-    assert.ok(validateRecordQuality(override.id, override).issues.some(issue => issue.message.includes("labels come from the shared vocabulary")));
   }
   const generalist = richRecordFixture();
   const typeId = generalist.record.properties.data.descriptors.find((d: any) => d.category === "type").id;
@@ -489,10 +491,13 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
     });
     await t.test("invalid vocabulary and retired fields cannot be written by PUT or PATCH even on thin records", async () => {
       const type = richRecordFixture().record.properties.data.descriptors.find((d: any) => d.category === "type");
+      const format = richRecordFixture().record.properties.data.descriptors.find((d: any) => d.category === "format");
       for (const method of ["put", "patch"] as const) {
         for (const invalid of [{ disciplines: ["fish_biodiversity"] }, { disciplines: ["ecology", "ecology"] }, { role: "reference_backbone" }, { disciplineFamily: "biodiversity" }, { geographicScope: "global" },
           { data: { descriptors: [{ ...type, label: "invented_type" }] } },
           { data: { descriptors: [type, { ...type, id: "duplicate" }] } },
+          { data: { descriptors: [{ ...format, label: "invented_format" }] } },
+          { data: { descriptors: [format, { ...format, id: "duplicate" }] } },
         ]) {
           const before = await read();
           const properties = { ...before.node.properties, ...invalid };
@@ -507,16 +512,18 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
             assert.deepEqual((await read()).node, before.node);
           }
         }
-        const before = await read();
-        const details = structuredClone(before.node.localizations.en!.details);
-        details.data.descriptors.find(d => d.id === type.id)!.label = "Invented type name";
-        for (const validateOnly of [true, false]) {
-          const options = { recordUpdatedAt: await version(), validateOnly };
-          const result = method === "put"
-            ? await repository.upsertRecord("fishbase", readRecordAggregateContentInput("fishbase", { record: { kind: "system", recordDepth: "thin", properties: before.node.properties }, localizations: { en: { title: "FishBase", details } } }), options)
-            : await repository.patchRecord("fishbase", readRecordPatchInput("fishbase", { record: { recordDepth: "thin" }, localizations: { en: { mode: "patch", detailsReplace: details } } }), options);
-          assert.ok("valid" in result && !result.valid, JSON.stringify(result));
-          assert.deepEqual((await read()).node, before.node);
+        for (const descriptor of [type, format]) {
+          const before = await read();
+          const details = structuredClone(before.node.localizations.en!.details);
+          details.data.descriptors.find(d => d.id === descriptor.id)!.label = "Invented label";
+          for (const validateOnly of [true, false]) {
+            const options = { recordUpdatedAt: await version(), validateOnly };
+            const result = method === "put"
+              ? await repository.upsertRecord("fishbase", readRecordAggregateContentInput("fishbase", { record: { kind: "system", recordDepth: "thin", properties: before.node.properties }, localizations: { en: { title: "FishBase", details } } }), options)
+              : await repository.patchRecord("fishbase", readRecordPatchInput("fishbase", { record: { recordDepth: "thin" }, localizations: { en: { mode: "patch", detailsReplace: details } } }), options);
+            assert.ok("valid" in result && !result.valid, JSON.stringify(result));
+            assert.deepEqual((await read()).node, before.node);
+          }
         }
       }
     });

@@ -12,7 +12,7 @@ Dates/counts are preserved historical assertions; this fixture does not claim a
 fresh factual or URL review. No machine route was present in the response.
 
 Fixture-only additions: explicit profile/edge source references, localized
-descriptor labels, six-language source titles/notes, and relationship-review
+standard descriptor labels, six-language source titles/notes, and relationship-review
 findings for all six edge types. The retired operator country code is null.
 The relationship findings deliberately document gaps rather than invent edges.
 These translations are
@@ -30,3 +30,6 @@ changes; do not automatically refresh it from the live database during tests.
 See `documentation/RICH_RESEARCH_RECORDS.md` for the complete authoring standard.
 
 Sources use the current node/edge-owned four-field collections. Citation references are IDs; source titles are locale maps. The fixture remains an example, not production data.
+
+The format example uses the approved `parquet` ID with shared display labels;
+its historical description retains the broader snapshot context.

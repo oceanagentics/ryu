@@ -73,14 +73,14 @@ A rich system must have:
   incoming `operates` edge from an existing organization.
 - All six supported node localizations, with non-empty title, summary, description,
   and explicit `details.profile.sourceRefs` supporting the prose and shared metadata.
-- Source-backed `format` descriptors and justified approved `type` descriptors. Include applicable `standard`
+- Source-backed approved `format` descriptors and justified approved `type` descriptors. Include applicable `standard`
   descriptors, or explain their absence in `details.researchGaps.standards`.
 - At least one actual `read` access path, with mechanism, URL, evidence, localized
   label and description. Explain authentication, licensing, restrictions, and
   contribution arrangements in the profile/access prose as applicable.
 - Matching, unique neutral/localized item IDs. Descriptors need localized
-  descriptions; format and standard descriptors also need localized labels.
-  Type labels come from the shared vocabulary. Access paths need labels and descriptions; gallery items
+  descriptions; standard descriptors also need localized labels.
+  Type and format labels come from the shared vocabularies. Access paths need labels and descriptions; gallery items
   need titles and captions; metrics need localized descriptions.
 - Source-backed metrics with finite non-negative values, units, and observation
   dates (YYYY, YYYY-MM, or YYYY-MM-DD). Storage values use bytes. When record count,
@@ -341,14 +341,14 @@ Use `nodes.properties_json.data.descriptors` for compact, source-backed data des
 Categories:
 
 - `type`: an approved data type ID from `dataTypes` in `shared/domain.ts`, describing records or products a user can retrieve.
-- `format`: how the data is exposed or stored, such as web pages, CSV, parquet, API JSON, Darwin Core Archive, RDF, or relational database tables.
+- `format`: an approved `dataFormats` ID from `shared/domain.ts`, identifying the concrete encoding or package in which content can be retrieved.
 - `standard`: identifiers, vocabularies, schemas, licenses, or protocols used by the database.
 
 Each neutral descriptor should have `id`, `category`, `label`, and optional `source`
-(required for rich records). For category `type`, `label` stores the canonical ID;
+(required for rich records). For categories `type` and `format`, `label` stores the canonical ID;
 its translated display name comes from `shared/i18n.ts`. Keep its localized entry's
-`id` and `description`, and omit `label`. Format and standard descriptors still
-use localized labels and descriptions.
+`id` and `description`, and omit `label`. Standard descriptors use localized
+labels and descriptions.
 
 Keep descriptors broad enough to scan. Do not create one descriptor per table unless table-level detail is essential.
 
@@ -409,6 +409,84 @@ documented equivalents, keeps one existing descriptor and its source/localizatio
 per type (preferring canonical and sourced entries), and removes ambiguous or
 duplicate descriptors. It does not certify the retained assignments as reviewed
 or backfill absent evidence. Review those assignments during subsequent authoring.
+
+### Approved Formats
+
+Use each format at most once per record. PUT and PATCH reject unknown IDs,
+duplicate assignments, and localized format-label overrides at every depth.
+The `dataFormat` search filter accepts only canonical IDs. Shared labels cover
+all six languages; retain format names/acronyms such as NetCDF and GeoJSON.
+
+| ID | Label | Meaning |
+| --- | --- | --- |
+| `csv` | CSV | Comma-separated text records. |
+| `tsv` | TSV | Tab-separated text records, including downloads marketed as CSV when the delimiter is a tab. |
+| `parquet` | Parquet | Columnar Apache Parquet data files. |
+| `json` | JSON | JSON records or responses; use a more specific approved format when applicable. |
+| `xml` | XML | XML records or documents. |
+| `html` | HTML | Actual record or document content delivered as web pages. |
+| `pdf` | PDF | PDF documents and reports. |
+| `netcdf` | NetCDF | Scientific array and observation data in NetCDF files. |
+| `zarr` | Zarr | Chunked arrays in a Zarr store. |
+| `bufr` | BUFR | Binary observation messages using WMO BUFR. |
+| `geojson` | GeoJSON | Geographic features and geometries encoded as GeoJSON. |
+| `shapefile` | Shapefile | An Esri shapefile dataset and its companion files. |
+| `geopackage` | GeoPackage | Geographic data in an OGC GeoPackage. |
+| `kml` | KML | Geographic features in KML, including a KMZ package containing KML. |
+| `esri_file_geodatabase` | Esri file geodatabase | A downloadable Esri file geodatabase and its feature classes/tables. |
+| `pmtiles` | PMTiles | A PMTiles archive containing map tiles. |
+| `pbf` | Protocol Buffers (PBF) | Protocol Buffers encoded content; identify the specific message schema in the description and relevant route contract. |
+| `png` | PNG | PNG images, including map tiles. |
+| `darwin_core_archive` | Darwin Core Archive | A Darwin Core Archive data package, distinct from use of Darwin Core terms alone. |
+| `fasta` | FASTA | Biological sequences in FASTA text format. |
+| `fastq` | FASTQ | Sequence reads with quality scores. |
+| `genbank_flatfile` | GenBank flat file | Annotated sequence records in GenBank flat-file format. |
+| `embl_flatfile` | EMBL flat file | Annotated sequence records in EMBL flat-file format. |
+
+Assign only formats supported by evidence for that system's actual content.
+A website alone does not justify HTML, and downloadable documentation does not
+establish the format of the underlying data. A ZIP wrapper, DOI, database engine,
+R package, REST API, WMS service, XYZ URL template, raster/grid layout, or generic
+"metadata schema" is not a format tag. Keep supported access mechanics in access
+paths/routes, schemas and vocabularies in Standards, and explanatory detail in
+localized prose. Record format versions, compression and package contents in
+descriptions; do not multiply tags for incidental encodings inside a package.
+For example, GeoJSON alone does not require an additional JSON tag.
+
+Split genuinely distinct outputs into separate descriptors, preserving their
+sources and corresponding localized descriptions. Do not turn "CSV / tabular"
+into CSV without checking the actual delimiter. Do not infer a format from an
+unimplemented connector or planned conversion. The node's Formats describe
+available content; route `format` and `deliveryFormats` remain separate operational
+metadata and are not rewritten by this change.
+
+**Adding a format requires human approval in the authoring chat.** Present the
+proposed ID, definition, record and source, and why existing formats do not fit.
+Wait for explicit approval, update `dataFormats` and all six translations, and
+release the vocabulary before authoring the new ID. Approval of a record or
+silence does not approve a vocabulary addition.
+
+For historical imports, `server/schema/012_data_formats.sql` provides the
+repeatable conversion before exporting the graph. The canonical graph was
+already converted through validated, version-checked Record API patches on
+2026-09-09 (56 records); this release requires no additional database migration.
+The conversion normalizes explicit names, splits CSV/Parquet and DLCD query outputs, retains one
+descriptor per format (preferring sourced, then canonical entries), and removes
+localized format labels. It reclassifies the named Darwin Core, EML, Extended
+MeasurementOrFact and re3data schemas as Standards. It preserves sourced prose
+from removed interface/backend claims in the localized profile with source refs;
+vague unsourced claims and unverified encodings are removed. It leaves all owner
+source collections, routes, edges and review history intact, and aborts on
+generated descriptor-ID collisions. It is safe to rerun.
+
+This migration normalizes existing claims, not their research status. Missing
+sources/descriptions still need backfill, and retained labels do not certify a
+format assignment as reviewed. In particular, Bio-ORACLE's incorrect sequence
+standard is removed; its documented NetCDF content needs a sourced descriptor.
+GBIF's TSV/Parquet, Marine Regions' GeoPackage/KML and ENA's specific sequence
+formats are additional research findings, not automatic expansions of vague tags.
+Empty format lists are allowed for incomplete records; do not add placeholders
+to satisfy rich-record requirements.
 
 ## Metrics
 

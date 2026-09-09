@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import type { GraphNode, GraphNodeKind, RyuRoute, SupportedLocale } from "../../shared/domain";
-import { dataTypes } from "../../shared/domain";
+import { dataFormats, dataTypes } from "../../shared/domain";
 import { facetLabel } from "../../shared/i18n";
 import { indexGraph } from "../../shared/indexGraph";
 import { emptyLocalizationDetails, resolveNodeLocalization, supportedLocales } from "../../shared/localization";
@@ -95,13 +95,17 @@ test("filters intersect across groups and OR within groups, using typed access a
   assert.throws(() => readRecordSearchQuery({ disciplines: "fish_biodiversity" }), /disciplines/);
   assert.throws(() => readRecordSearchQuery({ role: "aggregator" }), /unsupported/);
   assert.throws(() => readRecordSearchQuery({ disciplineFamily: "biodiversity" }), /unsupported/);
-  for (const key of ["countryCode", "geography", "dataFormat", "dataStandard", "accessType", "accessMethod"]) {
+  for (const key of ["countryCode", "geography", "dataStandard", "accessType", "accessMethod"]) {
     assert.equal(search([record], { ...filters, [key]: "not-a-match" }).length, 0, key);
   }
   assert.equal(search([record], { ...filters, accessType: "api" }).length, 0);
   assert.equal(search([record], { ...filters, dataType: "sequence_data" }).length, 0);
   assert.equal(search([record], { ...filters, dataType: "sequence_data,occurrence_records" }).length, 1);
   assert.throws(() => readRecordSearchQuery({ dataType: "geojson" }), /dataType/);
+  assert.throws(() => readRecordSearchQuery({ dataFormat: "not-a-format" }), /dataFormat/);
+  assert.throws(() => readRecordSearchQuery({ dataFormat: "GeoJSON" }), /dataFormat/);
+  assert.equal(search([record], { ...filters, dataFormat: "parquet" }).length, 0);
+  assert.equal(search([record], { ...filters, dataFormat: "parquet,geojson" }).length, 1);
   assert.equal(search([record], { ...filters, reviewLocale: "requested" }).length, 0);
   assert.equal(search([record], { ...filters, reviewLocale: "any" }).length, 1);
   for (const [localeAvailability, count] of [["available", 0], ["missing", 1], ["partial", 1], ["complete", 0]] as const) {
@@ -152,6 +156,29 @@ test("data type search and display use canonical translations and preserve recor
   assert.equal(search([record], { q: "Nomenclatural evidence" }).length, 1);
   for (const locale of supportedLocales) {
     for (const type of dataTypes) assert.notEqual(facetLabel(locale, "descriptorLabel", type), type, `${locale}/${type}`);
+  }
+});
+
+test("format search, details and filters use shared labels with localized descriptions", () => {
+  const record = node("formatted");
+  record.properties.data = { recordCount: null, storageSize: null, descriptors: [
+    { id: "format", category: "format", label: "genbank_flatfile", source: null },
+  ] };
+  record.localizations.en!.details.data.descriptors = [{ id: "format", label: "LegacyOverrideMarker", description: "Annotated sequence exports" }];
+  const resolved = systemDataDescriptors(record, resolveNodeLocalization(record, "fr"))[0];
+  assert.equal(resolved.localizedLabel, "Fichier plat GenBank");
+  assert.equal(resolved.description, "Annotated sequence exports");
+  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [], savedViews: [] });
+  assert.deepEqual(getSystemFilterOptions(buildSystemRecords(graph, "fr"), "fr").dataClaims.format, [
+    { value: "genbank_flatfile", label: "Fichier plat GenBank" },
+  ]);
+  assert.equal(search([record], { q: "Fichier plat GenBank", locale: "fr" })[0].reasons[0].field, "data.descriptors.format");
+  assert.equal(search([record], { q: "Annotated sequence exports" }).length, 1);
+  for (const locale of supportedLocales) {
+    for (const format of dataFormats) {
+      assert.notEqual(facetLabel(locale, "descriptorLabel", format), format, `${locale}/${format}`);
+      assert.deepEqual(readRecordSearchQuery({ dataFormat: format }).dataFormat, [format]);
+    }
   }
 });
 

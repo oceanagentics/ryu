@@ -10,7 +10,7 @@
         "descriptors": [
           {
             "id": "fishbase-data-format-parquet-csv",
-            "label": "CSV and parquet snapshots",
+            "label": "parquet",
             "source": "src-fishbase-sourcecoop",
             "category": "format"
           },
@@ -178,8 +178,7 @@
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
-              "description": "توزع لقطات الجداول الخام العامة ذات الإصدارات كصادرات CSV وparquet عبر Source Cooperative.",
-              "label": "لقطات CSV وParquet"
+              "description": "توزع لقطات الجداول الخام العامة ذات الإصدارات كصادرات CSV وparquet عبر Source Cooperative."
             },
             {
               "id": "fishbase-data-standard-license",
@@ -266,8 +265,7 @@
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
-              "description": "Versioned public raw table snapshots are distributed as CSV and parquet exports through Source Cooperative.",
-              "label": "CSV and parquet snapshots"
+              "description": "Versioned public raw table snapshots are distributed as CSV and parquet exports through Source Cooperative."
             },
             {
               "id": "fishbase-data-standard-license",
@@ -353,8 +351,7 @@
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
-              "description": "Las instantáneas públicas versionadas de tablas sin procesar se distribuyen como exportaciones CSV y parquet a través de Source Cooperative.",
-              "label": "Instantáneas CSV y Parquet"
+              "description": "Las instantáneas públicas versionadas de tablas sin procesar se distribuyen como exportaciones CSV y parquet a través de Source Cooperative."
             },
             {
               "id": "fishbase-data-standard-license",
@@ -441,8 +438,7 @@
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
-              "description": "Des instantanés publics versionnés des tables brutes sont distribués sous forme d'exports CSV et parquet via Source Cooperative.",
-              "label": "Instantanés CSV et Parquet"
+              "description": "Des instantanés publics versionnés des tables brutes sont distribués sous forme d'exports CSV et parquet via Source Cooperative."
             },
             {
               "id": "fishbase-data-standard-license",
@@ -529,8 +525,7 @@
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
-              "description": "Версионированные публичные снимки сырых таблиц распространяются через Source Cooperative как экспорты CSV и parquet.",
-              "label": "Снимки CSV и Parquet"
+              "description": "Версионированные публичные снимки сырых таблиц распространяются через Source Cooperative как экспорты CSV и parquet."
             },
             {
               "id": "fishbase-data-standard-license",
@@ -617,8 +612,7 @@
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
-              "description": "版本化的公开原始表快照通过 Source Cooperative 以 CSV 和 parquet 导出形式分发。",
-              "label": "CSV 和 Parquet 快照"
+              "description": "版本化的公开原始表快照通过 Source Cooperative 以 CSV 和 parquet 导出形式分发。"
             },
             {
               "id": "fishbase-data-standard-license",

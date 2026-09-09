@@ -51,6 +51,15 @@ export const dataTypes = [
 
 export type DataType = (typeof dataTypes)[number];
 
+// Additions require explicit human approval in the record-authoring chat.
+export const dataFormats = [
+  "csv", "tsv", "parquet", "json", "xml", "html", "pdf", "netcdf", "zarr", "bufr",
+  "geojson", "shapefile", "geopackage", "kml", "esri_file_geodatabase", "pmtiles", "pbf",
+  "png", "darwin_core_archive", "fasta", "fastq", "genbank_flatfile", "embl_flatfile",
+] as const;
+
+export type DataFormat = (typeof dataFormats)[number];
+
 export interface Source {
   id: string;
   url: string;
@@ -66,7 +75,7 @@ export type SystemDataDescriptorCategory = "type" | "format" | "standard";
 export type SystemDataDescriptor = {
   id: string;
   source: SourceRef | null;
-} & ({ category: "type"; label: DataType } | { category: "format" | "standard"; label: string });
+} & ({ category: "type"; label: DataType } | { category: "format"; label: DataFormat } | { category: "standard"; label: string });
 
 export interface LocalizedSystemDataDescriptor {
   id: string;
