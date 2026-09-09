@@ -44,10 +44,18 @@ const bootstrap: GraphBootstrapPayload = {
   ryuRoutes: [],
   savedViews: [],
 };
+const readerToken = "ryu_live_reader";
 const writerToken = "ryu_live_writer";
 const reviewerToken = "ryu_live_reviewer";
 const adminToken = "ryu_live_admin";
 const apiTokens: ApiTokenRecord[] = [
+  {
+    name: "reader",
+    scopes: ["reader"],
+    hash: hashApiToken(readerToken),
+    owner: "reader@oceanagentics.com",
+    expiresAt: null,
+  },
   {
     name: "writer",
     scopes: ["writer"],
@@ -282,7 +290,7 @@ class FakeRepository implements GraphRepository {
   ): RecordDeleteImpact {
     const impact = this.getRecordDeleteImpact(id);
     if (impact.impactHash !== impactHash) {
-      throw new Error("stale delete impact hash");
+      throw new ApiRequestError(409, "stale delete impact hash");
     }
     this.requireExistingPrecondition(options);
 
@@ -1084,45 +1092,76 @@ test("enforces review route payload limits", async () => {
   });
 });
 
-test("requires admin token for delete dry runs", async () => {
-  await withServer("api", async (baseUrl) => {
-    const response = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
-      method: "DELETE",
-      headers: authHeaders(writerToken),
-    });
+test("rejects reader, unauthenticated, and public delete dry runs and applies", async () => {
+  for (const [mode, headers, status, error] of [
+    ["api", authHeaders(readerToken, true), 403, "wrong_scope"],
+    ["api", {}, 401, "missing_bearer_token"],
+    ["public", authHeaders(writerToken, true), 403, "writes_disabled"],
+  ] as const) {
+    await withServer(mode, async (baseUrl) => {
+      for (const query of ["validateOnly=true", "impactHash=impact-1"]) {
+        const response = await fetch(`${baseUrl}/explorer/api/records/node-1?${query}`, {
+          method: "DELETE",
+          headers,
+        });
 
-    assert.equal(response.status, 403);
-    assert.deepEqual(await response.json(), { error: "wrong_scope" });
-  });
+        assert.equal(response.status, status);
+        assert.deepEqual(await response.json(), { error });
+      }
+    });
+  }
 });
 
-test("allows admin delete dry runs and requires impact hash to apply", async () => {
-  await withServer("api", async (baseUrl) => {
-    const headers = authHeaders(adminToken);
-    const dryRun = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
-      method: "DELETE",
-      headers,
+test("allows writer, reviewer, and admin deletes with impact and version checks", async () => {
+  for (const token of [writerToken, reviewerToken, adminToken]) {
+    await withServer("api", async (baseUrl) => {
+      const headers = authHeaders(token);
+      const dryRun = await fetch(`${baseUrl}/explorer/api/records/node-1?validateOnly=true`, {
+        method: "DELETE",
+        headers,
+      });
+
+      assert.equal(dryRun.status, 200);
+      const dryRunBody = await dryRun.json() as Record<string, unknown>;
+      assert.equal(dryRunBody.impactHash, "impact-1");
+
+      const missingHash = await fetch(`${baseUrl}/explorer/api/records/node-1`, {
+        method: "DELETE",
+        headers,
+      });
+
+      assert.equal(missingHash.status, 400);
+      assert.deepEqual(await missingHash.json(), { error: "impactHash is required" });
+
+      const staleHash = await fetch(`${baseUrl}/explorer/api/records/node-1?impactHash=stale`, {
+        method: "DELETE",
+        headers: authHeaders(token, true),
+      });
+      assert.equal(staleHash.status, 409);
+      assert.deepEqual(await staleHash.json(), { error: "stale delete impact hash" });
+
+      const missingVersion = await fetch(`${baseUrl}/explorer/api/records/node-1?impactHash=impact-1`, {
+        method: "DELETE",
+        headers,
+      });
+      assert.equal(missingVersion.status, 428);
+      assert.deepEqual(await missingVersion.json(), { error: "recordUpdatedAt precondition is required" });
+
+      const staleVersion = await fetch(`${baseUrl}/explorer/api/records/node-1?impactHash=impact-1`, {
+        method: "DELETE",
+        headers: { ...headers, "x-ryu-record-updated-at": "2026-08-26T00:00:00.000Z" },
+      });
+      assert.equal(staleVersion.status, 412);
+      assert.deepEqual(await staleVersion.json(), { error: "stale recordUpdatedAt" });
+
+      const apply = await fetch(`${baseUrl}/explorer/api/records/node-1?impactHash=impact-1`, {
+        method: "DELETE",
+        headers: authHeaders(token, true),
+      });
+
+      assert.equal(apply.status, 200);
     });
-
-    assert.equal(dryRun.status, 200);
-    const dryRunBody = await dryRun.json() as Record<string, unknown>;
-    assert.equal(dryRunBody.impactHash, "impact-1");
-
-    const missingHash = await fetch(`${baseUrl}/explorer/api/records/node-1`, {
-      method: "DELETE",
-      headers,
-    });
-
-    assert.equal(missingHash.status, 400);
-    assert.deepEqual(await missingHash.json(), { error: "impactHash is required" });
-
-    const apply = await fetch(`${baseUrl}/explorer/api/records/node-1?impactHash=impact-1`, {
-      method: "DELETE",
-      headers: authHeaders(adminToken, true),
-    });
-
-    assert.equal(apply.status, 200);
-  });
+  }
 });
 
 test("does not expose bulk validation as a launch API route", async () => {

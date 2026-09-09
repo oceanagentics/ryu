@@ -22,8 +22,7 @@ noted.
 - Enforce write authorization inside Explorer itself. Bearer tokens, IAP, Cloud
   Run settings, and DB roles are outer controls, but route handlers must still
   check operation-specific permissions.
-- Fail closed for admin-only operations when production admin scopes are missing
-  or empty. API writes must fail closed when bearer-token config is missing,
+- API writes must fail closed when bearer-token config is missing,
   malformed, invalid, expired, or lacks the required scope.
 - Start with `GET` for search/list reads. Do not add bulk endpoints for launch;
   agents can validate and apply one record per request.
@@ -131,7 +130,7 @@ Use this checklist for the implementation pass.
   allowlist fields instead of copying repository rows and deleting sensitive
   properties afterward.
 - [x] Add Explorer-side auth helpers for authenticated OA editor access and
-  admin-only destructive actions.
+  writer-scoped deletion.
 - [x] Add per-route JSON body limits for review, patch, and full record upsert.
 - [x] Implement Postgres-backed `GET /api/records` with the full filter set: `q`,
   `kind`, `geography`, `dataType`, `recordDepth`, `reviewState`, `locale`,
@@ -147,7 +146,7 @@ Use this checklist for the implementation pass.
 - [x] Add `PUT /api/records/:id` as a deterministic-ID content upsert, not a
   delete-by-omission replacement.
 - [x] Add tests for public redaction, admin/private DTO shape, auth denial,
-  authenticated review changes, admin-only destructive actions, unknown field
+  authenticated review changes, writer-scoped deletion, unknown field
   rejection, content-write review-field rejection, transaction rollback, and SQL
   query filters.
 - [x] Applied bulk imports are not part of this API. Bulk validation is also cut
@@ -572,9 +571,8 @@ The dry-run response should report the impact before applying the delete:
 - affected saved views, if any
 - orphaned source candidates, if any
 
-Applying a delete should require admin access, not just authenticated editor
-access. In the token model, that means an `admin` token scope rather than a
-separate email allowlist. The apply request should include both a fresh dry-run
+Delete dry-runs and applies require `writer` access or higher, including
+authenticated OA browser editors. The apply request should include both a fresh dry-run
 `impactHash` and the current `recordUpdatedAt` precondition so accidental stale
 deletes are rejected.
 
@@ -711,12 +709,13 @@ Token scopes:
 
 - `reader`: private record reads.
 - `writer`: includes `reader`; allows `PUT /api/records/:id`,
-  `PATCH /api/records/:id`, validate-only writes, and review changes to
+  `PATCH /api/records/:id`, `DELETE /api/records/:id`, validate-only writes,
+  delete dry-runs, and review changes to
   `agent_researched` or `needs_revision`.
 - `reviewer`: includes `writer`; additionally allows review changes to
   `human_reviewed`.
-- `admin`: includes `reviewer`; additionally allows `DELETE /api/records/:id`
-  apply requests.
+- `admin`: includes `reviewer`; retained for existing tokens, with no additional
+  record API permissions.
 
 Do not add per-table scopes unless the organization grows into a real multi-team
 permission model. These four scopes are enough for the current boundary.
@@ -796,8 +795,8 @@ is the token store.
 
 Human setup instructions:
 
-1. Ask an operator for a `reader`, `writer`, or `reviewer` token. Use an
-   `admin` token only when delete is actually needed.
+1. Ask an operator for a `reader`, `writer`, or `reviewer` token. A `writer`
+   token supports record creation, updates, and deletion.
 2. Store the token outside the repo, for example in a password manager, shell
    secret, local ignored environment file, or Codex/agent secret store.
 3. Tell the agent the API URL and which environment variable contains the token.
@@ -851,7 +850,7 @@ curl -sS -X PATCH \
   --data-binary @payload.json
 ```
 
-Delete remains admin-only and two-step:
+Delete requires writer access or higher and remains two-step:
 
 ```sh
 curl -sS -X DELETE \
@@ -886,13 +885,13 @@ Target Explorer app access levels:
   `@oceanagentics.com` users. Can use Explorer's direct record review/write
   actions.
 - reader token: direct API concept for private agent reads without write access.
-- writer token: direct API concept for agents. Can use private reads, create and
-  update record content, update reviewer notes, and set review state to
+- writer token: direct API concept for agents. Can use private reads, create,
+  update, and delete records, update reviewer notes, and set review state to
   `agent_researched` or `needs_revision`.
 - reviewer token: direct API concept for human-directed review work. Includes
   writer permissions and can set `human_reviewed`.
-- admin token: direct API concept for destructive or operationally sensitive
-  actions only. Admin can delete records and also has reviewer permissions.
+- admin token: retained for existing tokens; includes reviewer permissions.
+  Record deletion requires only writer access.
 
 Initial gates:
 
@@ -913,7 +912,7 @@ Minimal permission rule:
 
 - Authenticated OA users are browser readers/reviewers through direct Explorer
   IAP. Agents are API readers, writers, or reviewers through bearer tokens.
-  Admin is separate only because destructive actions need an extra token scope.
+  Existing admin tokens retain reviewer permissions; deletion needs no extra scope.
 
 ## Audit And Safety Requirements
 
@@ -993,7 +992,7 @@ Server:
   affected ids, validation result, affected sections, and `recordUpdatedAt`.
 - [x] Add tests for missing token, invalid token, expired token, wrong scope,
   writer success, writer denial for `human_reviewed`, reviewer success,
-  admin-only denial, admin success, semantic dry-run failures,
+  reader denial for deletion, writer/reviewer/admin delete success, semantic dry-run failures,
   `recordUpdatedAt` missing/stale failures, and rate-limit responses.
 
 Client:
@@ -1036,7 +1035,7 @@ Docs:
 3. Use the read API for browser search, directory ordering, and graph matching IDs.
 4. Add private `PATCH /api/records/:id` for targeted updates.
 5. Add `PUT /api/records/:id` for full record writes.
-6. Add delete with admin-only, mandatory dry-run behavior.
+6. Add delete with writer access and mandatory dry-run behavior.
 7. Remove legacy direct database-backed MCP server entrypoints. Do not rebuild
    MCP in this refactor.
 8. Add bearer-token auth in `RYU_MODE=api`, including token hash config, scopes,

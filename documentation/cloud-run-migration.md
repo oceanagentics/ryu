@@ -17,7 +17,7 @@ runtime database.
   human browser access is authenticated directly by Explorer/IAP. Without IAP,
   agent API access requires bearer-token auth. The API exposes
   record-oriented reads, deterministic record upserts, targeted record patches,
-  review updates, and admin-gated delete dry-runs/applies. It does not expose
+  review updates, and writer-gated delete dry-runs/applies. It does not expose
   raw table mutation, general node/edge/source/saved-view CRUD, bulk endpoints,
   or schema mutation routes.
 
@@ -92,7 +92,7 @@ The list endpoint is SQL-backed and supports `q`, `kind`, `geography`,
 Content writes reject review and audit fields. Full writes use deterministic
 caller-supplied IDs and transactional upserts; repeated requests with the same
 ID do not need a separate idempotency table. Applied writes require a
-`recordUpdatedAt` precondition. Deletes require admin access, a fresh dry-run
+`recordUpdatedAt` precondition. Deletes require writer access or higher, a fresh dry-run
 `impactHash`, and the same `recordUpdatedAt` precondition.
 
 ## Current Deployment

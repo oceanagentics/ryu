@@ -551,7 +551,6 @@ export function createApp(options: CreateAppOptions = {}) {
   const accessOptions = { adminUsers, apiTokens, iapAudience, rateLimit };
   const recordReadAccess = requireAccess(mode, "reader", accessOptions);
   const writerAccess = requireAccess(mode, "writer", accessOptions);
-  const adminAccess = requireAccess(mode, "admin", accessOptions);
   const shouldRedactPublicFields = mode === "public" && !iapAudience;
   const recordDtoScope = readRecordDtoScope(mode, iapAudience);
 
@@ -689,7 +688,7 @@ export function createApp(options: CreateAppOptions = {}) {
     }
   });
 
-  router.delete("/api/records/:id", adminAccess, async (request, response) => {
+  router.delete("/api/records/:id", writerAccess, async (request, response) => {
     const id = readParam(request, "id");
     try {
       const validateOnly = readValidateOnly(request.query.validateOnly);

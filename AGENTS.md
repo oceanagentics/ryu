@@ -32,11 +32,11 @@
 - Human browser authoring goes directly through the IAP-protected Explorer admin app at `/explorer/admin`, which calls its own `/api/records` routes.
 - The details UI shows `recordDepth` plus the resolved localization's `review.state` for all users. Authenticated/author mode renders the review state dropdown and reviewer-note form for that localization.
 - Record reads are `GET /api/records` and `GET /api/records/:id`.
-- Record writes are `PUT /api/records/:id`, `PATCH /api/records/:id`, `PATCH /api/records/:id/review`, and admin-only `DELETE /api/records/:id`.
+- Record writes are `PUT /api/records/:id`, `PATCH /api/records/:id`, `PATCH /api/records/:id/review`, and `DELETE /api/records/:id`.
 - Applied writes against existing records must include `x-ryu-record-updated-at` from a fresh read. Create-only writes must include `x-ryu-create-only: true`.
 - Agents should run `validateOnly=true` before applying content writes and show validation errors before retrying.
-- Writer tokens may create and update records but must not set `human_reviewed`; reviewer or admin tokens may set `human_reviewed`.
-- Delete is admin-only and requires a dry-run `impactHash` plus the current `recordUpdatedAt` precondition.
+- Writer tokens may create, update, and delete records but must not set `human_reviewed`; reviewer or admin tokens may set `human_reviewed`.
+- Delete dry-runs and applies require writer access or higher; applies require a dry-run `impactHash` plus the current `recordUpdatedAt` precondition.
 - Do not expose general node, edge, source, saved-view, schema, bulk, or direct database mutation routes as launch APIs.
 
 ## Current Minimal Model
