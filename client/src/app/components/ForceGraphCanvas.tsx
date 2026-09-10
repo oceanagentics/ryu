@@ -14,6 +14,7 @@ import ForceGraph3D, {
 } from "react-force-graph-3d";
 import * as THREE from "three";
 
+import { nodeMapEdgeColors } from "../graph/cytoscapeStyles";
 import {
   createNodeMap3dGlobe,
   disposeNodeMap3dObject,
@@ -148,15 +149,6 @@ const nodeColorByKind = {
 } satisfies Record<ForceGraphNode["kind"], string>;
 const selectedOrange = "#ff4f2f";
 const connectedOrange = "#ff785e";
-
-const linkColorByType = {
-  governs: "#c8dfff",
-  operates: "#9fe3d0",
-  member_of: "#8fb3db",
-  funds: "#e9c46a",
-  publishes_to: "#ff6b78",
-  syncs_to: "#c99cff",
-} satisfies Record<GraphProjectionEdgeType, string>;
 
 const nodeTransitionDurationMs = 900;
 const nodeMap3dStageCameraFov = 50;
@@ -1463,7 +1455,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
       if (highlighted.linkIds.has(link.id)) {
         return connectedOrange;
       }
-      return linkColorByType[link.type];
+      return nodeMapEdgeColors[link.type];
     },
     [highlighted.linkIds, selectedRelationshipId],
   );
@@ -1492,9 +1484,17 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
   );
 
   const linkThreeObject = useCallback(
-    (link: LinkObject<ForceGraphNode, ForceGraphLink>) =>
-      makeGlobeLinkObject(linkColor(link as RenderLink)),
-    [linkColor],
+    (link: RenderLink) => {
+      if (arrangement === "globe") return makeGlobeLinkObject(linkColor(link));
+      // Cylinder edges ignore linkHoverPrecision; an invisible line supplies the hit area.
+      return new THREE.Line(
+        new THREE.BufferGeometry().setAttribute(
+          "position", new THREE.BufferAttribute(new Float32Array(6), 3),
+        ),
+        new THREE.LineBasicMaterial({ visible: false }),
+      );
+    },
+    [arrangement, linkColor],
   );
 
   const linkPositionUpdate = useCallback(
@@ -1502,10 +1502,18 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
       object: THREE.Object3D,
       coords: { start: Coords; end: Coords },
       link: LinkObject,
-    ) =>
-      arrangement === "globe"
-        ? updateGlobeLinkObject(object, coords, linkColor(link as RenderLink))
-        : false,
+    ) => {
+      if (arrangement === "globe") {
+        return updateGlobeLinkObject(object, coords, linkColor(link as RenderLink));
+      }
+      const geometry = (object as THREE.Line).geometry;
+      const positions = geometry.getAttribute("position");
+      positions.setXYZ(0, coords.start.x, coords.start.y, coords.start.z);
+      positions.setXYZ(1, coords.end.x, coords.end.y, coords.end.z);
+      positions.needsUpdate = true;
+      geometry.computeBoundingSphere();
+      return false;
+    },
     [arrangement, linkColor],
   );
 
@@ -1573,11 +1581,12 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
         }
         linkDirectionalParticleSpeed={0.006}
         linkDirectionalParticleWidth={1.4}
-        linkHoverPrecision={6}
+        linkHoverPrecision={12}
         linkLabel={(link) => link.label}
         linkOpacity={0.38}
-        linkPositionUpdate={arrangement === "globe" ? linkPositionUpdate : undefined}
-        linkThreeObject={arrangement === "globe" ? linkThreeObject : undefined}
+        linkPositionUpdate={linkPositionUpdate}
+        linkThreeObject={linkThreeObject}
+        linkThreeObjectExtend={arrangement !== "globe"}
         linkWidth={linkWidth}
         nodeColor={nodeColor}
         nodeLabel={(node) =>

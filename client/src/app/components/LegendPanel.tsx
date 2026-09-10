@@ -1,6 +1,7 @@
 import { Card, Flex, Tag, Typography } from "antd";
 
-import type { GraphNodeKind } from "../../../../shared/domain";
+import { edgeKinds, type GraphNodeKind } from "../../../../shared/domain";
+import { nodeMapEdgeColors } from "../graph/cytoscapeStyles";
 import { vocabularyLabel, t } from "../i18n";
 import { useGraphStore } from "../state/graphStore";
 
@@ -58,6 +59,15 @@ export function LegendPanel() {
                 {vocabularyLabel(locale, "nodeKinds", kind)}
               </span>
             </button>
+          ))}
+        </Flex>
+        <Flex vertical gap={8} className="legend-column">
+          <Typography.Text strong>{t(locale, "graph.edges")}</Typography.Text>
+          {edgeKinds.map((kind) => (
+            <Flex key={kind} align="center" gap={8} className="legend-edge">
+              <span className="legend-edge-line" style={{ background: nodeMapEdgeColors[kind] }} />
+              <span>{vocabularyLabel(locale, "edgeKinds", kind)}</span>
+            </Flex>
           ))}
         </Flex>
         <Tag bordered={false} color="default" className="legend-note">

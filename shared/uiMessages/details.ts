@@ -1,6 +1,12 @@
 import type { SupportedLocale } from "../domain";
 
 export const detailsMessages = {
+  "details.from": {
+    en: "From", fr: "De", es: "Desde", ar: "من", zh: "起点", ru: "От",
+  },
+  "details.to": {
+    en: "To", fr: "Vers", es: "Hacia", ar: "إلى", zh: "终点", ru: "К",
+  },
   "details.closeEntityDetails": {
     en: "Close entity details", fr: "Fermer les détails de l'entité", es: "Cerrar detalles de la entidad",
     ar: "أغلق تفاصيل الكيان", zh: "关闭实体详情", ru: "Закрыть сведения об объекте",

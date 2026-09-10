@@ -2,6 +2,16 @@
  * Cytoscape stylesheet contains visual presentation only; geometry comes from node data.
  */
 import type cytoscape from "cytoscape";
+import type { GraphEdgeKind } from "../../../../shared/domain";
+
+export const nodeMapEdgeColors = {
+  governs: "#c8dfff",
+  operates: "#9fe3d0",
+  member_of: "#8fb3db",
+  funds: "#e9c46a",
+  publishes_to: "#ff6b78",
+  syncs_to: "#c99cff",
+} satisfies Record<GraphEdgeKind, string>;
 
 const labelFontScale = 2;
 

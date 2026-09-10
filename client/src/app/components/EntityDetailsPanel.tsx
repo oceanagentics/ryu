@@ -699,10 +699,66 @@ export function EntityDetailsPanel({
   const graph = useGraphStore((state) => state.graph);
   const locale = useGraphStore((state) => state.locale);
   const selectedEntityId = useGraphStore((state) => state.selectedEntityId);
+  const selectedRelationshipId = useGraphStore((state) => state.selectedRelationshipId);
+  const setSelectedEntityId = useGraphStore((state) => state.setSelectedEntityId);
+  const setSelectedRelationshipId = useGraphStore((state) => state.setSelectedRelationshipId);
   const resetSelection = useGraphStore((state) => state.resetSelection);
   const entity = selectedEntityId && graph ? graph.nodeById[selectedEntityId] : null;
+  const relationship = selectedRelationshipId && graph ? graph.edgeById[selectedRelationshipId] : null;
 
-  useEffect(() => { setRawFieldsOpen(false); }, [selectedEntityId]);
+  useEffect(() => { setRawFieldsOpen(false); }, [selectedEntityId, selectedRelationshipId]);
+
+  if (graph && relationship) {
+    return (
+      <ConfigProvider theme={{ algorithm: theme.defaultAlgorithm, token: { fontSize: 14 } }}>
+        <Card
+          className="entity-details-panel"
+          size="small"
+          title={vocabularyLabel(locale, "edgeKinds", relationship.kind)}
+          extra={extraActions ?? (showCloseButton ? (
+            <Button
+              aria-label={t(locale, "details.closeEntityDetails")}
+              icon={<CloseOutlined />}
+              size="small"
+              type="text"
+              onClick={onClose ?? resetSelection}
+            />
+          ) : null)}
+        >
+          <Flex vertical gap={16}>
+            <DetailSection title={t(locale, "details.profile")}>
+              {(["sourceNodeId", "targetNodeId"] as const).map((key) => {
+                const node = graph.nodeById[relationship[key]];
+                return (
+                  <InlineField key={key} label={t(locale, key === "sourceNodeId" ? "details.from" : "details.to")}>
+                    <Button type="link" size="small" style={{ padding: 0, height: "auto", whiteSpace: "normal" }}
+                      onClick={() => setSelectedEntityId(relationship[key])}>
+                      {node ? nodeTitle(node, locale) : relationship[key]}
+                    </Button>
+                  </InlineField>
+                );
+              })}
+              <Typography.Paragraph className="summary-copy">
+                {relationship.note || <EmptyValue />}
+              </Typography.Paragraph>
+              {Object.entries(relationship.properties).filter(([key, value]) =>
+                key !== "sourceRefs" && key !== "source" && value != null,
+              ).map(([key, value]) => (
+                <InlineField key={key} label={humanizeCode(key.replace(/([a-z])([A-Z])/g, "$1 $2"))}>
+                  {typeof value === "object" ? JSON.stringify(value) : String(value)}
+                </InlineField>
+              ))}
+            </DetailSection>
+            <DetailSection title={t(locale, "common.source")}>
+              {Object.keys(relationship.sources).length
+                ? Object.keys(relationship.sources).map(id => <SourceLink key={id} source={id} sources={relationship.sources} />)
+                : <EmptyValue />}
+            </DetailSection>
+          </Flex>
+        </Card>
+      </ConfigProvider>
+    );
+  }
 
   if (!graph || !entity) {
     return null;
@@ -876,9 +932,10 @@ export function EntityDetailsPanel({
                   <Typography.Text>
                     {otherEntity ? nodeTitle(otherEntity, locale) : otherEntityId}
                   </Typography.Text>
-                  <Typography.Text className="entity-detail-caption" type="secondary">
+                  <Button type="link" size="small" style={{ alignSelf: "flex-start", padding: 0 }}
+                    onClick={() => setSelectedRelationshipId(relationship.id)}>
                     {relationshipLabel(relationship, entity.id, locale)}
-                  </Typography.Text>
+                  </Button>
                   {Object.keys(relationship.sources).map(id => <SourceLink key={id} source={id} sources={relationship.sources} />)}
                 </Flex>
               </List.Item>

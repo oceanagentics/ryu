@@ -123,6 +123,7 @@ export function App() {
   const loading = useGraphStore((state) => state.loading);
   const error = useGraphStore((state) => state.error);
   const selectedEntityId = useGraphStore((state) => state.selectedEntityId);
+  const selectedRelationshipId = useGraphStore((state) => state.selectedRelationshipId);
   const searchQuery = useGraphStore((state) => state.searchQuery);
   const searchFilters = useGraphStore((state) => state.searchFilters);
   const searchAllLanguages = useGraphStore((state) => state.searchAllLanguages);
@@ -252,14 +253,14 @@ export function App() {
     }
   }, [graph, selectedEntityId]);
 
-  const showEntityDetails =
+  const showDetails =
     graph != null &&
-    selectedEntityId != null &&
-    graph.nodeById[selectedEntityId] != null;
+    Boolean((selectedEntityId && graph.nodeById[selectedEntityId]) ||
+      (selectedRelationshipId && graph.edgeById[selectedRelationshipId]));
   const openPaneCount = paneOrder.filter((paneId) => isPaneOpen(paneId)).length;
 
   function isPaneOpen(paneId: PaneId): boolean {
-    return paneId === "details" ? showEntityDetails : openPanes[paneId];
+    return paneId === "details" ? showDetails : openPanes[paneId];
   }
 
   function setPaneOpen(paneId: CollapsiblePaneId, open: boolean) {
@@ -643,7 +644,7 @@ export function App() {
             {renderSearchLauncher()}
           </div>
         )}
-        {showEntityDetails
+        {showDetails
           ? renderPane(
               "details",
               <EntityDetailsPanel
