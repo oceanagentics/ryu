@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import type { GraphNode, GraphNodeKind, RyuRoute, SupportedLocale } from "../../shared/domain";
-import { dataFormats, dataTypes } from "../../shared/domain";
+import { dataFormats, dataStandards, dataTypes } from "../../shared/domain";
 import { facetLabel } from "../../shared/i18n";
 import { indexGraph } from "../../shared/indexGraph";
 import { emptyLocalizationDetails, resolveNodeLocalization, supportedLocales } from "../../shared/localization";
@@ -80,11 +80,11 @@ test("filters intersect across groups and OR within groups, using typed access a
     data: { recordCount: null, storageSize: null, descriptors: [
       { id: "type", category: "type", label: "occurrence_records", source: "src-api" },
       { id: "format", category: "format", label: "geojson", source: "src-api" },
-      { id: "standard", category: "standard", label: "dwc", source: "src-api" },
+      { id: "standard", category: "standard", label: "darwin_core", source: "src-api" },
     ] },
   };
   const filters = { kind: "system", disciplines: "ecology,genetics",
-    dataType: "occurrence_records", dataFormat: "geojson", dataStandard: "dwc", recordDepth: "rich",
+    dataType: "occurrence_records", dataFormat: "geojson", dataStandard: "darwin_core", recordDepth: "rich",
     accessType: "read", accessMethod: "api", locale: "fr", localeAvailability: "missing",
     reviewState: "agent_researched", reviewLocale: "displayed" };
   assert.equal(search([record], filters).length, 1);
@@ -95,9 +95,11 @@ test("filters intersect across groups and OR within groups, using typed access a
   assert.throws(() => readRecordSearchQuery({ disciplines: "fish_biodiversity" }), /disciplines/);
   assert.throws(() => readRecordSearchQuery({ role: "aggregator" }), /unsupported/);
   assert.throws(() => readRecordSearchQuery({ disciplineFamily: "biodiversity" }), /unsupported/);
-  for (const key of ["countryCode", "geography", "dataStandard", "accessType", "accessMethod"]) {
+  for (const key of ["countryCode", "geography", "accessType", "accessMethod"]) {
     assert.equal(search([record], { ...filters, [key]: "not-a-match" }).length, 0, key);
   }
+  assert.throws(() => readRecordSearchQuery({ dataStandard: "Darwin Core" }), /dataStandard/);
+  assert.equal(search([record], { ...filters, dataStandard: "cf" }).length, 0);
   assert.equal(search([record], { ...filters, accessType: "api" }).length, 0);
   assert.equal(search([record], { ...filters, dataType: "sequence_data" }).length, 0);
   assert.equal(search([record], { ...filters, dataType: "sequence_data,occurrence_records" }).length, 1);
@@ -179,6 +181,27 @@ test("format search, details and filters use shared labels with localized descri
       assert.notEqual(facetLabel(locale, "descriptorLabel", format), format, `${locale}/${format}`);
       assert.deepEqual(readRecordSearchQuery({ dataFormat: format }).dataFormat, [format]);
     }
+  }
+});
+
+test("standard search and filters use canonical IDs and shared translations", () => {
+  const record = node("standardized");
+  record.properties.data = { recordCount: null, storageSize: null, descriptors: [
+    { id: "standard", category: "standard", label: "cf", source: null },
+  ] };
+  record.localizations.en!.details.data.descriptors = [{ id: "standard", label: "LegacyOverrideMarker", description: "NetCDF product conventions" }];
+  const resolved = systemDataDescriptors(record, resolveNodeLocalization(record, "fr"))[0];
+  assert.equal(resolved.localizedLabel, "Conventions climat et prévisions (CF)");
+  assert.equal(resolved.description, "NetCDF product conventions");
+  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [], savedViews: [] });
+  assert.deepEqual(getSystemFilterOptions(buildSystemRecords(graph, "fr"), "fr").dataClaims.standard, [
+    { value: "cf", label: "Conventions climat et prévisions (CF)" },
+  ]);
+  assert.equal(search([record], { q: "Conventions climat", locale: "fr" })[0].reasons[0].field, "data.descriptors.standard");
+  assert.equal(search([record], { q: "NetCDF product conventions" }).length, 1);
+  for (const locale of supportedLocales) for (const standard of dataStandards) {
+    assert.notEqual(facetLabel(locale, "descriptorLabel", standard), standard, `${locale}/${standard}`);
+    assert.deepEqual(readRecordSearchQuery({ dataStandard: standard }).dataStandard, [standard]);
   }
 });
 

@@ -15,12 +15,6 @@
             "category": "format"
           },
           {
-            "id": "fishbase-data-standard-license",
-            "label": "CC BY-NC 4.0 reuse terms",
-            "source": "src-fishbase-citation",
-            "category": "standard"
-          },
-          {
             "id": "fishbase-data-type-taxonomy",
             "label": "taxonomic_records",
             "source": "src-fishbase-home",
@@ -172,18 +166,13 @@
     "ar": {
       "title": "FishBase",
       "summary": "قاعدة بيانات عالمية للتنوع الحيوي للأسماك الزعنفية تغطي التصنيف، والأحياء، والبيئة، وتاريخ الحياة، والتوزيعات، والاستخدامات السمكية، والصور، والمراجع، ومصدر بيانات المتعاونين.",
-      "description": "FishBase هو نظام معلومات عالمي للتنوع الحيوي للأسماك الزعنفية. بدأ كمرجع لديناميكيات الجماعات لـ 200 نوع تجاري رئيسي، ويغطي الآن جميع أنواع الأسماك المعروفة عبر التصنيف، والتسمية، والأحياء، والبيئة الغذائية، وتاريخ الحياة، والمورفولوجيا، والتوزيع، والاستخدامات السمكية، وسياق الحفظ والهشاشة، والأسماء الشائعة، والصور، ومصدر الأدبيات. يذكر الموقع الحي أكثر من 36,500 نوع، وأكثر من 333,000 اسم شائع، وأكثر من 65,800 صورة، وأكثر من 68,300 مرجع، وأكثر من 2,570 متعاونا، وأكثر من 700,000 زيارة شهرية، ونحو 3.3 مليون سجل عبر حوالي 200 جدول. تستضيف FishBase وتديرها Quantitative Aquatics, Inc. (Q-quatics)، مع إرشاد علمي من اتحاد FishBase المكون من 13 عضوا. يصل الباحثون عادة إلى FishBase من خلال واجهة الويب المجانية وملخصات الأنواع؛ ويمكن للمستخدمين التقنيين الاستعلام عن لقطات ثابتة من الواجهة الخلفية بصيغ CSV/parquet عبر Source Cooperative وحزمة rfishbase في R. تتم المساهمات عبر تنظيم تحريري لا كتابة مباشرة في قاعدة البيانات الأساسية: يمكن للمساهمين إرسال مشاهدات أو صور أو نسخ مطبوعة أو تصحيحات أو مجموعات بيانات من خلال مسارات المتعاونين في FishBase وFishWatcher. لقطة parquet العامة مضغوطة ومؤرخة وقد تتأخر عن الموقع الحي.",
+      "description": "FishBase هو نظام معلومات عالمي للتنوع الحيوي للأسماك الزعنفية. بدأ كمرجع لديناميكيات الجماعات لـ 200 نوع تجاري رئيسي، ويغطي الآن جميع أنواع الأسماك المعروفة عبر التصنيف، والتسمية، والأحياء، والبيئة الغذائية، وتاريخ الحياة، والمورفولوجيا، والتوزيع، والاستخدامات السمكية، وسياق الحفظ والهشاشة، والأسماء الشائعة، والصور، ومصدر الأدبيات. يذكر الموقع الحي أكثر من 36,500 نوع، وأكثر من 333,000 اسم شائع، وأكثر من 65,800 صورة، وأكثر من 68,300 مرجع، وأكثر من 2,570 متعاونا، وأكثر من 700,000 زيارة شهرية، ونحو 3.3 مليون سجل عبر حوالي 200 جدول. تستضيف FishBase وتديرها Quantitative Aquatics, Inc. (Q-quatics)، مع إرشاد علمي من اتحاد FishBase المكون من 13 عضوا. يصل الباحثون عادة إلى FishBase من خلال واجهة الويب المجانية وملخصات الأنواع؛ ويمكن للمستخدمين التقنيين الاستعلام عن لقطات ثابتة من الواجهة الخلفية بصيغ CSV/parquet عبر Source Cooperative وحزمة rfishbase في R. تتم المساهمات عبر تنظيم تحريري لا كتابة مباشرة في قاعدة البيانات الأساسية: يمكن للمساهمين إرسال مشاهدات أو صور أو نسخ مطبوعة أو تصحيحات أو مجموعات بيانات من خلال مسارات المتعاونين في FishBase وFishWatcher. لقطة parquet العامة مضغوطة ومؤرخة وقد تتأخر عن الموقع الحي.\n\nتتاح نصوص FishBase وأرقامها وخرائطها لإعادة الاستخدام غير التجاري مع نسب المصدر؛ وتحتفظ الصور والرسومات بحقوقها الخاصة.",
       "details": {
         "data": {
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
               "description": "توزع لقطات الجداول الخام العامة ذات الإصدارات كصادرات CSV وparquet عبر Source Cooperative."
-            },
-            {
-              "id": "fishbase-data-standard-license",
-              "description": "تتاح نصوص FishBase وأرقامها وخرائطها لإعادة الاستخدام غير التجاري مع نسب المصدر؛ وتحتفظ الصور والرسومات بحقوقها الخاصة.",
-              "label": "شروط إعادة الاستخدام CC BY-NC 4.0"
             },
             {
               "id": "fishbase-data-type-taxonomy",
@@ -252,6 +241,9 @@
             "publishes_to": "لا تحدد المساهمات الموصوفة مؤسسة بعينها تنشر في النظام.",
             "syncs_to": "تتوفر لقطات ثابتة؛ ولا يثبت هذا المثال علاقة مزامنة نشطة."
           }
+        },
+        "researchGaps": {
+          "standards": "لم يُتحقق من معيار مشترك للبيانات أو البيانات الوصفية لهذه المخرجات من FishBase؛ وتندرج رخصة إعادة الاستخدام الموثقة ضمن إرشادات الوصول."
         }
       },
       "translatedFromLocale": "en"
@@ -259,18 +251,13 @@
     "en": {
       "title": "FishBase",
       "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
-      "description": "FishBase is a global biodiversity information system for finfishes. It began as a population-dynamics reference for 200 major commercial species and now covers all known fish species across taxonomy, nomenclature, biology, trophic ecology, life history, morphology, distribution, fisheries uses, conservation and vulnerability context, common names, images, and literature provenance. The live website reports more than 36,500 species, more than 333,000 common names, more than 65,800 pictures, more than 68,300 references, more than 2,570 collaborators, more than 700,000 monthly visits, and approximately 3.3 million records across about 200 tables. FishBase is hosted and managed by Quantitative Aquatics, Inc. (Q-quatics), with scientific guidance from a 13-member FishBase Consortium. Researchers usually access FishBase through the free web UI and species summaries; technical users can query static backend snapshots as CSV/parquet through Source Cooperative and the rfishbase R package. Contributions are curated rather than directly written to the core database: contributors can submit observations, photos, reprints, corrections, or datasets through FishBase collaborator and FishWatcher workflows. The public parquet snapshot is compressed, versioned, and may lag the live website.",
+      "description": "FishBase is a global biodiversity information system for finfishes. It began as a population-dynamics reference for 200 major commercial species and now covers all known fish species across taxonomy, nomenclature, biology, trophic ecology, life history, morphology, distribution, fisheries uses, conservation and vulnerability context, common names, images, and literature provenance. The live website reports more than 36,500 species, more than 333,000 common names, more than 65,800 pictures, more than 68,300 references, more than 2,570 collaborators, more than 700,000 monthly visits, and approximately 3.3 million records across about 200 tables. FishBase is hosted and managed by Quantitative Aquatics, Inc. (Q-quatics), with scientific guidance from a 13-member FishBase Consortium. Researchers usually access FishBase through the free web UI and species summaries; technical users can query static backend snapshots as CSV/parquet through Source Cooperative and the rfishbase R package. Contributions are curated rather than directly written to the core database: contributors can submit observations, photos, reprints, corrections, or datasets through FishBase collaborator and FishWatcher workflows. The public parquet snapshot is compressed, versioned, and may lag the live website.\n\nFishBase text, numbers, and maps are offered for non-commercial reuse with attribution; photos and drawings retain their own copyrights.",
       "details": {
         "data": {
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
               "description": "Versioned public raw table snapshots are distributed as CSV and parquet exports through Source Cooperative."
-            },
-            {
-              "id": "fishbase-data-standard-license",
-              "description": "FishBase text, numbers, and maps are offered for non-commercial reuse with attribution; photos and drawings retain their own copyrights.",
-              "label": "CC BY-NC 4.0 reuse terms"
             },
             {
               "id": "fishbase-data-type-taxonomy",
@@ -338,6 +325,9 @@
             "publishes_to": "Collaborator submissions described on the homepage do not establish a named organizational publisher.",
             "syncs_to": "Static snapshots are available; no active synchronization relationship is established in this fixture."
           }
+        },
+        "researchGaps": {
+          "standards": "No shared data or metadata standard has been verified for these FishBase outputs; the documented reuse license is access guidance."
         }
       },
       "translatedFromLocale": null
@@ -345,18 +335,13 @@
     "es": {
       "title": "FishBase",
       "summary": "Base de datos mundial de biodiversidad de peces con aletas que cubre taxonomía, biología, ecología, historia de vida, distribuciones, usos pesqueros, imágenes, referencias y procedencia de colaboradores.",
-      "description": "FishBase es un sistema mundial de información sobre biodiversidad para peces con aletas. Comenzó como una referencia de dinámica poblacional para 200 especies comerciales principales y ahora cubre todas las especies de peces conocidas en taxonomía, nomenclatura, biología, ecología trófica, historia de vida, morfología, distribución, usos pesqueros, contexto de conservación y vulnerabilidad, nombres comunes, imágenes y procedencia bibliográfica. El sitio en vivo reporta más de 36.500 especies, más de 333.000 nombres comunes, más de 65.800 imágenes, más de 68.300 referencias, más de 2.570 colaboradores, más de 700.000 visitas mensuales y aproximadamente 3,3 millones de registros en unas 200 tablas. FishBase está alojada y gestionada por Quantitative Aquatics, Inc. (Q-quatics), con orientación científica de un Consorcio FishBase de 13 miembros. Los investigadores suelen acceder a FishBase mediante la interfaz web gratuita y los resúmenes de especies; los usuarios técnicos pueden consultar instantáneas backend estáticas como CSV/parquet a través de Source Cooperative y el paquete de R rfishbase. Las contribuciones se curan en lugar de escribirse directamente en la base de datos central: los colaboradores pueden enviar observaciones, fotos, separatas, correcciones o conjuntos de datos mediante los flujos de trabajo de colaboradores de FishBase y FishWatcher. La instantánea pública parquet está comprimida, versionada y puede ir por detrás del sitio en vivo.",
+      "description": "FishBase es un sistema mundial de información sobre biodiversidad para peces con aletas. Comenzó como una referencia de dinámica poblacional para 200 especies comerciales principales y ahora cubre todas las especies de peces conocidas en taxonomía, nomenclatura, biología, ecología trófica, historia de vida, morfología, distribución, usos pesqueros, contexto de conservación y vulnerabilidad, nombres comunes, imágenes y procedencia bibliográfica. El sitio en vivo reporta más de 36.500 especies, más de 333.000 nombres comunes, más de 65.800 imágenes, más de 68.300 referencias, más de 2.570 colaboradores, más de 700.000 visitas mensuales y aproximadamente 3,3 millones de registros en unas 200 tablas. FishBase está alojada y gestionada por Quantitative Aquatics, Inc. (Q-quatics), con orientación científica de un Consorcio FishBase de 13 miembros. Los investigadores suelen acceder a FishBase mediante la interfaz web gratuita y los resúmenes de especies; los usuarios técnicos pueden consultar instantáneas backend estáticas como CSV/parquet a través de Source Cooperative y el paquete de R rfishbase. Las contribuciones se curan en lugar de escribirse directamente en la base de datos central: los colaboradores pueden enviar observaciones, fotos, separatas, correcciones o conjuntos de datos mediante los flujos de trabajo de colaboradores de FishBase y FishWatcher. La instantánea pública parquet está comprimida, versionada y puede ir por detrás del sitio en vivo.\n\nLos textos, números y mapas de FishBase se ofrecen para reutilización no comercial con atribución; las fotos y dibujos conservan sus propios derechos de autor.",
       "details": {
         "data": {
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
               "description": "Las instantáneas públicas versionadas de tablas sin procesar se distribuyen como exportaciones CSV y parquet a través de Source Cooperative."
-            },
-            {
-              "id": "fishbase-data-standard-license",
-              "description": "Los textos, números y mapas de FishBase se ofrecen para reutilización no comercial con atribución; las fotos y dibujos conservan sus propios derechos de autor.",
-              "label": "Condiciones de reutilización CC BY-NC 4.0"
             },
             {
               "id": "fishbase-data-type-taxonomy",
@@ -425,6 +410,9 @@
             "publishes_to": "Las aportaciones descritas no identifican una organización que publique en el sistema.",
             "syncs_to": "Hay instantáneas disponibles; este ejemplo no establece una sincronización activa."
           }
+        },
+        "researchGaps": {
+          "standards": "No se ha verificado ningún estándar compartido de datos o metadatos para estas salidas de FishBase; la licencia de reutilización documentada corresponde a las indicaciones de acceso."
         }
       },
       "translatedFromLocale": "en"
@@ -432,18 +420,13 @@
     "fr": {
       "title": "FishBase",
       "summary": "Base de données mondiale sur la biodiversité des poissons à nageoires couvrant la taxonomie, la biologie, l'écologie, les traits d'histoire de vie, les répartitions, les usages halieutiques, les images, les références et la provenance des collaborateurs.",
-      "description": "FishBase est un système mondial d'information sur la biodiversité des poissons à nageoires. Il a commencé comme référence de dynamique des populations pour 200 grandes espèces commerciales et couvre maintenant toutes les espèces de poissons connues: taxonomie, nomenclature, biologie, écologie trophique, traits d'histoire de vie, morphologie, distribution, usages halieutiques, contexte de conservation et de vulnérabilité, noms communs, images et provenance bibliographique. Le site actif indique plus de 36 500 espèces, plus de 333 000 noms communs, plus de 65 800 images, plus de 68 300 références, plus de 2 570 collaborateurs, plus de 700 000 visites mensuelles et environ 3,3 millions d'enregistrements répartis dans quelque 200 tables. FishBase est hébergé et géré par Quantitative Aquatics, Inc. (Q-quatics), avec l'orientation scientifique d'un consortium FishBase de 13 membres. Les chercheurs accèdent généralement à FishBase par l'interface web gratuite et les fiches d'espèces; les utilisateurs techniques peuvent interroger des instantanés statiques du backend en CSV/parquet via Source Cooperative et le paquet R rfishbase. Les contributions sont organisées par curation plutôt qu'écrites directement dans la base centrale: les contributeurs peuvent soumettre des observations, photos, tirés à part, corrections ou jeux de données via les flux de collaboration FishBase et FishWatcher. L'instantané parquet public est compressé, versionné et peut être en retard sur le site actif.",
+      "description": "FishBase est un système mondial d'information sur la biodiversité des poissons à nageoires. Il a commencé comme référence de dynamique des populations pour 200 grandes espèces commerciales et couvre maintenant toutes les espèces de poissons connues: taxonomie, nomenclature, biologie, écologie trophique, traits d'histoire de vie, morphologie, distribution, usages halieutiques, contexte de conservation et de vulnérabilité, noms communs, images et provenance bibliographique. Le site actif indique plus de 36 500 espèces, plus de 333 000 noms communs, plus de 65 800 images, plus de 68 300 références, plus de 2 570 collaborateurs, plus de 700 000 visites mensuelles et environ 3,3 millions d'enregistrements répartis dans quelque 200 tables. FishBase est hébergé et géré par Quantitative Aquatics, Inc. (Q-quatics), avec l'orientation scientifique d'un consortium FishBase de 13 membres. Les chercheurs accèdent généralement à FishBase par l'interface web gratuite et les fiches d'espèces; les utilisateurs techniques peuvent interroger des instantanés statiques du backend en CSV/parquet via Source Cooperative et le paquet R rfishbase. Les contributions sont organisées par curation plutôt qu'écrites directement dans la base centrale: les contributeurs peuvent soumettre des observations, photos, tirés à part, corrections ou jeux de données via les flux de collaboration FishBase et FishWatcher. L'instantané parquet public est compressé, versionné et peut être en retard sur le site actif.\n\nLes textes, chiffres et cartes de FishBase sont proposés pour une réutilisation non commerciale avec attribution; les photos et dessins conservent leurs propres droits d'auteur.",
       "details": {
         "data": {
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
               "description": "Des instantanés publics versionnés des tables brutes sont distribués sous forme d'exports CSV et parquet via Source Cooperative."
-            },
-            {
-              "id": "fishbase-data-standard-license",
-              "description": "Les textes, chiffres et cartes de FishBase sont proposés pour une réutilisation non commerciale avec attribution; les photos et dessins conservent leurs propres droits d'auteur.",
-              "label": "Conditions de réutilisation CC BY-NC 4.0"
             },
             {
               "id": "fishbase-data-type-taxonomy",
@@ -512,6 +495,9 @@
             "publishes_to": "Les contributions décrites ne permettent pas de nommer une organisation publiant dans le système.",
             "syncs_to": "Des instantanés sont disponibles ; aucune synchronisation active n’est établie dans cet exemple."
           }
+        },
+        "researchGaps": {
+          "standards": "Aucune norme commune de données ou de métadonnées n’a été vérifiée pour ces sorties FishBase ; la licence de réutilisation documentée relève des consignes d’accès."
         }
       },
       "translatedFromLocale": "en"
@@ -519,18 +505,13 @@
     "ru": {
       "title": "FishBase",
       "summary": "Глобальная база данных о биоразнообразии лучеперых рыб, охватывающая таксономию, биологию, экологию, жизненный цикл, распространение, рыбохозяйственное использование, изображения, литературу и происхождение данных от участников.",
-      "description": "FishBase — глобальная информационная система о биоразнообразии лучеперых рыб. Она начиналась как справочник по динамике популяций для 200 основных промысловых видов, а теперь охватывает все известные виды рыб по таксономии, номенклатуре, биологии, трофической экологии, жизненному циклу, морфологии, распространению, рыбохозяйственному использованию, контексту охраны и уязвимости, общеупотребительным названиям, изображениям и литературной основе. На действующем сайте указано более 36 500 видов, более 333 000 общеупотребительных названий, более 65 800 изображений, более 68 300 источников, более 2 570 участников, более 700 000 посещений в месяц и около 3,3 млн записей примерно в 200 таблицах. FishBase размещается и управляется Quantitative Aquatics, Inc. (Q-quatics) при научном сопровождении консорциума FishBase из 13 членов. Исследователи обычно обращаются к FishBase через бесплатный веб-интерфейс и сводки по видам; технические пользователи могут запрашивать статические снимки backend в форматах CSV/parquet через Source Cooperative и пакет R rfishbase. Вклады проходят кураторскую обработку, а не записываются напрямую в основную базу: участники могут отправлять наблюдения, фотографии, оттиски, исправления или наборы данных через рабочие процессы FishBase для участников и FishWatcher. Публичный parquet-снимок сжат, версионируется и может отставать от действующего сайта.",
+      "description": "FishBase — глобальная информационная система о биоразнообразии лучеперых рыб. Она начиналась как справочник по динамике популяций для 200 основных промысловых видов, а теперь охватывает все известные виды рыб по таксономии, номенклатуре, биологии, трофической экологии, жизненному циклу, морфологии, распространению, рыбохозяйственному использованию, контексту охраны и уязвимости, общеупотребительным названиям, изображениям и литературной основе. На действующем сайте указано более 36 500 видов, более 333 000 общеупотребительных названий, более 65 800 изображений, более 68 300 источников, более 2 570 участников, более 700 000 посещений в месяц и около 3,3 млн записей примерно в 200 таблицах. FishBase размещается и управляется Quantitative Aquatics, Inc. (Q-quatics) при научном сопровождении консорциума FishBase из 13 членов. Исследователи обычно обращаются к FishBase через бесплатный веб-интерфейс и сводки по видам; технические пользователи могут запрашивать статические снимки backend в форматах CSV/parquet через Source Cooperative и пакет R rfishbase. Вклады проходят кураторскую обработку, а не записываются напрямую в основную базу: участники могут отправлять наблюдения, фотографии, оттиски, исправления или наборы данных через рабочие процессы FishBase для участников и FishWatcher. Публичный parquet-снимок сжат, версионируется и может отставать от действующего сайта.\n\nТексты, числовые данные и карты FishBase предоставляются для некоммерческого повторного использования с указанием источника; фотографии и рисунки сохраняют собственные авторские права.",
       "details": {
         "data": {
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
               "description": "Версионированные публичные снимки сырых таблиц распространяются через Source Cooperative как экспорты CSV и parquet."
-            },
-            {
-              "id": "fishbase-data-standard-license",
-              "description": "Тексты, числовые данные и карты FishBase предоставляются для некоммерческого повторного использования с указанием источника; фотографии и рисунки сохраняют собственные авторские права.",
-              "label": "Условия использования CC BY-NC 4.0"
             },
             {
               "id": "fishbase-data-type-taxonomy",
@@ -599,6 +580,9 @@
             "publishes_to": "Описанный приём материалов не позволяет установить конкретную публикующую организацию.",
             "syncs_to": "Доступны статические снимки; активная синхронизация в этом примере не подтверждена."
           }
+        },
+        "researchGaps": {
+          "standards": "Для этих выходных данных FishBase не подтверждён общий стандарт данных или метаданных; документированная лицензия на повторное использование относится к условиям доступа."
         }
       },
       "translatedFromLocale": "en"
@@ -606,18 +590,13 @@
     "zh": {
       "title": "FishBase",
       "summary": "全球性有鳍鱼类生物多样性数据库，涵盖分类学、生物学、生态学、生活史、分布、渔业用途、图像、参考文献和协作者来源。",
-      "description": "FishBase 是一个面向有鳍鱼类的全球生物多样性信息系统。它最初是 200 种主要商业鱼种的种群动态参考库，现在覆盖所有已知鱼类物种，内容包括分类学、命名、生物学、营养生态、生活史、形态、分布、渔业用途、保护与脆弱性背景、俗名、图像和文献来源。实时网站报告超过 36,500 个物种、超过 333,000 个俗名、超过 65,800 张图片、超过 68,300 篇参考文献、超过 2,570 名协作者、每月超过 700,000 次访问，以及约 200 张表中的约 330 万条记录。FishBase 由 Quantitative Aquatics, Inc. (Q-quatics) 托管和管理，并由 13 个成员组成的 FishBase 联盟提供科学指导。研究人员通常通过免费的网页界面和物种摘要访问 FishBase；技术用户可通过 Source Cooperative 和 R 语言 rfishbase 包查询 CSV/parquet 格式的静态后端快照。贡献内容通过人工整理进入系统，而不是直接写入核心数据库：贡献者可通过 FishBase 协作者和 FishWatcher 工作流提交观测、照片、重印本、更正或数据集。公开 parquet 快照经过压缩和版本化，可能滞后于实时网站。",
+      "description": "FishBase 是一个面向有鳍鱼类的全球生物多样性信息系统。它最初是 200 种主要商业鱼种的种群动态参考库，现在覆盖所有已知鱼类物种，内容包括分类学、命名、生物学、营养生态、生活史、形态、分布、渔业用途、保护与脆弱性背景、俗名、图像和文献来源。实时网站报告超过 36,500 个物种、超过 333,000 个俗名、超过 65,800 张图片、超过 68,300 篇参考文献、超过 2,570 名协作者、每月超过 700,000 次访问，以及约 200 张表中的约 330 万条记录。FishBase 由 Quantitative Aquatics, Inc. (Q-quatics) 托管和管理，并由 13 个成员组成的 FishBase 联盟提供科学指导。研究人员通常通过免费的网页界面和物种摘要访问 FishBase；技术用户可通过 Source Cooperative 和 R 语言 rfishbase 包查询 CSV/parquet 格式的静态后端快照。贡献内容通过人工整理进入系统，而不是直接写入核心数据库：贡献者可通过 FishBase 协作者和 FishWatcher 工作流提交观测、照片、重印本、更正或数据集。公开 parquet 快照经过压缩和版本化，可能滞后于实时网站。\n\nFishBase 文本、数值和地图可在署名条件下用于非商业再利用；照片和绘图保留各自版权。",
       "details": {
         "data": {
           "descriptors": [
             {
               "id": "fishbase-data-format-parquet-csv",
               "description": "版本化的公开原始表快照通过 Source Cooperative 以 CSV 和 parquet 导出形式分发。"
-            },
-            {
-              "id": "fishbase-data-standard-license",
-              "description": "FishBase 文本、数值和地图可在署名条件下用于非商业再利用；照片和绘图保留各自版权。",
-              "label": "CC BY-NC 4.0 再利用条款"
             },
             {
               "id": "fishbase-data-type-taxonomy",
@@ -686,6 +665,9 @@
             "publishes_to": "网站描述的协作者提交方式未确认具体的机构发布者。",
             "syncs_to": "可获取静态快照；本示例未确认正在运行的同步关系。"
           }
+        },
+        "researchGaps": {
+          "standards": "尚未核实这些FishBase输出所采用的共享数据或元数据标准；已记录的再利用许可属于访问指南。"
         }
       },
       "translatedFromLocale": "en"

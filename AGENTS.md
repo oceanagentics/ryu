@@ -106,6 +106,15 @@
   a vocabulary/translation update. Keep interfaces, schemas, backend details,
   and planned conversions out of Formats; retain sourced detail in descriptions.
 
+- Use only approved `dataStandards` IDs from `shared/domain.ts` for `standard`
+  descriptors, once per system. Every assignment requires an owner-local source
+  and a scoped description in all six locales, including thin/stub records.
+  Shared vocabulary labels replace localized labels. New standard IDs require
+  explicit human approval and a vocabulary/translation release before use.
+  Follow `documentation/RICH_RESEARCH_RECORDS.md`; do not infer standards from
+  formats, connected systems, operators, or planned routes. Keep versions in
+  descriptions and document gaps when no assignment is verified.
+
 ## Ryu Access Routes
 - Treat `ryu_routes` as the first-class operational route index for agents.
 - Keep `nodes.properties_json.access` as access mechanics and `node_localizations.details_json.access` as localized human guidance; use `ryu_routes` to decide how an agent should actually retrieve data.

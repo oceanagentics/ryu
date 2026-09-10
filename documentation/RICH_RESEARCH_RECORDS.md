@@ -79,7 +79,7 @@ A rich system must have:
   label and description. Explain authentication, licensing, restrictions, and
   contribution arrangements in the profile/access prose as applicable.
 - Matching, unique neutral/localized item IDs. Descriptors need localized
-  descriptions; standard descriptors also need localized labels.
+  descriptions; all descriptor labels come from the shared vocabularies.
   Type and format labels come from the shared vocabularies. Access paths need labels and descriptions; gallery items
   need titles and captions; metrics need localized descriptions.
 - Source-backed metrics with finite non-negative values, units, and observation
@@ -342,15 +342,87 @@ Categories:
 
 - `type`: an approved data type ID from `dataTypes` in `shared/domain.ts`, describing records or products a user can retrieve.
 - `format`: an approved `dataFormats` ID from `shared/domain.ts`, identifying the concrete encoding or package in which content can be retrieved.
-- `standard`: identifiers, vocabularies, schemas, licenses, or protocols used by the database.
+- `standard`: an approved `dataStandards` ID from `shared/domain.ts`, describing a documented data model, metadata schema/profile, controlled vocabulary, or quality-control convention.
 
 Each neutral descriptor should have `id`, `category`, `label`, and optional `source`
-(required for rich records). For categories `type` and `format`, `label` stores the canonical ID;
+(required for rich records). For all descriptor categories, `label` stores the canonical ID;
 its translated display name comes from `shared/i18n.ts`. Keep its localized entry's
-`id` and `description`, and omit `label`. Standard descriptors use localized
-labels and descriptions.
+`id` and `description`, and omit `label`. Standard descriptors require a resolving
+source and scoped descriptions in all six locales at every record depth.
 
 Keep descriptors broad enough to scan. Do not create one descriptor per table unless table-level detail is essential.
+
+### Approved Standards
+
+Use the smallest source-backed set, once per standard per system. The list is
+flat. It describes documented use within the localized scope, not certification
+that every record conforms. Versions and application-specific qualifications
+belong in descriptions. Standards may be absent; do not invent an assignment.
+
+| ID | Label | Definition |
+| --- | --- | --- |
+| darwin_core | Darwin Core | Biodiversity data terms and record model. |
+| emof | Extended MeasurementOrFact (eMoF) | Measurements and facts linked to biodiversity occurrences or sampling events. |
+| dna_derived_data | DNA-derived data extension | DNA-derived occurrence evidence and associated molecular methods. |
+| humboldt_extension | Humboldt Extension | Biodiversity inventory and survey context, effort and completeness. |
+| eml | Ecological Metadata Language (EML) | Ecological dataset metadata. |
+| ggbn | GGBN Data Standard | Genomic material/sample facts used with an appropriate base schema. |
+| abcd | Access to Biological Collection Data (ABCD) | Detailed biological collection/specimen data model. |
+| mixs | Minimum Information about any Sequence (MIxS) | Sequence-associated sample and environmental metadata; specify checklist/package in the description. |
+| bcdm | Barcode Core Data Model (BCDM) | DNA barcode records and their specimen context. |
+| insdc | INSDC specifications | Shared sequence annotation, submission and controlled-vocabulary specifications; identify applicable components. |
+| cf | Climate and Forecast (CF) conventions | Scientific variables, coordinates, units and observation geometry. |
+| acdd | Attribute Convention for Data Discovery (ACDD) | Discovery attributes attached to scientific datasets. |
+| argo | Argo data conventions | Official Argo data structures, reference tables, data modes and quality flags. |
+| oceansites | OceanSITES conventions | Ocean time-series data structures and metadata profile. |
+| ioos_metadata | IOOS Metadata Profile | IOOS data/metadata requirements built on CF and ACDD. |
+| sgrid | SGRID conventions | Structured model-grid topology. |
+| ugrid | UGRID conventions | Unstructured model-grid topology. |
+| seadatanet | SeaDataNet data profiles | SeaDataNet-specific data structures and conventions; name the profile in the description. |
+| nerc_vocabularies | NERC/SeaDataNet vocabularies | Controlled concepts for marine parameters, units, instruments and related data; name relevant collections. |
+| qartod | QARTOD | Real-time ocean-observation quality-control tests and flag conventions; identify implementation scope. |
+| iso_19115 | ISO 19115 metadata | Geographic metadata model, including applicable parts and profiles. |
+| iso_19139 | ISO 19139 metadata | XML implementation schema for ISO geographic metadata. |
+| iso_19115_3 | ISO 19115-3 metadata | XML implementation schema for the newer ISO geographic metadata model. |
+| seadatanet_cdi | SeaDataNet CDI metadata profile | Marine discovery metadata used by the Common Data Index. |
+| cioos_metadata | CIOOS metadata profile | CIOOS catalogue metadata requirements. |
+| dublin_core | Dublin Core | General resource metadata elements and terms. |
+| datacite | DataCite Metadata Schema | Resource citation, attribution, discovery and relationship metadata. |
+| dcat | Data Catalog Vocabulary (DCAT) | Dataset, catalogue and distribution descriptions. |
+| dcat_ap | DCAT Application Profile (DCAT-AP) | European application profile of DCAT; specify profile/version. |
+| schema_org | Schema.org | Structured resource descriptions; specify the applicable type or ODIS publishing pattern. |
+| re3data | re3data metadata schema | Research repository descriptions. |
+| dif | Directory Interchange Format (DIF) | Earth-science discovery metadata. |
+| fgdc_csdgm | FGDC CSDGM | Legacy geographic metadata content standard; assign only to an actual supported representation. |
+| datras | DATRAS data model | Haul, length, age-related biological and litter record structures. |
+| intercatch | InterCatch data model | Fisheries catch submission structures and conventions. |
+| rdbes | RDBES data model | Commercial fisheries sampling and estimation input structures. |
+| ices_vocabularies | ICES controlled vocabularies | ICES-managed coded values; specify the relevant vocabularies. |
+| asfis | ASFIS species classification | Species codes used for fisheries statistics. |
+| isscaap | ISSCAAP | Statistical classification of aquatic animals and plants. |
+| isscfg | ISSCFG | Statistical classification of fishing gear. |
+| fao_fishing_areas | FAO fishing areas | Standard statistical fishing-area classification. |
+
+
+1. Read the current record and its sources. Research the system's official technical documentation or an actual data/metadata response. A standard's own website proves its definition, not the system's use.
+2. Select only approved IDs, once each per system. New standards require an explicit human decision on the ID, definition, record and evidence, then shared vocabulary/translation deployment before use. The initial vocabulary above was approved for the 2026-09-10 rollout.
+3. Attach an owner-local source to every standard descriptor, including thin/stub records. Supply a nonempty description in each of the six locales. Each description must identify the affected output, metadata interface, submission workflow or product family, and whether the convention is used, accepted, required, or recommended. A recommendation alone must not be presented as implemented support.
+4. Use source-backed scope. Do not infer CF from NetCDF, Darwin Core from OBIS/GBIF links, or any standard from an operator, member, parent/child system, source dataset, or planned connector. Do not automatically assign underlying standards from a profile name.
+5. Keep versions, extensions/checklists, vocabulary collections and exceptions in the description. Do not make one ID per version or parameter. Assign both a profile and its base only when documentation supports both and the description distinguishes them.
+6. Formats remain encodings/packages, including Darwin Core Archive. Transport protocols stay in access/routes; licensing stays in access/profile guidance; internal reference numbers and taxonomic-reference relationships stay in prose. Do not add discipline, type or format vocabulary entries as part of this rollout.
+7. No minimum standard count. When research does not establish a suitable assignment, use an empty standards set and explain the specific limitation in every locale's `details.researchGaps.standards`. Empty means no verified assignment, not no standards used. Existing unrelated descriptors remain intact.
+8. Use authenticated `PATCH /api/records/:id` only. Preserve unrelated sections and content, localizations, metrics, edges, routes, review history and record depth. Array updates must retain unrelated items. New source objects contain only id, url, six-language title and accessedAt.
+9. Run `validateOnly=true`, report issues, correct them, then apply using `x-ryu-record-updated-at` from a fresh read. Re-read and compare the intended sections. A stale precondition requires a fresh merge and validation; never force overwrite.
+10. A standards-only audit does not make a record rich or human-reviewed. Leave record depth and review state unchanged.
+
+
+PUT and PATCH reject unknown/duplicate standard IDs, localized label overrides,
+missing or unresolved standard citations, and missing descriptions in any of the
+six locales at every depth. Standards belong on system nodes. The `dataStandard`
+filter accepts only canonical IDs. No additional production table or schema
+migration is required; backfills use the Record API. Historical research batches
+must normalize and verify their standard descriptors before API submission;
+the historical Formats migration does not verify standards.
 
 ### Approved Data Types
 

@@ -1,6 +1,7 @@
 import type { SearchMatchReason } from "./searchPresentation";
 import type {
   DataFormat,
+  DataStandard,
   DataType,
   Discipline,
   GraphEdge,
@@ -57,7 +58,7 @@ export interface RecordSearchQuery {
   countryCode: string[];
   disciplines: Discipline[];
   dataFormat: DataFormat[];
-  dataStandard: string[];
+  dataStandard: DataStandard[];
   kind: GraphNodeKind[];
   geography: string[];
   dataType: DataType[];

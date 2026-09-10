@@ -6,7 +6,7 @@ import { PGlite } from "@electric-sql/pglite";
 import type { Pool } from "pg";
 
 import type { RecordAggregateContentInput } from "../../shared/recordApi";
-import { dataFormats, dataTypes } from "../../shared/domain";
+import { dataFormats, dataStandards, dataTypes } from "../../shared/domain";
 import { PostgresGraphRepository } from "./postgresGraphRepository";
 import { buildRecordUpdatedAt, readRecordAggregateContentInput, readRecordPatchInput, readRecordSearchQuery, toDefaultRecordDetailDto, validateRecordQuality } from "./recordContracts";
 import { collectSourceIds } from "./graphRepositorySupport";
@@ -107,7 +107,7 @@ test("stored rich example enforces content, evidence, localization and allowed g
     l.details.data.storageSize = null;
     l.details.usage = [];
     l.details.gallery = [];
-    l.details.researchGaps = { recordCount: "Not published", storageSize: "Not published", usage: "Not published" };
+    l.details.researchGaps = { ...l.details.researchGaps, recordCount: "Not published", storageSize: "Not published", usage: "Not published" };
   }
   const result = validateRecordQuality(gaps.id, gaps);
   assert.equal(result.valid, true, JSON.stringify(result.issues));
@@ -162,11 +162,18 @@ test("discipline vocabulary and retired fields are validated at every record dep
   assert.equal(validateRecordQuality(generalist.id, generalist).valid, true);
 });
 
-test("data types and formats reject invented names, duplicate assignments and localized overrides at every depth", () => {
-  for (const [category, vocabulary] of [["type", dataTypes], ["format", dataFormats]] as const) {
+test("data types, formats and standards reject invented names, duplicate assignments and localized overrides at every depth", () => {
+  for (const [category, vocabulary] of [["type", dataTypes], ["format", dataFormats], ["standard", dataStandards]] as const) {
+    const fixture = richRecordFixture();
+    if (category === "standard") {
+      fixture.record.properties.data.descriptors.push({ id: "test-standard", category, label: "darwin_core", source: "src-fishbase-home" });
+      for (const localization of Object.values(fixture.localizations) as any[]) {
+        localization.details.data.descriptors.push({ id: "test-standard", description: "Synthetic standard scope for contract validation" });
+      }
+    }
     for (const recordDepth of ["stub", "thin", "rich"]) {
       for (const label of [null, 42, "invented_value", "Taxonomic records", "CSV and parquet snapshots", ...vocabulary]) {
-        const input = richRecordFixture();
+        const input = structuredClone(fixture);
         input.record.recordDepth = recordDepth;
         const index = input.record.properties.data.descriptors.findIndex((d: any) => d.category === category);
         input.record.properties.data.descriptors[index].label = label;
@@ -175,15 +182,31 @@ test("data types and formats reject invented names, duplicate assignments and lo
         assert.equal(result.valid, approved, `${recordDepth}/${label}: ${JSON.stringify(result.issues)}`);
         if (!approved) assert.ok(result.issues.some(issue => issue.path === `record.properties.data.descriptors[${index}].label`));
       }
-      const duplicate = richRecordFixture();
+      const duplicate = structuredClone(fixture);
       duplicate.record.recordDepth = recordDepth;
       const type = duplicate.record.properties.data.descriptors.find((d: any) => d.category === category);
       duplicate.record.properties.data.descriptors.push({ ...type, id: "duplicate" });
       assert.ok(validateRecordQuality(duplicate.id, duplicate).issues.some(issue => issue.message.includes(`unique approved data ${category}`)));
-      const override = richRecordFixture();
+      const override = structuredClone(fixture);
       override.record.recordDepth = recordDepth;
       override.localizations.en.details.data.descriptors.find((d: any) => d.id === type.id).label = "Invented type name";
       assert.ok(validateRecordQuality(override.id, override).issues.some(issue => issue.message.includes("labels come from the shared vocabulary")));
+      if (category === "standard") {
+        for (const source of [null, "missing-source"]) {
+          const uncited = structuredClone(fixture);
+          uncited.record.recordDepth = recordDepth;
+          uncited.record.properties.data.descriptors.find((d: any) => d.id === "test-standard").source = source;
+          assert.equal(validateRecordQuality(uncited.id, uncited).valid, false);
+        }
+        const untranslated = structuredClone(fixture);
+        untranslated.record.recordDepth = recordDepth;
+        delete untranslated.localizations.fr;
+        assert.ok(validateRecordQuality(untranslated.id, untranslated).issues.some(issue => issue.path?.includes("localizations.fr.details.data.descriptors.test-standard.description")));
+        const organization = structuredClone(fixture);
+        organization.record.kind = "organization";
+        organization.record.recordDepth = recordDepth;
+        assert.ok(validateRecordQuality(organization.id, organization).issues.some(issue => issue.message === "data standards belong on system records"));
+      }
     }
   }
   const generalist = richRecordFixture();

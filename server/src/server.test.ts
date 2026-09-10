@@ -653,7 +653,7 @@ test("parses the full record search filter set", async () => {
 
   await withServer("public", async (baseUrl) => {
     const response = await fetch(
-      `${baseUrl}/explorer/api/records?q=fish&kind=system,country&geography=global&dataType=occurrence_records&recordDepth=rich&reviewState=agent_researched&locale=fr&localeMode=all_locales&localeAvailability=missing&reviewLocale=any&routeStatus=active&routeCapability=download&accessType=read&accessMethod=api&countryCode=CAN&disciplines=ecology,taxonomy&dataFormat=geojson&dataStandard=dwc&include=localizations,routes,matchReasons,matchingIds&limit=7`,
+      `${baseUrl}/explorer/api/records?q=fish&kind=system,country&geography=global&dataType=occurrence_records&recordDepth=rich&reviewState=agent_researched&locale=fr&localeMode=all_locales&localeAvailability=missing&reviewLocale=any&routeStatus=active&routeCapability=download&accessType=read&accessMethod=api&countryCode=CAN&disciplines=ecology,taxonomy&dataFormat=geojson&dataStandard=darwin_core&include=localizations,routes,matchReasons,matchingIds&limit=7`,
     );
 
     assert.equal(response.status, 200);
@@ -675,7 +675,7 @@ test("parses the full record search filter set", async () => {
     assert.deepEqual(repository.lastRecordQuery?.countryCode, ["CAN"]);
     assert.deepEqual(repository.lastRecordQuery?.disciplines, ["ecology", "taxonomy"]);
     assert.deepEqual(repository.lastRecordQuery?.dataFormat, ["geojson"]);
-    assert.deepEqual(repository.lastRecordQuery?.dataStandard, ["dwc"]);
+    assert.deepEqual(repository.lastRecordQuery?.dataStandard, ["darwin_core"]);
     assert.equal(repository.lastRecordQuery?.scope, "public");
     const body = await response.json() as { total: number; matchingIds: string[] };
     assert.equal(body.total, 1);

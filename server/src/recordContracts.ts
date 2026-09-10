@@ -57,6 +57,7 @@ import type {
 import {
   isDiscipline,
   isDataFormat,
+  isDataStandard,
   isDataType,
   isEdgeKind,
   isNodeKind,
@@ -206,7 +207,7 @@ export function readRecordSearchQuery(input: Record<string, unknown>): RecordSea
     disciplines: readList(input.disciplines, "disciplines").map(value =>
       readEnumValue(value, isDiscipline, "disciplines")),
     dataFormat: readList(input.dataFormat, "dataFormat").map(value => readEnumValue(value, isDataFormat, "dataFormat")),
-    dataStandard: readList(input.dataStandard, "dataStandard"),
+    dataStandard: readList(input.dataStandard, "dataStandard").map(value => readEnumValue(value, isDataStandard, "dataStandard")),
 
     dataType: readList(input.dataType, "dataType").map(value => readEnumValue(value, isDataType, "dataType")),
     recordDepth: readList(input.recordDepth, "recordDepth").map((value) =>
@@ -454,6 +455,7 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
   }
   const assignedDataTypes = new Set<unknown>();
   const assignedDataFormats = new Set<unknown>();
+  const assignedDataStandards = new Set<unknown>();
   descriptors.forEach((item, i) => {
     if (item.category === "type") {
       if (!isDataType(item.label) || assignedDataTypes.has(item.label)) {
@@ -466,6 +468,19 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
         issues.push({ recordId: id, path: `record.properties.data.descriptors[${i}].label`, message: "must be a unique approved data format ID; additions require human approval in the authoring chat and an update to the shared vocabulary" });
       }
       assignedDataFormats.add(item.label);
+    }
+    if (item.category === "standard") {
+      const field = `record.properties.data.descriptors[${i}]`;
+      if (!isDataStandard(item.label) || assignedDataStandards.has(item.label)) {
+        issues.push({ recordId: id, path: `${field}.label`, message: "must be a unique approved data standard ID; additions require human approval in the authoring chat and an update to the shared vocabulary" });
+      }
+      assignedDataStandards.add(item.label);
+      if (input.record.kind !== "system") issues.push({ recordId: id, path: field, message: "data standards belong on system records" });
+      if (!text(item.source) || !hasOwn(sources, item.source)) issues.push({ recordId: id, path: `${field}.source`, message: "a standard requires a source ID resolving to a source on this system" });
+      for (const locale of supportedLocales) {
+        const translated = array(object(object(input.localizations?.[locale]?.details).data).descriptors).find(row => row.id === item.id);
+        if (!text(translated?.description)) issues.push({ recordId: id, path: `localizations.${locale}.details.data.descriptors.${item.id}.description`, message: "a standard requires a localized description of its documented scope" });
+      }
     }
     requireText(item.label, `record.properties.data.descriptors[${i}].label`);
     if (!["type", "format", "standard"].includes(String(item.category))) add(`record.properties.data.descriptors[${i}].category`, "invalid descriptor category");
@@ -533,7 +548,7 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
       for (const item of neutral) {
         const translated = rows.find(row => row.id === item.id) ?? {};
         for (const key of fields) {
-          if (section === "data.descriptors" && (item.category === "type" || item.category === "format") && key === "label") {
+          if (section === "data.descriptors" && key === "label") {
             if (translated.label != null) issues.push({ recordId: id, path: `${field}.details.${section}.${item.id}.label`, message: `data ${item.category} labels come from the shared vocabulary; use description for record-specific detail` });
           } else requireText(translated[key], `${field}.details.${section}.${item.id}.${key}`);
         }

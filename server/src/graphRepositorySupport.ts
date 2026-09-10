@@ -1,5 +1,6 @@
 import type {
   DataFormat,
+  DataStandard,
   DataType,
   Discipline,
   GraphEdge,
@@ -21,7 +22,7 @@ import type {
   SourceCollection,
   SupportedLocale,
 } from "../../shared/domain";
-import { dataFormats, dataTypes, disciplines, edgeKinds } from "../../shared/domain";
+import { dataFormats, dataStandards, dataTypes, disciplines, edgeKinds } from "../../shared/domain";
 import {
   defaultLocale,
   emptyLocalizationDetails,
@@ -230,6 +231,10 @@ export function isDataType(value: unknown): value is DataType {
 
 export function isDataFormat(value: unknown): value is DataFormat {
   return typeof value === "string" && dataFormats.includes(value as DataFormat);
+}
+
+export function isDataStandard(value: unknown): value is DataStandard {
+  return typeof value === "string" && dataStandards.includes(value as DataStandard);
 }
 
 export function isNodeKind(value: unknown): value is GraphNodeKind {

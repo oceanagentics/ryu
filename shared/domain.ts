@@ -60,6 +60,17 @@ export const dataFormats = [
 
 export type DataFormat = (typeof dataFormats)[number];
 
+// Additions require explicit human approval in the record-authoring chat.
+export const dataStandards = [
+  "darwin_core", "emof", "dna_derived_data", "humboldt_extension", "eml", "ggbn", "abcd", "mixs", "bcdm", "insdc",
+  "cf", "acdd", "argo", "oceansites", "ioos_metadata", "sgrid", "ugrid", "seadatanet", "nerc_vocabularies", "qartod",
+  "iso_19115", "iso_19139", "iso_19115_3", "seadatanet_cdi", "cioos_metadata", "dublin_core", "datacite",
+  "dcat", "dcat_ap", "schema_org", "re3data", "dif", "fgdc_csdgm", "datras", "intercatch", "rdbes",
+  "ices_vocabularies", "asfis", "isscaap", "isscfg", "fao_fishing_areas",
+] as const;
+
+export type DataStandard = (typeof dataStandards)[number];
+
 export interface Source {
   id: string;
   url: string;
@@ -75,7 +86,7 @@ export type SystemDataDescriptorCategory = "type" | "format" | "standard";
 export type SystemDataDescriptor = {
   id: string;
   source: SourceRef | null;
-} & ({ category: "type"; label: DataType } | { category: "format"; label: DataFormat } | { category: "standard"; label: string });
+} & ({ category: "type"; label: DataType } | { category: "format"; label: DataFormat } | { category: "standard"; label: DataStandard });
 
 export interface LocalizedSystemDataDescriptor {
   id: string;

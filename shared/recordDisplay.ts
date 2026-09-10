@@ -110,9 +110,7 @@ export function systemDataDescriptors(
     const localized = localizedById[descriptor.id];
     return {
       ...descriptor,
-      localizedLabel: descriptor.category === "type" || descriptor.category === "format"
-        ? facetLabel(localization.requestedLocale, "descriptorLabel", descriptor.label)
-        : localized?.label ?? null,
+      localizedLabel: facetLabel(localization.requestedLocale, "descriptorLabel", descriptor.label),
       description: localized?.description ?? null,
     };
   });

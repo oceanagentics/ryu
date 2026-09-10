@@ -5,14 +5,14 @@ authenticated `GET /api/records/fishbase?include=localizations,sources,edges,rou
 on 2026-09-07. The canonical response had `recordUpdatedAt`:
 `2026-09-04T02:18:45.664Z`.
 
-The example retains the canonical six-language profile, three representative
+The example retains the canonical six-language profile, two representative
 source-backed descriptors, two access paths, two data metrics, one usage metric,
 one gallery item, and the operator edge. Six shared sources cover these sections.
 Dates/counts are preserved historical assertions; this fixture does not claim a
 fresh factual or URL review. No machine route was present in the response.
 
-Fixture-only additions: explicit profile/edge source references, localized
-standard descriptor labels, six-language source titles/notes, and relationship-review
+Fixture-only additions: explicit profile/edge source references,
+six-language source titles/notes, and relationship-review
 findings for all six edge types. The retired operator country code is null.
 The relationship findings deliberately document gaps rather than invent edges.
 These translations are
@@ -33,3 +33,7 @@ Sources use the current node/edge-owned four-field collections. Citation referen
 
 The format example uses the approved `parquet` ID with shared display labels;
 its historical description retains the broader snapshot context.
+
+The retired license-as-standard descriptor is preserved in profile prose with its
+citation. Standards remain empty with a six-language research gap; synthetic
+standard claims are introduced only within the relevant contract tests.
