@@ -797,18 +797,144 @@
     {
       "id": "fishbase",
       "title": "FishBase",
-      "standards": [],
-      "sources": {},
-      "researchGap": {
-        "en": "Internal reference numbers and reuse licences are not data standards. No approved standard was verified for the documented table snapshots; their relational structure remains described in the profile.",
-        "fr": "Les numéros de référence internes et licences ne sont pas des standards de données. Aucun standard approuvé n’a été vérifié pour les instantanés de tables documentés.",
-        "es": "Los números de referencia internos y licencias no son estándares de datos. No se verificó un estándar aprobado para las instantáneas de tablas documentadas.",
-        "ar": "أرقام المراجع الداخلية وتراخيص الاستخدام ليست معايير بيانات. لم يُتحقق من معيار معتمد للقطات الجداول الموثقة؛ وتظل بنيتها العلائقية موصوفة في الملف التعريفي.",
-        "zh": "内部参考编号及使用许可并非数据标准。尚未核实所述表格快照采用哪项可选标准；其关系结构仍在简介中说明。",
-        "ru": "Внутренние номера источников и лицензии не являются стандартами данных. Для документированных снимков таблиц утверждённый стандарт не подтверждён; связи таблиц описаны в профиле."
+      "standards": [
+        {
+          "label": "fao_fishing_areas",
+          "source": "src-fishbase-faoareas",
+          "description": {
+            "en": "FishBase’s FAOAREAS table classifies species occurrence by FAO major fishing areas. These are statistical boundaries; species-area coverage may be incomplete.",
+            "fr": "La table FAOAREAS classe les occurrences des espèces par grandes zones de pêche FAO. Ces limites sont statistiques ; la couverture des espèces peut être incomplète.",
+            "es": "La tabla FAOAREAS clasifica las ocurrencias de especies por grandes áreas pesqueras FAO. Son límites estadísticos; la cobertura de especies puede ser incompleta.",
+            "ar": "يصنف جدول FAOAREAS تواجد الأنواع حسب مناطق الصيد الرئيسية لدى FAO. هذه حدود إحصائية وقد تكون تغطية الأنواع غير مكتملة.",
+            "zh": "FishBase 的 FAOAREAS 表按 FAO 主要渔区划分物种出现记录。这些边界用于统计，物种在各区域的记录可能不完整。",
+            "ru": "Таблица FAOAREAS классифицирует встречаемость видов по основным рыболовным районам FAO. Границы статистические; сведения о видах в районах могут быть неполными."
+          }
+        },
+        {
+          "label": "asfis",
+          "source": "src-fishbase-fisheries-classification",
+          "description": {
+            "en": "FishBase’s ISSCAAP/ASFIS lookup supports ASFIS species entries and FAO alpha-code searches. This assignment covers that fisheries lookup.",
+            "fr": "La recherche ISSCAAP/ASFIS de FishBase utilise les entrées d’espèces ASFIS et les codes alphabétiques FAO. Cette attribution concerne cet outil de recherche.",
+            "es": "El buscador ISSCAAP/ASFIS de FishBase utiliza entradas de especies ASFIS y códigos alfabéticos FAO. Esta asignación abarca ese buscador pesquero.",
+            "ar": "يدعم بحث ISSCAAP/ASFIS في FishBase مدخلات الأنواع ASFIS والبحث بالرموز الأبجدية FAO. يخص هذا الوصف أداة البحث في المصايد.",
+            "zh": "FishBase 的 ISSCAAP/ASFIS 查询支持 ASFIS 物种条目及 FAO 字母代码搜索。此项仅适用于该渔业查询功能。",
+            "ru": "Поиск ISSCAAP/ASFIS в FishBase поддерживает видовые позиции ASFIS и буквенные коды FAO. Это относится к данному рыболовному поиску."
+          }
+        },
+        {
+          "label": "isscaap",
+          "source": "src-fishbase-fisheries-classification",
+          "description": {
+            "en": "FishBase’s fisheries lookup uses ISSCAAP species groups and adds trophic and size information. FishBase cautions that this service may not meet FAO dissemination QA rules.",
+            "fr": "La recherche halieutique FishBase utilise les groupes ISSCAAP et ajoute des données trophiques et de taille. FishBase signale une possible non-conformité aux règles qualité de diffusion FAO.",
+            "es": "El buscador pesquero FishBase usa grupos ISSCAAP y añade datos tróficos y de talla. FishBase advierte que puede no cumplir las reglas de calidad de difusión FAO.",
+            "ar": "يستخدم بحث المصايد في FishBase مجموعات ISSCAAP ويضيف بيانات التغذية والحجم. ينبه FishBase إلى احتمال عدم استيفاء قواعد FAO لضمان جودة النشر.",
+            "zh": "FishBase 渔业查询使用 ISSCAAP 物种组，并补充营养级和体型信息。FishBase 提醒，该服务可能未满足 FAO 信息发布质量保证规则。",
+            "ru": "Рыболовный поиск FishBase использует группы ISSCAAP и добавляет трофические данные и размеры. FishBase предупреждает о возможном несоответствии правилам качества публикации FAO."
+          }
+        },
+        {
+          "label": "darwin_core",
+          "source": "src-fishbase-gbif-ipt",
+          "description": {
+            "en": "FishBase publishes an occurrence extract as a Darwin Core Archive through GBIF Sweden. The listed release is 23 March 2023; this scope excludes the live relational database.",
+            "fr": "FishBase publie un extrait d’occurrences en Darwin Core Archive via GBIF Suède. La version affichée date du 23 mars 2023 ; ce périmètre exclut la base relationnelle actuelle.",
+            "es": "FishBase publica un extracto de ocurrencias como Darwin Core Archive mediante GBIF Suecia. La versión indicada es del 23 de marzo de 2023; no abarca la base relacional en vivo.",
+            "ar": "ينشر FishBase مستخرج تواجد بصيغة Darwin Core Archive عبر GBIF السويد. الإصدار المدرج بتاريخ 23 مارس 2023؛ ولا يشمل الوصف قاعدة البيانات العلائقية الحية.",
+            "zh": "FishBase 通过 GBIF 瑞典以 Darwin Core Archive 发布出现记录提取集。所列版本发布日期为 2023 年 3 月 23 日；此项不涵盖实时关系数据库。",
+            "ru": "FishBase публикует выборку встречаемости в Darwin Core Archive через GBIF Швеция. Указанный выпуск датирован 23 марта 2023 года; это не охватывает текущую реляционную базу."
+          }
+        },
+        {
+          "label": "eml",
+          "source": "src-fishbase-dwca",
+          "description": {
+            "en": "FishBase’s GBIF Sweden publication provides EML dataset metadata for its occurrence archive, listed as published on 23 March 2023.",
+            "fr": "La publication FishBase sur GBIF Suède fournit les métadonnées EML de son archive d’occurrences, datée du 23 mars 2023.",
+            "es": "La publicación de FishBase en GBIF Suecia proporciona metadatos EML para su archivo de ocurrencias, fechado el 23 de marzo de 2023.",
+            "ar": "يوفر نشر FishBase عبر GBIF السويد بيانات وصفية وفق EML لأرشيف التواجد المدرج بتاريخ 23 مارس 2023.",
+            "zh": "FishBase 在 GBIF 瑞典的发布提供出现记录档案的 EML 数据集元数据，所列发布日期为 2023 年 3 月 23 日。",
+            "ru": "Публикация FishBase на GBIF Швеция предоставляет метаданные EML для архива встречаемости, датированного 23 марта 2023 года."
+          }
+        },
+        {
+          "label": "dublin_core",
+          "source": "src-fishbase-dwca",
+          "description": {
+            "en": "FishBase’s GBIF Sweden occurrence archive maps modification dates to the Dublin Core modified term. Field population and date syntax vary across records.",
+            "fr": "L’archive d’occurrences FishBase sur GBIF Suède associe les dates de modification au terme Dublin Core modified. Le remplissage et la syntaxe des dates varient selon les enregistrements.",
+            "es": "El archivo de ocurrencias de FishBase en GBIF Suecia asigna las fechas de modificación al término modified de Dublin Core. La presencia y la sintaxis de las fechas varían entre registros.",
+            "ar": "يربط أرشيف تواجد FishBase لدى GBIF السويد تواريخ التعديل بمصطلح modified من Dublin Core. يختلف اكتمال الحقل وصياغة التواريخ بين السجلات.",
+            "zh": "FishBase 在 GBIF 瑞典的出现记录档案将修改日期映射到 Dublin Core 的 modified 术语。各记录的字段填充情况和日期语法不一。",
+            "ru": "Архив встречаемости FishBase на GBIF Швеция сопоставляет даты изменения с термином modified Dublin Core. Заполненность поля и синтаксис дат различаются между записями."
+          }
+        }
+      ],
+      "sources": {
+        "src-fishbase-faoareas": {
+          "id": "src-fishbase-faoareas",
+          "url": "https://www.fishbase.se/manual/english/FishBaseThe_FAOAREAS_Table.htm",
+          "title": {
+            "en": "FishBase manual: FAOAREAS table",
+            "fr": "Manuel FishBase : table FAOAREAS",
+            "es": "Manual de FishBase: tabla FAOAREAS",
+            "ar": "دليل FishBase: جدول FAOAREAS",
+            "zh": "FishBase 手册：FAOAREAS 表",
+            "ru": "Руководство FishBase: таблица FAOAREAS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-fishbase-fisheries-classification": {
+          "id": "src-fishbase-fisheries-classification",
+          "url": "https://www.fishbase.se/report/isscaap/isscaapsearchmenu.php",
+          "title": {
+            "en": "FishBase ISSCAAP and ASFIS lookup",
+            "fr": "Recherche ISSCAAP et ASFIS de FishBase",
+            "es": "Buscador ISSCAAP y ASFIS de FishBase",
+            "ar": "البحث في ISSCAAP وASFIS في FishBase",
+            "zh": "FishBase ISSCAAP 与 ASFIS 查询",
+            "ru": "Поиск ISSCAAP и ASFIS в FishBase"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-fishbase-gbif-ipt": {
+          "id": "src-fishbase-gbif-ipt",
+          "url": "https://www.gbif.se/ipt/resource?r=fishbase",
+          "title": {
+            "en": "FishBase Database: GBIF Sweden publication",
+            "fr": "FishBase Database : publication GBIF Suède",
+            "es": "FishBase Database: publicación en GBIF Suecia",
+            "ar": "قاعدة FishBase: النشر عبر GBIF السويد",
+            "zh": "FishBase Database：GBIF 瑞典发布",
+            "ru": "FishBase Database: публикация GBIF Швеция"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-fishbase-dwca": {
+          "id": "src-fishbase-dwca",
+          "url": "https://www.gbif.se/ipt/archive.do?r=fishbase",
+          "title": {
+            "en": "FishBase occurrence archive: manifest and EML metadata",
+            "fr": "Archive d’occurrences FishBase : manifeste et métadonnées EML",
+            "es": "Archivo de ocurrencias de FishBase: manifiesto y metadatos EML",
+            "ar": "أرشيف تواجد FishBase: البيان والبيانات الوصفية EML",
+            "zh": "FishBase 出现记录档案：清单与 EML 元数据",
+            "ru": "Архив встречаемости FishBase: манифест и метаданные EML"
+          },
+          "accessedAt": "2026-09-10"
+        }
       },
       "reviewedUrls": [
-        "https://docs.ropensci.org/rfishbase/"
+        "https://www.fishbase.se/manual/english/FishBaseThe_FAOAREAS_Table.htm",
+        "https://www.fishbase.se/report/isscaap/isscaapsearchmenu.php",
+        "https://www.gbif.se/ipt/resource?r=fishbase",
+        "https://www.gbif.se/ipt/archive.do?r=fishbase",
+        "https://www.fishbase.se/manual/FishBaseThe_STOCKS_Table.htm",
+        "https://www.fishbase.se/Nomenclature/Classification_explanation.php",
+        "https://www.fishbase.org/summary/Glyphis-gangeticus",
+        "https://www.fishbase.se/summary/2588",
+        "https://www.fishbase.se/manual/FishBaseThe_COUNTREF_Table.htm"
       ],
       "proseMoves": [
         {
@@ -836,6 +962,55 @@
             "ru": "Записи FishBase ссылаются на исходную литературу через последовательные номера источников, связанные с полными библиографическими описаниями.",
             "zh": "FishBase 记录通过连续参考编号引用来源文献，并链接到完整引文。"
           }
+        }
+      ],
+      "candidateStandards": [
+        {
+          "proposedId": "iucn_red_list",
+          "label": "IUCN Red List Categories and Criteria",
+          "status": "proposed_vocabulary_addition",
+          "finding": "Strong fit: the STOCKS status field and species pages use IUCN categories and criteria. Preserve assessment dates, category-system versions and FishBase-specific placeholders; a Red List release year is not a criteria version.",
+          "urls": [
+            "https://www.fishbase.se/manual/FishBaseThe_STOCKS_Table.htm",
+            "https://www.fishbase.org/summary/Glyphis-gangeticus"
+          ]
+        },
+        {
+          "proposedId": "iczn",
+          "label": "International Code of Zoological Nomenclature",
+          "status": "scope_decision_needed",
+          "finding": "All 731,043 rows in the inspected FishBase occurrence archive declare nomenclaturalCode=ICZN; FishBase also discusses ICZN decisions and publication rules. This is a scientific naming code, outside the present schema/profile/vocabulary/QC definition unless its scope is expanded. Taxonomic backbones themselves remain source datasets.",
+          "urls": [
+            "https://www.fishbase.se/Nomenclature/Classification_explanation.php",
+            "https://www.gbif.se/ipt/archive.do?r=fishbase"
+          ]
+        },
+        {
+          "proposedId": "cites_appendices",
+          "label": "CITES appendix classification",
+          "status": "scope_decision_needed",
+          "finding": "FishBase exposes appendix-based conservation/trade-status values. Could fit as a controlled classification; tagging CITES itself as a data standard would be too broad. No claim of current legal status is made.",
+          "urls": [
+            "https://www.fishbase.org/summary/Glyphis-gangeticus"
+          ]
+        },
+        {
+          "proposedId": "cms_appendices",
+          "label": "CMS appendix classification",
+          "status": "scope_decision_needed",
+          "finding": "FishBase exposes CMS Appendix I/II status on species pages. Candidate only if treaty-status classifications belong in the Standards vocabulary; not a data-exchange schema.",
+          "urls": [
+            "https://www.fishbase.se/summary/2588"
+          ]
+        },
+        {
+          "proposedId": "un_m49",
+          "label": "UN M49 statistical country/area codes",
+          "status": "needs_specific_mapping_evidence",
+          "finding": "COUNTREF mentions UN statistical names and code numbers. Confirm the actual field mapping and treatment of historical/extra area codes before claiming M49 or ISO 3166 compliance.",
+          "urls": [
+            "https://www.fishbase.se/manual/FishBaseThe_COUNTREF_Table.htm"
+          ]
         }
       ]
     },

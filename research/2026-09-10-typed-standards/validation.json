@@ -222,7 +222,10 @@
       "affectedSections": [
         "record",
         "localizations"
-      ]
+      ],
+      "checkedAt": "2026-09-10T16:52:46.513439+00:00",
+      "localTypedValidation": true,
+      "standardCount": 6
     },
     {
       "id": "gebco-web-services",
@@ -557,5 +560,19 @@
         "localizations"
       ]
     }
-  ]
+  ],
+  "fishbaseFollowup": {
+    "checkedAt": "2026-09-10T16:52:46.513439+00:00",
+    "localTypedValidation": "passed",
+    "liveApiValidationOnly": "passed",
+    "issues": [],
+    "standardsAdded": 6,
+    "appliedToProduction": false,
+    "previewPreservation": "Only FishBase changed; all other nodes, edges, routes and saved views preserved.",
+    "localPreviewVerification": {
+      "standardsVisible": 6,
+      "localesVerified": 6,
+      "allStandardSourcesResolve": true
+    }
+  }
 }
