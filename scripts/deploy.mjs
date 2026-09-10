@@ -26,8 +26,10 @@ export function affectedServices(files) {
 }
 
 export function revisionCommit(revision) {
+  const container = revision.spec?.containers?.[0];
+  if (container?.command?.length || container?.args?.length) return null; // Maintenance is not the app, even with the same image label.
   const label = revision.metadata?.labels?.['release-commit'];
-  const imageTag = revision.spec?.containers?.[0]?.image?.match(/:([a-f0-9]{7,40})$/)?.[1];
+  const imageTag = container?.image?.match(/:([a-f0-9]{7,40})$/)?.[1];
   return /^[a-f0-9]{40}$/.test(label ?? '') ? label : imageTag ?? null;
 }
 
@@ -47,9 +49,12 @@ async function run(command, args) {
 }
 const cloud = args => run('gcloud', [...args, '--project', project, '--region', region]);
 const cloudJson = async args => JSON.parse(await cloud([...args, '--format=json']));
+export function missingCloudResource(message) {
+  return !/PERMISSION_DENIED|UNAUTHENTICATED|permission|reauth|credentials/i.test(message) && /NOT_FOUND|Cannot find revision \[|was not found|does not exist|not found/i.test(message);
+}
 async function optionalCloud(args) {
   try { return await cloudJson(args); }
-  catch (error) { if (/NOT_FOUND|was not found|does not exist|not found/i.test(error.message)) return null; throw error; }
+  catch (error) { if (missingCloudResource(error.message)) return null; throw error; }
 }
 async function together(tasks) {
   const results = await Promise.allSettled(tasks);
@@ -134,7 +139,7 @@ export async function main(mode = 'publish') {
         const raw = await run('gcloud', ['artifacts', 'docker', 'images', 'describe', imageFor(service), '--project', project, '--format=value(image_summary.digest)']);
         if (!/^sha256:[a-f0-9]{64}$/.test(raw)) throw Error(`Invalid image digest for ${service}`);
         return `${registry}/${repository(service)}@${raw}`;
-      } catch (error) { if (/NOT_FOUND|was not found|does not exist|not found/i.test(error.message)) return null; throw error; }
+      } catch (error) { if (missingCloudResource(error.message)) return null; throw error; }
     }
     await together(targets.map(async service => { state.images[service] = await digest(service); }));
     async function build(key, config, substitutions) {

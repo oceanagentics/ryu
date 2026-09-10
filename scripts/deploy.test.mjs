@@ -1,13 +1,20 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { test } from 'node:test';
-import { affectedServices, dataIssues, revisionCommit } from './deploy.mjs';
+import { affectedServices, dataIssues, missingCloudResource, revisionCommit } from './deploy.mjs';
 
 const all = ['explorer', 'explorer-admin', 'explorer-api'];
 const fixture = () => {
   const record = JSON.parse(fs.readFileSync(new URL('../server/src/fixtures/rich-record.json', import.meta.url)));
   return { nodes: [{ id: record.id, ...record.record, localizations: record.localizations }], edges: record.edges, ryuRoutes: record.routes };
 };
+
+test('missing resources can be prepared, but authentication and permission errors stop the release', () => {
+  assert.equal(missingCloudResource('ERROR: (gcloud.run.revisions.describe) Cannot find revision [explorer-release-abc]'), true);
+  assert.equal(missingCloudResource('NOT_FOUND: requested image was not found'), true);
+  assert.equal(missingCloudResource('PERMISSION_DENIED: image was not found or access is denied'), false);
+  assert.equal(missingCloudResource('Reauthentication failed'), false);
+});
 
 test('UI changes omit API; runtime, shared contracts and dependencies include every service', () => {
   assert.deepEqual(affectedServices(['client/src/app/components/LegendPanel.tsx']), all.slice(0, 2));
@@ -27,6 +34,7 @@ test('revision provenance uses the serving revision label or an explicit image c
   assert.equal(revisionCommit({ metadata: { labels: { 'release-commit': commit } }, spec: { containers: [{ image: 'example:123abcd' }] } }), commit);
   assert.equal(revisionCommit({ spec: { containers: [{ image: 'example:123abcd' }] } }), '123abcd');
   assert.equal(revisionCommit({ metadata: { name: 'explorer-fake-123abcd' }, spec: { containers: [{ image: `example@sha256:${'b'.repeat(64)}` }] } }), null);
+  assert.equal(revisionCommit({ metadata: { labels: { 'release-commit': commit } }, spec: { containers: [{ image: `example:${commit}`, command: ['node'], args: ['maintenance.mjs'] }] } }), null);
 });
 
 test('preflight rejects malformed graph responses and accepts the complete current record contract', () => {
