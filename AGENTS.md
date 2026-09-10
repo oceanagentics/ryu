@@ -79,9 +79,12 @@
 - `countryCode` is an identity code for country nodes only. Do not set it on
   organizations or systems, or recreate an Operator country field.
 - Before marking a record rich, review every incident edge and investigate all six
-  relationship types. Record source-backed findings for all six types in each
-  localization's `details.relationshipReview`; explicitly describe research gaps
-  or inapplicable relationships. Follow `documentation/RICH_RESEARCH_RECORDS.md`.
+  relationship types. Actively research missing connections beyond the operator,
+  using primary sources to establish endpoints, direction, scope, and time/status.
+  Store relationship descriptions, scope, time/status, and citations on the edges.
+  Persist verified material connections during authorized backfills and report
+  unresolved candidates with reasons. Keep unfinished research thin; there is no
+  minimum connection count. Follow `documentation/RICH_RESEARCH_RECORDS.md`.
 
 ## Provenance and Metadata
 - Store sources in dedicated `nodes.sources` and `edges.sources` JSONB objects, keyed by owner-local source ID. Each source has exactly `id`, `url`, `title` (supported-locale map), and `accessedAt` (YYYY-MM-DD).

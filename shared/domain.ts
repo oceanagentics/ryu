@@ -177,7 +177,6 @@ export interface LocalizedNodeDataDetails {
 
 export interface NodeLocalizationDetails extends Record<string, unknown> {
   profile?: { sourceRefs: string[] };
-  relationshipReview?: { sourceRefs: string[]; findings: Record<GraphEdgeKind, string> };
   researchGaps?: Partial<Record<MetricGroup | "standards", string>>;
   aliases: string[];
   gallery: LocalizedSystemGalleryItem[];

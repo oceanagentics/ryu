@@ -48,6 +48,7 @@ same shared lookup.
 | Headings, buttons, empty states and message templates | `uiMessages/`, grouped by UI concern |
 | Language names | `localeNames.ts` |
 | A record's title, profile, descriptor descriptions and access guidance | `node_localizations` |
+| Relationship descriptions, scope, status and citations | `edges.note`, `edges.properties_json` and `edges.sources` |
 | A source's translated title | That node or edge's `sources[id].title` map |
 
 For data descriptors, the neutral `label` field contains an approved ID. Its

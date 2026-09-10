@@ -92,12 +92,11 @@ A rich system must have:
   a metric or an explicit research gap for each group in every locale's
   `details.researchGaps.data` or `usage`; do not invent numbers to fill a group.
 - Evidence on each relationship and route, using a `source` ID or `properties.sourceRefs` IDs. Relationship references resolve against `edges.sources`; route references resolve against the route node's `nodes.sources`. References contain no duplicate URL.
-- A relationship review in every localization's `details.relationshipReview`,
-  containing `sourceRefs` and `findings` with non-empty entries for all six edge
-  types. This applies to rich organizations and countries as well as systems.
-  Review all incoming and outgoing edges, find missing material relationships,
-  and document unsupported or unresolved claims. The API validates review coverage
-  and evidence; the agent must assess whether the sources support the semantics.
+- Complete the connection research in Relationship Review below for rich systems,
+  organizations, and countries. Persist verified material relationships with their
+  descriptions and evidence on the edges, and report unsupported or unresolved
+  candidates to the user. The API validates edge evidence references; passing
+  validation alone does not establish adequate research or the truth of a claim.
 
 Gallery and machine routes are optional. No approved route produces a warning;
 do not invent one. When present, gallery assets must exist or have HTTP(S) URLs.
@@ -228,52 +227,61 @@ kind/source/target triples, unknown types, and retired `part_of` are rejected.
 | `publishes_to` | organization -> system | An evidenced publication/submission relationship. |
 | `syncs_to` | system -> system | An evidenced transfer, with direction and active/planned status made clear. |
 
+Well-researched connections are a required part of a rich record. Checking the
+existing operator alone is insufficient. Actively discover
+missing material relationships as well as verifying existing ones. There is no
+minimum edge count or requirement to assert every type: evidence determines the
+connections. Keep the record `thin` while material relationship research or verified
+edge additions remain unfinished. Specific evidence gaps after a completed
+investigation are acceptable; generic "reviewed, no additional relationship
+established" findings do not satisfy this standard.
+
 For each record, agents must:
 
-1. Read the complete record and its incident edges; inspect the connected nodes to
-   verify their identities and kinds. A consortium label does not establish its members.
+1. Read the complete canonical record and its incident edges through the record API;
+   inspect connected nodes and search for candidate endpoints to verify identities
+   and kinds and reuse existing records. A consortium label does not establish its members.
 2. Research governance, operation, funding, membership, publication, and synchronization
-   using primary sources. Distinguish national, subnational, institutional, and
-   collective authority. Funding a dataset does not necessarily fund its repository.
+   using primary sources beyond the homepage: authority documents, member lists,
+   grant and annual reports, contributor documentation, and upstream/downstream
+   dataset records or export documentation, as applicable. Follow named partners
+   and data destinations to their own evidence. Distinguish national, subnational,
+   institutional, and collective authority. Funding a dataset does not necessarily
+   fund its repository.
 3. Check every asserted edge's direction, endpoints, meaning, provenance, and time
-   scope. Attach supporting source refs to the edge itself. Review existing edges
-   as critically as new ones; do not accept geographic grouping as governance.
-4. Add verified missing relationships and remove unsupported assertions through
-   `PATCH /api/records/:id`. Do not invent authority, contributors, grants, or
-   memberships to fill the graph. Keep uncertainty explicit in the review findings.
-5. Record localized findings under all six keys in `details.relationshipReview.findings`,
-   with `details.relationshipReview.sourceRefs` supporting the investigation.
-   Findings should say what is established, inapplicable, historical, planned, or
-   still unknown. A missing edge alone does not demonstrate that a type was reviewed.
+   scope. Explain the supported role or data contribution in the edge note/properties
+   and attach supporting source refs to the edge itself. For funding, identify the
+   recipient/activity, any intermediary, and supported period. For transfers, identify
+   the data, documented path/method, update cadence and latest observed release when
+   available; distinguish live, periodic, historical, planned, and unknown status.
+   A source's access date does not prove a relationship is current. Review existing
+   edges as critically as new ones; a hyperlink, shared operator, scientific advice,
+   or downstream reuse alone does not prove governance, membership, or a direct or
+   reciprocal transfer.
+4. During authorized backfills, add verified missing relationships and remove
+   unsupported assertions through `PATCH /api/records/:id`; create minimal missing
+   endpoint records as needed. For research-only requests, propose these changes
+   without applying them. Do not invent authority, contributors, grants, or
+   memberships to fill the graph.
+5. Report the organizations/systems and evidence examined, what was established,
+   and which candidates were withheld and why. When no edge is supported, explain
+   the specific research gap or why the relationship is inapplicable. Distinguish
+   historical evidence from current or planned activity and unknown continuation.
+   A missing edge alone does not demonstrate that a type was reviewed.
 6. Run `validateOnly=true` on the resulting aggregate before applying; re-read to
-   verify both endpoints and confirm the final edge set. Reassess these findings
+   verify both endpoints and confirm the final edge set. Reassess the research
    whenever relationships or their supporting evidence change.
 
-Example shape (illustrative findings, never boilerplate to copy into live records):
+Relationship content has one owner: the edge. Put the explanation in `note`,
+structured scope/status and `sourceRefs` in `properties`, and cited sources in the
+edge's `sources` collection. Node properties and localization details contain no
+separate connection summary.
 
-```json
-{
-  "relationshipReview": {
-    "sourceRefs": ["official-operator-page"],
-    "findings": {
-      "governs": "Describe the evidenced governing authority, or the research gap.",
-      "operates": "Identify the organizations responsible for this system.",
-      "funds": "Describe supported funding relationships and their periods, or unresolved funding.",
-      "member_of": "Identify documented memberships, or explain why none were established.",
-      "publishes_to": "Identify confirmed publication relationships, or their absence.",
-      "syncs_to": "Identify confirmed transfer destinations, direction, and status, or their absence."
-    }
-  }
-}
-```
-
-For existing databases, apply `server/schema/009_relationship_contract.sql` with
-the release, after reviewing/removing legacy `part_of` edges using the record API.
-It refuses an automatic rename, clears non-country affiliation codes, installs
-the six-type/endpoint constraints, and returns previously rich records lacking
-relationship-review coverage to `thin`. Review history is preserved and affected
-localizations require revision. Promote records through the API only after the
-complete current rich criteria pass. Regenerate the public bootstrap from Postgres.
+The six-type/endpoint constraints were introduced by
+`server/schema/009_relationship_contract.sql`. Its historical rich-record downgrade
+used the former localization review fields; those fields are no longer part of
+the current rich criteria. Promote records through the API only after the current
+criteria pass. Regenerate the public bootstrap from Postgres after graph changes.
 
 ## Disciplines
 
@@ -773,6 +781,9 @@ psql "$DATABASE_URL" -c \
 
 Confirm:
 
+- All six relationship types have been investigated; verified material connections
+  are persisted as edges with their own evidence, scope, and time/status caveats.
+  No material connection research remains unfinished.
 - Required access URLs, descriptions, and sources are present.
 - Required metric sources are present.
 - Gallery local files exist for every local `url` and `thumbnailUrl`.
@@ -784,6 +795,9 @@ When reporting a completed backfill, include:
 
 - What system was updated.
 - Main profile improvements.
+- A concise sourced connection summary: endpoints, relationship type/direction,
+  evidence, scope, and time/status caveats for material additions or corrections;
+  identify unresolved candidates and why they were withheld.
 - Counts of descriptors, access paths, gallery items, and metrics.
 - The most important sourced metrics.
 - Any caveats, especially about approximate counts, snapshot-vs-live sizes, or missing usage data.

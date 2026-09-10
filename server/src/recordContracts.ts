@@ -2,7 +2,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { edgeKinds, isSystemMetricKey, metricDefinitions, metricPeriods } from "../../shared/domain";
+import { isSystemMetricKey, metricDefinitions, metricPeriods } from "../../shared/domain";
 
 import type {
   GraphEdge,
@@ -531,16 +531,6 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     }
     collectSourceIds(details, refs);
     citedProfile(details.profile, `${field}.details.profile`);
-    const relationshipReview = object(details.relationshipReview);
-    if (rich || details.relationshipReview != null) {
-      citedProfile(relationshipReview, `${field}.details.relationshipReview`);
-      for (const kind of edgeKinds) {
-        requireText(object(relationshipReview.findings)[kind], `${field}.details.relationshipReview.findings.${kind}`);
-      }
-      for (const kind of Object.keys(object(relationshipReview.findings))) {
-        if (!edgeKinds.includes(kind as typeof edgeKinds[number])) issues.push({ recordId: id, path: `${field}.details.relationshipReview.findings.${kind}`, message: "unknown relationship type" });
-      }
-    }
     const localizedData = object(details.data);
     const sections: [string, Record<string, unknown>[], unknown, string[]][] = [
       ["data.descriptors", descriptors, localizedData.descriptors, ["label", "description"]],

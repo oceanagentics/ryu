@@ -212,19 +212,6 @@
             "src-fishbase-collaborator-guide"
           ]
         },
-        "relationshipReview": {
-          "sourceRefs": [
-            "src-fishbase-home"
-          ],
-          "findings": {
-            "governs": "لا تثبت المشورة العلمية لاتحاد FishBase سلطة ملزمة؛ وتحتاج الحوكمة الرسمية إلى مزيد من البحث.",
-            "operates": "تستضيف Q-quatics قاعدة FishBase وتديرها؛ وتستشهد علاقة التشغيل بالموقع الرسمي.",
-            "funds": "يذكر الموقع جهات داعمة، لكن هذا المثال لا يثبت علاقة تمويل حالية أو مدتها.",
-            "member_of": "لا يثبت المصدر الذي تمت مراجعته عضوية رسمية لهذا النظام.",
-            "publishes_to": "لا تحدد المساهمات الموصوفة مؤسسة بعينها تنشر في النظام.",
-            "syncs_to": "تتوفر لقطات ثابتة؛ ولا يثبت هذا المثال علاقة مزامنة نشطة."
-          }
-        },
         "researchGaps": {
           "standards": "لم يُتحقق من معيار مشترك للبيانات أو البيانات الوصفية لهذه المخرجات من FishBase؛ وتندرج رخصة إعادة الاستخدام الموثقة ضمن إرشادات الوصول.",
           "usage": "لا يتضمن هذا المثال أرقام الاستخدام."
@@ -296,19 +283,6 @@
             "src-fishbase-gadus-summary",
             "src-fishbase-collaborator-guide"
           ]
-        },
-        "relationshipReview": {
-          "sourceRefs": [
-            "src-fishbase-home"
-          ],
-          "findings": {
-            "governs": "Scientific advice from the FishBase Consortium does not establish binding governance; formal authority needs further research.",
-            "operates": "Q-quatics hosts and manages FishBase; the operator edge cites its official homepage.",
-            "funds": "The homepage identifies support, but this fixture establishes no current funding relationship or funding period.",
-            "member_of": "No formal membership of this system is established by the reviewed source.",
-            "publishes_to": "Collaborator submissions described on the homepage do not establish a named organizational publisher.",
-            "syncs_to": "Static snapshots are available; no active synchronization relationship is established in this fixture."
-          }
         },
         "researchGaps": {
           "standards": "No shared data or metadata standard has been verified for these FishBase outputs; the documented reuse license is access guidance.",
@@ -383,19 +357,6 @@
             "src-fishbase-collaborator-guide"
           ]
         },
-        "relationshipReview": {
-          "sourceRefs": [
-            "src-fishbase-home"
-          ],
-          "findings": {
-            "governs": "El asesoramiento científico del Consorcio FishBase no demuestra autoridad vinculante; la gobernanza formal requiere más investigación.",
-            "operates": "Q-quatics aloja y gestiona FishBase; la relación de operador cita su página oficial.",
-            "funds": "La página menciona apoyo, pero este ejemplo no establece financiación actual ni un período de financiación.",
-            "member_of": "La fuente revisada no establece la pertenencia formal de este sistema a otra entidad.",
-            "publishes_to": "Las aportaciones descritas no identifican una organización que publique en el sistema.",
-            "syncs_to": "Hay instantáneas disponibles; este ejemplo no establece una sincronización activa."
-          }
-        },
         "researchGaps": {
           "standards": "No se ha verificado ningún estándar compartido de datos o metadatos para estas salidas de FishBase; la licencia de reutilización documentada corresponde a las indicaciones de acceso.",
           "usage": "Este ejemplo no incluye cifras de uso."
@@ -468,19 +429,6 @@
             "src-fishbase-gadus-summary",
             "src-fishbase-collaborator-guide"
           ]
-        },
-        "relationshipReview": {
-          "sourceRefs": [
-            "src-fishbase-home"
-          ],
-          "findings": {
-            "governs": "Les conseils scientifiques du consortium FishBase ne prouvent pas une autorité contraignante ; la gouvernance formelle reste à étudier.",
-            "operates": "Q-quatics héberge et gère FishBase ; la relation opérateur cite le site officiel.",
-            "funds": "Le site mentionne des soutiens, mais cet exemple ne confirme aucun financement actuel ni sa période.",
-            "member_of": "La source examinée ne confirme aucune adhésion formelle de ce système.",
-            "publishes_to": "Les contributions décrites ne permettent pas de nommer une organisation publiant dans le système.",
-            "syncs_to": "Des instantanés sont disponibles ; aucune synchronisation active n’est établie dans cet exemple."
-          }
         },
         "researchGaps": {
           "standards": "Aucune norme commune de données ou de métadonnées n’a été vérifiée pour ces sorties FishBase ; la licence de réutilisation documentée relève des consignes d’accès.",
@@ -555,19 +503,6 @@
             "src-fishbase-collaborator-guide"
           ]
         },
-        "relationshipReview": {
-          "sourceRefs": [
-            "src-fishbase-home"
-          ],
-          "findings": {
-            "governs": "Научные рекомендации консорциума FishBase не подтверждают обязательные управленческие полномочия; формальное управление требует исследования.",
-            "operates": "Q-quatics размещает и обслуживает FishBase; связь с оператором подтверждается официальным сайтом.",
-            "funds": "Сайт упоминает поддержку, но пример не подтверждает текущее финансирование или его период.",
-            "member_of": "Рассмотренный источник не подтверждает формальное членство этой системы.",
-            "publishes_to": "Описанный приём материалов не позволяет установить конкретную публикующую организацию.",
-            "syncs_to": "Доступны статические снимки; активная синхронизация в этом примере не подтверждена."
-          }
-        },
         "researchGaps": {
           "standards": "Для этих выходных данных FishBase не подтверждён общий стандарт данных или метаданных; документированная лицензия на повторное использование относится к условиям доступа.",
           "usage": "В этом примере нет показателей использования."
@@ -640,19 +575,6 @@
             "src-fishbase-gadus-summary",
             "src-fishbase-collaborator-guide"
           ]
-        },
-        "relationshipReview": {
-          "sourceRefs": [
-            "src-fishbase-home"
-          ],
-          "findings": {
-            "governs": "FishBase 联盟提供科学建议，但这不足以证明其拥有约束性决策权；正式治理关系仍需研究。",
-            "operates": "Q-quatics 托管并管理 FishBase；运营关系引用其官方网站。",
-            "funds": "网站提及支持情况，但本示例未确认当前资助关系或资助期限。",
-            "member_of": "已审阅的来源未确认该系统的正式成员关系。",
-            "publishes_to": "网站描述的协作者提交方式未确认具体的机构发布者。",
-            "syncs_to": "可获取静态快照；本示例未确认正在运行的同步关系。"
-          }
         },
         "researchGaps": {
           "standards": "尚未核实这些FishBase输出所采用的共享数据或元数据标准；已记录的再利用许可属于访问指南。",

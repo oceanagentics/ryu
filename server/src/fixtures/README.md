@@ -7,14 +7,13 @@ on 2026-09-07. The canonical response had `recordUpdatedAt`:
 
 The example retains the canonical six-language profile, two representative
 source-backed descriptors, two access paths, three data metrics, a documented usage gap,
-one gallery item, and the operator edge. Six shared sources cover these sections.
+one gallery item, and the operator edge. Sources belong to their node or edge.
 Dates/counts are preserved historical assertions; this fixture does not claim a
 fresh factual or URL review. No machine route was present in the response.
 
-Fixture-only additions: explicit profile/edge source references,
-six-language source titles/notes, and relationship-review
-findings for all six edge types. The retired operator country code is null.
-The relationship findings deliberately document gaps rather than invent edges.
+Fixture-only additions: explicit profile/edge source references and
+six-language source titles. The retired operator country code is null.
+Relationship descriptions and evidence are stored on the operator edge.
 These translations are
 agent-authored examples, not human-approved source publications. No review or
 audit fields are supplied. The existing gallery files are reused.

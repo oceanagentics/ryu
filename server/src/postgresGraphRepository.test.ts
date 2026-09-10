@@ -77,9 +77,6 @@ test("stored rich example enforces content, evidence, localization and allowed g
     ["localizations.fr", input => { delete input.localizations.fr; }],
     ["localizations.en.summary", input => { input.localizations.en.summary = ""; }],
     ["localizations.en.details.profile.sourceRefs", input => { delete input.localizations.en.details.profile; }],
-    ["localizations.en.details.relationshipReview.sourceRefs", input => { delete input.localizations.en.details.relationshipReview.sourceRefs; }],
-    ["localizations.fr.details.relationshipReview.findings.funds", input => { delete input.localizations.fr.details.relationshipReview.findings.funds; }],
-    ["localizations.en.details.relationshipReview.findings.part_of", input => { input.localizations.en.details.relationshipReview.findings.part_of = "Retired type"; }],
     ["record.countryCode", input => { input.record.countryCode = "INT"; }],
     ["record.properties.metrics[0].source", input => { delete input.record.properties.metrics[0].source; }],
     ["record.properties.metrics[0].observedAt", input => { input.record.properties.metrics[0].observedAt = "2026-02-31"; }],
@@ -87,6 +84,7 @@ test("stored rich example enforces content, evidence, localization and allowed g
     ["record.sources.src-fishbase-home", input => { delete input.record.sources["src-fishbase-home"]; }],
     ["record.sources.src-fishbase-home.title.ar", input => { delete input.record.sources["src-fishbase-home"].title.ar; }],
     ["edges", input => { input.edges = []; }],
+    [`edges.${fixture.edges[0].id}.properties.sourceRefs`, input => { input.edges[0].properties = {}; }],
     ["record.properties.gallery[0].url", input => { input.record.properties.gallery[0].url = "/gallery/missing.png"; }],
     ["routes.example.target", input => { input.routes = [{ id: "example", status: "active", mode: "live_api", properties: { sourceRefs: ["src-fishbase-home"] } }]; }],
   ];
