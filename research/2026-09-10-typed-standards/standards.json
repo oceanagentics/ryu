@@ -1,0 +1,2480 @@
+{
+  "date": "2026-09-10",
+  "status": "prepared_pending_deployment",
+  "vocabularyCommit": "4830a74",
+  "systems": [
+    {
+      "id": "algaebase",
+      "title": "AlgaeBase",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "No approved standard was verified. The official site returned HTTP 403 during this audit; a current export schema remains to be checked.",
+        "fr": "Aucun standard approuvé n’a été vérifié. Le site officiel a renvoyé HTTP 403 ; le schéma d’export actuel reste à examiner.",
+        "es": "No se verificó un estándar aprobado. El sitio oficial devolvió HTTP 403; queda por comprobar el esquema de exportación actual.",
+        "ar": "لم يُتحقق من معيار معتمد. أعاد الموقع الرسمي HTTP 403 أثناء المراجعة؛ وما زال مخطط التصدير الحالي بحاجة للتحقق.",
+        "zh": "尚未核实可选标准。此次审核访问官网返回 HTTP 403，仍需检查当前导出模式。",
+        "ru": "Утверждённый стандарт не подтверждён. Официальный сайт вернул HTTP 403; текущую схему экспорта ещё нужно проверить."
+      },
+      "reviewedUrls": [
+        "https://www.algaebase.org/"
+      ]
+    },
+    {
+      "id": "aquamaps",
+      "title": "AquaMaps",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "The reviewed AquaMaps description explains modelled distributions but does not establish an approved data or metadata standard for a specific output.",
+        "fr": "La description AquaMaps examinée explique les distributions modélisées, sans établir de standard approuvé pour une sortie précise.",
+        "es": "La descripción revisada de AquaMaps explica distribuciones modeladas, sin establecer un estándar aprobado para una salida concreta.",
+        "ar": "يشرح وصف AquaMaps الذي روجع التوزيعات النموذجية لكنه لا يثبت معياراً معتمداً لمخرج محدد.",
+        "zh": "所审阅的 AquaMaps 说明介绍了模型预测分布，尚未证实具体输出采用哪项可选数据或元数据标准。",
+        "ru": "Изученное описание AquaMaps объясняет моделируемое распространение, но не подтверждает утверждённый стандарт конкретного вывода."
+      },
+      "reviewedUrls": [
+        "https://aquamaps.org/main/AboutAquaMaps.php"
+      ]
+    },
+    {
+      "id": "argo-gdac",
+      "title": "Argo Global Data Assembly Centers",
+      "standards": [
+        {
+          "label": "argo",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Argo GDAC files use Argo parameter names, raw/adjusted values, data modes and quality flags. Read the file-specific mode and quality fields before selecting observations.",
+            "fr": "Les fichiers des GDAC Argo utilisent les noms de paramètres, valeurs brutes/corrigées, modes et indicateurs qualité Argo. Consulter ces champs avant de sélectionner les observations.",
+            "es": "Los archivos de los GDAC de Argo usan nombres de parámetros, valores brutos/ajustados, modos e indicadores de calidad Argo. Deben consultarse antes de seleccionar observaciones.",
+            "ar": "تستخدم ملفات Argo GDAC أسماء المعلمات والقيم الخام والمعدلة وأنماط البيانات وأعلام الجودة الخاصة بـArgo. يجب قراءة حقول النمط والجودة قبل اختيار الملاحظات.",
+            "zh": "Argo GDAC 文件使用 Argo 参数名、原始及调整值、数据模式和质量标志。选择观测前需检查文件中的模式与质量字段。",
+            "ru": "Файлы Argo GDAC используют названия параметров Argo, исходные и скорректированные значения, режимы данных и флаги качества. Эти поля следует проверять перед выбором наблюдений."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://argo.ucsd.edu/data/how-to-use-argo-files/",
+          "title": {
+            "en": "Argo file guide — technical documentation",
+            "fr": "Argo file guide — documentation technique",
+            "es": "Argo file guide — documentación técnica",
+            "ar": "Argo file guide — الوثائق التقنية",
+            "zh": "Argo file guide — 技术文档",
+            "ru": "Argo file guide — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://argo.ucsd.edu/data/how-to-use-argo-files/"
+      ]
+    },
+    {
+      "id": "argovis",
+      "title": "Argovis",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "Argovis transforms Argo inputs into its own JSON record structure. Argo provenance alone does not establish conformance of the delivered JSON to Argo file conventions.",
+        "fr": "Argovis transforme les données Argo en sa propre structure JSON. Leur origine Argo ne prouve pas la conformité du JSON aux conventions des fichiers Argo.",
+        "es": "Argovis transforma entradas Argo en su propia estructura JSON. El origen Argo no demuestra que el JSON entregado cumpla las convenciones de archivos Argo.",
+        "ar": "يحول Argovis مدخلات Argo إلى بنية JSON خاصة به. لا يثبت مصدر Argo وحده مطابقة JSON المسلم لاتفاقيات ملفات Argo.",
+        "zh": "Argovis 将 Argo 输入转换为自有 JSON 结构。数据来源于 Argo 并不足以证明交付的 JSON 遵循 Argo 文件约定。",
+        "ru": "Argovis преобразует данные Argo в собственную структуру JSON. Происхождение из Argo не подтверждает соответствие JSON соглашениям файлов Argo."
+      },
+      "reviewedUrls": [
+        "https://argovis.github.io/hackathon22-docs/data_management/argo_merge.html"
+      ]
+    },
+    {
+      "id": "bold",
+      "title": "Barcode of Life Data System",
+      "standards": [
+        {
+          "label": "bcdm",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The BOLD data API documents barcode records using the Barcode Core Data Model (BCDM). This assignment covers the documented API record schema.",
+            "fr": "L’API de données BOLD décrit les enregistrements de codes-barres avec le Barcode Core Data Model (BCDM). Cette attribution concerne le schéma documenté de l’API.",
+            "es": "La API de datos de BOLD describe los registros de códigos de barras con el Barcode Core Data Model (BCDM). Esta asignación abarca el esquema documentado de la API.",
+            "ar": "توثق واجهة بيانات BOLD سجلات الباركود باستخدام نموذج Barcode Core Data Model ‏(BCDM). يخص هذا الوصف مخطط السجلات الموثق للواجهة.",
+            "zh": "BOLD 数据 API 使用 Barcode Core Data Model（BCDM）描述条形码记录。此项适用于文档所述的 API 记录模式。",
+            "ru": "API данных BOLD описывает записи штрихкодов с помощью Barcode Core Data Model (BCDM). Это относится к документированной схеме записей API."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://boldsystems.org/data/api/",
+          "title": {
+            "en": "BOLD API — technical documentation",
+            "fr": "BOLD API — documentation technique",
+            "es": "BOLD API — documentación técnica",
+            "ar": "BOLD API — الوثائق التقنية",
+            "zh": "BOLD API — 技术文档",
+            "ru": "BOLD API — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://boldsystems.org/data/api/"
+      ]
+    },
+    {
+      "id": "platform-bbnj-chm",
+      "title": "BBNJ Clearing-House Mechanism (CHM)",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "This record describes a planned CHM implementation. No approved standard is assigned without a verified operational data or metadata contract.",
+        "fr": "Cette notice décrit une mise en œuvre CHM prévue. Aucun standard approuvé n’est attribué sans contrat opérationnel de données ou métadonnées vérifié.",
+        "es": "Este registro describe una implementación CHM prevista. No se asigna un estándar aprobado sin un contrato operativo de datos o metadatos verificado.",
+        "ar": "يصف السجل تنفيذاً مخططاً لآلية CHM. لا يُسند معيار معتمد دون التحقق من مواصفات تشغيلية للبيانات أو بياناتها الوصفية.",
+        "zh": "此记录描述计划中的 CHM 实现。尚未核实实际运行的数据或元数据接口规范，因此未分配标准。",
+        "ru": "Запись описывает планируемую реализацию CHM. Утверждённый стандарт не назначен без подтверждённой эксплуатационной спецификации данных или метаданных."
+      },
+      "reviewedUrls": [
+        "https://www.un.org/bbnjagreement/sites/default/files/2024-08/Text%20of%20the%20Agreement%20in%20English.pdf"
+      ]
+    },
+    {
+      "id": "bco-dmo",
+      "title": "BCO-DMO",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "Current API documentation returned only a loading shell in this audit. Historical metadata claims need confirmation against a current BCO-DMO metadata endpoint before assigning standards.",
+        "fr": "La documentation API actuelle n’a affiché qu’un écran de chargement. Les déclarations historiques doivent être confirmées sur une interface de métadonnées BCO-DMO actuelle.",
+        "es": "La documentación API actual solo mostró una pantalla de carga. Las declaraciones históricas deben confirmarse en una interfaz de metadatos BCO-DMO vigente.",
+        "ar": "عرضت وثائق الواجهة الحالية شاشة تحميل فقط. تحتاج ادعاءات البيانات الوصفية التاريخية إلى التحقق عبر واجهة BCO-DMO حالية قبل إسناد المعايير.",
+        "zh": "此次审核中的现行 API 文档仅显示加载页面。分配标准前，需通过当前 BCO-DMO 元数据端点确认历史文档中的声明。",
+        "ru": "Текущая документация API показала лишь экран загрузки. Исторические сведения о стандартах следует подтвердить через действующий интерфейс метаданных BCO-DMO."
+      },
+      "reviewedUrls": [
+        "https://www.bco-dmo.org/how-to/access-and-reuse/bco-dmo-api",
+        "https://www.coretrustseal.org/wp-content/uploads/2020/07/Biological-and-Chemical-Oceanography-Data-Management-Office.pdf"
+      ]
+    },
+    {
+      "id": "bio-oracle",
+      "title": "Bio-ORACLE",
+      "standards": [
+        {
+          "label": "cf",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The Bio-ORACLE terrain_characteristics ERDDAP dataset declares CF-1.5 and the CF Standard Name Table. This evidence applies to that terrain dataset, not automatically to all Bio-ORACLE products.",
+            "fr": "Le jeu ERDDAP terrain_characteristics de Bio-ORACLE déclare CF-1.5 et la table des noms standard CF. Cette preuve concerne ce jeu de données de terrain uniquement.",
+            "es": "El conjunto ERDDAP terrain_characteristics de Bio-ORACLE declara CF-1.5 y la tabla de nombres estándar CF. La evidencia abarca ese conjunto de terreno únicamente.",
+            "ar": "تعلن مجموعة terrain_characteristics في ERDDAP الخاص بـBio-ORACLE عن CF-1.5 وجدول أسماء CF المعيارية. يقتصر الدليل على مجموعة التضاريس هذه.",
+            "zh": "Bio-ORACLE 的 terrain_characteristics ERDDAP 数据集声明使用 CF-1.5 及 CF 标准名称表。此证据仅适用于该地形数据集。",
+            "ru": "Набор terrain_characteristics в ERDDAP Bio-ORACLE объявляет CF-1.5 и таблицу стандартных имён CF. Это свидетельство относится только к данному набору рельефа."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://erddap.bio-oracle.org/erddap/info/terrain_characteristics/index.html",
+          "title": {
+            "en": "Bio-ORACLE terrain characteristics — technical documentation",
+            "fr": "Bio-ORACLE terrain characteristics — documentation technique",
+            "es": "Bio-ORACLE terrain characteristics — documentación técnica",
+            "ar": "Bio-ORACLE terrain characteristics — الوثائق التقنية",
+            "zh": "Bio-ORACLE terrain characteristics — 技术文档",
+            "ru": "Bio-ORACLE terrain characteristics — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://erddap.bio-oracle.org/erddap/info/terrain_characteristics/index.html"
+      ]
+    },
+    {
+      "id": "bismal",
+      "title": "BISMaL",
+      "standards": [
+        {
+          "label": "darwin_core",
+          "source": "src-standards-1",
+          "description": {
+            "en": "BISMaL stores occurrence information using the Darwin Core/OBIS-supported schema. This assignment covers occurrence records, not every media or literature field.",
+            "fr": "BISMaL stocke les occurrences selon le schéma Darwin Core pris en charge par OBIS. Cette attribution concerne les occurrences, sans couvrir tous les champs multimédias ou bibliographiques.",
+            "es": "BISMaL almacena las ocurrencias con el esquema Darwin Core compatible con OBIS. Esta asignación abarca las ocurrencias, sin cubrir todos los campos multimedia o bibliográficos.",
+            "ar": "يخزن BISMaL بيانات التواجد وفق مخطط Darwin Core المدعوم من OBIS. يقتصر هذا الوصف على سجلات التواجد ولا يشمل كل حقول الوسائط أو المراجع.",
+            "zh": "BISMaL 使用 OBIS 支持的 Darwin Core 模式存储物种出现信息。此项仅涉及出现记录，不涵盖全部媒体或文献字段。",
+            "ru": "BISMaL хранит сведения о встречаемости по схеме Darwin Core, поддерживаемой OBIS. Это относится к записям о встречаемости, а не ко всем полям мультимедиа и литературы."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.godac.jamstec.go.jp/bismal/e/b_data.html",
+          "title": {
+            "en": "BISMaL biodiversity data — technical documentation",
+            "fr": "BISMaL biodiversity data — documentation technique",
+            "es": "BISMaL biodiversity data — documentación técnica",
+            "ar": "BISMaL biodiversity data — الوثائق التقنية",
+            "zh": "BISMaL biodiversity data — 技术文档",
+            "ru": "BISMaL biodiversity data — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.godac.jamstec.go.jp/bismal/e/b_data.html"
+      ]
+    },
+    {
+      "id": "cioos",
+      "title": "Canadian Integrated Ocean Observing System",
+      "standards": [
+        {
+          "label": "cioos_metadata",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The CIOOS metadata-entry workflow creates catalogue descriptions conforming to its CIOOS profile and ISO 19115. This covers dataset metadata, not a universal schema for the underlying data.",
+            "fr": "Le processus de saisie CIOOS crée des descriptions de catalogue conformes au profil CIOOS et à ISO 19115. Cela concerne les métadonnées, sans schéma universel des données.",
+            "es": "El flujo de entrada CIOOS crea descripciones de catálogo conformes al perfil CIOOS e ISO 19115. Abarca metadatos, no un esquema universal de los datos.",
+            "ar": "تنشئ عملية إدخال CIOOS أوصافاً للفهرس وفق ملف CIOOS ومعيار ISO 19115. يخص ذلك البيانات الوصفية وليس مخططاً موحداً للبيانات الأصلية.",
+            "zh": "CIOOS 元数据录入流程按照 CIOOS 规范及 ISO 19115 创建目录描述。此项针对数据集元数据，并非底层数据的统一模式。",
+            "ru": "Процесс ввода CIOOS создаёт описания каталога по профилю CIOOS и ISO 19115. Это метаданные, а не универсальная схема самих данных."
+          }
+        },
+        {
+          "label": "iso_19115",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The CIOOS metadata-entry workflow creates catalogue descriptions conforming to its CIOOS profile and ISO 19115. This covers dataset metadata, not a universal schema for the underlying data.",
+            "fr": "Le processus de saisie CIOOS crée des descriptions de catalogue conformes au profil CIOOS et à ISO 19115. Cela concerne les métadonnées, sans schéma universel des données.",
+            "es": "El flujo de entrada CIOOS crea descripciones de catálogo conformes al perfil CIOOS e ISO 19115. Abarca metadatos, no un esquema universal de los datos.",
+            "ar": "تنشئ عملية إدخال CIOOS أوصافاً للفهرس وفق ملف CIOOS ومعيار ISO 19115. يخص ذلك البيانات الوصفية وليس مخططاً موحداً للبيانات الأصلية.",
+            "zh": "CIOOS 元数据录入流程按照 CIOOS 规范及 ISO 19115 创建目录描述。此项针对数据集元数据，并非底层数据的统一模式。",
+            "ru": "Процесс ввода CIOOS создаёт описания каталога по профилю CIOOS и ISO 19115. Это метаданные, а не универсальная схема самих данных."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://github.com/cioos-siooc/metadata-entry-form",
+          "title": {
+            "en": "CIOOS metadata entry form — technical documentation",
+            "fr": "CIOOS metadata entry form — documentation technique",
+            "es": "CIOOS metadata entry form — documentación técnica",
+            "ar": "CIOOS metadata entry form — الوثائق التقنية",
+            "zh": "CIOOS metadata entry form — 技术文档",
+            "ru": "CIOOS metadata entry form — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://github.com/cioos-siooc/metadata-entry-form"
+      ]
+    },
+    {
+      "id": "cmems-datastore",
+      "title": "Copernicus Marine Data Store",
+      "standards": [
+        {
+          "label": "cf",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Copernicus Marine documents CF conventions for its NetCDF products. The version is declared in each file’s global attributes; check the selected product and file.",
+            "fr": "Copernicus Marine documente les conventions CF pour ses produits NetCDF. La version figure dans les attributs globaux de chaque fichier ; vérifier le produit choisi.",
+            "es": "Copernicus Marine documenta convenciones CF para sus productos NetCDF. La versión figura en los atributos globales de cada archivo; debe comprobarse en el producto elegido.",
+            "ar": "يوثق Copernicus Marine اتفاقيات CF لمنتجات NetCDF. يُذكر الإصدار في السمات العامة لكل ملف ويجب التحقق منه للمنتج المختار.",
+            "zh": "Copernicus Marine 文档说明其 NetCDF 产品采用 CF 约定。具体版本见各文件的全局属性，需按所选产品和文件检查。",
+            "ru": "Copernicus Marine документирует соглашения CF для продуктов NetCDF. Версия указана в глобальных атрибутах файла; её нужно проверить для выбранного продукта."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://help.marine.copernicus.eu/en/articles/9221210-introduction-to-the-netcdf-format",
+          "title": {
+            "en": "Copernicus Marine NetCDF guide — technical documentation",
+            "fr": "Copernicus Marine NetCDF guide — documentation technique",
+            "es": "Copernicus Marine NetCDF guide — documentación técnica",
+            "ar": "Copernicus Marine NetCDF guide — الوثائق التقنية",
+            "zh": "Copernicus Marine NetCDF guide — 技术文档",
+            "ru": "Copernicus Marine NetCDF guide — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://help.marine.copernicus.eu/en/articles/9221210-introduction-to-the-netcdf-format"
+      ]
+    },
+    {
+      "id": "copernicus-marine",
+      "title": "Copernicus Marine Service",
+      "standards": [
+        {
+          "label": "cf",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Copernicus Marine documents CF conventions for its NetCDF products. The version is declared in each file’s global attributes; check the selected product and file.",
+            "fr": "Copernicus Marine documente les conventions CF pour ses produits NetCDF. La version figure dans les attributs globaux de chaque fichier ; vérifier le produit choisi.",
+            "es": "Copernicus Marine documenta convenciones CF para sus productos NetCDF. La versión figura en los atributos globales de cada archivo; debe comprobarse en el producto elegido.",
+            "ar": "يوثق Copernicus Marine اتفاقيات CF لمنتجات NetCDF. يُذكر الإصدار في السمات العامة لكل ملف ويجب التحقق منه للمنتج المختار.",
+            "zh": "Copernicus Marine 文档说明其 NetCDF 产品采用 CF 约定。具体版本见各文件的全局属性，需按所选产品和文件检查。",
+            "ru": "Copernicus Marine документирует соглашения CF для продуктов NetCDF. Версия указана в глобальных атрибутах файла; её нужно проверить для выбранного продукта."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://help.marine.copernicus.eu/en/articles/9221210-introduction-to-the-netcdf-format",
+          "title": {
+            "en": "Copernicus Marine NetCDF guide — technical documentation",
+            "fr": "Copernicus Marine NetCDF guide — documentation technique",
+            "es": "Copernicus Marine NetCDF guide — documentación técnica",
+            "ar": "Copernicus Marine NetCDF guide — الوثائق التقنية",
+            "zh": "Copernicus Marine NetCDF guide — 技术文档",
+            "ru": "Copernicus Marine NetCDF guide — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://help.marine.copernicus.eu/en/articles/9221210-introduction-to-the-netcdf-format"
+      ]
+    },
+    {
+      "id": "datras",
+      "title": "DATRAS",
+      "standards": [
+        {
+          "label": "datras",
+          "source": "src-standards-1",
+          "description": {
+            "en": "DATRAS submissions use its documented haul (HH), length (HL), age-related (CA) and litter record structures, according to the submitted survey data.",
+            "fr": "Les soumissions DATRAS utilisent les structures documentées de traits (HH), longueurs (HL), données d’âge (CA) et déchets, selon les données de campagne.",
+            "es": "Los envíos DATRAS usan estructuras documentadas de lances (HH), tallas (HL), edades (CA) y basura, según los datos de campaña.",
+            "ar": "تستخدم إيداعات DATRAS تراكيب سجلات السحبات HH والأطوال HL والبيانات المرتبطة بالعمر CA والنفايات وفق بيانات المسح المقدمة.",
+            "zh": "DATRAS 提交按调查内容使用其规定的拖网作业（HH）、长度（HL）、年龄相关（CA）及垃圾记录结构。",
+            "ru": "При подаче в DATRAS используются структуры тралений (HH), длин (HL), возрастных данных (CA) и мусора согласно содержанию съёмки."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.ices.dk/data/data-portals/Pages/DATRAS_format_description.aspx",
+          "title": {
+            "en": "ICES DATRAS exchange structure — technical documentation",
+            "fr": "ICES DATRAS exchange structure — documentation technique",
+            "es": "ICES DATRAS exchange structure — documentación técnica",
+            "ar": "ICES DATRAS exchange structure — الوثائق التقنية",
+            "zh": "ICES DATRAS exchange structure — 技术文档",
+            "ru": "ICES DATRAS exchange structure — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.ices.dk/data/data-portals/Pages/DATRAS_format_description.aspx"
+      ]
+    },
+    {
+      "id": "ddbj",
+      "title": "DNA Data Bank of Japan",
+      "standards": [
+        {
+          "label": "insdc",
+          "source": "src-standards-1",
+          "description": {
+            "en": "INSDC member archives use shared sequence-exchange specifications, including feature-table annotation and controlled values. The applicable submission or annotation specification depends on the record type.",
+            "fr": "Les archives membres de l’INSDC utilisent des spécifications communes d’échange de séquences, dont l’annotation des tables de caractéristiques et les valeurs contrôlées. La spécification applicable dépend du type de notice.",
+            "es": "Los archivos miembros de INSDC usan especificaciones comunes de intercambio de secuencias, incluidas anotaciones de tablas de características y valores controlados. La especificación aplicable depende del tipo de registro.",
+            "ar": "تستخدم أرشيفات INSDC مواصفات مشتركة لتبادل التسلسلات تشمل توصيف جداول السمات والقيم المضبوطة. تتوقف مواصفات الإيداع أو التوصيف المطبقة على نوع السجل.",
+            "zh": "INSDC 成员档案库使用共享的序列交换规范，包括特征表注释及受控取值。适用的提交或注释规范取决于记录类型。",
+            "ru": "Архивы INSDC используют общие спецификации обмена последовательностями, включая аннотации таблиц признаков и контролируемые значения. Применимая спецификация зависит от типа записи."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.insdc.org/technical-specifications/",
+          "title": {
+            "en": "INSDC technical specifications — technical documentation",
+            "fr": "INSDC technical specifications — documentation technique",
+            "es": "INSDC technical specifications — documentación técnica",
+            "ar": "INSDC technical specifications — الوثائق التقنية",
+            "zh": "INSDC technical specifications — 技术文档",
+            "ru": "INSDC technical specifications — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.insdc.org/technical-specifications/"
+      ]
+    },
+    {
+      "id": "dryad",
+      "title": "Dryad",
+      "standards": [
+        {
+          "label": "datacite",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Dryad bases its dataset metadata-entry form on the DataCite Metadata Schema. This describes repository metadata; deposited files retain their own structures.",
+            "fr": "Dryad fonde son formulaire de métadonnées sur le schéma DataCite. Cela décrit les métadonnées du dépôt ; les fichiers gardent leurs propres structures.",
+            "es": "Dryad basa su formulario de metadatos en el esquema DataCite. Abarca metadatos del repositorio; los archivos conservan sus estructuras propias.",
+            "ar": "يبني Dryad نموذج إدخال البيانات الوصفية على مخطط DataCite. يصف ذلك بيانات المستودع الوصفية بينما تحتفظ الملفات ببنيتها الخاصة.",
+            "zh": "Dryad 的数据集元数据录入表基于 DataCite 元数据模式。此项描述仓储元数据；提交文件仍保留各自结构。",
+            "ru": "Форма ввода метаданных Dryad основана на схеме DataCite. Это метаданные репозитория; загруженные файлы сохраняют собственные структуры."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://datadryad.org/mission",
+          "title": {
+            "en": "Dryad metadata principles — technical documentation",
+            "fr": "Dryad metadata principles — documentation technique",
+            "es": "Dryad metadata principles — documentación técnica",
+            "ar": "Dryad metadata principles — الوثائق التقنية",
+            "zh": "Dryad metadata principles — 技术文档",
+            "ru": "Dryad metadata principles — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://datadryad.org/mission"
+      ]
+    },
+    {
+      "id": "ecotrust-oregon-fisheries-uses-values",
+      "title": "Ecotrust Oregon Marine Fisheries Uses and Values Project",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "The reviewed project catalogue describes fisheries GIS layers but does not establish an approved metadata or data-model standard. Check the metadata of the selected layer.",
+        "fr": "Le catalogue examiné décrit les couches SIG de pêche sans établir de standard approuvé. Les métadonnées de la couche choisie restent à vérifier.",
+        "es": "El catálogo revisado describe capas SIG pesqueras sin establecer un estándar aprobado. Deben verificarse los metadatos de la capa elegida.",
+        "ar": "يصف فهرس المشروع طبقات GIS للمصايد دون إثبات معيار معتمد. يجب التحقق من البيانات الوصفية للطبقة المختارة.",
+        "zh": "所审阅的项目目录描述了渔业 GIS 图层，但尚未证实可选的元数据或数据模型标准。需检查所选图层的元数据。",
+        "ru": "Изученный каталог описывает рыболовные слои ГИС, но не подтверждает утверждённый стандарт. Необходимо проверить метаданные выбранного слоя."
+      },
+      "reviewedUrls": [
+        "https://offshorewind.westcoastoceans.org/orowindmap-data-catalog/fishing-ecotrust-uses-and-values-project/"
+      ]
+    },
+    {
+      "id": "emodnet-biology",
+      "title": "EMODnet Biology",
+      "standards": [
+        {
+          "label": "darwin_core",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The documented EurOBIS integration workflow uses Darwin Core occurrence/event records and eMoF measurement records. This covers standardized integrated biodiversity data.",
+            "fr": "Le processus d’intégration EurOBIS documenté utilise des occurrences et événements Darwin Core et des mesures eMoF, pour les données de biodiversité intégrées et normalisées.",
+            "es": "El flujo documentado de integración de EurOBIS usa ocurrencias y eventos Darwin Core y mediciones eMoF para datos de biodiversidad integrados y normalizados.",
+            "ar": "تستخدم عملية التكامل الموثقة في EurOBIS سجلات التواجد والأحداث من Darwin Core وسجلات القياس eMoF لبيانات التنوع الحيوي المدمجة والموحدة.",
+            "zh": "EurOBIS 文档所述整合流程使用 Darwin Core 出现与事件记录及 eMoF 测量记录，适用于标准化整合的生物多样性数据。",
+            "ru": "Документированный процесс интеграции EurOBIS использует записи встреч и событий Darwin Core и измерения eMoF для стандартизированных данных биоразнообразия."
+          }
+        },
+        {
+          "label": "emof",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The documented EurOBIS integration workflow uses Darwin Core occurrence/event records and eMoF measurement records. This covers standardized integrated biodiversity data.",
+            "fr": "Le processus d’intégration EurOBIS documenté utilise des occurrences et événements Darwin Core et des mesures eMoF, pour les données de biodiversité intégrées et normalisées.",
+            "es": "El flujo documentado de integración de EurOBIS usa ocurrencias y eventos Darwin Core y mediciones eMoF para datos de biodiversidad integrados y normalizados.",
+            "ar": "تستخدم عملية التكامل الموثقة في EurOBIS سجلات التواجد والأحداث من Darwin Core وسجلات القياس eMoF لبيانات التنوع الحيوي المدمجة والموحدة.",
+            "zh": "EurOBIS 文档所述整合流程使用 Darwin Core 出现与事件记录及 eMoF 测量记录，适用于标准化整合的生物多样性数据。",
+            "ru": "Документированный процесс интеграции EurOBIS использует записи встреч и событий Darwin Core и измерения eMoF для стандартизированных данных биоразнообразия."
+          }
+        },
+        {
+          "label": "nerc_vocabularies",
+          "source": "src-standards-2",
+          "description": {
+            "en": "The standardisation workflow maps eMoF measurement terms to BODC/NERC vocabularies, including M21, C17 and Q01 where applicable; mapping coverage varies by dataset.",
+            "fr": "La normalisation associe les termes de mesure eMoF aux vocabulaires BODC/NERC, notamment M21, C17 et Q01 selon les cas ; la couverture varie par jeu de données.",
+            "es": "La normalización vincula términos de medición eMoF con vocabularios BODC/NERC, incluidos M21, C17 y Q01 cuando corresponda; la cobertura varía por conjunto.",
+            "ar": "تربط عملية التوحيد مصطلحات قياس eMoF بمفردات BODC/NERC ومنها M21 وC17 وQ01 حسب الاقتضاء؛ وتختلف التغطية بين المجموعات.",
+            "zh": "标准化流程将 eMoF 测量术语映射至 BODC/NERC 词汇，包括适用时的 M21、C17 和 Q01；映射覆盖范围因数据集而异。",
+            "ru": "Стандартизация сопоставляет термины измерений eMoF со словарями BODC/NERC, включая M21, C17 и Q01, где применимо; охват зависит от набора."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/Biology/D2.6-Report%20on%20the%20standardisation%20and%20integration%20of%20the%20proposed%20new%20and%20updated%20datasets.pdf",
+          "title": {
+            "en": "EMODnet Biology data standardisation report — technical documentation",
+            "fr": "EMODnet Biology data standardisation report — documentation technique",
+            "es": "EMODnet Biology data standardisation report — documentación técnica",
+            "ar": "EMODnet Biology data standardisation report — الوثائق التقنية",
+            "zh": "EMODnet Biology data standardisation report — 技术文档",
+            "ru": "EMODnet Biology data standardisation report — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-standards-2": {
+          "id": "src-standards-2",
+          "url": "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/Biology/D2.6-Report%20on%20data%20standardization%20of%20proposed%20new%20and%20update%20datasets.pdf",
+          "title": {
+            "en": "EMODnet Biology vocabulary mapping — technical documentation",
+            "fr": "EMODnet Biology vocabulary mapping — documentation technique",
+            "es": "EMODnet Biology vocabulary mapping — documentación técnica",
+            "ar": "EMODnet Biology vocabulary mapping — الوثائق التقنية",
+            "zh": "EMODnet Biology vocabulary mapping — 技术文档",
+            "ru": "EMODnet Biology vocabulary mapping — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/Biology/D2.6-Report%20on%20the%20standardisation%20and%20integration%20of%20the%20proposed%20new%20and%20updated%20datasets.pdf",
+        "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/Biology/D2.6-Report%20on%20data%20standardization%20of%20proposed%20new%20and%20update%20datasets.pdf"
+      ]
+    },
+    {
+      "id": "euro-argo",
+      "title": "Euro-Argo ERIC",
+      "standards": [
+        {
+          "label": "argo",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Euro-Argo documents Argo formatting and quality-control conventions for its contributed float data. This assignment concerns Argo data contributions, not every Euro-Argo website response.",
+            "fr": "Euro-Argo documente les conventions Argo de structuration et de contrôle qualité pour les données de flotteurs contribuées. Cette attribution concerne ces données, pas toutes les réponses du site.",
+            "es": "Euro-Argo documenta las convenciones Argo de estructuración y control de calidad para sus datos de flotadores. Esta asignación abarca esas contribuciones, no todas las respuestas del sitio.",
+            "ar": "يوثق Euro-Argo تنسيق Argo واتفاقيات مراقبة الجودة لبيانات العوامات التي يساهم بها. يخص هذا الوصف مساهمات البيانات وليس كل استجابات الموقع.",
+            "zh": "Euro-Argo 文档说明其浮标数据采用 Argo 格式和质量控制约定。此项针对 Argo 数据贡献，不涵盖网站的所有响应。",
+            "ru": "Euro-Argo описывает структуру данных и правила контроля качества Argo для предоставляемых данных буёв. Это относится к вкладу данных Argo, а не ко всем ответам сайта."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.euro-argo.eu/content/download/165132/file/D4.11_VF.pdf",
+          "title": {
+            "en": "Euro-Argo D4.11 — technical documentation",
+            "fr": "Euro-Argo D4.11 — documentation technique",
+            "es": "Euro-Argo D4.11 — documentación técnica",
+            "ar": "Euro-Argo D4.11 — الوثائق التقنية",
+            "zh": "Euro-Argo D4.11 — 技术文档",
+            "ru": "Euro-Argo D4.11 — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.euro-argo.eu/content/download/165132/file/D4.11_VF.pdf"
+      ]
+    },
+    {
+      "id": "emodnet",
+      "title": "European Marine Observation and Data Network",
+      "standards": [
+        {
+          "label": "iso_19139",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The EMODnet Ingestion submission specification maps metadata elements to ISO/TS 19139 paths. This concerns ingestion metadata, not all thematic data products.",
+            "fr": "La spécification de soumission EMODnet Ingestion associe les éléments de métadonnées aux chemins ISO/TS 19139. Elle concerne les métadonnées d’ingestion.",
+            "es": "La especificación de envío de EMODnet Ingestion vincula metadatos con rutas ISO/TS 19139. Abarca los metadatos de ingreso, no todos los productos temáticos.",
+            "ar": "تربط مواصفات الإيداع في EMODnet Ingestion عناصر البيانات الوصفية بمسارات ISO/TS 19139. يخص ذلك بيانات الإدخال الوصفية وليس جميع المنتجات الموضوعية.",
+            "zh": "EMODnet Ingestion 提交规范将元数据元素映射至 ISO/TS 19139 路径。此项针对导入元数据，不涵盖所有专题数据产品。",
+            "ru": "Спецификация подачи EMODnet Ingestion сопоставляет элементы метаданных с путями ISO/TS 19139. Это относится к метаданным поступления, а не ко всем тематическим продуктам."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/reports/EMODnet-Ingestion-Submission-Workflow-Metadata-Elements_v2.0.0-March2024.pdf",
+          "title": {
+            "en": "EMODnet Ingestion metadata workflow 2.0.0 — technical documentation",
+            "fr": "EMODnet Ingestion metadata workflow 2.0.0 — documentation technique",
+            "es": "EMODnet Ingestion metadata workflow 2.0.0 — documentación técnica",
+            "ar": "EMODnet Ingestion metadata workflow 2.0.0 — الوثائق التقنية",
+            "zh": "EMODnet Ingestion metadata workflow 2.0.0 — 技术文档",
+            "ru": "EMODnet Ingestion metadata workflow 2.0.0 — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/reports/EMODnet-Ingestion-Submission-Workflow-Metadata-Elements_v2.0.0-March2024.pdf"
+      ]
+    },
+    {
+      "id": "ena",
+      "title": "European Nucleotide Archive",
+      "standards": [
+        {
+          "label": "insdc",
+          "source": "src-standards-1",
+          "description": {
+            "en": "INSDC member archives use shared sequence-exchange specifications, including feature-table annotation and controlled values. The applicable submission or annotation specification depends on the record type.",
+            "fr": "Les archives membres de l’INSDC utilisent des spécifications communes d’échange de séquences, dont l’annotation des tables de caractéristiques et les valeurs contrôlées. La spécification applicable dépend du type de notice.",
+            "es": "Los archivos miembros de INSDC usan especificaciones comunes de intercambio de secuencias, incluidas anotaciones de tablas de características y valores controlados. La especificación aplicable depende del tipo de registro.",
+            "ar": "تستخدم أرشيفات INSDC مواصفات مشتركة لتبادل التسلسلات تشمل توصيف جداول السمات والقيم المضبوطة. تتوقف مواصفات الإيداع أو التوصيف المطبقة على نوع السجل.",
+            "zh": "INSDC 成员档案库使用共享的序列交换规范，包括特征表注释及受控取值。适用的提交或注释规范取决于记录类型。",
+            "ru": "Архивы INSDC используют общие спецификации обмена последовательностями, включая аннотации таблиц признаков и контролируемые значения. Применимая спецификация зависит от типа записи."
+          }
+        },
+        {
+          "label": "mixs",
+          "source": "src-standards-2",
+          "description": {
+            "en": "ENA accepts MIxS-based sample metadata through the relevant sample checklists. Select the checklist appropriate to the sequence and environment; this is not a requirement for every ENA record.",
+            "fr": "ENA accepte les métadonnées d’échantillons fondées sur MIxS via les listes de contrôle correspondantes. La liste dépend des séquences et du milieu ; elle n’est pas obligatoire pour toutes les notices ENA.",
+            "es": "ENA admite metadatos de muestras basados en MIxS mediante las listas de requisitos pertinentes. La lista depende de la secuencia y el ambiente; no es obligatoria para todos los registros ENA.",
+            "ar": "يقبل ENA بيانات وصفية للعينات مبنية على MIxS عبر قوائم المتطلبات ذات الصلة. تُختار القائمة وفق التسلسل والبيئة ولا تُفرض على كل سجلات ENA.",
+            "zh": "ENA 通过相应的样本检查清单接受基于 MIxS 的元数据。应按序列和环境选择清单，并非所有 ENA 记录都必须采用。",
+            "ru": "ENA принимает метаданные образцов на основе MIxS через соответствующие контрольные списки. Список выбирают по последовательности и среде; это не требование ко всем записям ENA."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.insdc.org/technical-specifications/",
+          "title": {
+            "en": "INSDC technical specifications — technical documentation",
+            "fr": "INSDC technical specifications — documentation technique",
+            "es": "INSDC technical specifications — documentación técnica",
+            "ar": "INSDC technical specifications — الوثائق التقنية",
+            "zh": "INSDC technical specifications — 技术文档",
+            "ru": "INSDC technical specifications — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-standards-2": {
+          "id": "src-standards-2",
+          "url": "https://ena-docs.readthedocs.io/en/latest/submit/samples/programmatic.html",
+          "title": {
+            "en": "ENA sample submission — technical documentation",
+            "fr": "ENA sample submission — documentation technique",
+            "es": "ENA sample submission — documentación técnica",
+            "ar": "ENA sample submission — الوثائق التقنية",
+            "zh": "ENA sample submission — 技术文档",
+            "ru": "ENA sample submission — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.insdc.org/technical-specifications/",
+        "https://ena-docs.readthedocs.io/en/latest/submit/samples/programmatic.html"
+      ]
+    },
+    {
+      "id": "eurobis",
+      "title": "European Ocean Biodiversity Information System",
+      "standards": [
+        {
+          "label": "darwin_core",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The documented EurOBIS integration workflow uses Darwin Core occurrence/event records and eMoF measurement records. This covers standardized integrated biodiversity data.",
+            "fr": "Le processus d’intégration EurOBIS documenté utilise des occurrences et événements Darwin Core et des mesures eMoF, pour les données de biodiversité intégrées et normalisées.",
+            "es": "El flujo documentado de integración de EurOBIS usa ocurrencias y eventos Darwin Core y mediciones eMoF para datos de biodiversidad integrados y normalizados.",
+            "ar": "تستخدم عملية التكامل الموثقة في EurOBIS سجلات التواجد والأحداث من Darwin Core وسجلات القياس eMoF لبيانات التنوع الحيوي المدمجة والموحدة.",
+            "zh": "EurOBIS 文档所述整合流程使用 Darwin Core 出现与事件记录及 eMoF 测量记录，适用于标准化整合的生物多样性数据。",
+            "ru": "Документированный процесс интеграции EurOBIS использует записи встреч и событий Darwin Core и измерения eMoF для стандартизированных данных биоразнообразия."
+          }
+        },
+        {
+          "label": "emof",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The documented EurOBIS integration workflow uses Darwin Core occurrence/event records and eMoF measurement records. This covers standardized integrated biodiversity data.",
+            "fr": "Le processus d’intégration EurOBIS documenté utilise des occurrences et événements Darwin Core et des mesures eMoF, pour les données de biodiversité intégrées et normalisées.",
+            "es": "El flujo documentado de integración de EurOBIS usa ocurrencias y eventos Darwin Core y mediciones eMoF para datos de biodiversidad integrados y normalizados.",
+            "ar": "تستخدم عملية التكامل الموثقة في EurOBIS سجلات التواجد والأحداث من Darwin Core وسجلات القياس eMoF لبيانات التنوع الحيوي المدمجة والموحدة.",
+            "zh": "EurOBIS 文档所述整合流程使用 Darwin Core 出现与事件记录及 eMoF 测量记录，适用于标准化整合的生物多样性数据。",
+            "ru": "Документированный процесс интеграции EurOBIS использует записи встреч и событий Darwin Core и измерения eMoF для стандартизированных данных биоразнообразия."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/Biology/D2.6-Report%20on%20the%20standardisation%20and%20integration%20of%20the%20proposed%20new%20and%20updated%20datasets.pdf",
+          "title": {
+            "en": "EMODnet Biology data standardisation report — technical documentation",
+            "fr": "EMODnet Biology data standardisation report — documentation technique",
+            "es": "EMODnet Biology data standardisation report — documentación técnica",
+            "ar": "EMODnet Biology data standardisation report — الوثائق التقنية",
+            "zh": "EMODnet Biology data standardisation report — 技术文档",
+            "ru": "EMODnet Biology data standardisation report — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://emodnet.ec.europa.eu/sites/emodnet.ec.europa.eu/files/public/Biology/D2.6-Report%20on%20the%20standardisation%20and%20integration%20of%20the%20proposed%20new%20and%20updated%20datasets.pdf"
+      ]
+    },
+    {
+      "id": "fao-fishstat",
+      "title": "FAO FishStat and Fishery Statistics",
+      "standards": [
+        {
+          "label": "asfis",
+          "source": "src-standards-1",
+          "description": {
+            "en": "FAO fisheries statistics use ASFIS species items, ISSCAAP species-group aggregation and FAO statistical fishing areas. Applicability depends on the selected statistical collection and dimensions.",
+            "fr": "Les statistiques FAO utilisent les éléments d’espèces ASFIS, les groupes ISSCAAP et les zones statistiques FAO, selon la collection et ses dimensions.",
+            "es": "Las estadísticas FAO usan elementos de especies ASFIS, grupos ISSCAAP y áreas estadísticas FAO, según la colección y sus dimensiones.",
+            "ar": "تستخدم إحصاءات مصايد FAO بنود الأنواع ASFIS وتجميعات ISSCAAP ومناطق الصيد الإحصائية FAO وفق المجموعة والأبعاد المختارة.",
+            "zh": "FAO 渔业统计使用 ASFIS 物种条目、ISSCAAP 物种组汇总及 FAO 统计渔区。适用性取决于所选统计集合及其维度。",
+            "ru": "Статистика FAO использует видовые позиции ASFIS, группы ISSCAAP и статистические районы FAO в зависимости от коллекции и измерений."
+          }
+        },
+        {
+          "label": "isscaap",
+          "source": "src-standards-1",
+          "description": {
+            "en": "FAO fisheries statistics use ASFIS species items, ISSCAAP species-group aggregation and FAO statistical fishing areas. Applicability depends on the selected statistical collection and dimensions.",
+            "fr": "Les statistiques FAO utilisent les éléments d’espèces ASFIS, les groupes ISSCAAP et les zones statistiques FAO, selon la collection et ses dimensions.",
+            "es": "Las estadísticas FAO usan elementos de especies ASFIS, grupos ISSCAAP y áreas estadísticas FAO, según la colección y sus dimensiones.",
+            "ar": "تستخدم إحصاءات مصايد FAO بنود الأنواع ASFIS وتجميعات ISSCAAP ومناطق الصيد الإحصائية FAO وفق المجموعة والأبعاد المختارة.",
+            "zh": "FAO 渔业统计使用 ASFIS 物种条目、ISSCAAP 物种组汇总及 FAO 统计渔区。适用性取决于所选统计集合及其维度。",
+            "ru": "Статистика FAO использует видовые позиции ASFIS, группы ISSCAAP и статистические районы FAO в зависимости от коллекции и измерений."
+          }
+        },
+        {
+          "label": "fao_fishing_areas",
+          "source": "src-standards-1",
+          "description": {
+            "en": "FAO fisheries statistics use ASFIS species items, ISSCAAP species-group aggregation and FAO statistical fishing areas. Applicability depends on the selected statistical collection and dimensions.",
+            "fr": "Les statistiques FAO utilisent les éléments d’espèces ASFIS, les groupes ISSCAAP et les zones statistiques FAO, selon la collection et ses dimensions.",
+            "es": "Las estadísticas FAO usan elementos de especies ASFIS, grupos ISSCAAP y áreas estadísticas FAO, según la colección y sus dimensiones.",
+            "ar": "تستخدم إحصاءات مصايد FAO بنود الأنواع ASFIS وتجميعات ISSCAAP ومناطق الصيد الإحصائية FAO وفق المجموعة والأبعاد المختارة.",
+            "zh": "FAO 渔业统计使用 ASFIS 物种条目、ISSCAAP 物种组汇总及 FAO 统计渔区。适用性取决于所选统计集合及其维度。",
+            "ru": "Статистика FAO использует видовые позиции ASFIS, группы ISSCAAP и статистические районы FAO в зависимости от коллекции и измерений."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.fao.org/statistics/methods-and-standards/fishery-and-aquaculture/en",
+          "title": {
+            "en": "FAO fisheries statistical standards — technical documentation",
+            "fr": "FAO fisheries statistical standards — documentation technique",
+            "es": "FAO fisheries statistical standards — documentación técnica",
+            "ar": "FAO fisheries statistical standards — الوثائق التقنية",
+            "zh": "FAO fisheries statistical standards — 技术文档",
+            "ru": "FAO fisheries statistical standards — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.fao.org/statistics/methods-and-standards/fishery-and-aquaculture/en"
+      ]
+    },
+    {
+      "id": "fishbase",
+      "title": "FishBase",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "Internal reference numbers and reuse licences are not data standards. No approved standard was verified for the documented table snapshots; their relational structure remains described in the profile.",
+        "fr": "Les numéros de référence internes et licences ne sont pas des standards de données. Aucun standard approuvé n’a été vérifié pour les instantanés de tables documentés.",
+        "es": "Los números de referencia internos y licencias no son estándares de datos. No se verificó un estándar aprobado para las instantáneas de tablas documentadas.",
+        "ar": "أرقام المراجع الداخلية وتراخيص الاستخدام ليست معايير بيانات. لم يُتحقق من معيار معتمد للقطات الجداول الموثقة؛ وتظل بنيتها العلائقية موصوفة في الملف التعريفي.",
+        "zh": "内部参考编号及使用许可并非数据标准。尚未核实所述表格快照采用哪项可选标准；其关系结构仍在简介中说明。",
+        "ru": "Внутренние номера источников и лицензии не являются стандартами данных. Для документированных снимков таблиц утверждённый стандарт не подтверждён; связи таблиц описаны в профиле."
+      },
+      "reviewedUrls": [
+        "https://docs.ropensci.org/rfishbase/"
+      ],
+      "proseMoves": [
+        {
+          "descriptorId": "fishbase-data-standard-license",
+          "source": "src-fishbase-citation",
+          "destination": "localization.description with details.profile.sourceRefs",
+          "description": {
+            "ar": "تتاح نصوص FishBase وأرقامها وخرائطها لإعادة الاستخدام غير التجاري مع نسب المصدر؛ وتحتفظ الصور والرسومات بحقوقها الخاصة.",
+            "en": "FishBase text, numbers, and maps are offered for non-commercial reuse with attribution; photos and drawings retain their own copyrights.",
+            "es": "Los textos, números y mapas de FishBase se ofrecen para reutilización no comercial con atribución; las fotos y dibujos conservan sus propios derechos de autor.",
+            "fr": "Les textes, chiffres et cartes de FishBase sont proposés pour une réutilisation non commerciale avec attribution; les photos et dessins conservent leurs propres droits d'auteur.",
+            "ru": "Тексты, числовые данные и карты FishBase предоставляются для некоммерческого повторного использования с указанием источника; фотографии и рисунки сохраняют собственные авторские права.",
+            "zh": "FishBase 文本、数值和地图可在署名条件下用于非商业再利用；照片和绘图保留各自版权。"
+          }
+        },
+        {
+          "descriptorId": "fishbase-data-standard-refno",
+          "source": "src-fishbase-references-table",
+          "destination": "localization.description with details.profile.sourceRefs",
+          "description": {
+            "ar": "تستشهد سجلات FishBase بالأدبيات المصدرية عبر أرقام مراجع متسلسلة مرتبطة بالاستشهادات الكاملة.",
+            "en": "FishBase records cite source literature through sequential reference numbers linked to full citations.",
+            "es": "Los registros de FishBase citan literatura fuente mediante números de referencia secuenciales vinculados a citas completas.",
+            "fr": "Les enregistrements FishBase citent la littérature source au moyen de numéros de référence séquentiels liés aux citations complètes.",
+            "ru": "Записи FishBase ссылаются на исходную литературу через последовательные номера источников, связанные с полными библиографическими описаниями.",
+            "zh": "FishBase 记录通过连续参考编号引用来源文献，并链接到完整引文。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gebco-web-services",
+      "title": "GEBCO Web Services",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "The documented service is a WMS map interface. WMS is an access protocol; no approved data-model or metadata standard was established for this service node.",
+        "fr": "Le service documenté est une interface cartographique WMS. WMS est un protocole d’accès ; aucun standard approuvé de données ou métadonnées n’a été établi ici.",
+        "es": "El servicio documentado es una interfaz cartográfica WMS. WMS es un protocolo de acceso; no se estableció un estándar aprobado de datos o metadatos para este nodo.",
+        "ar": "الخدمة الموثقة واجهة خرائط WMS. يعد WMS بروتوكول وصول؛ ولم يُثبت معيار معتمد لنموذج البيانات أو بياناتها الوصفية لهذه العقدة.",
+        "zh": "文档所述服务为 WMS 地图接口。WMS 属于访问协议；尚未证实此服务节点采用哪项可选的数据模型或元数据标准。",
+        "ru": "Документированный сервис — картографический интерфейс WMS. Это протокол доступа; утверждённый стандарт модели данных или метаданных для этого узла не подтверждён."
+      },
+      "reviewedUrls": [
+        "https://www.gebco.net/data-products/gebco-web-services/web-map-service"
+      ]
+    },
+    {
+      "id": "genbank",
+      "title": "GenBank",
+      "standards": [
+        {
+          "label": "insdc",
+          "source": "src-standards-1",
+          "description": {
+            "en": "INSDC member archives use shared sequence-exchange specifications, including feature-table annotation and controlled values. The applicable submission or annotation specification depends on the record type.",
+            "fr": "Les archives membres de l’INSDC utilisent des spécifications communes d’échange de séquences, dont l’annotation des tables de caractéristiques et les valeurs contrôlées. La spécification applicable dépend du type de notice.",
+            "es": "Los archivos miembros de INSDC usan especificaciones comunes de intercambio de secuencias, incluidas anotaciones de tablas de características y valores controlados. La especificación aplicable depende del tipo de registro.",
+            "ar": "تستخدم أرشيفات INSDC مواصفات مشتركة لتبادل التسلسلات تشمل توصيف جداول السمات والقيم المضبوطة. تتوقف مواصفات الإيداع أو التوصيف المطبقة على نوع السجل.",
+            "zh": "INSDC 成员档案库使用共享的序列交换规范，包括特征表注释及受控取值。适用的提交或注释规范取决于记录类型。",
+            "ru": "Архивы INSDC используют общие спецификации обмена последовательностями, включая аннотации таблиц признаков и контролируемые значения. Применимая спецификация зависит от типа записи."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.insdc.org/technical-specifications/",
+          "title": {
+            "en": "INSDC technical specifications — technical documentation",
+            "fr": "INSDC technical specifications — documentation technique",
+            "es": "INSDC technical specifications — documentación técnica",
+            "ar": "INSDC technical specifications — الوثائق التقنية",
+            "zh": "INSDC technical specifications — 技术文档",
+            "ru": "INSDC technical specifications — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.insdc.org/technical-specifications/"
+      ]
+    },
+    {
+      "id": "geome",
+      "title": "Genomic Observatories MetaDatabase",
+      "standards": [
+        {
+          "label": "darwin_core",
+          "source": "src-standards-1",
+          "description": {
+            "en": "GEOME v4 supports Darwin Core terms in metadata queries and project-configured ingestion templates. Required fields and validation depend on the project configuration.",
+            "fr": "GEOME v4 prend en charge les termes Darwin Core dans les recherches et les modèles d’importation configurés par projet. Les champs obligatoires et la validation dépendent du projet.",
+            "es": "GEOME v4 admite términos Darwin Core en consultas y plantillas de carga configuradas por proyecto. Los campos obligatorios y la validación dependen de cada configuración.",
+            "ar": "يدعم GEOME v4 مصطلحات Darwin Core في الاستعلامات وقوالب الإدخال المضبوطة لكل مشروع. تحدد إعدادات المشروع الحقول الإلزامية وقواعد التحقق.",
+            "zh": "GEOME v4 在元数据查询及按项目配置的导入模板中支持 Darwin Core 术语。必填字段和验证规则取决于项目配置。",
+            "ru": "GEOME v4 поддерживает термины Darwin Core в запросах метаданных и шаблонах загрузки проектов. Обязательные поля и проверки зависят от конфигурации проекта."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://geome-db.org/docs/helpDocumentationv4.pdf",
+          "title": {
+            "en": "GEOME user documentation v4 — technical documentation",
+            "fr": "GEOME user documentation v4 — documentation technique",
+            "es": "GEOME user documentation v4 — documentación técnica",
+            "ar": "GEOME user documentation v4 — الوثائق التقنية",
+            "zh": "GEOME user documentation v4 — 技术文档",
+            "ru": "GEOME user documentation v4 — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://geome-db.org/docs/helpDocumentationv4.pdf"
+      ]
+    },
+    {
+      "id": "gbif",
+      "title": "Global Biodiversity Information Facility",
+      "standards": [
+        {
+          "label": "darwin_core",
+          "source": "src-standards-1",
+          "description": {
+            "en": "GBIF accepts survey publication using Darwin Core event/occurrence records, EML dataset metadata and the Humboldt Extension for inventory effort and completeness. Humboldt applies to supported survey publications, not every GBIF download.",
+            "fr": "GBIF accepte la publication d’inventaires avec des événements et occurrences Darwin Core, des métadonnées EML et l’extension Humboldt pour l’effort et l’exhaustivité. Humboldt concerne les inventaires pris en charge, pas tous les téléchargements.",
+            "es": "GBIF admite inventarios con eventos y ocurrencias Darwin Core, metadatos EML y la extensión Humboldt para esfuerzo y exhaustividad. Humboldt se aplica a publicaciones de inventarios compatibles, no a todas las descargas.",
+            "ar": "يقبل GBIF نشر المسوحات باستخدام سجلات Darwin Core وبيانات EML الوصفية وإضافة Humboldt لجهد الحصر واكتماله. تنطبق Humboldt على المسوحات المدعومة وليس على كل تنزيل.",
+            "zh": "GBIF 支持使用 Darwin Core 事件与出现记录、EML 数据集元数据以及描述调查投入和完整性的 Humboldt 扩展发布调查数据。Humboldt 仅适用于受支持的调查发布流程。",
+            "ru": "GBIF принимает публикации обследований с событиями и встречами Darwin Core, метаданными EML и расширением Humboldt для усилий и полноты учёта. Humboldt относится к поддерживаемым обследованиям, а не ко всем выгрузкам."
+          }
+        },
+        {
+          "label": "eml",
+          "source": "src-standards-1",
+          "description": {
+            "en": "GBIF accepts survey publication using Darwin Core event/occurrence records, EML dataset metadata and the Humboldt Extension for inventory effort and completeness. Humboldt applies to supported survey publications, not every GBIF download.",
+            "fr": "GBIF accepte la publication d’inventaires avec des événements et occurrences Darwin Core, des métadonnées EML et l’extension Humboldt pour l’effort et l’exhaustivité. Humboldt concerne les inventaires pris en charge, pas tous les téléchargements.",
+            "es": "GBIF admite inventarios con eventos y ocurrencias Darwin Core, metadatos EML y la extensión Humboldt para esfuerzo y exhaustividad. Humboldt se aplica a publicaciones de inventarios compatibles, no a todas las descargas.",
+            "ar": "يقبل GBIF نشر المسوحات باستخدام سجلات Darwin Core وبيانات EML الوصفية وإضافة Humboldt لجهد الحصر واكتماله. تنطبق Humboldt على المسوحات المدعومة وليس على كل تنزيل.",
+            "zh": "GBIF 支持使用 Darwin Core 事件与出现记录、EML 数据集元数据以及描述调查投入和完整性的 Humboldt 扩展发布调查数据。Humboldt 仅适用于受支持的调查发布流程。",
+            "ru": "GBIF принимает публикации обследований с событиями и встречами Darwin Core, метаданными EML и расширением Humboldt для усилий и полноты учёта. Humboldt относится к поддерживаемым обследованиям, а не ко всем выгрузкам."
+          }
+        },
+        {
+          "label": "humboldt_extension",
+          "source": "src-standards-1",
+          "description": {
+            "en": "GBIF accepts survey publication using Darwin Core event/occurrence records, EML dataset metadata and the Humboldt Extension for inventory effort and completeness. Humboldt applies to supported survey publications, not every GBIF download.",
+            "fr": "GBIF accepte la publication d’inventaires avec des événements et occurrences Darwin Core, des métadonnées EML et l’extension Humboldt pour l’effort et l’exhaustivité. Humboldt concerne les inventaires pris en charge, pas tous les téléchargements.",
+            "es": "GBIF admite inventarios con eventos y ocurrencias Darwin Core, metadatos EML y la extensión Humboldt para esfuerzo y exhaustividad. Humboldt se aplica a publicaciones de inventarios compatibles, no a todas las descargas.",
+            "ar": "يقبل GBIF نشر المسوحات باستخدام سجلات Darwin Core وبيانات EML الوصفية وإضافة Humboldt لجهد الحصر واكتماله. تنطبق Humboldt على المسوحات المدعومة وليس على كل تنزيل.",
+            "zh": "GBIF 支持使用 Darwin Core 事件与出现记录、EML 数据集元数据以及描述调查投入和完整性的 Humboldt 扩展发布调查数据。Humboldt 仅适用于受支持的调查发布流程。",
+            "ru": "GBIF принимает публикации обследований с событиями и встречами Darwin Core, метаданными EML и расширением Humboldt для усилий и полноты учёта. Humboldt относится к поддерживаемым обследованиям, а не ко всем выгрузкам."
+          }
+        },
+        {
+          "label": "dna_derived_data",
+          "source": "src-standards-2",
+          "description": {
+            "en": "GBIF publication guidance uses the DNA-derived data extension for applicable sequence-based occurrence datasets and molecular-method metadata.",
+            "fr": "Les instructions GBIF utilisent l’extension DNA-derived data pour les occurrences issues de séquences et les métadonnées des méthodes moléculaires pertinentes.",
+            "es": "Las instrucciones de GBIF utilizan la extensión DNA-derived data para ocurrencias basadas en secuencias y metadatos de los métodos moleculares pertinentes.",
+            "ar": "تستخدم إرشادات النشر في GBIF إضافة DNA-derived data لمجموعات التواجد المستمدة من التسلسلات وللبيانات الوصفية الخاصة بالأساليب الجزيئية ذات الصلة.",
+            "zh": "GBIF 发布指南使用 DNA-derived data 扩展描述相关的序列来源出现数据及分子方法元数据。",
+            "ru": "Руководство GBIF использует расширение DNA-derived data для соответствующих наборов встречаемости на основе последовательностей и метаданных молекулярных методов."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://docs.gbif.org/guide-publishing-survey-data/en/",
+          "title": {
+            "en": "GBIF survey-data publishing guide — technical documentation",
+            "fr": "GBIF survey-data publishing guide — documentation technique",
+            "es": "GBIF survey-data publishing guide — documentación técnica",
+            "ar": "GBIF survey-data publishing guide — الوثائق التقنية",
+            "zh": "GBIF survey-data publishing guide — 技术文档",
+            "ru": "GBIF survey-data publishing guide — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-standards-2": {
+          "id": "src-standards-2",
+          "url": "https://docs.gbif.org/publishing-dna-derived-data/en/",
+          "title": {
+            "en": "GBIF DNA-derived data publishing guide — technical documentation",
+            "fr": "GBIF DNA-derived data publishing guide — documentation technique",
+            "es": "GBIF DNA-derived data publishing guide — documentación técnica",
+            "ar": "GBIF DNA-derived data publishing guide — الوثائق التقنية",
+            "zh": "GBIF DNA-derived data publishing guide — 技术文档",
+            "ru": "GBIF DNA-derived data publishing guide — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://docs.gbif.org/guide-publishing-survey-data/en/",
+        "https://docs.gbif.org/publishing-dna-derived-data/en/"
+      ]
+    },
+    {
+      "id": "ggbn",
+      "title": "Global Genome Biodiversity Network",
+      "standards": [
+        {
+          "label": "ggbn",
+          "source": "src-standards-1",
+          "description": {
+            "en": "GGBN documents provider exchange using its genomic-material terms with ABCD or Darwin Core Archive implementations. GGBN supplies sample-specific terms; ABCD and Darwin Core provide alternative base models, not a requirement to publish both.",
+            "fr": "GGBN documente l’échange des données fournisseurs avec ses termes de matériel génomique, via ABCD ou Darwin Core Archive. GGBN apporte les termes propres aux échantillons ; ABCD et Darwin Core sont des modèles de base alternatifs.",
+            "es": "GGBN documenta el intercambio de proveedores con sus términos de material genómico mediante ABCD o Darwin Core Archive. GGBN aporta términos de muestras; ABCD y Darwin Core son modelos base alternativos.",
+            "ar": "يوثق GGBN تبادل بيانات المزودين بمصطلحات المواد الجينومية عبر تطبيقات ABCD أو Darwin Core Archive. يوفر GGBN مصطلحات العينات بينما يمثل ABCD وDarwin Core نموذجين أساسيين بديلين.",
+            "zh": "GGBN 通过 ABCD 或 Darwin Core Archive 实现供应方的基因组材料数据交换。GGBN 提供样本专用术语；ABCD 与 Darwin Core 是可选的基础模型，并非必须同时采用。",
+            "ru": "GGBN описывает обмен данными поставщиков с терминами геномного материала через реализации ABCD или Darwin Core Archive. GGBN задаёт термины образцов, а ABCD и Darwin Core служат альтернативными базовыми моделями."
+          }
+        },
+        {
+          "label": "abcd",
+          "source": "src-standards-1",
+          "description": {
+            "en": "GGBN documents provider exchange using its genomic-material terms with ABCD or Darwin Core Archive implementations. GGBN supplies sample-specific terms; ABCD and Darwin Core provide alternative base models, not a requirement to publish both.",
+            "fr": "GGBN documente l’échange des données fournisseurs avec ses termes de matériel génomique, via ABCD ou Darwin Core Archive. GGBN apporte les termes propres aux échantillons ; ABCD et Darwin Core sont des modèles de base alternatifs.",
+            "es": "GGBN documenta el intercambio de proveedores con sus términos de material genómico mediante ABCD o Darwin Core Archive. GGBN aporta términos de muestras; ABCD y Darwin Core son modelos base alternativos.",
+            "ar": "يوثق GGBN تبادل بيانات المزودين بمصطلحات المواد الجينومية عبر تطبيقات ABCD أو Darwin Core Archive. يوفر GGBN مصطلحات العينات بينما يمثل ABCD وDarwin Core نموذجين أساسيين بديلين.",
+            "zh": "GGBN 通过 ABCD 或 Darwin Core Archive 实现供应方的基因组材料数据交换。GGBN 提供样本专用术语；ABCD 与 Darwin Core 是可选的基础模型，并非必须同时采用。",
+            "ru": "GGBN описывает обмен данными поставщиков с терминами геномного материала через реализации ABCD или Darwin Core Archive. GGBN задаёт термины образцов, а ABCD и Darwin Core служат альтернативными базовыми моделями."
+          }
+        },
+        {
+          "label": "darwin_core",
+          "source": "src-standards-1",
+          "description": {
+            "en": "GGBN documents provider exchange using its genomic-material terms with ABCD or Darwin Core Archive implementations. GGBN supplies sample-specific terms; ABCD and Darwin Core provide alternative base models, not a requirement to publish both.",
+            "fr": "GGBN documente l’échange des données fournisseurs avec ses termes de matériel génomique, via ABCD ou Darwin Core Archive. GGBN apporte les termes propres aux échantillons ; ABCD et Darwin Core sont des modèles de base alternatifs.",
+            "es": "GGBN documenta el intercambio de proveedores con sus términos de material genómico mediante ABCD o Darwin Core Archive. GGBN aporta términos de muestras; ABCD y Darwin Core son modelos base alternativos.",
+            "ar": "يوثق GGBN تبادل بيانات المزودين بمصطلحات المواد الجينومية عبر تطبيقات ABCD أو Darwin Core Archive. يوفر GGBN مصطلحات العينات بينما يمثل ABCD وDarwin Core نموذجين أساسيين بديلين.",
+            "zh": "GGBN 通过 ABCD 或 Darwin Core Archive 实现供应方的基因组材料数据交换。GGBN 提供样本专用术语；ABCD 与 Darwin Core 是可选的基础模型，并非必须同时采用。",
+            "ru": "GGBN описывает обмен данными поставщиков с терминами геномного материала через реализации ABCD или Darwin Core Archive. GGBN задаёт термины образцов, а ABCD и Darwin Core служат альтернативными базовыми моделями."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.ggbn.org/ggbn_portal/site/wf?p=GGBN_Data_Standard",
+          "title": {
+            "en": "GGBN Data Standard — technical documentation",
+            "fr": "GGBN Data Standard — documentation technique",
+            "es": "GGBN Data Standard — documentación técnica",
+            "ar": "GGBN Data Standard — الوثائق التقنية",
+            "zh": "GGBN Data Standard — 技术文档",
+            "ru": "GGBN Data Standard — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.ggbn.org/ggbn_portal/site/wf?p=GGBN_Data_Standard"
+      ]
+    },
+    {
+      "id": "glodap",
+      "title": "Global Ocean Data Analysis Project",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "The reviewed GLODAP release describes WOCE Exchange and product-specific tables. Those representations do not by themselves establish an assignment from the approved Standards list.",
+        "fr": "La version GLODAP examinée décrit WOCE Exchange et des tables propres aux produits. Ces représentations ne suffisent pas à attribuer un standard de la liste approuvée.",
+        "es": "La versión GLODAP revisada describe WOCE Exchange y tablas específicas. Esas representaciones no bastan para asignar un estándar de la lista aprobada.",
+        "ar": "يصف إصدار GLODAP المراجع تمثيل WOCE Exchange وجداول خاصة بالمنتجات. لا تكفي هذه التمثيلات وحدها لإسناد معيار من القائمة المعتمدة.",
+        "zh": "所审阅的 GLODAP 版本介绍了 WOCE Exchange 及产品专用表格。这些表示形式本身不足以确定可选标准列表中的适用项。",
+        "ru": "Изученный выпуск GLODAP описывает WOCE Exchange и таблицы продуктов. Эти представления сами по себе не подтверждают стандарт из утверждённого списка."
+      },
+      "reviewedUrls": [
+        "https://glodap.info/"
+      ]
+    },
+    {
+      "id": "go-ship",
+      "title": "Global Ocean Ship-based Hydrographic Investigations Program",
+      "standards": [
+        {
+          "label": "cf",
+          "source": "src-standards-1",
+          "description": {
+            "en": "CCHDO provides a CF NetCDF bottle-data representation for GO-SHIP cruise 33RR20230722 (I05, 2023). This confirms that product representation, not all GO-SHIP data streams.",
+            "fr": "CCHDO fournit une représentation CF NetCDF des données bouteilles de la campagne GO-SHIP 33RR20230722 (I05, 2023). Cela confirme ce produit uniquement.",
+            "es": "CCHDO ofrece una representación CF NetCDF de datos de botellas de la campaña GO-SHIP 33RR20230722 (I05, 2023). Esto confirma ese producto únicamente.",
+            "ar": "يوفر CCHDO تمثيلاً بصيغة CF NetCDF لبيانات القوارير في رحلة GO-SHIP ‏33RR20230722 ‏(I05، 2023). يثبت ذلك هذا المنتج فقط.",
+            "zh": "CCHDO 为 GO-SHIP 航次 33RR20230722（I05，2023）的采水瓶数据提供 CF NetCDF 表示。此项仅确认该产品形式。",
+            "ru": "CCHDO предоставляет данные батометров рейса GO-SHIP 33RR20230722 (I05, 2023) в CF NetCDF. Это подтверждает только данное представление продукта."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://cchdo.ucsd.edu/cruise/33RR20230722",
+          "title": {
+            "en": "GO-SHIP I05 2023 CCHDO data — technical documentation",
+            "fr": "GO-SHIP I05 2023 CCHDO data — documentation technique",
+            "es": "GO-SHIP I05 2023 CCHDO data — documentación técnica",
+            "ar": "GO-SHIP I05 2023 CCHDO data — الوثائق التقنية",
+            "zh": "GO-SHIP I05 2023 CCHDO data — 技术文档",
+            "ru": "GO-SHIP I05 2023 CCHDO data — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://cchdo.ucsd.edu/cruise/33RR20230722"
+      ]
+    },
+    {
+      "id": "ices-data",
+      "title": "ICES Marine Data",
+      "standards": [
+        {
+          "label": "ices_vocabularies",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The ICES acoustic database specification uses ICES controlled codes for fields such as gear, platform, survey and country. This evidence covers that acoustic data workflow.",
+            "fr": "La base acoustique ICES utilise les codes contrôlés ICES pour les engins, plateformes, campagnes et pays. Cette preuve concerne le flux acoustique.",
+            "es": "La base acústica ICES usa códigos controlados ICES para artes, plataformas, campañas y países. Esta evidencia abarca el flujo acústico.",
+            "ar": "تستخدم مواصفات قاعدة ICES الصوتية رموز ICES المضبوطة لحقول مثل معدات الصيد والمنصة والمسح والبلد. يقتصر الدليل على هذا المسار الصوتي.",
+            "zh": "ICES 声学数据库规范对渔具、平台、调查和国家等字段使用 ICES 受控代码。此证据针对该声学数据流程。",
+            "ru": "Спецификация акустической базы ICES использует контролируемые коды орудий, платформ, съёмок и стран. Это относится к акустическому процессу."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.ices.dk/data/Documents/Specification%20of%20the%20acoustic%20database.pdf",
+          "title": {
+            "en": "ICES acoustic database specification — technical documentation",
+            "fr": "ICES acoustic database specification — documentation technique",
+            "es": "ICES acoustic database specification — documentación técnica",
+            "ar": "ICES acoustic database specification — الوثائق التقنية",
+            "zh": "ICES acoustic database specification — 技术文档",
+            "ru": "ICES acoustic database specification — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.ices.dk/data/Documents/Specification%20of%20the%20acoustic%20database.pdf"
+      ]
+    },
+    {
+      "id": "intercatch",
+      "title": "InterCatch",
+      "standards": [
+        {
+          "label": "intercatch",
+          "source": "src-standards-1",
+          "description": {
+            "en": "InterCatch requires catch submissions to follow its documented import structure and associated codes; national data must be converted into that submission structure.",
+            "fr": "InterCatch exige sa structure d’importation et ses codes pour les captures ; les données nationales doivent être converties vers cette structure.",
+            "es": "InterCatch exige su estructura de importación y códigos para capturas; los datos nacionales deben convertirse a esa estructura.",
+            "ar": "يتطلب InterCatch تقديم المصيد وفق بنية الاستيراد والرموز الموثقة؛ ويجب تحويل البيانات الوطنية إلى تلك البنية.",
+            "zh": "InterCatch 要求按其规定的导入结构及代码提交捕捞数据；国家数据需转换为该提交结构。",
+            "ru": "InterCatch требует представлять уловы по документированной структуре импорта и кодам; национальные данные преобразуют в эту структуру."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.ices.dk/data/data-portals/Pages/InterCatch.aspx",
+          "title": {
+            "en": "ICES InterCatch submissions — technical documentation",
+            "fr": "ICES InterCatch submissions — documentation technique",
+            "es": "ICES InterCatch submissions — documentación técnica",
+            "ar": "ICES InterCatch submissions — الوثائق التقنية",
+            "zh": "ICES InterCatch submissions — 技术文档",
+            "ru": "ICES InterCatch submissions — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.ices.dk/data/data-portals/Pages/InterCatch.aspx"
+      ]
+    },
+    {
+      "id": "insdc",
+      "title": "International Nucleotide Sequence Database Collaboration",
+      "standards": [
+        {
+          "label": "insdc",
+          "source": "src-standards-1",
+          "description": {
+            "en": "INSDC member archives use shared sequence-exchange specifications, including feature-table annotation and controlled values. The applicable submission or annotation specification depends on the record type.",
+            "fr": "Les archives membres de l’INSDC utilisent des spécifications communes d’échange de séquences, dont l’annotation des tables de caractéristiques et les valeurs contrôlées. La spécification applicable dépend du type de notice.",
+            "es": "Los archivos miembros de INSDC usan especificaciones comunes de intercambio de secuencias, incluidas anotaciones de tablas de características y valores controlados. La especificación aplicable depende del tipo de registro.",
+            "ar": "تستخدم أرشيفات INSDC مواصفات مشتركة لتبادل التسلسلات تشمل توصيف جداول السمات والقيم المضبوطة. تتوقف مواصفات الإيداع أو التوصيف المطبقة على نوع السجل.",
+            "zh": "INSDC 成员档案库使用共享的序列交换规范，包括特征表注释及受控取值。适用的提交或注释规范取决于记录类型。",
+            "ru": "Архивы INSDC используют общие спецификации обмена последовательностями, включая аннотации таблиц признаков и контролируемые значения. Применимая спецификация зависит от типа записи."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.insdc.org/technical-specifications/",
+          "title": {
+            "en": "INSDC technical specifications — technical documentation",
+            "fr": "INSDC technical specifications — documentation technique",
+            "es": "INSDC technical specifications — documentación técnica",
+            "ar": "INSDC technical specifications — الوثائق التقنية",
+            "zh": "INSDC technical specifications — 技术文档",
+            "ru": "INSDC technical specifications — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.insdc.org/technical-specifications/"
+      ]
+    },
+    {
+      "id": "marine-regions",
+      "title": "Marine Regions",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "The reviewed Marine Regions documentation establishes web-service interfaces. It does not establish an approved schema for the delivered regional data or metadata.",
+        "fr": "La documentation Marine Regions examinée établit les interfaces web, sans confirmer de schéma approuvé pour les données régionales ou métadonnées livrées.",
+        "es": "La documentación revisada de Marine Regions establece interfaces web, sin confirmar un esquema aprobado para los datos regionales o metadatos entregados.",
+        "ar": "تثبت وثائق Marine Regions المراجعة واجهات خدمات الويب لكنها لا تثبت مخططاً معتمداً للبيانات الإقليمية المسلمة أو بياناتها الوصفية.",
+        "zh": "所审阅的 Marine Regions 文档说明了网络服务接口，但未证实所交付区域数据或元数据采用哪项可选模式。",
+        "ru": "Изученная документация Marine Regions описывает веб-интерфейсы, но не подтверждает утверждённую схему выдаваемых региональных данных или метаданных."
+      },
+      "reviewedUrls": [
+        "https://www.marineregions.org/webservices.php"
+      ]
+    },
+    {
+      "id": "mgnify",
+      "title": "MGnify",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "MGnify describes ENA submission schemes and GSC guidelines, but the reviewed page does not identify a concrete MIxS checklist or output contract. Confirm the applicable workflow before assigning a standard.",
+        "fr": "MGnify évoque les schémas ENA et recommandations GSC sans identifier de liste MIxS ni de contrat de sortie précis. Le flux applicable reste à confirmer.",
+        "es": "MGnify describe esquemas ENA y directrices GSC sin identificar una lista MIxS ni un contrato de salida concreto. Debe confirmarse el flujo aplicable.",
+        "ar": "يصف MGnify مخططات إيداع ENA وإرشادات GSC لكن الصفحة لا تحدد قائمة MIxS أو مواصفات مخرجات بعينها. يجب تأكيد المسار المطبق قبل إسناد معيار.",
+        "zh": "MGnify 说明采用 ENA 提交模式及 GSC 指南，但所审阅页面未明确具体 MIxS 清单或输出规范。分配标准前需确认适用流程。",
+        "ru": "MGnify описывает схемы ENA и рекомендации GSC, но страница не указывает конкретный список MIxS или спецификацию вывода. Следует подтвердить применимый процесс."
+      },
+      "reviewedUrls": [
+        "https://docs.mgnify.org/src/docs/about.html"
+      ]
+    },
+    {
+      "id": "molluscabase",
+      "title": "MolluscaBase",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "The reviewed MolluscaBase description does not establish its own standard-bearing export. Shared Aphia infrastructure or WoRMS participation does not prove identical export support.",
+        "fr": "La description MolluscaBase examinée ne confirme pas d’export normalisé propre. L’infrastructure Aphia ou la participation à WoRMS ne prouve pas une offre identique.",
+        "es": "La descripción revisada de MolluscaBase no confirma una exportación normalizada propia. La infraestructura Aphia o participación en WoRMS no demuestra soporte idéntico.",
+        "ar": "لا يثبت وصف MolluscaBase المراجع تصديراً خاصاً يتبع معياراً محدداً. لا تثبت بنية Aphia المشتركة أو المشاركة في WoRMS دعماً مماثلاً للتصدير.",
+        "zh": "所审阅的 MolluscaBase 说明未证实其自身的标准化导出。共享 Aphia 基础设施或参与 WoRMS 并不能证明其导出支持完全相同。",
+        "ru": "Изученное описание MolluscaBase не подтверждает собственный стандартизированный экспорт. Общая инфраструктура Aphia или участие в WoRMS не доказывают одинаковую поддержку экспорта."
+      },
+      "reviewedUrls": [
+        "https://molluscabase.org/about.php"
+      ]
+    },
+    {
+      "id": "noaa-cetacean-bia",
+      "title": "NOAA Cetacean Biologically Important Areas",
+      "standards": [
+        {
+          "label": "iso_19115",
+          "source": "src-standards-1",
+          "description": {
+            "en": "This dataset’s NOAA InPort record offers an ISO 19115 metadata export. The standard describes the GIS dataset; it does not specify its feature-file encoding.",
+            "fr": "La notice NOAA InPort de ce jeu propose un export de métadonnées ISO 19115. Ce standard décrit le jeu SIG, sans définir le codage de ses entités.",
+            "es": "El registro NOAA InPort de este conjunto ofrece una exportación de metadatos ISO 19115. El estándar describe el conjunto SIG, no la codificación de sus entidades.",
+            "ar": "يوفر سجل المجموعة في NOAA InPort تصدير بيانات وصفية وفق ISO 19115. يصف المعيار مجموعة GIS ولا يحدد ترميز ملفات معالمها.",
+            "zh": "该数据集的 NOAA InPort 记录提供 ISO 19115 元数据导出。此标准描述 GIS 数据集，不规定其要素文件编码。",
+            "ru": "Запись набора в NOAA InPort предлагает экспорт метаданных ISO 19115. Стандарт описывает набор ГИС, а не кодировку файлов объектов."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.fisheries.noaa.gov/inport/item/23643",
+          "title": {
+            "en": "NOAA InPort 23643 — technical documentation",
+            "fr": "NOAA InPort 23643 — documentation technique",
+            "es": "NOAA InPort 23643 — documentación técnica",
+            "ar": "NOAA InPort 23643 — الوثائق التقنية",
+            "zh": "NOAA InPort 23643 — 技术文档",
+            "ru": "NOAA InPort 23643 — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.fisheries.noaa.gov/inport/item/23643"
+      ]
+    },
+    {
+      "id": "noaa-esi-wa-or-marine-mammals",
+      "title": "NOAA ESI Outer Coast WA/OR Marine Mammal Polygons",
+      "standards": [
+        {
+          "label": "iso_19115",
+          "source": "src-standards-1",
+          "description": {
+            "en": "This dataset’s NOAA InPort record offers an ISO 19115 metadata export. The standard describes the GIS dataset; it does not specify its feature-file encoding.",
+            "fr": "La notice NOAA InPort de ce jeu propose un export de métadonnées ISO 19115. Ce standard décrit le jeu SIG, sans définir le codage de ses entités.",
+            "es": "El registro NOAA InPort de este conjunto ofrece una exportación de metadatos ISO 19115. El estándar describe el conjunto SIG, no la codificación de sus entidades.",
+            "ar": "يوفر سجل المجموعة في NOAA InPort تصدير بيانات وصفية وفق ISO 19115. يصف المعيار مجموعة GIS ولا يحدد ترميز ملفات معالمها.",
+            "zh": "该数据集的 NOAA InPort 记录提供 ISO 19115 元数据导出。此标准描述 GIS 数据集，不规定其要素文件编码。",
+            "ru": "Запись набора в NOAA InPort предлагает экспорт метаданных ISO 19115. Стандарт описывает набор ГИС, а не кодировку файлов объектов."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.fisheries.noaa.gov/inport/item/55730",
+          "title": {
+            "en": "NOAA InPort 55730 — technical documentation",
+            "fr": "NOAA InPort 55730 — documentation technique",
+            "es": "NOAA InPort 55730 — documentación técnica",
+            "ar": "NOAA InPort 55730 — الوثائق التقنية",
+            "zh": "NOAA InPort 55730 — 技术文档",
+            "ru": "NOAA InPort 55730 — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.fisheries.noaa.gov/inport/item/55730"
+      ]
+    },
+    {
+      "id": "noaa-ncei-marine",
+      "title": "NOAA NCEI Marine Data",
+      "standards": [
+        {
+          "label": "iso_19115",
+          "source": "src-standards-1",
+          "description": {
+            "en": "NCEI documents ISO 19115/19115-2 for geographic metadata content and ISO 19139 for its XML implementation. This assignment concerns NCEI metadata, not every marine data file.",
+            "fr": "NCEI documente ISO 19115/19115-2 pour le contenu des métadonnées géographiques et ISO 19139 pour leur implémentation XML. Cette attribution concerne les métadonnées.",
+            "es": "NCEI documenta ISO 19115/19115-2 para el contenido de metadatos geográficos e ISO 19139 para su implementación XML. Esta asignación abarca metadatos.",
+            "ar": "يوثق NCEI معيار ISO 19115/19115-2 لمحتوى البيانات الوصفية الجغرافية وISO 19139 لتطبيقها بصيغة XML. يخص هذا الوصف البيانات الوصفية.",
+            "zh": "NCEI 文档规定地理元数据内容采用 ISO 19115/19115-2，XML 实现采用 ISO 19139。此项针对元数据，并非所有海洋数据文件。",
+            "ru": "NCEI документирует ISO 19115/19115-2 для содержания географических метаданных и ISO 19139 для реализации XML. Это относится к метаданным."
+          }
+        },
+        {
+          "label": "iso_19139",
+          "source": "src-standards-1",
+          "description": {
+            "en": "NCEI documents ISO 19115/19115-2 for geographic metadata content and ISO 19139 for its XML implementation. This assignment concerns NCEI metadata, not every marine data file.",
+            "fr": "NCEI documente ISO 19115/19115-2 pour le contenu des métadonnées géographiques et ISO 19139 pour leur implémentation XML. Cette attribution concerne les métadonnées.",
+            "es": "NCEI documenta ISO 19115/19115-2 para el contenido de metadatos geográficos e ISO 19139 para su implementación XML. Esta asignación abarca metadatos.",
+            "ar": "يوثق NCEI معيار ISO 19115/19115-2 لمحتوى البيانات الوصفية الجغرافية وISO 19139 لتطبيقها بصيغة XML. يخص هذا الوصف البيانات الوصفية.",
+            "zh": "NCEI 文档规定地理元数据内容采用 ISO 19115/19115-2，XML 实现采用 ISO 19139。此项针对元数据，并非所有海洋数据文件。",
+            "ru": "NCEI документирует ISO 19115/19115-2 для содержания географических метаданных и ISO 19139 для реализации XML. Это относится к метаданным."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.ncei.noaa.gov/resources/metadata/create",
+          "title": {
+            "en": "NCEI metadata creation guidance — technical documentation",
+            "fr": "NCEI metadata creation guidance — documentation technique",
+            "es": "NCEI metadata creation guidance — documentación técnica",
+            "ar": "NCEI metadata creation guidance — الوثائق التقنية",
+            "zh": "NCEI metadata creation guidance — 技术文档",
+            "ru": "NCEI metadata creation guidance — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.ncei.noaa.gov/resources/metadata/create"
+      ]
+    },
+    {
+      "id": "platform-obis",
+      "title": "Ocean Biodiversity Information System (OBIS)",
+      "standards": [
+        {
+          "label": "darwin_core",
+          "source": "src-standards-1",
+          "description": {
+            "en": "OBIS publication archives use Darwin Core for occurrence/event tables, eMoF for linked measurements and facts, and EML for dataset metadata. Extensions apply when the dataset contains those observations.",
+            "fr": "Les archives de publication OBIS utilisent Darwin Core pour les occurrences et événements, eMoF pour les mesures et faits liés, et EML pour les métadonnées du jeu de données. Les extensions dépendent des observations présentes.",
+            "es": "Los archivos de publicación de OBIS usan Darwin Core para ocurrencias y eventos, eMoF para mediciones y hechos vinculados, y EML para los metadatos del conjunto. Las extensiones dependen de las observaciones presentes.",
+            "ar": "تستخدم حزم النشر في OBIS معيار Darwin Core لجداول التواجد والأحداث وeMoF للقياسات والحقائق المرتبطة وEML لوصف مجموعة البيانات. تتوقف الإضافات على الملاحظات المتاحة في المجموعة.",
+            "zh": "OBIS 发布档案使用 Darwin Core 表示出现和采样事件，使用 eMoF 表示关联测量与事实，使用 EML 描述数据集元数据。扩展表取决于数据集包含的观测内容。",
+            "ru": "В архивах публикации OBIS Darwin Core описывает встречи и события, eMoF — связанные измерения и факты, EML — метаданные набора. Расширения применяются при наличии соответствующих наблюдений."
+          }
+        },
+        {
+          "label": "emof",
+          "source": "src-standards-1",
+          "description": {
+            "en": "OBIS publication archives use Darwin Core for occurrence/event tables, eMoF for linked measurements and facts, and EML for dataset metadata. Extensions apply when the dataset contains those observations.",
+            "fr": "Les archives de publication OBIS utilisent Darwin Core pour les occurrences et événements, eMoF pour les mesures et faits liés, et EML pour les métadonnées du jeu de données. Les extensions dépendent des observations présentes.",
+            "es": "Los archivos de publicación de OBIS usan Darwin Core para ocurrencias y eventos, eMoF para mediciones y hechos vinculados, y EML para los metadatos del conjunto. Las extensiones dependen de las observaciones presentes.",
+            "ar": "تستخدم حزم النشر في OBIS معيار Darwin Core لجداول التواجد والأحداث وeMoF للقياسات والحقائق المرتبطة وEML لوصف مجموعة البيانات. تتوقف الإضافات على الملاحظات المتاحة في المجموعة.",
+            "zh": "OBIS 发布档案使用 Darwin Core 表示出现和采样事件，使用 eMoF 表示关联测量与事实，使用 EML 描述数据集元数据。扩展表取决于数据集包含的观测内容。",
+            "ru": "В архивах публикации OBIS Darwin Core описывает встречи и события, eMoF — связанные измерения и факты, EML — метаданные набора. Расширения применяются при наличии соответствующих наблюдений."
+          }
+        },
+        {
+          "label": "eml",
+          "source": "src-standards-1",
+          "description": {
+            "en": "OBIS publication archives use Darwin Core for occurrence/event tables, eMoF for linked measurements and facts, and EML for dataset metadata. Extensions apply when the dataset contains those observations.",
+            "fr": "Les archives de publication OBIS utilisent Darwin Core pour les occurrences et événements, eMoF pour les mesures et faits liés, et EML pour les métadonnées du jeu de données. Les extensions dépendent des observations présentes.",
+            "es": "Los archivos de publicación de OBIS usan Darwin Core para ocurrencias y eventos, eMoF para mediciones y hechos vinculados, y EML para los metadatos del conjunto. Las extensiones dependen de las observaciones presentes.",
+            "ar": "تستخدم حزم النشر في OBIS معيار Darwin Core لجداول التواجد والأحداث وeMoF للقياسات والحقائق المرتبطة وEML لوصف مجموعة البيانات. تتوقف الإضافات على الملاحظات المتاحة في المجموعة.",
+            "zh": "OBIS 发布档案使用 Darwin Core 表示出现和采样事件，使用 eMoF 表示关联测量与事实，使用 EML 描述数据集元数据。扩展表取决于数据集包含的观测内容。",
+            "ru": "В архивах публикации OBIS Darwin Core описывает встречи и события, eMoF — связанные измерения и факты, EML — метаданные набора. Расширения применяются при наличии соответствующих наблюдений."
+          }
+        },
+        {
+          "label": "dna_derived_data",
+          "source": "src-standards-2",
+          "description": {
+            "en": "OBIS documents use of the DNA-derived data extension for sequence-derived occurrence evidence and molecular methods; it applies to relevant DNA datasets, not all OBIS records.",
+            "fr": "OBIS documente l’utilisation de l’extension DNA-derived data pour les occurrences déduites de séquences et les méthodes moléculaires ; elle concerne les jeux de données ADN pertinents.",
+            "es": "OBIS documenta el uso de la extensión DNA-derived data para evidencias de ocurrencia derivadas de secuencias y métodos moleculares; se aplica a los conjuntos de ADN pertinentes.",
+            "ar": "يوثق OBIS استخدام إضافة DNA-derived data لأدلة التواجد المستمدة من التسلسلات والأساليب الجزيئية؛ وتنطبق على مجموعات الحمض النووي ذات الصلة.",
+            "zh": "OBIS 文档说明使用 DNA-derived data 扩展记录由序列推导的出现证据及分子方法；仅适用于相关 DNA 数据集。",
+            "ru": "OBIS описывает использование расширения DNA-derived data для свидетельств встречаемости на основе последовательностей и молекулярных методов; оно применимо к соответствующим наборам ДНК."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://manual.obis.org/data_format.html",
+          "title": {
+            "en": "OBIS data format — technical documentation",
+            "fr": "OBIS data format — documentation technique",
+            "es": "OBIS data format — documentación técnica",
+            "ar": "OBIS data format — الوثائق التقنية",
+            "zh": "OBIS data format — 技术文档",
+            "ru": "OBIS data format — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-standards-2": {
+          "id": "src-standards-2",
+          "url": "https://manual.obis.org/dna_data",
+          "title": {
+            "en": "OBIS DNA-derived data — technical documentation",
+            "fr": "OBIS DNA-derived data — documentation technique",
+            "es": "OBIS DNA-derived data — documentación técnica",
+            "ar": "OBIS DNA-derived data — الوثائق التقنية",
+            "zh": "OBIS DNA-derived data — 技术文档",
+            "ru": "OBIS DNA-derived data — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://manual.obis.org/data_format.html",
+        "https://manual.obis.org/dna_data"
+      ]
+    },
+    {
+      "id": "odis",
+      "title": "Ocean Data and Information System",
+      "standards": [
+        {
+          "label": "schema_org",
+          "source": "src-standards-1",
+          "description": {
+            "en": "ODIS/Ocean InfoHub discovery uses Schema.org resource descriptions published as JSON-LD. This covers the federation’s discovery metadata, not a common schema for all source data.",
+            "fr": "La découverte ODIS/Ocean InfoHub utilise des descriptions Schema.org publiées en JSON-LD. Cela concerne les métadonnées de la fédération.",
+            "es": "El descubrimiento ODIS/Ocean InfoHub usa descripciones Schema.org publicadas en JSON-LD. Abarca metadatos de la federación.",
+            "ar": "يستخدم الاكتشاف في ODIS/Ocean InfoHub أوصاف Schema.org المنشورة بصيغة JSON-LD. يخص ذلك بيانات الاكتشاف الوصفية للاتحاد.",
+            "zh": "ODIS/Ocean InfoHub 发现流程使用以 JSON-LD 发布的 Schema.org 资源描述。此项针对联合发现元数据。",
+            "ru": "Обнаружение ODIS/Ocean InfoHub использует описания Schema.org в JSON-LD. Это метаданные федеративного обнаружения."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://book.odis.org/gettingStarted.html",
+          "title": {
+            "en": "ODIS publishing guidance — technical documentation",
+            "fr": "ODIS publishing guidance — documentation technique",
+            "es": "ODIS publishing guidance — documentación técnica",
+            "ar": "ODIS publishing guidance — الوثائق التقنية",
+            "zh": "ODIS publishing guidance — 技术文档",
+            "ru": "ODIS publishing guidance — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://book.odis.org/gettingStarted.html"
+      ]
+    },
+    {
+      "id": "oceaninfohub",
+      "title": "Ocean InfoHub",
+      "standards": [
+        {
+          "label": "schema_org",
+          "source": "src-standards-1",
+          "description": {
+            "en": "ODIS/Ocean InfoHub discovery uses Schema.org resource descriptions published as JSON-LD. This covers the federation’s discovery metadata, not a common schema for all source data.",
+            "fr": "La découverte ODIS/Ocean InfoHub utilise des descriptions Schema.org publiées en JSON-LD. Cela concerne les métadonnées de la fédération.",
+            "es": "El descubrimiento ODIS/Ocean InfoHub usa descripciones Schema.org publicadas en JSON-LD. Abarca metadatos de la federación.",
+            "ar": "يستخدم الاكتشاف في ODIS/Ocean InfoHub أوصاف Schema.org المنشورة بصيغة JSON-LD. يخص ذلك بيانات الاكتشاف الوصفية للاتحاد.",
+            "zh": "ODIS/Ocean InfoHub 发现流程使用以 JSON-LD 发布的 Schema.org 资源描述。此项针对联合发现元数据。",
+            "ru": "Обнаружение ODIS/Ocean InfoHub использует описания Schema.org в JSON-LD. Это метаданные федеративного обнаружения."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://book.odis.org/gettingStarted.html",
+          "title": {
+            "en": "ODIS publishing guidance — technical documentation",
+            "fr": "ODIS publishing guidance — documentation technique",
+            "es": "ODIS publishing guidance — documentación técnica",
+            "ar": "ODIS publishing guidance — الوثائق التقنية",
+            "zh": "ODIS publishing guidance — 技术文档",
+            "ru": "ODIS publishing guidance — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://book.odis.org/gettingStarted.html"
+      ]
+    },
+    {
+      "id": "ooi-data",
+      "title": "Ocean Observatories Initiative Data Portal",
+      "standards": [
+        {
+          "label": "cf",
+          "source": "src-standards-1",
+          "description": {
+            "en": "OOI Data Explorer ERDDAP documents NetCDF output with CF variable/coordinate conventions and ACDD discovery metadata. Other output representations have separate structures.",
+            "fr": "ERDDAP OOI Data Explorer documente des sorties NetCDF avec conventions CF pour variables et coordonnées et métadonnées ACDD. Les autres représentations ont leurs propres structures.",
+            "es": "ERDDAP de OOI Data Explorer documenta salidas NetCDF con convenciones CF para variables y coordenadas y metadatos ACDD. Otras representaciones tienen estructuras distintas.",
+            "ar": "يوثق ERDDAP في OOI Data Explorer مخرجات NetCDF باتفاقيات CF للمتغيرات والإحداثيات وبيانات اكتشاف ACDD. للمخرجات الأخرى تراكيب مستقلة.",
+            "zh": "OOI Data Explorer 的 ERDDAP 文档说明 NetCDF 输出采用 CF 变量与坐标约定及 ACDD 发现元数据。其他输出形式具有各自的结构。",
+            "ru": "ERDDAP OOI Data Explorer документирует вывод NetCDF с соглашениями CF для переменных и координат и метаданными ACDD. Другие представления имеют отдельные структуры."
+          }
+        },
+        {
+          "label": "acdd",
+          "source": "src-standards-1",
+          "description": {
+            "en": "OOI Data Explorer ERDDAP documents NetCDF output with CF variable/coordinate conventions and ACDD discovery metadata. Other output representations have separate structures.",
+            "fr": "ERDDAP OOI Data Explorer documente des sorties NetCDF avec conventions CF pour variables et coordonnées et métadonnées ACDD. Les autres représentations ont leurs propres structures.",
+            "es": "ERDDAP de OOI Data Explorer documenta salidas NetCDF con convenciones CF para variables y coordenadas y metadatos ACDD. Otras representaciones tienen estructuras distintas.",
+            "ar": "يوثق ERDDAP في OOI Data Explorer مخرجات NetCDF باتفاقيات CF للمتغيرات والإحداثيات وبيانات اكتشاف ACDD. للمخرجات الأخرى تراكيب مستقلة.",
+            "zh": "OOI Data Explorer 的 ERDDAP 文档说明 NetCDF 输出采用 CF 变量与坐标约定及 ACDD 发现元数据。其他输出形式具有各自的结构。",
+            "ru": "ERDDAP OOI Data Explorer документирует вывод NetCDF с соглашениями CF для переменных и координат и метаданными ACDD. Другие представления имеют отдельные структуры."
+          }
+        },
+        {
+          "label": "qartod",
+          "source": "src-standards-2",
+          "description": {
+            "en": "OOI implements QARTOD tests and flags progressively by instrument and data product. Check the selected stream’s QARTOD fields and test coverage.",
+            "fr": "OOI met en œuvre les tests et indicateurs QARTOD progressivement par instrument et produit. Vérifier les champs et la couverture du flux choisi.",
+            "es": "OOI implementa pruebas e indicadores QARTOD progresivamente por instrumento y producto. Deben comprobarse los campos y la cobertura del flujo elegido.",
+            "ar": "يطبق OOI اختبارات QARTOD وأعلامها تدريجياً حسب الجهاز ومنتج البيانات. يجب التحقق من الحقول وتغطية الاختبارات للتدفق المختار.",
+            "zh": "OOI 按仪器与数据产品逐步实施 QARTOD 测试和标志。需检查所选数据流的 QARTOD 字段及测试覆盖范围。",
+            "ru": "OOI постепенно внедряет тесты и флаги QARTOD по приборам и продуктам. Следует проверить поля и охват тестов выбранного потока."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://erddap.dataexplorer.oceanobservatories.org/erddap/tabledap/documentation.html",
+          "title": {
+            "en": "OOI ERDDAP output documentation — technical documentation",
+            "fr": "OOI ERDDAP output documentation — documentation technique",
+            "es": "OOI ERDDAP output documentation — documentación técnica",
+            "ar": "OOI ERDDAP output documentation — الوثائق التقنية",
+            "zh": "OOI ERDDAP output documentation — 技术文档",
+            "ru": "OOI ERDDAP output documentation — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-standards-2": {
+          "id": "src-standards-2",
+          "url": "https://oceanobservatories.org/2022/11/ooi-launches-qartod/",
+          "title": {
+            "en": "OOI QARTOD implementation — technical documentation",
+            "fr": "OOI QARTOD implementation — documentation technique",
+            "es": "OOI QARTOD implementation — documentación técnica",
+            "ar": "OOI QARTOD implementation — الوثائق التقنية",
+            "zh": "OOI QARTOD implementation — 技术文档",
+            "ru": "OOI QARTOD implementation — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://erddap.dataexplorer.oceanobservatories.org/erddap/tabledap/documentation.html",
+        "https://oceanobservatories.org/2022/11/ooi-launches-qartod/"
+      ]
+    },
+    {
+      "id": "oceanops",
+      "title": "OceanOPS",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "The OceanOPS board could not be read in this audit. A NOAA-hosted transformed copy declares CF/ACDD, but that alone does not establish those conventions for OceanOPS’s own service.",
+        "fr": "Le tableau OceanOPS n’a pas pu être lu. Une copie transformée chez NOAA déclare CF/ACDD, sans établir ces conventions pour le service OceanOPS lui-même.",
+        "es": "No pudo leerse el tablero OceanOPS. Una copia transformada alojada por NOAA declara CF/ACDD, sin demostrar esas convenciones para el propio servicio OceanOPS.",
+        "ar": "تعذرت قراءة لوحة OceanOPS. تعلن نسخة محولة تستضيفها NOAA عن CF/ACDD لكن ذلك لا يثبت تطبيقهما في خدمة OceanOPS الأصلية.",
+        "zh": "此次未能读取 OceanOPS 控制台。NOAA 托管的转换副本声明 CF/ACDD，但这不足以证明 OceanOPS 自有服务采用这些约定。",
+        "ru": "Панель OceanOPS не удалось прочитать. Преобразованная копия у NOAA объявляет CF/ACDD, но это не подтверждает их использование собственным сервисом OceanOPS."
+      },
+      "reviewedUrls": [
+        "https://www.ocean-ops.org/board/",
+        "https://osmc.noaa.gov/erddap/info/OceanOPS_platform_metadata/index.html"
+      ]
+    },
+    {
+      "id": "oceansites",
+      "title": "OceanSITES",
+      "standards": [
+        {
+          "label": "oceansites",
+          "source": "src-standards-1",
+          "description": {
+            "en": "OceanSITES GDAC submission files follow the OceanSITES time-series profile built on CF conventions; CF describes variables and coordinates within the project-specific profile.",
+            "fr": "Les fichiers soumis aux GDAC OceanSITES suivent le profil de séries temporelles OceanSITES fondé sur CF, qui décrit les variables et coordonnées.",
+            "es": "Los archivos enviados a los GDAC OceanSITES siguen el perfil de series temporales OceanSITES basado en CF, que describe variables y coordenadas.",
+            "ar": "تتبع ملفات الإيداع في OceanSITES GDAC ملف السلاسل الزمنية OceanSITES المبني على CF الذي يصف المتغيرات والإحداثيات.",
+            "zh": "OceanSITES GDAC 提交文件遵循基于 CF 的 OceanSITES 时间序列规范；CF 描述该项目规范中的变量与坐标。",
+            "ru": "Файлы для GDAC OceanSITES следуют профилю временных рядов OceanSITES на основе CF; CF описывает переменные и координаты внутри профиля."
+          }
+        },
+        {
+          "label": "cf",
+          "source": "src-standards-1",
+          "description": {
+            "en": "OceanSITES GDAC submission files follow the OceanSITES time-series profile built on CF conventions; CF describes variables and coordinates within the project-specific profile.",
+            "fr": "Les fichiers soumis aux GDAC OceanSITES suivent le profil de séries temporelles OceanSITES fondé sur CF, qui décrit les variables et coordonnées.",
+            "es": "Los archivos enviados a los GDAC OceanSITES siguen el perfil de series temporales OceanSITES basado en CF, que describe variables y coordenadas.",
+            "ar": "تتبع ملفات الإيداع في OceanSITES GDAC ملف السلاسل الزمنية OceanSITES المبني على CF الذي يصف المتغيرات والإحداثيات.",
+            "zh": "OceanSITES GDAC 提交文件遵循基于 CF 的 OceanSITES 时间序列规范；CF 描述该项目规范中的变量与坐标。",
+            "ru": "Файлы для GDAC OceanSITES следуют профилю временных рядов OceanSITES на основе CF; CF описывает переменные и координаты внутри профиля."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://ocean-sites.org/index.php/data/",
+          "title": {
+            "en": "OceanSITES data — technical documentation",
+            "fr": "OceanSITES data — documentation technique",
+            "es": "OceanSITES data — documentación técnica",
+            "ar": "OceanSITES data — الوثائق التقنية",
+            "zh": "OceanSITES data — 技术文档",
+            "ru": "OceanSITES data — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://ocean-sites.org/index.php/data/"
+      ]
+    },
+    {
+      "id": "odfw-commercial-landings",
+      "title": "ODFW Commercial Landing Statistics",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "The reviewed ODFW page did not expose a current statistical data dictionary or approved metadata standard. Verify a specific landings extract before assigning fisheries classification tags.",
+        "fr": "La page ODFW examinée n’exposait ni dictionnaire statistique actuel ni standard de métadonnées approuvé. Vérifier un extrait de débarquements précis.",
+        "es": "La página ODFW revisada no expuso un diccionario estadístico actual ni estándar de metadatos aprobado. Debe verificarse un extracto concreto de desembarques.",
+        "ar": "لم تعرض صفحة ODFW قاموساً إحصائياً حالياً أو معيار بيانات وصفية معتمداً. يجب التحقق من مستخرج إنزال محدد قبل إسناد تصنيفات المصايد.",
+        "zh": "所审阅的 ODFW 页面未提供当前统计数据字典或可选元数据标准。分配渔业分类标签前需核实具体的上岸量数据提取文件。",
+        "ru": "Изученная страница ODFW не предоставила текущий статистический словарь или утверждённый стандарт метаданных. Следует проверить конкретную выгрузку выгрузок улова."
+      },
+      "reviewedUrls": [
+        "https://www.dfw.state.or.us/fish/commercial/statistics.asp"
+      ]
+    },
+    {
+      "id": "openstreetmap-standard-raster-tiles",
+      "title": "OpenStreetMap Standard Map",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "This node serves rendered raster tiles. Tile addressing, PNG encoding and attribution requirements do not establish a data standard from the approved list.",
+        "fr": "Ce nœud sert des tuiles raster rendues. L’adressage, le codage PNG et l’attribution ne constituent pas un standard de la liste approuvée.",
+        "es": "Este nodo sirve teselas ráster renderizadas. El direccionamiento, la codificación PNG y la atribución no establecen un estándar de la lista aprobada.",
+        "ar": "تقدم هذه العقدة بلاطات نقطية مرسومة. لا تثبت عناوين البلاطات وترميز PNG ومتطلبات نسب المصدر معياراً من القائمة المعتمدة.",
+        "zh": "此节点提供渲染后的栅格瓦片。瓦片寻址、PNG 编码及署名要求并不构成可选列表中的数据标准。",
+        "ru": "Узел предоставляет растровые тайлы. Адресация тайлов, кодировка PNG и атрибуция не подтверждают стандарт из утверждённого списка."
+      },
+      "reviewedUrls": [
+        "https://operations.osmfoundation.org/policies/tiles/"
+      ]
+    },
+    {
+      "id": "oregon-dlcd-coastal-gis",
+      "title": "Oregon DLCD Coastal GIS",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "The reviewed DLCD catalogue lists GIS resources without establishing one approved metadata standard across the coastal layers. Verify the selected layer’s metadata.",
+        "fr": "Le catalogue DLCD examiné répertorie des ressources SIG sans établir un standard approuvé commun aux couches côtières. Vérifier les métadonnées de la couche choisie.",
+        "es": "El catálogo DLCD revisado enumera recursos SIG sin establecer un estándar aprobado común a las capas costeras. Deben verificarse los metadatos de la capa elegida.",
+        "ar": "يسرد فهرس DLCD موارد GIS دون إثبات معيار بيانات وصفية معتمد مشترك للطبقات الساحلية. يجب التحقق من بيانات الطبقة المختارة الوصفية.",
+        "zh": "所审阅的 DLCD 目录列出 GIS 资源，但未证实沿海图层统一采用哪项可选元数据标准。需检查所选图层的元数据。",
+        "ru": "Изученный каталог DLCD перечисляет ресурсы ГИС, но не подтверждает единый утверждённый стандарт метаданных прибрежных слоёв. Следует проверить выбранный слой."
+      },
+      "reviewedUrls": [
+        "https://www.oregon.gov/lcd/about/pages/maps-data-tools.aspx"
+      ]
+    },
+    {
+      "id": "pangaea",
+      "title": "PANGAEA",
+      "standards": [
+        {
+          "label": "dublin_core",
+          "source": "src-standards-1",
+          "description": {
+            "en": "PANGAEA serves dataset metadata as Dublin Core, DataCite, ISO 19139/19115 and DIF; Schema.org is available through JSON-LD content negotiation. These are metadata representations, not data-table schemas.",
+            "fr": "PANGAEA diffuse ses métadonnées en Dublin Core, DataCite, ISO 19139/19115 et DIF, ainsi qu’en Schema.org via JSON-LD. Ce sont des représentations de métadonnées.",
+            "es": "PANGAEA ofrece metadatos en Dublin Core, DataCite, ISO 19139/19115 y DIF, y Schema.org mediante JSON-LD. Son representaciones de metadatos.",
+            "ar": "يوفر PANGAEA بيانات وصفية وفق Dublin Core وDataCite وISO 19139/19115 وDIF، وSchema.org عبر JSON-LD. هذه تمثيلات للبيانات الوصفية.",
+            "zh": "PANGAEA 提供 Dublin Core、DataCite、ISO 19139/19115 和 DIF 元数据，并通过 JSON-LD 内容协商提供 Schema.org。这些均为元数据表示。",
+            "ru": "PANGAEA предоставляет метаданные Dublin Core, DataCite, ISO 19139/19115 и DIF, а также Schema.org через JSON-LD. Это представления метаданных."
+          }
+        },
+        {
+          "label": "datacite",
+          "source": "src-standards-1",
+          "description": {
+            "en": "PANGAEA serves dataset metadata as Dublin Core, DataCite, ISO 19139/19115 and DIF; Schema.org is available through JSON-LD content negotiation. These are metadata representations, not data-table schemas.",
+            "fr": "PANGAEA diffuse ses métadonnées en Dublin Core, DataCite, ISO 19139/19115 et DIF, ainsi qu’en Schema.org via JSON-LD. Ce sont des représentations de métadonnées.",
+            "es": "PANGAEA ofrece metadatos en Dublin Core, DataCite, ISO 19139/19115 y DIF, y Schema.org mediante JSON-LD. Son representaciones de metadatos.",
+            "ar": "يوفر PANGAEA بيانات وصفية وفق Dublin Core وDataCite وISO 19139/19115 وDIF، وSchema.org عبر JSON-LD. هذه تمثيلات للبيانات الوصفية.",
+            "zh": "PANGAEA 提供 Dublin Core、DataCite、ISO 19139/19115 和 DIF 元数据，并通过 JSON-LD 内容协商提供 Schema.org。这些均为元数据表示。",
+            "ru": "PANGAEA предоставляет метаданные Dublin Core, DataCite, ISO 19139/19115 и DIF, а также Schema.org через JSON-LD. Это представления метаданных."
+          }
+        },
+        {
+          "label": "iso_19139",
+          "source": "src-standards-1",
+          "description": {
+            "en": "PANGAEA serves dataset metadata as Dublin Core, DataCite, ISO 19139/19115 and DIF; Schema.org is available through JSON-LD content negotiation. These are metadata representations, not data-table schemas.",
+            "fr": "PANGAEA diffuse ses métadonnées en Dublin Core, DataCite, ISO 19139/19115 et DIF, ainsi qu’en Schema.org via JSON-LD. Ce sont des représentations de métadonnées.",
+            "es": "PANGAEA ofrece metadatos en Dublin Core, DataCite, ISO 19139/19115 y DIF, y Schema.org mediante JSON-LD. Son representaciones de metadatos.",
+            "ar": "يوفر PANGAEA بيانات وصفية وفق Dublin Core وDataCite وISO 19139/19115 وDIF، وSchema.org عبر JSON-LD. هذه تمثيلات للبيانات الوصفية.",
+            "zh": "PANGAEA 提供 Dublin Core、DataCite、ISO 19139/19115 和 DIF 元数据，并通过 JSON-LD 内容协商提供 Schema.org。这些均为元数据表示。",
+            "ru": "PANGAEA предоставляет метаданные Dublin Core, DataCite, ISO 19139/19115 и DIF, а также Schema.org через JSON-LD. Это представления метаданных."
+          }
+        },
+        {
+          "label": "iso_19115",
+          "source": "src-standards-1",
+          "description": {
+            "en": "PANGAEA serves dataset metadata as Dublin Core, DataCite, ISO 19139/19115 and DIF; Schema.org is available through JSON-LD content negotiation. These are metadata representations, not data-table schemas.",
+            "fr": "PANGAEA diffuse ses métadonnées en Dublin Core, DataCite, ISO 19139/19115 et DIF, ainsi qu’en Schema.org via JSON-LD. Ce sont des représentations de métadonnées.",
+            "es": "PANGAEA ofrece metadatos en Dublin Core, DataCite, ISO 19139/19115 y DIF, y Schema.org mediante JSON-LD. Son representaciones de metadatos.",
+            "ar": "يوفر PANGAEA بيانات وصفية وفق Dublin Core وDataCite وISO 19139/19115 وDIF، وSchema.org عبر JSON-LD. هذه تمثيلات للبيانات الوصفية.",
+            "zh": "PANGAEA 提供 Dublin Core、DataCite、ISO 19139/19115 和 DIF 元数据，并通过 JSON-LD 内容协商提供 Schema.org。这些均为元数据表示。",
+            "ru": "PANGAEA предоставляет метаданные Dublin Core, DataCite, ISO 19139/19115 и DIF, а также Schema.org через JSON-LD. Это представления метаданных."
+          }
+        },
+        {
+          "label": "dif",
+          "source": "src-standards-1",
+          "description": {
+            "en": "PANGAEA serves dataset metadata as Dublin Core, DataCite, ISO 19139/19115 and DIF; Schema.org is available through JSON-LD content negotiation. These are metadata representations, not data-table schemas.",
+            "fr": "PANGAEA diffuse ses métadonnées en Dublin Core, DataCite, ISO 19139/19115 et DIF, ainsi qu’en Schema.org via JSON-LD. Ce sont des représentations de métadonnées.",
+            "es": "PANGAEA ofrece metadatos en Dublin Core, DataCite, ISO 19139/19115 y DIF, y Schema.org mediante JSON-LD. Son representaciones de metadatos.",
+            "ar": "يوفر PANGAEA بيانات وصفية وفق Dublin Core وDataCite وISO 19139/19115 وDIF، وSchema.org عبر JSON-LD. هذه تمثيلات للبيانات الوصفية.",
+            "zh": "PANGAEA 提供 Dublin Core、DataCite、ISO 19139/19115 和 DIF 元数据，并通过 JSON-LD 内容协商提供 Schema.org。这些均为元数据表示。",
+            "ru": "PANGAEA предоставляет метаданные Dublin Core, DataCite, ISO 19139/19115 и DIF, а также Schema.org через JSON-LD. Это представления метаданных."
+          }
+        },
+        {
+          "label": "schema_org",
+          "source": "src-standards-1",
+          "description": {
+            "en": "PANGAEA serves dataset metadata as Dublin Core, DataCite, ISO 19139/19115 and DIF; Schema.org is available through JSON-LD content negotiation. These are metadata representations, not data-table schemas.",
+            "fr": "PANGAEA diffuse ses métadonnées en Dublin Core, DataCite, ISO 19139/19115 et DIF, ainsi qu’en Schema.org via JSON-LD. Ce sont des représentations de métadonnées.",
+            "es": "PANGAEA ofrece metadatos en Dublin Core, DataCite, ISO 19139/19115 y DIF, y Schema.org mediante JSON-LD. Son representaciones de metadatos.",
+            "ar": "يوفر PANGAEA بيانات وصفية وفق Dublin Core وDataCite وISO 19139/19115 وDIF، وSchema.org عبر JSON-LD. هذه تمثيلات للبيانات الوصفية.",
+            "zh": "PANGAEA 提供 Dublin Core、DataCite、ISO 19139/19115 和 DIF 元数据，并通过 JSON-LD 内容协商提供 Schema.org。这些均为元数据表示。",
+            "ru": "PANGAEA предоставляет метаданные Dublin Core, DataCite, ISO 19139/19115 и DIF, а также Schema.org через JSON-LD. Это представления метаданных."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://wiki.pangaea.de/wiki/Data_Access_and_Reuse",
+          "title": {
+            "en": "PANGAEA metadata access — technical documentation",
+            "fr": "PANGAEA metadata access — documentation technique",
+            "es": "PANGAEA metadata access — documentación técnica",
+            "ar": "PANGAEA metadata access — الوثائق التقنية",
+            "zh": "PANGAEA metadata access — 技术文档",
+            "ru": "PANGAEA metadata access — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://wiki.pangaea.de/wiki/Data_Access_and_Reuse"
+      ]
+    },
+    {
+      "id": "protomaps-basemap",
+      "title": "Protomaps Basemap",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "Protomaps documents PMTiles packaging and its basemap layers. Packaging and a product-specific layer schema do not establish a standard from the approved list.",
+        "fr": "Protomaps documente le conditionnement PMTiles et ses couches de fond de carte. Cela n’établit pas un standard de la liste approuvée.",
+        "es": "Protomaps documenta el empaquetado PMTiles y sus capas de mapa base. Esto no establece un estándar de la lista aprobada.",
+        "ar": "يوثق Protomaps حزم PMTiles وطبقات خريطة الأساس. لا تثبت الحزم ومخطط الطبقات الخاص بالمنتج معياراً من القائمة المعتمدة.",
+        "zh": "Protomaps 文档说明了 PMTiles 打包及底图图层。打包格式和产品专用图层模式不足以确定可选列表中的适用标准。",
+        "ru": "Protomaps описывает упаковку PMTiles и слои базовой карты. Упаковка и схема слоёв продукта не подтверждают стандарт из утверждённого списка."
+      },
+      "reviewedUrls": [
+        "https://docs.protomaps.com/basemaps/downloads"
+      ]
+    },
+    {
+      "id": "re3data",
+      "title": "re3data",
+      "standards": [
+        {
+          "label": "re3data",
+          "source": "src-standards-1",
+          "description": {
+            "en": "The re3data API documents repository descriptions using the re3data metadata schema, currently version 4.0. These describe repositories, not their deposited datasets.",
+            "fr": "L’API re3data décrit les dépôts avec son schéma de métadonnées, actuellement en version 4.0. Il décrit les dépôts, pas leurs jeux de données.",
+            "es": "La API re3data describe repositorios con su esquema de metadatos, actualmente versión 4.0. Describe repositorios, no sus conjuntos depositados.",
+            "ar": "توثق واجهة re3data أوصاف المستودعات بمخطط re3data للبيانات الوصفية، بالإصدار 4.0 حالياً. تصف المستودعات وليس مجموعات البيانات المودعة.",
+            "zh": "re3data API 使用 re3data 元数据模式描述仓储，目前为 4.0 版。描述对象是仓储，而非其中存放的数据集。",
+            "ru": "API re3data описывает репозитории по схеме метаданных re3data, сейчас версии 4.0. Это описания репозиториев, а не хранимых наборов."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.re3data.org/api/doc/",
+          "title": {
+            "en": "re3data API — technical documentation",
+            "fr": "re3data API — documentation technique",
+            "es": "re3data API — documentación técnica",
+            "ar": "re3data API — الوثائق التقنية",
+            "zh": "re3data API — 技术文档",
+            "ru": "re3data API — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.re3data.org/api/doc/"
+      ]
+    },
+    {
+      "id": "rdbes",
+      "title": "Regional DataBase and Estimation System",
+      "standards": [
+        {
+          "label": "rdbes",
+          "source": "src-standards-1",
+          "description": {
+            "en": "RDBES submissions follow the published RDBES exchange model for commercial fisheries sampling data; use the applicable release and sampling hierarchy.",
+            "fr": "Les soumissions RDBES suivent le modèle d’échange publié pour l’échantillonnage des pêches commerciales, selon la version et la hiérarchie pertinentes.",
+            "es": "Los envíos RDBES siguen el modelo de intercambio publicado para muestreos de pesca comercial, con la versión y jerarquía pertinentes.",
+            "ar": "تتبع إيداعات RDBES نموذج التبادل المنشور لبيانات أخذ عينات المصايد التجارية وفق الإصدار والتسلسل الهرمي المناسبين.",
+            "zh": "RDBES 提交遵循其公布的商业渔业采样数据交换模型，需选择适用版本和采样层级。",
+            "ru": "Подача в RDBES следует опубликованной модели обмена данными выборочных обследований коммерческого рыболовства с применимой версией и иерархией."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.ices.dk/data/data-portals/Pages/rdbes.aspx",
+          "title": {
+            "en": "ICES RDBES exchange documentation — technical documentation",
+            "fr": "ICES RDBES exchange documentation — documentation technique",
+            "es": "ICES RDBES exchange documentation — documentación técnica",
+            "ar": "ICES RDBES exchange documentation — الوثائق التقنية",
+            "zh": "ICES RDBES exchange documentation — 技术文档",
+            "ru": "ICES RDBES exchange documentation — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.ices.dk/data/data-portals/Pages/rdbes.aspx"
+      ]
+    },
+    {
+      "id": "sea-around-us",
+      "title": "Sea Around Us",
+      "standards": [
+        {
+          "label": "fao_fishing_areas",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Sea Around Us provides catch-data selection by FAO fishing area. This records the geographic classification of that browsing/download dimension.",
+            "fr": "Sea Around Us propose une sélection des captures par zone de pêche FAO. Cette attribution décrit la classification de cette dimension géographique.",
+            "es": "Sea Around Us ofrece selección de capturas por área pesquera FAO. Esta asignación describe la clasificación de esa dimensión geográfica.",
+            "ar": "يوفر Sea Around Us اختيار بيانات المصيد حسب منطقة الصيد FAO. يصف هذا التصنيف الجغرافي لذلك البعد في التصفح والتنزيل.",
+            "zh": "Sea Around Us 支持按 FAO 渔区选择捕捞数据。此项描述该浏览和下载维度的地理分类。",
+            "ru": "Sea Around Us предлагает выбор уловов по районам FAO. Это географическая классификация данного измерения просмотра и выгрузки."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://api.seaaroundus.org/simple-site.php",
+          "title": {
+            "en": "Sea Around Us catch-data selection — technical documentation",
+            "fr": "Sea Around Us catch-data selection — documentation technique",
+            "es": "Sea Around Us catch-data selection — documentación técnica",
+            "ar": "Sea Around Us catch-data selection — الوثائق التقنية",
+            "zh": "Sea Around Us catch-data selection — 技术文档",
+            "ru": "Sea Around Us catch-data selection — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://api.seaaroundus.org/simple-site.php"
+      ]
+    },
+    {
+      "id": "seadatanet",
+      "title": "SeaDataNet",
+      "standards": [
+        {
+          "label": "seadatanet",
+          "source": "src-standards-1",
+          "description": {
+            "en": "SeaDataNet documents standardized exchange profiles for ODV, MedAtlas and NetCDF. The NetCDF profile uses CF; these are exchange options, not a claim that every download uses each profile.",
+            "fr": "SeaDataNet documente des profils d’échange ODV, MedAtlas et NetCDF. Le profil NetCDF utilise CF ; ce sont des options d’échange, variables selon les téléchargements.",
+            "es": "SeaDataNet documenta perfiles de intercambio ODV, MedAtlas y NetCDF. El perfil NetCDF usa CF; son opciones de intercambio que varían según la descarga.",
+            "ar": "يوثق SeaDataNet ملفات تبادل معيارية لـODV وMedAtlas وNetCDF. يستخدم ملف NetCDF معيار CF؛ وهذه خيارات تبادل تختلف حسب التنزيل.",
+            "zh": "SeaDataNet 文档说明支持 ODV、MedAtlas 和 NetCDF 标准化交换规范，其中 NetCDF 规范采用 CF；具体使用哪种规范取决于下载内容。",
+            "ru": "SeaDataNet описывает профили обмена ODV, MedAtlas и NetCDF. Профиль NetCDF использует CF; это варианты обмена, зависящие от выгрузки."
+          }
+        },
+        {
+          "label": "cf",
+          "source": "src-standards-1",
+          "description": {
+            "en": "SeaDataNet documents standardized exchange profiles for ODV, MedAtlas and NetCDF. The NetCDF profile uses CF; these are exchange options, not a claim that every download uses each profile.",
+            "fr": "SeaDataNet documente des profils d’échange ODV, MedAtlas et NetCDF. Le profil NetCDF utilise CF ; ce sont des options d’échange, variables selon les téléchargements.",
+            "es": "SeaDataNet documenta perfiles de intercambio ODV, MedAtlas y NetCDF. El perfil NetCDF usa CF; son opciones de intercambio que varían según la descarga.",
+            "ar": "يوثق SeaDataNet ملفات تبادل معيارية لـODV وMedAtlas وNetCDF. يستخدم ملف NetCDF معيار CF؛ وهذه خيارات تبادل تختلف حسب التنزيل.",
+            "zh": "SeaDataNet 文档说明支持 ODV、MedAtlas 和 NetCDF 标准化交换规范，其中 NetCDF 规范采用 CF；具体使用哪种规范取决于下载内容。",
+            "ru": "SeaDataNet описывает профили обмена ODV, MedAtlas и NetCDF. Профиль NetCDF использует CF; это варианты обмена, зависящие от выгрузки."
+          }
+        },
+        {
+          "label": "seadatanet_cdi",
+          "source": "src-standards-2",
+          "description": {
+            "en": "CDI discovery records use the SeaDataNet CDI profile: ISO 19115 metadata content encoded with ISO 19139 XML. This describes catalogue records, not the delivered observations.",
+            "fr": "Les notices CDI utilisent le profil SeaDataNet CDI : contenu ISO 19115 encodé en XML ISO 19139. Cela décrit le catalogue, pas les observations livrées.",
+            "es": "Los registros CDI usan el perfil SeaDataNet CDI: contenido ISO 19115 codificado en XML ISO 19139. Esto describe el catálogo, no las observaciones entregadas.",
+            "ar": "تستخدم سجلات CDI ملف SeaDataNet CDI بمحتوى بيانات وصفية ISO 19115 مرمز في XML وفق ISO 19139. يخص ذلك الفهرس وليس الملاحظات المسلمة.",
+            "zh": "CDI 发现记录采用 SeaDataNet CDI 规范：以 ISO 19139 XML 编码 ISO 19115 元数据内容。此项描述目录记录，而非交付的观测值。",
+            "ru": "Записи CDI используют профиль SeaDataNet CDI: содержание ISO 19115 в XML-кодировке ISO 19139. Это описание каталога, а не передаваемых наблюдений."
+          }
+        },
+        {
+          "label": "iso_19115",
+          "source": "src-standards-2",
+          "description": {
+            "en": "CDI discovery records use the SeaDataNet CDI profile: ISO 19115 metadata content encoded with ISO 19139 XML. This describes catalogue records, not the delivered observations.",
+            "fr": "Les notices CDI utilisent le profil SeaDataNet CDI : contenu ISO 19115 encodé en XML ISO 19139. Cela décrit le catalogue, pas les observations livrées.",
+            "es": "Los registros CDI usan el perfil SeaDataNet CDI: contenido ISO 19115 codificado en XML ISO 19139. Esto describe el catálogo, no las observaciones entregadas.",
+            "ar": "تستخدم سجلات CDI ملف SeaDataNet CDI بمحتوى بيانات وصفية ISO 19115 مرمز في XML وفق ISO 19139. يخص ذلك الفهرس وليس الملاحظات المسلمة.",
+            "zh": "CDI 发现记录采用 SeaDataNet CDI 规范：以 ISO 19139 XML 编码 ISO 19115 元数据内容。此项描述目录记录，而非交付的观测值。",
+            "ru": "Записи CDI используют профиль SeaDataNet CDI: содержание ISO 19115 в XML-кодировке ISO 19139. Это описание каталога, а не передаваемых наблюдений."
+          }
+        },
+        {
+          "label": "iso_19139",
+          "source": "src-standards-2",
+          "description": {
+            "en": "CDI discovery records use the SeaDataNet CDI profile: ISO 19115 metadata content encoded with ISO 19139 XML. This describes catalogue records, not the delivered observations.",
+            "fr": "Les notices CDI utilisent le profil SeaDataNet CDI : contenu ISO 19115 encodé en XML ISO 19139. Cela décrit le catalogue, pas les observations livrées.",
+            "es": "Los registros CDI usan el perfil SeaDataNet CDI: contenido ISO 19115 codificado en XML ISO 19139. Esto describe el catálogo, no las observaciones entregadas.",
+            "ar": "تستخدم سجلات CDI ملف SeaDataNet CDI بمحتوى بيانات وصفية ISO 19115 مرمز في XML وفق ISO 19139. يخص ذلك الفهرس وليس الملاحظات المسلمة.",
+            "zh": "CDI 发现记录采用 SeaDataNet CDI 规范：以 ISO 19139 XML 编码 ISO 19115 元数据内容。此项描述目录记录，而非交付的观测值。",
+            "ru": "Записи CDI используют профиль SeaDataNet CDI: содержание ISO 19115 в XML-кодировке ISO 19139. Это описание каталога, а не передаваемых наблюдений."
+          }
+        },
+        {
+          "label": "nerc_vocabularies",
+          "source": "src-standards-3",
+          "description": {
+            "en": "SeaDataNet uses NERC/BODC vocabulary collections in its data and CDI workflows, including P01 parameters, P02 parameter groups and P06 units where applicable.",
+            "fr": "SeaDataNet utilise les vocabulaires NERC/BODC dans ses flux de données et CDI, notamment P01 pour les paramètres, P02 pour leurs groupes et P06 pour les unités.",
+            "es": "SeaDataNet usa vocabularios NERC/BODC en sus flujos de datos y CDI, incluidos P01 para parámetros, P02 para grupos y P06 para unidades cuando corresponda.",
+            "ar": "يستخدم SeaDataNet مجموعات مفردات NERC/BODC في مسارات البيانات وCDI، ومنها P01 للمعلمات وP02 لمجموعاتها وP06 للوحدات عند الاقتضاء.",
+            "zh": "SeaDataNet 在数据及 CDI 工作流中使用 NERC/BODC 词汇集，包括适用时的 P01 参数、P02 参数组和 P06 单位。",
+            "ru": "SeaDataNet использует словари NERC/BODC в процессах данных и CDI, включая P01 для параметров, P02 для групп параметров и P06 для единиц, где применимо."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.seadatanet.org/content/download/4735/file/2020_02_SDC_Hebden_EUInterrregCOMPASSWorkShop.pdf",
+          "title": {
+            "en": "SeaDataNet data exchange overview — technical documentation",
+            "fr": "SeaDataNet data exchange overview — documentation technique",
+            "es": "SeaDataNet data exchange overview — documentación técnica",
+            "ar": "SeaDataNet data exchange overview — الوثائق التقنية",
+            "zh": "SeaDataNet data exchange overview — 技术文档",
+            "ru": "SeaDataNet data exchange overview — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-standards-2": {
+          "id": "src-standards-2",
+          "url": "https://www.seadatanet.org/content/download/3258/file/SDC_WP3_Training1_ImprovingWorkflow_MFichaut.pdf",
+          "title": {
+            "en": "SeaDataNet CDI workflow — technical documentation",
+            "fr": "SeaDataNet CDI workflow — documentation technique",
+            "es": "SeaDataNet CDI workflow — documentación técnica",
+            "ar": "SeaDataNet CDI workflow — الوثائق التقنية",
+            "zh": "SeaDataNet CDI workflow — 技术文档",
+            "ru": "SeaDataNet CDI workflow — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-standards-3": {
+          "id": "src-standards-3",
+          "url": "https://www.seadatanet.org/content/download/2022/file/SDC_RKL_HCMR_Vocabularies_Oct17.pdf",
+          "title": {
+            "en": "SeaDataNet common vocabularies — technical documentation",
+            "fr": "SeaDataNet common vocabularies — documentation technique",
+            "es": "SeaDataNet common vocabularies — documentación técnica",
+            "ar": "SeaDataNet common vocabularies — الوثائق التقنية",
+            "zh": "SeaDataNet common vocabularies — 技术文档",
+            "ru": "SeaDataNet common vocabularies — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.seadatanet.org/content/download/4735/file/2020_02_SDC_Hebden_EUInterrregCOMPASSWorkShop.pdf",
+        "https://www.seadatanet.org/content/download/3258/file/SDC_WP3_Training1_ImprovingWorkflow_MFichaut.pdf",
+        "https://www.seadatanet.org/content/download/2022/file/SDC_RKL_HCMR_Vocabularies_Oct17.pdf"
+      ]
+    },
+    {
+      "id": "seadatanet-cdi",
+      "title": "SeaDataNet Common Data Index",
+      "standards": [
+        {
+          "label": "seadatanet_cdi",
+          "source": "src-standards-1",
+          "description": {
+            "en": "CDI discovery records use the SeaDataNet CDI profile: ISO 19115 metadata content encoded with ISO 19139 XML. This describes catalogue records, not the delivered observations.",
+            "fr": "Les notices CDI utilisent le profil SeaDataNet CDI : contenu ISO 19115 encodé en XML ISO 19139. Cela décrit le catalogue, pas les observations livrées.",
+            "es": "Los registros CDI usan el perfil SeaDataNet CDI: contenido ISO 19115 codificado en XML ISO 19139. Esto describe el catálogo, no las observaciones entregadas.",
+            "ar": "تستخدم سجلات CDI ملف SeaDataNet CDI بمحتوى بيانات وصفية ISO 19115 مرمز في XML وفق ISO 19139. يخص ذلك الفهرس وليس الملاحظات المسلمة.",
+            "zh": "CDI 发现记录采用 SeaDataNet CDI 规范：以 ISO 19139 XML 编码 ISO 19115 元数据内容。此项描述目录记录，而非交付的观测值。",
+            "ru": "Записи CDI используют профиль SeaDataNet CDI: содержание ISO 19115 в XML-кодировке ISO 19139. Это описание каталога, а не передаваемых наблюдений."
+          }
+        },
+        {
+          "label": "iso_19115",
+          "source": "src-standards-1",
+          "description": {
+            "en": "CDI discovery records use the SeaDataNet CDI profile: ISO 19115 metadata content encoded with ISO 19139 XML. This describes catalogue records, not the delivered observations.",
+            "fr": "Les notices CDI utilisent le profil SeaDataNet CDI : contenu ISO 19115 encodé en XML ISO 19139. Cela décrit le catalogue, pas les observations livrées.",
+            "es": "Los registros CDI usan el perfil SeaDataNet CDI: contenido ISO 19115 codificado en XML ISO 19139. Esto describe el catálogo, no las observaciones entregadas.",
+            "ar": "تستخدم سجلات CDI ملف SeaDataNet CDI بمحتوى بيانات وصفية ISO 19115 مرمز في XML وفق ISO 19139. يخص ذلك الفهرس وليس الملاحظات المسلمة.",
+            "zh": "CDI 发现记录采用 SeaDataNet CDI 规范：以 ISO 19139 XML 编码 ISO 19115 元数据内容。此项描述目录记录，而非交付的观测值。",
+            "ru": "Записи CDI используют профиль SeaDataNet CDI: содержание ISO 19115 в XML-кодировке ISO 19139. Это описание каталога, а не передаваемых наблюдений."
+          }
+        },
+        {
+          "label": "iso_19139",
+          "source": "src-standards-1",
+          "description": {
+            "en": "CDI discovery records use the SeaDataNet CDI profile: ISO 19115 metadata content encoded with ISO 19139 XML. This describes catalogue records, not the delivered observations.",
+            "fr": "Les notices CDI utilisent le profil SeaDataNet CDI : contenu ISO 19115 encodé en XML ISO 19139. Cela décrit le catalogue, pas les observations livrées.",
+            "es": "Los registros CDI usan el perfil SeaDataNet CDI: contenido ISO 19115 codificado en XML ISO 19139. Esto describe el catálogo, no las observaciones entregadas.",
+            "ar": "تستخدم سجلات CDI ملف SeaDataNet CDI بمحتوى بيانات وصفية ISO 19115 مرمز في XML وفق ISO 19139. يخص ذلك الفهرس وليس الملاحظات المسلمة.",
+            "zh": "CDI 发现记录采用 SeaDataNet CDI 规范：以 ISO 19139 XML 编码 ISO 19115 元数据内容。此项描述目录记录，而非交付的观测值。",
+            "ru": "Записи CDI используют профиль SeaDataNet CDI: содержание ISO 19115 в XML-кодировке ISO 19139. Это описание каталога, а не передаваемых наблюдений."
+          }
+        },
+        {
+          "label": "nerc_vocabularies",
+          "source": "src-standards-2",
+          "description": {
+            "en": "SeaDataNet uses NERC/BODC vocabulary collections in its data and CDI workflows, including P01 parameters, P02 parameter groups and P06 units where applicable.",
+            "fr": "SeaDataNet utilise les vocabulaires NERC/BODC dans ses flux de données et CDI, notamment P01 pour les paramètres, P02 pour leurs groupes et P06 pour les unités.",
+            "es": "SeaDataNet usa vocabularios NERC/BODC en sus flujos de datos y CDI, incluidos P01 para parámetros, P02 para grupos y P06 para unidades cuando corresponda.",
+            "ar": "يستخدم SeaDataNet مجموعات مفردات NERC/BODC في مسارات البيانات وCDI، ومنها P01 للمعلمات وP02 لمجموعاتها وP06 للوحدات عند الاقتضاء.",
+            "zh": "SeaDataNet 在数据及 CDI 工作流中使用 NERC/BODC 词汇集，包括适用时的 P01 参数、P02 参数组和 P06 单位。",
+            "ru": "SeaDataNet использует словари NERC/BODC в процессах данных и CDI, включая P01 для параметров, P02 для групп параметров и P06 для единиц, где применимо."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.seadatanet.org/content/download/3258/file/SDC_WP3_Training1_ImprovingWorkflow_MFichaut.pdf",
+          "title": {
+            "en": "SeaDataNet CDI workflow — technical documentation",
+            "fr": "SeaDataNet CDI workflow — documentation technique",
+            "es": "SeaDataNet CDI workflow — documentación técnica",
+            "ar": "SeaDataNet CDI workflow — الوثائق التقنية",
+            "zh": "SeaDataNet CDI workflow — 技术文档",
+            "ru": "SeaDataNet CDI workflow — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-standards-2": {
+          "id": "src-standards-2",
+          "url": "https://www.seadatanet.org/content/download/2022/file/SDC_RKL_HCMR_Vocabularies_Oct17.pdf",
+          "title": {
+            "en": "SeaDataNet common vocabularies — technical documentation",
+            "fr": "SeaDataNet common vocabularies — documentation technique",
+            "es": "SeaDataNet common vocabularies — documentación técnica",
+            "ar": "SeaDataNet common vocabularies — الوثائق التقنية",
+            "zh": "SeaDataNet common vocabularies — 技术文档",
+            "ru": "SeaDataNet common vocabularies — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.seadatanet.org/content/download/3258/file/SDC_WP3_Training1_ImprovingWorkflow_MFichaut.pdf",
+        "https://www.seadatanet.org/content/download/2022/file/SDC_RKL_HCMR_Vocabularies_Oct17.pdf"
+      ]
+    },
+    {
+      "id": "sealifebase",
+      "title": "SeaLifeBase",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "Internal reference numbers and reuse licences are not data standards. No approved standard was verified for the documented table snapshots; their relational structure remains described in the profile.",
+        "fr": "Les numéros de référence internes et licences ne sont pas des standards de données. Aucun standard approuvé n’a été vérifié pour les instantanés de tables documentés.",
+        "es": "Los números de referencia internos y licencias no son estándares de datos. No se verificó un estándar aprobado para las instantáneas de tablas documentadas.",
+        "ar": "أرقام المراجع الداخلية وتراخيص الاستخدام ليست معايير بيانات. لم يُتحقق من معيار معتمد للقطات الجداول الموثقة؛ وتظل بنيتها العلائقية موصوفة في الملف التعريفي.",
+        "zh": "内部参考编号及使用许可并非数据标准。尚未核实所述表格快照采用哪项可选标准；其关系结构仍在简介中说明。",
+        "ru": "Внутренние номера источников и лицензии не являются стандартами данных. Для документированных снимков таблиц утверждённый стандарт не подтверждён; связи таблиц описаны в профиле."
+      },
+      "reviewedUrls": [
+        "https://docs.ropensci.org/rfishbase/"
+      ],
+      "movedProse": {
+        "en": "Reference and bibliography tables provide internal reference-number style provenance for source literature and record support.",
+        "fr": "Les tables de références et de bibliographie relient les notices à la littérature source au moyen de numéros de référence internes.",
+        "es": "Las tablas de referencias y bibliografía vinculan los registros con la literatura fuente mediante números de referencia internos.",
+        "ar": "توفر جداول المراجع والببليوغرافيا توثيقاً للمصادر عبر أرقام مراجع داخلية تدعم السجلات.",
+        "zh": "参考及书目表通过内部参考编号关联来源文献，为记录提供依据。",
+        "ru": "Таблицы источников и библиографии связывают записи с исходной литературой посредством внутренних номеров ссылок."
+      },
+      "proseMoves": [
+        {
+          "descriptorId": "sealifebase-data-standard-refno",
+          "source": "src-sealifebase-sourcecoop-s3-v2504",
+          "destination": "localization.description with details.profile.sourceRefs",
+          "description": {
+            "ar": "توفر جداول المراجع والببليوغرافيا توثيقاً للمصادر عبر أرقام مراجع داخلية تدعم السجلات.",
+            "en": "Reference and bibliography tables provide internal reference-number style provenance for source literature and record support.",
+            "es": "Las tablas de referencias y bibliografía vinculan los registros con la literatura fuente mediante números de referencia internos.",
+            "fr": "Les tables de références et de bibliographie relient les notices à la littérature source au moyen de numéros de référence internes.",
+            "ru": "Таблицы источников и библиографии связывают записи с исходной литературой посредством внутренних номеров ссылок.",
+            "zh": "参考及书目表通过内部参考编号关联来源文献，为记录提供依据。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "socat",
+      "title": "Surface Ocean CO2 Atlas",
+      "standards": [],
+      "sources": {},
+      "researchGap": {
+        "en": "The reviewed SOCAT pages describe project QC and a metadata editor but do not verify an approved schema for a specific current download. Check the chosen product’s metadata and quality conventions.",
+        "fr": "Les pages SOCAT examinées décrivent le contrôle qualité et un éditeur de métadonnées, sans confirmer de schéma approuvé pour un téléchargement actuel précis.",
+        "es": "Las páginas SOCAT revisadas describen control de calidad y un editor de metadatos, sin confirmar un esquema aprobado para una descarga actual concreta.",
+        "ar": "تصف صفحات SOCAT المراجعة مراقبة جودة المشروع ومحرر بيانات وصفية دون إثبات مخطط معتمد لتنزيل حالي محدد. يجب فحص المنتج المختار.",
+        "zh": "所审阅的 SOCAT 页面介绍项目质量控制及元数据编辑器，但未核实具体当前下载采用哪项可选模式。需检查所选产品的元数据及质量约定。",
+        "ru": "Изученные страницы SOCAT описывают контроль качества и редактор метаданных, но не подтверждают утверждённую схему конкретной текущей выгрузки. Следует проверить выбранный продукт."
+      },
+      "reviewedUrls": [
+        "https://socat.info/",
+        "https://socat.info/index.php/metadata-editor/"
+      ]
+    },
+    {
+      "id": "ioos",
+      "title": "U.S. Integrated Ocean Observing System",
+      "standards": [
+        {
+          "label": "cf",
+          "source": "src-standards-1",
+          "description": {
+            "en": "IOOS publishing requirements specify Metadata Profile 1.2 for mooring/shore observations, with CF variables and ACDD discovery attributes. This records a provider requirement, not verified compliance of every dataset.",
+            "fr": "IOOS prescrit le profil 1.2 pour les observations de mouillages et stations côtières, avec variables CF et attributs ACDD. Il s’agit d’une exigence, sans certification de chaque jeu.",
+            "es": "IOOS exige el perfil 1.2 para observaciones de fondeos y estaciones costeras, con variables CF y atributos ACDD. Es un requisito, no una certificación de cada conjunto.",
+            "ar": "تحدد متطلبات نشر IOOS الملف 1.2 لرصد المراسي والمحطات الساحلية مع متغيرات CF وسمات اكتشاف ACDD. هذا شرط للمزودين وليس إثبات مطابقة كل مجموعة.",
+            "zh": "IOOS 发布要求规定锚系及岸站观测采用元数据规范 1.2，包含 CF 变量与 ACDD 发现属性。此项记录供应方要求，未逐一验证所有数据集。",
+            "ru": "Требования IOOS задают профиль 1.2 для якорных и береговых наблюдений с переменными CF и атрибутами ACDD. Это требование, а не проверка каждого набора."
+          }
+        },
+        {
+          "label": "acdd",
+          "source": "src-standards-1",
+          "description": {
+            "en": "IOOS publishing requirements specify Metadata Profile 1.2 for mooring/shore observations, with CF variables and ACDD discovery attributes. This records a provider requirement, not verified compliance of every dataset.",
+            "fr": "IOOS prescrit le profil 1.2 pour les observations de mouillages et stations côtières, avec variables CF et attributs ACDD. Il s’agit d’une exigence, sans certification de chaque jeu.",
+            "es": "IOOS exige el perfil 1.2 para observaciones de fondeos y estaciones costeras, con variables CF y atributos ACDD. Es un requisito, no una certificación de cada conjunto.",
+            "ar": "تحدد متطلبات نشر IOOS الملف 1.2 لرصد المراسي والمحطات الساحلية مع متغيرات CF وسمات اكتشاف ACDD. هذا شرط للمزودين وليس إثبات مطابقة كل مجموعة.",
+            "zh": "IOOS 发布要求规定锚系及岸站观测采用元数据规范 1.2，包含 CF 变量与 ACDD 发现属性。此项记录供应方要求，未逐一验证所有数据集。",
+            "ru": "Требования IOOS задают профиль 1.2 для якорных и береговых наблюдений с переменными CF и атрибутами ACDD. Это требование, а не проверка каждого набора."
+          }
+        },
+        {
+          "label": "ioos_metadata",
+          "source": "src-standards-1",
+          "description": {
+            "en": "IOOS publishing requirements specify Metadata Profile 1.2 for mooring/shore observations, with CF variables and ACDD discovery attributes. This records a provider requirement, not verified compliance of every dataset.",
+            "fr": "IOOS prescrit le profil 1.2 pour les observations de mouillages et stations côtières, avec variables CF et attributs ACDD. Il s’agit d’une exigence, sans certification de chaque jeu.",
+            "es": "IOOS exige el perfil 1.2 para observaciones de fondeos y estaciones costeras, con variables CF y atributos ACDD. Es un requisito, no una certificación de cada conjunto.",
+            "ar": "تحدد متطلبات نشر IOOS الملف 1.2 لرصد المراسي والمحطات الساحلية مع متغيرات CF وسمات اكتشاف ACDD. هذا شرط للمزودين وليس إثبات مطابقة كل مجموعة.",
+            "zh": "IOOS 发布要求规定锚系及岸站观测采用元数据规范 1.2，包含 CF 变量与 ACDD 发现属性。此项记录供应方要求，未逐一验证所有数据集。",
+            "ru": "Требования IOOS задают профиль 1.2 для якорных и береговых наблюдений с переменными CF и атрибутами ACDD. Это требование, а не проверка каждого набора."
+          }
+        },
+        {
+          "label": "iso_19115",
+          "source": "src-standards-1",
+          "description": {
+            "en": "IOOS requires dataset descriptions in ISO 19115-2 XML metadata for catalogue harvesting. This applies to discovery metadata, not the observation values.",
+            "fr": "IOOS exige des descriptions ISO 19115-2 XML pour le moissonnage du catalogue. Cette exigence concerne les métadonnées de découverte.",
+            "es": "IOOS exige descripciones ISO 19115-2 XML para la recolección del catálogo. El requisito abarca metadatos de descubrimiento.",
+            "ar": "يشترط IOOS أوصاف مجموعات البيانات في بيانات وصفية XML وفق ISO 19115-2 لحصاد الفهرس. يتعلق ذلك بوصف الاكتشاف.",
+            "zh": "IOOS 要求使用 ISO 19115-2 XML 元数据描述数据集，以供目录收割。此项针对发现元数据。",
+            "ru": "IOOS требует описания наборов в XML-метаданных ISO 19115-2 для сбора каталогом. Это относится к метаданным обнаружения."
+          }
+        },
+        {
+          "label": "qartod",
+          "source": "src-standards-3",
+          "description": {
+            "en": "IOOS publishes QARTOD manuals for real-time observation quality tests and flags. This assignment describes its QC guidance; implementation must be checked for the selected provider and variable.",
+            "fr": "IOOS publie les manuels QARTOD de tests et indicateurs qualité en temps réel. Cette attribution décrit ses recommandations ; vérifier l’application par fournisseur et variable.",
+            "es": "IOOS publica manuales QARTOD de pruebas e indicadores de calidad en tiempo real. La asignación describe sus directrices; debe verificarse la aplicación por proveedor y variable.",
+            "ar": "ينشر IOOS أدلة QARTOD لاختبارات جودة الرصد الآني وأعلامها. يصف هذا إرشاداته؛ ويجب التحقق من التطبيق لدى المزود وللمتغير المختار.",
+            "zh": "IOOS 发布 QARTOD 实时观测质量测试与标志指南。此项描述其质量控制指导；实际实施需按供应方和变量检查。",
+            "ru": "IOOS публикует руководства QARTOD по проверкам и флагам качества оперативных наблюдений. Это рекомендации; реализацию проверяют для конкретного поставщика и переменной."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://ioos.noaa.gov/data/data-standards/data-publishing/",
+          "title": {
+            "en": "IOOS data publishing requirements — technical documentation",
+            "fr": "IOOS data publishing requirements — documentation technique",
+            "es": "IOOS data publishing requirements — documentación técnica",
+            "ar": "IOOS data publishing requirements — الوثائق التقنية",
+            "zh": "IOOS data publishing requirements — 技术文档",
+            "ru": "IOOS data publishing requirements — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-standards-3": {
+          "id": "src-standards-3",
+          "url": "https://ioos.noaa.gov/project/qartod/",
+          "title": {
+            "en": "IOOS QARTOD — technical documentation",
+            "fr": "IOOS QARTOD — documentation technique",
+            "es": "IOOS QARTOD — documentación técnica",
+            "ar": "IOOS QARTOD — الوثائق التقنية",
+            "zh": "IOOS QARTOD — 技术文档",
+            "ru": "IOOS QARTOD — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://ioos.noaa.gov/data/data-standards/data-publishing/",
+        "https://ioos.noaa.gov/project/qartod/"
+      ]
+    },
+    {
+      "id": "worms",
+      "title": "World Register of Marine Species",
+      "standards": [
+        {
+          "label": "darwin_core",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Approved WoRMS taxonomic bulk downloads are provided as Darwin Core CSV. This applies to the requested taxonomic export; it does not imply the web-service responses share that schema.",
+            "fr": "Les téléchargements taxonomiques WoRMS approuvés sont fournis en CSV Darwin Core. Cela concerne l’export demandé, pas nécessairement les services web.",
+            "es": "Las descargas taxonómicas masivas aprobadas de WoRMS se ofrecen en CSV Darwin Core. Abarca la exportación solicitada, no necesariamente los servicios web.",
+            "ar": "تُقدم تنزيلات WoRMS التصنيفية الجماعية المعتمدة بصيغة CSV وفق Darwin Core. يخص ذلك التصدير المطلوب ولا يشمل بالضرورة استجابات خدمات الويب.",
+            "zh": "经批准的 WoRMS 分类批量下载以 Darwin Core CSV 提供。此项仅适用于该分类导出，不代表网络服务响应采用相同模式。",
+            "ru": "Одобренные массовые таксономические выгрузки WoRMS предоставляются в CSV Darwin Core. Это относится к запрошенному экспорту, не обязательно к веб-сервисам."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://www.marinespecies.org/usersrequest.php",
+          "title": {
+            "en": "WoRMS taxonomic downloads — technical documentation",
+            "fr": "WoRMS taxonomic downloads — documentation technique",
+            "es": "WoRMS taxonomic downloads — documentación técnica",
+            "ar": "WoRMS taxonomic downloads — الوثائق التقنية",
+            "zh": "WoRMS taxonomic downloads — 技术文档",
+            "ru": "WoRMS taxonomic downloads — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://www.marinespecies.org/usersrequest.php"
+      ]
+    },
+    {
+      "id": "zenodo",
+      "title": "Zenodo",
+      "standards": [
+        {
+          "label": "dublin_core",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Zenodo exposes repository metadata in Dublin Core, DataCite, DCAT and Schema.org JSON-LD. These describe deposited resources without imposing those schemas on uploaded files.",
+            "fr": "Zenodo expose les métadonnées en Dublin Core, DataCite, DCAT et Schema.org JSON-LD. Ces schémas décrivent les ressources sans s’imposer aux fichiers déposés.",
+            "es": "Zenodo expone metadatos en Dublin Core, DataCite, DCAT y Schema.org JSON-LD. Describen los recursos sin imponer esos esquemas a los archivos depositados.",
+            "ar": "يعرض Zenodo البيانات الوصفية وفق Dublin Core وDataCite وDCAT وSchema.org JSON-LD. تصف هذه المخططات الموارد ولا تفرض بنيتها على الملفات المودعة.",
+            "zh": "Zenodo 以 Dublin Core、DataCite、DCAT 和 Schema.org JSON-LD 提供仓储元数据。这些模式描述资源，不强制上传文件采用同一结构。",
+            "ru": "Zenodo предоставляет метаданные Dublin Core, DataCite, DCAT и Schema.org JSON-LD. Они описывают ресурсы, не навязывая эти схемы загружаемым файлам."
+          }
+        },
+        {
+          "label": "datacite",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Zenodo exposes repository metadata in Dublin Core, DataCite, DCAT and Schema.org JSON-LD. These describe deposited resources without imposing those schemas on uploaded files.",
+            "fr": "Zenodo expose les métadonnées en Dublin Core, DataCite, DCAT et Schema.org JSON-LD. Ces schémas décrivent les ressources sans s’imposer aux fichiers déposés.",
+            "es": "Zenodo expone metadatos en Dublin Core, DataCite, DCAT y Schema.org JSON-LD. Describen los recursos sin imponer esos esquemas a los archivos depositados.",
+            "ar": "يعرض Zenodo البيانات الوصفية وفق Dublin Core وDataCite وDCAT وSchema.org JSON-LD. تصف هذه المخططات الموارد ولا تفرض بنيتها على الملفات المودعة.",
+            "zh": "Zenodo 以 Dublin Core、DataCite、DCAT 和 Schema.org JSON-LD 提供仓储元数据。这些模式描述资源，不强制上传文件采用同一结构。",
+            "ru": "Zenodo предоставляет метаданные Dublin Core, DataCite, DCAT и Schema.org JSON-LD. Они описывают ресурсы, не навязывая эти схемы загружаемым файлам."
+          }
+        },
+        {
+          "label": "dcat",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Zenodo exposes repository metadata in Dublin Core, DataCite, DCAT and Schema.org JSON-LD. These describe deposited resources without imposing those schemas on uploaded files.",
+            "fr": "Zenodo expose les métadonnées en Dublin Core, DataCite, DCAT et Schema.org JSON-LD. Ces schémas décrivent les ressources sans s’imposer aux fichiers déposés.",
+            "es": "Zenodo expone metadatos en Dublin Core, DataCite, DCAT y Schema.org JSON-LD. Describen los recursos sin imponer esos esquemas a los archivos depositados.",
+            "ar": "يعرض Zenodo البيانات الوصفية وفق Dublin Core وDataCite وDCAT وSchema.org JSON-LD. تصف هذه المخططات الموارد ولا تفرض بنيتها على الملفات المودعة.",
+            "zh": "Zenodo 以 Dublin Core、DataCite、DCAT 和 Schema.org JSON-LD 提供仓储元数据。这些模式描述资源，不强制上传文件采用同一结构。",
+            "ru": "Zenodo предоставляет метаданные Dublin Core, DataCite, DCAT и Schema.org JSON-LD. Они описывают ресурсы, не навязывая эти схемы загружаемым файлам."
+          }
+        },
+        {
+          "label": "schema_org",
+          "source": "src-standards-1",
+          "description": {
+            "en": "Zenodo exposes repository metadata in Dublin Core, DataCite, DCAT and Schema.org JSON-LD. These describe deposited resources without imposing those schemas on uploaded files.",
+            "fr": "Zenodo expose les métadonnées en Dublin Core, DataCite, DCAT et Schema.org JSON-LD. Ces schémas décrivent les ressources sans s’imposer aux fichiers déposés.",
+            "es": "Zenodo expone metadatos en Dublin Core, DataCite, DCAT y Schema.org JSON-LD. Describen los recursos sin imponer esos esquemas a los archivos depositados.",
+            "ar": "يعرض Zenodo البيانات الوصفية وفق Dublin Core وDataCite وDCAT وSchema.org JSON-LD. تصف هذه المخططات الموارد ولا تفرض بنيتها على الملفات المودعة.",
+            "zh": "Zenodo 以 Dublin Core、DataCite、DCAT 和 Schema.org JSON-LD 提供仓储元数据。这些模式描述资源，不强制上传文件采用同一结构。",
+            "ru": "Zenodo предоставляет метаданные Dublin Core, DataCite, DCAT и Schema.org JSON-LD. Они описывают ресурсы, не навязывая эти схемы загружаемым файлам."
+          }
+        },
+        {
+          "label": "dcat_ap",
+          "source": "src-standards-2",
+          "description": {
+            "en": "Zenodo documents its DCAT metadata export as a DataCite-to-DCAT-AP transformation. This assignment covers that export, not every metadata interface.",
+            "fr": "Zenodo décrit son export DCAT comme une transformation DataCite vers DCAT-AP. Cette attribution concerne cet export.",
+            "es": "Zenodo documenta su exportación DCAT como una transformación de DataCite a DCAT-AP. Esta asignación abarca esa exportación.",
+            "ar": "يوثق Zenodo تصدير بيانات DCAT الوصفية باعتباره تحويلاً من DataCite إلى DCAT-AP. يخص هذا الوصف ذلك التصدير.",
+            "zh": "Zenodo 文档将其 DCAT 元数据导出描述为 DataCite 到 DCAT-AP 的转换。此项仅涉及该导出。",
+            "ru": "Zenodo описывает экспорт DCAT как преобразование DataCite в DCAT-AP. Это относится к данному экспорту."
+          }
+        }
+      ],
+      "sources": {
+        "src-standards-1": {
+          "id": "src-standards-1",
+          "url": "https://about.zenodo.org/principles/",
+          "title": {
+            "en": "Zenodo metadata principles — technical documentation",
+            "fr": "Zenodo metadata principles — documentation technique",
+            "es": "Zenodo metadata principles — documentación técnica",
+            "ar": "Zenodo metadata principles — الوثائق التقنية",
+            "zh": "Zenodo metadata principles — 技术文档",
+            "ru": "Zenodo metadata principles — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-standards-2": {
+          "id": "src-standards-2",
+          "url": "https://developers.zenodo.org/",
+          "title": {
+            "en": "Zenodo export documentation — technical documentation",
+            "fr": "Zenodo export documentation — documentation technique",
+            "es": "Zenodo export documentation — documentación técnica",
+            "ar": "Zenodo export documentation — الوثائق التقنية",
+            "zh": "Zenodo export documentation — 技术文档",
+            "ru": "Zenodo export documentation — техническая документация"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "reviewedUrls": [
+        "https://about.zenodo.org/principles/",
+        "https://developers.zenodo.org/"
+      ]
+    }
+  ]
+}

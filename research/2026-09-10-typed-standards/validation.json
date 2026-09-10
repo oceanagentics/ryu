@@ -1,0 +1,561 @@
+{
+  "checkedAt": "2026-09-10T16:37:31.932304+00:00",
+  "status": "prepared_pending_deployment",
+  "appliedRecords": 0,
+  "localTypedValidation": {
+    "passed": 60,
+    "failed": 0
+  },
+  "liveApiValidationOnly": {
+    "passed": 60,
+    "failed": 0
+  },
+  "preservationCheck": "Only standard descriptors, standards research gaps, and FishBase/SeaLifeBase cited prose moves differ. All other content, sources, properties and localized details preserved. Patches omit edges, routes, depth and review fields.",
+  "implementationChecks": {
+    "testsPassed": 80,
+    "productionBuild": "passed"
+  },
+  "deploymentBlocker": "The selected local gcloud account requires interactive reauthentication; both Cloud Build submissions failed before builds started.",
+  "records": [
+    {
+      "id": "algaebase",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "aquamaps",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "argo-gdac",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "argovis",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "bold",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "platform-bbnj-chm",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "bco-dmo",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "bio-oracle",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "bismal",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "cioos",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "cmems-datastore",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "copernicus-marine",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "datras",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "ddbj",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "dryad",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "ecotrust-oregon-fisheries-uses-values",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "emodnet-biology",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "euro-argo",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "emodnet",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "ena",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "eurobis",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "fao-fishstat",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "fishbase",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "gebco-web-services",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "genbank",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "geome",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "gbif",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "ggbn",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "glodap",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "go-ship",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "ices-data",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "intercatch",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "insdc",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "marine-regions",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "mgnify",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "molluscabase",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "noaa-cetacean-bia",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "noaa-esi-wa-or-marine-mammals",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "noaa-ncei-marine",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "platform-obis",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "odis",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "oceaninfohub",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "ooi-data",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "oceanops",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "oceansites",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "odfw-commercial-landings",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "openstreetmap-standard-raster-tiles",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "oregon-dlcd-coastal-gis",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "pangaea",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "protomaps-basemap",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "re3data",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "rdbes",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "sea-around-us",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "seadatanet",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "seadatanet-cdi",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "sealifebase",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "socat",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "ioos",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "worms",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    },
+    {
+      "id": "zenodo",
+      "valid": true,
+      "recordUpdatedAt": "2026-09-09T19:42:13.505Z",
+      "affectedSections": [
+        "record",
+        "localizations"
+      ]
+    }
+  ]
+}
