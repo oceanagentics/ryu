@@ -1,5 +1,7 @@
 import type { SearchMatchReason } from "./searchPresentation";
 import type {
+  AccessMethod,
+  SystemAccessType,
   DataFormat,
   DataStandard,
   DataType,
@@ -70,8 +72,8 @@ export interface RecordSearchQuery {
   reviewLocale: ReviewLocaleMode;
   routeStatus: string[];
   routeCapability: string[];
-  accessType: string[];
-  accessMethod: string[];
+  accessType: SystemAccessType[];
+  accessMethod: AccessMethod[];
   include: RecordInclude[];
   limit: number;
   cursor?: RecordSearchCursor;

@@ -46,10 +46,17 @@ test("approved vocabulary lookups reject values from another group", () => {
   }, /Unknown disciplines value: new_discipline/);
 });
 
-test("open record fields retain their known translations and unknown-value fallback", () => {
-  assert.equal(vocabularyLabel("fr", "accessMethods", "web_ui"), "Interface web");
-  for (const group of ["accessMethods"] as const) {
-    assert.equal(vocabularyLabel("fr", group, "custom_value"), "Custom Value");
-  }
-  assert.equal(t("fr", "directory.systemCount", { filtered: 2, total: 10 }), "2 sur 10 systèmes");
+test("access catalogs share translations for both directions and reject legacy values", () => {
+  assert.equal(vocabularyLabel("fr", "accessMethods", "browse"), "Explorer");
+  assert.equal(vocabularyLabel("fr", "accessMethods", "upload"), "Téléverser");
+  assert.equal(vocabularyLabel("es", "accessTypes", "write"), "Escritura");
+  assert.throws(() => {
+    // @ts-expect-error Retired access types must not be humanized.
+    vocabularyLabel("en", "accessTypes", "partner_sync");
+  }, /Unknown accessTypes/);
+  assert.equal(vocabularyLabel("es", "accessRequirements", "account"), "Cuenta obligatoria");
+  assert.throws(() => {
+    // @ts-expect-error A legacy mechanism is not an approved read method.
+    vocabularyLabel("en", "accessMethods", "web_ui");
+  }, /Unknown accessMethods/);
 });

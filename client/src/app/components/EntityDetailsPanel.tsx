@@ -201,23 +201,26 @@ function MetricValue({ metric }: { metric: ResolvedSourcedMetric | null }) {
 
 function AccessDescription({ path }: { path: ResolvedSystemAccessPath }) {
   const locale = useGraphStore((state) => state.locale);
-  const label = path.label === path.method
-    ? vocabularyLabel(locale, "accessMethods", path.method)
-    : path.label;
+  const browserUrl = /^https?:\/\//i.test(path.url) && !/\{[^}]+\}/.test(path.url);
 
   return (
     <Flex vertical gap={4}>
       <Flex align="center" gap={6} wrap>
-        <Typography.Text>{label}</Typography.Text>
-        <Tag bordered={false}>{vocabularyLabel(locale, "accessTypes", path.type)}</Tag>
-        <Tag bordered={false}>{vocabularyLabel(locale, "accessMethods", path.method)}</Tag>
+        {browserUrl
+          ? <Typography.Link href={path.url} target="_blank" rel="noreferrer">{path.label}</Typography.Link>
+          : <Typography.Text>{path.label}</Typography.Text>}
+        {path.methods.map(method => <Tag key={method} bordered={false}>{vocabularyLabel(locale, "accessMethods", method)}</Tag>)}
+        <Tag bordered={false}>{vocabularyLabel(locale, "accessCosts", path.cost)}</Tag>
+        {path.requirements === null
+          ? <Tag bordered={false}>{t(locale, "details.accessRequirementsUnknown")}</Tag>
+          : path.requirements.length === 0
+            ? <Tag bordered={false}>{t(locale, "details.accessNoRequirements")}</Tag>
+            : path.requirements.map(requirement => <Tag key={requirement} bordered={false}>{vocabularyLabel(locale, "accessRequirements", requirement)}</Tag>)}
       </Flex>
       <Typography.Text type="secondary">{path.description}</Typography.Text>
-      <Typography.Link href={path.url} target="_blank" rel="noreferrer">
-        {path.url}
-      </Typography.Link>
+      {!browserUrl && <Typography.Text code copyable>{path.url}</Typography.Text>}
       <Typography.Text className="entity-detail-caption" type="secondary">
-        {t(locale, "common.source")}: <SourceLink source={path.source} />
+        {t(locale, "common.source")}: {path.sourceRefs.map(source => <span key={source}><SourceLink source={source} />{" "}</span>)}
       </Typography.Text>
     </Flex>
   );
@@ -784,7 +787,7 @@ export function EntityDetailsPanel({
     ? systemAccessPaths(system, systemLocalization)
     : [];
   const readAccessPaths = resolvedAccessPaths.filter((path) => path.type === "read");
-  const writeAccessPaths = resolvedAccessPaths.filter((path) => path.type !== "read");
+  const writeAccessPaths = resolvedAccessPaths.filter((path) => path.type === "write");
   const ryuRoutes = system ? graph.ryuRoutesByNodeId[entity.id] ?? [] : [];
   const operatorNodes = system ? operatorNodesForSystem(graph, system.id) : [];
   const isSystem = Boolean(system);
@@ -880,7 +883,7 @@ export function EntityDetailsPanel({
             <List<ResolvedSystemAccessPath>
               className="entity-detail-list"
               dataSource={readAccessPaths}
-              locale={{ emptyText: t(locale, "details.noReadAccess") }}
+              locale={{ emptyText: systemLocalization?.details.researchGaps?.access || t(locale, "details.noReadAccess") }}
               renderItem={(path) => (
                 <List.Item><AccessDescription path={path} /></List.Item>
               )}

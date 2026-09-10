@@ -106,13 +106,13 @@ The vocabulary groups are:
 | `nodeKinds`, `edgeKinds` | `vocabularyLabels/graph.ts` | `GraphNodeKind`, `GraphEdgeKind` |
 | `relationshipDirections` | `vocabularyLabels/graph.ts` | `incoming`, `outgoing` |
 | `accessTypes` | `vocabularyLabels/access.ts` | `SystemAccessType` |
-| `accessMethods` | `vocabularyLabels/access.ts` | Known labels plus arbitrary record strings |
+| `accessMethods` | `vocabularyLabels/access.ts` | `AccessMethod` (`ReadAccessMethod` / `WriteAccessMethod`) |
+| `accessRequirements`, `accessCosts` | `vocabularyLabels/access.ts` | `AccessRequirement`, `AccessCost` |
 | `metricKeys`, `units`, `metricPeriods` | `vocabularyLabels/metrics.ts` | `SystemMetricKey`, `MetricUnit`, `MetricPeriod` |
 | `recordDepths`, `reviewStates` | `vocabularyLabels/records.ts` | `RecordDepth`, `ReviewState` |
 
 Approved vocabulary lookups reject unknown IDs and missing/blank translations.
-Only `accessMethods` accepts unknown values and falls back to `humanizeCode()`.
-That record field remains an open string. Metrics and units are closed vocabularies. Do not broaden a
+Read and Write methods, requirements, costs, metrics and units are closed vocabularies. Do not broaden a
 closed catalog to `Record<string, ...>` or cast a value to bypass its ID type.
 
 Keep descriptor categories intact through display and search. Prefer

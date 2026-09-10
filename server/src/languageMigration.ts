@@ -1,12 +1,9 @@
 import type {
-  LocalizedSystemAccessPath,
   LocalizedSystemGalleryItem,
   NodeLocalizationDetails,
   NodeProperties,
   ReviewState,
   SourceRef,
-  SystemAccessPath,
-  SystemAccessType,
   SystemDataDescriptor,
   SystemGalleryItem,
 } from "../../shared/domain";
@@ -16,9 +13,13 @@ import { isRecord, isReviewState, normalizeString } from "./graphRepositorySuppo
 // Historical intermediate shape; 013_system_metrics.sql converts these fields after import.
 type SourcedMetric = { id: string; key: string; value: number; unit: string; observedAt: string | null; source: SourceRef };
 type LocalizedSourcedMetric = { id: string; description: string | null };
+// Access from this historical importer requires research and normalization before API submission.
+type LegacyAccessType = "read" | "submit" | "partner_sync";
+type LegacyAccessPath = { id: string; type: LegacyAccessType; method: string; url: string; source: SourceRef };
+type LegacyLocalizedAccessPath = { id: string; label: string | null; description: string | null };
 type LegacyData = { descriptors: SystemDataDescriptor[]; recordCount: SourcedMetric | null; storageSize: SourcedMetric | null };
 type LocalizedNodeDataDetails = { descriptors: { id: string; description: string | null }[]; recordCount: LocalizedSourcedMetric | null; storageSize: LocalizedSourcedMetric | null };
-type LegacyDetails = Pick<NodeLocalizationDetails, "aliases" | "access" | "gallery"> & Record<string, unknown> & { data: LocalizedNodeDataDetails; usage: LocalizedSourcedMetric[] };
+type LegacyDetails = Pick<NodeLocalizationDetails, "aliases" | "gallery"> & Record<string, unknown> & { data: LocalizedNodeDataDetails; usage: LocalizedSourcedMetric[]; access: LegacyLocalizedAccessPath[] };
 
 export const languageMigrationId = "2026-09-01-node-localizations";
 
@@ -36,7 +37,7 @@ export type LegacyNodeRow = {
 };
 
 export type MigratedNodeContent = {
-  propertiesJson: Pick<NodeProperties, "disciplines" | "access" | "gallery"> & Record<string, unknown> & { data: LegacyData; usage: SourcedMetric[] };
+  propertiesJson: Pick<NodeProperties, "disciplines" | "gallery"> & Record<string, unknown> & { data: LegacyData; usage: SourcedMetric[]; access: LegacyAccessPath[] };
   localization: {
     nodeId: string;
     locale: "en";
@@ -67,7 +68,7 @@ const neutralDetailKeys = new Set([
   "usage",
 ]);
 
-export function normalizeAccessType(value: unknown): SystemAccessType | null {
+export function normalizeAccessType(value: unknown): LegacyAccessType | null {
   if (value === "read" || value === "submit" || value === "partner_sync") {
     return value;
   }
@@ -220,11 +221,11 @@ function readGalleryText(value: unknown): LocalizedSystemGalleryItem | null {
 }
 
 function splitAccess(values: unknown[]): {
-  neutral: SystemAccessPath[];
-  localized: LocalizedSystemAccessPath[];
+  neutral: LegacyAccessPath[];
+  localized: LegacyLocalizedAccessPath[];
 } {
-  const neutral: SystemAccessPath[] = [];
-  const localized: LocalizedSystemAccessPath[] = [];
+  const neutral: LegacyAccessPath[] = [];
+  const localized: LegacyLocalizedAccessPath[] = [];
 
   for (const value of values) {
     if (!isRecord(value)) {

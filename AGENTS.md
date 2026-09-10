@@ -128,6 +128,13 @@
   Follow `documentation/RICH_RESEARCH_RECORDS.md` for sources, reporting periods,
   research gaps, and preserving unsupported measurements as sourced prose.
 
+- Read and Write access use approved `readAccessMethods` / `writeAccessMethods`,
+  `accessRequirements` and
+  `accessCosts` from `shared/domain.ts`, with owner-local `sourceRefs` and matching
+  labels/descriptions in all six locales at every depth. Additions require human
+  approval and a vocabulary/translation release. Keep human and machine access;
+  follow the Access Paths guidance in `documentation/RICH_RESEARCH_RECORDS.md`.
+
 ## Ryu Access Routes
 - Treat `ryu_routes` as the first-class operational route index for agents.
 - Keep `nodes.properties_json.access` as access mechanics and `node_localizations.details_json.access` as localized human guidance; use `ryu_routes` to decide how an agent should actually retrieve data.

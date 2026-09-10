@@ -210,4 +210,6 @@ export const detailsMessages = {
     en: "Source record {id} is not loaded.", fr: "La source {id} n'est pas chargée.", es: "La fuente {id} no está cargada.",
     ar: "سجل المصدر {id} غير محمّل.", zh: "来源记录 {id} 未加载。", ru: "Запись источника {id} не загружена.",
   },
+  "details.accessRequirementsUnknown": { en: "Requirements not verified", fr: "Conditions non vérifiées", es: "Requisitos sin verificar", ar: "المتطلبات غير متحقق منها", zh: "要求尚未核实", ru: "Требования не проверены" },
+  "details.accessNoRequirements": { en: "No prerequisites", fr: "Aucun prérequis", es: "Sin requisitos previos", ar: "لا متطلبات مسبقة", zh: "无先决条件", ru: "Без предварительных условий" },
 } satisfies Record<string, Record<SupportedLocale, string>>;

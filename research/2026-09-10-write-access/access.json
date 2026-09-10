@@ -1,0 +1,3582 @@
+[
+  {
+    "nodeId": "bold",
+    "access": [
+      {
+        "id": "bold-write-workbench",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://v5.boldsystems.org/workbench/",
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-workbench",
+          "write-access-templates-support"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "bold-write-workbench",
+          "label": "BOLD Workbench — Submit data",
+          "description": "Sign in to manage barcode projects and submit specimen metadata, sequences and images. Use current templates; project permissions govern unpublished records."
+        }
+      ],
+      "fr": [
+        {
+          "id": "bold-write-workbench",
+          "label": "BOLD Workbench — Soumettre des données",
+          "description": "Connectez-vous pour gérer les projets et déposer métadonnées de spécimens, séquences et images. Utilisez les modèles actuels ; les droits du projet régissent les données non publiées."
+        }
+      ],
+      "es": [
+        {
+          "id": "bold-write-workbench",
+          "label": "BOLD Workbench — Enviar datos",
+          "description": "Inicie sesión para gestionar proyectos y enviar metadatos de especímenes, secuencias e imágenes. Use las plantillas actuales; los permisos del proyecto rigen los registros no publicados."
+        }
+      ],
+      "ar": [
+        {
+          "id": "bold-write-workbench",
+          "label": "BOLD Workbench — إرسال البيانات",
+          "description": "سجّل الدخول لإدارة مشاريع الباركود وإرسال بيانات العينات الوصفية والتسلسلات والصور. استخدم القوالب الحالية؛ وتحكم أذونات المشروع الوصول إلى السجلات غير المنشورة."
+        }
+      ],
+      "zh": [
+        {
+          "id": "bold-write-workbench",
+          "label": "BOLD Workbench — 提交数据",
+          "description": "登录后管理条形码项目并提交标本元数据、序列和图像。使用当前模板；未公开记录的访问取决于项目权限。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "bold-write-workbench",
+          "label": "BOLD Workbench — Передача данных",
+          "description": "Войдите для управления проектами и передачи метаданных образцов, последовательностей и изображений. Используйте актуальные шаблоны; доступ к неопубликованным записям определяется правами проекта."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-workbench": {
+        "id": "write-access-workbench",
+        "url": "https://v5.boldsystems.org/workbench/",
+        "title": {
+          "en": "BOLD Workbench — Submit data",
+          "fr": "BOLD Workbench — Soumettre des données",
+          "es": "BOLD Workbench — Enviar datos",
+          "ar": "BOLD Workbench — إرسال البيانات",
+          "zh": "BOLD Workbench — 提交数据",
+          "ru": "BOLD Workbench — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-templates-support": {
+        "id": "write-access-templates-support",
+        "url": "https://v5.boldsystems.org/resource-hub/templates/",
+        "title": {
+          "en": "BOLD Workbench — Submit data",
+          "fr": "BOLD Workbench — Soumettre des données",
+          "es": "BOLD Workbench — Enviar datos",
+          "ar": "BOLD Workbench — إرسال البيانات",
+          "zh": "BOLD Workbench — 提交数据",
+          "ru": "BOLD Workbench — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "platform-bbnj-chm",
+    "access": [],
+    "localizations": {
+      "en": [],
+      "fr": [],
+      "es": [],
+      "ar": [],
+      "zh": [],
+      "ru": []
+    },
+    "sources": {}
+  },
+  {
+    "nodeId": "bco-dmo",
+    "access": [
+      {
+        "id": "bco-dmo-write-deposit",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://submit.bco-dmo.org/welcome",
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-deposit"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "bco-dmo-write-deposit",
+          "label": "BCO-DMO — Submit data",
+          "description": "Sign in with ORCID, register the project and dataset, and upload files with metadata. A data manager reviews the submission before author approval and publication."
+        }
+      ],
+      "fr": [
+        {
+          "id": "bco-dmo-write-deposit",
+          "label": "BCO-DMO — Soumettre des données",
+          "description": "Connectez-vous avec ORCID, enregistrez projet et jeu de données, puis déposez fichiers et métadonnées. Un gestionnaire examine le dépôt avant validation par l’auteur et publication."
+        }
+      ],
+      "es": [
+        {
+          "id": "bco-dmo-write-deposit",
+          "label": "BCO-DMO — Enviar datos",
+          "description": "Acceda con ORCID, registre el proyecto y conjunto, y cargue archivos y metadatos. Un gestor revisa el envío antes de la aprobación del autor y publicación."
+        }
+      ],
+      "ar": [
+        {
+          "id": "bco-dmo-write-deposit",
+          "label": "BCO-DMO — إرسال البيانات",
+          "description": "ادخل باستخدام ORCID وسجّل المشروع ومجموعة البيانات وارفع الملفات وبياناتها الوصفية. يراجع مدير البيانات الإرسال قبل موافقة المؤلف والنشر."
+        }
+      ],
+      "zh": [
+        {
+          "id": "bco-dmo-write-deposit",
+          "label": "BCO-DMO — 提交数据",
+          "description": "通过 ORCID 登录，注册项目和数据集并上传文件及元数据。数据管理员审核后，由作者确认并发布。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "bco-dmo-write-deposit",
+          "label": "BCO-DMO — Передача данных",
+          "description": "Войдите через ORCID, зарегистрируйте проект и набор, загрузите файлы и метаданные. Менеджер проверит материалы до подтверждения автором и публикации."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-deposit": {
+        "id": "write-access-deposit",
+        "url": "https://submit.bco-dmo.org/welcome",
+        "title": {
+          "en": "BCO-DMO — Submit data",
+          "fr": "BCO-DMO — Soumettre des données",
+          "es": "BCO-DMO — Enviar datos",
+          "ar": "BCO-DMO — إرسال البيانات",
+          "zh": "BCO-DMO — 提交数据",
+          "ru": "BCO-DMO — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "bismal",
+    "access": [
+      {
+        "id": "bismal-write-corrections",
+        "type": "write",
+        "methods": [
+          "request"
+        ],
+        "url": "https://www.godac.jamstec.go.jp/bismal/e/b_data.html",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-corrections"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "bismal-write-corrections",
+          "label": "BISMaL — Contribution enquiries",
+          "description": "Send corrections or taxonomic information with supporting references to the operating team. Discuss larger data contributions with the team before preparing a submission."
+        }
+      ],
+      "fr": [
+        {
+          "id": "bismal-write-corrections",
+          "label": "BISMaL — Demandes de contribution",
+          "description": "Transmettez corrections ou informations taxonomiques avec références à l’équipe. Discutez avec elle des contributions volumineuses avant de préparer un dépôt."
+        }
+      ],
+      "es": [
+        {
+          "id": "bismal-write-corrections",
+          "label": "BISMaL — Consultas sobre contribuciones",
+          "description": "Envíe correcciones o información taxonómica con referencias al equipo. Consulte las aportaciones de mayor volumen antes de preparar el envío."
+        }
+      ],
+      "ar": [
+        {
+          "id": "bismal-write-corrections",
+          "label": "BISMaL — الاستفسار عن المساهمة",
+          "description": "أرسل التصحيحات أو المعلومات التصنيفية مع المراجع إلى الفريق التشغيلي. ناقش المساهمات الأكبر حجمًا معه قبل إعداد الإرسال."
+        }
+      ],
+      "zh": [
+        {
+          "id": "bismal-write-corrections",
+          "label": "BISMaL — 贡献咨询",
+          "description": "向运营团队发送附有参考文献的更正或分类信息。准备较大规模的数据贡献前，请先与团队沟通。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "bismal-write-corrections",
+          "label": "BISMaL — Согласование передачи",
+          "description": "Передавайте команде исправления или таксономические сведения с подтверждающими ссылками. Перед подготовкой крупных наборов согласуйте передачу с командой."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-corrections": {
+        "id": "write-access-corrections",
+        "url": "https://www.godac.jamstec.go.jp/bismal/e/b_data.html",
+        "title": {
+          "en": "BISMaL — Contribution enquiries",
+          "fr": "BISMaL — Demandes de contribution",
+          "es": "BISMaL — Consultas sobre contribuciones",
+          "ar": "BISMaL — الاستفسار عن المساهمة",
+          "zh": "BISMaL — 贡献咨询",
+          "ru": "BISMaL — Согласование передачи"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "cioos",
+    "access": [
+      {
+        "id": "cioos-write-provider",
+        "type": "write",
+        "methods": [
+          "request"
+        ],
+        "url": "https://guide.cioos.ca/main/en/pgd/pgdcioos/",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-provider"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "cioos-write-provider",
+          "label": "CIOOS — Contribution enquiries",
+          "description": "Contact CIOOS for help preparing a data management plan and making ocean data discoverable. Agree formats, hosting and delivery with the receiving team."
+        }
+      ],
+      "fr": [
+        {
+          "id": "cioos-write-provider",
+          "label": "CIOOS — Demandes de contribution",
+          "description": "Contactez CIOOS pour préparer un plan de gestion et rendre les données océaniques découvrables. Convenez des formats, de l’hébergement et de la livraison avec l’équipe."
+        }
+      ],
+      "es": [
+        {
+          "id": "cioos-write-provider",
+          "label": "CIOOS — Consultas sobre contribuciones",
+          "description": "Contacte a CIOOS para preparar un plan de gestión y facilitar el descubrimiento de datos oceánicos. Acuerde formatos, alojamiento y entrega con el equipo receptor."
+        }
+      ],
+      "ar": [
+        {
+          "id": "cioos-write-provider",
+          "label": "CIOOS — الاستفسار عن المساهمة",
+          "description": "تواصل مع CIOOS لإعداد خطة إدارة البيانات وإتاحة اكتشاف البيانات البحرية. واتفق مع الفريق المستقبِل على الصيغ والاستضافة والتسليم."
+        }
+      ],
+      "zh": [
+        {
+          "id": "cioos-write-provider",
+          "label": "CIOOS — 贡献咨询",
+          "description": "联系 CIOOS，获取数据管理计划编制和海洋数据发现方面的帮助。与接收团队商定格式、托管和交付方式。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "cioos-write-provider",
+          "label": "CIOOS — Согласование передачи",
+          "description": "Обратитесь в CIOOS за помощью с планом управления и обеспечением обнаружения океанических данных. Согласуйте форматы, размещение и передачу с принимающей командой."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-provider": {
+        "id": "write-access-provider",
+        "url": "https://guide.cioos.ca/main/en/pgd/pgdcioos/",
+        "title": {
+          "en": "CIOOS — Contribution enquiries",
+          "fr": "CIOOS — Demandes de contribution",
+          "es": "CIOOS — Consultas sobre contribuciones",
+          "ar": "CIOOS — الاستفسار عن المساهمة",
+          "zh": "CIOOS — 贡献咨询",
+          "ru": "CIOOS — Согласование передачи"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "cmems-datastore",
+    "access": [
+      {
+        "id": "cmems-datastore-write-insitu",
+        "type": "write",
+        "methods": [
+          "request"
+        ],
+        "url": "https://marineinsitu.eu/submit-data/",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-insitu"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "cmems-datastore-write-insitu",
+          "label": "Copernicus Marine In Situ TAC — Contribution enquiries",
+          "description": "Offer in-situ ocean observations through the regional In Situ TAC service desk listed here. Agree delivery, formatting and quality control for inclusion in Copernicus products."
+        }
+      ],
+      "fr": [
+        {
+          "id": "cmems-datastore-write-insitu",
+          "label": "Copernicus Marine In Situ TAC — Demandes de contribution",
+          "description": "Proposez des observations océaniques in situ au service régional In Situ TAC indiqué. Convenez de la livraison, du format et des contrôles pour leur intégration aux produits Copernicus."
+        }
+      ],
+      "es": [
+        {
+          "id": "cmems-datastore-write-insitu",
+          "label": "Copernicus Marine In Situ TAC — Consultas sobre contribuciones",
+          "description": "Ofrezca observaciones oceánicas in situ al servicio regional In Situ TAC indicado. Acuerde entrega, formato y controles para su incorporación a productos Copernicus."
+        }
+      ],
+      "ar": [
+        {
+          "id": "cmems-datastore-write-insitu",
+          "label": "Copernicus Marine In Situ TAC — الاستفسار عن المساهمة",
+          "description": "قدّم رصدات المحيط الميدانية عبر مكتب خدمة In Situ TAC الإقليمي المدرج هنا. اتفق على التسليم والتنسيق وفحص الجودة لإدراجها في منتجات Copernicus."
+        }
+      ],
+      "zh": [
+        {
+          "id": "cmems-datastore-write-insitu",
+          "label": "Copernicus Marine In Situ TAC — 贡献咨询",
+          "description": "通过此处列出的区域 In Situ TAC 服务台提供海洋现场观测。商定交付、格式和质量控制，以便纳入 Copernicus 产品。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "cmems-datastore-write-insitu",
+          "label": "Copernicus Marine In Situ TAC — Согласование передачи",
+          "description": "Предлагайте натурные океанические наблюдения региональной службе In Situ TAC из списка. Согласуйте передачу, формат и контроль качества для включения в продукты Copernicus."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-insitu": {
+        "id": "write-access-insitu",
+        "url": "https://marineinsitu.eu/submit-data/",
+        "title": {
+          "en": "Copernicus Marine In Situ TAC — Contribution enquiries",
+          "fr": "Copernicus Marine In Situ TAC — Demandes de contribution",
+          "es": "Copernicus Marine In Situ TAC — Consultas sobre contribuciones",
+          "ar": "Copernicus Marine In Situ TAC — الاستفسار عن المساهمة",
+          "zh": "Copernicus Marine In Situ TAC — 贡献咨询",
+          "ru": "Copernicus Marine In Situ TAC — Согласование передачи"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "datras",
+    "access": [
+      {
+        "id": "datras-write-upload",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://datras.ices.dk/",
+        "requirements": [
+          "account",
+          "approval"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-upload",
+          "write-access-authentication-support"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "datras-write-upload",
+          "label": "DATRAS — Submit data",
+          "description": "Obtain ICES access and prepare the survey reporting files. Screen errors and warnings, inspect outliers, then confirm the upload to DATRAS."
+        }
+      ],
+      "fr": [
+        {
+          "id": "datras-write-upload",
+          "label": "DATRAS — Soumettre des données",
+          "description": "Obtenez l’accès ICES et préparez les fichiers d’enquête. Vérifiez erreurs, avertissements et valeurs aberrantes, puis confirmez le dépôt dans DATRAS."
+        }
+      ],
+      "es": [
+        {
+          "id": "datras-write-upload",
+          "label": "DATRAS — Enviar datos",
+          "description": "Obtenga acceso de ICES y prepare los archivos de campaña. Revise errores, advertencias y valores atípicos; después confirme la carga en DATRAS."
+        }
+      ],
+      "ar": [
+        {
+          "id": "datras-write-upload",
+          "label": "DATRAS — إرسال البيانات",
+          "description": "احصل على صلاحية ICES وجهّز ملفات المسح. افحص الأخطاء والتحذيرات والقيم الشاذة ثم أكّد رفعها إلى DATRAS."
+        }
+      ],
+      "zh": [
+        {
+          "id": "datras-write-upload",
+          "label": "DATRAS — 提交数据",
+          "description": "取得 ICES 访问权限并准备调查报告文件。检查错误、警告和异常值后，确认上传至 DATRAS。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "datras-write-upload",
+          "label": "DATRAS — Передача данных",
+          "description": "Получите доступ ICES и подготовьте файлы съёмки. Проверьте ошибки, предупреждения и выбросы, затем подтвердите загрузку в DATRAS."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-upload": {
+        "id": "write-access-upload",
+        "url": "https://datras.ices.dk/",
+        "title": {
+          "en": "DATRAS — Submit data",
+          "fr": "DATRAS — Soumettre des données",
+          "es": "DATRAS — Enviar datos",
+          "ar": "DATRAS — إرسال البيانات",
+          "zh": "DATRAS — 提交数据",
+          "ru": "DATRAS — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-authentication-support": {
+        "id": "write-access-authentication-support",
+        "url": "https://datsu.ices.dk/web/index.aspx",
+        "title": {
+          "en": "DATRAS — Submit data",
+          "fr": "DATRAS — Soumettre des données",
+          "es": "DATRAS — Enviar datos",
+          "ar": "DATRAS — إرسال البيانات",
+          "zh": "DATRAS — 提交数据",
+          "ru": "DATRAS — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "ddbj",
+    "access": [
+      {
+        "id": "ddbj-write-submission",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://www.ddbj.nig.ac.jp/submission-e.html",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-submission"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "ddbj-write-submission",
+          "label": "DDBJ — Submit data",
+          "description": "Choose the service for your sequence type: NSSS for nucleotide submissions, MSS for large or complex batches, and DRA through D-way for raw reads."
+        }
+      ],
+      "fr": [
+        {
+          "id": "ddbj-write-submission",
+          "label": "DDBJ — Soumettre des données",
+          "description": "Choisissez le service adapté : NSSS pour les séquences nucléotidiques, MSS pour les lots volumineux ou complexes, DRA via D-way pour les lectures brutes."
+        }
+      ],
+      "es": [
+        {
+          "id": "ddbj-write-submission",
+          "label": "DDBJ — Enviar datos",
+          "description": "Elija el servicio según el tipo de secuencia: NSSS para nucleótidos, MSS para lotes grandes o complejos y DRA mediante D-way para lecturas crudas."
+        }
+      ],
+      "ar": [
+        {
+          "id": "ddbj-write-submission",
+          "label": "DDBJ — إرسال البيانات",
+          "description": "اختر خدمة الإرسال حسب نوع التسلسل: NSSS للتسلسلات النووية، وMSS للدفعات الكبيرة أو المعقدة، وDRA عبر D-way للقراءات الخام."
+        }
+      ],
+      "zh": [
+        {
+          "id": "ddbj-write-submission",
+          "label": "DDBJ — 提交数据",
+          "description": "按序列类型选择提交服务：核苷酸序列使用 NSSS，大批量或复杂提交使用 MSS，原始读段通过 D-way 提交至 DRA。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "ddbj-write-submission",
+          "label": "DDBJ — Передача данных",
+          "description": "Выберите сервис по типу последовательностей: NSSS для нуклеотидных данных, MSS для крупных или сложных пакетов, DRA через D-way для сырых прочтений."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-submission": {
+        "id": "write-access-submission",
+        "url": "https://www.ddbj.nig.ac.jp/submission-e.html",
+        "title": {
+          "en": "DDBJ — Submit data",
+          "fr": "DDBJ — Soumettre des données",
+          "es": "DDBJ — Enviar datos",
+          "ar": "DDBJ — إرسال البيانات",
+          "zh": "DDBJ — 提交数据",
+          "ru": "DDBJ — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "dryad",
+    "access": [
+      {
+        "id": "dryad-write-deposit",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://datadryad.org/help/guides/submission",
+        "requirements": [
+          "account"
+        ],
+        "cost": "mixed",
+        "sourceRefs": [
+          "write-access-deposit",
+          "write-access-submission-support"
+        ]
+      },
+      {
+        "id": "dryad-write-partner-api",
+        "type": "write",
+        "methods": [
+          "api"
+        ],
+        "url": "https://datadryad.org/help/guides/submission",
+        "requirements": [
+          "affiliation"
+        ],
+        "cost": "mixed",
+        "sourceRefs": [
+          "write-access-partner-api",
+          "write-access-costs-support"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "dryad-write-deposit",
+          "label": "Dryad — Submit data",
+          "description": "Prepare files, a README and metadata for curation. Publishing charges vary with size, partner sponsorship and approved waivers; check costs before submitting."
+        },
+        {
+          "id": "dryad-write-partner-api",
+          "label": "Dryad partners — Submission API",
+          "description": "Partner organizations can arrange programmatic submission through Dryad’s partnerships team. Confirm credentials, service conditions and publishing charges before integrating."
+        }
+      ],
+      "fr": [
+        {
+          "id": "dryad-write-deposit",
+          "label": "Dryad — Soumettre des données",
+          "description": "Préparez fichiers, README et métadonnées pour la curation. Les frais varient selon le volume, le financement partenaire et les exonérations ; vérifiez-les avant dépôt."
+        },
+        {
+          "id": "dryad-write-partner-api",
+          "label": "Dryad partners — API de soumission",
+          "description": "Les organismes partenaires peuvent organiser les dépôts automatisés avec l’équipe partenariats de Dryad. Confirmez identifiants, conditions et frais avant intégration."
+        }
+      ],
+      "es": [
+        {
+          "id": "dryad-write-deposit",
+          "label": "Dryad — Enviar datos",
+          "description": "Prepare archivos, README y metadatos para revisión. Los cargos dependen del tamaño, patrocinio y exenciones aprobadas; compruébelos antes del envío."
+        },
+        {
+          "id": "dryad-write-partner-api",
+          "label": "Dryad partners — API de envío",
+          "description": "Las organizaciones asociadas pueden acordar envíos programáticos con el equipo de alianzas de Dryad. Confirme credenciales, condiciones y cargos antes de integrar."
+        }
+      ],
+      "ar": [
+        {
+          "id": "dryad-write-deposit",
+          "label": "Dryad — إرسال البيانات",
+          "description": "جهّز الملفات وREADME والبيانات الوصفية للمراجعة. تختلف الرسوم حسب الحجم ودعم الشركاء والإعفاءات المعتمدة؛ تحقّق منها قبل الإرسال."
+        },
+        {
+          "id": "dryad-write-partner-api",
+          "label": "Dryad partners — واجهة إرسال البيانات",
+          "description": "يمكن للمؤسسات الشريكة ترتيب الإرسال البرمجي مع فريق شراكات Dryad. أكّد بيانات الاعتماد وشروط الخدمة ورسوم النشر قبل التكامل."
+        }
+      ],
+      "zh": [
+        {
+          "id": "dryad-write-deposit",
+          "label": "Dryad — 提交数据",
+          "description": "准备文件、README 和元数据以供整理审核。费用取决于数据量、合作伙伴资助和获批减免；提交前请核实。"
+        },
+        {
+          "id": "dryad-write-partner-api",
+          "label": "Dryad partners — 提交 API",
+          "description": "合作机构可与 Dryad 合作团队安排程序化提交。集成前请确认凭据、服务条件和出版费用。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "dryad-write-deposit",
+          "label": "Dryad — Передача данных",
+          "description": "Подготовьте файлы, README и метаданные для кураторской проверки. Стоимость зависит от объёма, поддержки партнёров и одобренных льгот; уточните её перед отправкой."
+        },
+        {
+          "id": "dryad-write-partner-api",
+          "label": "Dryad partners — API передачи данных",
+          "description": "Партнёрские организации могут согласовать программную передачу с командой партнёрств Dryad. До интеграции уточните учётные данные, условия и стоимость публикации."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-deposit": {
+        "id": "write-access-deposit",
+        "url": "https://datadryad.org/help/requirements/costs",
+        "title": {
+          "en": "Dryad — Submit data",
+          "fr": "Dryad — Soumettre des données",
+          "es": "Dryad — Enviar datos",
+          "ar": "Dryad — إرسال البيانات",
+          "zh": "Dryad — 提交数据",
+          "ru": "Dryad — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-submission-support": {
+        "id": "write-access-submission-support",
+        "url": "https://datadryad.org/help/guides/submission",
+        "title": {
+          "en": "Dryad — Submit data",
+          "fr": "Dryad — Soumettre des données",
+          "es": "Dryad — Enviar datos",
+          "ar": "Dryad — إرسال البيانات",
+          "zh": "Dryad — 提交数据",
+          "ru": "Dryad — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-partner-api": {
+        "id": "write-access-partner-api",
+        "url": "https://datadryad.org/help/guides/submission",
+        "title": {
+          "en": "Dryad partners — Submission API",
+          "fr": "Dryad partners — API de soumission",
+          "es": "Dryad partners — API de envío",
+          "ar": "Dryad partners — واجهة إرسال البيانات",
+          "zh": "Dryad partners — 提交 API",
+          "ru": "Dryad partners — API передачи данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-costs-support": {
+        "id": "write-access-costs-support",
+        "url": "https://datadryad.org/help/requirements/costs",
+        "title": {
+          "en": "Dryad partners — Submission API",
+          "fr": "Dryad partners — API de soumission",
+          "es": "Dryad partners — API de envío",
+          "ar": "Dryad partners — واجهة إرسال البيانات",
+          "zh": "Dryad partners — 提交 API",
+          "ru": "Dryad partners — API передачи данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "emodnet-biology",
+    "access": [
+      {
+        "id": "emodnet-biology-write-ingestion",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://emodnet.ec.europa.eu/en/data-ingestion",
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-ingestion"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "emodnet-biology-write-ingestion",
+          "label": "EMODnet Biology — Submit data",
+          "description": "Offer biological datasets with metadata through EMODnet Data Ingestion. Register through EU Login; expert centres assess and route submissions into the thematic infrastructure."
+        }
+      ],
+      "fr": [
+        {
+          "id": "emodnet-biology-write-ingestion",
+          "label": "EMODnet Biology — Soumettre des données",
+          "description": "Proposez données biologiques et métadonnées via EMODnet Data Ingestion. Inscrivez-vous avec EU Login ; les centres experts évaluent et orientent les dépôts vers l’infrastructure thématique."
+        }
+      ],
+      "es": [
+        {
+          "id": "emodnet-biology-write-ingestion",
+          "label": "EMODnet Biology — Enviar datos",
+          "description": "Ofrezca datos biológicos y metadatos mediante EMODnet Data Ingestion. Regístrese con EU Login; los centros expertos evalúan y canalizan los envíos hacia la infraestructura temática."
+        }
+      ],
+      "ar": [
+        {
+          "id": "emodnet-biology-write-ingestion",
+          "label": "EMODnet Biology — إرسال البيانات",
+          "description": "قدّم مجموعات البيانات البيولوجية وبياناتها الوصفية عبر EMODnet Data Ingestion. سجّل عبر EU Login؛ وتقيّم المراكز المتخصصة المساهمات وتوجّهها إلى البنية الموضوعية."
+        }
+      ],
+      "zh": [
+        {
+          "id": "emodnet-biology-write-ingestion",
+          "label": "EMODnet Biology — 提交数据",
+          "description": "通过 EMODnet Data Ingestion 提交生物数据集及元数据。使用 EU Login 注册；专业中心评估并将提交内容导入相应主题基础设施。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "emodnet-biology-write-ingestion",
+          "label": "EMODnet Biology — Передача данных",
+          "description": "Передавайте биологические наборы и метаданные через EMODnet Data Ingestion. Зарегистрируйтесь через EU Login; профильные центры оценят материалы и направят их в тематическую инфраструктуру."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-ingestion": {
+        "id": "write-access-ingestion",
+        "url": "https://emodnet.ec.europa.eu/en/data-ingestion",
+        "title": {
+          "en": "EMODnet Biology — Submit data",
+          "fr": "EMODnet Biology — Soumettre des données",
+          "es": "EMODnet Biology — Enviar datos",
+          "ar": "EMODnet Biology — إرسال البيانات",
+          "zh": "EMODnet Biology — 提交数据",
+          "ru": "EMODnet Biology — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "euro-argo",
+    "access": [
+      {
+        "id": "euro-argo-write-dac",
+        "type": "write",
+        "methods": [
+          "request"
+        ],
+        "url": "https://www.euro-argo.eu/sendform/contact",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-dac",
+          "write-access-contact-support"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "euro-argo-write-dac",
+          "label": "Euro-Argo — Contribution enquiries",
+          "description": "Contact Euro-Argo to identify the responsible Data Assembly Centre for float contributions. DACs decode, quality-control and distribute measurements; coordinate provider arrangements before delivery."
+        }
+      ],
+      "fr": [
+        {
+          "id": "euro-argo-write-dac",
+          "label": "Euro-Argo — Demandes de contribution",
+          "description": "Contactez Euro-Argo pour identifier le centre d’assemblage responsable des flotteurs. Les DAC décodent, contrôlent et diffusent les mesures ; convenez des modalités avant transfert."
+        }
+      ],
+      "es": [
+        {
+          "id": "euro-argo-write-dac",
+          "label": "Euro-Argo — Consultas sobre contribuciones",
+          "description": "Contacte a Euro-Argo para identificar el centro responsable de los flotadores. Los DAC decodifican, verifican y distribuyen mediciones; acuerde las condiciones antes de entregar."
+        }
+      ],
+      "ar": [
+        {
+          "id": "euro-argo-write-dac",
+          "label": "Euro-Argo — الاستفسار عن المساهمة",
+          "description": "تواصل مع Euro-Argo لتحديد مركز تجميع البيانات المسؤول عن مساهمات العوّامات. تفك المراكز ترميز القياسات وتفحص جودتها وتوزعها؛ نسّق ترتيبات المزوّد قبل التسليم."
+        }
+      ],
+      "zh": [
+        {
+          "id": "euro-argo-write-dac",
+          "label": "Euro-Argo — 贡献咨询",
+          "description": "联系 Euro-Argo，确定负责浮标数据贡献的数据汇集中心。DAC 解码、质控并分发测量数据；交付前需协调提供方安排。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "euro-argo-write-dac",
+          "label": "Euro-Argo — Согласование передачи",
+          "description": "Обратитесь в Euro-Argo для определения центра сбора данных ваших буёв. DAC декодируют, проверяют и распространяют измерения; согласуйте условия до передачи."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-dac": {
+        "id": "write-access-dac",
+        "url": "https://www.euro-argo.eu/content/download/137918/file/D1.2_Data_Management_Plan_V1.1.pdf",
+        "title": {
+          "en": "Euro-Argo — Contribution enquiries",
+          "fr": "Euro-Argo — Demandes de contribution",
+          "es": "Euro-Argo — Consultas sobre contribuciones",
+          "ar": "Euro-Argo — الاستفسار عن المساهمة",
+          "zh": "Euro-Argo — 贡献咨询",
+          "ru": "Euro-Argo — Согласование передачи"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-contact-support": {
+        "id": "write-access-contact-support",
+        "url": "https://www.euro-argo.eu/sendform/contact",
+        "title": {
+          "en": "Euro-Argo — Contribution enquiries",
+          "fr": "Euro-Argo — Demandes de contribution",
+          "es": "Euro-Argo — Consultas sobre contribuciones",
+          "ar": "Euro-Argo — الاستفسار عن المساهمة",
+          "zh": "Euro-Argo — 贡献咨询",
+          "ru": "Euro-Argo — Согласование передачи"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "ena",
+    "access": [
+      {
+        "id": "ena-write-interactive",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/interactive.html",
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-interactive"
+        ]
+      },
+      {
+        "id": "ena-write-cli",
+        "type": "write",
+        "methods": [
+          "software",
+          "upload"
+        ],
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html",
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-cli"
+        ]
+      },
+      {
+        "id": "ena-write-api",
+        "type": "write",
+        "methods": [
+          "api",
+          "upload"
+        ],
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/programmatic.html",
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-api"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "ena-write-interactive",
+          "label": "ENA Webin — Submit data",
+          "description": "Use a Webin account to register studies and samples, complete templates and submit supported data. Upload read files before interactive submission."
+        },
+        {
+          "id": "ena-write-cli",
+          "label": "ENA Webin-CLI — Submission tool",
+          "description": "Run Webin-CLI to validate, upload and submit reads or assemblies. Prepare the manifest and registered study/sample references; use test mode before production."
+        },
+        {
+          "id": "ena-write-api",
+          "label": "ENA Webin — Submission API",
+          "description": "Submit XML or JSON with Webin credentials after uploading referenced files. Check receipts for accessions and errors; test and production services are separate."
+        }
+      ],
+      "fr": [
+        {
+          "id": "ena-write-interactive",
+          "label": "ENA Webin — Soumettre des données",
+          "description": "Utilisez un compte Webin pour enregistrer études et échantillons, remplir les modèles et soumettre les données acceptées. Téléversez d’abord les fichiers de lectures."
+        },
+        {
+          "id": "ena-write-cli",
+          "label": "ENA Webin-CLI — Outil de soumission",
+          "description": "Exécutez Webin-CLI pour valider, téléverser et soumettre lectures ou assemblages. Préparez manifeste et références étude/échantillon ; utilisez le mode test avant la production."
+        },
+        {
+          "id": "ena-write-api",
+          "label": "ENA Webin — API de soumission",
+          "description": "Envoyez XML ou JSON avec vos identifiants Webin après téléversement des fichiers référencés. Vérifiez identifiants et erreurs dans le reçu ; test et production sont distincts."
+        }
+      ],
+      "es": [
+        {
+          "id": "ena-write-interactive",
+          "label": "ENA Webin — Enviar datos",
+          "description": "Use una cuenta Webin para registrar estudios y muestras, completar plantillas y enviar datos admitidos. Cargue los archivos de lecturas antes del envío interactivo."
+        },
+        {
+          "id": "ena-write-cli",
+          "label": "ENA Webin-CLI — Herramienta de envío",
+          "description": "Ejecute Webin-CLI para validar, cargar y enviar lecturas o ensamblajes. Prepare el manifiesto y referencias de estudio/muestra; pruebe antes de usar producción."
+        },
+        {
+          "id": "ena-write-api",
+          "label": "ENA Webin — API de envío",
+          "description": "Envíe XML o JSON con credenciales Webin tras cargar los archivos referenciados. Revise accesiones y errores en el recibo; prueba y producción son servicios distintos."
+        }
+      ],
+      "ar": [
+        {
+          "id": "ena-write-interactive",
+          "label": "ENA Webin — إرسال البيانات",
+          "description": "استخدم حساب Webin لتسجيل الدراسات والعينات واستكمال القوالب وإرسال البيانات المدعومة. ارفع ملفات القراءات قبل الإرسال التفاعلي."
+        },
+        {
+          "id": "ena-write-cli",
+          "label": "ENA Webin-CLI — أداة إرسال البيانات",
+          "description": "شغّل Webin-CLI للتحقق من القراءات أو التجميعات ورفعها وإرسالها. جهّز ملف البيان ومراجع الدراسة والعينة؛ واستخدم وضع الاختبار قبل الإنتاج."
+        },
+        {
+          "id": "ena-write-api",
+          "label": "ENA Webin — واجهة إرسال البيانات",
+          "description": "أرسل XML أو JSON ببيانات دخول Webin بعد رفع الملفات المشار إليها. راجع أرقام الإيداع والأخطاء في الإيصال؛ فالاختبار منفصل عن الإنتاج."
+        }
+      ],
+      "zh": [
+        {
+          "id": "ena-write-interactive",
+          "label": "ENA Webin — 提交数据",
+          "description": "使用 Webin 账户注册研究和样本、填写模板并提交支持的数据。交互式提交读段前需先上传文件。"
+        },
+        {
+          "id": "ena-write-cli",
+          "label": "ENA Webin-CLI — 提交工具",
+          "description": "运行 Webin-CLI 验证、上传并提交读段或组装结果。准备清单和已注册的研究、样本引用；正式提交前使用测试模式。"
+        },
+        {
+          "id": "ena-write-api",
+          "label": "ENA Webin — 提交 API",
+          "description": "上传引用的文件后，使用 Webin 凭据提交 XML 或 JSON。检查回执中的入库编号和错误；测试服务与生产服务分开。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "ena-write-interactive",
+          "label": "ENA Webin — Передача данных",
+          "description": "Используйте учётную запись Webin для регистрации исследований и образцов, заполнения шаблонов и передачи поддерживаемых данных. Файлы прочтений загрузите заранее."
+        },
+        {
+          "id": "ena-write-cli",
+          "label": "ENA Webin-CLI — Инструмент передачи данных",
+          "description": "Запускайте Webin-CLI для проверки, загрузки и передачи прочтений или сборок. Подготовьте манифест и ссылки на исследование и образцы; сначала используйте тестовый режим."
+        },
+        {
+          "id": "ena-write-api",
+          "label": "ENA Webin — API передачи данных",
+          "description": "Передавайте XML или JSON с учётными данными Webin после загрузки указанных файлов. Проверяйте номера доступа и ошибки в квитанции; тестовый и рабочий сервисы разделены."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-interactive": {
+        "id": "write-access-interactive",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/interactive.html",
+        "title": {
+          "en": "ENA Webin — Submit data",
+          "fr": "ENA Webin — Soumettre des données",
+          "es": "ENA Webin — Enviar datos",
+          "ar": "ENA Webin — إرسال البيانات",
+          "zh": "ENA Webin — 提交数据",
+          "ru": "ENA Webin — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-cli": {
+        "id": "write-access-cli",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html",
+        "title": {
+          "en": "ENA Webin-CLI — Submission tool",
+          "fr": "ENA Webin-CLI — Outil de soumission",
+          "es": "ENA Webin-CLI — Herramienta de envío",
+          "ar": "ENA Webin-CLI — أداة إرسال البيانات",
+          "zh": "ENA Webin-CLI — 提交工具",
+          "ru": "ENA Webin-CLI — Инструмент передачи данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-api": {
+        "id": "write-access-api",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/programmatic.html",
+        "title": {
+          "en": "ENA Webin — Submission API",
+          "fr": "ENA Webin — API de soumission",
+          "es": "ENA Webin — API de envío",
+          "ar": "ENA Webin — واجهة إرسال البيانات",
+          "zh": "ENA Webin — 提交 API",
+          "ru": "ENA Webin — API передачи данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "eurobis",
+    "access": [
+      {
+        "id": "eurobis-write-deposit",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload",
+          "request"
+        ],
+        "url": "https://www.eurobis.org/how_to_contribute",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-deposit"
+        ]
+      },
+      {
+        "id": "eurobis-write-ipt",
+        "type": "write",
+        "methods": [
+          "harvest"
+        ],
+        "url": "https://www.eurobis.org/how_to_contribute",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-ipt"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "eurobis-write-deposit",
+          "label": "EurOBIS — Submit data",
+          "description": "Offer marine or brackish biodiversity tables and metadata through the contribution form or team. Scope, formatting and quality checks determine incorporation."
+        },
+        {
+          "id": "eurobis-write-ipt",
+          "label": "EurOBIS IPT — Register a data source",
+          "description": "Publish a Darwin Core Archive on your production IPT or arrange EurOBIS IPT hosting. Coordinate eligibility and harvesting with the data team."
+        }
+      ],
+      "fr": [
+        {
+          "id": "eurobis-write-deposit",
+          "label": "EurOBIS — Soumettre des données",
+          "description": "Proposez tableaux et métadonnées de biodiversité marine ou saumâtre via le formulaire ou l’équipe. Périmètre, format et contrôles conditionnent l’intégration."
+        },
+        {
+          "id": "eurobis-write-ipt",
+          "label": "EurOBIS IPT — Enregistrer une source de données",
+          "description": "Publiez une archive Darwin Core sur votre IPT de production ou demandez l’hébergement EurOBIS. Convenez de l’éligibilité et du moissonnage avec l’équipe."
+        }
+      ],
+      "es": [
+        {
+          "id": "eurobis-write-deposit",
+          "label": "EurOBIS — Enviar datos",
+          "description": "Ofrezca tablas y metadatos de biodiversidad marina o salobre mediante el formulario o el equipo. El alcance, formato y controles determinan la incorporación."
+        },
+        {
+          "id": "eurobis-write-ipt",
+          "label": "EurOBIS IPT — Registrar una fuente de datos",
+          "description": "Publique un archivo Darwin Core en su IPT de producción o solicite alojamiento en EurOBIS. Coordine elegibilidad y recolección con el equipo."
+        }
+      ],
+      "ar": [
+        {
+          "id": "eurobis-write-deposit",
+          "label": "EurOBIS — إرسال البيانات",
+          "description": "قدّم جداول التنوع الحيوي البحري أو قليل الملوحة وبياناتها الوصفية عبر النموذج أو الفريق. ويتحدد الإدراج بحسب النطاق والتنسيق وفحوص الجودة."
+        },
+        {
+          "id": "eurobis-write-ipt",
+          "label": "EurOBIS IPT — تسجيل مصدر بيانات",
+          "description": "انشر أرشيف Darwin Core على IPT الإنتاجي الخاص بك أو رتّب استضافته لدى EurOBIS. نسّق الأهلية والحصاد مع فريق البيانات."
+        }
+      ],
+      "zh": [
+        {
+          "id": "eurobis-write-deposit",
+          "label": "EurOBIS — 提交数据",
+          "description": "通过贡献表单或团队提供海洋或半咸水生物多样性表格和元数据。是否纳入取决于范围、格式和质量检查。"
+        },
+        {
+          "id": "eurobis-write-ipt",
+          "label": "EurOBIS IPT — 注册数据源",
+          "description": "在自己的生产 IPT 发布 Darwin Core Archive，或安排由 EurOBIS 托管。与数据团队确认适用范围和采集安排。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "eurobis-write-deposit",
+          "label": "EurOBIS — Передача данных",
+          "description": "Предлагайте таблицы и метаданные о морском или солоноватоводном биоразнообразии через форму или команду. Включение зависит от охвата, формата и проверки качества."
+        },
+        {
+          "id": "eurobis-write-ipt",
+          "label": "EurOBIS IPT — Регистрация источника данных",
+          "description": "Опубликуйте архив Darwin Core на рабочем IPT или согласуйте размещение в EurOBIS. Уточните соответствие требованиям и сбор данных с командой."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-deposit": {
+        "id": "write-access-deposit",
+        "url": "https://www.eurobis.org/how_to_contribute",
+        "title": {
+          "en": "EurOBIS — Submit data",
+          "fr": "EurOBIS — Soumettre des données",
+          "es": "EurOBIS — Enviar datos",
+          "ar": "EurOBIS — إرسال البيانات",
+          "zh": "EurOBIS — 提交数据",
+          "ru": "EurOBIS — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-ipt": {
+        "id": "write-access-ipt",
+        "url": "https://www.eurobis.org/how_to_contribute",
+        "title": {
+          "en": "EurOBIS IPT — Register a data source",
+          "fr": "EurOBIS IPT — Enregistrer une source de données",
+          "es": "EurOBIS IPT — Registrar una fuente de datos",
+          "ar": "EurOBIS IPT — تسجيل مصدر بيانات",
+          "zh": "EurOBIS IPT — 注册数据源",
+          "ru": "EurOBIS IPT — Регистрация источника данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "fishbase",
+    "access": [
+      {
+        "id": "fishbase-submit-fishwatcher",
+        "url": "https://www.fishbase.se/fishwatcher/menu.php",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "src-fishbase-fishwatcher"
+        ]
+      },
+      {
+        "id": "fishbase-submit-collaborator",
+        "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
+        "type": "write",
+        "methods": [
+          "request"
+        ],
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "src-fishbase-collaborator-guide"
+        ]
+      },
+      {
+        "id": "fishbase-submit-photos",
+        "url": "https://fishbase.se/contribu.htm",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload",
+          "request"
+        ],
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "src-fishbase-photo-contrib"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "fishbase-submit-fishwatcher",
+          "label": "FishWatcher observations",
+          "description": "FishWatcher lets users obtain an ID/password and upload fish observations, coordinates, dates, lengths, and photos for use in distribution mapping and biodiversity monitoring."
+        },
+        {
+          "id": "fishbase-submit-collaborator",
+          "label": "Curated collaborator contributions",
+          "description": "Data additions and corrections are mediated through FishBase collaborator workflows. Contributors receive credit in record stamps, acknowledgments, collaborator tables, or dedicated tables when substantial datasets are incorporated."
+        },
+        {
+          "id": "fishbase-submit-photos",
+          "label": "Photo contributions",
+          "description": "Photo contributors can upload through species pages, email files to FishBase/Q-quatics, send physical media, or provide download locations. Copyright remains with contributors and FishBase attaches attribution metadata."
+        }
+      ],
+      "fr": [
+        {
+          "id": "fishbase-submit-fishwatcher",
+          "label": "Observations FishWatcher",
+          "description": "FishWatcher permet aux utilisateurs d'obtenir un identifiant et un mot de passe et de téléverser des observations de poissons, coordonnées, dates, longueurs et photos pour la cartographie des distributions et le suivi de la biodiversité."
+        },
+        {
+          "id": "fishbase-submit-collaborator",
+          "label": "Contributions de collaborateurs avec curation",
+          "description": "Les ajouts et corrections de données passent par les flux de collaboration FishBase. Les contributeurs sont crédités dans les estampilles d'enregistrement, remerciements, tables de collaborateurs ou tables dédiées lorsque des jeux de données substantiels sont incorporés."
+        },
+        {
+          "id": "fishbase-submit-photos",
+          "label": "Contributions de photos",
+          "description": "Les contributeurs de photos peuvent téléverser via les pages d'espèces, envoyer des fichiers par courriel à FishBase/Q-quatics, envoyer des supports physiques ou fournir des emplacements de téléchargement. Le droit d'auteur reste aux contributeurs et FishBase ajoute des métadonnées d'attribution."
+        }
+      ],
+      "es": [
+        {
+          "id": "fishbase-submit-fishwatcher",
+          "label": "Observaciones FishWatcher",
+          "description": "FishWatcher permite a los usuarios obtener un ID/contraseña y subir observaciones de peces, coordenadas, fechas, longitudes y fotos para uso en cartografía de distribución y monitoreo de biodiversidad."
+        },
+        {
+          "id": "fishbase-submit-collaborator",
+          "label": "Contribuciones curadas de colaboradores",
+          "description": "Las adiciones y correcciones de datos se median mediante flujos de trabajo de colaboradores de FishBase. Los colaboradores reciben crédito en sellos de registros, agradecimientos, tablas de colaboradores o tablas dedicadas cuando se incorporan conjuntos de datos sustanciales."
+        },
+        {
+          "id": "fishbase-submit-photos",
+          "label": "Contribuciones fotográficas",
+          "description": "Los colaboradores de fotos pueden subirlas mediante páginas de especies, enviar archivos por correo electrónico a FishBase/Q-quatics, enviar medios físicos o proporcionar ubicaciones de descarga. Los derechos de autor permanecen con los colaboradores y FishBase adjunta metadatos de atribución."
+        }
+      ],
+      "ar": [
+        {
+          "id": "fishbase-submit-fishwatcher",
+          "label": "مشاهدات FishWatcher",
+          "description": "يتيح FishWatcher للمستخدمين الحصول على معرف وكلمة مرور ورفع مشاهدات الأسماك والإحداثيات والتواريخ والأطوال والصور لاستخدامها في خرائط التوزيع ورصد التنوع الحيوي."
+        },
+        {
+          "id": "fishbase-submit-collaborator",
+          "label": "مساهمات المتعاونين المنظمة",
+          "description": "تدار إضافات البيانات والتصحيحات عبر مسارات المتعاونين في FishBase. يحصل المساهمون على الإقرار في أختام السجلات أو الشكر أو جداول المتعاونين أو جداول مخصصة عند إدراج مجموعات بيانات كبيرة."
+        },
+        {
+          "id": "fishbase-submit-photos",
+          "label": "مساهمات الصور",
+          "description": "يمكن للمساهمين بالصور الرفع عبر صفحات الأنواع، أو إرسال الملفات بالبريد الإلكتروني إلى FishBase/Q-quatics، أو إرسال وسائط مادية، أو توفير مواقع تنزيل. تبقى حقوق النشر للمساهمين وتضيف FishBase بيانات نسب تعريفية."
+        }
+      ],
+      "zh": [
+        {
+          "id": "fishbase-submit-fishwatcher",
+          "label": "FishWatcher 观测",
+          "description": "FishWatcher 允许用户获取 ID/密码并上传鱼类观测、坐标、日期、长度和照片，用于分布制图和生物多样性监测。"
+        },
+        {
+          "id": "fishbase-submit-collaborator",
+          "label": "经整理的协作者贡献",
+          "description": "数据新增和更正通过 FishBase 协作者工作流调解。贡献者会在记录印章、致谢、协作者表或专用表中获得署名，特别是在纳入重要数据集时。"
+        },
+        {
+          "id": "fishbase-submit-photos",
+          "label": "照片贡献",
+          "description": "照片贡献者可通过物种页面上传，向 FishBase/Q-quatics 发送电子邮件文件，寄送实体介质，或提供下载位置。版权仍归贡献者所有，FishBase 会附加署名元数据。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "fishbase-submit-fishwatcher",
+          "label": "Наблюдения FishWatcher",
+          "description": "FishWatcher позволяет пользователям получить ID/пароль и загрузить наблюдения рыб, координаты, даты, длины и фотографии для картирования распространения и мониторинга биоразнообразия."
+        },
+        {
+          "id": "fishbase-submit-collaborator",
+          "label": "Курируемые вклады участников",
+          "description": "Добавления и исправления данных проходят через рабочие процессы участников FishBase. Участники получают признание в штампах записей, благодарностях, таблицах участников или отдельных таблицах, когда включаются значительные наборы данных."
+        },
+        {
+          "id": "fishbase-submit-photos",
+          "label": "Фотографические вклады",
+          "description": "Авторы фотографий могут загружать их через страницы видов, отправлять файлы по электронной почте в FishBase/Q-quatics, пересылать физические носители или предоставлять места загрузки. Авторские права остаются у участников, а FishBase добавляет метаданные атрибуции."
+        }
+      ]
+    },
+    "sources": {}
+  },
+  {
+    "nodeId": "genbank",
+    "access": [
+      {
+        "id": "genbank-write-portal",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://submit.ncbi.nlm.nih.gov/about/genbank/",
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-portal"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "genbank-write-portal",
+          "label": "GenBank Submission Portal — Submit data",
+          "description": "Sign in to NCBI and choose the workflow for your assembled sequences. Supply files, source metadata and annotations; review messages and accession status after submission."
+        }
+      ],
+      "fr": [
+        {
+          "id": "genbank-write-portal",
+          "label": "GenBank Submission Portal — Soumettre des données",
+          "description": "Connectez-vous à NCBI et choisissez le parcours adapté aux séquences assemblées. Fournissez fichiers, métadonnées et annotations ; consultez ensuite les messages et l’état d’attribution des identifiants."
+        }
+      ],
+      "es": [
+        {
+          "id": "genbank-write-portal",
+          "label": "GenBank Submission Portal — Enviar datos",
+          "description": "Acceda a NCBI y elija el flujo para sus secuencias ensambladas. Aporte archivos, metadatos y anotaciones; revise después los mensajes y el estado de los números de acceso."
+        }
+      ],
+      "ar": [
+        {
+          "id": "genbank-write-portal",
+          "label": "GenBank Submission Portal — إرسال البيانات",
+          "description": "سجّل الدخول إلى NCBI واختر مسار التسلسلات المجمّعة. قدّم الملفات والبيانات الوصفية والتعليقات التوضيحية؛ ثم راجع الرسائل وحالة أرقام الإيداع."
+        }
+      ],
+      "zh": [
+        {
+          "id": "genbank-write-portal",
+          "label": "GenBank Submission Portal — 提交数据",
+          "description": "登录 NCBI，按组装序列类型选择流程。提供文件、来源元数据和注释；提交后查看消息和入库编号状态。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "genbank-write-portal",
+          "label": "GenBank Submission Portal — Передача данных",
+          "description": "Войдите в NCBI и выберите процесс для ваших сборок. Передайте файлы, метаданные источника и аннотации; затем проверяйте сообщения и статус присвоения номеров."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-portal": {
+        "id": "write-access-portal",
+        "url": "https://submit.ncbi.nlm.nih.gov/about/genbank/",
+        "title": {
+          "en": "GenBank Submission Portal — Submit data",
+          "fr": "GenBank Submission Portal — Soumettre des données",
+          "es": "GenBank Submission Portal — Enviar datos",
+          "ar": "GenBank Submission Portal — إرسال البيانات",
+          "zh": "GenBank Submission Portal — 提交数据",
+          "ru": "GenBank Submission Portal — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "geome",
+    "access": [
+      {
+        "id": "geome-write-workbench",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://geome-db.org/",
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-workbench"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "geome-write-workbench",
+          "label": "GEOME — Submit data",
+          "description": "Create a project, generate its template, validate the spreadsheet and load an expedition. Project permissions control updates; sequence deposition follows the documented repository workflow."
+        }
+      ],
+      "fr": [
+        {
+          "id": "geome-write-workbench",
+          "label": "GEOME — Soumettre des données",
+          "description": "Créez un projet, générez son modèle, validez le tableur et chargez une expédition. Les droits contrôlent les mises à jour ; suivez le parcours documenté pour les séquences."
+        }
+      ],
+      "es": [
+        {
+          "id": "geome-write-workbench",
+          "label": "GEOME — Enviar datos",
+          "description": "Cree un proyecto, genere su plantilla, valide la hoja y cargue una expedición. Los permisos controlan las actualizaciones; siga el flujo documentado para depositar secuencias."
+        }
+      ],
+      "ar": [
+        {
+          "id": "geome-write-workbench",
+          "label": "GEOME — إرسال البيانات",
+          "description": "أنشئ مشروعًا وولّد قالبه وتحقّق من الجدول وحمّل حملة. تضبط صلاحيات المشروع التحديثات؛ ويتبع إيداع التسلسلات مسار المستودع الموثق."
+        }
+      ],
+      "zh": [
+        {
+          "id": "geome-write-workbench",
+          "label": "GEOME — 提交数据",
+          "description": "创建项目并生成模板，验证表格后导入一次采样活动。项目权限控制更新；序列入库应遵循文档中的存储库流程。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "geome-write-workbench",
+          "label": "GEOME — Передача данных",
+          "description": "Создайте проект, сформируйте шаблон, проверьте таблицу и загрузите экспедицию. Обновления зависят от прав проекта; последовательности депонируются по описанному процессу репозитория."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-workbench": {
+        "id": "write-access-workbench",
+        "url": "https://geome-db.org/docs/helpDocumentationv4.pdf",
+        "title": {
+          "en": "GEOME — Submit data",
+          "fr": "GEOME — Soumettre des données",
+          "es": "GEOME — Enviar datos",
+          "ar": "GEOME — إرسال البيانات",
+          "zh": "GEOME — 提交数据",
+          "ru": "GEOME — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "gbif",
+    "access": [
+      {
+        "id": "gbif-write-ipt",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload",
+          "harvest"
+        ],
+        "url": "https://www.gbif.org/ipt",
+        "requirements": [
+          "account",
+          "approval"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-ipt",
+          "write-access-endorsement-support"
+        ]
+      },
+      {
+        "id": "gbif-write-registry",
+        "type": "write",
+        "methods": [
+          "api",
+          "harvest"
+        ],
+        "url": "https://techdocs.gbif.org/en/data-publishing/register-dataset-api",
+        "requirements": [
+          "account",
+          "approval"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-registry",
+          "write-access-registry-auth"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "gbif-write-ipt",
+          "label": "GBIF IPT — Submit data",
+          "description": "Arrange IPT hosting and publisher endorsement, then upload tables, map fields and complete metadata. Publish the dataset and register it for GBIF indexing."
+        },
+        {
+          "id": "gbif-write-registry",
+          "label": "GBIF Registry — Submission API",
+          "description": "Host a valid Darwin Core Archive and register its dataset through the Registry API. For occasional datasets, the helpdesk can register it on your behalf. Obtain editor permissions for your organization from the helpdesk."
+        }
+      ],
+      "fr": [
+        {
+          "id": "gbif-write-ipt",
+          "label": "GBIF IPT — Soumettre des données",
+          "description": "Organisez l’hébergement IPT et l’approbation de l’éditeur, puis chargez tableaux, correspondances de champs et métadonnées. Publiez et enregistrez le jeu pour indexation GBIF."
+        },
+        {
+          "id": "gbif-write-registry",
+          "label": "GBIF Registry — API de soumission",
+          "description": "Hébergez une archive Darwin Core valide et enregistrez-la via l’API Registry. Pour les dépôts occasionnels, l’assistance peut effectuer l’enregistrement pour vous. Demandez à l’assistance les droits d’édition de votre organisme."
+        }
+      ],
+      "es": [
+        {
+          "id": "gbif-write-ipt",
+          "label": "GBIF IPT — Enviar datos",
+          "description": "Acuerde alojamiento IPT y aval del publicador; cargue tablas, asigne campos y complete metadatos. Publique y registre el conjunto para indexación en GBIF."
+        },
+        {
+          "id": "gbif-write-registry",
+          "label": "GBIF Registry — API de envío",
+          "description": "Aloje un archivo Darwin Core válido y regístrelo mediante la API Registry. Para envíos ocasionales, el soporte puede registrarlo en su nombre. Solicite al soporte permisos de edición para su organización."
+        }
+      ],
+      "ar": [
+        {
+          "id": "gbif-write-ipt",
+          "label": "GBIF IPT — إرسال البيانات",
+          "description": "رتّب استضافة IPT واعتماد الناشر، ثم ارفع الجداول واربط الحقول وأكمل البيانات الوصفية. انشر المجموعة وسجّلها لفهرسة GBIF."
+        },
+        {
+          "id": "gbif-write-registry",
+          "label": "GBIF Registry — واجهة إرسال البيانات",
+          "description": "استضف أرشيف Darwin Core صالحًا وسجّل مجموعته عبر واجهة Registry. ويمكن للدعم تسجيل المجموعات العرضية نيابةً عنك. اطلب من الدعم صلاحيات التحرير لمؤسستك."
+        }
+      ],
+      "zh": [
+        {
+          "id": "gbif-write-ipt",
+          "label": "GBIF IPT — 提交数据",
+          "description": "安排 IPT 托管并取得发布机构认可，再上传表格、映射字段和完善元数据。发布数据集并注册以供 GBIF 索引。"
+        },
+        {
+          "id": "gbif-write-registry",
+          "label": "GBIF Registry — 提交 API",
+          "description": "托管有效的 Darwin Core Archive，并通过 Registry API 注册数据集。偶尔提交的数据集可由帮助台代为注册。 向帮助台申请机构编辑权限。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "gbif-write-ipt",
+          "label": "GBIF IPT — Передача данных",
+          "description": "Согласуйте размещение IPT и одобрение издателя, загрузите таблицы, сопоставьте поля и заполните метаданные. Опубликуйте и зарегистрируйте набор для индексации GBIF."
+        },
+        {
+          "id": "gbif-write-registry",
+          "label": "GBIF Registry — API передачи данных",
+          "description": "Разместите корректный архив Darwin Core и зарегистрируйте набор через Registry API. При редких публикациях служба поддержки может зарегистрировать его за вас. Запросите у поддержки права редактора вашей организации."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-ipt": {
+        "id": "write-access-ipt",
+        "url": "https://ipt.gbif.org/manual/en/ipt/latest/",
+        "title": {
+          "en": "GBIF IPT — Submit data",
+          "fr": "GBIF IPT — Soumettre des données",
+          "es": "GBIF IPT — Enviar datos",
+          "ar": "GBIF IPT — إرسال البيانات",
+          "zh": "GBIF IPT — 提交数据",
+          "ru": "GBIF IPT — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-endorsement-support": {
+        "id": "write-access-endorsement-support",
+        "url": "https://docs.gbif.org/course-introduction-to-gbif/en/how-to-become-a-data-publisher.html",
+        "title": {
+          "en": "GBIF IPT — Submit data",
+          "fr": "GBIF IPT — Soumettre des données",
+          "es": "GBIF IPT — Enviar datos",
+          "ar": "GBIF IPT — إرسال البيانات",
+          "zh": "GBIF IPT — 提交数据",
+          "ru": "GBIF IPT — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-registry": {
+        "id": "write-access-registry",
+        "url": "https://techdocs.gbif.org/en/data-publishing/",
+        "title": {
+          "en": "GBIF Registry — Submission API",
+          "fr": "GBIF Registry — API de soumission",
+          "es": "GBIF Registry — API de envío",
+          "ar": "GBIF Registry — واجهة إرسال البيانات",
+          "zh": "GBIF Registry — 提交 API",
+          "ru": "GBIF Registry — API передачи данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-registry-auth": {
+        "id": "write-access-registry-auth",
+        "url": "https://techdocs.gbif.org/en/data-publishing/register-dataset-api",
+        "title": {
+          "en": "GBIF Registry — Submission API",
+          "fr": "GBIF Registry — API de soumission",
+          "es": "GBIF Registry — API de envío",
+          "ar": "GBIF Registry — واجهة إرسال البيانات",
+          "zh": "GBIF Registry — 提交 API",
+          "ru": "GBIF Registry — API передачи данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "ggbn",
+    "access": [
+      {
+        "id": "ggbn-write-provider",
+        "type": "write",
+        "methods": [
+          "harvest"
+        ],
+        "url": "https://wiki.ggbn.org/ggbn/GBIF",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-provider"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "ggbn-write-provider",
+          "label": "GGBN — Register a data source",
+          "description": "Expose collection and sample records through a supported IPT or BioCASe provider. Coordinate metadata mapping and registration with GGBN before expecting portal inclusion."
+        }
+      ],
+      "fr": [
+        {
+          "id": "ggbn-write-provider",
+          "label": "GGBN — Enregistrer une source de données",
+          "description": "Exposez les collections et échantillons via un fournisseur IPT ou BioCASe compatible. Convenez des correspondances de métadonnées et de l’enregistrement avec GGBN avant l’intégration."
+        }
+      ],
+      "es": [
+        {
+          "id": "ggbn-write-provider",
+          "label": "GGBN — Registrar una fuente de datos",
+          "description": "Exponga registros de colecciones y muestras mediante IPT o BioCASe compatible. Coordine el mapeo de metadatos y registro con GGBN antes de esperar su inclusión."
+        }
+      ],
+      "ar": [
+        {
+          "id": "ggbn-write-provider",
+          "label": "GGBN — تسجيل مصدر بيانات",
+          "description": "أتِح سجلات المجموعات والعينات عبر مزوّد IPT أو BioCASe مدعوم. نسّق ربط البيانات الوصفية والتسجيل مع GGBN قبل توقّع الإدراج في البوابة."
+        }
+      ],
+      "zh": [
+        {
+          "id": "ggbn-write-provider",
+          "label": "GGBN — 注册数据源",
+          "description": "通过受支持的 IPT 或 BioCASe 数据提供服务开放馆藏和样本记录。纳入门户前，与 GGBN 协调元数据映射和注册。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "ggbn-write-provider",
+          "label": "GGBN — Регистрация источника данных",
+          "description": "Предоставляйте записи коллекций и образцов через поддерживаемый IPT или BioCASe. До включения в портал согласуйте сопоставление метаданных и регистрацию с GGBN."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-provider": {
+        "id": "write-access-provider",
+        "url": "https://wiki.ggbn.org/ggbn/GBIF",
+        "title": {
+          "en": "GGBN — Register a data source",
+          "fr": "GGBN — Enregistrer une source de données",
+          "es": "GGBN — Registrar una fuente de datos",
+          "ar": "GGBN — تسجيل مصدر بيانات",
+          "zh": "GGBN — 注册数据源",
+          "ru": "GGBN — Регистрация источника данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "glodap",
+    "access": [
+      {
+        "id": "glodap-write-team",
+        "type": "write",
+        "methods": [
+          "request"
+        ],
+        "url": "https://glodap.info/index.php/contact/",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-team"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "glodap-write-team",
+          "label": "GLODAP — Contribution enquiries",
+          "description": "Contact the GLODAP team about contributing ocean-interior biogeochemical measurements. Ask which preparation, quality checks and submission channel apply to your dataset."
+        }
+      ],
+      "fr": [
+        {
+          "id": "glodap-write-team",
+          "label": "GLODAP — Demandes de contribution",
+          "description": "Contactez l’équipe GLODAP pour proposer des mesures biogéochimiques de l’intérieur océanique. Demandez la préparation, les contrôles et le canal de dépôt adaptés."
+        }
+      ],
+      "es": [
+        {
+          "id": "glodap-write-team",
+          "label": "GLODAP — Consultas sobre contribuciones",
+          "description": "Contacte al equipo GLODAP para aportar mediciones biogeoquímicas del interior oceánico. Consulte la preparación, controles y canal de envío adecuados para su conjunto."
+        }
+      ],
+      "ar": [
+        {
+          "id": "glodap-write-team",
+          "label": "GLODAP — الاستفسار عن المساهمة",
+          "description": "تواصل مع فريق GLODAP بشأن المساهمة بقياسات بيوجيوكيميائية لباطن المحيط. استفسر عن التحضير وفحوص الجودة وقناة الإرسال المناسبة لمجموعتك."
+        }
+      ],
+      "zh": [
+        {
+          "id": "glodap-write-team",
+          "label": "GLODAP — 贡献咨询",
+          "description": "联系 GLODAP 团队，咨询贡献海洋内部生物地球化学测量数据。确认适用的准备步骤、质量检查和提交渠道。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "glodap-write-team",
+          "label": "GLODAP — Согласование передачи",
+          "description": "Обратитесь к команде GLODAP по поводу передачи биогеохимических измерений толщи океана. Уточните подготовку, проверки качества и подходящий канал передачи."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-team": {
+        "id": "write-access-team",
+        "url": "https://glodap.info/index.php/contact/",
+        "title": {
+          "en": "GLODAP — Contribution enquiries",
+          "fr": "GLODAP — Demandes de contribution",
+          "es": "GLODAP — Consultas sobre contribuciones",
+          "ar": "GLODAP — الاستفسار عن المساهمة",
+          "zh": "GLODAP — 贡献咨询",
+          "ru": "GLODAP — Согласование передачи"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "go-ship",
+    "access": [
+      {
+        "id": "go-ship-write-cchdo",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://learning.cchdo.io/submitting_data/detailed_guide",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-cchdo"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "go-ship-write-cchdo",
+          "label": "GO-SHIP / CCHDO — Submit data",
+          "description": "Submit CTD and bottle data with cruise documentation to CCHDO. Include methods, units and quality flags; other GO-SHIP measurements require their respective repositories."
+        }
+      ],
+      "fr": [
+        {
+          "id": "go-ship-write-cchdo",
+          "label": "GO-SHIP / CCHDO — Soumettre des données",
+          "description": "Déposez données CTD et bouteilles avec la documentation de campagne à CCHDO. Incluez méthodes, unités et indicateurs qualité ; les autres mesures relèvent de dépôts distincts."
+        }
+      ],
+      "es": [
+        {
+          "id": "go-ship-write-cchdo",
+          "label": "GO-SHIP / CCHDO — Enviar datos",
+          "description": "Envíe datos CTD y de botellas con documentación de campaña a CCHDO. Incluya métodos, unidades y banderas de calidad; otras mediciones corresponden a repositorios distintos."
+        }
+      ],
+      "ar": [
+        {
+          "id": "go-ship-write-cchdo",
+          "label": "GO-SHIP / CCHDO — إرسال البيانات",
+          "description": "أرسل بيانات CTD وقوارير أخذ العينات ووثائق الرحلة إلى CCHDO. أدرج الطرق والوحدات وأعلام الجودة؛ أما القياسات الأخرى فتتبع مستودعاتها المختصة."
+        }
+      ],
+      "zh": [
+        {
+          "id": "go-ship-write-cchdo",
+          "label": "GO-SHIP / CCHDO — 提交数据",
+          "description": "向 CCHDO 提交 CTD、采水瓶数据和航次文档，包括方法、单位和质量标记；其他 GO-SHIP 测量需提交至相应存储库。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "go-ship-write-cchdo",
+          "label": "GO-SHIP / CCHDO — Передача данных",
+          "description": "Передавайте данные CTD и батометров с документацией рейса в CCHDO. Укажите методы, единицы и флаги качества; остальные измерения направляйте в соответствующие репозитории."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-cchdo": {
+        "id": "write-access-cchdo",
+        "url": "https://learning.cchdo.io/submitting_data/detailed_guide",
+        "title": {
+          "en": "GO-SHIP / CCHDO — Submit data",
+          "fr": "GO-SHIP / CCHDO — Soumettre des données",
+          "es": "GO-SHIP / CCHDO — Enviar datos",
+          "ar": "GO-SHIP / CCHDO — إرسال البيانات",
+          "zh": "GO-SHIP / CCHDO — 提交数据",
+          "ru": "GO-SHIP / CCHDO — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "ices-data",
+    "access": [
+      {
+        "id": "ices-data-write-calls",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://data.ices.dk/submissions/listSubmissionsCalls",
+        "requirements": [
+          "account",
+          "approval"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-calls"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "ices-data-write-calls",
+          "label": "ICES Data Calls — Submit data",
+          "description": "Choose an open data call and follow its format and deadline. Sign in through Microsoft 365 with ICES access; request access if necessary."
+        }
+      ],
+      "fr": [
+        {
+          "id": "ices-data-write-calls",
+          "label": "ICES Data Calls — Soumettre des données",
+          "description": "Choisissez un appel ouvert et respectez format et échéance. Connectez-vous via Microsoft 365 avec les droits ICES ; demandez l’accès si nécessaire."
+        }
+      ],
+      "es": [
+        {
+          "id": "ices-data-write-calls",
+          "label": "ICES Data Calls — Enviar datos",
+          "description": "Elija una convocatoria abierta y siga su formato y plazo. Acceda mediante Microsoft 365 con permisos ICES; solicite acceso si es necesario."
+        }
+      ],
+      "ar": [
+        {
+          "id": "ices-data-write-calls",
+          "label": "ICES Data Calls — إرسال البيانات",
+          "description": "اختر طلب بيانات مفتوحًا والتزم بصيغته وموعده. ادخل عبر Microsoft 365 بصلاحية ICES؛ واطلب الوصول عند الحاجة."
+        }
+      ],
+      "zh": [
+        {
+          "id": "ices-data-write-calls",
+          "label": "ICES Data Calls — 提交数据",
+          "description": "选择开放的数据征集并遵循其格式和截止日期。通过具有 ICES 权限的 Microsoft 365 账户登录；必要时申请权限。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "ices-data-write-calls",
+          "label": "ICES Data Calls — Передача данных",
+          "description": "Выберите открытый сбор данных, соблюдайте его формат и срок. Войдите через Microsoft 365 с доступом ICES; при необходимости запросите доступ."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-calls": {
+        "id": "write-access-calls",
+        "url": "https://www.ices.dk/data/tools/Pages/Data-calls.aspx",
+        "title": {
+          "en": "ICES Data Calls — Submit data",
+          "fr": "ICES Data Calls — Soumettre des données",
+          "es": "ICES Data Calls — Enviar datos",
+          "ar": "ICES Data Calls — إرسال البيانات",
+          "zh": "ICES Data Calls — 提交数据",
+          "ru": "ICES Data Calls — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "intercatch",
+    "access": [
+      {
+        "id": "intercatch-write-upload",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://www.ices.dk/data/data-portals/Pages/InterCatch.aspx",
+        "requirements": [
+          "account",
+          "affiliation"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-upload"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "intercatch-write-upload",
+          "label": "InterCatch — Submit data",
+          "description": "National submitters upload catch files in InterCatch format. Stock coordinators check and aggregate data for assessment; contact ICES for the appropriate access role."
+        }
+      ],
+      "fr": [
+        {
+          "id": "intercatch-write-upload",
+          "label": "InterCatch — Soumettre des données",
+          "description": "Les déclarants nationaux chargent les captures au format InterCatch. Les coordinateurs vérifient et agrègent les données pour l’évaluation ; contactez ICES pour le rôle d’accès adapté."
+        }
+      ],
+      "es": [
+        {
+          "id": "intercatch-write-upload",
+          "label": "InterCatch — Enviar datos",
+          "description": "Los remitentes nacionales cargan capturas en formato InterCatch. Los coordinadores revisan y agregan los datos para evaluación; contacte a ICES para obtener el rol adecuado."
+        }
+      ],
+      "ar": [
+        {
+          "id": "intercatch-write-upload",
+          "label": "InterCatch — إرسال البيانات",
+          "description": "يرفع مقدّمو البيانات الوطنيون ملفات المصيد بصيغة InterCatch. يراجع منسقو المخزونات البيانات ويجمعونها للتقييم؛ تواصل مع ICES لتحديد دور الوصول المناسب."
+        }
+      ],
+      "zh": [
+        {
+          "id": "intercatch-write-upload",
+          "label": "InterCatch — 提交数据",
+          "description": "国家数据提交者以 InterCatch 格式上传渔获文件。种群协调员检查并汇总评估数据；联系 ICES 确定适当的访问角色。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "intercatch-write-upload",
+          "label": "InterCatch — Передача данных",
+          "description": "Национальные поставщики загружают уловы в формате InterCatch. Координаторы запасов проверяют и агрегируют данные для оценки; согласуйте подходящую роль доступа с ICES."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-upload": {
+        "id": "write-access-upload",
+        "url": "https://www.ices.dk/data/data-portals/Pages/InterCatch.aspx",
+        "title": {
+          "en": "InterCatch — Submit data",
+          "fr": "InterCatch — Soumettre des données",
+          "es": "InterCatch — Enviar datos",
+          "ar": "InterCatch — إرسال البيانات",
+          "zh": "InterCatch — 提交数据",
+          "ru": "InterCatch — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "insdc",
+    "access": [
+      {
+        "id": "insdc-write-members",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://www.insdc.org/",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-members"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "insdc-write-members",
+          "label": "INSDC member archives — Submit data",
+          "description": "Choose DDBJ, ENA or GenBank using the member submission links. Deposit with the selected archive; INSDC coordinates exchange rather than operating a separate submission portal."
+        }
+      ],
+      "fr": [
+        {
+          "id": "insdc-write-members",
+          "label": "INSDC member archives — Soumettre des données",
+          "description": "Choisissez DDBJ, ENA ou GenBank via les liens des membres. Déposez auprès de l’archive choisie ; INSDC coordonne les échanges sans portail de dépôt distinct."
+        }
+      ],
+      "es": [
+        {
+          "id": "insdc-write-members",
+          "label": "INSDC member archives — Enviar datos",
+          "description": "Elija DDBJ, ENA o GenBank mediante los enlaces de miembros. Deposite en el archivo elegido; INSDC coordina el intercambio sin un portal de envío independiente."
+        }
+      ],
+      "ar": [
+        {
+          "id": "insdc-write-members",
+          "label": "INSDC member archives — إرسال البيانات",
+          "description": "اختر DDBJ أو ENA أو GenBank عبر روابط الأعضاء وأودع لدى الأرشيف المختار. تنسّق INSDC التبادل ولا تشغّل بوابة إيداع منفصلة."
+        }
+      ],
+      "zh": [
+        {
+          "id": "insdc-write-members",
+          "label": "INSDC member archives — 提交数据",
+          "description": "通过成员链接选择 DDBJ、ENA 或 GenBank，并向所选档案库提交。INSDC 协调数据交换，没有独立的提交门户。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "insdc-write-members",
+          "label": "INSDC member archives — Передача данных",
+          "description": "Выберите DDBJ, ENA или GenBank по ссылкам участников и передайте данные выбранному архиву. INSDC координирует обмен, не предоставляя отдельный портал загрузки."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-members": {
+        "id": "write-access-members",
+        "url": "https://www.insdc.org/",
+        "title": {
+          "en": "INSDC member archives — Submit data",
+          "fr": "INSDC member archives — Soumettre des données",
+          "es": "INSDC member archives — Enviar datos",
+          "ar": "INSDC member archives — إرسال البيانات",
+          "zh": "INSDC member archives — 提交数据",
+          "ru": "INSDC member archives — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "mgnify",
+    "access": [
+      {
+        "id": "mgnify-write-analysis",
+        "type": "write",
+        "methods": [
+          "form",
+          "request"
+        ],
+        "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-analysis"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "mgnify-write-analysis",
+          "label": "MGnify — Submit data",
+          "description": "Request analysis of an existing public ENA dataset through MGnify. Private submissions require ENA Webin registration and explicit consent for MGnify to access the data."
+        }
+      ],
+      "fr": [
+        {
+          "id": "mgnify-write-analysis",
+          "label": "MGnify — Soumettre des données",
+          "description": "Demandez à MGnify l’analyse d’un jeu ENA public. Les données privées nécessitent un compte ENA Webin et un consentement explicite pour leur accès par MGnify."
+        }
+      ],
+      "es": [
+        {
+          "id": "mgnify-write-analysis",
+          "label": "MGnify — Enviar datos",
+          "description": "Solicite a MGnify analizar un conjunto público de ENA. Los envíos privados requieren registro ENA Webin y consentimiento explícito de acceso para MGnify."
+        }
+      ],
+      "ar": [
+        {
+          "id": "mgnify-write-analysis",
+          "label": "MGnify — إرسال البيانات",
+          "description": "اطلب من MGnify تحليل مجموعة عامة في ENA. تتطلب الإرسالات الخاصة حساب ENA Webin وموافقة صريحة على وصول MGnify إلى البيانات."
+        }
+      ],
+      "zh": [
+        {
+          "id": "mgnify-write-analysis",
+          "label": "MGnify — 提交数据",
+          "description": "通过 MGnify 申请分析已有的 ENA 公开数据集。私有数据提交需注册 ENA Webin，并明确授权 MGnify 访问。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "mgnify-write-analysis",
+          "label": "MGnify — Передача данных",
+          "description": "Запросите анализ открытого набора ENA через MGnify. Для частных данных нужны регистрация ENA Webin и явное согласие на доступ MGnify."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-analysis": {
+        "id": "write-access-analysis",
+        "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+        "title": {
+          "en": "MGnify — Submit data",
+          "fr": "MGnify — Soumettre des données",
+          "es": "MGnify — Enviar datos",
+          "ar": "MGnify — إرسال البيانات",
+          "zh": "MGnify — 提交数据",
+          "ru": "MGnify — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "noaa-ncei-marine",
+    "access": [
+      {
+        "id": "noaa-ncei-marine-write-deposit",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://www.ncei.noaa.gov/archive/send2ncei/",
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-deposit"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "noaa-ncei-marine-write-deposit",
+          "label": "Send2NCEI — Submit data",
+          "description": "Consult an archive specialist before your first deposit. Use Login.gov or NOAA credentials to submit a standalone package under 20 GB with documentation."
+        }
+      ],
+      "fr": [
+        {
+          "id": "noaa-ncei-marine-write-deposit",
+          "label": "Send2NCEI — Soumettre des données",
+          "description": "Consultez un archiviste avant votre premier dépôt. Utilisez Login.gov ou vos identifiants NOAA pour envoyer un paquet autonome de moins de 20 Go avec sa documentation."
+        }
+      ],
+      "es": [
+        {
+          "id": "noaa-ncei-marine-write-deposit",
+          "label": "Send2NCEI — Enviar datos",
+          "description": "Consulte a un especialista antes del primer depósito. Use Login.gov o credenciales NOAA para enviar un paquete independiente de menos de 20 GB con documentación."
+        }
+      ],
+      "ar": [
+        {
+          "id": "noaa-ncei-marine-write-deposit",
+          "label": "Send2NCEI — إرسال البيانات",
+          "description": "استشر اختصاصي الأرشفة قبل أول إيداع. استخدم Login.gov أو بيانات NOAA لإرسال حزمة مستقلة أقل من 20 غيغابايت مع وثائقها."
+        }
+      ],
+      "zh": [
+        {
+          "id": "noaa-ncei-marine-write-deposit",
+          "label": "Send2NCEI — 提交数据",
+          "description": "首次提交前咨询档案专家。使用 Login.gov 或 NOAA 凭据，提交小于 20 GB 的独立数据包及文档。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "noaa-ncei-marine-write-deposit",
+          "label": "Send2NCEI — Передача данных",
+          "description": "Перед первым депозитом проконсультируйтесь с архивистом. Через Login.gov или учётную запись NOAA передайте отдельный пакет менее 20 ГБ с документацией."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-deposit": {
+        "id": "write-access-deposit",
+        "url": "https://www.ncei.noaa.gov/archive/send2ncei/",
+        "title": {
+          "en": "Send2NCEI — Submit data",
+          "fr": "Send2NCEI — Soumettre des données",
+          "es": "Send2NCEI — Enviar datos",
+          "ar": "Send2NCEI — إرسال البيانات",
+          "zh": "Send2NCEI — 提交数据",
+          "ru": "Send2NCEI — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "platform-obis",
+    "access": [
+      {
+        "id": "platform-obis-write-node",
+        "type": "write",
+        "methods": [
+          "request"
+        ],
+        "url": "https://manual.obis.org/contribute.html",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-node"
+        ]
+      },
+      {
+        "id": "platform-obis-write-ipt",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload",
+          "harvest"
+        ],
+        "url": "https://manual.obis.org/ipt",
+        "requirements": [
+          "account"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-ipt"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "platform-obis-write-node",
+          "label": "OBIS nodes — Contribution enquiries",
+          "description": "Choose an appropriate OBIS node to help publish marine biodiversity data. Prepare linked occurrence data, measurements and metadata, and resolve quality issues before publication."
+        },
+        {
+          "id": "platform-obis-write-ipt",
+          "label": "OBIS IPT — Register a data source",
+          "description": "Use an approved publishing IPT to upload Darwin Core tables and metadata. Coordinate with its manager; OBIS harvests recognized publishers after datasets are made public."
+        }
+      ],
+      "fr": [
+        {
+          "id": "platform-obis-write-node",
+          "label": "OBIS nodes — Demandes de contribution",
+          "description": "Choisissez un nœud OBIS pour publier les données de biodiversité marine. Préparez occurrences, mesures et métadonnées liées, puis corrigez les problèmes de qualité avant publication."
+        },
+        {
+          "id": "platform-obis-write-ipt",
+          "label": "OBIS IPT — Enregistrer une source de données",
+          "description": "Utilisez un IPT de publication agréé pour déposer tableaux Darwin Core et métadonnées. Coordonnez-vous avec son gestionnaire ; OBIS moissonne les éditeurs reconnus après publication."
+        }
+      ],
+      "es": [
+        {
+          "id": "platform-obis-write-node",
+          "label": "OBIS nodes — Consultas sobre contribuciones",
+          "description": "Elija un nodo OBIS para publicar biodiversidad marina. Prepare ocurrencias, mediciones y metadatos vinculados y resuelva los problemas de calidad antes de publicar."
+        },
+        {
+          "id": "platform-obis-write-ipt",
+          "label": "OBIS IPT — Registrar una fuente de datos",
+          "description": "Use un IPT de publicación aprobado para cargar tablas Darwin Core y metadatos. Coordine con su gestor; OBIS recolecta de publicadores reconocidos tras la publicación."
+        }
+      ],
+      "ar": [
+        {
+          "id": "platform-obis-write-node",
+          "label": "OBIS nodes — الاستفسار عن المساهمة",
+          "description": "اختر عقدة OBIS مناسبة لنشر بيانات التنوع الحيوي البحري. جهّز سجلات التواجد والقياسات والبيانات الوصفية المرتبطة وصحّح مشكلات الجودة قبل النشر."
+        },
+        {
+          "id": "platform-obis-write-ipt",
+          "label": "OBIS IPT — تسجيل مصدر بيانات",
+          "description": "استخدم IPT معتمدًا للنشر لرفع جداول Darwin Core والبيانات الوصفية. نسّق مع مديره؛ تحصد OBIS بيانات الناشرين المعترف بهم بعد إتاحتها للعامة."
+        }
+      ],
+      "zh": [
+        {
+          "id": "platform-obis-write-node",
+          "label": "OBIS nodes — 贡献咨询",
+          "description": "选择适当的 OBIS 节点协助发布海洋生物多样性数据。准备关联的出现记录、测量和元数据，并在发布前解决质量问题。"
+        },
+        {
+          "id": "platform-obis-write-ipt",
+          "label": "OBIS IPT — 注册数据源",
+          "description": "使用获认可的发布 IPT 上传 Darwin Core 表格和元数据，并与其管理员协调。数据公开后，OBIS 从认可的发布者采集。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "platform-obis-write-node",
+          "label": "OBIS nodes — Согласование передачи",
+          "description": "Выберите подходящий узел OBIS для публикации морского биоразнообразия. Подготовьте связанные находки, измерения и метаданные; устраните проблемы качества до публикации."
+        },
+        {
+          "id": "platform-obis-write-ipt",
+          "label": "OBIS IPT — Регистрация источника данных",
+          "description": "Загружайте таблицы Darwin Core и метаданные через одобренный IPT. Согласуйте действия с администратором; OBIS собирает открытые наборы признанных издателей."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-node": {
+        "id": "write-access-node",
+        "url": "https://manual.obis.org/contribute.html",
+        "title": {
+          "en": "OBIS nodes — Contribution enquiries",
+          "fr": "OBIS nodes — Demandes de contribution",
+          "es": "OBIS nodes — Consultas sobre contribuciones",
+          "ar": "OBIS nodes — الاستفسار عن المساهمة",
+          "zh": "OBIS nodes — 贡献咨询",
+          "ru": "OBIS nodes — Согласование передачи"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-ipt": {
+        "id": "write-access-ipt",
+        "url": "https://manual.obis.org/ipt",
+        "title": {
+          "en": "OBIS IPT — Register a data source",
+          "fr": "OBIS IPT — Enregistrer une source de données",
+          "es": "OBIS IPT — Registrar una fuente de datos",
+          "ar": "OBIS IPT — تسجيل مصدر بيانات",
+          "zh": "OBIS IPT — 注册数据源",
+          "ru": "OBIS IPT — Регистрация источника данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "odis",
+    "access": [
+      {
+        "id": "odis-write-register",
+        "type": "write",
+        "methods": [
+          "form",
+          "harvest"
+        ],
+        "url": "https://book.odis.org/gettingStarted.html",
+        "requirements": [
+          "account",
+          "approval"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-register"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "odis-write-register",
+          "label": "ODIS — Register a data source",
+          "description": "Use an approved OceanExpert account to register your system in ODISCat. Publish JSON-LD metadata and register its sitemap; harvesting discovers resources hosted by your system."
+        }
+      ],
+      "fr": [
+        {
+          "id": "odis-write-register",
+          "label": "ODIS — Enregistrer une source de données",
+          "description": "Avec un compte OceanExpert approuvé, enregistrez votre système dans ODISCat. Publiez les métadonnées JSON-LD et leur sitemap ; le moissonnage découvre vos ressources hébergées."
+        }
+      ],
+      "es": [
+        {
+          "id": "odis-write-register",
+          "label": "ODIS — Registrar una fuente de datos",
+          "description": "Con una cuenta OceanExpert aprobada, registre su sistema en ODISCat. Publique metadatos JSON-LD y registre el sitemap; la recolección descubre recursos alojados en su sistema."
+        }
+      ],
+      "ar": [
+        {
+          "id": "odis-write-register",
+          "label": "ODIS — تسجيل مصدر بيانات",
+          "description": "استخدم حساب OceanExpert معتمدًا لتسجيل نظامك في ODISCat. انشر البيانات الوصفية بصيغة JSON-LD وسجّل خريطة الموقع؛ يكتشف الحصاد الموارد التي يستضيفها نظامك."
+        }
+      ],
+      "zh": [
+        {
+          "id": "odis-write-register",
+          "label": "ODIS — 注册数据源",
+          "description": "使用获批的 OceanExpert 账户在 ODISCat 注册系统。发布 JSON-LD 元数据并注册站点地图；采集用于发现您系统托管的资源。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "odis-write-register",
+          "label": "ODIS — Регистрация источника данных",
+          "description": "С одобренной учётной записью OceanExpert зарегистрируйте систему в ODISCat. Опубликуйте метаданные JSON-LD и карту сайта; сбор обеспечивает обнаружение размещённых у вас ресурсов."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-register": {
+        "id": "write-access-register",
+        "url": "https://book.odis.org/gettingStarted.html",
+        "title": {
+          "en": "ODIS — Register a data source",
+          "fr": "ODIS — Enregistrer une source de données",
+          "es": "ODIS — Registrar una fuente de datos",
+          "ar": "ODIS — تسجيل مصدر بيانات",
+          "zh": "ODIS — 注册数据源",
+          "ru": "ODIS — Регистрация источника данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "oceaninfohub",
+    "access": [
+      {
+        "id": "oceaninfohub-write-odis",
+        "type": "write",
+        "methods": [
+          "harvest"
+        ],
+        "url": "https://book.odis.org/gettingStarted.html",
+        "requirements": [
+          "account",
+          "approval"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-odis",
+          "write-access-onboarding-support"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "oceaninfohub-write-odis",
+          "label": "Ocean InfoHub / ODIS — Register a data source",
+          "description": "Follow the successor ODIS onboarding guide to publish discoverable metadata. Register your system and sitemap through ODISCat using an approved OceanExpert account."
+        }
+      ],
+      "fr": [
+        {
+          "id": "oceaninfohub-write-odis",
+          "label": "Ocean InfoHub / ODIS — Enregistrer une source de données",
+          "description": "Suivez le guide du successeur ODIS pour publier des métadonnées découvrables. Enregistrez système et sitemap dans ODISCat avec un compte OceanExpert approuvé."
+        }
+      ],
+      "es": [
+        {
+          "id": "oceaninfohub-write-odis",
+          "label": "Ocean InfoHub / ODIS — Registrar una fuente de datos",
+          "description": "Siga la guía del sucesor ODIS para publicar metadatos descubribles. Registre su sistema y sitemap en ODISCat con una cuenta OceanExpert aprobada."
+        }
+      ],
+      "ar": [
+        {
+          "id": "oceaninfohub-write-odis",
+          "label": "Ocean InfoHub / ODIS — تسجيل مصدر بيانات",
+          "description": "اتبع دليل ODIS الخلف لنشر بيانات وصفية قابلة للاكتشاف. سجّل نظامك وخريطة الموقع في ODISCat باستخدام حساب OceanExpert معتمد."
+        }
+      ],
+      "zh": [
+        {
+          "id": "oceaninfohub-write-odis",
+          "label": "Ocean InfoHub / ODIS — 注册数据源",
+          "description": "按照后继系统 ODIS 的接入指南发布可发现的元数据。使用获批的 OceanExpert 账户在 ODISCat 注册系统和站点地图。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "oceaninfohub-write-odis",
+          "label": "Ocean InfoHub / ODIS — Регистрация источника данных",
+          "description": "Следуйте руководству преемника ODIS для публикации обнаруживаемых метаданных. Зарегистрируйте систему и карту сайта в ODISCat с одобренной учётной записью OceanExpert."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-odis": {
+        "id": "write-access-odis",
+        "url": "https://oceaninfohub.org/project-overview/",
+        "title": {
+          "en": "Ocean InfoHub / ODIS — Register a data source",
+          "fr": "Ocean InfoHub / ODIS — Enregistrer une source de données",
+          "es": "Ocean InfoHub / ODIS — Registrar una fuente de datos",
+          "ar": "Ocean InfoHub / ODIS — تسجيل مصدر بيانات",
+          "zh": "Ocean InfoHub / ODIS — 注册数据源",
+          "ru": "Ocean InfoHub / ODIS — Регистрация источника данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-onboarding-support": {
+        "id": "write-access-onboarding-support",
+        "url": "https://book.odis.org/gettingStarted.html",
+        "title": {
+          "en": "Ocean InfoHub / ODIS — Register a data source",
+          "fr": "Ocean InfoHub / ODIS — Enregistrer une source de données",
+          "es": "Ocean InfoHub / ODIS — Registrar una fuente de datos",
+          "ar": "Ocean InfoHub / ODIS — تسجيل مصدر بيانات",
+          "zh": "Ocean InfoHub / ODIS — 注册数据源",
+          "ru": "Ocean InfoHub / ODIS — Регистрация источника данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "oceansites",
+    "access": [
+      {
+        "id": "oceansites-write-gdac",
+        "type": "write",
+        "methods": [
+          "upload",
+          "request"
+        ],
+        "url": "https://ocean-sites.org/index.php/submitting-data/",
+        "requirements": [
+          "account",
+          "approval"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-gdac"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "oceansites-write-gdac",
+          "label": "OceanSITES GDAC — Submit data",
+          "description": "Register the site with the Project Office and obtain platform codes. Request a GDAC account, prepare OceanSITES-compliant files and upload them through the agreed FTP service."
+        }
+      ],
+      "fr": [
+        {
+          "id": "oceansites-write-gdac",
+          "label": "OceanSITES GDAC — Soumettre des données",
+          "description": "Enregistrez le site auprès du bureau du projet et obtenez les codes de plateforme. Demandez un compte GDAC, préparez les fichiers conformes et transférez-les par FTP."
+        }
+      ],
+      "es": [
+        {
+          "id": "oceansites-write-gdac",
+          "label": "OceanSITES GDAC — Enviar datos",
+          "description": "Registre el sitio con la oficina del proyecto y obtenga códigos de plataforma. Solicite una cuenta GDAC, prepare archivos compatibles y cárguelos por FTP."
+        }
+      ],
+      "ar": [
+        {
+          "id": "oceansites-write-gdac",
+          "label": "OceanSITES GDAC — إرسال البيانات",
+          "description": "سجّل الموقع لدى مكتب المشروع واحصل على رموز المنصات. اطلب حساب GDAC وجهّز ملفات مطابقة لـ OceanSITES وارفعها عبر خدمة FTP المتفق عليها."
+        }
+      ],
+      "zh": [
+        {
+          "id": "oceansites-write-gdac",
+          "label": "OceanSITES GDAC — 提交数据",
+          "description": "向项目办公室注册站点并获取平台代码。申请 GDAC 账户，准备符合 OceanSITES 规范的文件，再通过约定的 FTP 服务上传。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "oceansites-write-gdac",
+          "label": "OceanSITES GDAC — Передача данных",
+          "description": "Зарегистрируйте станцию в офисе проекта и получите коды платформ. Запросите учётную запись GDAC, подготовьте файлы OceanSITES и загрузите их через согласованный FTP."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-gdac": {
+        "id": "write-access-gdac",
+        "url": "https://ocean-sites.org/index.php/submitting-data/",
+        "title": {
+          "en": "OceanSITES GDAC — Submit data",
+          "fr": "OceanSITES GDAC — Soumettre des données",
+          "es": "OceanSITES GDAC — Enviar datos",
+          "ar": "OceanSITES GDAC — إرسال البيانات",
+          "zh": "OceanSITES GDAC — 提交数据",
+          "ru": "OceanSITES GDAC — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "pangaea",
+    "access": [
+      {
+        "id": "pangaea-write-deposit",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://www.pangaea.de/submit/",
+        "requirements": [
+          "account"
+        ],
+        "cost": "free",
+        "sourceRefs": [
+          "write-access-deposit"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "pangaea-write-deposit",
+          "label": "PANGAEA — Submit data",
+          "description": "Sign in and submit data with metadata. Editors use the issue tracker for revisions and author proofing before DOI publication; financial contributions are voluntary."
+        }
+      ],
+      "fr": [
+        {
+          "id": "pangaea-write-deposit",
+          "label": "PANGAEA — Soumettre des données",
+          "description": "Connectez-vous et déposez données et métadonnées. Les éditeurs gèrent révisions et validation par l’auteur dans le suivi des demandes avant publication DOI ; les contributions financières sont volontaires."
+        }
+      ],
+      "es": [
+        {
+          "id": "pangaea-write-deposit",
+          "label": "PANGAEA — Enviar datos",
+          "description": "Acceda y envíe datos y metadatos. Los editores gestionan revisiones y comprobación del autor mediante el seguimiento de incidencias antes de publicar el DOI; las aportaciones económicas son voluntarias."
+        }
+      ],
+      "ar": [
+        {
+          "id": "pangaea-write-deposit",
+          "label": "PANGAEA — إرسال البيانات",
+          "description": "سجّل الدخول وأرسل البيانات وبياناتها الوصفية. يدير المحررون التنقيحات ومراجعة المؤلف عبر نظام المتابعة قبل النشر بمعرّف DOI؛ والمساهمات المالية طوعية."
+        }
+      ],
+      "zh": [
+        {
+          "id": "pangaea-write-deposit",
+          "label": "PANGAEA — 提交数据",
+          "description": "登录并提交数据及元数据。编辑通过问题跟踪系统管理修订和作者校对，然后以 DOI 发布；经济捐助为自愿性质。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "pangaea-write-deposit",
+          "label": "PANGAEA — Передача данных",
+          "description": "Войдите и передайте данные с метаданными. Редакторы ведут исправления и авторскую проверку в системе заявок до публикации DOI; финансовая поддержка добровольна."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-deposit": {
+        "id": "write-access-deposit",
+        "url": "https://www.pangaea.de/submit/",
+        "title": {
+          "en": "PANGAEA — Submit data",
+          "fr": "PANGAEA — Soumettre des données",
+          "es": "PANGAEA — Enviar datos",
+          "ar": "PANGAEA — إرسال البيانات",
+          "zh": "PANGAEA — 提交数据",
+          "ru": "PANGAEA — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "rdbes",
+    "access": [
+      {
+        "id": "rdbes-write-upload",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://www.ices.dk/data/data-portals/Pages/rdbes.aspx",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-upload"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "rdbes-write-upload",
+          "label": "RDBES — Submit data",
+          "description": "Follow the RDBES exchange documentation to prepare catch, effort and sampling files. Use the data-submission portal and validation reports; confirm the appropriate role with ICES."
+        }
+      ],
+      "fr": [
+        {
+          "id": "rdbes-write-upload",
+          "label": "RDBES — Soumettre des données",
+          "description": "Suivez le format RDBES pour préparer captures, effort et échantillonnage. Utilisez le portail de dépôt et ses rapports de validation ; confirmez le rôle adapté avec ICES."
+        }
+      ],
+      "es": [
+        {
+          "id": "rdbes-write-upload",
+          "label": "RDBES — Enviar datos",
+          "description": "Siga el formato RDBES para preparar capturas, esfuerzo y muestreo. Use el portal de envío y los informes de validación; confirme el rol adecuado con ICES."
+        }
+      ],
+      "ar": [
+        {
+          "id": "rdbes-write-upload",
+          "label": "RDBES — إرسال البيانات",
+          "description": "اتبع وثائق تبادل RDBES لإعداد ملفات المصيد والجهد وأخذ العينات. استخدم بوابة الإرسال وتقارير التحقق؛ وأكّد الدور المناسب مع ICES."
+        }
+      ],
+      "zh": [
+        {
+          "id": "rdbes-write-upload",
+          "label": "RDBES — 提交数据",
+          "description": "按照 RDBES 交换格式文档准备渔获量、捕捞努力量和采样文件。使用提交门户和验证报告；向 ICES 确认适当角色。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "rdbes-write-upload",
+          "label": "RDBES — Передача данных",
+          "description": "Подготовьте уловы, промысловое усилие и выборки по формату RDBES. Используйте портал передачи и отчёты проверки; уточните роль доступа у ICES."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-upload": {
+        "id": "write-access-upload",
+        "url": "https://www.ices.dk/data/data-portals/Pages/rdbes.aspx",
+        "title": {
+          "en": "RDBES — Submit data",
+          "fr": "RDBES — Soumettre des données",
+          "es": "RDBES — Enviar datos",
+          "ar": "RDBES — إرسال البيانات",
+          "zh": "RDBES — 提交数据",
+          "ru": "RDBES — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "seadatanet",
+    "access": [
+      {
+        "id": "seadatanet-write-seanoe",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://www.seadatanet.org/Software/SEANOE",
+        "requirements": null,
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-seanoe"
+        ]
+      },
+      {
+        "id": "seadatanet-write-provider",
+        "type": "write",
+        "methods": [
+          "request"
+        ],
+        "url": "https://www.seadatanet.org/Metadata/How-to-contribute/Data-CDI",
+        "requirements": [
+          "approval",
+          "affiliation"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-provider"
+        ]
+      },
+      {
+        "id": "seadatanet-write-replication",
+        "type": "write",
+        "methods": [
+          "software",
+          "upload"
+        ],
+        "url": "https://www.seadatanet.org/Metadata/How-to-contribute/Data-CDI",
+        "requirements": [
+          "approval",
+          "affiliation"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-replication"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "seadatanet-write-seanoe",
+          "label": "SeaDataNet / SEANOE — Submit data",
+          "description": "Publish a marine dataset through SEANOE with descriptive metadata and a DOI. Expert centres may subsequently integrate suitable deposits into SeaDataNet and EMODnet."
+        },
+        {
+          "id": "seadatanet-write-provider",
+          "label": "SeaDataNet CDI — Contribution enquiries",
+          "description": "Data centres should contact MARIS to configure and validate their CDI connection. Prepare CDI XML and associated data; a staff-mediated arrangement is available."
+        },
+        {
+          "id": "seadatanet-write-replication",
+          "label": "SeaDataNet Replication Manager — Submission tool",
+          "description": "Connected data centres run Replication Manager to maintain CDI metadata and data contributions. Coordinate configuration with MARIS; use the required SeaDataNet delivery formats."
+        }
+      ],
+      "fr": [
+        {
+          "id": "seadatanet-write-seanoe",
+          "label": "SeaDataNet / SEANOE — Soumettre des données",
+          "description": "Publiez un jeu marin dans SEANOE avec métadonnées et DOI. Les centres experts peuvent ensuite intégrer les dépôts pertinents dans SeaDataNet et EMODnet."
+        },
+        {
+          "id": "seadatanet-write-provider",
+          "label": "SeaDataNet CDI — Demandes de contribution",
+          "description": "Les centres de données contactent MARIS pour configurer et valider leur connexion CDI. Préparez XML CDI et données associées ; une prise en charge manuelle est possible."
+        },
+        {
+          "id": "seadatanet-write-replication",
+          "label": "SeaDataNet Replication Manager — Outil de soumission",
+          "description": "Les centres connectés exécutent Replication Manager pour maintenir métadonnées CDI et données. Coordonnez la configuration avec MARIS et utilisez les formats SeaDataNet requis."
+        }
+      ],
+      "es": [
+        {
+          "id": "seadatanet-write-seanoe",
+          "label": "SeaDataNet / SEANOE — Enviar datos",
+          "description": "Publique un conjunto marino en SEANOE con metadatos y DOI. Los centros expertos pueden incorporar después los depósitos adecuados a SeaDataNet y EMODnet."
+        },
+        {
+          "id": "seadatanet-write-provider",
+          "label": "SeaDataNet CDI — Consultas sobre contribuciones",
+          "description": "Los centros de datos deben contactar a MARIS para configurar y validar su conexión CDI. Prepare XML CDI y datos asociados; existe una modalidad asistida por personal."
+        },
+        {
+          "id": "seadatanet-write-replication",
+          "label": "SeaDataNet Replication Manager — Herramienta de envío",
+          "description": "Los centros conectados ejecutan Replication Manager para mantener metadatos CDI y datos. Coordine la configuración con MARIS y use los formatos SeaDataNet exigidos."
+        }
+      ],
+      "ar": [
+        {
+          "id": "seadatanet-write-seanoe",
+          "label": "SeaDataNet / SEANOE — إرسال البيانات",
+          "description": "انشر مجموعة بيانات بحرية عبر SEANOE مع بيانات وصفية ومعرّف DOI. قد تدمج المراكز المختصة الإيداعات المناسبة لاحقًا في SeaDataNet وEMODnet."
+        },
+        {
+          "id": "seadatanet-write-provider",
+          "label": "SeaDataNet CDI — الاستفسار عن المساهمة",
+          "description": "تتواصل مراكز البيانات مع MARIS لضبط اتصال CDI والتحقق منه. جهّز XML الخاص بـ CDI والبيانات المرتبطة؛ ويتوفر ترتيب يتولاه الموظفون."
+        },
+        {
+          "id": "seadatanet-write-replication",
+          "label": "SeaDataNet Replication Manager — أداة إرسال البيانات",
+          "description": "تشغّل مراكز البيانات المتصلة Replication Manager لتحديث بيانات CDI الوصفية ومساهمات البيانات. نسّق الإعداد مع MARIS واستخدم صيغ تسليم SeaDataNet المطلوبة."
+        }
+      ],
+      "zh": [
+        {
+          "id": "seadatanet-write-seanoe",
+          "label": "SeaDataNet / SEANOE — 提交数据",
+          "description": "通过 SEANOE 发布海洋数据集、描述性元数据和 DOI。专业中心之后可能将适用的提交内容纳入 SeaDataNet 和 EMODnet。"
+        },
+        {
+          "id": "seadatanet-write-provider",
+          "label": "SeaDataNet CDI — 贡献咨询",
+          "description": "数据中心应联系 MARIS 配置并验证 CDI 连接。准备 CDI XML 及关联数据；也可安排由工作人员协助处理。"
+        },
+        {
+          "id": "seadatanet-write-replication",
+          "label": "SeaDataNet Replication Manager — 提交工具",
+          "description": "已连接的数据中心运行 Replication Manager 维护 CDI 元数据和数据贡献。与 MARIS 协调配置，并使用所需的 SeaDataNet 交付格式。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "seadatanet-write-seanoe",
+          "label": "SeaDataNet / SEANOE — Передача данных",
+          "description": "Опубликуйте морской набор через SEANOE с метаданными и DOI. Профильные центры впоследствии могут включить подходящие депозиты в SeaDataNet и EMODnet."
+        },
+        {
+          "id": "seadatanet-write-provider",
+          "label": "SeaDataNet CDI — Согласование передачи",
+          "description": "Центрам данных следует связаться с MARIS для настройки и проверки подключения CDI. Подготовьте CDI XML и связанные данные; возможна передача при содействии сотрудников."
+        },
+        {
+          "id": "seadatanet-write-replication",
+          "label": "SeaDataNet Replication Manager — Инструмент передачи данных",
+          "description": "Подключённые центры используют Replication Manager для обновления метаданных CDI и данных. Согласуйте настройку с MARIS и используйте требуемые форматы SeaDataNet."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-seanoe": {
+        "id": "write-access-seanoe",
+        "url": "https://www.seadatanet.org/Software/SEANOE",
+        "title": {
+          "en": "SeaDataNet / SEANOE — Submit data",
+          "fr": "SeaDataNet / SEANOE — Soumettre des données",
+          "es": "SeaDataNet / SEANOE — Enviar datos",
+          "ar": "SeaDataNet / SEANOE — إرسال البيانات",
+          "zh": "SeaDataNet / SEANOE — 提交数据",
+          "ru": "SeaDataNet / SEANOE — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-provider": {
+        "id": "write-access-provider",
+        "url": "https://www.seadatanet.org/Metadata/How-to-contribute/Data-CDI",
+        "title": {
+          "en": "SeaDataNet CDI — Contribution enquiries",
+          "fr": "SeaDataNet CDI — Demandes de contribution",
+          "es": "SeaDataNet CDI — Consultas sobre contribuciones",
+          "ar": "SeaDataNet CDI — الاستفسار عن المساهمة",
+          "zh": "SeaDataNet CDI — 贡献咨询",
+          "ru": "SeaDataNet CDI — Согласование передачи"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-replication": {
+        "id": "write-access-replication",
+        "url": "https://www.seadatanet.org/Metadata/How-to-contribute/Data-CDI",
+        "title": {
+          "en": "SeaDataNet Replication Manager — Submission tool",
+          "fr": "SeaDataNet Replication Manager — Outil de soumission",
+          "es": "SeaDataNet Replication Manager — Herramienta de envío",
+          "ar": "SeaDataNet Replication Manager — أداة إرسال البيانات",
+          "zh": "SeaDataNet Replication Manager — 提交工具",
+          "ru": "SeaDataNet Replication Manager — Инструмент передачи данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "seadatanet-cdi",
+    "access": [
+      {
+        "id": "seadatanet-cdi-write-provider",
+        "type": "write",
+        "methods": [
+          "request"
+        ],
+        "url": "https://www.seadatanet.org/Metadata/How-to-contribute/Data-CDI",
+        "requirements": [
+          "approval",
+          "affiliation"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-provider"
+        ]
+      },
+      {
+        "id": "seadatanet-cdi-write-replication",
+        "type": "write",
+        "methods": [
+          "software",
+          "upload"
+        ],
+        "url": "https://www.seadatanet.org/Metadata/How-to-contribute/Data-CDI",
+        "requirements": [
+          "approval",
+          "affiliation"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-replication"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "seadatanet-cdi-write-provider",
+          "label": "SeaDataNet CDI — Contribution enquiries",
+          "description": "Data centres should contact MARIS to configure and validate their CDI connection. Prepare CDI XML and associated data; a staff-mediated arrangement is available."
+        },
+        {
+          "id": "seadatanet-cdi-write-replication",
+          "label": "SeaDataNet Replication Manager — Submission tool",
+          "description": "Connected data centres run Replication Manager to maintain CDI metadata and data contributions. Coordinate configuration with MARIS; use the required SeaDataNet delivery formats."
+        }
+      ],
+      "fr": [
+        {
+          "id": "seadatanet-cdi-write-provider",
+          "label": "SeaDataNet CDI — Demandes de contribution",
+          "description": "Les centres de données contactent MARIS pour configurer et valider leur connexion CDI. Préparez XML CDI et données associées ; une prise en charge manuelle est possible."
+        },
+        {
+          "id": "seadatanet-cdi-write-replication",
+          "label": "SeaDataNet Replication Manager — Outil de soumission",
+          "description": "Les centres connectés exécutent Replication Manager pour maintenir métadonnées CDI et données. Coordonnez la configuration avec MARIS et utilisez les formats SeaDataNet requis."
+        }
+      ],
+      "es": [
+        {
+          "id": "seadatanet-cdi-write-provider",
+          "label": "SeaDataNet CDI — Consultas sobre contribuciones",
+          "description": "Los centros de datos deben contactar a MARIS para configurar y validar su conexión CDI. Prepare XML CDI y datos asociados; existe una modalidad asistida por personal."
+        },
+        {
+          "id": "seadatanet-cdi-write-replication",
+          "label": "SeaDataNet Replication Manager — Herramienta de envío",
+          "description": "Los centros conectados ejecutan Replication Manager para mantener metadatos CDI y datos. Coordine la configuración con MARIS y use los formatos SeaDataNet exigidos."
+        }
+      ],
+      "ar": [
+        {
+          "id": "seadatanet-cdi-write-provider",
+          "label": "SeaDataNet CDI — الاستفسار عن المساهمة",
+          "description": "تتواصل مراكز البيانات مع MARIS لضبط اتصال CDI والتحقق منه. جهّز XML الخاص بـ CDI والبيانات المرتبطة؛ ويتوفر ترتيب يتولاه الموظفون."
+        },
+        {
+          "id": "seadatanet-cdi-write-replication",
+          "label": "SeaDataNet Replication Manager — أداة إرسال البيانات",
+          "description": "تشغّل مراكز البيانات المتصلة Replication Manager لتحديث بيانات CDI الوصفية ومساهمات البيانات. نسّق الإعداد مع MARIS واستخدم صيغ تسليم SeaDataNet المطلوبة."
+        }
+      ],
+      "zh": [
+        {
+          "id": "seadatanet-cdi-write-provider",
+          "label": "SeaDataNet CDI — 贡献咨询",
+          "description": "数据中心应联系 MARIS 配置并验证 CDI 连接。准备 CDI XML 及关联数据；也可安排由工作人员协助处理。"
+        },
+        {
+          "id": "seadatanet-cdi-write-replication",
+          "label": "SeaDataNet Replication Manager — 提交工具",
+          "description": "已连接的数据中心运行 Replication Manager 维护 CDI 元数据和数据贡献。与 MARIS 协调配置，并使用所需的 SeaDataNet 交付格式。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "seadatanet-cdi-write-provider",
+          "label": "SeaDataNet CDI — Согласование передачи",
+          "description": "Центрам данных следует связаться с MARIS для настройки и проверки подключения CDI. Подготовьте CDI XML и связанные данные; возможна передача при содействии сотрудников."
+        },
+        {
+          "id": "seadatanet-cdi-write-replication",
+          "label": "SeaDataNet Replication Manager — Инструмент передачи данных",
+          "description": "Подключённые центры используют Replication Manager для обновления метаданных CDI и данных. Согласуйте настройку с MARIS и используйте требуемые форматы SeaDataNet."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-provider": {
+        "id": "write-access-provider",
+        "url": "https://www.seadatanet.org/Metadata/How-to-contribute/Data-CDI",
+        "title": {
+          "en": "SeaDataNet CDI — Contribution enquiries",
+          "fr": "SeaDataNet CDI — Demandes de contribution",
+          "es": "SeaDataNet CDI — Consultas sobre contribuciones",
+          "ar": "SeaDataNet CDI — الاستفسار عن المساهمة",
+          "zh": "SeaDataNet CDI — 贡献咨询",
+          "ru": "SeaDataNet CDI — Согласование передачи"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-replication": {
+        "id": "write-access-replication",
+        "url": "https://www.seadatanet.org/Metadata/How-to-contribute/Data-CDI",
+        "title": {
+          "en": "SeaDataNet Replication Manager — Submission tool",
+          "fr": "SeaDataNet Replication Manager — Outil de soumission",
+          "es": "SeaDataNet Replication Manager — Herramienta de envío",
+          "ar": "SeaDataNet Replication Manager — أداة إرسال البيانات",
+          "zh": "SeaDataNet Replication Manager — 提交工具",
+          "ru": "SeaDataNet Replication Manager — Инструмент передачи данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "socat",
+    "access": [
+      {
+        "id": "socat-write-upload",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://socat.info/index.php/data-upload-and-quality-control/",
+        "requirements": [
+          "account",
+          "approval"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-upload"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "socat-write-upload",
+          "label": "SOCAT — Submit data",
+          "description": "Request a submission account from SOCAT support. Upload surface CO₂ data with the required metadata; community quality control and release deadlines govern inclusion."
+        }
+      ],
+      "fr": [
+        {
+          "id": "socat-write-upload",
+          "label": "SOCAT — Soumettre des données",
+          "description": "Demandez un compte de dépôt à l’assistance SOCAT. Chargez données CO₂ de surface et métadonnées requises ; contrôles communautaires et échéances régissent l’intégration."
+        }
+      ],
+      "es": [
+        {
+          "id": "socat-write-upload",
+          "label": "SOCAT — Enviar datos",
+          "description": "Solicite una cuenta al soporte SOCAT. Cargue datos de CO₂ superficial y metadatos requeridos; los controles comunitarios y plazos de publicación rigen la inclusión."
+        }
+      ],
+      "ar": [
+        {
+          "id": "socat-write-upload",
+          "label": "SOCAT — إرسال البيانات",
+          "description": "اطلب حساب إرسال من دعم SOCAT. ارفع بيانات CO₂ السطحية مع البيانات الوصفية المطلوبة؛ ويخضع الإدراج لفحص المجتمع ومواعيد الإصدارات."
+        }
+      ],
+      "zh": [
+        {
+          "id": "socat-write-upload",
+          "label": "SOCAT — 提交数据",
+          "description": "向 SOCAT 支持团队申请提交账户。上传表层 CO₂ 数据及所需元数据；是否纳入取决于社区质量检查和发布截止日期。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "socat-write-upload",
+          "label": "SOCAT — Передача данных",
+          "description": "Запросите учётную запись у поддержки SOCAT. Загрузите данные поверхностного CO₂ и необходимые метаданные; включение зависит от проверки сообщества и сроков выпуска."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-upload": {
+        "id": "write-access-upload",
+        "url": "https://socat.info/index.php/data-upload-and-quality-control/",
+        "title": {
+          "en": "SOCAT — Submit data",
+          "fr": "SOCAT — Soumettre des données",
+          "es": "SOCAT — Enviar datos",
+          "ar": "SOCAT — إرسال البيانات",
+          "zh": "SOCAT — 提交数据",
+          "ru": "SOCAT — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "ioos",
+    "access": [
+      {
+        "id": "ioos-write-registry",
+        "type": "write",
+        "methods": [
+          "form",
+          "harvest"
+        ],
+        "url": "https://ioos.noaa.gov/data/data-standards/catalog-registration-new/",
+        "requirements": [
+          "account",
+          "affiliation"
+        ],
+        "cost": "unknown",
+        "sourceRefs": [
+          "write-access-registry"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "ioos-write-registry",
+          "label": "IOOS Harvest Registry — Register a data source",
+          "description": "Register an organizational account and configure a WAF or CS-W metadata source. Maintain ISO metadata and inspect harvest errors; observations remain on provider services."
+        }
+      ],
+      "fr": [
+        {
+          "id": "ioos-write-registry",
+          "label": "IOOS Harvest Registry — Enregistrer une source de données",
+          "description": "Créez un compte lié à l’organisme et configurez une source WAF ou CS-W. Maintenez les métadonnées ISO et contrôlez les erreurs ; les observations restent chez le fournisseur."
+        }
+      ],
+      "es": [
+        {
+          "id": "ioos-write-registry",
+          "label": "IOOS Harvest Registry — Registrar una fuente de datos",
+          "description": "Registre una cuenta vinculada a la organización y configure una fuente WAF o CS-W. Mantenga metadatos ISO y revise errores; las observaciones permanecen en servicios del proveedor."
+        }
+      ],
+      "ar": [
+        {
+          "id": "ioos-write-registry",
+          "label": "IOOS Harvest Registry — تسجيل مصدر بيانات",
+          "description": "سجّل حسابًا مرتبطًا بمؤسستك واضبط مصدر بيانات وصفية WAF أو CS-W. حدّث بيانات ISO وراجع أخطاء الحصاد؛ وتبقى الرصدات لدى خدمات المزوّد."
+        }
+      ],
+      "zh": [
+        {
+          "id": "ioos-write-registry",
+          "label": "IOOS Harvest Registry — 注册数据源",
+          "description": "注册机构关联账户并配置 WAF 或 CS-W 元数据源。维护 ISO 元数据并检查采集错误；观测数据仍由提供方服务托管。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "ioos-write-registry",
+          "label": "IOOS Harvest Registry — Регистрация источника данных",
+          "description": "Зарегистрируйте учётную запись организации и настройте источник WAF или CS-W. Поддерживайте метаданные ISO и проверяйте ошибки сбора; наблюдения остаются у поставщика."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-registry": {
+        "id": "write-access-registry",
+        "url": "https://ioos.noaa.gov/data/data-standards/catalog-registration-new/",
+        "title": {
+          "en": "IOOS Harvest Registry — Register a data source",
+          "fr": "IOOS Harvest Registry — Enregistrer une source de données",
+          "es": "IOOS Harvest Registry — Registrar una fuente de datos",
+          "ar": "IOOS Harvest Registry — تسجيل مصدر بيانات",
+          "zh": "IOOS Harvest Registry — 注册数据源",
+          "ru": "IOOS Harvest Registry — Регистрация источника данных"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "nodeId": "zenodo",
+    "access": [
+      {
+        "id": "zenodo-write-deposit",
+        "type": "write",
+        "methods": [
+          "form",
+          "upload"
+        ],
+        "url": "https://help.zenodo.org/docs/deposit/",
+        "requirements": [
+          "account"
+        ],
+        "cost": "free",
+        "sourceRefs": [
+          "write-access-deposit",
+          "write-access-costs"
+        ]
+      },
+      {
+        "id": "zenodo-write-api",
+        "type": "write",
+        "methods": [
+          "api",
+          "upload"
+        ],
+        "url": "https://developers.zenodo.org/",
+        "requirements": [
+          "account",
+          "api_key"
+        ],
+        "cost": "free",
+        "sourceRefs": [
+          "write-access-api",
+          "write-access-costs"
+        ]
+      }
+    ],
+    "localizations": {
+      "en": [
+        {
+          "id": "zenodo-write-deposit",
+          "label": "Zenodo — Submit data",
+          "description": "Create an upload, add files and descriptive metadata, then review the draft before publishing. Choose access and licensing settings appropriate to the material. Check upload quotas and fair-use limits before large deposits."
+        },
+        {
+          "id": "zenodo-write-api",
+          "label": "Zenodo — Submission API",
+          "description": "Create a personal access token with deposition scopes, upload files and metadata, then publish explicitly. Writing drafts and publishing require distinct token permissions."
+        }
+      ],
+      "fr": [
+        {
+          "id": "zenodo-write-deposit",
+          "label": "Zenodo — Soumettre des données",
+          "description": "Créez un dépôt, ajoutez fichiers et métadonnées, puis vérifiez le brouillon avant publication. Choisissez les paramètres d’accès et de licence adaptés aux contenus. Vérifiez les quotas et limites d’usage raisonnable avant les dépôts volumineux."
+        },
+        {
+          "id": "zenodo-write-api",
+          "label": "Zenodo — API de soumission",
+          "description": "Créez un jeton personnel doté des droits de dépôt, envoyez fichiers et métadonnées, puis publiez explicitement. Modification des brouillons et publication exigent des droits distincts."
+        }
+      ],
+      "es": [
+        {
+          "id": "zenodo-write-deposit",
+          "label": "Zenodo — Enviar datos",
+          "description": "Cree un depósito, añada archivos y metadatos y revise el borrador antes de publicar. Elija opciones de acceso y licencia adecuadas al material. Compruebe cuotas y límites de uso razonable antes de depósitos grandes."
+        },
+        {
+          "id": "zenodo-write-api",
+          "label": "Zenodo — API de envío",
+          "description": "Cree un token personal con permisos de depósito, cargue archivos y metadatos y publique explícitamente. Escribir borradores y publicar requieren permisos distintos."
+        }
+      ],
+      "ar": [
+        {
+          "id": "zenodo-write-deposit",
+          "label": "Zenodo — إرسال البيانات",
+          "description": "أنشئ إيداعًا وأضف الملفات والبيانات الوصفية ثم راجع المسودة قبل النشر. اختر إعدادات الوصول والترخيص الملائمة للمحتوى. تحقّق من حصص الرفع وحدود الاستخدام المنصف قبل الإيداعات الكبيرة."
+        },
+        {
+          "id": "zenodo-write-api",
+          "label": "Zenodo — واجهة إرسال البيانات",
+          "description": "أنشئ رمز وصول شخصيًا بصلاحيات الإيداع وارفع الملفات والبيانات الوصفية ثم انشر صراحةً. تتطلب كتابة المسودات والنشر أذونات مختلفة للرمز."
+        }
+      ],
+      "zh": [
+        {
+          "id": "zenodo-write-deposit",
+          "label": "Zenodo — 提交数据",
+          "description": "创建上传条目，添加文件和描述性元数据，并在发布前检查草稿。选择适合材料的访问和许可设置。 大量提交前请检查上传配额和公平使用限制。"
+        },
+        {
+          "id": "zenodo-write-api",
+          "label": "Zenodo — 提交 API",
+          "description": "创建具有存入权限的个人访问令牌，上传文件及元数据后显式发布。写入草稿和发布需要不同的令牌权限。"
+        }
+      ],
+      "ru": [
+        {
+          "id": "zenodo-write-deposit",
+          "label": "Zenodo — Передача данных",
+          "description": "Создайте депозит, добавьте файлы и метаданные, проверьте черновик перед публикацией. Выберите подходящие настройки доступа и лицензии. Перед крупной загрузкой проверьте квоты и ограничения добросовестного использования."
+        },
+        {
+          "id": "zenodo-write-api",
+          "label": "Zenodo — API передачи данных",
+          "description": "Создайте личный токен с правами депонирования, загрузите файлы и метаданные, затем отдельно опубликуйте. Редактирование черновиков и публикация требуют разных прав токена."
+        }
+      ]
+    },
+    "sources": {
+      "write-access-deposit": {
+        "id": "write-access-deposit",
+        "url": "https://help.zenodo.org/docs/deposit/",
+        "title": {
+          "en": "Zenodo — Submit data",
+          "fr": "Zenodo — Soumettre des données",
+          "es": "Zenodo — Enviar datos",
+          "ar": "Zenodo — إرسال البيانات",
+          "zh": "Zenodo — 提交数据",
+          "ru": "Zenodo — Передача данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-api": {
+        "id": "write-access-api",
+        "url": "https://developers.zenodo.org/",
+        "title": {
+          "en": "Zenodo — Submission API",
+          "fr": "Zenodo — API de soumission",
+          "es": "Zenodo — API de envío",
+          "ar": "Zenodo — واجهة إرسال البيانات",
+          "zh": "Zenodo — 提交 API",
+          "ru": "Zenodo — API передачи данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-costs": {
+        "id": "write-access-costs",
+        "url": "https://support.zenodo.org/help/en-gb/1-upload-deposit/80-what-are-the-size-limitations-of-zenodo",
+        "title": {
+          "en": "Zenodo — Free service and upload limits",
+          "fr": "Zenodo — Gratuité et limites de dépôt",
+          "es": "Zenodo — Servicio gratuito y límites de carga",
+          "ar": "Zenodo — الخدمة المجانية وحدود الرفع",
+          "zh": "Zenodo — 免费服务与上传限制",
+          "ru": "Zenodo — Бесплатный сервис и ограничения загрузки"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  }
+]

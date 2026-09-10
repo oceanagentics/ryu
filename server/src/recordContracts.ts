@@ -2,7 +2,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { isSystemMetricKey, metricDefinitions, metricPeriods } from "../../shared/domain";
+import { accessCosts, accessRequirements, isReadAccessMethod, isWriteAccessMethod, isAccessUrl, isSystemMetricKey, metricDefinitions, metricPeriods } from "../../shared/domain";
 
 import type {
   GraphEdge,
@@ -222,8 +222,8 @@ export function readRecordSearchQuery(input: Record<string, unknown>): RecordSea
     reviewLocale,
     routeStatus: readList(input.routeStatus, "routeStatus"),
     routeCapability: readList(input.routeCapability, "routeCapability"),
-    accessType: readList(input.accessType, "accessType"),
-    accessMethod: readList(input.accessMethod, "accessMethod"),
+    accessType: readList(input.accessType, "accessType").map(value => readSetValue(value, new Set(["read", "write"] as const), "accessType")),
+    accessMethod: readList(input.accessMethod, "accessMethod").map(value => readEnumValue(value, value => isReadAccessMethod(value) || isWriteAccessMethod(value), "accessMethod")),
     include: readList(input.include, "include").map((value) =>
       readSetValue(value, recordIncludes, "include"),
     ),
@@ -427,10 +427,12 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
   const access = array(p.access);
   const gallery = array(p.gallery);
   const metrics = array(p.metrics);
+  const accessError = (field: string, message: string, evidence = false) => add(field, message, evidence, true);
   const metricError = (field: string, message: string, evidence = false) => add(field, message, evidence, true);
   for (const [field, value] of [["access", p.access], ["gallery", p.gallery], ["data.descriptors", data.descriptors]] as const) {
     if (value != null && (!Array.isArray(value) || value.some(item => !isRecord(item)))) add(`record.properties.${field}`, "must be an array of objects");
   }
+  if (p.access !== undefined && (!Array.isArray(p.access) || p.access.some(item => !isRecord(item)))) accessError("record.properties.access", "must be an array of access objects");
   if (p.metrics !== undefined && (!Array.isArray(p.metrics) || p.metrics.some(item => !isRecord(item)))) metricError("record.properties.metrics", "must be an array of metric objects");
   if (hasOwn(p, "usage")) metricError("record.properties.usage", "field removed; use metrics");
   for (const key of ["recordCount", "storageSize"]) {
@@ -500,13 +502,36 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     if (!["type", "format", "standard"].includes(String(item.category))) add(`record.properties.data.descriptors[${i}].category`, "invalid descriptor category");
     citation(item.source, `record.properties.data.descriptors[${i}].source`);
   });
+  const accessIds = new Set(access.map(item => item.id));
+  if (accessIds.size !== access.length || access.some(item => !text(item.id))) accessError("record.properties.access", "access IDs must be present and unique");
   access.forEach((item, i) => {
     const field = `record.properties.access[${i}]`;
-    if (!["read", "submit", "partner_sync"].includes(String(item.type))) add(`${field}.type`, "invalid access type");
-    if (!text(item.method) || !/^[a-z][a-z0-9_]*$/.test(item.method)) add(`${field}.method`, "a lower_snake_case method is required");
-    if (!httpUrl(item.url)) add(`${field}.url`, "an HTTP(S) URL is required");
-    citation(item.source, `${field}.source`);
+    if (item.type !== "read" && item.type !== "write") accessError(`${field}.type`, "use read or write; submit and partner_sync are retired");
+    if (input.record.kind !== "system") accessError(field, "access belongs on system records");
+    for (const key of Object.keys(item)) {
+      if (!["id", "type", "methods", "url", "requirements", "cost", "sourceRefs"].includes(key)) accessError(`${field}.${key}`, "unknown access field; use methods, requirements, cost and sourceRefs");
+    }
+    const methodGuard = item.type === "write" ? isWriteAccessMethod : isReadAccessMethod;
+    if (!Array.isArray(item.methods) || !item.methods.length || item.methods.some(method => !methodGuard(method)) || new Set(item.methods).size !== item.methods.length) accessError(`${field}.methods`, "use a nonempty array of unique approved methods for this direction; additions require human approval and a vocabulary/translation release");
+    if (!isAccessUrl(item.url)) accessError(`${field}.url`, "a usable HTTP(S), FTP(S), SFTP, rsync, S3 or GS address without embedded credentials is required");
+    if (item.requirements !== null && (!Array.isArray(item.requirements) || item.requirements.some(value => !accessRequirements.some(requirement => requirement === value)) || new Set(item.requirements).size !== item.requirements.length)) accessError(`${field}.requirements`, "use unique approved requirements, [] for verified absence, or null when unknown");
+    if (!accessCosts.some(cost => cost === item.cost)) accessError(`${field}.cost`, "use free, paid, mixed or unknown");
+    if (!Array.isArray(item.sourceRefs) || !item.sourceRefs.length || item.sourceRefs.some(ref => !text(ref) || !hasOwn(sources, ref)) || new Set(item.sourceRefs).size !== item.sourceRefs.length) accessError(`${field}.sourceRefs`, "nonempty unique source IDs resolving against this system are required", true);
   });
+  for (const locale of supportedLocales) {
+    const localizedAccess = object(input.localizations?.[locale]?.details).access;
+    if (localizedAccess !== undefined && (!Array.isArray(localizedAccess) || localizedAccess.some(row => !isRecord(row)))) accessError(`localizations.${locale}.details.access`, "must be an array of localized access objects");
+    const rows = array(localizedAccess);
+    for (const item of access) {
+      const field = `localizations.${locale}.details.access.${item.id}`;
+      const matches = rows.filter(row => row.id === item.id);
+      if (matches.length !== 1) accessError(field, "each access ID requires exactly one localized entry in all six languages");
+      const translated = matches[0] ?? {};
+      for (const key of Object.keys(translated)) if (!["id", "label", "description"].includes(key)) accessError(`${field}.${key}`, "localized access contains only id, label and description; consolidate instructions and caveats into description");
+      for (const key of ["label", "description"]) if (!text(translated[key])) accessError(`${field}.${key}`, "nonempty localized access guidance is required");
+    }
+    if (rows.some(row => !accessIds.has(row.id))) accessError(`localizations.${locale}.details.access`, "localized access IDs must resolve to neutral entries");
+  }
   gallery.forEach((item, i) => {
     const field = `record.properties.gallery[${i}]`;
     if (!["image", "embed"].includes(String(item.type))) add(`${field}.type`, "invalid gallery type");
@@ -564,7 +589,7 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
       if (item.description !== null && typeof item.description !== "string") metricError(`${field}.details.metrics[${i}].description`, "must be text or null");
     });
     for (const key of Object.keys(object(details.researchGaps))) {
-      if (!["data", "usage", "standards"].includes(key)) metricError(`${field}.details.researchGaps.${key}`, "use data, usage, or standards for research gaps");
+      if (!["data", "usage", "standards", "access"].includes(key)) metricError(`${field}.details.researchGaps.${key}`, "use data, usage, standards, or access for research gaps");
     }
     if (input.record.kind === "system") {
       for (const [key, present] of [["data", metrics.some(item => isSystemMetricKey(item.key) && metricDefinitions[item.key].group === "data")], ["usage", metrics.some(item => isSystemMetricKey(item.key) && metricDefinitions[item.key].group === "usage")], ["standards", descriptors.some(item => item.category === "standard")]] as const) {

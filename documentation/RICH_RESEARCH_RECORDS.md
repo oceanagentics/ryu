@@ -36,7 +36,7 @@ For system nodes:
 - Use `nodes.record_depth` to track `stub`, `thin`, or `rich`.
 - Use `nodes.properties_json` for language-neutral operational facts: approved discipline IDs, gallery asset URLs, data descriptor structure, access mechanics, and metric values.
 - Use `node_localizations.title`, `summary`, and `description` for the public prose profile in each locale.
-- Use `node_localizations.details_json` for localized details: aliases, gallery titles/captions, descriptor descriptions, access labels/descriptions/instructions, metric descriptions, and other language-specific prose.
+- Use `node_localizations.details_json` for localized details: aliases, gallery titles/captions, descriptor descriptions, access labels/descriptions, metric descriptions, and other language-specific prose.
 - Store review snapshots in `node_localizations.review_json.history`. Each snapshot has `state`, `reviewer`, `date`, and `note`; the final entry defines current review state (`agent_researched`, `human_reviewed`, or `needs_revision`).
 - The details UI shows `recordDepth` and the resolved localization's `review.state` for all users. In authenticated/author mode, it lets users update only `reviewState` and `reviewerNote`; snapshot `reviewer` and `date` are set by the server.
 - Do not set review metadata in record content writes. Review state and reviewer
@@ -665,22 +665,50 @@ The API rejects the old fields after cutover; there is no permanent dual write.
 
 Use `nodes.properties_json.access` for access mechanics and `node_localizations.details_json.access` for localized access prose. Access and submission remain one record section, but the UI splits read paths from write/contribution paths.
 
-Each neutral access path should have:
+Read and Write access include human and machine connections. Every access entry has exactly:
 
-- `id`: stable route-like id within the node.
-- `type`: `read`, `submit`, or `partner_sync`.
-- `method`: lower_snake_case access mechanism.
-- `url`: direct portal, docs, contact, download, API, or terms page.
-- `source`: source ID resolving against `nodes.sources`, including its translated title.
+- `id`: stable ID unique within the node's access array.
+- `type`: `read` or `write`. The old `submit` and `partner_sync` types are retired.
+- `methods`: a nonempty, unique array from `readAccessMethods` or `writeAccessMethods`, matching the direction.
+- `url`: a useful portal, documentation page, endpoint, download, URL template or storage/transfer address. Supported schemes are HTTP, HTTPS, FTP, FTPS, SFTP, rsync, S3 and GS. Never embed credentials.
+- `requirements`: unique approved IDs, `[]` when the absence of prerequisites is verified, or `null` when requirements are unknown.
+- `cost`: `free`, `paid`, `mixed` or `unknown`.
+- `sourceRefs`: a nonempty, unique list of IDs resolving against this node's sources. The shared Source shape is unchanged.
 
-Each localized access path should have the same `id` plus:
+| Read method | Meaning |
+| --- | --- |
+| `browse` | Search, inspect or visualize data through a website. |
+| `download` | Retrieve files, exports, snapshots or stored objects. |
+| `api` | Query or retrieve data programmatically, including map services and metadata harvesting. |
+| `software` | Retrieve data using a client library, SDK, CLI, toolbox or application that the user runs. |
+| `request` | Follow a documented process to request data. |
 
-- `label`: short human-readable label.
-- `description`: how access is handled, including account/API key, application, payment, free access, limitations, and whether data are static snapshots.
+Hosted ERDDAP is classified by its offered browse/download/API access. Client tools are software. SPARQL, WFS, WMS and WMTS are API access; retain the interface name and its scope in the title and description. A map viewer is browse access. Metadata catalogue and harvesting access is retained, with guidance explicitly distinguishing metadata from underlying data. Do not add protocol-specific method IDs.
 
-Do not add negative access rows for access that does not exist, such as "no public write API", "no direct write", or "commercial reuse requires contact". Leave absent access absent. If a limitation materially qualifies an actual access path, describe it in that access path's localized `description` or in the system profile.
+Write methods describe how a contributor provides data, metadata, corrections or other accepted content:
 
-Do not create `none`, `service`, `documentation`, or `download` access types. Preserve those distinctions in `method` or localized labels when useful; `type` must be `read`, `submit`, or `partner_sync`.
+| Write method | Meaning |
+| --- | --- |
+| `form` | Enter or edit content through web forms. |
+| `upload` | Send files, including browser uploads or managed file transfer. |
+| `api` | Create, update or submit content programmatically. |
+| `software` | Contribute through a client tool, CLI or application the contributor runs. |
+| `request` | Contact staff or follow a mediated contribution process. |
+| `harvest` | Expose or register a source that the receiving system retrieves. |
+
+Hosted IPT and other server packages are classified by their offered form/upload/harvest workflows. Keep package, protocol and template names in guidance. DOI publication is an outcome, not a method. A read API does not establish write support.
+
+Requirements are `account`, `api_key` (key or access token), `approval`, and `affiliation` (membership of an eligible organization or group). Tag only confirmed prerequisites for the described access. Unknown does not mean unrestricted. `approval` means permission to participate; routine curator review belongs in prose. Cost concerns obtaining data for Read or contributing/publishing it for Write, not opening documentation. Describe conditional requirements and variation in prose; split entries when conditions materially differ. Free access does not establish an unrestricted reuse licence.
+
+Each access entry requires exactly one localized `{ id, label, description }` item in every supported locale, including thin/stub records. Labels name the destination or interface. Descriptions explain what the user receives or contributes, where to start, prerequisites and material limits. For Write, name accepted content, preparation steps, submission versus publication, curation and any upstream repository involved. Include relevant subset, snapshot, quota, licensing, map-image versus feature, and metadata-versus-data distinctions. Consolidate legacy `instructions` and `caveats` into `description`, preserving useful information. Never use boilerplate such as "Access via API."
+
+Use multiple methods on one entry when they describe the same useful destination and conditions. The same method may occur on several entries. Consolidate redundant rows, verify destinations from official documentation and actual responses, and preserve distinct useful services. A generic project homepage rarely establishes an API or download route. Do not manufacture access for a planned system; record the gap in localized prose when no current path is verified.
+
+The approved vocabularies live in `shared/domain.ts`, with all six translations in `shared/vocabularyLabels/access.ts`. Additions require explicit human approval in the authoring chat and a vocabulary/translation release. API validation enforces the shared shape, approved values, source resolution and six-language guidance at every depth. The old singular `method` and `source` fields are rejected for all access entries.
+
+Do not retain outgoing preservation copies or federation plans as Write access. Preserve evidenced transfers on `syncs_to` edges and describe planned or unavailable contribution arrangements in sourced profile prose. Retiring an access row must not remove its source or an existing edge.
+
+Do not add negative access rows for unavailable access. Describe a limitation on a real path in its guidance or the profile. Endpoint availability does not establish an inter-system relationship: only an evidenced transfer supports a `syncs_to` edge, directed from provider to recipient regardless of who initiates the request. Operational agent route selection remains in `ryu_routes`.
 
 ## Ryu Routes
 

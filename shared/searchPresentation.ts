@@ -10,6 +10,7 @@ import type {
   RyuRoute,
   SupportedLocale,
   SystemAccessType,
+  AccessMethod,
   SystemDataDescriptorCategory,
 } from "./domain";
 import type { IndexedGraph } from "./indexGraph";
@@ -33,8 +34,8 @@ export type LocalizationCoverageFilter =
 export type GraphSearchFilters = {
   disciplines: Discipline[];
   dataClaims: Record<ClaimFilterKey, string[]>;
-  accessTypes: string[];
-  accessMethods: string[];
+  accessTypes: SystemAccessType[];
+  accessMethods: AccessMethod[];
   localizationCoverage: LocalizationCoverageFilter[];
   reviewState: ReviewState[];
 };
@@ -65,7 +66,7 @@ export type SystemSearchRecord = {
   dataFormats: DataFormat[];
   dataStandards: DataStandard[];
   accessTypes: SystemAccessType[];
-  accessMethods: string[];
+  accessMethods: AccessMethod[];
   accessLabels: string[];
   hasCurrentLocale: boolean;
   currentLocaleReviewState: ReviewState | null;
@@ -213,12 +214,8 @@ export function buildSystemRecord(
     dataFormats,
     dataStandards,
     accessTypes: uniqueSorted(accessPaths.map((path) => path.type)),
-    accessMethods: uniqueSorted(accessPaths.map((path) => path.method)),
-    accessLabels: uniqueSorted(accessPaths.map((path) =>
-      path.label === path.method
-        ? vocabularyLabel(locale, "accessMethods", path.method)
-        : path.label,
-    )),
+    accessMethods: uniqueSorted(accessPaths.flatMap((path) => path.methods)),
+    accessLabels: uniqueSorted(accessPaths.map(path => path.label)),
     hasCurrentLocale: Boolean(currentLocalization),
     currentLocaleReviewState: currentLocalization?.review.state ?? null,
     sourceTitles: uniqueSorted([

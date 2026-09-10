@@ -7,7 +7,7 @@ import { detailsMessages } from "./uiMessages/details";
 import { directoryMessages } from "./uiMessages/directory";
 import { graphMessages } from "./uiMessages/graph";
 import { searchMessages } from "./uiMessages/search";
-import { accessMethodLabels, accessTypeLabels } from "./vocabularyLabels/access";
+import { accessMethodLabels, accessTypeLabels, accessRequirementLabels, accessCostLabels } from "./vocabularyLabels/access";
 import { dataFormatLabels } from "./vocabularyLabels/dataFormats";
 import { dataStandardLabels } from "./vocabularyLabels/dataStandards";
 import { dataTypeLabels } from "./vocabularyLabels/dataTypes";
@@ -37,6 +37,8 @@ export const vocabularyLabels = {
   relationshipDirections: relationshipDirectionLabels,
   accessTypes: accessTypeLabels,
   accessMethods: accessMethodLabels,
+  accessRequirements: accessRequirementLabels,
+  accessCosts: accessCostLabels,
   metricKeys: metricKeyLabels,
   metricPeriods: metricPeriodLabels,
   units: unitLabels,
@@ -45,7 +47,7 @@ export const vocabularyLabels = {
 };
 export type VocabularyGroup = keyof typeof vocabularyLabels;
 export type VocabularyValue<Group extends VocabularyGroup> =
-  Group extends "accessMethods" ? string : keyof typeof vocabularyLabels[Group] & string;
+  keyof typeof vocabularyLabels[Group] & string;
 
 export function humanizeCode(value: string): string {
   return value
@@ -79,8 +81,6 @@ export function vocabularyLabel<Group extends VocabularyGroup>(
 ): string {
   const catalog = vocabularyLabels[group] as Record<string, Record<SupportedLocale, string>>;
   if (!Object.hasOwn(catalog, value)) {
-    // These fields accept arbitrary strings in records; approved vocabularies do not.
-    if (group === "accessMethods") return humanizeCode(value);
     throw new Error(`Unknown ${group} value: ${value}`);
   }
   const label = catalog[value][locale];

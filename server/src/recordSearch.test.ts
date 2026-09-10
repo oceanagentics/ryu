@@ -95,7 +95,7 @@ test("filters intersect across groups and OR within groups, using typed access a
   const record = node("filtered");
   record.recordDepth = "rich";
   record.properties = { disciplines: ["ecology", "taxonomy"], geographicScope: "Global",
-    access: [{ id: "api", type: "read", method: "api", url: "https://example.org", source: "src-api" }],
+    access: [{ id: "api", type: "read", methods: ["browse", "api"], url: "https://example.org", requirements: ["api_key"], cost: "free", sourceRefs: ["src-api"] }],
     data: { descriptors: [
       { id: "type", category: "type", label: "occurrence_records", source: "src-api" },
       { id: "format", category: "format", label: "geojson", source: "src-api" },
@@ -114,12 +114,12 @@ test("filters intersect across groups and OR within groups, using typed access a
   assert.throws(() => readRecordSearchQuery({ disciplines: "fish_biodiversity" }), /disciplines/);
   assert.throws(() => readRecordSearchQuery({ role: "aggregator" }), /unsupported/);
   assert.throws(() => readRecordSearchQuery({ disciplineFamily: "biodiversity" }), /unsupported/);
-  for (const key of ["countryCode", "geography", "accessType", "accessMethod"]) {
+  for (const key of ["countryCode", "geography"]) {
     assert.equal(search([record], { ...filters, [key]: "not-a-match" }).length, 0, key);
   }
   assert.throws(() => readRecordSearchQuery({ dataStandard: "Darwin Core" }), /dataStandard/);
   assert.equal(search([record], { ...filters, dataStandard: "cf" }).length, 0);
-  assert.equal(search([record], { ...filters, accessType: "api" }).length, 0);
+  for (const input of [{ accessType: "api" }, { accessType: "submit" }, { accessType: "partner_sync" }, { accessMethod: "api_write" }]) assert.throws(() => readRecordSearchQuery(input), /access/);
   assert.equal(search([record], { ...filters, dataType: "sequence_data" }).length, 0);
   assert.equal(search([record], { ...filters, dataType: "sequence_data,occurrence_records" }).length, 1);
   assert.throws(() => readRecordSearchQuery({ dataType: "geojson" }), /dataType/);
@@ -137,6 +137,24 @@ test("filters intersect across groups and OR within groups, using typed access a
   }
   assert.equal(search([record], { localeAvailability: "complete" }).length, 1);
   assert.equal(search([record], { localeAvailability: "partial" }).length, 0);
+});
+
+test("access filters match one path and Write vocabulary is searchable in every language", () => {
+  const record = node("contributor");
+  record.properties.access = [
+    { id: "read-api", type: "read", methods: ["api"], url: "https://example.org/api", requirements: [], cost: "free", sourceRefs: ["docs"] },
+    { id: "write-upload", type: "write", methods: ["form", "upload"], url: "https://example.org/submit", requirements: ["account"], cost: "paid", sourceRefs: ["docs"] },
+  ];
+  assert.equal(search([record], { accessType: "write", accessMethod: "api" }).length, 0);
+  assert.equal(search([record], { accessType: "write", accessMethod: "upload" }).length, 1);
+  assert.equal(search([record], { accessType: "read", accessMethod: "upload" }).length, 0);
+  assert.equal(search([record], { accessType: "read,write", accessMethod: "api" }).length, 1);
+  for (const locale of supportedLocales) {
+    record.localizations[locale] = { ...structuredClone(record.localizations.en!), locale };
+    for (const label of [vocabularyLabel(locale, "accessTypes", "write"), vocabularyLabel(locale, "accessMethods", "upload"), vocabularyLabel(locale, "accessRequirements", "account"), vocabularyLabel(locale, "accessCosts", "paid")]) {
+      assert.equal(search([record], { q: label, locale }).length, 1, `${locale}/${label}`);
+    }
+  }
 });
 
 test("discipline tags are independently searchable and produce localized, deduplicated filter options", () => {

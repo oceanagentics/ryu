@@ -27,15 +27,23 @@
           "id": "fishbase-access-sourcecoop",
           "url": "https://source.coop/cboettig/fishbase",
           "type": "read",
-          "method": "cloud_table_snapshot",
-          "source": "src-fishbase-sourcecoop"
+          "methods": [
+            "download"
+          ],
+          "sourceRefs": [
+            "src-fishbase-sourcecoop"
+          ],
+          "requirements": null,
+          "cost": "unknown"
         },
         {
           "id": "fishbase-submit-collaborator",
           "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
-          "type": "submit",
-          "method": "curated_collaboration",
-          "source": "src-fishbase-collaborator-guide"
+          "type": "write",
+          "methods": ["request"],
+          "requirements": null,
+          "cost": "unknown",
+          "sourceRefs": ["src-fishbase-collaborator-guide"]
         }
       ],
       "gallery": [

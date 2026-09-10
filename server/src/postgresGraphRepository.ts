@@ -1086,7 +1086,7 @@ export class PostgresGraphRepository implements GraphRepository {
         const descriptorLabels = node.properties.data?.descriptors.map((descriptor) => descriptor.label) ?? [];
         const accessValues = node.properties.access?.flatMap((accessPath) => [
           accessPath.type,
-          accessPath.method,
+          ...accessPath.methods,
         ]) ?? [];
 
         return {

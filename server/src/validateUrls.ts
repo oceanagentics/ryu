@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { TextDecoder } from "node:util";
 import { promisify } from "node:util";
 
+import { isAccessUrl } from "../../shared/domain";
 import type { GraphBootstrapPayload } from "../../shared/domain";
 import { defaultLocale, resolveNodeLocalization } from "../../shared/localization";
 import { createGraphRepository } from "./repositoryFactory";
@@ -482,7 +483,9 @@ async function main() {
     recordsByUrl.set(normalizedUrl, existingRecords);
   }
 
-  const uniqueUrls = [...recordsByUrl.keys()];
+  const manualUrls = [...recordsByUrl.keys()].filter(url => isAccessUrl(url) && (!isHttpUrl(url) || /\{[^}]+\}/.test(url)));
+  if (manualUrls.length) console.warn(`Not probed by the HTTP checker; verify with the relevant client or template parameters:\n${manualUrls.join("\n")}`);
+  const uniqueUrls = [...recordsByUrl.keys()].filter(url => !manualUrls.includes(url));
   const results = await mapWithConcurrency(uniqueUrls, 8, async (url) => ({
     url,
     result: await validateUrl(url),

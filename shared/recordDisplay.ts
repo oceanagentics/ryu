@@ -22,8 +22,6 @@ import { dataDescriptorLabel, vocabularyLabel } from "./i18n";
 export type ResolvedSystemAccessPath = SystemAccessPath & {
   label: string;
   description: string | null;
-  instructions: string | null;
-  caveats: string[];
 };
 
 export type ResolvedSystemGalleryItem = SystemGalleryItem & {
@@ -90,10 +88,8 @@ export function systemAccessPaths(
     const localized = localizedById[path.id];
     return {
       ...path,
-      label: localized?.label ?? path.method,
+      label: localized?.label ?? path.methods.map(method => vocabularyLabel(localization.requestedLocale, "accessMethods", method)).join(", "),
       description: localized?.description ?? null,
-      instructions: localized?.instructions ?? null,
-      caveats: localized?.caveats ?? [],
     };
   });
 }

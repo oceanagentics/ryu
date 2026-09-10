@@ -303,8 +303,7 @@ const systemFieldDefinitions = withCommonFields([
     getValues: (entity, graph, context, localization) => {
       const system = graph.nodeById[entity.id];
       return systemAccessPaths(system, localization).flatMap((path) => [
-        path.method,
-        vocabularyLabel(context.locale, "accessMethods", path.method),
+        ...path.methods.flatMap(method => [method, vocabularyLabel(context.locale, "accessMethods", method)]),
         path.label,
       ]);
     },
@@ -313,12 +312,12 @@ const systemFieldDefinitions = withCommonFields([
     field: "access.detail",
     label: "search.field.accessDetail",
     weight: 36,
-    getValues: (entity, graph, _context, localization) => {
+    getValues: (entity, graph, context, localization) => {
       const system = graph.nodeById[entity.id];
       return systemAccessPaths(system, localization).flatMap((path) => [
+        vocabularyLabel(context.locale, "accessCosts", path.cost),
+        ...(path.requirements ?? []).map(value => vocabularyLabel(context.locale, "accessRequirements", value)),
         path.description,
-        path.instructions,
-        path.caveats,
         path.url,
       ]);
     },
@@ -556,8 +555,8 @@ function matchesFilters(entity: GraphNode, graph: IndexedGraph, query: RecordSea
     && ([["type", query.dataType], ["format", query.dataFormat], ["standard", query.dataStandard]] as const)
       .every(([category, selected]) => matchesAny(
         (properties.data?.descriptors ?? []).filter(value => value.category === category).map(value => value.label), selected))
-    && matchesAny((properties.access ?? []).map(value => value.type), query.accessType)
-    && matchesAny((properties.access ?? []).map(value => value.method), query.accessMethod)
+    && ((!query.accessType.length && !query.accessMethod.length) || (properties.access ?? []).some(path =>
+      matchesAny([path.type], query.accessType) && matchesAny(path.methods, query.accessMethod)))
     && matchesAny(reviewStates.filter((value): value is NonNullable<typeof value> => Boolean(value)), query.reviewState)
     && (!availability || (availability === "available" ? Boolean(requested)
       : availability === "missing" ? !requested

@@ -94,22 +94,60 @@ export interface LocalizedSystemDataDescriptor {
   description: string | null;
 }
 
-export type SystemAccessType = "read" | "submit" | "partner_sync";
+export type SystemAccessType = "read" | "write";
 
-export interface SystemAccessPath {
-  id: string;
-  type: SystemAccessType;
-  method: string;
-  url: string;
-  source: SourceRef;
+// Additions require human approval and a complete translation release.
+export const readAccessMethods = ["browse", "download", "api", "software", "request"] as const;
+export type ReadAccessMethod = (typeof readAccessMethods)[number];
+export const writeAccessMethods = ["form", "upload", "api", "software", "request", "harvest"] as const;
+export type WriteAccessMethod = (typeof writeAccessMethods)[number];
+export type AccessMethod = ReadAccessMethod | WriteAccessMethod;
+export const accessRequirements = ["account", "api_key", "approval", "affiliation"] as const;
+export type AccessRequirement = (typeof accessRequirements)[number];
+export const accessCosts = ["free", "paid", "mixed", "unknown"] as const;
+export type AccessCost = (typeof accessCosts)[number];
+
+export function isReadAccessMethod(value: unknown): value is ReadAccessMethod {
+  return readAccessMethods.some(method => method === value);
 }
+
+export function isWriteAccessMethod(value: unknown): value is WriteAccessMethod {
+  return writeAccessMethods.some(method => method === value);
+}
+
+export function isAccessUrl(value: unknown): value is string {
+  if (typeof value !== "string" || /[\s\\]/.test(value)) return false;
+  try {
+    const url = new URL(value);
+    return ["http:", "https:", "ftp:", "ftps:", "sftp:", "rsync:", "s3:", "gs:"].includes(url.protocol)
+      && Boolean(url.hostname) && !url.username && !url.password;
+  } catch { return false; }
+}
+
+interface AccessPathBase {
+  id: string;
+  url: string;
+  requirements: AccessRequirement[] | null;
+  cost: AccessCost;
+  sourceRefs: SourceRef[];
+}
+
+export interface ReadAccessPath extends AccessPathBase {
+  type: "read";
+  methods: ReadAccessMethod[];
+}
+
+export interface WriteAccessPath extends AccessPathBase {
+  type: "write";
+  methods: WriteAccessMethod[];
+}
+
+export type SystemAccessPath = ReadAccessPath | WriteAccessPath;
 
 export interface LocalizedSystemAccessPath {
   id: string;
-  label: string | null;
-  description: string | null;
-  instructions?: string | null;
-  caveats?: string[];
+  label: string;
+  description: string;
 }
 
 export interface SystemGalleryItem {
@@ -177,7 +215,7 @@ export interface LocalizedNodeDataDetails {
 
 export interface NodeLocalizationDetails extends Record<string, unknown> {
   profile?: { sourceRefs: string[] };
-  researchGaps?: Partial<Record<MetricGroup | "standards", string>>;
+  researchGaps?: Partial<Record<MetricGroup | "standards" | "access", string>>;
   aliases: string[];
   gallery: LocalizedSystemGalleryItem[];
   data: LocalizedNodeDataDetails;
