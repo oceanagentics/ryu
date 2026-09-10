@@ -919,7 +919,7 @@ body {
   overflow-wrap: anywhere;
 }
 
-.legend-node-filter {
+.legend-filter {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -935,18 +935,18 @@ body {
   text-align: left;
 }
 
-.legend-node-filter:hover,
-.legend-node-filter:focus-visible {
+.legend-filter:hover,
+.legend-filter:focus-visible {
   border-color: rgba(119, 180, 255, 0.36);
   background: rgba(119, 180, 255, 0.1);
   outline: none;
 }
 
-.legend-node-filter.is-inactive {
+.legend-filter.is-inactive {
   opacity: 0.42;
 }
 
-.legend-node-filter-label {
+.legend-filter-label {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -970,10 +970,6 @@ body {
 
 .legend-chip.system {
   background: #8fc7ff;
-}
-
-.legend-edge {
-  padding: 0 6px;
 }
 
 .legend-edge-line {

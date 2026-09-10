@@ -23,6 +23,7 @@ export function GraphCanvas({ displayMode = "diagram" }: GraphCanvasProps) {
   const locale = useGraphStore((state) => state.locale);
   const searchEntityIds = useGraphStore((state) => state.searchEntityIds);
   const hiddenNodeKinds = useGraphStore((state) => state.hiddenNodeKinds);
+  const hiddenEdgeKinds = useGraphStore((state) => state.hiddenEdgeKinds);
 
   const [container, setContainer] = useState<HTMLDivElement | null>(null);
   const structuralFocusEntityId =
@@ -40,12 +41,14 @@ export function GraphCanvas({ displayMode = "diagram" }: GraphCanvasProps) {
       focusEntityId: structuralFocusEntityId,
       locale,
       hiddenNodeKinds,
+      hiddenEdgeKinds,
       searchEntityIds,
     });
   }, [
     countryDisplayMode,
     graph,
     hiddenNodeKinds,
+    hiddenEdgeKinds,
     locale,
     searchEntityIds,
     structuralFocusEntityId,

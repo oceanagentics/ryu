@@ -773,7 +773,7 @@ Use the record API, which applies each record write in one Postgres transaction.
 
 Recommended order:
 
-1. Create any missing operator records through `/api/records`.
+1. Create minimal missing relationship endpoint records through `/api/records`.
 2. Read the system record and its current `recordUpdatedAt`.
 3. Assemble its neutral fields, localizations, routes, node-owned sources, and relationship updates with their edge-owned sources. Include required title translations in the same write as localization changes.
 4. Run `validateOnly=true`, resolve reported errors, then apply with the current record precondition. Use the dedicated review endpoint for review decisions.

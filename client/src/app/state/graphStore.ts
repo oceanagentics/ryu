@@ -4,8 +4,10 @@ import type { RecordListDto } from "../../../../shared/recordApi";
  */
 import { create } from "zustand";
 
+import { edgeKinds } from "../../../../shared/domain";
 import type {
   GraphBootstrapPayload,
+  GraphEdgeKind,
   GraphNode,
   GraphNodeKind,
   SavedView,
@@ -78,6 +80,7 @@ interface GraphState {
   searchLoading: boolean;
   searchError: string | null;
   hiddenNodeKinds: GraphNodeKind[];
+  hiddenEdgeKinds: GraphEdgeKind[];
   setBootstrap: (payload: GraphBootstrapPayload) => void;
   setSavedViews: (savedViews: SavedView[]) => void;
   updateNode: (node: GraphNode) => void;
@@ -96,7 +99,8 @@ interface GraphState {
   setSearchAllLanguages: (searchAllLanguages: boolean) => void;
   setSearchFilters: (searchFilters: GraphSearchFilters) => void;
   toggleNodeKindVisibility: (nodeKind: GraphNodeKind) => void;
-  resetNodeKindFilters: () => void;
+  toggleEdgeKindVisibility: (edgeKind: GraphEdgeKind) => void;
+  resetKindFilters: () => void;
   resetSearchFilters: () => void;
   resetSearch: () => void;
   resetSelection: () => void;
@@ -124,6 +128,7 @@ export const useGraphStore = create<GraphState>((set) => ({
   searchLoading: false,
   searchError: null,
   hiddenNodeKinds: [],
+  hiddenEdgeKinds: [],
   setBootstrap: (payload) =>
     set({
       graph: indexGraph(payload),
@@ -192,7 +197,20 @@ export const useGraphStore = create<GraphState>((set) => ({
         ),
       };
     }),
-  resetNodeKindFilters: () => set({ hiddenNodeKinds: [] }),
+  toggleEdgeKindVisibility: (edgeKind) =>
+    set((state) => {
+      const hiddenEdgeKinds = new Set(state.hiddenEdgeKinds);
+      if (hiddenEdgeKinds.has(edgeKind)) {
+        hiddenEdgeKinds.delete(edgeKind);
+      } else {
+        hiddenEdgeKinds.add(edgeKind);
+      }
+
+      return {
+        hiddenEdgeKinds: edgeKinds.filter((kind) => hiddenEdgeKinds.has(kind)),
+      };
+    }),
+  resetKindFilters: () => set({ hiddenNodeKinds: [], hiddenEdgeKinds: [] }),
   resetSearchFilters: () => set({ searchFilters: emptySearchFilters() }),
   resetSearch: () =>
     set({

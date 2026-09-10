@@ -920,6 +920,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
   const locale = useGraphStore((state) => state.locale);
   const searchEntityIds = useGraphStore((state) => state.searchEntityIds);
   const hiddenNodeKinds = useGraphStore((state) => state.hiddenNodeKinds);
+  const hiddenEdgeKinds = useGraphStore((state) => state.hiddenEdgeKinds);
   const selectedEntityId = useGraphStore((state) => state.selectedEntityId);
   const selectedRelationshipId = useGraphStore((state) => state.selectedRelationshipId);
   const setSelectedEntityId = useGraphStore((state) => state.setSelectedEntityId);
@@ -948,6 +949,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
       focusEntityId: viewMode === "governance" ? null : focusEntityId,
       locale,
       hiddenNodeKinds,
+      hiddenEdgeKinds,
       searchEntityIds,
     });
   }, [
@@ -955,6 +957,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
     focusEntityId,
     graph,
     hiddenNodeKinds,
+    hiddenEdgeKinds,
     locale,
     searchEntityIds,
     viewMode,
@@ -1463,12 +1466,12 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
   const linkWidth = useCallback(
     (link: RenderLink) => {
       if (link.id === selectedRelationshipId) {
-        return 2.8;
+        return 7.8;
       }
       if (highlighted.linkIds.has(link.id)) {
-        return 1.9;
+        return 5.4;
       }
-      return link.type === "publishes_to" || link.type === "syncs_to" ? 1.15 : 0.72;
+      return link.type === "publishes_to" || link.type === "syncs_to" ? 3.2 : 2;
     },
     [highlighted.linkIds, selectedRelationshipId],
   );

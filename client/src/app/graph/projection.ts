@@ -3,6 +3,7 @@
  */
 import type {
   GraphEdge,
+  GraphEdgeKind,
   GraphNode,
   GraphNodeKind,
   SupportedLocale,
@@ -28,6 +29,7 @@ export interface ProjectionInput {
   locale: SupportedLocale;
   searchEntityIds?: ReadonlySet<string> | null;
   hiddenNodeKinds?: readonly GraphNodeKind[];
+  hiddenEdgeKinds?: readonly GraphEdgeKind[];
 }
 
 export type GovernanceBlock = "national" | "international" | null;
@@ -121,6 +123,7 @@ export function projectGraph(input: ProjectionInput): GraphProjection {
     locale,
     searchEntityIds = null,
     hiddenNodeKinds = [],
+    hiddenEdgeKinds = [],
   } = input;
   const hiddenKindSet = new Set(hiddenNodeKinds);
 
@@ -157,7 +160,8 @@ export function projectGraph(input: ProjectionInput): GraphProjection {
     .filter(
       (edge) =>
         visibleIds.has(edge.sourceNodeId) &&
-        visibleIds.has(edge.targetNodeId),
+        visibleIds.has(edge.targetNodeId) &&
+        !hiddenEdgeKinds.includes(edge.kind),
     )
     .map((edge) => ({
       id: edge.id,
