@@ -1,4 +1,4 @@
-FROM node:24-alpine
+FROM node:24-alpine AS server
 
 WORKDIR /app
 
@@ -16,6 +16,18 @@ COPY shared ./shared
 COPY server ./server
 RUN npm --workspace server run build
 
+ENV NODE_ENV=production
+EXPOSE 8080
+USER node
+CMD ["npm", "--workspace", "server", "run", "start"]
+
+FROM server AS api
+ENV APP_BASE_PATH=/
+ARG SOURCE_COMMIT=unknown
+LABEL org.opencontainers.image.revision=${SOURCE_COMMIT}
+
+FROM server AS web
+USER root
 ARG APP_BASE_PATH=/explorer
 ARG VITE_APP_MODE=author
 ARG VITE_CAN_REVIEW_NODES=true
@@ -29,10 +41,6 @@ ENV VITE_REVIEW_API_BASE_PATH=${VITE_REVIEW_API_BASE_PATH}
 COPY client ./client
 RUN npm --workspace client run build
 
-ENV NODE_ENV=production
-
-EXPOSE 8080
-
+ARG SOURCE_COMMIT=unknown
+LABEL org.opencontainers.image.revision=${SOURCE_COMMIT}
 USER node
-
-CMD ["npm", "--workspace", "server", "run", "start"]

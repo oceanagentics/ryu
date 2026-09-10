@@ -138,6 +138,12 @@ Last verified on 2026-09-03:
 
 ## Build Image
 
+Routine publishing uses `scripts/deploy.sh`, shared with GitHub Actions. It selects
+affected services, checks data compatibility before building, and reuses prepared
+images on retries. Use `prepare` for a coordinated migration and `publish` after
+the data is compatible. See [Publishing Explorer](deployment-recommendations.md).
+The lower-level build examples below remain available for deliberate manual work.
+
 Build Explorer images into the shared CHM Artifact Registry repo with cache
 image substitutions so unchanged dependency layers are reused when
 `package-lock.json` has not changed.
@@ -166,7 +172,7 @@ For API/server-only changes, build the API service image instead:
 gcloud builds submit \
   --region us-east4 \
   --config cloudbuild.yaml \
-  --substitutions _IMAGE=us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-api:${SHA},_CACHE_IMAGE=us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-api:latest,_APP_BASE_PATH=/,_VITE_APP_MODE=public,_VITE_CAN_REVIEW_NODES=false \
+  --substitutions _IMAGE=us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-api:${SHA},_CACHE_IMAGE=us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-api:latest,_TARGET=api \
   .
 ```
 

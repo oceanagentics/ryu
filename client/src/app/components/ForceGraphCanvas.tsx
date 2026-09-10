@@ -1471,7 +1471,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
       if (highlighted.linkIds.has(link.id)) {
         return 5.4;
       }
-      return link.type === "publishes_to" || link.type === "syncs_to" ? 3.2 : 2;
+      return 3;
     },
     [highlighted.linkIds, selectedRelationshipId],
   );

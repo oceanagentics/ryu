@@ -7,3 +7,5 @@ data/*.sqlite
 data/*.sqlite-*
 .DS_Store
 tmp-bootstrap.json
+.release/
+gha-creds-*.json

@@ -24,6 +24,10 @@ steps:
       - pull-admin-cache
     args:
       - build
+      - --target
+      - web
+      - --build-arg
+      - SOURCE_COMMIT=${_SOURCE_COMMIT}
       - --cache-from
       - ${_PUBLIC_CACHE_IMAGE}
       - --build-arg
@@ -44,6 +48,10 @@ steps:
       - build-public
     args:
       - build
+      - --target
+      - web
+      - --build-arg
+      - SOURCE_COMMIT=${_SOURCE_COMMIT}
       - --cache-from
       - ${_ADMIN_CACHE_IMAGE}
       - --build-arg
@@ -86,6 +94,7 @@ options:
   logging: CLOUD_LOGGING_ONLY
 
 substitutions:
+  _SOURCE_COMMIT: unknown
   _PUBLIC_IMAGE: us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-public:latest
   _PUBLIC_CACHE_IMAGE: us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-public:latest
   _ADMIN_IMAGE: us-east4-docker.pkg.dev/chm-network/chm-apps/explorer-admin:latest

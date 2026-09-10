@@ -5,3 +5,5 @@ server/node_modules
 client/dist
 npm-debug.log
 .DS_Store
+.release
+gha-creds-*.json

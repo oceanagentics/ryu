@@ -171,6 +171,7 @@
 - Browser-facing `explorer` uses read credentials; private `explorer-api` uses write credentials; schema/setup work uses the dedicated schema-capable credentials only when an explicit database change is being applied.
 
 ## Cloud Run Publishing
+- Use `scripts/deploy.sh` as the shared local/Actions release entry point. `plan` checks scope and data compatibility; `prepare` stages images without traffic; default `publish` promotes compatible revisions and smoke-tests. Follow `documentation/deployment-recommendations.md` for migration releases and retries.
 - Build one Explorer image with `cloudbuild.yaml`, or build the public/admin image pair with `cloudbuild.release.yaml`, into Artifact Registry repository `chm-apps`; use cache image substitutions so unchanged dependency layers are reused when `package-lock.json` has not changed.
 - Use commit-only updates for review, handoff, and release traceability; commits do not publish by themselves unless an external trigger is explicitly configured.
 - Use routine fast deploys for UI, API, runtime, and other app-only changes: commit, build the affected immutable image, deploy that image to the existing Cloud Run service with `gcloud run deploy --image`, and smoke test.

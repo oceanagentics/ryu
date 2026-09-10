@@ -15,3 +15,5 @@ research/
 data/*.sqlite
 data/*.sqlite-*
 tmp-bootstrap.json
+.release/
+gha-creds-*.json

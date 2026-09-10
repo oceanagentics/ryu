@@ -8,6 +8,10 @@ steps:
   - name: gcr.io/cloud-builders/docker
     args:
       - build
+      - --target
+      - ${_TARGET}
+      - --build-arg
+      - SOURCE_COMMIT=${_SOURCE_COMMIT}
       - --cache-from
       - ${_CACHE_IMAGE}
       - --build-arg
@@ -37,6 +41,8 @@ options:
   logging: CLOUD_LOGGING_ONLY
 
 substitutions:
+  _TARGET: web
+  _SOURCE_COMMIT: unknown
   _APP_BASE_PATH: /explorer
   _VITE_APP_MODE: author
   _VITE_CAN_REVIEW_NODES: "true"
