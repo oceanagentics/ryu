@@ -1,7 +1,7 @@
 import { Card, Flex, Tag, Typography } from "antd";
 
 import type { GraphNodeKind } from "../../../../shared/domain";
-import { facetLabel, t } from "../i18n";
+import { vocabularyLabel, t } from "../i18n";
 import { useGraphStore } from "../state/graphStore";
 
 const nodeItems: GraphNodeKind[] = ["country", "organization", "system"];
@@ -48,14 +48,14 @@ export function LegendPanel() {
                 hiddenKindSet.has(kind)
                   ? "graph.showNodeKind"
                   : "graph.hideNodeKind",
-                { kind: facetLabel(locale, "nodeKind", kind) },
+                { kind: vocabularyLabel(locale, "nodeKinds", kind) },
               )}
               type="button"
               onClick={() => toggleNodeKindVisibility(kind)}
             >
               <span className={`legend-chip ${kind}`} />
               <span className="legend-node-filter-label">
-                {facetLabel(locale, "nodeKind", kind)}
+                {vocabularyLabel(locale, "nodeKinds", kind)}
               </span>
             </button>
           ))}

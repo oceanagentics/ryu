@@ -2,6 +2,10 @@
 
 Use this guide when researching and backfilling rich database records for Ryu. The goal is a record that helps a researcher quickly understand what a database is for, what data it contains, how large it is, how to access or contribute to it, who manages it, and which machine routes Ryu can use.
 
+For shared vocabulary labels, UI messages, lookup APIs and translation extension
+checks, see [the shared code guide](../shared/README.md). Record-specific prose
+and source titles continue to follow the ownership rules below.
+
 ## Source Of Truth
 
 - Treat Cloud SQL/Postgres as the canonical editable graph.
@@ -30,9 +34,9 @@ For system nodes:
 
 - Use `nodes.url` for the primary public URL.
 - Use `nodes.record_depth` to track `stub`, `thin`, or `rich`.
-- Use `nodes.properties_json` for language-neutral operational facts: approved discipline IDs, gallery asset URLs, data descriptor structure, access mechanics, and usage metric values.
+- Use `nodes.properties_json` for language-neutral operational facts: approved discipline IDs, gallery asset URLs, data descriptor structure, access mechanics, and metric values.
 - Use `node_localizations.title`, `summary`, and `description` for the public prose profile in each locale.
-- Use `node_localizations.details_json` for localized details: aliases, gallery titles/captions, descriptor descriptions, access labels/descriptions/instructions, usage descriptions, and other language-specific prose.
+- Use `node_localizations.details_json` for localized details: aliases, gallery titles/captions, descriptor descriptions, access labels/descriptions/instructions, metric descriptions, and other language-specific prose.
 - Store review snapshots in `node_localizations.review_json.history`. Each snapshot has `state`, `reviewer`, `date`, and `note`; the final entry defines current review state (`agent_researched`, `human_reviewed`, or `needs_revision`).
 - The details UI shows `recordDepth` and the resolved localization's `review.state` for all users. In authenticated/author mode, it lets users update only `reviewState` and `reviewerNote`; snapshot `reviewer` and `date` are set by the server.
 - Do not set review metadata in record content writes. Review state and reviewer
@@ -82,10 +86,11 @@ A rich system must have:
   descriptions; all descriptor labels come from the shared vocabularies.
   Type and format labels come from the shared vocabularies. Access paths need labels and descriptions; gallery items
   need titles and captions; metrics need localized descriptions.
-- Source-backed metrics with finite non-negative values, units, and observation
-  dates (YYYY, YYYY-MM, or YYYY-MM-DD). Storage values use bytes. When record count,
-  storage size, or usage metrics cannot be found, omit the values and explain each
-  gap in every locale's `details.researchGaps.recordCount`, `storageSize`, or `usage`.
+- Source-backed metrics using only the ten approved keys, finite non-negative
+  values, and observation dates (YYYY, YYYY-MM, YYYY-MM-DD, or null when unknown).
+  Units and Data/Usage groups come from `shared/domain.ts`. Rich records require
+  a metric or an explicit research gap for each group in every locale's
+  `details.researchGaps.data` or `usage`; do not invent numbers to fill a group.
 - Evidence on each relationship and route, using a `source` ID or `properties.sourceRefs` IDs. Relationship references resolve against `edges.sources`; route references resolve against the route node's `nodes.sources`. References contain no duplicate URL.
 - A relationship review in every localization's `details.relationshipReview`,
   containing `sourceRefs` and `findings` with non-empty entries for all six edge
@@ -275,7 +280,7 @@ complete current rich criteria pass. Regenerate the public bootstrap from Postgr
 Use `properties.disciplines` as an array of unique IDs from `shared/domain.ts`.
 The API rejects unknown IDs, duplicates, non-array values, and the retired `role`
 and `disciplineFamily` properties at every record depth. Labels are translated
-in `shared/i18n.ts`; do not store labels or translated IDs in records.
+in `shared/vocabularyLabels/disciplines.ts`; do not store labels or translated IDs in records.
 
 Use the smallest set that adequately describes substantial, documented coverage.
 Support assignments with the profile's source references. Do not infer disciplines
@@ -346,7 +351,8 @@ Categories:
 
 Each neutral descriptor should have `id`, `category`, `label`, and optional `source`
 (required for rich records). For all descriptor categories, `label` stores the canonical ID;
-its translated display name comes from `shared/i18n.ts`. Keep its localized entry's
+its translated display name comes from `shared/vocabularyLabels/dataTypes.ts`,
+`dataFormats.ts`, or `dataStandards.ts`, through the shared `i18n.ts` lookup. Keep its localized entry's
 `id` and `description`, and omit `label`. Standard descriptors require a resolving
 source and scoped descriptions in all six locales at every record depth.
 
@@ -562,21 +568,90 @@ to satisfy rich-record requirements.
 
 ## Metrics
 
-Use these `nodes.properties_json` fields for quantitative claims:
+Use one `nodes.properties_json.metrics` array. The approved vocabulary is closed:
 
-- `data.recordCount`: native record count.
-- `data.storageSize`: total size in bytes.
-- `usage`: publication counts, citation counts, downloads, registered users, contributors, and similar usage metrics.
+| Group | Keys |
+| --- | --- |
+| Data | `record_count`, `occurrence_count`, `sample_count`, `sequence_count`, `species_count`, `storage_size_bytes` |
+| Usage | `session_count`, `download_count`, `contributor_count`, `citation_count` |
 
-Each neutral metric should include `id`, `key`, `value`, `unit`, `observedAt`, and `source`. Put localized metric descriptions in `node_localizations.details_json.data` or `node_localizations.details_json.usage` using the same metric id.
+`metricDefinitions` in `shared/domain.ts` assigns each key its fixed unit and
+Data/Usage group. Shared labels live in `shared/vocabularyLabels/metrics.ts`.
+Agents must not write units, labels, group overrides, or alternate metric keys.
+New keys, units, and material definition changes require explicit human approval
+in the current authoring chat, followed by a domain/catalog release before use.
+Propose the measurement, meaning, evidence, and why existing keys do not fit.
+Until approved, retain the sourced finding in profile prose, not a new metric.
 
-Rules:
+Each observation contains `id`, `key`, `value`, `observedAt`, `source`, and an
+optional `period`. For example:
 
-- Every metric must have a `source` ID resolving against `nodes.sources`.
-- Use `observedAt` for the date or version the number refers to.
-- Use localized descriptions to capture caveats, such as "compressed public snapshot, not live production DB".
-- Store storage in bytes even if the source reports MB/GB/TB. Convert carefully and describe the original source measurement.
-- If a metric cannot be found, do not invent it. Leave it absent and mention the gap in notes or final summary.
+```json
+{
+  "id": "public-species-count",
+  "key": "species_count",
+  "value": 36535,
+  "observedAt": "2026-02",
+  "source": "official-statistics"
+}
+```
+
+The source ID resolves against the owning node's `sources`. Each localization's
+`details.metrics` contains matching `{ "id": "...", "description": "..." }`
+entries. Rich records need non-empty descriptions in all six languages.
+Validation rejects unknown keys/fields, malformed values and dates, unresolved
+sources, duplicate IDs, localized label/unit overrides, and retired metric fields
+at every record depth. Store values within JavaScript's safe numeric range; never
+silently round an exact integer that cannot be represented.
+
+Definitions and research rules:
+
+- Records are native entries/rows; occurrences are occurrence records; samples are
+  represented samples; sequences are sequence entries, not nucleotide bases;
+  species are represented species. Explain the counting basis and scope.
+  These counts can overlap; do not add them together or rank unlike units.
+- Size is bytes. Convert source units carefully and describe whether the value is
+  a live database, public snapshot, compressed export, or subset. Include release
+  and format in the description. Do not present snapshot size as production size.
+- Sessions count sessions, not visits, page views, or unique users. Downloads count
+  download events, not downloaded rows. Contributors count the stated community
+  or roster. Citations measure research use, not references held in the system;
+  name the citation index and its scope in the description.
+- Usage observations may set `period` to `day`, `month`, `year`, or `cumulative`.
+  Omit it or use null when unknown. Explain the actual reporting window or whether
+  this is a reported typical rate. `observedAt` alone does not establish a period.
+  Do not infer monthly sessions from an unqualified session count or relabel visits.
+- `observedAt` is the date the figure refers to, at its published precision.
+  Unknown dates use null with an explanation. A source's `accessedAt` is the date
+  consulted, and a release/version is not automatically an observation date.
+- Preserve approximations, bounds, counting methods, and limitations in descriptions.
+  For counts or sums derived from a source, document the selection and calculation.
+  Missing values are absent, not zero. Do not annualize or derive unsupported ratios.
+- Investigate Data and Usage. For rich records, if a group has no supported metric,
+  explain the result in every locale's `details.researchGaps.data` or `usage`.
+  Gaps may also explain missing measures within a partially populated group.
+- Keep IDs stable when correcting an observation. A genuinely different period or
+  release may have another observation. Preserve unrelated metrics and sources.
+- Use the normal Record API workflow: fresh read, `validateOnly=true`, inspect
+  errors, then apply with `x-ryu-record-updated-at`. Array replacements must retain
+  unrelated items. Review state changes use the review endpoint.
+
+### Migration from the three legacy metric fields
+
+`server/schema/013_system_metrics.sql` moves `data.recordCount`, `data.storageSize`,
+and `usage` into `metrics`, preserving IDs, values, dates and sources. A species
+record count becomes `species_count`. Contributor units are normalized through
+the shared definition. Unsupported measurements, including legacy `view_count`,
+become profile prose with owner-local profile source references. The migration
+does not establish whether SeaLifeBase sessions are monthly. Verify that evidence
+before authoring a new `session_count` observation.
+
+Run this deliberate migration after earlier schema migrations, with a backup and
+coordinated app release. The new reader fails explicitly on legacy metric fields;
+it must not silently hide unmigrated data. SQL is transactional and repeatable,
+and aborts on ID collisions or orphaned localized evidence. It preserves sources,
+edges, routes, review history and depth. Revalidate records before promoting them.
+The API rejects the old fields after cutover; there is no permanent dual write.
 
 ## Access Paths
 

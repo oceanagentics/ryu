@@ -3,7 +3,6 @@ import type {
   LocalizedSystemAccessPath,
   LocalizedSystemDataDescriptor,
   LocalizedSystemGalleryItem,
-  LocalizedSourcedMetric,
   NodeLocalizationDetails,
   ResolvedNodeLocalization,
   SourcedMetric,
@@ -17,7 +16,8 @@ import {
   emptyLocalizationDetails,
   resolveNodeLocalization,
 } from "./localization";
-import { facetLabel } from "./i18n";
+import { metricDefinitions } from "./domain";
+import { dataDescriptorLabel, vocabularyLabel } from "./i18n";
 
 export type ResolvedSystemAccessPath = SystemAccessPath & {
   label: string;
@@ -33,12 +33,12 @@ export type ResolvedSystemGalleryItem = SystemGalleryItem & {
 };
 
 export type ResolvedSourcedMetric = SourcedMetric & {
-  label: string | null;
+  label: string;
   description: string | null;
 };
 
 export type ResolvedSystemDataDescriptor = SystemDataDescriptor & {
-  localizedLabel: string | null;
+  localizedLabel: string;
   description: string | null;
 };
 
@@ -110,30 +110,20 @@ export function systemDataDescriptors(
     const localized = localizedById[descriptor.id];
     return {
       ...descriptor,
-      localizedLabel: facetLabel(localization.requestedLocale, "descriptorLabel", descriptor.label),
+      localizedLabel: dataDescriptorLabel(localization.requestedLocale, descriptor),
       description: localized?.description ?? null,
     };
   });
 }
 
-export function resolveMetric(
-  metric: SourcedMetric | null | undefined,
-  localizedMetric: LocalizedSourcedMetric | null | undefined,
-): ResolvedSourcedMetric | null {
-  if (!metric) {
-    return null;
-  }
-
-  return {
+export function systemMetrics(
+  system: GraphNode,
+  localization: ResolvedNodeLocalization,
+): ResolvedSourcedMetric[] {
+  const localizedById = byId(localizationDetails(localization).metrics);
+  return (system.properties.metrics ?? []).map(metric => ({
     ...metric,
-    label: localizedMetric?.label ?? null,
-    unit: localizedMetric?.unit ?? metric.unit,
-    description: localizedMetric?.description ?? null,
-  };
-}
-
-export function localizedMetricById(
-  values: LocalizedSourcedMetric[] | undefined,
-): Record<string, LocalizedSourcedMetric> {
-  return byId(values);
+    label: vocabularyLabel(localization.requestedLocale, "metricKeys", metric.key),
+    description: localizedById[metric.id]?.description ?? null,
+  })).sort((a, b) => Object.keys(metricDefinitions).indexOf(a.key) - Object.keys(metricDefinitions).indexOf(b.key));
 }

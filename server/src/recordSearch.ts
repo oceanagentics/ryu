@@ -1,9 +1,10 @@
+import { metricDefinitions } from "../../shared/domain";
 import type { GraphNode, ResolvedNodeLocalization, Source, SupportedLocale, SystemDataDescriptorCategory } from "../../shared/domain";
 import type { IndexedGraph } from "../../shared/indexGraph";
 import type { RecordSearchQuery } from "../../shared/recordApi";
 import { defaultLocale, supportedLocales } from "../../shared/localization";
-import { nodeTitle, resolveNodeDisplay, systemAccessPaths, systemDataDescriptors, systemGallery } from "../../shared/recordDisplay";
-import { facetLabel, t, type UiMessageKey } from "../../shared/i18n";
+import { nodeTitle, resolveNodeDisplay, systemAccessPaths, systemDataDescriptors, systemGallery, systemMetrics } from "../../shared/recordDisplay";
+import { dataDescriptorLabel, vocabularyLabel, t, type UiMessageKey } from "../../shared/i18n";
 import { buildSystemRecords, getRelationships, getConnectedNames, type SearchMatchReason, type SystemSearchRecord } from "../../shared/searchPresentation";
 
 export type EntitySearchResult = {
@@ -125,7 +126,7 @@ function descriptorValues(
       descriptor.label,
       descriptor.localizedLabel,
       descriptor.description,
-      facetLabel(locale, "descriptorLabel", descriptor.label),
+      dataDescriptorLabel(locale, descriptor),
     ])
     .filter((value): value is string => Boolean(value))
     : [];
@@ -147,7 +148,7 @@ function withCommonFields(
       weight: 80,
       getValues: (entity, _graph, context) => [
         entity.kind,
-        facetLabel(context.locale, "nodeKind", entity.kind),
+        vocabularyLabel(context.locale, "nodeKinds", entity.kind),
       ],
     },
     {
@@ -212,7 +213,7 @@ const organizationFieldDefinitions = withCommonFields([
     getValues: (entity, graph, context) =>
       getRelationships(entity.id, graph).flatMap((relationship) => [
         relationship.kind,
-        facetLabel(context.locale, "edgeKind", relationship.kind),
+        vocabularyLabel(context.locale, "edgeKinds", relationship.kind),
       ]),
   },
   {
@@ -242,7 +243,7 @@ const systemFieldDefinitions = withCommonFields([
     weight: 62,
     getValues: (entity, graph, context) => {
       const values = graph.nodeById[entity.id]?.properties.disciplines ?? [];
-      return values.flatMap(value => [value, facetLabel(context.locale, "discipline", value)]);
+      return values.flatMap(value => [value, vocabularyLabel(context.locale, "disciplines", value)]);
     },
   },
 
@@ -272,24 +273,16 @@ const systemFieldDefinitions = withCommonFields([
     field: "data.metrics",
     label: "search.field.metric",
     weight: 55,
-    getValues: (entity, graph, context) => {
-      const system = graph.nodeById[entity.id];
-      return [
-        system?.properties.data?.recordCount,
-        system?.properties.data?.storageSize,
-        ...(system?.properties.usage ?? []),
-      ].flatMap((metric) =>
-        metric
-          ? [
-              metric.key,
-              facetLabel(context.locale, "metricKey", metric.key),
-              String(metric.value),
-              metric.unit,
-              facetLabel(context.locale, "unit", metric.unit),
-            ]
-          : [],
-      );
-    },
+    getValues: (entity, graph, context, localization) =>
+      systemMetrics(graph.nodeById[entity.id], localization).flatMap(metric => [
+        metric.key,
+        metric.label,
+        String(metric.value),
+        metricDefinitions[metric.key].unit,
+        vocabularyLabel(context.locale, "units", metricDefinitions[metric.key].unit),
+        metric.description,
+        metric.period ? vocabularyLabel(context.locale, "metricPeriods", metric.period) : null,
+      ]),
   },
   {
     field: "access.type",
@@ -299,7 +292,7 @@ const systemFieldDefinitions = withCommonFields([
       const system = graph.nodeById[entity.id];
       return systemAccessPaths(system, localization).flatMap((path) => [
         path.type,
-        facetLabel(context.locale, "accessType", path.type),
+        vocabularyLabel(context.locale, "accessTypes", path.type),
       ]);
     },
   },
@@ -311,7 +304,7 @@ const systemFieldDefinitions = withCommonFields([
       const system = graph.nodeById[entity.id];
       return systemAccessPaths(system, localization).flatMap((path) => [
         path.method,
-        facetLabel(context.locale, "accessMethod", path.method),
+        vocabularyLabel(context.locale, "accessMethods", path.method),
         path.label,
       ]);
     },
@@ -344,7 +337,7 @@ const systemFieldDefinitions = withCommonFields([
     getValues: (entity, graph, context) =>
       getRelationships(entity.id, graph).flatMap((relationship) => [
         relationship.kind,
-        facetLabel(context.locale, "edgeKind", relationship.kind),
+        vocabularyLabel(context.locale, "edgeKinds", relationship.kind),
       ]),
   },
   {

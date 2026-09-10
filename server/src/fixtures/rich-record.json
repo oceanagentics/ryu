@@ -20,34 +20,8 @@
             "source": "src-fishbase-home",
             "category": "type"
           }
-        ],
-        "recordCount": {
-          "id": "fishbase-metric-record-count",
-          "key": "record_count",
-          "unit": "records",
-          "value": 3300000,
-          "source": "src-fishbase-home",
-          "observedAt": "2026-02"
-        },
-        "storageSize": {
-          "id": "fishbase-metric-storage-size-bytes",
-          "key": "storage_size_bytes",
-          "unit": "bytes",
-          "value": 194684778,
-          "source": "src-fishbase-sourcecoop-s3-v2504",
-          "observedAt": "2026-07-21"
-        }
+        ]
       },
-      "usage": [
-        {
-          "id": "fishbase-metric-species-count",
-          "key": "species_count",
-          "unit": "species",
-          "value": 36535,
-          "source": "src-fishbase-home",
-          "observedAt": "2026-02"
-        }
-      ],
       "access": [
         {
           "id": "fishbase-access-sourcecoop",
@@ -79,6 +53,29 @@
         "taxonomy",
         "ecology",
         "fisheries_science"
+      ],
+      "metrics": [
+        {
+          "id": "fishbase-metric-record-count",
+          "key": "record_count",
+          "value": 3300000,
+          "source": "src-fishbase-home",
+          "observedAt": "2026-02"
+        },
+        {
+          "id": "fishbase-metric-storage-size-bytes",
+          "key": "storage_size_bytes",
+          "value": 194684778,
+          "source": "src-fishbase-sourcecoop-s3-v2504",
+          "observedAt": "2026-07-21"
+        },
+        {
+          "id": "fishbase-metric-species-count",
+          "key": "species_count",
+          "value": 36535,
+          "source": "src-fishbase-home",
+          "observedAt": "2026-02"
+        }
       ]
     },
     "sources": {
@@ -178,22 +175,8 @@
               "id": "fishbase-data-type-taxonomy",
               "description": "الأسماء المقبولة، والمرادفات، والتصنيف، والسلطات التصنيفية، وروابط موارد الفهرسة للأسماك الزعنفية."
             }
-          ],
-          "recordCount": {
-            "id": "fishbase-metric-record-count",
-            "description": "إجمالي تقريبي للسجلات التي تبلغ عنها FishBase عبر حوالي 200 جدول، بما في ذلك نحو 60 جدولا رئيسيا."
-          },
-          "storageSize": {
-            "id": "fishbase-metric-storage-size-bytes",
-            "description": "حجم لقطة parquet العامة المضغوطة v25.04 محسوبا من 216 كائنا من نوع parquet في Source Cooperative S3؛ وليس هذا حجم قاعدة بيانات الإنتاج الحية أو أرشيف الصور."
-          }
+          ]
         },
-        "usage": [
-          {
-            "id": "fishbase-metric-species-count",
-            "description": "عدد أنواع FishBase كما ورد في إحصاءات البيانات الرئيسية لشهر فبراير 2026."
-          }
-        ],
         "access": [
           {
             "id": "fishbase-access-sourcecoop",
@@ -243,8 +226,23 @@
           }
         },
         "researchGaps": {
-          "standards": "لم يُتحقق من معيار مشترك للبيانات أو البيانات الوصفية لهذه المخرجات من FishBase؛ وتندرج رخصة إعادة الاستخدام الموثقة ضمن إرشادات الوصول."
-        }
+          "standards": "لم يُتحقق من معيار مشترك للبيانات أو البيانات الوصفية لهذه المخرجات من FishBase؛ وتندرج رخصة إعادة الاستخدام الموثقة ضمن إرشادات الوصول.",
+          "usage": "لا يتضمن هذا المثال أرقام الاستخدام."
+        },
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "إجمالي تقريبي للسجلات التي تبلغ عنها FishBase عبر حوالي 200 جدول، بما في ذلك نحو 60 جدولا رئيسيا."
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "حجم لقطة parquet العامة المضغوطة v25.04 محسوبا من 216 كائنا من نوع parquet في Source Cooperative S3؛ وليس هذا حجم قاعدة بيانات الإنتاج الحية أو أرشيف الصور."
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "عدد أنواع FishBase كما ورد في إحصاءات البيانات الرئيسية لشهر فبراير 2026."
+          }
+        ]
       },
       "translatedFromLocale": "en"
     },
@@ -263,22 +261,8 @@
               "id": "fishbase-data-type-taxonomy",
               "description": "Accepted names, synonyms, classification, taxonomic authorities, and links to cataloging resources for finfishes."
             }
-          ],
-          "recordCount": {
-            "id": "fishbase-metric-record-count",
-            "description": "Approximate total records reported by FishBase across about 200 tables, including about 60 main tables."
-          },
-          "storageSize": {
-            "id": "fishbase-metric-storage-size-bytes",
-            "description": "Compressed public v25.04 parquet snapshot size summed from 216 Source Cooperative S3 parquet objects; this is not the live production database or image archive size."
-          }
+          ]
         },
-        "usage": [
-          {
-            "id": "fishbase-metric-species-count",
-            "description": "FishBase species count reported in the February 2026 main data statistics."
-          }
-        ],
         "access": [
           {
             "id": "fishbase-access-sourcecoop",
@@ -327,8 +311,23 @@
           }
         },
         "researchGaps": {
-          "standards": "No shared data or metadata standard has been verified for these FishBase outputs; the documented reuse license is access guidance."
-        }
+          "standards": "No shared data or metadata standard has been verified for these FishBase outputs; the documented reuse license is access guidance.",
+          "usage": "Usage figures are not included in this fixture."
+        },
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "Approximate total records reported by FishBase across about 200 tables, including about 60 main tables."
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "Compressed public v25.04 parquet snapshot size summed from 216 Source Cooperative S3 parquet objects; this is not the live production database or image archive size."
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "FishBase species count reported in the February 2026 main data statistics."
+          }
+        ]
       },
       "translatedFromLocale": null
     },
@@ -347,22 +346,8 @@
               "id": "fishbase-data-type-taxonomy",
               "description": "Nombres aceptados, sinónimos, clasificación, autoridades taxonómicas y enlaces a recursos de catalogación para peces con aletas."
             }
-          ],
-          "recordCount": {
-            "id": "fishbase-metric-record-count",
-            "description": "Total aproximado de registros reportado por FishBase en unas 200 tablas, incluidas unas 60 tablas principales."
-          },
-          "storageSize": {
-            "id": "fishbase-metric-storage-size-bytes",
-            "description": "Tamaño comprimido de la instantánea pública parquet v25.04 sumado desde 216 objetos parquet de Source Cooperative S3; no es el tamaño de la base de datos de producción en vivo ni del archivo de imágenes."
-          }
+          ]
         },
-        "usage": [
-          {
-            "id": "fishbase-metric-species-count",
-            "description": "Conteo de especies de FishBase reportado en las estadísticas principales de datos de febrero de 2026."
-          }
-        ],
         "access": [
           {
             "id": "fishbase-access-sourcecoop",
@@ -412,8 +397,23 @@
           }
         },
         "researchGaps": {
-          "standards": "No se ha verificado ningún estándar compartido de datos o metadatos para estas salidas de FishBase; la licencia de reutilización documentada corresponde a las indicaciones de acceso."
-        }
+          "standards": "No se ha verificado ningún estándar compartido de datos o metadatos para estas salidas de FishBase; la licencia de reutilización documentada corresponde a las indicaciones de acceso.",
+          "usage": "Este ejemplo no incluye cifras de uso."
+        },
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "Total aproximado de registros reportado por FishBase en unas 200 tablas, incluidas unas 60 tablas principales."
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "Tamaño comprimido de la instantánea pública parquet v25.04 sumado desde 216 objetos parquet de Source Cooperative S3; no es el tamaño de la base de datos de producción en vivo ni del archivo de imágenes."
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "Conteo de especies de FishBase reportado en las estadísticas principales de datos de febrero de 2026."
+          }
+        ]
       },
       "translatedFromLocale": "en"
     },
@@ -432,22 +432,8 @@
               "id": "fishbase-data-type-taxonomy",
               "description": "Noms acceptés, synonymes, classification, autorités taxonomiques et liens vers des ressources de catalogage pour les poissons à nageoires."
             }
-          ],
-          "recordCount": {
-            "id": "fishbase-metric-record-count",
-            "description": "Total approximatif des enregistrements signalés par FishBase dans environ 200 tables, dont quelque 60 tables principales."
-          },
-          "storageSize": {
-            "id": "fishbase-metric-storage-size-bytes",
-            "description": "Taille compressée de l'instantané parquet public v25.04, sommée à partir de 216 objets parquet S3 de Source Cooperative; ce n'est pas la taille de la base de production active ni celle de l'archive d'images."
-          }
+          ]
         },
-        "usage": [
-          {
-            "id": "fishbase-metric-species-count",
-            "description": "Nombre d'espèces FishBase indiqué dans les statistiques principales de données de février 2026."
-          }
-        ],
         "access": [
           {
             "id": "fishbase-access-sourcecoop",
@@ -497,8 +483,23 @@
           }
         },
         "researchGaps": {
-          "standards": "Aucune norme commune de données ou de métadonnées n’a été vérifiée pour ces sorties FishBase ; la licence de réutilisation documentée relève des consignes d’accès."
-        }
+          "standards": "Aucune norme commune de données ou de métadonnées n’a été vérifiée pour ces sorties FishBase ; la licence de réutilisation documentée relève des consignes d’accès.",
+          "usage": "Les chiffres d’utilisation ne sont pas inclus dans cet exemple."
+        },
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "Total approximatif des enregistrements signalés par FishBase dans environ 200 tables, dont quelque 60 tables principales."
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "Taille compressée de l'instantané parquet public v25.04, sommée à partir de 216 objets parquet S3 de Source Cooperative; ce n'est pas la taille de la base de production active ni celle de l'archive d'images."
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "Nombre d'espèces FishBase indiqué dans les statistiques principales de données de février 2026."
+          }
+        ]
       },
       "translatedFromLocale": "en"
     },
@@ -517,22 +518,8 @@
               "id": "fishbase-data-type-taxonomy",
               "description": "Принятые названия, синонимы, классификация, таксономические авторитеты и ссылки на каталожные ресурсы для лучеперых рыб."
             }
-          ],
-          "recordCount": {
-            "id": "fishbase-metric-record-count",
-            "description": "Приблизительное общее число записей, указанное FishBase для примерно 200 таблиц, включая около 60 основных таблиц."
-          },
-          "storageSize": {
-            "id": "fishbase-metric-storage-size-bytes",
-            "description": "Размер сжатого публичного parquet-снимка v25.04, суммированный по 216 parquet-объектам Source Cooperative S3; это не размер действующей производственной базы данных или архива изображений."
-          }
+          ]
         },
-        "usage": [
-          {
-            "id": "fishbase-metric-species-count",
-            "description": "Число видов FishBase, указанное в основной статистике данных за февраль 2026 года."
-          }
-        ],
         "access": [
           {
             "id": "fishbase-access-sourcecoop",
@@ -582,8 +569,23 @@
           }
         },
         "researchGaps": {
-          "standards": "Для этих выходных данных FishBase не подтверждён общий стандарт данных или метаданных; документированная лицензия на повторное использование относится к условиям доступа."
-        }
+          "standards": "Для этих выходных данных FishBase не подтверждён общий стандарт данных или метаданных; документированная лицензия на повторное использование относится к условиям доступа.",
+          "usage": "В этом примере нет показателей использования."
+        },
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "Приблизительное общее число записей, указанное FishBase для примерно 200 таблиц, включая около 60 основных таблиц."
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "Размер сжатого публичного parquet-снимка v25.04, суммированный по 216 parquet-объектам Source Cooperative S3; это не размер действующей производственной базы данных или архива изображений."
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "Число видов FishBase, указанное в основной статистике данных за февраль 2026 года."
+          }
+        ]
       },
       "translatedFromLocale": "en"
     },
@@ -602,22 +604,8 @@
               "id": "fishbase-data-type-taxonomy",
               "description": "有鳍鱼类的接受名、同物异名、分类、分类学权威以及编目资源链接。"
             }
-          ],
-          "recordCount": {
-            "id": "fishbase-metric-record-count",
-            "description": "FishBase 报告的约 200 张表中的近似总记录数，其中包括约 60 张主表。"
-          },
-          "storageSize": {
-            "id": "fishbase-metric-storage-size-bytes",
-            "description": "公共 v25.04 parquet 压缩快照大小，按 216 个 Source Cooperative S3 parquet 对象求和；这不是实时生产数据库或图像档案的大小。"
-          }
+          ]
         },
-        "usage": [
-          {
-            "id": "fishbase-metric-species-count",
-            "description": "2026 年 2 月主要数据统计中报告的 FishBase 物种数量。"
-          }
-        ],
         "access": [
           {
             "id": "fishbase-access-sourcecoop",
@@ -667,8 +655,23 @@
           }
         },
         "researchGaps": {
-          "standards": "尚未核实这些FishBase输出所采用的共享数据或元数据标准；已记录的再利用许可属于访问指南。"
-        }
+          "standards": "尚未核实这些FishBase输出所采用的共享数据或元数据标准；已记录的再利用许可属于访问指南。",
+          "usage": "此示例未包含使用量数据。"
+        },
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "FishBase 报告的约 200 张表中的近似总记录数，其中包括约 60 张主表。"
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "公共 v25.04 parquet 压缩快照大小，按 216 个 Source Cooperative S3 parquet 对象求和；这不是实时生产数据库或图像档案的大小。"
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "2026 年 2 月主要数据统计中报告的 FishBase 物种数量。"
+          }
+        ]
       },
       "translatedFromLocale": "en"
     }

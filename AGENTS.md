@@ -7,6 +7,7 @@
 - Treat `research/*` CSV folders as incremental research/import batches, not as a separate central source of truth.
 
 ## Documentation
+- Read [shared/README.md](shared/README.md) before using or extending shared domain contracts, localization, vocabulary labels, UI messages, or search presentation.
 - Follow `documentation/RICH_RESEARCH_RECORDS.md` for standing rich research and record-backfill instructions.
 - Use `documentation/mvp.md` as the current Deeptime/Ryu MCP portal working plan.
 - Use `documentation/osusources.md` as the current Oregon/OSU source plan.
@@ -114,6 +115,15 @@
   Follow `documentation/RICH_RESEARCH_RECORDS.md`; do not infer standards from
   formats, connected systems, operators, or planned routes. Keep versions in
   descriptions and document gaps when no assignment is verified.
+
+- Store system measurements only in `properties.metrics`, using the ten approved
+  `metricDefinitions` keys from `shared/domain.ts`. Units and Data/Usage groups
+  come from that definition; never author labels, units, or arbitrary metric keys.
+  New metrics, units, or changes of meaning require explicit human approval in
+  the current authoring chat and a vocabulary/translation release before use.
+  Put descriptions in each localization's `details.metrics`, with matching IDs.
+  Follow `documentation/RICH_RESEARCH_RECORDS.md` for sources, reporting periods,
+  research gaps, and preserving unsupported measurements as sourced prose.
 
 ## Ryu Access Routes
 - Treat `ryu_routes` as the first-class operational route index for agents.

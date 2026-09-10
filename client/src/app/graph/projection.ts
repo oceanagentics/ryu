@@ -9,7 +9,7 @@ import type {
   ViewMode,
 } from "../../../../shared/domain";
 import { defaultLocale } from "../../../../shared/localization";
-import { facetLabel } from "../i18n";
+import { vocabularyLabel } from "../i18n";
 import { nodeTitle, resolveNodeDisplay } from "../localization";
 import type { CountryDisplayMode } from "../state/graphStore";
 import { buildLabel, getLayoutBand, getNodeDimensions, type NodeGeometry } from "./geometry";
@@ -110,7 +110,7 @@ function secondaryNodeLabel(
 }
 
 function edgeLabel(kind: GraphProjectionEdgeType, locale: SupportedLocale): string {
-  return facetLabel(locale, "edgeKind", kind);
+  return vocabularyLabel(locale, "edgeKinds", kind);
 }
 
 export function projectGraph(input: ProjectionInput): GraphProjection {

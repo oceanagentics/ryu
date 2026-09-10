@@ -119,9 +119,9 @@ function createFakeNode(overrides: Partial<GraphNode> = {}): GraphNode {
     properties: {
       disciplines: [],
       gallery: [],
-      data: { descriptors: [], recordCount: null, storageSize: null },
+      data: { descriptors: [] },
       access: [],
-      usage: [],
+      metrics: [],
     },
     createdAt: "2026-08-27T00:00:00.000Z",
     updatedAt: "2026-08-27T00:00:00.000Z",

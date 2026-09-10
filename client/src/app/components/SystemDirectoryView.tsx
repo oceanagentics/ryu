@@ -32,7 +32,7 @@ import {
   type SearchMatchReason,
   type SystemSearchRecord,
 } from "../search";
-import { facetLabel, localeName, t, type FacetGroup } from "../i18n";
+import { vocabularyLabel, localeName, t } from "../i18n";
 import { useGraphStore } from "../state/graphStore";
 
 type DirectoryMode = "cards" | "table";
@@ -41,11 +41,9 @@ type SystemDirectoryVariant = "page" | "rail";
 function CompactTags({
   values,
   limit = 3,
-  facetGroup,
 }: {
   values: string[];
   limit?: number;
-  facetGroup?: FacetGroup;
 }) {
   const locale = useGraphStore((state) => state.locale);
   const visible = values.slice(0, limit);
@@ -59,7 +57,7 @@ function CompactTags({
     <Flex gap={4} wrap>
       {visible.map((value) => (
         <Tag key={value} bordered={false}>
-          {facetGroup ? facetLabel(locale, facetGroup, value) : value}
+          {value}
         </Tag>
       ))}
       {remaining > 0 ? <Tag bordered={false}>+{remaining}</Tag> : null}
@@ -196,7 +194,7 @@ export function SystemDirectoryView({
               : t(locale, "common.missingLocale", { locale: localeName(locale, locale) })}
           </Tag>
           {record.currentLocaleReviewState ? (
-            <Tag bordered={false}>{facetLabel(locale, "reviewState", record.currentLocaleReviewState)}</Tag>
+            <Tag bordered={false}>{vocabularyLabel(locale, "reviewStates", record.currentLocaleReviewState)}</Tag>
           ) : null}
         </Flex>
       ),
@@ -205,7 +203,7 @@ export function SystemDirectoryView({
       title: t(locale, "details.discipline"),
       key: "disciplines",
       render: (_: unknown, record: SystemSearchRecord) => (
-        <CompactTags values={record.disciplines} facetGroup="discipline" />
+        <CompactTags values={record.disciplines.map(value => vocabularyLabel(locale, "disciplines", value))} />
       ),
     },
     {
@@ -213,9 +211,12 @@ export function SystemDirectoryView({
       key: "data",
       render: (_: unknown, record: SystemSearchRecord) => (
         <CompactTags
-          values={[...record.dataTypes, ...record.dataFormats, ...record.dataStandards]}
+          values={[
+            ...record.dataTypes.map(value => vocabularyLabel(locale, "dataTypes", value)),
+            ...record.dataFormats.map(value => vocabularyLabel(locale, "dataFormats", value)),
+            ...record.dataStandards.map(value => vocabularyLabel(locale, "dataStandards", value)),
+          ]}
           limit={4}
-          facetGroup="descriptorLabel"
         />
       ),
     },
@@ -322,7 +323,7 @@ export function SystemDirectoryView({
                 onChange={(value) => patchFilters({ disciplines: value })}
               />
               {claimFilterKeys.map((key) => (
-                <Select
+                <Select<string[]>
                   key={key}
                   allowClear
                   mode="multiple"
@@ -397,7 +398,7 @@ export function SystemDirectoryView({
                         : t(locale, "common.missingLocale", { locale: localeName(locale, locale) })}
                     </Tag>
                     {record.currentLocaleReviewState ? (
-                      <Tag bordered={false}>{facetLabel(locale, "reviewState", record.currentLocaleReviewState)}</Tag>
+                      <Tag bordered={false}>{vocabularyLabel(locale, "reviewStates", record.currentLocaleReviewState)}</Tag>
                     ) : null}
                   </Flex>
                   {record.summary ? (
@@ -407,7 +408,7 @@ export function SystemDirectoryView({
                   ) : null}
                   <MatchReasons reasons={record.matchReasons} />
                   <div className="systems-card-meta">
-                    <CompactTags values={record.disciplines} facetGroup="discipline" />
+                    <CompactTags values={record.disciplines.map(value => vocabularyLabel(locale, "disciplines", value))} />
                     <span>
                       {t(locale, "directory.relationshipCount", {
                         count: record.relationships.length,
@@ -415,7 +416,7 @@ export function SystemDirectoryView({
                     </span>
                   </div>
                   <Flex vertical gap={8}>
-                    <CompactTags values={record.dataTypes} facetGroup="descriptorLabel" />
+                    <CompactTags values={record.dataTypes.map(value => vocabularyLabel(locale, "dataTypes", value))} />
                     <CompactTags values={record.accessLabels} />
                   </Flex>
                   <Flex align="center" justify="space-between" gap={8}>

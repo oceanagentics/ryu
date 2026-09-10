@@ -27,7 +27,7 @@ import { GraphLanguageSelector } from "./components/GraphLanguageSelector";
 import { LegendPanel } from "./components/LegendPanel";
 import { SystemDirectoryView } from "./components/SystemDirectoryView";
 import type { NodeMap3dArrangement } from "./graph/nodeMap3dLayout";
-import { facetLabel, t } from "./i18n";
+import { t } from "./i18n";
 import { countActiveFilters } from "./search";
 import { useGraphStore } from "./state/graphStore";
 
@@ -396,7 +396,7 @@ export function App() {
   }
 
   function renderPaneHeader(paneId: PaneId) {
-    const paneLabel = facetLabel(locale, "pane", paneId);
+    const paneLabel = t(locale, `app.pane.${paneId}`);
 
     return (
       <div className="workspace-pane-header">
@@ -420,7 +420,7 @@ export function App() {
         aria-label={t(locale, "app.graphView")}
       >
         {nodeMap3dArrangementOptions.map((option) => {
-          const optionLabel = facetLabel(locale, "graphArrangement", option.value);
+          const optionLabel = t(locale, `graph.arrangement.${option.value}`);
           const collapsedLabel = t(locale, "app.openGraphPaneInView", {
             view: optionLabel,
           });
@@ -452,7 +452,7 @@ export function App() {
 
   function renderPaneActions(paneId: PaneId) {
     const canExpand = openPaneCount > 1;
-    const paneLabel = facetLabel(locale, "pane", paneId);
+    const paneLabel = t(locale, `app.pane.${paneId}`);
 
     return (
       <div className="workspace-pane-actions">
@@ -482,7 +482,7 @@ export function App() {
   function renderPane(paneId: PaneId, children: ReactNode) {
     const isResizable = resizablePaneIds.has(paneId);
     const resizeEdge = paneId === "details" ? "left" : "right";
-    const paneLabel = facetLabel(locale, "pane", paneId);
+    const paneLabel = t(locale, `app.pane.${paneId}`);
     const paneClassName = [
       "workspace-pane",
       `workspace-pane-${paneId}`,
@@ -544,24 +544,24 @@ export function App() {
       <button
         key={paneId}
         aria-label={t(locale, "app.openPane", {
-          pane: facetLabel(locale, "pane", paneId),
+          pane: t(locale, `app.pane.${paneId}`),
         })}
         className={`workspace-pane-collapsed workspace-pane-collapsed-${paneId}`}
         title={t(locale, "app.openPaneTitle", {
-          pane: facetLabel(locale, "pane", paneId),
+          pane: t(locale, `app.pane.${paneId}`),
         })}
         type="button"
         onClick={() => setPaneOpen(paneId, true)}
       >
         <span className="workspace-pane-collapsed-title">
-          {facetLabel(locale, "pane", paneId)}
+          {t(locale, `app.pane.${paneId}`)}
         </span>
       </button>
     );
   }
 
   function renderSearchLauncher() {
-    const searchPaneLabel = facetLabel(locale, "pane", "search");
+    const searchPaneLabel = t(locale, "app.pane.search");
     const trimmedSearchQuery = searchQuery.trim();
     const launcherClassName = [
       "graph-search-launcher",

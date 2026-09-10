@@ -2,10 +2,10 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import type { GraphNode, GraphNodeKind, RyuRoute, SupportedLocale } from "../../shared/domain";
 import { dataFormats, dataStandards, dataTypes } from "../../shared/domain";
-import { facetLabel } from "../../shared/i18n";
+import { vocabularyLabel } from "../../shared/i18n";
 import { indexGraph } from "../../shared/indexGraph";
 import { emptyLocalizationDetails, resolveNodeLocalization, supportedLocales } from "../../shared/localization";
-import { systemDataDescriptors } from "../../shared/recordDisplay";
+import { systemDataDescriptors, systemMetrics } from "../../shared/recordDisplay";
 import { buildSystemRecords, getSystemFilterOptions } from "../../shared/searchPresentation";
 import { readRecordSearchQuery } from "./recordContracts";
 import { searchRecords } from "./recordSearch";
@@ -25,6 +25,25 @@ function node(id: string, kind: GraphNodeKind = "system", title = id): GraphNode
 function search(nodes: GraphNode[], input: Record<string, unknown>, routes: RyuRoute[] = []) {
   return searchRecords(indexGraph({ nodes, edges: [], ryuRoutes: routes, savedViews: [] }), readRecordSearchQuery(input));
 }
+
+test("metric display and search share typed labels, units and reporting periods in every language", () => {
+  const record = node("metrics");
+  record.properties.metrics = [{ id: "sessions", key: "session_count", value: 1200, observedAt: "2026-08", period: "month", source: "stats" }];
+  for (const locale of supportedLocales) {
+    record.localizations[locale] = { ...structuredClone(record.localizations.en!), locale,
+      details: { ...emptyLocalizationDetails(), metrics: [{ id: "sessions", description: `${locale} measured traffic` }] } };
+  }
+  record.availableLocales = [...supportedLocales];
+  for (const locale of supportedLocales) {
+    const label = vocabularyLabel(locale, "metricKeys", "session_count");
+    assert.equal(systemMetrics(record, resolveNodeLocalization(record, locale))[0].label, label);
+    for (const q of [label, vocabularyLabel(locale, "units", "sessions"), vocabularyLabel(locale, "metricPeriods", "month"), "1200"]) {
+      const result = search([record], { q, locale });
+      assert.equal(result.length, 1, `${locale}/${q}`);
+      assert.ok(result[0].reasons.some(reason => reason.field === "data.metrics"));
+    }
+  }
+});
 
 test("aliases match every record kind in the displayed localization, with English fallback", () => {
   for (const kind of ["system", "organization", "country"] as const) {
@@ -77,7 +96,7 @@ test("filters intersect across groups and OR within groups, using typed access a
   record.recordDepth = "rich";
   record.properties = { disciplines: ["ecology", "taxonomy"], geographicScope: "Global",
     access: [{ id: "api", type: "read", method: "api", url: "https://example.org", source: "src-api" }],
-    data: { recordCount: null, storageSize: null, descriptors: [
+    data: { descriptors: [
       { id: "type", category: "type", label: "occurrence_records", source: "src-api" },
       { id: "format", category: "format", label: "geojson", source: "src-api" },
       { id: "standard", category: "standard", label: "darwin_core", source: "src-api" },
@@ -141,7 +160,7 @@ test("discipline tags are independently searchable and produce localized, dedupl
 
 test("data type search and display use canonical translations and preserve record-specific descriptions", () => {
   const record = node("taxonomy");
-  record.properties.data = { recordCount: null, storageSize: null, descriptors: [
+  record.properties.data = { descriptors: [
     { id: "type", category: "type", label: "taxonomic_records", source: null },
   ] };
   record.localizations.en!.details.data.descriptors = [{ id: "type", label: "LegacyOverrideMarker", description: "Nomenclatural evidence" }];
@@ -157,13 +176,34 @@ test("data type search and display use canonical translations and preserve recor
   assert.equal(matches[0].reasons[0].field, "data.descriptors.type");
   assert.equal(search([record], { q: "Nomenclatural evidence" }).length, 1);
   for (const locale of supportedLocales) {
-    for (const type of dataTypes) assert.notEqual(facetLabel(locale, "descriptorLabel", type), type, `${locale}/${type}`);
+    for (const type of dataTypes) assert.notEqual(vocabularyLabel(locale, "dataTypes", type), type, `${locale}/${type}`);
+  }
+});
+
+test("discipline and occurrence labels remain searchable and filterable in every language", () => {
+  const record = node("catalog-fixture");
+  record.properties.disciplines = ["botany"];
+  record.properties.data = { descriptors: [
+    { id: "occurrences", category: "type", label: "occurrence_records", source: null },
+  ] };
+  const graph = indexGraph({ nodes: [record], edges: [], ryuRoutes: [], savedViews: [] });
+  for (const locale of supportedLocales) {
+    const botany = vocabularyLabel(locale, "disciplines", "botany");
+    const occurrences = vocabularyLabel(locale, "dataTypes", "occurrence_records");
+    const options = getSystemFilterOptions(buildSystemRecords(graph, locale), locale);
+    assert.deepEqual(options.disciplines, [{ value: "botany", label: botany }]);
+    assert.deepEqual(options.dataClaims.type, [{ value: "occurrence_records", label: occurrences }]);
+    for (const [q, field] of [[botany, "system.disciplines"], [occurrences, "data.descriptors.type"]]) {
+      const matches = search([record], { q, locale });
+      assert.equal(matches.length, 1, `${locale}/${q}`);
+      assert.ok(matches[0].reasons.some(reason => reason.field === field), `${locale}/${field}`);
+    }
   }
 });
 
 test("format search, details and filters use shared labels with localized descriptions", () => {
   const record = node("formatted");
-  record.properties.data = { recordCount: null, storageSize: null, descriptors: [
+  record.properties.data = { descriptors: [
     { id: "format", category: "format", label: "genbank_flatfile", source: null },
   ] };
   record.localizations.en!.details.data.descriptors = [{ id: "format", label: "LegacyOverrideMarker", description: "Annotated sequence exports" }];
@@ -178,7 +218,7 @@ test("format search, details and filters use shared labels with localized descri
   assert.equal(search([record], { q: "Annotated sequence exports" }).length, 1);
   for (const locale of supportedLocales) {
     for (const format of dataFormats) {
-      assert.notEqual(facetLabel(locale, "descriptorLabel", format), format, `${locale}/${format}`);
+      assert.notEqual(vocabularyLabel(locale, "dataFormats", format), format, `${locale}/${format}`);
       assert.deepEqual(readRecordSearchQuery({ dataFormat: format }).dataFormat, [format]);
     }
   }
@@ -186,7 +226,7 @@ test("format search, details and filters use shared labels with localized descri
 
 test("standard search and filters use canonical IDs and shared translations", () => {
   const record = node("standardized");
-  record.properties.data = { recordCount: null, storageSize: null, descriptors: [
+  record.properties.data = { descriptors: [
     { id: "standard", category: "standard", label: "cf", source: null },
   ] };
   record.localizations.en!.details.data.descriptors = [{ id: "standard", label: "LegacyOverrideMarker", description: "NetCDF product conventions" }];
@@ -200,7 +240,7 @@ test("standard search and filters use canonical IDs and shared translations", ()
   assert.equal(search([record], { q: "Conventions climat", locale: "fr" })[0].reasons[0].field, "data.descriptors.standard");
   assert.equal(search([record], { q: "NetCDF product conventions" }).length, 1);
   for (const locale of supportedLocales) for (const standard of dataStandards) {
-    assert.notEqual(facetLabel(locale, "descriptorLabel", standard), standard, `${locale}/${standard}`);
+    assert.notEqual(vocabularyLabel(locale, "dataStandards", standard), standard, `${locale}/${standard}`);
     assert.deepEqual(readRecordSearchQuery({ dataStandard: standard }).dataStandard, [standard]);
   }
 });

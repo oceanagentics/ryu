@@ -102,11 +102,9 @@ export function emptyNodeProperties(): NodeProperties {
     gallery: [],
     data: {
       descriptors: [],
-      recordCount: null,
-      storageSize: null,
     },
     access: [],
-    usage: [],
+    metrics: [],
   };
 }
 
@@ -164,18 +162,12 @@ function normalizeLocalizationDetails(value: unknown): NodeLocalizationDetails {
       descriptors: Array.isArray(data.descriptors)
         ? data.descriptors as NodeLocalizationDetails["data"]["descriptors"]
         : [],
-      recordCount: isRecord(data.recordCount)
-        ? data.recordCount as unknown as NodeLocalizationDetails["data"]["recordCount"]
-        : null,
-      storageSize: isRecord(data.storageSize)
-        ? data.storageSize as unknown as NodeLocalizationDetails["data"]["storageSize"]
-        : null,
     },
     access: Array.isArray(value.access)
       ? value.access as NodeLocalizationDetails["access"]
       : [],
-    usage: Array.isArray(value.usage)
-      ? value.usage as NodeLocalizationDetails["usage"]
+    metrics: Array.isArray(value.metrics)
+      ? value.metrics as NodeLocalizationDetails["metrics"]
       : [],
   };
 }
@@ -187,6 +179,9 @@ export function normalizeNodeProperties(value: unknown): NodeProperties {
   }
 
   const data = isRecord(value.data) ? value.data : {};
+  if (Object.hasOwn(value, "usage") || Object.hasOwn(data, "recordCount") || Object.hasOwn(data, "storageSize")) {
+    throw new Error("Legacy metrics found: apply server/schema/013_system_metrics.sql before starting this version.");
+  }
   const properties = { ...value };
   delete properties.operator;
   delete properties.role;
@@ -203,17 +198,11 @@ export function normalizeNodeProperties(value: unknown): NodeProperties {
       descriptors: Array.isArray(data.descriptors)
         ? data.descriptors as NonNullable<NodeProperties["data"]>["descriptors"]
         : [],
-      recordCount: isRecord(data.recordCount)
-        ? data.recordCount as unknown as NonNullable<NodeProperties["data"]>["recordCount"]
-        : null,
-      storageSize: isRecord(data.storageSize)
-        ? data.storageSize as unknown as NonNullable<NodeProperties["data"]>["storageSize"]
-        : null,
     },
     access: Array.isArray(value.access)
       ? value.access as NodeProperties["access"]
       : [],
-    usage: Array.isArray(value.usage) ? value.usage as NodeProperties["usage"] : [],
+    metrics: Array.isArray(value.metrics) ? value.metrics as NodeProperties["metrics"] : [],
   };
 }
 

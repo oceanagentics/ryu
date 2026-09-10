@@ -81,8 +81,8 @@ test("stored rich example enforces content, evidence, localization and allowed g
     ["localizations.fr.details.relationshipReview.findings.funds", input => { delete input.localizations.fr.details.relationshipReview.findings.funds; }],
     ["localizations.en.details.relationshipReview.findings.part_of", input => { input.localizations.en.details.relationshipReview.findings.part_of = "Retired type"; }],
     ["record.countryCode", input => { input.record.countryCode = "INT"; }],
-    ["record.properties.data.recordCount.source", input => { delete input.record.properties.data.recordCount.source; }],
-    ["record.properties.data.recordCount.observedAt", input => { input.record.properties.data.recordCount.observedAt = "2026-02-31"; }],
+    ["record.properties.metrics[0].source", input => { delete input.record.properties.metrics[0].source; }],
+    ["record.properties.metrics[0].observedAt", input => { input.record.properties.metrics[0].observedAt = "2026-02-31"; }],
     ["localizations.es.details.access", input => { input.localizations.es.details.access[0].id = "different"; }],
     ["record.sources.src-fishbase-home", input => { delete input.record.sources["src-fishbase-home"]; }],
     ["record.sources.src-fishbase-home.title.ar", input => { delete input.record.sources["src-fishbase-home"].title.ar; }],
@@ -98,16 +98,12 @@ test("stored rich example enforces content, evidence, localization and allowed g
     assert.ok(result.issues.some(issue => issue.path === path), `${path}: ${JSON.stringify(result.issues)}`);
   }
   const gaps = richRecordFixture();
-  gaps.record.properties.data.recordCount = null;
-  gaps.record.properties.data.storageSize = null;
-  gaps.record.properties.usage = [];
+  gaps.record.properties.metrics = [];
   gaps.record.properties.gallery = [];
   for (const l of Object.values(gaps.localizations) as any[]) {
-    l.details.data.recordCount = null;
-    l.details.data.storageSize = null;
-    l.details.usage = [];
+    l.details.metrics = [];
     l.details.gallery = [];
-    l.details.researchGaps = { ...l.details.researchGaps, recordCount: "Not published", storageSize: "Not published", usage: "Not published" };
+    l.details.researchGaps = { ...l.details.researchGaps, data: "Not published", usage: "Not published" };
   }
   const result = validateRecordQuality(gaps.id, gaps);
   assert.equal(result.valid, true, JSON.stringify(result.issues));
@@ -517,6 +513,9 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
       const format = richRecordFixture().record.properties.data.descriptors.find((d: any) => d.category === "format");
       for (const method of ["put", "patch"] as const) {
         for (const invalid of [{ disciplines: ["fish_biodiversity"] }, { disciplines: ["ecology", "ecology"] }, { role: "reference_backbone" }, { disciplineFamily: "biodiversity" }, { geographicScope: "global" },
+          { metrics: [{ ...richRecordFixture().record.properties.metrics[0], key: "invented_metric" }] },
+          { metrics: [{ ...richRecordFixture().record.properties.metrics[0], unit: "visits/month" }] },
+          { usage: [] },
           { data: { descriptors: [{ ...type, label: "invented_type" }] } },
           { data: { descriptors: [type, { ...type, id: "duplicate" }] } },
           { data: { descriptors: [{ ...format, label: "invented_format" }] } },

@@ -6,7 +6,7 @@ on 2026-09-07. The canonical response had `recordUpdatedAt`:
 `2026-09-04T02:18:45.664Z`.
 
 The example retains the canonical six-language profile, two representative
-source-backed descriptors, two access paths, two data metrics, one usage metric,
+source-backed descriptors, two access paths, three data metrics, a documented usage gap,
 one gallery item, and the operator edge. Six shared sources cover these sections.
 Dates/counts are preserved historical assertions; this fixture does not claim a
 fresh factual or URL review. No machine route was present in the response.

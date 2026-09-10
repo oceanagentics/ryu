@@ -2,7 +2,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { edgeKinds } from "../../shared/domain";
+import { edgeKinds, isSystemMetricKey, metricDefinitions, metricPeriods } from "../../shared/domain";
 
 import type {
   GraphEdge,
@@ -385,10 +385,10 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
   const rich = input.record.recordDepth === "rich";
   const sources = input.record.sources ?? {};
   const refs = collectSourceIds(input.record.properties);
-  const add = (field: string, message: string, evidence = false) => {
+  const add = (field: string, message: string, evidence = false, always = false) => {
     const issue = { recordId: id, path: field, message };
     if (evidence) sourceIssues.push(issue);
-    if (rich) issues.push(issue);
+    if (rich || always) issues.push(issue);
   };
   const text = (value: unknown): value is string => typeof value === "string" && value.trim().length > 0;
   const object = (value: unknown): Record<string, unknown> => isRecord(value) ? value : {};
@@ -426,19 +426,33 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
   const descriptors = array(data.descriptors);
   const access = array(p.access);
   const gallery = array(p.gallery);
-  const usage = array(p.usage);
-  for (const [field, value] of [["access", p.access], ["gallery", p.gallery], ["usage", p.usage], ["data.descriptors", data.descriptors]] as const) {
+  const metrics = array(p.metrics);
+  const metricError = (field: string, message: string, evidence = false) => add(field, message, evidence, true);
+  for (const [field, value] of [["access", p.access], ["gallery", p.gallery], ["data.descriptors", data.descriptors]] as const) {
     if (value != null && (!Array.isArray(value) || value.some(item => !isRecord(item)))) add(`record.properties.${field}`, "must be an array of objects");
   }
+  if (p.metrics !== undefined && (!Array.isArray(p.metrics) || p.metrics.some(item => !isRecord(item)))) metricError("record.properties.metrics", "must be an array of metric objects");
+  if (hasOwn(p, "usage")) metricError("record.properties.usage", "field removed; use metrics");
   for (const key of ["recordCount", "storageSize"]) {
-    if (data[key] != null && !isRecord(data[key])) add(`record.properties.data.${key}`, "must be a metric object or null");
+    if (hasOwn(data, key)) metricError(`record.properties.data.${key}`, "field removed; use metrics");
   }
-  const metric = (item: Record<string, unknown>, field: string) => {
-    for (const key of ["id", "key", "unit"]) requireText(item[key], `${field}.${key}`);
-    if (typeof item.value !== "number" || !Number.isFinite(item.value) || item.value < 0) add(`${field}.value`, "a finite non-negative value is required");
-    if (!date(item.observedAt)) add(`${field}.observedAt`, "an observation date (YYYY, YYYY-MM, or YYYY-MM-DD) is required", true);
-    citation(item.source, `${field}.source`);
-  };
+  if (input.record.kind !== "system" && metrics.length) metricError("record.properties.metrics", "metrics belong on system records");
+  const metricIds = new Set<string>();
+  metrics.forEach((item, i) => {
+    const field = `record.properties.metrics[${i}]`;
+    for (const key of Object.keys(item)) {
+      if (!["id", "key", "value", "observedAt", "period", "source"].includes(key)) metricError(`${field}.${key}`, "unknown metric field; labels and units come from the shared vocabulary");
+    }
+    if (!text(item.id) || metricIds.has(item.id)) metricError(`${field}.id`, "metric IDs must be present and unique");
+    else metricIds.add(item.id);
+    if (!isSystemMetricKey(item.key)) metricError(`${field}.key`, "must be an approved metric key; new metrics require explicit human approval and a vocabulary/translation release");
+    if (typeof item.value !== "number" || !Number.isFinite(item.value) || item.value < 0 || item.value > Number.MAX_SAFE_INTEGER) metricError(`${field}.value`, "a finite non-negative value within the safe numeric range is required");
+    if (item.observedAt !== null && !date(item.observedAt)) metricError(`${field}.observedAt`, "use YYYY, YYYY-MM, YYYY-MM-DD, or null when the observation date is unknown", true);
+    if (item.period != null && !metricPeriods.some(period => period === item.period)) metricError(`${field}.period`, "must be day, month, year, cumulative, or null");
+    if (item.period != null && isSystemMetricKey(item.key) && metricDefinitions[item.key].group === "data") metricError(`${field}.period`, "data metrics describe holdings or size; reporting periods apply to usage metrics");
+    if (!text(item.source)) metricError(`${field}.source`, "a source ID is required", true);
+    else refs.add(item.source);
+  });
   const asset = (value: unknown, field: string) => {
     if (text(value) && value.startsWith("/gallery/")) {
       const root = fileURLToPath(new URL("../../client/public/gallery/", import.meta.url));
@@ -500,12 +514,6 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     if (item.type === "image" || item.thumbnailUrl != null) asset(item.thumbnailUrl, `${field}.thumbnailUrl`);
     citation(item.source, `${field}.source`);
   });
-  for (const key of ["recordCount", "storageSize"]) {
-    if (data[key] != null) metric(object(data[key]), `record.properties.data.${key}`);
-  }
-  if (data.storageSize != null && object(data.storageSize).unit !== "bytes") add("record.properties.data.storageSize.unit", "storage size must be stored in bytes");
-  usage.forEach((item, i) => metric(item, `record.properties.usage[${i}]`));
-
   const locales = rich ? supportedLocales : Object.keys(input.localizations ?? {}) as SupportedLocale[];
   for (const locale of locales) {
     const l = input.localizations?.[locale];
@@ -538,7 +546,7 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
       ["data.descriptors", descriptors, localizedData.descriptors, ["label", "description"]],
       ["access", access, details.access, ["label", "description"]],
       ["gallery", gallery, details.gallery, ["title", "caption"]],
-      ["usage", usage, details.usage, ["description"]],
+      ["metrics", metrics, details.metrics, ["description"]],
     ];
     for (const [section, neutral, localized, fields] of sections) {
       const rows = array(localized);
@@ -554,15 +562,22 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
         }
       }
     }
+    if (hasOwn(details, "usage")) metricError(`${field}.details.usage`, "field removed; use metrics");
     for (const key of ["recordCount", "storageSize"]) {
-      if (data[key] != null) {
-        const translated = object(localizedData[key]);
-        if (translated.id !== object(data[key]).id) add(`${field}.details.data.${key}.id`, "must match the neutral metric ID");
-        requireText(translated.description, `${field}.details.data.${key}.description`);
-      } else if (localizedData[key] != null) add(`${field}.details.data.${key}`, "localized metric has no neutral metric");
+      if (hasOwn(localizedData, key)) metricError(`${field}.details.data.${key}`, "field removed; use metrics");
+    }
+    const localizedMetrics = array(details.metrics);
+    if (details.metrics !== undefined && (!Array.isArray(details.metrics) || details.metrics.some(item => !isRecord(item)))) metricError(`${field}.details.metrics`, "must be an array of localized metric objects");
+    if (localizedMetrics.length !== metrics.length || new Set(localizedMetrics.map(item => item.id)).size !== localizedMetrics.length || localizedMetrics.some(item => !text(item.id) || !metricIds.has(item.id))) metricError(`${field}.details.metrics`, "localized metric IDs must exactly match neutral metric IDs");
+    localizedMetrics.forEach((item, i) => {
+      for (const key of Object.keys(item)) if (!["id", "description"].includes(key)) metricError(`${field}.details.metrics[${i}].${key}`, "localized metrics contain only id and description; labels and units come from the shared vocabulary");
+      if (item.description !== null && typeof item.description !== "string") metricError(`${field}.details.metrics[${i}].description`, "must be text or null");
+    });
+    for (const key of Object.keys(object(details.researchGaps))) {
+      if (!["data", "usage", "standards"].includes(key)) metricError(`${field}.details.researchGaps.${key}`, "use data, usage, or standards for research gaps");
     }
     if (input.record.kind === "system") {
-      for (const [key, present] of [["recordCount", data.recordCount != null], ["storageSize", data.storageSize != null], ["usage", usage.length > 0], ["standards", descriptors.some(item => item.category === "standard")]] as const) {
+      for (const [key, present] of [["data", metrics.some(item => isSystemMetricKey(item.key) && metricDefinitions[item.key].group === "data")], ["usage", metrics.some(item => isSystemMetricKey(item.key) && metricDefinitions[item.key].group === "usage")], ["standards", descriptors.some(item => item.category === "standard")]] as const) {
         if (!present && !text(object(details.researchGaps)[key])) add(`${field}.details.researchGaps.${key}`, "document the research gap when this information is unavailable");
       }
     }

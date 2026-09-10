@@ -1,4 +1,7 @@
 import type {
+  DataFormat,
+  DataStandard,
+  DataType,
   Discipline,
   GraphEdge,
   GraphNode,
@@ -6,14 +9,15 @@ import type {
   ReviewState,
   RyuRoute,
   SupportedLocale,
+  SystemAccessType,
   SystemDataDescriptorCategory,
 } from "./domain";
 import type { IndexedGraph } from "./indexGraph";
 import { operatorNodesForSystem } from "./indexGraph";
 import {
-  facetLabel,
+  vocabularyLabel,
   humanizeCode,
-  type FacetGroup,
+  t,
 } from "./i18n";
 import {
   nodeTitle,
@@ -57,10 +61,10 @@ export type SystemSearchRecord = {
   localization: ResolvedNodeLocalization;
   operatorName: string;
   disciplines: Discipline[];
-  dataTypes: string[];
-  dataFormats: string[];
-  dataStandards: string[];
-  accessTypes: string[];
+  dataTypes: DataType[];
+  dataFormats: DataFormat[];
+  dataStandards: DataStandard[];
+  accessTypes: SystemAccessType[];
   accessMethods: string[];
   accessLabels: string[];
   hasCurrentLocale: boolean;
@@ -76,7 +80,7 @@ export type SystemSearchRecord = {
 export const claimFilterKeys = ["type", "format", "standard"] as const;
 
 export function claimFilterLabel(locale: SupportedLocale, value: ClaimFilterKey): string {
-  return facetLabel(locale, "dataClaim", value);
+  return t(locale, `directory.dataClaim.${value}`);
 }
 
 export function localizationCoverageFilterOptions(locale: SupportedLocale): Array<{
@@ -85,11 +89,11 @@ export function localizationCoverageFilterOptions(locale: SupportedLocale): Arra
 }> {
   return [
     {
-      label: facetLabel(locale, "localizationCoverage", "current_locale"),
+      label: t(locale, "directory.localizationCoverage.current_locale"),
       value: "current_locale",
     },
     {
-      label: facetLabel(locale, "localizationCoverage", "missing_current_locale"),
+      label: t(locale, "directory.localizationCoverage.missing_current_locale"),
       value: "missing_current_locale",
     },
   ];
@@ -99,9 +103,9 @@ export function reviewStateFilterOptions(
   locale: SupportedLocale,
 ): Array<{ label: string; value: ReviewState }> {
   return [
-    { label: facetLabel(locale, "reviewState", "agent_researched"), value: "agent_researched" },
-    { label: facetLabel(locale, "reviewState", "human_reviewed"), value: "human_reviewed" },
-    { label: facetLabel(locale, "reviewState", "needs_revision"), value: "needs_revision" },
+    { label: vocabularyLabel(locale, "reviewStates", "agent_researched"), value: "agent_researched" },
+    { label: vocabularyLabel(locale, "reviewStates", "human_reviewed"), value: "human_reviewed" },
+    { label: vocabularyLabel(locale, "reviewStates", "needs_revision"), value: "needs_revision" },
   ];
 }
 
@@ -122,18 +126,17 @@ export function labelize(value: string): string {
   return humanizeCode(value);
 }
 
-export function uniqueSorted(values: Array<string | null | undefined>): string[] {
-  return [...new Set(values.filter((value): value is string => Boolean(value)))]
+export function uniqueSorted<Value extends string>(values: Array<Value | null | undefined>): Value[] {
+  return [...new Set(values.filter((value): value is Value => Boolean(value)))]
     .sort((left, right) => left.localeCompare(right));
 }
 
-export function selectOptions(
-  values: Array<string | null | undefined>,
-  locale: SupportedLocale,
-  facetGroup?: FacetGroup,
+export function selectOptions<Value extends string>(
+  values: Array<Value | null | undefined>,
+  label: (value: Value) => string,
 ) {
   return uniqueSorted(values).map((value) => ({
-    label: facetGroup ? facetLabel(locale, facetGroup, value) : labelize(value),
+    label: label(value),
     value,
   }));
 }
@@ -176,17 +179,6 @@ export function getConnectedNames(
   );
 }
 
-function descriptorLabels(
-  system: GraphNode,
-  category: SystemDataDescriptorCategory,
-): string[] {
-  return uniqueSorted(
-    (system.properties.data?.descriptors ?? [])
-      .filter((descriptor) => descriptor.category === category)
-      .map((descriptor) => descriptor.label),
-  );
-}
-
 export function buildSystemRecord(
   entity: GraphNode,
   graph: IndexedGraph,
@@ -203,9 +195,10 @@ export function buildSystemRecord(
   const relationships = getRelationships(entity.id, graph);
   const connectedNames = getConnectedNames(entity, graph, locale);
   const operatorNodes = operatorNodesForSystem(graph, entity.id);
-  const dataTypes = descriptorLabels(system, "type");
-  const dataFormats = descriptorLabels(system, "format");
-  const dataStandards = descriptorLabels(system, "standard");
+  const descriptors = system.properties.data?.descriptors ?? [];
+  const dataTypes = uniqueSorted(descriptors.filter(d => d.category === "type").map(d => d.label));
+  const dataFormats = uniqueSorted(descriptors.filter(d => d.category === "format").map(d => d.label));
+  const dataStandards = uniqueSorted(descriptors.filter(d => d.category === "standard").map(d => d.label));
   const ryuRoutes = graph.ryuRoutesByNodeId[entity.id] ?? [];
 
   return {
@@ -223,7 +216,7 @@ export function buildSystemRecord(
     accessMethods: uniqueSorted(accessPaths.map((path) => path.method)),
     accessLabels: uniqueSorted(accessPaths.map((path) =>
       path.label === path.method
-        ? facetLabel(locale, "accessMethod", path.method)
+        ? vocabularyLabel(locale, "accessMethods", path.method)
         : path.label,
     )),
     hasCurrentLocale: Boolean(currentLocalization),
@@ -259,15 +252,14 @@ export function getSystemFilterOptions(
   return {
     disciplines: selectOptions(
       records.flatMap((record) => record.disciplines),
-      locale,
-      "discipline",
+      value => vocabularyLabel(locale, "disciplines", value),
     ),
     dataClaims: {
-      type: selectOptions(records.flatMap((record) => record.dataTypes), locale, "descriptorLabel"),
-      format: selectOptions(records.flatMap((record) => record.dataFormats), locale, "descriptorLabel"),
-      standard: selectOptions(records.flatMap((record) => record.dataStandards), locale, "descriptorLabel"),
+      type: selectOptions(records.flatMap((record) => record.dataTypes), value => vocabularyLabel(locale, "dataTypes", value)),
+      format: selectOptions(records.flatMap((record) => record.dataFormats), value => vocabularyLabel(locale, "dataFormats", value)),
+      standard: selectOptions(records.flatMap((record) => record.dataStandards), value => vocabularyLabel(locale, "dataStandards", value)),
     },
-    accessTypes: selectOptions(records.flatMap((record) => record.accessTypes), locale, "accessType"),
-    accessMethods: selectOptions(records.flatMap((record) => record.accessMethods), locale, "accessMethod"),
+    accessTypes: selectOptions(records.flatMap((record) => record.accessTypes), value => vocabularyLabel(locale, "accessTypes", value)),
+    accessMethods: selectOptions(records.flatMap((record) => record.accessMethods), value => vocabularyLabel(locale, "accessMethods", value)),
   };
 }

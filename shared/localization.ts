@@ -24,11 +24,9 @@ export function emptyLocalizationDetails(): NodeLocalizationDetails {
     gallery: [],
     data: {
       descriptors: [],
-      recordCount: null,
-      storageSize: null,
     },
     access: [],
-    usage: [],
+    metrics: [],
   };
 }
 

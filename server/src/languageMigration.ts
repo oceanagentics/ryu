@@ -1,12 +1,9 @@
 import type {
-  LocalizedNodeDataDetails,
   LocalizedSystemAccessPath,
   LocalizedSystemGalleryItem,
-  LocalizedSourcedMetric,
   NodeLocalizationDetails,
   NodeProperties,
   ReviewState,
-  SourcedMetric,
   SourceRef,
   SystemAccessPath,
   SystemAccessType,
@@ -15,6 +12,13 @@ import type {
 } from "../../shared/domain";
 import { emptyLocalizationDetails } from "../../shared/localization";
 import { isRecord, isReviewState, normalizeString } from "./graphRepositorySupport";
+
+// Historical intermediate shape; 013_system_metrics.sql converts these fields after import.
+type SourcedMetric = { id: string; key: string; value: number; unit: string; observedAt: string | null; source: SourceRef };
+type LocalizedSourcedMetric = { id: string; description: string | null };
+type LegacyData = { descriptors: SystemDataDescriptor[]; recordCount: SourcedMetric | null; storageSize: SourcedMetric | null };
+type LocalizedNodeDataDetails = { descriptors: { id: string; description: string | null }[]; recordCount: LocalizedSourcedMetric | null; storageSize: LocalizedSourcedMetric | null };
+type LegacyDetails = Pick<NodeLocalizationDetails, "aliases" | "access" | "gallery"> & Record<string, unknown> & { data: LocalizedNodeDataDetails; usage: LocalizedSourcedMetric[] };
 
 export const languageMigrationId = "2026-09-01-node-localizations";
 
@@ -32,14 +36,14 @@ export type LegacyNodeRow = {
 };
 
 export type MigratedNodeContent = {
-  propertiesJson: NodeProperties;
+  propertiesJson: Pick<NodeProperties, "disciplines" | "access" | "gallery"> & Record<string, unknown> & { data: LegacyData; usage: SourcedMetric[] };
   localization: {
     nodeId: string;
     locale: "en";
     title: string;
     summary: string | null;
     description: string | null;
-    detailsJson: NodeLocalizationDetails;
+    detailsJson: LegacyDetails;
     translatedFromLocale: null;
     contentUpdatedAt: string;
     reviewState: ReviewState;
@@ -257,7 +261,7 @@ function splitAccess(values: unknown[]): {
 }
 
 function splitData(value: unknown): {
-  neutral: NonNullable<NodeProperties["data"]>;
+  neutral: LegacyData;
   localized: LocalizedNodeDataDetails;
 } {
   const data = isRecord(value) ? value : {};
@@ -297,7 +301,7 @@ export function splitLegacyNodeContent(row: LegacyNodeRow): MigratedNodeContent 
   const access = splitAccess(accessValues);
   const galleryValues = Array.isArray(details.gallery) ? details.gallery : [];
   const usageValues = Array.isArray(details.usage) ? details.usage : [];
-  const localizedDetails: NodeLocalizationDetails = {
+  const localizedDetails: LegacyDetails = {
     ...emptyLocalizationDetails(),
     ...Object.fromEntries(
       Object.entries(details).filter(([key]) => !neutralDetailKeys.has(key)),

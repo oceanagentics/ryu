@@ -128,54 +128,62 @@ export interface LocalizedSystemGalleryItem {
   altText?: string | null;
 }
 
-export type SystemMetricKey =
-  | "record_count"
-  | "storage_size_bytes"
-  | "publication_count"
-  | "citation_count"
-  | "view_count"
-  | "download_count"
-  | "registered_user_count"
-  | "contributor_count"
-  | string;
+// New keys, units, or changes of meaning require human approval and a catalog release.
+export const metricDefinitions = {
+  record_count: { group: "data", unit: "records" },
+  occurrence_count: { group: "data", unit: "occurrences" },
+  sample_count: { group: "data", unit: "samples" },
+  sequence_count: { group: "data", unit: "sequences" },
+  species_count: { group: "data", unit: "species" },
+  storage_size_bytes: { group: "data", unit: "bytes" },
+  session_count: { group: "usage", unit: "sessions" },
+  download_count: { group: "usage", unit: "downloads" },
+  contributor_count: { group: "usage", unit: "contributors" },
+  citation_count: { group: "usage", unit: "citations" },
+} as const;
+
+export type SystemMetricKey = keyof typeof metricDefinitions;
+export type MetricUnit = (typeof metricDefinitions)[SystemMetricKey]["unit"];
+export type MetricGroup = (typeof metricDefinitions)[SystemMetricKey]["group"];
+export const metricPeriods = ["day", "month", "year", "cumulative"] as const;
+export type MetricPeriod = (typeof metricPeriods)[number];
+
+export function isSystemMetricKey(value: unknown): value is SystemMetricKey {
+  return typeof value === "string" && Object.hasOwn(metricDefinitions, value);
+}
 
 export interface SourcedMetric {
   id: string;
   key: SystemMetricKey;
   value: number;
-  unit: string;
   observedAt: string | null;
+  // Reporting basis, not inferred from observedAt. Exact windows belong in the description.
+  period?: MetricPeriod | null;
   source: SourceRef;
 }
 
 export interface LocalizedSourcedMetric {
   id: string;
-  label?: string | null;
-  unit?: string | null;
   description: string | null;
 }
 
 export interface NodeDataDetails {
   descriptors: SystemDataDescriptor[];
-  recordCount: SourcedMetric | null;
-  storageSize: SourcedMetric | null;
 }
 
 export interface LocalizedNodeDataDetails {
   descriptors: LocalizedSystemDataDescriptor[];
-  recordCount: LocalizedSourcedMetric | null;
-  storageSize: LocalizedSourcedMetric | null;
 }
 
 export interface NodeLocalizationDetails extends Record<string, unknown> {
   profile?: { sourceRefs: string[] };
   relationshipReview?: { sourceRefs: string[]; findings: Record<GraphEdgeKind, string> };
-  researchGaps?: Partial<Record<"recordCount" | "storageSize" | "usage" | "standards", string>>;
+  researchGaps?: Partial<Record<MetricGroup | "standards", string>>;
   aliases: string[];
   gallery: LocalizedSystemGalleryItem[];
   data: LocalizedNodeDataDetails;
   access: LocalizedSystemAccessPath[];
-  usage: LocalizedSourcedMetric[];
+  metrics: LocalizedSourcedMetric[];
 }
 
 export interface NodeProperties extends Record<string, unknown> {
@@ -183,7 +191,7 @@ export interface NodeProperties extends Record<string, unknown> {
   gallery?: SystemGalleryItem[];
   data?: NodeDataDetails;
   access?: SystemAccessPath[];
-  usage?: SourcedMetric[];
+  metrics?: SourcedMetric[];
 }
 
 export interface ReviewSnapshot {
