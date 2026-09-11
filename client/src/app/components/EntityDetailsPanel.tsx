@@ -163,14 +163,26 @@ function DescriptorTags({ descriptors }: { descriptors: ResolvedSystemDataDescri
     <Flex gap={4} wrap>
       {descriptors.map((descriptor) => {
         const source = descriptor.source ? sources?.[descriptor.source] : undefined;
+        const sourceTitle = descriptor.source ? source?.title[locale] ?? descriptor.source : null;
         return (
-          <Tag key={descriptor.id} bordered={false}>
-            {source ? (
-              <Typography.Link href={source.url} title={source.title[locale]} target="_blank" rel="noreferrer">
-                {descriptor.localizedLabel}
-              </Typography.Link>
-            ) : descriptor.localizedLabel}
-          </Tag>
+          <Tooltip
+            key={descriptor.id}
+            title={(descriptor.description || sourceTitle) ? (
+              <Flex className="source-record-tooltip" vertical gap={2}>
+                {descriptor.description ? <Typography.Text>{descriptor.description}</Typography.Text> : null}
+                {sourceTitle ? <Typography.Text>{t(locale, "common.source")}: {sourceTitle}</Typography.Text> : null}
+                {source ? <Typography.Text>{t(locale, "source.accessed")}: {source.accessedAt}</Typography.Text> : null}
+              </Flex>
+            ) : null}
+          >
+            <Tag bordered={false}>
+              {source ? (
+                <Typography.Link href={source.url} title={sourceTitle ?? undefined} target="_blank" rel="noreferrer">
+                  {descriptor.localizedLabel}
+                </Typography.Link>
+              ) : descriptor.localizedLabel}
+            </Tag>
+          </Tooltip>
         );
       })}
     </Flex>
