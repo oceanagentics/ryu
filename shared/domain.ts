@@ -403,6 +403,6 @@ export interface SavedViewInput {
 }
 
 export interface NodeLocalizationReviewInput {
-  reviewState?: ReviewState;
+  reviewState: ReviewState;
   reviewerNote?: string | null;
 }

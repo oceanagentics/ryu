@@ -295,8 +295,8 @@ class FakeRepository implements GraphRepository {
     const nextLocalization = createFakeLocalization({
       ...existingLocalization,
       review: {
-        state: input.reviewState ?? existingLocalization.review.state,
-        note: input.reviewerNote === undefined ? existingLocalization.review.note : input.reviewerNote,
+        state: input.reviewState,
+        note: input.reviewerNote ?? null,
         reviewer,
         date: reviewDate,
       },
@@ -769,6 +769,33 @@ test("prevents writer tokens from setting human_reviewed", async () => {
     assert.equal(response.status, 403);
     assert.deepEqual(await response.json(), { error: "review_scope_required" });
   });
+});
+
+test("requires an explicit review state even when submitting only a note on a human-reviewed record", async () => {
+  const review = {
+    state: "human_reviewed" as const,
+    note: "Original approval.",
+    reviewer: "reviewer@oceanagentics.com",
+    date: recordUpdatedAt,
+  };
+  const node = createFakeNode({ localizations: { en: createFakeLocalization({ review }) } });
+  const repository = new FakeRepository(node);
+  await withServer("api", async (baseUrl) => {
+    for (const token of [writerToken, reviewerToken, adminToken]) {
+      for (const validateOnly of [true, false]) {
+        for (const fields of [{ reviewerNote: "New note." }, { reviewerNote: null }, {}, { reviewState: null }, { reviewState: "" }]) {
+          const response = await fetch(`${baseUrl}/explorer/api/records/node-1/review?validateOnly=${validateOnly}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json", ...authHeaders(token, true) },
+            body: JSON.stringify({ locale: "en", ...fields }),
+          });
+          assert.equal(response.status, 400);
+          assert.deepEqual(await response.json(), { error: "invalid reviewState" });
+          assert.deepEqual(repository.getRecord("node-1").node, node);
+        }
+      }
+    }
+  }, { repository });
 });
 
 test("rejects loose and nested review fields in content upserts", async () => {

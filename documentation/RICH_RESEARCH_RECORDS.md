@@ -121,10 +121,13 @@ For system nodes:
 - Use `node_localizations.title`, `summary`, and `description` for the public prose profile in each locale.
 - Use `node_localizations.details_json` for localized details: aliases, gallery titles/captions, descriptor descriptions, access labels/descriptions, metric descriptions, and other language-specific prose.
 - Store review snapshots in `node_localizations.review_json.history`. Each snapshot has `state`, `reviewer`, `date`, and `note`; the final entry defines current review state (`agent_researched`, `human_reviewed`, or `needs_revision`).
-- The details UI shows `recordDepth` and the resolved localization's `review.state` for all users. In authenticated/author mode, it lets users update only `reviewState` and `reviewerNote`; snapshot `reviewer` and `date` are set by the server.
+- The details UI shows `recordDepth` and the resolved localization's `review.state` for all users. In authenticated/author mode, it submits a new review with an explicit `reviewState` and an optional `reviewerNote`; snapshot `reviewer` and `date` are set by the server.
 - Do not set review metadata in record content writes. Review state and reviewer
   notes belong in the dedicated review endpoint so the server can set reviewer
-  identity and timestamps.
+  identity and timestamps. Every review submission requires an explicit
+  `reviewState` authorized for the caller and appends a new history entry.
+  Note-only submissions are rejected. An omitted or null `reviewerNote` leaves
+  the new entry's note empty; previous history entries remain unchanged.
 - Use `ryu_routes` only for approved machine access routes that agents or other apps should call.
 
 Do not reintroduce removed tables or fields:

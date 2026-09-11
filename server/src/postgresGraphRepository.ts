@@ -455,12 +455,7 @@ export class PostgresGraphRepository implements GraphRepository {
       throw new Error("reviewer is required");
     }
 
-    const hasReviewState = Object.prototype.hasOwnProperty.call(input, "reviewState");
-    const hasReviewerNote = Object.prototype.hasOwnProperty.call(input, "reviewerNote");
-    if (!hasReviewState && !hasReviewerNote) {
-      throw new Error("reviewState or reviewerNote is required");
-    }
-    if (hasReviewState && !isReviewState(input.reviewState)) {
+    if (!isReviewState(input.reviewState)) {
       throw new Error("invalid reviewState");
     }
 
@@ -474,11 +469,7 @@ export class PostgresGraphRepository implements GraphRepository {
 
     await this.withTransaction(async (client) => {
       await this.requireExistingRecordPrecondition(client, id, options);
-      const existing = await this.getNodeLocalization(id, locale, client);
-      const reviewState = hasReviewState ? input.reviewState : existing.review.state;
-      const reviewerNote = hasReviewerNote
-        ? normalizeString(input.reviewerNote)
-        : existing.review.note;
+      await this.getNodeLocalization(id, locale, client);
       const reviewDate = new Date().toISOString();
 
       await client.query(
@@ -492,8 +483,8 @@ export class PostgresGraphRepository implements GraphRepository {
         `,
         [
           id,
-          reviewState,
-          reviewerNote,
+          input.reviewState,
+          normalizeString(input.reviewerNote),
           normalizedReviewer,
           reviewDate,
           locale,

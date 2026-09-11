@@ -603,9 +603,19 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
       assert.equal(applied.node.availableLocales.length, 6);
       assert.equal(Object.keys(applied.node.sources).length, Object.keys(fixture.record.sources!).length);
     });
-    await t.test("note-only review saves append a full snapshot without changing content or sibling reviews", async () => {
+    await t.test("note-only reviews are rejected without changing a human-reviewed record", async () => {
+      await repository.updateNodeLocalizationReview("fishbase", "fr", { reviewState: "human_reviewed", reviewerNote: "Original approval." }, "reviewer@example.org", { recordUpdatedAt: await version() });
+      const before = await read();
+      for (const validateOnly of [true, false]) {
+        await assert.rejects(repository.updateNodeLocalizationReview("fishbase", "fr",
+          // @ts-expect-error Reviews require an explicit state, including for callers outside TypeScript.
+          { reviewerNote: "New note." }, "second@example.org", { recordUpdatedAt: await version(), validateOnly }), /invalid reviewState/);
+        assert.deepEqual(await read(), before);
+      }
+    });
+    await t.test("explicit reviews append a full snapshot without changing content or sibling reviews", async () => {
       const before = (await read()).node;
-      const updated = await repository.updateNodeLocalizationReview("fishbase", "fr", { reviewerNote: "A new review note." }, "second@example.org", { recordUpdatedAt: await version() });
+      const updated = await repository.updateNodeLocalizationReview("fishbase", "fr", { reviewState: "needs_revision", reviewerNote: "A new review note." }, "second@example.org", { recordUpdatedAt: await version() });
       const previous = before.localizations.fr!;
       const current = updated.localizations.fr!;
       assert.equal(current.contentUpdatedAt, previous.contentUpdatedAt);
@@ -613,13 +623,14 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
       assert.deepEqual(current.review.history!.slice(0, -1), previous.review.history);
       const { history, ...snapshot } = current.review;
       assert.deepEqual(snapshot, history!.at(-1));
-      assert.equal(snapshot.state, previous.review.state);
+      assert.equal(snapshot.state, "needs_revision");
       assert.equal(snapshot.note, "A new review note.");
       assert.equal(snapshot.reviewer, "second@example.org");
       assert.ok(Number.isFinite(Date.parse(snapshot.date!)));
     });
     await t.test("substantive edits invalidate human review and unchanged edits preserve it", async () => {
       const reviewed = await repository.updateNodeLocalizationReview("fishbase", "fr", { reviewState: "human_reviewed" }, "reviewer@example.org", { recordUpdatedAt: await version() });
+      assert.equal(reviewed.localizations.fr!.review.note, null);
       assert.ok(Number.isFinite(Date.parse(reviewed.localizations.fr!.review.date!)));
       const summary = (await read()).node.localizations.fr!.summary!;
       await repository.patchRecord("fishbase", { localizations: { fr: { mode: "patch", summary } } }, { recordUpdatedAt: await version() });

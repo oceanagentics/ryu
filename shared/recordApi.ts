@@ -275,7 +275,7 @@ export interface RecordPatchInput {
 
 export interface RecordReviewInput {
   locale: SupportedLocale;
-  reviewState?: ReviewState;
+  reviewState: ReviewState;
   reviewerNote?: string | null;
 }
 

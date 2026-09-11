@@ -10,7 +10,6 @@ import type {
   NodeLocalization,
   NodeLocalizationDetails,
   NodeLocalizationReviewInput,
-  ReviewState,
   RyuRoute,
   SourceCollection,
   SupportedLocale,
@@ -236,18 +235,10 @@ export function readRecordReviewInput(input: unknown): RecordReviewInput {
   const body = readObject(input, "body");
   assertAllowedFields(body, new Set(["locale", "reviewState", "reviewerNote"]), "body");
 
-  const hasReviewState = hasOwn(body, "reviewState");
-  const hasReviewerNote = hasOwn(body, "reviewerNote");
-  if (!hasReviewState && !hasReviewerNote) {
-    throw new ApiRequestError(400, "reviewState or reviewerNote is required");
-  }
-
   return {
     locale: readRequiredEnum(body.locale, isSupportedLocale, "locale"),
-    ...(hasReviewState
-      ? { reviewState: readRequiredEnum(body.reviewState, isReviewState, "reviewState") }
-      : {}),
-    ...(hasReviewerNote
+    reviewState: readRequiredEnum(body.reviewState, isReviewState, "reviewState"),
+    ...(hasOwn(body, "reviewerNote")
       ? { reviewerNote: readNullableString(body.reviewerNote, "reviewerNote") }
       : {}),
   };
@@ -257,7 +248,7 @@ export function toNodeLocalizationReviewInput(
   input: RecordReviewInput | Omit<RecordReviewInput, "locale">,
 ): NodeLocalizationReviewInput {
   return {
-    ...(hasOwn(input, "reviewState") ? { reviewState: input.reviewState as ReviewState } : {}),
+    reviewState: input.reviewState,
     ...(hasOwn(input, "reviewerNote") ? { reviewerNote: input.reviewerNote ?? null } : {}),
   };
 }

@@ -495,7 +495,7 @@ Keep review state intentionally separate from content writes:
 PATCH /api/records/:id/review
 ```
 
-Suggested body:
+Request body:
 
 ```json
 {
@@ -504,6 +504,11 @@ Suggested body:
   "reviewerNote": "Looks good."
 }
 ```
+
+Every submission requires `locale` and an explicit `reviewState`, checked against
+the caller's permissions. Note-only submissions are rejected, including dry runs.
+`reviewerNote` is optional; omission or `null` means the new review has no note.
+Neither the state nor the note is inherited from the previous review.
 
 The pre-launch node-localization review route should be removed from the launch
 surface. Human browser review and agent review both use this record-oriented
