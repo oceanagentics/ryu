@@ -21,12 +21,12 @@ RUN npm --workspace server run build
 ENV NODE_ENV=production
 EXPOSE 8080
 USER node
-CMD ["npm", "--workspace", "server", "run", "start"]
 
 FROM server AS api
 ENV APP_BASE_PATH=/
 ARG SOURCE_COMMIT=unknown
 LABEL org.opencontainers.image.revision=${SOURCE_COMMIT}
+CMD ["npm", "--workspace", "server", "run", "start"]
 
 FROM server AS web
 USER root
@@ -46,3 +46,4 @@ RUN npm --workspace client run build
 ARG SOURCE_COMMIT=unknown
 LABEL org.opencontainers.image.revision=${SOURCE_COMMIT}
 USER node
+CMD ["npm", "--workspace", "server", "run", "start"]
