@@ -1,0 +1,179 @@
+[
+  {
+    "url": "https://api.obis.org/v3/statistics?nodeid=9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://api.obis.org/v3/statistics?nodeid=9d2d95be-32eb-4d81-8911-32cb8bc641c8"
+  },
+  {
+    "url": "https://catalogue.odis.org/view/893",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://catalogue.odis.org/view/893"
+  },
+  {
+    "url": "https://data.isa.org.jm/isa/map",
+    "status": 200,
+    "method": "successful prior GET",
+    "evidence": "map.raw",
+    "note": "Slow response; no legal terms acceptance or native map export performed."
+  },
+  {
+    "url": "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+    "status": 200,
+    "method": "successful prior GET",
+    "evidence": "odis-example.raw",
+    "note": "Slow response; no legal terms acceptance or native map export performed."
+  },
+  {
+    "url": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+    "status": 200,
+    "method": "successful prior GET",
+    "evidence": "odis-sitemap.raw",
+    "note": "Slow response; no legal terms acceptance or native map export performed."
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/bgrpmn12021_env_2018_biology/bgrpmn12021_env_2018_biology.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/bgrpmn12021_env_2018_biology/bgrpmn12021_env_2018_biology.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/cmmpmn12022_env/cmmpmn12022_env.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/cmmpmn12022_env/cmmpmn12022_env.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/comracfc12017_dy36_meiofauna/comracfc12017_dy36_meiofauna.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/comracfc12017_dy36_meiofauna/comracfc12017_dy36_meiofauna.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/dordpmn12018_env_mn_bio/dordpmn12018_env_mn_bio.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/dordpmn12018_env_mn_bio/dordpmn12018_env_mn_bio.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/gsrpmn12017_env_bioso239/gsrpmn12017_env_bioso239.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/gsrpmn12017_env_bioso239/gsrpmn12017_env_bioso239.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/ifremerpmn12018_so239/ifremerpmn12018_so239.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/ifremerpmn12018_so239/ifremerpmn12018_so239.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/index.html",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/index.html"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/iompmn12018_env_biol/iompmn12018_env_biol.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/iompmn12018_env_biol/iompmn12018_env_biol.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/jogmeccrfc12024_env_20220212_2024/jogmeccrfc12024_env_20220212_2024.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/jogmeccrfc12024_env_20220212_2024/jogmeccrfc12024_env_20220212_2024.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/omspmn12022_env_nhm_norce/omspmn12022_env_nhm_norce.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/omspmn12022_env_nhm_norce/omspmn12022_env_nhm_norce.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/rusmnrcrfc12015_env_biodata/rusmnrcrfc12015_env_biodata.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/rusmnrcrfc12015_env_biodata/rusmnrcrfc12015_env_biodata.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/tomlpmn12024_env_20220212_bio/tomlpmn12024_env_20220212_bio.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/tomlpmn12024_env_20220212_bio/tomlpmn12024_env_20220212_bio.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/uksrlpmn12019_nhm_norce_updated/uksrlpmn12019_nhm_norce_updated.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/uksrlpmn12019_nhm_norce_updated/uksrlpmn12019_nhm_norce_updated.zip"
+  },
+  {
+    "url": "https://datasets.obis.org/hosted/isa/yuzhpmn12015_biodata_b6/yuzhpmn12015_biodata_b6.zip",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://datasets.obis.org/hosted/isa/yuzhpmn12015_biodata_b6/yuzhpmn12015_biodata_b6.zip"
+  },
+  {
+    "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://isa.org.jm/deepdata-database/about-deepdata/"
+  },
+  {
+    "url": "https://isa.org.jm/deepdata-database/deepdata-dashboard/",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://isa.org.jm/deepdata-database/deepdata-dashboard/"
+  },
+  {
+    "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://isa.org.jm/deepdata-database/reporting-templates/"
+  },
+  {
+    "url": "https://isa.org.jm/exploration-contracts/cobalt-rich-ferromanganese-crusts/",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://isa.org.jm/exploration-contracts/cobalt-rich-ferromanganese-crusts/"
+  },
+  {
+    "url": "https://isa.org.jm/isa-fact-check-2023-1/",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://isa.org.jm/isa-fact-check-2023-1/"
+  },
+  {
+    "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/"
+  },
+  {
+    "url": "https://isa.org.jm/term-and-conditions-of-use-of-the-international-seabed-authority-website/",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://isa.org.jm/term-and-conditions-of-use-of-the-international-seabed-authority-website/"
+  },
+  {
+    "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8"
+  },
+  {
+    "url": "https://www.isa.org.jm/wp-content/uploads/2022/04/UserManual_v1.1_20181119.pdf",
+    "status": 200,
+    "method": "HEAD",
+    "finalUrl": "https://www.isa.org.jm/wp-content/uploads/2022/04/UserManual_v1.1_20181119.pdf"
+  }
+]

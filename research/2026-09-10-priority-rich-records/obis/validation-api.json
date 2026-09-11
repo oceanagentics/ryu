@@ -1,0 +1,609 @@
+{
+  "status": 200,
+  "precondition": "2026-09-10T20:03:10.745Z",
+  "result": {
+    "valid": false,
+    "recordId": "platform-obis",
+    "issues": [
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[0].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[1].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[1].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[2].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[2].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[3].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[3].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[4].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[4].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[5].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[5].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[5].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[6].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[6].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "record.properties.access[6].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.data.descriptors.platform-obis-tag-data-format-darwin-core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.data.descriptors.platform-obis-tag-data-format-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.data.descriptors.platform-obis-tag-data-format-emof.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.data.descriptors.obis-standard-dna.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.data.descriptors.obis-standard-nerc.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ar.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.data.descriptors.platform-obis-tag-data-format-darwin-core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.data.descriptors.platform-obis-tag-data-format-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.data.descriptors.platform-obis-tag-data-format-emof.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.data.descriptors.obis-standard-dna.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.data.descriptors.obis-standard-nerc.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.zh.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.data.descriptors.platform-obis-tag-data-format-darwin-core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.data.descriptors.platform-obis-tag-data-format-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.data.descriptors.platform-obis-tag-data-format-emof.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.data.descriptors.obis-standard-dna.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.data.descriptors.obis-standard-nerc.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.en.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.data.descriptors.platform-obis-tag-data-format-darwin-core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.data.descriptors.platform-obis-tag-data-format-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.data.descriptors.platform-obis-tag-data-format-emof.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.data.descriptors.obis-standard-dna.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.data.descriptors.obis-standard-nerc.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.fr.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.data.descriptors.platform-obis-tag-data-format-darwin-core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.data.descriptors.platform-obis-tag-data-format-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.data.descriptors.platform-obis-tag-data-format-emof.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.data.descriptors.obis-standard-dna.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.data.descriptors.obis-standard-nerc.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.ru.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.data.descriptors.platform-obis-tag-data-format-darwin-core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.data.descriptors.platform-obis-tag-data-format-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.data.descriptors.platform-obis-tag-data-format-emof.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.data.descriptors.obis-standard-dna.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.data.descriptors.obis-standard-nerc.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "localizations.es.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "edges.rel-richard-lounsbery-foundation-funds-platform-obis",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "edges.rel-deepdata-syncs-to-platform-obis",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "platform-obis",
+        "path": "edges.rel-international-seabed-authority-publishes-to-platform-obis",
+        "message": "edge endpoints must exist and match the relationship kind"
+      }
+    ],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 38,
+      "resolvedSources": 38,
+      "issues": [
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.access[0].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.access[1].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.access[2].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.access[3].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.access[4].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.access[5].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.access[6].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.ar.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.zh.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.en.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.fr.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.ru.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.es.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "recordUpdatedAt": "2026-09-10T20:03:10.745Z",
+    "affectedSections": [
+      "record",
+      "localizations",
+      "edges",
+      "routes"
+    ]
+  }
+}

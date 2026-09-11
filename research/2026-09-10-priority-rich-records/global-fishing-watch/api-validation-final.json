@@ -1,0 +1,611 @@
+{
+  "checkedAt": "2026-09-11T01:05:59.069806+00:00",
+  "precondition": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: global-fishing-watch"
+    }
+  },
+  "httpStatus": 200,
+  "fileSha256": "45b5ff4fe5882759738a97ebbf67bd8ea5a8c7befdb7834998c0517e88a766df",
+  "body": {
+    "valid": false,
+    "recordId": "global-fishing-watch",
+    "issues": [
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[0].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[1].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[1].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[2].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[2].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[3].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[3].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[4].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[4].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[5].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[5].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[6].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[6].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[6].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[7].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[7].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "record.properties.access[7].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ar.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ar.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ar.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ar.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ar.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ar.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ar.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ar.details.data.descriptors.gfw-fao.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ar.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ar.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.zh.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.zh.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.zh.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.zh.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.zh.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.zh.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.zh.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.zh.details.data.descriptors.gfw-fao.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.zh.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.zh.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.en.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.en.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.en.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.en.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.en.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.en.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.en.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.en.details.data.descriptors.gfw-fao.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.en.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.en.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.fr.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.fr.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.fr.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.fr.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.fr.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.fr.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.fr.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.fr.details.data.descriptors.gfw-fao.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.fr.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.fr.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ru.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ru.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ru.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ru.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ru.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ru.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ru.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ru.details.data.descriptors.gfw-fao.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ru.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.ru.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.es.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.es.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.es.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.es.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.es.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.es.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.es.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.es.details.data.descriptors.gfw-fao.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.es.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "localizations.es.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-global-fishing-watch-operator-operates-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-global-fishing-watch-operator-governs-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-kpler-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-planet-labs-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-trygg-mat-tracking-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-fisheries-analytical-capacity-tool-syncs-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-norwegian-directorate-of-fisheries-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-brazil-ministry-fisheries-aquaculture-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-incopesca-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-panama-aquatic-resources-authority-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-peru-ministry-production-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-sernapesca-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-ecuador-dirnea-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-belize-high-seas-fisheries-unit-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-papua-new-guinea-national-fisheries-authority-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-protected-planet-syncs-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-protectedseas-navigator-syncs-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-skylight-syncs-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-global-fishing-watch-syncs-to-google-earth-engine",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-global-fishing-watch-syncs-to-google-bigquery",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-global-fishing-watch-syncs-to-arcgis-online",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-dalio-philanthropies-funds-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "global-fishing-watch",
+        "path": "edges.rel-indonesia-ministry-marine-affairs-fisheries-publishes-to-global-fishing-watch",
+        "message": "edge endpoints must exist and match the relationship kind"
+      }
+    ],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 48,
+      "resolvedSources": 48,
+      "issues": [
+        {
+          "recordId": "global-fishing-watch",
+          "path": "record.properties.access[0].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "record.properties.access[1].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "record.properties.access[2].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "record.properties.access[3].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "record.properties.access[4].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "record.properties.access[5].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "record.properties.access[6].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "record.properties.access[7].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "localizations.ar.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "localizations.zh.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "localizations.en.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "localizations.fr.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "localizations.ru.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "global-fishing-watch",
+          "path": "localizations.es.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "recordUpdatedAt": null,
+    "affectedSections": [
+      "record",
+      "localizations",
+      "edges",
+      "routes"
+    ]
+  }
+}

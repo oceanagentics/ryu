@@ -1,0 +1,860 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:ipt="http://ipt.gbif.org/">
+  <channel>
+    <title>International Seabed Authority (ISA)</title>
+    <link>https://datasets.obis.org/hosted/isa/index.html</link>
+    <description>International Seabed Authority (ISA)</description>
+    <item>
+  <title>NORIPMN12022 Env Template BIO</title>
+  <link>https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>OMSPMN12022 Env Template NHM-NORCE</title>
+  <link>https://datasets.obis.org/hosted/isa/omspmn12022_env_nhm_norce/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/omspmn12022_env_nhm_norce/omspmn12022_env_nhm_norce.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12019 Nodule Macrofauna 2019</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12019_nodule_macrofauna_2019/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12019_nodule_macrofauna_2019/koreapmn12019_nodule_macrofauna_2019.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>NORIPMN12020 Env Template</title>
+  <link>https://datasets.obis.org/hosted/isa/noripmn12020_env/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/noripmn12020_env/noripmn12020_env.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12019 NHM-NORCE Updated</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12019_nhm_norce_updated/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12019_nhm_norce_updated/uksrlpmn12019_nhm_norce_updated.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>NORIPMN12024 Env Template NOC</title>
+  <link>https://datasets.obis.org/hosted/isa/noripmn12024_env_noc/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/noripmn12024_env_noc/noripmn12024_env_noc.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMS12023 Env Template PMS final</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapms12023_env_pms_final/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapms12023_env_pms_final/koreapms12023_env_pms_final.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMS12023 Env Template PMS ROK edited</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapms12023_env_pms_rok_edited/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapms12023_env_pms_rok_edited/koreapms12023_env_pms_rok_edited.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMN12021 Env Template 2018 Biology</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpmn12021_env_2018_biology/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpmn12021_env_2018_biology/bgrpmn12021_env_2018_biology.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>TOMLPMN12024 Env Template 20220212 Bio</title>
+  <link>https://datasets.obis.org/hosted/isa/tomlpmn12024_env_20220212_bio/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/tomlpmn12024_env_20220212_bio/tomlpmn12024_env_20220212_bio.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12019 NHM-NORCE</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12019_nhm_norce/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12019_nhm_norce/uksrlpmn12019_nhm_norce.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12019 NOC NERC</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12019_noc_nerc/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12019_noc_nerc/uksrlpmn12019_noc_nerc.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12023 Env Template 20220212 UKSRL11</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12023_env_20220212_uksrl11/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12023_env_20220212_uksrl11/uksrlpmn12023_env_20220212_uksrl11.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRL1PMN Env Template 2022 Annual Report</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrl1pmn_env_2022_annual_report/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrl1pmn_env_2022_annual_report/uksrl1pmn_env_2022_annual_report.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>JOGMECCRFC12024 Env Template 20220212 2024</title>
+  <link>https://datasets.obis.org/hosted/isa/jogmeccrfc12024_env_20220212_2024/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/jogmeccrfc12024_env_20220212_2024/jogmeccrfc12024_env_20220212_2024.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>JOGMECCRFC12014 Env Template 2022</title>
+  <link>https://datasets.obis.org/hosted/isa/jogmeccrfc12014_env_2022/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/jogmeccrfc12014_env_2022/jogmeccrfc12014_env_2022.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMN12021 Env Template 2013 Biology</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpmn12021_env_2013_biology/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpmn12021_env_2013_biology/bgrpmn12021_env_2013_biology.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>NORIPMN12024 JAM Env Template 20220212</title>
+  <link>https://datasets.obis.org/hosted/isa/noripmn12024_jam_env_20220212/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/noripmn12024_jam_env_20220212/noripmn12024_jam_env_20220212.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12021 Env Template ROK</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12021_env_rok/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12021_env_rok/koreapmn12021_env_rok.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRACFC12017 DY36 meiofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/comracfc12017_dy36_meiofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comracfc12017_dy36_meiofauna/comracfc12017_dy36_meiofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12015 Env Template 2013 meiofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12015_env_2013_meiofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12015_env_2013_meiofauna/koreapmn12015_env_2013_meiofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12016 Sequences</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12016_sequences/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12016_sequences/comrapmn12016_sequences.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12015 Env Template Scavengers 032016</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_scavengers_032016/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_scavengers_032016/uksrlpmn12015_env_scavengers_032016.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12017 Env Template phytoplankton</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12017_env_phytoplankton/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12017_env_phytoplankton/comrapms12017_env_phytoplankton.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12015 ENV</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12015_env/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12015_env/comrapms12015_env.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12018 Phytoplankton</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12018_phytoplankton/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12018_phytoplankton/comrapms12018_phytoplankton.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IFREMERPMN12018 SO239</title>
+  <link>https://datasets.obis.org/hosted/isa/ifremerpmn12018_so239/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/ifremerpmn12018_so239/ifremerpmn12018_so239.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>OMSPMN12018 NUS Data</title>
+  <link>https://datasets.obis.org/hosted/isa/omspmn12018_nus_data/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/omspmn12018_nus_data/omspmn12018_nus_data.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>OMSPMN12017 Macro Senckenberg</title>
+  <link>https://datasets.obis.org/hosted/isa/omspmn12017_macro_senckenberg/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/omspmn12017_macro_senckenberg/omspmn12017_macro_senckenberg.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>OMSPMN12017 Scavengers Senckenberg</title>
+  <link>https://datasets.obis.org/hosted/isa/omspmn12017_scavengers_senckenberg/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/omspmn12017_scavengers_senckenberg/omspmn12017_scavengers_senckenberg.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12015 Env Template Meiobent</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12015_env_meiobenthos/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12015_env_meiobenthos/comrapms12015_env_meiobenthos.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMN1 Env Template 20200914 2010 Biology</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpmn1_env_20200914_2010_biology/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpmn1_env_20200914_2010_biology/bgrpmn1_env_20200914_2010_biology.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IFREMERPMS 160314 Env Template 20220212</title>
+  <link>https://datasets.obis.org/hosted/isa/ifremerpms_160314_env_20220212/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/ifremerpms_160314_env_20220212/ifremerpms_160314_env_20220212.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IFREMERPMN12018 Env Template Polynoids</title>
+  <link>https://datasets.obis.org/hosted/isa/ifremerpmn12018_env_polynoids/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/ifremerpmn12018_env_polynoids/ifremerpmn12018_env_polynoids.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12014 Env Template W1101</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12014_env_w1101/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12014_env_w1101/comrapmn12014_env_w1101.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12014 Env Template W1102</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12014_env_w1102/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12014_env_w1102/comrapmn12014_env_w1102.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12014 Env Template WS1102</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12014_env_ws1102/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12014_env_ws1102/comrapmn12014_env_ws1102.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12014 Env Template WS1104</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12014_env_ws1104/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12014_env_ws1104/comrapmn12014_env_ws1104.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12015 Env Template AB01 NHM</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_ab01_nhm/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_ab01_nhm/uksrlpmn12015_env_ab01_nhm.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12015 Env Template Macrofauna 032016</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_macrofauna_032016/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_macrofauna_032016/uksrlpmn12015_env_macrofauna_032016.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12015 Env Template Senckenberg 032016</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_senckenberg_032016/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_senckenberg_032016/uksrlpmn12015_env_senckenberg_032016.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12015 Env Templaye Megafauna 032016</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_megafauna_032016/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_megafauna_032016/uksrlpmn12015_env_megafauna_032016.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMN12017 Env Template MANGAN2014</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpmn12017_env_mangan2014/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpmn12017_env_mangan2014/bgrpmn12017_env_mangan2014.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMN12017 Env Template FLUM</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpmn12017_env_flum/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpmn12017_env_flum/bgrpmn12017_env_flum.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>GSRPMN12017 Env Template BIOSO239</title>
+  <link>https://datasets.obis.org/hosted/isa/gsrpmn12017_env_bioso239/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/gsrpmn12017_env_bioso239/gsrpmn12017_env_bioso239.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRACFRC120015 Env Template 2015 demersal scavenger</title>
+  <link>https://datasets.obis.org/hosted/isa/comracfrc120015_env_2015_demersal_scavenger/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comracfrc120015_env_2015_demersal_scavenger/comracfrc120015_env_2015_demersal_scavenger.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRACFRC120015 Env Template 2015 macrofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/comracfrc120015_env_2015_macrofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comracfrc120015_env_2015_macrofauna/comracfrc120015_env_2015_macrofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRACRFC12016 Env Template DY37 megafauna</title>
+  <link>https://datasets.obis.org/hosted/isa/comracrfc12016_env_dy37_megafauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comracrfc12016_env_dy37_megafauna/comracrfc12016_env_dy37_megafauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12019 Macrofauna2018</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12019_macrofauna2018/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12019_macrofauna2018/koreapmn12019_macrofauna2018.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12011 Env Template 2011 abundance</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12011_env_2011_abundance/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12011_env_2011_abundance/koreapmn12011_env_2011_abundance.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>RUSMNRCRFC12015 Env Template Biodata</title>
+  <link>https://datasets.obis.org/hosted/isa/rusmnrcrfc12015_env_biodata/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/rusmnrcrfc12015_env_biodata/rusmnrcrfc12015_env_biodata.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>JOGMECCRFC12018 Env Template HK17 NEMA</title>
+  <link>https://datasets.obis.org/hosted/isa/jogmeccrfc12018_env_hk17_nema/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/jogmeccrfc12018_env_hk17_nema/jogmeccrfc12018_env_hk17_nema.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12017 Env Template zooplankton</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12017_env_zooplankton/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12017_env_zooplankton/comrapms12017_env_zooplankton.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12016 Env Template phytoplanton</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12016_env_phytoplanton/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12016_env_phytoplanton/comrapms12016_env_phytoplanton.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>JOGMECCRFC12018 Env Template JK18 picoplankton</title>
+  <link>https://datasets.obis.org/hosted/isa/jogmeccrfc12018_env_jk18_picoplankton/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/jogmeccrfc12018_env_jk18_picoplankton/jogmeccrfc12018_env_jk18_picoplankton.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>GSRPMN12019 P03-MBL 1</title>
+  <link>https://datasets.obis.org/hosted/isa/gsrpmn12019_p03_mbl_1/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/gsrpmn12019_p03_mbl_1/gsrpmn12019_p03_mbl_1.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>JOGMECCRFC12018 Env Template HK17-01 phyto</title>
+  <link>https://datasets.obis.org/hosted/isa/jogmeccrfc12018_env_hk17_01_phyto/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/jogmeccrfc12018_env_hk17_01_phyto/jogmeccrfc12018_env_hk17_01_phyto.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>GSRPMN12019 P03-MBL 2</title>
+  <link>https://datasets.obis.org/hosted/isa/gsrpmn12019_p03_mbl_2/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/gsrpmn12019_p03_mbl_2/gsrpmn12019_p03_mbl_2.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>CMMPMN12022 Env Template</title>
+  <link>https://datasets.obis.org/hosted/isa/cmmpmn12022_env/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/cmmpmn12022_env/cmmpmn12022_env.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>OMSPMN12022 Env Template AB02RC01</title>
+  <link>https://datasets.obis.org/hosted/isa/omspmn12022_env_ab02rc01/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/omspmn12022_env_ab02rc01/omspmn12022_env_ab02rc01.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12022 ENV MacroBenthos2020</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12022_env_macrobenthos2020/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12022_env_macrobenthos2020/comrapmn12022_env_macrobenthos2020.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12020 Plankton 2018</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12020_plankton_2018/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12020_plankton_2018/comrapmn12020_plankton_2018.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12019 Nodule Macrofauna 2018</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12019_nodule_macrofauna_2018/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12019_nodule_macrofauna_2018/koreapmn12019_nodule_macrofauna_2018.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12020 Megafauna</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12020_megafauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12020_megafauna/comrapms12020_megafauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>JOGMECCRFC12020 ENV Meiofauna JK19</title>
+  <link>https://datasets.obis.org/hosted/isa/jogmeccrfc12020_env_meiofauna_jk19/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/jogmeccrfc12020_env_meiofauna_jk19/jogmeccrfc12020_env_meiofauna_jk19.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMS12015 Env Template 20200914 ROV Biology</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpms12015_env_20200914_rov_biology/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpms12015_env_20200914_rov_biology/bgrpms12015_env_20200914_rov_biology.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IOMPMN12018 Env Template BIOL</title>
+  <link>https://datasets.obis.org/hosted/isa/iompmn12018_env_biol/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/iompmn12018_env_biol/iompmn12018_env_biol.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12018 zooplankton</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12018_zooplankton/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12018_zooplankton/comrapms12018_zooplankton.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12018 Lander2017</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12018_lander2017/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12018_lander2017/comrapmn12018_lander2017.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMN12017 Biodiveristy</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpmn12017_biodiversity/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpmn12017_biodiversity/bgrpmn12017_biodiversity.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IFREMERPMN12015 AR ENV</title>
+  <link>https://datasets.obis.org/hosted/isa/ifremerpmn12015_ar_env/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/ifremerpmn12015_ar_env/ifremerpmn12015_ar_env.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IFREMERPMN12018 Nodinaut Nematoda Copepoda</title>
+  <link>https://datasets.obis.org/hosted/isa/ifremerpmn12018_nodinaut_nematoda_copepoda/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/ifremerpmn12018_nodinaut_nematoda_copepoda/ifremerpmn12018_nodinaut_nematoda_copepoda.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12016 Senkenberg</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12016_senkenberg/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12016_senkenberg/uksrlpmn12016_senkenberg.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12016 Megafauna</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12016_megafauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12016_megafauna/uksrlpmn12016_megafauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12017 Senkenberg Macrofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12017_senkenberg_macrofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12017_senkenberg_macrofauna/uksrlpmn12017_senkenberg_macrofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>YUZHPMN12015 Biodata B6</title>
+  <link>https://datasets.obis.org/hosted/isa/yuzhpmn12015_biodata_b6/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/yuzhpmn12015_biodata_b6/yuzhpmn12015_biodata_b6.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>YUZPMN12016 Biodata</title>
+  <link>https://datasets.obis.org/hosted/isa/yuzpmn12016_biodata/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/yuzpmn12016_biodata/yuzpmn12016_biodata.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>DORDPMN12018 Env Mn Bio</title>
+  <link>https://datasets.obis.org/hosted/isa/dordpmn12018_env_mn_bio/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/dordpmn12018_env_mn_bio/dordpmn12018_env_mn_bio.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IOMPMN12022 Env Template</title>
+  <link>https://datasets.obis.org/hosted/isa/iompmn12022_env/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/iompmn12022_env/iompmn12022_env.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRACFC2022 DY48 Zooplankton2019ar</title>
+  <link>https://datasets.obis.org/hosted/isa/comracfc2022_dy48_zooplankton2019ar/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comracfc2022_dy48_zooplankton2019ar/comracfc2022_dy48_zooplankton2019ar.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>CMMPMN12023 Env Template EXAMPLE</title>
+  <link>https://datasets.obis.org/hosted/isa/cmmpmn12023_env_example/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/cmmpmn12023_env_example/cmmpmn12023_env_example.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12023 Env Template EXAMPLE</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12023_env_example/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12023_env_example/comrapmn12023_env_example.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IOMPMN12023 Env Template Appendix 9</title>
+  <link>https://datasets.obis.org/hosted/isa/iompmn12023_env_appendix_9/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/iompmn12023_env_appendix_9/iompmn12023_env_appendix_9.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>GSRPMN12016 MarBiol UGent</title>
+  <link>https://datasets.obis.org/hosted/isa/gsrpmn12016_marbiol_ugent/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/gsrpmn12016_marbiol_ugent/gsrpmn12016_marbiol_ugent.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12024 Env Template 2021-Meiofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12024_env_2021_meiofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12024_env_2021_meiofauna/comrapms12024_env_2021_meiofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>CMMPMN12024 Env Template 20220212</title>
+  <link>https://datasets.obis.org/hosted/isa/cmmpmn12024_env_20220212/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/cmmpmn12024_env_20220212/cmmpmn12024_env_20220212.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREACRFC12024 Env Template 20220212</title>
+  <link>https://datasets.obis.org/hosted/isa/koreacrfc12024_env_20220212/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreacrfc12024_env_20220212/koreacrfc12024_env_20220212.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>GSRPMN12024 Env Template 20220212 Marbiol rev20250326</title>
+  <link>https://datasets.obis.org/hosted/isa/gsrpmn12024_env_20220212_marbiol_rev20250326/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/gsrpmn12024_env_20220212_marbiol_rev20250326/gsrpmn12024_env_20220212_marbiol_rev20250326.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12019 macrofauna2019</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12019_macrofauna2019/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12019_macrofauna2019/koreapmn12019_macrofauna2019.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12016 NHM-UNI</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12016_nhm_uni/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12016_nhm_uni/uksrlpmn12016_nhm_uni.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12012 Env Template 2012 biomass</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12012_env_2012_biomass/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12012_env_2012_biomass/koreapmn12012_env_2012_biomass.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12012 Env Template 2012 macrofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12012_env_2012_macrofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12012_env_2012_macrofauna/koreapmn12012_env_2012_macrofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>JOGMECCRFC12016 Env Template 2016 Edokko data</title>
+  <link>https://datasets.obis.org/hosted/isa/jogmeccrfc12016_env_2016_edokko_data/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/jogmeccrfc12016_env_2016_edokko_data/jogmeccrfc12016_env_2016_edokko_data.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>JOGMECCRFC12016 Env Template 2016 nematoda DNA</title>
+  <link>https://datasets.obis.org/hosted/isa/jogmeccrfc12016_env_2016_nematoda_dna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/jogmeccrfc12016_env_2016_nematoda_dna/jogmeccrfc12016_env_2016_nematoda_dna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>JOGMECCRFC12016 Env Template 2016 ROV</title>
+  <link>https://datasets.obis.org/hosted/isa/jogmeccrfc12016_env_2016_rov/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/jogmeccrfc12016_env_2016_rov/jogmeccrfc12016_env_2016_rov.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>JOGMECCRFC120017 Env Template 2017 abundance</title>
+  <link>https://datasets.obis.org/hosted/isa/jogmeccrfc120017_env_2017_abundance/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/jogmeccrfc120017_env_2017_abundance/jogmeccrfc120017_env_2017_abundance.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>DORDPMN12016 Mn2016 ENV</title>
+  <link>https://datasets.obis.org/hosted/isa/dordpmn12016_mn2016_env/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/dordpmn12016_mn2016_env/dordpmn12016_mn2016_env.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMN12017 Env Template ECORESPONSE</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpmn12017_env_ecoresponse/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpmn12017_env_ecoresponse/bgrpmn12017_env_ecoresponse.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMN12017 Env Template MANGAN2013</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpmn12017_env_mangan2013/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpmn12017_env_mangan2013/bgrpmn12017_env_mangan2013.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMN12017 Env Template MANGAN2016</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpmn12017_env_mangan2016/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpmn12017_env_mangan2016/bgrpmn12017_env_mangan2016.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IOMPMN12015 Env Template annex 1</title>
+  <link>https://datasets.obis.org/hosted/isa/iompmn12015_env_annex_1/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/iompmn12015_env_annex_1/iompmn12015_env_annex_1.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IOMPMN12015 Env Template annex 11</title>
+  <link>https://datasets.obis.org/hosted/isa/iompmn12015_env_annex_11/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/iompmn12015_env_annex_11/iompmn12015_env_annex_11.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12014 Env Template 2014 megafauna</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12014_env_2014_megafauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12014_env_2014_megafauna/koreapmn12014_env_2014_megafauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMS12020 2019 WC Biology</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpms12020_2019_wc_biology/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpms12020_2019_wc_biology/bgrpms12020_2019_wc_biology.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12016 Env Template phytoplankton</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12016_env_phytoplankton/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12016_env_phytoplankton/comrapms12016_env_phytoplankton.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12012 Meiofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12012_meiofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12012_meiofauna/koreapmn12012_meiofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IOMPMN12014 Env Bio</title>
+  <link>https://datasets.obis.org/hosted/isa/iompmn12014_env_bio/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/iompmn12014_env_bio/iompmn12014_env_bio.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>DORDPMN12020 Env</title>
+  <link>https://datasets.obis.org/hosted/isa/dordpmn12020_env/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/dordpmn12020_env/dordpmn12020_env.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>GSRPMN12020 MarBiol UGent</title>
+  <link>https://datasets.obis.org/hosted/isa/gsrpmn12020_marbiol_ugent/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/gsrpmn12020_marbiol_ugent/gsrpmn12020_marbiol_ugent.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IFREMERPMN12018 Polynoids</title>
+  <link>https://datasets.obis.org/hosted/isa/ifremerpmn12018_polynoids/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/ifremerpmn12018_polynoids/ifremerpmn12018_polynoids.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMS12015 Env Template 20200914 2019 GC Biology</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpms12015_env_20200914_2019_gc_biology/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpms12015_env_20200914_2019_gc_biology/bgrpms12015_env_20200914_2019_gc_biology.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMAPMS12023 2020-Env PMS-Megafauna edit0221</title>
+  <link>https://datasets.obis.org/hosted/isa/comapms12023_2020_env_pms-megafauna_edit0221/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comapms12023_2020_env_pms-megafauna_edit0221/comapms12023_2020_env_pms-megafauna_edit0221.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMS12015 Env Template 20200914 2019 DR Biology</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpms12015_env_20200914_2019_dr_biology/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpms12015_env_20200914_2019_dr_biology/bgrpms12015_env_20200914_2019_dr_biology.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>RUSMNRCRFC12021 YMG biodata</title>
+  <link>https://datasets.obis.org/hosted/isa/rusmnrcrfc12021_ymg_biodata/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/rusmnrcrfc12021_ymg_biodata/rusmnrcrfc12021_ymg_biodata.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IFREMERPMS12024 Env Template 20220212 HER2</title>
+  <link>https://datasets.obis.org/hosted/isa/ifremerpms12024_env_20220212_her2/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/ifremerpms12024_env_20220212_her2/ifremerpms12024_env_20220212_her2.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12022 ENV Phytoplankton2020</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12022_env_phytoplankton2020/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12022_env_phytoplankton2020/comrapmn12022_env_phytoplankton2020.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>GSRPMN12020 MarBiol UGent 2021</title>
+  <link>https://datasets.obis.org/hosted/isa/gsrpmn12020_marbiol_ugent_2021/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/gsrpmn12020_marbiol_ugent_2021/gsrpmn12020_marbiol_ugent_2021.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRACRFC12015 ENV DY125-27 meiofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/comracrfc12015_env_dy125_27_meiofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comracrfc12015_env_dy125_27_meiofauna/comracrfc12015_env_dy125_27_meiofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRACRFC12015 ENV DY125-35 Demersal Scavenger</title>
+  <link>https://datasets.obis.org/hosted/isa/comracrfc12015_env_dy125_35_demersal_scavenger/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comracrfc12015_env_dy125_35_demersal_scavenger/comracrfc12015_env_dy125_35_demersal_scavenger.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRACFC12015 Macrofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/comracfc12015_macrofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comracfc12015_macrofauna/comracfc12015_macrofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12023 2021-Env-Megafauna edit240229</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12023_2021_env-megafauna_edit240229/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12023_2021_env-megafauna_edit240229/comrapms12023_2021_env-megafauna_edit240229.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>BGRPMN1 Env Template 20200914 2012 Biology</title>
+  <link>https://datasets.obis.org/hosted/isa/bgrpmn1_env_20200914_2012_biology/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/bgrpmn1_env_20200914_2012_biology/bgrpmn1_env_20200914_2012_biology.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IFREMERPMS12018 Env Template Bicose2</title>
+  <link>https://datasets.obis.org/hosted/isa/ifremerpms12018_env_bicose2/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/ifremerpms12018_env_bicose2/ifremerpms12018_env_bicose2.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IFREMERPMS12018 Env Template Hermine</title>
+  <link>https://datasets.obis.org/hosted/isa/ifremerpms12018_env_hermine/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/ifremerpms12018_env_hermine/ifremerpms12018_env_hermine.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12015 Env Template 2012 macrofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12015_env_2012_macrofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12015_env_2012_macrofauna/koreapmn12015_env_2012_macrofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMN12020 Plankton2018</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapmn12020_plankton2018/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapmn12020_plankton2018/comrapmn12020_plankton2018.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRAPMS12024 Env Template 2021-zooplanton</title>
+  <link>https://datasets.obis.org/hosted/isa/comrapms12024_env_2021_zooplanton/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comrapms12024_env_2021_zooplanton/comrapms12024_env_2021_zooplanton.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRACRFC12017 Env Template DY36 meiofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/comracrfc12017_env_dy36_meiofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comracrfc12017_env_dy36_meiofauna/comracrfc12017_env_dy36_meiofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12010 Env Template 2010 biomass</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12010_env_2010_biomass/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12010_env_2010_biomass/koreapmn12010_env_2010_biomass.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12013 Env Template 2013 abundance</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12013_env_2013_abundance/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12013_env_2013_abundance/koreapmn12013_env_2013_abundance.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12016 AB02 NOCS</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12016_ab02_nocs/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12016_ab02_nocs/uksrlpmn12016_ab02_nocs.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12017 NOC NERC</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12017_noc_nerc/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12017_noc_nerc/uksrlpmn12017_noc_nerc.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>OMSPMN12018 Env NHM NORCE</title>
+  <link>https://datasets.obis.org/hosted/isa/omspmn12018_env_nhm_norce/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/omspmn12018_env_nhm_norce/omspmn12018_env_nhm_norce.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12012 Env Template 2012 abundance</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12012_env_2012_abundance/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12012_env_2012_abundance/koreapmn12012_env_2012_abundance.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12014 Env Template 2014 abundance</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12014_env_2014_abundance/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12014_env_2014_abundance/koreapmn12014_env_2014_abundance.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12014 Env Template 2014 biomass</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12014_env_2014_biomass/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12014_env_2014_biomass/koreapmn12014_env_2014_biomass.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>KOREAPMN12011 Env Template 2011 biomass</title>
+  <link>https://datasets.obis.org/hosted/isa/koreapmn12011_env_2011_biomass/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/koreapmn12011_env_2011_biomass/koreapmn12011_env_2011_biomass.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12015 Env Template GG 032020163</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_gg_032020163/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12015_env_gg_032020163/uksrlpmn12015_env_gg_032020163.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>UKSRLPMN12017 Senkenberg Meofauna</title>
+  <link>https://datasets.obis.org/hosted/isa/uksrlpmn12017_senkenberg_meiofauna/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/uksrlpmn12017_senkenberg_meiofauna/uksrlpmn12017_senkenberg_meiofauna.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>RUSMNRCRFC12018 ENV biodata 16-17</title>
+  <link>https://datasets.obis.org/hosted/isa/rusmnrcrfc12018_env_biodata_16_17/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/rusmnrcrfc12018_env_biodata_16_17/rusmnrcrfc12018_env_biodata_16_17.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>IFREMERPMN12017 Env Template BIO1 2017</title>
+  <link>https://datasets.obis.org/hosted/isa/ifremerpmn12017_env_bio1_2017/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/ifremerpmn12017_env_bio1_2017/ifremerpmn12017_env_bio1_2017.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+<item>
+  <title>COMRACRFC12017 Env Template DY29 zooplankton</title>
+  <link>https://datasets.obis.org/hosted/isa/comracrfc12017_env_dy29_zooplankton/index.html</link>
+  <ipt:dwca>https://datasets.obis.org/hosted/isa/comracrfc12017_env_dy29_zooplankton/comracrfc12017_env_dy29_zooplankton.zip</ipt:dwca>
+  <pubDate>Mon, 20 Apr 2026 20:08:13 +0200</pubDate>
+</item>
+  </channel>
+</rss>

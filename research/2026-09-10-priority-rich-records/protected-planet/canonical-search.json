@@ -1,0 +1,47 @@
+{
+  "Protected Planet": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "WDPA": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "WDPCA": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "WD-OECM": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "UNEP": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "IUCN": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "IBAT": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "Marine Conservation Institute": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "Earth Engine": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  }
+}

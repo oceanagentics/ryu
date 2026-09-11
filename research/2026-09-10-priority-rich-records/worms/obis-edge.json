@@ -1,0 +1,45 @@
+{
+  "id": "rel-worms-syncs-to-platform-obis",
+  "sourceNodeId": "worms",
+  "targetNodeId": "platform-obis",
+  "kind": "syncs_to",
+  "note": "OBIS matches submitted scientific names or WoRMS LSIDs against WoRMS and includes the resulting taxonomic information in its occurrence exports. Synonyms resolve to accepted names. This is taxonomic enrichment during OBIS ingestion; no fixed refresh schedule or latest taxonomic snapshot date is established.",
+  "properties": {
+    "scope": "Taxonomic name reconciliation and enrichment of OBIS occurrence records",
+    "status": "active documented integration",
+    "sourceRefs": [
+      "obis-taxonomy",
+      "obis-access"
+    ],
+    "transferMethod": "WoRMS web services and taxon identifiers used in OBIS ingestion",
+    "updateFrequency": "unspecified"
+  },
+  "sources": {
+    "obis-taxonomy": {
+      "id": "obis-taxonomy",
+      "url": "https://obis.org/sources/worms/",
+      "title": {
+        "en": "OBIS taxonomic backbone: WoRMS",
+        "fr": "Référentiel taxonomique OBIS : WoRMS",
+        "es": "Referencia taxonómica de OBIS: WoRMS",
+        "ar": "مرجع OBIS التصنيفي: WoRMS",
+        "zh": "OBIS分类主干：WoRMS",
+        "ru": "Таксономическая основа OBIS: WoRMS"
+      },
+      "accessedAt": "2026-09-10"
+    },
+    "obis-access": {
+      "id": "obis-access",
+      "url": "https://manual.obis.org/access.html",
+      "title": {
+        "en": "OBIS data access and enrichment",
+        "fr": "Accès et enrichissement des données OBIS",
+        "es": "Acceso y enriquecimiento de datos OBIS",
+        "ar": "الوصول إلى بيانات OBIS وإثراؤها",
+        "zh": "OBIS数据访问及丰富",
+        "ru": "Доступ к данным OBIS и их обогащение"
+      },
+      "accessedAt": "2026-09-10"
+    }
+  }
+}

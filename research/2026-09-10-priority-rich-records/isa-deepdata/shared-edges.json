@@ -1,0 +1,120 @@
+[
+  {
+    "id": "rel-deepdata-syncs-to-platform-obis",
+    "sourceNodeId": "deepdata",
+    "targetNodeId": "platform-obis",
+    "kind": "syncs_to",
+    "note": "The OBIS ISA node identifies DeepData as the source of contractor environmental data and exposes an ISA dataset feed. Its listed biological datasets establish the published subset, not transfer of confidential geological or all DeepData holdings. No uniform refresh schedule is established. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
+    "properties": {
+      "scope": "Public biological subset of ISA DeepData through OBIS ISA",
+      "status": "published harvested datasets; cadence unspecified",
+      "sourceRefs": [
+        "evidence",
+        "archive"
+      ],
+      "transferMethod": "ISA dataset feed harvested into OBIS",
+      "artifact": "https://datasets.obis.org/hosted/isa/rss.xml"
+    },
+    "sources": {
+      "evidence": {
+        "id": "evidence",
+        "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+        "title": {
+          "en": "OBIS ISA node and DeepData source",
+          "fr": "Nœud OBIS ISA et source DeepData",
+          "es": "Nodo OBIS ISA y fuente DeepData",
+          "ar": "عقدة OBIS ISA ومصدر DeepData",
+          "zh": "OBIS ISA节点与DeepData来源",
+          "ru": "Узел OBIS ISA и источник DeepData"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "archive": {
+        "id": "archive",
+        "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+        "title": {
+          "en": "NORI 2022 biological archive: EML and archive metadata",
+          "fr": "Archive biologique NORI 2022 : EML et métadonnées",
+          "es": "Archivo biológico NORI 2022: EML y metadatos",
+          "ar": "أرشيف NORI البيولوجي 2022: بيانات EML ووصف الأرشيف",
+          "zh": "NORI 2022生物档案：EML和档案元数据",
+          "ru": "Биологический архив NORI 2022: EML и метаданные"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "id": "rel-international-seabed-authority-publishes-to-platform-obis",
+    "sourceNodeId": "international-seabed-authority",
+    "targetNodeId": "platform-obis",
+    "kind": "publishes_to",
+    "note": "ISA supplies publicly indexed environmental biodiversity datasets through the OBIS ISA thematic node. Node metadata identifies ISA and DeepData; underlying contractor data ownership is not transferred to OBIS. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
+    "properties": {
+      "scope": "ISA-node publication of the public DeepData biological subset",
+      "status": "published node datasets",
+      "sourceRefs": [
+        "evidence",
+        "archive"
+      ],
+      "via": "OBIS ISA"
+    },
+    "sources": {
+      "evidence": {
+        "id": "evidence",
+        "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+        "title": {
+          "en": "OBIS ISA node and DeepData source",
+          "fr": "Nœud OBIS ISA et source DeepData",
+          "es": "Nodo OBIS ISA y fuente DeepData",
+          "ar": "عقدة OBIS ISA ومصدر DeepData",
+          "zh": "OBIS ISA节点与DeepData来源",
+          "ru": "Узел OBIS ISA и источник DeepData"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "archive": {
+        "id": "archive",
+        "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+        "title": {
+          "en": "NORI 2022 biological archive: EML and archive metadata",
+          "fr": "Archive biologique NORI 2022 : EML et métadonnées",
+          "es": "Archivo biológico NORI 2022: EML y metadatos",
+          "ar": "أرشيف NORI البيولوجي 2022: بيانات EML ووصف الأرشيف",
+          "zh": "NORI 2022生物档案：EML和档案元数据",
+          "ru": "Биологический архив NORI 2022: EML и метаданные"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "id": "rel-worms-syncs-to-deepdata",
+    "sourceNodeId": "worms",
+    "targetNodeId": "deepdata",
+    "kind": "syncs_to",
+    "note": "ISA’s July 2023 account reports expert review and use of WoRMS tools on more than 60,000 biological records to improve DeepData taxonomy. This is scoped taxonomic reconciliation, not a copy of the WoRMS database or a demonstrated continuous synchronization. The 2022 partnership alone would not establish a data transfer.",
+    "properties": {
+      "scope": "Taxonomic reconciliation of DeepData biological records using WoRMS",
+      "status": "documented completed work as of July 2023; ongoing cadence not established",
+      "sourceRefs": [
+        "factcheck"
+      ]
+    },
+    "sources": {
+      "factcheck": {
+        "id": "factcheck",
+        "url": "https://isa.org.jm/isa-fact-check-2023-1/",
+        "title": {
+          "en": "ISA explanation of DeepData holdings and funding, July 2023",
+          "fr": "Explication des fonds et du financement DeepData, juillet 2023",
+          "es": "Explicación de fondos y financiación DeepData, julio de 2023",
+          "ar": "توضيح بيانات DeepData وتمويلها، يوليو 2023",
+          "zh": "2023年7月ISA对DeepData馆藏与经费的说明",
+          "ru": "Разъяснение о данных и финансировании DeepData, июль 2023"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  }
+]

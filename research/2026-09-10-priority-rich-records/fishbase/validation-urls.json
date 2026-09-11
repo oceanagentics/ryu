@@ -1,0 +1,287 @@
+[
+  {
+    "url": "https://aquamaps.org/main/home.php",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://digitalcommons.uri.edu/gsofacpubs/1538/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://docs.ropensci.org/rfishbase/",
+    "status": 200,
+    "finalUrl": "https://docs.ropensci.org/rfishbase/",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/Download/",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/Download/",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/bruvs/manual/FishBaseBRUVS_2021_03.pdf",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/bruvs/manual/FishBaseBRUVS_2021_03.pdf",
+    "contentType": "application/pdf",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/collaborators/CollaboratorSummary.php?id=2903",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/collaborators/CollaboratorSummary.php?id=2903",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/contribu.htm",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/contribu.htm",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/gallery.htm",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/gallery.htm",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/home.htm",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/home.htm",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/home.php",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/home.php",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/manual/fishbasethe_references_table.htm",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/manual/fishbasethe_references_table.htm",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/search.php",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/search.php",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/summary/SpeciesSummary.php?id=69",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/summary/69",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://fishbase.se/webservice/summary/fb/showXML.php?identifier=FB-69&ProviderDbase=03",
+    "status": 200,
+    "finalUrl": "https://fishbase.se/webservice/summary/fb/showXML.php?identifier=FB-69&ProviderDbase=03",
+    "contentType": "text/xml;charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://gov.om/en/ministry-of-agriculture-fisheries-and-water-resources",
+    "status": 200,
+    "finalUrl": "https://gov.om/en/ministry-of-agriculture-fisheries-and-water-resources",
+    "contentType": "text/html;charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+    "status": 200,
+    "finalUrl": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+    "contentType": "text/html;charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://portal.obis.org/node/dcb0c76d-46a1-4e07-9a69-98cf3fd67576",
+    "status": 200,
+    "finalUrl": "https://portal.obis.org/node/dcb0c76d-46a1-4e07-9a69-98cf3fd67576",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v25.04/parquet/",
+    "status": 200,
+    "finalUrl": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v25.04/parquet/",
+    "contentType": "application/xml",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v26.06/parquet/",
+    "status": 200,
+    "finalUrl": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v26.06/parquet/",
+    "contentType": "application/xml",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://source.coop/cboettig/fishbase",
+    "status": 200,
+    "finalUrl": "https://source.coop/cboettig/fishbase",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://swims.hku.hk/",
+    "status": 200,
+    "finalUrl": "https://swims.hku.hk/",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://worldfishcenter.org/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.africamuseum.be/en/staff/795/publication_detail_view?pubid=6525",
+    "status": 200,
+    "finalUrl": "https://www.africamuseum.be/en/staff/795/publication_detail_view?pubid=6525",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.bloomassociation.org/en/",
+    "status": 200,
+    "finalUrl": "https://www.bloomassociation.org/en/",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.blueabacus.org/",
+    "status": 200,
+    "finalUrl": "https://www.blueabacus.org/",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.csiro.au/en/about",
+    "status": 200,
+    "finalUrl": "https://www.csiro.au/en/about",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.fishbase.se/fishwatcher/menu.php",
+    "status": 200,
+    "finalUrl": "https://www.fishbase.se/fishwatcher/menu.php",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.fishbase.se/manual/english/FishBaseThe_FAOAREAS_Table.htm",
+    "status": 200,
+    "finalUrl": "https://www.fishbase.se/manual/english/FishBaseThe_FAOAREAS_Table.htm",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.fishbase.se/references/FBRefList.php",
+    "status": 200,
+    "finalUrl": "https://www.fishbase.se/references/FBRefList.php",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.fishbase.se/report/isscaap/isscaapsearchmenu.php",
+    "status": 200,
+    "finalUrl": "https://www.fishbase.se/report/isscaap/isscaapsearchmenu.php",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.fishbase.se/summary/citation.php",
+    "status": 200,
+    "finalUrl": "https://www.fishbase.se/summary/citation.php",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.gbif.se/ipt/archive.do?r=fishbase",
+    "status": 200,
+    "finalUrl": "https://www.gbif.se/ipt/archive.do?r=fishbase",
+    "contentType": "application/zip",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.gbif.se/ipt/resource?r=fishbase",
+    "status": 200,
+    "finalUrl": "https://www.gbif.se/ipt/resource?r=fishbase",
+    "contentType": "text/html;charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.geomar.de/en/",
+    "status": 200,
+    "finalUrl": "https://www.geomar.de/en/",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.marinespecies.org/about.php",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/about.php",
+    "contentType": "text/html; charset=UTF-8;",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.minderoo.org/",
+    "status": 200,
+    "finalUrl": "https://www.minderoo.org/",
+    "contentType": "text/html",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.mundusmaris.org/",
+    "status": 200,
+    "finalUrl": "https://www.mundusmaris.org/",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+    "status": 200,
+    "finalUrl": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+    "contentType": "text/html;charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.q-quatics.org/affiliated-projects/",
+    "status": 200,
+    "finalUrl": "https://www.q-quatics.org/affiliated-projects/",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+    "status": 200,
+    "finalUrl": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+    "contentType": "application/pdf",
+    "sampleBytes": 4096
+  },
+  {
+    "url": "https://www.univ-lorraine.fr/",
+    "status": 200,
+    "finalUrl": "https://www.univ-lorraine.fr/",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 4096
+  }
+]

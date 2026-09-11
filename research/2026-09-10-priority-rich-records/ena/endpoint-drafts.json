@@ -1,0 +1,893 @@
+[
+  {
+    "id": "bbsrc",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.ukri.org/councils/bbsrc/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Biotechnology and Biological Sciences Research Council",
+        "details": {
+          "aliases": [
+            "BBSRC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Conseil de recherche en biotechnologie et sciences biologiques",
+        "details": {
+          "aliases": [
+            "BBSRC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Consejo de Investigación en Biotecnología y Ciencias Biológicas",
+        "details": {
+          "aliases": [
+            "BBSRC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "مجلس أبحاث التكنولوجيا الحيوية والعلوم البيولوجية",
+        "details": {
+          "aliases": [
+            "BBSRC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Совет по исследованиям в области биотехнологии и биологических наук",
+        "details": {
+          "aliases": [
+            "BBSRC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "生物技术与生物科学研究理事会",
+        "details": {
+          "aliases": [
+            "BBSRC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "wellcome",
+    "record": {
+      "kind": "organization",
+      "url": "https://wellcome.org/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Wellcome",
+        "details": {
+          "aliases": [
+            "Wellcome Trust"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Wellcome",
+        "details": {
+          "aliases": [
+            "Wellcome Trust"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Wellcome",
+        "details": {
+          "aliases": [
+            "Wellcome Trust"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "ويلكوم",
+        "details": {
+          "aliases": [
+            "Wellcome Trust"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Wellcome",
+        "details": {
+          "aliases": [
+            "Wellcome Trust"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "惠康",
+        "details": {
+          "aliases": [
+            "Wellcome Trust"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "gordon-and-betty-moore-foundation",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.moore.org/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Gordon and Betty Moore Foundation",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Fondation Gordon et Betty Moore",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Fundación Gordon y Betty Moore",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "مؤسسة غوردون وبيتي مور",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Фонд Гордона и Бетти Мур",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "戈登与贝蒂·摩尔基金会",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "niaid",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.niaid.nih.gov/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "National Institute of Allergy and Infectious Diseases",
+        "details": {
+          "aliases": [
+            "NIAID"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Institut national des allergies et des maladies infectieuses",
+        "details": {
+          "aliases": [
+            "NIAID"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Instituto Nacional de Alergias y Enfermedades Infecciosas",
+        "details": {
+          "aliases": [
+            "NIAID"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "المعهد الوطني للحساسية والأمراض المعدية",
+        "details": {
+          "aliases": [
+            "NIAID"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Национальный институт аллергии и инфекционных заболеваний",
+        "details": {
+          "aliases": [
+            "NIAID"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "美国国家过敏和传染病研究所",
+        "details": {
+          "aliases": [
+            "NIAID"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "novo-nordisk-foundation",
+    "record": {
+      "kind": "organization",
+      "url": "https://novonordiskfonden.dk/en/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Novo Nordisk Foundation",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Fondation Novo Nordisk",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Fundación Novo Nordisk",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "مؤسسة نوفو نورديسك",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Фонд Ново Нордиск",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "诺和诺德基金会",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "wellcome-sanger-institute",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.sanger.ac.uk/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "sanger-release": {
+          "id": "sanger-release",
+          "url": "https://www.sanger.ac.uk/wp-content/uploads/WSI_Annual_Highlights_2023_Digital.pdf",
+          "title": {
+            "en": "Wellcome Sanger Institute Highlights 2022/23: Tree of Life data release",
+            "fr": "Bilan 2022/23 du Wellcome Sanger Institute : publication des données Tree of Life",
+            "es": "Informe 2022/23 del Wellcome Sanger Institute: publicación de datos Tree of Life",
+            "ar": "أبرز أعمال معهد ويلكوم سانغر 2022/23: نشر بيانات شجرة الحياة",
+            "ru": "Итоги Wellcome Sanger Institute за 2022/23: публикация данных Tree of Life",
+            "zh": "Wellcome Sanger Institute 2022/23年度亮点：生命之树数据发布"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Wellcome Sanger Institute",
+        "details": {
+          "aliases": [
+            "Sanger Institute"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "sanger-release"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Institut Wellcome Sanger",
+        "details": {
+          "aliases": [
+            "Sanger Institute"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "sanger-release"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Instituto Wellcome Sanger",
+        "details": {
+          "aliases": [
+            "Sanger Institute"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "sanger-release"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "معهد ويلكوم سانغر",
+        "details": {
+          "aliases": [
+            "Sanger Institute"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "sanger-release"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Институт Wellcome Sanger",
+        "details": {
+          "aliases": [
+            "Sanger Institute"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "sanger-release"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "惠康桑格研究所",
+        "details": {
+          "aliases": [
+            "Sanger Institute"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "sanger-release"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "biosamples",
+    "record": {
+      "kind": "system",
+      "url": "https://www.ebi.ac.uk/biosamples/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "BioSamples",
+        "details": {
+          "aliases": [
+            "EMBL-EBI BioSamples"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "BioSamples",
+        "details": {
+          "aliases": [
+            "EMBL-EBI BioSamples"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "BioSamples",
+        "details": {
+          "aliases": [
+            "EMBL-EBI BioSamples"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "BioSamples",
+        "details": {
+          "aliases": [
+            "EMBL-EBI BioSamples"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "BioSamples",
+        "details": {
+          "aliases": [
+            "EMBL-EBI BioSamples"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "BioSamples",
+        "details": {
+          "aliases": [
+            "EMBL-EBI BioSamples"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "ena-2025"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "genoscope",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.cea.fr/drf/Pages/Actualites/En-direct-des-labos/2022/quand-la-genomique-eclaire-le-climat.aspx",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "cea-genoscope": {
+          "id": "cea-genoscope",
+          "url": "https://www.cea.fr/drf/Pages/Actualites/En-direct-des-labos/2022/quand-la-genomique-eclaire-le-climat.aspx",
+          "title": {
+            "en": "CEA: Genoscope genomic research on Tara Oceans",
+            "fr": "CEA : recherches génomiques du Genoscope sur Tara Oceans",
+            "es": "CEA: investigación genómica de Genoscope sobre Tara Oceans",
+            "ar": "CEA: بحوث Genoscope الجينومية في Tara Oceans",
+            "ru": "CEA: геномные исследования Tara Oceans в Genoscope",
+            "zh": "CEA：Genoscope的Tara Oceans基因组研究"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "tara-project-xml": {
+          "id": "tara-project-xml",
+          "url": "https://www.ebi.ac.uk/ena/browser/api/xml/PRJEB402",
+          "title": {
+            "en": "ENA Tara Oceans study metadata and submitting centre",
+            "fr": "Métadonnées ENA de Tara Oceans et centre déposant",
+            "es": "Metadatos de Tara Oceans en ENA y centro remitente",
+            "ar": "بيانات دراسة Tara Oceans في ENA والمركز المودع",
+            "ru": "Метаданные исследования Tara Oceans в ENA и центр-отправитель",
+            "zh": "ENA Tara Oceans研究元数据与提交机构"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Genoscope (CEA)",
+        "details": {
+          "aliases": [
+            "Genoscope CEA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "cea-genoscope",
+              "tara-project-xml"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Genoscope (CEA)",
+        "details": {
+          "aliases": [
+            "Genoscope CEA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "cea-genoscope",
+              "tara-project-xml"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Genoscope (CEA)",
+        "details": {
+          "aliases": [
+            "Genoscope CEA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "cea-genoscope",
+              "tara-project-xml"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "Genoscope (CEA)",
+        "details": {
+          "aliases": [
+            "Genoscope CEA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "cea-genoscope",
+              "tara-project-xml"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Genoscope (CEA)",
+        "details": {
+          "aliases": [
+            "Genoscope CEA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "cea-genoscope",
+              "tara-project-xml"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "Genoscope (CEA)",
+        "details": {
+          "aliases": [
+            "Genoscope CEA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "cea-genoscope",
+              "tara-project-xml"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  }
+]

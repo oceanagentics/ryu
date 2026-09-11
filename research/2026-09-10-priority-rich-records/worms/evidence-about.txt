@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WoRMS - World Register of Marine Species</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="google-site-verification" content="K3-dDlqPOhXjZBSl_DXhAQ9y-EoX2OogyHQaUtlaSR4"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?=v2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?=v2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?=v2">
+    <link rel="manifest" href="/images/favicon/manifest.json?=v2">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?=v2" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico?=v2" />
+    <link title="WoRMS search" type="application/opensearchdescription+xml" rel="search" href="/provider.xml" />
+    <link rel="stylesheet" type="text/css" href="https://www.marinespecies.org/aphia/css/third_party.css?1789056038" />
+<script type="text/javascript" src="https://www.marinespecies.org/aphia/js/third_party.js?1789056038" ></script>
+<script type="text/javascript" src="https://www.marinespecies.org/aphia/js/aphia.js?1789056038" ></script>
+<link type="text/css" rel="stylesheet" href="/build/styles.css?1758120940" />
+
+        <link rel="alternate" title="WoRMS latest taxa additions" href="https://marinespecies.org/aphia.php?p=rss" type="application/rss+xml" />
+        <link rel="alternate" title="WoRMS latest taxa edits" href="https://marinespecies.org/aphia.php?p=rss&type=edit" type="application/rss+xml" />
+        <link rel="alternate" title="WoRMS latest taxa checked" href="https://marinespecies.org/aphia.php?p=rss&type=check" type="application/rss+xml" />
+        <link rel="alternate" title="WoRMS latest distribution additions" href="https://marinespecies.org/aphia.php?p=rss&what=dr" type="application/rss+xml" />
+        <link rel="alternate" title="WoRMS latest note additions" href="https://marinespecies.org/aphia.php?p=rss&what=notes" type="application/rss+xml" />
+        <link rel="alternate" title="WoRMS latest vernacular additions" href="https://marinespecies.org/aphia.php?p=rss&what=vernaculars" type="application/rss+xml" />
+        <link rel="alternate" title="WoRMS latest image additions" href="https://marinespecies.org/aphia.php?p=rss&what=images" type="application/rss+xml" />
+<script language="javascript" type="text/javascript" src="aphia.php?p=js"></script>
+<link rel="alternate" title="WoRMS latest attributes additions" href="https://marinespecies.org/aphia.php?p=rss&what=at" type="application/rss+xml" />
+<link rel="stylesheet" type="text/css" href="https://www.marinespecies.org/aphia/css/aphia_core.css?1789056038" />
+
+<script>var aphia_jquery = $;</script>
+
+</head>
+<body>
+
+<div class="main_bg">
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default worms-header">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header visible-xs">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navigation-shared,#navigation-content" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="/images/layout/worms_logo.png" height="60px"/>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse worms-nav-menu" id="navigation-content">
+                <div class="worms-nav-menu-table">
+                    <div class="worms-nav-menu-table-cell-col1 hidden-xs">
+                        <a class="navbar-left" href="/index.php">
+                            <img src="/images/layout/worms_logo.png" height="100px"/>
+                        </a>
+                    </div>
+                    <div class="worms-nav-menu-table-cell-col2">
+                        <div class="content_options">
+                            <ul id="aphiaContentOpts" class="list-inline" style="display: none;">
+    <li class="list-item">
+        marine only&nbsp;
+        <div class="material-switch pull-right">
+            <input id="contentEnableMarine" name="contentEnableMarine" type="checkbox" checked="checked"/>
+            <label for="contentEnableMarine"></label>
+        </div>
+    </li>
+    <li class="list-item">
+        extant only&nbsp;&nbsp;
+        <div class="material-switch pull-right">
+            <input id="contentEnableExtant" name="contentEnableExtant" type="checkbox"/>
+            <label for="contentEnableExtant"></label>
+        </div>
+    </li>
+</ul>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/index.php">Home</a></li>
+                            <li class="active"><a href="/about.php">About</a></li>
+                            <li><a href="/subregisters.php">Subregisters</a></li>
+                            <li><a href="/users.php">Users</a></li>
+                            <li><a href="/photogallery.php">Photogallery</a></li>
+                            <li><a href="/documents.php">Documents</a></li>
+                            <li><a href="/lifewatch.php">LifeWatch</a></li>
+                            <li><a href="/contribute.php">Contribute</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.navbar-collapse -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse aphia-nav-menu" id="navigation-shared">
+                <div class="aphia-nav-menu-table">
+                    <div class="aphia-nav-menu-table-cell-col1 hidden-xs">
+                        <form id="aphia-quick-search-form" class="navbar-form navbar-left" action="/aphia.php?p=taxlist" method="post">
+                            <div class="input-group" style="width: 280px;">
+                                
+    <script type="text/javascript">
+        var comp_jquery = $;
+        comp_jquery(document).ready(function() {
+                            window.initAphiaComponentCombobox('d8907a10040f4fba', {
+                            view_component_ajax_url: '/aphia.php?p=rest&__route__/AjaxAphiaRecordsByNamePart',
+                view_component_ajax_request_delay: 500,                                                view_dict_optional_ajax_args: {
+                                    'rank_min': "10",
+                                    'combine_vernaculars': "0",
+                                    'marine_only': "1",
+                                    'fossil_id': "4",
+                                },                view_component_ajax_append_input_to_url: true,                                view_dict_dynamic_ajax_args: "if ($('#quick_search_inc_common').prop('checked')) { data['combine_vernaculars'] = 1; }",                view_component_ajax_dont_trigger_numbers: true,                        view_component_allow_user_text: true,                                                                                                view_selection_placeholder: 'Quick search...',            view_hidden_key_id: 'tid',                                    view_hidden_data_id: 'tName',                                                                            });
+
+        });
+    </script>
+        <div id="d8907a10040f4fba_storage" name="d8907a10040f4fba_storage"></div>
+                                    <div class="input-group">
+                                    <select id="d8907a10040f4fba" class="form-control input-sm"></select>
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><span class="fa fa-cog"></span> <span class="caret"></span></button>
+                                        <ul class="dropdown-menu">
+                                            <li class="quick_search_inc_chk"><a href="#" data-value="option1" tabIndex="-1"><input id="quick_search_inc_scientific" checked="checked" disabled="disabled" type="checkbox"/>&nbsp;Scientific names</a></li>
+                                            <li class="quick_search_inc_chk"><a href="#" data-value="option2" tabIndex="-1"><input id="quick_search_inc_common" type="checkbox"/>&nbsp;Common names (slower)</a></li>
+                                            <li class="quick_search_inc_chk"><a style="padding-left: 33px;" href="/aphia.php?p=search&adv=1">&nbsp;Advanced search</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $("#d8907a10040f4fba_storage").change(function(event) {
+                                        $(".select2-search--inline").hide();
+                                        var tid = $(this).children('input[name="tid"]').val();
+                                        if (tid < 0) {
+                                            //No id => means no value picked from the suggestion list => check text to be numeric
+                                            tid = $(this).children('input[name="tName"]').val();
+                                        }
+                                        $("#d8907a10040f4fba").prop("disabled", true);
+                                        if (!isNaN(tid) && isFinite(tid) && tid > 0 && tid % 1 === 0) {
+                                            console.log('redirect...');
+                                            window.location = "/aphia.php?p=taxdetails&id=" + tid;
+                                        } else {
+                                            $("#aphia-quick-search-form").submit();
+                                        }
+                                    });
+                                </script>
+                            </div>
+                            <input type="hidden" name="searchpar" value="0" />
+                            <input type="hidden" name="tComp" value="begins" />
+                            <input type="hidden" name="action" value="search" />
+                            <input type="hidden" name="rSkips" value="0" />
+                                                                                                                                <input type="hidden" name="marine" value="1" />
+                                                                                                    <input type="hidden" name="fossil" value="4" />
+                                                                                    </form>
+                    </div>
+                    <div class="aphia-nav-menu-table-cell-col2">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/aphia.php?p=search"><span class="fa fa-search"></span>&nbsp;Taxa</a></li>
+                            <li><a href="/aphia.php?p=sources"><span class="fa fa-graduation-cap fa-1x"></span>&nbsp;Literature</a></li>
+                            <li><a href="/aphia.php?p=checklist"><span class="fa fa-map fa-1x"></span>&nbsp;Distribution</a></li>
+                            <li><a href="/aphia.php?p=specimens"><span class="fa fa-tags fa-1x"></span>&nbsp;Specimen</a></li>
+                                                        <li><a href="/aphia.php?p=editors"><span class="fa fa-users fa-1x"></span>&nbsp;Editors</a></li>
+                            <li><a href="/aphia.php?p=stats"><span class="fa fa-line-chart fa-1x"></span>&nbsp;Statistics</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false"><span class="fa fa-gears fa-1x"></span>&nbsp;Tools
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/aphia.php?p=match"><span class="fa fa-binoculars fa-1x"></span>&nbsp;Match taxa</a></li>
+                                    <li><a href="/aphia.php?p=webservice"><span class="fa fa-globe fa-1x"></span>&nbsp;Webservices</a></li>
+                                    <li><a href="/aphia.php?p=browser"><span class="fa fa-sitemap fa-1x"></span>&nbsp;Taxon tree</a></li>
+                                    <li><a href="/aphia.php?p=idkeys"><span class="fa fa-puzzle-piece fa-1x"></span>&nbsp;IDKeys</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/aphia.php?p=manual"><span class="fa fa-book fa-1x"></span>&nbsp;Manual</a></li>
+                                                                                                                                                                                                <li><a href="/aphia.php?p=login&amp;decodetype=1&amp;redirect=L2Fib3V0LnBocA=="><span class="fa fa-lock fa-1x"></span>&nbsp;Log in</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+<div class="container-fluid worms-content">
+<div class="row">
+        <nav id="scroll_spy" class="col-sm-3 col-lg-2 about_nav_section" style="visibility: hidden;">
+                <ul class="nav nav-pills nav-stacked affix" data-spy="affix" data-offset-top="205" data-offset-bottom="434" style="width: 200px; min-height: 350px;">
+            <li><a href="#what_is_worms">What is WoRMS</a></li>
+            <li><a href="#what_is_aphia">What is Aphia</a></li>
+            <li><a href="#classification">Higher classification</a></li>
+            <li><a href="/lifewatch.php" data-target="#what_is_lifewatch">What is LifeWatch</a></li>
+			<li><a href="#oceandecade">Ocean Decade</a></li>
+            <li><a href="#governance">Governance</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#funding">Funding</a></li>
+            <li><a href="#terms">Terms of use</a></li>
+            <li><a href="#cite_worms">Citing WoRMS</a></li>
+            <li><a href="/wormsliterature.php" data-target="#worms_literature">WoRMS in literature</a></li>
+            <li><a href="#plosone">PLoS One collection</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#awards">WoRMS Awards</a></li>
+            <li id="worms_top_ten"><a href="/worms-top-ten">WoRMS top 10</a></li>
+        </ul>
+    </nav>
+        <div class="col-sm-9 col-lg-10 about_content_section">
+        <br />
+                <div id="what_is_worms" class="worms_content_section worms_content_section_colored">
+            <p class="h1 worms_content_color_main">What is WoRMS?</p>
+<br />
+<p>
+    The aim of a World Register of Marine Species (WoRMS) is to provide an authoritative and comprehensive
+    list of names of marine organisms, including information on synonymy. While the highest priority goes to
+    valid names, other names in use are included so that this register can serve as a guide to interpret
+    taxonomic literature.
+</p>
+<p>
+    The content of WoRMS is controlled by taxonomic and thematic experts, not by database managers. WoRMS has an
+    editorial management system where each taxonomic group is represented by an expert who has the
+    authority over the content, and is responsible for controlling the quality of the information.
+    Each of these main taxonomic editors can invite several specialists of smaller groups within their
+    area of responsibility to join them.
+</p>
+<p>
+    This register of marine species grew out of the European Register of Marine Species (<a href="http://www.marbef.org/data/erms.php" target="_blank">ERMS</a>),
+    and its combination with several other species registers maintained at the Flanders Marine Institute (<a href="http://www.vliz.be" target="_blank">VLIZ</a>).
+    Rather than building separate registers for all projects, and to make sure taxonomy used in these different projects is consistent,
+    VLIZ developed a consolidated database called ‘Aphia’. A list of marine species registers included in Aphia is available <a href="/subregisters.php">here</a>.
+    MarineSpecies.org is the web interface for the marine taxa available in this Aphia database. WoRMS combines information from
+    Aphia with other authoritative marine species lists which are maintained by others (e.g. <a href="https://www.algaebase.org" target="_blank">AlgaeBase</a>,
+    <a href="http://www.fishbase.org" target="_blank">FishBase</a>), the so-called 'externally hosted and managed species databases'.
+</p>
+<p>
+    Resources to build MarineSpecies.org and Aphia were provided mainly by the EU Network of Excellence
+    ‘Marine Biodiversity and Ecosystem Functioning’ (<a href="http://www.marbef.org" target="_blank">MarBEF</a>),
+    and also by the EU funded Species 2000 Europe and ERMS projects.
+</p>
+<p>
+    Aphia contains valid species names, synonyms and vernacular names, and extra information such as
+    literature and biogeographic data. Besides species names, Aphia also contains the higher classification
+    in which each scientific name is linked to its parent taxon. The classification used is a ‘compromise’
+    between established systems and recent changes. Its aim is to aid data management, rather than suggest
+    any taxonomic or phylogenetic opinion on species relationships.
+</p>
+<p>
+    Keeping WoRMS up-to-date is a continuous process. New information is entered daily by the taxonomic
+    editors and by the members of our data management team. Often data also come in from contributions of
+    large datasets, such as global or regional species lists. No database of this size is without errors
+    and omissions. We can’t promise to make no errors, but we do promise to follow up and give feedback
+    on any communications pointing out errors. Feedback is very welcome!
+</p>
+        </div>
+                            <div id="what_is_aphia" class="worms_content_section worms_content_section_colored">
+                <p class="h1 worms_content_color_main">What is Aphia?</p>
+<br />
+<div class="row">
+	<div class="col-xs-12">
+		<img style="padding: 0 20px 20px 20px;" class="pull-right img-responsive" src="/images/layout/about/aphia_conceptmodel.jpg" title="conceptual model of the Aphia database" width="350" />
+		<p>
+			The Aphia platform is an infrastructure designed to capture taxonomic and related data and information, and includes an online editing environment.
+			It is the core platform that underpins the World Register of Marine Species (WoRMS) and all its related global, regional and thematic species databases, but it also allows the storage of non-marine data.
+		</p>
+		<p>
+			The Aphia platform is an MS SQL database, containing over 400 fields spread over more than 80 related tables. Content-wise, the Aphia structure can roughly be divided into 10 modules: taxonomy, distribution, traits,
+			specimen information, vernacular names, notes, links, images, identification keys and sources.
+		</p>
+		<p>
+			Almost all information available in Aphia is backed up with a source.
+			This serves a double purpose: it allows easy quality control of the added information and it guides users to potentially more information than what has been documented in Aphia.
+		</p>
+		<p>
+			Aphia uses unique and stable identifiers for each available name in the database, through Life Science Identifiers (LSIDs). The system not only allows the storage of accepted and unaccepted names, but it also
+			documents the relationship between names. This makes it a very powerful tool for taxonomic quality control, and also allows the linking of different pieces of information through scientific names, both within the Aphia
+			platform and in relation to externally hosted databases.
+		</p>
+		<p>
+			Through the use of LSIDs, Aphia - and thus WoRMS - have become an important player in the field of (marine) biodiversity informatics, allowing interactions between its own taxonomic data and e.g. biogeographic databases,
+			such as e.g. the European and international Ocean Biodiversity Information System (<a href="http://www.eurobis.org" target="_blank">EurOBIS</a> & <a href="https://www.obis.org" target="_blank">OBIS</a>).
+		</p>
+		<p>
+			Three main categories of Species Databases can be distinguished in Aphia, based on the use of a context: Global Species Databases (GSD), Regional Species Databases (RSD) and Thematic Species Databases (TSD).
+			All these different Species Databases within Aphia are <a href="#governance">governed on 3 different levels</a>.
+		</p>
+		<p>
+			The use of so-called 'contexts' is unique to Aphia. These contexts allow an easy management of specific content and form the backbone for the creation of distinct portals,
+			through which editors can maintain their taxonomic, thematic or regional register.
+			The advantage of these contexts is that all information only needs to be added once to the database: one entry can then receive multiple contexts and can thus be displayed through several portals.
+		</p>
+		<p>GSDs are based on the higher classification of taxa and include WoRMS, as the global database of all marine life. In RSDs, taxa are grouped based on their known geographic occurrence
+			and TSDs group taxa based on a particular characteristic.
+		</p>
+		<p>
+			Occassionally, new GSDs, RSDs or TSDs are integrated into Aphia through Data Rescue Actions.
+			The reasons for migrating a Register can be multiple, but mostly relates to the need of a permanent host institute and continuous support by a Data Management Team to protect the data from being lost for the scientific community.
+			These kind of actions require thorough planning and the design of a future management plan in close collaboration with the original manager and host institute.
+		</p>
+		<p>
+			For a full description of Aphia, we refer to the publication <a href="https://www.marinespecies.org/imis.php?module=ref&refid=251609" target="_blank">'How Aphia - the platform behind several online and taxonomically oriented databases -
+				can serve both the taxonomic community and the field of biodiversity informatics'</a>.
+		</p>
+	</div>
+</div>
+<br />
+<div class="row">
+	<div class="col-xs-12">
+		<img class="img-responsive center-block" src="/images/layout/about/aphia_only.png" title="Conceptual representation of the relationships between the Aphia platform and its component databases" align="center"/>
+	</div>
+</div>
+            </div>
+                        <div id="classification" class="worms_content_section worms_content_section_colored">
+            <p class="h1 worms_content_color_main">Higher classification</p>
+<br />
+
+<p>
+	A higher level classification of all living organisms was published by <a href="aphia.php?p=sourcedetails&amp;id=365361" target="_blank">Ruggiero et al. (2015)</a>.<br />
+	This paper provides a management classification for all living organisms and forms the basis for the Catalogue of Life higher classification.
+</p>
+
+<p>
+	A comparison between this paper and the higher classification in WoRMS has been made. Where inconsistencies appear, the responsible editors were consulted to see if changes are needed.
+	WoRMS aims to reflect current knowledge and therefore allows newer publications to be applied to higher level taxa, supported by appropriate sources which will be indicated on the subregister or taxon page.
+
+	If no editor is available for a group, the classification by Ruggiero et al. (2015) will be followed. Ruggiero et al. (2015) cover the classification from superkingdom to order level.
+	Below the rank of order (e.g., suborder, infraorder, parvorder, superfamily, family, subfamily, genus) the classification is the responsibility of the editor of the taxon.
+</p>
+
+        </div>
+                            <div id="what_is_lifewatch" class="worms_content_section worms_content_section_colored">
+                <p class="h1 worms_content_color_main">What is LifeWatch?</p>
+<br />
+<div class="row">
+    <div class="col-xs-12">
+        <p class="h4 worms_content_color_main">Background</p>
+        <img style="padding: 0 20px 20px 20px;" class="pull-right" src="//www.marinespecies.org/images/layout/logoLW_BE.png" title="LifeWatchBE" width="160" />
+        <p>
+            LifeWatch was established as part of the European Strategy Forum on Research Infrastructure (ESFRI) and can be seen as a virtual laboratory for biodiversity research.
+            The concept behind LifeWatch was developed in the 1990s and early 2000s, with the support of EU Networks of Excellence related to biodiversity and ecosystem functioning.
+            This - amongst others - included the <a href="http://www.marbef.org" target="_blank">MarBEF</a> project, which was the driving project behind the creation
+            of the European Register of Marine Species (<a href="http://www.marbef.org/data/erms.php" target="_blank">ERMS</a>) data system - the predecessor of the World Register of Marine Species (<a href="https://www.marinespecies.org/" target="_blank">WoRMS</a>).
+        </p>
+        <p>
+            Belgium contributes to LifeWatch with varied and complementary "in-kind" contributions. These are implemented under the form of long lasting projects
+            by different research centers and universities spread over the country and supported by each respective political authority. Within LifeWatch,
+            the <a href="https://www.vliz.be" target="_blank">Flanders Marine Institute</a> - host of the World Register of Marine Species (WoRMS) - has taken on the responsibility to develop the
+            <a href="https://www.lifewatch.be/biodiversity-data-systems" target="_blank">LifeWatch Species Information Backbone</a>.
+        </p>
+        <br />
+        <p class="h4 worms_content_color_main">LifeWatch mission</p>
+        <p>
+            The mission of LifeWatch is to advance biodiversity research and to provide major contributions to address the big environmental challenges,
+            such as knowledge-based solutions to environmental managers in the framework of preservation or dealing with long-standing ecological questions
+            that could so far not be addressed due to a lack of data or - more importantly - a lack of good and easy access to data.
+        </p>
+        <p>
+            The LifeWatch mission is being achieved by giving access to data and information through a single infrastructure which (virtually) brings together
+            a large range and variety of datasets, services and tools. Scientists can use these tools and services to construct so-called Virtual Research Environments (VREs),
+            where they are able to address specific questions related to biodiversity research, including e.g. topics related to preservation.
+        </p>
+        <p>
+            The construction and operation of the LifeWatch e-infrastructure is revolutionizing the way scientists can do biodiversity research.
+            They are not only offered an environment with unlimited computer and data storing capacity, but there is also transparency at all stages of their research process
+            and the generic application of the e-infrastructure open the door towards more inter- and multidisciplinary research.
+        </p>
+        <br />
+        <p class="h4 worms_content_color_main">LifeWatch Species Information Backbone</p>
+        <p>
+            The Flanders Marine Institute (<a href="https://www.vliz.be" target="_blank">VLIZ</a>) is responsible for the set-up of the <a href="https://www.lifewatch.be/biodiversity-data-systems" target="_blank">LifeWatch Species Information Backbone</a>,
+            as a central part of the European LifeWatch Infrastructure.
+        </p>
+        <p>
+            The backbone aims to (virtually) bring together different component databases and data systems, all of them related to taxonomy, biogeography, ecology, genetics and literature.
+            By doing so, the backbone standardises species data and integrates biodiversity data from different repositories and operating facilities and is the driving force behind the species information services
+            of the Belgian LifeWatch.be <a href="https://www.lifewatch.be/e-lab" target="_blank">e-Lab</a> that is being developed.
+        </p>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-xs-12">
+                <img style="padding: 0 30px 20px 0;" class="pull-left img-responsive" src="//www.marinespecies.org/images/layout/lifewatch_backbone.png" title="LifeWatch backbone" width="512" />
+                <div>
+            <p>The LifeWatch Species Information Backbone consists of five major components:
+            <ol style="overflow: hidden;">
+                <li>Taxonomy (species registers) </li>
+                <li>Biogeography (species occurrences)</li>
+                <li>Literature</li>
+                <li>Ecology (traits)</li>
+                <li>Genetics</li>
+            </ol>
+            <p>
+                                WoRMS not only contributes to the Species Registers in the backbone, but also to all of the other parts.
+                As all the <a href="https://www.obis.org/dataset/b74b429a-4052-4f5b-bff3-fe0b5a2e8669" target="_blank">WoRMS type localities</a> - where there is latitude & longitude information available -
+                are sent to the Ocean Biodiversity Information System (<a href="https://www.obis.org" target="_blank">OBIS</a>), through its European node <a href="http://www.eurobis.org" target="_blank">EurOBIS</a>,
+                WoRMS also contributes to the biogeographic part of the backbone.
+                In addition, all the <a href="aphia.php?p=sources" target="_blank">literature</a> that is available through WoRMS - from original descriptions to large-scale taxon overviews and ecological papers - is at the disposal of the backbone.
+                As WoRMS also stores trait information - either documented by its editorial network or shared through externally hosted and managed species databases -, these data contribute to the traits-part of the LifeWatch Species Information Backbone,
+                allowing e.g. the link between taxonomy, biogeography and traits through LifeWatch web services.
+                So far, the only link from WoRMS to the genetics part of the LifeWatch Species Information Backbone is the fact that WoRMS provides deep-links to <a href="https://www.ncbi.nlm.nih.gov/genbank/" target="_blank">GenBank</a> on its species pages.
+                            </p>
+            <p>
+                Through the LifeWatch Species Information Backbone, users benefit in several ways, amongst others by:
+            <ul style="overflow: hidden;">
+                <li>Easy access to data and information to a variety of resources, including the World Register of Marine Species                <li>The opportunity to quality control their own data, by cross-checking with data available through the backbone, e.g. perform a taxon-match against WoRMS, to verify their own species names
+                <li>Easy access to a wide range of data services and web services, free to use
+                <li>The possibility to combine available services into workflows, and link several systems together (e.g. link taxonomic and traits information from WoRMS with biogeographic information from OBIS)
+            </ul>
+            The coordination and development of the <a href="https://www.lifewatch.be/biodiversity-data-systems" target="_blank">LifeWatch Species Information Backbone</a> happens at three different levels:
+            <ol style="overflow: hidden;">
+                <li>Setting up a central species information backbone</li>
+                <li>Completing and updating the taxonomic and species related data</li>
+                <li>Organizing and mobilizing the taxonomic experts that provide the data</li>
+            </ol>
+            </p>
+        </div>
+    </div>
+</div>
+<br/>
+<p>
+    The work done at all these levels is strongly reflected in the ongoing activities of the World Register of Marine Species and are described in detail under <a href="/about.php#activities" target="_blank">Activities</a>.
+    WoRMS - and more specifically the <a href="/about.php#what_is_aphia" target="_blank">Aphia platform</a> - is currently the biggest contributor to the taxonomic part of the LifeWatch Species Information Backbone.
+    The work of the DMT is currently being <a href="/about.php#funding" target="_blank">funded</a> through the LifeWatch project.
+</p>
+            </div>
+                        <div id="oceandecade" class="worms_content_section worms_content_section_colored">
+            <p class="h1 worms_content_color_main">UN Decade For Ocean Sciences</p>
+<br />
+
+	<img style="margin: 0 0 0 20px;" class="pull-right" src="images/layout/about/un_decade_logo.png" width="250" />
+
+	<p class="h4 worms_content_color_main">Ocean Decade vision</p>
+	<p>
+	The vision of the <a href="https://www.oceandecade.org" target="_blank">United Nations Decade of Ocean Science for Sustainable Development (2021-2030)</a> is the "science we need for the ocean we want".
+	The Ocean Decade is a convening framework for diverse stakeholders to co-design and co-deliver solution-oriented research needed for a well-functioning ocean in support of the 2030 Agenda. Capacity development, ocean literacy and the removal of barriers to full gender, generational, and geographic diversity are essential elements of the Decade.
+	</p>
+	<br/>
+
+	<p class="h4 worms_content_color_main">ABC WoRMS: Above and Beyond - Completing the World Register of Marine Species</p>
+	
+	<p>
+	During 2021, the WoRMS Steering Committee and Data Management Team submitted a proposal under the first call for Actions,
+	entitled "Above and Beyond &#8212; Completing the World Register of Marine Species" (<a href="https://www.oceandecade.org/actions/above-and-beyond-completing-the-world-register-of-marine-species-abc-worms/" target="_blank">ABC WoRMS</a>),
+	which received endorsement as an official UN Ocean Decade Project in October 2021.
+	</p>
+	
+	<p>
+	During the full span of the Ocean Decade, WoRMS will continue its endeavors to be able to provide a full taxonomic overview of all marine life,
+	thereby not only supporting scientists, but everyone who makes use of species names, including policy, industry and the public at large.
+	Although already fairly complete, taxonomic gaps still need to be addressed, in both space and time. New challenges in the field of taxonomy -
+	such as temporary names - need to be explored, thereby looking for the best suitable solution for all WoRMS users.
+	</p>
+
+	<p>
+	The documentation of species traits which are of critical importance for ecological marine research will be encouraged, as will there be increased efforts
+	to link with other global databases, infrastructures and initiatives such as
+	<a href="https://www.lifewatch.be/" target="_blank">LifeWatch</a>,
+	<a href="https://www.lifewatch.be/biodiversity-data-systems" target="_blank">LifeWatch Species Information Backbone</a>,
+	<a href="https://www.obis.org" target="_blank">OBIS</a>,
+	<a href="https://www.goosocean.org/" target="_blank">GOOS</a>,
+	<a href="https://www.catalogueoflife.org/" target="_blank">COL</a>,
+	<a href="https://www.boldsystems.org/" target="_blank">BoLD</a> &
+	<a href="https://www.ncbi.nlm.nih.gov/genbank/" target="_blank">GenBank</a>.
+	</p>
+
+	<br />
+
+	<p class="h5 worms_content_color_main"><b>High-level objectives of WoRMS within the UN Ocean Decade</b></p>
+	<p>
+			<ul>
+				<li>To provide a complete database of marine taxon names, by targeting the currently identified priorities and gaps, documenting the relationships between existing names, and linking each name to supporting taxonomic literature.</li>
+				<li>To serve as a data rescue platform for taxonomically-focused databases at the brink of disappearing, thereby safeguarding expert knowledge and making it widely and publicly available.</li>
+				<li>To develop a strategy and guidelines to consistently deal with well-established temporary names and open taxonomic nomenclature	within the World Register of Marine Species, as this kind of nomenclature is being used more frequently by the taxonomic community and can no longer be ignored in taxonomic databases.</li>
+				<li>To encourage the documentation of species traits which are of critical importance for ecological marine research. Trait information is not always easily available and accessible, but WoRMS provides an excellent platform for the capture of these data in a structured and easily accessible format.</li>
+				<li>To provide improved support and links between other global databases and infrastructures that use a marine taxonomic backbone, such as the Ocean Biodiversity Information System (OBIS) & the Global Ocean Observing System (GOOS), as well as improved content and stronger relationships with environment-independent initiatives and infrastructures such as Catalogue of Life (COL), the Barcode of Life Data System (BoLD) & GenBank.</li>
+				<li>To widen the user-group of WoRMS, targeting all groups of the so-called quadruple helix: scientists, policy makers,	industry and the public at large.</li>
+			</ul>
+	</p>
+
+	<p class="h4 worms_content_color_main">WoRMS & Marine Life 2030</p>
+
+	<img style="margin: 0 0 0 20px;" class="pull-right" src="images/layout/about/marinelife_2030_logo.png" width="150">
+
+	<p>
+	As an Ocean Decade Project, WoRMS is linked to the endorsed Action Programme Marine Life 2030: A Global Integrated Marine Biodiversity
+	Information Management and Forecasting System for Sustainable Development and Conservation.
+	Marine Life 2030 will unite existing and frontier technologies and partners into a global, interoperable network and community of practice
+	advancing observation and forecasting of marine life. It will establish a globally coordinated system to deliver actionable, transdisciplinary
+	knowledge of ocean life to those who need it, promoting human well-being, sustainable development and ocean conservation.
+	See also <a href="https://marinelife2030.org/" target="_blank">Marine Life 2030</a> official website.
+
+	</p>
+
+
+	<p class="h4 worms_content_color_main">WoRMS & Challenger 150</p>
+
+	<img style="margin: 0 0 0 20px;" class="pull-right" src="images/layout/about/Challenger_150_logo_FINAL_small.png" width="150">
+
+	<p>
+	Early 2023, WoRMS formed a partnership with the endorsed Action Programme Challenger 150. The Challenger 150 programme is a global 
+	scientific cooperative developed to respond to the needs of the UN Ocean Decade, and is a vehicle for the coordination of deep-sea research 
+	globally towards a set of common objectives. Challenger 150 recognises WoRMS as the global marine taxonomy standard, and aims to partner 
+	with the WoRMS taxonomic editors to  deliver high quality biodiversity observations and support the development of novel tools, technologies, 
+	and training materials to raise standards in biological observation data.  One of the working groups focuses on the development of 
+	standards in image annotation, building on efforts such as the Australian CATAMI classification system and the SMarTaR-ID project, 
+	which could highly benefit from the WoRMS editor involvement.
+	See also <a href="https://challenger150.world/" target="_blank">Challenger 150</a> official website.
+
+	</p>
+
+	<br />
+
+
+	<p class="h4 worms_content_color_main">WoRMS & Sustainable Development Goals</p>
+
+	<p>WoRMS mainly and directly contributes to <a href="https://sdgs.un.org/goals/goal14" target="_blank">Goal 14, Life Below Water</a>.</p>
+	
+	<img style="margin: 20px 20px 20px 0;" class="pull-left" src="images/layout/about/sdg_goals_14_icon.png" width="120">
+	
+	<p>
+	In order to be able to protect, conserve and sustainably manage marine life,
+	knowledge of which species are encountered below the surface of oceans and seas,
+	and their characteristics, is critical to our ability to define their potential as a resource, their potential threats,
+	and to develop means to protect and sustainably manage them.
+	When looking at the distribution of marine life, one needs to be able to correctly name a species.
+	</p>
+	
+	<p>
+	Additionally, linking a species and its characteristics to its distribution can give valuable insights on how a species
+	is affected by its surroundings. Knowing which species have a calcified skeleton is highly relevant in any research linked to climate change
+	and ocean acidification (<a href="https://sdgs.un.org/goals/goal13" target="_blank">Goal 13: Climate Action</a>).
+	WoRMS provides a global marine species register, with links between 'old' and 'new' names for species,
+	including a platform for documentation of relevant traits or characteristics. WoRMS can be used as a taxonomic and traits-backbone with
+	large infrastructures such as OBIS and GOOS.
+	</p>
+        </div>
+                        <div id="governance" class="worms_content_section worms_content_section_colored">
+            <style>
+    .about_governance_sc_member {
+        list-style: none;
+    }
+    .about_governance_sc_member li div {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .about_governance_sc_member li div > div {
+        display: inline-block;
+        white-space: normal;
+    }
+    .worms_gmap_editors {
+        padding-left: 40px;
+        display: block;
+        width: 60vw;
+        height: 50vh;
+    }
+</style>
+<p class="h1 worms_content_color_main">Governance</p>
+<br />
+WoRMS is managed at three different levels, each having their own tasks and responsibilities:
+<ol>
+    <li> the Steering Committee (SC) </li>
+    <li> the Editorial Board </li>
+    <li> the Data Management Team (DMT) </li>
+</ol>
+
+<p class="h2 worms_content_color_main">1. Steering Committee (SC)</p>
+<p>
+    The WoRMS Steering Committee (SC) represents the members of the WoRMS Editorial Board in all matters related to the databases, including acting as a liaison with other international projects and initiatives.
+    They take care of the day-to-day business of WoRMS and set priorities for future activities.
+    The SC consists of 12 elected members from within the Editorial Board who can serve for a period of 3 years, with the possibility of re-election.
+    The WoRMS SC members appoint a chair and vice-chair by majority vote. The chair and vice-chair are elected for a 3-year term; re-election for a second term is possible.
+</p>
+<ul class="about_governance_sc_member">
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=17407" target="_blank">Ahyong, Shane</a>
+            <div class="label label-default">Chair</div>            <br />
+            <small>Australian Museum; Marine Invertebrates, Australia</small>
+            <br />
+            <small>Last elected: 2025</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=16184" target="_blank">Boyko, Christopher</a>
+            <div class="label label-default">Vice-chair</div>            <br />
+            <small>American Museum of Natural History; Division of Invertebrate Zoology</small>
+            <br />
+            <small>Last elected: 2025</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=34471" target="_blank">Bernot, James</a>
+                        <br />
+            <small>University of Connecticut; Department of Ecology and Evolutionary Biology, USA</small>
+            <br />
+            <small>Last elected: 2022</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=16117" target="_blank">Brandão, Simone</a>
+                        <br />
+            <small>Universidade Federal Rural de Pernambuco; Unidade Acadêmica de Serra Talhada, Brasil</small>
+            <br />
+            <small>Last elected: 2025</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=32567" target="_blank">Daly, Meg</a>
+                        <br />
+            <small>Ohio State University; Department of Evolution, Ecology and Organismal Biology, USA</small>
+            <br />
+            <small>Last elected: 2025</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=657" target="_blank">De Grave, Sammy</a>
+                        <br />
+            <small>University of Oxford; Museum of Natural History, UK</small>
+            <br />
+            <small>Last elected: 2025</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=16327" target="_blank">de Voogd, Nicole</a>
+                        <br />
+            <small>Naturalis Biodiversity Center, Netherlands</small>
+            <br />
+            <small>Last elected: 2024</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=7205" target="_blank">Gofas, Serge</a>
+                        <br />
+            <small>University of Málaga; Faculty of Sciences; Departamento de Biología Animal, Spain</small>
+            <br />
+            <small>Last elected: 2025</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=131" target="_blank">Hernandez, Francisco</a>
+            <div class="label label-default">ex officio, datamanager, substitute: Leen Vandepitte</div>            <br />
+            <small>Vlaams Instituut voor de Zee, Belgium</small>
+            <br />
+                    </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=48" target="_blank">Mees, Jan</a>
+                        <br />
+            <small>Vlaams Instituut voor de Zee, Belgium</small>
+            <br />
+            <small>Last elected: 2025</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=30767" target="_blank">Neubauer, Thomas A.</a>
+                        <br />
+            <small>Bavarian State Collection for Paleontology and Geology, Germany</small>
+            <br />
+            <small>Last elected: 2025</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=15750" target="_blank">Paulay, Gustav</a>
+                        <br />
+            <small>University of Florida; Florida Museum of Natural History, USA</small>
+            <br />
+            <small>Last elected: 2023</small>        </div>
+    </li>
+    <li>
+        <div>
+            <a href="https://www.marinespecies.org/imis.php?module=person&persid=29364" target="_blank">van der Meij, Sancia</a>
+                        <br />
+            <small>Naturalis Biodiversity Center, Netherlands</small>
+            <br />
+            <small>Last elected: 2024</small>        </div>
+    </li>
+</ul>
+
+
+<p class="h2 worms_content_color_main">2. Editorial board</p>
+<p>
+    The Editorial Board includes all active editors and data providers.
+    Their main task is to take responsibility for one or more taxa, themes or regions under their expertise, by adding newly published taxa to WoRMS, correcting errors and constantly being on the look-out for information of interest to WoRMS.
+    The Editorial board is the pivot of WoRMS: they dedicate their spare time to making WoRMS more complete and helping the DMT in answering user questions and fixing issues that arise from quality control.
+</p>
+<p>
+    The Editorial Board is a very dynamic body. A full list of all the taxonomic experts can be found on the <a href="aphia.php?p=editors">editors</a> page.
+</p>
+<p>
+    <a href="#" onclick="var addr=$('<textarea/>').html('&amp;#105;&amp;#110;&amp;#102;&amp;#111;&amp;#64;&amp;#109;&amp;#97;&amp;#114;&amp;#105;&amp;#110;&amp;#101;&amp;#115;&amp;#112;&amp;#101;&amp;#99;&amp;#105;&amp;#101;&amp;#115;&amp;#46;&amp;#111;&amp;#114;&amp;#103;').text();var check; var self=this;$(window).blur(function(){clearTimeout(check);});check=setTimeout(function(){self.innerText=addr;},3000);window.location.href='mailto:' + addr + '?subject=Governance Info'; return false;">Send us an email</a> if
+    you have any questions or want to contribute to this initiative.
+</p>
+<p class="h4 worms_content_main_color">Our editors around the world!</p>
+<div id="about_governance_map" style="height:50vh;">
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $.ajax({
+            method: "GET",
+            url: "/map.php?type=te"
+        }).done(function( data ) {
+            $('#about_governance_map').html(data);
+        });
+    });
+</script>
+<p class="h2 worms_content_color_main">3. Data Management Team (DMT)</p>
+<p>
+    The Data Management Team is based at the Flanders Marine Institute (VLIZ - Belgium), home of the World Register of Marine Species.
+    The DMT consists of both technical and scientific staff, each following up on specific aspects of WoRMS.
+    The DMT is responsible for keeping the database online, protecting its integrity and the persistence of the unique identifiers (AphiaIDs).
+<p>
+<p>
+    View the current <a href="aphia.php?p=editors&amp;context=dmt" target="_blank">Data Management Team</a> (DMT) members.
+</p>
+<p>The DMT provides support on different levels:</p>
+<div class="indent">
+    <p class="h4 worms_content_color_main header-bullet">Support to editors</p>
+    <p class="indent">
+        The DMT supervises all ongoing editing activities and supports editors where needed in their work.The support can be both on the technical and content side of the database. The DMT can upload bulk information into the database and run specific queries to help identify gaps or issues for editors to deal with.
+        In addition, the DMT also does online editing upon request of the editors.
+        An <a href="aphia.php?p=manual" target="_blank">online manual</a> provides background information on how editors can work with the online editing interface. The DMT is always stand-by to help editors with the use of this interface.
+        Additionally, the DMT may develop new tools and features that enhance the data entry.
+    </p>
+</div>
+<div class="indent">
+    <p class="h4 worms_content_color_main header-bullet">Support to users</p>
+    <p class="indent">
+        Through  <a href="#" onclick="var addr=$('<textarea/>').html('&amp;#105;&amp;#110;&amp;#102;&amp;#111;&amp;#64;&amp;#109;&amp;#97;&amp;#114;&amp;#105;&amp;#110;&amp;#101;&amp;#115;&amp;#112;&amp;#101;&amp;#99;&amp;#105;&amp;#101;&amp;#115;&amp;#46;&amp;#111;&amp;#114;&amp;#103;').text();var check; var self=this;$(window).blur(function(){clearTimeout(check);});check=setTimeout(function(){self.innerText=addr;},3000);window.location.href='mailto:' + addr + '?subject=Governance Info'; return false;">email</a>, the DMT is receiving a lot of questions such as:  requests to identify encountered species during field or diving trips, the removal of duplicates, reporting errors in the database, etc...<br />
+        The DMT works as a filter between our users and the editors, to avoid an overload of emails for our editors.
+        The DMT also manages the distribution of the monthly downloads and deals with custom-tailored user requests regarding extraction of content from the database.
+        In addition, it provides exports of the database to <a href="/users.php" target="_blank">numerous other initiatives</a>.
+    </p>
+</div>
+<div class="indent">
+    <p class="h4 worms_content_color_main header-bullet">IT developments</p>
+    <p class="indent">
+        New technical developments mostly take place in the framework of projects or link to initiatives within the WoRMS community.
+        The DMT provides a continuous technical support to the many users of WoRMS, including fixing minor bugs brought to our attention, help in modifying
+        web service client scripts and help in setting up batch upload of information (e.g. images, deep links, ...).
+        The WoRMS database is archived every month and you may request a copy in compliance with the terms and conditions as outlined the <a href="/usersrequest.php" target="_blank">request form</a>.
+        If you are interested in the structure of the database, we have created a view at <a href="/structure/" target="_blank">WoRMS structure</a>.
+    </p>
+</div>
+        </div>
+                        <div id="partners" class="worms_content_section worms_content_section_colored">
+            <p class="h1 worms_content_color_main">Partners</p>
+<br />
+<p>
+	WoRMS cannot only count on its vast network of <a href="aphia.php?p=editors">editors</a> to maintain and expand its content, but can also rely on other taxonomic databases,
+	willing to share their expertise and content with WoRMS. Within WoRMS, these databases are referred to as 'externally hosted and managed Species Databases'.
+</p>
+<p>
+	The reason for such collaborations is simple: if something good already exists, the effort should not be duplicated. Agreements have been sought with all these databases, so that their content can also
+	be stored in Aphia and can be displayed through the different relevant portals. The responsibility for the content and the daily management remains with the original host institute.
+	The majority of the information pulled from these databases relates to taxonomy, although collaboration can also be sought based on distribution or traits information these sources have available.
+</p>
+<p>
+	WoRMS is currently pulling information from the following externally hosted and managed Species Databases:
+	<ul>
+		<li><a href="https://www.algaebase.org" target="_blank">AlgaeBase</a></li>
+		<li><a href="https://www.fishbase.org" target="_blank">FishBase</a></li>
+		<li><a href="http://www.indexfungorum.org/" target="_blank">Index Fungorum (IF)</a></li>
+		<li><a href="https://talk.ictvonline.org/" target="_blank">International Committee on Taxonomy of Viruses (ICTV)</a></li>
+		<li><a href="https://faculty.washington.edu/cemills/Ctenolist.html" target="_blank">Phylum Ctenophora: list of all valid species names</a></li>
+		<li><a href="http://www.reptile-database.org/" target="_blank">The Reptile Database</a></li>
+		<li><a href="http://fada.biodiversity.be/" target="_blank">the Freshwater Animal Diversity Assessment (FADA)</a></li>
+		<li><a href="http://www.bryozoa.net/" target="_blank">Recent & Fossil Bryozoa</a></li>
+		<li><a href="https://www.sealifebase.org/" target="_blank">SeaLifeBase</a></li>
+	</ul>
+</p>
+<p>
+	For large-scale collaborations - and specifically cases where the content of WoRMS is distributed through other channels - Memoranda of Understanding (MoUs) are set up (or in the process of being set up)
+	between WoRMS and these external systems.
+	These MoUs discuss in detail under which conditions the WoRMS data can be shared and - in case of a two-way data exchange - how WoRMS can use the data from the other resource.
+	An overview of the current MoUs is available in the <a href="/documents.php?exclusiveFolder=/MoUs_ToUs/">Documents section</a>.
+</p>
+<p>
+	There are not only systems that receive data from WoRMS or share their data with WoRMS, but WoRMS is also heavily used as a taxonomic quality control tool for other data systems, within projects or by individual researchers.
+	They mostly make use of the online tools and services WoRMS is offering, and cross-check the quality of their own species lists with what is available in WoRMS.
+	Some instances receive a monthly download of WoRMS, which is used for similar purposes. The <a href="/users.php">Users page</a> lists all known users and for which reasons they are using WoRMS.
+</p>
+<p>
+	WoRMS is (part of) the taxonomic backbone behind several projects and initiatives, such as <a href="https://www.eurobis.org/standards" target="_blank">EurOBIS</a>, <a href="https://www.obis.org" target="_blank">OBIS</a>,
+	<a href="https://www.gbif.org" target="_blank">GBIF</a> and <a href="https://www.emodnet-biology.eu/data-infrastructure" target="_blank">EMODnet Biology</a>.
+	Within these initiatives, WoRMS is used to cross-check the taxonomic names available in each of these data systems. The idea is that each name in those systems is linked to a name in WoRMS, or an explanation for not linking is provided.
+</p>
+<p>
+	Not only the taxonomy of WoRMS can be used for quality control purposes, but also the available distribution information.
+	As an extra functionality, the occurrence information of OBIS can be combined with the available distribution maps in WoRMS. The visual comparison of WoRMS and OBIS for species distributions can act as an extra
+	quality control for both systems: deviations could point to a data gap in WoRMS or could indicate possible errors in OBIS.
+	Both of these outcomes can help improve the content and quality of the two databases.
+</p>
+<img class="img-responsive center-block" src="/images/layout/about/aphia_infograph.png" title="Aphia infographic" align="center">
+        </div>
+                        <div id="funding" class="worms_content_section worms_content_section_colored">
+            <p class="h1 worms_content_color_main">Funding</p>
+<br />
+<p><b>All WoRMS content is open-access and available at no charge</b>.</p>
+<p>
+	The maintenance and further development of WoRMS relies on financial contributions, the time contributed by
+	its <a href="aphia.php?p=editors" target="_blank">editorial board</a>, and support of its host institution: <a href="http://www.vliz.be" target="_blank">VLIZ</a>.
+</p>
+<p>
+	WoRMS is currently funded through the <a href="https://www.lifewatch.be" target="_blank">LifeWatch Belgium</a> project.
+</p>
+<p>
+	Through LifeWatch, it is possible to have a dedicated Data Management Team supporting the many WoRMS editors and users.
+</p>
+<p>
+	If you would like to know how you can contribute to WoRMS, please visit our <a href="/contribute.php">'contribute' page.</a>
+</p>
+<br />
+<p>
+	In the past, several projects and initiatives have provided funding for WoRMS.
+</p>
+<div class="indent">
+	<p class="h4 worms_content_color_main header-bullet">Project funding</p>
+	<div class="indent">
+		<p>The following European Commission projects financially contributed to WoRMS:</p>
+		<ul>
+			<li>2004-2009: Marine Biodiversity and Ecosystem Functioning (<a href="http://www.marbef.org" target="_blank">MarBEF</a>)</li>
+			<li>2009-2011: Pan-European Species directories Infrastructure (<a href="https://www.eu-nomen.eu" target="_blank">PESI</a>)</li>
+			<li>2010-2012: European Marine Observation and Data NETwork - EMODnet Biology I (<a href="https://emodnet.ec.europa.eu/biology" target="_blank">EMODnet</a>)</li>
+			<li>2010-2012: Distributed Dynamic Diversity Databases for Life (<a href="https://cordis.europa.eu/project/id/261555" target="_blank">4D4Life</a>)</li>
+			<li>2013-2016: European Marine Observation and Data NETwork - EMODnet Biology II (<a href="https://emodnet.ec.europa.eu/biology" target="_blank">EMODnet</a>)</li>
+			<li>2014-2016: Aquatic Species Register Exchange and Services (<a href="https://odnature.naturalsciences.be/aquares" target="_blank">AquaRES</a>)</li>
+			<li>2017-2020: European Marine Observation and Data NETwork - EMODnet Biology III (<a href="https://emodnet.ec.europa.eu/biology" target="_blank">EMODnet</a>)</li>
+			<li>2024-2025: Transforming European Taxonomy through Training, Research and Innovations - 3rd Party Projects (<a href="https://tettris.eu" target="_blank">TETTRIs</a>)</li>
+			<li>2012-2026: LifeWatch Belgium (<a href="https://www.lifewatch.be" target="_blank">www.lifewatch.be</a>) - See [<a href="#activities">activities</a>]</li>
+		</ul>
+	</div>
+</div>
+<div class="indent">
+	<p class="h4 worms_content_color_main header-bullet">Service grants</p>
+	<div class="indent">
+		<p>
+			Financial support for WoRMS has enabled us to fill some pertinent gaps, such as in those groups where no global species list existed (e.g. ostracods, some parasitic groups, molluscs, ...)
+			or to enhance the quality control (molluscs, birds, …). Funding is used to pay for data entry personnel, coordination and taxonomic expert staff time, travel to key meetings,
+			and has been coordinated through the Flanders Marine Institute (VLIZ), Natural History Museum, (London), Muséum National d'Histoire Naturelle (Paris) and the University of Auckland.
+		</p>
+		<p>
+			Our taxonomic editors contribute significantly to the databases through their own time. Collectively we have estimated this to be worth several million Euros.
+		</p>
+		<p>Examples of such funding include:</p>
+		<ul>
+			<li>Alfred P. Sloan Foundation (via <a href="http://www.coml.org/" target="_blank">Census of Marine Life</a>, Memorial University, Canada)</li>
+			<li><a href="https://www.gbif.org" target="_blank">Global Biodiversity Information Facility</a> (GBIF)</li>
+			<li><a href="https://www.dfo-mpo.gc.ca" target="_blank">Department of Fisheries and Oceans</a> (DFO) (Canada)</li>
+			<li><a href="https://www.medin.org.uk" target="_blank">Marine Environmental Data & Information Network</a> (MEDIN) (UK)</li>
+			<li>National Science Foundation (NSF) <a href="https://sites.duke.edu/cunninghamlab/coordinating-research-on-the-north-atlantic-corona/" target="_blank">CORONA project</a> (USA)</li>
+		</ul>
+	</div>
+</div>
+        </div>
+                        <div id="terms" class="worms_content_section worms_content_section_colored">
+            <p class="h1 worms_content_color_main">Terms of use</p>
+<br />
+<p>
+	The text on the WoRMS pages is open-access under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution License (CC-BY)</a>.
+	This License permits unrestricted use, provided it is cited as requested on the WoRMS webpages, unless stated otherwise on the individual pages.
+</p>
+<p>
+	Images are by default open-access under the terms of the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA license</a>, unless stated otherwise.
+</p>
+<p>
+	Re-distribution of the entire database is not permitted, unless by prior written agreement.
+	This is mainly to avoid circulation of (quickly) outdated copies of WoRMS, accessible through different pathways which can lead to confusion for our many users.
+</p>
+<br />
+<p>
+	In exceptional cases, institutes may request a copy of the database (<a href="/usersrequest.php">using this form</a>), which will be assessed by two WoRMS Steering Committee members and the Data Management Team.<br />
+	These data downloads consist of the taxonomic data only, and do not include additional data such as distributions, traits, notes, etc.<br />
+	We strongly encourage the use of the on-line tools and <a href="aphia.php?p=webservice" target="_blank">available webservices</a> instead of data requests, as the on-line database and webservices can guarantee continuous updates.
+<p>
+<p>
+	The <a href="aphia.php?p=editors">WoRMS Editorial Board</a> maintains this Register, but is aware that the content can have omissions and errors.<br />
+	If you come across any error or incomplete information or you are willing to contribute to this initiative, please contact the <a href="#" onclick="var addr=$('<textarea/>').html('&amp;#105;&amp;#110;&amp;#102;&amp;#111;&amp;#64;&amp;#109;&amp;#97;&amp;#114;&amp;#105;&amp;#110;&amp;#101;&amp;#115;&amp;#112;&amp;#101;&amp;#99;&amp;#105;&amp;#101;&amp;#115;&amp;#46;&amp;#111;&amp;#114;&amp;#103;').text();var check; var self=this;$(window).blur(function(){clearTimeout(check);});check=setTimeout(function(){self.innerText=addr;},3000);window.location.href='mailto:' + addr + '?subject=WoRMS Contact'; return false;">Data Management Team</a> or check out our <a href="/contribute.php" target="_blank">Contribute</a> page.
+</p>
+<p>
+	The majority of the <a href="/photogallery.php" target="_blank">photo gallery</a> drawings used at the first and second level of the gallery are reproduced on WoRMS
+	with permission of the <a href="http://www.linnean.org" target="_blank">Linnean Society of London</a>.
+	The DMT is grateful to them for granting permission for use, thereby giving us the opportunity to make the central entry-point of our photo gallery more uniform.
+	Where images are taken from other resources, this is clearly mentioned on the image.
+</p>
+<div class="row">
+	<div class="col-xs-12">
+		<img style="padding: 0 30px 20px 0;" class="pull-left" src="/images/layout/WoRMS_logo_neg_blue.png" title="WoRMS_LOGO" width="215" />
+		<p>
+			The WoRMS logo was developed by <a href="https://www.marinespecies.org/imis.php?module=person&persid=32695" target="_blank">Sarita Camacho da Encarna&ccedil;&atilde;o</a>, one of the WoRMS taxonomic editors for Foraminifera.
+			Her design was selected by the WoRMS Steering Committee out of more than 75 submissions. The Steering Committee chose this logo for several reasons,
+			including the fact that it did not deviate too far from the style of the previous logo thereby guaranteeing a continuity in the recognition of WoRMS. Sarita's logo also provides the option
+			to switch a central part of the logo for use in the WoRMS related Global, Thematic and Regional registers.
+			This aspect will allow future registers to create their own branding and yet retain the strong connection to WoRMS as a whole.
+		</p>
+	</div>
+</div>
+        </div>
+                        <div id="cite_worms" class="worms_content_section worms_content_section_colored">
+            <p class="h1 worms_content_color_main">Citing WoRMS</p>
+<br />
+<p>
+    WoRMS is continuously updating and strives to reflect current published scientific knowledge, without making new
+    taxonomic decisions. The Data Management Team welcomes any feedback and suggestions for improvement.
+    Usage of data from WoRMS in scientific publications should be acknowledged by citing as follows: <br /><br />
+    <b><a href="aphia.php?p=popup&amp;name=citation" target="_blank">WoRMS Editorial Board</a></b> (2026). World Register of Marine Species. Available from https://www.marinespecies.org at VLIZ. Accessed 2026-09-11. doi:10.14284/170
+<br /><br />[<a href="#" onclick="window.open('aphia.php?p=popup&name=citation','aphia_citation_popup','width=1000,height=600,left=200,top=90,resizable=yes,scrollbars=yes'); return false;">full citation</a>]
+<p>
+<p>
+    If the data from WoRMS constitute a substantial proportion of the records used in analyses, the chief editor(s) of the database should be contacted. There may be additional data which may prove valuable to such analyses.<br />
+    Individual pages are individually authored and dated. These can be cited separately: the proper citation is provided at the bottom of each page. 
+</p>
+
+<p>If you make use of <a href="/subregisters.php" target="_blank">global, regional or thematic registers</a>, please cite these accordingly. Their citations are shown on their web pages.</p>
+        </div>
+                        <div id="worms_literature" class="worms_content_section worms_content_section_colored">
+            <style>
+    .about_worms_listerature_source_text {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    .about_worms_listerature_source_text:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    .about_worms_listerature_source_options {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        color: darkgray;
+    }
+    .about_worms_listerature_source_options a {
+        color: darkgray;
+    }
+    .about_worms_listerature_source_options a:hover {
+        color: darkslategray;
+    }
+</style>
+<p class="h1 worms_content_color_main">WoRMS in literature&nbsp;<span id="worms_in_literature_global_count" class="badge"></span></p>
+<br />
+<p>
+    The library at the Flanders Marine Institute (VLIZ, Belgium) - host institute of WoRMS - keeps track of all publications that refer to or mention WoRMS or any of its sub-registers in their abstract, full-text or reference section,
+    in collaboration with the Data Management Team.
+</p>
+<p>
+    If you would know of a publication (peer-reviewed or other) referring to WoRMS or any of its related registers which is missing from this inventory, please send it to the <a href="#" onclick="var addr=$('<textarea/>').html('&amp;#105;&amp;#110;&amp;#102;&amp;#111;&amp;#64;&amp;#109;&amp;#97;&amp;#114;&amp;#105;&amp;#110;&amp;#101;&amp;#115;&amp;#112;&amp;#101;&amp;#99;&amp;#105;&amp;#101;&amp;#115;&amp;#46;&amp;#111;&amp;#114;&amp;#103;').text();var check; var self=this;$(window).blur(function(){clearTimeout(check);});check=setTimeout(function(){self.innerText=addr;},3000);window.location.href='mailto:' + addr + '?subject=WoRMS Contact'; return false;">Data Management Team</a>, so it can be added to the list.</p>
+</p>
+<br />
+<ul id="about_year_selection" class="nav nav-pills">
+                    <li><a href="#" data="2026" onclick="about_updateRefList(this);return false;">2026</a></li>
+                        <li><a href="#" data="2025" onclick="about_updateRefList(this);return false;">2025</a></li>
+                        <li><a href="#" data="2024" onclick="about_updateRefList(this);return false;">2024</a></li>
+                        <li><a href="#" data="2023" onclick="about_updateRefList(this);return false;">2023</a></li>
+                        <li><a href="#" data="2022" onclick="about_updateRefList(this);return false;">2022</a></li>
+                        <li><a href="#" data="2021" onclick="about_updateRefList(this);return false;">2021</a></li>
+                        <li><a href="#" data="2020" onclick="about_updateRefList(this);return false;">2020</a></li>
+                        <li><a href="#" data="2019" onclick="about_updateRefList(this);return false;">2019</a></li>
+                        <li><a href="#" data="2018" onclick="about_updateRefList(this);return false;">2018</a></li>
+                <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Older
+                <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                    <li><a href="#" data="2017" onclick="about_updateRefList(this);return false;">2017</a></li>
+                        <li><a href="#" data="2016" onclick="about_updateRefList(this);return false;">2016</a></li>
+                        <li><a href="#" data="2015" onclick="about_updateRefList(this);return false;">2015</a></li>
+                        <li><a href="#" data="2014" onclick="about_updateRefList(this);return false;">2014</a></li>
+                        <li><a href="#" data="2013" onclick="about_updateRefList(this);return false;">2013</a></li>
+                        <li><a href="#" data="2012" onclick="about_updateRefList(this);return false;">2012</a></li>
+                        <li><a href="#" data="2011" onclick="about_updateRefList(this);return false;">2011</a></li>
+                        <li><a href="#" data="2010" onclick="about_updateRefList(this);return false;">2010</a></li>
+                        <li><a href="#" data="2009" onclick="about_updateRefList(this);return false;">2009</a></li>
+                        <li><a href="#" data="2008" onclick="about_updateRefList(this);return false;">2008</a></li>
+                        <li><a href="#" data="2007" onclick="about_updateRefList(this);return false;">2007</a></li>
+                        <li><a href="#" data="2006" onclick="about_updateRefList(this);return false;">2006</a></li>
+                        <li><a href="#" data="2005" onclick="about_updateRefList(this);return false;">2005</a></li>
+                        <li><a href="#" data="2004" onclick="about_updateRefList(this);return false;">2004</a></li>
+                        <li><a href="#" data="2003" onclick="about_updateRefList(this);return false;">2003</a></li>
+                        <li><a href="#" data="2002" onclick="about_updateRefList(this);return false;">2002</a></li>
+                        <li><a href="#" data="2001" onclick="about_updateRefList(this);return false;">2001</a></li>
+                        <li><a href="#" data="2000" onclick="about_updateRefList(this);return false;">2000</a></li>
+                </ul>
+        </li>
+    </ul>
+<br />
+<div id="about_literature_results_loading" style="text-align: center; width: 100%; padding-top: 100px;">
+    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+    <span>Retrieving results...</span>
+</div>
+<div id="about_literature_results" class="container-fluid">
+</div>
+<script type="text/javascript">
+    function about_updateRefList(element) {
+        //Extract and validate param
+        var year_to_show = $(element).attr('data');
+        if (isNaN(year_to_show)
+                || !isFinite(year_to_show)
+                || year_to_show < 2000
+                || year_to_show > 2026
+        ) {
+            console.log("Invalid year! Aborting!");
+            return;
+        }
+        about_showRefLestForYear(year_to_show);
+    }
+    function about_getImisLinkByImisRecord(record){
+        return "<a href='" + record.url + "' target='_blank'><i title=\"View IMIS page\" class=\"fa fa-search\" aria-hidden=\"true\"></i></a>"
+    }
+    function about_getImisPeerReviewIconByImisRecord(record){
+        return record.PeerRev ? "&nbsp;&nbsp;&nbsp;&nbsp;<i title=\"Peer reviewed\" class=\"fa fa-graduation-cap\" aria-hidden=\"true\"></i>" : "";
+    }
+    function about_showRefLestForYear(year_to_show, record_offset) {
+        //Remove active pill selection
+        $("#about_year_selection").find(".active").removeClass("active");
+
+        //Select new year
+        $('a[data=' + year_to_show.toString() + ']').parent().addClass("active");
+
+        //Clear container
+        $('#about_literature_results').html("");
+        $('#about_literature_results_loading').show();
+
+        if (typeof(record_offset) === "undefined"
+                || isNaN(year_to_show)
+                || !isFinite(year_to_show)
+                || year_to_show <= 0
+        ) {
+            record_offset = 1;
+        }
+
+        //Query for total record count
+        var max_results = 10;
+        $.ajax({
+            method: "GET",
+            url: "/imis.php",
+            data: {
+                year: year_to_show.toString(),
+                module: "ref",
+                show: "json",
+                spcolid: 915,
+                globalspcolid: 0,
+                cnt : 1
+            }
+        }).done(function( data ) {
+            var total_record = data.cnt;
+            //Do a new request for the actual data
+            $.ajax({
+                method: "GET",
+                url: "/imis.php",
+                data: {
+                    year: year_to_show.toString(),
+                    module: "ref",
+                    show: "json",
+                    spcolid: 915,
+                    globalspcolid: 0,
+                    start: record_offset.toString(),
+                    count: (max_results + 1).toString()
+                }
+            }).done(function( data ) {
+                var html = '<span class="badge"> Reference count: ' + total_record.toString().replace(new RegExp('(\\.|\\,)(?=(\\d{3})+)','g'),'&nbsp;') + '</span>';
+                if (!data.length) {
+                    console.log("No literature found");
+                    html += "No results found!";
+                } else {
+                    html += "<br />";
+                    for (var index = 0; index < data.length && index < max_results; index++) {
+                        html += "<div class=\"row about_worms_listerature_source\">\n";
+                        html += "<div class=\"col-xs-2 col-md-1 about_worms_listerature_source_options\">" + about_getImisLinkByImisRecord(data[index]) + about_getImisPeerReviewIconByImisRecord(data[index]) + "</div>\n";
+                        html += "<div class=\"col-xs-10 col-md-11 about_worms_listerature_source_text\"><p class=\"worms-break-words\"><small>" + data[index].RR + "</small></p></div>\n";
+                        html += "</div>\n";
+                    }
+
+                    var html_opts = "";
+                    if (record_offset > 1) {
+                        //Previous button is required
+                        var new_offset = record_offset - max_results;
+                        if (new_offset < 1) {
+                            new_offset = 1;
+                        }
+                        html_opts += "<a href=\"#\" class=\"btn btn-primary\" onclick='about_showRefLestForYear(" + year_to_show.toString() + ", " + new_offset.toString() + ");return false;'>Prev</a>&nbsp;";
+                    }
+                    if (data.length > max_results) {
+                        //Next button is required
+                        html_opts += "<a href=\"#\" class=\"btn btn-primary\" onclick='about_showRefLestForYear(" + year_to_show.toString() + ", " + (record_offset + max_results).toString() + ");return false;'>Next</a>";
+                    }
+                    if (html_opts.length) {
+                        html += "<br>";
+                        html += "<div class=\"row\">";
+                        html += "<div class=\"col-xs-5\"></div>";
+                        html += "<div class=\"col-xs-5\">" + html_opts + "</div>";
+                        html += "</div>";
+                    }
+                }
+                //Hide loader
+                $('#about_literature_results_loading').hide();
+
+                //Show content
+                $('#about_literature_results').html(html);
+            });
+        }).fail(function() {
+            var html = "Unable to retrieve data!";
+            //Hide loader
+            $('#about_literature_results_loading').hide();
+            //Show content
+            $('#about_literature_results').html(html);
+        });
+    }
+    function about_showRefGlobalCount() {
+        $.ajax({
+            method: "GET",
+            url: "/imis.php",
+            data: {
+                module: "ref",
+                show: "json",
+                spcolid: 915,
+                globalspcolid: 0,
+                cnt : 1
+            }
+        }).done(function( data ) {
+            $("#worms_in_literature_global_count").html("Total references: " + data.cnt.toString().replace(new RegExp('(\\.|\\,)(?=(\\d{3})+)','g'),'&nbsp;'));
+        });
+    }
+    $(document).ready(function() {
+        // executes when HTML-Document is loaded and DOM is ready
+        about_showRefGlobalCount();
+        about_showRefLestForYear(2026);
+    });
+</script>
+        </div>
+                        <div id="plosone" class="worms_content_section worms_content_section_colored">
+            <p class="h1 worms_content_color_main">PLoS One collection</p>
+<br />
+<p>
+    This PLoS One collection has been created by the editors of the World Register of Marine Species (WoRMS).
+</p>
+<p>
+    The collection complements the database by synthesising current knowledge and understanding about a variety of taxa. Papers can cover any taxonomic level, from a genus to phylum, and any number of species.
+</p>
+<p>
+    The scope of individual papers may vary because of the peculiarities of the taxon, available information, and interests of the authors. However, they generally contain information on the history,
+    anatomy and diagnostic features, ecology, biogeography, physiology, and economic importance.
+</p>
+<p>
+    The <a href="https://collections.plos.org/marine-species" target="_blank">WoRMS PLoS One papers</a> are available through Open Access.
+</p>
+        </div>
+                        <div id="activities" class="worms_content_section worms_content_section_colored">
+            <p class="h1 worms_content_color_main">Activities</p>
+<br />
+<p>
+	The World Register of Marine Species (WoRMS) is a major contributor to the LifeWatch Species Information Backbone.
+	Within the backbone, the coordination is taking place at three parallel levels. Each of these levels also relates to WoRMS, as WoRMS constitutes an important part of this backbone.
+</p>
+<div class="indent">
+	<p class="h3 worms_content_color_main header-bullet">Setting up a central species information backbone</p>
+	<p class="indent">
+		The LifeWatch Species Information Backbone integrates the existing taxonomic, biogeographical, ecological,
+		genomic and literature databases as contributing components and builds access services bringing the data to the LifeWatch infrastructure.<br />
+		WoRMS is included in this Backbone, and several of the web services and tools on WoRMS help people to get easier access to the content of WoRMS or facilitate the (virtual) integration of WoRMS with data from other systems.
+	</p>
+</div>
+<div class="indent">
+	<p class="h3 worms_content_color_main header-bullet">Completing and updating the taxonomic and species related data</p>
+	<div class="indent">
+		<p>
+			In WoRMS, this is done by supporting the WoRMS Editorial Board through the Data Management Team, which is providing technical, logistic and financial support for upgrading and
+			expanding the component databases.<br />
+			This includes the LifeWatch data grants that were written out to fill the gaps in information in the World Register of Marine Species (WoRMS)
+			and all the activities of the Data Management Team that support the editors in adding information to WoRMS and performing a quality control on the already existing information.
+		</p>
+		<div class="indent">
+			<p class="h4 worms_content_color_main header-bullet">WoRMS Data Management Team annual reports</p>
+			<p class="indent">
+				Each year, the Data Management Team compiles a report on their activities of the past year.
+				These reports typically include an overview of all the activities by the DMT related to the website, the content of WoRMS and technical developments and improvements that have been made.<br>
+				All the DMT activities reports can be consulted <a href="/documents.php?exclusiveFolder=/DMT%20reports/">here</a>.
+			</p>
+			<p class="indent">
+				All of these activities are supported by staff members provided by VLIZ as part of the Flemish contribution to LifeWatch and is funded by the Hercules Foundation.<br />
+				LifeWatch is the E-Science European Infrastructure for Biodiversity and Ecosystem Research.
+				It is a distributed virtual laboratory which will be used for different aspects of biodiversity research.
+			</p>
+			<p class="indent">
+				The LifeWatch Species Information Backbone aims at bringing together taxonomic and species-related data and at filling the gaps in our knowledge.
+				In addition, it gives support to taxonomic experts by providing them logistic and financial support for meetings and workshops related to expanding the content
+				and enhancing the quality of taxonomic databases. As WoRMS is a major player in this backbone, funds can be made available to support the further development of WoRMS and its related databases, both on the content and technical level.<br />
+			</p>
+		</div>
+		<div class="indent">
+			<p class="h4 worms_content_color_main header-bullet">Data grants supported by LifeWatch</p>
+			<p class="indent">
+				In the past, open calls have been launched to all WoRMS editors to help fill the remaining gaps in the groups under their taxonomic responsibility.
+			</p>
+			<p class="indent">
+				These actions directly contributed to LifeWatch and its Species Information Backbone.<br>
+				This backbone consists of species information services that will be used to standardize species data and to integrate distributed biodiversity data repositories and operating facilities.
+				As WoRMS is the world standard for marine taxonomic information, WoRMS is a major contributor to this backbone.
+			</p>
+			<p class="indent">
+				An overview of all the reports of the previously assigned grants are available <a href="/documents.php?exclusiveFolder=/LifeWatch%20reports/data%20grant%20reports/">here</a>.
+			</p>
+		</div>
+	</div>
+</div>
+<div class="indent">
+	<p class="h3 worms_content_color_main header-bullet">Organizing and mobilizing the taxonomic experts that provide the data</p>
+	<p>
+		This is specifically done by supporting the taxonomy societies in which they participate.<br />
+		Through LifeWatch, logistic and financial support is provided for e.g. WoRMS editor workshops, and meetings with and between different societies where WoRMS plays a key-role.
+	</p>
+	<div class="indent">
+		<p class="h4 worms_content_color_main header-bullet">Editor workshops supported by LifeWatch</p>
+		<p class="indent">
+			These workshops aim at physically bringing the editors together, giving them the opportunity to organize themselves in a better way,
+			to discuss the way they work (e.g. responsibilities within the group), work on pending issues and make concrete plans towards the future.<br>
+			Next to a future vision, the organizing editor(s) also aims at some short-term tangible outcomes, e.g. presentation of the progress, plans and results at an upcoming conference.
+		</p>
+		<p class="indent">
+			The target groups are either taxonomically, geographically or thematically oriented, with as main goal to make the targeted Register more complete and to define long-term plans to maintain it. <br>
+			To make the most of these workshops, the programme includes at least 1/2 to 1 full day of hands-on working with the online editing interface.
+			This part of the workshop is covered by the Data Management Team and allows the DMT to give a full overview of the existing and newly developed tools and possibilities of the interface.
+		</p>
+		<p class="indent">
+			Several workshops have already been organized and the reports of these workshops can be found <a href="/documents.php?exclusiveFolder=/LifeWatch%20reports/editor%20workshop%20reports/">here</a>.
+		</p>
+	</div>
+	<div class="indent">
+		<p class="h4 worms_content_color_main header-bullet">Hosting, attending and financially supporting society meetings</p>
+		<p class="indent">
+			Through LifeWatch, the organization and/or attendance of meetings by DMT members or WoRMS editors is financially supported.
+		</p>
+		<p class="indent">
+			Examples of these are the WoRMS representation by the Data Management Team at several conferences, workshops
+			and meetings relevant to (marine) biodiversity informatics and ad hoc meetings with partners to discuss the further development of WoRMS or the linking with external databases.
+		</p>
+	</div>
+</div>
+        </div>
+                        <div id="awards" class="worms_content_section worms_content_section_colored">
+            <p class="h1 worms_content_color_main">WoRMS Awards</p>
+<br />
+<p>
+	On an annual basis, two Awards are granted to an individual or a group that has made outstanding contributions to WoRMS, either throughout their entire career (Achievement Award)
+	or in the early stages of their career (Early Career Researchers Award).
+</p>
+<p>
+	Each Awardee receives a certificate, containing art work designed by New-Zealand artist <a href="https://joogier.co.nz/artwork/" target="_blank">Jo Ogier</a>.
+</p>
+<br />
+<p class="h4 worms_content_color_main">WoRMS Achievement Award</p>
+<p>The WoRMS Achievement Award is handed out to an individual or group that has made an outstanding contribution to the development or content of the World Register of Marine Species and/or its associated databases.</p>
+<p>This Award represent an annual recognition of an editor or team who has made an outstanding contribution to WoRMS.</p>
+<br />
+<b><i class="worms_content_color_main">Awardees</i></b>
+	<ul>
+		<li>2025: <a href="/news.php?p=show&id=9428" target="_blank">Sammy De Grave</a></li>
+		<li>2023: <a href="/news.php?p=show&id=9273" target="_blank">Peter Schuchert</a></li>
+		<li>2022: <a href="/news.php?p=show&id=9107" target="_blank">Nicole Boury-Esnault and Jim Lowry (posthumous)</a></li>
+		<li>2021: <a href="/news.php?p=show&id=8798" target="_blank">Chad Walter</a></li>
+		<li>2020: <a href="/news.php?p=show&id=8366" target="_blank">Serge Gofas</a></li>
+		<li>2019: <a href="/news.php?p=show&id=6845" target="_blank">Rob van Soest</a></li>
+        <li>2018: <a href="/news.php?p=show&id=5387" target="_blank">Geoff Read</a></li>
+        <li>2017: <a href="/news.php?p=show&id=5136" target="_blank">Geoff Boxshall</a></li>
+		<li>2016: Philippe Bouchet</li>
+	</ul>
+<br />
+<p class="h4 worms_content_color_main">Early Career Researchers Award</p>
+<p>
+	This award is intended to recognize the effort of a scientist who has contributed to WoRMS significantly within about 10 years of their PhD and was handed out for the first time in 2017.
+</p>
+<br />
+<b><i class="worms_content_color_main">Awardees</i></b>
+<ul>
+	<li>2025: <a href="/news.php?p=show&id=9428" target="_blank">Sávio Gabriel Gomes Pereira</a></li>
+	<li>2023: <a href="/news.php?p=show&id=9273" target="_blank">Tristan Verhoeff</a></li>
+	<li>2022: <a href="/news.php?p=show&id=9107" target="_blank">Virág Venekey</a></li>
+	<li>2021: <a href="/news.php?p=show&id=8798" target="_blank">Ralf Cordeiro</a></li>
+	<li>2020: <a href="/news.php?p=show&id=8366" target="_blank">Thomas A. Neubauer</a></li>
+	<li>2019: <a href="/news.php?p=show&id=6845" target="_blank">Barna Páll-Gergely</a></li>
+    <li>2018: <a href="/news.php?p=show&id=5387" target="_blank">François Le Coze</a></li>
+    <li>2017: <a href="/news.php?p=show&id=5136" target="_blank">Ben Thuy</a></li>
+</ul>
+<br />
+<p class="h4 worms_content_color_main">Rules & evaluation criteria for both Awards</p>
+<br />
+<b class="worms_content_color_main">Rules</b>
+<ol>
+	<li>There are no restrictions based on age, nationality, time-period of contributions or kinds of contributions.</li>
+	<li>Typically one award will be made annually based on the outcome of evaluation of nominations. However, the jury reserves the option to make more or no awards.</li>
+	<li>Nominations can be made by members of the WoRMS Steering Committee, by active WoRMS editors, and by members of the Data Management Team. Self-nominations are not allowed.</li>
+	<li>Persons or groups may be nominated again in subsequent years. Any person or group can only receive the award once.</li>
+	<li>The WoRMS Steering Committee will appoint a jury of at least 5 persons to evaluate nominations. The Chair of the jury will be a member of the WoRMS Steering Committee.
+	A member of the Data Management Team will attend the meetings of the jury in order to provide data and/or advice, but has no vote.The jury will appoint a Secretary to receive and disseminate nominations.</li>
+	<li>The jury members will state their potential conflicts of interest and will not evaluate nominations of close colleagues (e.g. regular collaborator, works in same institute).</li>
+	<li>Nominations will be independently reviewed and ranked by each jury member with reasons. The jury will meet by telephone or video to discuss the evaluation. Discussion will aim
+	to reach consensus on the top candidate.  In case no consensus can be reached, the jury will vote. In the event of a tie, the Chair has the deciding vote.</li>
+	<li>The WoRMS Steering Committee will be notified prior to the announcement of the awardee but does not have any power of veto or influence in the selection process.</li>
+	<li>The jury will produce a brief citation giving the reasons for their selection of the awardee.</li>
+	<li>Lobbying jury members beyond the nomination process will disqualify candidates.</li>
+</ol>
+<br />
+<b class="worms_content_color_main">Evaluation criteria</b>
+<ol>
+	<li>Activity as editor.</li>
+	<li>Responsiveness to user feedback and Data Management Team requests.</li>
+	<li>Number of taxa entered, number of records edited and checked.</li>
+	<li>Volume of other content entered.</li>
+	<li>Quality and completeness of entries.</li>
+	<li>Length of service as active editor.</li>
+	<li>New ideas or innovations contributed or suggested.</li>
+	<li>Improvements to the web interface suggested.</li>
+	<li>Contribution to outreach and stimulation of the use of WoRMS.</li>
+	<li>Contribution to management and funding.</li>
+</ol>
+        </div>
+            </div>
+</div>
+<script type="text/javascript">
+    //Load scrollspy & affix
+    $(document).ready(function(){
+        $("body").scrollspy({
+            target: "#scroll_spy",
+            offset: 10
+        });
+            });
+
+    //Once page loaded show the menu (prevents jumping of the menu during initial load)
+    $(window).on('load', function(){
+        $("#scroll_spy").css('visibility', 'visible');
+    });
+
+    </script>
+</div>
+<div class="container-fluid worms-footer">
+    <br/>
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
+            <div class="worms-footer-column">
+                <h4>WoRMS</h4>
+                <ul class="worms-footer-list">
+                    <li><a href="/about.php#what_is_worms">What is WoRMS</a></li>
+                    <li><a href="/lifewatch.php">What is LifeWatch</a></li>
+                    <li><a href="/subregisters.php">Subregisters</a></li>
+                    <li><a href="/about.php#partners">Partners</a></li>
+                    <li><a href="/about.php#users">WoRMS users</a></li>
+                    <li><a href="/wormsliterature.php">WoRMS in literature</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="worms-footer-column">
+                <h4>Using WoRMS</h4>
+                <ul class="worms-footer-list">
+                    <li><a href="/about.php#cite_worms">Citing WoRMS</a></li>
+                    <li><a href="/about.php#terms">Terms of use</a></li>
+                    <li><a href="/usersrequest.php">Request access</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="worms-footer-column">
+                <h4>Tools</h4>
+                <ul class="worms-footer-list">
+                    <li><a href="aphia.php?p=match">WoRMS Match Taxa</a></li>
+                    <li><a href="https://www.lifewatch.be/data-services/" target="_blank" rel="noopener noreferrer">LifeWatch Match Taxa</a></li>
+                    <li><a href="aphia.php?p=webservice">Webservices</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="worms-footer-column">
+                <h4>Connect with us</h4>
+                <ul class="worms-footer-list">
+                    <li>
+                        <a href="#" onclick="var addr=$('<textarea/>').html('&amp;#105;&amp;#110;&amp;#102;&amp;#111;&amp;#64;&amp;#109;&amp;#97;&amp;#114;&amp;#105;&amp;#110;&amp;#101;&amp;#115;&amp;#112;&amp;#101;&amp;#99;&amp;#105;&amp;#101;&amp;#115;&amp;#46;&amp;#111;&amp;#114;&amp;#103;').text();var check; var self=this;$(window).blur(function(){clearTimeout(check);});check=setTimeout(function(){self.innerText=addr;},3000);window.location.href='mailto:' + addr + '?subject=WoRMS Contact'; return false;"><i class="fa fa-envelope" aria-hidden="true"></i>Send us an email</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/WRMarineSpecies" target="_blank" rel="noopener noreferrer nofollow"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter page</a>
+                    </li>
+                    <li>
+                                                <a href="aphia.php?p=rss" target="_blank"><i class="fa fa-rss fa-1x" aria-hidden="true"></i>RSS Feed</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/world-register-of-marine-species/" target="_blank">
+                            <i class="fa fa-linkedin-square fa-1x" aria-hidden="true"></i>LinkedIn page
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bsky.app/profile/marinespecies.bsky.social" target="_blank">
+                            <div style="display: flex; gap: 10px; align-items: center">
+                                <svg  width="20" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14"><script/>
+                                    <path fill="#a9a9a9" d="M3.585 1.163c1.756 1.318 3.646 3.992 4.339 5.427 0.694 -1.435 2.583 -4.109 4.339 -5.427 1.268 -0.952 3.321 -1.688 3.321 0.654 0 0.468 -0.268 3.93 -0.426 4.492 -0.547 1.954 -2.54 2.453 -4.313 2.151 3.099 0.527 3.887 2.274 2.185 4.021 -3.233 3.317 -4.646 -0.832 -5.009 -1.896 -0.066 -0.195 -0.097 -0.286 -0.098 -0.209 -0.001 -0.078 -0.031 0.013 -0.098 0.209 -0.363 1.063 -1.776 5.213 -5.009 1.896 -1.702 -1.746 -0.914 -3.494 2.185 -4.021 -1.772 0.302 -3.765 -0.197 -4.313 -2.151C0.532 5.748 0.264 2.286 0.264 1.818c0 -2.343 2.054 -1.606 3.321 -0.655z"/>
+                                </svg>
+                                <span>Bluesky page</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <hr class="worms-footer-splitter" />
+    </div>
+    <div class="row">
+        <div class="worms-footer-hosted_by text-center">
+            	<style>
+        .lwbanner {
+            
+            color: #a9a9a9;
+            font-size: calc(13px + (26 - 13) * ((100vw - 300px) / (4000 - 300)));
+            font-family: 'open_sansregular','Helvetica Neue', Helvetica, sans-serif;
+            padding: 0.5em;
+            border: 0px solid #bfbfbf;
+        }
+        
+        .lwbanner div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lwbanner span{
+            padding: 1%;
+        }
+        
+        .lwbanner img {
+            height: 60px;
+            max-width: 33%; 
+        }
+        
+        .lwbanner a {
+            color: #a9a9a9;
+            font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (4000 - 300)));
+            text-decoration: none;
+        }
+        .lwbanner a:hover {
+            text-decoration: underline;
+        }
+        
+        .lwbanner small {
+            font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (4000 - 300)));
+        }
+	</style>		<div id="lwbanner" class="lwbanner">
+			<div><img src="data:image/png;base64,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"/><span>This service is powered by LifeWatch Belgium<br/><small></small></span><a href="http://www.lifewatch.be" target="_blank">Learn more&raquo;</a></div>
+		</div>
+            <small>Website and databases developed and hosted by
+                <a href="http://www.vliz.be" target="_blank" rel="noopener noreferrer">Flanders Marine Institute</a> &middot; Page generated on 2026-09-11 02:28:13+02:00 &middot; <a href="http://www.vliz.be/privacy" target="_blank" rel="noopener noreferrer">Privacy and cookie policy</a>
+            </small>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

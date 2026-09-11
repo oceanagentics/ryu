@@ -1,0 +1,128 @@
+[
+  {
+    "url": "https://aphia.org/feed",
+    "status": 200,
+    "finalUrl": "https://aphia.org/feed",
+    "contentType": "text/turtle;charset=UTF-8",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://api.gbif.org/v1/dataset/2d59e5db-57ad-41ff-97d6-11f5fb264527",
+    "status": 200,
+    "finalUrl": "https://api.gbif.org/v1/dataset/2d59e5db-57ad-41ff-97d6-11f5fb264527",
+    "contentType": "application/json",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://docs.ropensci.org/worrms/",
+    "status": 200,
+    "finalUrl": "https://docs.ropensci.org/worrms/",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://emodnet.ec.europa.eu/en/biology",
+    "status": 200,
+    "finalUrl": "https://emodnet.ec.europa.eu/en/biology",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://github.com/CatalogueOfLife/testing/issues/299",
+    "status": 200,
+    "finalUrl": "https://github.com/CatalogueOfLife/testing/issues/299",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://ipt.vliz.be/eurobis/resource?r=worms_type_localities",
+    "status": 200,
+    "finalUrl": "https://ipt.vliz.be/eurobis/resource?r=worms_type_localities",
+    "contentType": "text/html;charset=UTF-8",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://manual.obis.org/access.html",
+    "status": 200,
+    "finalUrl": "https://manual.obis.org/access.html",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://marinespecies.org/documents/Steering%20Committee%20reports/20250422_WoRMS_SC_meeting_Ostend_report.pdf",
+    "status": 200,
+    "finalUrl": "https://marinespecies.org/documents/Steering%20Committee%20reports/20250422_WoRMS_SC_meeting_Ostend_report.pdf",
+    "contentType": "application/pdf",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://obis.org/sources/worms/",
+    "status": 200,
+    "finalUrl": "https://obis.org/sources/worms/",
+    "contentType": "text/html",
+    "sampleBytes": 406
+  },
+  {
+    "url": "https://www.marinespecies.org/",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/",
+    "contentType": "text/html; charset=UTF-8;",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://www.marinespecies.org/about.php",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/about.php",
+    "contentType": "text/html; charset=UTF-8;",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://www.marinespecies.org/aphia.php?p=editors",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/aphia.php?p=editors",
+    "contentType": "text/html; charset=UTF-8;",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://www.marinespecies.org/aphia.php?p=match",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/aphia.php?p=match",
+    "contentType": "text/html; charset=UTF-8;",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://www.marinespecies.org/aphia.php?p=webservice",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/aphia.php?p=webservice",
+    "contentType": "text/html; charset=UTF-8;",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://www.marinespecies.org/contribute.php",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/contribute.php",
+    "contentType": "text/html; charset=UTF-8;",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+    "contentType": "application/pdf",
+    "sampleBytes": 1024
+  },
+  {
+    "url": "https://www.marinespecies.org/rest/AphiaRecordByAphiaID/127160",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/rest/AphiaRecordByAphiaID/127160",
+    "contentType": "application/json",
+    "sampleBytes": 919
+  },
+  {
+    "url": "https://www.marinespecies.org/usersrequest.php",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/usersrequest.php",
+    "contentType": "text/html; charset=UTF-8;",
+    "sampleBytes": 1024
+  }
+]

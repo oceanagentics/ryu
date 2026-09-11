@@ -1,0 +1,211 @@
+{
+  "supportsReturnServiceEditsOption": true,
+  "supportsApplyEditsWithGlobalIds": false,
+  "maxRecordCount": 2000,
+  "datesInUnknownTimezone": false,
+  "supportsQueryDomains": true,
+  "infoInEstimates": [
+    "extent",
+    "count"
+  ],
+  "onlyAllowTrueCurveUpdatesByTrueCurveClients": true,
+  "syncEnabled": false,
+  "relationships": [],
+  "tables": [
+    {
+      "name": "WDPCA_source_latest",
+      "id": 2
+    }
+  ],
+  "cimVersion": "3.7.0",
+  "layers": [
+    {
+      "subLayerIds": null,
+      "maxScale": 0,
+      "name": "WDPCA_point_latest",
+      "defaultVisibility": true,
+      "id": 0,
+      "minScale": 0,
+      "type": "Feature Layer",
+      "parentLayerId": -1,
+      "geometryType": "esriGeometryMultipoint"
+    },
+    {
+      "subLayerIds": null,
+      "maxScale": 0,
+      "name": "WDPCA_poly_latest",
+      "defaultVisibility": true,
+      "id": 1,
+      "minScale": 0,
+      "type": "Feature Layer",
+      "parentLayerId": -1,
+      "geometryType": "esriGeometryPolygon"
+    }
+  ],
+  "spatialReference": {
+    "falseM": -100000,
+    "xyTolerance": 0.001,
+    "mUnits": 10000,
+    "zUnits": 10000,
+    "latestWkid": 3857,
+    "zTolerance": 0.001,
+    "wkid": 102100,
+    "xyUnits": 10000,
+    "mTolerance": 0.001,
+    "falseX": -20037700,
+    "falseY": -30241100,
+    "falseZ": -100000
+  },
+  "fullExtent": {
+    "ymin": -20520831.68660583,
+    "xmin": -20037507.067161843,
+    "ymax": 22165023.587148983,
+    "xmax": 20037507.067161843,
+    "spatialReference": {
+      "falseM": -100000,
+      "xyTolerance": 0.001,
+      "mUnits": 10000,
+      "zUnits": 10000,
+      "latestWkid": 3857,
+      "zTolerance": 0.001,
+      "wkid": 102100,
+      "xyUnits": 10000,
+      "mTolerance": 0.001,
+      "falseX": -20037700,
+      "falseY": -30241100,
+      "falseZ": -100000
+    }
+  },
+  "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson,kml,excel,featureCollection",
+  "syncCapabilities": {
+    "supportsSyncDirectionControl": true,
+    "supportsRegisterReplicaForServer": true,
+    "supportsAttachmentsSyncDirection": true,
+    "supportedSyncDataOptions": 57636,
+    "supportsDurableUrlForSyncModelNone": false,
+    "supportsPerLayerSync": true,
+    "supportsSyncModelNone": true,
+    "supportsExportDomainDescription": true,
+    "supportsPerReplicaSync": true
+  },
+  "supportsDisconnectedEditing": false,
+  "extractChangesCapabilities": {
+    "supportsFeatureReturn": false,
+    "supportsReturnHasGeometryUpdates": false,
+    "supportsLayerQueries": false,
+    "supportsReturnAttachments": false,
+    "supportsReturnIdsOnly": false,
+    "supportsServerGens": false,
+    "supportsFieldsToCompare": false,
+    "supportsGeometry": false,
+    "supportsReturnExtentOnly": false
+  },
+  "currentVersion": 12.1,
+  "hasBranchVersionedData": false,
+  "referenceScale": 0,
+  "advancedEditingCapabilities": {
+    "supportsMultipatchOptionForServiceEdits": true,
+    "supportsAsyncApplyEdits": true,
+    "supportsApplyEditsbyUploadID": true,
+    "supportsDivideCombineGroupedObjects": true,
+    "supportsSessionBasedUpdateAttachments": true,
+    "supportsSessionBasedAddAttachments": true,
+    "supportsSplit": false,
+    "supportedApplyEditsOptions": {
+      "supportedEditingOptions": 0
+    },
+    "supportsSessionBasedUpdateFeatures": true,
+    "supportsSessionBasedDeleteAttachments": true,
+    "supportsReturnServiceEditsInSourceSR": true,
+    "supportsDeleteAssociations": true,
+    "supportedApplyEditsUploadIDFormats": "JSON,PBF",
+    "supportsSessionBasedDeleteFeatures": true,
+    "supportsSessionBasedAddFeatures": true
+  },
+  "initialExtent": {
+    "ymin": -6798236.066925099,
+    "xmin": -6743244.306158199,
+    "ymax": 8442407.314222993,
+    "xmax": 6743244.306158199,
+    "spatialReference": {
+      "falseM": -100000,
+      "xyTolerance": 0.001,
+      "mUnits": 10000,
+      "zUnits": 10000,
+      "latestWkid": 3857,
+      "zTolerance": 0.001,
+      "wkid": 102100,
+      "xyUnits": 10000,
+      "mTolerance": 0.001,
+      "falseX": -20037700,
+      "falseY": -30241100,
+      "falseZ": -100000
+    }
+  },
+  "allowTrueCurvesUpdates": true,
+  "supportedCurveTypes": [
+    "esriGeometryCircularArc",
+    "esriGeometryEllipticArc",
+    "esriGeometryBezier3Curve"
+  ],
+  "maxRecordCountFactor": 1,
+  "hasArchivedData": false,
+  "documentInfo": {
+    "Category": "",
+    "Keywords": "wdpa,wd-oecm,protected-planet,protected-area,conserved areas,other-effective-area-based-conservation-measures,OECMs,areas-of-biodiversity-importance,wdpca",
+    "Comments": "This is a Map to update the Vector Tile Service for the WDPA",
+    "Title": "VTS_Update",
+    "Author": "",
+    "Subject": ""
+  },
+  "supportsUseEstimateForExceedsLimit": true,
+  "allowGeometryUpdates": true,
+  "supportsQueryContingentValues": true,
+  "description": "The WDPCA is the most comprehensive global database of marine and terrestrial protected areas and other effective area-based conservation measures. It is updated on a monthly basis and is one of the key global biodiversity datasets widely used by scientists, businesses, governments, international secretariats, and others to inform planning, policy decisions, and management.&nbsp;The WDPCA is part of the Protected Planet Initiative, a joint product of the UN Environment Programme and the International Union for Conservation of Nature (IUCN). The compilation and management of the WDPCA is carried out by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC), in collaboration with governments and other stakeholders. Data and information on the world\u2019s protected and conserved areas compiled in the WDPCA are used for reporting on progress towards Target 3 of the Kunming-Montreal Global Biodiversity Framework, which calls for 30% of the world\u2019s land and waters to be effectively conserved by 2030. Additionally, the WDPCA is used for reporting to the United Nations to track progress towards the 2030 Sustainable Development Goals, the tracking of core indicators of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES), and for providing information for other international assessments and reports including the Global Biodiversity Outlook. UNEP-WCMC and IUCN periodically release the Protected Planet Report on the status of the world\u2019s protected and conserved areas.&nbsp;Many platforms incorporate the WDPCA to provide integrated information to diverse users, including businesses and governments across a range of sectors. For example, the WDPCA is included in the Integrated Biodiversity Assessment Tool (IBAT), an innovative decision-support tool that gives commercial users easy access to up-to-date information that allows them to identify biodiversity risks and opportunities within a project boundary. The reach of the WDPCA is further enhanced by the UN Biodiversity Lab, as well as services developed by other organisations such as Global Forest Watch and the Digital Observatory for Protected Areas. These platforms provide decision-makers with access to monitoring and alert systems that allow whole landscapes to be managed more effectively. Together, these applications of the WDPCA demonstrate the growing value and significance of the Protected Planet initiative.",
+  "units": "esriMeters",
+  "hasVersionedData": false,
+  "supportsDatumTransformation": true,
+  "supportsQueryDataElements": true,
+  "returnServiceEditsHaveSR": true,
+  "supportsRelationshipsResource": true,
+  "supportsSharedTemplates": true,
+  "enableZDefaults": false,
+  "serviceItemId": "66db02d9d633438ea32ce163ff2e690a",
+  "allowUpdateWithoutMValues": false,
+  "capabilities": "Query,Extract",
+  "supportsTrueCurve": true,
+  "supportsAppend": true,
+  "supportsSharedTemplatesRelationshipId": true,
+  "supportedTrueCurvePbfFeatureEncodings": [
+    "esriCompressedShapeBuffer",
+    "esriDefault"
+  ],
+  "supportedAppendFormats": "FILEGDB,PBF",
+  "supportsVCSProjection": true,
+  "supportedQueryFormats": "JSON",
+  "datumTransformations": [
+    {
+      "geoTransforms": [
+        {
+          "latestWkid": 1149,
+          "transformForward": true,
+          "wkid": 1149,
+          "name": "ETRS_1989_To_WGS_1984"
+        }
+      ]
+    },
+    {
+      "geoTransforms": [
+        {
+          "latestWkid": 1149,
+          "transformForward": false,
+          "wkid": 1149,
+          "name": "ETRS_1989_To_WGS_1984"
+        }
+      ]
+    }
+  ],
+  "serviceDescription": "<div style='text-align:Left;'><div><div><p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>The WDPCA is the most comprehensive global database of marine and terrestrial protected areas and other effective area-based conservation measures. It is updated on a monthly basis and is one of the key global biodiversity datasets widely used by scientists, businesses, governments, international secretariats, and others to inform planning, policy decisions, and management.&nbsp;</span></span></p><p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>The WDPCA is part of the Protected Planet Initiative, a joint product of the UN Environment Programme and the International Union for Conservation of Nature (IUCN). The compilation and management of the WDPCA is carried out by the UN Environment Programme World Conservation Monitoring Centre (UNEP-WCMC), in collaboration with governments and other stakeholders. Data and information on the world\u2019s protected and conserved areas compiled in the WDPCA are used for reporting on progress towards Target 3 of the Kunming-Montreal Global Biodiversity Framework, which calls for 30% of the world\u2019s land and waters to be effectively conserved by 2030. Additionally, the WDPCA is used for reporting to the United Nations to track progress towards the 2030 Sustainable Development Goals, the tracking of core indicators of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services (IPBES), and for providing information for other international assessments and reports including the Global Biodiversity Outlook. UNEP-WCMC and IUCN periodically release the Protected Planet Report on the status of the world\u2019s protected and conserved areas.&nbsp;</span></span></p><p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Many platforms incorporate the WDPCA to provide integrated information to diverse users, including businesses and governments across a range of sectors. For example, the WDPCA is included in the Integrated Biodiversity Assessment Tool (IBAT), an innovative decision-support tool that gives commercial users easy access to up-to-date information that allows them to identify biodiversity risks and opportunities within a project boundary. The reach of the WDPCA is further enhanced by the UN Biodiversity Lab, as well as services developed by other organisations such as Global Forest Watch and the Digital Observatory for Protected Areas. These platforms provide decision-makers with access to monitoring and alert systems that allow whole landscapes to be managed more effectively. Together, these applications of the WDPCA demonstrate the growing value and significance of the Protected Planet initiative.</span></span></p></div></div></div>",
+  "copyrightText": "Protected Planet: The World Database on Protected Areas (WDPA)/The World Database on Other Effective Area-based Conservation Measures (WD-OECM) [On-line], [September 2026], Cambridge, UK: UNEP-WCMC and IUCN. Available at: https://doi.org/10.34892/6fwd-af11",
+  "hasSharedTemplates": true
+}

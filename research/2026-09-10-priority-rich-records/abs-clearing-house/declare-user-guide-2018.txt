@@ -1,0 +1,734 @@
+PAGE 1
+ 
+ 
+User guide / Questions and answers – DECLARE NAGOYA IT system  
+(version 03/2018) 
+For any question on the use of DECLARE NAGOYA IT system,  
+CONTACT US on ENV-DECLARE-NAGOYA@ec.europa.eu 
+For any substantive questions, please contact responsible authorities in a respective Member State  1 
+ 
+ 
+Table of Contents 
+Table of Contents .................................................................................................................................... 1 
+Basic concepts ......................................................................................................................................... 3 
+1. What is DECLARE? ........................................................................................................................... 3 
+2. Is use of DECLARE obligatory? ........................................................................................................ 4 
+3. What is a due diligence declaration? .............................................................................................. 5 
+4. Which authority is the relevant competent authority? .................................................................. 6 
+5. What is the ABS Clearing House? .................................................................................................... 6 
+6. What is an internationally recognized certificate of compliance? ................................................. 7 
+Start using DECLARE - registration .......................................................................................................... 7 
+7. How do I get started with using DECLARE?..................................................................................... 7 
+a. EU Login ...................................................................................................................................... 7 
+b. Registration in DECLARE ............................................................................................................. 8 
+i. Select NAGOYA policy domain to register .................................................................................. 8 
+ii. Register in DECLARE system........................................................................................................ 9 
+iii. Register your organisation .......................................................................................................... 9 
+8. How do “organizations” function in DECLARE? ............................................................................ 11 
+Submitting a due diligence declaration ................................................................................................ 14 
+                                                           
+1 Information about competent national authorities can be found on the Commission website:  
+http://ec.europa.eu/environment/nature/biodiversity/international/abs/legislation_en.htm  or on the ABS 
+Clearing House website: www.absch.int; if no competent national authorities are designated in a Member 
+State concerned, please contact National Focal Point for Nagoya Protocol (NFP); contact details for NFPs can 
+be found on the ABS Clearing House www.absch.int  (see also question 4)  
+ 
+
+PAGE 2
+ 
+ 
+9. What do I need to do when I want to submit a due diligence declaration via DECLARE? ........... 14 
+i. Select the type of due diligence declaration to submit ............................................................ 14 
+ii. Fill in the declaration form and save it ..................................................................................... 15 
+iii. Review and submit the due diligence declaration to the Competent Authority ......................... 17 
+10. What if I utilised more than one genetic resource in my research project? ............................ 17 
+11. What if I utilised more than one genetic resource in my product? .......................................... 18 
+12. When exactly do I need to submit a due diligence declaration at the second checkpoint (final 
+stage of development of a product)? ................................................................................................... 19 
+Content of the due diligence declaration ............................................................................................. 21 
+13. What information should be provided in the field “Subject matter of the research or 
+identification code of the grant”? ......................................................................................................... 21 
+14. What information should be provided in the field “Name of the product”? ........................... 21 
+15. What is the “Place of access”? .................................................................................................. 21 
+16. What information needs to be provided in the field “Description of the genetic resources or 
+traditional knowledge associated with genetic resource”? ................................................................. 22 
+17. What is an “Identifier of access permit”? ................................................................................. 22 
+18. What is an “Equivalent of an access permit”? .......................................................................... 22 
+19. What is an “Entity which granted prior informed consent”? ................................................... 23 
+20. What is an “Entity to whom the prior informed consent was granted”? ................................. 23 
+21. What is a “Direct source of genetic resource”? ........................................................................ 23 
+22. What is a “Registered collection”? ........................................................................................... 24 
+23. What do I mark in response to the question on restrictions in mutually agreed terms? ........ 24 
+24. What if my product falls within more than one category and the system allows ticking only 
+one? 24 
+25. What do I enter in the fields “Date” and “Place” at the end of the declaration? .................... 24 
+Other considerations ............................................................................................................................ 25 
+26. Who can see my declaration? ................................................................................................... 25 
+27. What will happen with confidential information? .................................................................... 25 
+28. What is the basis for confidentiality? ....................................................................................... 25 
+29. Why is there a field for translations in the due diligence declaration? .................................... 26 
+30. Is a declaration still required if a provider country did not require the establishment of 
+mutually agreed terms? ........................................................................................................................ 26 
+31. Why is Part B not transferred to ABS Clearing House? ............................................................. 26 
+ 
+
+PAGE 3
+ 
+ 
+Basic concepts  
+1. What is DECLARE? 
+ 
+DECLARE is an EU -wide web-based tool which enables users of gen etic resources to submit the due 
+diligence declarations required by Article 7 of Regulation (EU) No 511/20142 (the EU ABS Regulation 
+or the Regulation) and further specified in the Commission Implementing Regulation (EU) No 
+2015/18663 to the relevant competent authorities  responsible for their implementation4. The 
+competent authorities also use DECLARE to transfer non -confidential information from the due 
+diligence declarations to the ABS Clearing House.  
+ 
+ 
+ 
+ 
+                                                           
+2  Regulation (EU) No 511/2014 of the European Parliament and of the Council of 16 April 2014 on 
+compliance measures for users from the Nagoya Protocol on Access to Genetic Resources and the Fair and 
+Equitable Sharing of Benefits Arising from their Utilisation in the Union; OJ L 150/59; 20.5.2014  
+3  Commission Implementing Regulation (EU) No 2015/1866 laying down detailed rules for the 
+implementation of Regulation (EU) No 511/2014 of the European Parliament and of the Council as regards the 
+register of collections, monitoring user compliance and best practices; OJ L 275/4; 20.10.2015  
+4  Whenever "competent authorities" or " authorities" are mentioned in the present document without 
+further qualification, this refers to authorities responsible for implementation of the Regulation, designated 
+based on Article 6 of the Regulation, and not to authorities responsible for access rules  
+
+
+PAGE 4
+ 
+ 
+ 
+ 
+ 
+ The EU ABS Regulation implements compliance measures of the Nagoya Protocol in 
+the EU. More information about the Protocol and the EU legal framework 
+implementing the Protocol can be found on:   
+http://ec.europa.eu/environment/nature/biodiversity/international/abs/legislation_en.
+htm   
+ 
+ In order to define whether your activities are within the scope of the EU ABS 
+Regulation, please consult the Guidance document on the scope of application and 
+core obligations of the Regulation 5. An overview of the conditions applicable is 
+provided in the Annex to that document6. 
+ 
+ Due diligence declarations need to be submitted only if  utilisation of the genetic 
+resources in question is within the scope of the ABS Regulation. 
+ 
+ The DECLARE IT system is available on https://webgate.ec.europa.eu/declare/ 
+ 
+In case of questions concerning use of the IT DECLARE Nagoya system, please contact: ENV-
+DECLARE-NAGOYA@ec.europa.eu 
+In case of substantial questions, please contact relevant competent authorities in Member States.   
+2.  Is use of DECLARE obligatory?  
+ 
+The use of DECLARE is not mandatory. Users are strongly encourage d to use DECLARE rather than 
+submit due diligence declarations on paper  but if for some reason a user does not want to use the 
+electronic system, paper declarations can also be submitted.  
+                                                           
+5  Guidance document on the scope of application and core obligations of Re gulation (EU) No 511/2014 
+of the European Parliament and of the Council on the compliance measures for users from the Nagoya 
+Protocol on Access to Genetic Resources and the Fair and Equitable Sharing of Benefits Arising from their 
+Utilisation in the Union, OJ C 313/1  
+6http://eur-lex.europa.eu/legal-
+content/EN/TXT/?uri=uriserv:OJ.C_.2016.313.01.0001.01.ENG&toc=OJ:C:2016:313:TOC  
+ 
+
+PAGE 5
+ 
+ 
+Please note also that Member States may develop their own national systems for users to submit 
+due diligence declarations. Those systems will generally be linked with DECLARE.  
+Users from the Spain are required  to use the national system and not directly DECLARE:    
+https://sede.mapama.gob.es/portal/site/se/procedimientos-intermedio?theme_id=5  
+Also users in France for the purpose of submitting the declaration at the resear ch stage need to use 
+the national system and not DECLARE.  
+ The form for due diligence declaration at the stage of research funding c an be 
+obtained from https://esr-projets.adc.education.fr/apaeu/. Further information is 
+provided here: http://www.enseignementsup-
+recherche.gouv.fr/pid28966/encadrement-reglementaire-des-pratiques-de-
+recherche.html  
+ 
+ For any additional questions  concerning the declaration at the research stage in 
+France, please contact: si.apa@recherche.gouv.fr.  
+  
+For the due diligence declaration at the stage of final development of a product, u sers in France 
+should use DECLARE.  
+3. What is a due diligence declaration?  
+The most import ant obligation for users in the EU under the ABS Regulation is to "exercise due 
+diligence to ascertain that genetic resources and traditional knowledge associated with genetic 
+resources which they utilise have been accessed in accordance with applicable ac cess and benefit -
+sharing legislation or regulatory requirements, and that benefits are fairly and equitably shared upon 
+mutually agreed terms, in accordance with any applicable legislation or regulatory requirements" 
+(see Art. 4(1)). The due diligence decl aration plays a key role in demonstrating that this obligation is 
+met.  
+There are two points in time when a due diligence declaration needs to be submitted:  
+1) at the stage of research funding, where research involves the utilisation of genetic resources 
+and/or traditional knowledge associated with genetic resources, as requested by the Member States 
+(1st "checkpoint");  
+2) at the stage of final development of a product developed via the utilisation of genetic resources or 
+traditional knowledge associated with genetic resources; the events triggering submission of the 
+declaration have been identified in Article 6 of the Commission Implementing Regulation (2 nd 
+"checkpoint")7  
+                                                           
+7  See: http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015R1866). 
+
+PAGE 6
+ 
+ 
+It is possible, although rather uncommon, that one user will need to submit two due  diligence 
+declarations concerning the same genetic resource, i.e. one at the stage of research funding and one 
+at the stage of final development of a product. This will be necessary when a user carries out 
+activities falling in scope of the two requiremen ts (thus carries our research involving utilisation of 
+genetic resources and commercialises a product developed via utilisation of genetic resources8).  
+In practice, the declaration is a form that needs to be filled in by users and submitted to the relevant 
+competent authority in the EU. The detailed content of the forms is determined in Annex II and III of 
+the Commission Implementing Regulation. Both Annexes are integrated 1:1 into the DECLARE 
+system.  
+4. Which authority is the relevant competent authority?  
+ 
+The authorities relevant for submitting due diligence declarations are defined in the Commission 
+Implementing Regulation. For the first checkpoint (receipt of research funding), the declarations are 
+to be submitted to the competent authority where the rec ipient of funding is established (and in 
+case the recipient is not established in the EU  but the research is carried out in the EU , where the 
+research is carried out). For the second checkpoint (final stage of product development), the due 
+diligence declaration is to be submitted to the competent authority of the Member State where the 
+user is established. The DECLARE system automatically submits the due diligence declarations to the 
+relevant authorities according to these criteria, on the basis of information provided by the users.  
+The list of competent authorities in the EU can be also found on th e ABS website of the Commission 
+(http://ec.europa.eu/environment/nature/biodiversity/international/abs/legislation_en.htm).   
+5. What is the ABS Clearing House?   
+ 
+The ABS Clearing House (ABS CH) is an international IT platform for exchange of all relevant ABS 
+information between actors in different countries which are Parties to the Nagoya Protocol.  
+A significant amount of information is legally required, by the Pro tocol, to be shared via the ABS CH. 
+For example the Parties to the Protocol are required to place access legislation (if they h ave 
+established any) on t he ABS CH. It is also mandatory for t he Parties to submit to the ABS CH 
+information on checkpoints established on their territory. In the EU those checkpoints are the 
+competent authorities designated in the Member States based on Article 6 of the EU ABS Regulation.  
+In the EU, submitting a due diligence declarations to the competent authorities is equivalent to 
+providing information to checkpoints. Information gathered in the due diligence declarations 
+(insomuch as it is not confidential) is transferred via D ECLARE to the ABSCH and published there in 
+the form of a so-called “checkpoint communiqué”.  
+                                                           
+8  Or transfers result of utilisation or outcome of utilisation  
+
+PAGE 7
+ 
+ 
+https://absch.cbd.int/  
+6. What is an internationally recognized certificate of 
+compliance? 
+ 
+An internationally recognized certificate of compliance (IRCC) is a permit for access to genetic 
+resources that has been issued by the authorities of the providing country and placed on the ABS 
+Clearing House. See examples of IRCCs on the ABSCH.  
+https://absch.cbd.int/search/nationalRecords?schema=absPermit  
+ 
+According to Article 4(3)(a) of the EU ABS Regulation, due diligence can be demonstrated with 
+reference to an IRCC. In practice it means that the user of genetic resources will only need to provide 
+information in DECLARE on unique identifier of the IRCC.  
+Start using DECLARE - registration  
+7. How do I get started with using DECLARE?  
+ 
+In order to be able to submit a due diligence declaration in DECLARE you need to first register in EU 
+Login. When you access DECLARE (https://webgate.ec.europa.eu/declare/), yo u will be re -directed 
+into EU Login.   
+a. EU Login 
+ 
+First you need an EU Login (formerly European Commission Authentication System – ECAS) account 
+to enter/login into DECLARE system. If a given person already has an EU Login account, that account 
+can be used for the purpose of submitting due diligence declarations via DECLARE. If not, the person 
+has to create an (EU Login) account first. 
+EU Login serves as an ‘entry gate’ into DECLARE system.  
+ 
+ 
+
+PAGE 8
+ 
+ 
+ 
+ 
+b. Registration in DECLARE 
+ 
+Once logged into EU Login, you can ac cess DECLARE (where you will also need to register). Firstly, 
+you need to select Nagoya policy domain.  
+ 
+i. Select NAGOYA policy domain to register 
+ 
+
+
+PAGE 9
+ 
+ 
+ 
+ii. Register in DECLARE system 
+ 
+ 
+Information submitted in EU Login will be automatically used by the system for the purpose of 
+registration in DECLARE.  
+ 
+ 
+ 
+iii. Register your organisation 
+ 
+Anybody using  DECLARE is seen by DECLARE as “an organization” and need s to register as an 
+organization in the system.  
+Thus, n ext, you need to provide information about  the genetic resource user – this is the entity 
+which will submit due diligence declarations (see below, no. 8). 
+ 
+
+
+PAGE 10
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The registration of genetic resource users (organizations ) will have to be validated by the relevant 
+competent authority (a body designated for that purpose by the Member State's government – see 
+also above, no. 4).  
+
+
+PAGE 11
+ 
+ 
+ 
+ 
+After validation of the registration, the person who created the entry of the organization in DECLARE 
+receives an email confirming that he/she has the access rights required to use DECLARE and submit 
+due diligence declarations.  
+Once e -mail is received giving access rights to use DECLARE, the user can log in and submit due 
+diligence declarations.   
+8. How do “organizations” function in DECLARE? 
+ 
+In accordance with the EU ABS Regulation and the Commission Implementing Regulation, 
+declarations need to be submitted by users of genetic resources.  The user of genetic resources can 
+be an individual person or an entity  (laboratory, university, company etc.) . If the user in question is 
+an individual person, he/she should register as such.  
+
+
+PAGE 12
+ 
+ 
+ 
+ 
+Most typically, however, individual users work within organ isations/entities such as research 
+laboratories, industrial enterprises, etc.  If the user works for such an organisation/ entity and carries 
+out utilisation on its behalf, the name of that organisation/ entity should be provided as the genetic 
+resource user.  
+It is up to the users  and their organizations/entities to decide at which level of their organisation 
+they want to make their submissions of due diligence declarations. For example, a university may 
+decide to register itself as an organisation, or it may be decided that a department of that university 
+will be registered as an organisation for the purposes of DECLARE. Similarly, a company may decide 
+to register as organization in the system or register only o ne or several individual branch(es) as an 
+organisation(s). This decision will imply that users within one organisation will be able to see 
+submissions originating from other users in the same organisation.  
+Every organisation can have as many members active in DECLARE as it wishes to.  
+If more members are registered, at least one person needs to be registered as administrator so 
+he/she can "manage" (add or modify access of)  other members.  The first person registering the 
+organization receives automatically  the status of administrator. There are thus two types of 
+members in an organisation: the "administrator" member and the "regular member". Both can view, 
+create and submit due diligence declarations . In addition, administrator can add members to the 
+organization.  
+ 
+
+
+PAGE 13
+ 
+ 
+ 
+Be aware that confidential information provided by members of one organization in DECLARE will be 
+visible to other members from the same organization. If a given organization wants to avoid such a 
+situation, different departments should registe r as separate organisations, each with its own 
+members. 
+Note also that the exchange of comments between members of one organization by using the Add 
+comment option might be visible to the competent authorities that have access to a given 
+declaration depending on the settings for visibility of comments.  
+You can administer the visibility of comments in DECLARE. If you wish to use Add comment option 
+for the purpose of communication between the organization’s members (and you don’t want the 
+authorities to see this exchange), please select the option “visible only to my organization 
+members”.  
+ 
+
+
+PAGE 14
+ 
+ 
+Submitting a due diligence declaration  
+9. What do I need to do when I want to submit a due diligence 
+declaration via DECLARE? 
+ 
+Once you are logged into the system, you need to select which type of due diligence declaration you 
+wish to submit, i.e. at the stage of research funding ("Research phase") or at th e stage of final 
+development of a product  ("Final development phase") . You can at this point also view the list of 
+submissions previously made by you or by your organization ("Submission list").  
+i. Select the type of due diligence declaration to submit 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+PAGE 15
+ 
+ 
+ 
+ii. Fill in the declaration form and save it 
+ 
+ 
+ 
+ 
+
+
+PAGE 16
+ 
+ 
+ 
+ 
+Declarations can be saved as drafts for subsequent review or modification until the moment they are 
+submitted.   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+PAGE 17
+ 
+ 
+ 
+iii. Review and submit the due diligence declaration to the 
+Competent Authority 
+ 
+When you are satisfied with the information put in the declaration, you can submit it to the 
+competent authority in relevant Member State.  
+ 
+10. What if I utilised more than one genetic resource in my 
+research project? 
+ 
+Only one due diligence declaration is required per research project , even if more genetic resource s 
+are used in the project.  
+There are different situations possible:  
+ multiple genetic resources utilised in a project are covered by the same permit;  
+ multiple genetic resources utilised in a project are covered by different permits from 
+the same providing country; 
+ multiple genetic resources utilised in a project are covered by different permits from 
+different providing countries;   
+If multiple genetic resources are covered by one permit (first scenario above), information about 
+genetic resources should be entered in the field “ Description of the genetic resources or traditional 
+knowledge associated with genetic resource” (see also below, no 16). 
+In the other two scenarios (genetic resources are covered by different permits, be it from the same 
+providing country or from different providing countries), information about such resources needs to 
+
+
+PAGE 18
+ 
+ 
+be added. You need to use then the button(s) “Add IRCC” or “Add national permit ”, and the system 
+will create all additional fields that need to be filled in. 
+ 
+ 
+ 
+11. What if I utilised more than one genetic resource in my 
+product?  
+ 
+Only one due diligence declaration is required per product , even if more genetic resources are used 
+in the given product. The same applies to result of utilisation and outcome of utilisation. 
+Similarly as with regard to research project, there are different situations possible:  
+ multiple genetic resources utilised in a product9 are covered by the same permit;  
+ multiple genetic resources utilised in a product 10 are covered by different permits 
+from the same providing country; 
+ multiple genetic resources utilised in a product 11 are covered by different permits 
+from different providing countries;   
+                                                           
+9   Or result of utilisation or outcome of utilisation  
+10  Or result of utilisation or outcome of utilisation 
+11  Or result of utilisation or outcome of utilisation 
+
+
+PAGE 19
+ 
+ 
+If multiple genetic resources are covered by one permit  (first scenario above) , information about 
+genetic resources should be entered in the field “ Description of the genetic resources or traditional 
+knowledge associated with genetic resource” (see also below, no 16).  
+In the other two scenarios (genetic resources are covered be different permits, be it from the same 
+providing country or from different providing countries), information about such resources needs to 
+be added. When you use the button “A dd IRCC” or “Add n ational permit ” , the system will then 
+automatically create all additional fields that need to be filled in.  
+ 
+ 
+12. When exactly do I need to submit a due diligence 
+declaration at the second checkpoint (final stage of 
+development of a product)?  
+ 
+According to the Commission Implementing Regulation, the due diligence at the final stage of 
+development needs to be filed prior to the first of the following events occurring:  
+ Market approval or authorisation is sought for a product (developed via the utilisation of 
+genetic resources and traditional knowledge associated with genetic resources);  
+ A notification is required prior to placing for the first time on a Union market is made for a 
+product (developed via the utilisation of genetic resources and traditional k nowledge 
+associated with genetic resources); 
+ Placing on the Union market for the first time a product (developed via the utilisation of 
+genetic resources and traditional knowledge associated with genetic resources) for which no 
+market approval, authorisation or notification is required;  
+
+
+PAGE 20
+ 
+ 
+ The result of the utilisation is sold or transferred in any way to a natural or legal person 
+within the Union in order for that person to carry out one of the activities referred above 
+(market approval, notification, placing on the market…);  
+ The utilisation in the Union has ended and its outcome is sold or transferred in any other 
+way to a natural or legal person outside the Union.    
+Users of genetic resources thus need to determine which of the above applies to their situation. The 
+first three events are  linked to the placing of a product on the market. Some products require 
+market approval (for example pharmaceutical products); for some, a notification needs to be made 
+(for example for cosmetic products); others are placed on the market without market 
+approval/authorisation or notification (for example, a new variety  of an ornamental plant ). The 
+declaration needs to be submitted prior to placing the product on the market, making the 
+notification or seeking approval/authorisation, as the case may be. 
+The fourth and fifth events are not directly linked to the placing of a product on the market (or the 
+intention to do so). In the fourth case, the result of utilisation is sold or transferred to another actor 
+in EU and it is the intention of that actor to place  the product on the market but he/she no longer 
+carries out utilisation (and hence is not in scope of the Regulation ). In the fifth case, the outcome of 
+utilisation leaves the EU; it may allow for manufacturing of the product without further utilisation, or 
+the outcome may still be subject to further research and development , which however, takes place 
+outside of the EU .  Both in case four and five , the declaration needs to be filed by the last actor in 
+the value chain that performed utilisation in the EU and before the result or outcome of utilisation is 
+transferred.   
+More detailed explanation of the two events can be found in the Guidance document on scope…  in 
+section 4.2.  
+  
+  
+
+PAGE 21
+ 
+ 
+Content of the due diligence declaration  
+13. What information should be provided in the field “Subject 
+matter of the research or identification code of the grant”? 
+ 
+Information on the subject matter of the research should be provided; the project title and a brief 
+description will be sufficient for that purpose. Alternatively, a code should be given; such code is 
+usually assigned by the funding agency by which the grant can be clearly identified and information 
+on the subject matter of the research can be found.   
+This information – transmitted through the ABS Clearing House or, if ess ential information is 
+confidential, directly to the providing country’s authorities - will allow the provid ing country  to 
+check whether the use of the genetic resource is in conformity with the prior informed consent and 
+mutually agreed terms, and that benefits are shared in accordance with MAT.   
+14. What information should be provided in the field “Name of 
+the product”?  
+ 
+A name should be provided which allows identifying both the type of the product in question (for 
+example facial cream,  plant variety, etc .) as well as the specific product by its brand or other name 
+which allows unequivocal identification, (e.g. in case of a plant  variety, its  denomination or 
+commercial name).  
+As in the case of research grants (no. 13 above), the information provided will allow the provider of 
+the genetic resource to check whether the use of the genetic resource is in conformity with the prior 
+informed consent and mutually agreed terms, and that benefits are shared in accordance with MAT.   
+15. What is the “Place of access”? 
+ 
+“Place of access” refers to the provider country. Provider country should be understood as country 
+of origin of the genetic resources  or any (other) Party to the Protocol that has acquired the genetic 
+resources in accordance wit h the Convention . If a genetic resource was accessed directly in a 
+provider country, then the place of access is that country.  
+If a genetic resource was accessed indirectly from an intermediary, such as an ex-situ collection not 
+located in a provider country, then the place of access is still the provider country and not the 
+country in which the intermediary is located. In short, “Place of access” always refers to the provider 
+country.   
+  
+
+PAGE 22
+ 
+ 
+16. What information needs to be provided in the field 
+“Description of the genetic resources or traditional knowledge 
+associated with genetic resource”? 
+ 
+This refers to i nformation which will allow the provider country to identify the genetic resource or 
+traditional knowledge associated with genetic resources; the unique iden tifiers should be used 
+wherever they are available.  
+It is advised to use terms from the original permits. For example, if a permit concerned 10,000 
+unsorted arthropods, it will be helpful if the information in the due diligence declaration referred 
+also to 10,000 unsorted arthropods even if only one of them was utilised; the user could refer then 
+in the due diligence declaration to the particular genetic resource used, i.e. “Curculio oblongus, one 
+of 10,000 unsorted arthropods”. This will facilitate the wo rk of competent authorities of the 
+providing countries. Reference only to  one particular genetic resource (in this case “Curculio 
+oblongus”) would likely trigger a clarifying request on behalf of the providing country.    
+The information provided in the fi eld “ Description of genetic resource” can refer to  biota at any 
+taxonomic rank (species, genus, family etc.), which may carry a taxonomic name. It may also include 
+a reference to the location where material was collected. It may also be possible to identify a genetic 
+resource through reference to a voucher specimen or fields notes held in an identified archive or 
+collection.  
+17. What is an “Identifier of access permit”? 
+ 
+A  number or other code used by the issuing authority to identify  the permit.  
+18. What is an “Equivalent of an access permit”?  
+ 
+Parties to the Protocol may have specific rules for different types of access to their genetic 
+resources. For example, they may require access permits only for the utilisation in the 
+commercialisation phase, whereas in the non -commercial utilisation only a notification or 
+registration may be required. Such notification or registration is considered to be equivalent to an 
+access permit, as it also constitutes an access requirement. As such, this also needs to be reported in 
+the due diligence declaration.   
+  
+
+PAGE 23
+ 
+ 
+19. What is an “Entity which granted prior informed consent”?  
+ 
+Depending on national legislation of the provider country, prior informed consent (PIC) may be 
+granted through a decision issued at governmental or regional l evel. It is also possible that countries 
+delegate the authority to issue PIC to local communities. Who is responsible for granting prior 
+informed consent is defined in the legislation of the provider country.  
+The information about entit ies which at some p oint granted prior informed consent is retrieved  by 
+DECLARE from the ABS Clearing House  and can be seen in a drop -down menu. If the entity which 
+granted PIC for the genetic resource covered in the particular DDD does not have a corresponding 
+record on the ABS Clearing House, such record needs to be created.  
+ 
+20. What is an “Entity to whom the prior informed consent 
+was granted”?  
+ 
+This is the entity which received the permit (prior informed consent).  
+As with regard  to   the entity which granted prior informed consent  (no. 19 above), a list of these 
+entities is retrieved by DECLARE from the ABS Clearing House. If the entity which obtained PIC in a 
+particular case does not have a corresponding record on the ABS Cleari ng House, such a record 
+needs to be created.  
+21. What is a “Direct source of genetic resource”? 
+ 
+This is the person or legal entity from whom the user obtained the genetic resources directly, i.e. the 
+previous actor in the value chain. If a genetic resource is obtained directly from the provider country, 
+the name of the country should be provided .  If a genetic resource is obtained from a collection, the 
+details of the collection need to be provided. If a genetic resource is obtained from a different user 
+in the value chain, contact details of that user need to be provided.  
+ 
+ 
+
+
+PAGE 24
+ 
+ 
+22. What is a “Registered collection”?  
+ 
+The EU ABS Regulation provides f or collections of genetic resources to become registered when 
+certain criteria (set up in the Regulation and further specified in the Commission Implementing 
+Regulation) are fulfilled. According to the Regulation, a user who obtains a genetic resource from  
+such a registered collection is considered to have complied with the duty of being du ly diligent in 
+relation to seeking information. Other obligations, including to submit a due diligence declaration , 
+remain applicable.  
+For the moment (July 2017) there are no registered collections in the EU. If and when any collections 
+have been registered, those will be listed on the ABS website of the Commission.  
+23. What do I mark in response to the question on restrictions 
+in mutually agreed terms?  
+ 
+There are three possible ways to answer the question on possible restrictions in the mutually agreed 
+terms limiting the possible utilisation of genetic resources (or traditional knowledge associated with 
+genetic resources): “yes”, ”no”, ” not applicable”.  
+Where no mutually agreed terms have been established, “not applicable ” should be selected. If 
+there are restrictions in the mutually agreed terms concerning utilisation and allowing , for example 
+only non -commercial utilisation “yes” should be selected. If there are no restrictions in mutually 
+agreed terms, “no” should be selected.    
+24. What if my product falls within more than one category 
+and the system allows ticking only one?  
+ 
+Tick the box “other” and specify.  
+25. What do I enter in the fields “Date” and “Place” at the end 
+of the declaration?  
+ 
+“Date” is the date on which the declaration is submitted, just as it would be done when submitting a 
+declaration in writing. The date is automatically filled in by the system. 
+“Place” is  the location where you are when you submit the declaration, just as it would b e done 
+when submitting a declaration in writing.  
+ 
+
+PAGE 25
+ 
+ 
+Other considerations 
+26. Who can see my declaration?  
+ 
+The non-confidential information in a due diligence declaration can eventually be seen by anybody, 
+as they are transferred to the ABS Clearing House and thus made public. Prior to transmission of the 
+information to the ABS Clearing House, the non-confidential information can be seen by the relevant 
+competent authority ( to whom the user submitted the due diligence declaration ), by the 
+Commission ( when the d ue diligence declaration is validated by the competent authority) and by 
+other EU competent authorities ( in cases where a product is put on the market  of more than one 
+Member State).  
+27. What will happen with confidential information?  
+ 
+Confidential information included in a due diligence declaration in DECLARE can be accessed by the 
+other members of the same  user’s “organisation” (see no. 8 above) and by the competent 
+authorities to whom the due diligence declaration is submitted . These are the only entities which 
+can see confidential information. Other competent authorities (for example from other EU countries 
+where the product is put on the market) or the European Commission cannot see the confidential 
+information. Confidential information is also not transferred to the ABS Clearing House.  
+In some situations information might be indicated as confidential in a due diligence declaration while 
+being crucial for creating a “checkpoint communiqué” (see no. 3 above), for example the place of 
+access). Such due dili gence declarations w ill not be published on the ABS CH as they do not allow 
+provider countries to identify their genetic resources. In such a situation, the competent authority of 
+the EU Member State where the  due diligence declaration  is submitted will contact directly the 
+provider country to supply information about its genetic resources (see Article 7(2) of the 
+Commission Implementing Regulation). This information will allow the provider country to check 
+whether the use of the geneti c resource is in conformity with the prior informed consent and 
+mutually agreed terms, and that benefits are shared in accordance with MAT.   
+28. What is the basis for confidentiality?    
+ 
+The Commission Implementing Regulation requires that, when information is indicated to be 
+confidential, reasons are provided for declaring such confidentiality.  
+Article 7(5) of the Regulation indicates that the competent authorities shall take due account of the 
+respect of confidentiality of commercial or industrial informat ion where such confidentiality is 
+provided for by Union or national law to protect a legitimate economic interest. This interest might 
+be in particular related to information on genetic resources or their utilisation.  
+
+PAGE 26
+ 
+ 
+Users are advised to address confidentiality for relevant aspects of the agreement when negotiating 
+the mutually agreed terms with the provider country. 
+29. Why is there a field for translations in the due diligence 
+declaration?  
+ 
+The information submitted to the ABSCH needs to be in one of six U N languages, three of which are 
+also official EU languages (i.e. English, French, and Spanish). When users submit due diligence 
+declarations in other languages, they are encouraged to provide translations into one of the three 
+UN languages used in the EU. The declarations can be also submitted if no translations are provided.  
+If information is considered to be confidential, it is not foreseen to provide translations, as this 
+information will not be transferred to the ABSCH.   
+30. Is a declaration still required if a provider country did not 
+require the establishment of mutually agreed terms?  
+ 
+Yes. If other conditions for applicability of the Regulation are met, the declaration needs to be filed 
+in even if mutually agreed terms have not been negotiated. Some pr ovider countries may not 
+require establishment of mutually agreed terms whereas obtaining prior informed consent may still 
+be obligatory.  
+It is also possible that a country requires establishment of mutually agreed terms but does not 
+require obtaining of an access permit. A due diligence declaration is also required then.  
+A due diligence declaration is also required when a country just requires a notification or registration 
+of the fact of access, as this constitutes an equivalent of an access permit.  
+In short, due diligence is required when a provider country put some legislative or regulatory 
+requirements concerning access, whatever they might be. 
+31. Why is Part B not transferred to ABS Clearing House?  
+ 
+The Commission Implementing Regulation requires that information from Part A but not from Part B 
+of Annex II and III is transferred to the ABS Clearing House. Th e information collected in Part B is 
+relevant rather for the implementation of the Regulation in th e EU and will assist the competent 
+authorities in carrying out potential checks on users.  

@@ -1,0 +1,137 @@
+{
+  "readAt": "2026-09-11T01:14:23.281626+00:00",
+  "results": [
+    {
+      "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "id": "gleaner:deep-seabed-and-ocean-database-international-seabed-authority:https%3A%2F%2Fdata.isa.org.jm%2Fstatic%2Foih%2Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+        "title": "China Ocean Mineral Resources Research and Development Association - PMS",
+        "summary": "Water Properties measured within the Water Column by Contractors to the ISA in for exploration",
+        "type": "Dataset",
+        "url": "https://data.isa.org.jm",
+        "source": {
+          "id": "deep-seabed-and-ocean-database-international-seabed-authority",
+          "name": "Deep Seabed and Ocean Database - International Seabed Authority",
+          "url": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+          "domain": "https://data.isa.org.jm",
+          "last_indexed": "2026-09-10T08:41:07.596052"
+        },
+        "facts": [
+          {
+            "label": "Temporal coverage",
+            "value": "2014",
+            "href": null,
+            "links": []
+          },
+          {
+            "label": "Distribution",
+            "value": "application.zip",
+            "href": "https://data.isa.org.jm/isa/map/download/comrapms12014_env_template_ctd2-3zip",
+            "links": [
+              {
+                "value": "application.zip",
+                "href": "https://data.isa.org.jm/isa/map/download/comrapms12014_env_template_ctd2-3zip"
+              }
+            ]
+          }
+        ],
+        "highlight": null,
+        "spatial": {
+          "boxes": [],
+          "points": [
+            {
+              "lat": 49.6508,
+              "lon": -37.7684
+            }
+          ]
+        },
+        "elasticsearch_document_url": "http://odis.org:9400/odis/_doc/https%3A%2F%2Fdata.isa.org.jm%2Fstatic%2Foih%2Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+        "raw": null
+      }
+    },
+    {
+      "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Aoceanexpert%3Acaf4562bcc499b395e484216b1d488130fe7ef28.json",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "id": "gleaner:oceanexpert:caf4562bcc499b395e484216b1d488130fe7ef28.json",
+        "title": "ISA DeepData connects with Ocean Biodiversity Information System (OBIS) on deep-sea biodiversity data",
+        "summary": "Online Meeting (MS Teams), 8 June 2021 (8 am – 10 am, Kingston Time) - This webinar is being convened by the ISA secretariat, in collaboration with the OBIS secretariat. It will be moderated by Dr. Gordon Paterson, a member of the LTC. -  The main objective of this webinar is to present an important recent cooperation undertaken between the ISA secretariat and OBIS of IOC/UNESCO for sharing biodiversity data and information. Building on the biodiversity data contained in ISA’s database, DeepData, this new partnership will contribute to enhance the global accessibility and visibility of deep-sea biodiversity data collected and submitted by exploration contractors carrying activities in the international seabed area (Area), including historical data collected in the past several decades. -  This webinar will share the perspectives of data provider (exploration contractors), as well as data users, in particular scientific communities. Special focus will be given on discussing the importance of ensuring data quality and standardization as well as enhancing capacity for data analysis and synthesis. -  ISA members, contractors, LTC members, and other relevant stakeholders will be invited to attend this webinar.",
+        "type": "Event",
+        "url": "https://oceanexpert.org/event/3100",
+        "source": {
+          "id": "oceanexpert",
+          "name": "OceanExpert",
+          "url": "https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml",
+          "domain": "https://oceanexpert.org",
+          "last_indexed": "2026-09-10T08:39:00.856658"
+        },
+        "facts": [],
+        "highlight": null,
+        "spatial": null,
+        "elasticsearch_document_url": "http://odis.org:9400/odis/_doc/caf4562bcc499b395e484216b1d488130fe7ef28.json",
+        "raw": null
+      }
+    },
+    {
+      "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Aocean-biodiversity-information-system%3Ahttps%253A%252F%252Fobis.org%252Fdataset%252F8935fb89-6494-4829-8b29-09022c3dbc90",
+      "status": 200,
+      "contentType": "application/json",
+      "body": {
+        "id": "gleaner:ocean-biodiversity-information-system:https%3A%2F%2Fobis.org%2Fdataset%2F8935fb89-6494-4829-8b29-09022c3dbc90",
+        "title": "Spain-Baleric Is. 2015 Loggerhead Turtles (aggregated per 1-degree cell)",
+        "summary": "Original provider:\nNOAA PIFSC\n\nDataset credits:\nData provider\nFisheries Bycatch Research Group\nOriginating data center\n<a href=\"http://www.seaturtle.org/tracking/\">Satellite Tracking and Analysis Tool (STAT)</a>\n This dataset is a summarized representation of the telemetry locations aggregated per species per 1-degree cell.",
+        "type": "Dataset",
+        "url": "https://obis.org/dataset/8935fb89-6494-4829-8b29-09022c3dbc90",
+        "source": {
+          "id": "ocean-biodiversity-information-system",
+          "name": "Ocean Biodiversity Information System",
+          "url": "https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml",
+          "domain": "https://obis.org/",
+          "last_indexed": "2026-09-10T09:01:32.734611"
+        },
+        "facts": [
+          {
+            "label": "License",
+            "value": "This work is licensed under a  Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License",
+            "href": null,
+            "links": []
+          },
+          {
+            "label": "Temporal coverage",
+            "value": "2016/2017",
+            "href": null,
+            "links": []
+          },
+          {
+            "label": "Distribution",
+            "value": "ZIP",
+            "href": "https://ipt.env.duke.edu/archive.do?r=zd_1310_1deg",
+            "links": [
+              {
+                "value": "ZIP",
+                "href": "https://ipt.env.duke.edu/archive.do?r=zd_1310_1deg"
+              }
+            ]
+          }
+        ],
+        "highlight": null,
+        "spatial": {
+          "boxes": [
+            {
+              "south": 30.5,
+              "west": -2.5,
+              "north": 39.5,
+              "east": 34.5
+            }
+          ],
+          "points": []
+        },
+        "elasticsearch_document_url": "http://odis.org:9400/odis/_doc/https%3A%2F%2Fobis.org%2Fdataset%2F8935fb89-6494-4829-8b29-09022c3dbc90",
+        "raw": null
+      }
+    }
+  ]
+}

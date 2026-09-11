@@ -1,0 +1,1686 @@
+[
+  {
+    "id": "global-fishing-watch-operator",
+    "record": {
+      "kind": "organization",
+      "url": "https://globalfishingwatch.org/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "terms": {
+          "id": "terms",
+          "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+          "title": {
+            "en": "API licence and limits",
+            "fr": "Licence et limites API",
+            "es": "Licencia y límites API",
+            "ar": "ترخيص API وحدودها",
+            "zh": "API许可与限额",
+            "ru": "Лицензия и ограничения API"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "en": "Annual report 2025",
+            "fr": "Rapport annuel 2025",
+            "es": "Informe anual 2025",
+            "ar": "التقرير السنوي 2025",
+            "zh": "2025年年度报告",
+            "ru": "Годовой отчёт 2025"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "coalition": {
+          "id": "coalition",
+          "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+          "title": {
+            "en": "Ocean transparency commitments, 18 June 2026",
+            "fr": "Engagements de transparence océanique, 18 juin 2026",
+            "es": "Compromisos de transparencia oceánica, 18 junio 2026",
+            "ar": "التزامات شفافية المحيطات، 18 يونيو 2026",
+            "zh": "海洋透明度承诺，2026年6月18日",
+            "ru": "Обязательства по прозрачности океана, 18 июня 2026"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "jac": {
+          "id": "jac",
+          "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+          "title": {
+            "en": "Joint Analytical Cell",
+            "fr": "Cellule analytique conjointe",
+            "es": "Célula Analítica Conjunta",
+            "ar": "الخلية التحليلية المشتركة",
+            "zh": "联合分析小组",
+            "ru": "Совместная аналитическая группа"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Global Fishing Watch, Inc.",
+        "summary": "Independent nonprofit that owns and operates the Global Fishing Watch platform and participates in fisheries-transparency partnerships.",
+        "description": "Independent nonprofit that owns and operates the Global Fishing Watch platform and participates in fisheries-transparency partnerships.",
+        "details": {
+          "aliases": [
+            "GFW"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "terms",
+              "annual",
+              "coalition",
+              "jac"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-audacious-project-funds-global-fishing-watch-operator",
+        "sourceNodeId": "audacious-project",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "USD 60 million commitment via the Audacious Project, described by GFW as five-year support for 2023–2028, for mapping human activity and scaling ocean governance. This is a commitment, not USD 60 million disbursed in 2025.",
+        "properties": {
+          "scope": "2023–2028 commitment supporting GFW strategy",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "en": "Annual report 2025",
+              "fr": "Rapport annuel 2025",
+              "es": "Informe anual 2025",
+              "ar": "التقرير السنوي 2025",
+              "zh": "2025年年度报告",
+              "ru": "Годовой отчёт 2025"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-hans-wilsdorf-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "hans-wilsdorf-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "Three-year USD 5.1 million partnership secured in 2025, supporting marine-protection and fisheries work in West/Central Africa, the Mediterranean and the Pacific. Exact start/end dates are unstated.",
+        "properties": {
+          "scope": "Three-year regional program partnership reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "en": "Annual report 2025",
+              "fr": "Rapport annuel 2025",
+              "es": "Informe anual 2025",
+              "ar": "التقرير السنوي 2025",
+              "zh": "2025年年度报告",
+              "ru": "Годовой отчёт 2025"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-islas-secas-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "islas-secas-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "Renewed funding for Panama marine-protected-area enforcement reported in 2025; amount and exact dates are unstated.",
+        "properties": {
+          "scope": "Panama program support reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "en": "Annual report 2025",
+              "fr": "Rapport annuel 2025",
+              "es": "Informe anual 2025",
+              "ar": "التقرير السنوي 2025",
+              "zh": "2025年年度报告",
+              "ru": "Годовой отчёт 2025"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-walmart-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "walmart-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "Two-year USD 450,000 grant renewed in 2025 for industry Vessel Viewer training and integration with partner platforms. Not assigned in full to generic database operations.",
+        "properties": {
+          "scope": "Vessel Viewer training and partner integrations",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "en": "Annual report 2025",
+              "fr": "Rapport annuel 2025",
+              "es": "Informe anual 2025",
+              "ar": "التقرير السنوي 2025",
+              "zh": "2025年年度报告",
+              "ru": "Годовой отчёт 2025"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-minderoo-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "minderoo-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "One-year USD 200,000 extension reported in 2025 for reliable models and risk assessment related to forced labour and illegal fishing.",
+        "properties": {
+          "scope": "One-year model and risk-assessment support reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "en": "Annual report 2025",
+              "fr": "Rapport annuel 2025",
+              "es": "Informe anual 2025",
+              "ar": "التقرير السنوي 2025",
+              "zh": "2025年年度报告",
+              "ru": "Годовой отчёт 2025"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-sall-family-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "sall-family-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "One-year USD 150,000 unrestricted grant reported in 2025.",
+        "properties": {
+          "scope": "One-year unrestricted organizational support reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "en": "Annual report 2025",
+              "fr": "Rapport annuel 2025",
+              "es": "Informe anual 2025",
+              "ar": "التقرير السنوي 2025",
+              "zh": "2025年年度报告",
+              "ru": "Годовой отчёт 2025"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-oceana-funds-global-fishing-watch-operator",
+        "sourceNodeId": "oceana",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "USD 115,000 subgrant at the end of 2025 for Coalition for Fisheries Transparency work supporting the Global Charter for Fisheries Transparency. Founding collaboration does not establish current governance.",
+        "properties": {
+          "scope": "Coalition transparency work, subgrant reported in late 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "en": "Annual report 2025",
+              "fr": "Rapport annuel 2025",
+              "es": "Informe anual 2025",
+              "ar": "التقرير السنوي 2025",
+              "zh": "2025年年度报告",
+              "ru": "Годовой отчёт 2025"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-global-fishing-watch-operator-member-of-coalition-for-fisheries-transparency",
+        "sourceNodeId": "global-fishing-watch-operator",
+        "targetNodeId": "coalition-for-fisheries-transparency",
+        "kind": "member_of",
+        "note": "GFW identifies itself as a member of the coalition. This is organizational participation, not system hierarchy or unilateral governance.",
+        "properties": {
+          "scope": "Organizational participation in fisheries transparency",
+          "status": "documented June 2026",
+          "sourceRefs": [
+            "coalition"
+          ]
+        },
+        "sources": {
+          "coalition": {
+            "id": "coalition",
+            "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+            "title": {
+              "en": "Ocean transparency commitments, 18 June 2026",
+              "fr": "Engagements de transparence océanique, 18 juin 2026",
+              "es": "Compromisos de transparencia oceánica, 18 junio 2026",
+              "ar": "التزامات شفافية المحيطات، 18 يونيو 2026",
+              "zh": "海洋透明度承诺，2026年6月18日",
+              "ru": "Обязательства по прозрачности океана, 18 июня 2026"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-global-fishing-watch-operator-member-of-joint-analytical-cell",
+        "sourceNodeId": "global-fishing-watch-operator",
+        "targetNodeId": "joint-analytical-cell",
+        "kind": "member_of",
+        "note": "The official JAC page lists GFW among its members. Membership does not assign authority over every member or transfer confidential operational data to the public map.",
+        "properties": {
+          "scope": "Participation in the Joint Analytical Cell",
+          "status": "listed on current official page",
+          "sourceRefs": [
+            "jac"
+          ]
+        },
+        "sources": {
+          "jac": {
+            "id": "jac",
+            "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+            "title": {
+              "en": "Joint Analytical Cell",
+              "fr": "Cellule analytique conjointe",
+              "es": "Célula Analítica Conjunta",
+              "ar": "الخلية التحليلية المشتركة",
+              "zh": "联合分析小组",
+              "ru": "Совместная аналитическая группа"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      }
+    ],
+    "routes": []
+  },
+  {
+    "id": "kpler",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "kpler": {
+          "id": "kpler",
+          "url": "https://globalfishingwatch.org/platform-update/data-vendor-transition/",
+          "title": {
+            "en": "AIS provider transition, 25 April 2026",
+            "fr": "Changement de fournisseur AIS, 25 avril 2026",
+            "es": "Cambio de proveedor AIS, 25 abril 2026",
+            "ar": "تغيير مزود AIS، 25 أبريل 2026",
+            "zh": "AIS供应商变更，2026年4月25日",
+            "ru": "Смена поставщика AIS, 25 апреля 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Kpler",
+        "summary": "Unified commercial AIS data provider to GFW since April 2026.",
+        "description": "Unified commercial AIS data provider to GFW since April 2026.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "kpler"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "planet-labs",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "optical": {
+          "id": "optical",
+          "url": "https://globalfishingwatch.org/insights/ask-global-fishing-watch-optical-detections/",
+          "title": {
+            "en": "Optical vessel detections",
+            "fr": "Détections optiques de navires",
+            "es": "Detecciones ópticas de buques",
+            "ar": "الرصد البصري للسفن",
+            "zh": "船舶光学探测",
+            "ru": "Оптическое обнаружение судов"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Planet Labs",
+        "summary": "Supplier of purchased PlanetScope optical imagery used by Global Fishing Watch.",
+        "description": "Supplier of purchased PlanetScope optical imagery used by Global Fishing Watch.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "optical"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "trygg-mat-tracking",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "tmt": {
+          "id": "tmt",
+          "url": "https://globalfishingwatch.org/platform-update/five-new-vessel-registry-data-sources-integrated/",
+          "title": {
+            "en": "Vessel registry integrations, 1 June 2026",
+            "fr": "Intégration des registres de navires, 1 juin 2026",
+            "es": "Integración de registros de buques, 1 junio 2026",
+            "ar": "دمج سجلات السفن، 1 يونيو 2026",
+            "zh": "船舶登记数据集成，2026年6月1日",
+            "ru": "Интеграция судовых реестров, 1 июня 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "TMT",
+        "summary": "Organization providing curated vessel identity and registry information to GFW through its Fisheries Analytical Capacity Tool.",
+        "description": "Organization providing curated vessel identity and registry information to GFW through its Fisheries Analytical Capacity Tool.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "tmt"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "fisheries-analytical-capacity-tool",
+    "record": {
+      "kind": "system",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "tmt": {
+          "id": "tmt",
+          "url": "https://globalfishingwatch.org/platform-update/five-new-vessel-registry-data-sources-integrated/",
+          "title": {
+            "en": "Vessel registry integrations, 1 June 2026",
+            "fr": "Intégration des registres de navires, 1 juin 2026",
+            "es": "Integración de registros de buques, 1 junio 2026",
+            "ar": "دمج سجلات السفن، 1 يونيو 2026",
+            "zh": "船舶登记数据集成，2026年6月1日",
+            "ru": "Интеграция судовых реестров, 1 июня 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Fisheries Analytical Capacity Tool",
+        "summary": "TMT database (FACT) supplying selected vessel identity/history data to GFW.",
+        "description": "TMT database (FACT) supplying selected vessel identity/history data to GFW.",
+        "details": {
+          "aliases": [
+            "FACT"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "tmt"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "norwegian-directorate-of-fisheries",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "provider-1": {
+          "id": "provider-1",
+          "url": "https://globalfishingwatch.org/norway/",
+          "title": {
+            "en": "Norway VMS data partnership",
+            "fr": "Partenariat de données VMS : Norwegian Directorate of Fisheries",
+            "es": "Asociación de datos VMS: Norwegian Directorate of Fisheries",
+            "ar": "شراكة بيانات VMS: Norwegian Directorate of Fisheries",
+            "zh": "VMS数据合作：Norwegian Directorate of Fisheries",
+            "ru": "Партнёрство по данным VMS: Norwegian Directorate of Fisheries"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Norwegian Directorate of Fisheries",
+        "summary": "Norwegian VMS feed made public on the GFW map in March 2023, following the May 2022 agreement. The published vessel counts are historical; this edge does not claim all Norwegian vessels are included.",
+        "description": "Norwegian VMS feed made public on the GFW map in March 2023, following the May 2022 agreement. The published vessel counts are historical; this edge does not claim all Norwegian vessels are included.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "provider-1"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "brazil-ministry-fisheries-aquaculture",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "provider-2": {
+          "id": "provider-2",
+          "url": "https://www.gov.br/mpa/pt-br/assuntos/cadastro-registro-e-monitoramento/monitoramento-da-aquicultura-e-da-pesca-1/preps-1/global-fishing-watch",
+          "title": {
+            "en": "Brazil PREPS and GFW partnership",
+            "fr": "Partenariat de données VMS : Brazil Ministry of Fisheries and Aquaculture",
+            "es": "Asociación de datos VMS: Brazil Ministry of Fisheries and Aquaculture",
+            "ar": "شراكة بيانات VMS: Brazil Ministry of Fisheries and Aquaculture",
+            "zh": "VMS数据合作：Brazil Ministry of Fisheries and Aquaculture",
+            "ru": "Партнёрство по данным VMS: Brazil Ministry of Fisheries and Aquaculture"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Brazil Ministry of Fisheries and Aquaculture",
+        "summary": "The ministry states that GFW mirrors PREPS tracking data under the partnership established in 2021. Public VMS sharing does not imply that restricted Brazilian RGP registry fields are publicly available.",
+        "description": "The ministry states that GFW mirrors PREPS tracking data under the partnership established in 2021. Public VMS sharing does not imply that restricted Brazilian RGP registry fields are publicly available.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "provider-2"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "incopesca",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "provider-3": {
+          "id": "provider-3",
+          "url": "https://globalfishingwatch.org/costa-rica/",
+          "title": {
+            "en": "Costa Rica VMS data partnership",
+            "fr": "Partenariat de données VMS : Costa Rican Institute of Fisheries and Aquaculture",
+            "es": "Asociación de datos VMS: Costa Rican Institute of Fisheries and Aquaculture",
+            "ar": "شراكة بيانات VMS: Costa Rican Institute of Fisheries and Aquaculture",
+            "zh": "VMS数据合作：Costa Rican Institute of Fisheries and Aquaculture",
+            "ru": "Партнёрство по данным VMS: Costa Rican Institute of Fisheries and Aquaculture"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Costa Rican Institute of Fisheries and Aquaculture",
+        "summary": "INCOPESCA agreed to share VMS data in July 2020; the industrial longline and purse-seine subset was made public in January 2022. This does not establish universal coverage of Costa Rican boats.",
+        "description": "INCOPESCA agreed to share VMS data in July 2020; the industrial longline and purse-seine subset was made public in January 2022. This does not establish universal coverage of Costa Rican boats.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "provider-3"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "panama-aquatic-resources-authority",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "provider-4": {
+          "id": "provider-4",
+          "url": "https://globalfishingwatch.org/es/historias/panama-publica-los-datos-de-seguimiento-de-embarcaciones-en-el-mapa-de-global-fishing-watch/",
+          "title": {
+            "en": "Panama publishes vessel tracking data",
+            "fr": "Partenariat de données VMS : Aquatic Resources Authority of Panama",
+            "es": "Asociación de datos VMS: Aquatic Resources Authority of Panama",
+            "ar": "شراكة بيانات VMS: Aquatic Resources Authority of Panama",
+            "zh": "VMS数据合作：Aquatic Resources Authority of Panama",
+            "ru": "Партнёрство по данным VMS: Aquatic Resources Authority of Panama"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "panama-current": {
+          "id": "panama-current",
+          "url": "https://globalfishingwatch.org/our-work-in-panama/",
+          "title": {
+            "en": "GFW in Panama: public domestic fleet in 2026",
+            "fr": "GFW au Panama : flotte nationale publique en 2026",
+            "es": "GFW en Panamá: flota nacional pública en 2026",
+            "ar": "GFW في بنما: نشر الأسطول المحلي في 2026",
+            "zh": "GFW在巴拿马：2026年国内船队公开",
+            "ru": "GFW в Панаме: публичный национальный флот в 2026 году"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Aquatic Resources Authority of Panama",
+        "summary": "ARAP is GFW’s named Panamanian fisheries partner. GFW reports international-fleet VMS sharing from 2019 and public domestic longline/trawl data in 2026.",
+        "description": "ARAP is GFW’s named Panamanian fisheries partner. GFW reports international-fleet VMS sharing from 2019 and public domestic longline/trawl data in 2026.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "provider-4",
+              "panama-current"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "peru-ministry-production",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "provider-5": {
+          "id": "provider-5",
+          "url": "https://globalfishingwatch.org/press-release/new-partnership-transparency-fisheries-eastern-tropical-pacific/",
+          "title": {
+            "en": "Peru Ministry of Production data partnership",
+            "fr": "Partenariat de données VMS : Peru Ministry of Production",
+            "es": "Asociación de datos VMS: Peru Ministry of Production",
+            "ar": "شراكة بيانات VMS: Peru Ministry of Production",
+            "zh": "VMS数据合作：Peru Ministry of Production",
+            "ru": "Партнёрство по данным VMS: Peru Ministry of Production"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Peru Ministry of Production",
+        "summary": "The ministry and GFW agreed to public VMS access; GFW subsequently reports publication from October 2018. Historical positions extend back to 2012. This edge concerns shared vessel tracking, not public access to every Peruvian fisheries record.",
+        "description": "The ministry and GFW agreed to public VMS access; GFW subsequently reports publication from October 2018. Historical positions extend back to 2012. This edge concerns shared vessel tracking, not public access to every Peruvian fisheries record.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "provider-5"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "sernapesca",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "provider-6": {
+          "id": "provider-6",
+          "url": "https://globalfishingwatch.org/our-work-in-chile/",
+          "title": {
+            "en": "Chile Sernapesca data partnership",
+            "fr": "Partenariat de données VMS : Chile National Fisheries and Aquaculture Service",
+            "es": "Asociación de datos VMS: Chile National Fisheries and Aquaculture Service",
+            "ar": "شراكة بيانات VMS: Chile National Fisheries and Aquaculture Service",
+            "zh": "VMS数据合作：Chile National Fisheries and Aquaculture Service",
+            "ru": "Партнёрство по данным VMS: Chile National Fisheries and Aquaculture Service"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Chile National Fisheries and Aquaculture Service",
+        "summary": "Sernapesca agreed to public vessel tracking in 2019; GFW reports that data became public in 2020. Industrial and small-scale vessel subsets are included, with no claim that all Chilean boats are tracked.",
+        "description": "Sernapesca agreed to public vessel tracking in 2019; GFW reports that data became public in 2020. Industrial and small-scale vessel subsets are included, with no claim that all Chilean boats are tracked.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "provider-6"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "ecuador-dirnea",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "provider-7": {
+          "id": "provider-7",
+          "url": "https://globalfishingwatch.org/es/programa-transparencia-latinoamerica-ecuador/",
+          "title": {
+            "en": "Ecuador DIRNEA data partnership",
+            "fr": "Partenariat de données VMS : Ecuador National Directorate of Aquatic Spaces",
+            "es": "Asociación de datos VMS: Ecuador National Directorate of Aquatic Spaces",
+            "ar": "شراكة بيانات VMS: Ecuador National Directorate of Aquatic Spaces",
+            "zh": "VMS数据合作：Ecuador National Directorate of Aquatic Spaces",
+            "ru": "Партнёрство по данным VMS: Ecuador National Directorate of Aquatic Spaces"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Ecuador National Directorate of Aquatic Spaces",
+        "summary": "DIRNEA signed a sharing agreement in December 2020; GFW reports that industrial fishing-vessel VMS data became public in October 2021.",
+        "description": "DIRNEA signed a sharing agreement in December 2020; GFW reports that industrial fishing-vessel VMS data became public in October 2021.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "provider-7"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "belize-high-seas-fisheries-unit",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "provider-8": {
+          "id": "provider-8",
+          "url": "https://globalfishingwatch.org/belize/",
+          "title": {
+            "en": "Belize high-seas fleet partnership",
+            "fr": "Partenariat de données VMS : Belize High Seas Fisheries Unit",
+            "es": "Asociación de datos VMS: Belize High Seas Fisheries Unit",
+            "ar": "شراكة بيانات VMS: Belize High Seas Fisheries Unit",
+            "zh": "VMS数据合作：Belize High Seas Fisheries Unit",
+            "ru": "Партнёрство по данным VMS: Belize High Seas Fisheries Unit"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Belize High Seas Fisheries Unit",
+        "summary": "The Belize High Seas Fisheries Unit signed an agreement in June 2021; its high-seas fleet VMS subset became public in March 2022. This is not the Belize domestic fleet.",
+        "description": "The Belize High Seas Fisheries Unit signed an agreement in June 2021; its high-seas fleet VMS subset became public in March 2022. This is not the Belize domestic fleet.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "provider-8"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "papua-new-guinea-national-fisheries-authority",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "provider-9": {
+          "id": "provider-9",
+          "url": "https://globalfishingwatch.org/our-work-in-papua-new-guinea/",
+          "title": {
+            "en": "Papua New Guinea VMS partnership",
+            "fr": "Partenariat de données VMS : Papua New Guinea National Fisheries Authority",
+            "es": "Asociación de datos VMS: Papua New Guinea National Fisheries Authority",
+            "ar": "شراكة بيانات VMS: Papua New Guinea National Fisheries Authority",
+            "zh": "VMS数据合作：Papua New Guinea National Fisheries Authority",
+            "ru": "Партнёрство по данным VMS: Papua New Guinea National Fisheries Authority"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Papua New Guinea National Fisheries Authority",
+        "summary": "The National Fisheries Authority signed an agreement in October 2022, supported by the Fisheries Industry Association. GFW identifies June 2023 as publication of the FIA purse-seine subset; broader national coverage is not established.",
+        "description": "The National Fisheries Authority signed an agreement in October 2022, supported by the Fisheries Industry Association. GFW identifies June 2023 as publication of the FIA purse-seine subset; broader national coverage is not established.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "provider-9"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "protectedseas-navigator",
+    "record": {
+      "kind": "system",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "guide": {
+          "id": "guide",
+          "url": "https://globalfishingwatch.org/user-guide/",
+          "title": {
+            "en": "Map user guide",
+            "fr": "Guide de la carte",
+            "es": "Guía del mapa",
+            "ar": "دليل استخدام الخريطة",
+            "zh": "地图使用指南",
+            "ru": "Руководство по карте"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "ProtectedSeas Navigator",
+        "summary": "Marine protected-area and fishing-protection reference database whose layer is incorporated in GFW.",
+        "description": "Marine protected-area and fishing-protection reference database whose layer is incorporated in GFW.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "guide"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "skylight",
+    "record": {
+      "kind": "system",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "skylight": {
+          "id": "skylight",
+          "url": "https://globalfishingwatch.org/platform-update/skylight-viirs-detections-added/",
+          "title": {
+            "en": "Skylight VIIRS integration, 31 March 2026",
+            "fr": "Intégration Skylight VIIRS, 31 mars 2026",
+            "es": "Integración Skylight VIIRS, 31 marzo 2026",
+            "ar": "دمج Skylight VIIRS، 31 مارس 2026",
+            "zh": "Skylight VIIRS集成，2026年3月31日",
+            "ru": "Интеграция Skylight VIIRS, 31 марта 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Skylight",
+        "summary": "Vessel-monitoring platform whose VIIRS night-light model outputs are integrated into GFW.",
+        "description": "Vessel-monitoring platform whose VIIRS night-light model outputs are integrated into GFW.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "skylight"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "google-bigquery",
+    "record": {
+      "kind": "system",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "zenodo": {
+          "id": "zenodo",
+          "url": "https://zenodo.org/records/14982712",
+          "title": {
+            "en": "Global AIS-based Apparent Fishing Effort v3.0.0",
+            "fr": "Effort de pêche apparent mondial issu de l’AIS v3.0.0",
+            "es": "Esfuerzo pesquero aparente mundial basado en AIS v3.0.0",
+            "ar": "جهد الصيد الظاهر العالمي المستند إلى AIS، الإصدار 3.0.0",
+            "zh": "全球AIS表观捕捞努力量v3.0.0",
+            "ru": "Глобальное предполагаемое рыболовное усилие по AIS v3.0.0"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Google BigQuery",
+        "summary": "Cloud query service hosting the GFW fishing_effort_v3 dataset cited by the versioned release.",
+        "description": "Cloud query service hosting the GFW fishing_effort_v3 dataset cited by the versioned release.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "zenodo"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "arcgis-online",
+    "record": {
+      "kind": "system",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "arcgis": {
+          "id": "arcgis",
+          "url": "https://globalfishingwatch.org/platform-update/explore-global-fishing-watch-data-via-esris-arcgis-online/",
+          "title": {
+            "en": "ArcGIS Online layers, 15 January 2026",
+            "fr": "Couches ArcGIS Online, 15 janvier 2026",
+            "es": "Capas ArcGIS Online, 15 enero 2026",
+            "ar": "طبقات ArcGIS Online، 15 يناير 2026",
+            "zh": "ArcGIS Online图层，2026年1月15日",
+            "ru": "Слои ArcGIS Online, 15 января 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "ArcGIS Online",
+        "summary": "GIS platform hosting GFW tile and feature services announced in January 2026.",
+        "description": "GIS platform hosting GFW tile and feature services announced in January 2026.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "arcgis"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "dalio-philanthropies",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "en": "Annual report 2025",
+            "fr": "Rapport annuel 2025",
+            "es": "Informe anual 2025",
+            "ar": "التقرير السنوي 2025",
+            "zh": "2025年年度报告",
+            "ru": "Годовой отчёт 2025"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Dalio Philanthropies",
+        "summary": "Dalio Philanthropies is a named financial supporter of GFW in its 2025 annual report.",
+        "description": "Dalio Philanthropies is a named financial supporter of GFW in its 2025 annual report.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "annual"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "audacious-project",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "en": "Annual report 2025",
+            "fr": "Rapport annuel 2025",
+            "es": "Informe anual 2025",
+            "ar": "التقرير السنوي 2025",
+            "zh": "2025年年度报告",
+            "ru": "Годовой отчёт 2025"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "The Audacious Project",
+        "summary": "The Audacious Project is a named financial supporter of GFW in its 2025 annual report.",
+        "description": "The Audacious Project is a named financial supporter of GFW in its 2025 annual report.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "annual"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "hans-wilsdorf-foundation",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "en": "Annual report 2025",
+            "fr": "Rapport annuel 2025",
+            "es": "Informe anual 2025",
+            "ar": "التقرير السنوي 2025",
+            "zh": "2025年年度报告",
+            "ru": "Годовой отчёт 2025"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Hans Wilsdorf Foundation",
+        "summary": "Hans Wilsdorf Foundation is a named financial supporter of GFW in its 2025 annual report.",
+        "description": "Hans Wilsdorf Foundation is a named financial supporter of GFW in its 2025 annual report.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "annual"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "islas-secas-foundation",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "en": "Annual report 2025",
+            "fr": "Rapport annuel 2025",
+            "es": "Informe anual 2025",
+            "ar": "التقرير السنوي 2025",
+            "zh": "2025年年度报告",
+            "ru": "Годовой отчёт 2025"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Islas Secas Foundation",
+        "summary": "Islas Secas Foundation is a named financial supporter of GFW in its 2025 annual report.",
+        "description": "Islas Secas Foundation is a named financial supporter of GFW in its 2025 annual report.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "annual"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "walmart-foundation",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "en": "Annual report 2025",
+            "fr": "Rapport annuel 2025",
+            "es": "Informe anual 2025",
+            "ar": "التقرير السنوي 2025",
+            "zh": "2025年年度报告",
+            "ru": "Годовой отчёт 2025"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Walmart Foundation",
+        "summary": "Walmart Foundation is a named financial supporter of GFW in its 2025 annual report.",
+        "description": "Walmart Foundation is a named financial supporter of GFW in its 2025 annual report.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "annual"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "sall-family-foundation",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "en": "Annual report 2025",
+            "fr": "Rapport annuel 2025",
+            "es": "Informe anual 2025",
+            "ar": "التقرير السنوي 2025",
+            "zh": "2025年年度报告",
+            "ru": "Годовой отчёт 2025"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Sall Family Foundation",
+        "summary": "Sall Family Foundation is a named financial supporter of GFW in its 2025 annual report.",
+        "description": "Sall Family Foundation is a named financial supporter of GFW in its 2025 annual report.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "annual"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "oceana",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "en": "Annual report 2025",
+            "fr": "Rapport annuel 2025",
+            "es": "Informe anual 2025",
+            "ar": "التقرير السنوي 2025",
+            "zh": "2025年年度报告",
+            "ru": "Годовой отчёт 2025"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Oceana",
+        "summary": "Oceana is a named financial supporter of GFW in its 2025 annual report.",
+        "description": "Oceana is a named financial supporter of GFW in its 2025 annual report.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "annual"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "coalition-for-fisheries-transparency",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "coalition": {
+          "id": "coalition",
+          "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+          "title": {
+            "en": "Ocean transparency commitments, 18 June 2026",
+            "fr": "Engagements de transparence océanique, 18 juin 2026",
+            "es": "Compromisos de transparencia oceánica, 18 junio 2026",
+            "ar": "التزامات شفافية المحيطات، 18 يونيو 2026",
+            "zh": "海洋透明度承诺，2026年6月18日",
+            "ru": "Обязательства по прозрачности океана, 18 июня 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Coalition for Fisheries Transparency",
+        "summary": "Coalition in which GFW documents organizational membership in June 2026.",
+        "description": "Coalition in which GFW documents organizational membership in June 2026.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "coalition"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "joint-analytical-cell",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "jac": {
+          "id": "jac",
+          "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+          "title": {
+            "en": "Joint Analytical Cell",
+            "fr": "Cellule analytique conjointe",
+            "es": "Célula Analítica Conjunta",
+            "ar": "الخلية التحليلية المشتركة",
+            "zh": "联合分析小组",
+            "ru": "Совместная аналитическая группа"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Joint Analytical Cell",
+        "summary": "Collaboration providing fisheries intelligence, analytical support and capacity assistance.",
+        "description": "Collaboration providing fisheries intelligence, analytical support and capacity assistance.",
+        "details": {
+          "aliases": [
+            "JAC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "jac"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "indonesia-ministry-marine-affairs-fisheries",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "indonesia": {
+          "id": "indonesia",
+          "url": "https://globalfishingwatch.org/transparency/vms-layer-in-fishing-activity-map/",
+          "title": {
+            "en": "Indonesia VMS public release, 2017",
+            "fr": "Publication VMS indonésienne, 2017",
+            "es": "Publicación VMS de Indonesia, 2017",
+            "ar": "نشر بيانات VMS الإندونيسية، 2017",
+            "zh": "印度尼西亚VMS公开发布，2017年",
+            "ru": "Публикация VMS Индонезии, 2017"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "vms-history": {
+          "id": "vms-history",
+          "url": "https://globalfishingwatch.org/wp-content/uploads/GFW-Poster-250530-01.pdf",
+          "title": {
+            "en": "Public vessel tracking, 2012–2024",
+            "fr": "Suivi public des navires, 2012–2024",
+            "es": "Seguimiento público de buques, 2012–2024",
+            "ar": "التتبع العام للسفن، 2012–2024",
+            "zh": "公开船舶跟踪，2012–2024年",
+            "ru": "Публичное слежение за судами, 2012–2024"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Indonesia Ministry of Marine Affairs and Fisheries",
+        "summary": "Indonesian ministry that supplied public VMS data to GFW in 2017; GFW reports that sharing ended in 2020. Resumption is unverified.",
+        "description": "Indonesian ministry that supplied public VMS data to GFW in 2017; GFW reports that sharing ended in 2020. Resumption is unverified.",
+        "details": {
+          "aliases": [
+            "KKP"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "indonesia",
+              "vms-history"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  }
+]

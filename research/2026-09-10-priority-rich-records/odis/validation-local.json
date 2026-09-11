@@ -1,0 +1,186 @@
+{
+  "checkedAt": "2026-09-11T01:26:24.085Z",
+  "sha256": "8957b685242a2bfa2d0f6ecced0c10b2b1a6f55088648b347e2420098f9e9aa6",
+  "shape": {
+    "valid": true,
+    "recordId": "odis",
+    "issues": []
+  },
+  "quality": {
+    "valid": true,
+    "recordId": "odis",
+    "issues": [],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 69,
+      "resolvedSources": 69,
+      "issues": []
+    }
+  },
+  "endpoints": [
+    {
+      "id": "rel-ioc-unesco-iode-operates-ocean-data-and-information-system",
+      "source": "ioc-unesco-iode",
+      "sourceKind": "organization",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-ioc-assembly-governs-odis",
+      "source": "ioc-assembly",
+      "sourceKind": "organization",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-ioc-unesco-funds-odis",
+      "source": "ioc-unesco",
+      "sourceKind": "organization",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-government-of-flanders-funds-odis",
+      "source": "government-of-flanders",
+      "sourceKind": "organization",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-deepdata-member_of-odis",
+      "source": "deepdata",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-deepdata-syncs_to-odis",
+      "source": "deepdata",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-platform-obis-member-of-odis",
+      "source": "platform-obis",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-oceanexpert-member-of-odis",
+      "source": "oceanexpert",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-emodnet-member-of-odis",
+      "source": "emodnet",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-gbif-member-of-odis",
+      "source": "gbif",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-bco-dmo-member-of-odis",
+      "source": "bco-dmo",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-cioos-member-of-odis",
+      "source": "cioos",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-argovis-member-of-odis",
+      "source": "argovis",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-ioos-member-of-odis",
+      "source": "ioos",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-oceanexpert-syncs-to-odis",
+      "source": "oceanexpert",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-platform-obis-syncs-to-odis",
+      "source": "platform-obis",
+      "sourceKind": "system",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-international-seabed-authority-publishes-to-odis",
+      "source": "international-seabed-authority",
+      "sourceKind": "organization",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-norad-funds-odis",
+      "source": "norad",
+      "sourceKind": "organization",
+      "target": "odis",
+      "targetKind": "system",
+      "valid": true
+    }
+  ],
+  "preservation": {
+    "nodeSources": true,
+    "incidentIds": true,
+    "edgeSources": true
+  },
+  "counts": {
+    "locales": 6,
+    "descriptors": 5,
+    "access": 6,
+    "metrics": 4,
+    "edges": 18,
+    "nodeSources": 28,
+    "gallery": 0,
+    "routes": 0
+  }
+}

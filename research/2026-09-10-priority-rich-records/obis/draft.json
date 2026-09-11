@@ -1,0 +1,2259 @@
+{
+  "id": "platform-obis",
+  "record": {
+    "kind": "system",
+    "url": "https://obis.org/",
+    "recordDepth": "rich",
+    "properties": {
+      "disciplines": [
+        "marine_biology",
+        "ecology"
+      ],
+      "data": {
+        "descriptors": [
+          {
+            "id": "platform-obis-tag-data-format-darwin-core",
+            "category": "standard",
+            "label": "darwin_core",
+            "source": "obis-policy"
+          },
+          {
+            "id": "platform-obis-tag-data-format-darwin-core-archive",
+            "category": "format",
+            "label": "darwin_core_archive",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-data-format-eml",
+            "category": "standard",
+            "label": "eml",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-data-format-emof",
+            "category": "standard",
+            "label": "emof",
+            "source": "obis-emof"
+          },
+          {
+            "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+            "category": "type",
+            "label": "catalogue_records",
+            "source": "obis-manual-access"
+          },
+          {
+            "id": "platform-obis-tag-data-type-occurrence-observation",
+            "category": "type",
+            "label": "occurrence_records",
+            "source": "obis-access"
+          },
+          {
+            "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+            "category": "type",
+            "label": "taxonomic_records",
+            "source": "obis-access"
+          },
+          {
+            "id": "obis-type-surveys",
+            "category": "type",
+            "label": "survey_records",
+            "source": "obis-dfo-dataset"
+          },
+          {
+            "id": "obis-type-environment",
+            "category": "type",
+            "label": "environmental_measurements",
+            "source": "obis-emof"
+          },
+          {
+            "id": "obis-type-sequences",
+            "category": "type",
+            "label": "sequence_data",
+            "source": "obis-dna"
+          },
+          {
+            "id": "obis-format-json",
+            "category": "format",
+            "label": "json",
+            "source": "obis-api"
+          },
+          {
+            "id": "obis-format-tsv",
+            "category": "format",
+            "label": "tsv",
+            "source": "obis-access"
+          },
+          {
+            "id": "obis-format-parquet",
+            "category": "format",
+            "label": "parquet",
+            "source": "obis-aws"
+          },
+          {
+            "id": "obis-standard-dna",
+            "category": "standard",
+            "label": "dna_derived_data",
+            "source": "obis-dna"
+          },
+          {
+            "id": "obis-standard-nerc",
+            "category": "standard",
+            "label": "nerc_vocabularies",
+            "source": "obis-vocabulary"
+          }
+        ]
+      },
+      "access": [
+        {
+          "id": "platform-obis-tag-read-method-dashboard-viewer",
+          "type": "read",
+          "methods": [
+            "browse",
+            "download"
+          ],
+          "url": "https://mapper.obis.org/",
+          "requirements": null,
+          "cost": "free",
+          "sourceRefs": [
+            "obis-access",
+            "obis-manual-access",
+            "obis-policy",
+            "obis-mapper"
+          ]
+        },
+        {
+          "id": "platform-obis-tag-read-method-api",
+          "type": "read",
+          "methods": [
+            "api"
+          ],
+          "url": "https://api.obis.org/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "obis-api",
+            "obis-access",
+            "obis-policy"
+          ]
+        },
+        {
+          "id": "platform-obis-tag-read-method-sdk-notebook",
+          "type": "read",
+          "methods": [
+            "software"
+          ],
+          "url": "https://iobis.github.io/robis/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "obis-manual-access",
+            "obis-dna",
+            "obis-policy"
+          ]
+        },
+        {
+          "id": "platform-obis-tag-read-method-download",
+          "type": "read",
+          "methods": [
+            "download"
+          ],
+          "url": "https://github.com/iobis/obis-open-data",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "obis-aws",
+            "obis-access"
+          ]
+        },
+        {
+          "id": "platform-obis-tag-read-method-ipt",
+          "type": "read",
+          "methods": [
+            "browse",
+            "download"
+          ],
+          "url": "https://obis.org/search",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "obis-manual-access",
+            "src-obis-ipt",
+            "obis-policy"
+          ]
+        },
+        {
+          "id": "platform-obis-tag-write-method-manager-mediated-submission",
+          "type": "write",
+          "methods": [
+            "request"
+          ],
+          "url": "https://obis.org/data/contribute/",
+          "requirements": null,
+          "cost": "unknown",
+          "sourceRefs": [
+            "obis-contribute",
+            "src-obis-ipt"
+          ]
+        },
+        {
+          "id": "platform-obis-tag-write-method-ipt-publish",
+          "type": "write",
+          "methods": [
+            "form",
+            "upload",
+            "harvest"
+          ],
+          "url": "https://manual.obis.org/ipt",
+          "requirements": [
+            "account"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "src-obis-ipt",
+            "obis-contribute",
+            "obis-policy"
+          ]
+        }
+      ],
+      "gallery": [],
+      "metrics": [
+        {
+          "id": "obis-occurrences-api",
+          "key": "occurrence_count",
+          "value": 229141362,
+          "observedAt": "2026-09-10",
+          "source": "obis-stats"
+        },
+        {
+          "id": "obis-species-api",
+          "key": "species_count",
+          "value": 168352,
+          "observedAt": "2026-09-10",
+          "source": "obis-stats"
+        },
+        {
+          "id": "obis-snapshot-size",
+          "key": "storage_size_bytes",
+          "value": 98731625923,
+          "observedAt": "2026-09-10",
+          "source": "obis-s3"
+        },
+        {
+          "id": "obis-dna-headline",
+          "key": "sequence_count",
+          "value": 83000000,
+          "observedAt": null,
+          "source": "obis-home"
+        },
+        {
+          "id": "obis-community-headline",
+          "key": "contributor_count",
+          "value": 6000,
+          "observedAt": null,
+          "source": "obis-home"
+        }
+      ]
+    },
+    "sources": {
+      "src-obis-ipt": {
+        "id": "src-obis-ipt",
+        "url": "https://manual.obis.org/ipt",
+        "title": {
+          "ar": "دليل OBIS: أداة IPT",
+          "en": "OBIS Manual IPT",
+          "es": "Manual de OBIS: IPT",
+          "fr": "Manuel OBIS : IPT",
+          "ru": "Руководство OBIS: IPT",
+          "zh": "OBIS手册：IPT"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-home": {
+        "id": "obis-home",
+        "url": "https://obis.org/",
+        "title": {
+          "en": "OBIS homepage and headline statistics",
+          "fr": "Accueil et chiffres clés d’OBIS",
+          "es": "Inicio y cifras principales de OBIS",
+          "ar": "الصفحة الرئيسية والإحصاءات الموجزة لـ OBIS",
+          "zh": "OBIS主页与概览统计",
+          "ru": "Главная страница и сводные показатели OBIS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-access": {
+        "id": "obis-access",
+        "url": "https://obis.org/data/access/",
+        "title": {
+          "en": "OBIS data access and interpreted fields",
+          "fr": "Accès aux données OBIS et champs interprétés",
+          "es": "Acceso a datos OBIS y campos interpretados",
+          "ar": "الوصول إلى بيانات OBIS والحقول المفسرة",
+          "zh": "OBIS数据访问与解释字段",
+          "ru": "Доступ к данным OBIS и интерпретированные поля"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-manual-access": {
+        "id": "obis-manual-access",
+        "url": "https://manual.obis.org/access",
+        "title": {
+          "en": "OBIS manual: data access",
+          "fr": "Manuel OBIS : accès aux données",
+          "es": "Manual OBIS: acceso a datos",
+          "ar": "دليل OBIS: الوصول إلى البيانات",
+          "zh": "OBIS手册：数据访问",
+          "ru": "Руководство OBIS: доступ к данным"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-policy": {
+        "id": "obis-policy",
+        "url": "https://manual.obis.org/policy.html",
+        "title": {
+          "en": "OBIS data policy",
+          "fr": "Politique de données OBIS",
+          "es": "Política de datos OBIS",
+          "ar": "سياسة بيانات OBIS",
+          "zh": "OBIS数据政策",
+          "ru": "Политика OBIS в отношении данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-governance": {
+        "id": "obis-governance",
+        "url": "https://obis.org/about/governance/",
+        "title": {
+          "en": "OBIS governance and Secretariat",
+          "fr": "Gouvernance et secrétariat d’OBIS",
+          "es": "Gobernanza y Secretaría de OBIS",
+          "ar": "حوكمة OBIS وأمانته",
+          "zh": "OBIS治理与秘书处",
+          "ru": "Управление и секретариат OBIS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-dna": {
+        "id": "obis-dna",
+        "url": "https://manual.obis.org/dna_data.html",
+        "title": {
+          "en": "OBIS manual: DNA-derived data",
+          "fr": "Manuel OBIS : données dérivées de l’ADN",
+          "es": "Manual OBIS: datos derivados de ADN",
+          "ar": "دليل OBIS: البيانات المشتقة من الحمض النووي",
+          "zh": "OBIS手册：DNA衍生数据",
+          "ru": "Руководство OBIS: данные, полученные из ДНК"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-emof": {
+        "id": "obis-emof",
+        "url": "https://manual.obis.org/format_emof.html",
+        "title": {
+          "en": "OBIS manual: extended MeasurementOrFact",
+          "fr": "Manuel OBIS : extension MeasurementOrFact",
+          "es": "Manual OBIS: extensión MeasurementOrFact",
+          "ar": "دليل OBIS: امتداد MeasurementOrFact",
+          "zh": "OBIS手册：扩展MeasurementOrFact",
+          "ru": "Руководство OBIS: расширение MeasurementOrFact"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-vocabulary": {
+        "id": "obis-vocabulary",
+        "url": "https://manual.obis.org/vocabulary.html",
+        "title": {
+          "en": "OBIS measurement vocabulary guidance",
+          "fr": "Guide des vocabulaires de mesures OBIS",
+          "es": "Guía de vocabularios de medición OBIS",
+          "ar": "إرشادات مفردات القياس في OBIS",
+          "zh": "OBIS测量词汇指南",
+          "ru": "Рекомендации OBIS по словарям измерений"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-aws": {
+        "id": "obis-aws",
+        "url": "https://github.com/iobis/obis-open-data",
+        "title": {
+          "en": "OBIS Open Data on AWS",
+          "fr": "Données ouvertes OBIS sur AWS",
+          "es": "Datos abiertos OBIS en AWS",
+          "ar": "بيانات OBIS المفتوحة على AWS",
+          "zh": "AWS上的OBIS开放数据",
+          "ru": "Открытые данные OBIS в AWS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-s3": {
+        "id": "obis-s3",
+        "url": "https://obis-open-data.s3.amazonaws.com/?list-type=2&prefix=occurrence%2F",
+        "title": {
+          "en": "OBIS S3 occurrence object inventory",
+          "fr": "Inventaire des objets d’occurrences OBIS sur S3",
+          "es": "Inventario de objetos de ocurrencias OBIS en S3",
+          "ar": "جرد كائنات سجلات الوجود في OBIS على S3",
+          "zh": "OBIS S3出现记录对象清单",
+          "ru": "Перечень объектов встречаемости OBIS в S3"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-stats": {
+        "id": "obis-stats",
+        "url": "https://api.obis.org/v3/statistics",
+        "title": {
+          "en": "OBIS API v3 live statistics",
+          "fr": "Statistiques en direct de l’API OBIS v3",
+          "es": "Estadísticas en vivo de la API OBIS v3",
+          "ar": "الإحصاءات الحية لواجهة OBIS v3",
+          "zh": "OBIS API v3实时统计",
+          "ru": "Текущая статистика API OBIS v3"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-api": {
+        "id": "obis-api",
+        "url": "https://api.obis.org/obis_v3.yml",
+        "title": {
+          "en": "OBIS API v3 OpenAPI contract",
+          "fr": "Contrat OpenAPI de l’API OBIS v3",
+          "es": "Contrato OpenAPI de la API OBIS v3",
+          "ar": "عقد OpenAPI لواجهة OBIS v3",
+          "zh": "OBIS API v3 OpenAPI接口规范",
+          "ru": "Спецификация OpenAPI для API OBIS v3"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-contribute": {
+        "id": "obis-contribute",
+        "url": "https://obis.org/data/contribute/",
+        "title": {
+          "en": "Contributing datasets to OBIS",
+          "fr": "Contribuer des jeux de données à OBIS",
+          "es": "Aportar conjuntos de datos a OBIS",
+          "ar": "المساهمة بمجموعات بيانات في OBIS",
+          "zh": "向OBIS贡献数据集",
+          "ru": "Передача наборов данных в OBIS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-dfo-dataset": {
+        "id": "obis-dfo-dataset",
+        "url": "https://obis.org/dataset/471fe91a-2d5f-4651-b76b-e1e9cdba9940",
+        "title": {
+          "en": "Maritimes 4VSW research vessel surveys",
+          "fr": "Campagnes océanographiques Maritimes 4VSW",
+          "es": "Campañas de investigación Maritimes 4VSW",
+          "ar": "مسوحات سفن الأبحاث Maritimes 4VSW",
+          "zh": "Maritimes 4VSW调查船航次",
+          "ru": "Научно-исследовательские рейсы Maritimes 4VSW"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-impact": {
+        "id": "obis-impact",
+        "url": "https://obis.org/whatwedo/impact/",
+        "title": {
+          "en": "OBIS applications and interoperability",
+          "fr": "Applications et interopérabilité d’OBIS",
+          "es": "Aplicaciones e interoperabilidad de OBIS",
+          "ar": "تطبيقات OBIS والتشغيل البيني",
+          "zh": "OBIS应用与互操作性",
+          "ru": "Применение и совместимость OBIS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-mapper": {
+        "id": "obis-mapper",
+        "url": "https://mapper.obis.org/",
+        "title": {
+          "en": "OBIS mapper and live export confirmation",
+          "fr": "Visualiseur OBIS et confirmation d’export",
+          "es": "Visor OBIS y confirmación de exportación",
+          "ar": "عارض OBIS وتأكيد التصدير المباشر",
+          "zh": "OBIS地图浏览器及导出确认",
+          "ru": "Карта OBIS и подтверждение экспорта"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-ec8-2026": {
+        "id": "obis-ec8-2026",
+        "url": "https://obis.org/2026/09/01/ec-obis-8/",
+        "title": {
+          "en": "OBIS Executive Committee 8: progress, funding and strategic priorities (1 September 2026)",
+          "fr": "Comité exécutif OBIS 8 : progrès, financement et priorités stratégiques (1er septembre 2026)",
+          "es": "Comité Ejecutivo OBIS 8: avances, financiación y prioridades estratégicas (1 de septiembre de 2026)",
+          "ar": "اللجنة التنفيذية الثامنة لـOBIS: التقدم والتمويل والأولويات الاستراتيجية (1 سبتمبر 2026)",
+          "zh": "OBIS第八届执行委员会：进展、资金和战略重点（2026年9月1日）",
+          "ru": "Восьмое заседание Исполнительного комитета OBIS: прогресс, финансирование и стратегические приоритеты (1 сентября 2026 года)"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-ec8-report": {
+        "id": "obis-ec8-report",
+        "url": "https://oceanexpert.org/downloadFile/62883",
+        "title": {
+          "en": "Report of the eighth OBIS Executive Committee meeting, June 2026",
+          "fr": "Rapport de la huitième réunion du Comité exécutif OBIS, juin 2026",
+          "es": "Informe de la octava reunión del Comité Ejecutivo OBIS, junio de 2026",
+          "ar": "تقرير الاجتماع الثامن للجنة التنفيذية لـOBIS، يونيو 2026",
+          "zh": "OBIS执行委员会第八次会议报告，2026年6月",
+          "ru": "Отчёт восьмого заседания Исполнительного комитета OBIS, июнь 2026 года"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "en": {
+      "title": "Ocean Biodiversity Information System (OBIS)",
+      "summary": "Global marine biodiversity infrastructure integrating occurrence, sampling, environmental and DNA-derived records from a network of data providers.",
+      "description": "OBIS began with the Census of Marine Life in 2000 and entered IOC-UNESCO’s IODE programme in 2009. Its Secretariat coordinates a distributed network; contributing institutions retain ownership of their datasets. It serves marine species records worldwide, including areas beyond national jurisdiction, with sampling context, measurements, molecular evidence and WoRMS taxonomic enrichment. A live API statistics read on 10 September 2026 returned 229,141,362 occurrence records and 168,352 species; these counts differ from the homepage’s rounded headlines and should not be combined. Researchers can explore the mapper, query the API or robis, or analyse public GeoParquet objects. Contributions pass through a suitable node and Darwin Core Archive publication with EML metadata. Access is free, but dataset licences and attribution still apply; the combined AWS dataset is CC BY-NC. Mapper downloads omit absence records, whereas the API and cloud archive can include them. Missing observations do not establish ecological absence, and quality flags, uneven sampling and molecular detection methods require interpretation. OBIS reported 97 publications citing its data in early 2026. The September news summary describes January–June, while the full committee report specifies the first 5.5 months; neither identifies the citation index or counting method.",
+      "details": {
+        "aliases": [
+          "OBIS",
+          "Ocean Biogeographic Information System"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "obis-home",
+            "obis-governance",
+            "obis-access",
+            "obis-manual-access",
+            "obis-policy",
+            "obis-aws",
+            "obis-stats",
+            "obis-impact",
+            "obis-contribute",
+            "obis-dna",
+            "obis-ec8-2026",
+            "obis-ec8-report"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "platform-obis-tag-data-format-darwin-core",
+              "description": "Darwin Core terms structure published occurrence and sampling-event data; provider completeness varies."
+            },
+            {
+              "id": "platform-obis-tag-data-format-darwin-core-archive",
+              "description": "Source datasets can be downloaded as Darwin Core Archives containing linked data tables and metadata."
+            },
+            {
+              "id": "platform-obis-tag-data-format-eml",
+              "description": "EML encodes dataset metadata in the eml.xml file of published source archives."
+            },
+            {
+              "id": "platform-obis-tag-data-format-emof",
+              "description": "The eMoF extension links measurements and sampling facts to occurrences or events."
+            },
+            {
+              "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+              "description": "Dataset discovery records include descriptions, provenance, contacts, licences and links to source archives."
+            },
+            {
+              "id": "platform-obis-tag-data-type-occurrence-observation",
+              "description": "Species detections with time, position and provenance; absence records are accessible through explicitly selected interfaces."
+            },
+            {
+              "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+              "description": "Interpreted scientific names, accepted names, classifications and checklists use WoRMS enrichment."
+            },
+            {
+              "id": "obis-type-surveys",
+              "description": "Sampling-event records document surveys and effort; the Maritimes 4VSW dataset includes survey events and catches."
+            },
+            {
+              "id": "obis-type-environment",
+              "description": "Environmental measurements may accompany sampling events through eMoF; availability depends on the dataset."
+            },
+            {
+              "id": "obis-type-sequences",
+              "description": "DNA-derived extensions can contain actual ASV/OTU sequences and processing metadata, not just links to external archives."
+            },
+            {
+              "id": "obis-format-json",
+              "description": "The public v3 API returns JSON occurrence, dataset, taxon and statistics responses."
+            },
+            {
+              "id": "obis-format-tsv",
+              "description": "The current official access table identifies mapper tabular exports as TSV; documentation also calls some files CSV."
+            },
+            {
+              "id": "obis-format-parquet",
+              "description": "The AWS occurrence collection is GeoParquet, with source and interpreted fields, extensions, geometry and quality flags."
+            },
+            {
+              "id": "obis-standard-dna",
+              "description": "DNA-derived data are published using the Darwin Core DNA-derived data extension attached to occurrences or events."
+            },
+            {
+              "id": "obis-standard-nerc",
+              "description": "OBIS recommends NERC P01 measurement concepts and P06 units for eMoF; other resolvable vocabularies are allowed."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "platform-obis-tag-read-method-dashboard-viewer",
+            "label": "OBIS mapper",
+            "description": "Explore small taxonomic, spatial or temporal subsets without an account. The export confirmation requires an email address before proceeding; the live dialog warns that email notifications are not operational, so keep the window open for download status and the link. Select measurement or DNA extensions when needed. Default downloads exclude absences; interpret flags and cite each contributing dataset."
+          },
+          {
+            "id": "platform-obis-tag-read-method-api",
+            "label": "OBIS REST API v3",
+            "description": "Query occurrences, taxa, datasets, checklists and statistics without credentials. Request extensions and absence or dropped records explicitly. Paginate with the documented parameters; OBIS asks users not to parallelize downloads and recommends AWS for large analyses."
+          },
+          {
+            "id": "platform-obis-tag-read-method-sdk-notebook",
+            "label": "robis R package",
+            "description": "Use the free R client for OBIS API queries and checklists. Extension functions expose DNA sequences and measurements. No OBIS credentials are required; installation and R are needed. Use cloud data for large jobs."
+          },
+          {
+            "id": "platform-obis-tag-read-method-download",
+            "label": "AWS GeoParquet and source archives",
+            "description": "Download public S3 occurrence objects without signing requests, or query a local copy. These snapshots include absence and dropped flags: filter deliberately. Source DwC-A and per-dataset licences accompany the collection; aggregate reuse is CC BY-NC. Cloud compute may incur separate charges."
+          },
+          {
+            "id": "platform-obis-tag-read-method-ipt",
+            "label": "Dataset search and source archives",
+            "description": "Find a dataset and follow Source DwC-A to its original archive, with separate tables and EML metadata. These provider archives do not contain OBIS-added quality fields. Public browsing and downloads require no account; respect the source licence."
+          },
+          {
+            "id": "platform-obis-tag-write-method-manager-mediated-submission",
+            "label": "Node-mediated contribution",
+            "description": "Contact an appropriate OBIS node or the Secretariat with marine data you may publish. The node can prepare and check tables and metadata for you, then publish through an IPT. Participation arrangements and any charges were not established."
+          },
+          {
+            "id": "platform-obis-tag-write-method-ipt-publish",
+            "label": "Publish through an IPT",
+            "description": "Request an IPT account from the node manager, map tables to Darwin Core and extensions, and complete EML metadata. Publish and make the resource public for harvest after node quality checks. Registration with GBIF is a separate step. Accepted licences are CC0, CC BY or CC BY-NC; contribution fees are unspecified."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "obis-occurrences-api",
+            "description": "Exact records value returned by the unfiltered OBIS API v3 statistics endpoint on 10 September 2026; scope is that API index, not a sum of homepage categories."
+          },
+          {
+            "id": "obis-species-api",
+            "description": "Exact species value from the same API statistics response; distinct from its taxa count and the homepage’s rounded marine-species headline."
+          },
+          {
+            "id": "obis-snapshot-size",
+            "description": "Sum of Content Size for 7,104 .parquet objects under the public occurrence/ prefix across eight S3 listing pages on 10 September 2026. Excludes dwca/, licences and live database storage."
+          },
+          {
+            "id": "obis-dna-headline",
+            "description": "Rounded homepage headline of 83 million DNA sequences; reporting date and unique-sequence counting basis are unspecified. It is not a raw read or nucleotide-base total."
+          },
+          {
+            "id": "obis-community-headline",
+            "description": "Rounded homepage community figure of 6,000 scientists and data managers; no dated roster or reporting period is supplied."
+          }
+        ],
+        "researchGaps": {
+          "data": "The homepage reports 224M observations, 207K marine species, 7,361 datasets and 421M measurements/facts; API statistics differ. Filter, update-time and counting differences remain unreconciled. Dataset and measurement headlines stay prose because their specific counting units have no approved metric key.",
+          "usage": "No current system-wide session or download-event total was verified. GBIF network citations and individual-dataset downloads are narrower measures and are not presented as OBIS-wide usage. The reported 97 citing publications remain prose: the citation index and counting method are unidentified, and the two primary accounts differ on the reporting window.",
+          "access": "The manual calls mapper files CSV while the current access table says TSV; TSV is used here pending a delimiter check of a fresh mapper export. Snapshot documentation explicitly includes absences, unlike the manual’s generic full-export description."
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Système d’information sur la biodiversité océanique (OBIS)",
+      "summary": "Infrastructure mondiale de biodiversité marine intégrant occurrences, échantillonnages, mesures environnementales et données issues de l’ADN d’un réseau de fournisseurs.",
+      "description": "Né avec le Census of Marine Life en 2000, OBIS a rejoint le programme IODE de la COI-UNESCO en 2009. Son secrétariat coordonne un réseau distribué ; les institutions contributrices conservent la propriété de leurs jeux de données. Le système couvre les espèces marines dans le monde entier, y compris au-delà des juridictions nationales, avec contexte d’échantillonnage, mesures, données moléculaires et enrichissement taxonomique WoRMS. Une interrogation de l’API le 10 septembre 2026 a renvoyé 229 141 362 occurrences et 168 352 espèces ; ces chiffres diffèrent des valeurs arrondies de l’accueil et ne doivent pas être combinés. Les chercheurs utilisent le visualiseur, l’API, robis ou les objets GeoParquet publics. Les contributions passent par un nœud et une publication Darwin Core Archive avec métadonnées EML. L’accès est gratuit, mais les licences et l’attribution restent applicables ; l’ensemble AWS est sous CC BY-NC. Les téléchargements du visualiseur excluent les absences, que l’API et les archives cloud peuvent inclure. Un manque d’observations ne prouve pas une absence écologique ; indicateurs de qualité, échantillonnage inégal et méthodes moléculaires exigent une interprétation. OBIS a signalé 97 publications citant ses données au début de 2026. La synthèse de septembre indique janvier–juin, tandis que le rapport complet du comité précise les 5,5 premiers mois ; aucun des deux ne nomme l’index de citations ni la méthode de comptage.",
+      "details": {
+        "aliases": [
+          "OBIS",
+          "Ocean Biodiversity Information System",
+          "Ocean Biogeographic Information System"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "obis-home",
+            "obis-governance",
+            "obis-access",
+            "obis-manual-access",
+            "obis-policy",
+            "obis-aws",
+            "obis-stats",
+            "obis-impact",
+            "obis-contribute",
+            "obis-dna",
+            "obis-ec8-2026",
+            "obis-ec8-report"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "platform-obis-tag-data-format-darwin-core",
+              "description": "Les termes Darwin Core structurent les occurrences et événements d’échantillonnage publiés ; leur complétude varie selon le fournisseur."
+            },
+            {
+              "id": "platform-obis-tag-data-format-darwin-core-archive",
+              "description": "Les jeux sources sont téléchargeables en Darwin Core Archive, avec tables liées et métadonnées."
+            },
+            {
+              "id": "platform-obis-tag-data-format-eml",
+              "description": "EML encode les métadonnées du jeu dans le fichier eml.xml des archives sources publiées."
+            },
+            {
+              "id": "platform-obis-tag-data-format-emof",
+              "description": "L’extension eMoF relie mesures et informations d’échantillonnage aux occurrences ou aux événements."
+            },
+            {
+              "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+              "description": "Les notices de découverte présentent description, provenance, contacts, licences et liens vers les archives sources."
+            },
+            {
+              "id": "platform-obis-tag-data-type-occurrence-observation",
+              "description": "Détections d’espèces avec date, position et provenance ; certains accès permettent de demander explicitement les absences."
+            },
+            {
+              "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+              "description": "Noms interprétés, noms acceptés, classifications et listes taxonomiques bénéficient de l’enrichissement WoRMS."
+            },
+            {
+              "id": "obis-type-surveys",
+              "description": "Les événements décrivent campagnes et effort ; Maritimes 4VSW comprend événements de prospection et captures."
+            },
+            {
+              "id": "obis-type-environment",
+              "description": "Des mesures environnementales peuvent accompagner les événements via eMoF ; leur disponibilité dépend du jeu."
+            },
+            {
+              "id": "obis-type-sequences",
+              "description": "Les extensions ADN peuvent contenir les séquences ASV/OTU et les métadonnées de traitement, pas seulement des liens externes."
+            },
+            {
+              "id": "obis-format-json",
+              "description": "L’API publique v3 fournit en JSON occurrences, jeux, taxons et statistiques."
+            },
+            {
+              "id": "obis-format-tsv",
+              "description": "Le tableau officiel actuel indique TSV pour les exports tabulaires du visualiseur ; le manuel nomme aussi certains fichiers CSV."
+            },
+            {
+              "id": "obis-format-parquet",
+              "description": "La collection AWS utilise GeoParquet, avec champs sources et interprétés, extensions, géométrie et indicateurs de qualité."
+            },
+            {
+              "id": "obis-standard-dna",
+              "description": "Les données moléculaires sont publiées avec l’extension Darwin Core DNA-derived data rattachée aux occurrences ou événements."
+            },
+            {
+              "id": "obis-standard-nerc",
+              "description": "OBIS recommande les concepts NERC P01 et unités P06 pour eMoF ; d’autres vocabulaires résolvables sont admis."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "platform-obis-tag-read-method-dashboard-viewer",
+            "label": "Visualiseur OBIS",
+            "description": "Explorer de petits sous-ensembles taxonomiques, spatiaux ou temporels sans compte. La confirmation d’export exige une adresse électronique ; la boîte de dialogue signale que les notifications ne fonctionnent pas, donc garder la fenêtre ouverte pour suivre le téléchargement et obtenir le lien. Sélectionner les extensions de mesures ou ADN nécessaires. Les téléchargements excluent les absences par défaut ; interpréter les indicateurs et citer chaque jeu."
+          },
+          {
+            "id": "platform-obis-tag-read-method-api",
+            "label": "API REST OBIS v3",
+            "description": "Interroger occurrences, taxons, jeux, listes et statistiques sans identifiants. Demander explicitement extensions, absences ou enregistrements écartés. Utiliser la pagination documentée ; OBIS déconseille les téléchargements parallèles et recommande AWS pour les analyses volumineuses."
+          },
+          {
+            "id": "platform-obis-tag-read-method-sdk-notebook",
+            "label": "Package R robis",
+            "description": "Utiliser ce client gratuit pour les requêtes API et listes. Les fonctions d’extension exposent séquences ADN et mesures. Aucun identifiant OBIS n’est requis ; R et l’installation sont nécessaires. Préférer les données cloud pour les gros traitements."
+          },
+          {
+            "id": "platform-obis-tag-read-method-download",
+            "label": "GeoParquet AWS et archives sources",
+            "description": "Télécharger les objets S3 publics sans signature ou interroger une copie locale. Les instantanés comportent les indicateurs d’absence et d’exclusion : filtrer délibérément. Archives DwC-A et licences individuelles accompagnent la collection ; sa réutilisation globale relève de CC BY-NC. Le calcul cloud peut être facturé séparément."
+          },
+          {
+            "id": "platform-obis-tag-read-method-ipt",
+            "label": "Recherche de jeux et archives sources",
+            "description": "Trouver un jeu puis suivre Source DwC-A vers son archive originale, avec tables séparées et métadonnées EML. Ces archives ne contiennent pas les champs de qualité ajoutés par OBIS. Consultation et téléchargement publics sans compte ; respecter la licence."
+          },
+          {
+            "id": "platform-obis-tag-write-method-manager-mediated-submission",
+            "label": "Contribution accompagnée par un nœud",
+            "description": "Contacter un nœud adapté ou le secrétariat avec des données marines publiables. Le nœud peut préparer et vérifier tables et métadonnées, puis publier via un IPT. Les modalités de participation et frais éventuels n’ont pas été établis."
+          },
+          {
+            "id": "platform-obis-tag-write-method-ipt-publish",
+            "label": "Publication via un IPT",
+            "description": "Demander un compte IPT au responsable du nœud, associer les tables aux termes Darwin Core et extensions, puis compléter les métadonnées EML. Publier et rendre la ressource publique pour moissonnage après contrôle. L’enregistrement GBIF est distinct. Licences acceptées : CC0, CC BY ou CC BY-NC ; frais non précisés."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "obis-occurrences-api",
+            "description": "Valeur exacte records de l’API v3 sans filtre le 10 septembre 2026 ; elle couvre cet index API et ne somme pas les catégories de l’accueil."
+          },
+          {
+            "id": "obis-species-api",
+            "description": "Valeur exacte species de la même réponse ; distincte du nombre de taxons et du chiffre arrondi d’espèces marines affiché à l’accueil."
+          },
+          {
+            "id": "obis-snapshot-size",
+            "description": "Somme des tailles de 7 104 objets .parquet sous occurrence/ sur huit pages S3 le 10 septembre 2026. Exclut dwca/, licences et stockage de production."
+          },
+          {
+            "id": "obis-dna-headline",
+            "description": "Chiffre arrondi de 83 millions de séquences ADN affiché à l’accueil ; date et dénombrement des séquences uniques non précisés. Ce n’est pas un total de lectures brutes ou de bases."
+          },
+          {
+            "id": "obis-community-headline",
+            "description": "Chiffre communautaire arrondi de 6 000 scientifiques et gestionnaires de données ; aucun registre daté ni période ne sont fournis."
+          }
+        ],
+        "researchGaps": {
+          "data": "L’accueil annonce 224 M d’observations, 207 000 espèces marines, 7 361 jeux et 421 M de mesures/faits ; les statistiques API diffèrent. Les écarts de filtres, dates et unités restent à expliquer. Les jeux et mesures restent dans le texte faute de clé métrique adaptée.",
+          "usage": "Aucun total actuel de sessions ou téléchargements pour tout OBIS n’a été vérifié. Les citations du réseau GBIF et téléchargements par jeu ont une portée plus étroite. Les 97 publications citantes restent dans le texte : l’index et la méthode de comptage ne sont pas identifiés, et les deux sources primaires divergent sur la période.",
+          "access": "Le manuel parle de CSV et le tableau actuel de TSV pour le visualiseur ; TSV est retenu en attendant de vérifier le séparateur d’un nouvel export. Les archives cloud incluent explicitement les absences, contrairement à la description générique des exports complets du manuel."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Sistema de Información sobre la Biodiversidad Oceánica (OBIS)",
+      "summary": "Infraestructura mundial de biodiversidad marina que integra ocurrencias, muestreos, mediciones ambientales y datos derivados de ADN de una red de proveedores.",
+      "description": "OBIS nació con el Census of Marine Life en 2000 y se incorporó al programa IODE de la COI-UNESCO en 2009. Su Secretaría coordina una red distribuida; las instituciones mantienen la propiedad de sus datos. Cubre especies marinas de todo el mundo, incluidas zonas fuera de la jurisdicción nacional, con contexto de muestreo, mediciones, evidencia molecular y enriquecimiento taxonómico de WoRMS. Una consulta a la API del 10 de septiembre de 2026 devolvió 229.141.362 ocurrencias y 168.352 especies; estas cifras difieren de las cifras redondeadas de la portada y no deben combinarse. Se accede mediante el visor, la API, robis u objetos GeoParquet públicos. Las contribuciones pasan por un nodo y se publican como Darwin Core Archive con metadatos EML. El acceso es gratuito, pero se aplican licencias y atribución; el conjunto AWS está bajo CC BY-NC. Las descargas del visor omiten ausencias, mientras que la API y el archivo en la nube pueden incluirlas. La falta de observaciones no demuestra ausencia ecológica; deben interpretarse los indicadores de calidad, el muestreo desigual y los métodos moleculares. OBIS informó de 97 publicaciones que citaron sus datos a comienzos de 2026. La noticia de septiembre indica enero–junio, mientras que el informe completo del comité precisa los primeros 5,5 meses; ninguno identifica el índice de citas ni el método de recuento.",
+      "details": {
+        "aliases": [
+          "OBIS",
+          "Ocean Biodiversity Information System",
+          "Ocean Biogeographic Information System"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "obis-home",
+            "obis-governance",
+            "obis-access",
+            "obis-manual-access",
+            "obis-policy",
+            "obis-aws",
+            "obis-stats",
+            "obis-impact",
+            "obis-contribute",
+            "obis-dna",
+            "obis-ec8-2026",
+            "obis-ec8-report"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "platform-obis-tag-data-format-darwin-core",
+              "description": "Los términos Darwin Core estructuran ocurrencias y eventos de muestreo publicados; la integridad varía por proveedor."
+            },
+            {
+              "id": "platform-obis-tag-data-format-darwin-core-archive",
+              "description": "Los conjuntos originales pueden descargarse como Darwin Core Archive con tablas vinculadas y metadatos."
+            },
+            {
+              "id": "platform-obis-tag-data-format-eml",
+              "description": "EML codifica metadatos del conjunto en el archivo eml.xml de los paquetes originales."
+            },
+            {
+              "id": "platform-obis-tag-data-format-emof",
+              "description": "La extensión eMoF relaciona mediciones y datos del muestreo con ocurrencias o eventos."
+            },
+            {
+              "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+              "description": "Las fichas de descubrimiento incluyen descripciones, procedencia, contactos, licencias y enlaces a archivos originales."
+            },
+            {
+              "id": "platform-obis-tag-data-type-occurrence-observation",
+              "description": "Detecciones de especies con fecha, posición y procedencia; ciertas interfaces permiten solicitar registros de ausencia."
+            },
+            {
+              "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+              "description": "Nombres interpretados, nombres aceptados, clasificaciones y listas utilizan enriquecimiento de WoRMS."
+            },
+            {
+              "id": "obis-type-surveys",
+              "description": "Los eventos documentan campañas y esfuerzo; Maritimes 4VSW incluye eventos de prospección y capturas."
+            },
+            {
+              "id": "obis-type-environment",
+              "description": "Las mediciones ambientales pueden acompañar eventos mediante eMoF; su disponibilidad depende del conjunto."
+            },
+            {
+              "id": "obis-type-sequences",
+              "description": "Las extensiones moleculares pueden incluir secuencias ASV/OTU y metadatos de procesamiento, además de enlaces externos."
+            },
+            {
+              "id": "obis-format-json",
+              "description": "La API pública v3 devuelve respuestas JSON de ocurrencias, conjuntos, taxones y estadísticas."
+            },
+            {
+              "id": "obis-format-tsv",
+              "description": "La tabla oficial actual identifica como TSV los archivos tabulares del visor; el manual también llama CSV a algunos archivos."
+            },
+            {
+              "id": "obis-format-parquet",
+              "description": "La colección AWS utiliza GeoParquet con campos originales e interpretados, extensiones, geometría e indicadores de calidad."
+            },
+            {
+              "id": "obis-standard-dna",
+              "description": "Los datos moleculares se publican con la extensión Darwin Core DNA-derived data asociada a ocurrencias o eventos."
+            },
+            {
+              "id": "obis-standard-nerc",
+              "description": "OBIS recomienda conceptos NERC P01 y unidades P06 para eMoF; admite otros vocabularios con identificadores resolubles."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "platform-obis-tag-read-method-dashboard-viewer",
+            "label": "Visor OBIS",
+            "description": "Explore pequeños subconjuntos taxonómicos, espaciales o temporales sin cuenta. La confirmación de exportación exige una dirección de correo electrónico; el diálogo advierte que las notificaciones no funcionan, por lo que debe mantener abierta la ventana para ver el estado y el enlace de descarga. Seleccione extensiones de mediciones o ADN cuando las necesite. Por defecto se excluyen ausencias; interprete los indicadores y cite cada conjunto."
+          },
+          {
+            "id": "platform-obis-tag-read-method-api",
+            "label": "API REST OBIS v3",
+            "description": "Consulte ocurrencias, taxones, conjuntos, listas y estadísticas sin credenciales. Solicite expresamente extensiones, ausencias o registros descartados. Use la paginación documentada; OBIS pide no paralelizar descargas y recomienda AWS para análisis grandes."
+          },
+          {
+            "id": "platform-obis-tag-read-method-sdk-notebook",
+            "label": "Paquete R robis",
+            "description": "Cliente gratuito para consultar la API y listas. Las funciones de extensiones exponen secuencias de ADN y mediciones. No requiere credenciales OBIS, pero sí R e instalación. Prefiera datos en la nube para trabajos grandes."
+          },
+          {
+            "id": "platform-obis-tag-read-method-download",
+            "label": "GeoParquet AWS y archivos originales",
+            "description": "Descargue objetos públicos S3 sin firmar solicitudes o consulte una copia local. Los archivos incluyen indicadores de ausencia y descarte: filtre deliberadamente. Hay archivos DwC-A y licencias por conjunto; la reutilización del agregado se rige por CC BY-NC. El cómputo en la nube puede generar cargos separados."
+          },
+          {
+            "id": "platform-obis-tag-read-method-ipt",
+            "label": "Búsqueda de conjuntos y archivos originales",
+            "description": "Localice un conjunto y siga Source DwC-A a su archivo original con tablas separadas y metadatos EML. Estos archivos no incluyen campos de calidad añadidos por OBIS. Consulta y descarga públicas sin cuenta; respete la licencia."
+          },
+          {
+            "id": "platform-obis-tag-write-method-manager-mediated-submission",
+            "label": "Contribución mediada por un nodo",
+            "description": "Contacte con un nodo adecuado o la Secretaría con datos marinos que pueda publicar. El nodo puede preparar y revisar tablas y metadatos y publicarlos mediante IPT. No se determinaron las condiciones de participación ni posibles cargos."
+          },
+          {
+            "id": "platform-obis-tag-write-method-ipt-publish",
+            "label": "Publicación mediante IPT",
+            "description": "Solicite una cuenta IPT al responsable del nodo, asigne tablas a Darwin Core y extensiones y complete EML. Publique y haga público el recurso para su recolección tras los controles. El registro en GBIF es independiente. Licencias aceptadas: CC0, CC BY o CC BY-NC; tarifas no especificadas."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "obis-occurrences-api",
+            "description": "Valor exacto records devuelto por las estadísticas de la API v3 sin filtros el 10 de septiembre de 2026; corresponde a ese índice, no a la suma de categorías de portada."
+          },
+          {
+            "id": "obis-species-api",
+            "description": "Valor exacto species de la misma respuesta; difiere del recuento de taxones y de la cifra redondeada de especies marinas en portada."
+          },
+          {
+            "id": "obis-snapshot-size",
+            "description": "Suma de tamaños de 7.104 objetos .parquet bajo occurrence/ en ocho páginas S3 el 10 de septiembre de 2026. Excluye dwca/, licencias y almacenamiento de producción."
+          },
+          {
+            "id": "obis-dna-headline",
+            "description": "Cifra redondeada de portada: 83 millones de secuencias de ADN; fecha y base de recuento de secuencias únicas no especificadas. No es un total de lecturas crudas ni bases."
+          },
+          {
+            "id": "obis-community-headline",
+            "description": "Cifra comunitaria redondeada de 6.000 científicos y gestores de datos; no se aporta un listado fechado ni período."
+          }
+        ],
+        "researchGaps": {
+          "data": "La portada informa 224 M de observaciones, 207.000 especies marinas, 7.361 conjuntos y 421 M de mediciones/hechos; la API difiere. No se conciliaron filtros, fechas ni unidades. Conjuntos y mediciones permanecen como texto al no existir una clave métrica adecuada.",
+          "usage": "No se verificó un total actual de sesiones o descargas para todo OBIS. Las citas de la red GBIF y descargas individuales tienen un alcance menor. Las 97 publicaciones citantes se conservan como texto: no se identifican el índice ni el método de recuento, y las dos fuentes primarias difieren sobre el período.",
+          "access": "El manual llama CSV a archivos que la tabla actual del visor identifica como TSV; se usa TSV pendiente de comprobar un nuevo archivo. El archivo cloud incluye ausencias explícitamente, a diferencia de la descripción genérica de exportaciones completas del manual."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ar": {
+      "title": "نظام معلومات التنوع البيولوجي للمحيطات (OBIS)",
+      "summary": "بنية عالمية للتنوع البيولوجي البحري تجمع سجلات الوجود وأخذ العينات والقياسات البيئية والبيانات المشتقة من الحمض النووي من شبكة مزودي بيانات.",
+      "description": "بدأ OBIS مع مشروع تعداد الحياة البحرية عام 2000 وانضم إلى برنامج IODE التابع للجنة الدولية الحكومية لعلوم المحيطات باليونسكو عام 2009. تنسق أمانته شبكة موزعة، وتحتفظ المؤسسات المساهمة بملكية بياناتها. يغطي الأنواع البحرية عالمياً، بما في ذلك المناطق خارج الولاية الوطنية، مع سياق أخذ العينات والقياسات والأدلة الجزيئية والإثراء التصنيفي من WoRMS. أعادت قراءة حية للواجهة في 10 سبتمبر 2026 عدد 229,141,362 سجل وجود و168,352 نوعاً؛ وتختلف هذه الأرقام عن الأرقام التقريبية في الصفحة الرئيسية ولا ينبغي جمعها. يمكن استخدام عارض الخرائط أو الواجهة أو robis أو ملفات GeoParquet العامة. تمر المساهمات عبر عقدة مناسبة ونشر أرشيف Darwin Core مع بيانات EML الوصفية. الوصول مجاني، لكن التراخيص ونسب الفضل واجبان؛ وتخضع مجموعة AWS المجمعة لترخيص CC BY-NC. تستبعد تنزيلات العارض سجلات الغياب، بينما يمكن للواجهة والأرشيف السحابي تضمينها. نقص المشاهدات لا يثبت الغياب البيئي، ويجب تفسير أعلام الجودة وتفاوت أخذ العينات وطرق الكشف الجزيئية. أفاد OBIS بوجود 97 منشوراً استشهدت ببياناته في أوائل 2026. يحدد ملخص سبتمبر الفترة من يناير إلى يونيو، بينما يذكر تقرير اللجنة الكامل الأشهر الخمسة والنصف الأولى؛ ولا يحدد أي منهما فهرس الاستشهادات أو طريقة العد.",
+      "details": {
+        "aliases": [
+          "OBIS",
+          "Ocean Biodiversity Information System",
+          "Ocean Biogeographic Information System"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "obis-home",
+            "obis-governance",
+            "obis-access",
+            "obis-manual-access",
+            "obis-policy",
+            "obis-aws",
+            "obis-stats",
+            "obis-impact",
+            "obis-contribute",
+            "obis-dna",
+            "obis-ec8-2026",
+            "obis-ec8-report"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "platform-obis-tag-data-format-darwin-core",
+              "description": "تنظم مصطلحات Darwin Core سجلات الوجود وأحداث أخذ العينات المنشورة؛ وتختلف درجة الاكتمال بين المزودين."
+            },
+            {
+              "id": "platform-obis-tag-data-format-darwin-core-archive",
+              "description": "يمكن تنزيل مجموعات المصدر كأرشيفات Darwin Core تضم جداول مترابطة وبيانات وصفية."
+            },
+            {
+              "id": "platform-obis-tag-data-format-eml",
+              "description": "تُرمّز البيانات الوصفية للمجموعة بصيغة EML في ملف eml.xml داخل أرشيف المصدر."
+            },
+            {
+              "id": "platform-obis-tag-data-format-emof",
+              "description": "يربط امتداد eMoF القياسات وحقائق أخذ العينات بسجلات الوجود أو الأحداث."
+            },
+            {
+              "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+              "description": "تتضمن سجلات اكتشاف المجموعات الأوصاف والمنشأ وجهات الاتصال والتراخيص وروابط الأرشيفات الأصلية."
+            },
+            {
+              "id": "platform-obis-tag-data-type-occurrence-observation",
+              "description": "سجلات كشف الأنواع مع الوقت والموقع والمنشأ؛ ويمكن طلب سجلات الغياب عبر واجهات محددة."
+            },
+            {
+              "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+              "description": "تستفيد الأسماء المفسرة والمقبولة والتصنيفات والقوائم من إثراء WoRMS."
+            },
+            {
+              "id": "obis-type-surveys",
+              "description": "توثق أحداث أخذ العينات المسوحات والجهد؛ وتتضمن مجموعة Maritimes 4VSW أحداث المسح والمصيد."
+            },
+            {
+              "id": "obis-type-environment",
+              "description": "قد تصاحب القياسات البيئية أحداث أخذ العينات عبر eMoF؛ ويتوقف توفرها على المجموعة."
+            },
+            {
+              "id": "obis-type-sequences",
+              "description": "قد تحتوي امتدادات الحمض النووي تسلسلات ASV/OTU الفعلية وبيانات المعالجة الوصفية، لا الروابط الخارجية فقط."
+            },
+            {
+              "id": "obis-format-json",
+              "description": "تعيد الواجهة العامة v3 استجابات JSON للوجود والمجموعات والأصناف والإحصاءات."
+            },
+            {
+              "id": "obis-format-tsv",
+              "description": "يسمي جدول الوصول الرسمي الحالي صادرات العارض الجدولية TSV؛ ويسمي الدليل بعض الملفات CSV أيضاً."
+            },
+            {
+              "id": "obis-format-parquet",
+              "description": "تستخدم مجموعة AWS صيغة GeoParquet مع حقول أصلية ومفسرة وامتدادات وهندسة مكانية وأعلام جودة."
+            },
+            {
+              "id": "obis-standard-dna",
+              "description": "تنشر البيانات الجزيئية بامتداد Darwin Core DNA-derived data المرتبط بالوجود أو الأحداث."
+            },
+            {
+              "id": "obis-standard-nerc",
+              "description": "يوصي OBIS بمفاهيم NERC P01 ووحدات P06 لـ eMoF؛ ويُسمح بمفردات أخرى ذات معرفات قابلة للحل."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "platform-obis-tag-read-method-dashboard-viewer",
+            "label": "عارض خرائط OBIS",
+            "description": "استكشف مجموعات صغيرة حسب التصنيف أو المكان أو الزمن دون حساب. يتطلب تأكيد التصدير عنوان بريد إلكتروني؛ ويحذر مربع الحوار من أن إشعارات البريد لا تعمل، لذا أبقِ النافذة مفتوحة لمتابعة حالة التنزيل والحصول على الرابط. اختر امتدادات القياسات أو الحمض النووي عند الحاجة. تستبعد التنزيلات الغياب افتراضياً؛ فسّر الأعلام واستشهد بكل مجموعة مساهمة."
+          },
+          {
+            "id": "platform-obis-tag-read-method-api",
+            "label": "واجهة OBIS REST v3",
+            "description": "استعلم عن الوجود والأصناف والمجموعات والقوائم والإحصاءات دون بيانات اعتماد. اطلب الامتدادات وسجلات الغياب أو الاستبعاد صراحة. استخدم ترقيم الصفحات الموثق؛ يطلب OBIS عدم تنزيل البيانات بالتوازي ويوصي بـ AWS للتحليلات الكبيرة."
+          },
+          {
+            "id": "platform-obis-tag-read-method-sdk-notebook",
+            "label": "حزمة robis للغة R",
+            "description": "استخدم العميل المجاني لاستعلامات الواجهة والقوائم. تتيح وظائف الامتدادات تسلسلات الحمض النووي والقياسات. لا يلزم اعتماد OBIS، لكن يلزم R وتثبيت الحزمة. استخدم البيانات السحابية للأعمال الكبيرة."
+          },
+          {
+            "id": "platform-obis-tag-read-method-download",
+            "label": "GeoParquet على AWS وأرشيفات المصدر",
+            "description": "نزّل كائنات S3 العامة دون توقيع الطلبات أو استعلم عن نسخة محلية. تتضمن اللقطات أعلام الغياب والاستبعاد؛ طبّق المرشحات عمداً. تتوفر أرشيفات DwC-A وتراخيص كل مجموعة؛ وإعادة استخدام المجموعة المجمعة تخضع لـ CC BY-NC. قد تُفرض رسوم حوسبة سحابية منفصلة."
+          },
+          {
+            "id": "platform-obis-tag-read-method-ipt",
+            "label": "البحث عن المجموعات وأرشيفات المصدر",
+            "description": "ابحث عن مجموعة واتبع Source DwC-A إلى أرشيفها الأصلي بجداول منفصلة وبيانات EML الوصفية. لا تضم هذه الأرشيفات حقول الجودة المضافة من OBIS. التصفح والتنزيل العامان دون حساب؛ احترم الترخيص."
+          },
+          {
+            "id": "platform-obis-tag-write-method-manager-mediated-submission",
+            "label": "مساهمة بوساطة عقدة",
+            "description": "تواصل مع عقدة مناسبة أو الأمانة ببيانات بحرية يحق لك نشرها. يمكن للعقدة إعداد الجداول والبيانات الوصفية والتحقق منها ثم نشرها عبر IPT. لم تُحدد ترتيبات المشاركة أو الرسوم المحتملة."
+          },
+          {
+            "id": "platform-obis-tag-write-method-ipt-publish",
+            "label": "النشر عبر IPT",
+            "description": "اطلب حساب IPT من مدير العقدة واربط الجداول بـ Darwin Core وامتداداته وأكمل بيانات EML. انشر المورد واجعله عاماً للحصاد بعد فحوص الجودة. التسجيل في GBIF خطوة منفصلة. التراخيص المقبولة CC0 وCC BY وCC BY-NC؛ رسوم المساهمة غير محددة."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "obis-occurrences-api",
+            "description": "قيمة records الدقيقة التي أعادتها إحصاءات واجهة v3 دون مرشحات في 10 سبتمبر 2026؛ تخص فهرس الواجهة وليست مجموع فئات الصفحة الرئيسية."
+          },
+          {
+            "id": "obis-species-api",
+            "description": "قيمة species الدقيقة من الاستجابة نفسها؛ تختلف عن عدد الأصناف والرقم التقريبي للأنواع البحرية في الصفحة الرئيسية."
+          },
+          {
+            "id": "obis-snapshot-size",
+            "description": "مجموع أحجام 7,104 كائنات .parquet تحت occurrence/ عبر ثماني صفحات S3 في 10 سبتمبر 2026. يستبعد dwca/ والتراخيص وتخزين قاعدة الإنتاج."
+          },
+          {
+            "id": "obis-dna-headline",
+            "description": "رقم تقريبي في الصفحة الرئيسية يبلغ 83 مليون تسلسل حمض نووي؛ تاريخ القياس وأساس عد التسلسلات الفريدة غير محددين. ليس مجموع القراءات الخام أو القواعد."
+          },
+          {
+            "id": "obis-community-headline",
+            "description": "رقم مجتمعي تقريبي يبلغ 6,000 عالم ومدير بيانات؛ لا تتوفر قائمة مؤرخة أو فترة تقرير."
+          }
+        ],
+        "researchGaps": {
+          "data": "تعرض الصفحة الرئيسية 224 مليون مشاهدة و207 آلاف نوع بحري و7,361 مجموعة و421 مليون قياس وحقيقة؛ وتختلف إحصاءات الواجهة. لم تُحسم فروق المرشحات والتوقيت ووحدات العد. تُحفظ أعداد المجموعات والقياسات كنص لغياب مفتاح قياس مناسب.",
+          "usage": "لم يُتحقق من مجموع حالي للجلسات أو أحداث التنزيل على مستوى OBIS كله. استشهادات شبكة GBIF وتنزيلات المجموعات المفردة أضيق نطاقاً. يبقى عدد المنشورات المستشهِدة البالغ 97 ضمن النص الوصفي: فالفهرس وطريقة العد غير محددين، ويختلف المصدران الأوليان بشأن فترة التقرير.",
+          "access": "يسمي الدليل ملفات العارض CSV بينما يسميها جدول الوصول الحالي TSV؛ استُخدم TSV بانتظار فحص فاصل ملف جديد. تؤكد وثائق اللقطة السحابية وجود سجلات الغياب خلافاً لوصف الدليل العام للتصدير الكامل."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "海洋生物多样性信息系统（OBIS）",
+      "summary": "汇集数据提供者网络的物种出现、采样、环境测量和DNA衍生记录的全球海洋生物多样性基础设施。",
+      "description": "OBIS于2000年随海洋生物普查启动，2009年纳入联合国教科文组织政府间海洋学委员会的IODE计划。秘书处协调分布式网络，贡献机构保留数据集所有权。系统覆盖全球海洋物种，包括国家管辖范围以外区域，提供采样背景、测量、分子证据及WoRMS分类补充。2026年9月10日实时API统计返回229,141,362条出现记录和168,352个物种；这些数字与主页四舍五入的概览不同，不应合并使用。研究者可使用地图浏览器、API、robis或公共GeoParquet对象。数据贡献须经适当节点，以附带EML元数据的Darwin Core Archive发布。访问免费，但仍须遵守数据集许可和署名要求；AWS汇总数据采用CC BY-NC。地图下载排除未检出记录，而API和云端档案可包含这些记录。缺少观察不能证明生态学上的缺失；质量标记、采样不均与分子检测方法均需审慎解释。 OBIS报告称，2026年初有97篇出版物引用其数据。9月新闻摘要将期间表述为1月至6月，而委员会完整报告注明前5.5个月；两者均未说明引文索引或计数方法。",
+      "details": {
+        "aliases": [
+          "OBIS",
+          "Ocean Biodiversity Information System",
+          "Ocean Biogeographic Information System",
+          "海洋生物地理信息系统"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "obis-home",
+            "obis-governance",
+            "obis-access",
+            "obis-manual-access",
+            "obis-policy",
+            "obis-aws",
+            "obis-stats",
+            "obis-impact",
+            "obis-contribute",
+            "obis-dna",
+            "obis-ec8-2026",
+            "obis-ec8-report"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "platform-obis-tag-data-format-darwin-core",
+              "description": "Darwin Core术语用于组织发布的物种出现和采样事件数据；各提供者的数据完整程度不同。"
+            },
+            {
+              "id": "platform-obis-tag-data-format-darwin-core-archive",
+              "description": "源数据集可下载为Darwin Core Archive，包含关联的数据表及元数据。"
+            },
+            {
+              "id": "platform-obis-tag-data-format-eml",
+              "description": "EML用于编码源档案中eml.xml文件内的数据集元数据。"
+            },
+            {
+              "id": "platform-obis-tag-data-format-emof",
+              "description": "eMoF扩展将测量和采样事实关联至出现记录或事件。"
+            },
+            {
+              "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+              "description": "数据集发现记录包括描述、来源、联系人、许可和源档案链接。"
+            },
+            {
+              "id": "platform-obis-tag-data-type-occurrence-observation",
+              "description": "附有时间、位置和来源的物种检测记录；特定接口允许明确请求物种未检出记录。"
+            },
+            {
+              "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+              "description": "经解释的学名、接受名、分类和名录使用WoRMS补充信息。"
+            },
+            {
+              "id": "obis-type-surveys",
+              "description": "采样事件记录调查及投入；Maritimes 4VSW数据集包含调查事件和捕获数据。"
+            },
+            {
+              "id": "obis-type-environment",
+              "description": "环境测量可通过eMoF附于采样事件；是否提供取决于数据集。"
+            },
+            {
+              "id": "obis-type-sequences",
+              "description": "DNA衍生扩展可包含实际ASV/OTU序列及处理元数据，而不只是外部档案链接。"
+            },
+            {
+              "id": "obis-format-json",
+              "description": "公共v3 API以JSON返回出现记录、数据集、分类单元和统计响应。"
+            },
+            {
+              "id": "obis-format-tsv",
+              "description": "当前官方访问表将地图表格导出标为TSV；手册也把部分文件称作CSV。"
+            },
+            {
+              "id": "obis-format-parquet",
+              "description": "AWS出现记录集合采用GeoParquet，包含原始及解释字段、扩展、几何信息和质量标记。"
+            },
+            {
+              "id": "obis-standard-dna",
+              "description": "分子数据通过附于出现记录或事件的Darwin Core DNA-derived data扩展发布。"
+            },
+            {
+              "id": "obis-standard-nerc",
+              "description": "OBIS建议eMoF使用NERC P01测量概念与P06单位；也允许其他具有可解析标识符的词汇。"
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "platform-obis-tag-read-method-dashboard-viewer",
+            "label": "OBIS地图浏览器",
+            "description": "无需账户即可浏览较小的分类、空间或时间子集。导出确认步骤要求填写电子邮箱；当前对话框提示邮件通知功能尚未运行，因此请保持窗口打开以查看下载状态和链接。按需选择测量或DNA扩展。默认下载排除物种未检出记录；须解释质量标记并引用各贡献数据集。"
+          },
+          {
+            "id": "platform-obis-tag-read-method-api",
+            "label": "OBIS REST API v3",
+            "description": "无需凭证即可查询出现记录、分类、数据集、名录与统计。须明确请求扩展、物种未检出或被排除记录。使用文档说明的分页参数；OBIS要求不要并行下载，并建议大型分析使用AWS。"
+          },
+          {
+            "id": "platform-obis-tag-read-method-sdk-notebook",
+            "label": "robis R包",
+            "description": "免费客户端可查询OBIS API与名录；扩展函数提供DNA序列和测量。无需OBIS凭证，但须安装R及软件包。大型任务宜使用云端数据。"
+          },
+          {
+            "id": "platform-obis-tag-read-method-download",
+            "label": "AWS GeoParquet与源档案",
+            "description": "无需签名请求即可下载公共S3对象，也可查询本地副本。快照包含物种未检出和排除标记，须主动筛选。集合同时提供DwC-A源档案与各数据集许可；汇总数据再利用受CC BY-NC约束。云端计算可能另行收费。"
+          },
+          {
+            "id": "platform-obis-tag-read-method-ipt",
+            "label": "数据集搜索与源档案",
+            "description": "找到数据集后，点击Source DwC-A获取原始档案及独立数据表和EML元数据。这些提供者档案不含OBIS添加的质量字段。公开浏览及下载无需账户；须遵守源许可。"
+          },
+          {
+            "id": "platform-obis-tag-write-method-manager-mediated-submission",
+            "label": "节点协调贡献",
+            "description": "向适当OBIS节点或秘书处提交有权公开的海洋数据。节点可协助准备及检查数据表和元数据，并通过IPT发布。参与安排及潜在费用未得到确认。"
+          },
+          {
+            "id": "platform-obis-tag-write-method-ipt-publish",
+            "label": "通过IPT发布",
+            "description": "向节点管理员申请IPT账户，将数据表映射到Darwin Core及扩展并填写EML元数据。经质量检查后发布并设为公开，以便采集。GBIF注册是独立步骤。接受CC0、CC BY或CC BY-NC许可；贡献费用未说明。"
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "obis-occurrences-api",
+            "description": "2026年9月10日无筛选OBIS API v3统计返回的精确records值；范围为该API索引，并非主页类别相加。"
+          },
+          {
+            "id": "obis-species-api",
+            "description": "同一API响应中的精确species值；不同于分类单元总数和主页约数海洋物种统计。"
+          },
+          {
+            "id": "obis-snapshot-size",
+            "description": "2026年9月10日遍历八页S3清单，汇总occurrence/下7,104个.parquet对象大小。排除dwca/、许可文件及生产数据库存储。"
+          },
+          {
+            "id": "obis-dna-headline",
+            "description": "主页显示的约8,300万条DNA序列；统计日期与唯一序列计数依据未说明。并非原始测序读段或碱基总数。"
+          },
+          {
+            "id": "obis-community-headline",
+            "description": "主页显示约6,000名科学家和数据管理员；未提供注明日期的名单或统计期。"
+          }
+        ],
+        "researchGaps": {
+          "data": "主页显示约2.24亿条观察、20.7万海洋物种、7,361个数据集和4.21亿条测量及事实，与API统计不同。筛选、更新日期和计数依据尚未统一。数据集与测量计数没有适用的批准指标，故保留为文字。",
+          "usage": "未核实当前覆盖整个OBIS的会话或下载事件总数。GBIF网络引用和单个数据集下载量范围较窄，不作为全系统使用量。 所报告的97篇引用出版物保留为文字说明：引文索引和计数方法不明，两个一手来源对统计期间的表述不同。",
+          "access": "手册称地图导出为CSV，当前访问表称TSV；暂采用TSV，待检查新导出文件的实际分隔符。云端快照文档明确包含物种未检出记录，与手册对完整导出的概括不同。"
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Информационная система по биоразнообразию океана (OBIS)",
+      "summary": "Глобальная инфраструктура морского биоразнообразия, объединяющая находки, отбор проб, экологические измерения и данные ДНК от сети поставщиков.",
+      "description": "OBIS возникла в рамках Census of Marine Life в 2000 году и вошла в программу IODE МОК ЮНЕСКО в 2009 году. Секретариат координирует распределённую сеть; организации сохраняют права на свои наборы данных. Система охватывает морские виды во всём мире, включая районы за пределами национальной юрисдикции, и предоставляет контекст отбора проб, измерения, молекулярные данные и таксономическое обогащение WoRMS. Запрос API от 10 сентября 2026 года вернул 229 141 362 записи о встречаемости и 168 352 вида; эти числа отличаются от округлённых показателей главной страницы и не должны объединяться. Доступ возможен через карту, API, robis и публичные объекты GeoParquet. Данные поступают через подходящий узел с публикацией Darwin Core Archive и метаданными EML. Доступ бесплатный, но действуют лицензии и требования атрибуции; совокупный набор AWS имеет лицензию CC BY-NC. Выгрузки карты исключают отсутствия, тогда как API и облачный архив могут их включать. Недостаток наблюдений не доказывает экологическое отсутствие; необходимо учитывать флаги качества, неравномерность выборок и молекулярные методы. OBIS сообщила о 97 публикациях, цитирующих её данные, в начале 2026 года. В сентябрьской новости указан период январь–июнь, а в полном отчёте комитета — первые 5,5 месяца; ни один источник не называет индекс цитирования или метод подсчёта.",
+      "details": {
+        "aliases": [
+          "OBIS",
+          "Ocean Biodiversity Information System",
+          "Ocean Biogeographic Information System"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "obis-home",
+            "obis-governance",
+            "obis-access",
+            "obis-manual-access",
+            "obis-policy",
+            "obis-aws",
+            "obis-stats",
+            "obis-impact",
+            "obis-contribute",
+            "obis-dna",
+            "obis-ec8-2026",
+            "obis-ec8-report"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "platform-obis-tag-data-format-darwin-core",
+              "description": "Термины Darwin Core структурируют опубликованные находки и события отбора проб; полнота различается между поставщиками."
+            },
+            {
+              "id": "platform-obis-tag-data-format-darwin-core-archive",
+              "description": "Исходные наборы доступны в Darwin Core Archive со связанными таблицами и метаданными."
+            },
+            {
+              "id": "platform-obis-tag-data-format-eml",
+              "description": "EML кодирует метаданные набора в файле eml.xml опубликованного исходного архива."
+            },
+            {
+              "id": "platform-obis-tag-data-format-emof",
+              "description": "Расширение eMoF связывает измерения и сведения об отборе проб с находками или событиями."
+            },
+            {
+              "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+              "description": "Каталожные записи содержат описания, происхождение, контакты, лицензии и ссылки на исходные архивы."
+            },
+            {
+              "id": "platform-obis-tag-data-type-occurrence-observation",
+              "description": "Обнаружения видов с временем, координатами и происхождением; отдельные интерфейсы позволяют явно запросить отсутствия."
+            },
+            {
+              "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+              "description": "Интерпретированные и принятые названия, классификации и списки используют обогащение WoRMS."
+            },
+            {
+              "id": "obis-type-surveys",
+              "description": "События описывают съёмки и усилие; Maritimes 4VSW включает исследовательские события и уловы."
+            },
+            {
+              "id": "obis-type-environment",
+              "description": "Экологические измерения могут сопровождать события через eMoF; доступность зависит от набора."
+            },
+            {
+              "id": "obis-type-sequences",
+              "description": "Расширения ДНК могут содержать сами последовательности ASV/OTU и метаданные обработки, а не только внешние ссылки."
+            },
+            {
+              "id": "obis-format-json",
+              "description": "Публичный API v3 возвращает находки, наборы, таксоны и статистику в JSON."
+            },
+            {
+              "id": "obis-format-tsv",
+              "description": "Текущая официальная таблица доступа указывает TSV для табличных выгрузок карты; руководство также называет некоторые файлы CSV."
+            },
+            {
+              "id": "obis-format-parquet",
+              "description": "Коллекция AWS использует GeoParquet с исходными и интерпретированными полями, расширениями, геометрией и флагами качества."
+            },
+            {
+              "id": "obis-standard-dna",
+              "description": "Молекулярные данные публикуются через расширение Darwin Core DNA-derived data, связанное с находками или событиями."
+            },
+            {
+              "id": "obis-standard-nerc",
+              "description": "OBIS рекомендует понятия NERC P01 и единицы P06 для eMoF; допустимы другие словари с разрешимыми идентификаторами."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "platform-obis-tag-read-method-dashboard-viewer",
+            "label": "Карта OBIS",
+            "description": "Просматривайте небольшие таксономические, пространственные или временные выборки без аккаунта. Для подтверждения экспорта требуется адрес электронной почты; диалог предупреждает, что уведомления не работают, поэтому оставьте окно открытым для получения статуса и ссылки на загрузку. При необходимости включайте измерения и ДНК. По умолчанию отсутствия исключены; учитывайте флаги и цитируйте каждый набор."
+          },
+          {
+            "id": "platform-obis-tag-read-method-api",
+            "label": "REST API OBIS v3",
+            "description": "Запрашивайте находки, таксоны, наборы, списки и статистику без учётных данных. Явно включайте расширения, отсутствия и исключённые записи. Используйте документированную пагинацию; OBIS просит не распараллеливать загрузки и рекомендует AWS для крупных анализов."
+          },
+          {
+            "id": "platform-obis-tag-read-method-sdk-notebook",
+            "label": "Пакет R robis",
+            "description": "Бесплатный клиент для запросов API и списков. Функции расширений предоставляют последовательности ДНК и измерения. Учётные данные OBIS не нужны, но необходимы R и установка пакета. Для крупных задач используйте облачные данные."
+          },
+          {
+            "id": "platform-obis-tag-read-method-download",
+            "label": "GeoParquet AWS и исходные архивы",
+            "description": "Загружайте публичные объекты S3 без подписания запросов или анализируйте локальную копию. Снимки содержат флаги отсутствия и исключения: фильтруйте явно. Доступны исходные DwC-A и лицензии наборов; совокупный набор распространяется по CC BY-NC. Облачные вычисления могут оплачиваться отдельно."
+          },
+          {
+            "id": "platform-obis-tag-read-method-ipt",
+            "label": "Поиск наборов и исходные архивы",
+            "description": "Найдите набор и перейдите по Source DwC-A к исходному архиву с отдельными таблицами и EML. Эти архивы не содержат добавленных OBIS полей качества. Публичный просмотр и загрузка без аккаунта; соблюдайте лицензию источника."
+          },
+          {
+            "id": "platform-obis-tag-write-method-manager-mediated-submission",
+            "label": "Передача данных через узел",
+            "description": "Свяжитесь с подходящим узлом или секретариатом, имея право публиковать морские данные. Узел может подготовить и проверить таблицы и метаданные, затем опубликовать через IPT. Условия участия и возможная плата не установлены."
+          },
+          {
+            "id": "platform-obis-tag-write-method-ipt-publish",
+            "label": "Публикация через IPT",
+            "description": "Запросите аккаунт IPT у менеджера узла, сопоставьте таблицы с Darwin Core и расширениями и заполните EML. После проверки опубликуйте ресурс и откройте его для сбора. Регистрация в GBIF выполняется отдельно. Принимаются CC0, CC BY и CC BY-NC; плата не указана."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "obis-occurrences-api",
+            "description": "Точное значение records из статистики API v3 без фильтров 10 сентября 2026 года; относится к индексу API, а не сумме категорий главной страницы."
+          },
+          {
+            "id": "obis-species-api",
+            "description": "Точное значение species из того же ответа; отличается от числа таксонов и округлённого показателя морских видов на главной странице."
+          },
+          {
+            "id": "obis-snapshot-size",
+            "description": "Сумма размеров 7 104 объектов .parquet в occurrence/ по восьми страницам S3 на 10 сентября 2026 года. Исключены dwca/, лицензии и производственная база."
+          },
+          {
+            "id": "obis-dna-headline",
+            "description": "Округлённый показатель главной страницы: 83 млн последовательностей ДНК; дата и метод подсчёта уникальных последовательностей не указаны. Это не число сырых прочтений или оснований."
+          },
+          {
+            "id": "obis-community-headline",
+            "description": "Округлённая численность сообщества: 6 000 учёных и менеджеров данных; датированный список и отчётный период не предоставлены."
+          }
+        ],
+        "researchGaps": {
+          "data": "Главная страница сообщает 224 млн наблюдений, 207 тыс. морских видов, 7 361 набор и 421 млн измерений/фактов; API выдаёт другие числа. Различия фильтров, дат и единиц не согласованы. Число наборов и измерений сохранено в тексте, поскольку подходящих утверждённых ключей нет.",
+          "usage": "Текущие суммарные сессии и события загрузки для всей OBIS не подтверждены. Цитирования сети GBIF и загрузки отдельных наборов имеют более узкую область охвата. Число 97 цитирующих публикаций сохранено в тексте: индекс и метод подсчёта не определены, а два первичных источника указывают разные отчётные периоды.",
+          "access": "Руководство называет файлы карты CSV, текущая таблица доступа — TSV; выбран TSV до проверки разделителя новой выгрузки. Облачный архив явно включает отсутствия, в отличие от общего описания полных экспортов в руководстве."
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "link-eurobis-obis",
+      "sourceNodeId": "eurobis",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "EurOBIS transfers marine occurrence data to OBIS regularly, covering European waters and data collected by European institutions elsewhere. Its data-flow documentation specifies no fixed interval or latest completed harvest.",
+      "properties": {
+        "sourceRefs": [
+          "src-relationship-eurobis",
+          "evidence"
+        ],
+        "scope": "EurOBIS marine occurrence datasets",
+        "status": "documented ongoing transfer",
+        "transferMethod": "Regional-node dataset transfer",
+        "updateFrequency": "regular; exact cadence unspecified"
+      },
+      "sources": {
+        "src-relationship-eurobis": {
+          "id": "src-relationship-eurobis",
+          "url": "https://www.eurobis.org/about",
+          "title": {
+            "ar": "حول EurOBIS",
+            "en": "About EurOBIS",
+            "es": "Acerca de EurOBIS",
+            "fr": "À propos de EurOBIS",
+            "ru": "О EurOBIS",
+            "zh": "关于EurOBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.eurobis.org/data_flow",
+          "title": {
+            "en": "EurOBIS data flow",
+            "fr": "Flux de données EurOBIS",
+            "es": "Flujo de datos EurOBIS",
+            "ar": "تدفق بيانات EurOBIS",
+            "zh": "EurOBIS数据流",
+            "ru": "Потоки данных EurOBIS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-bismal-syncs-to-obis",
+      "sourceNodeId": "bismal",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "JAMSTEC states that data collected and integrated by J-OBIS are provided to OBIS through BISMaL. The cited page establishes neither IPT as the transfer mechanism nor a fixed cadence or latest delivery date.",
+      "properties": {
+        "scope": "J-OBIS marine biodiversity data provided through BISMaL",
+        "status": "documented ongoing transfer",
+        "transferMethod": "BISMaL dissemination to OBIS; protocol unspecified",
+        "sourceRefs": [
+          "src-relationship-j-obis"
+        ]
+      },
+      "sources": {
+        "src-relationship-j-obis": {
+          "id": "src-relationship-j-obis",
+          "url": "https://www.godac.jamstec.go.jp/bismal/e/about.html",
+          "title": {
+            "ar": "حول BISMaL / J-OBIS",
+            "en": "About BISMaL / J-OBIS",
+            "es": "Acerca de BISMaL / J-OBIS",
+            "fr": "À propos de BISMaL / J-OBIS",
+            "ru": "О BISMaL / J-OBIS",
+            "zh": "关于BISMaL / J-OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-fishbase-member-of-platform-obis",
+      "sourceNodeId": "fishbase",
+      "targetNodeId": "platform-obis",
+      "kind": "member_of",
+      "note": "The OBIS Fish OBIS node page explicitly identifies FishBase and FishNet2 as participating systems in the global thematic Fish OBIS node. This represents FishBase participation in OBIS through that node, not organizational membership or component ownership. The page describes intended FishBase contributions; current delivery is assessed separately.",
+      "properties": {
+        "via": "Fish OBIS",
+        "scope": "OBIS network participation through the Fish OBIS thematic node",
+        "status": "listed participant",
+        "sourceRefs": [
+          "evidence"
+        ]
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://portal.obis.org/node/dcb0c76d-46a1-4e07-9a69-98cf3fd67576",
+          "title": {
+            "ar": "العقدة الموضوعية Fish OBIS والأنظمة المشاركة",
+            "en": "Fish OBIS thematic node and participating systems",
+            "es": "Nodo temático Fish OBIS y sistemas participantes",
+            "fr": "Nœud thématique Fish OBIS et systèmes participants",
+            "ru": "Тематический узел Fish OBIS и участвующие системы",
+            "zh": "Fish OBIS专题节点与参与系统"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-fishbase-syncs-to-platform-obis",
+      "sourceNodeId": "fishbase",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "OBIS hosts an archive of FishBase occurrence records harvested from the GBIF-Sweden-hosted resource. The available archive was published on 2018-10-10 and lists an unknown update frequency. This records the historical transfer path; an ongoing refresh is not established.",
+      "properties": {
+        "scope": "Historical harvest of FishBase occurrence data via GBIF-Sweden",
+        "format": "Darwin Core Archive",
+        "status": "historical; current refresh unknown",
+        "artifact": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "transferMethod": "OBIS harvest of the GBIF-Sweden-hosted FishBase resource",
+        "updateFrequency": "unknown",
+        "latestPublishedAt": "2018-10-10"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+          "title": {
+            "ar": "أرشيف سجلات وجود الأنواع في FishBase الذي جمعه OBIS",
+            "en": "FishBase occurrence archive harvested by OBIS",
+            "es": "Archivo de presencias de FishBase recopilado por OBIS",
+            "fr": "Archive des occurrences FishBase collectée par OBIS",
+            "ru": "Архив находок FishBase, собранный OBIS",
+            "zh": "OBIS采集的FishBase物种出现记录档案"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ioc-unesco-iode-operates-ocean-biodiversity-information-system",
+      "sourceNodeId": "ioc-unesco-iode",
+      "targetNodeId": "platform-obis",
+      "kind": "operates",
+      "note": "The OBIS Secretariat is hosted at the UNESCO/IOC project office for IODE. Its project manager and data manager operate the central portal and coordinate the independently operated node network; this is not exclusive operation of every contributing node.",
+      "properties": {
+        "scope": "OBIS central Secretariat, portal operation and network coordination",
+        "sourceRefs": [
+          "src-relationship-platform-obis"
+        ],
+        "status": "active documented responsibility"
+      },
+      "sources": {
+        "src-relationship-platform-obis": {
+          "id": "src-relationship-platform-obis",
+          "url": "https://obis.org/about/governance/",
+          "title": {
+            "ar": "حوكمة OBIS",
+            "en": "OBIS governance",
+            "es": "Gobernanza de OBIS",
+            "fr": "Gouvernance d’OBIS",
+            "ru": "Управление OBIS",
+            "zh": "OBIS治理"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ioc-assembly-governs-platform-obis",
+      "sourceNodeId": "ioc-assembly",
+      "targetNodeId": "platform-obis",
+      "kind": "governs",
+      "note": "The IOC Assembly adopts IODE recommendations; IOC adopted OBIS into IODE in June 2009 and issues OBIS programme decisions. This is collective programme authority. The Steering Group advises IODE and is not treated as a unilateral governing body.",
+      "properties": {
+        "scope": "Adoption and oversight of OBIS within IOC/IODE",
+        "status": "formal authority documented from 2009",
+        "sourceRefs": [
+          "evidence"
+        ]
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://obis.org/about/governance/",
+          "title": {
+            "en": "OBIS governance and IOC decisions",
+            "fr": "Gouvernance OBIS et décisions de la COI",
+            "es": "Gobernanza OBIS y decisiones de la COI",
+            "ar": "حوكمة OBIS وقرارات اللجنة الدولية لعلوم المحيطات",
+            "zh": "OBIS治理与IOC决定",
+            "ru": "Управление OBIS и решения МОК"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-eurobis-member-of-platform-obis",
+      "sourceNodeId": "eurobis",
+      "targetNodeId": "platform-obis",
+      "kind": "member_of",
+      "note": "EurOBIS is explicitly the European OBIS node.",
+      "properties": {
+        "scope": "OBIS regional-node participation",
+        "status": "listed current participant",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "via": "EurOBIS"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.eurobis.org/about",
+          "title": {
+            "ar": "حول EurOBIS",
+            "en": "About EurOBIS",
+            "es": "Acerca de EurOBIS",
+            "fr": "À propos de EurOBIS",
+            "ru": "О EurOBIS",
+            "zh": "关于EurOBIS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-bismal-member-of-platform-obis",
+      "sourceNodeId": "bismal",
+      "targetNodeId": "platform-obis",
+      "kind": "member_of",
+      "note": "BISMaL is explicitly the information system of J-OBIS, Japan’s OBIS node; participation is through that node.",
+      "properties": {
+        "scope": "OBIS regional-node participation",
+        "status": "listed current participant",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "via": "J-OBIS"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.godac.jamstec.go.jp/bismal/e/about.html",
+          "title": {
+            "ar": "حول BISMaL / J-OBIS",
+            "en": "About BISMaL / J-OBIS",
+            "es": "Acerca de BISMaL / J-OBIS",
+            "fr": "À propos de BISMaL / J-OBIS",
+            "ru": "О BISMaL / J-OBIS",
+            "zh": "关于BISMaL / J-OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worms-syncs-to-platform-obis",
+      "sourceNodeId": "worms",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "OBIS matches submitted scientific names or WoRMS LSIDs against WoRMS and includes the resulting taxonomic information in its occurrence exports. Synonyms resolve to accepted names. This is taxonomic enrichment during OBIS ingestion; no fixed refresh schedule or latest taxonomic snapshot date is established.",
+      "properties": {
+        "scope": "Taxonomic name reconciliation and enrichment of OBIS occurrence records",
+        "status": "active documented integration",
+        "sourceRefs": [
+          "obis-taxonomy",
+          "obis-access"
+        ],
+        "transferMethod": "WoRMS web services and taxon identifiers used in OBIS ingestion",
+        "updateFrequency": "unspecified"
+      },
+      "sources": {
+        "obis-taxonomy": {
+          "id": "obis-taxonomy",
+          "url": "https://obis.org/sources/worms/",
+          "title": {
+            "en": "OBIS taxonomic backbone: WoRMS",
+            "fr": "Référentiel taxonomique OBIS : WoRMS",
+            "es": "Referencia taxonómica de OBIS: WoRMS",
+            "ar": "مرجع OBIS التصنيفي: WoRMS",
+            "zh": "OBIS分类主干：WoRMS",
+            "ru": "Таксономическая основа OBIS: WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "obis-access": {
+          "id": "obis-access",
+          "url": "https://manual.obis.org/access.html",
+          "title": {
+            "en": "OBIS data access and enrichment",
+            "fr": "Accès et enrichissement des données OBIS",
+            "es": "Acceso y enriquecimiento de datos OBIS",
+            "ar": "الوصول إلى بيانات OBIS وإثراؤها",
+            "zh": "OBIS数据访问及丰富",
+            "ru": "Доступ к данным OBIS и их обогащение"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-platform-obis-syncs-to-aquamaps",
+      "sourceNodeId": "platform-obis",
+      "targetNodeId": "aquamaps",
+      "kind": "syncs_to",
+      "note": "AquaMaps derives part of its environmental envelopes from occurrence records available from OBIS. The model description is labelled version 10/2019; it establishes input-data direction but no recent extract or fixed refresh cadence.",
+      "properties": {
+        "scope": "Occurrence inputs to predicted species ranges",
+        "status": "documented historical method; current refresh unverified",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "transferMethod": "Occurrence extraction for model inputs",
+        "updateFrequency": "unspecified"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://aquamaps.org/main/home.php",
+          "title": {
+            "en": "AquaMaps model inputs",
+            "fr": "Données d’entrée du modèle AquaMaps",
+            "es": "Datos de entrada del modelo AquaMaps",
+            "ar": "مدخلات نموذج AquaMaps",
+            "zh": "AquaMaps模型输入",
+            "ru": "Исходные данные модели AquaMaps"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-platform-obis-member-of-odis",
+      "sourceNodeId": "platform-obis",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "The OBIS data policy explicitly states that OBIS is connected to ODIS. This records participating-service status in the federation, not component ownership or a claim that every OBIS occurrence is harvested.",
+      "properties": {
+        "scope": "Participation in the ODIS interoperability federation",
+        "status": "documented connected service",
+        "sourceRefs": [
+          "evidence"
+        ]
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://manual.obis.org/policy.html",
+          "title": {
+            "en": "OBIS data policy",
+            "fr": "Politique de données OBIS",
+            "es": "Política de datos OBIS",
+            "ar": "سياسة بيانات OBIS",
+            "zh": "OBIS数据政策",
+            "ru": "Политика OBIS в отношении данных"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-platform-obis-member-of-gbif",
+      "sourceNodeId": "platform-obis",
+      "targetNodeId": "gbif",
+      "kind": "member_of",
+      "note": "GBIF maintains a registered OBIS dataset network, registered on 3 April 2007 and still listing publishers and datasets. This is system-level participation and dataset grouping, not organizational membership or direct central-database replication.",
+      "properties": {
+        "scope": "OBIS dataset-network participation in GBIF",
+        "status": "registered network",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "period": "Registered 2007-04-03; listed at research time"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.gbif.org/network/2b7c7b4f-4d4f-40d3-94de-c28b6fa054a6",
+          "title": {
+            "en": "OBIS registered network in GBIF",
+            "fr": "Réseau OBIS enregistré dans GBIF",
+            "es": "Red OBIS registrada en GBIF",
+            "ar": "شبكة OBIS المسجلة في GBIF",
+            "zh": "GBIF中的OBIS注册网络",
+            "ru": "Зарегистрированная сеть OBIS в GBIF"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-fisheries-and-oceans-canada-publishes-to-platform-obis",
+      "sourceNodeId": "fisheries-and-oceans-canada",
+      "targetNodeId": "platform-obis",
+      "kind": "publishes_to",
+      "note": "OBIS identifies Fisheries and Oceans Canada as publisher of Maritimes 4VSW Research Vessel Surveys through OBIS Canada. The dataset page lists version 1.3 and publication on 23 March 2022; no 2026 refresh is asserted.",
+      "properties": {
+        "scope": "Maritimes 4VSW survey events, catches and associated measurements",
+        "status": "published dataset; publication listed 2022-03-23",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "period": "Survey data 1986–2010; publication listed 2022-03-23",
+        "via": "OBIS Canada"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://obis.org/dataset/471fe91a-2d5f-4651-b76b-e1e9cdba9940",
+          "title": {
+            "en": "Maritimes 4VSW research vessel surveys",
+            "fr": "Campagnes océanographiques Maritimes 4VSW",
+            "es": "Campañas de investigación Maritimes 4VSW",
+            "ar": "مسوحات سفن الأبحاث Maritimes 4VSW",
+            "zh": "Maritimes 4VSW调查船航次",
+            "ru": "Научно-исследовательские рейсы Maritimes 4VSW"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-government-of-flanders-funds-platform-obis",
+      "sourceNodeId": "government-of-flanders",
+      "targetNodeId": "platform-obis",
+      "kind": "funds",
+      "note": "The January 2024 IODE report identifies Flanders-funded OBIS Secretariat activities: PacMAN (US$856,620; 13 March 2020–30 June 2024) and eDNA Expeditions (US$890,649; 8 December 2021–30 June 2024). These are historical project budgets, not annual operating revenue. The OBIS update of 1 September 2026 separately names FUST-funded MOZAIEK, scheduled to start in January 2027, for OBIS-led data products involving its nodes. This is an announced future commitment; no January 2027 delivery, disbursement amount or project end date is verified.",
+      "properties": {
+        "scope": "Historical OBIS Secretariat PacMAN and eDNA Expeditions activities; announced future MOZAIEK data-product work involving OBIS nodes",
+        "status": "historical project funding and announced future project commitment",
+        "sourceRefs": [
+          "evidence",
+          "obis-ec8-2026"
+        ],
+        "period": "Historical projects: 2020-03-13 to 2024-06-30 across projects; MOZAIEK: scheduled start January 2027, end unspecified",
+        "intermediary": "UNESCO/IOC project office for IODE"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://oceanexpert.org/downloadFile/55092",
+          "title": {
+            "en": "IODE 2024–2025 work plan and budget, OBIS section",
+            "fr": "Plan et budget IODE 2024–2025, section OBIS",
+            "es": "Plan y presupuesto IODE 2024–2025, sección OBIS",
+            "ar": "خطة وميزانية IODE لعامي 2024–2025، قسم OBIS",
+            "zh": "IODE 2024–2025工作计划和预算：OBIS部分",
+            "ru": "План и бюджет IODE на 2024–2025 годы: OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "obis-ec8-2026": {
+          "id": "obis-ec8-2026",
+          "url": "https://obis.org/2026/09/01/ec-obis-8/",
+          "title": {
+            "en": "OBIS Executive Committee 8: progress, funding and strategic priorities (1 September 2026)",
+            "fr": "Comité exécutif OBIS 8 : progrès, financement et priorités stratégiques (1er septembre 2026)",
+            "es": "Comité Ejecutivo OBIS 8: avances, financiación y prioridades estratégicas (1 de septiembre de 2026)",
+            "ar": "اللجنة التنفيذية الثامنة لـOBIS: التقدم والتمويل والأولويات الاستراتيجية (1 سبتمبر 2026)",
+            "zh": "OBIS第八届执行委员会：进展、资金和战略重点（2026年9月1日）",
+            "ru": "Восьмое заседание Исполнительного комитета OBIS: прогресс, финансирование и стратегические приоритеты (1 сентября 2026 года)"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-eur-funds-platform-obis",
+      "sourceNodeId": "eur",
+      "targetNodeId": "platform-obis",
+      "kind": "funds",
+      "note": "The January 2024 IODE report identifies EU-funded OBIS Secretariat work under MARCO-BOLO with a reported US$733,735 project budget for 1 December 2022–30 November 2026. This covers the named activity, not payments received or total repository funding.",
+      "properties": {
+        "scope": "OBIS Secretariat MARCO-BOLO activities",
+        "status": "funded project with documented 2022–2026 period",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "period": "2022-12-01 to 2026-11-30",
+        "intermediary": "UNESCO/IOC project office for IODE"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://oceanexpert.org/downloadFile/55092",
+          "title": {
+            "en": "IODE 2024–2025 work plan and budget, OBIS section",
+            "fr": "Plan et budget IODE 2024–2025, section OBIS",
+            "es": "Plan y presupuesto IODE 2024–2025, sección OBIS",
+            "ar": "خطة وميزانية IODE لعامي 2024–2025، قسم OBIS",
+            "zh": "IODE 2024–2025工作计划和预算：OBIS部分",
+            "ru": "План и бюджет IODE на 2024–2025 годы: OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-richard-lounsbery-foundation-funds-platform-obis",
+      "sourceNodeId": "richard-lounsbery-foundation",
+      "targetNodeId": "platform-obis",
+      "kind": "funds",
+      "note": "The foundation’s board-approved grants table lists an US$80,000 award to OBIS on 1 May 2019 for genomic integration in marine-life databases. The grant end date and continuing support are not established.",
+      "properties": {
+        "scope": "Genomic integration tools for OBIS",
+        "status": "historical grant awarded",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "period": "Award date 2019-05-01; duration unspecified"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.rlounsbery.org/_files/ugd/553dc0_1b662632ebdd410d97d7a0fa5e101d36.pdf",
+          "title": {
+            "en": "Richard Lounsbery Foundation 2013–2019 report, p.30",
+            "fr": "Rapport 2013–2019 de la Fondation Richard Lounsbery, p.30",
+            "es": "Informe 2013–2019 de la Fundación Richard Lounsbery, p.30",
+            "ar": "تقرير مؤسسة ريتشارد لونزبري 2013–2019، ص30",
+            "zh": "理查德·朗斯伯里基金会2013–2019报告，第30页",
+            "ru": "Отчёт Фонда Ричарда Лаунсбери за 2013–2019 годы, с.30"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-deepdata-syncs-to-platform-obis",
+      "sourceNodeId": "deepdata",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "The OBIS ISA node identifies DeepData as the source of contractor environmental data and exposes an ISA dataset feed. Its listed biological datasets establish the published subset, not transfer of confidential geological or all DeepData holdings. No uniform refresh schedule is established. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
+      "properties": {
+        "scope": "Public biological subset of ISA DeepData through OBIS ISA",
+        "status": "published harvested datasets; cadence unspecified",
+        "sourceRefs": [
+          "evidence",
+          "archive"
+        ],
+        "transferMethod": "ISA dataset feed harvested into OBIS",
+        "artifact": "https://datasets.obis.org/hosted/isa/rss.xml"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+          "title": {
+            "en": "OBIS ISA node and DeepData source",
+            "fr": "Nœud OBIS ISA et source DeepData",
+            "es": "Nodo OBIS ISA y fuente DeepData",
+            "ar": "عقدة OBIS ISA ومصدر DeepData",
+            "zh": "OBIS ISA节点与DeepData来源",
+            "ru": "Узел OBIS ISA и источник DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "archive": {
+          "id": "archive",
+          "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+          "title": {
+            "en": "NORI 2022 biological archive: EML and archive metadata",
+            "fr": "Archive biologique NORI 2022 : EML et métadonnées",
+            "es": "Archivo biológico NORI 2022: EML y metadatos",
+            "ar": "أرشيف NORI البيولوجي 2022: بيانات EML ووصف الأرشيف",
+            "zh": "NORI 2022生物档案：EML和档案元数据",
+            "ru": "Биологический архив NORI 2022: EML и метаданные"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-international-seabed-authority-publishes-to-platform-obis",
+      "sourceNodeId": "international-seabed-authority",
+      "targetNodeId": "platform-obis",
+      "kind": "publishes_to",
+      "note": "ISA supplies publicly indexed environmental biodiversity datasets through the OBIS ISA thematic node. Node metadata identifies ISA and DeepData; underlying contractor data ownership is not transferred to OBIS. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
+      "properties": {
+        "scope": "ISA-node publication of the public DeepData biological subset",
+        "status": "published node datasets",
+        "sourceRefs": [
+          "evidence",
+          "archive"
+        ],
+        "via": "OBIS ISA"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+          "title": {
+            "en": "OBIS ISA node and DeepData source",
+            "fr": "Nœud OBIS ISA et source DeepData",
+            "es": "Nodo OBIS ISA y fuente DeepData",
+            "ar": "عقدة OBIS ISA ومصدر DeepData",
+            "zh": "OBIS ISA节点与DeepData来源",
+            "ru": "Узел OBIS ISA и источник DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "archive": {
+          "id": "archive",
+          "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+          "title": {
+            "en": "NORI 2022 biological archive: EML and archive metadata",
+            "fr": "Archive biologique NORI 2022 : EML et métadonnées",
+            "es": "Archivo biológico NORI 2022: EML y metadatos",
+            "ar": "أرشيف NORI البيولوجي 2022: بيانات EML ووصف الأرشيف",
+            "zh": "NORI 2022生物档案：EML和档案元数据",
+            "ru": "Биологический архив NORI 2022: EML и метаданные"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-bio-oracle-syncs-to-platform-obis",
+      "sourceNodeId": "bio-oracle",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "OBIS adds sea-surface temperature and salinity from Bio-ORACLE through xylookup. The source reference cites the 2012 Bio-ORACLE dataset. These are coordinate-based environmental values, not simultaneous field observations; source version and refresh cadence remain unverified.",
+      "properties": {
+        "scope": "Environmental raster enrichment of occurrence records",
+        "status": "documented derived-data integration; refresh unverified",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "transferMethod": "Bio-ORACLE rasters to OBIS xylookup"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://github.com/iobis/xylookup",
+          "title": {
+            "en": "OBIS xylookup inputs and references",
+            "fr": "Sources et références d’OBIS xylookup",
+            "es": "Fuentes y referencias de OBIS xylookup",
+            "ar": "مدخلات ومراجع OBIS xylookup",
+            "zh": "OBIS xylookup输入与引用",
+            "ru": "Источники и ссылки OBIS xylookup"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-marine-regions-syncs-to-platform-obis",
+      "sourceNodeId": "marine-regions",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "OBIS xylookup documents preprocessing and loading spatial boundaries for area lookups and cites MarineRegions.org (2017). This is a documented boundary-input path; ongoing automatic synchronization and latest source release are not established.",
+      "properties": {
+        "scope": "Geographic boundary inputs to OBIS spatial lookup",
+        "status": "documented historical input; refresh unverified",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "transferMethod": "Boundary preprocessing and loading into xylookup"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://github.com/iobis/xylookup",
+          "title": {
+            "en": "OBIS xylookup inputs and references",
+            "fr": "Sources et références d’OBIS xylookup",
+            "es": "Fuentes y referencias de OBIS xylookup",
+            "ar": "مدخلات ومراجع OBIS xylookup",
+            "zh": "OBIS xylookup输入与引用",
+            "ru": "Источники и ссылки OBIS xylookup"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-norad-funds-platform-obis",
+      "sourceNodeId": "norad",
+      "targetNodeId": "platform-obis",
+      "kind": "funds",
+      "note": "The OBIS update of 1 September 2026 states that NORAD funding has been received to prepare OBIS infrastructure for BBNJ requirements and handling digital sequence information. This establishes funded preparation, not completed BBNJ integration or an operational Clearing-House data transfer. The amount and grant start/end dates are not stated.",
+      "properties": {
+        "scope": "OBIS infrastructure preparation for BBNJ and digital sequence information",
+        "status": "funding received, reported September 2026; implementation completion unverified",
+        "period": "Support reported by 2026-09-01; grant dates unspecified",
+        "sourceRefs": [
+          "obis-ec8-2026"
+        ]
+      },
+      "sources": {
+        "obis-ec8-2026": {
+          "id": "obis-ec8-2026",
+          "url": "https://obis.org/2026/09/01/ec-obis-8/",
+          "title": {
+            "en": "OBIS Executive Committee 8: progress, funding and strategic priorities (1 September 2026)",
+            "fr": "Comité exécutif OBIS 8 : progrès, financement et priorités stratégiques (1er septembre 2026)",
+            "es": "Comité Ejecutivo OBIS 8: avances, financiación y prioridades estratégicas (1 de septiembre de 2026)",
+            "ar": "اللجنة التنفيذية الثامنة لـOBIS: التقدم والتمويل والأولويات الاستراتيجية (1 سبتمبر 2026)",
+            "zh": "OBIS第八届执行委员会：进展、资金和战略重点（2026年9月1日）",
+            "ru": "Восьмое заседание Исполнительного комитета OBIS: прогресс, финансирование и стратегические приоритеты (1 сентября 2026 года)"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-minderoo-foundation-funds-platform-obis",
+      "sourceNodeId": "minderoo-foundation",
+      "targetNodeId": "platform-obis",
+      "kind": "funds",
+      "note": "The OBIS update of 1 September 2026 identifies Minderoo Foundation as funder of eDNA Expeditions 2026–2028, which started in January 2026. The supported scope is OBIS participation and leadership in that named project and its node-based marine biodiversity data work. No funding amount or system-wide operating subsidy is established; the proposed wider biomolecular observatory network remains a future objective.",
+      "properties": {
+        "scope": "OBIS work in eDNA Expeditions 2026–2028, including data solutions involving OBIS nodes",
+        "status": "funded project started January 2026",
+        "period": "2026–2028 project; start January 2026",
+        "sourceRefs": [
+          "obis-ec8-2026"
+        ]
+      },
+      "sources": {
+        "obis-ec8-2026": {
+          "id": "obis-ec8-2026",
+          "url": "https://obis.org/2026/09/01/ec-obis-8/",
+          "title": {
+            "en": "OBIS Executive Committee 8: progress, funding and strategic priorities (1 September 2026)",
+            "fr": "Comité exécutif OBIS 8 : progrès, financement et priorités stratégiques (1er septembre 2026)",
+            "es": "Comité Ejecutivo OBIS 8: avances, financiación y prioridades estratégicas (1 de septiembre de 2026)",
+            "ar": "اللجنة التنفيذية الثامنة لـOBIS: التقدم والتمويل والأولويات الاستراتيجية (1 سبتمبر 2026)",
+            "zh": "OBIS第八届执行委员会：进展、资金和战略重点（2026年9月1日）",
+            "ru": "Восьмое заседание Исполнительного комитета OBIS: прогресс, финансирование и стратегические приоритеты (1 сентября 2026 года)"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-platform-obis-syncs-to-odis",
+      "sourceNodeId": "platform-obis",
+      "targetNodeId": "odis",
+      "kind": "syncs_to",
+      "note": "The public ODIS development-search API returned a Dataset record attributed to Ocean Biodiversity Information System, with its original resource URL and provider information. The response reports source.last_indexed=2026-09-10T09:01:32.734611 (timezone unspecified). The registered sitemap was independently readable. This verifies metadata present in the recipient demo, not the most recent source release, all source content or a guaranteed refresh schedule.",
+      "properties": {
+        "scope": "OBIS dataset-level metadata in the development search, not all occurrence records",
+        "status": "downstream demo metadata verified 2026-09-10; complete coverage and cadence unverified",
+        "sourceRefs": [
+          "demo-obis",
+          "feed-platform-obis",
+          "nodes"
+        ],
+        "transferMethod": "ODIS indexing of provider metadata exposed through a registered sitemap",
+        "format": "Schema.org JSON-LD at source; normalized JSON in the demo response",
+        "artifact": "https://search-demo.odis.org/api/v1/records/gleaner%3Aocean-biodiversity-information-system%3Ahttps%253A%252F%252Fobis.org%252Fdataset%252F8935fb89-6494-4829-8b29-09022c3dbc90",
+        "sourceIndexReportedAt": "2026-09-10T09:01:32.734611 (timezone unspecified)"
+      },
+      "sources": {
+        "demo-obis": {
+          "id": "demo-obis",
+          "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Aocean-biodiversity-information-system%3Ahttps%253A%252F%252Fobis.org%252Fdataset%252F8935fb89-6494-4829-8b29-09022c3dbc90",
+          "title": {
+            "en": "ODIS demo JSON record for OBIS turtle dataset metadata",
+            "fr": "Notice JSON de démonstration ODIS pour un jeu de données OBIS sur les tortues",
+            "es": "Registro JSON de demostración ODIS con metadatos OBIS de tortugas",
+            "ar": "سجل JSON في عرض ODIS لبيانات OBIS الوصفية عن السلاحف",
+            "ru": "JSON-запись демонстрационного поиска ODIS с метаданными набора OBIS о черепахах",
+            "zh": "ODIS演示中的OBIS海龟数据集元数据JSON记录"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "feed-platform-obis": {
+          "id": "feed-platform-obis",
+          "url": "https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml",
+          "title": {
+            "en": "Registered platform-obis metadata sitemap",
+            "fr": "Sitemap de métadonnées enregistré : platform-obis",
+            "es": "Sitemap de metadatos registrado: platform-obis",
+            "ar": "خريطة البيانات الوصفية المسجلة: platform-obis",
+            "ru": "Зарегистрированная карта метаданных: platform-obis",
+            "zh": "platform-obis已登记元数据网站地图"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "nodes": {
+          "id": "nodes",
+          "url": "https://catalogue.odis.org/odis",
+          "title": {
+            "en": "ODIS node-designated catalogue entries and registered feeds",
+            "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+            "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+            "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+            "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+            "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

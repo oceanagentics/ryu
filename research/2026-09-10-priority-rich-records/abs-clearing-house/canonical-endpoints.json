@@ -1,0 +1,1106 @@
+{
+  "readAt": "2026-09-11T00:57:00.064649+00:00",
+  "records": [
+    {
+      "id": "abs-clearing-house",
+      "status": 404,
+      "data": {
+        "error": "record not found: abs-clearing-house"
+      }
+    },
+    {
+      "id": "absch",
+      "status": 404,
+      "data": {
+        "error": "record not found: absch"
+      }
+    },
+    {
+      "id": "cbd-secretariat",
+      "status": 404,
+      "data": {
+        "error": "record not found: cbd-secretariat"
+      }
+    },
+    {
+      "id": "nagoya-protocol-cop-mop",
+      "status": 404,
+      "data": {
+        "error": "record not found: nagoya-protocol-cop-mop"
+      }
+    },
+    {
+      "id": "declare",
+      "status": 404,
+      "data": {
+        "error": "record not found: declare"
+      }
+    },
+    {
+      "id": "defra",
+      "status": 404,
+      "data": {
+        "error": "record not found: defra"
+      }
+    },
+    {
+      "id": "moefcc",
+      "status": 404,
+      "data": {
+        "error": "record not found: moefcc"
+      }
+    },
+    {
+      "id": "eur",
+      "status": 200,
+      "data": {
+        "id": "eur",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "European Union",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "agent_researched",
+          "en": "agent_researched",
+          "es": "agent_researched",
+          "fr": "agent_researched",
+          "ru": "agent_researched",
+          "zh": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:29.334Z",
+        "recordUpdatedAt": "2026-09-10T20:02:29.334Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 4,
+          "resolvedSources": 4,
+          "issues": [
+            {
+              "recordId": "eur",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "eur",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "eur",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "eur",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "eur",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "eur",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "eur",
+          "kind": "organization",
+          "countryCode": null,
+          "url": null,
+          "recordDepth": "stub",
+          "sources": {},
+          "properties": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "gallery": [],
+            "disciplines": [],
+            "pseudoCountry": true
+          },
+          "createdAt": "2026-05-26T16:46:26.459Z",
+          "updatedAt": "2026-09-10T20:02:29.334Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "\u0627\u0644\u0627\u062a\u062d\u0627\u062f \u0627\u0644\u0623\u0648\u0631\u0648\u0628\u064a",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:29.413Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:29.413Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "European Union",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:29.305Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.459Z",
+            "updatedAt": "2026-09-10T20:02:29.305Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Uni\u00f3n Europea",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:29.413Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:29.413Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Union europ\u00e9enne",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:29.413Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:29.413Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "\u0415\u0432\u0440\u043e\u043f\u0435\u0439\u0441\u043a\u0438\u0439 \u0441\u043e\u044e\u0437",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:29.413Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:29.413Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "\u6b27\u6d32\u8054\u76df",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:29.413Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:29.413Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-eur-funds-cmems-datastore",
+            "sourceNodeId": "eur",
+            "targetNodeId": "cmems-datastore",
+            "kind": "funds",
+            "note": "European Union programme funding.",
+            "properties": {
+              "scope": "Copernicus Marine programme funding",
+              "sourceRefs": [
+                "src-relationship-cmems-datastore"
+              ]
+            },
+            "sources": {
+              "src-relationship-cmems-datastore": {
+                "id": "src-relationship-cmems-datastore",
+                "url": "https://www.copernicus.eu/en/copernicus-services/marine",
+                "title": {
+                  "ar": "\u062e\u062f\u0645\u0629 \u0643\u0648\u0628\u0631\u0646\u064a\u0643\u0648\u0633 \u0627\u0644\u0628\u062d\u0631\u064a\u0629",
+                  "en": "Copernicus Marine service",
+                  "es": "Servicio Marino de Copernicus",
+                  "fr": "Service marin Copernicus",
+                  "ru": "\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u0441\u043b\u0443\u0436\u0431\u0430 Copernicus",
+                  "zh": "\u54e5\u767d\u5c3c\u6d77\u6d0b\u670d\u52a1"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:43.042Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-eur-funds-copernicus-marine",
+            "sourceNodeId": "eur",
+            "targetNodeId": "copernicus-marine",
+            "kind": "funds",
+            "note": "European Union programme funding.",
+            "properties": {
+              "scope": "Copernicus Marine programme funding",
+              "sourceRefs": [
+                "src-relationship-copernicus-marine"
+              ]
+            },
+            "sources": {
+              "src-relationship-copernicus-marine": {
+                "id": "src-relationship-copernicus-marine",
+                "url": "https://www.copernicus.eu/en/copernicus-services/marine",
+                "title": {
+                  "ar": "\u062e\u062f\u0645\u0629 \u0643\u0648\u0628\u0631\u0646\u064a\u0643\u0648\u0633 \u0627\u0644\u0628\u062d\u0631\u064a\u0629",
+                  "en": "Copernicus Marine service",
+                  "es": "Servicio Marino de Copernicus",
+                  "fr": "Service marin Copernicus",
+                  "ru": "\u041c\u043e\u0440\u0441\u043a\u0430\u044f \u0441\u043b\u0443\u0436\u0431\u0430 Copernicus",
+                  "zh": "\u54e5\u767d\u5c3c\u6d77\u6d0b\u670d\u52a1"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:43.751Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-eur-funds-emodnet",
+            "sourceNodeId": "eur",
+            "targetNodeId": "emodnet",
+            "kind": "funds",
+            "note": "European Union programme funding.",
+            "properties": {
+              "scope": "EMFAF programme funding",
+              "sourceRefs": [
+                "src-relationship-emodnet"
+              ]
+            },
+            "sources": {
+              "src-relationship-emodnet": {
+                "id": "src-relationship-emodnet",
+                "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+                "title": {
+                  "ar": "\u062d\u0648\u0644 EMODnet",
+                  "en": "About EMODnet",
+                  "es": "Acerca de EMODnet",
+                  "fr": "\u00c0 propos de EMODnet",
+                  "ru": "\u041e EMODnet",
+                  "zh": "\u5173\u4e8eEMODnet"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:50.362Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-eur-funds-emodnet-biology",
+            "sourceNodeId": "eur",
+            "targetNodeId": "emodnet-biology",
+            "kind": "funds",
+            "note": "European Union programme funding.",
+            "properties": {
+              "scope": "EMFAF programme funding",
+              "sourceRefs": [
+                "src-relationship-emodnet"
+              ]
+            },
+            "sources": {
+              "src-relationship-emodnet": {
+                "id": "src-relationship-emodnet",
+                "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+                "title": {
+                  "ar": "\u062d\u0648\u0644 EMODnet",
+                  "en": "About EMODnet",
+                  "es": "Acerca de EMODnet",
+                  "fr": "\u00c0 propos de EMODnet",
+                  "ru": "\u041e EMODnet",
+                  "zh": "\u5173\u4e8eEMODnet"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:51.118Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "jpn",
+      "status": 200,
+      "data": {
+        "id": "jpn",
+        "kind": "country",
+        "countryCode": "JPN",
+        "url": null,
+        "recordDepth": "stub",
+        "title": "Japan",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "agent_researched",
+          "en": "agent_researched",
+          "es": "agent_researched",
+          "fr": "agent_researched",
+          "ru": "agent_researched",
+          "zh": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:50.981Z",
+        "recordUpdatedAt": "2026-09-10T20:02:50.981Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": [
+            {
+              "recordId": "jpn",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "jpn",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "jpn",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "jpn",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "jpn",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "jpn",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "jpn",
+          "kind": "country",
+          "countryCode": "JPN",
+          "url": null,
+          "recordDepth": "stub",
+          "sources": {},
+          "properties": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "gallery": [],
+            "disciplines": []
+          },
+          "createdAt": "2026-04-24T00:00:00.000Z",
+          "updatedAt": "2026-09-10T20:02:50.981Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "\u0627\u0644\u064a\u0627\u0628\u0627\u0646",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:30.265Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:30.265Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "Japan",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:50.955Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-04-24T00:00:00.000Z",
+            "updatedAt": "2026-09-10T20:02:50.955Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Jap\u00f3n",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:30.265Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:30.265Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Japon",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:30.265Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:30.265Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "\u042f\u043f\u043e\u043d\u0438\u044f",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:30.265Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:30.265Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "\u65e5\u672c",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:30.265Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:30.265Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-bioinformation-and-ddbj-center-nig-part-of-jpn",
+            "sourceNodeId": "jpn",
+            "targetNodeId": "bioinformation-and-ddbj-center-nig",
+            "kind": "governs",
+            "note": "National public institutional authority; international collaboration does not erase this governmental tie.",
+            "properties": {
+              "scope": "National institutional authority, exercised through the responsible public bodies",
+              "sourceRefs": [
+                "src-relationship-nig"
+              ]
+            },
+            "sources": {
+              "src-relationship-nig": {
+                "id": "src-relationship-nig",
+                "url": "https://www.ddbj.nig.ac.jp/about/index-e.html",
+                "title": {
+                  "ar": "\u062d\u0648\u0644 DDBJ / NIG",
+                  "en": "About DDBJ / NIG",
+                  "es": "Acerca de DDBJ / NIG",
+                  "fr": "\u00c0 propos de DDBJ / NIG",
+                  "ru": "\u041e DDBJ / NIG",
+                  "zh": "\u5173\u4e8eDDBJ / NIG"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.461Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-jamstec-part-of-japan",
+            "sourceNodeId": "jpn",
+            "targetNodeId": "jamstec",
+            "kind": "governs",
+            "note": "National public institutional authority; international collaboration does not erase this governmental tie.",
+            "properties": {
+              "scope": "National institutional authority, exercised through the responsible public bodies",
+              "sourceRefs": [
+                "src-relationship-jamstec"
+              ]
+            },
+            "sources": {
+              "src-relationship-jamstec": {
+                "id": "src-relationship-jamstec",
+                "url": "https://www.jamstec.go.jp/e/about/",
+                "title": {
+                  "ar": "\u062d\u0648\u0644 JAMSTEC",
+                  "en": "About JAMSTEC",
+                  "es": "Acerca de JAMSTEC",
+                  "fr": "\u00c0 propos de JAMSTEC",
+                  "ru": "\u041e JAMSTEC",
+                  "zh": "\u5173\u4e8eJAMSTEC"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-04-24T00:00:00.000Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "deu",
+      "status": 200,
+      "data": {
+        "id": "deu",
+        "kind": "country",
+        "countryCode": "DEU",
+        "url": null,
+        "recordDepth": "stub",
+        "title": "Germany",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "agent_researched",
+          "en": "agent_researched",
+          "es": "agent_researched",
+          "fr": "agent_researched",
+          "ru": "agent_researched",
+          "zh": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:22.283Z",
+        "recordUpdatedAt": "2026-09-10T20:02:22.283Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 3,
+          "resolvedSources": 3,
+          "issues": [
+            {
+              "recordId": "deu",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "deu",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "deu",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "deu",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "deu",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "deu",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "deu",
+          "kind": "country",
+          "countryCode": "DEU",
+          "url": null,
+          "recordDepth": "stub",
+          "sources": {},
+          "properties": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "gallery": [],
+            "disciplines": [],
+            "pseudoCountry": false
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-10T20:02:22.283Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "\u0623\u0644\u0645\u0627\u0646\u064a\u0627",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:29.692Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:29.692Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "Germany",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:22.263Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.461Z",
+            "updatedAt": "2026-09-10T20:02:22.263Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Alemania",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:29.692Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:29.692Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Allemagne",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:29.692Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:29.692Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:29.692Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:29.692Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "\u5fb7\u56fd",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T00:56:29.692Z",
+            "review": {
+              "date": null,
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T00:56:29.692Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-deu-funds-embl",
+            "sourceNodeId": "deu",
+            "targetNodeId": "embl",
+            "kind": "funds",
+            "note": "Member-state contribution to EMBL programmes; no sole control or grant amount inferred.",
+            "properties": {
+              "scope": "Membership contribution",
+              "sourceRefs": [
+                "src-relationship-embl-members"
+              ]
+            },
+            "sources": {
+              "src-relationship-embl-members": {
+                "id": "src-relationship-embl-members",
+                "url": "https://www.embl.org/about/member-states/",
+                "title": {
+                  "ar": "\u0627\u0644\u062f\u0648\u0644 \u0627\u0644\u0623\u0639\u0636\u0627\u0621 \u0641\u064a EMBL",
+                  "en": "EMBL member states",
+                  "es": "Estados miembros de EMBL",
+                  "fr": "\u00c9tats membres de l\u2019EMBL",
+                  "ru": "\u0413\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0430 \u2014 \u0447\u043b\u0435\u043d\u044b EMBL",
+                  "zh": "EMBL\u6210\u5458\u56fd"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:34:00.516Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-deu-member-of-embl",
+            "sourceNodeId": "deu",
+            "targetNodeId": "embl",
+            "kind": "member_of",
+            "note": "Germany is a full member state.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-embl-members"
+              ],
+              "membershipStatus": "full"
+            },
+            "sources": {
+              "src-relationship-embl-members": {
+                "id": "src-relationship-embl-members",
+                "url": "https://www.embl.org/about/member-states/",
+                "title": {
+                  "ar": "\u0627\u0644\u062f\u0648\u0644 \u0627\u0644\u0623\u0639\u0636\u0627\u0621 \u0641\u064a EMBL",
+                  "en": "EMBL member states",
+                  "es": "Estados miembros de EMBL",
+                  "fr": "\u00c9tats membres de l\u2019EMBL",
+                  "ru": "\u0413\u043e\u0441\u0443\u0434\u0430\u0440\u0441\u0442\u0432\u0430 \u2014 \u0447\u043b\u0435\u043d\u044b EMBL",
+                  "zh": "EMBL\u6210\u5458\u56fd"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:34:00.516Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-deu-member-of-ices",
+            "sourceNodeId": "deu",
+            "targetNodeId": "ices",
+            "kind": "member_of",
+            "note": "ICES member country represented in collective governance.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-ices-data"
+              ],
+              "membershipStatus": "member"
+            },
+            "sources": {
+              "src-relationship-ices-data": {
+                "id": "src-relationship-ices-data",
+                "url": "https://www.ices.dk/about-ICES/who-we-are/Pages/Member-Countries.aspx",
+                "title": {
+                  "ar": "\u0627\u0644\u062f\u0648\u0644 \u0627\u0644\u0623\u0639\u0636\u0627\u0621 \u0641\u064a ICES",
+                  "en": "ICES member countries",
+                  "es": "Pa\u00edses miembros de ICES",
+                  "fr": "Pays membres du CIEM",
+                  "ru": "\u0421\u0442\u0440\u0430\u043d\u044b \u2014 \u0447\u043b\u0435\u043d\u044b ICES",
+                  "zh": "ICES\u6210\u5458\u56fd"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:45.230Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    }
+  ]
+}

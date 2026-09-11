@@ -1,0 +1,35 @@
+{
+  "request": {
+    "valid": true,
+    "recordId": "platform-obis",
+    "issues": []
+  },
+  "quality": {
+    "valid": true,
+    "recordId": "platform-obis",
+    "issues": [],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 46,
+      "resolvedSources": 46,
+      "issues": []
+    }
+  },
+  "edges": [],
+  "scope": "Local EC8 funding/citation correction; no API calls or applies",
+  "changedEdgeIds": [
+    "rel-norad-funds-platform-obis",
+    "rel-minderoo-foundation-funds-platform-obis",
+    "rel-government-of-flanders-funds-platform-obis"
+  ],
+  "counts": {
+    "edges": 22,
+    "metrics": 5,
+    "locales": 6
+  }
+}

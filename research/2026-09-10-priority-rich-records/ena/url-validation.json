@@ -1,0 +1,229 @@
+[
+  {
+    "url": "https://academic.oup.com/nar/article/53/D1/D49/7903379",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+    "status": 200,
+    "finalUrl": "https://docs.mgnify.org/src/docs/dataflow.html",
+    "contentType": "text/html; charset=utf-8",
+    "challenge": false
+  },
+  {
+    "url": "https://ena-docs.readthedocs.io/en/latest/retrieval/file-download.html",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access/advanced-search.html",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access/browser-api.html",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide.html",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/programmatic.html",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/registration.html",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ena-docs.readthedocs.io/en/latest/submit/reads.html",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ena-docs.readthedocs.io/en/latest/submit/samples/programmatic.html",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ftp.sra.ebi.ac.uk/vol1/",
+    "status": 200,
+    "finalUrl": "https://ftp.sra.ebi.ac.uk/vol1/",
+    "contentType": "text/html;charset=UTF-8",
+    "challenge": false
+  },
+  {
+    "url": "https://novonordiskfonden.dk/en/",
+    "status": 403,
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://wellcome.org/",
+    "status": 202,
+    "finalUrl": "https://wellcome.org/",
+    "contentType": "text/html; charset=UTF-8",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ebi.ac.uk/biosamples/",
+    "status": 200,
+    "finalUrl": "https://www.ebi.ac.uk/biosamples/",
+    "contentType": "application/ld+json",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ebi.ac.uk/ena/browser/api/",
+    "status": 200,
+    "finalUrl": "https://www.ebi.ac.uk/ena/browser/api/swagger-ui/index.html",
+    "contentType": "text/html",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERC000014",
+    "status": 200,
+    "finalUrl": "https://www.ebi.ac.uk/ena/browser/api/xml/ERC000014",
+    "contentType": "application/xml",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ebi.ac.uk/ena/browser/home",
+    "status": 200,
+    "finalUrl": "https://www.ebi.ac.uk/ena/browser/home",
+    "contentType": "text/html",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ebi.ac.uk/ena/browser/view/PRJEB402",
+    "status": 200,
+    "finalUrl": "https://www.ebi.ac.uk/ena/browser/view/PRJEB402",
+    "contentType": "text/html",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ebi.ac.uk/ena/portal/api/",
+    "status": 200,
+    "finalUrl": "https://www.ebi.ac.uk/ena/portal/api/swagger-ui/index.html",
+    "contentType": "text/html",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ebi.ac.uk/ena/submit/webin-v2/",
+    "status": 200,
+    "finalUrl": "https://www.ebi.ac.uk/ena/submit/webin-v2/swagger-ui/index.html",
+    "contentType": "text/html",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ebi.ac.uk/ena/submit/webin/",
+    "status": 200,
+    "finalUrl": "https://www.ebi.ac.uk/ena/submit/webin/",
+    "contentType": "text/html",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+    "status": 200,
+    "finalUrl": "https://www.ebi.ac.uk/training/online/courses/ena-quick-tour/what-is-ena/",
+    "contentType": "text/html; charset=UTF-8",
+    "challenge": false
+  },
+  {
+    "url": "https://www.insdc.org/about-insdc/",
+    "status": 200,
+    "finalUrl": "https://www.insdc.org/about-insdc/",
+    "contentType": "text/html; charset=UTF-8",
+    "challenge": false
+  },
+  {
+    "url": "https://www.insdc.org/news/insdc-spatiotemporal-metadata-minimum-standards-update-03-03-2023/",
+    "status": 200,
+    "finalUrl": "https://www.insdc.org/news/insdc-spatiotemporal-metadata-minimum-standards-update-03-03-2023/",
+    "contentType": "text/html; charset=UTF-8",
+    "challenge": false
+  },
+  {
+    "url": "https://www.insdc.org/submitting-standards/feature-table/",
+    "status": 200,
+    "finalUrl": "https://www.insdc.org/submitting-standards/feature-table/",
+    "contentType": "text/html; charset=UTF-8",
+    "challenge": false
+  },
+  {
+    "url": "https://www.moore.org/",
+    "status": 200,
+    "finalUrl": "https://www.moore.org/",
+    "contentType": "text/html; charset=utf-8",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+    "status": 200,
+    "finalUrl": "https://www.ncbi.nlm.nih.gov/genbank/",
+    "contentType": "text/html; charset=UTF-8",
+    "challenge": false
+  },
+  {
+    "url": "https://www.niaid.nih.gov/",
+    "status": 405,
+    "error": "HTTP Error 405: Not Allowed"
+  },
+  {
+    "url": "https://www.sanger.ac.uk/",
+    "status": 200,
+    "finalUrl": "https://www.sanger.ac.uk/",
+    "contentType": "text/html; charset=UTF-8",
+    "challenge": false
+  },
+  {
+    "url": "https://www.sanger.ac.uk/collaboration/aquatic-symbiosis-genomics-project/",
+    "status": 200,
+    "finalUrl": "https://www.sanger.ac.uk/collaboration/aquatic-symbiosis-genomics-project/",
+    "contentType": "text/html; charset=UTF-8",
+    "challenge": false
+  },
+  {
+    "url": "https://www.sanger.ac.uk/wp-content/uploads/WSI_Annual_Highlights_2023_Digital.pdf",
+    "status": 200,
+    "finalUrl": "https://www.sanger.ac.uk/wp-content/uploads/WSI_Annual_Highlights_2023_Digital.pdf",
+    "contentType": "application/pdf",
+    "challenge": false
+  },
+  {
+    "url": "https://www.ukri.org/councils/bbsrc/",
+    "status": 200,
+    "finalUrl": "https://www.ukri.org/councils/bbsrc/",
+    "contentType": "text/html; charset=UTF-8",
+    "challenge": false
+  },
+  {
+    "url": "https://github.com/enasequence/webin-cli",
+    "status": 200,
+    "finalUrl": "https://github.com/enasequence/webin-cli"
+  },
+  {
+    "url": "https://www.cea.fr/drf/Pages/Actualites/En-direct-des-labos/2022/quand-la-genomique-eclaire-le-climat.aspx",
+    "status": 200,
+    "finalUrl": "https://www.cea.fr/drf/Pages/Actualites/En-direct-des-labos/2022/quand-la-genomique-eclaire-le-climat.aspx"
+  }
+]

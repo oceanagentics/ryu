@@ -1,0 +1,4398 @@
+{
+  "readAt": "2026-09-11T01:14:01.936126+00:00",
+  "records": [
+    {
+      "id": "ioc-unesco-iode",
+      "status": 200,
+      "data": {
+        "id": "ioc-unesco-iode",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "IOC-UNESCO IODE",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:49.415Z",
+        "recordUpdatedAt": "2026-09-10T20:02:49.415Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 4,
+          "resolvedSources": 4,
+          "issues": [
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "ioc-unesco-iode",
+          "kind": "organization",
+          "countryCode": null,
+          "url": null,
+          "recordDepth": "stub",
+          "sources": {},
+          "properties": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "gallery": [],
+            "disciplines": []
+          },
+          "createdAt": "2026-05-26T16:46:26.458Z",
+          "updatedAt": "2026-09-10T20:02:49.415Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "اللجنة الدولية الحكومية لعلوم المحيطات التابعة لليونسكو - تبادل البيانات والمعلومات الأوقيانوغرافية الدولي"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:03.928Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.331447+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:03.928Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:49.393Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.279693+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.458Z",
+            "updatedAt": "2026-09-10T20:02:49.393Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "Comisión Oceanográfica Intergubernamental de la UNESCO - Intercambio Internacional de Datos e Información Oceanográficos"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:03.928Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.331964+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:03.928Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "Commission océanographique intergouvernementale de l'UNESCO - Échange international des données et de l'information océanographiques"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:03.928Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.331668+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:03.928Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "Межправительственная океанографическая комиссия ЮНЕСКО - Международный обмен океанографическими данными и информацией"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:03.928Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.331826+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:03.928Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "联合国教科文组织政府间海洋学委员会国际海洋数据和信息交换"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:03.928Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.331549+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:03.928Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-ioc-assembly-governs-ioc-unesco-iode",
+            "sourceNodeId": "ioc-assembly",
+            "targetNodeId": "ioc-unesco-iode",
+            "kind": "governs",
+            "note": "IODE recommendations are submitted to the IOC Assembly for adoption.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-platform-obis"
+              ]
+            },
+            "sources": {
+              "src-relationship-platform-obis": {
+                "id": "src-relationship-platform-obis",
+                "url": "https://obis.org/about/governance/",
+                "title": {
+                  "ar": "حوكمة OBIS",
+                  "en": "OBIS governance",
+                  "es": "Gobernanza de OBIS",
+                  "fr": "Gouvernance d’OBIS",
+                  "ru": "Управление OBIS",
+                  "zh": "OBIS治理"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:33:22.539Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-ioc-unesco-iode-operates-ocean-biodiversity-information-system",
+            "sourceNodeId": "ioc-unesco-iode",
+            "targetNodeId": "platform-obis",
+            "kind": "operates",
+            "note": "IODE/IOC-UNESCO coordinates OBIS with independently operated nodes. Node contributions do not imply ownership by one government.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-platform-obis"
+              ]
+            },
+            "sources": {
+              "src-relationship-platform-obis": {
+                "id": "src-relationship-platform-obis",
+                "url": "https://obis.org/about/governance/",
+                "title": {
+                  "ar": "حوكمة OBIS",
+                  "en": "OBIS governance",
+                  "es": "Gobernanza de OBIS",
+                  "fr": "Gouvernance d’OBIS",
+                  "ru": "Управление OBIS",
+                  "zh": "OBIS治理"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.458Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-ioc-unesco-iode-operates-ocean-data-and-information-system",
+            "sourceNodeId": "ioc-unesco-iode",
+            "targetNodeId": "odis",
+            "kind": "operates",
+            "note": "IODE coordinates distributed infrastructure under IOC; independent connected systems retain their own governance.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-odis"
+              ]
+            },
+            "sources": {
+              "src-relationship-odis": {
+                "id": "src-relationship-odis",
+                "url": "https://oceaninfohub.org/odis/",
+                "title": {
+                  "ar": "نظام بيانات ومعلومات المحيطات",
+                  "en": "Ocean Data and Information System",
+                  "es": "Sistema de Datos e Información Oceánicos",
+                  "fr": "Système de données et d’informations océaniques",
+                  "ru": "Система океанических данных и информации",
+                  "zh": "海洋数据与信息系统"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.464Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-ioc-unesco-iode-operates-ocean-infohub",
+            "sourceNodeId": "ioc-unesco-iode",
+            "targetNodeId": "oceaninfohub",
+            "kind": "operates",
+            "note": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-oceaninfohub"
+              ]
+            },
+            "sources": {
+              "src-relationship-oceaninfohub": {
+                "id": "src-relationship-oceaninfohub",
+                "url": "https://oceaninfohub.org/project-overview/",
+                "title": {
+                  "ar": "نظرة عامة على مشروع Ocean InfoHub",
+                  "en": "Ocean InfoHub project overview",
+                  "es": "Descripción general del proyecto Ocean InfoHub",
+                  "fr": "Présentation du projet Ocean InfoHub",
+                  "ru": "Обзор проекта Ocean InfoHub",
+                  "zh": "Ocean InfoHub项目概览"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.464Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "ioc-assembly",
+      "status": 200,
+      "data": {
+        "id": "ioc-assembly",
+        "kind": "organization",
+        "countryCode": null,
+        "url": "https://obis.org/about/governance/",
+        "recordDepth": "stub",
+        "title": "IOC Assembly",
+        "summary": "Member-state body adopting IODE recommendations and programmes.",
+        "availableLocales": [
+          "en"
+        ],
+        "missingLocales": [
+          "ar",
+          "zh",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "reviewStatesByLocale": {
+          "en": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:48.864Z",
+        "recordUpdatedAt": "2026-09-10T20:02:48.864Z",
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        },
+        "record": {
+          "id": "ioc-assembly",
+          "kind": "organization",
+          "countryCode": null,
+          "url": "https://obis.org/about/governance/",
+          "recordDepth": "stub",
+          "sources": {
+            "src-relationship-platform-obis": {
+              "id": "src-relationship-platform-obis",
+              "url": "https://obis.org/about/governance/",
+              "title": {
+                "ar": "حوكمة OBIS",
+                "en": "OBIS governance",
+                "es": "Gobernanza de OBIS",
+                "fr": "Gouvernance d’OBIS",
+                "ru": "Управление OBIS",
+                "zh": "OBIS治理"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "properties": {
+            "disciplines": [],
+            "gallery": [],
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "access": [],
+            "usage": []
+          },
+          "createdAt": "2026-09-09T18:32:29.921Z",
+          "updatedAt": "2026-09-10T20:02:48.864Z"
+        },
+        "localizations": {
+          "en": {
+            "locale": "en",
+            "title": "IOC Assembly",
+            "summary": "Member-state body adopting IODE recommendations and programmes.",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": [],
+              "profile": {
+                "sourceRefs": [
+                  "src-relationship-platform-obis"
+                ]
+              }
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:48.844Z",
+            "review": {
+              "date": "2026-09-09T18:32:29.921289+00:00",
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-09T18:32:29.921Z",
+            "updatedAt": "2026-09-10T20:02:48.844Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-ioc-assembly-governs-ioc-unesco-iode",
+            "sourceNodeId": "ioc-assembly",
+            "targetNodeId": "ioc-unesco-iode",
+            "kind": "governs",
+            "note": "IODE recommendations are submitted to the IOC Assembly for adoption.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-platform-obis"
+              ]
+            },
+            "sources": {
+              "src-relationship-platform-obis": {
+                "id": "src-relationship-platform-obis",
+                "url": "https://obis.org/about/governance/",
+                "title": {
+                  "ar": "حوكمة OBIS",
+                  "en": "OBIS governance",
+                  "es": "Gobernanza de OBIS",
+                  "fr": "Gouvernance d’OBIS",
+                  "ru": "Управление OBIS",
+                  "zh": "OBIS治理"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:33:22.539Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "government-of-flanders",
+      "status": 200,
+      "data": {
+        "id": "government-of-flanders",
+        "kind": "organization",
+        "countryCode": null,
+        "url": "https://oceaninfohub.org/project-overview/",
+        "recordDepth": "stub",
+        "title": "Government of Flanders",
+        "summary": "Government funder of the Ocean InfoHub project; a subnational authority is modeled as an organization.",
+        "availableLocales": [
+          "en"
+        ],
+        "missingLocales": [
+          "ar",
+          "zh",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "reviewStatesByLocale": {
+          "en": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:42.808Z",
+        "recordUpdatedAt": "2026-09-10T20:02:42.808Z",
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        },
+        "record": {
+          "id": "government-of-flanders",
+          "kind": "organization",
+          "countryCode": null,
+          "url": "https://oceaninfohub.org/project-overview/",
+          "recordDepth": "stub",
+          "sources": {
+            "src-relationship-oceaninfohub": {
+              "id": "src-relationship-oceaninfohub",
+              "url": "https://oceaninfohub.org/project-overview/",
+              "title": {
+                "ar": "نظرة عامة على مشروع Ocean InfoHub",
+                "en": "Ocean InfoHub project overview",
+                "es": "Descripción general del proyecto Ocean InfoHub",
+                "fr": "Présentation du projet Ocean InfoHub",
+                "ru": "Обзор проекта Ocean InfoHub",
+                "zh": "Ocean InfoHub项目概览"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "properties": {
+            "disciplines": [],
+            "gallery": [],
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "access": [],
+            "usage": []
+          },
+          "createdAt": "2026-09-09T18:32:29.012Z",
+          "updatedAt": "2026-09-10T20:02:42.808Z"
+        },
+        "localizations": {
+          "en": {
+            "locale": "en",
+            "title": "Government of Flanders",
+            "summary": "Government funder of the Ocean InfoHub project; a subnational authority is modeled as an organization.",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": [],
+              "profile": {
+                "sourceRefs": [
+                  "src-relationship-oceaninfohub"
+                ]
+              }
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:42.789Z",
+            "review": {
+              "date": "2026-09-09T18:32:29.012491+00:00",
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-09T18:32:29.012Z",
+            "updatedAt": "2026-09-10T20:02:42.789Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-government-of-flanders-funds-oceaninfohub",
+            "sourceNodeId": "government-of-flanders",
+            "targetNodeId": "oceaninfohub",
+            "kind": "funds",
+            "note": "Funding of the Ocean InfoHub project.",
+            "properties": {
+              "scope": "Documented project support; continuation terms not established",
+              "sourceRefs": [
+                "src-relationship-oceaninfohub"
+              ]
+            },
+            "sources": {
+              "src-relationship-oceaninfohub": {
+                "id": "src-relationship-oceaninfohub",
+                "url": "https://oceaninfohub.org/project-overview/",
+                "title": {
+                  "ar": "نظرة عامة على مشروع Ocean InfoHub",
+                  "en": "Ocean InfoHub project overview",
+                  "es": "Descripción general del proyecto Ocean InfoHub",
+                  "fr": "Présentation du projet Ocean InfoHub",
+                  "ru": "Обзор проекта Ocean InfoHub",
+                  "zh": "Ocean InfoHub项目概览"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:33:21.805Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "flanders-marine-institute",
+      "status": 200,
+      "data": {
+        "id": "flanders-marine-institute",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "Flanders Marine Institute",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:34.998Z",
+        "recordUpdatedAt": "2026-09-10T20:02:34.998Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 5,
+          "resolvedSources": 5,
+          "issues": [
+            {
+              "recordId": "flanders-marine-institute",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "flanders-marine-institute",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "flanders-marine-institute",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "flanders-marine-institute",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "flanders-marine-institute",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "flanders-marine-institute",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "flanders-marine-institute",
+          "kind": "organization",
+          "countryCode": null,
+          "url": null,
+          "recordDepth": "stub",
+          "sources": {},
+          "properties": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "gallery": [],
+            "disciplines": []
+          },
+          "createdAt": "2026-05-26T16:46:26.459Z",
+          "updatedAt": "2026-09-10T20:02:34.998Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "معهد فلاندرز البحري",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "VLIZ",
+                "Flanders Marine Institute"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:47.745Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.323542+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:47.745Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "Flanders Marine Institute",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:34.976Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.280628+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.459Z",
+            "updatedAt": "2026-09-10T20:02:34.976Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Instituto Marino de Flandes",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "VLIZ",
+                "Flanders Marine Institute"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:47.745Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.324183+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:47.745Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Institut marin flamand",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "VLIZ",
+                "Flanders Marine Institute"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:47.745Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.323798+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:47.745Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Фландрский морской институт",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "VLIZ",
+                "Flanders Marine Institute"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:47.745Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.324061+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:47.745Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "佛兰德海洋研究所",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "VLIZ",
+                "Flanders Marine Institute"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:47.745Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.323694+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:47.745Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-flanders-marine-institute-operates-emodnet-biology",
+            "sourceNodeId": "flanders-marine-institute",
+            "targetNodeId": "emodnet-biology",
+            "kind": "operates",
+            "note": "VLIZ operates technical infrastructure and data management.",
+            "properties": {
+              "scope": "Technical infrastructure; scientific contributors retain their own roles",
+              "sourceRefs": [
+                "src-relationship-emodnet-biology"
+              ]
+            },
+            "sources": {
+              "src-relationship-emodnet-biology": {
+                "id": "src-relationship-emodnet-biology",
+                "url": "https://emodnet.ec.europa.eu/en/biology",
+                "title": {
+                  "ar": "EMODnet: علم الأحياء",
+                  "en": "EMODnet Biology",
+                  "es": "Biología de EMODnet",
+                  "fr": "Biologie d’EMODnet",
+                  "ru": "Биология EMODnet",
+                  "zh": "EMODnet生物学"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:51.118Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-flanders-marine-institute-operates-eurobis",
+            "sourceNodeId": "flanders-marine-institute",
+            "targetNodeId": "eurobis",
+            "kind": "operates",
+            "note": "VLIZ operates technical infrastructure and data management.",
+            "properties": {
+              "scope": "Technical infrastructure; scientific contributors retain their own roles",
+              "sourceRefs": [
+                "src-relationship-eurobis"
+              ]
+            },
+            "sources": {
+              "src-relationship-eurobis": {
+                "id": "src-relationship-eurobis",
+                "url": "https://www.eurobis.org/about",
+                "title": {
+                  "ar": "حول EurOBIS",
+                  "en": "About EurOBIS",
+                  "es": "Acerca de EurOBIS",
+                  "fr": "À propos de EurOBIS",
+                  "ru": "О EurOBIS",
+                  "zh": "关于EurOBIS"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:55.725Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-flanders-marine-institute-operates-marine-regions",
+            "sourceNodeId": "flanders-marine-institute",
+            "targetNodeId": "marine-regions",
+            "kind": "operates",
+            "note": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-marine-regions"
+              ]
+            },
+            "sources": {
+              "src-relationship-marine-regions": {
+                "id": "src-relationship-marine-regions",
+                "url": "https://www.marineregions.org/about.php",
+                "title": {
+                  "ar": "حول Marine Regions",
+                  "en": "About Marine Regions",
+                  "es": "Acerca de Marine Regions",
+                  "fr": "À propos de Marine Regions",
+                  "ru": "О Marine Regions",
+                  "zh": "关于Marine Regions"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.460Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-flanders-marine-institute-operates-molluscabase",
+            "sourceNodeId": "flanders-marine-institute",
+            "targetNodeId": "molluscabase",
+            "kind": "operates",
+            "note": "VLIZ operates technical infrastructure and data management.",
+            "properties": {
+              "scope": "Technical infrastructure; scientific contributors retain their own roles",
+              "sourceRefs": [
+                "src-relationship-molluscabase"
+              ]
+            },
+            "sources": {
+              "src-relationship-molluscabase": {
+                "id": "src-relationship-molluscabase",
+                "url": "https://molluscabase.org/about.php",
+                "title": {
+                  "ar": "حول MolluscaBase",
+                  "en": "About MolluscaBase",
+                  "es": "Acerca de MolluscaBase",
+                  "fr": "À propos de MolluscaBase",
+                  "ru": "О MolluscaBase",
+                  "zh": "关于MolluscaBase"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:33:16.584Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-flanders-marine-institute-operates-world-register-of-marine-species",
+            "sourceNodeId": "flanders-marine-institute",
+            "targetNodeId": "worms",
+            "kind": "operates",
+            "note": "VLIZ operates infrastructure; the elected Steering Committee has scientific policy authority. Advisory and operational roles are distinct.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-worms"
+              ]
+            },
+            "sources": {
+              "src-relationship-worms": {
+                "id": "src-relationship-worms",
+                "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+                "title": {
+                  "ar": "اختصاصات WoRMS",
+                  "en": "WoRMS terms of reference",
+                  "es": "Términos de referencia de WoRMS",
+                  "fr": "Mandat de WoRMS",
+                  "ru": "Положение о деятельности WoRMS",
+                  "zh": "WoRMS职权范围"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.459Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "oceanexpert",
+      "status": 404,
+      "body": "{\"error\":\"record not found: oceanexpert\"}"
+    },
+    {
+      "id": "ioc-unesco",
+      "status": 404,
+      "body": "{\"error\":\"record not found: ioc-unesco\"}"
+    },
+    {
+      "id": "norad",
+      "status": 404,
+      "body": "{\"error\":\"record not found: norad\"}"
+    },
+    {
+      "id": "deepdata",
+      "status": 404,
+      "body": "{\"error\":\"record not found: deepdata\"}"
+    },
+    {
+      "id": "international-seabed-authority",
+      "status": 404,
+      "body": "{\"error\":\"record not found: international-seabed-authority\"}"
+    },
+    {
+      "id": "platform-obis",
+      "status": 200,
+      "data": {
+        "id": "platform-obis",
+        "kind": "system",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "thin",
+        "title": "Ocean Biodiversity Information System (OBIS)",
+        "summary": "Global marine biodiversity system receiving synchronized data from BISMaL.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:10.745Z",
+        "recordUpdatedAt": "2026-09-10T20:03:10.745Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 6,
+          "resolvedSources": 6,
+          "issues": [
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[1].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[2].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[3].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[4].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[5].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[6].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "platform-obis",
+          "kind": "system",
+          "countryCode": null,
+          "url": null,
+          "recordDepth": "thin",
+          "sources": {
+            "src-obis-ipt": {
+              "id": "src-obis-ipt",
+              "url": "https://manual.obis.org/ipt",
+              "title": {
+                "ar": "دليل OBIS: أداة IPT",
+                "en": "OBIS Manual IPT",
+                "es": "Manual de OBIS: IPT",
+                "fr": "Manuel OBIS : IPT",
+                "ru": "Руководство OBIS: IPT",
+                "zh": "OBIS手册：IPT"
+              },
+              "accessedAt": "2026-05-26"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "platform-obis-tag-data-format-darwin-core",
+                  "label": "Darwin Core",
+                  "source": null,
+                  "category": "standard"
+                },
+                {
+                  "id": "platform-obis-tag-data-format-darwin-core-archive",
+                  "label": "darwin_core_archive",
+                  "source": null,
+                  "category": "format"
+                },
+                {
+                  "id": "platform-obis-tag-data-format-eml",
+                  "label": "Ecological Metadata Language",
+                  "source": null,
+                  "category": "standard"
+                },
+                {
+                  "id": "platform-obis-tag-data-format-emof",
+                  "label": "Extended MeasurementOrFact",
+                  "source": null,
+                  "category": "standard"
+                },
+                {
+                  "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+                  "label": "catalogue_records",
+                  "source": null,
+                  "category": "type"
+                },
+                {
+                  "id": "platform-obis-tag-data-type-occurrence-observation",
+                  "label": "occurrence_records",
+                  "source": null,
+                  "category": "type"
+                },
+                {
+                  "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+                  "label": "taxonomic_records",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "platform-obis-tag-read-method-api",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "api",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-dashboard-viewer",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "dashboard_viewer",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-download",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "download",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-ipt",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "ipt",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-rest-api",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "rest_api",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-sdk-notebook",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "sdk_notebook",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-web",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "web",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-write-method-ipt-publish",
+                "url": "https://manual.obis.org/ipt",
+                "type": "submit",
+                "method": "ipt_publish",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-write-method-manager-mediated-submission",
+                "url": "https://manual.obis.org/ipt",
+                "type": "submit",
+                "method": "manager_mediated_submission",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-write-method-template-csv-workflow",
+                "url": "https://manual.obis.org/ipt",
+                "type": "submit",
+                "method": "template_csv_workflow",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-write-method-upload",
+                "url": "https://manual.obis.org/ipt",
+                "type": "submit",
+                "method": "upload",
+                "source": "src-obis-ipt"
+              }
+            ],
+            "gallery": [],
+            "disciplines": []
+          },
+          "createdAt": "2026-04-24T00:00:00.000Z",
+          "updatedAt": "2026-09-10T20:03:10.745Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "نظام معلومات التنوع الحيوي في المحيطات (OBIS)",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "OBIS",
+                "Ocean Biodiversity Information System (OBIS)"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.342542+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:23.137Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "Ocean Biodiversity Information System (OBIS)",
+            "summary": "Global marine biodiversity system receiving synchronized data from BISMaL.",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "platform-obis-tag-data-format-darwin-core",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-format-darwin-core-archive",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-format-eml",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-format-emof",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-type-occurrence-observation",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "platform-obis-tag-read-method-api",
+                  "label": "API",
+                  "description": "Access via API."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-dashboard-viewer",
+                  "label": "Dashboard / viewer",
+                  "description": "Access via Dashboard / viewer."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-download",
+                  "label": "Download",
+                  "description": "Access via Download."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-ipt",
+                  "label": "IPT",
+                  "description": "Access via IPT."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-rest-api",
+                  "label": "REST API",
+                  "description": "Access via REST API."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-sdk-notebook",
+                  "label": "SDK / notebook",
+                  "description": "Access via SDK / notebook."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "Access via Web UI."
+                },
+                {
+                  "id": "platform-obis-tag-write-method-ipt-publish",
+                  "label": "IPT publish",
+                  "description": "Submission via IPT publish."
+                },
+                {
+                  "id": "platform-obis-tag-write-method-manager-mediated-submission",
+                  "label": "Manager-mediated submission",
+                  "description": "Submission via Manager-mediated submission."
+                },
+                {
+                  "id": "platform-obis-tag-write-method-template-csv-workflow",
+                  "label": "Template / CSV workflow",
+                  "description": "Submission via Template / CSV workflow."
+                },
+                {
+                  "id": "platform-obis-tag-write-method-upload",
+                  "label": "Upload",
+                  "description": "Submission via Upload."
+                }
+              ],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:03:10.719Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.376639+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-04-24T00:00:00.000Z",
+            "updatedAt": "2026-09-10T20:03:10.719Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Sistema de Información sobre Biodiversidad Oceánica (OBIS)",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "OBIS",
+                "Ocean Biodiversity Information System (OBIS)"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.343836+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:23.137Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Système d'information sur la biodiversité océanique (OBIS)",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "OBIS",
+                "Ocean Biodiversity Information System (OBIS)"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.342762+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:23.137Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Информационная система океанического биоразнообразия (OBIS)",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "OBIS",
+                "Ocean Biodiversity Information System (OBIS)"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.342916+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:23.137Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "海洋生物多样性信息系统 (OBIS)",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "OBIS",
+                "Ocean Biodiversity Information System (OBIS)"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.342664+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:23.137Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "link-eurobis-obis",
+            "sourceNodeId": "eurobis",
+            "targetNodeId": "platform-obis",
+            "kind": "syncs_to",
+            "note": "EurOBIS contributes marine species distribution records to OBIS.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-eurobis"
+              ]
+            },
+            "sources": {
+              "src-relationship-eurobis": {
+                "id": "src-relationship-eurobis",
+                "url": "https://www.eurobis.org/about",
+                "title": {
+                  "ar": "حول EurOBIS",
+                  "en": "About EurOBIS",
+                  "es": "Acerca de EurOBIS",
+                  "fr": "À propos de EurOBIS",
+                  "ru": "О EurOBIS",
+                  "zh": "关于EurOBIS"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T21:51:00.376Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-bismal-syncs-to-obis",
+            "sourceNodeId": "bismal",
+            "targetNodeId": "platform-obis",
+            "kind": "syncs_to",
+            "note": "BISMaL distributes Japanese OBIS-node biodiversity records to OBIS.",
+            "properties": {
+              "format": "Darwin Core Archive",
+              "sourceRefs": [
+                "src-relationship-j-obis"
+              ],
+              "transferMethod": "IPT"
+            },
+            "sources": {
+              "src-relationship-j-obis": {
+                "id": "src-relationship-j-obis",
+                "url": "https://www.godac.jamstec.go.jp/bismal/e/about.html",
+                "title": {
+                  "ar": "حول BISMaL / J-OBIS",
+                  "en": "About BISMaL / J-OBIS",
+                  "es": "Acerca de BISMaL / J-OBIS",
+                  "fr": "À propos de BISMaL / J-OBIS",
+                  "ru": "О BISMaL / J-OBIS",
+                  "zh": "关于BISMaL / J-OBIS"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-04-24T00:00:00.000Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-fishbase-member-of-platform-obis",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "platform-obis",
+            "kind": "member_of",
+            "note": "The OBIS Fish OBIS node page explicitly identifies FishBase and FishNet2 as participating systems in the global thematic Fish OBIS node. This represents FishBase participation in OBIS through that node, not organizational membership or component ownership. The page describes intended FishBase contributions; current delivery is assessed separately.",
+            "properties": {
+              "via": "Fish OBIS",
+              "scope": "OBIS network participation through the Fish OBIS thematic node",
+              "status": "listed participant",
+              "sourceRefs": [
+                "evidence"
+              ]
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://portal.obis.org/node/dcb0c76d-46a1-4e07-9a69-98cf3fd67576",
+                "title": {
+                  "ar": "العقدة الموضوعية Fish OBIS والأنظمة المشاركة",
+                  "en": "Fish OBIS thematic node and participating systems",
+                  "es": "Nodo temático Fish OBIS y sistemas participantes",
+                  "fr": "Nœud thématique Fish OBIS et systèmes participants",
+                  "ru": "Тематический узел Fish OBIS и участвующие системы",
+                  "zh": "Fish OBIS专题节点与参与系统"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-fishbase-syncs-to-platform-obis",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "platform-obis",
+            "kind": "syncs_to",
+            "note": "OBIS hosts an archive of FishBase occurrence records harvested from the GBIF-Sweden-hosted resource. The available archive was published on 2018-10-10 and lists an unknown update frequency. This records the historical transfer path; an ongoing refresh is not established.",
+            "properties": {
+              "scope": "Historical harvest of FishBase occurrence data via GBIF-Sweden",
+              "format": "Darwin Core Archive",
+              "status": "historical; current refresh unknown",
+              "artifact": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+              "sourceRefs": [
+                "evidence"
+              ],
+              "transferMethod": "OBIS harvest of the GBIF-Sweden-hosted FishBase resource",
+              "updateFrequency": "unknown",
+              "latestPublishedAt": "2018-10-10"
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+                "title": {
+                  "ar": "أرشيف سجلات وجود الأنواع في FishBase الذي جمعه OBIS",
+                  "en": "FishBase occurrence archive harvested by OBIS",
+                  "es": "Archivo de presencias de FishBase recopilado por OBIS",
+                  "fr": "Archive des occurrences FishBase collectée par OBIS",
+                  "ru": "Архив находок FishBase, собранный OBIS",
+                  "zh": "OBIS采集的FishBase物种出现记录档案"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-ioc-unesco-iode-operates-ocean-biodiversity-information-system",
+            "sourceNodeId": "ioc-unesco-iode",
+            "targetNodeId": "platform-obis",
+            "kind": "operates",
+            "note": "IODE/IOC-UNESCO coordinates OBIS with independently operated nodes. Node contributions do not imply ownership by one government.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-platform-obis"
+              ]
+            },
+            "sources": {
+              "src-relationship-platform-obis": {
+                "id": "src-relationship-platform-obis",
+                "url": "https://obis.org/about/governance/",
+                "title": {
+                  "ar": "حوكمة OBIS",
+                  "en": "OBIS governance",
+                  "es": "Gobernanza de OBIS",
+                  "fr": "Gouvernance d’OBIS",
+                  "ru": "Управление OBIS",
+                  "zh": "OBIS治理"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.458Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "emodnet",
+      "status": 200,
+      "data": {
+        "id": "emodnet",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+        "recordDepth": "thin",
+        "title": "European Marine Observation and Data Network",
+        "summary": "European umbrella marine data network",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:26.803Z",
+        "recordUpdatedAt": "2026-09-10T20:02:26.803Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 3,
+          "resolvedSources": 3,
+          "issues": [
+            {
+              "recordId": "emodnet",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "emodnet",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "emodnet",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "emodnet",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "emodnet",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "emodnet",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "emodnet",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+          "recordDepth": "thin",
+          "sources": {
+            "src-emodnet-about": {
+              "id": "src-emodnet-about",
+              "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+              "title": {
+                "ar": "حول EMODnet",
+                "en": "About EMODnet",
+                "es": "Acerca de EMODnet",
+                "fr": "À propos de EMODnet",
+                "ru": "О EMODnet",
+                "zh": "关于EMODnet"
+              },
+              "accessedAt": "2026-05-26"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "emodnet-tag-read-method-api",
+                "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+                "type": "read",
+                "method": "api",
+                "source": "src-emodnet-about"
+              },
+              {
+                "id": "emodnet-tag-read-method-dashboard-viewer",
+                "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+                "type": "read",
+                "method": "dashboard_viewer",
+                "source": "src-emodnet-about"
+              },
+              {
+                "id": "emodnet-tag-read-method-web",
+                "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+                "type": "read",
+                "method": "web",
+                "source": "src-emodnet-about"
+              }
+            ],
+            "gallery": [],
+            "disciplines": []
+          },
+          "createdAt": "2026-05-26T16:46:26.459Z",
+          "updatedAt": "2026-09-10T20:02:26.803Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "الشبكة الأوروبية لرصد وبيانات البحار",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "EMODnet",
+                "European Marine Observation and Data Network"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:40.208Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.312887+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:40.208Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "European Marine Observation and Data Network",
+            "summary": "European umbrella marine data network",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "emodnet-tag-read-method-api",
+                  "label": "API",
+                  "description": "Access via API."
+                },
+                {
+                  "id": "emodnet-tag-read-method-dashboard-viewer",
+                  "label": "Dashboard / viewer",
+                  "description": "Access via Dashboard / viewer."
+                },
+                {
+                  "id": "emodnet-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "Access via Web UI."
+                }
+              ],
+              "aliases": [
+                "EMODnet"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:26.779Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.374056+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.459Z",
+            "updatedAt": "2026-09-10T20:02:26.779Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Red Europea de Observación y Datos Marinos",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "EMODnet",
+                "European Marine Observation and Data Network"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:40.208Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.318873+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:40.208Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Réseau européen d'observation et de données marines",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "EMODnet",
+                "European Marine Observation and Data Network"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:40.208Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.318638+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:40.208Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Европейская сеть морских наблюдений и данных",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "EMODnet",
+                "European Marine Observation and Data Network"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:40.208Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.318736+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:40.208Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "欧洲海洋观测与数据网络",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "EMODnet",
+                "European Marine Observation and Data Network"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:40.208Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.313038+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:40.208Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-ec-dg-mare-operates-emodnet",
+            "sourceNodeId": "ec-dg-mare",
+            "targetNodeId": "emodnet",
+            "kind": "operates",
+            "note": "Programme management of EMODnet, with technical delivery by consortia.",
+            "properties": {
+              "scope": "Programme management of EMODnet, with technical delivery by consortia.",
+              "sourceRefs": [
+                "src-relationship-emodnet"
+              ]
+            },
+            "sources": {
+              "src-relationship-emodnet": {
+                "id": "src-relationship-emodnet",
+                "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+                "title": {
+                  "ar": "حول EMODnet",
+                  "en": "About EMODnet",
+                  "es": "Acerca de EMODnet",
+                  "fr": "À propos de EMODnet",
+                  "ru": "О EMODnet",
+                  "zh": "关于EMODnet"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:50.362Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-eur-funds-emodnet",
+            "sourceNodeId": "eur",
+            "targetNodeId": "emodnet",
+            "kind": "funds",
+            "note": "European Union programme funding.",
+            "properties": {
+              "scope": "EMFAF programme funding",
+              "sourceRefs": [
+                "src-relationship-emodnet"
+              ]
+            },
+            "sources": {
+              "src-relationship-emodnet": {
+                "id": "src-relationship-emodnet",
+                "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+                "title": {
+                  "ar": "حول EMODnet",
+                  "en": "About EMODnet",
+                  "es": "Acerca de EMODnet",
+                  "fr": "À propos de EMODnet",
+                  "ru": "О EMODnet",
+                  "zh": "关于EMODnet"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:50.362Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "gbif",
+      "status": 200,
+      "data": {
+        "id": "gbif",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.gbif.org/what-is-gbif",
+        "recordDepth": "thin",
+        "title": "Global Biodiversity Information Facility",
+        "summary": "Global biodiversity infrastructure heavily used in marine workflows",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:35.528Z",
+        "recordUpdatedAt": "2026-09-10T20:02:35.528Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 3,
+          "resolvedSources": 3,
+          "issues": [
+            {
+              "recordId": "gbif",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "gbif",
+              "path": "record.properties.data.descriptors[1].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "gbif",
+              "path": "record.properties.data.descriptors[2].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "gbif",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "gbif",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "gbif",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "gbif",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "gbif",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "gbif",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "gbif",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://www.gbif.org/what-is-gbif",
+          "recordDepth": "thin",
+          "sources": {
+            "src-gbif-what-is": {
+              "id": "src-gbif-what-is",
+              "url": "https://techdocs.gbif.org/en/",
+              "title": {
+                "ar": "الوثائق التقنية لـ GBIF",
+                "en": "GBIF technical documentation",
+                "es": "Documentación técnica de GBIF",
+                "fr": "Documentation technique de GBIF",
+                "ru": "Техническая документация GBIF",
+                "zh": "GBIF技术文档"
+              },
+              "accessedAt": "2026-07-22"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "gbif-tag-data-format-darwin-core",
+                  "label": "Darwin Core",
+                  "source": null,
+                  "category": "standard"
+                },
+                {
+                  "id": "gbif-tag-data-format-darwin-core-archive",
+                  "label": "darwin_core_archive",
+                  "source": null,
+                  "category": "format"
+                },
+                {
+                  "id": "gbif-tag-data-type-occurrence-observation",
+                  "label": "occurrence_records",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "gbif-tag-read-method-api",
+                "url": "https://techdocs.gbif.org/en/",
+                "type": "read",
+                "method": "api",
+                "source": "src-gbif-what-is"
+              },
+              {
+                "id": "gbif-tag-read-method-download",
+                "url": "https://techdocs.gbif.org/en/",
+                "type": "read",
+                "method": "download",
+                "source": "src-gbif-what-is"
+              },
+              {
+                "id": "gbif-tag-read-method-ipt",
+                "url": "https://techdocs.gbif.org/en/",
+                "type": "read",
+                "method": "ipt",
+                "source": "src-gbif-what-is"
+              },
+              {
+                "id": "gbif-tag-read-method-web",
+                "url": "https://techdocs.gbif.org/en/",
+                "type": "read",
+                "method": "web",
+                "source": "src-gbif-what-is"
+              },
+              {
+                "id": "gbif-tag-write-method-ipt-publish",
+                "url": "https://techdocs.gbif.org/en/",
+                "type": "submit",
+                "method": "ipt_publish",
+                "source": "src-gbif-what-is"
+              },
+              {
+                "id": "gbif-tag-write-method-web-submission",
+                "url": "https://techdocs.gbif.org/en/",
+                "type": "submit",
+                "method": "web_submission",
+                "source": "src-gbif-what-is"
+              }
+            ],
+            "gallery": [],
+            "disciplines": []
+          },
+          "createdAt": "2026-05-26T16:46:26.459Z",
+          "updatedAt": "2026-09-10T20:02:35.528Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "المرفق العالمي لمعلومات التنوع البيولوجي",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "GBIF",
+                "Global Biodiversity Information Facility"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:56.834Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.326361+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:56.834Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "Global Biodiversity Information Facility",
+            "summary": "Global biodiversity infrastructure heavily used in marine workflows",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "gbif-tag-data-format-darwin-core",
+                    "description": null
+                  },
+                  {
+                    "id": "gbif-tag-data-format-darwin-core-archive",
+                    "description": null
+                  },
+                  {
+                    "id": "gbif-tag-data-type-occurrence-observation",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "gbif-tag-read-method-api",
+                  "label": "API",
+                  "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+                },
+                {
+                  "id": "gbif-tag-read-method-download",
+                  "label": "Download",
+                  "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+                },
+                {
+                  "id": "gbif-tag-read-method-ipt",
+                  "label": "IPT",
+                  "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+                },
+                {
+                  "id": "gbif-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+                },
+                {
+                  "id": "gbif-tag-write-method-ipt-publish",
+                  "label": "IPT publish",
+                  "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+                },
+                {
+                  "id": "gbif-tag-write-method-web-submission",
+                  "label": "Web submission",
+                  "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+                }
+              ],
+              "aliases": [
+                "GBIF"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:35.504Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.374685+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.459Z",
+            "updatedAt": "2026-09-10T20:02:35.504Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Infraestructura Mundial de Información en Biodiversidad",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "GBIF",
+                "Global Biodiversity Information Facility"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:56.834Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.326895+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:56.834Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Système mondial d'information sur la biodiversité",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "GBIF",
+                "Global Biodiversity Information Facility"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:56.834Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.326653+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:56.834Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Глобальная информационная система по биоразнообразию",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "GBIF",
+                "Global Biodiversity Information Facility"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:56.834Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.326751+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:56.834Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "全球生物多样性信息设施",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "GBIF",
+                "Global Biodiversity Information Facility"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:56.834Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.326528+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:56.834Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-fishbase-syncs-to-gbif",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "gbif",
+            "kind": "syncs_to",
+            "note": "FishBase publishes an occurrence dataset through the GBIF-Sweden IPT, registered with GBIF. The publisher lists 731,043 archive records, a latest publication date of 2023-03-23 and irregular updates. The archive count is not a verified count of currently indexed GBIF occurrences.",
+            "properties": {
+              "scope": "FishBase occurrence dataset via GBIF-Sweden",
+              "format": "Darwin Core Archive",
+              "status": "published snapshot; current refresh unverified",
+              "artifact": "https://www.gbif.se/ipt/resource?r=fishbase",
+              "sourceRefs": [
+                "evidence"
+              ],
+              "transferMethod": "GBIF-Sweden IPT Darwin Core Archive publication",
+              "updateFrequency": "irregular",
+              "latestPublishedAt": "2023-03-23"
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://www.gbif.se/ipt/resource?r=fishbase",
+                "title": {
+                  "ar": "أرشيف سجلات وجود الأنواع في FishBase المنشور عبر GBIF-Sweden",
+                  "en": "FishBase occurrence archive published through GBIF-Sweden",
+                  "es": "Archivo de presencias de FishBase publicado mediante GBIF-Sweden",
+                  "fr": "Archive des occurrences FishBase publiée via GBIF-Sweden",
+                  "ru": "Архив находок FishBase, опубликованный через GBIF-Sweden",
+                  "zh": "通过GBIF-Sweden发布的FishBase物种出现记录档案"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-gbif-secretariat-operates-global-biodiversity-information-facility",
+            "sourceNodeId": "gbif-secretariat",
+            "targetNodeId": "gbif",
+            "kind": "operates",
+            "note": "GBIF Secretariat runs the infrastructure for an international network of countries and organizations. Secretariat location is not governing nationality.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-gbif"
+              ]
+            },
+            "sources": {
+              "src-relationship-gbif": {
+                "id": "src-relationship-gbif",
+                "url": "https://www.gbif.org/what-is-gbif",
+                "title": {
+                  "ar": "ما هو GBIF",
+                  "en": "What is GBIF",
+                  "es": "Qué es GBIF",
+                  "fr": "Qu’est-ce que GBIF",
+                  "ru": "Что такое GBIF",
+                  "zh": "GBIF是什么"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.459Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "bco-dmo",
+      "status": 200,
+      "data": {
+        "id": "bco-dmo",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.bco-dmo.org/about",
+        "recordDepth": "thin",
+        "title": "BCO-DMO",
+        "summary": "Primary repository for NSF-supported oceanographic communities",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:13.258Z",
+        "recordUpdatedAt": "2026-09-10T20:02:13.258Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 4,
+          "resolvedSources": 4,
+          "issues": [
+            {
+              "recordId": "bco-dmo",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "bco-dmo",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "bco-dmo",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "bco-dmo",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "bco-dmo",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "bco-dmo",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "bco-dmo",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "bco-dmo",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://www.bco-dmo.org/about",
+          "recordDepth": "thin",
+          "sources": {
+            "src-bcodmo-about": {
+              "id": "src-bcodmo-about",
+              "url": "https://www.bco-dmo.org/about",
+              "title": {
+                "ar": "حول BCO-DMO",
+                "en": "BCO-DMO About",
+                "es": "Acerca de BCO-DMO",
+                "fr": "À propos de BCO-DMO",
+                "ru": "О BCO-DMO",
+                "zh": "关于BCO-DMO"
+              },
+              "accessedAt": "2026-05-26"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "bco-dmo-tag-data-type-chemical-biogeochemical",
+                  "label": "environmental_measurements",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "bco-dmo-tag-write-method-preservation-copy",
+                "url": "https://www.bco-dmo.org/about",
+                "type": "partner_sync",
+                "method": "preservation_copy",
+                "source": "src-bcodmo-about"
+              },
+              {
+                "id": "bco-dmo-tag-read-method-api",
+                "url": "https://www.bco-dmo.org/about",
+                "type": "read",
+                "method": "api",
+                "source": "src-bcodmo-about"
+              },
+              {
+                "id": "bco-dmo-tag-read-method-erddap",
+                "url": "https://www.bco-dmo.org/about",
+                "type": "read",
+                "method": "erddap",
+                "source": "src-bcodmo-about"
+              },
+              {
+                "id": "bco-dmo-tag-read-method-web",
+                "url": "https://www.bco-dmo.org/about",
+                "type": "read",
+                "method": "web",
+                "source": "src-bcodmo-about"
+              },
+              {
+                "id": "bco-dmo-tag-write-method-api-write",
+                "url": "https://www.bco-dmo.org/about",
+                "type": "submit",
+                "method": "api_write",
+                "source": "src-bcodmo-about"
+              },
+              {
+                "id": "bco-dmo-tag-write-method-web-submission",
+                "url": "https://www.bco-dmo.org/about",
+                "type": "submit",
+                "method": "web_submission",
+                "source": "src-bcodmo-about"
+              }
+            ],
+            "gallery": [],
+            "disciplines": [
+              "oceanography"
+            ]
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-10T20:02:13.258Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "BCO-DMO",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "مكتب إدارة بيانات علم المحيطات البيولوجية والكيميائية"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:14.694Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.293276+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:14.694Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "BCO-DMO",
+            "summary": "Primary repository for NSF-supported oceanographic communities",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "bco-dmo-tag-data-type-chemical-biogeochemical",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "bco-dmo-tag-write-method-preservation-copy",
+                  "label": "Preservation copy",
+                  "description": "Submission via Preservation copy."
+                },
+                {
+                  "id": "bco-dmo-tag-read-method-api",
+                  "label": "API",
+                  "description": "Access via API."
+                },
+                {
+                  "id": "bco-dmo-tag-read-method-erddap",
+                  "label": "ERDDAP",
+                  "description": "Access via ERDDAP."
+                },
+                {
+                  "id": "bco-dmo-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "Access via Web UI."
+                },
+                {
+                  "id": "bco-dmo-tag-write-method-api-write",
+                  "label": "API write",
+                  "description": "Submission via API write."
+                },
+                {
+                  "id": "bco-dmo-tag-write-method-web-submission",
+                  "label": "Web submission",
+                  "description": "Submission via Web submission."
+                }
+              ],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:13.226Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.275088+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.461Z",
+            "updatedAt": "2026-09-10T20:02:13.226Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "BCO-DMO",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "Oficina de Gestión de Datos de Oceanografía Biológica y Química"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:14.694Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.293642+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:14.694Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "BCO-DMO",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "Bureau de gestion des données d'océanographie biologique et chimique"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:14.694Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.293458+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:14.694Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "BCO-DMO",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "офис управления данными биологической и химической океанографии"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:14.694Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.293553+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:14.694Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "BCO-DMO",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "生物与化学海洋学数据管理办公室"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:14.694Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.29337+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:14.694Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "link-bcodmo-ncei",
+            "sourceNodeId": "bco-dmo",
+            "targetNodeId": "noaa-ncei-marine",
+            "kind": "syncs_to",
+            "note": "BCO-DMO sends preservation copies to NOAA NCEI.",
+            "properties": {
+              "scope": "Published data preservation copies",
+              "sourceRefs": [
+                "src-relationship-bco-dmo"
+              ]
+            },
+            "sources": {
+              "src-relationship-bco-dmo": {
+                "id": "src-relationship-bco-dmo",
+                "url": "https://www.bco-dmo.org/about",
+                "title": {
+                  "ar": "حول BCO-DMO",
+                  "en": "About BCO-DMO",
+                  "es": "Acerca de BCO-DMO",
+                  "fr": "À propos de BCO-DMO",
+                  "ru": "О BCO-DMO",
+                  "zh": "关于BCO-DMO"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.465Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-nsf-funds-bco-dmo",
+            "sourceNodeId": "nsf",
+            "targetNodeId": "bco-dmo",
+            "kind": "funds",
+            "note": "NSF supports the programme through award OCE-2421145.",
+            "properties": {
+              "award": "OCE-2421145",
+              "scope": "Programme award; not exclusive funding",
+              "sourceRefs": [
+                "src-relationship-bco-dmo"
+              ]
+            },
+            "sources": {
+              "src-relationship-bco-dmo": {
+                "id": "src-relationship-bco-dmo",
+                "url": "https://www.bco-dmo.org/about",
+                "title": {
+                  "ar": "حول BCO-DMO",
+                  "en": "About BCO-DMO",
+                  "es": "Acerca de BCO-DMO",
+                  "fr": "À propos de BCO-DMO",
+                  "ru": "О BCO-DMO",
+                  "zh": "关于BCO-DMO"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:37.214Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-whoi-operates-bco-dmo",
+            "sourceNodeId": "whoi",
+            "targetNodeId": "bco-dmo",
+            "kind": "operates",
+            "note": "WHOI operates the BCO-DMO office and designated OOI components.",
+            "properties": {
+              "scope": "WHOI operates the BCO-DMO office and designated OOI components.",
+              "sourceRefs": [
+                "src-relationship-bco-dmo"
+              ]
+            },
+            "sources": {
+              "src-relationship-bco-dmo": {
+                "id": "src-relationship-bco-dmo",
+                "url": "https://www.bco-dmo.org/about",
+                "title": {
+                  "ar": "حول BCO-DMO",
+                  "en": "About BCO-DMO",
+                  "es": "Acerca de BCO-DMO",
+                  "fr": "À propos de BCO-DMO",
+                  "ru": "О BCO-DMO",
+                  "zh": "关于BCO-DMO"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:37.214Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "cioos",
+      "status": 200,
+      "data": {
+        "id": "cioos",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://catalogue.cioos.ca/about",
+        "recordDepth": "thin",
+        "title": "Canadian Integrated Ocean Observing System",
+        "summary": "National federation of regional ocean data catalogues in Canada",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:18.425Z",
+        "recordUpdatedAt": "2026-09-10T20:02:18.425Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 5,
+          "resolvedSources": 5,
+          "issues": [
+            {
+              "recordId": "cioos",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "cioos",
+              "path": "record.properties.data.descriptors[1].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "cioos",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "cioos",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "cioos",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "cioos",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "cioos",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "cioos",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "cioos",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://catalogue.cioos.ca/about",
+          "recordDepth": "thin",
+          "sources": {
+            "src-cioos-about": {
+              "id": "src-cioos-about",
+              "url": "https://catalogue.cioos.ca/api/",
+              "title": {
+                "ar": "حول فهرس النظام الكندي المتكامل لرصد المحيطات",
+                "en": "About the Canadian Integrated Ocean Observing System Catalogue",
+                "es": "Acerca del catálogo del Sistema Canadiense Integrado de Observación Oceánica",
+                "fr": "À propos du catalogue du Système intégré d’observation des océans du Canada",
+                "ru": "О каталоге Канадской комплексной системы наблюдения за океаном",
+                "zh": "关于加拿大综合海洋观测系统目录"
+              },
+              "accessedAt": "2026-07-22"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "cioos-tag-data-type-metadata-catalog-registry",
+                  "label": "catalogue_records",
+                  "source": null,
+                  "category": "type"
+                },
+                {
+                  "id": "cioos-tag-data-type-physical-oceanography",
+                  "label": "environmental_measurements",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "cioos-tag-write-method-indirect-partner-submission",
+                "url": "https://catalogue.cioos.ca/api/",
+                "type": "partner_sync",
+                "method": "indirect_partner_submission",
+                "source": "src-cioos-about"
+              },
+              {
+                "id": "cioos-tag-read-method-api",
+                "url": "https://catalogue.cioos.ca/api/",
+                "type": "read",
+                "method": "api",
+                "source": "src-cioos-about"
+              },
+              {
+                "id": "cioos-tag-read-method-metadata-catalog",
+                "url": "https://catalogue.cioos.ca/api/",
+                "type": "read",
+                "method": "metadata_catalog",
+                "source": "src-cioos-about"
+              },
+              {
+                "id": "cioos-tag-read-method-web",
+                "url": "https://catalogue.cioos.ca/api/",
+                "type": "read",
+                "method": "web",
+                "source": "src-cioos-about"
+              }
+            ],
+            "gallery": [],
+            "disciplines": [
+              "oceanography"
+            ]
+          },
+          "createdAt": "2026-05-26T21:51:00.375Z",
+          "updatedAt": "2026-09-10T20:02:18.425Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "النظام الكندي المتكامل لرصد المحيطات",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "CIOOS",
+                "Canadian Integrated Ocean Observing System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:23.878Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.301462+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:23.878Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "Canadian Integrated Ocean Observing System",
+            "summary": "National federation of regional ocean data catalogues in Canada",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "cioos-tag-data-type-metadata-catalog-registry",
+                    "description": null
+                  },
+                  {
+                    "id": "cioos-tag-data-type-physical-oceanography",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "cioos-tag-write-method-indirect-partner-submission",
+                  "label": "Indirect partner submission",
+                  "description": "CIOOS catalogue access is represented by the reachable catalogue API endpoint. The human catalogue UI may be protected by Cloudflare, so this record uses the API endpoint as the validated access URL."
+                },
+                {
+                  "id": "cioos-tag-read-method-api",
+                  "label": "API",
+                  "description": "CIOOS catalogue access is represented by the reachable catalogue API endpoint. The human catalogue UI may be protected by Cloudflare, so this record uses the API endpoint as the validated access URL."
+                },
+                {
+                  "id": "cioos-tag-read-method-metadata-catalog",
+                  "label": "Metadata catalogue",
+                  "description": "CIOOS catalogue access is represented by the reachable catalogue API endpoint. The human catalogue UI may be protected by Cloudflare, so this record uses the API endpoint as the validated access URL."
+                },
+                {
+                  "id": "cioos-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "CIOOS catalogue access is represented by the reachable catalogue API endpoint. The human catalogue UI may be protected by Cloudflare, so this record uses the API endpoint as the validated access URL."
+                }
+              ],
+              "aliases": [
+                "CIOOS"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:18.398Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.27569+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T21:51:00.375Z",
+            "updatedAt": "2026-09-10T20:02:18.398Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Sistema Canadiense Integrado de Observación Oceánica",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "CIOOS",
+                "Canadian Integrated Ocean Observing System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:23.878Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.301889+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:23.878Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Système canadien intégré d'observation des océans",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "CIOOS",
+                "Canadian Integrated Ocean Observing System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:23.878Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.301669+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:23.878Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Канадская интегрированная система наблюдения за океаном",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "CIOOS",
+                "Canadian Integrated Ocean Observing System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:23.878Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.301769+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:23.878Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "加拿大综合海洋观测系统",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "CIOOS",
+                "Canadian Integrated Ocean Observing System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:23.878Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.301562+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:23.878Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-cioos-operates-canadian-integrated-ocean-observing-system",
+            "sourceNodeId": "cioos-operator",
+            "targetNodeId": "cioos",
+            "kind": "operates",
+            "note": "Federated Canadian observing system supported by Fisheries and Oceans Canada; national coordination and regional operations must not be conflated with sole federal control.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-cioos"
+              ]
+            },
+            "sources": {
+              "src-relationship-cioos": {
+                "id": "src-relationship-cioos",
+                "url": "https://cioos.ca/about-us/",
+                "title": {
+                  "ar": "حول CIOOS",
+                  "en": "About CIOOS",
+                  "es": "Acerca de CIOOS",
+                  "fr": "À propos de CIOOS",
+                  "ru": "О CIOOS",
+                  "zh": "关于CIOOS"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T21:51:00.375Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-fisheries-and-oceans-canada-funds-cioos",
+            "sourceNodeId": "fisheries-and-oceans-canada",
+            "targetNodeId": "cioos",
+            "kind": "funds",
+            "note": "Departmental support for CIOOS; does not imply sole operational authority.",
+            "properties": {
+              "scope": "CIOOS support; award amount and term not established",
+              "sourceRefs": [
+                "src-relationship-cioos"
+              ]
+            },
+            "sources": {
+              "src-relationship-cioos": {
+                "id": "src-relationship-cioos",
+                "url": "https://cioos.ca/about-us/",
+                "title": {
+                  "ar": "حول CIOOS",
+                  "en": "About CIOOS",
+                  "es": "Acerca de CIOOS",
+                  "fr": "À propos de CIOOS",
+                  "ru": "О CIOOS",
+                  "zh": "关于CIOOS"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:41.569Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-meopar-funds-cioos",
+            "sourceNodeId": "meopar",
+            "targetNodeId": "cioos",
+            "kind": "funds",
+            "note": "Co-funds the national Coordination Office with DFO.",
+            "properties": {
+              "scope": "Coordination Office funding since 2025",
+              "sourceRefs": [
+                "src-relationship-cioos"
+              ]
+            },
+            "sources": {
+              "src-relationship-cioos": {
+                "id": "src-relationship-cioos",
+                "url": "https://cioos.ca/about-us/",
+                "title": {
+                  "ar": "حول CIOOS",
+                  "en": "About CIOOS",
+                  "es": "Acerca de CIOOS",
+                  "fr": "À propos de CIOOS",
+                  "ru": "О CIOOS",
+                  "zh": "关于CIOOS"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:41.569Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-meopar-operates-cioos",
+            "sourceNodeId": "meopar",
+            "targetNodeId": "cioos",
+            "kind": "operates",
+            "note": "MEOPAR hosts the CIOOS Coordination Office.",
+            "properties": {
+              "scope": "National coordination office; regional associations retain their own operations",
+              "sourceRefs": [
+                "src-relationship-cioos"
+              ]
+            },
+            "sources": {
+              "src-relationship-cioos": {
+                "id": "src-relationship-cioos",
+                "url": "https://cioos.ca/about-us/",
+                "title": {
+                  "ar": "حول CIOOS",
+                  "en": "About CIOOS",
+                  "es": "Acerca de CIOOS",
+                  "fr": "À propos de CIOOS",
+                  "ru": "О CIOOS",
+                  "zh": "关于CIOOS"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:41.569Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "argovis",
+      "status": 200,
+      "data": {
+        "id": "argovis",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://argovis.colorado.edu/",
+        "recordDepth": "thin",
+        "title": "Argovis",
+        "summary": "Data access platform for colocated ocean profile workflows",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:12.242Z",
+        "recordUpdatedAt": "2026-09-10T20:02:12.242Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": [
+            {
+              "recordId": "argovis",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "argovis",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "argovis",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "argovis",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "argovis",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "argovis",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "argovis",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "argovis",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://argovis.colorado.edu/",
+          "recordDepth": "thin",
+          "sources": {
+            "src-argovis-about": {
+              "id": "src-argovis-about",
+              "url": "https://argovis.colorado.edu/Argovis_hackathon_S2024_Giglio.pdf",
+              "title": {
+                "ar": "شرائح عرض منصة Argovis",
+                "en": "Argovis platform slide deck",
+                "es": "Diapositivas de la plataforma Argovis",
+                "fr": "Diaporama de la plateforme Argovis",
+                "ru": "Презентация платформы Argovis",
+                "zh": "Argovis平台幻灯片"
+              },
+              "accessedAt": "2026-05-26"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "argovis-tag-data-type-atmospheric-time-series",
+                  "label": "environmental_measurements",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "argovis-tag-read-method-api",
+                "url": "https://argovis.colorado.edu/",
+                "type": "read",
+                "method": "api",
+                "source": "src-argovis-about"
+              },
+              {
+                "id": "argovis-tag-read-method-sdk-notebook",
+                "url": "https://argovis.colorado.edu/",
+                "type": "read",
+                "method": "sdk_notebook",
+                "source": "src-argovis-about"
+              },
+              {
+                "id": "argovis-tag-read-method-web",
+                "url": "https://argovis.colorado.edu/",
+                "type": "read",
+                "method": "web",
+                "source": "src-argovis-about"
+              }
+            ],
+            "gallery": [],
+            "disciplines": [
+              "oceanography"
+            ]
+          },
+          "createdAt": "2026-05-26T21:51:00.375Z",
+          "updatedAt": "2026-09-10T20:02:12.242Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "Argovis",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "منصة بيانات Argo",
+                "Argovis"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:12.631Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.292283+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:12.631Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "Argovis",
+            "summary": "Data access platform for colocated ocean profile workflows",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "argovis-tag-data-type-atmospheric-time-series",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "argovis-tag-read-method-api",
+                  "label": "API",
+                  "description": "Access via API."
+                },
+                {
+                  "id": "argovis-tag-read-method-sdk-notebook",
+                  "label": "SDK / notebook",
+                  "description": "Access via SDK / notebook."
+                },
+                {
+                  "id": "argovis-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "Access via Web UI."
+                }
+              ],
+              "aliases": [
+                "Argovis"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:12.217Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.371056+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T21:51:00.375Z",
+            "updatedAt": "2026-09-10T20:02:12.217Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Argovis",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "plataforma de datos Argo",
+                "Argovis"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:12.631Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.292675+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:12.631Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Argovis",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "plateforme de données Argo",
+                "Argovis"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:12.631Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.292487+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:12.631Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Argovis",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "платформа данных Argo",
+                "Argovis"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:12.631Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.292586+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:12.631Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "Argovis",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "Argo 数据平台",
+                "Argovis"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:12.631Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.292381+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:12.631Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-university-of-colorado-boulder-and-collaborators-operates-argovis",
+            "sourceNodeId": "university-of-colorado-boulder-and-collaborators",
+            "targetNodeId": "argovis",
+            "kind": "operates",
+            "note": "University research collaboration; a US location does not establish federal governance. Presentation is historical (2024).",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-argovis"
+              ]
+            },
+            "sources": {
+              "src-relationship-argovis": {
+                "id": "src-relationship-argovis",
+                "url": "https://argovis.colorado.edu/Argovis_hackathon_S2024_Giglio.pdf",
+                "title": {
+                  "ar": "عرض مشروع Argovis",
+                  "en": "Argovis project presentation",
+                  "es": "Presentación del proyecto Argovis",
+                  "fr": "Présentation du projet Argovis",
+                  "ru": "Презентация проекта Argovis",
+                  "zh": "Argovis项目介绍"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T21:51:00.375Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "ioos",
+      "status": 200,
+      "data": {
+        "id": "ioos",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://ioos.noaa.gov/about/about-us/",
+        "recordDepth": "thin",
+        "title": "U.S. Integrated Ocean Observing System",
+        "summary": "National observing network with many regional data portals",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:49.907Z",
+        "recordUpdatedAt": "2026-09-10T20:02:49.907Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": [
+            {
+              "recordId": "ioos",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "ioos",
+              "path": "record.properties.data.descriptors[1].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "ioos",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioos",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioos",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioos",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioos",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioos",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "ioos",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://ioos.noaa.gov/about/about-us/",
+          "recordDepth": "thin",
+          "sources": {
+            "src-ioos-about": {
+              "id": "src-ioos-about",
+              "url": "https://ioos.noaa.gov/about/about-us/",
+              "title": {
+                "ar": "حول IOOS",
+                "en": "IOOS About Us",
+                "es": "Acerca de IOOS",
+                "fr": "À propos de IOOS",
+                "ru": "О IOOS",
+                "zh": "关于IOOS"
+              },
+              "accessedAt": "2026-05-26"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "ioos-tag-data-type-model-forecast-reanalysis",
+                  "label": "model_outputs",
+                  "source": null,
+                  "category": "type"
+                },
+                {
+                  "id": "ioos-tag-data-type-platform-instrument-status",
+                  "label": "platform_records",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "ioos-tag-write-method-indirect-partner-submission",
+                "url": "https://ioos.noaa.gov/about/about-us/",
+                "type": "partner_sync",
+                "method": "indirect_partner_submission",
+                "source": "src-ioos-about"
+              },
+              {
+                "id": "ioos-tag-read-method-federated-portal",
+                "url": "https://ioos.noaa.gov/about/about-us/",
+                "type": "read",
+                "method": "federated_portal",
+                "source": "src-ioos-about"
+              }
+            ],
+            "gallery": [],
+            "disciplines": [
+              "oceanography"
+            ]
+          },
+          "createdAt": "2026-05-26T16:46:26.462Z",
+          "updatedAt": "2026-09-10T20:02:49.907Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "النظام الأمريكي المتكامل لرصد المحيطات",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "IOOS",
+                "U.S. Integrated Ocean Observing System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:49.495Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.36864+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:49.495Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "U.S. Integrated Ocean Observing System",
+            "summary": "National observing network with many regional data portals",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "ioos-tag-data-type-model-forecast-reanalysis",
+                    "description": null
+                  },
+                  {
+                    "id": "ioos-tag-data-type-platform-instrument-status",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "ioos-tag-write-method-indirect-partner-submission",
+                  "label": "Indirect partner submission",
+                  "description": "Submission via Indirect partner submission."
+                },
+                {
+                  "id": "ioos-tag-read-method-federated-portal",
+                  "label": "Federated portal/service",
+                  "description": "Access via Federated portal/service."
+                }
+              ],
+              "aliases": [
+                "IOOS"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:49.886Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.375542+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.462Z",
+            "updatedAt": "2026-09-10T20:02:49.886Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Sistema Integrado de Observación Oceánica de Estados Unidos",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "IOOS",
+                "U.S. Integrated Ocean Observing System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:49.495Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.369137+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:49.495Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Système intégré d'observation de l'océan des États-Unis",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "IOOS",
+                "U.S. Integrated Ocean Observing System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:49.495Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.368927+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:49.495Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Интегрированная система наблюдений за океаном США",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "IOOS",
+                "U.S. Integrated Ocean Observing System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:49.495Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.36903+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:49.495Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "美国综合海洋观测系统",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "IOOS",
+                "U.S. Integrated Ocean Observing System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:49.495Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.36875+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:49.495Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-noaa-ioos-operates-u-s-integrated-ocean-observing-system",
+            "sourceNodeId": "noaa-ioos",
+            "targetNodeId": "ioos",
+            "kind": "operates",
+            "note": "NOAA coordinates US IOOS with federal and non-federal partners. Operation scope is the programme office, not ownership of every regional data source.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-ioos"
+              ]
+            },
+            "sources": {
+              "src-relationship-ioos": {
+                "id": "src-relationship-ioos",
+                "url": "https://ioos.noaa.gov/about/about-us/",
+                "title": {
+                  "ar": "حول US IOOS",
+                  "en": "About US IOOS",
+                  "es": "Acerca de US IOOS",
+                  "fr": "À propos de US IOOS",
+                  "ru": "О US IOOS",
+                  "zh": "关于US IOOS"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.462Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    }
+  ]
+}

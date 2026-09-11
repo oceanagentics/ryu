@@ -1,0 +1,463 @@
+{
+  "status": 200,
+  "body": {
+    "valid": false,
+    "recordId": "oceanteacher",
+    "issues": [
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[0].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[1].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[1].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[2].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[2].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[3].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[3].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[4].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[4].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[4].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[5].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[5].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "record.properties.access[5].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ar.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ar.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ar.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ar.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ar.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ar.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ar.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ar.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ar.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.zh.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.zh.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.zh.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.zh.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.zh.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.zh.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.zh.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.zh.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.zh.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.en.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.en.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.en.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.en.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.en.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.en.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.en.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.en.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.en.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.fr.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.fr.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.fr.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.fr.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.fr.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.fr.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.fr.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.fr.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.fr.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ru.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ru.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ru.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ru.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ru.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ru.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ru.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ru.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.ru.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.es.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.es.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.es.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.es.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.es.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.es.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.es.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.es.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "localizations.es.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "edges.rel-ioc-unesco-funds-oceanteacher",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "edges.rel-medin-publishes-to-oceanteacher",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "edges.rel-norad-funds-oceanteacher",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "edges.rel-lifewatch-eric-funds-oceanteacher",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "edges.rel-marine-institute-ireland-funds-oceanteacher",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "edges.rel-leibniz-centre-for-tropical-marine-research-publishes-to-oceanteacher",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "oceanteacher",
+        "path": "edges.rel-oceanteacher-syncs-to-oceanexpert",
+        "message": "edge endpoints must exist and match the relationship kind"
+      }
+    ],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 32,
+      "resolvedSources": 32,
+      "issues": [
+        {
+          "recordId": "oceanteacher",
+          "path": "record.properties.access[0].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "record.properties.access[1].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "record.properties.access[2].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "record.properties.access[3].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "record.properties.access[4].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "record.properties.access[5].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "localizations.ar.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "localizations.zh.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "localizations.en.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "localizations.fr.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "localizations.ru.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "oceanteacher",
+          "path": "localizations.es.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "recordUpdatedAt": null,
+    "affectedSections": [
+      "record",
+      "localizations",
+      "edges",
+      "routes"
+    ]
+  }
+}

@@ -1,0 +1,1574 @@
+[
+  {
+    "id": "unep",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.unep.org/who-we-are/about-us",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-legal": {
+          "id": "pp-legal",
+          "url": "https://www.protectedplanet.net/en/legal",
+          "title": {
+            "en": "Protected Planet terms of use",
+            "fr": "Conditions d’utilisation de Protected Planet",
+            "es": "Condiciones de uso de Protected Planet",
+            "ar": "شروط استخدام Protected Planet",
+            "ru": "Условия использования Protected Planet",
+            "zh": "Protected Planet使用条款"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-management": {
+          "id": "pp-management",
+          "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+          "title": {
+            "en": "Protected Planet management and Arcadia grant announcement",
+            "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+            "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+            "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+            "ru": "Управление Protected Planet и объявление гранта Arcadia",
+            "zh": "Protected Planet管理与Arcadia资助公告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "United Nations Environment Programme",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP",
+            "PNUE",
+            "PNUMA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Programme des Nations Unies pour l’environnement",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP",
+            "PNUE",
+            "PNUMA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Programa de las Naciones Unidas para el Medio Ambiente",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP",
+            "PNUE",
+            "PNUMA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "برنامج الأمم المتحدة للبيئة",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP",
+            "PNUE",
+            "PNUMA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Программа ООН по окружающей среде",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP",
+            "PNUE",
+            "PNUMA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "联合国环境规划署",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP",
+            "PNUE",
+            "PNUMA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "iucn",
+    "record": {
+      "kind": "organization",
+      "url": "https://iucn.org/our-union",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-legal": {
+          "id": "pp-legal",
+          "url": "https://www.protectedplanet.net/en/legal",
+          "title": {
+            "en": "Protected Planet terms of use",
+            "fr": "Conditions d’utilisation de Protected Planet",
+            "es": "Condiciones de uso de Protected Planet",
+            "ar": "شروط استخدام Protected Planet",
+            "ru": "Условия использования Protected Planet",
+            "zh": "Protected Planet使用条款"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-management": {
+          "id": "pp-management",
+          "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+          "title": {
+            "en": "Protected Planet management and Arcadia grant announcement",
+            "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+            "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+            "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+            "ru": "Управление Protected Planet и объявление гранта Arcadia",
+            "zh": "Protected Planet管理与Arcadia资助公告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "International Union for Conservation of Nature",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IUCN",
+            "UICN",
+            "МСОП"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Union internationale pour la conservation de la nature",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IUCN",
+            "UICN",
+            "МСОП"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Unión Internacional para la Conservación de la Naturaleza",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IUCN",
+            "UICN",
+            "МСОП"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "الاتحاد الدولي لحفظ الطبيعة",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IUCN",
+            "UICN",
+            "МСОП"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Международный союз охраны природы",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IUCN",
+            "UICN",
+            "МСОП"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "世界自然保护联盟",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IUCN",
+            "UICN",
+            "МСОП"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-legal",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "unep-wcmc",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.unep-wcmc.org/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-management": {
+          "id": "pp-management",
+          "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+          "title": {
+            "en": "Protected Planet management and Arcadia grant announcement",
+            "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+            "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+            "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+            "ru": "Управление Protected Planet и объявление гранта Arcadia",
+            "zh": "Protected Planet管理与Arcadia资助公告"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-ibat": {
+          "id": "pp-ibat",
+          "url": "https://www.ibat-alliance.org/datasets/wdpca",
+          "title": {
+            "en": "IBAT: World Database on Protected and Conserved Areas",
+            "fr": "IBAT : base mondiale des aires protégées et conservées",
+            "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+            "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+            "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+            "zh": "IBAT：世界保护地与保育地数据库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "UN Environment Programme World Conservation Monitoring Centre",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Centre mondial de surveillance de la conservation de la nature du PNUE",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Centro Mundial de Vigilancia de la Conservación del PNUMA",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "المركز العالمي لرصد حفظ الطبيعة التابع لبرنامج الأمم المتحدة للبيئة",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Всемирный центр мониторинга охраны природы ЮНЕП",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "联合国环境规划署世界保护监测中心",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "arcadia",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.arcadiafund.org.uk/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-funders": {
+          "id": "pp-funders",
+          "url": "https://www.unep-wcmc.org/en/our-funders",
+          "title": {
+            "en": "UNEP-WCMC funders and their project scope",
+            "fr": "Bailleurs de l’UNEP-WCMC et portée des projets",
+            "es": "Financiadores de UNEP-WCMC y alcance de proyectos",
+            "ar": "مموّلو UNEP-WCMC ونطاق مشروعاتهم",
+            "ru": "Спонсоры UNEP-WCMC и направления проектов",
+            "zh": "UNEP-WCMC资助方及项目范围"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-management": {
+          "id": "pp-management",
+          "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+          "title": {
+            "en": "Protected Planet management and Arcadia grant announcement",
+            "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+            "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+            "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+            "ru": "Управление Protected Planet и объявление гранта Arcadia",
+            "zh": "Protected Planet管理与Arcadia资助公告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Arcadia",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Arcadia Fund"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Arcadia",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Arcadia Fund"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Arcadia",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Arcadia Fund"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "أركاديا",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Arcadia Fund"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Arcadia",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Arcadia Fund"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "Arcadia",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Arcadia Fund"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-management"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "proteus-partnership",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.proteuspartners.org/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-funders": {
+          "id": "pp-funders",
+          "url": "https://www.unep-wcmc.org/en/our-funders",
+          "title": {
+            "en": "UNEP-WCMC funders and their project scope",
+            "fr": "Bailleurs de l’UNEP-WCMC et portée des projets",
+            "es": "Financiadores de UNEP-WCMC y alcance de proyectos",
+            "ar": "مموّلو UNEP-WCMC ونطاق مشروعاتهم",
+            "ru": "Спонсоры UNEP-WCMC и направления проектов",
+            "zh": "UNEP-WCMC资助方及项目范围"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-proteus": {
+          "id": "pp-proteus",
+          "url": "https://www.proteuspartners.org/content/uploads/2017/07/Proteus-2021-25-Strategy-Document.pdf",
+          "title": {
+            "en": "Proteus strategy 2021–2025: financing data maintenance",
+            "fr": "Stratégie Proteus 2021–2025 : financement des données",
+            "es": "Estrategia Proteus 2021–2025: financiación de datos",
+            "ar": "استراتيجية Proteus للفترة 2021–2025: تمويل صيانة البيانات",
+            "ru": "Стратегия Proteus на 2021–2025 годы: финансирование данных",
+            "zh": "Proteus 2021—2025战略：数据维护资助"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Proteus Partnership",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Proteus"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-proteus"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Partenariat Proteus",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Proteus"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-proteus"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Asociación Proteus",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Proteus"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-proteus"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "شراكة Proteus",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Proteus"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-proteus"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Партнерство Proteus",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Proteus"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-proteus"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "Proteus伙伴关系",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Proteus"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-proteus"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "bezos-earth-fund",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.bezosearthfund.org/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-funders": {
+          "id": "pp-funders",
+          "url": "https://www.unep-wcmc.org/en/our-funders",
+          "title": {
+            "en": "UNEP-WCMC funders and their project scope",
+            "fr": "Bailleurs de l’UNEP-WCMC et portée des projets",
+            "es": "Financiadores de UNEP-WCMC y alcance de proyectos",
+            "ar": "مموّلو UNEP-WCMC ونطاق مشروعاتهم",
+            "ru": "Спонсоры UNEP-WCMC и направления проектов",
+            "zh": "UNEP-WCMC资助方及项目范围"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-bezos": {
+          "id": "pp-bezos",
+          "url": "https://www.unep-wcmc.org/en/news/towards-30x30-new-grant-supports-major-progress-for-protected-and-conserved-areas",
+          "title": {
+            "en": "Bezos Earth Fund grant for seven-country conservation reporting",
+            "fr": "Subvention Bezos Earth Fund pour sept pays",
+            "es": "Subvención de Bezos Earth Fund para siete países",
+            "ar": "منحة Bezos Earth Fund لدعم سبع دول",
+            "ru": "Грант Bezos Earth Fund для семи стран",
+            "zh": "Bezos Earth Fund七国保护项目资助"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Bezos Earth Fund",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-bezos"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Fonds Bezos pour la Terre",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-bezos"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Fondo Bezos para la Tierra",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-bezos"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "صندوق بيزوس للأرض",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-bezos"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Фонд Земли Безоса",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-bezos"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "贝索斯地球基金",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "pp-funders",
+              "pp-bezos"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "usgs",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.usgs.gov/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-usgs": {
+          "id": "pp-usgs",
+          "url": "https://www.usgs.gov/data/protected-areas-database-united-states-pad-us-30-world-database-protected-areas-wdpa",
+          "title": {
+            "en": "USGS PAD-US 3.0 submission to WDPA",
+            "fr": "Soumission PAD-US 3.0 de l’USGS à la WDPA",
+            "es": "Envío de PAD-US 3.0 del USGS a WDPA",
+            "ar": "تقديم USGS لبيانات PAD-US 3.0 إلى WDPA",
+            "ru": "Передача PAD-US 3.0 от USGS в WDPA",
+            "zh": "USGS向WDPA提交PAD-US 3.0"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "United States Geological Survey",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "USGS"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-usgs"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Institut d’études géologiques des États-Unis",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "USGS"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-usgs"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Servicio Geológico de Estados Unidos",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "USGS"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-usgs"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "هيئة المسح الجيولوجي الأمريكية",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "USGS"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-usgs"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Геологическая служба США",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "USGS"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-usgs"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "美国地质调查局",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "USGS"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-usgs"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "dutch-caribbean-nature-alliance",
+    "record": {
+      "kind": "organization",
+      "url": "https://dcnanature.org/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-bonaire": {
+          "id": "pp-bonaire",
+          "url": "https://www.protectedplanet.net/230",
+          "title": {
+            "en": "Bonaire protected area: site 230 and data source",
+            "fr": "Aire protégée de Bonaire : site 230 et source",
+            "es": "Área protegida de Bonaire: sitio 230 y fuente",
+            "ar": "منطقة بونير المحمية: الموقع 230 ومصدر البيانات",
+            "ru": "Охраняемая территория Бонайре: участок 230 и источник",
+            "zh": "博奈尔保护地：230号地点与数据来源"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "dcna-about": {
+          "id": "dcna-about",
+          "url": "https://dcnanature.org/",
+          "title": {
+            "en": "Dutch Caribbean Nature Alliance",
+            "fr": "Alliance pour la nature des Caraïbes néerlandaises",
+            "es": "Alianza para la Naturaleza del Caribe Neerlandés",
+            "ar": "تحالف طبيعة الكاريبي الهولندي",
+            "ru": "Альянс охраны природы Нидерландских Карибов",
+            "zh": "荷属加勒比自然联盟"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Dutch Caribbean Nature Alliance",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DCNA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-bonaire",
+              "dcna-about"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Alliance pour la nature des Caraïbes néerlandaises",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DCNA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-bonaire",
+              "dcna-about"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Alianza para la Naturaleza del Caribe Neerlandés",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DCNA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-bonaire",
+              "dcna-about"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "تحالف طبيعة الكاريبي الهولندي",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DCNA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-bonaire",
+              "dcna-about"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Альянс охраны природы Нидерландских Карибов",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DCNA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-bonaire",
+              "dcna-about"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "荷属加勒比自然联盟",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DCNA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-bonaire",
+              "dcna-about"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "ibat",
+    "record": {
+      "kind": "system",
+      "url": "https://www.ibat-alliance.org/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-ibat": {
+          "id": "pp-ibat",
+          "url": "https://www.ibat-alliance.org/datasets/wdpca",
+          "title": {
+            "en": "IBAT: World Database on Protected and Conserved Areas",
+            "fr": "IBAT : base mondiale des aires protégées et conservées",
+            "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+            "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+            "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+            "zh": "IBAT：世界保护地与保育地数据库"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-ibat-service": {
+          "id": "pp-ibat-service",
+          "url": "https://www.ibat-alliance.org/services",
+          "title": {
+            "en": "IBAT data access services",
+            "fr": "Services d’accès aux données IBAT",
+            "es": "Servicios de acceso a datos de IBAT",
+            "ar": "خدمات الوصول إلى بيانات IBAT",
+            "ru": "Сервисы доступа к данным IBAT",
+            "zh": "IBAT数据访问服务"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Integrated Biodiversity Assessment Tool",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IBAT"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-ibat",
+              "pp-ibat-service"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Outil intégré d’évaluation de la biodiversité",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IBAT"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-ibat",
+              "pp-ibat-service"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Herramienta Integrada de Evaluación de la Biodiversidad",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IBAT"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-ibat",
+              "pp-ibat-service"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "الأداة المتكاملة لتقييم التنوع البيولوجي",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IBAT"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-ibat",
+              "pp-ibat-service"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Интегрированный инструмент оценки биоразнообразия",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IBAT"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-ibat",
+              "pp-ibat-service"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "综合生物多样性评估工具",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "IBAT"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-ibat",
+              "pp-ibat-service"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "google-earth-engine",
+    "record": {
+      "kind": "system",
+      "url": "https://earthengine.google.com/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-earth-engine": {
+          "id": "pp-earth-engine",
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/WCMC_WDPA_current_polygons",
+          "title": {
+            "en": "Earth Engine WDPA polygon collection",
+            "fr": "Collection de polygones WDPA dans Earth Engine",
+            "es": "Colección de polígonos WDPA en Earth Engine",
+            "ar": "مجموعة مضلعات WDPA في Earth Engine",
+            "ru": "Коллекция полигонов WDPA в Earth Engine",
+            "zh": "Earth Engine WDPA多边形数据集"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-earth-access": {
+          "id": "pp-earth-access",
+          "url": "https://developers.google.com/earth-engine/guides/noncommercial_tiers",
+          "title": {
+            "en": "Earth Engine noncommercial access tiers",
+            "fr": "Niveaux d’accès non commercial à Earth Engine",
+            "es": "Niveles de acceso no comercial de Earth Engine",
+            "ar": "مستويات الاستخدام غير التجاري في Earth Engine",
+            "ru": "Уровни некоммерческого доступа Earth Engine",
+            "zh": "Earth Engine非商业访问等级"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Google Earth Engine",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Earth Engine",
+            "GEE"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-earth-engine",
+              "pp-earth-access"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Google Earth Engine",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Earth Engine",
+            "GEE"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-earth-engine",
+              "pp-earth-access"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Google Earth Engine",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Earth Engine",
+            "GEE"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-earth-engine",
+              "pp-earth-access"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "Google Earth Engine",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Earth Engine",
+            "GEE"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-earth-engine",
+              "pp-earth-access"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Google Earth Engine",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Earth Engine",
+            "GEE"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-earth-engine",
+              "pp-earth-access"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "Google Earth Engine",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Earth Engine",
+            "GEE"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-earth-engine",
+              "pp-earth-access"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "mpatlas",
+    "record": {
+      "kind": "system",
+      "url": "https://mpatlas.org/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "pp-mpatlas": {
+          "id": "pp-mpatlas",
+          "url": "https://old.mpatlas.org/about/data/",
+          "title": {
+            "en": "MPAtlas data sources and independent processing",
+            "fr": "Sources de données et traitement indépendant de MPAtlas",
+            "es": "Fuentes y procesamiento independiente de MPAtlas",
+            "ar": "مصادر بيانات MPAtlas ومعالجتها المستقلة",
+            "ru": "Источники данных и независимая обработка MPAtlas",
+            "zh": "MPAtlas数据来源与独立处理"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-mpatlas-2026": {
+          "id": "pp-mpatlas-2026",
+          "url": "https://marine-conservation.org/on-the-tide/halfway-to-30x30/",
+          "title": {
+            "en": "Marine Conservation Institute: MPAtlas assessment in January 2026",
+            "fr": "Marine Conservation Institute : bilan MPAtlas de janvier 2026",
+            "es": "Marine Conservation Institute: evaluación de MPAtlas en enero de 2026",
+            "ar": "Marine Conservation Institute: تقييم MPAtlas في يناير 2026",
+            "ru": "Marine Conservation Institute: оценка MPAtlas в январе 2026 года",
+            "zh": "Marine Conservation Institute：2026年1月MPAtlas评估"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Marine Protection Atlas",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MPAtlas"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-mpatlas",
+              "pp-mpatlas-2026"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Atlas de la protection marine",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MPAtlas"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-mpatlas",
+              "pp-mpatlas-2026"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Atlas de Protección Marina",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MPAtlas"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-mpatlas",
+              "pp-mpatlas-2026"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "أطلس الحماية البحرية",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MPAtlas"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-mpatlas",
+              "pp-mpatlas-2026"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Атлас охраны морских территорий",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MPAtlas"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-mpatlas",
+              "pp-mpatlas-2026"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "海洋保护地图集",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MPAtlas"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-mpatlas",
+              "pp-mpatlas-2026"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  }
+]

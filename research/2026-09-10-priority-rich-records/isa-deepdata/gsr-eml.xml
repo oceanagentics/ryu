@@ -1,0 +1,71 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+  packageId="https://datasets.obis.org/deepdata" system="http://gbif.org" scope="system"
+  xml:lang="eng">
+
+<dataset>
+  <title xml:lang="eng">GSRPMN12017 Env Template BIOSO239</title>
+  <pubDate>2026-04-20</pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>Sampling data captured in Oceanic Exploration Research In 2017 (Year 4 of the exploration contract), a multidisciplinary offshore campaign named “GSRNOD17” was
+conducted by Global Sea Mineral Resources NV (GSR), subsidiary company of the DEME‐Group, in its offshore claim
+area (Clarion‐Clipperton Zone – CCZ), pursuant to the exploration contract concluded with the International Seabed
+Authority (ISA).
+The expedition took place on board of the MV Topaz Captain, from mid‐May to early July 2018 (42 days offshore),
+involving 52 persons on board (crew, engineers, scientists and experts) but also a significant onshore support. </para>
+  </abstract>
+  <keywordSet>
+    <keyword>Occurrence</keyword>
+    <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+  </keywordSet>
+  <intellectualRights>
+    <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+  </intellectualRights>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>unkown</maintenanceUpdateFrequency>
+  </maintenance>
+  <creator>
+    <individualName>
+    <givenName></givenName>
+    <surName></surName>
+    </individualName>
+    <organizationName>Global Sea Mineral Resources NV</organizationName>
+    <positionName></positionName>
+    <electronicMailAddress></electronicMailAddress>
+  </creator>
+  <metadataProvider>
+    <individualName>
+    <givenName>Sheldon</givenName>
+    <surName>Carter</surName>
+    </individualName>
+    <organizationName>International Seabed Authority</organizationName>
+    <positionName>Database Manager</positionName>
+    <electronicMailAddress>scarter@isa.org.jm</electronicMailAddress>
+  </metadataProvider>
+  <contact>
+    <individualName>
+    <givenName>Sheldon</givenName>
+    <surName>Carter</surName>
+    </individualName>
+    <organizationName>International Seabed Authority</organizationName>
+    <positionName>Database Manager</positionName>
+    <electronicMailAddress>scarter@isa.org.jm</electronicMailAddress>
+  </contact>
+</dataset>
+<additionalMetadata>
+<metadata>
+<gbif>
+  <dateStamp>2026-04-20T20:08:21+0200</dateStamp>
+  <hierarchyLevel>dataset</hierarchyLevel>
+  <citation>Global Sea Mineral Resources NV, (2017). GSRPMN12017 Env Template BIOSO239. Available : DeepData, International Seabed Authority https://data.isa.org.jm/ Accessed: [YYYY-MM-DD].</citation>
+</gbif>
+</metadata>
+</additionalMetadata>
+</eml:eml>
+

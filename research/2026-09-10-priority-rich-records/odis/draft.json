@@ -1,0 +1,2267 @@
+{
+  "id": "odis",
+  "record": {
+    "kind": "system",
+    "url": "https://odis.org/",
+    "recordDepth": "rich",
+    "properties": {
+      "disciplines": [],
+      "data": {
+        "descriptors": [
+          {
+            "id": "odis-tag-data-type-metadata-catalog-registry",
+            "category": "type",
+            "label": "catalogue_records",
+            "source": "catalogue"
+          },
+          {
+            "id": "odis-format-json",
+            "category": "format",
+            "label": "json",
+            "source": "demo-deepdata"
+          },
+          {
+            "id": "odis-format-xml",
+            "category": "format",
+            "label": "xml",
+            "source": "nodes"
+          },
+          {
+            "id": "odis-format-html",
+            "category": "format",
+            "label": "html",
+            "source": "catalogue"
+          },
+          {
+            "id": "odis-standard-schema-org",
+            "category": "standard",
+            "label": "schema_org",
+            "source": "join"
+          }
+        ]
+      },
+      "access": [
+        {
+          "id": "odis-tag-read-method-web",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://catalogue.odis.org/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "catalogue",
+            "disclaimer"
+          ]
+        },
+        {
+          "id": "odis-read-demo",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://search-demo.odis.org/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "home",
+            "demo",
+            "demo-obis",
+            "demo-deepdata",
+            "network"
+          ]
+        },
+        {
+          "id": "odis-read-demo-api",
+          "type": "read",
+          "methods": [
+            "api"
+          ],
+          "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "demo",
+            "demo-deepdata",
+            "demo-obis",
+            "demo-oceanexpert"
+          ]
+        },
+        {
+          "id": "odis-tag-read-method-harvest",
+          "type": "read",
+          "methods": [
+            "browse",
+            "api",
+            "download"
+          ],
+          "url": "https://catalogue.odis.org/odis",
+          "requirements": null,
+          "cost": "unknown",
+          "sourceRefs": [
+            "nodes",
+            "join"
+          ]
+        },
+        {
+          "id": "odis-tag-write-method-harvested-node",
+          "type": "write",
+          "methods": [
+            "form",
+            "harvest"
+          ],
+          "url": "https://book.odis.org/gettingStarted.html",
+          "requirements": [
+            "account",
+            "approval"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "join",
+            "catalogue"
+          ]
+        },
+        {
+          "id": "odis-write-suggestion",
+          "type": "write",
+          "methods": [
+            "request"
+          ],
+          "url": "https://catalogue.odis.org/",
+          "requirements": [],
+          "cost": "unknown",
+          "sourceRefs": [
+            "catalogue"
+          ]
+        }
+      ],
+      "gallery": [],
+      "metrics": [
+        {
+          "id": "odis-metric-catalogue-total",
+          "key": "record_count",
+          "value": 3137,
+          "observedAt": "2026-09-10",
+          "source": "catalogue"
+        },
+        {
+          "id": "odis-metric-catalogue-searchable",
+          "key": "record_count",
+          "value": 2191,
+          "observedAt": "2026-09-10",
+          "source": "catalogue"
+        },
+        {
+          "id": "odis-metric-node-entries",
+          "key": "record_count",
+          "value": 65,
+          "observedAt": "2026-09-10",
+          "source": "nodes"
+        },
+        {
+          "id": "odis-metric-demo-results",
+          "key": "record_count",
+          "value": 163080,
+          "observedAt": "2026-09-10",
+          "source": "demo"
+        }
+      ]
+    },
+    "sources": {
+      "src-odis": {
+        "id": "src-odis",
+        "url": "https://oceaninfohub.org/odis/",
+        "title": {
+          "ar": "ODIS",
+          "en": "ODIS",
+          "es": "ODIS",
+          "fr": "ODIS",
+          "ru": "ODIS",
+          "zh": "ODIS"
+        },
+        "accessedAt": "2026-05-26"
+      },
+      "home": {
+        "id": "home",
+        "url": "https://odis.org/",
+        "title": {
+          "en": "ODIS homepage and search redevelopment",
+          "fr": "Accueil ODIS et refonte de la recherche",
+          "es": "Inicio de ODIS y renovación de la búsqueda",
+          "ar": "صفحة ODIS الرئيسية وإعادة تطوير البحث",
+          "ru": "Главная страница ODIS и обновление поиска",
+          "zh": "ODIS主页与搜索重建"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "overview": {
+        "id": "overview",
+        "url": "https://odis.org/overview/",
+        "title": {
+          "en": "ODIS overview, federation and institutional history",
+          "fr": "Présentation, fédération et histoire institutionnelle d’ODIS",
+          "es": "Panorama, federación e historia institucional de ODIS",
+          "ar": "نظرة عامة على ODIS واتحاده وتاريخه المؤسسي",
+          "ru": "Обзор, федерация и институциональная история ODIS",
+          "zh": "ODIS概况、联邦与机构沿革"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "catalogue": {
+        "id": "catalogue",
+        "url": "https://catalogue.odis.org/",
+        "title": {
+          "en": "ODIS Catalogue: sources and contribution guidance",
+          "fr": "Catalogue ODIS : sources et modalités de contribution",
+          "es": "Catálogo ODIS: fuentes y contribuciones",
+          "ar": "كتالوج ODIS: المصادر وإرشادات المساهمة",
+          "ru": "Каталог ODIS: источники и внесение сведений",
+          "zh": "ODIS目录：来源与贡献说明"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "nodes": {
+        "id": "nodes",
+        "url": "https://catalogue.odis.org/odis",
+        "title": {
+          "en": "ODIS node-designated catalogue entries and registered feeds",
+          "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+          "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+          "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+          "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+          "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "join": {
+        "id": "join",
+        "url": "https://book.odis.org/gettingStarted.html",
+        "title": {
+          "en": "ODIS federation: registration, metadata publication and access",
+          "fr": "Fédération ODIS : inscription, publication de métadonnées et accès",
+          "es": "Federación ODIS: registro, publicación de metadatos y acceso",
+          "ar": "اتحاد ODIS: التسجيل ونشر البيانات الوصفية والوصول",
+          "ru": "Федерация ODIS: регистрация, публикация метаданных и доступ",
+          "zh": "ODIS联邦：注册、元数据发布与访问"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "architecture": {
+        "id": "architecture",
+        "url": "https://book.odis.org/",
+        "title": {
+          "en": "ODIS architecture and thematic metadata patterns",
+          "fr": "Architecture ODIS et modèles thématiques de métadonnées",
+          "es": "Arquitectura ODIS y patrones temáticos de metadatos",
+          "ar": "بنية ODIS وأنماط البيانات الوصفية الموضوعية",
+          "ru": "Архитектура ODIS и тематические шаблоны метаданных",
+          "zh": "ODIS架构与专题元数据模式"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "validation": {
+        "id": "validation",
+        "url": "https://book.odis.org/validation/index.html",
+        "title": {
+          "en": "ODIS initial JSON-LD and SHACL validation approaches",
+          "fr": "Premières approches ODIS de validation JSON-LD et SHACL",
+          "es": "Enfoques iniciales de validación JSON-LD y SHACL de ODIS",
+          "ar": "مناهج ODIS الأولية للتحقق من JSON-LD وSHACL",
+          "ru": "Начальные подходы ODIS к проверке JSON-LD и SHACL",
+          "zh": "ODIS初期JSON-LD与SHACL验证方法"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "disclaimer": {
+        "id": "disclaimer",
+        "url": "https://catalogue.odis.org/disclaimer",
+        "title": {
+          "en": "ODIS Catalogue disclaimer and licence footer",
+          "fr": "Avertissement et licence du catalogue ODIS",
+          "es": "Aviso legal y licencia del catálogo ODIS",
+          "ar": "إخلاء المسؤولية والترخيص في كتالوج ODIS",
+          "ru": "Отказ от гарантий и лицензия каталога ODIS",
+          "zh": "ODIS目录免责声明与页脚许可"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "demo": {
+        "id": "demo",
+        "url": "https://search-demo.odis.org/",
+        "title": {
+          "en": "ODIS development search: live result counters and metadata",
+          "fr": "Recherche ODIS en développement : compteurs et métadonnées",
+          "es": "Búsqueda ODIS en desarrollo: contadores y metadatos",
+          "ar": "بحث ODIS قيد التطوير: عدادات النتائج والبيانات الوصفية",
+          "ru": "Поиск ODIS в разработке: счётчики и метаданные",
+          "zh": "开发中的ODIS搜索：结果计数与元数据"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "oih": {
+        "id": "oih",
+        "url": "https://oceaninfohub.org/",
+        "title": {
+          "en": "Ocean InfoHub project closure and search retirement notice",
+          "fr": "Clôture du projet Ocean InfoHub et arrêt de son interface de recherche",
+          "es": "Cierre de Ocean InfoHub y retirada de su búsqueda",
+          "ar": "إشعار اختتام مشروع Ocean InfoHub وإيقاف واجهة البحث",
+          "ru": "Завершение проекта Ocean InfoHub и прекращение поддержки поиска",
+          "zh": "Ocean InfoHub项目结束与搜索停用公告"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "fust": {
+        "id": "fust",
+        "url": "https://fust.iode.org/en/oih",
+        "title": {
+          "en": "FUST support for Ocean InfoHub and subsequent ODIS development",
+          "fr": "Soutien FUST à Ocean InfoHub et développement ultérieur d’ODIS",
+          "es": "Apoyo FUST a Ocean InfoHub y desarrollo posterior de ODIS",
+          "ar": "دعم FUST لمشروع Ocean InfoHub والتطور اللاحق لـODIS",
+          "ru": "Поддержка Ocean InfoHub фондом FUST и дальнейшее развитие ODIS",
+          "zh": "FUST对Ocean InfoHub及后续ODIS发展的支持"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "governance": {
+        "id": "governance",
+        "url": "https://odis.org/overview/governance/",
+        "title": {
+          "en": "ODIS programme and steering group terms of reference",
+          "fr": "Mandats du programme ODIS et de son groupe directeur",
+          "es": "Mandatos del programa ODIS y su grupo directivo",
+          "ar": "اختصاصات برنامج ODIS ومجموعته التوجيهية",
+          "ru": "Круг ведения программы ODIS и её руководящей группы",
+          "zh": "ODIS计划与指导组职权范围"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "components": {
+        "id": "components",
+        "url": "https://iode.org/programme-components/",
+        "title": {
+          "en": "IODE programme components and regular programme support",
+          "fr": "Composantes de programme IODE et soutien du programme ordinaire",
+          "es": "Componentes de IODE y apoyo del programa ordinario",
+          "ar": "مكونات برنامج IODE ودعم البرنامج العادي",
+          "ru": "Компоненты программы IODE и поддержка из регулярного бюджета",
+          "zh": "IODE计划组成部分与常规计划支持"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "demo-deepdata": {
+        "id": "demo-deepdata",
+        "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+        "title": {
+          "en": "ODIS demo JSON record for DeepData CTD metadata",
+          "fr": "Notice JSON de démonstration ODIS pour les métadonnées CTD DeepData",
+          "es": "Registro JSON de demostración ODIS con metadatos CTD de DeepData",
+          "ar": "سجل JSON في عرض ODIS لبيانات DeepData الوصفية عن CTD",
+          "ru": "JSON-запись демонстрационного поиска ODIS с метаданными CTD DeepData",
+          "zh": "ODIS演示中的DeepData CTD元数据JSON记录"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "demo-oceanexpert": {
+        "id": "demo-oceanexpert",
+        "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Aoceanexpert%3Acaf4562bcc499b395e484216b1d488130fe7ef28.json",
+        "title": {
+          "en": "ODIS demo JSON record for an OceanExpert event",
+          "fr": "Notice JSON de démonstration ODIS pour un événement OceanExpert",
+          "es": "Registro JSON de demostración ODIS de un evento OceanExpert",
+          "ar": "سجل JSON في عرض ODIS لفعالية OceanExpert",
+          "ru": "JSON-запись демонстрационного поиска ODIS о мероприятии OceanExpert",
+          "zh": "ODIS演示中的OceanExpert活动JSON记录"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "demo-obis": {
+        "id": "demo-obis",
+        "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Aocean-biodiversity-information-system%3Ahttps%253A%252F%252Fobis.org%252Fdataset%252F8935fb89-6494-4829-8b29-09022c3dbc90",
+        "title": {
+          "en": "ODIS demo JSON record for OBIS turtle dataset metadata",
+          "fr": "Notice JSON de démonstration ODIS pour un jeu de données OBIS sur les tortues",
+          "es": "Registro JSON de demostración ODIS con metadatos OBIS de tortugas",
+          "ar": "سجل JSON في عرض ODIS لبيانات OBIS الوصفية عن السلاحف",
+          "ru": "JSON-запись демонстрационного поиска ODIS с метаданными набора OBIS о черепахах",
+          "zh": "ODIS演示中的OBIS海龟数据集元数据JSON记录"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "node-oceanexpert": {
+        "id": "node-oceanexpert",
+        "url": "https://catalogue.odis.org/view/4",
+        "title": {
+          "en": "OceanExpert ODIS node registration",
+          "fr": "Inscription du nœud ODIS OceanExpert",
+          "es": "Registro del nodo ODIS OceanExpert",
+          "ar": "تسجيل عقدة OceanExpert في ODIS",
+          "ru": "Регистрация узла OceanExpert в ODIS",
+          "zh": "OceanExpert的ODIS节点注册"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "node-emodnet": {
+        "id": "node-emodnet",
+        "url": "https://catalogue.odis.org/view/364",
+        "title": {
+          "en": "EMODnet catalogue ODIS node registration",
+          "fr": "Inscription du nœud ODIS EMODnet catalogue",
+          "es": "Registro del nodo ODIS EMODnet catalogue",
+          "ar": "تسجيل عقدة EMODnet catalogue في ODIS",
+          "ru": "Регистрация узла EMODnet catalogue в ODIS",
+          "zh": "EMODnet catalogue的ODIS节点注册"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "node-gbif": {
+        "id": "node-gbif",
+        "url": "https://catalogue.odis.org/view/3297",
+        "title": {
+          "en": "GBIF ODIS node registration",
+          "fr": "Inscription du nœud ODIS GBIF",
+          "es": "Registro del nodo ODIS GBIF",
+          "ar": "تسجيل عقدة GBIF في ODIS",
+          "ru": "Регистрация узла GBIF в ODIS",
+          "zh": "GBIF的ODIS节点注册"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "node-bco-dmo": {
+        "id": "node-bco-dmo",
+        "url": "https://catalogue.odis.org/view/3287",
+        "title": {
+          "en": "BCO-DMO ODIS node registration",
+          "fr": "Inscription du nœud ODIS BCO-DMO",
+          "es": "Registro del nodo ODIS BCO-DMO",
+          "ar": "تسجيل عقدة BCO-DMO في ODIS",
+          "ru": "Регистрация узла BCO-DMO в ODIS",
+          "zh": "BCO-DMO的ODIS节点注册"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "node-cioos": {
+        "id": "node-cioos",
+        "url": "https://catalogue.odis.org/view/3263",
+        "title": {
+          "en": "CIOOS catalogue ODIS node registration",
+          "fr": "Inscription du nœud ODIS CIOOS catalogue",
+          "es": "Registro del nodo ODIS CIOOS catalogue",
+          "ar": "تسجيل عقدة CIOOS catalogue في ODIS",
+          "ru": "Регистрация узла CIOOS catalogue в ODIS",
+          "zh": "CIOOS catalogue的ODIS节点注册"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "node-argovis": {
+        "id": "node-argovis",
+        "url": "https://catalogue.odis.org/view/3304",
+        "title": {
+          "en": "Argovis Argo collection ODIS node registration",
+          "fr": "Inscription du nœud ODIS Argovis Argo collection",
+          "es": "Registro del nodo ODIS Argovis Argo collection",
+          "ar": "تسجيل عقدة Argovis Argo collection في ODIS",
+          "ru": "Регистрация узла Argovis Argo collection в ODIS",
+          "zh": "Argovis Argo collection的ODIS节点注册"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "node-ioos": {
+        "id": "node-ioos",
+        "url": "https://catalogue.odis.org/view/3308",
+        "title": {
+          "en": "IOOS data catalogue ODIS node registration",
+          "fr": "Inscription du nœud ODIS IOOS data catalogue",
+          "es": "Registro del nodo ODIS IOOS data catalogue",
+          "ar": "تسجيل عقدة IOOS data catalogue في ODIS",
+          "ru": "Регистрация узла IOOS data catalogue в ODIS",
+          "zh": "IOOS data catalogue的ODIS节点注册"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "feed-oceanexpert": {
+        "id": "feed-oceanexpert",
+        "url": "https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml",
+        "title": {
+          "en": "Registered oceanexpert metadata sitemap",
+          "fr": "Sitemap de métadonnées enregistré : oceanexpert",
+          "es": "Sitemap de metadatos registrado: oceanexpert",
+          "ar": "خريطة البيانات الوصفية المسجلة: oceanexpert",
+          "ru": "Зарегистрированная карта метаданных: oceanexpert",
+          "zh": "oceanexpert已登记元数据网站地图"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "feed-platform-obis": {
+        "id": "feed-platform-obis",
+        "url": "https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml",
+        "title": {
+          "en": "Registered platform-obis metadata sitemap",
+          "fr": "Sitemap de métadonnées enregistré : platform-obis",
+          "es": "Sitemap de metadatos registrado: platform-obis",
+          "ar": "خريطة البيانات الوصفية المسجلة: platform-obis",
+          "ru": "Зарегистрированная карта метаданных: platform-obis",
+          "zh": "platform-obis已登记元数据网站地图"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "isa-integration": {
+        "id": "isa-integration",
+        "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+        "title": {
+          "en": "DeepData joins ODIS, 6 May 2025",
+          "fr": "DeepData rejoint ODIS, 6 mai 2025",
+          "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+          "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+          "zh": "DeepData于2025年5月6日加入ODIS",
+          "ru": "DeepData присоединяется к ODIS, 6 мая 2025"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "network": {
+        "id": "network",
+        "url": "https://search-demo.odis.org/network",
+        "title": {
+          "en": "ODIS development network-status report",
+          "fr": "État du réseau ODIS en développement",
+          "es": "Estado de la red ODIS en desarrollo",
+          "ar": "تقرير حالة شبكة ODIS قيد التطوير",
+          "ru": "Состояние разрабатываемой сети ODIS",
+          "zh": "开发中的ODIS网络状态报告"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "en": {
+      "title": "Ocean Data and Information System (ODIS)",
+      "summary": "An IOC-UNESCO IODE federation for discovering ocean resources through distributed metadata, with a source catalogue and a developing global search service.",
+      "description": "ODIS connects independently managed ocean information systems through shared metadata publishing conventions. Coordinated by IOC-UNESCO’s IODE programme, it describes datasets, publications, experts, institutions, projects, training, vessels and other resources; providers retain stewardship of their holdings. Its ODIS Catalogue of Sources lists 3,137 source entries, including 2,191 searchable entries, while a separate node list contains 65 node-designated entries, with duplicates possible. These catalogue counts are distinct from the development search’s 163,080 metadata results observed on 10 September 2026. The current homepage says the Global Search Hub is being redeveloped; the linked demo nevertheless returns actual OBIS, DeepData and OceanExpert records and public JSON responses. The former Ocean InfoHub project ended in 2024 and its search interface is no longer maintained. Public discovery is free, but linked resources retain provider-specific permissions and licences; the catalogue footer links CC BY-NC-SA 4.0. Contributors use an approved OceanExpert account to register sources and expose Schema.org JSON-LD through sitemaps or sitegraphs. Registration and a catalogue online indicator do not establish complete or current harvesting. The demo network monitor separately listed 66 configured nodes and 41 with reported errors (18 unresponsive and 23 with parsing errors); these operational counts are not catalogue totals, and cached search results do not establish current source health.",
+      "details": {
+        "aliases": [
+          "ODIS",
+          "ODISCat",
+          "Ocean Data and Information System",
+          "ODIS Catalogue of Sources"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "home",
+            "overview",
+            "catalogue",
+            "nodes",
+            "architecture",
+            "join",
+            "demo",
+            "demo-deepdata",
+            "demo-obis",
+            "demo-oceanexpert",
+            "oih",
+            "disclaimer",
+            "fust",
+            "validation",
+            "network"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "odis-tag-data-type-metadata-catalog-registry",
+              "description": "Descriptions and links for ocean-related sources, services and resources, including source registrations and federated dataset, document, institution and event metadata; underlying measurements and files remain with providers."
+            },
+            {
+              "id": "odis-format-json",
+              "description": "Providers expose JSON-LD metadata; the current development search also returns ordinary JSON record responses with source information, distribution links and selected facts. The sampled demo responses have raw:null and are not full JSON-LD exports."
+            },
+            {
+              "id": "odis-format-xml",
+              "description": "Registered XML sitemaps or sitemap indexes enumerate provider metadata URLs for discovery. They describe retrieval locations rather than encoding the original ocean observations."
+            },
+            {
+              "id": "odis-format-html",
+              "description": "Human-readable catalogue source records and metadata landing pages are served as HTML. This describes accessible record content, not an additional data standard."
+            },
+            {
+              "id": "odis-standard-schema-org",
+              "description": "ODIS publishing guidance uses Schema.org types and properties in JSON-LD, with recommended thematic patterns. Valid types beyond those patterns are accepted; this is not certification that every registered source or demo record is complete or uniformly conformant."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "odis-tag-read-method-web",
+            "label": "ODIS Catalogue of Sources",
+            "description": "Browse and search source descriptions anonymously, inspect classifications and follow provider links. The catalogue footer links CC BY-NC-SA 4.0; this does not relicense linked data or guarantee their availability. Editing a source requires the separate contribution workflow."
+          },
+          {
+            "id": "odis-read-demo",
+            "label": "Development metadata search",
+            "description": "The homepage-linked demo supports searches, source filters and actual metadata cards, including DeepData and OBIS datasets. It is public and free but explicitly under development. Counts describe this index; original files and their licences remain at linked providers. The demo network monitor separately listed 66 configured nodes and 41 with reported errors (18 unresponsive and 23 with parsing errors); these operational counts are not catalogue totals, and cached search results do not establish current source health."
+          },
+          {
+            "id": "odis-read-demo-api",
+            "label": "Development JSON record API",
+            "description": "Follow a result card’s API-record link to retrieve JSON without an account or key. The supplied URL is a verified DeepData example; OBIS and OceanExpert examples also returned JSON. This development interface exposes normalized metadata and provider links, not original data files or a stable, approved Ryu API contract."
+          },
+          {
+            "id": "odis-tag-read-method-harvest",
+            "label": "Registered node metadata feeds",
+            "description": "The public node list links registered sitemaps and sitegraphs. Follow those links to provider-hosted metadata, including JSON-LD files or HTML pages containing JSON-LD. Selected feeds were readable; others returned 403. Authentication, fees, reuse and availability depend on the provider and are not established for all entries."
+          },
+          {
+            "id": "odis-tag-write-method-harvested-node",
+            "label": "Register a source and expose metadata",
+            "description": "Obtain an OceanExpert account and allow initial account approval before signing into ODISCat. Describe the source, publish Schema.org JSON-LD under your control and register its sitemap or sitegraph. Maintain an organization-sanctioned identity. IODE performs light curation; registration allows harvesting but does not prove it occurred. Contribution fees are not stated."
+          },
+          {
+            "id": "odis-write-suggestion",
+            "label": "Suggest a catalogue source",
+            "description": "Use the ODIS team email linked on the catalogue homepage to suggest a source. No OceanExpert login is required for this contact route. Staff handle the suggestion; sending it does not guarantee publication. A contribution fee policy was not found."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "odis-metric-catalogue-total",
+            "description": "Total source entries displayed by ODISCat on 10 September 2026. This counts catalogue registrations, not harvested metadata records or distinct organizations."
+          },
+          {
+            "id": "odis-metric-catalogue-searchable",
+            "description": "Searchable source entries displayed by ODISCat on 10 September 2026; a subset of the total catalogue entries, not an independent total to add to it."
+          },
+          {
+            "id": "odis-metric-node-entries",
+            "description": "Rows on the ODIS node list on 10 September 2026. These are 65 node-designated catalogue entries; duplicate sources occur, so this is not a count of unique active nodes, partners or successful harvests."
+          },
+          {
+            "id": "odis-metric-demo-results",
+            "description": "Exact unfiltered result count displayed by the development search on 10 September 2026. This is the demo metadata index, not ODISCat, all federation holdings, users or downloads; overlapping type facets must not be summed."
+          }
+        ],
+        "researchGaps": {
+          "data": "No current storage-byte measurement or independently deduplicated federation-wide holding count was established. Historic OIH reports of over 130,000 records, approximately 800 represented organizations and later over 55 nodes/48 partners have different dates and scopes.",
+          "usage": "No verified sessions, download events, API request totals, citation count or contributor roster measurement was found. Source registrations and demo search results measure holdings, not usage.",
+          "standards": "No system-wide DCAT, ISO or mandatory SHACL certification was established. The SHACL documentation describes initial search-validation work; OceanExpert identity recommendations are not a separate data-standard assignment.",
+          "access": "The documented dashboard failed HTTPS hostname verification; the documented HTTP SPARQL endpoint returned 404 and HTTPS failed hostname verification. Dashboard Parquet exports were therefore not verified. The working demo JSON interface has no approved operational Ryu route or verified stability guarantee."
+        }
+      }
+    },
+    "fr": {
+      "title": "Système de données et d’informations océaniques (ODIS)",
+      "summary": "Une fédération de la COI-UNESCO/IODE pour découvrir les ressources océaniques grâce à des métadonnées distribuées, un catalogue de sources et un moteur de recherche en développement.",
+      "description": "ODIS relie des systèmes d’information océanique gérés indépendamment au moyen de conventions communes de publication de métadonnées. Coordonné par le programme IODE de la COI-UNESCO, il décrit jeux de données, publications, experts, institutions, projets, formations, navires et autres ressources, dont les fournisseurs conservent la gestion. Son catalogue répertorie 3 137 sources, dont 2 191 interrogeables ; une liste distincte comprend 65 entrées désignées comme nœuds, avec des doublons possibles. Ces chiffres diffèrent des 163 080 résultats de métadonnées observés dans la recherche de démonstration le 10 septembre 2026. La page actuelle annonce la refonte du moteur mondial ; la démonstration liée fournit néanmoins de véritables notices OBIS, DeepData et OceanExpert et des réponses JSON publiques. Le projet Ocean InfoHub s’est terminé en 2024 et son ancienne recherche n’est plus maintenue. La découverte publique est gratuite, mais les ressources liées gardent leurs permissions et licences propres ; le catalogue affiche CC BY-NC-SA 4.0. Les contributeurs utilisent un compte OceanExpert approuvé pour inscrire leurs sources et exposer des métadonnées Schema.org en JSON-LD via sitemaps ou sitegraphs. L’inscription et l’indicateur de disponibilité ne prouvent pas un moissonnage complet ou récent. Le suivi du réseau de démonstration indiquait séparément 66 nœuds configurés et 41 signalant des erreurs (18 sans réponse et 23 avec erreurs d’analyse). Ces comptes opérationnels ne sont pas ceux du catalogue ; des résultats en cache ne prouvent pas la disponibilité actuelle des sources.",
+      "details": {
+        "aliases": [
+          "ODIS",
+          "ODISCat",
+          "Ocean Data and Information System",
+          "ODIS Catalogue of Sources"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "home",
+            "overview",
+            "catalogue",
+            "nodes",
+            "architecture",
+            "join",
+            "demo",
+            "demo-deepdata",
+            "demo-obis",
+            "demo-oceanexpert",
+            "oih",
+            "disclaimer",
+            "fust",
+            "validation",
+            "network"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "odis-tag-data-type-metadata-catalog-registry",
+              "description": "Descriptions et liens vers des sources, services et ressources océaniques : inscriptions de sources et métadonnées fédérées de jeux de données, documents, institutions et événements. Mesures et fichiers originaux restent chez les fournisseurs."
+            },
+            {
+              "id": "odis-format-json",
+              "description": "Les fournisseurs exposent du JSON-LD ; la démonstration actuelle fournit aussi des notices JSON ordinaires avec source, distributions et faits sélectionnés. Les réponses examinées contiennent raw:null et ne sont pas des exports JSON-LD complets."
+            },
+            {
+              "id": "odis-format-xml",
+              "description": "Des sitemaps XML ou index de sitemaps enregistrés énumèrent les URL de métadonnées des fournisseurs. Ils indiquent les emplacements de récupération plutôt que les observations originales."
+            },
+            {
+              "id": "odis-format-html",
+              "description": "Les notices du catalogue et pages descriptives de métadonnées sont accessibles en HTML. Il s’agit du contenu lisible des notices, pas d’une norme supplémentaire."
+            },
+            {
+              "id": "odis-standard-schema-org",
+              "description": "Les instructions ODIS utilisent les types et propriétés Schema.org en JSON-LD, avec des modèles thématiques recommandés. D’autres types valides sont admis ; aucune conformité uniforme ou complète de toutes les sources et notices de démonstration n’est certifiée."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "odis-tag-read-method-web",
+            "label": "Catalogue des sources ODIS",
+            "description": "Consultez anonymement les sources et leurs classifications, recherchez-les et suivez leurs liens. La licence CC BY-NC-SA 4.0 affichée ne modifie pas celle des données liées et ne garantit pas leur disponibilité. La modification relève du parcours de contribution."
+          },
+          {
+            "id": "odis-read-demo",
+            "label": "Recherche de métadonnées en développement",
+            "description": "La démonstration liée depuis l’accueil propose requêtes, filtres par source et vraies notices, notamment DeepData et OBIS. Publique et gratuite, elle reste explicitement en développement. Les comptes portent sur cet index ; fichiers originaux et licences restent chez les fournisseurs. Le suivi du réseau de démonstration indiquait séparément 66 nœuds configurés et 41 signalant des erreurs (18 sans réponse et 23 avec erreurs d’analyse). Ces comptes opérationnels ne sont pas ceux du catalogue ; des résultats en cache ne prouvent pas la disponibilité actuelle des sources."
+          },
+          {
+            "id": "odis-read-demo-api",
+            "label": "API JSON de démonstration",
+            "description": "Suivez le lien API d’une notice pour obtenir du JSON sans compte ni clé. L’URL fournie est un exemple DeepData vérifié ; des exemples OBIS et OceanExpert ont aussi répondu. Cette interface en développement livre des métadonnées normalisées et des liens, pas les fichiers originaux ni un contrat API Ryu stable et approuvé."
+          },
+          {
+            "id": "odis-tag-read-method-harvest",
+            "label": "Flux de métadonnées des nœuds enregistrés",
+            "description": "La liste publique pointe vers les sitemaps et sitegraphs déclarés. Suivez-les vers les métadonnées hébergées par les fournisseurs : fichiers JSON-LD ou pages HTML contenant du JSON-LD. Certains flux étaient lisibles, d’autres répondaient 403. Conditions, coûts, réutilisation et disponibilité varient selon la source."
+          },
+          {
+            "id": "odis-tag-write-method-harvested-node",
+            "label": "Inscrire une source et exposer ses métadonnées",
+            "description": "Créez un compte OceanExpert, attendez son approbation initiale puis connectez-vous à ODISCat. Décrivez la source, publiez du JSON-LD Schema.org sous votre contrôle et enregistrez son sitemap ou sitegraph. L’identité doit être reconnue par l’organisation. IODE exerce une curation légère ; inscription ne signifie pas moissonnage réalisé. Les frais éventuels ne sont pas indiqués."
+          },
+          {
+            "id": "odis-write-suggestion",
+            "label": "Proposer une source au catalogue",
+            "description": "Utilisez l’adresse de l’équipe ODIS indiquée sur l’accueil pour proposer une source. Aucun compte OceanExpert n’est requis pour ce contact. L’équipe traite la proposition sans garantie de publication. Aucun barème de contribution n’a été trouvé."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "odis-metric-catalogue-total",
+            "description": "Total des entrées de sources affiché par ODISCat le 10 septembre 2026 ; inscriptions au catalogue, pas notices moissonnées ni organisations distinctes."
+          },
+          {
+            "id": "odis-metric-catalogue-searchable",
+            "description": "Sources interrogeables affichées le 10 septembre 2026 ; sous-ensemble du total du catalogue, à ne pas additionner à celui-ci."
+          },
+          {
+            "id": "odis-metric-node-entries",
+            "description": "Nombre de lignes de la liste des nœuds au 10 septembre 2026 : 65 entrées désignées comme nœuds. Des doublons existent ; ce ne sont pas 65 nœuds actifs uniques, partenaires ou moissonnages réussis."
+          },
+          {
+            "id": "odis-metric-demo-results",
+            "description": "Compte exact des résultats sans filtre de la recherche en développement le 10 septembre 2026. Il mesure l’index de démonstration, pas le catalogue, toute la fédération, les utilisateurs ou téléchargements ; les facettes de types se chevauchent."
+          }
+        ],
+        "researchGaps": {
+          "data": "Aucun volume actuel en octets ni total dédupliqué de toute la fédération n’a été établi. Les chiffres historiques OIH de plus de 130 000 notices, environ 800 organisations et, ultérieurement, plus de 55 nœuds/48 partenaires ont d’autres dates et périmètres.",
+          "usage": "Aucune mesure vérifiée des sessions, téléchargements, requêtes API, citations ou contributeurs n’a été trouvée. Inscriptions et résultats de recherche mesurent les collections, pas les usages.",
+          "standards": "Aucune certification globale DCAT, ISO ou SHACL obligatoire n’a été établie. La documentation SHACL décrit des travaux initiaux ; les identités OceanExpert recommandées ne constituent pas une norme de données distincte.",
+          "access": "Le certificat HTTPS du tableau de bord ne correspondait pas au nom d’hôte. Le point SPARQL HTTP documenté renvoyait 404 et HTTPS échouait aussi sur le certificat. Les exports Parquet n’ont donc pas été vérifiés. L’API JSON fonctionnelle de démonstration n’a ni route Ryu approuvée ni garantie de stabilité vérifiée."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Sistema de Datos e Información Oceánicos (ODIS)",
+      "summary": "Federación de la COI-UNESCO/IODE para descubrir recursos oceánicos mediante metadatos distribuidos, un catálogo de fuentes y un buscador global en desarrollo.",
+      "description": "ODIS conecta sistemas oceánicos gestionados de forma independiente mediante convenciones comunes de publicación de metadatos. El programa IODE de la COI-UNESCO lo coordina; describe conjuntos de datos, publicaciones, expertos, instituciones, proyectos, formación, buques y otros recursos, cuya gestión permanece en los proveedores. Su catálogo muestra 3.137 fuentes, incluidas 2.191 consultables; otra lista contiene 65 entradas designadas como nodos, con posibles duplicados. Estas cifras difieren de los 163.080 resultados de metadatos observados en la búsqueda de demostración el 10 de septiembre de 2026. La web anuncia la renovación del buscador global, pero la demostración enlazada ofrece registros reales de OBIS, DeepData y OceanExpert y respuestas JSON públicas. Ocean InfoHub terminó en 2024 y su antiguo buscador ya no se mantiene. La consulta pública es gratuita; los recursos enlazados conservan sus permisos y licencias, mientras el catálogo enlaza CC BY-NC-SA 4.0. Los contribuyentes utilizan una cuenta OceanExpert aprobada para registrar fuentes y exponer JSON-LD Schema.org mediante sitemaps o sitegraphs. El registro y el indicador de disponibilidad no demuestran una recolección completa o actualizada. El monitor de la demostración mostraba por separado 66 nodos configurados y 41 con errores (18 sin respuesta y 23 con errores de análisis). Son cifras operativas distintas del catálogo; los resultados almacenados no prueban la disponibilidad actual del proveedor.",
+      "details": {
+        "aliases": [
+          "ODIS",
+          "ODISCat",
+          "Ocean Data and Information System",
+          "ODIS Catalogue of Sources"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "home",
+            "overview",
+            "catalogue",
+            "nodes",
+            "architecture",
+            "join",
+            "demo",
+            "demo-deepdata",
+            "demo-obis",
+            "demo-oceanexpert",
+            "oih",
+            "disclaimer",
+            "fust",
+            "validation",
+            "network"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "odis-tag-data-type-metadata-catalog-registry",
+              "description": "Descripciones y enlaces de fuentes, servicios y recursos oceánicos: registros de fuentes y metadatos federados de conjuntos, documentos, instituciones y eventos. Las mediciones y archivos originales permanecen con sus proveedores."
+            },
+            {
+              "id": "odis-format-json",
+              "description": "Los proveedores exponen JSON-LD; la demostración también devuelve registros JSON ordinarios con fuente, distribuciones y hechos seleccionados. Las respuestas examinadas contienen raw:null y no son exportaciones JSON-LD completas."
+            },
+            {
+              "id": "odis-format-xml",
+              "description": "Los sitemaps XML o índices registrados enumeran URL de metadatos de proveedores. Indican dónde recuperar recursos, no codifican las observaciones oceánicas originales."
+            },
+            {
+              "id": "odis-format-html",
+              "description": "El catálogo y las páginas descriptivas de metadatos ofrecen contenido legible en HTML. Esto describe registros accesibles, no otra norma de datos."
+            },
+            {
+              "id": "odis-standard-schema-org",
+              "description": "Las directrices ODIS emplean tipos y propiedades Schema.org en JSON-LD y recomiendan patrones temáticos. Se aceptan otros tipos válidos; no se certifica que todas las fuentes o registros sean completos o uniformemente conformes."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "odis-tag-read-method-web",
+            "label": "Catálogo de fuentes ODIS",
+            "description": "Consulte y busque descripciones y clasificaciones sin iniciar sesión y siga los enlaces de proveedores. CC BY-NC-SA 4.0 aparece en el catálogo, pero no cambia las licencias de datos enlazados ni garantiza su disponibilidad. La edición requiere el proceso de contribución."
+          },
+          {
+            "id": "odis-read-demo",
+            "label": "Búsqueda de metadatos en desarrollo",
+            "description": "La demostración enlazada permite consultas, filtros por fuente y registros reales, incluidos conjuntos DeepData y OBIS. Es pública y gratuita, pero está en desarrollo. Los recuentos corresponden a este índice; los originales y sus licencias siguen en los proveedores. El monitor de la demostración mostraba por separado 66 nodos configurados y 41 con errores (18 sin respuesta y 23 con errores de análisis). Son cifras operativas distintas del catálogo; los resultados almacenados no prueban la disponibilidad actual del proveedor."
+          },
+          {
+            "id": "odis-read-demo-api",
+            "label": "API JSON de demostración",
+            "description": "Siga el enlace API de un resultado para obtener JSON sin cuenta ni clave. La URL indicada es un ejemplo DeepData verificado; también respondieron ejemplos OBIS y OceanExpert. Esta interfaz en desarrollo entrega metadatos normalizados y enlaces, no archivos originales ni un contrato API Ryu estable y aprobado."
+          },
+          {
+            "id": "odis-tag-read-method-harvest",
+            "label": "Fuentes de metadatos de nodos registrados",
+            "description": "La lista pública enlaza sitemaps y sitegraphs declarados. Sígalos hasta metadatos alojados por proveedores, como JSON-LD o HTML con JSON-LD. Algunas fuentes respondieron y otras devolvieron 403. Autenticación, costes, reutilización y disponibilidad dependen de cada proveedor y no se han comprobado para todos."
+          },
+          {
+            "id": "odis-tag-write-method-harvested-node",
+            "label": "Registrar una fuente y exponer metadatos",
+            "description": "Obtenga una cuenta OceanExpert y espere su aprobación inicial antes de entrar en ODISCat. Describa la fuente, publique JSON-LD Schema.org bajo su control y registre el sitemap o sitegraph. Mantenga una identidad autorizada por su organización. IODE realiza curación ligera; registrarse permite la recolección, pero no demuestra que haya ocurrido. No se especifican tarifas."
+          },
+          {
+            "id": "odis-write-suggestion",
+            "label": "Sugerir una fuente al catálogo",
+            "description": "Utilice el correo del equipo ODIS enlazado en el inicio para sugerir una fuente. Este contacto no exige cuenta OceanExpert. El equipo tramita la sugerencia sin garantizar su publicación. No se encontró una política de tarifas de contribución."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "odis-metric-catalogue-total",
+            "description": "Total de fuentes mostrado por ODISCat el 10 de septiembre de 2026: registros del catálogo, no metadatos recolectados ni organizaciones únicas."
+          },
+          {
+            "id": "odis-metric-catalogue-searchable",
+            "description": "Fuentes consultables mostradas el 10 de septiembre de 2026: subconjunto del catálogo, no un total adicional que se deba sumar."
+          },
+          {
+            "id": "odis-metric-node-entries",
+            "description": "Filas de la lista de nodos el 10 de septiembre de 2026: 65 entradas designadas como nodos. Hay duplicados; no equivale a nodos activos únicos, socios o recolecciones satisfactorias."
+          },
+          {
+            "id": "odis-metric-demo-results",
+            "description": "Número exacto de resultados sin filtros en la búsqueda en desarrollo el 10 de septiembre de 2026. Describe su índice, no ODISCat, toda la federación, usuarios o descargas; las facetas de tipos pueden solaparse."
+          }
+        ],
+        "researchGaps": {
+          "data": "No se verificó almacenamiento actual en bytes ni un total deduplicado de toda la federación. Las cifras históricas OIH de más de 130.000 registros, unas 800 organizaciones y, posteriormente, más de 55 nodos/48 socios tienen fechas y alcances distintos.",
+          "usage": "No se hallaron métricas verificadas de sesiones, descargas, solicitudes API, citas o contribuyentes. Los registros de fuentes y resultados de búsqueda son existencias, no uso.",
+          "standards": "No se verificó certificación global DCAT, ISO o SHACL obligatoria. La documentación SHACL describe trabajo inicial de validación para búsquedas; las identidades OceanExpert recomendadas no son otra norma de datos.",
+          "access": "El certificado HTTPS del panel no correspondía al host. El SPARQL HTTP documentado devolvió 404 y HTTPS también falló por el certificado. No se verificaron los archivos Parquet del panel. La API JSON de demostración no tiene ruta Ryu aprobada ni garantía de estabilidad comprobada."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ar": {
+      "title": "نظام بيانات ومعلومات المحيطات (ODIS)",
+      "summary": "اتحاد تابع للجنة الدولية الحكومية لعلوم المحيطات باليونسكو وبرنامج IODE لاكتشاف موارد المحيطات عبر بيانات وصفية موزعة وكتالوج مصادر وخدمة بحث عالمية قيد التطوير.",
+      "description": "يربط ODIS أنظمة معلومات المحيطات التي تُدار باستقلال عبر قواعد مشتركة لنشر البيانات الوصفية. ينسقه برنامج IODE التابع للجنة الدولية الحكومية لعلوم المحيطات باليونسكو، ويصف مجموعات البيانات والمنشورات والخبراء والمؤسسات والمشروعات والتدريب والسفن وغيرها، مع بقاء إدارة المحتوى لدى مقدميه. يعرض كتالوجه 3,137 مصدراً، منها 2,191 قابلاً للبحث، وتضم قائمة مستقلة 65 مدخلاً مصنفاً كعقدة مع احتمال التكرار. تختلف هذه الأعداد عن 163,080 نتيجة وصفية ظهرت في البحث التجريبي في 10 سبتمبر 2026. تعلن الصفحة الحالية إعادة تطوير البحث العالمي، لكن النسخة التجريبية المرتبطة بها تعرض سجلات فعلية من OBIS وDeepData وOceanExpert واستجابات JSON عامة. انتهى مشروع Ocean InfoHub في 2024 ولم تعد واجهة بحثه القديمة تُصان. الاكتشاف العام مجاني، لكن الموارد المرتبطة تحتفظ بأذونها وتراخيصها؛ ويربط تذييل الكتالوج بترخيص CC BY-NC-SA 4.0. يستخدم المساهمون حساب OceanExpert معتمداً لتسجيل المصادر وإتاحة JSON-LD وفق Schema.org عبر خرائط المواقع أو الرسوم البيانية للموقع. التسجيل ومؤشر الاتصال لا يثبتان حصاداً كاملاً أو حديثاً. أظهر مراقب شبكة العرض بصورة منفصلة 66 عقدة مهيأة و41 بها أخطاء مُبلغ عنها، منها 18 غير مستجيبة و23 بأخطاء تحليل. تختلف هذه الأعداد التشغيلية عن الكتالوج، ولا تثبت النتائج المخزنة سلامة المصدر حالياً.",
+      "details": {
+        "aliases": [
+          "ODIS",
+          "ODISCat",
+          "Ocean Data and Information System",
+          "ODIS Catalogue of Sources"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "home",
+            "overview",
+            "catalogue",
+            "nodes",
+            "architecture",
+            "join",
+            "demo",
+            "demo-deepdata",
+            "demo-obis",
+            "demo-oceanexpert",
+            "oih",
+            "disclaimer",
+            "fust",
+            "validation",
+            "network"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "odis-tag-data-type-metadata-catalog-registry",
+              "description": "أوصاف وروابط لمصادر المحيطات وخدماتها ومواردها، تشمل تسجيلات المصادر وبيانات وصفية اتحادية لمجموعات ووثائق ومؤسسات وفعاليات. تبقى القياسات والملفات الأصلية لدى مقدميها."
+            },
+            {
+              "id": "odis-format-json",
+              "description": "يتيح المقدمون بيانات JSON-LD؛ ويعيد البحث التجريبي أيضاً سجلات JSON عادية تضم المصدر وروابط التوزيع وحقائق مختارة. تتضمن العينات raw:null ولا تمثل تصديراً كاملاً بصيغة JSON-LD."
+            },
+            {
+              "id": "odis-format-xml",
+              "description": "تعدّد خرائط المواقع XML أو فهارسها المسجلة عناوين بيانات المقدمين الوصفية. تحدد مواقع الاسترجاع ولا ترمّز رصد المحيطات الأصلي."
+            },
+            {
+              "id": "odis-format-html",
+              "description": "تُعرض سجلات مصادر الكتالوج وصفحات البيانات الوصفية المقروءة بشرياً بصيغة HTML. هذا وصف لمحتوى السجلات وليس معيار بيانات إضافياً."
+            },
+            {
+              "id": "odis-standard-schema-org",
+              "description": "تستخدم إرشادات ODIS أنواع Schema.org وخصائصه في JSON-LD مع أنماط موضوعية موصى بها. تقبل أنواعاً صالحة أخرى؛ ولا يشهد ذلك باكتمال جميع المصادر أو سجلات العرض أو امتثالها الموحد."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "odis-tag-read-method-web",
+            "label": "كتالوج مصادر ODIS",
+            "description": "تصفح أوصاف المصادر وتصنيفاتها وابحث فيها دون تسجيل دخول، ثم اتبع روابط المقدمين. يظهر CC BY-NC-SA 4.0 في تذييل الكتالوج دون تغيير ترخيص البيانات المرتبطة أو ضمان توافرها. يتطلب التحرير مسار المساهمة المنفصل."
+          },
+          {
+            "id": "odis-read-demo",
+            "label": "بحث البيانات الوصفية قيد التطوير",
+            "description": "تتيح النسخة التجريبية المرتبطة بالصفحة الرئيسية البحث والتصفية بحسب المصدر وبطاقات فعلية، ومنها مجموعات DeepData وOBIS. الوصول عام ومجاني مع إعلان أنها قيد التطوير. تخص الأعداد هذا الفهرس؛ وتبقى الملفات الأصلية وتراخيصها لدى المقدمين. أظهر مراقب شبكة العرض بصورة منفصلة 66 عقدة مهيأة و41 بها أخطاء مُبلغ عنها، منها 18 غير مستجيبة و23 بأخطاء تحليل. تختلف هذه الأعداد التشغيلية عن الكتالوج، ولا تثبت النتائج المخزنة سلامة المصدر حالياً."
+          },
+          {
+            "id": "odis-read-demo-api",
+            "label": "واجهة JSON التجريبية للسجلات",
+            "description": "اتبع رابط API في بطاقة النتيجة لاسترجاع JSON دون حساب أو مفتاح. العنوان المعروض مثال DeepData متحقق منه؛ واستجابت أمثلة OBIS وOceanExpert أيضاً. تقدم الواجهة التجريبية بيانات وصفية منسقة وروابط، لا الملفات الأصلية ولا عقد API مستقراً ومعتمداً لـRyu."
+          },
+          {
+            "id": "odis-tag-read-method-harvest",
+            "label": "تغذيات البيانات الوصفية للعقد المسجلة",
+            "description": "تربط قائمة العقد العامة بخرائط المواقع ورسومها البيانية المسجلة. اتبعها إلى JSON-LD أو صفحات HTML التي تتضمنه لدى المقدمين. أمكن قراءة بعض التغذيات، وأعادت أخرى 403. تختلف المصادقة والرسوم وإعادة الاستخدام والتوافر ولم تثبت لجميع المدخلات."
+          },
+          {
+            "id": "odis-tag-write-method-harvested-node",
+            "label": "تسجيل مصدر وإتاحة بيانات وصفية",
+            "description": "أنشئ حساب OceanExpert وانتظر اعتماده الأولي قبل دخول ODISCat. صف المصدر وانشر JSON-LD وفق Schema.org تحت سيطرتك وسجل خريطة موقعه أو رسمه البياني. احتفظ بهوية تقرها المؤسسة. يجري IODE تنسيقاً خفيفاً؛ يتيح التسجيل الحصاد دون إثبات حدوثه. لم تُذكر رسوم المساهمة."
+          },
+          {
+            "id": "odis-write-suggestion",
+            "label": "اقتراح مصدر للكتالوج",
+            "description": "استخدم بريد فريق ODIS المرتبط بالصفحة الرئيسية لاقتراح مصدر. لا يتطلب هذا الاتصال تسجيل OceanExpert. يعالج الفريق الاقتراح دون ضمان النشر. لم يُعثر على سياسة لرسوم المساهمة."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "odis-metric-catalogue-total",
+            "description": "إجمالي مدخلات المصادر الذي عرضه ODISCat في 10 سبتمبر 2026. يحصي تسجيلات الكتالوج لا السجلات المحصودة أو المؤسسات الفريدة."
+          },
+          {
+            "id": "odis-metric-catalogue-searchable",
+            "description": "مدخلات المصادر القابلة للبحث في 10 سبتمبر 2026؛ مجموعة فرعية من إجمالي الكتالوج وليست عدداً إضافياً يُجمع معه."
+          },
+          {
+            "id": "odis-metric-node-entries",
+            "description": "صفوف قائمة العقد في 10 سبتمبر 2026: 65 مدخلاً مصنفاً كعقدة. توجد مصادر مكررة، فلا يعني العدد عقداً نشطة فريدة أو شركاء أو عمليات حصاد ناجحة."
+          },
+          {
+            "id": "odis-metric-demo-results",
+            "description": "عدد النتائج الدقيق دون مرشحات في البحث التجريبي في 10 سبتمبر 2026. يخص فهرس العرض لا ODISCat أو جميع محتويات الاتحاد أو المستخدمين أو التنزيلات؛ ولا تُجمع فئات الأنواع المتداخلة."
+          }
+        ],
+        "researchGaps": {
+          "data": "لم يثبت حجم التخزين الحالي بالبايت أو عدد منزوع التكرار لكل مقتنيات الاتحاد. تختلف تواريخ ونطاقات أرقام OIH التاريخية: أكثر من 130,000 سجل ونحو 800 مؤسسة، ثم أكثر من 55 عقدة و48 شريكاً.",
+          "usage": "لم تُعثر على قياسات متحققة للجلسات أو التنزيلات أو طلبات API أو الاستشهادات أو قائمة المساهمين. تسجيلات المصادر ونتائج البحث تقيس المحتوى لا الاستخدام.",
+          "standards": "لم يثبت اعتماد شامل لـDCAT أو ISO أو اشتراط شهادة SHACL. تصف وثائق SHACL عملاً أولياً للتحقق من البحث؛ ولا تُعد هويات OceanExpert الموصى بها معيار بيانات مستقلاً.",
+          "access": "فشل التحقق من اسم مضيف شهادة HTTPS للوحة المتابعة؛ وأعاد عنوان SPARQL الموثق عبر HTTP خطأ 404 وفشل HTTPS لشهادته أيضاً. لذلك لم تُتحقق صادرات Parquet. واجهة JSON التجريبية العاملة ليست لها مسارات Ryu تشغيلية معتمدة أو ضمان استقرار متحقق."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Система океанических данных и информации (ODIS)",
+      "summary": "Федерация МОК ЮНЕСКО/IODE для поиска океанических ресурсов через распределённые метаданные, каталог источников и разрабатываемую глобальную поисковую службу.",
+      "description": "ODIS связывает независимо управляемые океанические информационные системы общими правилами публикации метаданных. Систему координирует программа IODE МОК ЮНЕСКО; она описывает наборы данных, публикации, экспертов, учреждения, проекты, обучение, суда и другие ресурсы, остающиеся под управлением поставщиков. Каталог содержит 3 137 источников, включая 2 191 доступный для поиска; отдельный список включает 65 записей, обозначенных как узлы, с возможными дублями. Это отличается от 163 080 результатов метаданных, показанных демонстрационным поиском 10 сентября 2026 года. Главная страница сообщает о переработке глобального поиска, но связанная демонстрация уже выдаёт реальные записи OBIS, DeepData и OceanExpert и публичные ответы JSON. Проект Ocean InfoHub завершился в 2024 году; прежний поиск больше не поддерживается. Публичный поиск бесплатен, однако связанные ресурсы сохраняют условия и лицензии поставщиков; в каталоге указана CC BY-NC-SA 4.0. Для регистрации источников и публикации Schema.org JSON-LD через sitemap или sitegraph используется одобренная учётная запись OceanExpert. Регистрация и отметка доступности не доказывают полноту или актуальность сбора. Монитор демонстрационной сети отдельно показывал 66 настроенных узлов и 41 узел с ошибками: 18 без ответа и 23 с ошибками разбора. Это не итоги каталога; сохранённые результаты не доказывают текущую работоспособность источников.",
+      "details": {
+        "aliases": [
+          "ODIS",
+          "ODISCat",
+          "Ocean Data and Information System",
+          "ODIS Catalogue of Sources"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "home",
+            "overview",
+            "catalogue",
+            "nodes",
+            "architecture",
+            "join",
+            "demo",
+            "demo-deepdata",
+            "demo-obis",
+            "demo-oceanexpert",
+            "oih",
+            "disclaimer",
+            "fust",
+            "validation",
+            "network"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "odis-tag-data-type-metadata-catalog-registry",
+              "description": "Описания и ссылки на океанические источники, службы и ресурсы: регистрации источников и федеративные метаданные наборов, документов, учреждений и мероприятий. Исходные измерения и файлы остаются у поставщиков."
+            },
+            {
+              "id": "odis-format-json",
+              "description": "Поставщики публикуют JSON-LD; демонстрационный поиск также возвращает обычные JSON-записи с источником, ссылками распространения и отдельными фактами. Проверенные ответы содержат raw:null и не являются полными экспортами JSON-LD."
+            },
+            {
+              "id": "odis-format-xml",
+              "description": "Зарегистрированные XML sitemap и их индексы перечисляют адреса метаданных поставщиков. Они указывают места получения, а не кодируют исходные наблюдения океана."
+            },
+            {
+              "id": "odis-format-html",
+              "description": "Карточки источников и страницы метаданных доступны для чтения в HTML. Это представление содержимого записей, а не дополнительный стандарт данных."
+            },
+            {
+              "id": "odis-standard-schema-org",
+              "description": "Руководство ODIS использует типы и свойства Schema.org в JSON-LD и рекомендует тематические шаблоны. Допускаются и другие корректные типы; это не подтверждает полноту или единообразное соответствие всех источников и демонстрационных записей."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "odis-tag-read-method-web",
+            "label": "Каталог источников ODIS",
+            "description": "Без входа просматривайте и ищите описания и классификации источников, переходите к поставщикам. Указанная в каталоге CC BY-NC-SA 4.0 не меняет лицензии внешних данных и не гарантирует их доступность. Для редактирования предусмотрен отдельный процесс внесения сведений."
+          },
+          {
+            "id": "odis-read-demo",
+            "label": "Разрабатываемый поиск метаданных",
+            "description": "Демонстрация с главной страницы поддерживает запросы, фильтрацию по источникам и реальные карточки, включая DeepData и OBIS. Доступ публичный и бесплатный, но служба находится в разработке. Числа относятся к её индексу; исходные файлы и лицензии остаются у поставщиков. Монитор демонстрационной сети отдельно показывал 66 настроенных узлов и 41 узел с ошибками: 18 без ответа и 23 с ошибками разбора. Это не итоги каталога; сохранённые результаты не доказывают текущую работоспособность источников."
+          },
+          {
+            "id": "odis-read-demo-api",
+            "label": "Демонстрационный API JSON-записей",
+            "description": "Перейдите по ссылке API в карточке результата для получения JSON без учётной записи или ключа. Указан проверенный пример DeepData; примеры OBIS и OceanExpert также ответили. Интерфейс в разработке предоставляет нормализованные метаданные и ссылки, а не исходные файлы или стабильный утверждённый API-контракт Ryu."
+          },
+          {
+            "id": "odis-tag-read-method-harvest",
+            "label": "Каналы метаданных зарегистрированных узлов",
+            "description": "Публичный список содержит зарегистрированные sitemap и sitegraph. По ним доступны размещённые поставщиками файлы JSON-LD или HTML со встроенным JSON-LD. Часть каналов читалась, другие возвращали 403. Требования, стоимость, повторное использование и доступность зависят от поставщика и проверены не для всех записей."
+          },
+          {
+            "id": "odis-tag-write-method-harvested-node",
+            "label": "Регистрация источника и публикация метаданных",
+            "description": "Создайте учётную запись OceanExpert и дождитесь первоначального одобрения перед входом в ODISCat. Опишите источник, опубликуйте подконтрольный вам Schema.org JSON-LD и зарегистрируйте sitemap либо sitegraph. Идентичность должна быть санкционирована организацией. IODE выполняет лёгкую кураторскую проверку; регистрация разрешает сбор, но не подтверждает его выполнение. Плата не указана."
+          },
+          {
+            "id": "odis-write-suggestion",
+            "label": "Предложение источника каталогу",
+            "description": "Предложите источник по электронной почте команды ODIS, указанной на главной странице каталога. Учётная запись OceanExpert для такого обращения не требуется. Сотрудники рассматривают предложение без гарантии публикации. Политика оплаты внесения сведений не найдена."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "odis-metric-catalogue-total",
+            "description": "Число записей источников в ODISCat на 10 сентября 2026 года: регистрации каталога, а не собранные метаданные или уникальные организации."
+          },
+          {
+            "id": "odis-metric-catalogue-searchable",
+            "description": "Доступные для поиска источники на 10 сентября 2026 года — подмножество общего каталога; прибавлять их к общему числу нельзя."
+          },
+          {
+            "id": "odis-metric-node-entries",
+            "description": "Строки списка узлов на 10 сентября 2026 года: 65 записей, обозначенных как узлы. Есть дубли, поэтому это не число уникальных активных узлов, партнёров или успешных сборов."
+          },
+          {
+            "id": "odis-metric-demo-results",
+            "description": "Точное число результатов без фильтра в разрабатываемом поиске на 10 сентября 2026 года. Это демонстрационный индекс, не ODISCat, вся федерация, пользователи или загрузки; пересекающиеся типовые фасеты нельзя складывать."
+          }
+        ],
+        "researchGaps": {
+          "data": "Текущий размер в байтах и дедуплицированное количество ресурсов всей федерации не установлены. Исторические данные OIH о более 130 000 записей, примерно 800 организациях и позднее более 55 узлах/48 партнёрах имеют разные даты и охват.",
+          "usage": "Проверенных измерений сеансов, скачиваний, запросов API, цитирований или числа участников не найдено. Регистрации и результаты поиска отражают ресурсы, а не использование.",
+          "standards": "Не установлены общесистемная сертификация DCAT, ISO или обязательная SHACL-проверка. Документация SHACL описывает начальную работу для поиска; рекомендуемые идентичности OceanExpert не являются отдельным стандартом данных.",
+          "access": "HTTPS-сертификат панели не соответствовал имени хоста. Документированный HTTP SPARQL вернул 404, HTTPS также не прошёл проверку сертификата. Экспорты Parquet не проверены. Рабочий демонстрационный JSON API не имеет утверждённого маршрута Ryu или проверенной гарантии стабильности."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "海洋数据与信息系统（ODIS）",
+      "summary": "由联合国教科文组织政府间海洋学委员会IODE协调的联邦，通过分布式元数据、来源目录和开发中的全球搜索服务发现海洋资源。",
+      "description": "ODIS通过共同的元数据发布约定连接独立管理的海洋信息系统。它由联合国教科文组织政府间海洋学委员会的IODE计划协调，描述数据集、出版物、专家、机构、项目、培训、船舶等资源，原始内容仍由提供方管理。其来源目录显示3,137个条目，其中2,191个可搜索；另一份节点列表有65个被标记为节点的条目，可能存在重复。这些目录数与2026年9月10日开发版搜索显示的163,080条元数据结果不同。当前主页说明全球搜索服务正在重建，但所链接的演示已提供真实的OBIS、DeepData和OceanExpert记录及公开JSON响应。Ocean InfoHub项目于2024年结束，原有搜索界面已停止维护。公开检索免费，但链接资源仍受提供方权限和许可约束；目录页脚链接CC BY-NC-SA 4.0。贡献者通过经批准的OceanExpert账户注册来源，并借助网站地图或站点图公开Schema.org JSON-LD。注册和目录在线标记均不证明已经完整、及时地采集。 演示网络监控另列出66个配置节点，其中41个报告错误（18个无响应、23个解析错误）。这些运行计数不同于目录总数；缓存搜索结果不证明来源当前正常。",
+      "details": {
+        "aliases": [
+          "ODIS",
+          "ODISCat",
+          "Ocean Data and Information System",
+          "ODIS Catalogue of Sources"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "home",
+            "overview",
+            "catalogue",
+            "nodes",
+            "architecture",
+            "join",
+            "demo",
+            "demo-deepdata",
+            "demo-obis",
+            "demo-oceanexpert",
+            "oih",
+            "disclaimer",
+            "fust",
+            "validation",
+            "network"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "odis-tag-data-type-metadata-catalog-registry",
+              "description": "海洋来源、服务和资源的描述及链接，包括来源注册以及数据集、文献、机构和活动的联邦元数据；原始测量值和文件仍保留在提供方。"
+            },
+            {
+              "id": "odis-format-json",
+              "description": "提供方公开JSON-LD；当前开发版搜索还返回普通JSON记录，包含来源、分发链接和部分事实。已检查的响应为raw:null，并非完整JSON-LD导出。"
+            },
+            {
+              "id": "odis-format-xml",
+              "description": "注册的XML网站地图或地图索引列出提供方元数据URL，用于发现获取位置，并不编码原始海洋观测。"
+            },
+            {
+              "id": "odis-format-html",
+              "description": "来源目录记录及元数据详情页以HTML提供可读内容。这描述记录的呈现格式，不是另一项数据标准。"
+            },
+            {
+              "id": "odis-standard-schema-org",
+              "description": "ODIS发布指南在JSON-LD中使用Schema.org类型与属性，并推荐专题模式；也接受其他有效类型。这不构成对每个注册来源或演示记录完整性、一致合规性的认证。"
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "odis-tag-read-method-web",
+            "label": "ODIS来源目录",
+            "description": "无需登录即可浏览、搜索来源描述及分类并访问提供方链接。目录页脚的CC BY-NC-SA 4.0不改变外部数据的许可，也不保证其可用性。编辑来源需使用单独的贡献流程。"
+          },
+          {
+            "id": "odis-read-demo",
+            "label": "开发中的元数据搜索",
+            "description": "主页链接的演示支持查询、来源筛选及真实记录卡片，包括DeepData和OBIS数据集。访问公开免费，但明确仍在开发中。计数属于该索引；原始文件与许可仍在提供方。 演示网络监控另列出66个配置节点，其中41个报告错误（18个无响应、23个解析错误）。这些运行计数不同于目录总数；缓存搜索结果不证明来源当前正常。"
+          },
+          {
+            "id": "odis-read-demo-api",
+            "label": "开发版JSON记录API",
+            "description": "通过结果卡片的API链接，无需账户或密钥即可获取JSON。所列URL是已验证的DeepData示例；OBIS和OceanExpert示例也返回JSON。此开发接口提供规范化元数据和提供方链接，不提供原始数据文件，也不是稳定、获批的Ryu API契约。"
+          },
+          {
+            "id": "odis-tag-read-method-harvest",
+            "label": "已注册节点的元数据馈送",
+            "description": "公开节点表链接已登记的网站地图和站点图。沿链接访问提供方托管的JSON-LD文件或嵌入JSON-LD的HTML页。部分馈送可读，另一些返回403。认证、费用、再利用与可用性依提供方而异，尚未对全部条目验证。"
+          },
+          {
+            "id": "odis-tag-write-method-harvested-node",
+            "label": "注册来源并公开元数据",
+            "description": "创建OceanExpert账户并等待首次批准，再登录ODISCat。描述来源，在自行控制的位置发布Schema.org JSON-LD，并注册网站地图或站点图。应维护经机构认可的身份。IODE进行轻量整理；注册允许采集，但不证明已经发生。文档未说明贡献费用。"
+          },
+          {
+            "id": "odis-write-suggestion",
+            "label": "向目录建议来源",
+            "description": "通过目录主页链接的ODIS团队邮箱建议来源；此联系途径无需OceanExpert登录。工作人员处理建议，但提交不保证发布。未找到贡献收费政策。"
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "odis-metric-catalogue-total",
+            "description": "ODISCat在2026年9月10日显示的来源条目总数；计量目录注册，而非已采集元数据或独立机构。"
+          },
+          {
+            "id": "odis-metric-catalogue-searchable",
+            "description": "2026年9月10日显示的可搜索来源条目，为目录总数的子集，不能再与总数相加。"
+          },
+          {
+            "id": "odis-metric-node-entries",
+            "description": "2026年9月10日节点列表的行数：65个被标记为节点的目录条目。存在重复来源，因此不代表独立活跃节点、合作方或成功采集次数。"
+          },
+          {
+            "id": "odis-metric-demo-results",
+            "description": "2026年9月10日开发版搜索未筛选时显示的精确结果数。它属于演示元数据索引，不代表ODISCat、整个联邦内容、用户或下载；类型筛选可重叠，不能求和。"
+          }
+        ],
+        "researchGaps": {
+          "data": "未确定当前存储字节数或全联邦去重后的资源总量。OIH历史报告的超过130,000条记录、约800个机构及后来的超过55个节点和48个合作方具有不同日期与范围。",
+          "usage": "未找到经验证的会话、下载事件、API请求、引用或贡献者数量。来源注册和搜索结果是内容规模，不是使用量。",
+          "standards": "未证实全系统采用DCAT、ISO认证或强制SHACL认证。SHACL文档描述的是搜索验证的初期工作；推荐使用OceanExpert身份不构成另一项数据标准。",
+          "access": "文档所列仪表板HTTPS证书主机名不匹配；HTTP SPARQL端点返回404，HTTPS也未通过证书验证。因此未验证仪表板Parquet导出。可用的演示JSON接口尚无获批Ryu运行路由，也无经验证的稳定性保证。"
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-ioc-unesco-iode-operates-ocean-data-and-information-system",
+      "sourceNodeId": "ioc-unesco-iode",
+      "targetNodeId": "odis",
+      "kind": "operates",
+      "note": "IODE coordinates ODIS programme operations and light node curation under IOC-UNESCO. Its catalogue is a product of the UNESCO/IOC Project Office for IODE. Independent participating systems retain their own governance and holdings; operation of ODIS does not transfer that authority.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "sourceRefs": [
+          "src-relationship-odis",
+          "overview",
+          "join",
+          "disclaimer"
+        ],
+        "status": "current programme operation documented on official ODIS and IODE pages"
+      },
+      "sources": {
+        "src-relationship-odis": {
+          "id": "src-relationship-odis",
+          "url": "https://oceaninfohub.org/odis/",
+          "title": {
+            "ar": "نظام بيانات ومعلومات المحيطات",
+            "en": "Ocean Data and Information System",
+            "es": "Sistema de Datos e Información Oceánicos",
+            "fr": "Système de données et d’informations océaniques",
+            "ru": "Система океанических данных и информации",
+            "zh": "海洋数据与信息系统"
+          },
+          "accessedAt": "2026-09-09"
+        },
+        "overview": {
+          "id": "overview",
+          "url": "https://odis.org/overview/",
+          "title": {
+            "en": "ODIS overview, federation and institutional history",
+            "fr": "Présentation, fédération et histoire institutionnelle d’ODIS",
+            "es": "Panorama, federación e historia institucional de ODIS",
+            "ar": "نظرة عامة على ODIS واتحاده وتاريخه المؤسسي",
+            "ru": "Обзор, федерация и институциональная история ODIS",
+            "zh": "ODIS概况、联邦与机构沿革"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "join": {
+          "id": "join",
+          "url": "https://book.odis.org/gettingStarted.html",
+          "title": {
+            "en": "ODIS federation: registration, metadata publication and access",
+            "fr": "Fédération ODIS : inscription, publication de métadonnées et accès",
+            "es": "Federación ODIS: registro, publicación de metadatos y acceso",
+            "ar": "اتحاد ODIS: التسجيل ونشر البيانات الوصفية والوصول",
+            "ru": "Федерация ODIS: регистрация, публикация метаданных и доступ",
+            "zh": "ODIS联邦：注册、元数据发布与访问"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "disclaimer": {
+          "id": "disclaimer",
+          "url": "https://catalogue.odis.org/disclaimer",
+          "title": {
+            "en": "ODIS Catalogue disclaimer and licence footer",
+            "fr": "Avertissement et licence du catalogue ODIS",
+            "es": "Aviso legal y licencia del catálogo ODIS",
+            "ar": "إخلاء المسؤولية والترخيص في كتالوج ODIS",
+            "ru": "Отказ от гарантий и лицензия каталога ODIS",
+            "zh": "ODIS目录免责声明与页脚许可"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ioc-assembly-governs-odis",
+      "sourceNodeId": "ioc-assembly",
+      "targetNodeId": "odis",
+      "kind": "governs",
+      "note": "The IOC Assembly formally established ODIS through Decision A-31/3.4.2 in 2021; the current programme terms reference Decision A-33/3.4.2 and IODE-28 recommendations. This authority concerns the ODIS programme and its terms, not the independent governance of every federated data provider.",
+      "properties": {
+        "scope": "Formal establishment and programme terms of reference",
+        "status": "formal decisions; current programme terms published in 2025",
+        "sourceRefs": [
+          "overview",
+          "governance"
+        ]
+      },
+      "sources": {
+        "overview": {
+          "id": "overview",
+          "url": "https://odis.org/overview/",
+          "title": {
+            "en": "ODIS overview, federation and institutional history",
+            "fr": "Présentation, fédération et histoire institutionnelle d’ODIS",
+            "es": "Panorama, federación e historia institucional de ODIS",
+            "ar": "نظرة عامة على ODIS واتحاده وتاريخه المؤسسي",
+            "ru": "Обзор, федерация и институциональная история ODIS",
+            "zh": "ODIS概况、联邦与机构沿革"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "governance": {
+          "id": "governance",
+          "url": "https://odis.org/overview/governance/",
+          "title": {
+            "en": "ODIS programme and steering group terms of reference",
+            "fr": "Mandats du programme ODIS et de son groupe directeur",
+            "es": "Mandatos del programa ODIS y su grupo directivo",
+            "ar": "اختصاصات برنامج ODIS ومجموعته التوجيهية",
+            "ru": "Круг ведения программы ODIS и её руководящей группы",
+            "zh": "ODIS计划与指导组职权范围"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ioc-unesco-funds-odis",
+      "sourceNodeId": "ioc-unesco",
+      "targetNodeId": "odis",
+      "kind": "funds",
+      "note": "The official FUST account states that ODIS continues as a UNESCO/IOC-funded IODE programme component; IODE defines programme components as receiving core regular-programme funding and staff support. No amount or exclusive funding claim is supported.",
+      "properties": {
+        "scope": "Core UNESCO/IOC regular-programme funding and staff support for ODIS",
+        "status": "standing support documented on current official pages; grant amount and exact interval unspecified",
+        "sourceRefs": [
+          "components",
+          "fust",
+          "overview"
+        ]
+      },
+      "sources": {
+        "components": {
+          "id": "components",
+          "url": "https://iode.org/programme-components/",
+          "title": {
+            "en": "IODE programme components and regular programme support",
+            "fr": "Composantes de programme IODE et soutien du programme ordinaire",
+            "es": "Componentes de IODE y apoyo del programa ordinario",
+            "ar": "مكونات برنامج IODE ودعم البرنامج العادي",
+            "ru": "Компоненты программы IODE и поддержка из регулярного бюджета",
+            "zh": "IODE计划组成部分与常规计划支持"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "fust": {
+          "id": "fust",
+          "url": "https://fust.iode.org/en/oih",
+          "title": {
+            "en": "FUST support for Ocean InfoHub and subsequent ODIS development",
+            "fr": "Soutien FUST à Ocean InfoHub et développement ultérieur d’ODIS",
+            "es": "Apoyo FUST a Ocean InfoHub y desarrollo posterior de ODIS",
+            "ar": "دعم FUST لمشروع Ocean InfoHub والتطور اللاحق لـODIS",
+            "ru": "Поддержка Ocean InfoHub фондом FUST и дальнейшее развитие ODIS",
+            "zh": "FUST对Ocean InfoHub及后续ODIS发展的支持"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "overview": {
+          "id": "overview",
+          "url": "https://odis.org/overview/",
+          "title": {
+            "en": "ODIS overview, federation and institutional history",
+            "fr": "Présentation, fédération et histoire institutionnelle d’ODIS",
+            "es": "Panorama, federación e historia institucional de ODIS",
+            "ar": "نظرة عامة على ODIS واتحاده وتاريخه المؤسسي",
+            "ru": "Обзор, федерация и институциональная история ODIS",
+            "zh": "ODIS概况、联邦与机构沿革"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-government-of-flanders-funds-odis",
+      "sourceNodeId": "government-of-flanders",
+      "targetNodeId": "odis",
+      "kind": "funds",
+      "note": "FUST funded the Ocean InfoHub project from April 2020 to April 2024, supporting the development of the ODIS architecture. The OIH site identifies the Government of Flanders as funder. This edge is scoped to ODIS development through that historical project, not all OIH expenditure or an ongoing ODIS grant. The project closure notice says June 2024, distinct from the stated funding interval.",
+      "properties": {
+        "scope": "ODIS architecture development through FUST-funded Ocean InfoHub",
+        "status": "historical project funding",
+        "sourceRefs": [
+          "fust",
+          "oih"
+        ],
+        "period": "FUST-supported OIH interval April 2020–April 2024; project conclusion separately reported June 2024",
+        "intermediary": "FUST / Ocean InfoHub project"
+      },
+      "sources": {
+        "fust": {
+          "id": "fust",
+          "url": "https://fust.iode.org/en/oih",
+          "title": {
+            "en": "FUST support for Ocean InfoHub and subsequent ODIS development",
+            "fr": "Soutien FUST à Ocean InfoHub et développement ultérieur d’ODIS",
+            "es": "Apoyo FUST a Ocean InfoHub y desarrollo posterior de ODIS",
+            "ar": "دعم FUST لمشروع Ocean InfoHub والتطور اللاحق لـODIS",
+            "ru": "Поддержка Ocean InfoHub фондом FUST и дальнейшее развитие ODIS",
+            "zh": "FUST对Ocean InfoHub及后续ODIS发展的支持"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "oih": {
+          "id": "oih",
+          "url": "https://oceaninfohub.org/",
+          "title": {
+            "en": "Ocean InfoHub project closure and search retirement notice",
+            "fr": "Clôture du projet Ocean InfoHub et arrêt de son interface de recherche",
+            "es": "Cierre de Ocean InfoHub y retirada de su búsqueda",
+            "ar": "إشعار اختتام مشروع Ocean InfoHub وإيقاف واجهة البحث",
+            "ru": "Завершение проекта Ocean InfoHub и прекращение поддержки поиска",
+            "zh": "Ocean InfoHub项目结束与搜索停用公告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-deepdata-member_of-odis",
+      "sourceNodeId": "deepdata",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "ISA announced integration of DeepData into the ODIS federation on 6 May 2025. This is documented participation of the database in a distributed system, not component hierarchy. A current development-search JSON response also confirms DeepData metadata is present downstream; full harvest coverage is not established. The development network monitor reports six DeepData page-parsing failures (five shown and one additional), so indexed presence is not evidence of complete ingestion; this research did not independently rerun the full crawl.",
+      "properties": {
+        "scope": "DeepData metadata discovery through the ODIS federation",
+        "status": "participation announced 2025-05-06; source sitemap retrieved 2026-09-10; catalogue reports online at check 10/09/2026 23:41 (timezone unspecified); downstream harvest time unverified",
+        "sourceRefs": [
+          "odis-news",
+          "odis-catalogue",
+          "sitemap",
+          "odis-example",
+          "demo-deepdata",
+          "network"
+        ],
+        "artifact": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml"
+      },
+      "sources": {
+        "odis-news": {
+          "id": "odis-news",
+          "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+          "title": {
+            "en": "DeepData joins ODIS, 6 May 2025",
+            "fr": "DeepData rejoint ODIS, 6 mai 2025",
+            "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+            "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+            "zh": "DeepData于2025年5月6日加入ODIS",
+            "ru": "DeepData присоединяется к ODIS, 6 мая 2025"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-catalogue": {
+          "id": "odis-catalogue",
+          "url": "https://catalogue.odis.org/view/893",
+          "title": {
+            "en": "ODIS catalogue record 893: DeepData",
+            "fr": "Notice 893 du catalogue ODIS : DeepData",
+            "es": "Registro 893 del catálogo ODIS: DeepData",
+            "ar": "سجل ODIS رقم 893: DeepData",
+            "zh": "ODIS目录条目893：DeepData",
+            "ru": "Запись 893 каталога ODIS: DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "sitemap": {
+          "id": "sitemap",
+          "url": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+          "title": {
+            "en": "DeepData ODIS sitemap",
+            "fr": "Plan de site ODIS de DeepData",
+            "es": "Mapa del sitio ODIS de DeepData",
+            "ar": "خريطة موقع DeepData لخدمة ODIS",
+            "zh": "DeepData ODIS站点地图",
+            "ru": "Карта сайта DeepData для ODIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-example": {
+          "id": "odis-example",
+          "url": "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+          "title": {
+            "en": "DeepData ODIS CTD metadata: Beijing Pioneer, 2021",
+            "fr": "Métadonnées CTD ODIS : Beijing Pioneer, 2021",
+            "es": "Metadatos CTD ODIS: Beijing Pioneer, 2021",
+            "ar": "بيانات CTD الوصفية عبر ODIS: بيجين بايونير، 2021",
+            "zh": "DeepData ODIS CTD元数据：北京先驱，2021",
+            "ru": "Метаданные CTD ODIS: Beijing Pioneer, 2021"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "demo-deepdata": {
+          "id": "demo-deepdata",
+          "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+          "title": {
+            "en": "ODIS demo JSON record for DeepData CTD metadata",
+            "fr": "Notice JSON de démonstration ODIS pour les métadonnées CTD DeepData",
+            "es": "Registro JSON de demostración ODIS con metadatos CTD de DeepData",
+            "ar": "سجل JSON في عرض ODIS لبيانات DeepData الوصفية عن CTD",
+            "ru": "JSON-запись демонстрационного поиска ODIS с метаданными CTD DeepData",
+            "zh": "ODIS演示中的DeepData CTD元数据JSON记录"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "network": {
+          "id": "network",
+          "url": "https://search-demo.odis.org/network",
+          "title": {
+            "en": "ODIS development network-status report",
+            "fr": "État du réseau ODIS en développement",
+            "es": "Estado de la red ODIS en desarrollo",
+            "ar": "تقرير حالة شبكة ODIS قيد التطوير",
+            "ru": "Состояние разрабатываемой сети ODIS",
+            "zh": "开发中的ODIS网络状态报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-deepdata-syncs_to-odis",
+      "sourceNodeId": "deepdata",
+      "targetNodeId": "odis",
+      "kind": "syncs_to",
+      "note": "ODIS catalogue record 893 registers DeepData’s sitemap; the upstream sample and sitemap support metadata exposure. On 10 September 2026, the development search displayed 335 DeepData dataset results and returned a public JSON record for COMRA CTD metadata with an ISA download link. Its source.last_indexed value is 2026-09-10T08:41:07.596052 (timezone unspecified), an index metadata field rather than proof of a complete latest-source harvest. ODISCat reported the source online at 10/09/2026 23:41; the earlier offline check is historical. This is verified downstream metadata presence, not replication of all DeepData files or a guaranteed refresh cadence. The development network monitor reports six DeepData page-parsing failures (five shown and one additional), so indexed presence is not evidence of complete ingestion; this research did not independently rerun the full crawl.",
+      "properties": {
+        "scope": "DeepData metadata discovery through the ODIS federation",
+        "status": "metadata present in ODIS development search on 2026-09-10; full coverage and refresh cadence unverified",
+        "sourceRefs": [
+          "odis-news",
+          "odis-catalogue",
+          "sitemap",
+          "odis-example",
+          "demo-deepdata",
+          "network"
+        ],
+        "artifact": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+        "sourceIndexReportedAt": "2026-09-10T08:41:07.596052 (timezone unspecified)"
+      },
+      "sources": {
+        "odis-news": {
+          "id": "odis-news",
+          "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+          "title": {
+            "en": "DeepData joins ODIS, 6 May 2025",
+            "fr": "DeepData rejoint ODIS, 6 mai 2025",
+            "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+            "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+            "zh": "DeepData于2025年5月6日加入ODIS",
+            "ru": "DeepData присоединяется к ODIS, 6 мая 2025"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-catalogue": {
+          "id": "odis-catalogue",
+          "url": "https://catalogue.odis.org/view/893",
+          "title": {
+            "en": "ODIS catalogue record 893: DeepData",
+            "fr": "Notice 893 du catalogue ODIS : DeepData",
+            "es": "Registro 893 del catálogo ODIS: DeepData",
+            "ar": "سجل ODIS رقم 893: DeepData",
+            "zh": "ODIS目录条目893：DeepData",
+            "ru": "Запись 893 каталога ODIS: DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "sitemap": {
+          "id": "sitemap",
+          "url": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+          "title": {
+            "en": "DeepData ODIS sitemap",
+            "fr": "Plan de site ODIS de DeepData",
+            "es": "Mapa del sitio ODIS de DeepData",
+            "ar": "خريطة موقع DeepData لخدمة ODIS",
+            "zh": "DeepData ODIS站点地图",
+            "ru": "Карта сайта DeepData для ODIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-example": {
+          "id": "odis-example",
+          "url": "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+          "title": {
+            "en": "DeepData ODIS CTD metadata: Beijing Pioneer, 2021",
+            "fr": "Métadonnées CTD ODIS : Beijing Pioneer, 2021",
+            "es": "Metadatos CTD ODIS: Beijing Pioneer, 2021",
+            "ar": "بيانات CTD الوصفية عبر ODIS: بيجين بايونير، 2021",
+            "zh": "DeepData ODIS CTD元数据：北京先驱，2021",
+            "ru": "Метаданные CTD ODIS: Beijing Pioneer, 2021"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "demo-deepdata": {
+          "id": "demo-deepdata",
+          "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+          "title": {
+            "en": "ODIS demo JSON record for DeepData CTD metadata",
+            "fr": "Notice JSON de démonstration ODIS pour les métadonnées CTD DeepData",
+            "es": "Registro JSON de demostración ODIS con metadatos CTD de DeepData",
+            "ar": "سجل JSON في عرض ODIS لبيانات DeepData الوصفية عن CTD",
+            "ru": "JSON-запись демонстрационного поиска ODIS с метаданными CTD DeepData",
+            "zh": "ODIS演示中的DeepData CTD元数据JSON记录"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "network": {
+          "id": "network",
+          "url": "https://search-demo.odis.org/network",
+          "title": {
+            "en": "ODIS development network-status report",
+            "fr": "État du réseau ODIS en développement",
+            "es": "Estado de la red ODIS en desarrollo",
+            "ar": "تقرير حالة شبكة ODIS قيد التطوير",
+            "ru": "Состояние разрабатываемой сети ODIS",
+            "zh": "开发中的ODIS网络状态报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-platform-obis-member-of-odis",
+      "sourceNodeId": "platform-obis",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "The OBIS data policy explicitly states that OBIS is connected to ODIS. This records participating-service status in the federation, not component ownership or a claim that every OBIS occurrence is harvested.",
+      "properties": {
+        "scope": "Participation in the ODIS interoperability federation",
+        "status": "documented connected service",
+        "sourceRefs": [
+          "evidence"
+        ]
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://manual.obis.org/policy.html",
+          "title": {
+            "en": "OBIS data policy",
+            "fr": "Politique de données OBIS",
+            "es": "Política de datos OBIS",
+            "ar": "سياسة بيانات OBIS",
+            "zh": "OBIS数据政策",
+            "ru": "Политика OBIS в отношении данных"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-oceanexpert-member-of-odis",
+      "sourceNodeId": "oceanexpert",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "The dedicated ODIS node list and catalogue entry 4 explicitly register OceanExpert with an ODIS-Arch feed. This establishes documented federation participation. The catalogue datasource check showed online at 10/09/2026 23:41 (timezone unspecified); this checks the source URL, not successful metadata harvesting. Registration does not establish complete, current downstream indexing. The ODIS joining guide independently identifies OceanExpert as a node whose content is shared through the federation. The development monitor reports a failed sitemap request with HTTP404 even while indexed OceanExpert records remain searchable. Our independent sitemap request returned200; these observations have different execution contexts and do not establish uninterrupted upstream health.",
+      "properties": {
+        "scope": "Expert, institution, event and related OceanExpert metadata",
+        "status": "registered node; source check online; full downstream coverage unverified",
+        "sourceRefs": [
+          "nodes",
+          "node-oceanexpert",
+          "join",
+          "network"
+        ]
+      },
+      "sources": {
+        "nodes": {
+          "id": "nodes",
+          "url": "https://catalogue.odis.org/odis",
+          "title": {
+            "en": "ODIS node-designated catalogue entries and registered feeds",
+            "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+            "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+            "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+            "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+            "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "node-oceanexpert": {
+          "id": "node-oceanexpert",
+          "url": "https://catalogue.odis.org/view/4",
+          "title": {
+            "en": "OceanExpert ODIS node registration",
+            "fr": "Inscription du nœud ODIS OceanExpert",
+            "es": "Registro del nodo ODIS OceanExpert",
+            "ar": "تسجيل عقدة OceanExpert في ODIS",
+            "ru": "Регистрация узла OceanExpert в ODIS",
+            "zh": "OceanExpert的ODIS节点注册"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "join": {
+          "id": "join",
+          "url": "https://book.odis.org/gettingStarted.html",
+          "title": {
+            "en": "ODIS federation: registration, metadata publication and access",
+            "fr": "Fédération ODIS : inscription, publication de métadonnées et accès",
+            "es": "Federación ODIS: registro, publicación de metadatos y acceso",
+            "ar": "اتحاد ODIS: التسجيل ونشر البيانات الوصفية والوصول",
+            "ru": "Федерация ODIS: регистрация, публикация метаданных и доступ",
+            "zh": "ODIS联邦：注册、元数据发布与访问"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "network": {
+          "id": "network",
+          "url": "https://search-demo.odis.org/network",
+          "title": {
+            "en": "ODIS development network-status report",
+            "fr": "État du réseau ODIS en développement",
+            "es": "Estado de la red ODIS en desarrollo",
+            "ar": "تقرير حالة شبكة ODIS قيد التطوير",
+            "ru": "Состояние разрабатываемой сети ODIS",
+            "zh": "开发中的ODIS网络状态报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-emodnet-member-of-odis",
+      "sourceNodeId": "emodnet",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "The dedicated ODIS node list and catalogue entry 364 explicitly register EMODnet catalogue with an ODIS-Arch feed. This establishes documented federation participation. The catalogue datasource check showed online at 10/09/2026 23:41 (timezone unspecified); this checks the source URL, not successful metadata harvesting. Registration does not establish complete, current downstream indexing.",
+      "properties": {
+        "scope": "Participation through the central EMODnet metadata catalogue, not every thematic portal",
+        "status": "registered node; source check online; full downstream coverage unverified",
+        "sourceRefs": [
+          "nodes",
+          "node-emodnet"
+        ]
+      },
+      "sources": {
+        "nodes": {
+          "id": "nodes",
+          "url": "https://catalogue.odis.org/odis",
+          "title": {
+            "en": "ODIS node-designated catalogue entries and registered feeds",
+            "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+            "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+            "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+            "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+            "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "node-emodnet": {
+          "id": "node-emodnet",
+          "url": "https://catalogue.odis.org/view/364",
+          "title": {
+            "en": "EMODnet catalogue ODIS node registration",
+            "fr": "Inscription du nœud ODIS EMODnet catalogue",
+            "es": "Registro del nodo ODIS EMODnet catalogue",
+            "ar": "تسجيل عقدة EMODnet catalogue في ODIS",
+            "ru": "Регистрация узла EMODnet catalogue в ODIS",
+            "zh": "EMODnet catalogue的ODIS节点注册"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-gbif-member-of-odis",
+      "sourceNodeId": "gbif",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "The dedicated ODIS node list and catalogue entry 3297 explicitly register GBIF with an ODIS-Arch feed. This establishes documented federation participation. The catalogue datasource check showed offline at 10/09/2026 23:41 (timezone unspecified); this checks the source URL, not successful metadata harvesting. Registration does not establish complete, current downstream indexing. The development monitor also reports sitemapHTTP403; our independent feed request returned403. Participation is retained without claiming a healthy current ingest.",
+      "properties": {
+        "scope": "Registered GBIF dataset-metadata source; no claim that all biodiversity occurrences are indexed",
+        "status": "registered node; source check offline; full downstream coverage unverified",
+        "sourceRefs": [
+          "nodes",
+          "node-gbif",
+          "network"
+        ]
+      },
+      "sources": {
+        "nodes": {
+          "id": "nodes",
+          "url": "https://catalogue.odis.org/odis",
+          "title": {
+            "en": "ODIS node-designated catalogue entries and registered feeds",
+            "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+            "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+            "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+            "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+            "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "node-gbif": {
+          "id": "node-gbif",
+          "url": "https://catalogue.odis.org/view/3297",
+          "title": {
+            "en": "GBIF ODIS node registration",
+            "fr": "Inscription du nœud ODIS GBIF",
+            "es": "Registro del nodo ODIS GBIF",
+            "ar": "تسجيل عقدة GBIF في ODIS",
+            "ru": "Регистрация узла GBIF в ODIS",
+            "zh": "GBIF的ODIS节点注册"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "network": {
+          "id": "network",
+          "url": "https://search-demo.odis.org/network",
+          "title": {
+            "en": "ODIS development network-status report",
+            "fr": "État du réseau ODIS en développement",
+            "es": "Estado de la red ODIS en desarrollo",
+            "ar": "تقرير حالة شبكة ODIS قيد التطوير",
+            "ru": "Состояние разрабатываемой сети ODIS",
+            "zh": "开发中的ODIS网络状态报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-bco-dmo-member-of-odis",
+      "sourceNodeId": "bco-dmo",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "The dedicated ODIS node list and catalogue entry 3287 explicitly register BCO-DMO with an ODIS-Arch feed. This establishes documented federation participation. The catalogue datasource check showed online at 10/09/2026 23:41 (timezone unspecified); this checks the source URL, not successful metadata harvesting. Registration does not establish complete, current downstream indexing.",
+      "properties": {
+        "scope": "Registered BCO-DMO metadata source",
+        "status": "registered node; source check online; full downstream coverage unverified",
+        "sourceRefs": [
+          "nodes",
+          "node-bco-dmo"
+        ]
+      },
+      "sources": {
+        "nodes": {
+          "id": "nodes",
+          "url": "https://catalogue.odis.org/odis",
+          "title": {
+            "en": "ODIS node-designated catalogue entries and registered feeds",
+            "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+            "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+            "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+            "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+            "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "node-bco-dmo": {
+          "id": "node-bco-dmo",
+          "url": "https://catalogue.odis.org/view/3287",
+          "title": {
+            "en": "BCO-DMO ODIS node registration",
+            "fr": "Inscription du nœud ODIS BCO-DMO",
+            "es": "Registro del nodo ODIS BCO-DMO",
+            "ar": "تسجيل عقدة BCO-DMO في ODIS",
+            "ru": "Регистрация узла BCO-DMO в ODIS",
+            "zh": "BCO-DMO的ODIS节点注册"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-cioos-member-of-odis",
+      "sourceNodeId": "cioos",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "The dedicated ODIS node list and catalogue entry 3263 explicitly register CIOOS catalogue with an ODIS-Arch feed. This establishes documented federation participation. The catalogue datasource check showed offline at 10/09/2026 23:41 (timezone unspecified); this checks the source URL, not successful metadata harvesting. Registration does not establish complete, current downstream indexing. The development monitor also reports sitemapHTTP403; our independent feed request returned403. Participation is retained without claiming a healthy current ingest.",
+      "properties": {
+        "scope": "Participation through the CIOOS data catalogue",
+        "status": "registered node; source check offline; full downstream coverage unverified",
+        "sourceRefs": [
+          "nodes",
+          "node-cioos",
+          "network"
+        ]
+      },
+      "sources": {
+        "nodes": {
+          "id": "nodes",
+          "url": "https://catalogue.odis.org/odis",
+          "title": {
+            "en": "ODIS node-designated catalogue entries and registered feeds",
+            "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+            "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+            "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+            "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+            "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "node-cioos": {
+          "id": "node-cioos",
+          "url": "https://catalogue.odis.org/view/3263",
+          "title": {
+            "en": "CIOOS catalogue ODIS node registration",
+            "fr": "Inscription du nœud ODIS CIOOS catalogue",
+            "es": "Registro del nodo ODIS CIOOS catalogue",
+            "ar": "تسجيل عقدة CIOOS catalogue في ODIS",
+            "ru": "Регистрация узла CIOOS catalogue в ODIS",
+            "zh": "CIOOS catalogue的ODIS节点注册"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "network": {
+          "id": "network",
+          "url": "https://search-demo.odis.org/network",
+          "title": {
+            "en": "ODIS development network-status report",
+            "fr": "État du réseau ODIS en développement",
+            "es": "Estado de la red ODIS en desarrollo",
+            "ar": "تقرير حالة شبكة ODIS قيد التطوير",
+            "ru": "Состояние разрабатываемой сети ODIS",
+            "zh": "开发中的ODIS网络状态报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-argovis-member-of-odis",
+      "sourceNodeId": "argovis",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "The dedicated ODIS node list and catalogue entry 3304 explicitly register Argovis Argo collection with an ODIS-Arch feed. This establishes documented federation participation. The catalogue datasource check showed online at 10/09/2026 23:41 (timezone unspecified); this checks the source URL, not successful metadata harvesting. Registration does not establish complete, current downstream indexing.",
+      "properties": {
+        "scope": "Registered Argovis Argo collection, not every Argovis collection",
+        "status": "registered node; source check online; full downstream coverage unverified",
+        "sourceRefs": [
+          "nodes",
+          "node-argovis"
+        ]
+      },
+      "sources": {
+        "nodes": {
+          "id": "nodes",
+          "url": "https://catalogue.odis.org/odis",
+          "title": {
+            "en": "ODIS node-designated catalogue entries and registered feeds",
+            "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+            "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+            "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+            "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+            "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "node-argovis": {
+          "id": "node-argovis",
+          "url": "https://catalogue.odis.org/view/3304",
+          "title": {
+            "en": "Argovis Argo collection ODIS node registration",
+            "fr": "Inscription du nœud ODIS Argovis Argo collection",
+            "es": "Registro del nodo ODIS Argovis Argo collection",
+            "ar": "تسجيل عقدة Argovis Argo collection في ODIS",
+            "ru": "Регистрация узла Argovis Argo collection в ODIS",
+            "zh": "Argovis Argo collection的ODIS节点注册"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ioos-member-of-odis",
+      "sourceNodeId": "ioos",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "The dedicated ODIS node list and catalogue entry 3308 explicitly register IOOS data catalogue with an ODIS-Arch feed. This establishes documented federation participation. The catalogue datasource check showed online at 10/09/2026 23:41 (timezone unspecified); this checks the source URL, not successful metadata harvesting. Registration does not establish complete, current downstream indexing. The network monitor reports metadata parsing failures for IOOS pages; a readable sitemap therefore does not prove complete ingest.",
+      "properties": {
+        "scope": "Participation through the IOOS data catalogue, not every regional observing service",
+        "status": "registered node; source check online; full downstream coverage unverified",
+        "sourceRefs": [
+          "nodes",
+          "node-ioos",
+          "network"
+        ]
+      },
+      "sources": {
+        "nodes": {
+          "id": "nodes",
+          "url": "https://catalogue.odis.org/odis",
+          "title": {
+            "en": "ODIS node-designated catalogue entries and registered feeds",
+            "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+            "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+            "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+            "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+            "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "node-ioos": {
+          "id": "node-ioos",
+          "url": "https://catalogue.odis.org/view/3308",
+          "title": {
+            "en": "IOOS data catalogue ODIS node registration",
+            "fr": "Inscription du nœud ODIS IOOS data catalogue",
+            "es": "Registro del nodo ODIS IOOS data catalogue",
+            "ar": "تسجيل عقدة IOOS data catalogue في ODIS",
+            "ru": "Регистрация узла IOOS data catalogue в ODIS",
+            "zh": "IOOS data catalogue的ODIS节点注册"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "network": {
+          "id": "network",
+          "url": "https://search-demo.odis.org/network",
+          "title": {
+            "en": "ODIS development network-status report",
+            "fr": "État du réseau ODIS en développement",
+            "es": "Estado de la red ODIS en desarrollo",
+            "ar": "تقرير حالة شبكة ODIS قيد التطوير",
+            "ru": "Состояние разрабатываемой сети ODIS",
+            "zh": "开发中的ODIS网络状态报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-oceanexpert-syncs-to-odis",
+      "sourceNodeId": "oceanexpert",
+      "targetNodeId": "odis",
+      "kind": "syncs_to",
+      "note": "The public ODIS development-search API returned a Event record attributed to OceanExpert, with its original resource URL and provider information. The response reports source.last_indexed=2026-09-10T08:39:00.856658 (timezone unspecified). The registered sitemap was independently readable. This verifies metadata present in the recipient demo, not the most recent source release, all source content or a guaranteed refresh schedule. The development monitor reports a failed sitemap request with HTTP404 even while indexed OceanExpert records remain searchable. Our independent sitemap request returned200; these observations have different execution contexts and do not establish uninterrupted upstream health.",
+      "properties": {
+        "scope": "OceanExpert event and related descriptive metadata in the development search",
+        "status": "downstream demo metadata verified 2026-09-10; complete coverage and cadence unverified",
+        "sourceRefs": [
+          "demo-oceanexpert",
+          "feed-oceanexpert",
+          "nodes",
+          "network"
+        ],
+        "transferMethod": "ODIS indexing of provider metadata exposed through a registered sitemap",
+        "format": "Schema.org JSON-LD at source; normalized JSON in the demo response",
+        "artifact": "https://search-demo.odis.org/api/v1/records/gleaner%3Aoceanexpert%3Acaf4562bcc499b395e484216b1d488130fe7ef28.json",
+        "sourceIndexReportedAt": "2026-09-10T08:39:00.856658 (timezone unspecified)"
+      },
+      "sources": {
+        "demo-oceanexpert": {
+          "id": "demo-oceanexpert",
+          "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Aoceanexpert%3Acaf4562bcc499b395e484216b1d488130fe7ef28.json",
+          "title": {
+            "en": "ODIS demo JSON record for an OceanExpert event",
+            "fr": "Notice JSON de démonstration ODIS pour un événement OceanExpert",
+            "es": "Registro JSON de demostración ODIS de un evento OceanExpert",
+            "ar": "سجل JSON في عرض ODIS لفعالية OceanExpert",
+            "ru": "JSON-запись демонстрационного поиска ODIS о мероприятии OceanExpert",
+            "zh": "ODIS演示中的OceanExpert活动JSON记录"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "feed-oceanexpert": {
+          "id": "feed-oceanexpert",
+          "url": "https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml",
+          "title": {
+            "en": "Registered oceanexpert metadata sitemap",
+            "fr": "Sitemap de métadonnées enregistré : oceanexpert",
+            "es": "Sitemap de metadatos registrado: oceanexpert",
+            "ar": "خريطة البيانات الوصفية المسجلة: oceanexpert",
+            "ru": "Зарегистрированная карта метаданных: oceanexpert",
+            "zh": "oceanexpert已登记元数据网站地图"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "nodes": {
+          "id": "nodes",
+          "url": "https://catalogue.odis.org/odis",
+          "title": {
+            "en": "ODIS node-designated catalogue entries and registered feeds",
+            "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+            "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+            "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+            "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+            "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "network": {
+          "id": "network",
+          "url": "https://search-demo.odis.org/network",
+          "title": {
+            "en": "ODIS development network-status report",
+            "fr": "État du réseau ODIS en développement",
+            "es": "Estado de la red ODIS en desarrollo",
+            "ar": "تقرير حالة شبكة ODIS قيد التطوير",
+            "ru": "Состояние разрабатываемой сети ODIS",
+            "zh": "开发中的ODIS网络状态报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-platform-obis-syncs-to-odis",
+      "sourceNodeId": "platform-obis",
+      "targetNodeId": "odis",
+      "kind": "syncs_to",
+      "note": "The public ODIS development-search API returned a Dataset record attributed to Ocean Biodiversity Information System, with its original resource URL and provider information. The response reports source.last_indexed=2026-09-10T09:01:32.734611 (timezone unspecified). The registered sitemap was independently readable. This verifies metadata present in the recipient demo, not the most recent source release, all source content or a guaranteed refresh schedule.",
+      "properties": {
+        "scope": "OBIS dataset-level metadata in the development search, not all occurrence records",
+        "status": "downstream demo metadata verified 2026-09-10; complete coverage and cadence unverified",
+        "sourceRefs": [
+          "demo-obis",
+          "feed-platform-obis",
+          "nodes"
+        ],
+        "transferMethod": "ODIS indexing of provider metadata exposed through a registered sitemap",
+        "format": "Schema.org JSON-LD at source; normalized JSON in the demo response",
+        "artifact": "https://search-demo.odis.org/api/v1/records/gleaner%3Aocean-biodiversity-information-system%3Ahttps%253A%252F%252Fobis.org%252Fdataset%252F8935fb89-6494-4829-8b29-09022c3dbc90",
+        "sourceIndexReportedAt": "2026-09-10T09:01:32.734611 (timezone unspecified)"
+      },
+      "sources": {
+        "demo-obis": {
+          "id": "demo-obis",
+          "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Aocean-biodiversity-information-system%3Ahttps%253A%252F%252Fobis.org%252Fdataset%252F8935fb89-6494-4829-8b29-09022c3dbc90",
+          "title": {
+            "en": "ODIS demo JSON record for OBIS turtle dataset metadata",
+            "fr": "Notice JSON de démonstration ODIS pour un jeu de données OBIS sur les tortues",
+            "es": "Registro JSON de demostración ODIS con metadatos OBIS de tortugas",
+            "ar": "سجل JSON في عرض ODIS لبيانات OBIS الوصفية عن السلاحف",
+            "ru": "JSON-запись демонстрационного поиска ODIS с метаданными набора OBIS о черепахах",
+            "zh": "ODIS演示中的OBIS海龟数据集元数据JSON记录"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "feed-platform-obis": {
+          "id": "feed-platform-obis",
+          "url": "https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml",
+          "title": {
+            "en": "Registered platform-obis metadata sitemap",
+            "fr": "Sitemap de métadonnées enregistré : platform-obis",
+            "es": "Sitemap de metadatos registrado: platform-obis",
+            "ar": "خريطة البيانات الوصفية المسجلة: platform-obis",
+            "ru": "Зарегистрированная карта метаданных: platform-obis",
+            "zh": "platform-obis已登记元数据网站地图"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "nodes": {
+          "id": "nodes",
+          "url": "https://catalogue.odis.org/odis",
+          "title": {
+            "en": "ODIS node-designated catalogue entries and registered feeds",
+            "fr": "Entrées du catalogue désignées comme nœuds ODIS et flux enregistrés",
+            "es": "Entradas designadas como nodos ODIS y fuentes registradas",
+            "ar": "مدخلات الكتالوج المصنفة عقد ODIS وتغذياتها المسجلة",
+            "ru": "Записи каталога, обозначенные как узлы ODIS, и зарегистрированные каналы",
+            "zh": "标记为ODIS节点的目录条目与已登记数据馈送"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-international-seabed-authority-publishes-to-odis",
+      "sourceNodeId": "international-seabed-authority",
+      "targetNodeId": "odis",
+      "kind": "publishes_to",
+      "note": "ISA announced the integration of its DeepData database with ODIS on 6 May 2025 to expose environmental and scientific information submitted by exploration contractors. A current ODIS demo JSON record shows the resulting provider-attributed metadata and an ISA download link. This is ISA’s mediated publication through DeepData, not direct publishing by every contractor or transfer of ownership to ODIS.",
+      "properties": {
+        "scope": "ISA environmental and scientific metadata supplied through DeepData",
+        "status": "announced 2025-05-06; downstream demo presence verified 2026-09-10",
+        "sourceRefs": [
+          "isa-integration",
+          "demo-deepdata"
+        ],
+        "via": "deepdata"
+      },
+      "sources": {
+        "isa-integration": {
+          "id": "isa-integration",
+          "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+          "title": {
+            "en": "DeepData joins ODIS, 6 May 2025",
+            "fr": "DeepData rejoint ODIS, 6 mai 2025",
+            "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+            "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+            "zh": "DeepData于2025年5月6日加入ODIS",
+            "ru": "DeepData присоединяется к ODIS, 6 мая 2025"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "demo-deepdata": {
+          "id": "demo-deepdata",
+          "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+          "title": {
+            "en": "ODIS demo JSON record for DeepData CTD metadata",
+            "fr": "Notice JSON de démonstration ODIS pour les métadonnées CTD DeepData",
+            "es": "Registro JSON de demostración ODIS con metadatos CTD de DeepData",
+            "ar": "سجل JSON في عرض ODIS لبيانات DeepData الوصفية عن CTD",
+            "ru": "JSON-запись демонстрационного поиска ODIS с метаданными CTD DeepData",
+            "zh": "ODIS演示中的DeepData CTD元数据JSON记录"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-norad-funds-odis",
+      "sourceNodeId": "norad",
+      "targetNodeId": "odis",
+      "kind": "funds",
+      "note": "The November 2024 IOC circular agenda names the joint ODIS/OBIS Biodiversity Data Hub for the High Seas as a NORAD 2023 project. The June 2025 IOC presentation explicitly describes a small NORAD-supported hub using ODIS technology, then ongoing, as a possible demonstrator for elements of the BBNJ Clearing-House Mechanism. This funding edge concerns ODIS participation in that joint demonstrator; it does not establish an amount, exact grant interval, continuation in 2026, or financing or completion of the full BBNJ clearing-house.",
+      "properties": {
+        "scope": "ODIS contribution to the joint OBIS/ODIS Biodiversity Data Hub for the High Seas demonstrator",
+        "status": "NORAD-labelled project in 2024 agenda; ongoing in June 2025 presentation; later continuation unverified",
+        "period": "Agenda label NORAD 2023; implementation described June 2025; exact grant start/end not established",
+        "sourceRefs": [
+          "norad-agenda",
+          "norad-presentation"
+        ]
+      },
+      "sources": {
+        "norad-agenda": {
+          "id": "norad-agenda",
+          "url": "https://www.oceanexpert.net/downloadFile/57704",
+          "title": {
+            "en": "IOC Circular Letter 3017: IODE-28 agenda, joint ODIS/OBIS NORAD project",
+            "fr": "Lettre circulaire COI 3017 : ordre du jour IODE-28, projet conjoint ODIS/OBIS NORAD",
+            "es": "Carta circular COI 3017: agenda IODE-28, proyecto conjunto ODIS/OBIS NORAD",
+            "ar": "تعميم اللجنة الدولية الحكومية لعلوم المحيطات 3017: جدول IODE-28 ومشروع ODIS/OBIS بدعم NORAD",
+            "ru": "Циркуляр МОК 3017: повестка IODE-28 и совместный проект ODIS/OBIS при поддержке NORAD",
+            "zh": "IOC第3017号通函：IODE-28议程及NORAD支持的ODIS/OBIS联合项目"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "norad-presentation": {
+          "id": "norad-presentation",
+          "url": "https://www.un.org/Depts/los/consultative_process/icp25/DiwaAcallar.pdf",
+          "title": {
+            "en": "IOC capacity-development presentation, June 2025: NORAD-supported high-seas data hub",
+            "fr": "Présentation COI sur le développement des capacités, juin 2025 : portail de données de haute mer soutenu par NORAD",
+            "es": "Presentación COI sobre capacidades, junio de 2025: centro de datos de alta mar apoyado por NORAD",
+            "ar": "عرض اللجنة عن تنمية القدرات في يونيو 2025: مركز بيانات أعالي البحار المدعوم من NORAD",
+            "ru": "Доклад МОК о развитии потенциала, июнь 2025: центр данных открытого моря при поддержке NORAD",
+            "zh": "IOC能力发展报告，2025年6月：NORAD支持的公海数据中心"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

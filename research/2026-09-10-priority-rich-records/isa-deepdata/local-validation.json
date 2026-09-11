@@ -1,0 +1,468 @@
+{
+  "results": [
+    {
+      "id": "deepdata",
+      "shape": {
+        "valid": true,
+        "recordId": "deepdata",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "deepdata",
+        "issues": [],
+        "warnings": [
+          "No gallery: acceptable when no useful, accessible capture is available.",
+          "No approved machine route is recorded.",
+          "Documented research gaps remain; omitted values have not been invented."
+        ],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 73,
+          "resolvedSources": 73,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "international-seabed-authority",
+      "shape": {
+        "valid": true,
+        "recordId": "international-seabed-authority",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "international-seabed-authority",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 4,
+          "resolvedSources": 4,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "ocean-mineral-singapore",
+      "shape": {
+        "valid": true,
+        "recordId": "ocean-mineral-singapore",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "ocean-mineral-singapore",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "uk-seabed-resources",
+      "shape": {
+        "valid": true,
+        "recordId": "uk-seabed-resources",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "uk-seabed-resources",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "bgr",
+      "shape": {
+        "valid": true,
+        "recordId": "bgr",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "bgr",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "tonga-offshore-mining",
+      "shape": {
+        "valid": true,
+        "recordId": "tonga-offshore-mining",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "tonga-offshore-mining",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "jogmec",
+      "shape": {
+        "valid": true,
+        "recordId": "jogmec",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "jogmec",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "comra",
+      "shape": {
+        "valid": true,
+        "recordId": "comra",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "comra",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "global-sea-mineral-resources",
+      "shape": {
+        "valid": true,
+        "recordId": "global-sea-mineral-resources",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "global-sea-mineral-resources",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "interoceanmetal",
+      "shape": {
+        "valid": true,
+        "recordId": "interoceanmetal",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "interoceanmetal",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "yuzhmorgeologiya",
+      "shape": {
+        "valid": true,
+        "recordId": "yuzhmorgeologiya",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "yuzhmorgeologiya",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "deep-ocean-resources-development",
+      "shape": {
+        "valid": true,
+        "recordId": "deep-ocean-resources-development",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "deep-ocean-resources-development",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "china-minmetals",
+      "shape": {
+        "valid": true,
+        "recordId": "china-minmetals",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "china-minmetals",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "russian-ministry-natural-resources",
+      "shape": {
+        "valid": true,
+        "recordId": "russian-ministry-natural-resources",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "russian-ministry-natural-resources",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "nauru-ocean-resources",
+      "shape": {
+        "valid": true,
+        "recordId": "nauru-ocean-resources",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "nauru-ocean-resources",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "beijing-pioneer-hi-tech",
+      "shape": {
+        "valid": true,
+        "recordId": "beijing-pioneer-hi-tech",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "beijing-pioneer-hi-tech",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "rel-international-seabed-authority-operates-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-international-seabed-authority-governs-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-international-seabed-authority-funds-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-deepdata-syncs-to-platform-obis",
+      "sourceKind": "system",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-deepdata-member_of-odis",
+      "sourceKind": "system",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-deepdata-syncs_to-odis",
+      "sourceKind": "system",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-worms-syncs-to-deepdata",
+      "sourceKind": "system",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-ocean-mineral-singapore-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-uk-seabed-resources-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-bgr-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-tonga-offshore-mining-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-jogmec-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-comra-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-ifremer-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-global-sea-mineral-resources-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-interoceanmetal-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-yuzhmorgeologiya-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-deep-ocean-resources-development-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-china-minmetals-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-russian-ministry-natural-resources-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-nauru-ocean-resources-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-beijing-pioneer-hi-tech-publishes-to-deepdata",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-international-seabed-authority-publishes-to-platform-obis",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    }
+  ]
+}

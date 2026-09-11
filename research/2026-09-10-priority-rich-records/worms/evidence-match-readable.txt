@@ -1,0 +1,219 @@
+WoRMS - World Register of Marine Species
+var aphia_jquery = $;
+h1, h2, h3 {
+                        color: #256092;
+                    }
+Toggle navigation
+Home
+About
+Subregisters
+Users
+Photogallery
+Documents
+LifeWatch
+Contribute
+var comp_jquery = $;
+        comp_jquery(document).ready(function() {
+                            window.initAphiaComponentCombobox('ae2558e3d4901654', {
+                            view_component_ajax_url: '/aphia.php?p=rest&__route__/AjaxAphiaRecordsByNamePart',
+                view_component_ajax_request_delay: 500,                                                view_dict_optional_ajax_args: {
+                                    'rank_min': "10",
+                                    'combine_vernaculars': "0",
+                                    'marine_only': "1",
+                                    'fossil_id': "4",
+                                },                view_component_ajax_append_input_to_url: true,                                view_dict_dynamic_ajax_args: "if ($('#quick_search_inc_common').prop('checked')) { data['combine_vernaculars'] = 1; }",                view_component_ajax_dont_trigger_numbers: true,                        view_component_allow_user_text: true,                                                                                                view_selection_placeholder: 'Quick search...',            view_hidden_key_id: 'tid',                                    view_hidden_data_id: 'tName',                                                                            });
+
+        });
+Scientific names
+Common names (slower)
+Advanced search
+$("#ae2558e3d4901654_storage").change(function(event) {
+                                        $(".select2-search--inline").hide();
+                                        var tid = $(this).children('input[name="tid"]').val();
+                                        if (tid < 0) {
+                                            //No id => means no value picked from the suggestion list => check text to be numeric
+                                            tid = $(this).children('input[name="tName"]').val();
+                                        }
+                                        $("#ae2558e3d4901654").prop("disabled", true);
+                                        if (!isNaN(tid) && isFinite(tid) && tid > 0 && tid % 1 === 0) {
+                                            console.log('redirect...');
+                                            window.location = "/aphia.php?p=taxdetails&id=" + tid;
+                                        } else {
+                                            $("#aphia-quick-search-form").submit();
+                                        }
+                                    });
+Taxa
+Literature
+Distribution
+Specimen
+Editors
+Statistics
+Tools
+Match taxa
+Webservices
+Taxon tree
+IDKeys
+Manual
+Log in
+WoRMS Taxon match
+<!--
+     function updateRowCol(){
+      var mf=document.getElementById("matchfile");
+      var reg = new RegExp("\.(xls)", "i");
+      var dr = document.getElementById("delim_row");
+      var dc = document.getElementById("delim_col");
+      if(reg.test(mf.value)) {
+       dr.value="";
+       dr.disabled=true;
+       dc.value="";
+       dc.disabled=true;
+      }else{
+	   dr.value="13+10";
+	   dr.disabled=false;
+	   dc.value="9";
+	   dc.disabled=false;
+	  }
+     }
+     //-->
+span.tool {  position: relative; }
+span.tool span.tip {  display: none; }
+/* tooltip will display on :hover event*/
+span.tool:hover span.tip {
+  display: block;
+  z-index: 100;
+  position: absolute;
+  top: 1.1em;
+  left: 0;
+  width: auto;
+  padding: 3px 7px 4px 6px;
+  border: 1px solid #336;
+  background-color: #f7f7ee;
+  text-align: left;
+  color: #000;
+}
+You can use the WoRMS Taxon Match Tool
+(
+credits
+)
+This tool uses the following components:
+TAXAMATCH fuzzy matching algorithm
+by Tony Rees
+PHP/MySql port of TAXAMATCH
+by Michael Giddens
+Scientific Names Parser
+by Dmitry Mozzherin
+to automatically match your species list or taxon list with WoRMS. After matching, the tool will return your file with the AphiaID's,  valid names, authorities, WoRMS classification and/or any other output you selected. [
+View manual
+]
+For performance reasons, the limit is set to 1,500 rows.
+For matching larger files, non-marine or multiple datasources, please use the
+Lifewatch Species Information Backbone
+.
+File
+*
+Allowed filetypes
+: Plain text [TXT], Comma Separated [CSV] & Excel sheet [XLS, XLSX]
+Row delimiter
+Return & linefeed (CR+LF)
+Return (CR)
+Linefeed (LF)
+Semicolon (;)
+Comma (,)
+Tab
+Vertical bar (|)
+First row contains column names
+Column delimiter
+Tab
+Semicolon (;)
+Comma (,)
+Vertical bar (|)
+Match authority
+Match upto
+(none)
+ScientificName
+Kingdom
+Phylum
+Class
+Order
+Family
+Genus
+Subgenus
+Species
+Higher taxa only possible if a full classification is given in additional columns
+Limit to
+taxa belonging to
+Output
+AphiaID
+LSID
+TSN
+ScientificName
+Authority
+Accepted name
+Classification
+Qualitystatus
+Taxon status
+Environment
+Citation
+WoRMS
+What is WoRMS
+What is LifeWatch
+Subregisters
+Partners
+WoRMS users
+WoRMS in literature
+Using WoRMS
+Citing WoRMS
+Terms of use
+Request access
+Tools
+WoRMS Match Taxa
+LifeWatch Match Taxa
+Webservices
+Connect with us
+Send us an email
+Twitter page
+RSS Feed
+LinkedIn page
+Bluesky page
+.lwbanner {
+            
+            color: #a9a9a9;
+            font-size: calc(13px + (26 - 13) * ((100vw - 300px) / (4000 - 300)));
+            font-family: 'open_sansregular','Helvetica Neue', Helvetica, sans-serif;
+            padding: 0.5em;
+            border: 0px solid #bfbfbf;
+        }
+        
+        .lwbanner div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lwbanner span{
+            padding: 1%;
+        }
+        
+        .lwbanner img {
+            height: 60px;
+            max-width: 33%; 
+        }
+        
+        .lwbanner a {
+            color: #a9a9a9;
+            font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (4000 - 300)));
+            text-decoration: none;
+        }
+        .lwbanner a:hover {
+            text-decoration: underline;
+        }
+        
+        .lwbanner small {
+            font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (4000 - 300)));
+        }
+This service is powered by LifeWatch Belgium
+Learn more»
+Website and databases developed and hosted by
+Flanders Marine Institute
+· Page generated on 2026-09-11 02:28:04+02:00 ·
+Privacy and cookie policy

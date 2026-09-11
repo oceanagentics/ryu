@@ -1,0 +1,327 @@
+{
+  "abs-about": {
+    "id": "abs-about",
+    "url": "https://www.cbd.int/abs/theabsch.shtml",
+    "title": {
+      "en": "CBD overview of the ABS Clearing-House",
+      "fr": "Présentation du Centre d’échange APA par la CDB",
+      "es": "Panorama del Centro de Intercambio de Información sobre APB de la CDB",
+      "ar": "عرض أمانة الاتفاقية لغرفة تبادل المعلومات بشأن الحصول وتقاسم المنافع",
+      "ru": "Обзор Механизма посредничества по ДГРСИВ Конвенции",
+      "zh": "生物多样性公约获取和惠益分享信息交换所概述"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-article14": {
+    "id": "abs-article14",
+    "url": "https://www.cbd.int/abs/text/articles/default.shtml?sec=abs-14",
+    "title": {
+      "en": "Nagoya Protocol Article 14: ABS Clearing-House",
+      "fr": "Article 14 du Protocole de Nagoya : Centre d’échange APA",
+      "es": "Artículo 14 del Protocolo de Nagoya: Centro de Intercambio de Información sobre APB",
+      "ar": "المادة 14 من بروتوكول ناغويا: غرفة تبادل المعلومات",
+      "ru": "Статья 14 Нагойского протокола: Механизм посредничества",
+      "zh": "《名古屋议定书》第14条：信息交换所"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-article17": {
+    "id": "abs-article17",
+    "url": "https://www.cbd.int/abs/text/articles/default.shtml?sec=abs-17",
+    "title": {
+      "en": "Nagoya Protocol Article 17: monitoring utilization",
+      "fr": "Article 17 du Protocole de Nagoya : surveillance de l’utilisation",
+      "es": "Artículo 17 del Protocolo de Nagoya: vigilancia de la utilización",
+      "ar": "المادة 17 من بروتوكول ناغويا: رصد الاستخدام",
+      "ru": "Статья 17 Нагойского протокола: мониторинг использования",
+      "zh": "《名古屋议定书》第17条：利用情况监测"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-scope": {
+    "id": "abs-scope",
+    "url": "https://www.cbd.int/abs/text/articles?sec=abs-03",
+    "title": {
+      "en": "Nagoya Protocol Article 3: scope",
+      "fr": "Article 3 du Protocole de Nagoya : champ d’application",
+      "es": "Artículo 3 del Protocolo de Nagoya: ámbito",
+      "ar": "المادة 3 من بروتوكول ناغويا: النطاق",
+      "ru": "Статья 3 Нагойского протокола: сфера применения",
+      "zh": "《名古屋议定书》第3条：范围"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-modalities": {
+    "id": "abs-modalities",
+    "url": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+    "title": {
+      "en": "Decision NP-1/2: operating modalities",
+      "fr": "Décision NP-1/2 : modalités de fonctionnement",
+      "es": "Decisión NP-1/2: modalidades de funcionamiento",
+      "ar": "المقرر NP-1/2: طرائق التشغيل",
+      "ru": "Решение NP-1/2: условия функционирования",
+      "zh": "NP-1/2号决定：运作方式"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-decision2024": {
+    "id": "abs-decision2024",
+    "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+    "title": {
+      "en": "Decision NP-5/4: ABS Clearing-House and information-sharing (2024)",
+      "fr": "Décision NP-5/4 : Centre d’échange APA et échange d’informations (2024)",
+      "es": "Decisión NP-5/4: Centro de Intercambio de Información sobre APB e intercambio de información (2024)",
+      "ar": "المقرر NP-5/4: غرفة تبادل المعلومات وتبادل المعلومات (2024)",
+      "ru": "Решение NP-5/4: Механизм посредничества и обмен информацией (2024)",
+      "zh": "NP-5/4号决定：信息交换所与信息共享（2024年）"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-api": {
+    "id": "abs-api",
+    "url": "https://developer.cbd.int/",
+    "title": {
+      "en": "CBD developer hub: public reads and authenticated workflows",
+      "fr": "Portail développeurs de la CDB : lecture publique et procédures authentifiées",
+      "es": "Portal para desarrolladores de la CDB: lecturas públicas y flujos autenticados",
+      "ar": "بوابة مطوري الاتفاقية: القراءة العامة وسير العمل الموثق",
+      "ru": "Портал разработчиков КБР: открытое чтение и авторизованные процессы",
+      "zh": "公约开发者中心：公开读取与身份验证流程"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-api-read": {
+    "id": "abs-api-read",
+    "url": "https://developer.cbd.int/clearing-house/absch/ircc/solr.html",
+    "title": {
+      "en": "ABSCH API: search public IRCC records",
+      "fr": "API ABSCH : rechercher les certificats publics",
+      "es": "API de ABSCH: búsqueda de certificados públicos",
+      "ar": "واجهة ABSCH: البحث في الشهادات العامة",
+      "ru": "API ABSCH: поиск открытых сертификатов",
+      "zh": "ABSCH API：检索公开证书记录"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-api-write": {
+    "id": "abs-api-write",
+    "url": "https://developer.cbd.int/clearing-house/absch/ircc/create.html",
+    "title": {
+      "en": "ABSCH API: creating IRCC records",
+      "fr": "API ABSCH : création de certificats",
+      "es": "API de ABSCH: creación de certificados",
+      "ar": "واجهة ABSCH: إنشاء سجلات الشهادات",
+      "ru": "API ABSCH: создание записей сертификатов",
+      "zh": "ABSCH API：创建证书记录"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-accounts": {
+    "id": "abs-accounts",
+    "url": "https://absch.cbd.int/about/accounts",
+    "title": {
+      "en": "CBD accounts and national submission roles",
+      "fr": "Comptes CDB et rôles de soumission nationaux",
+      "es": "Cuentas de la CDB y funciones nacionales de presentación",
+      "ar": "حسابات الاتفاقية وأدوار تقديم المعلومات الوطنية",
+      "ru": "Учетные записи КБР и национальные роли подачи данных",
+      "zh": "公约账户与国家信息提交角色"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-stakeholders": {
+    "id": "abs-stakeholders",
+    "url": "https://absch.cbd.int/kb/tags/getting-started/Getting-started-using-the-ABS-Clearing-House-for-Stakeholders/5bbe3a4d64f00600011e20d9",
+    "title": {
+      "en": "ABSCH stakeholder submission and Secretariat publication",
+      "fr": "Soumission par les parties prenantes et publication par le Secrétariat",
+      "es": "Presentación por interesados y publicación por la Secretaría",
+      "ar": "تقديم أصحاب المصلحة للمعلومات ونشر الأمانة لها",
+      "ru": "Подача материалов заинтересованными сторонами и публикация Секретариатом",
+      "zh": "利益攸关方提交与秘书处发布"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-commonformats": {
+    "id": "abs-commonformats",
+    "url": "https://absch.cbd.int/commonformats",
+    "title": {
+      "en": "ABSCH offline common formats",
+      "fr": "Formats communs hors ligne de l’ABSCH",
+      "es": "Formatos comunes sin conexión de ABSCH",
+      "ar": "النماذج الموحدة غير المتصلة لغرفة تبادل المعلومات",
+      "ru": "Общие автономные формы ABSCH",
+      "zh": "ABSCH离线通用表格"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-ircc-example": {
+    "id": "abs-ircc-example",
+    "url": "https://absch.cbd.int/en/database/IRCC/ABSCH-IRCC-ZA-300855-2",
+    "title": {
+      "en": "South African research permit: ABSCH-IRCC-ZA-300855-2",
+      "fr": "Permis de recherche sud-africain : ABSCH-IRCC-ZA-300855-2",
+      "es": "Permiso de investigación sudafricano: ABSCH-IRCC-ZA-300855-2",
+      "ar": "تصريح بحثي من جنوب أفريقيا: ABSCH-IRCC-ZA-300855-2",
+      "ru": "Разрешение ЮАР на исследования: ABSCH-IRCC-ZA-300855-2",
+      "zh": "南非研究许可证：ABSCH-IRCC-ZA-300855-2"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-terms": {
+    "id": "abs-terms",
+    "url": "https://www.cbd.int/terms",
+    "title": {
+      "en": "CBD website terms of use",
+      "fr": "Conditions d’utilisation du site de la CDB",
+      "es": "Condiciones de uso del sitio de la CDB",
+      "ar": "شروط استخدام موقع الاتفاقية",
+      "ru": "Условия использования сайта КБР",
+      "zh": "公约网站使用条款"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-virtual-pdf": {
+    "id": "abs-virtual-pdf",
+    "url": "https://absch.cbd.int/api/v2013/documents/3B50BCD4-C829-5953-9528-6FA9375176BB/attachments/An%20Explanatory%20Guide%20to%20the%20Nagoya%20Protocol%20on%20Access%20and%20Benefit-sharing%20%28English%29.pdf",
+    "title": {
+      "en": "ABSCH library attachment: Explanatory Guide to the Nagoya Protocol",
+      "fr": "Pièce jointe de la bibliothèque ABSCH : guide explicatif du Protocole de Nagoya",
+      "es": "Adjunto de la biblioteca ABSCH: guía explicativa del Protocolo de Nagoya",
+      "ar": "مرفق مكتبة ABSCH: دليل تفسيري لبروتوكول ناغويا",
+      "ru": "Вложение библиотеки ABSCH: руководство по Нагойскому протоколу",
+      "zh": "ABSCH资料库附件：《名古屋议定书》解释指南"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-progress2024": {
+    "id": "abs-progress2024",
+    "url": "https://www.cbd.int/doc/c/e1c2/4b9c/68bbb45c8d34f6cacf2b9f03/np-absch-iac-2024-01-02-en.pdf",
+    "title": {
+      "en": "ABSCH progress report to the February 2024 advisory meeting",
+      "fr": "Rapport de progrès ABSCH pour la réunion consultative de février 2024",
+      "es": "Informe de progreso de ABSCH para la reunión consultiva de febrero de 2024",
+      "ar": "تقرير تقدم ABSCH للاجتماع الاستشاري في فبراير 2024",
+      "ru": "Доклад о ходе работы ABSCH к консультативному совещанию февраля 2024 года",
+      "zh": "提交2024年2月咨询会议的ABSCH进展报告"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-support2016": {
+    "id": "abs-support2016",
+    "url": "https://www.cbd.int/doc/meetings/abs/np-mop-02/information/np-mop-02-inf-03-en.pdf",
+    "title": {
+      "en": "ABSCH advisory committee report, June 2016",
+      "fr": "Rapport du comité consultatif ABSCH, juin 2016",
+      "es": "Informe del comité asesor de ABSCH, junio de 2016",
+      "ar": "تقرير اللجنة الاستشارية لـ ABSCH، يونيو 2016",
+      "ru": "Доклад консультативного комитета ABSCH, июнь 2016 года",
+      "zh": "ABSCH咨询委员会报告，2016年6月"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-declare-guide": {
+    "id": "abs-declare-guide",
+    "url": "https://www.naturvardsverket.se/4ac4da/contentassets/09859c1d752d445ab59f06c0544fe6e0/question-and-answer-users.pdf",
+    "title": {
+      "en": "DECLARE Nagoya user guide (March 2018)",
+      "fr": "Guide utilisateur DECLARE Nagoya (mars 2018)",
+      "es": "Guía de usuario DECLARE Nagoya (marzo de 2018)",
+      "ar": "دليل مستخدم DECLARE ناغويا (مارس 2018)",
+      "ru": "Руководство пользователя DECLARE Nagoya (март 2018 года)",
+      "zh": "DECLARE名古屋用户指南（2018年3月）"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-eu2026": {
+    "id": "abs-eu2026",
+    "url": "https://environment.ec.europa.eu/document/download/c5a15594-3513-441c-978d-e5bc4bc26b53_en?filename=SWD_2026_66_1_EN_document_travail_service_part1_FINAL.pdf",
+    "title": {
+      "en": "European Union seventh CBD national report (2026), Target 13",
+      "fr": "Septième rapport national de l’UE à la CDB (2026), cible 13",
+      "es": "Séptimo informe nacional de la UE a la CDB (2026), meta 13",
+      "ar": "التقرير الوطني السابع للاتحاد الأوروبي إلى الاتفاقية (2026)، الهدف 13",
+      "ru": "Седьмой национальный доклад ЕС для КБР (2026), задача 13",
+      "zh": "欧盟向公约提交的第七次国家报告（2026年），目标13"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-declare-link": {
+    "id": "abs-declare-link",
+    "url": "https://green-forum.ec.europa.eu/nature-and-biodiversity/access-and-benefit-sharing-abs-implementation-eu-abs-regulation_en",
+    "title": {
+      "en": "European Commission: implementing the EU ABS Regulation",
+      "fr": "Commission européenne : mise en œuvre du règlement APA de l’UE",
+      "es": "Comisión Europea: aplicación del Reglamento de APB de la UE",
+      "ar": "المفوضية الأوروبية: تنفيذ لائحة الحصول وتقاسم المنافع",
+      "ru": "Европейская комиссия: выполнение Регламента ЕС о ДГРСИВ",
+      "zh": "欧盟委员会：实施欧盟获取和惠益分享条例"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-uk-checkpoint": {
+    "id": "abs-uk-checkpoint",
+    "url": "https://absch.cbd.int/database/CP/ABSCH-CP-GB-207653",
+    "title": {
+      "en": "UK checkpoint record: Defra publishing and OPSS enforcement roles",
+      "fr": "Point de contrôle britannique : publication par Defra et contrôle par OPSS",
+      "es": "Punto de verificación británico: publicación de Defra y supervisión de OPSS",
+      "ar": "نقطة التحقق البريطانية: دور النشر لدفرا والإنفاذ لمكتب OPSS",
+      "ru": "Контрольный пункт Великобритании: публикация Defra и надзор OPSS",
+      "zh": "英国检查站记录：Defra发布与OPSS执法职责"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-india2019": {
+    "id": "abs-india2019",
+    "url": "https://dste.py.gov.in/Envispdy/assets/pdf/Action%20Plan/IndiaNationalBiodiversityActionPlan2019.pdf",
+    "title": {
+      "en": "India biodiversity action plan implementation overview (2019), ABS roles",
+      "fr": "Mise en œuvre du plan indien pour la biodiversité (2019), rôles APA",
+      "es": "Aplicación del plan de biodiversidad de India (2019), funciones de APB",
+      "ar": "تنفيذ خطة التنوع البيولوجي الهندية (2019)، أدوار الحصول وتقاسم المنافع",
+      "ru": "Выполнение плана Индии по биоразнообразию (2019): роли ДГРСИВ",
+      "zh": "印度生物多样性行动计划实施概况（2019年）：获取和惠益分享角色"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-ircc-count": {
+    "id": "abs-ircc-count",
+    "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsPermit+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+    "title": {
+      "en": "ABSCH public API: current published IRCC count",
+      "fr": "API publique ABSCH : nombre de certificats publiés actuels",
+      "es": "API pública de ABSCH: recuento de certificados publicados actuales",
+      "ar": "واجهة ABSCH العامة: عدد الشهادات المنشورة الحالية",
+      "ru": "Открытый API ABSCH: число актуальных опубликованных сертификатов",
+      "zh": "ABSCH公开API：当前已发布证书数量"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-cpc-count": {
+    "id": "abs-cpc-count",
+    "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsCheckpointCommunique+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+    "title": {
+      "en": "ABSCH public API: current published CPC count",
+      "fr": "API publique ABSCH : nombre de communiqués publiés actuels",
+      "es": "API pública de ABSCH: recuento de comunicados publicados actuales",
+      "ar": "واجهة ABSCH العامة: عدد بيانات نقاط التحقق المنشورة الحالية",
+      "ru": "Открытый API ABSCH: число актуальных опубликованных коммюнике",
+      "zh": "ABSCH公开API：当前已发布检查站公报数量"
+    },
+    "accessedAt": "2026-09-10"
+  },
+  "abs-measure-count": {
+    "id": "abs-measure-count",
+    "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3Ameasure+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+    "title": {
+      "en": "ABSCH public API: current published measure count",
+      "fr": "API publique ABSCH : nombre de mesures publiées actuelles",
+      "es": "API pública de ABSCH: recuento de medidas publicadas actuales",
+      "ar": "واجهة ABSCH العامة: عدد التدابير المنشورة الحالية",
+      "ru": "Открытый API ABSCH: число актуальных опубликованных мер",
+      "zh": "ABSCH公开API：当前已发布措施数量"
+    },
+    "accessedAt": "2026-09-10"
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "records": [
+    {
+      "id": "protected-planet",
+      "shape": {
+        "valid": true,
+        "recordId": "protected-planet",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "protected-planet",
+        "issues": [],
+        "warnings": [
+          "No gallery: acceptable when no useful, accessible capture is available.",
+          "No approved machine route is recorded.",
+          "Documented research gaps remain; omitted values have not been invented."
+        ],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 35,
+          "resolvedSources": 35,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "unep",
+      "shape": {
+        "valid": true,
+        "recordId": "unep",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "unep",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "iucn",
+      "shape": {
+        "valid": true,
+        "recordId": "iucn",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "iucn",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "unep-wcmc",
+      "shape": {
+        "valid": true,
+        "recordId": "unep-wcmc",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "unep-wcmc",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "arcadia",
+      "shape": {
+        "valid": true,
+        "recordId": "arcadia",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "arcadia",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "proteus-partnership",
+      "shape": {
+        "valid": true,
+        "recordId": "proteus-partnership",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "proteus-partnership",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "bezos-earth-fund",
+      "shape": {
+        "valid": true,
+        "recordId": "bezos-earth-fund",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "bezos-earth-fund",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "usgs",
+      "shape": {
+        "valid": true,
+        "recordId": "usgs",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "usgs",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "dutch-caribbean-nature-alliance",
+      "shape": {
+        "valid": true,
+        "recordId": "dutch-caribbean-nature-alliance",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "dutch-caribbean-nature-alliance",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "ibat",
+      "shape": {
+        "valid": true,
+        "recordId": "ibat",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "ibat",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "google-earth-engine",
+      "shape": {
+        "valid": true,
+        "recordId": "google-earth-engine",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "google-earth-engine",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "mpatlas",
+      "shape": {
+        "valid": true,
+        "recordId": "mpatlas",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "mpatlas",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "rel-unep-governs-protected-planet",
+      "valid": true
+    },
+    {
+      "id": "rel-iucn-governs-protected-planet",
+      "valid": true
+    },
+    {
+      "id": "rel-unep-wcmc-operates-protected-planet",
+      "valid": true
+    },
+    {
+      "id": "rel-arcadia-funds-protected-planet",
+      "valid": true
+    },
+    {
+      "id": "rel-proteus-partnership-funds-protected-planet",
+      "valid": true
+    },
+    {
+      "id": "rel-bezos-earth-fund-funds-protected-planet",
+      "valid": true
+    },
+    {
+      "id": "rel-usgs-publishes-to-protected-planet",
+      "valid": true
+    },
+    {
+      "id": "rel-dutch-caribbean-nature-alliance-publishes-to-protected-planet",
+      "valid": true
+    },
+    {
+      "id": "rel-protected-planet-syncs-to-ibat",
+      "valid": true
+    },
+    {
+      "id": "rel-protected-planet-syncs-to-google-earth-engine",
+      "valid": true
+    },
+    {
+      "id": "rel-protected-planet-syncs-to-mpatlas",
+      "valid": true
+    }
+  ]
+}

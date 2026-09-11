@@ -1,0 +1,1719 @@
+{
+  "id": "protected-planet",
+  "record": {
+    "kind": "system",
+    "url": "https://www.protectedplanet.net/en",
+    "recordDepth": "rich",
+    "properties": {
+      "disciplines": [
+        "ecology",
+        "spatial_planning"
+      ],
+      "data": {
+        "descriptors": [
+          {
+            "id": "pp-geographic-data",
+            "category": "type",
+            "label": "geographic_reference_data",
+            "source": "pp-api"
+          },
+          {
+            "id": "pp-catalogue-data",
+            "category": "type",
+            "label": "catalogue_records",
+            "source": "pp-api-migration"
+          },
+          {
+            "id": "pp-shapefile",
+            "category": "format",
+            "label": "shapefile",
+            "source": "pp-api-request"
+          },
+          {
+            "id": "pp-gdb",
+            "category": "format",
+            "label": "esri_file_geodatabase",
+            "source": "pp-api-request"
+          },
+          {
+            "id": "pp-csv",
+            "category": "format",
+            "label": "csv",
+            "source": "pp-api-request"
+          },
+          {
+            "id": "pp-json",
+            "category": "format",
+            "label": "json",
+            "source": "pp-api"
+          },
+          {
+            "id": "pp-geojson",
+            "category": "format",
+            "label": "geojson",
+            "source": "pp-api"
+          }
+        ]
+      },
+      "access": [
+        {
+          "id": "pp-browse",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://www.protectedplanet.net/en",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "pp-home",
+            "pp-bonaire",
+            "pp-legal"
+          ]
+        },
+        {
+          "id": "pp-download",
+          "type": "read",
+          "methods": [
+            "download"
+          ],
+          "url": "https://www.protectedplanet.net/en/thematic-areas/wdpa",
+          "requirements": null,
+          "cost": "unknown",
+          "sourceRefs": [
+            "pp-api-request",
+            "pp-legal"
+          ]
+        },
+        {
+          "id": "pp-api-access",
+          "type": "read",
+          "methods": [
+            "api"
+          ],
+          "url": "https://api.protectedplanet.net/documentation",
+          "requirements": [
+            "api_key",
+            "approval"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "pp-api",
+            "pp-api-request",
+            "pp-api-migration",
+            "pp-legal"
+          ]
+        },
+        {
+          "id": "pp-gis-query",
+          "type": "read",
+          "methods": [
+            "api"
+          ],
+          "url": "https://data-gis.unep-wcmc.org/server/rest/services/ProtectedPlanet/WDPCA/FeatureServer",
+          "requirements": [],
+          "cost": "unknown",
+          "sourceRefs": [
+            "pp-gis-service",
+            "pp-legal"
+          ]
+        },
+        {
+          "id": "pp-earth-engine-access",
+          "type": "read",
+          "methods": [
+            "software",
+            "api"
+          ],
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/WCMC_WDPA_current_polygons",
+          "requirements": [
+            "account"
+          ],
+          "cost": "mixed",
+          "sourceRefs": [
+            "pp-earth-engine",
+            "pp-earth-access",
+            "pp-legal"
+          ]
+        },
+        {
+          "id": "pp-commercial-access",
+          "type": "read",
+          "methods": [
+            "request",
+            "download"
+          ],
+          "url": "https://www.ibat-alliance.org/services",
+          "requirements": [
+            "account",
+            "approval"
+          ],
+          "cost": "paid",
+          "sourceRefs": [
+            "pp-ibat",
+            "pp-ibat-service",
+            "pp-legal"
+          ]
+        },
+        {
+          "id": "pp-submit",
+          "type": "write",
+          "methods": [
+            "request"
+          ],
+          "url": "https://www.protectedplanet.net/en/resources/wdpa-manual",
+          "requirements": [
+            "approval"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "pp-manual",
+            "pp-legal",
+            "pp-data-justice"
+          ]
+        },
+        {
+          "id": "pp-feedback",
+          "type": "write",
+          "methods": [
+            "request"
+          ],
+          "url": "https://www.protectedplanet.net/en/legal",
+          "requirements": [],
+          "cost": "unknown",
+          "sourceRefs": [
+            "pp-legal"
+          ]
+        }
+      ],
+      "gallery": [],
+      "metrics": [
+        {
+          "id": "pp-protected-sites-2026-09",
+          "key": "record_count",
+          "value": 312943,
+          "observedAt": "2026-09",
+          "source": "pp-home"
+        },
+        {
+          "id": "pp-oecm-sites-2026-09",
+          "key": "record_count",
+          "value": 7663,
+          "observedAt": "2026-09",
+          "source": "pp-home"
+        }
+      ]
+    },
+    "sources": {
+      "pp-home": {
+        "id": "pp-home",
+        "url": "https://www.protectedplanet.net/en",
+        "title": {
+          "en": "Protected Planet: September 2026 statistics",
+          "fr": "Protected Planet : statistiques de septembre 2026",
+          "es": "Protected Planet: estadísticas de septiembre de 2026",
+          "ar": "Protected Planet: إحصاءات سبتمبر 2026",
+          "ru": "Protected Planet: статистика за сентябрь 2026 года",
+          "zh": "Protected Planet：2026年9月统计"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-merger": {
+        "id": "pp-merger",
+        "url": "https://www.protectedplanet.net/news-and-stories/launch-of-new-wdpca-user-manual",
+        "title": {
+          "en": "Launch of the WDPCA user manual",
+          "fr": "Publication du manuel WDPCA",
+          "es": "Publicación del manual WDPCA",
+          "ar": "إصدار دليل WDPCA",
+          "ru": "Выпуск руководства WDPCA",
+          "zh": "WDPCA用户手册发布"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-evolution": {
+        "id": "pp-evolution",
+        "url": "https://www.protectedplanet.net/en/news-and-stories/introducing-the-wdpca",
+        "title": {
+          "en": "Introducing the WDPCA",
+          "fr": "Présentation de la WDPCA",
+          "es": "Presentación de WDPCA",
+          "ar": "التعريف بقاعدة WDPCA",
+          "ru": "Представляем WDPCA",
+          "zh": "WDPCA介绍"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-manual": {
+        "id": "pp-manual",
+        "url": "https://www.protectedplanet.net/en/resources/wdpa-manual",
+        "title": {
+          "en": "Protected Planet manuals and contribution guides",
+          "fr": "Manuels et guides de contribution de Protected Planet",
+          "es": "Manuales y guías de aportación de Protected Planet",
+          "ar": "أدلة Protected Planet وتقديم البيانات",
+          "ru": "Руководства Protected Planet и предоставление данных",
+          "zh": "Protected Planet手册与数据提交指南"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-legal": {
+        "id": "pp-legal",
+        "url": "https://www.protectedplanet.net/en/legal",
+        "title": {
+          "en": "Protected Planet terms of use",
+          "fr": "Conditions d’utilisation de Protected Planet",
+          "es": "Condiciones de uso de Protected Planet",
+          "ar": "شروط استخدام Protected Planet",
+          "ru": "Условия использования Protected Planet",
+          "zh": "Protected Planet使用条款"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-api": {
+        "id": "pp-api",
+        "url": "https://api.protectedplanet.net/documentation",
+        "title": {
+          "en": "Protected Planet API v4 documentation",
+          "fr": "Documentation de l’API v4 de Protected Planet",
+          "es": "Documentación de la API v4 de Protected Planet",
+          "ar": "توثيق واجهة Protected Planet API v4",
+          "ru": "Документация API v4 Protected Planet",
+          "zh": "Protected Planet API v4文档"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-api-request": {
+        "id": "pp-api-request",
+        "url": "https://api.protectedplanet.net/request",
+        "title": {
+          "en": "Request a Protected Planet API key",
+          "fr": "Demander une clé API Protected Planet",
+          "es": "Solicitar una clave API de Protected Planet",
+          "ar": "طلب مفتاح API من Protected Planet",
+          "ru": "Запрос ключа API Protected Planet",
+          "zh": "申请Protected Planet API密钥"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-api-migration": {
+        "id": "pp-api-migration",
+        "url": "https://api.protectedplanet.net/documentation/whats_new_in_v4",
+        "title": {
+          "en": "Protected Planet API v4 changes",
+          "fr": "Changements de l’API v4 de Protected Planet",
+          "es": "Cambios de la API v4 de Protected Planet",
+          "ar": "تغييرات الإصدار الرابع لواجهة Protected Planet",
+          "ru": "Изменения API v4 Protected Planet",
+          "zh": "Protected Planet API v4变更"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-bonaire": {
+        "id": "pp-bonaire",
+        "url": "https://www.protectedplanet.net/230",
+        "title": {
+          "en": "Bonaire protected area: site 230 and data source",
+          "fr": "Aire protégée de Bonaire : site 230 et source",
+          "es": "Área protegida de Bonaire: sitio 230 y fuente",
+          "ar": "منطقة بونير المحمية: الموقع 230 ومصدر البيانات",
+          "ru": "Охраняемая территория Бонайре: участок 230 и источник",
+          "zh": "博奈尔保护地：230号地点与数据来源"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-ibat": {
+        "id": "pp-ibat",
+        "url": "https://www.ibat-alliance.org/datasets/wdpca",
+        "title": {
+          "en": "IBAT: World Database on Protected and Conserved Areas",
+          "fr": "IBAT : base mondiale des aires protégées et conservées",
+          "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+          "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+          "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+          "zh": "IBAT：世界保护地与保育地数据库"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-ibat-service": {
+        "id": "pp-ibat-service",
+        "url": "https://www.ibat-alliance.org/services",
+        "title": {
+          "en": "IBAT data access services",
+          "fr": "Services d’accès aux données IBAT",
+          "es": "Servicios de acceso a datos de IBAT",
+          "ar": "خدمات الوصول إلى بيانات IBAT",
+          "ru": "Сервисы доступа к данным IBAT",
+          "zh": "IBAT数据访问服务"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-earth-engine": {
+        "id": "pp-earth-engine",
+        "url": "https://developers.google.com/earth-engine/datasets/catalog/WCMC_WDPA_current_polygons",
+        "title": {
+          "en": "Earth Engine WDPA polygon collection",
+          "fr": "Collection de polygones WDPA dans Earth Engine",
+          "es": "Colección de polígonos WDPA en Earth Engine",
+          "ar": "مجموعة مضلعات WDPA في Earth Engine",
+          "ru": "Коллекция полигонов WDPA в Earth Engine",
+          "zh": "Earth Engine WDPA多边形数据集"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-earth-access": {
+        "id": "pp-earth-access",
+        "url": "https://developers.google.com/earth-engine/guides/noncommercial_tiers",
+        "title": {
+          "en": "Earth Engine noncommercial access tiers",
+          "fr": "Niveaux d’accès non commercial à Earth Engine",
+          "es": "Niveles de acceso no comercial de Earth Engine",
+          "ar": "مستويات الاستخدام غير التجاري في Earth Engine",
+          "ru": "Уровни некоммерческого доступа Earth Engine",
+          "zh": "Earth Engine非商业访问等级"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-management": {
+        "id": "pp-management",
+        "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+        "title": {
+          "en": "Protected Planet management and Arcadia grant announcement",
+          "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+          "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+          "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+          "ru": "Управление Protected Planet и объявление гранта Arcadia",
+          "zh": "Protected Planet管理与Arcadia资助公告"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-cbd": {
+        "id": "pp-cbd",
+        "url": "https://www.protectedplanet.net/en/resources/protected-planet-and-the-online-reporting-tool-of-the-convention-on-biological-diversity",
+        "title": {
+          "en": "Protected Planet and CBD national reporting",
+          "fr": "Protected Planet et rapports nationaux à la CDB",
+          "es": "Protected Planet e informes nacionales del CDB",
+          "ar": "Protected Planet والتقارير الوطنية لاتفاقية التنوع البيولوجي",
+          "ru": "Protected Planet и национальная отчетность КБР",
+          "zh": "Protected Planet与生物多样性公约国家报告"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-funders": {
+        "id": "pp-funders",
+        "url": "https://www.unep-wcmc.org/en/our-funders",
+        "title": {
+          "en": "UNEP-WCMC funders and their project scope",
+          "fr": "Bailleurs de l’UNEP-WCMC et portée des projets",
+          "es": "Financiadores de UNEP-WCMC y alcance de proyectos",
+          "ar": "مموّلو UNEP-WCMC ونطاق مشروعاتهم",
+          "ru": "Спонсоры UNEP-WCMC и направления проектов",
+          "zh": "UNEP-WCMC资助方及项目范围"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-proteus": {
+        "id": "pp-proteus",
+        "url": "https://www.proteuspartners.org/content/uploads/2017/07/Proteus-2021-25-Strategy-Document.pdf",
+        "title": {
+          "en": "Proteus strategy 2021–2025: financing data maintenance",
+          "fr": "Stratégie Proteus 2021–2025 : financement des données",
+          "es": "Estrategia Proteus 2021–2025: financiación de datos",
+          "ar": "استراتيجية Proteus للفترة 2021–2025: تمويل صيانة البيانات",
+          "ru": "Стратегия Proteus на 2021–2025 годы: финансирование данных",
+          "zh": "Proteus 2021—2025战略：数据维护资助"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-usgs": {
+        "id": "pp-usgs",
+        "url": "https://www.usgs.gov/data/protected-areas-database-united-states-pad-us-30-world-database-protected-areas-wdpa",
+        "title": {
+          "en": "USGS PAD-US 3.0 submission to WDPA",
+          "fr": "Soumission PAD-US 3.0 de l’USGS à la WDPA",
+          "es": "Envío de PAD-US 3.0 del USGS a WDPA",
+          "ar": "تقديم USGS لبيانات PAD-US 3.0 إلى WDPA",
+          "ru": "Передача PAD-US 3.0 от USGS в WDPA",
+          "zh": "USGS向WDPA提交PAD-US 3.0"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-mpatlas": {
+        "id": "pp-mpatlas",
+        "url": "https://old.mpatlas.org/about/data/",
+        "title": {
+          "en": "MPAtlas data sources and independent processing",
+          "fr": "Sources de données et traitement indépendant de MPAtlas",
+          "es": "Fuentes y procesamiento independiente de MPAtlas",
+          "ar": "مصادر بيانات MPAtlas ومعالجتها المستقلة",
+          "ru": "Источники данных и независимая обработка MPAtlas",
+          "zh": "MPAtlas数据来源与独立处理"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-mpatlas-2026": {
+        "id": "pp-mpatlas-2026",
+        "url": "https://marine-conservation.org/on-the-tide/halfway-to-30x30/",
+        "title": {
+          "en": "Marine Conservation Institute: MPAtlas assessment in January 2026",
+          "fr": "Marine Conservation Institute : bilan MPAtlas de janvier 2026",
+          "es": "Marine Conservation Institute: evaluación de MPAtlas en enero de 2026",
+          "ar": "Marine Conservation Institute: تقييم MPAtlas في يناير 2026",
+          "ru": "Marine Conservation Institute: оценка MPAtlas в январе 2026 года",
+          "zh": "Marine Conservation Institute：2026年1月MPAtlas评估"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-bezos": {
+        "id": "pp-bezos",
+        "url": "https://www.unep-wcmc.org/en/news/towards-30x30-new-grant-supports-major-progress-for-protected-and-conserved-areas",
+        "title": {
+          "en": "Bezos Earth Fund grant for seven-country conservation reporting",
+          "fr": "Subvention Bezos Earth Fund pour sept pays",
+          "es": "Subvención de Bezos Earth Fund para siete países",
+          "ar": "منحة Bezos Earth Fund لدعم سبع دول",
+          "ru": "Грант Bezos Earth Fund для семи стран",
+          "zh": "Bezos Earth Fund七国保护项目资助"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-data-justice": {
+        "id": "pp-data-justice",
+        "url": "https://www.unep-wcmc.org/en/news/five-steps-to-strengthen-data-justice-as-we-conserve-30-of-the-planet",
+        "title": {
+          "en": "Protected Planet data justice and country support in 2026",
+          "fr": "Équité des données et soutien aux pays en 2026",
+          "es": "Justicia de datos y apoyo a países en 2026",
+          "ar": "إنصاف البيانات ودعم الدول في 2026",
+          "ru": "Справедливость данных и поддержка стран в 2026 году",
+          "zh": "2026年数据公平与国家支持"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-gis-service": {
+        "id": "pp-gis-service",
+        "url": "https://data-gis.unep-wcmc.org/server/rest/services/ProtectedPlanet/WDPCA/FeatureServer/1",
+        "title": {
+          "en": "UNEP-WCMC WDPCA polygon service and current schema",
+          "fr": "Service de polygones WDPCA de l’UNEP-WCMC et schéma actuel",
+          "es": "Servicio de polígonos WDPCA de UNEP-WCMC y esquema actual",
+          "ar": "خدمة مضلعات WDPCA التابعة لـ UNEP-WCMC ومخططها الحالي",
+          "ru": "Сервис полигонов WDPCA UNEP-WCMC и текущая схема",
+          "zh": "UNEP-WCMC WDPCA多边形服务及现行结构"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "en": {
+      "title": "Protected Planet",
+      "summary": "Global platform for protected and conserved area data, including the merged WDPCA and monthly spatial releases.",
+      "description": "Protected Planet is managed by UNEP-WCMC as a joint UNEP and IUCN initiative. This record focuses on its global protected and conserved area inventory. On 1 November 2025, WDPA and WD-OECM merged into the World Database on Protected and Conserved Areas (WDPCA); older website sections and downstream collections still use the former names. Protected areas and other effective area-based conservation measures remain distinct site types. Records describe boundaries or points, designation, status, governance, management and reporting sources. The September 2026 homepage reports 312,943 protected areas and 7,663 OECMs; its marine coverage figures are 9.81% for protected areas and 10.03% including OECMs. Coverage does not demonstrate effective protection or represent an audit of every site. Monthly releases depend on the timeliness and accuracy of data-provider submissions. The Bonaire site illustrates this distinction: the current page names a Dutch Caribbean Nature Alliance source updated in 2020. WDPCA supports global conservation monitoring and CBD Target 3 reporting, alongside national reports. Public browsing and noncommercial data access are distinct from commercial permission through IBAT; redistribution also requires permission. API v4 exposes renamed site and parcel fields, and approved users may encounter field restrictions. IUCN categories, the WDPCA data specification and licence terms are described here without inventing Ryu standard tags. GD-PAME and other thematic resources belong to the wider platform and are not included in these inventory counts.",
+      "details": {
+        "aliases": [
+          "WDPCA",
+          "World Database on Protected and Conserved Areas",
+          "WDPA",
+          "WD-OECM"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "pp-home",
+            "pp-merger",
+            "pp-evolution",
+            "pp-management",
+            "pp-api",
+            "pp-api-migration",
+            "pp-legal",
+            "pp-bonaire",
+            "pp-cbd",
+            "pp-data-justice"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "pp-geographic-data",
+              "description": "Protected and conserved area polygons or representative points, with designation and reported-area attributes."
+            },
+            {
+              "id": "pp-catalogue-data",
+              "description": "Site and parcel records carry status, governance, management and reporting-source metadata; site_type distinguishes protected areas from OECMs."
+            },
+            {
+              "id": "pp-shapefile",
+              "description": "Spatial download packages offered by Protected Planet."
+            },
+            {
+              "id": "pp-gdb",
+              "description": "File geodatabase download option for GIS analysis; it is a delivery format, not an API."
+            },
+            {
+              "id": "pp-csv",
+              "description": "Tabular download option; geometric boundaries require a spatial representation."
+            },
+            {
+              "id": "pp-json",
+              "description": "API v4 returns structured metadata and paginated results as JSON."
+            },
+            {
+              "id": "pp-geojson",
+              "description": "API geometry can be requested with with_geometry; completeness may depend on field permissions."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "pp-browse",
+            "label": "Public map and site records",
+            "description": "Browse public maps, country summaries and site records without an account. Data-use and redistribution conditions still apply."
+          },
+          {
+            "id": "pp-download",
+            "label": "Monthly data downloads",
+            "description": "Use the website download flow for Shapefile, file geodatabase or CSV. Accept the current terms; commercial use and redistribution require separate permission. Account and fee requirements were not verified in a completed download session."
+          },
+          {
+            "id": "pp-api-access",
+            "label": "Approved API v4 access",
+            "description": "Request approval and an API key for noncommercial use; authentication uses the token parameter. v4 provides site and parcel endpoints and optional geometry. Some fields can be restricted. No working token or published API fee schedule was verified."
+          },
+          {
+            "id": "pp-gis-query",
+            "label": "UNEP-WCMC public GIS query",
+            "description": "The official WDPCA FeatureServer exposes point and polygon layers plus a source table. A limited query for site 230 returned JSON without credentials. This verifies that read, not every extraction size or a service guarantee; WDPCA use and redistribution conditions still apply."
+          },
+          {
+            "id": "pp-earth-engine-access",
+            "label": "Earth Engine collections",
+            "description": "Use the documented WCMC/WDPA/current polygon and point collections with an Earth Engine account and registered project. Verified noncommercial projects have free compute quotas; other service charges can apply. Google access does not grant commercial WDPCA rights. Check actual asset fields and release before analysis."
+          },
+          {
+            "id": "pp-commercial-access",
+            "label": "Commercial licensing through IBAT",
+            "description": "For use by or for a for-profit entity, or other revenue-generating use, arrange the appropriate IBAT licence and data access. GIS downloads and subscription/API options differ; provider restrictions can exclude data. Permission does not automatically authorize redistribution."
+          },
+          {
+            "id": "pp-submit",
+            "label": "Submit or update authoritative data",
+            "description": "Contact the Protected Planet team using the contribution guides. Governments and non-state rights-holders can propose data; publication follows data standards, verification and agreement with the provider. This is a curated request, not a public write API. No submission fee was established."
+          },
+          {
+            "id": "pp-feedback",
+            "label": "Report corrections",
+            "description": "The terms invite feedback and revised GIS information through the listed contact channels. The team reviews changes; users cannot edit the database directly through this path."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "pp-protected-sites-2026-09",
+            "description": "312,943 protected-area sites displayed in the September 2026 homepage statistics; excludes OECMs and is not a parcel-row or unique-boundary count."
+          },
+          {
+            "id": "pp-oecm-sites-2026-09",
+            "description": "7,663 OECM sites displayed in the September 2026 homepage statistics, separate from protected areas. Older thematic pages show different month snapshots."
+          }
+        ],
+        "researchGaps": {
+          "data": "No current storage-size figure was verified. These are reported site totals, not parcel rows, unique non-overlapping areas or all platform records; thematic pages can show different release snapshots.",
+          "usage": "No source established current session counts, download-event counts, a dated contributor roster total or research citation counts for this platform. Provider organizations are not assumed to be individual users.",
+          "standards": "The current WDPCA specification and IUCN classifications are documented, but neither has an approved Ryu standard ID. No implementation of another approved metadata standard was verified. The linked full manual v2.0 was blocked during retrieval; the official release page and API v4 documentation were readable.",
+          "access": "No approved token was available for the main REST API v4; its endpoints returned HTTP 403 to this research client. A separate official GIS query returned the real site 230 successfully. Website download prerequisites and API fee schedules remain unverified."
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Protected Planet",
+      "summary": "Plateforme mondiale de données sur les aires protégées et conservées, dont la WDPCA fusionnée et ses publications spatiales mensuelles.",
+      "description": "Protected Planet est gérée par l’UNEP-WCMC dans le cadre d’une initiative conjointe du PNUE et de l’UICN. Cette fiche porte sur son inventaire mondial des aires protégées et conservées. Le 1er novembre 2025, la WDPA et la WD-OECM ont fusionné dans la WDPCA ; certaines pages et collections dérivées gardent les anciens noms. Les aires protégées et les autres mesures de conservation efficaces par zone restent des types distincts. Les fiches décrivent limites ou points, désignation, statut, gouvernance, gestion et sources. La page d’accueil de septembre 2026 indique 312 943 aires protégées et 7 663 OECM ; la couverture marine atteint 9,81 % pour les aires protégées et 10,03 % avec les OECM. La couverture ne prouve ni l’efficacité de la protection ni l’audit de chaque site. Les publications mensuelles dépendent de l’actualité et de l’exactitude des contributions. La fiche de Bonaire cite ainsi une source de la Dutch Caribbean Nature Alliance mise à jour en 2020. La WDPCA soutient le suivi mondial et la cible 3 de la CDB, parallèlement aux rapports nationaux. Consultation publique et accès non commercial diffèrent de l’autorisation commerciale via IBAT ; la redistribution requiert aussi une autorisation. L’API v4 renomme les champs des sites et parcelles, avec d’éventuelles restrictions par champ. Les catégories UICN, la spécification WDPCA et la licence sont décrites sans créer de nouveaux identifiants de normes Ryu. La GD-PAME et les autres ressources thématiques ne sont pas comprises dans ces décomptes.",
+      "details": {
+        "aliases": [
+          "WDPCA",
+          "World Database on Protected and Conserved Areas",
+          "WDPA",
+          "WD-OECM"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "pp-home",
+            "pp-merger",
+            "pp-evolution",
+            "pp-management",
+            "pp-api",
+            "pp-api-migration",
+            "pp-legal",
+            "pp-bonaire",
+            "pp-cbd",
+            "pp-data-justice"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "pp-geographic-data",
+              "description": "Polygones ou points représentatifs des aires protégées et conservées, avec désignation et superficie déclarée."
+            },
+            {
+              "id": "pp-catalogue-data",
+              "description": "Les fiches de sites et parcelles portent statut, gouvernance, gestion et sources ; site_type distingue aires protégées et OECM."
+            },
+            {
+              "id": "pp-shapefile",
+              "description": "Paquets spatiaux téléchargeables proposés par Protected Planet."
+            },
+            {
+              "id": "pp-gdb",
+              "description": "Option de géodatabase fichier pour les analyses SIG ; format de livraison, pas API."
+            },
+            {
+              "id": "pp-csv",
+              "description": "Option de téléchargement tabulaire ; les limites nécessitent une représentation spatiale."
+            },
+            {
+              "id": "pp-json",
+              "description": "L’API v4 renvoie métadonnées structurées et résultats paginés en JSON."
+            },
+            {
+              "id": "pp-geojson",
+              "description": "La géométrie peut être demandée avec with_geometry ; sa disponibilité dépend éventuellement des droits sur les champs."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "pp-browse",
+            "label": "Carte et fiches publiques",
+            "description": "Consultez cartes, synthèses nationales et sites sans compte. Les conditions d’utilisation et de redistribution restent applicables."
+          },
+          {
+            "id": "pp-download",
+            "label": "Téléchargements mensuels",
+            "description": "Utilisez le téléchargement du site en Shapefile, géodatabase fichier ou CSV. Acceptez les conditions ; usage commercial et redistribution requièrent une autorisation distincte. Compte et frais n’ont pas été vérifiés lors d’un téléchargement complet."
+          },
+          {
+            "id": "pp-api-access",
+            "label": "Accès approuvé à l’API v4",
+            "description": "Demandez une approbation et une clé pour un usage non commercial ; utilisez le paramètre token. La v4 propose sites, parcelles et géométrie facultative. Certains champs peuvent être restreints. Aucun jeton fonctionnel ni barème n’a été vérifié."
+          },
+          {
+            "id": "pp-gis-query",
+            "label": "Requête SIG publique UNEP-WCMC",
+            "description": "Le FeatureServer WDPCA officiel expose points, polygones et table des sources. Une requête limitée au site 230 a renvoyé du JSON sans identifiants. Cela vérifie cette lecture, pas toute taille d’extraction ni une garantie de service ; les conditions WDPCA restent applicables."
+          },
+          {
+            "id": "pp-earth-engine-access",
+            "label": "Collections Earth Engine",
+            "description": "Utilisez les collections polygon et point WCMC/WDPA/current avec compte et projet Earth Engine. Les projets non commerciaux vérifiés ont des quotas gratuits ; d’autres frais sont possibles. Google n’accorde pas les droits commerciaux WDPCA. Vérifiez champs et version de l’actif."
+          },
+          {
+            "id": "pp-commercial-access",
+            "label": "Licence commerciale via IBAT",
+            "description": "Pour les usages par ou pour une entreprise lucrative, ou générant des revenus, obtenez la licence et l’accès IBAT adaptés. Téléchargements SIG, abonnements et API diffèrent ; les restrictions des fournisseurs peuvent exclure des données. La redistribution n’est pas automatique."
+          },
+          {
+            "id": "pp-submit",
+            "label": "Transmettre ou actualiser des données",
+            "description": "Contactez l’équipe via les guides. Gouvernements et détenteurs de droits non étatiques peuvent proposer des données ; la publication suit normes, vérification et accord du fournisseur. Il s’agit d’une demande encadrée, pas d’une API d’écriture publique. Aucun tarif de dépôt n’a été établi."
+          },
+          {
+            "id": "pp-feedback",
+            "label": "Signaler des corrections",
+            "description": "Les conditions invitent à transmettre remarques et données SIG révisées via les contacts indiqués. L’équipe examine les changements ; cette voie ne permet pas la modification directe."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "pp-protected-sites-2026-09",
+            "description": "312 943 sites protégés affichés pour septembre 2026 ; hors OECM, pas un nombre de lignes de parcelles ou de limites uniques."
+          },
+          {
+            "id": "pp-oecm-sites-2026-09",
+            "description": "7 663 sites OECM affichés pour septembre 2026, distincts des aires protégées. D’anciennes pages thématiques reflètent d’autres mois."
+          }
+        ],
+        "researchGaps": {
+          "data": "Aucun volume de stockage actuel n’a été vérifié. Il s’agit de totaux de sites déclarés, pas de lignes de parcelles, de surfaces sans chevauchement ni de toutes les fiches ; les pages thématiques peuvent refléter d’autres versions.",
+          "usage": "Aucune source n’établit actuellement sessions, événements de téléchargement, effectif daté des contributeurs ou citations de recherche de cette plateforme. Les fournisseurs ne sont pas assimilés à des utilisateurs individuels.",
+          "standards": "La spécification WDPCA et les classifications UICN sont documentées, mais sans identifiant de norme Ryu approuvé. Aucune autre norme de métadonnées approuvée n’a été vérifiée. Le manuel intégral v2.0 était inaccessible ; la page de publication et la documentation API v4 étaient lisibles.",
+          "access": "Aucune clé approuvée pour l’API REST v4 ; ses points d’accès ont renvoyé HTTP 403 à cet outil. Une requête SIG officielle distincte a renvoyé le site réel 230. Prérequis des téléchargements web et tarifs API restent non vérifiés."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Protected Planet",
+      "summary": "Plataforma mundial de datos sobre áreas protegidas y conservadas, incluida WDPCA y sus publicaciones espaciales mensuales.",
+      "description": "Protected Planet es gestionada por UNEP-WCMC como iniciativa conjunta del PNUMA y la UICN. Esta ficha se centra en su inventario mundial de áreas protegidas y conservadas. El 1 de noviembre de 2025, WDPA y WD-OECM se fusionaron en WDPCA; algunas páginas y colecciones derivadas conservan los nombres anteriores. Las áreas protegidas y otras medidas eficaces de conservación basadas en áreas siguen siendo tipos distintos. Los registros describen límites o puntos, designación, estado, gobernanza, gestión y fuentes. La portada de septiembre de 2026 informa de 312.943 áreas protegidas y 7.663 OECM; la cobertura marina es del 9,81 % para áreas protegidas y del 10,03 % incluyendo OECM. La cobertura no demuestra protección efectiva ni una auditoría de cada sitio. Las publicaciones mensuales dependen de la actualidad y exactitud de las aportaciones. La ficha de Bonaire cita una fuente de Dutch Caribbean Nature Alliance actualizada en 2020. WDPCA apoya el seguimiento mundial y la meta 3 del CDB junto a los informes nacionales. La consulta pública y el acceso no comercial se distinguen del permiso comercial mediante IBAT; la redistribución también requiere autorización. La API v4 cambia los campos de sitios y parcelas, con posibles restricciones por campo. Se describen las categorías UICN, la especificación WDPCA y la licencia sin inventar etiquetas de normas Ryu. GD-PAME y otros recursos temáticos quedan fuera de estos recuentos.",
+      "details": {
+        "aliases": [
+          "WDPCA",
+          "World Database on Protected and Conserved Areas",
+          "WDPA",
+          "WD-OECM"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "pp-home",
+            "pp-merger",
+            "pp-evolution",
+            "pp-management",
+            "pp-api",
+            "pp-api-migration",
+            "pp-legal",
+            "pp-bonaire",
+            "pp-cbd",
+            "pp-data-justice"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "pp-geographic-data",
+              "description": "Polígonos o puntos representativos de áreas protegidas y conservadas, con designación y superficie declarada."
+            },
+            {
+              "id": "pp-catalogue-data",
+              "description": "Los registros de sitios y parcelas incluyen estado, gobernanza, gestión y fuentes; site_type distingue áreas protegidas y OECM."
+            },
+            {
+              "id": "pp-shapefile",
+              "description": "Paquetes espaciales descargables de Protected Planet."
+            },
+            {
+              "id": "pp-gdb",
+              "description": "Opción de geodatabase de archivos para análisis SIG; formato de entrega, no API."
+            },
+            {
+              "id": "pp-csv",
+              "description": "Descarga tabular; los límites geométricos requieren una representación espacial."
+            },
+            {
+              "id": "pp-json",
+              "description": "La API v4 devuelve metadatos y resultados paginados en JSON."
+            },
+            {
+              "id": "pp-geojson",
+              "description": "Puede solicitarse geometría con with_geometry; su disponibilidad puede depender de permisos por campo."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "pp-browse",
+            "label": "Mapa y fichas públicas",
+            "description": "Consulte mapas, resúmenes nacionales y sitios sin cuenta. Siguen vigentes las condiciones de uso y redistribución."
+          },
+          {
+            "id": "pp-download",
+            "label": "Descargas mensuales",
+            "description": "Use la descarga web en Shapefile, geodatabase de archivos o CSV y acepte las condiciones. Uso comercial y redistribución requieren permiso aparte. No se verificaron cuenta ni tarifas en una descarga completada."
+          },
+          {
+            "id": "pp-api-access",
+            "label": "Acceso aprobado a API v4",
+            "description": "Solicite aprobación y clave para uso no comercial; autentique con token. v4 ofrece sitios, parcelas y geometría opcional. Algunos campos pueden estar restringidos. No se verificó un token válido ni tarifas publicadas."
+          },
+          {
+            "id": "pp-gis-query",
+            "label": "Consulta SIG pública de UNEP-WCMC",
+            "description": "El FeatureServer oficial expone puntos, polígonos y una tabla de fuentes. Una consulta limitada al sitio 230 devolvió JSON sin credenciales. Verifica esa lectura, no cualquier extracción ni una garantía de servicio; siguen vigentes las condiciones WDPCA."
+          },
+          {
+            "id": "pp-earth-engine-access",
+            "label": "Colecciones de Earth Engine",
+            "description": "Use las colecciones polygon y point WCMC/WDPA/current con cuenta y proyecto Earth Engine. Los proyectos no comerciales verificados tienen cuotas gratuitas; otros servicios pueden generar cargos. Google no concede derechos comerciales WDPCA. Compruebe campos y versión del activo."
+          },
+          {
+            "id": "pp-commercial-access",
+            "label": "Licencia comercial mediante IBAT",
+            "description": "Para uso por o para una entidad lucrativa, u otro uso que genere ingresos, obtenga la licencia y acceso IBAT correspondientes. Descargas SIG, suscripciones y API difieren; ciertas restricciones excluyen datos. La redistribución no queda autorizada automáticamente."
+          },
+          {
+            "id": "pp-submit",
+            "label": "Enviar o actualizar datos autorizados",
+            "description": "Contacte al equipo mediante las guías. Gobiernos y titulares de derechos no estatales pueden proponer datos; se publican tras aplicar normas, verificación y acuerdo del proveedor. Es una solicitud supervisada, no una API pública de escritura. No se estableció una tarifa de envío."
+          },
+          {
+            "id": "pp-feedback",
+            "label": "Comunicar correcciones",
+            "description": "Las condiciones invitan a enviar comentarios y datos SIG revisados mediante los contactos indicados. El equipo revisa los cambios; no permite editar directamente la base."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "pp-protected-sites-2026-09",
+            "description": "312.943 sitios protegidos en las estadísticas de septiembre de 2026; excluye OECM y no cuenta filas de parcelas ni límites únicos."
+          },
+          {
+            "id": "pp-oecm-sites-2026-09",
+            "description": "7.663 sitios OECM en septiembre de 2026, separados de las áreas protegidas. Otras páginas reflejan meses distintos."
+          }
+        ],
+        "researchGaps": {
+          "data": "No se verificó tamaño de almacenamiento actual. Son totales de sitios, no filas de parcelas, áreas sin solapamiento ni todos los registros; las páginas temáticas pueden reflejar otras versiones.",
+          "usage": "No se establecieron sesiones, eventos de descarga, total fechado de colaboradores ni citas de investigación actuales. No se equiparan organizaciones proveedoras con usuarios individuales.",
+          "standards": "La especificación WDPCA y las clasificaciones UICN están documentadas, pero no tienen identificador Ryu aprobado. No se verificó otro estándar admitido. El manual completo v2.0 quedó bloqueado; sí fueron legibles la página oficial y la documentación API v4.",
+          "access": "No se disponía de token aprobado para REST API v4, que devolvió HTTP 403 a este cliente. Una consulta SIG oficial separada devolvió correctamente el sitio real 230. Requisitos de descarga web y tarifas API siguen sin verificarse."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ar": {
+      "title": "Protected Planet",
+      "summary": "منصة عالمية لبيانات المناطق المحمية والمصونة، تضم WDPCA الموحّدة وإصدارات مكانية شهرية.",
+      "description": "يدير UNEP-WCMC منصة Protected Planet بوصفها مبادرة مشتركة لبرنامج الأمم المتحدة للبيئة والاتحاد الدولي لحفظ الطبيعة. يركّز هذا السجل على الحصر العالمي للمناطق المحمية والمصونة. في 1 نوفمبر 2025 اندمجت WDPA وWD-OECM في WDPCA، لكن بعض الصفحات والمجموعات اللاحقة ما زالت تستخدم الأسماء السابقة. وتظل المناطق المحمية والتدابير الفعالة الأخرى للحفظ القائم على المناطق نوعين مختلفين. تصف السجلات الحدود أو النقاط والتعيين والحالة والحوكمة والإدارة والمصادر. تذكر الصفحة الرئيسية لشهر سبتمبر 2026 عدد 312943 منطقة محمية و7663 من تدابير OECM؛ وتبلغ التغطية البحرية 9.81% للمناطق المحمية و10.03% مع OECM. ولا تثبت التغطية فعالية الحماية أو تدقيق كل موقع. تعتمد الإصدارات الشهرية على حداثة بيانات المساهمين ودقتها. فصفحة بونير الحالية تسمي مصدراً من Dutch Caribbean Nature Alliance محدّثاً في 2020. تدعم WDPCA الرصد العالمي والغاية 3 لاتفاقية التنوع البيولوجي بجانب التقارير الوطنية. ويختلف التصفح العام والوصول غير التجاري عن الترخيص التجاري عبر IBAT؛ كما تتطلب إعادة التوزيع إذناً. يعيد API v4 تسمية حقول المواقع والأجزاء وقد يقيّد بعض الحقول. توصف فئات IUCN ومواصفة WDPCA وشروط الترخيص دون اختراع وسوم معايير في Ryu. ولا تشمل هذه الأعداد GD-PAME أو الموارد الموضوعية الأخرى.",
+      "details": {
+        "aliases": [
+          "WDPCA",
+          "World Database on Protected and Conserved Areas",
+          "WDPA",
+          "WD-OECM"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "pp-home",
+            "pp-merger",
+            "pp-evolution",
+            "pp-management",
+            "pp-api",
+            "pp-api-migration",
+            "pp-legal",
+            "pp-bonaire",
+            "pp-cbd",
+            "pp-data-justice"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "pp-geographic-data",
+              "description": "مضلعات أو نقاط تمثيلية للمناطق المحمية والمصونة مع التعيين والمساحة المبلّغ عنها."
+            },
+            {
+              "id": "pp-catalogue-data",
+              "description": "تضم سجلات المواقع والأجزاء الحالة والحوكمة والإدارة والمصادر؛ ويميّز site_type المناطق المحمية عن OECM."
+            },
+            {
+              "id": "pp-shapefile",
+              "description": "حزم بيانات مكانية للتنزيل من Protected Planet."
+            },
+            {
+              "id": "pp-gdb",
+              "description": "خيار قاعدة جغرافية ملفية للتحليل المكاني؛ صيغة تسليم وليست واجهة API."
+            },
+            {
+              "id": "pp-csv",
+              "description": "خيار تنزيل جدولي؛ تتطلب الحدود الهندسية تمثيلاً مكانياً."
+            },
+            {
+              "id": "pp-json",
+              "description": "تعيد API v4 البيانات الوصفية والنتائج المقسّمة إلى صفحات بصيغة JSON."
+            },
+            {
+              "id": "pp-geojson",
+              "description": "يمكن طلب الهندسة عبر with_geometry؛ وقد يعتمد اكتمالها على أذونات الحقول."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "pp-browse",
+            "label": "الخريطة والسجلات العامة",
+            "description": "تصفح الخرائط والملخصات الوطنية والمواقع دون حساب، مع الالتزام بشروط الاستخدام وإعادة التوزيع."
+          },
+          {
+            "id": "pp-download",
+            "label": "تنزيل البيانات الشهرية",
+            "description": "استخدم تنزيل الموقع بصيغ Shapefile أو قاعدة جغرافية ملفية أو CSV واقبل الشروط. يتطلب الاستخدام التجاري وإعادة التوزيع إذناً مستقلاً. لم تُتحقق متطلبات الحساب والرسوم بجلسة تنزيل مكتملة."
+          },
+          {
+            "id": "pp-api-access",
+            "label": "الوصول المعتمد إلى API v4",
+            "description": "اطلب الموافقة ومفتاحاً للاستخدام غير التجاري؛ تستخدم المصادقة معامل token. تقدم v4 المواقع والأجزاء والهندسة الاختيارية، وقد تقيّد حقولاً. لم يُتحقق رمز صالح أو جدول رسوم منشور."
+          },
+          {
+            "id": "pp-gis-query",
+            "label": "استعلام GIS العام لدى UNEP-WCMC",
+            "description": "تعرض خدمة WDPCA الرسمية طبقات نقاط ومضلعات وجدول مصادر. أعاد استعلام محدود عن الموقع 230 بيانات JSON دون اعتماد دخول. يثبت ذلك هذه القراءة فقط، لا كل أحجام الاستخراج أو ضمان خدمة؛ وتظل شروط WDPCA سارية."
+          },
+          {
+            "id": "pp-earth-engine-access",
+            "label": "مجموعات Earth Engine",
+            "description": "استخدم مجموعات المضلعات والنقاط WCMC/WDPA/current بحساب ومشروع Earth Engine مسجل. للمشروعات غير التجارية المتحققة حصص مجانية وقد تترتب رسوم لخدمات أخرى. لا يمنح Google حقوق WDPCA التجارية. تحقق من حقول الأصل وإصداره."
+          },
+          {
+            "id": "pp-commercial-access",
+            "label": "الترخيص التجاري عبر IBAT",
+            "description": "للاستخدام بواسطة جهة ربحية أو لصالحها أو لتوليد إيراد، احصل على ترخيص IBAT والوصول المناسبين. تختلف خيارات GIS والاشتراكات والواجهات، وقد تُستبعد بيانات بقيود مزوديها. لا يُسمح تلقائياً بإعادة التوزيع."
+          },
+          {
+            "id": "pp-submit",
+            "label": "تقديم البيانات المعتمدة أو تحديثها",
+            "description": "اتصل بالفريق وفق أدلة المساهمة. يمكن للحكومات وأصحاب الحقوق غير الحكوميين اقتراح بيانات؛ ويخضع النشر للمعايير والتحقق واتفاق المزوّد. هذا طلب منسّق وليس API كتابة عامة. لم تُحدد رسوم للتقديم."
+          },
+          {
+            "id": "pp-feedback",
+            "label": "الإبلاغ عن التصحيحات",
+            "description": "ترحب الشروط بالملاحظات وبيانات GIS المصححة عبر قنوات الاتصال المذكورة. يراجع الفريق التغييرات ولا يتيح هذا المسار تحرير القاعدة مباشرة."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "pp-protected-sites-2026-09",
+            "description": "312943 موقعاً محمياً وفق إحصاءات سبتمبر 2026؛ يستثني OECM ولا يعد صفوف الأجزاء أو الحدود الفريدة."
+          },
+          {
+            "id": "pp-oecm-sites-2026-09",
+            "description": "7663 موقع OECM في إحصاءات سبتمبر 2026، منفصلة عن المناطق المحمية. تعرض صفحات أقدم لقطات لأشهر أخرى."
+          }
+        ],
+        "researchGaps": {
+          "data": "لم يُتحقق حجم التخزين الحالي. الأرقام أعداد مواقع مبلّغ عنها، وليست صفوف أجزاء أو مساحات بلا تداخل أو جميع سجلات المنصة؛ وقد تختلف لقطات الصفحات الموضوعية.",
+          "usage": "لم تثبت المصادر أعداد الجلسات أو أحداث التنزيل أو قائمة مساهمين مؤرخة أو الاستشهادات البحثية الحالية. لا تُعامل مؤسسات تقديم البيانات كمستخدمين أفراد.",
+          "standards": "مواصفة WDPCA وتصنيفات IUCN موثقة لكن لا معرّف معيار معتمداً لهما في Ryu. لم يُتحقق تطبيق معيار بيانات وصفية معتمد آخر. حُجب استرجاع الدليل الكامل v2.0؛ وأمكن قراءة صفحة الإصدار وتوثيق API v4.",
+          "access": "لم يتوفر رمز معتمد لواجهة REST v4 التي أعادت HTTP 403 لهذا العميل. نجح استعلام GIS رسمي منفصل في إرجاع الموقع الحقيقي 230. تظل متطلبات تنزيل الموقع ورسوم API غير متحققة."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Protected Planet",
+      "summary": "Глобальная платформа данных об охраняемых и сохраняемых территориях, включая объединенную WDPCA и ежемесячные пространственные выпуски.",
+      "description": "Protected Planet управляется UNEP-WCMC как совместная инициатива ЮНЕП и МСОП. Эта запись посвящена глобальному реестру охраняемых и сохраняемых территорий. 1 ноября 2025 года WDPA и WD-OECM объединились в WDPCA; некоторые страницы и производные коллекции сохраняют прежние названия. Охраняемые территории и другие эффективные природоохранные меры на порайонной основе остаются разными типами объектов. Записи описывают границы или точки, обозначение, статус, управление и источники. Главная страница за сентябрь 2026 года сообщает о 312943 охраняемых территориях и 7663 OECM; морской охват составляет 9,81% и 10,03% с учетом OECM. Охват не доказывает эффективность охраны или проверку каждого участка. Ежемесячные выпуски зависят от своевременности и точности предоставляемых данных. Например, текущая страница Бонайре ссылается на источник Dutch Caribbean Nature Alliance, обновленный в 2020 году. WDPCA поддерживает глобальный мониторинг и задачу 3 КБР наряду с национальными докладами. Открытый просмотр и некоммерческий доступ отличаются от коммерческого разрешения через IBAT; перераспространение также требует разрешения. API v4 переименовывает поля участков и их частей; отдельные поля могут быть ограничены. Категории МСОП, спецификация WDPCA и условия лицензии описаны без новых тегов стандартов Ryu. GD-PAME и другие тематические ресурсы в эти подсчеты не входят.",
+      "details": {
+        "aliases": [
+          "WDPCA",
+          "World Database on Protected and Conserved Areas",
+          "WDPA",
+          "WD-OECM"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "pp-home",
+            "pp-merger",
+            "pp-evolution",
+            "pp-management",
+            "pp-api",
+            "pp-api-migration",
+            "pp-legal",
+            "pp-bonaire",
+            "pp-cbd",
+            "pp-data-justice"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "pp-geographic-data",
+              "description": "Полигоны или репрезентативные точки территорий с обозначением и заявленной площадью."
+            },
+            {
+              "id": "pp-catalogue-data",
+              "description": "Записи участков и частей содержат статус, управление и источники; site_type различает охраняемые территории и OECM."
+            },
+            {
+              "id": "pp-shapefile",
+              "description": "Пространственные пакеты для скачивания из Protected Planet."
+            },
+            {
+              "id": "pp-gdb",
+              "description": "Файловая база геоданных для ГИС-анализа; формат поставки, не API."
+            },
+            {
+              "id": "pp-csv",
+              "description": "Табличная выгрузка; геометрические границы требуют пространственного представления."
+            },
+            {
+              "id": "pp-json",
+              "description": "API v4 возвращает метаданные и постраничные результаты в JSON."
+            },
+            {
+              "id": "pp-geojson",
+              "description": "Геометрию можно запросить через with_geometry; полнота зависит от разрешений на поля."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "pp-browse",
+            "label": "Открытая карта и записи",
+            "description": "Просматривайте карты, сводки по странам и записи без учетной записи; условия использования и перераспространения сохраняются."
+          },
+          {
+            "id": "pp-download",
+            "label": "Ежемесячные выгрузки",
+            "description": "Используйте выгрузку Shapefile, файловой базы геоданных или CSV, приняв условия. Коммерческое использование и перераспространение требуют отдельного разрешения. Требования к учетной записи и оплате не проверены завершенной загрузкой."
+          },
+          {
+            "id": "pp-api-access",
+            "label": "Одобренный доступ к API v4",
+            "description": "Запросите одобрение и ключ для некоммерческого использования; передавайте параметр token. v4 предоставляет участки, части и необязательную геометрию. Некоторые поля ограничены. Рабочий ключ и опубликованные тарифы не проверены."
+          },
+          {
+            "id": "pp-gis-query",
+            "label": "Открытый ГИС-запрос UNEP-WCMC",
+            "description": "Официальный FeatureServer WDPCA предоставляет точки, полигоны и таблицу источников. Ограниченный запрос участка 230 вернул JSON без учетных данных. Подтверждена эта операция, не любые объемы выгрузки или гарантия сервиса; условия WDPCA сохраняются."
+          },
+          {
+            "id": "pp-earth-engine-access",
+            "label": "Коллекции Earth Engine",
+            "description": "Используйте коллекции полигонов и точек WCMC/WDPA/current с учетной записью и проектом Earth Engine. Проверенные некоммерческие проекты имеют бесплатные квоты, другие сервисы могут оплачиваться. Google не предоставляет коммерческих прав WDPCA. Проверьте поля и выпуск актива."
+          },
+          {
+            "id": "pp-commercial-access",
+            "label": "Коммерческая лицензия через IBAT",
+            "description": "Для использования коммерческой организацией или в ее интересах либо для получения дохода оформите соответствующую лицензию IBAT. ГИС-выгрузки, подписки и API различаются; ограничения поставщиков могут исключать данные. Право перераспространения не предоставляется автоматически."
+          },
+          {
+            "id": "pp-submit",
+            "label": "Передать или обновить авторитетные данные",
+            "description": "Свяжитесь с командой по руководству поставщика. Государства и негосударственные правообладатели могут предложить данные; публикация требует соблюдения стандартов, проверки и согласования. Это курируемая заявка, не открытый API записи. Плата за подачу не установлена исследованием."
+          },
+          {
+            "id": "pp-feedback",
+            "label": "Сообщить об исправлениях",
+            "description": "Условия предлагают передавать замечания и исправленные ГИС-данные по указанным контактам. Команда проверяет изменения; напрямую редактировать базу нельзя."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "pp-protected-sites-2026-09",
+            "description": "312943 охраняемых участка по статистике за сентябрь 2026 года; без OECM, не число строк частей или уникальных границ."
+          },
+          {
+            "id": "pp-oecm-sites-2026-09",
+            "description": "7663 участка OECM за сентябрь 2026 года отдельно от охраняемых территорий. Старые тематические страницы отражают другие месяцы."
+          }
+        ],
+        "researchGaps": {
+          "data": "Текущий объем хранения не проверен. Это заявленные количества участков, не строки частей, неперекрывающиеся площади или все записи платформы; тематические страницы могут отражать другие выпуски.",
+          "usage": "Не установлены актуальные числа сеансов, событий скачивания, датированный состав участников или исследовательские цитирования платформы. Организации-поставщики не приравниваются к отдельным пользователям.",
+          "standards": "Спецификация WDPCA и классификации МСОП описаны, но не имеют одобренного идентификатора стандарта Ryu. Другой утвержденный стандарт не подтвержден. Полное руководство v2.0 было недоступно; страница выпуска и документация API v4 прочитаны.",
+          "access": "Одобренного ключа REST API v4 не было; адреса вернули HTTP 403 этому клиенту. Отдельный официальный ГИС-запрос успешно вернул реальный участок 230. Условия веб-выгрузки и тарифы API не проверены."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "Protected Planet",
+      "summary": "全球保护地与保育地数据平台，提供合并后的WDPCA及每月空间数据发布。",
+      "description": "Protected Planet由UNEP-WCMC管理，是联合国环境规划署与世界自然保护联盟的共同项目。本记录聚焦其全球保护地与保育地名录。2025年11月1日，WDPA与WD-OECM合并为WDPCA；部分网页和下游数据集仍沿用旧名称。保护地与其他有效区域保护措施仍属不同地点类型。记录描述边界或点位、指定类别、状态、治理、管理及数据来源。2026年9月主页报告312943个保护地和7663个OECM；海洋覆盖率分别为9.81%和计入OECM后的10.03%。覆盖面积不代表保护成效，也不意味着每个地点都经过审计。月度发布依赖提供方数据的及时性与准确性。例如，博奈尔现有页面引用的是Dutch Caribbean Nature Alliance于2020年更新的数据。WDPCA与国家报告共同支持全球监测和生物多样性公约目标3。公开浏览及非商业数据访问与IBAT商业授权不同；再分发也须获得许可。API v4改用了地点和分区字段名称，部分字段可能受限。本记录以文字说明IUCN类别、WDPCA规范和许可条件，不新建Ryu标准标签。上述数量不包括GD-PAME和平台其他专题资源。",
+      "details": {
+        "aliases": [
+          "WDPCA",
+          "World Database on Protected and Conserved Areas",
+          "WDPA",
+          "WD-OECM"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "pp-home",
+            "pp-merger",
+            "pp-evolution",
+            "pp-management",
+            "pp-api",
+            "pp-api-migration",
+            "pp-legal",
+            "pp-bonaire",
+            "pp-cbd",
+            "pp-data-justice"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "pp-geographic-data",
+              "description": "保护地与保育地多边形或代表点，含指定类别与报告面积。"
+            },
+            {
+              "id": "pp-catalogue-data",
+              "description": "地点与分区记录包含状态、治理、管理和来源；site_type区分保护地与OECM。"
+            },
+            {
+              "id": "pp-shapefile",
+              "description": "Protected Planet提供的空间数据下载包。"
+            },
+            {
+              "id": "pp-gdb",
+              "description": "用于GIS分析的文件地理数据库下载格式，并非API。"
+            },
+            {
+              "id": "pp-csv",
+              "description": "表格下载选项；几何边界需使用空间数据格式。"
+            },
+            {
+              "id": "pp-json",
+              "description": "API v4以JSON返回结构化元数据及分页结果。"
+            },
+            {
+              "id": "pp-geojson",
+              "description": "可通过with_geometry请求几何数据；完整性可能受字段权限影响。"
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "pp-browse",
+            "label": "公开地图与地点记录",
+            "description": "无需账户即可浏览地图、国家摘要和地点记录；使用与再分发条件仍适用。"
+          },
+          {
+            "id": "pp-download",
+            "label": "月度数据下载",
+            "description": "通过网站下载Shapefile、文件地理数据库或CSV并接受现行条款；商业使用和再分发须另行获准。尚未通过完整下载流程核实账户及收费要求。"
+          },
+          {
+            "id": "pp-api-access",
+            "label": "获批的API v4访问",
+            "description": "非商业使用须申请审批及API密钥，通过token参数认证。v4提供地点、分区和可选几何数据，部分字段可能受限。未验证有效密钥或公开API价目表。"
+          },
+          {
+            "id": "pp-gis-query",
+            "label": "UNEP-WCMC公开GIS查询",
+            "description": "官方WDPCA FeatureServer提供点位、多边形及来源表。对230号地点的限定查询无需凭据即返回JSON。这仅验证了该次读取，不保证任意规模提取或服务承诺；WDPCA使用及再分发条件仍适用。"
+          },
+          {
+            "id": "pp-earth-engine-access",
+            "label": "Earth Engine数据集",
+            "description": "使用WCMC/WDPA/current多边形和点位数据集需要Earth Engine账户及已注册项目。经核实的非商业项目有免费计算配额，其他服务可能收费。Google访问不授予WDPCA商业权利；分析前须核实实际资产字段和版本。"
+          },
+          {
+            "id": "pp-commercial-access",
+            "label": "通过IBAT获取商业许可",
+            "description": "为营利机构或代表营利机构使用数据，或用于其他创收用途，须安排适当的IBAT许可及访问。GIS下载、订阅和API选项不同，提供方限制可能排除部分数据；许可不自动允许再分发。"
+          },
+          {
+            "id": "pp-submit",
+            "label": "提交或更新权威数据",
+            "description": "按贡献指南联系团队。政府和非国家权利持有人可提出数据贡献；发布须遵循数据规范、核验及提供方协议。这是经审核的申请渠道，并非公开写入API。未查明提交费用。"
+          },
+          {
+            "id": "pp-feedback",
+            "label": "反馈更正",
+            "description": "条款欢迎通过所列联系方式提交反馈和修订后的GIS数据。更改由团队审核，用户不能通过此渠道直接编辑数据库。"
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "pp-protected-sites-2026-09",
+            "description": "2026年9月主页统计列示312943个保护地；不含OECM，亦非分区行数或唯一边界数。"
+          },
+          {
+            "id": "pp-oecm-sites-2026-09",
+            "description": "2026年9月主页列示7663个OECM，与保护地分列；旧专题页可能采用其他月份快照。"
+          }
+        ],
+        "researchGaps": {
+          "data": "未核实当前存储容量。这些是报告的地点数量，不是分区行数、互不重叠区域数量或平台全部记录；专题页可能对应不同发布快照。",
+          "usage": "未找到该平台当前会话数、下载事件数、有日期的贡献者名录总数或研究引用数量；不将提供数据的机构等同于个人用户。",
+          "standards": "WDPCA规范与IUCN分类已有文档，但均无已批准的Ryu标准ID。未核实其他已批准元数据标准的实际采用。完整v2.0手册获取受阻；已阅读官方发布页及API v4文档。",
+          "access": "未持有主REST API v4的批准密钥，其端点向本研究客户端返回HTTP 403；另一官方GIS查询已成功返回真实的230号地点。网站下载前提和API价目表仍未核实。"
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-unep-governs-protected-planet",
+      "sourceNodeId": "unep",
+      "targetNodeId": "protected-planet",
+      "kind": "governs",
+      "note": "The current terms reserve to UNEP and IUCN the right to vary conditions for WDPCA materials. UNEP additionally reserves authority to alter, limit or discontinue the website and deny access. This edge is limited to stated publication and access-policy authority, not governance over each protected area or unilateral control of national data.",
+      "properties": {
+        "scope": "WDPCA publication and use conditions; UNEP authority over the website",
+        "period": "Terms current at research date 2026-09-10",
+        "sourceRefs": [
+          "pp-legal"
+        ],
+        "status": "current published terms"
+      },
+      "sources": {
+        "pp-legal": {
+          "id": "pp-legal",
+          "url": "https://www.protectedplanet.net/en/legal",
+          "title": {
+            "en": "Protected Planet terms of use",
+            "fr": "Conditions d’utilisation de Protected Planet",
+            "es": "Condiciones de uso de Protected Planet",
+            "ar": "شروط استخدام Protected Planet",
+            "ru": "Условия использования Protected Planet",
+            "zh": "Protected Planet使用条款"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-iucn-governs-protected-planet",
+      "sourceNodeId": "iucn",
+      "targetNodeId": "protected-planet",
+      "kind": "governs",
+      "note": "The current terms give UNEP and IUCN jointly reserved authority to vary WDPCA use conditions and state that database intellectual property belongs to both. This records shared database policy authority; it does not infer day-to-day operation or governance of the protected areas described.",
+      "properties": {
+        "scope": "Shared WDPCA database publication and access-policy authority",
+        "period": "Terms current at research date 2026-09-10",
+        "sourceRefs": [
+          "pp-legal"
+        ],
+        "status": "current published terms"
+      },
+      "sources": {
+        "pp-legal": {
+          "id": "pp-legal",
+          "url": "https://www.protectedplanet.net/en/legal",
+          "title": {
+            "en": "Protected Planet terms of use",
+            "fr": "Conditions d’utilisation de Protected Planet",
+            "es": "Condiciones de uso de Protected Planet",
+            "ar": "شروط استخدام Protected Planet",
+            "ru": "Условия использования Protected Planet",
+            "zh": "Protected Planet使用条款"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-unep-wcmc-operates-protected-planet",
+      "sourceNodeId": "unep-wcmc",
+      "targetNodeId": "protected-planet",
+      "kind": "operates",
+      "note": "UNEP-WCMC manages the Protected Planet initiative and compiles and manages its protected and conserved area inventory. UNEP and IUCN are joint institutional partners; that wording does not make every contributor an operator.",
+      "properties": {
+        "scope": "Platform management and WDPCA compilation and maintenance",
+        "period": "Management reported in January 2022 and corroborated by current IBAT description",
+        "sourceRefs": [
+          "pp-management",
+          "pp-ibat"
+        ],
+        "status": "current documented operation"
+      },
+      "sources": {
+        "pp-management": {
+          "id": "pp-management",
+          "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+          "title": {
+            "en": "Protected Planet management and Arcadia grant announcement",
+            "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+            "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+            "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+            "ru": "Управление Protected Planet и объявление гранта Arcadia",
+            "zh": "Protected Planet管理与Arcadia资助公告"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-ibat": {
+          "id": "pp-ibat",
+          "url": "https://www.ibat-alliance.org/datasets/wdpca",
+          "title": {
+            "en": "IBAT: World Database on Protected and Conserved Areas",
+            "fr": "IBAT : base mondiale des aires protégées et conservées",
+            "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+            "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+            "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+            "zh": "IBAT：世界保护地与保育地数据库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-arcadia-funds-protected-planet",
+      "sourceNodeId": "arcadia",
+      "targetNodeId": "protected-planet",
+      "kind": "funds",
+      "note": "UNEP-WCMC announced a USD 5 million Arcadia grant in January 2022 for the Protected Planet initiative. Its current funder page dates support from 2021. Scope includes knowledge infrastructure, coverage, connectivity, management and equitable governance; no annual operating budget, final disbursement total or award end date is established.",
+      "properties": {
+        "scope": "Protected Planet initiative and global conservation knowledge infrastructure",
+        "period": "Support since 2021; USD 5 million grant announced January 2022; end date unverified",
+        "sourceRefs": [
+          "pp-management",
+          "pp-funders"
+        ],
+        "status": "documented grant; current funder acknowledgement"
+      },
+      "sources": {
+        "pp-management": {
+          "id": "pp-management",
+          "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+          "title": {
+            "en": "Protected Planet management and Arcadia grant announcement",
+            "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+            "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+            "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+            "ru": "Управление Protected Planet и объявление гранта Arcadia",
+            "zh": "Protected Planet管理与Arcadia资助公告"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-funders": {
+          "id": "pp-funders",
+          "url": "https://www.unep-wcmc.org/en/our-funders",
+          "title": {
+            "en": "UNEP-WCMC funders and their project scope",
+            "fr": "Bailleurs de l’UNEP-WCMC et portée des projets",
+            "es": "Financiadores de UNEP-WCMC y alcance de proyectos",
+            "ar": "مموّلو UNEP-WCMC ونطاق مشروعاتهم",
+            "ru": "Спонсоры UNEP-WCMC и направления проектов",
+            "zh": "UNEP-WCMC资助方及项目范围"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-proteus-partnership-funds-protected-planet",
+      "sourceNodeId": "proteus-partnership",
+      "targetNodeId": "protected-planet",
+      "kind": "funds",
+      "note": "The Proteus 2021–2025 strategy explicitly identifies financial support for maintaining and improving WDPA, including data quality, verification and non-government coverage. Current UNEP-WCMC funder acknowledgement corroborates the partnership; neither exact WDPA allocation nor a renewed 2026 award is established.",
+      "properties": {
+        "scope": "WDPA data maintenance, quality and reporting coverage within the Proteus programme",
+        "period": "2021–2025 strategy period; current partnership acknowledgement; later award terms unverified",
+        "sourceRefs": [
+          "pp-proteus",
+          "pp-funders"
+        ],
+        "status": "documented historical programme support"
+      },
+      "sources": {
+        "pp-proteus": {
+          "id": "pp-proteus",
+          "url": "https://www.proteuspartners.org/content/uploads/2017/07/Proteus-2021-25-Strategy-Document.pdf",
+          "title": {
+            "en": "Proteus strategy 2021–2025: financing data maintenance",
+            "fr": "Stratégie Proteus 2021–2025 : financement des données",
+            "es": "Estrategia Proteus 2021–2025: financiación de datos",
+            "ar": "استراتيجية Proteus للفترة 2021–2025: تمويل صيانة البيانات",
+            "ru": "Стратегия Proteus на 2021–2025 годы: финансирование данных",
+            "zh": "Proteus 2021—2025战略：数据维护资助"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-funders": {
+          "id": "pp-funders",
+          "url": "https://www.unep-wcmc.org/en/our-funders",
+          "title": {
+            "en": "UNEP-WCMC funders and their project scope",
+            "fr": "Bailleurs de l’UNEP-WCMC et portée des projets",
+            "es": "Financiadores de UNEP-WCMC y alcance de proyectos",
+            "ar": "مموّلو UNEP-WCMC ونطاق مشروعاتهم",
+            "ru": "Спонсоры UNEP-WCMC и направления проектов",
+            "zh": "UNEP-WCMC资助方及项目范围"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-bezos-earth-fund-funds-protected-planet",
+      "sourceNodeId": "bezos-earth-fund",
+      "targetNodeId": "protected-planet",
+      "kind": "funds",
+      "note": "A USD 5 million grant to UNEP-WCMC announced in December 2021 supported protected-area work in Congo, DR Congo, Gabon, Bolivia, Colombia, Ecuador and Peru. The 2026 Protected Planet data-justice account explicitly connects the partnership to country-level reporting support. The edge is scoped to that reporting and capacity work, not a claim that all grant funds finance the database or that a new grant was awarded in 2026.",
+      "properties": {
+        "scope": "Country-level protected and conserved area reporting and capacity in the Congo Basin and Andes",
+        "period": "Grant announced December 2021; reporting support described April 2026; end date unverified",
+        "sourceRefs": [
+          "pp-bezos",
+          "pp-data-justice",
+          "pp-funders"
+        ],
+        "status": "documented project support; archive allocation unknown"
+      },
+      "sources": {
+        "pp-bezos": {
+          "id": "pp-bezos",
+          "url": "https://www.unep-wcmc.org/en/news/towards-30x30-new-grant-supports-major-progress-for-protected-and-conserved-areas",
+          "title": {
+            "en": "Bezos Earth Fund grant for seven-country conservation reporting",
+            "fr": "Subvention Bezos Earth Fund pour sept pays",
+            "es": "Subvención de Bezos Earth Fund para siete países",
+            "ar": "منحة Bezos Earth Fund لدعم سبع دول",
+            "ru": "Грант Bezos Earth Fund для семи стран",
+            "zh": "Bezos Earth Fund七国保护项目资助"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-data-justice": {
+          "id": "pp-data-justice",
+          "url": "https://www.unep-wcmc.org/en/news/five-steps-to-strengthen-data-justice-as-we-conserve-30-of-the-planet",
+          "title": {
+            "en": "Protected Planet data justice and country support in 2026",
+            "fr": "Équité des données et soutien aux pays en 2026",
+            "es": "Justicia de datos y apoyo a países en 2026",
+            "ar": "إنصاف البيانات ودعم الدول في 2026",
+            "ru": "Справедливость данных и поддержка стран в 2026 году",
+            "zh": "2026年数据公平与国家支持"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-funders": {
+          "id": "pp-funders",
+          "url": "https://www.unep-wcmc.org/en/our-funders",
+          "title": {
+            "en": "UNEP-WCMC funders and their project scope",
+            "fr": "Bailleurs de l’UNEP-WCMC et portée des projets",
+            "es": "Financiadores de UNEP-WCMC y alcance de proyectos",
+            "ar": "مموّلو UNEP-WCMC ونطاق مشروعاتهم",
+            "ru": "Спонсоры UNEP-WCMC и направления проектов",
+            "zh": "UNEP-WCMC资助方及项目范围"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-usgs-publishes-to-protected-planet",
+      "sourceNodeId": "usgs",
+      "targetNodeId": "protected-planet",
+      "kind": "publishes_to",
+      "note": "USGS identifies itself as the primary US protected-area data source for WDPA and documents a biodiversity-focused PAD-US 3.0 submission of over 51,000 sites from 50 states and six territories. The source describes the December 2022 submission, published May 2023, with schema translation and exclusions; it is not a September 2026 complete submission or every PAD-US record.",
+      "properties": {
+        "scope": "Biodiversity-focused US marine and terrestrial PAD-US 3.0 subset submitted for WDPA inclusion",
+        "period": "Submission December 2022; data release published 2023-05-16",
+        "sourceRefs": [
+          "pp-usgs"
+        ],
+        "status": "documented historical submission",
+        "format": "esri_file_geodatabase"
+      },
+      "sources": {
+        "pp-usgs": {
+          "id": "pp-usgs",
+          "url": "https://www.usgs.gov/data/protected-areas-database-united-states-pad-us-30-world-database-protected-areas-wdpa",
+          "title": {
+            "en": "USGS PAD-US 3.0 submission to WDPA",
+            "fr": "Soumission PAD-US 3.0 de l’USGS à la WDPA",
+            "es": "Envío de PAD-US 3.0 del USGS a WDPA",
+            "ar": "تقديم USGS لبيانات PAD-US 3.0 إلى WDPA",
+            "ru": "Передача PAD-US 3.0 от USGS в WDPA",
+            "zh": "USGS向WDPA提交PAD-US 3.0"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-dutch-caribbean-nature-alliance-publishes-to-protected-planet",
+      "sourceNodeId": "dutch-caribbean-nature-alliance",
+      "targetNodeId": "protected-planet",
+      "kind": "publishes_to",
+      "note": "The public Bonaire site record (SITE ID 230) attributes its Protected Areas of the Dutch Caribbean source, updated in 2020, to the Dutch Caribbean Nature Alliance. This edge records that named provider contribution. STINAPA is listed as site management authority and is not inferred to be the database publisher.",
+      "properties": {
+        "scope": "Protected Areas of the Dutch Caribbean dataset represented by Bonaire site 230",
+        "period": "Provider source updated 2020; public site read 2026-09-10",
+        "sourceRefs": [
+          "pp-bonaire"
+        ],
+        "status": "published provider attribution",
+        "artifact": "https://www.protectedplanet.net/230"
+      },
+      "sources": {
+        "pp-bonaire": {
+          "id": "pp-bonaire",
+          "url": "https://www.protectedplanet.net/230",
+          "title": {
+            "en": "Bonaire protected area: site 230 and data source",
+            "fr": "Aire protégée de Bonaire : site 230 et source",
+            "es": "Área protegida de Bonaire: sitio 230 y fuente",
+            "ar": "منطقة بونير المحمية: الموقع 230 ومصدر البيانات",
+            "ru": "Охраняемая территория Бонайре: участок 230 и источник",
+            "zh": "博奈尔保护地：230号地点与数据来源"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-protected-planet-syncs-to-ibat",
+      "sourceNodeId": "protected-planet",
+      "targetNodeId": "ibat",
+      "kind": "syncs_to",
+      "note": "IBAT states that it incorporates WDPCA and updates its protected-area data at the start of each month. Provider restrictions may exclude commercially restricted material; a complete identical mirror is not asserted. IBAT commercial access is distinct from Protected Planet public noncommercial access.",
+      "properties": {
+        "scope": "WDPCA content incorporated into IBAT; restrictions and delivery products apply",
+        "period": "Current documented monthly updates; last successful ingestion not measured",
+        "sourceRefs": [
+          "pp-ibat",
+          "pp-ibat-service"
+        ],
+        "status": "documented operating data feed",
+        "transferMethod": "monthly dataset incorporation"
+      },
+      "sources": {
+        "pp-ibat": {
+          "id": "pp-ibat",
+          "url": "https://www.ibat-alliance.org/datasets/wdpca",
+          "title": {
+            "en": "IBAT: World Database on Protected and Conserved Areas",
+            "fr": "IBAT : base mondiale des aires protégées et conservées",
+            "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+            "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+            "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+            "zh": "IBAT：世界保护地与保育地数据库"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-ibat-service": {
+          "id": "pp-ibat-service",
+          "url": "https://www.ibat-alliance.org/services",
+          "title": {
+            "en": "IBAT data access services",
+            "fr": "Services d’accès aux données IBAT",
+            "es": "Servicios de acceso a datos de IBAT",
+            "ar": "خدمات الوصول إلى بيانات IBAT",
+            "ru": "Сервисы доступа к данным IBAT",
+            "zh": "IBAT数据访问服务"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-protected-planet-syncs-to-google-earth-engine",
+      "sourceNodeId": "protected-planet",
+      "targetNodeId": "google-earth-engine",
+      "kind": "syncs_to",
+      "note": "Google documents monthly WDPA polygon and point collections sourced from UNEP-WCMC, with current aliases and dated archives from July 2017. The catalogue still uses legacy naming and fields. This proves the collection relationship, not that every current WDPCA field or all OECMs have been migrated to a particular asset.",
+      "properties": {
+        "scope": "Documented WDPA polygon and point feature collections in Earth Engine",
+        "period": "Monthly source updates; dated archives from July 2017; actual latest asset release not executed",
+        "sourceRefs": [
+          "pp-earth-engine"
+        ],
+        "status": "documented collection; current content parity unverified",
+        "artifact": "WCMC/WDPA/current/polygons; WCMC/WDPA/current/points"
+      },
+      "sources": {
+        "pp-earth-engine": {
+          "id": "pp-earth-engine",
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/WCMC_WDPA_current_polygons",
+          "title": {
+            "en": "Earth Engine WDPA polygon collection",
+            "fr": "Collection de polygones WDPA dans Earth Engine",
+            "es": "Colección de polígonos WDPA en Earth Engine",
+            "ar": "مجموعة مضلعات WDPA في Earth Engine",
+            "ru": "Коллекция полигонов WDPA в Earth Engine",
+            "zh": "Earth Engine WDPA多边形数据集"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-protected-planet-syncs-to-mpatlas",
+      "sourceNodeId": "protected-planet",
+      "targetNodeId": "mpatlas",
+      "kind": "syncs_to",
+      "note": "MPAtlas documents importing WDPA as a starting inventory and independently replacing or correcting records using national sources and its own research. Its January 2026 operator report continues to compare and assess WDPA marine coverage. This is a selective derived-data relationship, not a whole-database mirror or equal protection classification; a fixed transfer cadence is unverified.",
+      "properties": {
+        "scope": "WDPA marine inventory used in independent MPAtlas processing and assessment",
+        "period": "Workflow documented on legacy data-method page; current assessment corroborated January 2026; cadence unverified",
+        "sourceRefs": [
+          "pp-mpatlas",
+          "pp-mpatlas-2026"
+        ],
+        "status": "documented selective derived use",
+        "transferMethod": "curated import and independent assessment"
+      },
+      "sources": {
+        "pp-mpatlas": {
+          "id": "pp-mpatlas",
+          "url": "https://old.mpatlas.org/about/data/",
+          "title": {
+            "en": "MPAtlas data sources and independent processing",
+            "fr": "Sources de données et traitement indépendant de MPAtlas",
+            "es": "Fuentes y procesamiento independiente de MPAtlas",
+            "ar": "مصادر بيانات MPAtlas ومعالجتها المستقلة",
+            "ru": "Источники данных и независимая обработка MPAtlas",
+            "zh": "MPAtlas数据来源与独立处理"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-mpatlas-2026": {
+          "id": "pp-mpatlas-2026",
+          "url": "https://marine-conservation.org/on-the-tide/halfway-to-30x30/",
+          "title": {
+            "en": "Marine Conservation Institute: MPAtlas assessment in January 2026",
+            "fr": "Marine Conservation Institute : bilan MPAtlas de janvier 2026",
+            "es": "Marine Conservation Institute: evaluación de MPAtlas en enero de 2026",
+            "ar": "Marine Conservation Institute: تقييم MPAtlas في يناير 2026",
+            "ru": "Marine Conservation Institute: оценка MPAtlas в январе 2026 года",
+            "zh": "Marine Conservation Institute：2026年1月MPAtlas评估"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-protected-planet-syncs-to-global-fishing-watch",
+      "sourceNodeId": "protected-planet",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "syncs_to",
+      "note": "GFW imports a protected-area reference layer labelled WDPA and documents monthly MPA updates. Protected Planet has since merged WDPA/WD-OECM into WDPCA; no claim is made that GFW already imports all WDPCA fields or OECMs.",
+      "properties": {
+        "scope": "Protected-area reference geometry in the GFW map",
+        "status": "documented monthly update policy; current source release unverified",
+        "sourceRefs": [
+          "reference",
+          "guide",
+          "wdpca-transition"
+        ],
+        "transferMethod": "reference-layer import"
+      },
+      "sources": {
+        "reference": {
+          "id": "reference",
+          "url": "https://globalfishingwatch.org/faqs/reference-layer-sources/",
+          "title": {
+            "en": "Reference layer sources",
+            "fr": "Sources des couches de référence",
+            "es": "Fuentes de las capas de referencia",
+            "ar": "مصادر الطبقات المرجعية",
+            "zh": "参考图层来源",
+            "ru": "Источники справочных слоёв"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "guide": {
+          "id": "guide",
+          "url": "https://globalfishingwatch.org/user-guide/",
+          "title": {
+            "en": "Map user guide",
+            "fr": "Guide de la carte",
+            "es": "Guía del mapa",
+            "ar": "دليل استخدام الخريطة",
+            "zh": "地图使用指南",
+            "ru": "Руководство по карте"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "wdpca-transition": {
+          "id": "wdpca-transition",
+          "url": "https://api.protectedplanet.net/",
+          "title": {
+            "en": "Protected Planet WDPCA migration notice",
+            "fr": "Avis de migration WDPCA de Protected Planet",
+            "es": "Aviso de migración WDPCA de Protected Planet",
+            "ar": "إشعار انتقال Protected Planet إلى WDPCA",
+            "zh": "Protected Planet WDPCA迁移通知",
+            "ru": "Уведомление о переходе Protected Planet на WDPCA"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

@@ -1,0 +1,150 @@
+[
+  {
+    "id": "rel-marine-regions-syncs-to-global-fishing-watch",
+    "sourceNodeId": "marine-regions",
+    "targetNodeId": "global-fishing-watch",
+    "kind": "syncs_to",
+    "note": "GFW identifies Marine Regions as the source of EEZ reference geometry. Its FAQ says reference layers are reviewed annually; the stale displayed update date is not used as proof of the current deployed geometry.",
+    "properties": {
+      "scope": "EEZ reference boundaries",
+      "status": "documented integration; deployed version unverified",
+      "sourceRefs": [
+        "reference"
+      ],
+      "transferMethod": "reference-layer import"
+    },
+    "sources": {
+      "reference": {
+        "id": "reference",
+        "url": "https://globalfishingwatch.org/faqs/reference-layer-sources/",
+        "title": {
+          "en": "Reference layer sources",
+          "fr": "Sources des couches de référence",
+          "es": "Fuentes de las capas de referencia",
+          "ar": "مصادر الطبقات المرجعية",
+          "zh": "参考图层来源",
+          "ru": "Источники справочных слоёв"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "id": "rel-protected-planet-syncs-to-global-fishing-watch",
+    "sourceNodeId": "protected-planet",
+    "targetNodeId": "global-fishing-watch",
+    "kind": "syncs_to",
+    "note": "GFW imports a protected-area reference layer labelled WDPA and documents monthly MPA updates. Protected Planet has since merged WDPA/WD-OECM into WDPCA; no claim is made that GFW already imports all WDPCA fields or OECMs.",
+    "properties": {
+      "scope": "Protected-area reference geometry in the GFW map",
+      "status": "documented monthly update policy; current source release unverified",
+      "sourceRefs": [
+        "reference",
+        "guide",
+        "wdpca-transition"
+      ],
+      "transferMethod": "reference-layer import"
+    },
+    "sources": {
+      "reference": {
+        "id": "reference",
+        "url": "https://globalfishingwatch.org/faqs/reference-layer-sources/",
+        "title": {
+          "en": "Reference layer sources",
+          "fr": "Sources des couches de référence",
+          "es": "Fuentes de las capas de referencia",
+          "ar": "مصادر الطبقات المرجعية",
+          "zh": "参考图层来源",
+          "ru": "Источники справочных слоёв"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "guide": {
+        "id": "guide",
+        "url": "https://globalfishingwatch.org/user-guide/",
+        "title": {
+          "en": "Map user guide",
+          "fr": "Guide de la carte",
+          "es": "Guía del mapa",
+          "ar": "دليل استخدام الخريطة",
+          "zh": "地图使用指南",
+          "ru": "Руководство по карте"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "wdpca-transition": {
+        "id": "wdpca-transition",
+        "url": "https://api.protectedplanet.net/",
+        "title": {
+          "en": "Protected Planet WDPCA migration notice",
+          "fr": "Avis de migration WDPCA de Protected Planet",
+          "es": "Aviso de migración WDPCA de Protected Planet",
+          "ar": "إشعار انتقال Protected Planet إلى WDPCA",
+          "zh": "Protected Planet WDPCA迁移通知",
+          "ru": "Уведомление о переходе Protected Planet на WDPCA"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "id": "rel-global-fishing-watch-syncs-to-zenodo",
+    "sourceNodeId": "global-fishing-watch",
+    "targetNodeId": "zenodo",
+    "kind": "syncs_to",
+    "note": "GFW deposited the fixed v3.0.0 apparent-fishing-effort release on 11 March 2025, covering 2012–2024 with CSV data, schemas and README files. No continuing synchronization cadence or parity with live v4 is asserted.",
+    "properties": {
+      "scope": "Versioned apparent-fishing-effort release",
+      "status": "v3.0.0 publication 11 March 2025",
+      "sourceRefs": [
+        "zenodo"
+      ],
+      "transferMethod": "versioned data deposit",
+      "format": "CSV files and metadata packaged in ZIP"
+    },
+    "sources": {
+      "zenodo": {
+        "id": "zenodo",
+        "url": "https://zenodo.org/records/14982712",
+        "title": {
+          "en": "Global AIS-based Apparent Fishing Effort v3.0.0",
+          "fr": "Effort de pêche apparent mondial issu de l’AIS v3.0.0",
+          "es": "Esfuerzo pesquero aparente mundial basado en AIS v3.0.0",
+          "ar": "جهد الصيد الظاهر العالمي المستند إلى AIS، الإصدار 3.0.0",
+          "zh": "全球AIS表观捕捞努力量v3.0.0",
+          "ru": "Глобальное предполагаемое рыболовное усилие по AIS v3.0.0"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  {
+    "id": "rel-global-fishing-watch-syncs-to-google-earth-engine",
+    "sourceNodeId": "global-fishing-watch",
+    "targetNodeId": "google-earth-engine",
+    "kind": "syncs_to",
+    "note": "Google hosts the historical GFW/GFF/V1/fishing_hours collection, with catalogue coverage from 2012-01-01 to 2017-01-01 and CC BY-SA 4.0. This is a legacy subset, not the live v4 platform or the separately licensed v3 release.",
+    "properties": {
+      "scope": "Legacy gridded fishing-hours collection",
+      "status": "published historical v1 collection",
+      "sourceRefs": [
+        "ee"
+      ]
+    },
+    "sources": {
+      "ee": {
+        "id": "ee",
+        "url": "https://developers.google.com/earth-engine/datasets/catalog/GFW_GFF_V1_fishing_hours",
+        "title": {
+          "en": "Earth Engine: GFW fishing hours v1",
+          "fr": "Earth Engine : heures de pêche GFW v1",
+          "es": "Earth Engine: horas de pesca GFW v1",
+          "ar": "Earth Engine: ساعات الصيد GFW بالإصدار 1",
+          "zh": "Earth Engine：GFW第1版捕捞时长",
+          "ru": "Earth Engine: часы рыболовства GFW v1"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  }
+]

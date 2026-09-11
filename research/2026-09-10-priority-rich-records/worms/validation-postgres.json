@@ -1,0 +1,210 @@
+{
+  "scope": "Isolated in-memory PostgreSQL validation; ID/kind snapshot only. Not a production merge or write. Sparse stubs receive normal empty system arrays.",
+  "results": [
+    {
+      "id": "lifewatch-belgium",
+      "valid": true,
+      "issues": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 2,
+        "resolvedSources": 2,
+        "issues": []
+      },
+      "roundTrip": {
+        "kind": "organization",
+        "depth": "stub",
+        "locales": [
+          "en"
+        ],
+        "edgeCount": 0,
+        "contentMatches": true
+      }
+    },
+    {
+      "id": "catalogue-of-life",
+      "valid": true,
+      "issues": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 2,
+        "resolvedSources": 2,
+        "issues": []
+      },
+      "roundTrip": {
+        "kind": "system",
+        "depth": "stub",
+        "locales": [
+          "en"
+        ],
+        "edgeCount": 0,
+        "contentMatches": true
+      }
+    },
+    {
+      "id": "worms-editorial-board",
+      "valid": true,
+      "issues": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 2,
+        "resolvedSources": 2,
+        "issues": []
+      },
+      "roundTrip": {
+        "kind": "organization",
+        "depth": "stub",
+        "locales": [
+          "en"
+        ],
+        "edgeCount": 0,
+        "contentMatches": true
+      }
+    },
+    {
+      "id": "index-fungorum",
+      "valid": true,
+      "issues": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 2,
+        "resolvedSources": 2,
+        "issues": []
+      },
+      "roundTrip": {
+        "kind": "system",
+        "depth": "stub",
+        "locales": [
+          "en"
+        ],
+        "edgeCount": 0,
+        "contentMatches": true
+      }
+    },
+    {
+      "id": "ictv-taxonomy",
+      "valid": true,
+      "issues": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 2,
+        "resolvedSources": 2,
+        "issues": []
+      },
+      "roundTrip": {
+        "kind": "system",
+        "depth": "stub",
+        "locales": [
+          "en"
+        ],
+        "edgeCount": 0,
+        "contentMatches": true
+      }
+    },
+    {
+      "id": "ctenophora-species-list",
+      "valid": true,
+      "issues": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 2,
+        "resolvedSources": 2,
+        "issues": []
+      },
+      "roundTrip": {
+        "kind": "system",
+        "depth": "stub",
+        "locales": [
+          "en"
+        ],
+        "edgeCount": 0,
+        "contentMatches": true
+      }
+    },
+    {
+      "id": "reptile-database",
+      "valid": true,
+      "issues": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 2,
+        "resolvedSources": 2,
+        "issues": []
+      },
+      "roundTrip": {
+        "kind": "system",
+        "depth": "stub",
+        "locales": [
+          "en"
+        ],
+        "edgeCount": 0,
+        "contentMatches": true
+      }
+    },
+    {
+      "id": "freshwater-animal-diversity-assessment",
+      "valid": true,
+      "issues": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 1,
+        "resolvedSources": 1,
+        "issues": []
+      },
+      "roundTrip": {
+        "kind": "system",
+        "depth": "stub",
+        "locales": [
+          "en"
+        ],
+        "edgeCount": 0,
+        "contentMatches": true
+      }
+    },
+    {
+      "id": "recent-fossil-bryozoa",
+      "valid": true,
+      "issues": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 2,
+        "resolvedSources": 2,
+        "issues": []
+      },
+      "roundTrip": {
+        "kind": "system",
+        "depth": "stub",
+        "locales": [
+          "en"
+        ],
+        "edgeCount": 0,
+        "contentMatches": true
+      }
+    },
+    {
+      "id": "worms",
+      "valid": true,
+      "issues": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 37,
+        "resolvedSources": 37,
+        "issues": []
+      },
+      "roundTrip": {
+        "kind": "system",
+        "depth": "rich",
+        "locales": [
+          "ar",
+          "en",
+          "es",
+          "fr",
+          "ru",
+          "zh"
+        ],
+        "edgeCount": 18,
+        "contentMatches": true
+      }
+    }
+  ]
+}

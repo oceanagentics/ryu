@@ -1,0 +1,537 @@
+[
+  {
+    "id": "lifewatch-belgium",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.lifewatch.be/about-lifewatch",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.lifewatch.be/about-lifewatch",
+          "title": {
+            "en": "LifeWatch Belgium — identity",
+            "fr": "LifeWatch Belgium — identité",
+            "es": "LifeWatch Belgium — identidad",
+            "ar": "LifeWatch Belgium — التعريف",
+            "zh": "LifeWatch Belgium — 身份",
+            "ru": "LifeWatch Belgium — сведения"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "LifeWatch Belgium",
+        "summary": "National Distributed Centre coordinating Belgian regional and federal contributions to LifeWatch ERIC; distinct from the European ERIC itself.",
+        "description": "National Distributed Centre coordinating Belgian regional and federal contributions to LifeWatch ERIC; distinct from the European ERIC itself.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity",
+              "src-worms-about"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "catalogue-of-life",
+    "record": {
+      "kind": "system",
+      "url": "https://www.catalogueoflife.org/data/metadata",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.catalogueoflife.org/data/metadata",
+          "title": {
+            "en": "Catalogue of Life — identity",
+            "fr": "Catalogue of Life — identité",
+            "es": "Catalogue of Life — identidad",
+            "ar": "Catalogue of Life — التعريف",
+            "zh": "Catalogue of Life — 身份",
+            "ru": "Catalogue of Life — сведения"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Catalogue of Life",
+        "summary": "Global taxonomic checklist combining contributing source databases, including named WoRMS sources.",
+        "description": "Global taxonomic checklist combining contributing source databases, including named WoRMS sources.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity",
+              "src-worms-about"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "worms-editorial-board",
+    "record": {
+      "kind": "organization",
+      "url": "https://marinespecies.org/about.php#governance",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://marinespecies.org/about.php#governance",
+          "title": {
+            "en": "WoRMS Editorial Board — identity",
+            "fr": "WoRMS Editorial Board — identité",
+            "es": "WoRMS Editorial Board — identidad",
+            "ar": "WoRMS Editorial Board — التعريف",
+            "zh": "WoRMS Editorial Board — 身份",
+            "ru": "WoRMS Editorial Board — сведения"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "WoRMS Editorial Board",
+        "summary": "Collective of active WoRMS taxonomic and thematic editors and data providers, led by the WoRMS Steering Committee.",
+        "description": "Collective of active WoRMS taxonomic and thematic editors and data providers, led by the WoRMS Steering Committee.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity",
+              "src-worms-about"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "index-fungorum",
+    "record": {
+      "kind": "system",
+      "url": "https://www.indexfungorum.org/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.indexfungorum.org/",
+          "title": {
+            "en": "Index Fungorum — identity",
+            "fr": "Index Fungorum — identité",
+            "es": "Index Fungorum — identidad",
+            "ar": "Index Fungorum — التعريف",
+            "zh": "Index Fungorum — 身份",
+            "ru": "Index Fungorum — сведения"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Index Fungorum",
+        "summary": "Nomenclatural database of fungal names at all ranks; listed by WoRMS as an external source.",
+        "description": "Nomenclatural database of fungal names at all ranks; listed by WoRMS as an external source.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity",
+              "src-worms-about"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "ictv-taxonomy",
+    "record": {
+      "kind": "system",
+      "url": "https://ictv.global/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://ictv.global/",
+          "title": {
+            "en": "ICTV Taxonomy Database — identity",
+            "fr": "ICTV Taxonomy Database — identité",
+            "es": "ICTV Taxonomy Database — identidad",
+            "ar": "ICTV Taxonomy Database — التعريف",
+            "zh": "ICTV Taxonomy Database — 身份",
+            "ru": "ICTV Taxonomy Database — сведения"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "ICTV Taxonomy Database",
+        "summary": "Database and official taxonomic resources of the International Committee on Taxonomy of Viruses; distinguish this system from the committee organization.",
+        "description": "Database and official taxonomic resources of the International Committee on Taxonomy of Viruses; distinguish this system from the committee organization.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity",
+              "src-worms-about"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "ctenophora-species-list",
+    "record": {
+      "kind": "system",
+      "url": "https://faculty.washington.edu/cemills/Ctenolist.html",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://faculty.washington.edu/cemills/Ctenolist.html",
+          "title": {
+            "en": "Phylum Ctenophora: list of all valid species names — identity",
+            "fr": "Phylum Ctenophora: list of all valid species names — identité",
+            "es": "Phylum Ctenophora: list of all valid species names — identidad",
+            "ar": "Phylum Ctenophora: list of all valid species names — التعريف",
+            "zh": "Phylum Ctenophora: list of all valid species names — 身份",
+            "ru": "Phylum Ctenophora: list of all valid species names — сведения"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Phylum Ctenophora: list of all valid species names",
+        "summary": "Claudia E. Mills’s published ctenophore name list, maintained at the University of Washington and identified as a source by WoRMS.",
+        "description": "Claudia E. Mills’s published ctenophore name list, maintained at the University of Washington and identified as a source by WoRMS.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity",
+              "src-worms-about"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "reptile-database",
+    "record": {
+      "kind": "system",
+      "url": "https://reptile-database.reptarium.cz/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://reptile-database.reptarium.cz/",
+          "title": {
+            "en": "The Reptile Database — identity",
+            "fr": "The Reptile Database — identité",
+            "es": "The Reptile Database — identidad",
+            "ar": "The Reptile Database — التعريف",
+            "zh": "The Reptile Database — 身份",
+            "ru": "The Reptile Database — сведения"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "The Reptile Database",
+        "summary": "Searchable taxonomic database of reptiles, listed by WoRMS as an external source.",
+        "description": "Searchable taxonomic database of reptiles, listed by WoRMS as an external source.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity",
+              "src-worms-about"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "freshwater-animal-diversity-assessment",
+    "record": {
+      "kind": "system",
+      "url": "https://fada.biodiversity.be/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Freshwater Animal Diversity Assessment (FADA)",
+        "summary": "Freshwater animal diversity database identified by WoRMS as an external source. Homepage retrieval was unsuccessful during this research; verify operational access before enrichment.",
+        "description": "Freshwater animal diversity database identified by WoRMS as an external source. Homepage retrieval was unsuccessful during this research; verify operational access before enrichment.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "src-worms-about"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "recent-fossil-bryozoa",
+    "record": {
+      "kind": "system",
+      "url": "https://www.bryozoa.net/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.bryozoa.net/",
+          "title": {
+            "en": "Recent & Fossil Bryozoa — identity",
+            "fr": "Recent & Fossil Bryozoa — identité",
+            "es": "Recent & Fossil Bryozoa — identidad",
+            "ar": "Recent & Fossil Bryozoa — التعريف",
+            "zh": "Recent & Fossil Bryozoa — 身份",
+            "ru": "Recent & Fossil Bryozoa — сведения"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Recent & Fossil Bryozoa",
+        "summary": "Phil Bock’s Bryozoa information resource, identified by WoRMS as an external source.",
+        "description": "Phil Bock’s Bryozoa information resource, identified by WoRMS as an external source.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity",
+              "src-worms-about"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      }
+    },
+    "edges": [],
+    "routes": []
+  }
+]

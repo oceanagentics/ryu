@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="https://ipt.vliz.be/eurobis/styles/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://ipt.vliz.be/eurobis/styles/bootstrap/bootstrap-borders.css" />
+    <link rel="stylesheet" type="text/css" href="https://ipt.vliz.be/eurobis/styles/dataTables/jquery.dataTables-1.13.6.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://ipt.vliz.be/eurobis/styles/dataTables/responsive.dataTables-2.5.0.min.css" />
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" type="text/css" href="https://ipt.vliz.be/eurobis/styles/bootstrap-icons/font/bootstrap-icons.css" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- IPT CSS -->
+    <style>
+        :root {
+            --color-gbif-primary: 97,168,97;
+            --color-gbif-danger: 227, 99, 112;
+            --color-gbif-secondary: 78, 86, 95;
+            --color-gbif-warning: 255, 193, 8;
+            --navbar-color: 120,181,120;
+            --navbar-link-color: 255,255,255;
+            --navbar-gbif-logo-color: 255,255,255;
+            --navbar-active-tab-color: 255,255,255;
+            --link-color: 75,162,206;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://ipt.vliz.be/eurobis/styles/main.css" />
+
+    <!-- Custom CSS for customizations -->
+    <link rel="stylesheet" type="text/css" href="https://ipt.vliz.be/eurobis/styles/custom.css" />
+
+    <link rel="shortcut icon" href="https://ipt.vliz.be/eurobis/images/icons/favicon-16x16.png" type="image/x-icon" />
+    <link href="https://ipt.vliz.be/eurobis/rss.do" title="Latest Resources" rel="alternate" type="application/rss+xml" />
+
+    <!-- for support of old browsers, like IE8. See http://modernizr.com/docs/#html5inie -->
+    <script src="https://ipt.vliz.be/eurobis/js/modernizr.js"></script>
+    <script src="https://ipt.vliz.be/eurobis/js/jquery/jquery-3.7.0.min.js"></script>
+    <script src="https://ipt.vliz.be/eurobis/js/jquery/jquery-ui.min-1.12.1.js"></script>
+    <script src="https://ipt.vliz.be/eurobis/js/global.js"></script>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector("header");
+            const scrollY = window.scrollY;
+
+            if (scrollY > 100) { // Adjust the scroll position where the header should shrink
+                header.classList.add("shrink");
+            } else {
+                header.classList.remove("shrink");
+            }
+        });
+    </script>
+
+
+
+      <script>
+        setTimeout(function(){
+          window.location.reload();
+        }, 600000);
+      </script>
+
+        <meta name="description" content="&lt;para&gt;Extraction of type locality information from the World Register of Marine Species.&lt;/para&gt;" />
+            <meta name="keywords" content="Bio-geographical regions, Habitats and biotopes, Sea regions, Biota, Environment, Geoscientific Information, Oceans, EurOBIS calculated BBOX, Metadata non conformant, Metadata not evaluated, No limitations to public access, Type localities, WGS84 (EPSG:4326), World Oceans, XYZ ASCII, Occurrence, Observation" />
+        <meta name="foaf:topic" content="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities/#dataset"/>
+        <meta name="foaf:isPrimaryTopicOf" content="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities">
+    <meta name="generator" content="IPT 3.2.3-r7b3c98c" />
+    <meta name="inventory" content="https://ipt.vliz.be/eurobis/inventory/dataset"/>
+    <meta name="foaf:seeAlso" content="https://ipt.vliz.be/eurobis/dcat"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Type locality distributions from the World Register of Marine Species</title>
+</head>
+
+<script>
+    function handleCustomLogoError() {
+        document.getElementById("gbif-logo-custom").style = "display: none;";
+        document.getElementById("gbif-logo").style = "display: inline-block;";
+
+        var loginPageLogoCustom = document.getElementById("login-page-logo-custom");
+        if (loginPageLogoCustom) {
+            loginPageLogoCustom.style = "display: none;";
+        }
+
+        var loginPageLogo = document.getElementById("login-page-logo");
+        if (loginPageLogo) {
+            loginPageLogo.style = "display: inline-block;";
+        }
+    }
+</script>
+<script>
+    // Check if the public URL is correct, otherwise display the fallback page
+    document.addEventListener("DOMContentLoaded", function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://ipt.vliz.be/eurobis/styles/main.css");
+        xhr.onload = function() {
+            if (xhr.status !== 200) {
+                window.location.href = "/fallback.do";
+            }
+        };
+        xhr.onerror = function() {
+            window.location.href = "/fallback.do";
+        };
+        xhr.send();
+    });
+</script>
+
+<body class="bg-body d-flex flex-column h-100">
+
+
+<header>
+    <nav class="main-nav navbar navbar-expand-xl navbar-dark bg-gbif-main-navbar fixed-top py-0 border-bottom">
+        <div class="container-fluid">
+            <a href="" rel="home" title="Logo" class="navbar-brand" >
+                <svg id="gbif-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 539.7 523.9" style="enable-background:new 0 0 539.7 523.9;" xml:space="preserve">
+                    <path class="ipt-icon-piece" d="M230.7,255.5c0-102.2,49.9-190.7,198.4-190.7C429.1,167.2,361.7,255.5,230.7,255.5"/>
+                    <path class="ipt-icon-piece" d="M468.6,523.9c27.8,0,49.2-4,71.1-12c0-80.9-48.3-138.7-133.5-180.4c-65.2-32.7-145.5-49.7-218.8-49.7C219.5,185.4,196.1,65.7,165,0c-34.5,68.8-56,186.8-22.9,282.8C77,287.6,25.4,315.9,3.6,353.3c-1.6,2.8-5,8.9-3,10c1.6,0.8,4.1-1.7,5.6-3.1c23.5-21.8,54.6-32.4,84.5-32.4c69.1,0,117.8,57.3,152.3,91.7C317.1,493.5,389.4,524.1,468.6,523.9"/>
+                </svg>
+                <img id="gbif-logo-custom" src="https://ipt.vliz.be/eurobis/appLogo.do" onerror="handleCustomLogoError()" />
+            </a>
+            <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <svg class="navbar-toggler-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgba(var(--navbar-link-color), 0.75)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+            </button>
+            <div class="collapse navbar-collapse ps-2" id="navbarCollapse">
+                <!-- Navbar -->
+                <ul class="navbar-nav mx-auto mb-md-0">
+                    <li class="nav-item nav-item-border-bottom">
+                        <a class="nav-link custom-nav-link active" href="https://ipt.vliz.be/eurobis/">Home</a>
+                    </li>
+                    <li class="nav-item nav-item-border-bottom">
+                        <a class="nav-link custom-nav-link " href="https://ipt.vliz.be/eurobis/about.do">About</a>
+                    </li>
+                </ul>
+
+                <div class="d-xl-flex align-content-between">
+                    <!-- Health -->
+                    <div class="navbar-nav nav-item-border-bottom">
+                      <a href="https://ipt.vliz.be/eurobis/health.do" class="nav-link position-relative health-link" title="Health status">
+                          <svg class="gbif-heartbeat-icon " height="20" width="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-356 246.5 90 77.6"  xml:space="preserve">
+                              <path d="M-277.2,286.2h-22.9l-5,11l-10.1-43.8l-10.9,32.8h-18.6c-1.8,0-3.2,1.4-3.2,3.2c0,1.8,1.4,3.2,3.2,3.2h23.3l5.2-15.5l9.2,40l11.1-24.5h18.7c1.8,0,3.2-1.4,3.2-3.2C-274,287.7-275.4,286.2-277.2,286.2z"/>
+                          </svg>
+                      </a>
+                    </div>
+
+                    <!-- Languages -->
+                    <div id="navbarNavDropdown">
+
+<ul class="navbar-nav">
+    <!-- add more languages as translations become available. -->
+
+    <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="languageDropdownLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Select language">
+            <svg class="gbif-translate-icon" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+            </svg>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-light text-light fs-smaller" aria-labelledby="languageDropdownLink">
+                    <li>
+                        <a class="dropdown-item dropdown-item-active menu-link" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check text-gbif-primary" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            English
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item menu-link" href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;request_locale=fr">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            Française
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item menu-link" href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;request_locale=es">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            Español
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item menu-link" href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;request_locale=zh">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            繁體中文
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item menu-link" href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;request_locale=pt">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            Português
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item menu-link" href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;request_locale=ja">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            日本語
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item menu-link" href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;request_locale=ru">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            Русский
+                        </a>
+                    </li>
+        </ul>
+    </li>
+</ul>
+                    </div>
+
+                    <!-- Login, account -->
+                        <form action="https://ipt.vliz.be/eurobis/login.do" method="post" class="d-xl-flex align-content-xl-center">
+                            <button id="login-button" class="btn btn-sm m-xl-auto navbar-button text-capitalize show-xl-bigger" type="submit" name="login-submit">
+login                            </button>
+                            <div class="navbar-nav show-xl-smaller nav-item-border-top">
+                                <a href="javascript:{}" class="nav-link text-capitalize" onclick="this.closest('form').submit();return false;">
+login                                </a>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<div id="dialog-confirm" class="modal fade" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"></div>
+
+
+
+<style>
+    h1, h2, h3, h4, h5 {
+        font-size: 1.25rem !important;
+    }
+</style>
+
+<script src="https://ipt.vliz.be/eurobis/js/jquery/jquery-3.7.0.min.js"></script>
+<script src="https://ipt.vliz.be/eurobis/js/jquery/jquery.dataTables-1.13.6.min.js"></script>
+<script src="https://ipt.vliz.be/eurobis/js/docbook/docbook-v2.js"></script>
+<script>
+    $(document).ready(function() {
+        // spy scroll and manage sidebar menu
+        $(window).scroll(function () {
+            var scrollPosition = $(document).scrollTop();
+
+            $('.bd-toc nav a').each(function () {
+                var currentLink = $(this);
+                var anchor = $(currentLink.attr("href"));
+                var sectionId = anchor[0].id.replace("anchor-", "");
+                var section = $("#" + sectionId);
+
+                var sectionsContainer = $("#sections");
+
+                if (sectionsContainer.position().top - 120 > scrollPosition) {
+                    var removeActiveFromThisLink = $('.bd-toc nav a.active');
+                    removeActiveFromThisLink.removeClass('active');
+                } else if (section.position().top - 120 <= scrollPosition
+                    && section.position().top + section.height() > scrollPosition) {
+                    if (!currentLink.hasClass("active")) {
+                        var removeFromThisLink = $('.bd-toc nav a.active');
+                        removeFromThisLink.removeClass('active');
+                        $(this).addClass('active');
+                    }
+                }
+            });
+        })
+
+        function renderDocBook(fieldValue, elementId) {
+            if (!fieldValue || fieldValue.trim().length === 0) return;
+
+            const el = document.getElementById(elementId);
+            if (el) el.innerHTML = convertToHtml(fieldValue);
+        }
+
+        const fields = [
+            { value: '&lt;para&gt;Extraction of type locality information from the World Register of Marine Species.&lt;/para&gt;',      id: 'description-container' },
+            { value: '',     id: 'introduction-container' },
+            { value: '',          id: 'purpose-container' },
+            { value: '', id: 'acknowledgements-container' },
+            { value: '',   id: 'gettingStarted-container' }
+        ];
+
+        fields.forEach(f => renderDocBook(f.value, f.id));
+    })
+</script>
+
+<div class="container px-0">
+
+
+
+
+
+
+</div>
+
+<div class="container-fluid bg-body border-bottom">
+
+    <div class="container border rounded-2 mb-4">
+        <div class="container my-3 p-3">
+            <div class="text-center fs-smaller">
+                <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="https://ipt.vliz.be/eurobis">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Resource</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="text-center">
+                <h1 property="dc:title" class="rtitle pb-2 mb-0 pt-2 text-gbif-header fs-2 fw-normal">
+                    Type locality distributions from the World Register of Marine Species
+                </h1>
+
+                <div class="text-center">
+                    <span class="fs-smaller-2 text-nowrap dt-content-link dt-content-pill type-occurrence me-1">Occurrence</span>
+                        <span class="fs-smaller-2 text-nowrap dt-content-link dt-content-pill type-observation me-1">Observation</span>
+                </div>
+
+                    <div class="text-gbif-primary fs-smaller-2 mt-2">
+                        <span>
+Latest version
+                                published by <b>Flanders Marine Institute</b> on <span property="dc:issued">Aug 23, 2026</span>
+                                <span property="dc:publisher" style="display: none">Flanders Marine Institute</span>
+                        </span>
+                    </div>
+
+                    <div class="mt-2">
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid bg-light border-bottom">
+    <div class="container px-0">
+        <div class="my-4 px-4 py-4 bg-body border rounded shadow-sm">
+            <span class="anchor anchor-home-resource-page-2 mb-3" id="anchor-downloads"></span>
+            <div class="mx-md-4 mx-2">
+                <div class="row">
+                    <div class="col-lg-4 text-smaller px-0 pb-lg-max-3 ps-lg-3 order-lg-2">
+                        <dl class="inline mb-0">
+                                <div class="text-truncate">
+                                    <dt>Home:</dt>
+                                    <dd><a href="https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/metadata/6d617269-6e65-696e-666f-000000005184">https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/metadata/6d617269-6e65-696e-666f-000000005184</a></dd>
+                                </div>
+
+                                <div>
+                                    <dt>GBIF UUID:</dt>
+                                    <dd><a href="https://www.gbif.org/dataset/2f7c33b3-ea7a-40ac-a3b7-bace96f978f7">2f7c33b3-ea7a-40ac-a3b7-bace96f978f7</a></dd>
+                                </div>
+
+                                <div>
+                                    <dt>Publication date:</dt>
+                                    <dd>23 August 2026</dd>
+                                </div>
+
+                                <div>
+                                    <dt>Published by:</dt>
+                                    <dd>
+                                        <a href="https://www.gbif.org/publisher/2089ce96-4fb5-4a20-999c-3ccf45a27a4d" target="_blank">Flanders Marine Institute</a>
+                                    </dd>
+                                </div>
+
+                                <div>
+                                    <dt>License:</dt>
+                                    <dd>
+                                            <a href="http://creativecommons.org/licenses/by/4.0/legalcode" target="_blank">CC-BY 4.0</a>
+                                    </dd>
+                                </div>
+
+                            <div>
+                                    <a href="#anchor-citation" class="doi" dir="ltr">
+                                        <span class="gb-icon gb-icon-quote"></span>
+                                        <span dir="auto">How to cite</span>
+                                    </a>
+
+
+                            </div>
+                        </dl>
+                    </div>
+
+
+                    <div class="col-lg-8 text-smaller px-0 pt-lg-max-3 border-lg-max-top order-lg-1">
+                            <p class="mb-1">Download the latest version of this resource data as a Darwin Core Archive (DwC-A) or the resource metadata as EML or RTF:</p>
+
+                        <div class="table-responsive">
+                            <table class="downloads text-smaller table table-sm table-borderless mb-0">
+                                    <tr>
+                                        <th class="col-4 p-0">
+Data as a DwC-A file                                        </th>
+                                            <td class="p-0">
+                                                <a href="https://ipt.vliz.be/eurobis/archive.do?r=worms_type_localities&v=1.12" onClick="_gaq.push(['_trackEvent', 'Archive', 'Download', 'worms_type_localities', 40,961 ]);">
+                                                    <svg class="link-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DownloadIcon"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"></path></svg>
+download                                                </a>
+                                                40,961 records&nbsp; (4 MB)&nbsp;-&nbsp;Update frequency:&nbsp;unknown
+                                            </td>
+                                    </tr>
+                                <tr>
+                                    <th class="p-0">Metadata as an EML file</th>
+                                    <td class="p-0">
+                                        <a href="https://ipt.vliz.be/eurobis/eml.do?r=worms_type_localities&v=1.12" onClick="_gaq.push(['_trackEvent', 'EML', 'Download', 'worms_type_localities']);" download>
+                                            <svg class="link-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DownloadIcon"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"></path></svg>
+download                                        </a>
+                                         (13 KB)
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th class="p-0">Metadata as an RTF file</th>
+                                    <td class="p-0">
+                                        <a href="https://ipt.vliz.be/eurobis/rtf.do?r=worms_type_localities&v=1.12" onClick="_gaq.push(['_trackEvent', 'RTF', 'Download', 'worms_type_localities']);">
+                                            <svg class="link-icon" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="DownloadIcon"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"></path></svg>
+download                                        </a>
+                                         (12 KB)
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="sections" class="container-fluid bg-body">
+    <div class="container mb-md-4 bd-layout main-content-container">
+        <main class="bd-main">
+            <div class="bd-toc mt-4 pt-3 ps-3 mb-lg-5 text-muted">
+                <nav id="sidebar-content">
+                    <ul>
+                        <li><a href="#anchor-description" class="sidebar-navigation-link">Description</a></li>
+                                <li><a href="#anchor-dataRecords" class="sidebar-navigation-link">Data Records</a></li>
+                                <li><a href="#anchor-versions" class="sidebar-navigation-link">Versions</a></li>
+                                <li><a href="#anchor-citation" class="sidebar-navigation-link">How to cite</a></li>
+                                <li><a href="#anchor-rights" class="sidebar-navigation-link">Rights</a></li>
+                            <li><a href="#anchor-gbif" class="sidebar-navigation-link">GBIF Registration</a></li>
+                                <li><a href="#anchor-keywords" class="sidebar-navigation-link">Keywords</a></li>
+                                <li><a href="#anchor-external" class="sidebar-navigation-link">External data</a></li>
+                                <li><a href="#anchor-contacts" class="sidebar-navigation-link">Contacts</a></li>
+                                <li><a href="#anchor-geospatial" class="sidebar-navigation-link">Geographic Coverage</a></li>
+                                <li><a href="#anchor-temporal" class="sidebar-navigation-link">Temporal Coverage</a></li>
+                        <li><a href="#anchor-additional" class="sidebar-navigation-link">Additional Metadata</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="bd-content ps-lg-4">
+                <span class="anchor anchor-home-resource-page" id="anchor-description"></span>
+                <div id="description" class="py-5 section">
+                    <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+Description                    </h4>
+                    <div id="description-container" property="dc:abstract" class="mt-3 overflow-x-auto">
+<para>Extraction of type locality information from the World Register of Marine Species.</para>                    </div>
+                </div>
+
+
+                <!-- Dataset must have been published for versions, downloads, and how to cite sections to show -->
+
+                    <!-- data records section, not shown for metadata-only resources -->
+
+                        <span class="anchor anchor-home-resource-page" id="anchor-dataRecords"></span>
+                        <div id="dataRecords" class="pb-5 section">
+                            <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+Data Records                            </h4>
+
+                            <p>
+                                    The data in this occurrence resource has been published as a Darwin Core Archive (DwC-A), which is a standardized format for sharing biodiversity data as a set of one or more data tables.
+                                    The core data table contains 40,961 records.
+                            </p>
+
+
+                            <p>
+This IPT archives the data and thus serves as the data repository. The data and resource metadata are available for download in the <a href="#anchor-downloads">downloads</a> section. The <a href="#anchor-versions">versions</a> table lists other versions of the resource that have been made publicly available and allows tracking changes made to the resource over time.                            </p>
+                        </div>
+
+                    <!-- versions section -->
+                        <span class="anchor anchor-home-resource-page" id="anchor-versions"></span>
+                        <div id ="versions" class="pb-5 section">
+                            <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+Versions                            </h4>
+
+                                <p>The table below shows only published versions of the resource that are publicly accessible.</p>
+    <script charset="utf-8">
+
+
+        /* version history list */
+        var aDataSet = [
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersion" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/>1.12',
+                '2026-08-23 12:00:30',
+                '40,961',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.11">1.11</a>',
+                '2026-08-06 14:46:07',
+                '40,860',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.10">1.10</a>',
+                '2026-06-23 12:00:22',
+                '40,768',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.9">1.9</a>',
+                '2026-05-23 12:00:40',
+                '40,618',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.8">1.8</a>',
+                '2026-04-23 12:00:22',
+                '40,523',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.7">1.7</a>',
+                '2026-03-23 12:00:44',
+                '40,383',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.6">1.6</a>',
+                '2026-02-23 12:00:26',
+                '40,259',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.5">1.5</a>',
+                '2026-01-23 12:00:29',
+                '40,113',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.4">1.4</a>',
+                '2025-12-23 12:00:26',
+                '40,015',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.3">1.3</a>',
+                '2025-11-23 12:00:23',
+                '39,935',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.2">1.2</a>',
+                '2025-10-23 12:00:26',
+                '39,859',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.1">1.1</a>',
+                '2025-09-23 12:00:35',
+                '39,762',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.0">1.0</a>',
+                '2025-09-17 11:55:59',
+                '39,633',
+                "None provided&nbsp;",
+                '',
+                'Dante Dumon']
+        ];
+
+        $(document).ready(function() {
+            $('#vtableContainer').html( '<table class="hover row-border dataTable compact" id="rtable"></table>' );
+            $('#rtable').dataTable( {
+                "bFilter": false,
+                "aaData": aDataSet,
+                "iDisplayLength": 3,
+                "bLengthChange": false,
+                "bAutoWidth": false,
+                "bSort": false,
+                "oLanguage": {
+                    "sEmptyTable": "No versions are currently available",
+                    "sZeroRecords": "No versions were found",
+                    "sInfo": "Showing _START_ to _END_ of _TOTAL_",
+                    "sInfoEmpty": "Showing 0 to 0 of 0",
+                    "sInfoFiltered": "(filtered from _MAX_ total)",
+                    "oPaginate": {
+                        "sNext": "next",
+                        "sPrevious": "previous"
+
+                    }
+                },
+                "aoColumns": [
+                    { "sTitle": "Version", "bSearchable": false},
+                    { "sTitle": "Published on", "bSearchable": false},
+                    { "sTitle": "Records", "bSearchable": false},
+                    { "sTitle": "Change summary", "bSearchable": false},
+                    { "sTitle": "DOI handle", "bSearchable": false},
+                    { "sTitle": "Last modified by", "bSearchable": false}
+                ],
+                "aoColumnDefs": [
+                    { 'bSortable': false, 'aTargets': [ 0,1,2,3,4,5] }
+                ]
+            } );
+        } );
+    </script>
+                            <div id="vtableContainer" class="table-responsive text-smaller"></div>
+                        </div>
+
+                    <!-- citation section -->
+                        <span class="anchor anchor-home-resource-page" id="anchor-citation"></span>
+                        <div id="citation" class="pb-5 section">
+                            <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+How to cite                            </h4>
+
+                            <p>
+                                Researchers should cite this work as follows:
+                            </p>
+                            <p property="dc:bibliographicCitation" class="howtocite mt-3 p-3 overflow-x-auto">
+WoRMS Editorial Board (2021). Type locality distributions from the World Register of Marine Species. Available from <a href="http://www.marinespecies.org">http://www.marinespecies.org</a>  at VLIZ. Accessed on YYYY-MM-DD.                             </p>
+                        </div>
+
+                    <!-- rights section -->
+                        <span class="anchor anchor-home-resource-page" id="anchor-rights"></span>
+                        <div id="rights" class="pb-5 section">
+                            <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+Rights                            </h4>
+
+                            <p>Researchers should respect the following rights statement:</p>
+            <a rel="license" id="cc_by" class="cc_logo cc_by"
+               href="http://creativecommons.org/licenses/by/4.0/legalcode"
+               title="Creative Commons Attribution (CC-BY) 4.0 License">
+                <img src="https://ipt.vliz.be/eurobis/images/icons/cc-by.svg" alt="Sample Image">
+            </a>
+                            <p property="dc:license">
+                                    The publisher and rights holder of this work is Flanders Marine Institute.
+This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution (CC-BY 4.0) License</a>.                            </p>
+                        </div>
+
+                    <!-- GBIF Registration section -->
+                    <span class="anchor anchor-home-resource-page" id="anchor-gbif"></span>
+                    <div id="gbif" class="pb-5 section">
+                        <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+GBIF Registration                        </h4>
+
+                            <p>
+                                This resource has been registered with GBIF, and assigned the following GBIF UUID: <a href="https://www.gbif.org/dataset/2f7c33b3-ea7a-40ac-a3b7-bace96f978f7">2f7c33b3-ea7a-40ac-a3b7-bace96f978f7</a>.
+                                &nbsp;<a href="https://www.gbif.org/publisher/2089ce96-4fb5-4a20-999c-3ccf45a27a4d">Flanders Marine Institute</a> publishes this resource, and is itself registered in GBIF as a data publisher endorsed by <a href="https://www.gbif.org/node/fb11cfe1-ebc3-45af-9159-17d9fddbcdac">Belgian Biodiversity Platform</a>.
+                            </p>
+                    </div>
+
+                    <!-- Keywords section -->
+                        <span class="anchor anchor-home-resource-page" id="anchor-keywords"></span>
+                        <div id="keywords" class="pb-5 section">
+                            <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+Keywords                            </h4>
+
+                            <p property="dc:subject">
+Bio-geographical regions; Habitats and biotopes; Sea regions; Biota; Environment; Geoscientific Information; Oceans; EurOBIS calculated BBOX; Metadata non conformant; Metadata not evaluated; No limitations to public access; Type localities; WGS84 (EPSG:4326); World Oceans; XYZ ASCII; Occurrence; Observation                            </p>
+                        </div>
+
+                    <!-- External data section -->
+                        <span class="anchor anchor-home-resource-page" id="anchor-external"></span>
+                        <div id="external" class="pb-5 section">
+                            <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+External data                            </h4>
+
+                            <p>The resource data is also available in other formats</p>
+
+                            <div class="table-responsive">
+                                <table class="text-smaller table table-sm table-borderless">
+                                        <tr property="dc:isFormatOf">
+                                            <th class="col-4">Online dataset</th>
+                                            <td>
+                                                <a href="https://emodnet.ec.europa.eu/geoviewer/?layers=6d617269-6e65-696e-666f-000000001510:1:1&amp;basemap=ebwbl&amp;active=12639&amp;bounds=-12530604,-7655416,12530604,7655416&amp;filters=12639:datasetid__datasetid=5184--&amp;projection=EPSG:3857">https://emodnet.ec.europa.eu/geoviewer/?layers=6d617269-6e65-696e-666f-000000001510:1:1&amp;basemap=ebwbl&amp;active=12639&amp;bounds=-12530604,-7655416,12530604,7655416&amp;filters=12639:datasetid__datasetid=5184--&amp;projection=EPSG:3857</a>
+                                                    UTF-8 HTML 
+                                            </td>
+                                        </tr>
+                                        <tr property="dc:isFormatOf">
+                                            <th class="col-4">Online dataset</th>
+                                            <td>
+                                                <a href="https://www.eurobis.org/toolbox/en/download/occurrence/dataset/5184">https://www.eurobis.org/toolbox/en/download/occurrence/dataset/5184</a>
+                                                    UTF-8 HTML 
+                                            </td>
+                                        </tr>
+                                        <tr property="dc:isFormatOf">
+                                            <th class="col-4">GBIF dataset</th>
+                                            <td>
+                                                <a href="https://www.gbif.org/dataset/2f7c33b3-ea7a-40ac-a3b7-bace96f978f7">https://www.gbif.org/dataset/2f7c33b3-ea7a-40ac-a3b7-bace96f978f7</a>
+                                                    UTF-8 HTML 
+                                            </td>
+                                        </tr>
+                                        <tr property="dc:isFormatOf">
+                                            <th class="col-4">INSPIRE Download Service (WFS)</th>
+                                            <td>
+                                                <a href="https://geo.vliz.be/geoserver/Dataportal/wfs?service=wfs&amp;version=1.1.0&amp;typeName=eurobis-obisenv_full&amp;request=GetFeature&amp;outputFormat=text%2Fcsv&amp;viewParams=datasetid%3A5184">https://geo.vliz.be/geoserver/Dataportal/wfs?service=wfs&amp;version=1.1.0&amp;typeName=eurobis-obisenv_full&amp;request=GetFeature&amp;outputFormat=text%2Fcsv&amp;viewParams=datasetid%3A5184</a>
+                                                    UTF-8 HTML 
+                                            </td>
+                                        </tr>
+                                        <tr property="dc:isFormatOf">
+                                            <th class="col-4">INSPIRE WMS</th>
+                                            <td>
+                                                <a href="https://geo.vliz.be/geoserver/wms?service=WMS&amp;request=getCapabilities&amp;layer=Dataportal:eurobis_rasters-obisenv">https://geo.vliz.be/geoserver/wms?service=WMS&amp;request=getCapabilities&amp;layer=Dataportal:eurobis_rasters-obisenv</a>
+                                                    UTF-8 HTML 
+                                            </td>
+                                        </tr>
+                                        <tr property="dc:isFormatOf">
+                                            <th class="col-4">IPT</th>
+                                            <td>
+                                                <a href="http://ipt.vliz.be/eurobis/resource?r=worms_type_localities">http://ipt.vliz.be/eurobis/resource?r=worms_type_localities</a>
+                                                    UTF-8 HTML 
+                                            </td>
+                                        </tr>
+                                        <tr property="dc:isFormatOf">
+                                            <th class="col-4">Online dataset</th>
+                                            <td>
+                                                <a href="https://obis.org/dataset/b74b429a-4052-4f5b-bff3-fe0b5a2e8669">https://obis.org/dataset/b74b429a-4052-4f5b-bff3-fe0b5a2e8669</a>
+                                                    UTF-8 HTML 
+                                            </td>
+                                        </tr>
+                                        <tr property="dc:isFormatOf">
+                                            <th class="col-4">Project home page</th>
+                                            <td>
+                                                <a href="http://www.marinespecies.org">http://www.marinespecies.org</a>
+                                                    UTF-8 HTML 
+                                            </td>
+                                        </tr>
+                                        <tr property="dc:isFormatOf">
+                                            <th class="col-4">Metadata</th>
+                                            <td>
+                                                <a href="https://www.eurobis.org/imis?dasid=5184">https://www.eurobis.org/imis?dasid=5184</a>
+                                                    UTF-8 HTML 
+                                            </td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    <!-- Contacts section -->
+                        <span class="anchor anchor-home-resource-page" id="anchor-contacts"></span>
+                        <div id="contacts" class="pb-5 section">
+                            <h4 class="pb-2 mb-4 pt-2 text-gbif-header-2 fw-400">
+Contacts                            </h4>
+
+                            <div class="row g-3 border">
+                                        <div class="col-lg-4 mt-0">    <div class="contact">
+
+        <div  class="contactName mb-1">
+                WoRMS Steering Committee
+        </div>
+        <div class="text-smaller text-discreet">
+            <div class="contactType fst-italic">
+                    <ul class="inline-bullet-list list-unstyled mb-1">
+                    </ul>
+            </div>
+
+
+            <div class="address">
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+                                        <div class="col-lg-4 mt-0">    <div class="contact">
+
+        <div  class="contactName mb-1">
+                Flanders Marine Institute (VLIZ)
+        </div>
+        <div class="text-smaller text-discreet">
+            <div class="contactType fst-italic">
+                    <ul class="inline-bullet-list list-unstyled mb-1">
+                    </ul>
+            </div>
+
+
+            <div class="address">
+
+
+
+
+                    <div class="country">BE</div>
+
+                    <ul class="email ul-contact-info">
+                        <li ><a href="mailto:info@vliz.be" title="email" class="break-all">info@vliz.be</a></li>
+                    </ul>
+
+            </div>
+
+                <ul class="ul-contact-info">
+                    <li ><a href="https://www.vliz.be" class="break-all">https://www.vliz.be</a></li>
+                </ul>
+
+        </div>
+    </div>
+</div>
+                                        <div class="col-lg-4 mt-0">    <div class="contact">
+
+        <div  class="contactName mb-1">
+                Leen Vandepitte
+        </div>
+        <div class="text-smaller text-discreet">
+            <div class="contactType fst-italic">
+                    <ul class="inline-bullet-list list-unstyled mb-1">
+                                <li class="mx-0">Point Of Contact </li>
+                    </ul>
+            </div>
+
+
+            <div class="address">
+                    <div>Vlaams Instituut voor de Zee</div>
+
+
+
+
+                    <div class="country">BE</div>
+
+                    <ul class="email ul-contact-info">
+                        <li ><a href="mailto:leen.vandepitte@vliz.be" title="email" class="break-all">leen.vandepitte@vliz.be</a></li>
+                    </ul>
+
+            </div>
+
+
+                <div>
+                    <ul class="ul-contact-info">
+                                <li >
+                                    <a href="https://orcid.org/0000-0002-8160-7941" class="break-all" target="_blank">
+                                            <img src="https://ipt.vliz.be/eurobis/images/icons/orcid_16x16.gif" class="orcid-small">
+                                        https://orcid.org/0000-0002-8160-7941
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+                            </div>
+                        </div>
+
+                    <!-- Geo coverage section -->
+                        <span class="anchor anchor-home-resource-page" id="anchor-geospatial"></span>
+                        <div id="geospatial" class="pb-5 section">
+                            <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+Geographic Coverage                            </h4>
+
+                            <p property="dc:spatial">
+EurOBIS calculated BBOX > station Bounding Box                            </p>
+
+                            <div class="table-responsive">
+                                <table class="text-smaller table table-sm table-borderless">
+                                    <tr>
+                                        <th class="col-4">Bounding Coordinates</th>
+                                        <td>South&nbsp;West&nbsp;&#91;-78.867,&nbsp;-180&#93;&#44;&nbsp;North&nbsp;East&nbsp;&#91;89.017,&nbsp;180&#93;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    <!-- Taxonomic coverage sections -->
+
+                    <!-- Temporal coverages section -->
+                        <span class="anchor anchor-home-resource-page" id="anchor-temporal"></span>
+                        <div id="temporal" class="pb-5 section">
+                            <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+Temporal Coverage                            </h4>
+
+                                <div class="table-responsive">
+                                    <table class="text-smaller table table-sm table-borderless">
+                                            <tr>
+                                                <th class="col-4">Start Date / End Date</th>
+                                                <td property="dc:temporal">1816-06-19 / 2024-01-19</td>
+                                            </tr>
+                                    </table>
+                                </div>
+                        </div>
+
+                    <!-- Project section -->
+
+                    <!-- Sampling methods section -->
+
+                    <!-- Collections section -->
+
+                    <!-- bibliographic citations section -->
+
+                <!-- Additional metadata section -->
+                    <span class="anchor anchor-home-resource-page" id="anchor-additional"></span>
+                    <div id="additional" class="pb-5 section">
+
+                        <h4 class="pb-2 mb-2 pt-2 text-gbif-header-2 fw-400">
+Additional Metadata                        </h4>
+
+                        <div>
+                            <div class="table-responsive">
+                                <table class="text-smaller table table-sm table-borderless">
+                                            <tr>
+                                                <th class="col-4">Alternative Identifiers</th>
+                                                <td>2f7c33b3-ea7a-40ac-a3b7-bace96f978f7 </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="col-4"></th>
+                                                <td><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities">https://ipt.vliz.be/eurobis/resource?r=worms_type_localities</a>  </td>
+                                            </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </main>
+    </div>
+</div>
+
+
+<footer class="footer bg-light border-top mt-auto text-center text-smaller py-3">
+    <div class="container">
+        <div class="mb-1 footer-text">
+            <img title="IPT 3.2.3-r7b3c98c" class="footer-gbif-logo" alt="GBIF" src="https://ipt.vliz.be/eurobis/images/GBIF-2015-standard-ipt.png"/>
+            Integrated Publishing Toolkit (IPT) Version 3.2.3
+        </div>
+        <ul class="list-inline mb-0">
+            <li class="list-inline-item ipt-footer-item">
+                <a class="footer-link" href="https://www.gbif.org/ipt"><small>About the IPT</small></a>
+            </li>
+            <li class="list-inline-item ipt-footer-item">
+                <a class="footer-link" href="https://ipt.gbif.org/manual/" target="_blank"><small>User manual</small></a>
+            </li>
+            <li class="list-inline-item ipt-footer-item">
+                <a class="footer-link" href="https://github.com/gbif/ipt/issues/new" target="_blank"><small>Report a bug</small></a>
+            </li>
+            <li class="list-inline-item">
+                <a class="footer-link" href="https://github.com/gbif/ipt/issues/new" target="_blank"><small>Request new feature</small></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<div class="dataTables_processing" style="display: none;">
+    <div><div></div><div></div><div></div><div></div></div>
+</div>
+
+<div id="modalbox">
+    <div id="modalback"></div>
+    <div id="modalcontainer">
+        <div id="modalcontent" class="container-fluid"></div>
+    </div>
+</div>
+
+<script src="https://ipt.vliz.be/eurobis/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="https://ipt.vliz.be/eurobis/js/form-validation.js"></script>
+<script src='https://ipt.vliz.be/eurobis/js/sortable/html5sortable-0.13.3.js'></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modalEl = document.getElementById('unsavedChangesModal');
+        const stayButton = document.getElementById('stayButton');
+        const leaveButton = document.getElementById('leaveButton');
+
+        if (!modalEl || !leaveButton) {
+            console.warn("Unsaved changes modal not found.");
+            return;
+        }
+
+        const bsModal = new bootstrap.Modal(modalEl);
+        let hasUnsavedChanges = false;
+        let redirectUrl = null;
+        let isIntentionalUnload = false;
+
+        // Track form changes
+        const form = document.querySelector('.track-unsaved');
+
+        form.querySelectorAll('button[type="submit"], input[type="submit"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                isIntentionalUnload = true;
+                hasUnsavedChanges = false;
+            });
+        });
+
+        if (form) {
+            // inputs
+            form.addEventListener('input', () => {
+                hasUnsavedChanges = true;
+            });
+
+            // dropdowns (select2)
+            $(document).on('select2:select select2:unselect change', 'select', function () {
+                if ($(this).data('select2')) {
+                    hasUnsavedChanges = true;
+                }
+            });
+
+            // copy agent button
+            document.getElementById('copy-agent-button')?.addEventListener('click', () => {
+                hasUnsavedChanges = true;
+            });
+
+            // Disable warning before submitting the form
+            form.addEventListener('submit', () => {
+                isIntentionalUnload = true;
+                hasUnsavedChanges = false;
+            });
+        }
+
+        // Warn before browser unload (refresh, close tab)
+        window.addEventListener('beforeunload', (e) => {
+            if (!hasUnsavedChanges || isIntentionalUnload) {
+                return;
+            }
+
+            e.preventDefault();
+            e.returnValue = '';
+        });
+
+        // Intercept internal link clicks
+        document.querySelectorAll('a[href]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Skip links that should not trigger the unsaved-changes modal
+                if (link.id === 're-infer-link') {
+                    console.log("link.id=" + link.id);
+                    console.log("skipping!")
+                    isIntentionalUnload = true;
+                    hasUnsavedChanges = false;
+                    return;
+                }
+
+                const href = link.getAttribute('href');
+
+                // Ignore non-links and JS links
+                if (!href ||
+                    href === '#' ||
+                    href.startsWith('#') ||
+                    href.startsWith('javascript:') ||
+                    link.target === '_blank') {
+                    return;
+                }
+
+                // Compute resolved URL
+                const targetUrl = new URL(link.href);
+                const currentUrl = new URL(window.location.href);
+
+                // Only warn if the target is a DIFFERENT page
+                const isRealNavigation =
+                    targetUrl.pathname !== currentUrl.pathname ||
+                    targetUrl.search !== currentUrl.search ||
+                    targetUrl.hash === '' && currentUrl.hash !== '';
+
+                if (!isRealNavigation) {
+                    return;
+                }
+
+                if (hasUnsavedChanges) {
+                    e.preventDefault();
+                    redirectUrl = link.href;
+                    bsModal.show();
+                }
+            });
+        });
+
+        // Stay -> close modal only
+        if (stayButton) {
+            stayButton.addEventListener('click', () => {
+                redirectUrl = null;
+            });
+        }
+
+        // Leave -> proceed to stored URL
+        leaveButton.addEventListener('click', () => {
+            if (redirectUrl) {
+                isIntentionalUnload = true;
+                hasUnsavedChanges = false;
+                window.location.href = redirectUrl;
+            }
+        });
+    });
+</script>
+<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    try {
+        var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+            trigger: 'focus'
+        })
+    } catch (TypeError) {}
+</script>
+
+</body>
+</html>
+
+<!-- data record line chart -->
+<script src="https://ipt.vliz.be/eurobis/js/graphs.js"></script>
+
+<script src="https://ipt.vliz.be/eurobis/js/jconfirmation.jquery.js"></script>
+
+<script>
+    $('.confirmDeleteVersion').jConfirmAction({
+        titleQuestion : "Are you sure?",
+        question : "Do you still want to delete this archived version?</br></br>Please ensure this version has not been cited in a scientific publication.</br></br>This operation cannot be reverted.",
+        yesAnswer : "Yes",
+        cancelAnswer : "No",
+        buttonType: "danger"
+    });
+
+    $(function() {
+    });
+
+    // show extension description in tooltip in data records section
+    $(function() {
+        $('.ext-tooltip').tooltip({track: true});
+    });
+
+</script>
+

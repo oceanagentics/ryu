@@ -1,0 +1,1503 @@
+{
+  "id": "abs-clearing-house",
+  "record": {
+    "kind": "system",
+    "url": "https://absch.cbd.int/",
+    "recordDepth": "rich",
+    "properties": {
+      "disciplines": [
+        "law"
+      ],
+      "data": {
+        "descriptors": [
+          {
+            "id": "abs-catalogue",
+            "category": "type",
+            "label": "catalogue_records",
+            "source": "abs-commonformats"
+          },
+          {
+            "id": "abs-documents",
+            "category": "type",
+            "label": "documents",
+            "source": "abs-virtual-pdf"
+          },
+          {
+            "id": "abs-json",
+            "category": "format",
+            "label": "json",
+            "source": "abs-api-read"
+          },
+          {
+            "id": "abs-html",
+            "category": "format",
+            "label": "html",
+            "source": "abs-ircc-example"
+          },
+          {
+            "id": "abs-pdf",
+            "category": "format",
+            "label": "pdf",
+            "source": "abs-virtual-pdf"
+          }
+        ]
+      },
+      "access": [
+        {
+          "id": "abs-browse",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://absch.cbd.int/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "abs-about",
+            "abs-ircc-example",
+            "abs-terms"
+          ]
+        },
+        {
+          "id": "abs-api-read",
+          "type": "read",
+          "methods": [
+            "api"
+          ],
+          "url": "https://developer.cbd.int/clearing-house/absch/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "abs-api",
+            "abs-api-read",
+            "abs-ircc-count",
+            "abs-terms"
+          ]
+        },
+        {
+          "id": "abs-download",
+          "type": "read",
+          "methods": [
+            "download"
+          ],
+          "url": "https://absch.cbd.int/api/v2013/documents/3B50BCD4-C829-5953-9528-6FA9375176BB/attachments/An%20Explanatory%20Guide%20to%20the%20Nagoya%20Protocol%20on%20Access%20and%20Benefit-sharing%20%28English%29.pdf",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "abs-virtual-pdf",
+            "abs-terms"
+          ]
+        },
+        {
+          "id": "abs-national-submit",
+          "type": "write",
+          "methods": [
+            "form",
+            "upload"
+          ],
+          "url": "https://absch.cbd.int/",
+          "requirements": [
+            "account",
+            "approval",
+            "affiliation"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "abs-accounts",
+            "abs-modalities",
+            "abs-commonformats"
+          ]
+        },
+        {
+          "id": "abs-reference-submit",
+          "type": "write",
+          "methods": [
+            "form",
+            "upload"
+          ],
+          "url": "https://absch.cbd.int/",
+          "requirements": [
+            "account"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "abs-stakeholders",
+            "abs-commonformats"
+          ]
+        },
+        {
+          "id": "abs-api-write",
+          "type": "write",
+          "methods": [
+            "api"
+          ],
+          "url": "https://developer.cbd.int/clearing-house/absch/ircc/create.html",
+          "requirements": [
+            "account",
+            "api_key",
+            "approval",
+            "affiliation"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "abs-api",
+            "abs-api-write",
+            "abs-modalities"
+          ]
+        },
+        {
+          "id": "abs-offline-submit",
+          "type": "write",
+          "methods": [
+            "request"
+          ],
+          "url": "https://absch.cbd.int/commonformats",
+          "requirements": [
+            "approval",
+            "affiliation"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "abs-commonformats",
+            "abs-modalities"
+          ]
+        }
+      ],
+      "gallery": [],
+      "metrics": [
+        {
+          "id": "abs-ircc-current",
+          "key": "record_count",
+          "value": 6545,
+          "observedAt": "2026-09-10",
+          "source": "abs-ircc-count"
+        },
+        {
+          "id": "abs-cpc-current",
+          "key": "record_count",
+          "value": 422,
+          "observedAt": "2026-09-10",
+          "source": "abs-cpc-count"
+        },
+        {
+          "id": "abs-measures-current",
+          "key": "record_count",
+          "value": 397,
+          "observedAt": "2026-09-10",
+          "source": "abs-measure-count"
+        }
+      ]
+    },
+    "sources": {
+      "abs-about": {
+        "id": "abs-about",
+        "url": "https://www.cbd.int/abs/theabsch.shtml",
+        "title": {
+          "en": "CBD overview of the ABS Clearing-House",
+          "fr": "Présentation du Centre d’échange APA par la CDB",
+          "es": "Panorama del Centro de Intercambio de Información sobre APB de la CDB",
+          "ar": "عرض أمانة الاتفاقية لغرفة تبادل المعلومات بشأن الحصول وتقاسم المنافع",
+          "ru": "Обзор Механизма посредничества по ДГРСИВ Конвенции",
+          "zh": "生物多样性公约获取和惠益分享信息交换所概述"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-article14": {
+        "id": "abs-article14",
+        "url": "https://www.cbd.int/abs/text/articles/default.shtml?sec=abs-14",
+        "title": {
+          "en": "Nagoya Protocol Article 14: ABS Clearing-House",
+          "fr": "Article 14 du Protocole de Nagoya : Centre d’échange APA",
+          "es": "Artículo 14 del Protocolo de Nagoya: Centro de Intercambio de Información sobre APB",
+          "ar": "المادة 14 من بروتوكول ناغويا: غرفة تبادل المعلومات",
+          "ru": "Статья 14 Нагойского протокола: Механизм посредничества",
+          "zh": "《名古屋议定书》第14条：信息交换所"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-article17": {
+        "id": "abs-article17",
+        "url": "https://www.cbd.int/abs/text/articles/default.shtml?sec=abs-17",
+        "title": {
+          "en": "Nagoya Protocol Article 17: monitoring utilization",
+          "fr": "Article 17 du Protocole de Nagoya : surveillance de l’utilisation",
+          "es": "Artículo 17 del Protocolo de Nagoya: vigilancia de la utilización",
+          "ar": "المادة 17 من بروتوكول ناغويا: رصد الاستخدام",
+          "ru": "Статья 17 Нагойского протокола: мониторинг использования",
+          "zh": "《名古屋议定书》第17条：利用情况监测"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-scope": {
+        "id": "abs-scope",
+        "url": "https://www.cbd.int/abs/text/articles?sec=abs-03",
+        "title": {
+          "en": "Nagoya Protocol Article 3: scope",
+          "fr": "Article 3 du Protocole de Nagoya : champ d’application",
+          "es": "Artículo 3 del Protocolo de Nagoya: ámbito",
+          "ar": "المادة 3 من بروتوكول ناغويا: النطاق",
+          "ru": "Статья 3 Нагойского протокола: сфера применения",
+          "zh": "《名古屋议定书》第3条：范围"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-modalities": {
+        "id": "abs-modalities",
+        "url": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+        "title": {
+          "en": "Decision NP-1/2: operating modalities",
+          "fr": "Décision NP-1/2 : modalités de fonctionnement",
+          "es": "Decisión NP-1/2: modalidades de funcionamiento",
+          "ar": "المقرر NP-1/2: طرائق التشغيل",
+          "ru": "Решение NP-1/2: условия функционирования",
+          "zh": "NP-1/2号决定：运作方式"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-decision2024": {
+        "id": "abs-decision2024",
+        "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+        "title": {
+          "en": "Decision NP-5/4: ABS Clearing-House and information-sharing (2024)",
+          "fr": "Décision NP-5/4 : Centre d’échange APA et échange d’informations (2024)",
+          "es": "Decisión NP-5/4: Centro de Intercambio de Información sobre APB e intercambio de información (2024)",
+          "ar": "المقرر NP-5/4: غرفة تبادل المعلومات وتبادل المعلومات (2024)",
+          "ru": "Решение NP-5/4: Механизм посредничества и обмен информацией (2024)",
+          "zh": "NP-5/4号决定：信息交换所与信息共享（2024年）"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-api": {
+        "id": "abs-api",
+        "url": "https://developer.cbd.int/",
+        "title": {
+          "en": "CBD developer hub: public reads and authenticated workflows",
+          "fr": "Portail développeurs de la CDB : lecture publique et procédures authentifiées",
+          "es": "Portal para desarrolladores de la CDB: lecturas públicas y flujos autenticados",
+          "ar": "بوابة مطوري الاتفاقية: القراءة العامة وسير العمل الموثق",
+          "ru": "Портал разработчиков КБР: открытое чтение и авторизованные процессы",
+          "zh": "公约开发者中心：公开读取与身份验证流程"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-api-read": {
+        "id": "abs-api-read",
+        "url": "https://developer.cbd.int/clearing-house/absch/ircc/solr.html",
+        "title": {
+          "en": "ABSCH API: search public IRCC records",
+          "fr": "API ABSCH : rechercher les certificats publics",
+          "es": "API de ABSCH: búsqueda de certificados públicos",
+          "ar": "واجهة ABSCH: البحث في الشهادات العامة",
+          "ru": "API ABSCH: поиск открытых сертификатов",
+          "zh": "ABSCH API：检索公开证书记录"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-api-write": {
+        "id": "abs-api-write",
+        "url": "https://developer.cbd.int/clearing-house/absch/ircc/create.html",
+        "title": {
+          "en": "ABSCH API: creating IRCC records",
+          "fr": "API ABSCH : création de certificats",
+          "es": "API de ABSCH: creación de certificados",
+          "ar": "واجهة ABSCH: إنشاء سجلات الشهادات",
+          "ru": "API ABSCH: создание записей сертификатов",
+          "zh": "ABSCH API：创建证书记录"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-accounts": {
+        "id": "abs-accounts",
+        "url": "https://absch.cbd.int/about/accounts",
+        "title": {
+          "en": "CBD accounts and national submission roles",
+          "fr": "Comptes CDB et rôles de soumission nationaux",
+          "es": "Cuentas de la CDB y funciones nacionales de presentación",
+          "ar": "حسابات الاتفاقية وأدوار تقديم المعلومات الوطنية",
+          "ru": "Учетные записи КБР и национальные роли подачи данных",
+          "zh": "公约账户与国家信息提交角色"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-stakeholders": {
+        "id": "abs-stakeholders",
+        "url": "https://absch.cbd.int/kb/tags/getting-started/Getting-started-using-the-ABS-Clearing-House-for-Stakeholders/5bbe3a4d64f00600011e20d9",
+        "title": {
+          "en": "ABSCH stakeholder submission and Secretariat publication",
+          "fr": "Soumission par les parties prenantes et publication par le Secrétariat",
+          "es": "Presentación por interesados y publicación por la Secretaría",
+          "ar": "تقديم أصحاب المصلحة للمعلومات ونشر الأمانة لها",
+          "ru": "Подача материалов заинтересованными сторонами и публикация Секретариатом",
+          "zh": "利益攸关方提交与秘书处发布"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-commonformats": {
+        "id": "abs-commonformats",
+        "url": "https://absch.cbd.int/commonformats",
+        "title": {
+          "en": "ABSCH offline common formats",
+          "fr": "Formats communs hors ligne de l’ABSCH",
+          "es": "Formatos comunes sin conexión de ABSCH",
+          "ar": "النماذج الموحدة غير المتصلة لغرفة تبادل المعلومات",
+          "ru": "Общие автономные формы ABSCH",
+          "zh": "ABSCH离线通用表格"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-ircc-example": {
+        "id": "abs-ircc-example",
+        "url": "https://absch.cbd.int/en/database/IRCC/ABSCH-IRCC-ZA-300855-2",
+        "title": {
+          "en": "South African research permit: ABSCH-IRCC-ZA-300855-2",
+          "fr": "Permis de recherche sud-africain : ABSCH-IRCC-ZA-300855-2",
+          "es": "Permiso de investigación sudafricano: ABSCH-IRCC-ZA-300855-2",
+          "ar": "تصريح بحثي من جنوب أفريقيا: ABSCH-IRCC-ZA-300855-2",
+          "ru": "Разрешение ЮАР на исследования: ABSCH-IRCC-ZA-300855-2",
+          "zh": "南非研究许可证：ABSCH-IRCC-ZA-300855-2"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-terms": {
+        "id": "abs-terms",
+        "url": "https://www.cbd.int/terms",
+        "title": {
+          "en": "CBD website terms of use",
+          "fr": "Conditions d’utilisation du site de la CDB",
+          "es": "Condiciones de uso del sitio de la CDB",
+          "ar": "شروط استخدام موقع الاتفاقية",
+          "ru": "Условия использования сайта КБР",
+          "zh": "公约网站使用条款"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-virtual-pdf": {
+        "id": "abs-virtual-pdf",
+        "url": "https://absch.cbd.int/api/v2013/documents/3B50BCD4-C829-5953-9528-6FA9375176BB/attachments/An%20Explanatory%20Guide%20to%20the%20Nagoya%20Protocol%20on%20Access%20and%20Benefit-sharing%20%28English%29.pdf",
+        "title": {
+          "en": "ABSCH library attachment: Explanatory Guide to the Nagoya Protocol",
+          "fr": "Pièce jointe de la bibliothèque ABSCH : guide explicatif du Protocole de Nagoya",
+          "es": "Adjunto de la biblioteca ABSCH: guía explicativa del Protocolo de Nagoya",
+          "ar": "مرفق مكتبة ABSCH: دليل تفسيري لبروتوكول ناغويا",
+          "ru": "Вложение библиотеки ABSCH: руководство по Нагойскому протоколу",
+          "zh": "ABSCH资料库附件：《名古屋议定书》解释指南"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-progress2024": {
+        "id": "abs-progress2024",
+        "url": "https://www.cbd.int/doc/c/e1c2/4b9c/68bbb45c8d34f6cacf2b9f03/np-absch-iac-2024-01-02-en.pdf",
+        "title": {
+          "en": "ABSCH progress report to the February 2024 advisory meeting",
+          "fr": "Rapport de progrès ABSCH pour la réunion consultative de février 2024",
+          "es": "Informe de progreso de ABSCH para la reunión consultiva de febrero de 2024",
+          "ar": "تقرير تقدم ABSCH للاجتماع الاستشاري في فبراير 2024",
+          "ru": "Доклад о ходе работы ABSCH к консультативному совещанию февраля 2024 года",
+          "zh": "提交2024年2月咨询会议的ABSCH进展报告"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-ircc-count": {
+        "id": "abs-ircc-count",
+        "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsPermit+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+        "title": {
+          "en": "ABSCH public API: current published IRCC count",
+          "fr": "API publique ABSCH : nombre de certificats publiés actuels",
+          "es": "API pública de ABSCH: recuento de certificados publicados actuales",
+          "ar": "واجهة ABSCH العامة: عدد الشهادات المنشورة الحالية",
+          "ru": "Открытый API ABSCH: число актуальных опубликованных сертификатов",
+          "zh": "ABSCH公开API：当前已发布证书数量"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-cpc-count": {
+        "id": "abs-cpc-count",
+        "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsCheckpointCommunique+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+        "title": {
+          "en": "ABSCH public API: current published CPC count",
+          "fr": "API publique ABSCH : nombre de communiqués publiés actuels",
+          "es": "API pública de ABSCH: recuento de comunicados publicados actuales",
+          "ar": "واجهة ABSCH العامة: عدد بيانات نقاط التحقق المنشورة الحالية",
+          "ru": "Открытый API ABSCH: число актуальных опубликованных коммюнике",
+          "zh": "ABSCH公开API：当前已发布检查站公报数量"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "abs-measure-count": {
+        "id": "abs-measure-count",
+        "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3Ameasure+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+        "title": {
+          "en": "ABSCH public API: current published measure count",
+          "fr": "API publique ABSCH : nombre de mesures publiées actuelles",
+          "es": "API pública de ABSCH: recuento de medidas publicadas actuales",
+          "ar": "واجهة ABSCH العامة: عدد التدابير المنشورة الحالية",
+          "ru": "Открытый API ABSCH: число актуальных опубликованных мер",
+          "zh": "ABSCH公开API：当前已发布措施数量"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "en": {
+      "title": "Access and Benefit-Sharing Clearing-House (ABSCH)",
+      "summary": "The Nagoya Protocol’s public information platform for access and benefit-sharing measures, permits, certificates, checkpoints and reference resources.",
+      "description": "Established by Article 14 of the Nagoya Protocol, the ABS Clearing-House supports access to genetic resources and associated traditional knowledge, benefit-sharing and monitoring of utilization. The CBD Secretariat operates its central portal and database under modalities decided by the Nagoya Protocol COP-MOP. National records include measures, authorities, access procedures, permits constituting internationally recognized certificates of compliance (IRCCs), and checkpoint communiqués (CPCs); reference records include guidance, community protocols and capacity-building resources. On 10 September 2026, its public API returned 6,545 current published IRCCs, 422 CPCs and 397 measure records, counted separately. Public browsing and JSON reads require no account. National publishing authorities authorize national records; registered stakeholders can submit reference material for Secretariat validation. An IRCC evidences prior informed consent and mutually agreed terms under the providing Party’s applicable law; it does not certify every later use. Published records may indicate withheld fields, but confidential values must not be submitted for publication. Archived versions and national reporting gaps require attention. Marine research can appear in its records; the platform is distinct from the BBNJ Clearing-House.",
+      "details": {
+        "aliases": [
+          "ABSCH",
+          "ABS Clearing-House",
+          "Access and Benefit-Sharing Clearing-House"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "abs-about",
+            "abs-article14",
+            "abs-article17",
+            "abs-scope",
+            "abs-modalities",
+            "abs-decision2024",
+            "abs-stakeholders",
+            "abs-ircc-example",
+            "abs-api",
+            "abs-ircc-count",
+            "abs-cpc-count",
+            "abs-measure-count",
+            "abs-progress2024"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "abs-catalogue",
+              "description": "National and reference entries cover authorities, measures, procedures, IRCCs, checkpoints, CPCs, national reports, community protocols, model clauses and capacity-development resources. A permit entry is not a biological sample or sequence dataset."
+            },
+            {
+              "id": "abs-documents",
+              "description": "Retrievable documents include reference-library attachments such as the explanatory guide to the Nagoya Protocol. National measures may include attached source documents in their original language."
+            },
+            {
+              "id": "abs-json",
+              "description": "The public search index and document API return JSON. Queries must specify the ABS realm and relevant record schema; published document reads use the record identifier."
+            },
+            {
+              "id": "abs-html",
+              "description": "Public record pages deliver the actual structured permit or checkpoint content in HTML, with version and related-record context."
+            },
+            {
+              "id": "abs-pdf",
+              "description": "PDF attachments are available for some library resources; the verified explanatory-guide attachment is an example, not a complete database dump."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "abs-browse",
+            "label": "Search records and country profiles",
+            "description": "Browse public national and reference records without signing in. Check the latest version, issuing country and record status. CBD website terms permit personal, noncommercial copying subject to specific material restrictions; public visibility does not provide general resale, redistribution or derivative-work rights."
+          },
+          {
+            "id": "abs-api-read",
+            "label": "Public JSON API",
+            "description": "Use the documented production API at api.cbd.int with Realm: abs. Public index and individual-document reads succeeded without credentials. Search by schema and use explicit publication/latest filters; archived versions are different from current entries. Reuse conditions still apply."
+          },
+          {
+            "id": "abs-download",
+            "label": "Reference document attachments",
+            "description": "Public library records can link to downloadable PDF documents. This path opens the verified explanatory guide attachment. Rights and coverage are specific to each attachment; it is not a bulk export of permits or confidential source agreements."
+          },
+          {
+            "id": "abs-national-submit",
+            "label": "National record submission",
+            "description": "Sign in with a CBD account and an official national PA or NAU designation. Prepare the relevant common form and permitted attachments. NAUs prepare drafts; the national publishing authority authorizes publication and is responsible for complete, current, nonconfidential information. Contribution fees were not established."
+          },
+          {
+            "id": "abs-reference-submit",
+            "label": "Stakeholder reference submissions",
+            "description": "Any registered user, including research institutions and Indigenous Peoples and local communities, can submit relevant reference resources. The Secretariat validates them before publication. Submit only correct, complete, current and nonconfidential material; a contribution fee was not established."
+          },
+          {
+            "id": "abs-api-write",
+            "label": "Authorized national API workflows",
+            "description": "Follow the IRCC API contract with a CBD account, access token and the appropriate government-scoped authorization. This supports national submission workflows, not anonymous publication or cross-government writes. No authenticated mutation was tested and no contribution fee schedule was found."
+          },
+          {
+            "id": "abs-offline-submit",
+            "label": "Mediated offline national submissions",
+            "description": "Download the appropriate common form and contact the Secretariat for the offline national-registration mechanism offered on request. National authorization and publication checks still apply. Word forms are documented; turnaround and any contribution costs were not established."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "abs-ircc-current",
+            "description": "6,545 current public absPermit records (IRCC entries), observed 10 September 2026 local time. The API query restricts realm_ss:abs, _state_s:public and _latest_s:true; it does not count archived revisions, biological samples or countries. Permit expiry dates were not filtered, so this is not a count of unexpired permits."
+          },
+          {
+            "id": "abs-cpc-current",
+            "description": "422 current public absCheckpointCommunique records under the same ABS realm, public-state and latest-version filters; a CPC is a checkpoint information entry, not a new permit."
+          },
+          {
+            "id": "abs-measures-current",
+            "description": "397 current public measure records under the same filters. These may describe legislation, administrative or policy measures and are not a count of countries or all laws in force."
+          }
+        ],
+        "researchGaps": {
+          "data": "The three native-entry counts cover separate schemas, not the whole catalogue or all national permits. No current storage size was verified. Publication and reporting completeness varies by country.",
+          "usage": "The 2024 advisory report gives about 975 weekly visitors in 2023 and about 14,000 new visitors for 1 July–1 December 2023, not session counts. No current approved session, download, contributor or citation metric was verified; analytics definitions changed on 1 July 2023.",
+          "standards": "ABSCH common formats, controlled vocabularies and document schemas are documented, but none is an approved Ryu standard ID. No implementation of another approved standard was verified; JSON, national law and IRCC identifiers do not establish one.",
+          "access": "Anonymous reads were tested; authenticated submissions, full search-export downloads, API quotas and contribution fees were not. Confidential values must remain outside the published record. Some browser pages were unavailable to the text fetcher although the public API worked."
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Centre d’échange sur l’accès et le partage des avantages (ABSCH)",
+      "summary": "Plateforme publique du Protocole de Nagoya consacrée aux mesures APA, permis, certificats, points de contrôle et ressources de référence.",
+      "description": "Créé par l’article 14 du Protocole de Nagoya, le Centre d’échange APA facilite l’accès aux ressources génétiques et aux connaissances traditionnelles associées, le partage des avantages et le suivi de leur utilisation. Le Secrétariat de la CDB exploite le portail et la base centraux selon les modalités décidées par la COP-MOP du Protocole. Les dossiers nationaux comprennent mesures, autorités, procédures d’accès, permis constituant des certificats de conformité internationalement reconnus (IRCC) et communiqués des points de contrôle (CPC) ; les références comprennent guides, protocoles communautaires et ressources de renforcement des capacités. Le 10 septembre 2026, l’API publique comptait séparément 6 545 IRCC, 422 CPC et 397 mesures publiés dans leur version actuelle. La consultation et la lecture JSON publiques ne nécessitent pas de compte. Les autorités nationales autorisent les publications nationales ; les utilisateurs inscrits soumettent des références que valide le Secrétariat. Un IRCC atteste le consentement préalable et les conditions convenues selon le droit applicable de la Partie fournisseur, sans certifier toute utilisation ultérieure. Des champs peuvent être signalés comme confidentiels, mais leurs valeurs confidentielles ne doivent pas être soumises pour publication. Il faut tenir compte des versions archivées et des lacunes nationales. Des recherches marines figurent dans les dossiers ; la plateforme est distincte du mécanisme d’échange BBNJ.",
+      "details": {
+        "aliases": [
+          "ABSCH",
+          "ABS Clearing-House",
+          "Access and Benefit-Sharing Clearing-House"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "abs-about",
+            "abs-article14",
+            "abs-article17",
+            "abs-scope",
+            "abs-modalities",
+            "abs-decision2024",
+            "abs-stakeholders",
+            "abs-ircc-example",
+            "abs-api",
+            "abs-ircc-count",
+            "abs-cpc-count",
+            "abs-measure-count",
+            "abs-progress2024"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "abs-catalogue",
+              "description": "Les dossiers nationaux et de référence couvrent autorités, mesures, procédures, IRCC, points de contrôle, CPC, rapports nationaux, protocoles communautaires, clauses types et renforcement des capacités. Un permis n’est pas un échantillon biologique ni un jeu de séquences."
+            },
+            {
+              "id": "abs-documents",
+              "description": "Les documents accessibles comprennent des pièces jointes de la bibliothèque, comme le guide explicatif du Protocole de Nagoya. Les mesures nationales peuvent joindre des textes sources dans leur langue originale."
+            },
+            {
+              "id": "abs-json",
+              "description": "L’index public et l’API documentaire fournissent du JSON. Les requêtes précisent le domaine ABS et le schéma pertinent ; la lecture d’un document publié utilise son identifiant."
+            },
+            {
+              "id": "abs-html",
+              "description": "Les pages publiques fournissent le contenu réel structuré des permis ou points de contrôle en HTML, avec contexte de version et dossiers associés."
+            },
+            {
+              "id": "abs-pdf",
+              "description": "Certaines ressources de bibliothèque ont des pièces jointes PDF ; le guide explicatif vérifié en est un exemple, pas une copie intégrale de la base."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "abs-browse",
+            "label": "Recherche et profils nationaux",
+            "description": "Consulter sans connexion les dossiers nationaux et de référence. Vérifier la dernière version, le pays émetteur et le statut. Les conditions du site CDB autorisent la copie personnelle non commerciale, sous réserve de restrictions propres aux documents ; la visibilité publique ne confère pas de droit général de revente, redistribution ou œuvre dérivée."
+          },
+          {
+            "id": "abs-api-read",
+            "label": "API JSON publique",
+            "description": "Utiliser l’API de production documentée à api.cbd.int avec Realm: abs. La lecture de l’index public et de documents individuels a réussi sans identifiants. Filtrer par schéma, publication et dernière version ; distinguer les versions archivées. Les conditions de réutilisation restent applicables."
+          },
+          {
+            "id": "abs-download",
+            "label": "Pièces jointes documentaires",
+            "description": "Les notices publiques peuvent proposer des PDF téléchargeables. Ce chemin ouvre le guide explicatif vérifié. Les droits et le contenu sont propres à chaque pièce jointe ; ce n’est pas un export global des permis ou des accords confidentiels."
+          },
+          {
+            "id": "abs-national-submit",
+            "label": "Soumission nationale",
+            "description": "Se connecter avec un compte CDB et une désignation officielle PA ou NAU. Remplir le formulaire commun et joindre les pièces autorisées. Les NAU préparent les projets ; l’autorité nationale autorise la publication et garantit des informations complètes, actuelles et non confidentielles. Les frais éventuels n’ont pas été établis."
+          },
+          {
+            "id": "abs-reference-submit",
+            "label": "Références des parties prenantes",
+            "description": "Tout utilisateur inscrit, notamment les instituts de recherche et les peuples autochtones et communautés locales, peut soumettre des références pertinentes. Le Secrétariat les valide avant publication. Fournir uniquement des informations exactes, complètes, actuelles et non confidentielles ; les frais éventuels n’ont pas été établis."
+          },
+          {
+            "id": "abs-api-write",
+            "label": "Procédures API nationales autorisées",
+            "description": "Suivre le contrat API IRCC avec un compte CDB, un jeton et l’autorisation pour le gouvernement concerné. Il permet les procédures nationales, pas la publication anonyme ni les écritures pour plusieurs gouvernements. Aucune modification authentifiée n’a été testée ; aucun tarif de contribution n’a été trouvé."
+          },
+          {
+            "id": "abs-offline-submit",
+            "label": "Soumission nationale hors ligne accompagnée",
+            "description": "Télécharger le formulaire commun adapté et contacter le Secrétariat pour le mécanisme national hors ligne disponible sur demande. L’autorisation nationale et les contrôles de publication restent nécessaires. Les formulaires Word sont documentés ; délais et frais éventuels restent inconnus."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "abs-ircc-current",
+            "description": "6 545 dossiers absPermit publics actuels (IRCC), observés le 10 septembre 2026 en heure locale. La requête filtre realm_ss:abs, _state_s:public et _latest_s:true ; elle ne compte ni anciennes versions, ni échantillons, ni pays. Les dates d’expiration ne sont pas filtrées : ce n’est donc pas un nombre de permis non expirés."
+          },
+          {
+            "id": "abs-cpc-current",
+            "description": "422 dossiers absCheckpointCommunique publics actuels, avec les mêmes filtres de domaine, publication et dernière version. Un CPC est une information de point de contrôle, pas un nouveau permis."
+          },
+          {
+            "id": "abs-measures-current",
+            "description": "397 dossiers measure publics actuels avec les mêmes filtres. Ils peuvent décrire des mesures législatives, administratives ou politiques ; ce n’est pas un nombre de pays ni de toutes les lois en vigueur."
+          }
+        ],
+        "researchGaps": {
+          "data": "Ces trois comptages portent sur des schémas distincts, pas sur tout le catalogue ni tous les permis nationaux. Aucun volume de stockage actuel n’a été vérifié. La complétude des publications varie selon les pays.",
+          "usage": "Le rapport consultatif de 2024 indique environ 975 visiteurs par semaine en 2023 et 14 000 nouveaux visiteurs du 1er juillet au 1er décembre 2023, pas des sessions. Aucun indicateur approuvé actuel de sessions, téléchargements, contributeurs ou citations n’a été vérifié ; les définitions analytiques ont changé le 1er juillet 2023.",
+          "standards": "Les formulaires communs, vocabulaires contrôlés et schémas ABSCH sont documentés, mais aucun ne possède un identifiant de norme Ryu approuvé. Aucune autre norme approuvée n’a été vérifiée ; JSON, droit national et identifiants IRCC n’en établissent pas une.",
+          "access": "La lecture anonyme a été testée ; soumissions authentifiées, exports complets, quotas API et frais de contribution ne l’ont pas été. Les valeurs confidentielles doivent rester hors des publications. Certaines pages étaient indisponibles au lecteur de texte alors que l’API fonctionnait."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Centro de Intercambio de Información sobre Acceso y Participación en los Beneficios (ABSCH)",
+      "summary": "Plataforma pública del Protocolo de Nagoya sobre medidas de APB, permisos, certificados, puntos de verificación y recursos de referencia.",
+      "description": "Creado por el artículo 14 del Protocolo de Nagoya, ABSCH facilita el acceso a recursos genéticos y conocimientos tradicionales asociados, la participación en los beneficios y la vigilancia de su utilización. La Secretaría del CDB opera el portal y la base central según las modalidades decididas por la COP-MOP del Protocolo. Los registros nacionales abarcan medidas, autoridades, procedimientos, permisos que constituyen certificados de cumplimiento reconocidos internacionalmente (IRCC) y comunicados de puntos de verificación (CPC); las referencias incluyen guías, protocolos comunitarios y recursos de desarrollo de capacidades. El 10 de septiembre de 2026, la API pública devolvió, por separado, 6.545 IRCC, 422 CPC y 397 registros de medidas publicados en su versión actual. La consulta pública y las lecturas JSON no requieren cuenta. Las autoridades nacionales autorizan los registros nacionales; los usuarios registrados presentan referencias para validación de la Secretaría. Un IRCC acredita el consentimiento fundamentado previo y las condiciones mutuamente acordadas conforme al derecho aplicable de la Parte proveedora, sin certificar todos los usos posteriores. Pueden señalarse campos reservados, pero los valores confidenciales no deben presentarse para publicación. Deben considerarse versiones archivadas y lagunas nacionales. Hay registros de investigación marina; la plataforma es distinta del mecanismo de intercambio BBNJ.",
+      "details": {
+        "aliases": [
+          "ABSCH",
+          "ABS Clearing-House",
+          "Access and Benefit-Sharing Clearing-House"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "abs-about",
+            "abs-article14",
+            "abs-article17",
+            "abs-scope",
+            "abs-modalities",
+            "abs-decision2024",
+            "abs-stakeholders",
+            "abs-ircc-example",
+            "abs-api",
+            "abs-ircc-count",
+            "abs-cpc-count",
+            "abs-measure-count",
+            "abs-progress2024"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "abs-catalogue",
+              "description": "Los registros nacionales y de referencia incluyen autoridades, medidas, procedimientos, IRCC, puntos de verificación, CPC, informes nacionales, protocolos comunitarios, cláusulas modelo y desarrollo de capacidades. Un permiso no es una muestra biológica ni un conjunto de secuencias."
+            },
+            {
+              "id": "abs-documents",
+              "description": "Los documentos accesibles incluyen adjuntos de la biblioteca, como la guía explicativa del Protocolo de Nagoya. Las medidas nacionales pueden incorporar documentos originales en su idioma de origen."
+            },
+            {
+              "id": "abs-json",
+              "description": "El índice público y la API documental devuelven JSON. Las consultas deben especificar el ámbito ABS y el esquema pertinente; los documentos publicados se recuperan mediante su identificador."
+            },
+            {
+              "id": "abs-html",
+              "description": "Las páginas públicas ofrecen el contenido estructurado real de permisos o puntos de verificación en HTML, con contexto de versión y registros relacionados."
+            },
+            {
+              "id": "abs-pdf",
+              "description": "Algunos recursos de biblioteca incluyen adjuntos PDF; la guía explicativa verificada es un ejemplo, no un volcado de toda la base."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "abs-browse",
+            "label": "Buscar registros y perfiles nacionales",
+            "description": "Consultar registros nacionales y de referencia sin iniciar sesión. Revisar la última versión, el país emisor y el estado. Las condiciones del CDB permiten copias personales no comerciales sujetas a restricciones específicas; la visibilidad pública no otorga derechos generales de reventa, redistribución u obras derivadas."
+          },
+          {
+            "id": "abs-api-read",
+            "label": "API JSON pública",
+            "description": "Utilizar la API de producción documentada en api.cbd.int con Realm: abs. Se verificaron lecturas del índice y documentos individuales sin credenciales. Filtrar por esquema y explícitamente por publicación y última versión; distinguir versiones archivadas. Siguen aplicándose las condiciones de reutilización."
+          },
+          {
+            "id": "abs-download",
+            "label": "Documentos adjuntos de referencia",
+            "description": "Los registros públicos de biblioteca pueden enlazar PDF descargables. Esta ruta abre la guía explicativa verificada. Cada adjunto tiene sus propios derechos y alcance; no es una exportación masiva de permisos o acuerdos confidenciales."
+          },
+          {
+            "id": "abs-national-submit",
+            "label": "Presentación de registros nacionales",
+            "description": "Iniciar sesión con una cuenta CDB y designación oficial PA o NAU. Preparar el formulario común y los adjuntos permitidos. Los NAU preparan borradores; la autoridad nacional autoriza su publicación y responde por información completa, actual y no confidencial. No se determinaron tarifas de contribución."
+          },
+          {
+            "id": "abs-reference-submit",
+            "label": "Referencias de interesados",
+            "description": "Cualquier usuario registrado, incluidas instituciones de investigación y pueblos indígenas y comunidades locales, puede presentar referencias pertinentes. La Secretaría las valida antes de publicarlas. Presentar únicamente información correcta, completa, actual y no confidencial; no se determinó una tarifa."
+          },
+          {
+            "id": "abs-api-write",
+            "label": "Flujos API nacionales autorizados",
+            "description": "Seguir el contrato API IRCC con cuenta CDB, token y autorización para el gobierno correspondiente. Permite flujos nacionales, no publicación anónima ni escrituras para distintos gobiernos. No se probaron modificaciones autenticadas ni se encontró una lista de tarifas."
+          },
+          {
+            "id": "abs-offline-submit",
+            "label": "Presentación nacional sin conexión mediada",
+            "description": "Descargar el formulario común adecuado y contactar con la Secretaría para el mecanismo nacional sin conexión disponible previa solicitud. Siguen aplicándose autorización nacional y controles de publicación. Se documentan formularios Word; plazos y posibles costes no se establecieron."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "abs-ircc-current",
+            "description": "6.545 registros absPermit públicos actuales (IRCC), observados el 10 de septiembre de 2026, hora local. La consulta filtra realm_ss:abs, _state_s:public y _latest_s:true; no cuenta revisiones archivadas, muestras ni países. No se filtraron las fechas de vencimiento; no es un recuento de permisos aún vigentes."
+          },
+          {
+            "id": "abs-cpc-current",
+            "description": "422 registros absCheckpointCommunique públicos actuales con los mismos filtros de ámbito, publicación y última versión. Un CPC es una entrada informativa de un punto de verificación, no un nuevo permiso."
+          },
+          {
+            "id": "abs-measures-current",
+            "description": "397 registros measure públicos actuales con los mismos filtros. Pueden describir medidas legislativas, administrativas o de política; no representan países ni todas las leyes vigentes."
+          }
+        ],
+        "researchGaps": {
+          "data": "Los tres recuentos cubren esquemas distintos, no todo el catálogo ni todos los permisos nacionales. No se verificó el almacenamiento actual. La integridad de la publicación varía entre países.",
+          "usage": "El informe consultivo de 2024 señala unos 975 visitantes semanales en 2023 y 14.000 nuevos visitantes entre el 1 de julio y el 1 de diciembre de 2023, no sesiones. No se verificaron métricas actuales aprobadas de sesiones, descargas, contribuyentes o citas; las definiciones analíticas cambiaron el 1 de julio de 2023.",
+          "standards": "Se documentan formularios comunes, vocabularios controlados y esquemas ABSCH, pero ninguno tiene un identificador de estándar Ryu aprobado. No se verificó otro estándar aprobado; JSON, leyes e identificadores IRCC no demuestran uno.",
+          "access": "Se probaron lecturas anónimas, pero no envíos autenticados, exportaciones completas, cuotas API ni tarifas de contribución. Los valores confidenciales deben quedar fuera de la publicación. Algunas páginas fallaron en el lector de texto aunque la API funcionaba."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ar": {
+      "title": "غرفة تبادل المعلومات بشأن الحصول وتقاسم المنافع (ABSCH)",
+      "summary": "منصة المعلومات العامة لبروتوكول ناغويا بشأن تدابير الحصول وتقاسم المنافع والتصاريح والشهادات ونقاط التحقق والمواد المرجعية.",
+      "description": "أُنشئت غرفة تبادل المعلومات بموجب المادة 14 من بروتوكول ناغويا لتيسير الحصول على الموارد الجينية والمعارف التقليدية المرتبطة بها وتقاسم المنافع ورصد الاستخدام. وتدير أمانة اتفاقية التنوع البيولوجي البوابة وقاعدة البيانات المركزيتين وفق طرائق يقررها مؤتمر الأطراف العامل كاجتماع لأطراف البروتوكول. وتشمل السجلات الوطنية التدابير والسلطات وإجراءات الحصول والتصاريح التي تشكل شهادات امتثال معترفاً بها دولياً (IRCC) وبيانات نقاط التحقق (CPC)، بينما تشمل المراجع الأدلة والبروتوكولات المجتمعية وموارد بناء القدرات. في 10 سبتمبر 2026 أعادت الواجهة العامة، بصورة منفصلة، 6,545 شهادة و422 بيان نقطة تحقق و397 سجل تدبير منشوراً بأحدث نسخة. ولا يتطلب التصفح العام أو قراءة JSON حساباً. وتجيز سلطات النشر الوطنية نشر السجلات الوطنية، ويقدم المستخدمون المسجلون المراجع لتتحقق منها الأمانة. وتدل الشهادة على الموافقة المسبقة عن علم والشروط المتفق عليها وفق قانون الطرف المزود المنطبق، ولا تصدق على كل استخدام لاحق. ويمكن الإشارة إلى حجب حقول، لكن يجب عدم تقديم قيم سرية للنشر. وتقتضي النسخ المؤرشفة وثغرات الإبلاغ الوطني الانتباه. وقد تتضمن السجلات بحوثاً بحرية؛ والمنصة منفصلة عن آلية تبادل المعلومات لاتفاق BBNJ.",
+      "details": {
+        "aliases": [
+          "ABSCH",
+          "ABS Clearing-House",
+          "Access and Benefit-Sharing Clearing-House"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "abs-about",
+            "abs-article14",
+            "abs-article17",
+            "abs-scope",
+            "abs-modalities",
+            "abs-decision2024",
+            "abs-stakeholders",
+            "abs-ircc-example",
+            "abs-api",
+            "abs-ircc-count",
+            "abs-cpc-count",
+            "abs-measure-count",
+            "abs-progress2024"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "abs-catalogue",
+              "description": "تغطي السجلات الوطنية والمرجعية السلطات والتدابير والإجراءات والشهادات ونقاط التحقق وبياناتها والتقارير الوطنية والبروتوكولات المجتمعية والبنود النموذجية وموارد بناء القدرات. سجل التصريح ليس عينة بيولوجية أو مجموعة تسلسلات."
+            },
+            {
+              "id": "abs-documents",
+              "description": "تشمل الوثائق القابلة للاسترجاع مرفقات المكتبة، مثل الدليل التفسيري لبروتوكول ناغويا. وقد تتضمن التدابير الوطنية وثائق أصلية بلغتها الأصلية."
+            },
+            {
+              "id": "abs-json",
+              "description": "يعيد فهرس البحث العام وواجهة الوثائق بيانات JSON. ويجب تحديد نطاق ABS ومخطط السجل المناسب؛ وتُقرأ الوثيقة المنشورة باستخدام معرّفها."
+            },
+            {
+              "id": "abs-html",
+              "description": "تعرض صفحات السجلات العامة المحتوى الفعلي المنظم للتصاريح أو نقاط التحقق بصيغة HTML مع سياق النسخة والسجلات المرتبطة."
+            },
+            {
+              "id": "abs-pdf",
+              "description": "تتوفر مرفقات PDF لبعض موارد المكتبة؛ والدليل التفسيري المتحقق منه مثال وليس نسخة كاملة من قاعدة البيانات."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "abs-browse",
+            "label": "البحث والسجلات القطرية",
+            "description": "تصفح السجلات الوطنية والمرجعية دون تسجيل دخول. تحقق من أحدث نسخة والبلد المصدر والحالة. تسمح شروط موقع الاتفاقية بالنسخ الشخصي غير التجاري مع مراعاة قيود المواد؛ ولا تمنح الإتاحة العامة حقوقاً عامة لإعادة البيع أو التوزيع أو إنشاء أعمال مشتقة."
+          },
+          {
+            "id": "abs-api-read",
+            "label": "واجهة JSON العامة",
+            "description": "استخدم واجهة الإنتاج الموثقة على api.cbd.int مع Realm: abs. نجحت قراءة الفهرس والوثائق الفردية دون بيانات اعتماد. رشّح بالمخطط وبحالة النشر وأحدث نسخة، وميز النسخ المؤرشفة. تبقى شروط إعادة الاستخدام سارية."
+          },
+          {
+            "id": "abs-download",
+            "label": "مرفقات الوثائق المرجعية",
+            "description": "قد تربط سجلات المكتبة العامة بملفات PDF قابلة للتنزيل. يفتح هذا المسار الدليل التفسيري المتحقق منه. لكل مرفق حقوقه ونطاقه؛ وليس تصديراً جماعياً للتصاريح أو الاتفاقات السرية."
+          },
+          {
+            "id": "abs-national-submit",
+            "label": "تقديم السجلات الوطنية",
+            "description": "سجّل الدخول بحساب الاتفاقية وتعيين رسمي بصفة سلطة نشر PA أو مستخدم وطني مخول NAU. أعد النموذج الموحد والمرفقات المسموحة. يجهز المستخدمون المخولون المسودات، وتجيز سلطة النشر الوطنية النشر وتتحمل مسؤولية اكتمال المعلومات وحداثتها وعدم سريتها. لم تُحدد رسوم المساهمة."
+          },
+          {
+            "id": "abs-reference-submit",
+            "label": "المواد المرجعية لأصحاب المصلحة",
+            "description": "يمكن لأي مستخدم مسجل، بما في ذلك المؤسسات البحثية والشعوب الأصلية والمجتمعات المحلية، تقديم موارد مرجعية ذات صلة. تتحقق الأمانة منها قبل النشر. قدّم معلومات صحيحة وكاملة وحديثة وغير سرية فقط؛ ولم تُحدد رسوم المساهمة."
+          },
+          {
+            "id": "abs-api-write",
+            "label": "سير العمل الوطني المخول عبر الواجهة",
+            "description": "اتبع عقد واجهة IRCC بحساب الاتفاقية ورمز وصول وتخويل خاص بالحكومة المعنية. يدعم ذلك التقديم الوطني وليس النشر المجهول أو الكتابة لحكومات متعددة. لم تُختبر تعديلات موثقة ولم يُعثر على جدول رسوم."
+          },
+          {
+            "id": "abs-offline-submit",
+            "label": "التقديم الوطني غير المتصل بوساطة الأمانة",
+            "description": "نزّل النموذج الموحد المناسب واتصل بالأمانة لآلية تسجيل المعلومات الوطنية غير المتصلة المتاحة عند الطلب. يبقى التخويل الوطني والتحقق قبل النشر مطلوبين. نماذج Word موثقة؛ ولم تُحدد المدة أو التكاليف المحتملة."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "abs-ircc-current",
+            "description": "6,545 سجل absPermit عاماً بأحدث نسخة (شهادات IRCC)، رُصدت في 10 سبتمبر 2026 بالتوقيت المحلي. يحدد الاستعلام realm_ss:abs و_state_s:public و_latest_s:true؛ ولا يعد النسخ المؤرشفة أو العينات أو البلدان. لم تُرشح تواريخ انتهاء التصاريح، ولذلك لا يمثل العدد التصاريح غير المنتهية فقط."
+          },
+          {
+            "id": "abs-cpc-current",
+            "description": "422 سجل absCheckpointCommunique عاماً بأحدث نسخة وبمرشحات النطاق والنشر نفسها. بيان نقطة التحقق سجل معلومات وليس تصريحاً جديداً."
+          },
+          {
+            "id": "abs-measures-current",
+            "description": "397 سجل measure عاماً بأحدث نسخة وبالمرشحات نفسها. قد تصف تدابير تشريعية أو إدارية أو سياسات، ولا تمثل عدد البلدان أو جميع القوانين السارية."
+          }
+        ],
+        "researchGaps": {
+          "data": "تغطي الأعداد الثلاثة مخططات منفصلة، وليس كامل الفهرس أو كل التصاريح الوطنية. لم يُتحقق من حجم التخزين الحالي، ويختلف اكتمال الإبلاغ والنشر بين البلدان.",
+          "usage": "يذكر التقرير الاستشاري لعام 2024 نحو 975 زائراً أسبوعياً في 2023 و14,000 زائر جديد بين 1 يوليو و1 ديسمبر 2023، وليس جلسات. لم تُتحقق مقاييس حالية معتمدة للجلسات أو التنزيلات أو المساهمين أو الاستشهادات؛ وتغيرت تعريفات التحليلات في 1 يوليو 2023.",
+          "standards": "النماذج الموحدة والمفردات المضبوطة ومخططات الوثائق موثقة، لكن لا يحمل أي منها معرّف معيار Ryu معتمداً. لم يُتحقق من تطبيق معيار آخر معتمد؛ ولا تثبت JSON أو القوانين أو معرّفات الشهادات ذلك.",
+          "access": "اختُبرت القراءة المجهولة، ولم تُختبر عمليات التقديم الموثقة أو التصدير الكامل أو حصص الواجهة أو رسوم المساهمة. يجب إبقاء القيم السرية خارج السجلات المنشورة. تعذر جلب بعض الصفحات نصياً رغم عمل الواجهة العامة."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Механизм посредничества для регулирования доступа к генетическим ресурсам и совместного использования выгод (ABSCH)",
+      "summary": "Открытая платформа Нагойского протокола с мерами ДГРСИВ, разрешениями, сертификатами, контрольными пунктами и справочными материалами.",
+      "description": "Созданный статьей 14 Нагойского протокола ABSCH содействует доступу к генетическим ресурсам и связанным традиционным знаниям, совместному использованию выгод и мониторингу использования. Секретариат КБР ведет центральные портал и базу по правилам, принимаемым Конференцией Сторон, выступающей в качестве совещания Сторон Протокола. Национальные записи включают меры, органы, процедуры доступа, разрешения, образующие международно признанные сертификаты соответствия (IRCC), и коммюнике контрольных пунктов (CPC); справочные материалы включают руководства, общинные протоколы и ресурсы развития потенциала. На 10 сентября 2026 года открытый API отдельно возвращал 6 545 актуальных опубликованных IRCC, 422 CPC и 397 записей о мерах. Открытый просмотр и чтение JSON не требуют учетной записи. Национальные органы публикации утверждают национальные записи, а зарегистрированные пользователи подают справочные материалы на проверку Секретариату. IRCC подтверждает предварительное обоснованное согласие и взаимосогласованные условия согласно применимому праву предоставляющей Стороны, но не удостоверяет любое последующее использование. Поля могут быть отмечены как скрытые, однако конфиденциальные значения нельзя подавать для публикации. Следует учитывать архивные версии и пробелы национальной отчетности. В записях встречаются морские исследования; платформа отличается от механизма обмена информацией BBNJ.",
+      "details": {
+        "aliases": [
+          "ABSCH",
+          "ABS Clearing-House",
+          "Access and Benefit-Sharing Clearing-House"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "abs-about",
+            "abs-article14",
+            "abs-article17",
+            "abs-scope",
+            "abs-modalities",
+            "abs-decision2024",
+            "abs-stakeholders",
+            "abs-ircc-example",
+            "abs-api",
+            "abs-ircc-count",
+            "abs-cpc-count",
+            "abs-measure-count",
+            "abs-progress2024"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "abs-catalogue",
+              "description": "Национальные и справочные записи охватывают органы, меры, процедуры, IRCC, контрольные пункты, CPC, национальные доклады, общинные протоколы, типовые условия и развитие потенциала. Запись разрешения не является биологическим образцом или набором последовательностей."
+            },
+            {
+              "id": "abs-documents",
+              "description": "Доступны документальные вложения библиотеки, например пояснительное руководство по Нагойскому протоколу. Национальные меры могут содержать исходные документы на языке оригинала."
+            },
+            {
+              "id": "abs-json",
+              "description": "Открытый поисковый индекс и API документов возвращают JSON. Запросы должны указывать область ABS и соответствующую схему; опубликованный документ читается по его идентификатору."
+            },
+            {
+              "id": "abs-html",
+              "description": "Открытые страницы предоставляют фактическое структурированное содержание разрешений или контрольных пунктов в HTML с указанием версии и связанных записей."
+            },
+            {
+              "id": "abs-pdf",
+              "description": "Некоторые библиотечные ресурсы имеют вложения PDF; проверенное пояснительное руководство — пример, а не полная выгрузка базы."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "abs-browse",
+            "label": "Поиск записей и профили стран",
+            "description": "Просматривайте национальные и справочные записи без входа. Проверяйте последнюю версию, страну выдачи и статус. Условия КБР допускают личное некоммерческое копирование с учетом ограничений конкретных материалов; открытость не дает общего права перепродажи, распространения или создания производных работ."
+          },
+          {
+            "id": "abs-api-read",
+            "label": "Открытый JSON API",
+            "description": "Используйте документированный рабочий API api.cbd.int с Realm: abs. Чтение открытого индекса и отдельных документов проверено без учетных данных. Фильтруйте по схеме, публикации и последней версии; различайте архивные версии. Условия повторного использования сохраняются."
+          },
+          {
+            "id": "abs-download",
+            "label": "Вложения справочных документов",
+            "description": "Библиотечные записи могут содержать ссылки на загружаемые PDF. Этот путь открывает проверенное пояснительное руководство. Права и охват определяются для каждого вложения; это не массовая выгрузка разрешений или конфиденциальных соглашений."
+          },
+          {
+            "id": "abs-national-submit",
+            "label": "Подача национальных записей",
+            "description": "Войдите с учетной записью КБР и официальным назначением PA или NAU. Подготовьте общую форму и разрешенные вложения. NAU создают проекты; национальный орган публикации разрешает публикацию и отвечает за полноту, актуальность и неконфиденциальность. Плата за подачу не установлена исследованием."
+          },
+          {
+            "id": "abs-reference-submit",
+            "label": "Справочные материалы заинтересованных сторон",
+            "description": "Любой зарегистрированный пользователь, включая научные учреждения, коренные народы и местные общины, может подавать подходящие материалы. Перед публикацией их проверяет Секретариат. Подавайте только точные, полные, актуальные и неконфиденциальные сведения; наличие платы не установлено."
+          },
+          {
+            "id": "abs-api-write",
+            "label": "Авторизованные национальные процессы API",
+            "description": "Следуйте контракту API IRCC с учетной записью КБР, токеном и разрешением для соответствующего правительства. Поддерживаются национальные процессы, а не анонимная публикация или запись от разных правительств. Авторизованные изменения не тестировались; тарифы не найдены."
+          },
+          {
+            "id": "abs-offline-submit",
+            "label": "Национальная подача вне сайта через Секретариат",
+            "description": "Загрузите подходящую общую форму и обратитесь в Секретариат для предоставляемой по запросу автономной регистрации. Национальное разрешение и проверка публикации сохраняются. Формы Word документированы; сроки и возможная плата не установлены."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "abs-ircc-current",
+            "description": "6 545 актуальных открытых записей absPermit (IRCC), наблюдавшихся 10 сентября 2026 года по местному времени. Фильтры: realm_ss:abs, _state_s:public и _latest_s:true; архивные версии, образцы и страны не подсчитываются. Даты истечения разрешений не фильтровались; это не число разрешений с неистекшим сроком."
+          },
+          {
+            "id": "abs-cpc-current",
+            "description": "422 актуальные открытые записи absCheckpointCommunique с теми же фильтрами области, публикации и последней версии. CPC — информационная запись контрольного пункта, а не новое разрешение."
+          },
+          {
+            "id": "abs-measures-current",
+            "description": "397 актуальных открытых записей measure с теми же фильтрами. Они могут описывать законодательные, административные или политические меры; это не число стран или всех действующих законов."
+          }
+        ],
+        "researchGaps": {
+          "data": "Три показателя охватывают отдельные схемы, а не весь каталог или все национальные разрешения. Текущий объем хранения не подтвержден. Полнота публикаций различается между странами.",
+          "usage": "Консультативный доклад 2024 года сообщает примерно о 975 посетителях в неделю в 2023 году и 14 000 новых посетителей с 1 июля по 1 декабря 2023 года, а не о сеансах. Текущие утвержденные показатели сеансов, загрузок, участников или цитирований не подтверждены; определения аналитики изменились 1 июля 2023 года.",
+          "standards": "Общие формы, контролируемые словари и схемы ABSCH документированы, но для них нет утвержденного идентификатора стандарта Ryu. Применение другого утвержденного стандарта не подтверждено; JSON, законы и идентификаторы IRCC его не устанавливают.",
+          "access": "Анонимное чтение проверено; авторизованная подача, полные выгрузки, квоты API и плата за подачу не проверялись. Конфиденциальные значения должны оставаться вне опубликованной записи. Некоторые страницы были недоступны текстовому загрузчику при работающем API."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "获取和惠益分享信息交换所（ABSCH）",
+      "summary": "《名古屋议定书》的公开信息平台，提供获取和惠益分享措施、许可证、证书、检查站及参考资源。",
+      "description": "ABSCH依据《名古屋议定书》第14条设立，支持遗传资源及相关传统知识的获取、惠益分享和利用情况监测。生物多样性公约秘书处按照作为议定书缔约方会议的缔约方大会所决定的方式运营中央门户和数据库。国家记录包括措施、主管部门、获取程序、构成国际公认合规证书（IRCC）的许可证以及检查站公报（CPC）；参考记录包括指南、社区规约和能力建设资源。2026年9月10日，公开API分别返回6,545条当前已发布IRCC、422条CPC和397条措施记录。公开浏览和JSON读取无需账户。国家发布机关批准国家记录，注册用户可提交参考资料供秘书处审核。IRCC证明已按提供方适用法律取得事先知情同意并达成共同商定条件，并不证明之后的所有利用均合规。记录可标示某些字段被保留，但机密值不得提交发布。使用者应注意归档版本和国家报告缺口。记录可能涉及海洋研究；该平台与BBNJ信息交换机制是不同系统。",
+      "details": {
+        "aliases": [
+          "ABSCH",
+          "ABS Clearing-House",
+          "Access and Benefit-Sharing Clearing-House"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "abs-about",
+            "abs-article14",
+            "abs-article17",
+            "abs-scope",
+            "abs-modalities",
+            "abs-decision2024",
+            "abs-stakeholders",
+            "abs-ircc-example",
+            "abs-api",
+            "abs-ircc-count",
+            "abs-cpc-count",
+            "abs-measure-count",
+            "abs-progress2024"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "abs-catalogue",
+              "description": "国家和参考记录涵盖主管部门、措施、程序、IRCC、检查站、CPC、国家报告、社区规约、示范条款及能力建设资源。许可证记录不是生物样本或序列数据集。"
+            },
+            {
+              "id": "abs-documents",
+              "description": "可获取文献包括资料库附件，例如《名古屋议定书》解释指南。国家措施可能附有原文语言的源文件。"
+            },
+            {
+              "id": "abs-json",
+              "description": "公开检索索引和文档API返回JSON。查询须指定ABS领域及相应记录模式；按文档标识符读取已发布文档。"
+            },
+            {
+              "id": "abs-html",
+              "description": "公开记录页面以HTML提供许可证或检查站的实际结构化内容，并显示版本及相关记录背景。"
+            },
+            {
+              "id": "abs-pdf",
+              "description": "部分资料库资源提供PDF附件；已验证的解释指南只是示例，并非整个数据库的转储。"
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "abs-browse",
+            "label": "检索记录和国家概况",
+            "description": "无需登录即可浏览国家和参考记录。检查最新版本、发布国家及记录状态。公约网站条款允许个人非商业复制，并受具体材料限制约束；公开可见并不赋予一般转售、再分发或创作衍生作品的权利。"
+          },
+          {
+            "id": "abs-api-read",
+            "label": "公开JSON API",
+            "description": "使用api.cbd.int的生产API，并设置Realm: abs。已成功测试无凭证读取公开索引及单个文档。按模式查询并明确筛选公开状态和最新版本；归档版本应另行区分。再利用条件仍然适用。"
+          },
+          {
+            "id": "abs-download",
+            "label": "参考文献附件",
+            "description": "公开资料库记录可链接至可下载PDF。此路径打开已验证的解释指南附件。各附件的权利及范围不同；它不是许可证或机密协议的批量导出。"
+          },
+          {
+            "id": "abs-national-submit",
+            "label": "提交国家记录",
+            "description": "使用公约账户及正式指定的发布机关PA或国家授权用户NAU身份登录。填写相应通用表格并附上获准文件。NAU准备草稿，国家发布机关批准发布，并负责信息完整、及时且不保密。未查明提交费用。"
+          },
+          {
+            "id": "abs-reference-submit",
+            "label": "利益攸关方提交参考资料",
+            "description": "任何注册用户，包括研究机构、土著人民和地方社区，均可提交相关参考资料。秘书处在发布前审核。仅提交准确、完整、及时且非机密的信息；未查明提交费用。"
+          },
+          {
+            "id": "abs-api-write",
+            "label": "获授权的国家API流程",
+            "description": "遵循IRCC API文档，使用公约账户、访问令牌及针对相关政府的授权。该流程支持国家信息提交，不支持匿名发布或跨政府写入。未测试身份验证后的修改，也未找到提交收费表。"
+          },
+          {
+            "id": "abs-offline-submit",
+            "label": "由秘书处协助离线提交国家信息",
+            "description": "下载相应通用表格，并联系秘书处使用按请求提供的国家信息离线登记机制。仍需国家授权及发布检查。已确认提供Word表格；处理时间和可能费用未查明。"
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "abs-ircc-current",
+            "description": "2026年9月10日当地时间观测到6,545条当前公开absPermit记录（IRCC）。查询限定realm_ss:abs、_state_s:public及_latest_s:true；不计归档修订、生物样本或国家数量。 未按许可证到期日期筛选，因此并非尚未过期许可证的数量。"
+          },
+          {
+            "id": "abs-cpc-current",
+            "description": "按相同ABS领域、公开状态及最新版本筛选，得到422条当前公开absCheckpointCommunique记录。CPC是检查站信息记录，不是新增许可证。"
+          },
+          {
+            "id": "abs-measures-current",
+            "description": "按相同条件得到397条当前公开measure记录。它们可能描述立法、行政或政策措施，不是国家数量或全部现行法律数量。"
+          }
+        ],
+        "researchGaps": {
+          "data": "三个原生记录数分别对应不同模式，并非全部目录或所有国家许可证。未验证当前存储规模；各国发布和报告完整性不同。",
+          "usage": "2024年咨询报告记载2023年每周约975名访客，以及2023年7月1日至12月1日约14,000名新访客，这些不是会话数。未验证当前符合批准定义的会话、下载、贡献者或引用指标；分析定义于2023年7月1日变更。",
+          "standards": "ABSCH通用表格、受控词表和文档模式已有文档，但均无获批Ryu标准标识。未验证其他获批标准的实施；JSON、国家法律及IRCC标识符本身不构成标准依据。",
+          "access": "已测试匿名读取；未测试需认证的提交、完整检索导出、API配额或提交费用。机密值必须保留在已发布记录之外。部分页面无法被文本工具获取，但公开API正常工作。"
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-nagoya-protocol-cop-mop-governs-abs-clearing-house",
+      "sourceNodeId": "nagoya-protocol-cop-mop",
+      "targetNodeId": "abs-clearing-house",
+      "kind": "governs",
+      "note": "The Conference of the Parties serving as the meeting of the Parties to the Nagoya Protocol decides and reviews ABSCH operating modalities under Article 14(4). Decision NP-5/4 continues the Secretariat’s administration mandate. This is collective treaty authority over the mechanism, not unilateral governance by every Party or operational control by the advisory committee.",
+      "properties": {
+        "scope": "Operating modalities and oversight of ABSCH",
+        "period": "Article 14; modalities adopted in 2014; mandate reaffirmed 30 October 2024",
+        "status": "current treaty mandate",
+        "sourceRefs": [
+          "abs-article14",
+          "abs-modalities",
+          "abs-decision2024"
+        ]
+      },
+      "sources": {
+        "abs-article14": {
+          "id": "abs-article14",
+          "url": "https://www.cbd.int/abs/text/articles/default.shtml?sec=abs-14",
+          "title": {
+            "en": "Nagoya Protocol Article 14: ABS Clearing-House",
+            "fr": "Article 14 du Protocole de Nagoya : Centre d’échange APA",
+            "es": "Artículo 14 del Protocolo de Nagoya: Centro de Intercambio de Información sobre APB",
+            "ar": "المادة 14 من بروتوكول ناغويا: غرفة تبادل المعلومات",
+            "ru": "Статья 14 Нагойского протокола: Механизм посредничества",
+            "zh": "《名古屋议定书》第14条：信息交换所"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-modalities": {
+          "id": "abs-modalities",
+          "url": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+          "title": {
+            "en": "Decision NP-1/2: operating modalities",
+            "fr": "Décision NP-1/2 : modalités de fonctionnement",
+            "es": "Decisión NP-1/2: modalidades de funcionamiento",
+            "ar": "المقرر NP-1/2: طرائق التشغيل",
+            "ru": "Решение NP-1/2: условия функционирования",
+            "zh": "NP-1/2号决定：运作方式"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-decision2024": {
+          "id": "abs-decision2024",
+          "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+          "title": {
+            "en": "Decision NP-5/4: ABS Clearing-House and information-sharing (2024)",
+            "fr": "Décision NP-5/4 : Centre d’échange APA et échange d’informations (2024)",
+            "es": "Decisión NP-5/4: Centro de Intercambio de Información sobre APB e intercambio de información (2024)",
+            "ar": "المقرر NP-5/4: غرفة تبادل المعلومات وتبادل المعلومات (2024)",
+            "ru": "Решение NP-5/4: Механизм посредничества и обмен информацией (2024)",
+            "zh": "NP-5/4号决定：信息交换所与信息共享（2024年）"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-cbd-secretariat-operates-abs-clearing-house",
+      "sourceNodeId": "cbd-secretariat",
+      "targetNodeId": "abs-clearing-house",
+      "kind": "operates",
+      "note": "The CBD Secretariat administers the Internet portal and central database, supports users and implements development work within the COP-MOP mandate. Decision NP-5/4 requests continued development and administration. National publication decisions remain with national publishing authorities.",
+      "properties": {
+        "scope": "Central portal/database operation and technical support",
+        "period": "2014 modalities; continued mandate in decision NP-5/4 of 30 October 2024",
+        "status": "current documented mandate",
+        "sourceRefs": [
+          "abs-modalities",
+          "abs-decision2024"
+        ]
+      },
+      "sources": {
+        "abs-modalities": {
+          "id": "abs-modalities",
+          "url": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+          "title": {
+            "en": "Decision NP-1/2: operating modalities",
+            "fr": "Décision NP-1/2 : modalités de fonctionnement",
+            "es": "Decisión NP-1/2: modalidades de funcionamiento",
+            "ar": "المقرر NP-1/2: طرائق التشغيل",
+            "ru": "Решение NP-1/2: условия функционирования",
+            "zh": "NP-1/2号决定：运作方式"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-decision2024": {
+          "id": "abs-decision2024",
+          "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+          "title": {
+            "en": "Decision NP-5/4: ABS Clearing-House and information-sharing (2024)",
+            "fr": "Décision NP-5/4 : Centre d’échange APA et échange d’informations (2024)",
+            "es": "Decisión NP-5/4: Centro de Intercambio de Información sobre APB e intercambio de información (2024)",
+            "ar": "المقرر NP-5/4: غرفة تبادل المعلومات وتبادل المعلومات (2024)",
+            "ru": "Решение NP-5/4: Механизм посредничества и обмен информацией (2024)",
+            "zh": "NP-5/4号决定：信息交换所与信息共享（2024年）"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-eur-funds-abs-clearing-house",
+      "sourceNodeId": "eur",
+      "targetNodeId": "abs-clearing-house",
+      "kind": "funds",
+      "note": "The European Union supported dedicated ABSCH human resources and outreach as reported in June 2016, financially supported the September–October 2019 workshop on monitoring through ABSCH, and supported the interoperability project described to the February 2024 advisory meeting. The latter covered API and national-system integration improvements. No amount or ongoing 2026 operating commitment is asserted.",
+      "properties": {
+        "scope": "Documented ABSCH administration, capacity-building and interoperability support",
+        "period": "Support reported June 2016; workshop 30 September–2 October 2019; interoperability work reported for December 2022–December 2023 to the February 2024 meeting",
+        "status": "historical and period-specific; continuation not established",
+        "sourceRefs": [
+          "abs-support2016",
+          "abs-about",
+          "abs-progress2024"
+        ]
+      },
+      "sources": {
+        "abs-support2016": {
+          "id": "abs-support2016",
+          "url": "https://www.cbd.int/doc/meetings/abs/np-mop-02/information/np-mop-02-inf-03-en.pdf",
+          "title": {
+            "en": "ABSCH advisory committee report, June 2016",
+            "fr": "Rapport du comité consultatif ABSCH, juin 2016",
+            "es": "Informe del comité asesor de ABSCH, junio de 2016",
+            "ar": "تقرير اللجنة الاستشارية لـ ABSCH، يونيو 2016",
+            "ru": "Доклад консультативного комитета ABSCH, июнь 2016 года",
+            "zh": "ABSCH咨询委员会报告，2016年6月"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-about": {
+          "id": "abs-about",
+          "url": "https://www.cbd.int/abs/theabsch.shtml",
+          "title": {
+            "en": "CBD overview of the ABS Clearing-House",
+            "fr": "Présentation du Centre d’échange APA par la CDB",
+            "es": "Panorama del Centro de Intercambio de Información sobre APB de la CDB",
+            "ar": "عرض أمانة الاتفاقية لغرفة تبادل المعلومات بشأن الحصول وتقاسم المنافع",
+            "ru": "Обзор Механизма посредничества по ДГРСИВ Конвенции",
+            "zh": "生物多样性公约获取和惠益分享信息交换所概述"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-progress2024": {
+          "id": "abs-progress2024",
+          "url": "https://www.cbd.int/doc/c/e1c2/4b9c/68bbb45c8d34f6cacf2b9f03/np-absch-iac-2024-01-02-en.pdf",
+          "title": {
+            "en": "ABSCH progress report to the February 2024 advisory meeting",
+            "fr": "Rapport de progrès ABSCH pour la réunion consultative de février 2024",
+            "es": "Informe de progreso de ABSCH para la reunión consultiva de febrero de 2024",
+            "ar": "تقرير تقدم ABSCH للاجتماع الاستشاري في فبراير 2024",
+            "ru": "Доклад о ходе работы ABSCH к консультативному совещанию февраля 2024 года",
+            "zh": "提交2024年2月咨询会议的ABSCH进展报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-jpn-funds-abs-clearing-house",
+      "sourceNodeId": "jpn",
+      "targetNodeId": "abs-clearing-house",
+      "kind": "funds",
+      "note": "Japan provided financial support through the Japan Biodiversity Fund for the 2019 workshop on monitoring utilization through ABSCH. The Fund also supported dedicated ABSCH workshops in December 2022 and at COP-MOP 5 in October 2024; its earlier support for dedicated personnel was acknowledged in 2016. Scope is these documented activities, not an inferred unrestricted 2026 archive budget.",
+      "properties": {
+        "scope": "Japan Biodiversity Fund support to ABSCH personnel and related capacity-building workshops",
+        "period": "Reported June 2016; September–October 2019; December 2022; October 2024",
+        "status": "historical documented support",
+        "sourceRefs": [
+          "abs-support2016",
+          "abs-about"
+        ]
+      },
+      "sources": {
+        "abs-support2016": {
+          "id": "abs-support2016",
+          "url": "https://www.cbd.int/doc/meetings/abs/np-mop-02/information/np-mop-02-inf-03-en.pdf",
+          "title": {
+            "en": "ABSCH advisory committee report, June 2016",
+            "fr": "Rapport du comité consultatif ABSCH, juin 2016",
+            "es": "Informe del comité asesor de ABSCH, junio de 2016",
+            "ar": "تقرير اللجنة الاستشارية لـ ABSCH، يونيو 2016",
+            "ru": "Доклад консультативного комитета ABSCH, июнь 2016 года",
+            "zh": "ABSCH咨询委员会报告，2016年6月"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-about": {
+          "id": "abs-about",
+          "url": "https://www.cbd.int/abs/theabsch.shtml",
+          "title": {
+            "en": "CBD overview of the ABS Clearing-House",
+            "fr": "Présentation du Centre d’échange APA par la CDB",
+            "es": "Panorama del Centro de Intercambio de Información sobre APB de la CDB",
+            "ar": "عرض أمانة الاتفاقية لغرفة تبادل المعلومات بشأن الحصول وتقاسم المنافع",
+            "ru": "Обзор Механизма посредничества по ДГРСИВ Конвенции",
+            "zh": "生物多样性公约获取和惠益分享信息交换所概述"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-deu-funds-abs-clearing-house",
+      "sourceNodeId": "deu",
+      "targetNodeId": "abs-clearing-house",
+      "kind": "funds",
+      "note": "The Government of Germany, through the Federal Agency for Nature Conservation (BfN), financially supported the 30 September–2 October 2019 workshop on monitoring utilization of genetic resources through ABSCH. This edge is limited to that training activity; Germany’s separate support for broader national ABS frameworks in 2024 is not treated as general database funding.",
+      "properties": {
+        "scope": "2019 ABSCH monitoring and utilization capacity-building workshop through BfN",
+        "period": "30 September–2 October 2019",
+        "status": "historical completed activity",
+        "sourceRefs": [
+          "abs-about"
+        ]
+      },
+      "sources": {
+        "abs-about": {
+          "id": "abs-about",
+          "url": "https://www.cbd.int/abs/theabsch.shtml",
+          "title": {
+            "en": "CBD overview of the ABS Clearing-House",
+            "fr": "Présentation du Centre d’échange APA par la CDB",
+            "es": "Panorama del Centro de Intercambio de Información sobre APB de la CDB",
+            "ar": "عرض أمانة الاتفاقية لغرفة تبادل المعلومات بشأن الحصول وتقاسم المنافع",
+            "ru": "Обзор Механизма посредничества по ДГРСИВ Конвенции",
+            "zh": "生物多样性公约获取和惠益分享信息交换所概述"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-cbd-secretariat-publishes-to-abs-clearing-house",
+      "sourceNodeId": "cbd-secretariat",
+      "targetNodeId": "abs-clearing-house",
+      "kind": "publishes_to",
+      "note": "The CBD Secretariat acts as publishing authority for reference records submitted by registered stakeholders, validating them before final publication. This covers reference materials rather than replacing the national authorities who approve national records.",
+      "properties": {
+        "scope": "Validation and publication of stakeholder reference records",
+        "period": "Official stakeholder workflow dated 10 October 2018 and still published at research date",
+        "status": "documented continuing workflow",
+        "sourceRefs": [
+          "abs-stakeholders"
+        ]
+      },
+      "sources": {
+        "abs-stakeholders": {
+          "id": "abs-stakeholders",
+          "url": "https://absch.cbd.int/kb/tags/getting-started/Getting-started-using-the-ABS-Clearing-House-for-Stakeholders/5bbe3a4d64f00600011e20d9",
+          "title": {
+            "en": "ABSCH stakeholder submission and Secretariat publication",
+            "fr": "Soumission par les parties prenantes et publication par le Secrétariat",
+            "es": "Presentación por interesados y publicación por la Secretaría",
+            "ar": "تقديم أصحاب المصلحة للمعلومات ونشر الأمانة لها",
+            "ru": "Подача материалов заинтересованными сторонами и публикация Секретариатом",
+            "zh": "利益攸关方提交与秘书处发布"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-defra-publishes-to-abs-clearing-house",
+      "sourceNodeId": "defra",
+      "targetNodeId": "abs-clearing-house",
+      "kind": "publishes_to",
+      "note": "The UK national focal point in the Department for Environment, Food & Rural Affairs (Defra) receives due-diligence declarations and submits them to ABSCH as checkpoint communiqués. The current public checkpoint record explicitly distinguishes Defra’s publishing role from OPSS’s enforcement role. This does not claim that OPSS, the research institution or the genetic-resource provider directly publishes the record.",
+      "properties": {
+        "scope": "UK due-diligence declarations submitted as checkpoint communiqués",
+        "period": "Checkpoint record ABSCH-CP-GB-207653-5, last updated 26 April 2023; still current/public in API on 10 September 2026",
+        "status": "current published role record",
+        "sourceRefs": [
+          "abs-uk-checkpoint"
+        ]
+      },
+      "sources": {
+        "abs-uk-checkpoint": {
+          "id": "abs-uk-checkpoint",
+          "url": "https://absch.cbd.int/database/CP/ABSCH-CP-GB-207653",
+          "title": {
+            "en": "UK checkpoint record: Defra publishing and OPSS enforcement roles",
+            "fr": "Point de contrôle britannique : publication par Defra et contrôle par OPSS",
+            "es": "Punto de verificación británico: publicación de Defra y supervisión de OPSS",
+            "ar": "نقطة التحقق البريطانية: دور النشر لدفرا والإنفاذ لمكتب OPSS",
+            "ru": "Контрольный пункт Великобритании: публикация Defra и надзор OPSS",
+            "zh": "英国检查站记录：Defra发布与OPSS执法职责"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-moefcc-publishes-to-abs-clearing-house",
+      "sourceNodeId": "moefcc",
+      "targetNodeId": "abs-clearing-house",
+      "kind": "publishes_to",
+      "note": "India’s 2019 biodiversity action-plan implementation report identifies the Ministry of Environment, Forest and Climate Change (MoEFCC) as the national publishing authority for ABSCH. It distinguishes the National Biodiversity Authority (NBA) as competent authority and national authorized user. This edge records the documented 2019 publication role; continuation of that organizational assignment in 2026 has not been independently established.",
+      "properties": {
+        "scope": "India national publishing-authority role; excludes an inference of NBA direct publication authority",
+        "period": "2019 report, chapter 14, printed page 153",
+        "status": "historical verified designation; current continuation unverified",
+        "sourceRefs": [
+          "abs-india2019"
+        ]
+      },
+      "sources": {
+        "abs-india2019": {
+          "id": "abs-india2019",
+          "url": "https://dste.py.gov.in/Envispdy/assets/pdf/Action%20Plan/IndiaNationalBiodiversityActionPlan2019.pdf",
+          "title": {
+            "en": "India biodiversity action plan implementation overview (2019), ABS roles",
+            "fr": "Mise en œuvre du plan indien pour la biodiversité (2019), rôles APA",
+            "es": "Aplicación del plan de biodiversidad de India (2019), funciones de APB",
+            "ar": "تنفيذ خطة التنوع البيولوجي الهندية (2019)، أدوار الحصول وتقاسم المنافع",
+            "ru": "Выполнение плана Индии по биоразнообразию (2019): роли ДГРСИВ",
+            "zh": "印度生物多样性行动计划实施概况（2019年）：获取和惠益分享角色"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-declare-syncs-to-abs-clearing-house",
+      "sourceNodeId": "declare",
+      "targetNodeId": "abs-clearing-house",
+      "kind": "syncs_to",
+      "note": "EU competent authorities use DECLARE to send nonconfidential information from due-diligence declarations to ABSCH as checkpoint information. The Commission’s February 2026 report confirms the continuing transfer; CBD describes API adjustments for DECLARE. The 2018 guide limits transfer to publishable Part A information and excludes confidential values and Part B. Direction is DECLARE to ABSCH; no reverse synchronization, comprehensive national coverage or fixed update cadence was established.",
+      "properties": {
+        "scope": "Publishable due-diligence information for checkpoint communiqués",
+        "period": "Documented March 2018; API integration work reported to February 2024; continued transfer reported 12 February 2026",
+        "status": "documented operational transfer; authenticated pipeline not exercised",
+        "sourceRefs": [
+          "abs-declare-guide",
+          "abs-eu2026",
+          "abs-progress2024"
+        ],
+        "transferMethod": "CBD API integration; authority-mediated publication",
+        "artifact": "Nonconfidential due-diligence declaration information / checkpoint communiqués",
+        "cadence": "Not specified; authority validation precedes publication"
+      },
+      "sources": {
+        "abs-declare-guide": {
+          "id": "abs-declare-guide",
+          "url": "https://www.naturvardsverket.se/4ac4da/contentassets/09859c1d752d445ab59f06c0544fe6e0/question-and-answer-users.pdf",
+          "title": {
+            "en": "DECLARE Nagoya user guide (March 2018)",
+            "fr": "Guide utilisateur DECLARE Nagoya (mars 2018)",
+            "es": "Guía de usuario DECLARE Nagoya (marzo de 2018)",
+            "ar": "دليل مستخدم DECLARE ناغويا (مارس 2018)",
+            "ru": "Руководство пользователя DECLARE Nagoya (март 2018 года)",
+            "zh": "DECLARE名古屋用户指南（2018年3月）"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-eu2026": {
+          "id": "abs-eu2026",
+          "url": "https://environment.ec.europa.eu/document/download/c5a15594-3513-441c-978d-e5bc4bc26b53_en?filename=SWD_2026_66_1_EN_document_travail_service_part1_FINAL.pdf",
+          "title": {
+            "en": "European Union seventh CBD national report (2026), Target 13",
+            "fr": "Septième rapport national de l’UE à la CDB (2026), cible 13",
+            "es": "Séptimo informe nacional de la UE a la CDB (2026), meta 13",
+            "ar": "التقرير الوطني السابع للاتحاد الأوروبي إلى الاتفاقية (2026)، الهدف 13",
+            "ru": "Седьмой национальный доклад ЕС для КБР (2026), задача 13",
+            "zh": "欧盟向公约提交的第七次国家报告（2026年），目标13"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-progress2024": {
+          "id": "abs-progress2024",
+          "url": "https://www.cbd.int/doc/c/e1c2/4b9c/68bbb45c8d34f6cacf2b9f03/np-absch-iac-2024-01-02-en.pdf",
+          "title": {
+            "en": "ABSCH progress report to the February 2024 advisory meeting",
+            "fr": "Rapport de progrès ABSCH pour la réunion consultative de février 2024",
+            "es": "Informe de progreso de ABSCH para la reunión consultiva de febrero de 2024",
+            "ar": "تقرير تقدم ABSCH للاجتماع الاستشاري في فبراير 2024",
+            "ru": "Доклад о ходе работы ABSCH к консультативному совещанию февраля 2024 года",
+            "zh": "提交2024年2月咨询会议的ABSCH进展报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

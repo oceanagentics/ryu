@@ -1,0 +1,1385 @@
+{
+  "id": "oceanteacher",
+  "record": {
+    "kind": "system",
+    "url": "https://classroom.oceanteacher.org/",
+    "recordDepth": "rich",
+    "properties": {
+      "disciplines": [
+        "oceanography",
+        "marine_biology",
+        "spatial_planning",
+        "law"
+      ],
+      "data": {
+        "descriptors": [
+          {
+            "id": "course-catalogue",
+            "category": "type",
+            "label": "catalogue_records",
+            "source": "catalogue"
+          },
+          {
+            "id": "learning-documents",
+            "category": "type",
+            "label": "documents",
+            "source": "guidelines"
+          },
+          {
+            "id": "learning-media",
+            "category": "type",
+            "label": "media",
+            "source": "guidelines"
+          },
+          {
+            "id": "html-pages",
+            "category": "format",
+            "label": "html",
+            "source": "catalogue"
+          },
+          {
+            "id": "pdf-guidance",
+            "category": "format",
+            "label": "pdf",
+            "source": "guidelines"
+          }
+        ]
+      },
+      "access": [
+        {
+          "id": "catalogue-browse",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://classroom.oceanteacher.org/course/index.php?categoryid=198&perpage=all",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "catalogue"
+          ]
+        },
+        {
+          "id": "enrolled-learning",
+          "type": "read",
+          "methods": [
+            "browse",
+            "download"
+          ],
+          "url": "https://classroom.oceanteacher.org/login/index.php",
+          "requirements": [
+            "account",
+            "approval"
+          ],
+          "cost": "free",
+          "sourceRefs": [
+            "login",
+            "catalogue",
+            "guidelines"
+          ]
+        },
+        {
+          "id": "guidelines-download",
+          "type": "read",
+          "methods": [
+            "download"
+          ],
+          "url": "https://oceanexpert.org/downloadFile/61311",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "guidelines"
+          ]
+        },
+        {
+          "id": "documentation-request",
+          "type": "read",
+          "methods": [
+            "request"
+          ],
+          "url": "https://classroom.oceanteacher.org/admin/tool/policy/view.php?versionid=8",
+          "requirements": [
+            "approval"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "data-policy",
+            "classroom"
+          ]
+        },
+        {
+          "id": "course-contribution",
+          "type": "write",
+          "methods": [
+            "request",
+            "upload"
+          ],
+          "url": "https://oceanexpert.org/downloadFile/61311",
+          "requirements": [
+            "account",
+            "approval",
+            "affiliation"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "guidelines",
+            "centre-call"
+          ]
+        },
+        {
+          "id": "learner-submission",
+          "type": "write",
+          "methods": [
+            "form",
+            "upload"
+          ],
+          "url": "https://classroom.oceanteacher.org/login/index.php",
+          "requirements": [
+            "account",
+            "approval"
+          ],
+          "cost": "free",
+          "sourceRefs": [
+            "guidelines",
+            "privacy",
+            "login"
+          ]
+        }
+      ],
+      "gallery": [],
+      "metrics": [
+        {
+          "id": "contributing-facilitators-2024-2025",
+          "key": "contributor_count",
+          "value": 650,
+          "observedAt": "2025-11-10",
+          "period": null,
+          "source": "sg5-report"
+        }
+      ]
+    },
+    "sources": {
+      "classroom": {
+        "id": "classroom",
+        "url": "https://classroom.oceanteacher.org/",
+        "title": {
+          "en": "OceanTeacher classroom and learning-service certification",
+          "fr": "Plateforme OceanTeacher et certification des services de formation",
+          "es": "Plataforma OceanTeacher y certificación de servicios de aprendizaje",
+          "ar": "منصة OceanTeacher وشهادة خدمات التعلم",
+          "zh": "OceanTeacher课堂及学习服务认证",
+          "ru": "Платформа OceanTeacher и сертификация учебных услуг"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "catalogue": {
+        "id": "catalogue",
+        "url": "https://classroom.oceanteacher.org/course/index.php?categoryid=198&perpage=all",
+        "title": {
+          "en": "OceanTeacher 2026 course catalogue",
+          "fr": "Catalogue des cours OceanTeacher 2026",
+          "es": "Catálogo de cursos OceanTeacher 2026",
+          "ar": "دليل دورات OceanTeacher لعام 2026",
+          "zh": "OceanTeacher 2026年课程目录",
+          "ru": "Каталог курсов OceanTeacher на 2026 год"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "login": {
+        "id": "login",
+        "url": "https://classroom.oceanteacher.org/login/index.php",
+        "title": {
+          "en": "OceanTeacher account and enrolment requirements",
+          "fr": "Conditions de compte et d’inscription OceanTeacher",
+          "es": "Requisitos de cuenta e inscripción de OceanTeacher",
+          "ar": "متطلبات حساب OceanTeacher والتسجيل في الدورات",
+          "zh": "OceanTeacher账户与选课要求",
+          "ru": "Требования к учётной записи и записи на курсы OceanTeacher"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "data-policy": {
+        "id": "data-policy",
+        "url": "https://classroom.oceanteacher.org/admin/tool/policy/view.php?versionid=8",
+        "title": {
+          "en": "OceanTeacher data policy, October 2024",
+          "fr": "Politique de données OceanTeacher, octobre 2024",
+          "es": "Política de datos de OceanTeacher, octubre de 2024",
+          "ar": "سياسة بيانات OceanTeacher، أكتوبر 2024",
+          "zh": "OceanTeacher数据政策，2024年10月",
+          "ru": "Политика данных OceanTeacher, октябрь 2024 года"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "privacy": {
+        "id": "privacy",
+        "url": "https://classroom.oceanteacher.org/admin/tool/policy/view.php?versionid=4",
+        "title": {
+          "en": "OceanTeacher privacy notice",
+          "fr": "Avis de confidentialité OceanTeacher",
+          "es": "Aviso de privacidad de OceanTeacher",
+          "ar": "إشعار خصوصية OceanTeacher",
+          "zh": "OceanTeacher隐私声明",
+          "ru": "Уведомление OceanTeacher о конфиденциальности"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "guidelines": {
+        "id": "guidelines",
+        "url": "https://oceanexpert.org/downloadFile/61311",
+        "title": {
+          "en": "OceanTeacher Course Management Guidelines, version 5.0 (2026)",
+          "fr": "Directives de gestion des cours OceanTeacher, version 5.0 (2026)",
+          "es": "Directrices de gestión de cursos OceanTeacher, versión 5.0 (2026)",
+          "ar": "إرشادات إدارة دورات OceanTeacher، الإصدار 5.0 (2026)",
+          "zh": "OceanTeacher课程管理指南，第5.0版（2026年）",
+          "ru": "Руководство по управлению курсами OceanTeacher, версия 5.0 (2026)"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "sg5-report": {
+        "id": "sg5-report",
+        "url": "https://oceanexpert.org/downloadFile/61264",
+        "title": {
+          "en": "Fifth OTGA Steering Group session: final report, November 2025",
+          "fr": "Cinquième session du groupe directeur OTGA : rapport final, novembre 2025",
+          "es": "Quinta reunión del Grupo Directivo de OTGA: informe final, noviembre de 2025",
+          "ar": "الدورة الخامسة للفريق التوجيهي لـOTGA: التقرير النهائي، نوفمبر 2025",
+          "zh": "OTGA指导组第五届会议：2025年11月最终报告",
+          "ru": "Пятая сессия руководящей группы OTGA: итоговый отчёт, ноябрь 2025 года"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "fust2": {
+        "id": "fust2",
+        "url": "https://fust.iode.org/en/otga2",
+        "title": {
+          "en": "FUST: OceanTeacher Global Academy 2 results and funding transition",
+          "fr": "FUST : résultats d’OceanTeacher Global Academy 2 et évolution du financement",
+          "es": "FUST: resultados de OceanTeacher Global Academy 2 y transición financiera",
+          "ar": "FUST: نتائج OceanTeacher Global Academy 2 وانتقال التمويل",
+          "zh": "FUST：OceanTeacher全球学院第二阶段成果与资金转型",
+          "ru": "FUST: итоги OceanTeacher Global Academy 2 и переход к новому финансированию"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "iode-training": {
+        "id": "iode-training",
+        "url": "https://iode.org/actions/capacity-development/",
+        "title": {
+          "en": "IODE capacity development and OceanTeacher programme",
+          "fr": "Développement des capacités IODE et programme OceanTeacher",
+          "es": "Desarrollo de capacidades de IODE y programa OceanTeacher",
+          "ar": "تنمية القدرات في IODE وبرنامج OceanTeacher",
+          "zh": "IODE能力建设及OceanTeacher计划",
+          "ru": "Развитие потенциала IODE и программа OceanTeacher"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "odis-entry": {
+        "id": "odis-entry",
+        "url": "https://catalogue.odis.org/view/359",
+        "title": {
+          "en": "ODIS catalogue entry 359: OceanTeacher",
+          "fr": "Notice 359 du catalogue ODIS : OceanTeacher",
+          "es": "Entrada 359 del catálogo ODIS: OceanTeacher",
+          "ar": "إدخال دليل ODIS رقم 359: OceanTeacher",
+          "zh": "ODIS目录第359条：OceanTeacher",
+          "ru": "Запись 359 каталога ODIS: OceanTeacher"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "centre-call": {
+        "id": "centre-call",
+        "url": "https://www.anep.edu.uy/sites/default/files/2026-04/Convocatoria.pdf",
+        "title": {
+          "en": "IOC Circular 3067: 2026 training-centre designation and renewal",
+          "fr": "Circulaire COI 3067 : désignation et renouvellement des centres en 2026",
+          "es": "Circular COI 3067: designación y renovación de centros en 2026",
+          "ar": "تعميم اللجنة الأوقيانوغرافية الحكومية الدولية 3067: اعتماد مراكز التدريب وتجديده في 2026",
+          "zh": "政府间海洋学委员会第3067号通函：2026年培训中心认定与续期",
+          "ru": "Циркуляр МОК 3067: назначение и продление статуса учебных центров в 2026 году"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "medin-training": {
+        "id": "medin-training",
+        "url": "https://medin.org.uk/data-standards/medin-workshops",
+        "title": {
+          "en": "MEDIN workshops hosted by OceanTeacher",
+          "fr": "Ateliers MEDIN hébergés par OceanTeacher",
+          "es": "Talleres MEDIN alojados en OceanTeacher",
+          "ar": "ورش MEDIN المستضافة على OceanTeacher",
+          "zh": "OceanTeacher承载的MEDIN培训班",
+          "ru": "Семинары MEDIN на платформе OceanTeacher"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "en": {
+      "title": "OceanTeacher Global Academy",
+      "summary": "Global IOC-UNESCO training platform for ocean science, marine data management and policy, with regional centres and OceanExpert-linked enrolment.",
+      "description": "OceanTeacher Global Academy (OTGA) is IOC-UNESCO’s global training programme and shared learning platform for ocean science, services, marine data management and policy. Its secretariat at the IOC Project Office for IODE in Oostende coordinates regional and specialized training centres and affiliated course providers. Training combines classroom, blended, facilitated online and self-paced learning, principally in English, French, Portuguese and Spanish. IODE reports a network of 17 centres; FUST reports more than 250 courses delivered to over 15,000 learners in 130 IOC Member States during 2015–2025. These are programme totals for that interval, not the current number of stored courses.\n\nThe platform holds course descriptions, learning documents, multimedia and assessments. Public catalogue previews describe course objectives, organisers, language and enrolment. Learning access uses an administrator-approved OceanExpert account; individual courses can additionally require selection, affiliation or an enrolment key. Participant and facilitator information is archived in OceanExpert and linked to the Moodle alumni system. Full records are restricted to the secretariat and IODE IT support, while course-completion information and profiles have a public subset.\n\nThe platform reports renewed ISO 29993:2017 certification in June 2025 for learning services. Its 2026 course guidelines support SCORM presentations and H5P activities. The guidelines and homepage state CC BY-NC-SA 4.0 unless otherwise specified, but another guideline passage mixes that wording with CC BY 4.0. Check the licence of each resource, including third-party material, before reuse.",
+      "details": {
+        "aliases": [
+          "OTGA",
+          "OceanTeacher"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "classroom",
+            "catalogue",
+            "login",
+            "data-policy",
+            "privacy",
+            "guidelines",
+            "fust2",
+            "iode-training"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "course-catalogue",
+              "description": "Public descriptions of courses, organisers, delivery language, learning outcomes and enrolment conditions; course delivery totals are not an inventory count."
+            },
+            {
+              "id": "learning-documents",
+              "description": "Course reading material, presentations, exercises and programme guidance. Some participant and assessment documentation is restricted or available by request."
+            },
+            {
+              "id": "learning-media",
+              "description": "Images, audio, video and interactive learning activities in Moodle courses; access depends on the course and enrolment."
+            },
+            {
+              "id": "html-pages",
+              "description": "HTML course catalogue previews and browser-based learning pages. Moodle is the learning interface, not a data format."
+            },
+            {
+              "id": "pdf-guidance",
+              "description": "The publicly downloadable 2026 Course Management Guidelines are PDF, hosted through OceanExpert; this does not establish a PDF export for every course."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "catalogue-browse",
+            "label": "Public course catalogue",
+            "description": "Browse detailed public previews by year, subject or language. The 2026 catalogue was accessible without an account; opening an actual course can require login."
+          },
+          {
+            "id": "enrolled-learning",
+            "label": "Enrolled learning and course files",
+            "description": "Use an OceanExpert account activated after administrator review, which may take a few business days. Old OceanTeacher logins are deactivated. Course files and activities depend on enrolment; a course may require selection, affiliation or a key. Current advertised online examples have no tuition fee; travel and accommodation are separate."
+          },
+          {
+            "id": "guidelines-download",
+            "label": "Course-management guidelines",
+            "description": "Download the public version 5.0 PDF (2026) through OceanExpert. It explains authoring, review, enrolment, assessments and data policy; no account was required for this document."
+          },
+          {
+            "id": "documentation-request",
+            "label": "Request additional documentation",
+            "description": "The data policy permits requests for OTGA documentation and metadata, such as assessment forms. Contact the secretariat via the contact details on the classroom; availability and conditions are decided by the service. This is not public access to the full participant database."
+          },
+          {
+            "id": "course-contribution",
+            "label": "Propose and develop course content",
+            "description": "IOC programmes, training centres and affiliated partners submit course proposals to the OTGA secretariat for prioritisation and approval. Approved coordinators and instructors prepare and upload learning content using Moodle templates. Centre designation requires institutional nomination and review; this is curated contribution, with contractual costs determined separately."
+          },
+          {
+            "id": "learner-submission",
+            "label": "Course assignments and feedback",
+            "description": "Enrolled learners submit assignments, quizzes and feedback through course activities. Account approval and course-specific enrolment apply. Submissions and activity records are processed for learning and assessment, rather than automatically published as open resources."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "contributing-facilitators-2024-2025",
+            "description": "Reported lower bound: over 650 facilitators—subject experts, lecturers and support staff—contributed to course development and delivery in 2024–10 November 2025. Value 650 represents “over 650”, not an exact unique-person census; deduplication is not specified."
+          }
+        ],
+        "researchGaps": {
+          "data": "No verified total of stored course or learning-resource records, or platform storage bytes, was found. Counts of courses delivered and learning hours describe programme activity, not database holdings.",
+          "usage": "The report provides contributing-facilitator counts, learners, users and completion rates with different scopes. No documented session, download or citation total was found; learner/user counts are not session counts.",
+          "standards": "No currently approved data-standard assignment was verified. ISO 29993 concerns learning services; Creative Commons concerns licensing. SCORM use and H5P activities are documented but have no approved vocabulary entries. ODIS entry 359 states no metadata standard and supplies no harvest URL.",
+          "access": "No documented public OceanTeacher machine API, bulk export or live ODIS harvest route was verified. Moodle capability and OceanExpert’s separate API do not establish an OTGA route. Course contents were not inspected behind login. Programme documentation is partly public despite the older request-only policy wording."
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Académie mondiale OceanTeacher",
+      "summary": "Plateforme mondiale de formation de la COI-UNESCO en sciences, données et politiques de l’océan, avec centres régionaux et inscription liée à OceanExpert.",
+      "description": "OceanTeacher Global Academy (OTGA) est le programme mondial de formation et la plateforme pédagogique commune de la COI-UNESCO pour les sciences, les services, la gestion des données et les politiques de l’océan. Son secrétariat, installé au Bureau de projet de la COI pour l’IODE à Ostende, coordonne des centres régionaux et spécialisés et des organismes de formation affiliés. Les formations sont présentielles, hybrides, en ligne avec accompagnement ou à rythme libre, principalement en anglais, français, portugais et espagnol. L’IODE décrit un réseau de 17 centres ; le FUST rapporte plus de 250 cours dispensés à plus de 15 000 apprenants de 130 États membres de la COI entre 2015 et 2025. Ces totaux concernent cette période et ne comptent pas les cours actuellement stockés.\n\nLa plateforme conserve des descriptions de cours, des documents pédagogiques, des contenus multimédias et des évaluations. Les aperçus publics précisent objectifs, organisateurs, langue et inscription. L’apprentissage nécessite un compte OceanExpert approuvé par un administrateur ; certains cours imposent aussi une sélection, une affiliation ou une clé d’inscription. Les informations sur les participants et les formateurs sont archivées dans OceanExpert et liées au système des anciens apprenants de Moodle. Le secrétariat et l’assistance informatique IODE seuls accèdent aux données complètes ; certaines informations de réussite et certains profils sont publics.\n\nLa plateforme annonce le renouvellement de sa certification ISO 29993:2017 pour les services de formation en juin 2025. Ses directives de 2026 prévoient des présentations SCORM et des activités H5P. Les directives et l’accueil indiquent CC BY-NC-SA 4.0 sauf mention contraire, mais un autre passage mélange cette formulation et CC BY 4.0. Vérifier la licence de chaque ressource, y compris les contenus tiers, avant réutilisation.",
+      "details": {
+        "aliases": [
+          "OTGA",
+          "OceanTeacher"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "classroom",
+            "catalogue",
+            "login",
+            "data-policy",
+            "privacy",
+            "guidelines",
+            "fust2",
+            "iode-training"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "course-catalogue",
+              "description": "Descriptions publiques des cours, organisateurs, langues, acquis visés et conditions d’inscription ; les totaux de formations dispensées ne constituent pas un inventaire."
+            },
+            {
+              "id": "learning-documents",
+              "description": "Lectures, présentations, exercices et directives du programme. Certains documents relatifs aux participants et aux évaluations sont restreints ou disponibles sur demande."
+            },
+            {
+              "id": "learning-media",
+              "description": "Images, sons, vidéos et activités interactives dans Moodle ; accès selon le cours et l’inscription."
+            },
+            {
+              "id": "html-pages",
+              "description": "Aperçus du catalogue et pages pédagogiques HTML. Moodle est l’interface d’apprentissage, pas un format de données."
+            },
+            {
+              "id": "pdf-guidance",
+              "description": "Les directives de gestion des cours de 2026 sont téléchargeables en PDF via OceanExpert ; cela ne prouve pas un export PDF de chaque cours."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "catalogue-browse",
+            "label": "Catalogue public des cours",
+            "description": "Consulter les aperçus détaillés par année, thème ou langue. Le catalogue 2026 était accessible sans compte ; ouvrir un cours peut nécessiter une connexion."
+          },
+          {
+            "id": "enrolled-learning",
+            "label": "Apprentissage et fichiers après inscription",
+            "description": "Utiliser un compte OceanExpert activé après examen administratif, qui peut prendre quelques jours ouvrés. Les anciens comptes OceanTeacher sont désactivés. Fichiers et activités dépendent de l’inscription ; sélection, affiliation ou clé peuvent être requises. Les exemples en ligne annoncés sont sans frais de scolarité ; voyage et hébergement sont distincts."
+          },
+          {
+            "id": "guidelines-download",
+            "label": "Directives de gestion des cours",
+            "description": "Télécharger le PDF public version 5.0 (2026) via OceanExpert. Il décrit création, évaluation, inscription et politique de données ; aucun compte n’était requis."
+          },
+          {
+            "id": "documentation-request",
+            "label": "Demander des documents complémentaires",
+            "description": "La politique permet de demander des documents et métadonnées OTGA, notamment des formulaires d’évaluation. Contacter le secrétariat aux coordonnées de la plateforme ; le service décide des conditions. Ce n’est pas un accès public à toute la base des participants."
+          },
+          {
+            "id": "course-contribution",
+            "label": "Proposer et développer un cours",
+            "description": "Les programmes COI, centres et partenaires soumettent des propositions au secrétariat pour priorisation et approbation. Les coordinateurs et formateurs agréés préparent et déposent le contenu selon les modèles Moodle. Les centres font l’objet d’une nomination et d’un examen institutionnels ; les coûts contractuels sont distincts."
+          },
+          {
+            "id": "learner-submission",
+            "label": "Devoirs et retours des apprenants",
+            "description": "Les inscrits déposent devoirs, questionnaires et retours dans les activités du cours. Compte approuvé et inscription au cours sont nécessaires. Les contributions servent à l’apprentissage et à l’évaluation, sans publication ouverte automatique."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "contributing-facilitators-2024-2025",
+            "description": "Borne inférieure publiée : plus de 650 formateurs, experts et personnels d’appui ont contribué aux cours entre 2024 et le 10 novembre 2025. La valeur 650 représente « plus de 650 », pas un décompte exact de personnes uniques ; dédoublonnage non précisé."
+          }
+        ],
+        "researchGaps": {
+          "data": "Aucun total vérifié de cours ou ressources stockés ni de volume en octets n’a été trouvé. Les cours dispensés et heures de formation décrivent l’activité, pas le contenu de la base.",
+          "usage": "Le rapport donne des formateurs contributeurs, apprenants, utilisateurs et taux de réussite selon des périmètres différents. Aucun total de sessions, téléchargements ou citations n’a été trouvé ; utilisateurs et sessions ne sont pas équivalents.",
+          "standards": "Aucune norme de données approuvée n’a été vérifiée. ISO 29993 concerne les services de formation et Creative Commons les licences. SCORM et H5P sont documentés mais absents du vocabulaire approuvé. La notice ODIS 359 n’indique ni norme de métadonnées ni URL de moissonnage.",
+          "access": "Aucune API publique OceanTeacher, export global ou route ODIS active n’a été vérifié. Les capacités Moodle et l’API distincte d’OceanExpert ne prouvent pas une route OTGA. Les contenus derrière connexion n’ont pas été inspectés. Certains documents sont publics malgré l’ancienne formulation « sur demande »."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Academia Mundial OceanTeacher",
+      "summary": "Plataforma mundial de formación de la COI-UNESCO en ciencias, datos y políticas oceánicas, con centros regionales e inscripción vinculada a OceanExpert.",
+      "description": "OceanTeacher Global Academy (OTGA) es el programa mundial de formación y la plataforma compartida de aprendizaje de la COI-UNESCO para ciencias, servicios, gestión de datos y políticas oceánicas. Su secretaría en la Oficina de Proyectos de la COI para IODE en Ostende coordina centros regionales y especializados y entidades formadoras afiliadas. Ofrece enseñanza presencial, semipresencial, en línea con facilitadores y al propio ritmo, principalmente en inglés, francés, portugués y español. IODE describe una red de 17 centros; FUST informa de más de 250 cursos impartidos a más de 15.000 estudiantes de 130 Estados miembros de la COI entre 2015 y 2025. Son cifras de actividad de ese periodo, no el número actual de cursos almacenados.\n\nLa plataforma contiene descripciones de cursos, documentos didácticos, contenidos multimedia y evaluaciones. Las vistas públicas del catálogo detallan objetivos, organizadores, idioma e inscripción. El acceso al aprendizaje utiliza una cuenta OceanExpert aprobada por un administrador; cada curso puede exigir además selección, afiliación o clave de inscripción. Los datos de participantes y facilitadores se archivan en OceanExpert y se vinculan al sistema de antiguos alumnos de Moodle. Solo la secretaría y el soporte informático IODE acceden a los datos completos; una parte de la información de finalización y los perfiles es pública.\n\nLa plataforma anunció la renovación de la certificación ISO 29993:2017 para servicios de aprendizaje en junio de 2025. Sus directrices de 2026 contemplan presentaciones SCORM y actividades H5P. Las directrices y la página principal indican CC BY-NC-SA 4.0 salvo indicación contraria, pero otro pasaje mezcla esa fórmula con CC BY 4.0. Compruebe la licencia de cada recurso, incluidos los materiales de terceros, antes de reutilizarlo.",
+      "details": {
+        "aliases": [
+          "OTGA",
+          "OceanTeacher"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "classroom",
+            "catalogue",
+            "login",
+            "data-policy",
+            "privacy",
+            "guidelines",
+            "fust2",
+            "iode-training"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "course-catalogue",
+              "description": "Descripciones públicas de cursos, organizadores, idiomas, resultados de aprendizaje e inscripción; los totales de cursos impartidos no son un inventario."
+            },
+            {
+              "id": "learning-documents",
+              "description": "Lecturas, presentaciones, ejercicios y directrices del programa. Parte de la documentación de participantes y evaluaciones tiene acceso restringido o se obtiene previa solicitud."
+            },
+            {
+              "id": "learning-media",
+              "description": "Imágenes, audio, vídeo y actividades interactivas en Moodle; el acceso depende del curso y de la inscripción."
+            },
+            {
+              "id": "html-pages",
+              "description": "Vistas del catálogo y páginas de aprendizaje en HTML. Moodle es la interfaz educativa, no un formato de datos."
+            },
+            {
+              "id": "pdf-guidance",
+              "description": "Las directrices de gestión de cursos de 2026 se descargan públicamente en PDF desde OceanExpert; ello no implica que todos los cursos se exporten en PDF."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "catalogue-browse",
+            "label": "Catálogo público de cursos",
+            "description": "Consulte vistas detalladas por año, tema o idioma. El catálogo de 2026 era accesible sin cuenta; abrir un curso puede requerir iniciar sesión."
+          },
+          {
+            "id": "enrolled-learning",
+            "label": "Aprendizaje y archivos con inscripción",
+            "description": "Utilice una cuenta OceanExpert activada tras revisión administrativa, que puede tardar varios días laborables. Los antiguos accesos OceanTeacher están desactivados. Archivos y actividades dependen de la inscripción; puede exigirse selección, afiliación o clave. Los ejemplos en línea anunciados no cobran matrícula; viaje y alojamiento son aparte."
+          },
+          {
+            "id": "guidelines-download",
+            "label": "Directrices de gestión de cursos",
+            "description": "Descargue el PDF público versión 5.0 (2026) desde OceanExpert. Explica creación, revisión, inscripción, evaluación y política de datos; no exigía cuenta."
+          },
+          {
+            "id": "documentation-request",
+            "label": "Solicitar documentación adicional",
+            "description": "La política permite solicitar documentación y metadatos de OTGA, como formularios de evaluación. Contacte con la secretaría mediante la plataforma; el servicio decide disponibilidad y condiciones. No es acceso público a toda la base de participantes."
+          },
+          {
+            "id": "course-contribution",
+            "label": "Proponer y desarrollar contenidos",
+            "description": "Programas de la COI, centros y socios presentan propuestas a la secretaría para priorización y aprobación. Coordinadores e instructores autorizados preparan y cargan contenido con plantillas Moodle. La designación de centros requiere nominación y revisión institucional; los costes contractuales se determinan aparte."
+          },
+          {
+            "id": "learner-submission",
+            "label": "Tareas y comentarios de estudiantes",
+            "description": "Los inscritos entregan tareas, cuestionarios y comentarios mediante las actividades del curso. Se exige cuenta aprobada e inscripción correspondiente. Las entregas sirven al aprendizaje y la evaluación, sin publicación abierta automática."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "contributing-facilitators-2024-2025",
+            "description": "Límite inferior publicado: más de 650 facilitadores, expertos, docentes y personal de apoyo contribuyeron a los cursos entre 2024 y el 10 de noviembre de 2025. El valor 650 representa «más de 650», no un censo exacto de personas únicas; no se especifica deduplicación."
+          }
+        ],
+        "researchGaps": {
+          "data": "No se encontró un total verificado de cursos o recursos almacenados ni del volumen en bytes. Los cursos impartidos y las horas formativas describen actividad, no existencias de la base.",
+          "usage": "El informe ofrece facilitadores, estudiantes, usuarios y tasas de finalización con alcances distintos. No se hallaron totales de sesiones, descargas o citas; los usuarios no equivalen a sesiones.",
+          "standards": "No se verificó una norma de datos del vocabulario aprobado. ISO 29993 se refiere a servicios de aprendizaje y Creative Commons a licencias. SCORM y H5P están documentados pero no figuran en el vocabulario. ODIS 359 no declara estándar de metadatos ni URL de recolección.",
+          "access": "No se verificó API pública de OceanTeacher, exportación masiva ni ruta activa de ODIS. Las capacidades de Moodle y la API independiente de OceanExpert no establecen una ruta OTGA. No se inspeccionaron contenidos tras el inicio de sesión. Parte de la documentación es pública pese a la antigua política de solicitud."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ar": {
+      "title": "أكاديمية OceanTeacher العالمية",
+      "summary": "منصة التدريب العالمية للجنة الأوقيانوغرافية الحكومية الدولية لليونسكو في علوم المحيطات وبياناتها وسياساتها، مع مراكز إقليمية وتسجيل مرتبط بـOceanExpert.",
+      "description": "OceanTeacher Global Academy (OTGA) هو برنامج التدريب العالمي ومنصة التعلم المشتركة التابعة للجنة الأوقيانوغرافية الحكومية الدولية لليونسكو، ويغطي علوم المحيطات وخدماتها وإدارة بياناتها وسياساتها. تنسق أمانته في مكتب مشاريع اللجنة لبرنامج IODE في أوستند عمل مراكز التدريب الإقليمية والمتخصصة والجهات التدريبية المنتسبة. يجمع التدريب بين الحضور والتعلم المدمج والتعلم عبر الإنترنت بإشراف مدربين والتعلم الذاتي، أساساً بالإنجليزية والفرنسية والبرتغالية والإسبانية. يذكر IODE شبكة من 17 مركزاً؛ ويورد FUST تقديم أكثر من 250 دورة لأكثر من 15,000 متعلم من 130 دولة عضواً خلال 2015–2025. هذه حصيلة نشاط تلك الفترة، وليست عدد الدورات المخزنة حالياً.\n\nتضم المنصة أوصاف الدورات ووثائق التعلم والوسائط المتعددة والتقييمات. توضح معاينات الدليل العامة أهداف الدورات ومنظميها ولغاتها وشروط التسجيل. يتطلب التعلم حساب OceanExpert معتمداً من مسؤول؛ وقد تتطلب الدورة أيضاً اختيار المشاركين أو انتساباً مؤسسياً أو مفتاح تسجيل. تُؤرشف معلومات المشاركين والمدربين في OceanExpert وتُربط بنظام الخريجين في Moodle. يقتصر الوصول إلى السجلات الكاملة على الأمانة ودعم IODE التقني، بينما يتاح جزء من معلومات إتمام الدورات والملفات التعريفية للجمهور.\n\nأعلنت المنصة تجديد شهادة ISO 29993:2017 لخدمات التعلم في يونيو 2025. تدعم إرشادات الدورات لعام 2026 عروض SCORM وأنشطة H5P. تنص الإرشادات والصفحة الرئيسية على ترخيص CC BY-NC-SA 4.0 ما لم يُذكر خلاف ذلك، لكن فقرة أخرى تخلط هذه الصيغة مع CC BY 4.0. ينبغي فحص ترخيص كل مورد، بما فيه مواد الأطراف الأخرى، قبل إعادة استخدامه.",
+      "details": {
+        "aliases": [
+          "OTGA",
+          "OceanTeacher"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "classroom",
+            "catalogue",
+            "login",
+            "data-policy",
+            "privacy",
+            "guidelines",
+            "fust2",
+            "iode-training"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "course-catalogue",
+              "description": "أوصاف عامة للدورات والمنظمين ولغات التدريس ونواتج التعلم وشروط التسجيل؛ حصيلة الدورات المقدمة ليست جرداً للمحتوى المخزن."
+            },
+            {
+              "id": "learning-documents",
+              "description": "مواد القراءة والعروض والتمارين وإرشادات البرنامج. بعض وثائق المشاركين والتقييم مقيدة أو متاحة عند الطلب."
+            },
+            {
+              "id": "learning-media",
+              "description": "صور وصوت وفيديو وأنشطة تعلم تفاعلية في دورات Moodle؛ يختلف الوصول حسب الدورة والتسجيل."
+            },
+            {
+              "id": "html-pages",
+              "description": "معاينات دليل الدورات وصفحات التعلم بصيغة HTML عبر المتصفح. Moodle واجهة للتعلم وليس صيغة بيانات."
+            },
+            {
+              "id": "pdf-guidance",
+              "description": "إرشادات إدارة الدورات لعام 2026 متاحة للتنزيل العام بصيغة PDF عبر OceanExpert؛ ولا يثبت ذلك إمكانية تصدير كل دورة بهذه الصيغة."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "catalogue-browse",
+            "label": "دليل الدورات العام",
+            "description": "تصفح المعاينات التفصيلية حسب السنة أو الموضوع أو اللغة. كان دليل 2026 متاحاً دون حساب، بينما قد يتطلب فتح الدورة تسجيل الدخول."
+          },
+          {
+            "id": "enrolled-learning",
+            "label": "التعلم وملفات الدورات بعد التسجيل",
+            "description": "استخدم حساب OceanExpert مفعلاً بعد مراجعة إدارية قد تستغرق بضعة أيام عمل. أُلغيت حسابات الدخول القديمة إلى OceanTeacher. تتوقف الملفات والأنشطة على التسجيل، وقد تلزم عملية اختيار أو انتساب أو مفتاح. أمثلة الدورات المعلنة عبر الإنترنت بلا رسوم دراسية؛ السفر والإقامة منفصلان."
+          },
+          {
+            "id": "guidelines-download",
+            "label": "إرشادات إدارة الدورات",
+            "description": "نزّل ملف PDF العام للإصدار 5.0 (2026) عبر OceanExpert. يوضح التأليف والمراجعة والتسجيل والتقييم وسياسة البيانات، ولم يتطلب حساباً."
+          },
+          {
+            "id": "documentation-request",
+            "label": "طلب وثائق إضافية",
+            "description": "تتيح السياسة طلب وثائق OTGA وبياناتها الوصفية مثل نماذج التقييم. تواصل مع الأمانة عبر بيانات الاتصال في المنصة؛ وتقرر الخدمة الإتاحة والشروط. لا يتيح ذلك وصولاً عاماً إلى قاعدة المشاركين الكاملة."
+          },
+          {
+            "id": "course-contribution",
+            "label": "اقتراح محتوى الدورات وتطويره",
+            "description": "تقدم برامج اللجنة ومراكز التدريب والشركاء المقترحات إلى الأمانة لتحديد الأولوية واعتمادها. يُعد المنسقون والمدربون المعتمدون المحتوى ويرفعونه باستخدام قوالب Moodle. يتطلب اعتماد المراكز ترشيحاً ومراجعة مؤسسية؛ وتُحدد التكاليف التعاقدية بصورة منفصلة."
+          },
+          {
+            "id": "learner-submission",
+            "label": "واجبات المتعلمين وملاحظاتهم",
+            "description": "يرسل المتعلمون المسجلون الواجبات والاختبارات والملاحظات عبر أنشطة الدورة. يلزم اعتماد الحساب والتسجيل في الدورة. تُعالج المشاركات وسجلات النشاط للتعلم والتقييم، ولا تُنشر تلقائياً كموارد مفتوحة."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "contributing-facilitators-2024-2025",
+            "description": "الحد الأدنى المبلغ عنه: ساهم أكثر من 650 مدرباً وخبيراً ومحاضراً وموظف دعم في تطوير الدورات وتقديمها خلال 2024–10 نوفمبر 2025. تمثل القيمة 650 عبارة «أكثر من 650» وليست حصراً دقيقاً لأشخاص فريدين؛ لم تُحدد إزالة التكرار."
+          }
+        ],
+        "researchGaps": {
+          "data": "لم يُعثر على عدد موثق للدورات أو الموارد المخزنة أو حجم المنصة بالبايت. تصف الدورات المقدمة وساعات التعلم النشاط، لا محتويات قاعدة البيانات.",
+          "usage": "يورد التقرير أعداد المدربين المساهمين والمتعلمين والمستخدمين ونسب الإتمام بنطاقات مختلفة. لم يُعثر على إجمالي للجلسات أو التنزيلات أو الاستشهادات؛ أعداد المتعلمين والمستخدمين ليست أعداد جلسات.",
+          "standards": "لم يُتحقق من معيار بيانات ضمن المفردات المعتمدة. تتعلق ISO 29993 بخدمات التعلم وCreative Commons بالترخيص. استخدام SCORM وأنشطة H5P موثق لكنهما خارج المفردات المعتمدة. لا يحدد إدخال ODIS 359 معيار بيانات وصفية أو رابط حصاد.",
+          "access": "لم تُتحقق واجهة آلية عامة لـOceanTeacher أو تصدير شامل أو مسار حصاد ODIS حي. لا تثبت إمكانات Moodle أو واجهة OceanExpert المنفصلة وجود مسار لـOTGA. لم تُفحص محتويات الدورات خلف تسجيل الدخول. بعض وثائق البرنامج عامة رغم صياغة السياسة الأقدم بأنها عند الطلب."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "OceanTeacher全球学院",
+      "summary": "政府间海洋学委员会全球培训平台，涵盖海洋科学、数据管理与政策，通过区域中心开展培训并使用OceanExpert报名。",
+      "description": "OceanTeacher全球学院（OTGA）是联合国教科文组织政府间海洋学委员会的全球培训计划及共享学习平台，涵盖海洋科学、服务、数据管理和政策。其秘书处位于奥斯坦德的IODE项目办公室，协调区域培训中心、专题培训中心及合作培训机构。培训采用面授、混合式、教师辅导在线教学和自主学习等方式，主要使用英语、法语、葡萄牙语和西班牙语。IODE报告其网络有17个中心；FUST报告2015至2025年共向130个委员会成员国的逾15,000名学员提供250多门次课程。这些数字表示该时段的培训活动总量，并非当前储存的课程数量。\n\n平台包含课程介绍、学习文档、多媒体及考核。公开目录预览提供课程目标、主办机构、语言和报名信息。学习须使用经管理员审核激活的OceanExpert账户；部分课程还要求筛选、机构隶属资格或选课密钥。学员及教师信息归档于OceanExpert，并与Moodle校友系统关联。完整记录仅供秘书处和IODE技术支持人员访问，部分结业信息和个人资料公开。\n\n平台宣布于2025年6月更新ISO 29993:2017学习服务认证。2026年课程指南支持SCORM演示内容和H5P活动。指南与首页注明，除另有说明外采用CC BY-NC-SA 4.0许可，但指南另一段将其与CC BY 4.0混用。再次使用前应检查每项资源及第三方材料的具体许可。",
+      "details": {
+        "aliases": [
+          "OTGA",
+          "OceanTeacher"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "classroom",
+            "catalogue",
+            "login",
+            "data-policy",
+            "privacy",
+            "guidelines",
+            "fust2",
+            "iode-training"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "course-catalogue",
+              "description": "公开课程介绍包括主办方、教学语言、学习目标和选课条件；已举办课程总量不等于库存记录数。"
+            },
+            {
+              "id": "learning-documents",
+              "description": "课程阅读材料、演示文稿、练习及计划指南；部分学员及考核文档受限或须申请。"
+            },
+            {
+              "id": "learning-media",
+              "description": "Moodle课程中的图像、音频、视频及互动学习活动；访问取决于课程与选课状态。"
+            },
+            {
+              "id": "html-pages",
+              "description": "HTML课程目录预览及浏览器学习页面；Moodle是学习界面，而非数据格式。"
+            },
+            {
+              "id": "pdf-guidance",
+              "description": "2026年课程管理指南通过OceanExpert公开提供PDF下载；这并不表示所有课程均支持PDF导出。"
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "catalogue-browse",
+            "label": "公开课程目录",
+            "description": "按年份、主题或语言浏览详细预览。2026年目录无需账户即可访问；打开实际课程可能要求登录。"
+          },
+          {
+            "id": "enrolled-learning",
+            "label": "选课后的学习及课程文件",
+            "description": "使用经管理员审核激活的OceanExpert账户，审核可能需要数个工作日。旧OceanTeacher登录已停用。文件与活动取决于选课状态，部分课程要求筛选、机构资格或密钥。当前宣传的在线示例课程不收学费；交通和住宿另计。"
+          },
+          {
+            "id": "guidelines-download",
+            "label": "课程管理指南",
+            "description": "通过OceanExpert下载公开的第5.0版PDF（2026年），内容涵盖编写、审核、选课、考核和数据政策；该文档无需账户。"
+          },
+          {
+            "id": "documentation-request",
+            "label": "申请补充文档",
+            "description": "数据政策允许申请OTGA文档和元数据，例如评估表。可通过课堂网站联系方式联系秘书处，由服务方确定提供条件。这不是对完整学员数据库的公开访问。"
+          },
+          {
+            "id": "course-contribution",
+            "label": "提出并编写课程内容",
+            "description": "委员会计划、培训中心及合作机构向秘书处提交课程提案，由其排序并批准。获准协调员和教师按Moodle模板编写上传内容。中心认定须经机构提名及审核，属于受管理的投稿流程，合同费用另定。"
+          },
+          {
+            "id": "learner-submission",
+            "label": "学员作业及反馈",
+            "description": "已选课学员通过课程活动提交作业、测验和反馈，需要账户批准及对应课程选课资格。提交内容和活动记录用于学习考核，不会自动公开发布。"
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "contributing-facilitators-2024-2025",
+            "description": "报告的下限：2024年至2025年11月10日期间，650多名专业专家、教师及支持人员参与课程开发和授课。数值650表示“超过650”，并非精确的不重复人数普查；报告未说明去重方法。"
+          }
+        ],
+        "researchGaps": {
+          "data": "未核实存储的课程或学习资源总数及存储字节量。已举办课程和学时反映活动，不代表数据库库存。",
+          "usage": "报告中的贡献教师、学员、用户及结业率采用不同统计范围。未找到会话、下载或引用总数；学员或用户数不等于会话数。",
+          "standards": "未验证当前获准数据标准的适用性。ISO 29993针对学习服务，Creative Commons针对许可。SCORM和H5P虽有文档支持，但无获准词汇条目。ODIS第359条未注明元数据标准，也未提供采集地址。",
+          "access": "未核实OceanTeacher公开机器接口、批量导出或有效ODIS采集通道。Moodle的能力及OceanExpert独立接口不能证明OTGA通道存在。未检查登录后的课程内容。尽管旧政策称须申请，部分计划文档目前已公开。"
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Глобальная академия OceanTeacher",
+      "summary": "Глобальная платформа МОК ЮНЕСКО для обучения наукам об океане, управлению данными и политике, с региональными центрами и регистрацией через OceanExpert.",
+      "description": "OceanTeacher Global Academy (OTGA) — глобальная учебная программа и общая платформа МОК ЮНЕСКО для обучения наукам об океане, океаническим службам, управлению морскими данными и политике. Секретариат в проектном офисе МОК по IODE в Остенде координирует региональные и специализированные учебные центры и партнёрские организации. Обучение проводится очно, в смешанном формате, онлайн с преподавателем и самостоятельно, преимущественно на английском, французском, португальском и испанском языках. IODE сообщает о сети из 17 центров; по данным FUST, в 2015–2025 годах проведено более 250 курсов для более 15 000 слушателей из 130 государств — членов МОК. Это показатели деятельности за указанный период, а не текущее число хранимых курсов.\n\nПлатформа содержит описания курсов, учебные документы, мультимедиа и задания. Открытые страницы каталога указывают цели, организаторов, язык и порядок записи. Для обучения нужна одобренная администратором учётная запись OceanExpert; отдельные курсы также требуют отбора, принадлежности к организации или ключа записи. Сведения о слушателях и преподавателях архивируются в OceanExpert и связаны с системой выпускников Moodle. Полные записи доступны только секретариату и технической поддержке IODE; часть сведений о завершении курсов и профилях открыта.\n\nВ июне 2025 года платформа сообщила о продлении сертификации учебных услуг ISO 29993:2017. Руководство 2026 года предусматривает презентации SCORM и задания H5P. На главной странице и в руководстве указана лицензия CC BY-NC-SA 4.0, если не оговорено иное, но другой фрагмент смешивает её с CC BY 4.0. Перед повторным использованием следует проверить лицензию каждого ресурса, включая сторонние материалы.",
+      "details": {
+        "aliases": [
+          "OTGA",
+          "OceanTeacher"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "classroom",
+            "catalogue",
+            "login",
+            "data-policy",
+            "privacy",
+            "guidelines",
+            "fust2",
+            "iode-training"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "course-catalogue",
+              "description": "Открытые описания курсов, организаторов, языков, результатов обучения и условий записи; число проведённых курсов не равно размеру каталога."
+            },
+            {
+              "id": "learning-documents",
+              "description": "Учебные тексты, презентации, упражнения и руководство программы. Часть документов об участниках и оценивании ограничена в доступе или выдаётся по запросу."
+            },
+            {
+              "id": "learning-media",
+              "description": "Изображения, аудио, видео и интерактивные задания в Moodle; доступ зависит от курса и записи."
+            },
+            {
+              "id": "html-pages",
+              "description": "HTML-страницы каталога и обучения в браузере. Moodle — учебный интерфейс, а не формат данных."
+            },
+            {
+              "id": "pdf-guidance",
+              "description": "Руководство по управлению курсами 2026 года открыто скачивается в PDF через OceanExpert; это не означает возможность экспорта любого курса в PDF."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "catalogue-browse",
+            "label": "Открытый каталог курсов",
+            "description": "Просматривайте подробные описания по году, теме или языку. Каталог 2026 года доступен без учётной записи; открытие самого курса может потребовать входа."
+          },
+          {
+            "id": "enrolled-learning",
+            "label": "Обучение и файлы после записи",
+            "description": "Используйте OceanExpert после одобрения администратором; проверка может занять несколько рабочих дней. Старые логины OceanTeacher отключены. Доступ к файлам и заданиям зависит от записи; возможны отбор, требование аффилиации или ключ. Объявленные онлайн-курсы бесплатны; поездка и проживание оплачиваются отдельно."
+          },
+          {
+            "id": "guidelines-download",
+            "label": "Руководство по управлению курсами",
+            "description": "Скачайте открытый PDF версии 5.0 (2026) через OceanExpert. Он описывает подготовку, проверку, запись, оценивание и политику данных; учётная запись не требовалась."
+          },
+          {
+            "id": "documentation-request",
+            "label": "Запрос дополнительной документации",
+            "description": "Политика допускает запросы документов и метаданных OTGA, например форм оценки. Обратитесь в секретариат по контактам платформы; условия определяет служба. Это не открытый доступ к полной базе участников."
+          },
+          {
+            "id": "course-contribution",
+            "label": "Предложение и подготовка курсов",
+            "description": "Программы МОК, центры и партнёры направляют предложения секретариату для определения приоритета и одобрения. Уполномоченные координаторы и преподаватели создают и загружают материалы по шаблонам Moodle. Центрам требуются институциональное выдвижение и проверка; договорные расходы определяются отдельно."
+          },
+          {
+            "id": "learner-submission",
+            "label": "Задания и обратная связь слушателей",
+            "description": "Записанные слушатели отправляют задания, тесты и отзывы через учебные активности. Нужны одобренная запись и зачисление на курс. Материалы используются для обучения и оценки, без автоматической открытой публикации."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "contributing-facilitators-2024-2025",
+            "description": "Опубликованная нижняя граница: более 650 экспертов, преподавателей и сотрудников поддержки участвовали в подготовке и проведении курсов за 2024 год — 10 ноября 2025 года. Значение 650 передаёт «более 650», а не точную численность уникальных лиц; устранение повторов не описано."
+          }
+        ],
+        "researchGaps": {
+          "data": "Не найден подтверждённый объём хранимых курсов, ресурсов или данных в байтах. Число проведённых курсов и учебных часов характеризует деятельность, а не содержимое базы.",
+          "usage": "Отчёт приводит преподавателей, слушателей, пользователей и доли завершения с разным охватом. Итоги сеансов, скачиваний и цитирований не найдены; пользователи не равны сеансам.",
+          "standards": "Применение стандарта данных из утверждённого словаря не подтверждено. ISO 29993 относится к учебным услугам, Creative Commons — к лицензиям. SCORM и H5P описаны, но отсутствуют в утверждённом словаре. Запись ODIS 359 не указывает стандарт метаданных и адрес сбора.",
+          "access": "Не подтверждены открытый машинный API OceanTeacher, массовый экспорт или действующий сбор ODIS. Возможности Moodle и отдельный API OceanExpert не доказывают маршрут OTGA. Содержание за входом не проверялось. Часть документов открыта, несмотря на прежнее описание выдачи по запросу."
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-ioc-unesco-iode-governs-oceanteacher",
+      "sourceNodeId": "ioc-unesco-iode",
+      "targetNodeId": "oceanteacher",
+      "kind": "governs",
+      "note": "IODE provides programme-level oversight of OTGA: the fifth Steering Group report records submission of the workplan and budget to the IODE Committee, instructions from IODE-28 to programme components, and a budget approved by IODE-28. Scope is IODE programme oversight; the 2026 IOC reform and future organisational transition are not treated as completed changes.",
+      "properties": {
+        "scope": "IODE programme workplan, budget approval and committee oversight",
+        "period": "2025–2026 documented programme arrangements",
+        "status": "documented; future IOC reform not assumed",
+        "sourceRefs": [
+          "sg5-report",
+          "iode-training"
+        ]
+      },
+      "sources": {
+        "sg5-report": {
+          "id": "sg5-report",
+          "url": "https://oceanexpert.org/downloadFile/61264",
+          "title": {
+            "en": "Fifth OTGA Steering Group session: final report, November 2025",
+            "fr": "Cinquième session du groupe directeur OTGA : rapport final, novembre 2025",
+            "es": "Quinta reunión del Grupo Directivo de OTGA: informe final, noviembre de 2025",
+            "ar": "الدورة الخامسة للفريق التوجيهي لـOTGA: التقرير النهائي، نوفمبر 2025",
+            "zh": "OTGA指导组第五届会议：2025年11月最终报告",
+            "ru": "Пятая сессия руководящей группы OTGA: итоговый отчёт, ноябрь 2025 года"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "iode-training": {
+          "id": "iode-training",
+          "url": "https://iode.org/actions/capacity-development/",
+          "title": {
+            "en": "IODE capacity development and OceanTeacher programme",
+            "fr": "Développement des capacités IODE et programme OceanTeacher",
+            "es": "Desarrollo de capacidades de IODE y programa OceanTeacher",
+            "ar": "تنمية القدرات في IODE وبرنامج OceanTeacher",
+            "zh": "IODE能力建设及OceanTeacher计划",
+            "ru": "Развитие потенциала IODE и программа OceanTeacher"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ioc-unesco-iode-operates-oceanteacher",
+      "sourceNodeId": "ioc-unesco-iode",
+      "targetNodeId": "oceanteacher",
+      "kind": "operates",
+      "note": "The OTGA Secretariat is hosted by the IOC Project Office for IODE in Oostende. Published 2026 guidelines assign it management of learning services, hosting the e-learning platform, technical support, course quality assurance, administration and reporting. Regional delivery is coordinated with training centres and affiliated partners.",
+      "properties": {
+        "scope": "OTGA Secretariat and shared Moodle learning platform",
+        "status": "current in 2026 guidelines",
+        "sourceRefs": [
+          "guidelines",
+          "iode-training"
+        ]
+      },
+      "sources": {
+        "guidelines": {
+          "id": "guidelines",
+          "url": "https://oceanexpert.org/downloadFile/61311",
+          "title": {
+            "en": "OceanTeacher Course Management Guidelines, version 5.0 (2026)",
+            "fr": "Directives de gestion des cours OceanTeacher, version 5.0 (2026)",
+            "es": "Directrices de gestión de cursos OceanTeacher, versión 5.0 (2026)",
+            "ar": "إرشادات إدارة دورات OceanTeacher، الإصدار 5.0 (2026)",
+            "zh": "OceanTeacher课程管理指南，第5.0版（2026年）",
+            "ru": "Руководство по управлению курсами OceanTeacher, версия 5.0 (2026)"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "iode-training": {
+          "id": "iode-training",
+          "url": "https://iode.org/actions/capacity-development/",
+          "title": {
+            "en": "IODE capacity development and OceanTeacher programme",
+            "fr": "Développement des capacités IODE et programme OceanTeacher",
+            "es": "Desarrollo de capacidades de IODE y programa OceanTeacher",
+            "ar": "تنمية القدرات في IODE وبرنامج OceanTeacher",
+            "zh": "IODE能力建设及OceanTeacher计划",
+            "ru": "Развитие потенциала IODE и программа OceanTeacher"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-government-of-flanders-funds-oceanteacher",
+      "sourceNodeId": "government-of-flanders",
+      "targetNodeId": "oceanteacher",
+      "kind": "funds",
+      "note": "Flanders financed OTGA through the UNESCO/Flanders Trust Fund for Science. The SG-V report identifies OTGA2 as major funding support during its last four years, finalised at the end of 2024 with the narrative report approved in April 2025. The 27 May 2024 co-design course announcement also identifies UNESCO/Flanders FUST support for that named OTGA-associated course. This edge records scoped historical support, not an ongoing unrestricted 2026 operating grant.",
+      "properties": {
+        "scope": "FUST OTGA2 project support and 2024 Ocean Decade co-design course",
+        "period": "OTGA2 through December 2024; co-design course announced May 2024",
+        "status": "historical documented financial support",
+        "sourceRefs": [
+          "fust2",
+          "sg5-report",
+          "codesign"
+        ]
+      },
+      "sources": {
+        "fust2": {
+          "id": "fust2",
+          "url": "https://fust.iode.org/en/otga2",
+          "title": {
+            "en": "FUST: OceanTeacher Global Academy 2 results and funding transition",
+            "fr": "FUST : résultats d’OceanTeacher Global Academy 2 et évolution du financement",
+            "es": "FUST: resultados de OceanTeacher Global Academy 2 y transición financiera",
+            "ar": "FUST: نتائج OceanTeacher Global Academy 2 وانتقال التمويل",
+            "zh": "FUST：OceanTeacher全球学院第二阶段成果与资金转型",
+            "ru": "FUST: итоги OceanTeacher Global Academy 2 и переход к новому финансированию"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "sg5-report": {
+          "id": "sg5-report",
+          "url": "https://oceanexpert.org/downloadFile/61264",
+          "title": {
+            "en": "Fifth OTGA Steering Group session: final report, November 2025",
+            "fr": "Cinquième session du groupe directeur OTGA : rapport final, novembre 2025",
+            "es": "Quinta reunión del Grupo Directivo de OTGA: informe final, noviembre de 2025",
+            "ar": "الدورة الخامسة للفريق التوجيهي لـOTGA: التقرير النهائي، نوفمبر 2025",
+            "zh": "OTGA指导组第五届会议：2025年11月最终报告",
+            "ru": "Пятая сессия руководящей группы OTGA: итоговый отчёт, ноябрь 2025 года"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "codesign": {
+          "id": "codesign",
+          "url": "https://oceandecade.org/fr/news/ocean-decade-launches-new-online-course-on-co-design/",
+          "title": {
+            "en": "UNESCO-IOC launches the Ocean Decade co-design course, 27 May 2024",
+            "fr": "La COI-UNESCO lance le cours de co-conception de la Décennie, 27 mai 2024",
+            "es": "La COI-UNESCO lanza el curso de codiseño del Decenio, 27 de mayo de 2024",
+            "ar": "إطلاق دورة التصميم المشترك لعقد المحيطات، 27 مايو 2024",
+            "zh": "教科文组织政府间海洋学委员会发布海洋十年共同设计课程，2024年5月27日",
+            "ru": "МОК ЮНЕСКО запускает курс совместного проектирования Десятилетия океана, 27 мая 2024 года"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ioc-unesco-funds-oceanteacher",
+      "sourceNodeId": "ioc-unesco",
+      "targetNodeId": "oceanteacher",
+      "kind": "funds",
+      "note": "IOC regular-budget support for OTGA core activities is explicitly documented. The November 2025 Steering Group report distinguishes approximately US$150,000 requested in 2025 from US$70,000 actually available and used after UNESCO expenditure restrictions. FUST identifies the subsequent IODE programme as funded by IOC/UNESCO. The US$70,000 is actual reported 2025 core funding, not the platform’s total budget; estimated extra-budgetary resources are separate.",
+      "properties": {
+        "scope": "OTGA core learning-platform and programme activities",
+        "period": "2025 actual funds used; programme funding transition documented",
+        "status": "documented financial support",
+        "amountUsd": 70000,
+        "sourceRefs": [
+          "sg5-report",
+          "fust2"
+        ]
+      },
+      "sources": {
+        "sg5-report": {
+          "id": "sg5-report",
+          "url": "https://oceanexpert.org/downloadFile/61264",
+          "title": {
+            "en": "Fifth OTGA Steering Group session: final report, November 2025",
+            "fr": "Cinquième session du groupe directeur OTGA : rapport final, novembre 2025",
+            "es": "Quinta reunión del Grupo Directivo de OTGA: informe final, noviembre de 2025",
+            "ar": "الدورة الخامسة للفريق التوجيهي لـOTGA: التقرير النهائي، نوفمبر 2025",
+            "zh": "OTGA指导组第五届会议：2025年11月最终报告",
+            "ru": "Пятая сессия руководящей группы OTGA: итоговый отчёт, ноябрь 2025 года"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "fust2": {
+          "id": "fust2",
+          "url": "https://fust.iode.org/en/otga2",
+          "title": {
+            "en": "FUST: OceanTeacher Global Academy 2 results and funding transition",
+            "fr": "FUST : résultats d’OceanTeacher Global Academy 2 et évolution du financement",
+            "es": "FUST: resultados de OceanTeacher Global Academy 2 y transición financiera",
+            "ar": "FUST: نتائج OceanTeacher Global Academy 2 وانتقال التمويل",
+            "zh": "FUST：OceanTeacher全球学院第二阶段成果与资金转型",
+            "ru": "FUST: итоги OceanTeacher Global Academy 2 и переход к новому финансированию"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-medin-publishes-to-oceanteacher",
+      "sourceNodeId": "medin",
+      "targetNodeId": "oceanteacher",
+      "kind": "publishes_to",
+      "note": "MEDIN supplies the named Marine Data Management, Governance and the MEDIN toolset courses hosted by OceanTeacher. MEDIN’s own current workshop page lists the September and October 2026 and February 2027 editions and describes the chapters, quizzes and assignments on OceanTeacher. The 2026 catalogue identifies MEDIN as organiser with OTGA. This is publication of course content, not transfer of the MEDIN marine-data catalogue.",
+      "properties": {
+        "scope": "MEDIN marine-data-management learning courses",
+        "period": "2026 courses and announced February 2027 edition",
+        "status": "current published course offerings",
+        "artifact": "Course chapters, quizzes, assignments and course descriptions",
+        "sourceRefs": [
+          "medin-training",
+          "catalogue"
+        ]
+      },
+      "sources": {
+        "medin-training": {
+          "id": "medin-training",
+          "url": "https://medin.org.uk/data-standards/medin-workshops",
+          "title": {
+            "en": "MEDIN workshops hosted by OceanTeacher",
+            "fr": "Ateliers MEDIN hébergés par OceanTeacher",
+            "es": "Talleres MEDIN alojados en OceanTeacher",
+            "ar": "ورش MEDIN المستضافة على OceanTeacher",
+            "zh": "OceanTeacher承载的MEDIN培训班",
+            "ru": "Семинары MEDIN на платформе OceanTeacher"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "catalogue": {
+          "id": "catalogue",
+          "url": "https://classroom.oceanteacher.org/course/index.php?categoryid=198&perpage=all",
+          "title": {
+            "en": "OceanTeacher 2026 course catalogue",
+            "fr": "Catalogue des cours OceanTeacher 2026",
+            "es": "Catálogo de cursos OceanTeacher 2026",
+            "ar": "دليل دورات OceanTeacher لعام 2026",
+            "zh": "OceanTeacher 2026年课程目录",
+            "ru": "Каталог курсов OceanTeacher на 2026 год"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-flanders-marine-institute-publishes-to-oceanteacher",
+      "sourceNodeId": "flanders-marine-institute",
+      "targetNodeId": "oceanteacher",
+      "kind": "publishes_to",
+      "note": "The final SG-V report names Flanders Marine Institute (VLIZ) as the leading affiliated organisation for the IOC/OTGA/VLIZ/VLIR course on the Nagoya Protocol and access and benefit-sharing under the CBD on 23 February 2024. It also lists the IOC/OTGA/VLIZ Biological Data Management self-paced course in May–August 2024. The scope is named learning content delivered through OTGA, not an inferred general data feed.",
+      "properties": {
+        "scope": "Nagoya Protocol/ABS and Biological Data Management course content",
+        "period": "2024 delivered courses",
+        "status": "historical publication documented",
+        "sourceRefs": [
+          "sg5-report"
+        ]
+      },
+      "sources": {
+        "sg5-report": {
+          "id": "sg5-report",
+          "url": "https://oceanexpert.org/downloadFile/61264",
+          "title": {
+            "en": "Fifth OTGA Steering Group session: final report, November 2025",
+            "fr": "Cinquième session du groupe directeur OTGA : rapport final, novembre 2025",
+            "es": "Quinta reunión del Grupo Directivo de OTGA: informe final, noviembre de 2025",
+            "ar": "الدورة الخامسة للفريق التوجيهي لـOTGA: التقرير النهائي، نوفمبر 2025",
+            "zh": "OTGA指导组第五届会议：2025年11月最终报告",
+            "ru": "Пятая сессия руководящей группы OTGA: итоговый отчёт, ноябрь 2025 года"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ioc-unesco-iode-publishes-to-oceanteacher",
+      "sourceNodeId": "ioc-unesco-iode",
+      "targetNodeId": "oceanteacher",
+      "kind": "publishes_to",
+      "note": "IODE delivers its marine-data-management learning content through OTGA. The fifth Steering Group report lists Ocean Data Management courses led by RTC Belgium and the IOC IODE/OBIS course Contributing and publishing datasets to OBIS. The 2026 catalogue hosts the updated OBIS course under named OBIS instructors and coordinator. These are courses published by the IOC/IODE programme; teaching OBIS is not itself an OBIS dataset synchronisation.",
+      "properties": {
+        "scope": "IODE and OBIS training materials hosted in OceanTeacher",
+        "period": "2024–2026 documented course editions",
+        "status": "published courses; enrolment restrictions vary",
+        "sourceRefs": [
+          "sg5-report",
+          "catalogue"
+        ]
+      },
+      "sources": {
+        "sg5-report": {
+          "id": "sg5-report",
+          "url": "https://oceanexpert.org/downloadFile/61264",
+          "title": {
+            "en": "Fifth OTGA Steering Group session: final report, November 2025",
+            "fr": "Cinquième session du groupe directeur OTGA : rapport final, novembre 2025",
+            "es": "Quinta reunión del Grupo Directivo de OTGA: informe final, noviembre de 2025",
+            "ar": "الدورة الخامسة للفريق التوجيهي لـOTGA: التقرير النهائي، نوفمبر 2025",
+            "zh": "OTGA指导组第五届会议：2025年11月最终报告",
+            "ru": "Пятая сессия руководящей группы OTGA: итоговый отчёт, ноябрь 2025 года"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "catalogue": {
+          "id": "catalogue",
+          "url": "https://classroom.oceanteacher.org/course/index.php?categoryid=198&perpage=all",
+          "title": {
+            "en": "OceanTeacher 2026 course catalogue",
+            "fr": "Catalogue des cours OceanTeacher 2026",
+            "es": "Catálogo de cursos OceanTeacher 2026",
+            "ar": "دليل دورات OceanTeacher لعام 2026",
+            "zh": "OceanTeacher 2026年课程目录",
+            "ru": "Каталог курсов OceanTeacher на 2026 год"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-norad-funds-oceanteacher",
+      "sourceNodeId": "norad",
+      "targetNodeId": "oceanteacher",
+      "kind": "funds",
+      "note": "Norad financial support is explicitly named for development of the OTGA-hosted OBIS course updated for 2025/2026, alongside LifeWatch ERIC. UNESCO-IOC also names Norad among funders of the Ocean Decade co-design course launched 27 May 2024. ADAPT’s 2025 catalogue description identifies financial support through the Norad–UNESCO Programme Cooperation Agreement for its joint ocean-best-practices training. These are named course/project scopes; amounts and payment dates to OTGA are not published.",
+      "properties": {
+        "scope": "OBIS data-publishing course, 2024 co-design course and 2025 ADAPT training",
+        "period": "2024–2026 course/project reporting",
+        "status": "documented financial support; no platform-wide grant amount inferred",
+        "sourceRefs": [
+          "catalogue",
+          "codesign",
+          "adapt"
+        ]
+      },
+      "sources": {
+        "catalogue": {
+          "id": "catalogue",
+          "url": "https://classroom.oceanteacher.org/course/index.php?categoryid=198&perpage=all",
+          "title": {
+            "en": "OceanTeacher 2026 course catalogue",
+            "fr": "Catalogue des cours OceanTeacher 2026",
+            "es": "Catálogo de cursos OceanTeacher 2026",
+            "ar": "دليل دورات OceanTeacher لعام 2026",
+            "zh": "OceanTeacher 2026年课程目录",
+            "ru": "Каталог курсов OceanTeacher на 2026 год"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "codesign": {
+          "id": "codesign",
+          "url": "https://oceandecade.org/fr/news/ocean-decade-launches-new-online-course-on-co-design/",
+          "title": {
+            "en": "UNESCO-IOC launches the Ocean Decade co-design course, 27 May 2024",
+            "fr": "La COI-UNESCO lance le cours de co-conception de la Décennie, 27 mai 2024",
+            "es": "La COI-UNESCO lanza el curso de codiseño del Decenio, 27 de mayo de 2024",
+            "ar": "إطلاق دورة التصميم المشترك لعقد المحيطات، 27 مايو 2024",
+            "zh": "教科文组织政府间海洋学委员会发布海洋十年共同设计课程，2024年5月27日",
+            "ru": "МОК ЮНЕСКО запускает курс совместного проектирования Десятилетия океана, 27 мая 2024 года"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "adapt": {
+          "id": "adapt",
+          "url": "https://classroom.oceanteacher.org/course/search.php?lang=en&search=ADAPT&perpage=all",
+          "title": {
+            "en": "ADAPT ocean-best-practices course: 2025 training and funding",
+            "fr": "Cours ADAPT sur les bonnes pratiques océaniques : formation et financement en 2025",
+            "es": "Curso ADAPT de mejores prácticas oceánicas: formación y financiación en 2025",
+            "ar": "دورة ADAPT لأفضل ممارسات المحيطات: التدريب والتمويل في 2025",
+            "zh": "ADAPT海洋最佳实践课程：2025年培训及资助",
+            "ru": "Курс ADAPT по передовым океаническим практикам: обучение и финансирование в 2025 году"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-lifewatch-eric-funds-oceanteacher",
+      "sourceNodeId": "lifewatch-eric",
+      "targetNodeId": "oceanteacher",
+      "kind": "funds",
+      "note": "The public OTGA 2026 catalogue explicitly credits LifeWatch ERIC and Norad with financial support for development of Contributing and publishing datasets to OBIS (course 1196), updated for 2025/2026. The course is for invited OBIS-node staff/collaborators and opens from December 2025 into December 2026; the catalogue disagrees on 15 versus 31 December closing day. This is course-development funding, not general OTGA operating support.",
+      "properties": {
+        "scope": "Development of OBIS course 1196, 2025/2026 update",
+        "period": "2025/2026 edition",
+        "status": "documented financial support; amount and payment date not stated",
+        "sourceRefs": [
+          "catalogue"
+        ]
+      },
+      "sources": {
+        "catalogue": {
+          "id": "catalogue",
+          "url": "https://classroom.oceanteacher.org/course/index.php?categoryid=198&perpage=all",
+          "title": {
+            "en": "OceanTeacher 2026 course catalogue",
+            "fr": "Catalogue des cours OceanTeacher 2026",
+            "es": "Catálogo de cursos OceanTeacher 2026",
+            "ar": "دليل دورات OceanTeacher لعام 2026",
+            "zh": "OceanTeacher 2026年课程目录",
+            "ru": "Каталог курсов OceanTeacher на 2026 год"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-marine-institute-ireland-funds-oceanteacher",
+      "sourceNodeId": "marine-institute-ireland",
+      "targetNodeId": "oceanteacher",
+      "kind": "funds",
+      "note": "The UNESCO-IOC announcement dated 27 May 2024 explicitly says the Ocean Decade co-design training course developed with OTGA and ZMT is funded by the Government of Ireland through its Marine Institute, alongside FUST and Norad. The Institute is represented as the named funding channel. The evidence supports this course scope and launch period, not a continuing general OTGA grant or a separate duplicate direct government edge.",
+      "properties": {
+        "scope": "Ocean Decade self-paced co-design course",
+        "period": "Launched 27 May 2024",
+        "status": "documented course funding through Marine Institute",
+        "sourceRefs": [
+          "codesign"
+        ]
+      },
+      "sources": {
+        "codesign": {
+          "id": "codesign",
+          "url": "https://oceandecade.org/fr/news/ocean-decade-launches-new-online-course-on-co-design/",
+          "title": {
+            "en": "UNESCO-IOC launches the Ocean Decade co-design course, 27 May 2024",
+            "fr": "La COI-UNESCO lance le cours de co-conception de la Décennie, 27 mai 2024",
+            "es": "La COI-UNESCO lanza el curso de codiseño del Decenio, 27 de mayo de 2024",
+            "ar": "إطلاق دورة التصميم المشترك لعقد المحيطات، 27 مايو 2024",
+            "zh": "教科文组织政府间海洋学委员会发布海洋十年共同设计课程，2024年5月27日",
+            "ru": "МОК ЮНЕСКО запускает курс совместного проектирования Десятилетия океана, 27 мая 2024 года"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-leibniz-centre-for-tropical-marine-research-publishes-to-oceanteacher",
+      "sourceNodeId": "leibniz-centre-for-tropical-marine-research",
+      "targetNodeId": "oceanteacher",
+      "kind": "publishes_to",
+      "note": "UNESCO-IOC identifies ZMT as co-developer, with OTGA and the Ocean Decade Capacity Development Facility, of the six-module self-paced co-design course launched on 27 May 2024. The scope is the named learning resource made available through the OTGA training arrangement; no general ZMT research-data transfer is asserted.",
+      "properties": {
+        "scope": "Ocean Decade co-design learning course",
+        "period": "May 2024 launch",
+        "status": "historical course co-development and publication",
+        "sourceRefs": [
+          "codesign"
+        ]
+      },
+      "sources": {
+        "codesign": {
+          "id": "codesign",
+          "url": "https://oceandecade.org/fr/news/ocean-decade-launches-new-online-course-on-co-design/",
+          "title": {
+            "en": "UNESCO-IOC launches the Ocean Decade co-design course, 27 May 2024",
+            "fr": "La COI-UNESCO lance le cours de co-conception de la Décennie, 27 mai 2024",
+            "es": "La COI-UNESCO lanza el curso de codiseño del Decenio, 27 de mayo de 2024",
+            "ar": "إطلاق دورة التصميم المشترك لعقد المحيطات، 27 مايو 2024",
+            "zh": "教科文组织政府间海洋学委员会发布海洋十年共同设计课程，2024年5月27日",
+            "ru": "МОК ЮНЕСКО запускает курс совместного проектирования Десятилетия океана, 27 мая 2024 года"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-oceanteacher-syncs-to-oceanexpert",
+      "sourceNodeId": "oceanteacher",
+      "targetNodeId": "oceanexpert",
+      "kind": "syncs_to",
+      "note": "OTGA’s October 2024 data policy, repeated in the published 2026 guidelines, explicitly states that participant, facilitator and expert information is archived in the IODE OceanExpert database and linked to the OTGA Moodle alumni system. Full records are accessible only to the OTGA Secretariat and IODE IT support; course-completion information and profiles have a public subset. This edge describes that documented archival/linked-data flow. It does not assert a public bulk export, automatic refresh cadence, bidirectional replication or unrestricted personal-data access.",
+      "properties": {
+        "scope": "OTGA participation, facilitator and alumni/completion data archived in OceanExpert",
+        "period": "October 2024 policy reaffirmed in 2026 guidelines",
+        "status": "documented linked archival integration; transport and cadence unspecified",
+        "transferMethod": "Archival and linked alumni records; technical mechanism not published",
+        "sourceRefs": [
+          "data-policy",
+          "guidelines"
+        ]
+      },
+      "sources": {
+        "data-policy": {
+          "id": "data-policy",
+          "url": "https://classroom.oceanteacher.org/admin/tool/policy/view.php?versionid=8",
+          "title": {
+            "en": "OceanTeacher data policy, October 2024",
+            "fr": "Politique de données OceanTeacher, octobre 2024",
+            "es": "Política de datos de OceanTeacher, octubre de 2024",
+            "ar": "سياسة بيانات OceanTeacher، أكتوبر 2024",
+            "zh": "OceanTeacher数据政策，2024年10月",
+            "ru": "Политика данных OceanTeacher, октябрь 2024 года"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "guidelines": {
+          "id": "guidelines",
+          "url": "https://oceanexpert.org/downloadFile/61311",
+          "title": {
+            "en": "OceanTeacher Course Management Guidelines, version 5.0 (2026)",
+            "fr": "Directives de gestion des cours OceanTeacher, version 5.0 (2026)",
+            "es": "Directrices de gestión de cursos OceanTeacher, versión 5.0 (2026)",
+            "ar": "إرشادات إدارة دورات OceanTeacher، الإصدار 5.0 (2026)",
+            "zh": "OceanTeacher课程管理指南，第5.0版（2026年）",
+            "ru": "Руководство по управлению курсами OceanTeacher, версия 5.0 (2026)"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

@@ -1,0 +1,138 @@
+{
+  "httpStatus": 200,
+  "result": {
+    "id": "ifremer",
+    "kind": "organization",
+    "countryCode": null,
+    "url": "https://argo.ucsd.edu/organization/argo-data-system/",
+    "recordDepth": "stub",
+    "title": "IFREMER",
+    "summary": "GDAC operation at Coriolis/Brest.",
+    "availableLocales": [
+      "en"
+    ],
+    "missingLocales": [
+      "ar",
+      "zh",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "reviewStatesByLocale": {
+      "en": "agent_researched"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-10T20:02:45.014Z",
+    "recordUpdatedAt": "2026-09-10T20:02:45.014Z",
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 2,
+      "resolvedSources": 2,
+      "issues": []
+    },
+    "record": {
+      "id": "ifremer",
+      "kind": "organization",
+      "countryCode": null,
+      "url": "https://argo.ucsd.edu/organization/argo-data-system/",
+      "recordDepth": "stub",
+      "sources": {
+        "src-relationship-argo-gdac": {
+          "id": "src-relationship-argo-gdac",
+          "url": "https://argo.ucsd.edu/organization/argo-data-system/",
+          "title": {
+            "ar": "نظام بيانات Argo",
+            "en": "Argo data system",
+            "es": "Sistema de datos Argo",
+            "fr": "Système de données Argo",
+            "ru": "Система данных Argo",
+            "zh": "Argo数据系统"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "properties": {
+        "disciplines": [],
+        "gallery": [],
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "access": [],
+        "usage": []
+      },
+      "createdAt": "2026-09-09T18:32:17.824Z",
+      "updatedAt": "2026-09-10T20:02:45.014Z"
+    },
+    "localizations": {
+      "en": {
+        "locale": "en",
+        "title": "IFREMER",
+        "summary": "GDAC operation at Coriolis/Brest.",
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [],
+          "gallery": [],
+          "profile": {
+            "sourceRefs": [
+              "src-relationship-argo-gdac"
+            ]
+          }
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-10T20:02:44.993Z",
+        "review": {
+          "date": "2026-09-09T18:32:17.8242+00:00",
+          "note": null,
+          "state": "agent_researched",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-09T18:32:17.824Z",
+        "updatedAt": "2026-09-10T20:02:44.993Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-ifremer-operates-argo-gdac",
+        "sourceNodeId": "ifremer",
+        "targetNodeId": "argo-gdac",
+        "kind": "operates",
+        "note": "GDAC operation at Coriolis/Brest.",
+        "properties": {
+          "scope": "GDAC operation at Coriolis/Brest.",
+          "sourceRefs": [
+            "src-relationship-argo-gdac"
+          ]
+        },
+        "sources": {
+          "src-relationship-argo-gdac": {
+            "id": "src-relationship-argo-gdac",
+            "url": "https://argo.ucsd.edu/organization/argo-data-system/",
+            "title": {
+              "ar": "نظام بيانات Argo",
+              "en": "Argo data system",
+              "es": "Sistema de datos Argo",
+              "fr": "Système de données Argo",
+              "ru": "Система данных Argo",
+              "zh": "Argo数据系统"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-09-09T18:32:34.352Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      }
+    ],
+    "routes": []
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "records": [
+    {
+      "id": "worms",
+      "shape": {
+        "valid": true,
+        "recordId": "worms",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "worms",
+        "issues": [],
+        "warnings": [
+          "No gallery: acceptable when no useful, accessible capture is available.",
+          "No approved machine route is recorded.",
+          "Documented research gaps remain; omitted values have not been invented."
+        ],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 37,
+          "resolvedSources": 37,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "lifewatch-belgium",
+      "shape": {
+        "valid": true,
+        "recordId": "lifewatch-belgium",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "lifewatch-belgium",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "catalogue-of-life",
+      "shape": {
+        "valid": true,
+        "recordId": "catalogue-of-life",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "catalogue-of-life",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "worms-editorial-board",
+      "shape": {
+        "valid": true,
+        "recordId": "worms-editorial-board",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "worms-editorial-board",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "index-fungorum",
+      "shape": {
+        "valid": true,
+        "recordId": "index-fungorum",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "index-fungorum",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "ictv-taxonomy",
+      "shape": {
+        "valid": true,
+        "recordId": "ictv-taxonomy",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "ictv-taxonomy",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "ctenophora-species-list",
+      "shape": {
+        "valid": true,
+        "recordId": "ctenophora-species-list",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "ctenophora-species-list",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "reptile-database",
+      "shape": {
+        "valid": true,
+        "recordId": "reptile-database",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "reptile-database",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "freshwater-animal-diversity-assessment",
+      "shape": {
+        "valid": true,
+        "recordId": "freshwater-animal-diversity-assessment",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "freshwater-animal-diversity-assessment",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "recent-fossil-bryozoa",
+      "shape": {
+        "valid": true,
+        "recordId": "recent-fossil-bryozoa",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "recent-fossil-bryozoa",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "endpointKindsValidated": true,
+  "edgeCount": 18
+}

@@ -1,0 +1,1949 @@
+Intergovernmental Oceanographic Commission
+Reports of Meetings of Experts and Equivalent Bodies
+
+
+
+
+IODE Steering Group for the
+OceanTeacher Global Academy
+(SG-OTGA-V)
+
+Fifth Session (online)
+12-14 November 2025
+
+
+
+
+                                                       UNESCO 2025
+                                          IOC/IODE-SG-OTGA-V
+                                    Oostende, 12 to 14 November 2025
+                                                  English
+
+
+
+
+For bibliographic purposes, this document should be cited as follows:
+Fifth Session of the IODE Steering Group for the OceanTeacher Global Academy (SG-OTGA-V), 12-14 November
+2025. Paris, UNESCO, 28. Reports of Meetings of Experts and Equivalent Bodies (IOC/IODE-SG-OTGA-V)
+(English)
+© UNESCO 2025
+
+
+
+
+Meeting announcement and documents: https://oceanexpert.org/event/4852
+This report was produced by OTGA Secretariat, with the assistance of automated digital tools for translation and
+summarization, such as Microsoft 365 under UNESCO subscription and in compliance with ethical and responsible use of
+Artificial Intelligence (AI).
+                                                                          IOC/IODE-SG-OTGA-V
+
+
+                                      TABLE OF CONTENTS
+1. OPENING OF THE MEETING                                                                 3
+    1.1 Welcome by the OTGA Co-chairs                                                     3
+    1.2 Welcome by the IOC representatives                                                3
+    1.3 Adoption of the agenda and timetable                                              3
+    1.4 Introduction of participants                                                      3
+2. OTGA STATUS                                                                            4
+    2.1 Review of OTGA Training Activities                                                4
+         2.1.1. Training Courses                                                          4
+         2.1.2. Projects                                                                  6
+         2.1.3. Stakeholder engagement, Community Building, and Communication             7
+    2.2 Review of RTC/STC Activities                                                      9
+         2.2.1. STC Argentina                                                            13
+         2.2.2. RTC Belgium                                                              13
+         2.2.3. RTC China                                                                14
+         2.2.4. RTC Colombia                                                             14
+         2.2.5. RTC Cono Sur                                                             15
+         2.2.7. RTC Ghana                                                                15
+         2.2.8. STC Harmful Algae Bloom Programme                                        15
+         2.2.9. RTC India                                                                16
+         2.2.10. STC Indonesia                                                           16
+         2.2.11. RTC Kenya                                                               17
+         2.2.12. RTC Malaysia                                                            17
+         2.2.14. STC Norway                                                              18
+         2.2.15. RTC Pacific Community                                                   18
+         2.2.16. RTC Portugal                                                            18
+         2.2.17. STC International Tsunami Information Centre                            18
+    2.3 Joint Activities with other IOC Programmes and Regional Subsidiary Bodies        19
+         2.3.1. IOC Ocean Science Section and IOC Capacity Development Unit              23
+         2.3.2. IOC Marine Police and Regions Section                                    23
+         2.3.3. IOC Tsunami Section                                                      24
+         2.3.4. IOC Ocean Observations Section                                           24
+         2.3.5. IOC International Ocean Data and Information Exchange Programme          24
+         2.3.6. IOCARIBE                                                                 24
+         2.3.7. IOCAFRICA                                                                24
+         2.3.8. IOCINDIO                                                                 24
+         2.3.9. IOC WESTPAC                                                              24
+    2.4 Joint Activities with Partner Organizations                                      24
+3 OTGA OPERATIONS                                                                        26
+    3.1 OTGA Learning Management System and services                                     26
+    3.2 Review of OTGA Course Management Guidelines                                      28
+    3.3 Review of OTGA Terms of Reference                                                29
+IOC/IODE-SG-OTGA-V
+Page 2
+
+
+    3.4 Challenges and Expectations for OTGA                     30
+    3.5 OTGA Workplan and Budget 2026/2027                       31
+4 SUMMARY AND DISCUSSION                                         35
+    4.1 Review of the main decisions agreed during the meeting   35
+    4.2 Adoption of the work plan and summary report             35
+5 CLOSING                                                        35
+Annex I. List of Participants                                    36
+Annex II. Agenda of the Meeting                                  38
+Annex III. OTGA Guidelines                                       38
+Annex IV. OTGA Terms of Reference                                38
+Annex IV. Proposed Work Plan and BUDGET 2026-2027                38
+Annex V. List of Proposed Trainings 2026                         38
+                                                                           IOC/IODE-SG-OTGA-IV
+                                                                                        Page 3
+
+
+
+1.        OPENING OF THE MEETING
+1.1       WELCOME BY THE OTGA CO-CHAIRS
+The meeting was opened by Ms Filomena Martins (RTC Portugal) and Ms Carolina Garcia (RTC
+Colombia), Co-Chairs of the Steering Group for the OceanTeacher Global Academy. They
+welcomed participants to this session of the Steering Group and informed the Group that the
+meeting would be held online.
+The Co-Chairs outlined the objectives of the Steering Group meeting:
+      ●   To review the current status of OTGA
+      ●   To review the training courses delivered by the Regional and Specialized Training
+          Centres for the last intersessional period
+      ●   To discuss the operations of OTGA, including procedures and standards of the Learning
+          Management System
+      ●   To discuss the governance of OTGA, under IOC reform
+      ●   To discuss the Project work plan for 2026-27, including proposed courses
+      ●   To discuss implementation of OTGA Vision 2025-2030
+The Co-Chairs explained the meeting logistics and informed about the attendees' categories,
+which include OTGA Secretariat, Co-chair(s), RTC-STC representatives, IOC representatives, and
+Affiliated partners representatives, and their respective roles.
+
+1.2       WELCOME BY THE IOC REPRESENTATIVES
+Ms Joana Post, Head of IOC Ocean Observations and Services Section and of the Project Office
+for IODE (interim), and Ms Karen Evans, Head of IOC Ocean Science Section and IOC Capacity
+Development Coordinator, welcomed the meeting participants. They emphasized the
+importance of OTGA in delivering training and capability development, and highlighted the
+need for strong planning, innovation, and regional support to ensure effective implementation
+of IOC priorities. They also highlighted the growing importance and success of OTGA within
+IOC, noting its evolution into a central component of capacity development. They emphasized
+the need to expand OTGA’s role beyond data-related training to address broader regional
+needs, making this steering group meeting crucial for shaping its future direction in the next
+biennium.
+
+1.3       ADOPTION OF THE AGENDA AND TIMETABLE
+
+This agenda item was introduced by the Co-Chairs, who reviewed the meeting planning and
+invited participants for any subject to be added.
+
+The Steering Group adopted the agenda, which is attached as Annex with no additional items.
+
+The Co-Chairs informed the Group that all documents and presentations of the meeting are
+available online OceanExpert (https://oceanexpert.org/event/4852).
+
+1.4       INTRODUCTION OF PARTICIPANTS
+
+This agenda item was introduced by the Co-Chairs. All participants were invited to introduce
+themselves. The full list of participants is available as Annex.
+IOC/IODE-SG-OTGA-V
+Page 4
+
+
+2.        OTGA STATUS
+2.1       REVIEW OF OTGA TRAINING ACTIVITIES
+This agenda item was introduced by Ms Ana Carolina Mazzuco, OTGA Coordinator. She
+informed the Steering Group about training activities conducted in 2024 and 2025 (up to 10
+November), providing a presentation with the compilation of results and a summary report:
+
+2.1.1. TRAINING COURSES
+
+      ●   A total of 112 training courses delivered by OTGA Regional and Specialized Training
+          Centres and affiliated partner organizations.
+      ●   52% (58) of these training courses were led by IOC, through OTGA Secretariat, on
+          behalf of IOC sections to directly serve the IOC community and all IOC Programmes.
+      ●   Over 9100 learners were registered in these courses, with an average of 40%
+          completion rate
+      ●   These participants were based in 138 IOC Member States (36 IOC Member States in
+          Africa and 29 IOC Member States in Small Island Developing States), being supported
+          by enhanced capacity development opportunities of knowledge exchange and
+          upskilling.
+      ●   Over 650 facilitators (subject matter experts, lecturers and support staff) contributed
+          to course development and delivery, including creation of new sets of learning
+          materials openly and freely available to the ocean community.
+      ●   Training courses were delivered in 4 languages: 66% in English, 20% in Spanish, 11% in
+          Portuguese, and 3% in French.
+      ●   Courses included distance learning and in-person training; 70% were online, 19%
+          blended, and 11% only face-to-face.
+      ●   Approximately 3400 hours of training were made available by OTGA Learning
+          Management System and activities.
+      ●   Gender balance among participants was, on average 59% female and 41% male.
+
+Beneficiaries of these trainings were experts, practitioners, and broad civil society working with
+Research, Natural Data Management, Operational Support (technical), Institutional
+Management, Decision Making & Policy, Teaching/Education, Information Management and
+Library, Commercial (Sales & Marketing), Extension Services (Public Awareness), Technical
+Advice and Consulting, Communication, and Administrative Support. Currently, there are over
+17000 users of OTGA e-Learning Platform, of which 12245 are enrolled in at least one training
+course.
+
+OTGA trainings courses covered a range of topics within ocean research, management, and
+services related to Sustainable Development Goal 14 and its targets associated to IOC
+Mandate, including 14a Scientific Knowledge And Research (91 learning sets), 14.1 Marine
+Pollution (13 learning sets), 14.2 Marine And Coastal Ecosystems (62 learning sets), 14.3 Ocean
+Acidification (3 learning sets), 14.7 Sustainable Use Of Marine Resources (42 learning sets),
+14.5 Marine Spatial Planning (18 learning sets), and 14c Implement Enforce International Sea
+Law (11 learning sets).
+
+Contributions of OTGA training courses to the capacity development action to the UN Ocean
+Decade:
+
+          Challenge 1 Understand and beat marine pollution (16%);
+          Challenge 2 Protect and restore ecosystems and biodiversity (27%);
+                                                                           IOC/IODE-SG-OTGA-V
+                                                                                        Page 5
+
+       Challenge 3 Sustainably nourish the global population (1%);
+       Challenge 4 Develop a sustainable, resilient and equitable ocean economy (16%);
+       Challenge 5 Unlock ocean-based solutions to climate change (4%);
+       Challenge 6 Increase community resilience to ocean and coastal risks (16%);
+       Challenge 7 Sustainably expand the Global Ocean Observing System (17%);
+       Challenge 8 Create a digital representation of the ocean (51%);
+       Challenge 9 Skills, knowledge, technology and participation for all (100%); and
+       Challenge 10 Restore society’s relationship with the ocean (29%).
+
+Contributions of OTGA training courses to IOC High-level priorities and wide implementation
+plan, under support to capacity development activities:
+   ●   High-level Objective 1. Healthy ocean and sustained ocean ecosystem services
+           ○ Sub-Objective 1.3 Enhanced application of best practices, tools and
+               approaches for ecosystem-based management
+                   ■ KPI 1.3.2 Number of capacity development initiatives provided to
+                       Member States to fulfil national commitments related to biodiversity
+                       under multilateral agreements including CBD and BBNJ: 20 training
+                       courses in themes related to the CBD Aichi Targets and
+                       BBNJ-Agreement
+   ●   High-level Objective 2. Effective warning systems and preparedness for tsunamis and
+       other ocean-related hazards
+           ○ Sub-Objective 2.3 Enhanced deployment of regionally or nationally adapted
+               decision support tools including multi-hazard early warning and mitigation
+               systems
+                   ■ KPI 2.3.1 Number of Member States supported to pilot or implement
+                       tsunami and other IOC supported EWS, including through capacity
+                       development initiatives: 91 Member States (15 in Africa, 23 SIDS)
+                       supported by OTGA training courses in the target subjects.
+   ●   High-level Objective 3. Resilience to climate change and contribution to its mitigation
+           ○ 3.1 Enhanced observations and data for increased scientific understanding of
+               the ocean dimension in climate change
+                   ■ KPI 3.1.2 Number of Member States supported with capacity
+                       development for collecting and managing observations related to
+                       climate change trends including ocean acidification and sea level rise:
+                       95 Member States (33 in Africa, 16 in SIDS) supported by OTGA training
+                       courses in the target subjects.
+   ●   High-level Objective 4. Scientifically founded services for the sustainable ocean
+       economy
+           ○ Sub-Objective 4.2 Enhanced dissemination of relevant scientific knowledge to
+               marine industries and economic actors
+                   ■ KPI 4.3.1 Number of Member States engaged in and supported by
+                       IOC-led activities on Sustainable Ocean Planning and Management
+                       (incl. Marine Spatial Planning) , including through capacity
+                       development initiatives: 81 Member States (21 in Africa, 14 in SIDS)
+                       supported by OTGA training courses in the target subjects.
+   ●   High-level Objective 5. Foresight on emerging ocean science issues
+           ○ Sub-Objective 5.3 Improved ability to account for and respond to priority
+               emerging issues in decision-making
+                   ■ KPI 5.3.1 Number of capacity development initiatives delivered on
+                       emerging ocean science issues: At least 4 training courses in the target
+IOC/IODE-SG-OTGA-V
+Page 6
+
+                        subjects, including topics such as deep sea mining, metagenomics,
+                        biodiversity benefit sharing, Artificial Intelligence.
+
+OTGA training courses contributed to the implementation of IOC Capacity Development
+Strategy, directly contributing to Output 1 Human resources developed at individual and
+institutional levels, and indirectly supporting Output 2, 3, 4, and 5. Several courses are also
+aligned with the newly approved IOC Strategy for Ocean Planning and Management (SOPM),
+including core baseline courses in marine spatial planning (+5 training sets), ecosystem
+restoration (2 training sets), coastal resilience (+5 training sets), and ocean data management
+(+5 training sets).
+
+The Steering Group commented that most OTGA trainings have been delivered online to reach
+a wide audience and overcome resource and time constraints, while face-to-face sessions
+remain essential for networking and hands-on activities. Hybrid formats combining online
+preparation with on-site engagement are increasingly adopted, and participant feedback is
+positive, with blended approaches seen as the most effective way forward to OTGA.
+Discussions also emphasized topics such as equity, KPIs for monitoring participation and
+impact, competency frameworks, balancing strategies with regional needs, and challenges to
+meet the high-level requirements.
+
+2.1.2. PROJECTS
+
+Ms Ana Carolina Mazzuco also highlighted that, through its Secretariat, OTGA collaborated
+with global and regional projects in 2024-2025:
+
+    ●   UNESCO IOC NORAD FUND OceanTraining Internship Program, a joint initiative with
+        IOC Capacity Development, to promote national and international exchange of
+        professionals to acquire expertise related to the IOC mandate.
+    ●   UNESCO IOC NORAD FUND to support on-site and online training courses on ocean
+        best practices in the Caribbean, a joint project with IOC Ocean Best Practices System.
+    ●   EU/UNESCO IOC MSPGlobal 2.0-3.0 projects, with the joint development of online
+        self-paced training on marine spatial planning in three languages.
+    ●   European Union’s Erasmus+ Erasmus Maris project, with support for blended training
+        on marine pollution focused on citizen science in the European blue schools.
+    ●   European Union’s Horizon Europe BlueCloud2026 project, with the development of 6
+        Courses on Virtual Research Environment courses.
+    ●   European Union’s Horizon GES4SEAS project, providing an online platform to openly
+        host and share learning sets about coastal and marine biodiversity, ecosystems and
+        services.
+    ●   European Union’s Horizon A-AAGORA project, providing an online platform to openly
+        host and share learning sets for cross-sectoral cooperation for restoration of marine
+        and coastal ecosystems and increased climate resilience through transformative
+        innovation.
+    ●   UNESCO/FUST OTGA2 -Major funding support for the last 4 years, resulting in the
+        consolidation of the project activities. The project was finalised at the end of 2024,
+        with a narrative progress report approved by April 2025.
+    ●   UNESCO/FUST MangRes 1.0-2.0 projects, with support for blended training on
+        mangrove restoration at biosphere reserves in the Caribbean.
+    ●   UNESCO/FUST BiOES small-scale activity, to build capacity on marine biodiversity
+        observatories through IOC’s ocean data tools and services.
+                                                                             IOC/IODE-SG-OTGA-V
+                                                                                          Page 7
+
+    ●   GEF/UNDP Small Grants Program to support marine litter training and monitoring in
+        Cape Verde and for Portuguese-speaking countries.
+    ●   ICS/SCOR Working Group 164 CoNCENSUS, on the joint development of a training
+        course on underwater marine life survey techniques.
+
+She highlighted that new project proposals were jointly developed and submitted to funding
+agencies/donor overview, and results are expected for the next months, including
+
+    ●   EU Horizon - Strict Marine Protected Areas project, with OBIS (under review)
+    ●   IOC/Nippon Foundation - Marine Pollution, with IOC Ocean Science Section (under
+        review)
+    ●   FWO/International Cooperation Agreement - OceanConnectXL, with Vrije Universiteit
+        Brussel (approved - to start in 2026)
+The Steering Group highlighted the need for OTGA to diversify teaching modalities beyond
+formal courses, introducing short tutorials and innovative, interactive formats. They raised that
+while new projects are driving these changes, international accreditation requirements (ISO
+standards) may limit flexibility, and suggested that OTGA create a balance between quality
+assurance and adaptability.
+
+2.1.3. STAKEHOLDER ENGAGEMENT, COMMUNITY BUILDING, AND COMMUNICATION
+
+Ms Sofie De Baenst informed the Group about the OTGA communication and outreach
+activities, including website and social media presence, statistics and presentations at
+conferences.      OTGA    Social   media      presence      is   available    on    Facebook
+(https://www.facebook.com/IODE.Oceanteacher),                                        LinkedIn
+(https://www.linkedin.com/company/otga-learning) and X (https://x.com/OceanteacherA),
+where all courses are launched with general information and visuals. The social media strategy
+includes scheduled posts every 2 weeks in English, French, Spanish, and Portuguese. The social
+media audience is composed mostly of people between 25-34 years old, 50% gender balance,
+and from the education-research and science-environmental services sector.
+
+Social media statistics for 2024-2025 (till October 2025) are:
+
+    ●   Facebook: 340 postings (own and reposts), with 6568 followers.
+    ●   X: 251 postings (own and retweets), with 993 followers.
+    ●   LinkedIn: 241 (own and reposts), 5583 followers.
+
+She reported that announcements on activities are not only published through OTGA social
+media but also using the OceanExpert calendar (IOC’s online event calendar). OceanExpert is
+also used for mailings, targeting the correct audience for the specific OTGA trainings. Other
+websites where OTGA trainings are announced are the IODE website, Marinetraining,
+CLME+website, Ocean CD-hub, and WCRP academy website. All trainings are also listed in the
+IOC newsletter and through the channels of the training centre/course organiser.
+
+Ms De Baenst highlighted that OTGA Secretariat is currently looking into updating the OTGA
+website (its e-Learning Platform), adding an extra layer to include more general information
+and improved search engines before users log in to the classroom. This action aims to make the
+programme more understandable not only for learners, but also for other stakeholders and
+beneficiaries (government, donors, etc). The requirements and needs are listed;
+implementation is foreseen for 2026.
+IOC/IODE-SG-OTGA-V
+Page 8
+
+OTGA Secretariat participated in several meetings to communicate about the training
+programme and activities. Some presentations given in 2024-2025 (online meetings, on-site
+events and conferences):
+
+    ●   13th IHO-IMO-WMO-IOC-IALA-IAEA-FIG-IMPA Capacity Building Coordination meeting,
+        Monaco
+    ●   IMDIS conference, Norway
+    ●   Ocean Decade Conference, Barcelona, Spain
+    ●   Belgian Federal Government and BBNJ Sablon Secretariat campaign, Oostende,
+        Belgium
+    ●   IMPA Webinar on Gender Balance, online
+    ●   IOC Regional Subsidiary Bodies’ meetings, online
+    ●   IODE28, Santa Marta, Colombia
+    ●   Seventeenth session of the IOC-FAO Intergovernmental Panel on Harmful Algal Blooms
+        (IPHAB-XVI), UNESCO, Paris, online
+    ●   GOOS Regional Alliances meeting, online
+    ●   Ocean and Lakes, presentation on Blue Skills, Oostende, Belgium
+    ●   United National Ocean Conference (UNOC3) event on Lehmkuhl (school ship for the
+        Royal Norwegian Navy)
+    ●   United National Ocean Conference (UNOC3) event on Meteor (German research
+        vessel)
+
+OTGA was well presented at the United National Ocean Conference (UNOC3) in Nice (9-13 June
+2025). UNOC3 was organised by France and Costa Rica to bring UN member states, their head
+of state and government together with international agencies, local authorities, civil society,
+the private sector and international donors. Different locations were made available to offer
+presentations, such as the Statsraad Lehmenkuhl (Norwegian Sailing ship) and the German
+Meteor Vessel. The presentation on the Lemenkuhl (June 2025) discussed the “Advancing Skills,
+knowledge, technology and participation for all – An interactive marketplace for CD tools and
+methodologies “Showing key CD tools and methodologies” made available by IOC and its
+partners. (e.g. the IOC Decades Matchmaking platform, the IOC Oceanteacher global academy,
+the IOC CD-HUB, IOC Oceanexexpert, and the different IOC Regional and Specialized training
+centers). (The presentations and the panel Discussions on the Meteor Vessel focused on (1)
+the critical global and regional needs on ocean science capacity development; (2) ways on how
+progress is being assessed and approached by various initiatives; and (3) recent efforts of
+existing and new partners such as other UN agencies, intergovernmental institutions, and
+international initiatives leading Capacity Development in marine and maritime space, in a call
+to a jointly coordinated action towards Goal 14. The theme connects SDG 14 to SDG 4 and SDG
+17, inviting leading experts to share and commit to supporting global collaboration in Ocean
+Capacity Development.
+
+During the European summer, there was a successful Ocean Decade campaign dedicated to
+several Decade contributors, including OTGA (ahead of the 2025 United Nations Ocean
+Conference).
+https://oceandecade.org/news/ocean-science-in-action-how-global-cooperation-helps-to-adva
+nce-ocean-science/. Additionally, videos of onsite training courses were created together with
+course organizers, assisting on promoting OTGA across different networks: (1) ECOPS
+programme Training Malta (November 2024) (2) Coastal resilience course organised by the
+Decade Collaborative Centre for Coastal Resilience, Italy (January 2025); (3) video created for
+the Coastal Ocean Environment School in Western Indian Ocean (COES-WIO) on Coastal and
+Oceanographic Processes, Marine Pollution, Fisheries and Data Management (September
+                                                                                   IOC/IODE-SG-OTGA-V
+                                                                                                Page 9
+
+2025); (4) Video announcement on the blended training course created by the IOC Africa team
+for the eDNA for Africa and the Adjacent Island States Ghana November 2025.
+
+The Vision 2025-2030 brochure is still in use, with minor updates foreseen this year to print a
+new batch and share with RTCs/STCs, and affiliated.
+
+The Steering Group commented on the use of additional social media platforms to reach
+young people for OTGA trainings targeting high school and university students.
+
+2.2       REVIEW OF RTC/STC ACTIVITIES
+This agenda item was introduced by the Co-chairs, who invited RTC/STCs Coordinators or
+Representatives to report on:
+
+      ●   description of the scope and priorities;
+
+      ●   major achievements of training in 2024-2025 (with OTGA); and
+
+      ●   course and training activities planned for 2026 (with OTGA).
+
+Coordinators and facilitators were invited to share their experience on the previous courses
+(lessons learnt, challenges) and the list of courses for the next year(s). Additionally, the Centres
+highlighted how the training courses organised by your RTC/STC will be contributing to the
+implementation of IOC Midterm Strategy, IOC Capacity Development Strategy, the workplan of
+IOC Regional Subsidiary Bodies, and/or IOC Member States priorities. Resources provided in
+preparation for this meeting, such as presentation slides and recordings, are available through
+this external folder.
+
+Regional Training Centres (RTCs) and Specialized Training Centres (STCs) are institutions or
+coordinated groups of institutions that undertake delivery of training on a broad range of
+topics or targeted specialized training in ocean science that contribute to the high-level
+objectives of the IOC. RTCs and STCs are nominated by IOC Member States and undergo an
+official selection process. They provide the institutional backbone for the training activities. As
+hosting organizations, they ensure the human and financial resources and facilities to design
+and deliver targeted learning services, responding to the training needs of the IOC
+Programmes, IOC Regions, and IOC Member States. Each RTC and STCs contact point,
+Coordinator, is responsible for managing its training activities, including representing the
+RTC/STC in designated meetings, proposing new courses, providing workplans, monitoring,
+evaluating, and reporting according to OTGA guidelines. An RTC or STC shares responsibilities
+with OTGA Secretariat whenever the need is identified and agreed.
+
+OTGA Secretariat provided a general overview of the trainings carried out by the RTC/STCs,
+highlighting that over 70 training courses (online and blended) were led by RTC/STCs in
+2024/2025, with more than 2000 hours of lectures and activities made available by +200
+subject experts and facilitators.
+
+List of courses organized by RTC/STCs in 2024:
+
+ Date                 Course                                                        RTC/STC
+                    IODE/OTGA Training Course: Quality Management System Essentials
+ 16-18 January 2024 for NODCs and ADUs                                              RTC Belgium
+ 22-26 January 2024 IOC/OTGA/MBON/UM-NOAA AOML/CONICET/CADIC/UC : 2nd              RTC Colombia
+IOC/IODE-SG-OTGA-V
+Page 10
+
+                      Image-Based Biodiversity Monitoring Workshop
+                    IOC/OTGA/RTC Portugal/CIMA-UAlg: Proliferação de Algas:
+01-29 February 2024 regulação, impactos e previsão                                      RTC Portugal
+01 February - 31 May
+       2024          IOC/OTGA: Ocean Data Management                                    RTC Belgium
+  5 February -15      IOC/OTGA/OIH/ODIS : Implementing the Ocean Data and
+  December 2024       Information System (ODIS) architecture [self-paced]               RTC Belgium
+  5 February -15      IOC/OTGA/OIH/ODIS :Implementação da arquitetura do Sistema de
+  December 2024       Dados e Informações Oceânicas (ODIS) [individualizado]        RTC Belgium
+  5 February -15      IOC/OTGA/OIH/ODIS :Mise en œuvre de l'architecture du Système
+  December 2024       de données et d'informations océanographiques [individuel]        RTC Belgium
+  5 February -15      IOC/OTGA/OIH/ODIS : Implementación de la arquitectura del
+  December 2024       Sistema de información y datos oceánicos [Ritmo propio]           RTC Belgium
+  15 February -15     IOC/OTGA : Microplástico: natureza, impacto e aplicação prática
+    March 2024        para monitoramento costeiro e marinho                             RTC Belgium
+  26 February -27     IOC/OTGA/RTC Colombia : Tecnologías de Información (SIG)
+    March 2024        aplicado al Medio Marino y Costero                                RTC Colombia
+  26 February -19     IOC/OTGA/ECOPs : Data Analysis with Python Programming for Early
+    March 2024        Career Ocean Professionals (ECOPs)                               RTC Belgium
+ 13 March -15 April   IOC/OTGA/RTC Portugal : A mudança que precisamos para o Oceano
+       2024           que queremos - Literacia do Oceano com escolas (ONLINE)        RTC Portugal
+ 01 May -30 August IOC/OTGA/VLIZ : Biological Data Management 2024 (self-paced
+       2024        course)                                                              RTC Belgium
+                      IOC/OTGA/RTC Colombia : Curso regional de capacitación y
+                      entrenamiento sobre medición del sistema de carbonatos para la    RTC Colombia
+  06-10 May 2024      evaluación
+06 May -12 July 2024 IOC/OTGA/OSS/OA/RTC Ghana : Ocean Acidification                    RTC Ghana
+                      IOC/OTGA /RTC Moçambique CePTMar : Análise de dados para
+  27-31 May 2024      gestão costeira / Data analysis for coastal management            RTC Mozambique
+                       IOC/OTGA/STC Argentina/COPLA Argentina : Determinación del
+18 June - 05 July 2024 Límite Exterior de la Plataforma Continental [online]            STC Argentina
+01 July -20 September IOCHABS-IOC Science and Communication Centre on Harmful Algae
+         2024         International Phytoplankton Intercomparison (IPI) test 2024   STC HAB
+                      IOC/OTGA/STC Argentina: Observador de Hielo Marino y Témpanos
+ 19-23 August 2024                                                                  STC Argentina
+                      [virtual]
+ 01 September - 12
+  December 2024       IOC/OTGA: Ocean Data Management                                   RTC Belgium
+  03-06 September     IOC/OTGA/RTC Colombia : Curso de Manejo Integrado de Zonas        RTC Colombia
+        2024          Costeras y Planificación Espacial Marina / MIZC-PEM
+  09-13 September
+                                                                                        RTC Belgium
+        2024          IOC/OTGA/RTC Belgium: Erasmus Maris Week 2024
+  14 September -08
+   November 2024      IOC/OTGA/RTC ConoSur: Planificación Espacial Marina y Costera     RTC Cono Sur
+ 17 September - 15    IOC/OTGA/WMO/BMKG: Implementation of Satellite Altimetry Data
+                                                                                    STC Indonesia
+  November 2024       for Operational Meteocean Services
+  23-26 September     IOC/OTGA/IOCAFRICA/RTC Kenya: Training on the implementation
+        2024          of FAR Principles to African Marine and Coastal                   RTC Kenya
+                                                                                       IOC/IODE-SG-OTGA-V
+                                                                                                   Page 11
+
+ 04 October 2024-20 IOC/OTGA/RTC Colombia : Fundamentos para la publicación de         RTC Colombia
+   February 2025    datos de biodiversidad marina en OBIS [autodidacta]
+                    APC13 : 13th Advanced Phytoplankton Course- Identification,
+ 06-26 October 2024 Taxonomy, Systematics                                              STC HAB
+                    IOC/OTGA/RTC India INCOIS : Ocean Colour Remote Sensing - Data,
+ 14-25 October 2024 Processing and Analysis [blended]                               RTC India
+  15 October -15     IOC/OTGA/RTC Portugal : Management and mitigation of coastal
+  November 2024      erosion [online course]                                           RTC Portugal
+  21 October - 02    IOC/OTGA /RTC Moçambique CePTMar : Tecnologias de Observação
+  November 2024      Oceânica                                                     RTC Mozambique
+                    IOC/OTGA/ECOPs: Introduction to Oceanographic Survey Techniques
+04-15 November 2024 and Data Management                                             RTC Belgium
+                    IOC/OTGA/RTC Colombia: Datos e información para el manejo de       RTC Colombia
+05-29 November 2024 Áreas Marinas Protegidas
+  12 November -15    IOC/OTGA/STC Argentina: Introducción a la geología y minería de
+   December 2024     fondos marinos                                                    STC Argentina
+  15 November - 15   IOC/OTGA/RTC Portugal: Biomonitorização de substâncias e
+   December 2024     materiais perigosos em ecossistemas costeiros                     RTC Portugal
+                    IOC/OTGA/RTC India INCOIS : Coastal Vulnerability Mapping and
+15-29 November 2024 analysis using QGIS [blended]                                      RTC India
+ 18 November 2024 - UNESCO/MAB/IOC/OTGA/RTC Colombia/VLIZ : Conservación y             RTC Colombia
+    25 April 2025   restauración de manglares en reservas de biosfera
+                    IOC/OTGA/NCOSM/NMDIS Observation technique about blue
+25-29 November 2024 carbon                                                             RTC China
+  26 November - 13   IOC/OTGA/STC Argentina/COPLA Argentina : Determinación del
+   December 2024     Límite Exterior de la Plataforma Continental [online]             STC Argentina
+                    IOC/OTGA/RTC Indonesia : Online Training on Ocean Forecast
+16-20 December 2024 System                                                             STC Indonesia
+20 July - 30 December
+          2024        UNESCO-IOC Tsunami Awareness self-paced course                   STC ITIC
+
+
+
+List of courses organized by RTC/STCs in 2025:
+
+ Date                  Course                                                           RTC/STC
+   15 January - 15
+   December 2025     IOC/OTGA/OBPS : Ocean Best Practices                              RTC Belgium
+ 24 November 2023 - IOC/OTGA/EMODnet : Contributing datasets to EMODnet Biology
+  31 December 2026 (self-paced)                                                        RTC Belgium
+17 February 2024 - 31 IOC/OTGA/OBIS: Contributing and publishing datasets to OBIS
+   December 2025      (self-paced)                                                     RTC Belgium
+ 1 February - 31 May
+        2025         IOC/OTGA/VLIZ : Ocean Data Management 2025 (self-paced)           RTC Belgium
+                      IOC/OTGA/JRC/ASE/CAMPUS MAX TEM: Erasmus Maris from
+17 – 21 February 2025 sampling and analysis to data                                    RTC Belgium
+1 Apr to 31 July 2025 IOC/OTGA/VLIZ : Biological Data Management 2025 (self-paced)     RTC Belgium
+ 01 July - 31 October
+         2025         IOC/OTGA/VLIZ : Ocean Data Management 2025 (self-paced)          RTC Belgium
+IOC/IODE-SG-OTGA-V
+Page 12
+
+  15 -19 September     IOC/OTGA/RTC Belgium: Erasmus Maris 2025: From sampling and
+        2025           analysis of microplastics to data                                  RTC Belgium
+ 03 September - 30
+  November 2025        IOC/OTGA/VLIZ : Biological Data Management 2025 (self-paced)       RTC Belgium
+  10 - 21 November     IOC/OTGA/DCO-ODS: Data quality assurance (QA) and quality
+         2025          control (QC) in the Ocean Decade                                   RTC Belgium
+ 04 November 2025 - IOC/OTGA/DCO-ODS: De la observación a la acción, empoderando a
+  28 February 2026 las comunidades hacia la excelencia en datos marinos.           RTC Belgium
+ 04 November 2025 - IOC/OTGA/DCO-ODS: From Observation to Action: Empowering
+  28 February 2026 communities towards excellence in marine data                          RTC Belgium
+                       IOC/OTGA/RTC China: Sea Level Rise and Its Impact on Coastal
+ 20 to 29 May 2025     Zones under Climate Change                                         RTC China
+04 October 2024 - 20 IOC/OTGA/RTC Colombia: Fundamentos para la publicación de datos
+   February 2025     de biodiversidad marina en OBIS [autodidacta]                   RTC Colombia
+                       UNESCO/IOC/OTGA/RTC Colombia: Entrenamiento en gestión de
+   3-8 March 2025      datos de biodiversidad para incrementar el conocimiento en áreas
+                       profundas del Corredor Marino del Pacífico Este Tropical           RTC Colombia
+                       IOC/OBPS/OTGA/RTC Colombia: ADAPT Curso de formación sobre
+28 April to 2 May 2025 mejores prácticas oceánicas                                        RTC Colombia
+13 May to 13 August IOC/OTGA/RTC Colombia: Todos por una causa: El Océano que
+       2025         queremos                                                              RTC Colombia
+                       IOC/OBPS/OTGA/RTC Colombia: ADAPT Curso de formación sobre
+       Dec-25          mejores prácticas oceánicas (self-paced)                           RTC Colombia
+                       IOC/OTGA/RTC Ghana: Earth Observation and fishing vessel
+  09 - 16 July 2025    monitoring data for fisheries management                           RTC Ghana
+  03 - 07 November     IOC/IOCAFRICA/OBIS/OTGA: Environmental DNA (eDNA) Training for
+                                                                                      RTC Ghana
+         2025          Africa and the Adjacent Island States
+                       IOC/OTGA/ECOPs/RTC Kenya: Coastal Ocean Environment School in
+ 21 - 27 September     Western Indian Ocean (COES-WIO) on Coastal and Oceanographic
+        2025           Processes, Marine Pollution, Fisheries and Data Management    RTC Kenya
+ 31 March - 02 May IOC/OTGA/RTC Portugal: A mudança que precisamos para o Oceano
+                                                                                 RTC Portugal
+       2025        que queremos - Literacia do Oceano com escolas
+                       IOC/OTGA/HAB/RTC Portugal, and Centro de Investigação Marinha e
+                       Ambiental (CIMA), Universidade do Algarve (Portugal): Harmful   RTC Portugal
+02 June - 18 July 2025 Algal Blooms: environmental drivers, impacts, and prediction
+ 28 July - 22 August   IOC/OTGA/RTC Portugal: Recursos online para análise de
+        2025           ecossistemas marinhos (1º turma)                                   RTC Portugal
+  03 November - 08     IOC/OTGA/RTC Portugal: Biomonitorização de substâncias e
+                                                                                          RTC Portugal
+   December 2025       materiais perigosos em ecossistemas costeiros
+  03 - 28 November     IOC/OTGA/RTC Portugal: Recursos online para análise de
+         2025          ecossistemas marinhos (2º turma)                                   RTC Portugal
+  30 June to 30 July   IOC/OTGA/STC Argentina: Introducción a la geología y minería de
+        2025           fondos marinos                                                     STC Argentina
+ 2 to 19 September     IOC/OTGA/STC Argentina/COPLA Argentina: Determinación del
+        2025           Límite Exterior de la Plataforma Continental                       STC Argentina
+ 03 March - 09 April IAEA/IOC/HAB/OTGA: IAEA-IOC Training Course and Certification on
+       2025          Identification of Harmful Marine Algae                           STC HAB
+   06 October - 29     IOC/OTGA/HAB: IOC Training Course and Identification Qualification
+   November 2025       in Harmful Marine Microalgae                                       STC HAB
+                                                                                    IOC/IODE-SG-OTGA-V
+                                                                                                Page 13
+
+  14 - 18 July 2025   IOC/OTGA/STC Indonesia: BMKG Training on Tsunami Mitigation   STC Indonesia
+   20 Jan - 15 Dec    UNESCO-IOC Tsunami Awareness self-paced course                STC ITIC
+   17 Jan - 15 Dec    IOC/OTGA/ITIC: UNESCO-IOC Tsunami Ready self-paced course     STC ITIC
+
+
+
+The Steering Group commented on the formats of the training and shared impressions on the
+experience of participants, endorsing the importance of face-to-face activities depending on
+the audience and training topic, as well as for community building.
+
+2.2.1. STC ARGENTINA
+
+Ms Nancy Correa, STC coordinator, reported that STC Argentina continues to deliver impactful
+training aligned with IOC strategies, regional work plans, and Member States’ priorities. The
+“Introduction to Seabed Geology and Mining” course was highly successful and well-attended
+by South American participants, though it will not be offered in 2026 due to scheduling
+constraints. The long-standing “Determination of the Outer Limit of the Continental Shelf”
+course will be updated next year to better match participant profiles, with a less technical
+approach. The planned “Sea Ice and Iceberg Observer” course was cancelled in 2025 due to
+funding limitations, but there is a strong commitment to reschedule it in 2026, either in-person
+or virtually. For 2026, STC Argentina plans to offer three courses in collaboration with OTGA:
+the updated Continental Shelf course, the Sea Ice and Iceberg Observer course, and a new
+“Visualizations with Python” course combining theory and practical skills.
+
+2.2.2. RTC BELGIUM
+
+Ms. Ana Carolina Mazzuco, RTC coordinator and IODE Training Coordinator, reported that the
+Centre opened 12 courses in 2024 and 12 courses in 2025, mostly focused on joint
+collaboration with ocean data initiatives such as IOC Ocean Biodiversity Information System
+(OBIS), IOC Ocean Best Practices System (OBPS), IOC Ocean Data and Information System
+(ODIS), the IOC Decade Coordination Office (DCO) for Ocean Data Sharing (ODS), the European
+Marine Observation and Data Network (EMODnet), the Ocean Decade Early Career Ocean
+Professional Programme, and the Data Centre of Flanders Marine Institute (VLIZ). These
+trainings focused on various steps within the ocean data pipeline, including data management,
+quality assurance, best practices for observations and sharing, analysis and visualization,
+among others. The interest in these baseline trainings has been increasing over the years,
+reaching more than 2000 registrations in the last biennial.
+RTC Belgium also started a collaboration with the EU Erasmus Maris project, assisting with the
+development of training for microplastics monitoring in a regional citizen science framework
+related to the European Blue Schools. This initiative was a collaboration between the EU Joint
+Research Centre in Geel, Belgium, an innovative infrastructure, reference materials,
+measurements, methodologies and tools for policies, and Ayam Sailing Europe AISBL, building
+citizen science learnings. RTC Belgium engaged in several projects, through its secretariat,
+highlighted in the other items.
+Ms Ana Carolina Mazzuco highlighted that RTC Belgium faces most challenges in combining
+the activities of OTGA Secretariat and its expansion of the training centre. It envisions
+enhancing its activities on-site, in support of the European ocean-related priorities in the
+coming years. She reported that new courses are planned to be launched in 2026, including a
+BBNJ-Agreement and Indigenous and Local Knowledge (jointly with Ocean Decade
+Unit/Capacity Development Facility), Emerging topics in Ocean Data, and an expanded online
+course on Nagoya Protocol/ABS (jointly with VLIZ).
+IOC/IODE-SG-OTGA-V
+Page 14
+
+The Steering group discussed the upcoming training needs and collaborative opportunities
+within IOC and related programs, including through the Decade Coordination Office for Ocean
+Data Sharing and leveraging internal and external initiatives to ensure high-quality training.
+There was expressed interest in the participation of the RTC/STCs in the BBNJ-Agreement and
+Indigenous training initiatives.
+
+2.2.3. RTC CHINA
+
+Ms Dian Xu, representing the RTC China, reported that, in collaboration with NMDIS and the
+National Centre of Ocean Standards and Metrology, successfully delivered an impactful training
+program in 2025 focused on sea level rise and its impact on coastal dunes and climate change.
+The course covered key topics such as catastrophe risk modeling for disaster risk financing,
+enhancing climate resilience and disaster preparedness, social and ecological impacts of
+monsoons and heatwaves, marine dual evaluation technology, and included a study tour to the
+National Marine Museum of China. This initiative built capacity in critical environmental areas
+and technical disciplines, attracting 16 trainees from eight Indo-Pacific countries—China, Egypt,
+Indonesia, Malaysia, Pakistan, the Philippines, Thailand, and Vietnam—resulting in a 100%
+completion rate with all participants submitting final reports. Building on this success, a new
+online course is planned for November 2026 on the formulation and practice of international
+marine standards, targeting researchers and management staff involved in marine
+standardization. To further enhance training quality and impact, the Centre recommends
+increased support from the Secretariat to secure world-renowned lecturers and the
+development of specialized training opportunities for regional training coordinators, both
+online and on-site, to strengthen collective capacity and coordination.
+The Steering Group discussed the opportunity to replicate coastal resilience training through
+collaboration with RTC China, a pilot initiative also scalable for other trainings or regions.
+
+2.2.4. RTC COLOMBIA
+
+Ms Carolina García Valencia, OTGA Co-Chair representing the RTC-Colombia Coordinator,
+presented an overview of its scope, priorities, and training achievements for 2024–2025 in
+collaboration with OTGA, as well as plans for 2026 at the RTCColombia for Spanish-speaking
+countries. The focus remains on aligning training with regional needs, supporting projects
+across the Pacific and Caribbean, and strengthening ocean data and information management.
+Between 2024 and 2025, RTC Colombia delivered eight courses in various formats (four in
+person), reaching 108 participants from 15 countries, with 57% women. Key topics included
+ocean acidification, data management, coastal zone management, marine spatial planning, and
+marine protected areas. The ADAPT project was highlighted for enabling an in-person
+workshop and an upcoming online course. For 2026, three courses are planned: one on blue
+governance, another on carbonate measurements to support SDG 14, and the ADAPT course
+on best practices for seagrass and mangrove monitoring. The centre continues improving
+course materials, prioritizing blended delivery, and addressing platform performance issues,
+while acknowledging strong support from OTGA coordination.
+The Steering Group discussed the challenge of training courses receiving far more applications
+than available slots and how to support those not selected. Suggestions included: prioritizing
+non-selected applicants in future calls, providing access to course materials for self-learning
+(without certification), developing self-paced versions of instructor-led courses, and recording
+live sessions for sharing on platforms like YouTube. It was also suggested OTGA consider
+mechanisms to differentiate between participants seeking certification and those wanting only
+knowledge, ensure lecturer consent and licensing compliance for content sharing, and adopt a
+case-by-case approach based on the course nature.
+                                                                            IOC/IODE-SG-OTGA-V
+                                                                                        Page 15
+
+2.2.5. RTC CONO SUR
+
+On behalf of Mr Daniel Conde, RTC Cono Sur coordinator, Ms Sofie De Baenst reported that
+the Regional Training Centre (RTC), in collaboration with Uruguay and Brazil, focuses on
+capacity building and coastal and marine spatial planning. They aim to deliver an annual
+course, with an online edition held in 2024 that received around 200 applications from 25
+countries, though participant numbers were not disclosed. A face-to-face course planned for
+2025 in Uruguay was cancelled due to budget constraints and is now proposed for 2026.
+Challenges in organizing in-person courses, including logistics, funding, and professor
+availability, were highlighted. The sustainability of RTC and continued delivery of OTGA courses
+relies on strong commitment from all partners, with support from the OTGA Secretariat for
+promotion, communication, and coordination. Long-term sustainability and collaboration
+remain key priorities.
+The Steering Group discussed the timing of fund availability and challenges that may prevent
+implementation of a training, and highlighted the need for improved planning and coordination
+by the Secretariat to align resource allocation with organizational timelines, communicate
+these constraints to donors, and optimize opportunities.
+2.2.6. RTC Ecuador
+No report or presentation was received from RTC Ecuador coordinator.
+
+2.2.7. RTC GHANA
+
+Mr Benjamin Botwe, RTC coordinator, reported that the scope of activities of RTC Ghana is to
+cover West, Central, and North Africa, focusing on ocean applications and climate change,
+including environmental DNA (eDNA), fisheries science, oceanographic data, and marine spatial
+planning. Training delivery has been in-person, online, and blended formats, with a strong
+emphasis on capacity development for early-career ocean professionals, regional collaboration,
+and integration of science into policy and governance. Key achievements in 2024 included
+online and in-person courses on ocean acidification under the Biotal project, training 25
+participants from six West African countries on chemical drivers, biological impacts, and
+monitoring techniques. Additional courses addressed Earth observation for fisheries
+monitoring and enforcement against illegal fishing, as well as hands-on eDNA training for
+biodiversity assessment and marine governance. Planned activities for 2026 include repeating
+high-demand courses on ocean applications, Earth observation, fisheries resource
+management, and eDNA, supported by partners such as UC Africa, OTGA, the Ocean
+Foundation, and POGO.
+The Steering Group discussed logistical challenges, internet connection, and increased demand
+for participation, but a limited number could be accommodated. There were also insights on
+the application review process that RTC Ghana carried out, as an example of a process based
+on regional representation, gender balance, and an impartial review process where evaluators
+did not assess applicants from their own countries.
+
+2.2.8. STC HARMFUL ALGAE BLOOM PROGRAMME
+
+Mr Henrik Enevoldsen informed about the activities of the STC HAB, through the IOC Science
+and Communication Centre on Harmful Algal Blooms (HABs), emphasizing its long-standing role
+since 1995 in capacity building for managing HABs, especially in developing Member States.
+Highlights include certified hybrid courses on harmful microalgae identification, international
+phytoplankton intercalibration exercises, and ad hoc regional trainings, all linked to global
+research and data collection. Courses are demand-driven, fee-based, and include examinations
+IOC/IODE-SG-OTGA-V
+Page 16
+
+and certification, which are critical for seafood safety monitoring. Future plans of STC HAB
+involve continued annual courses, new partnerships for intercalibration, and expanded
+in-country training in Southern Africa.
+The Steering Group highlighted the importance of cost-recovery models for OTGA training
+courses. It was reinforced that partial funding and travel grants have worked well, enabling
+broader participation, especially for early-career professionals. The group suggested that OTGA
+consider expanding cost-recovery practices, maintaining grants for those in need, and
+organising more regional courses to reduce travel costs and improve accessibility.
+Demand-driven planning and prioritisation based on surveys were also emphasised as key to
+aligning OTGA courses with Member States’ needs.
+
+2.2.9. RTC INDIA
+
+Mr Udaya Bhaskar, RTC Coordinator, reported that INCOIS promotes ocean-related activities
+and advanced operational oceanography training at national, regional, and global levels. It
+offers courses in ocean data analysis, remote sensing, modelling, hazard monitoring, and
+integrated oceanography for students, government staff, decision-makers, and operational
+centres, supported by state-of-the-art infrastructure for physical, online, and hybrid formats.
+Since its inception, INCOIS has conducted 132 courses for 7,400 participants from 96 IOC
+Member States, ensuring gender balance through women-focused programmes. In 2024, it
+delivered two OTGA courses for 46 participants, while in 2025, despite funding constraints, it
+organized 25 additional courses and outreach under the Ocean Decade, including training for
+early-career ocean professionals and hosting IOC traineeships. For 2026, plans include
+repeating high-demand OTGA courses (subject to funding), expanding Category 2 activities, and
+launching a self-paced learning platform with integrated hands-on sessions, continuing hybrid
+and on-campus delivery enhanced by modelling servers.
+The Steering Group discussed the formats of training to leverage the potentials of RTC India
+and training capabilities within the region.
+
+2.2.10. STC INDONESIA
+
+Ms Anni Arumsari Fitriany, representing the STC coordinator, reported that The Indonesian
+Centre of Excellence reported its activities for 2024–2025, focusing on marine meteorology and
+tsunami-related initiatives. In 2024, the Centre organized several regional trainings and
+workshops, including collaborative sessions with OTGA and WMO, despite initial challenges in
+harmonizing administrative requirements. Key events included two focus group discussions on
+satellite meteorology applications in ocean weather prediction, a hybrid Data Buoy
+Cooperation Panel workshop on ocean observations with 239 participants from 33 countries,
+and a two-phase training on satellite altimetry for operational ocean mapping. These marked
+the Centre’s first collaborative training with OTGA and WMO, supported by funding
+partnerships. For 2025, planned activities included a regional discussion on satellite
+meteorology in marine operations and an online tsunami mitigation training with 28
+participants from multiple countries. The Centre highlighted the need for improved
+understanding and management of the OTGA learning platform, suggesting dedicated training
+for platform administration to enhance future program delivery.
+The Steering Group cited opportunities for discussions to enhance the collaboration under
+IOC/WMO, and the design of training for facilitators on the technicalities of the Moodle
+platform.
+                                                                              IOC/IODE-SG-OTGA-V
+                                                                                          Page 17
+
+2.2.11. RTC KENYA
+
+Mr Harrison Onganda, who reported on RTC in Mombasa, hosted by the Kenya Marine and
+Fisheries Research Institute, emphasized that marine spatial planning (MSP) is a national
+priority, with ongoing MSP processes coordinated by the institute. The centre aligns with IOC
+Africa objectives and primarily supports English-speaking countries, while also engaging
+participants from French and Portuguese-speaking regions. In 2024, RTC Mombasa delivered a
+face-to-face course on implementing FAIR principles for African marine and coastal data,
+attracting participants from across Africa. The centre highlighted the need for an African
+Coastal and Marine Atlas Workshop to build on this achievement. A planned joint training with
+Seabed 2030 on satellite-derived bathymetry was postponed due to competency assessment
+issues, but is rescheduled. For 2026, proposed activities include: A system dynamics course for
+sustainable MSP in collaboration with Nelson Mandela University and Scottish Association for
+Marine Sciences; Training on fundamentals of oceanographic data management and
+inter-calibration of common datasets, aligned with international strategies; A course on
+operational remote sensing and satellite oceanography, potentially in partnership with
+Copernicus or NOAA Ocean Colour programs.
+The Steering Group noted with appreciation the requests from RTC Kenya and the challenges
+faced by some lecturers while adapting to LMS procedures and standards, such as the
+Competency Assessment Form. It suggested that OTGA Secretariat discuss the possibilities to
+accomplish these trainings in the following years.
+
+2.2.12. RTC MALAYSIA
+
+Mr Aidy Muslim, RTC Malaysia coordinator, informed that RTC Malaysia has recently focused
+on marine science, aquatic resources, species, and the oil and gas sector, prioritizing specialized
+training for national agencies to meet operational needs. Over the past few years, the
+institution has gained attention through the Ocean Decade initiative, resulting in increased
+involvement in training and research cruises, which limited engagement with OTGA activities.
+Most training has been face-to-face, funded by agencies, though efforts are underway to adapt
+courses for OTGA’s online model. In 2025, planned OTGA courses, such as Coral Reef Health
+and Monitoring, were deferred due to staff availability, while other initiatives, like the BBNJ
+course conducted outside OTGA. For 2026, RTC Malaysia plans to deliver the Coral Reef Health
+and Monitoring course in June and a Marine GIS course, leveraging UMT’s existing credited
+programs and exploring self-paced formats aligned with OTGA standards.
+2.2.13. RTC MOZAMBIQUE
+Ms Clousa Maueua, representing the RTC Mozambique, reported that RTC Mozambique
+focuses on marine research, ocean literacy, and coastal ecosystem management, including
+seagrass and mangrove restoration. It organizes both onsite and online courses, with recent
+sessions attracting participants from multiple countries despite challenges like limited funding
+and connectivity issues. The centre relies heavily on IOC support for logistics and aims to
+improve planning, reduce tool complexity in courses, and address high demand by repeating
+popular training. Plans for next year include delivering a postponed sustainable coastal
+management course and expanding online offerings to accommodate more applicants.
+The Steering Group commented on the persistent challenges with internet connectivity for
+participants, and suggested OTGA consider developing offline or self-contained course options,
+such as downloadable modules or tools like MoodleBox, and exploring mobile applications that
+work without internet. It was also noted that access to global data systems complicates offline
+solutions, but creative approaches and resource allocation could help ensure learning is not
+blocked by connectivity issues.
+IOC/IODE-SG-OTGA-V
+Page 18
+
+2.2.14. STC NORWAY
+
+STC Norway is not active and has withdrawn from the programme in 2024. An open call for
+replacement is foreseen for the next year, in accordance with the Terms of Reference.
+
+2.2.15. RTC PACIFIC COMMUNITY
+
+Ms Maeva Tesan, on behalf of RTC Coordinator, outlined the current priorities and challenges
+for ocean governance and training in the Pacific region, which comprises 22 countries and
+territories. Due to the complexity of coordinating across these nations, no courses were
+delivered in 2025, but plans are underway for 2026. The focus will be on two main areas: (1)
+regional ocean governance, particularly maritime boundaries impacted by sea-level rise, to
+ensure internationally recognized zones, and (2) marine spatial planning, including GIS and case
+studies, supported by a new micro-qualification initiative. Collaboration with regional agencies
+and platforms like OTGA is essential, and the first courses are targeted for delivery by July and
+September 2026, with ECOP and ocean science professionals as key audiences.
+The Steering Group commented on the positives of the new trainings envisioned by the RTC,
+and opportunities and synergies with other IOC initiatives and IOC Regional Sub-Commissions.
+
+2.2.16. RTC PORTUGAL
+
+Ms Filomena Cardoso Martins, RTC coordinator, reported that RTC Portugal, is an open
+consortium comprising 17 institutions across Portugal. Over the past two years (2024–2025),
+the consortium has offered a diverse range of online courses, some of which were
+continuations of earlier editions, such as the Ocean Literacy course, which reached its third
+edition in 2025. Despite attracting a high number of candidates, participant retention has been
+a challenge, particularly in courses involving African countries, largely due to internet instability
+and platform access issues. While courses like Harmful Algal Bloom and Biomonitorization met
+initial expectations, others require reevaluation and restructuring. The consortium is currently
+revising and updating course materials, with new courses postponed to 2026. The annual
+meeting, initially planned for June, was delayed but is expected to occur by year-end to
+redefine strategies and improve collaboration among institutions. The coordinator expressed
+gratitude to the secretariat for its essential support in delivering courses during this period.
+The Steering Group commented about the possibilities of joint activities with the Decade
+Coordination Office for Ocean Literacy, the challenges of distance-learning, language barriers,
+and course completion time; and suggested that OTGA consider the implementation of more
+creative and innovative tools for learning and teaching, and test the trainers' approach, in
+support of challenges faced by RTC Portugal.
+
+2.2.17. STC INTERNATIONAL TSUNAMI INFORMATION CENTRE
+
+Ms Laura Kong, STC Coordinator, informed that STC ITIC, established in 1965 and hosted by the
+U.S. NOAA and Chile, reported on its recent capacity-building activities in collaboration with
+the IOC Tsunami Programme. ITIC operates from offices in Hawaii and Puerto Rico, supporting
+both Pacific and Caribbean regions. Over the past decades, ITIC has conducted extensive
+training, with recent efforts focused on the Tsunami Ready Programme and the development
+of self-paced online courses. Two key courses have been launched: Tsunami Awareness
+(mid-2024) with 442 enrollments and 226 completions, and Tsunami Ready (late 2024) with
+122 enrollments and 82 completions. Current initiatives include creating a comprehensive
+competency-based training framework for tsunami warning centre staff, funded by U.S.
+contributions and developed with IOC and country partners. This framework will feature a
+                                                                             IOC/IODE-SG-OTGA-V
+                                                                                         Page 19
+
+progressive series of courses—from awareness to advanced operational modules—integrating
+resources, culminating in hands-on simulations by 2026. ITIC aims to enhance global tsunami
+preparedness through scalable, accessible training solutions.
+The Steering Group discussed the new Tsunami Ready online training, clarifying that it
+complements existing community recognition programs by providing accessible, structured
+learning on tsunami preparedness and certification processes. It was highlighted that the role
+of these courses is in scaling global participation through self-paced modules, reducing
+repetitive in-person explanations, and creating a pathway for advanced training. Concerns were
+raised about how individual certification benefits communities and the challenges of
+transitioning to blended learning, including monitoring and evaluation. Notes were added
+about the high demand for in-person training, which is costly and limited, and suggested a
+tiered approach where completion of online modules qualifies participants for hands-on
+simulations. Suggestions included improving automation and enrollment processes, replicating
+ITIC’s structured training model across other programs to enhance scalability and user
+experience, opening the materials to more people and sharing some video classes on Youtube.
+
+2.3       JOINT ACTIVITIES WITH OTHER IOC PROGRAMMES AND REGIONAL SUBSIDIARY BODIES
+This agenda item was introduced by the Ms Ana Carolina Mazzuco, who highlighted that OTGA
+courses cover a range of topics related to the IOC high-level priorities, contributing to the IOC
+Mandate and the implementation of the IOC Capacity Development Strategy, enabling
+equitable participation of all IOC Member States, IOC Programmes, and IOC Regional Subsidiary
+Bodies. Examples of this support include:
+      ●   Tsunami Resilience Section (TRS). OTGA provides a framework for sustainable delivery
+          of tsunami-related training programmes to meet the capacity development priorities of
+          Member States. Some immediate areas where OTGA contributes are by leveraging the
+          RTCs/STCs and co-located Regional Tsunami Service Providers (RTSP) to routinely
+          deliver tsunami-related training, development of online training modules for priority
+          tsunami-related areas to support self-paced training, provision of an effective online
+          training management system, and complementing global TRS capacity development
+          activities and projects.
+      ●   Marine Policy and Regional Coordination Section (MPR). OTGA provides additional
+          support to the training needs of MPR for a number of activities and projects such as
+          multi-language online training in Marine Spatial Planning; various learning frameworks
+          and competencies for the Ocean Decade, including the close collaboration with the
+          Capacity Development Facility and Decade Collaborative Centres and Coordination
+          Offices; and wide subjects related to the international ocean governance, i.e., BBNJ
+          Agreement and Sustainable Ocean Planning.
+      ●   Ocean Literacy. OTGA supports the Ocean Literacy training programme for business,
+          policy, education and civic groups by providing both online and self-paced training
+          materials and facilitating onsite workshops. The outcome will be business, policy,
+          education and civic groups trained on ocean literacy and empowered to use ocean
+          knowledge for ocean action.
+      ●   IOC Harmful Algal Bloom Programme. OTGA supports HAB training activities, such as
+          the IOC Identification Qualification in Harmful Marine Microalgae, the IPI Marine
+          Phytoplankton enumeration and identification, the IOC UNESCO Advanced
+          Phytoplankton Course, and many others.
+      ●   Ocean Science Section (OSS). OTGA supports courses that improve the participants'
+          ocean acidification data management skills and familiarize national experts with the
+          14.3.1 data portal and tools.
+IOC/IODE-SG-OTGA-V
+Page 20
+
+    ●     The International Oceanographic Data and Information Programme (IODE). OTGA,
+          created and hosted by IODE, dedicates core training activities to teach the principles of
+          data and information management and promote the use of standards across IODE
+          centres to achieve interoperability. Specific training can include Research Data
+          Management, Discovery and Use of Operational Ocean Data Products and Services,
+          Introduction to Coastal Atlases, Biological Data Management and Monitoring, Quality
+          Management Framework and Marine GIS Applications.
+
+
+List of courses led by IOC units in 2024:
+
+ Date                 Course                                             IOC Section/Unit/RSB
+                     IOC/OTGA/MSP: MSPglobal Online Training Course
+   27 Sep - 31 Dec   (ENGLISH)                                          IOC MPR/MSP
+                     IOC/OTGA/MSP: Cours de formation en ligne de
+   27 Sep - 31 Dec   MSPglobal (FRANÇAIS)                               IOC MPR/MSP
+                     IOC/OTGA/MSP: Curso de formación en línea de
+   27 Sep - 31 Dec   MSPglobal (ESPAÑOL)                                IOC MPR/MSP
+                     IOC/OTGA/OD Codesign for the Ocean Decade
+   27 May - 15 Dec   [Self-paced online course]                         IOC MPR/CDF
+                     IOC/OTGA/OL Why the ocean should matter to us all
+    1 Jan - 30 Dec   (self-paced)                                      IOC OSS/OL
+                     IOC/OTGA/OL Mainstreaming Ocean Literacy in
+    1 Jan - 30 Dec   Governance (self-paced)                            IOC OSS/OL
+                     IOC/OTGA/OL Educating about the Ocean: Waves of
+    1 Jan - 30 Dec   change (self-paced)                             IOC OSS/OL
+                     IOC/OTGA/OL iSea Stories: Understanding the Ocean
+    1 Jan - 30 Dec   for Media and Press (self-paced)                  IOC OSS/OL
+                     IOC/OTGA/OL: Ocean Literacy Training for architects
+    1 Jan - 30 Dec   and urban planners (self-paced)                     IOC OSS/OL
+                     IOC/OTGA/OL : Save the Wave: Summer School on
+     24 - 28 Jun     Ocean Literacy and Ecosystem Restoration           IOC OSS/OL
+                     IOC/OTGA/OL : Summer School on Ocean Literacy
+                     and Collaboration on Nature-Based Solutions for the
+        1- 5 Jul     Baltic and North Sea                                IOC OSS/OL
+                    IODE/OTGA Training Course: Quality Management
+ 16-18 January 2024 System Essentials for NODCs and ADUs                IOC IODE/RTC Belgium
+01 February - 31 May
+       2024          IOC/OTGA: Ocean Data Management                    IOC IODE/RTC Belgium
+                     IOC/OTGA/OIH/ODIS : Implementing the Ocean Data
+   5 February -15    and Information System (ODIS) architecture
+   December 2024     [self-paced]                                    IOC IODE/ODIS
+                     IOC/OTGA/OIH/ODIS :Implementação da arquitetura
+   5 February -15    do Sistema de Dados e Informações Oceânicas (ODIS)
+   December 2024     [individualizado]                                  IOC IODE/ODIS
+                     IOC/OTGA/OIH/ODIS :Mise en œuvre de
+   5 February -15    l'architecture du Système de données et
+   December 2024     d'informations océanographiques [individuel]       IOC IODE/ODIS
+   5 February -15    IOC/OTGA/OIH/ODIS : Implementación de la
+   December 2024     arquitectura del Sistema de información y datos    IOC IODE/ODIS
+                                                                                         IOC/IODE-SG-OTGA-V
+                                                                                                     Page 21
+
+                      oceánicos [Ritmo propio]
+                      IOC/OTGA/ECOPs : Data Analysis with Python
+   26 February -19    Programming for Early Career Ocean Professionals
+     March 2024       (ECOPs)                                            IOC IODE/RTC Belgium
+ 01 May -30 August IOC/OTGA/VLIZ : Biological Data Management 2024
+       2024        (self-paced course)                                   IOC IODE/RTC Belgium
+    20 Jul - 30 Dec   UNESCO-IOC Tsunami Awareness self-paced course     IOC TRS/STC ITIC
+                       IOCHABS-IOC Science and Communication Centre on
+01 July -20 September Harmful Algae International Phytoplankton
+         2024         Intercomparison (IPI) test 2024                  IOC OSS/STC HAB
+  01 September - 12
+   December 2024      IOC/OTGA: Ocean Data Management                    IOC IODE/RTC Belgium
+                    APC13 : 13th Advanced Phytoplankton Course-
+ 06-26 October 2024 Identification, Taxonomy, Systematics                IOC OSS/STC HAB
+                    IOC/OTGA/ECOPs: Introduction to Oceanographic
+04-15 November 2024 Survey Techniques and Data Management                IOC IODE/RTC Belgium
+
+
+
+List of courses led by IOC units in 2025:
+
+ Date                  Course                                             IOC Section/Unit/RSB
+                     IOC/OTGA/MSP: MSPglobal Online Training Course
+ 1 Jan - 30 Dec 2025 (ENGLISH)                                           IOC MPR/MSP
+                     IOC/OTGA/MSP: Cours de formation en ligne de
+ 1 Jan - 30 Dec 2025 MSPglobal (FRANÇAIS)                                IOC MPR/MSP
+                     IOC/OTGA/MSP: Curso de formación en línea de
+ 1 Jan - 30 Dec 2025 MSPglobal (ESPAÑOL)                                 IOC MPR/MSP
+                     IOC/OTGA/OD Codesign for the Ocean Decade
+ 8 Jan - 15 Dec 2025 [Self-paced online course]                          IOC MPR/CDF
+                     IOC/OTGA/OL Why the ocean should matter to us all
+ 9 Mar - 30 Dec 2025 (self-paced)                                      IOC OSS/OL
+                     IOC/OTGA/OL Mainstreaming Ocean Literacy in
+ 9 Mar - 30 Dec 2025 Governance (self-paced)                             IOC OSS/OL
+                     IOC/OTGA/OL Educating about the Ocean: Waves of
+ 9 Mar - 30 Dec 2025 change (self-paced)                             IOC OSS/OL
+                     IOC/OTGA/OL iSea Stories: Understanding the Ocean
+ 9 Mar - 30 Dec 2025 for Media and Press (self-paced)                  IOC OSS/OL
+                     IOC/OTGA/OL: Ocean Literacy Training for architects
+ 9 Mar - 30 Dec 2025 and urban planners (self-paced)                     IOC OSS/OL
+ 22 April - 31 October Co-Design Training Course for Ocean Decade Actions
+         2025          in Africa                                          IOC MPR/CDF
+                       IOC/OL/OTGA: Summer School on Ocean Literacy and
+                       Collaboration on Nature-Based Solutions for the
+ 29 June - 4 July 2025 Mediterranean and Black Seas                     IOC OSS/OL
+ 31 December 2025 - Ocean Literacy for Blue Schools Coordinators and
+  31 December 2026 Teachers                                              IOC OSS/OL
+15 Jan - 15 December
+         2025        IOC/OTGA/OBPS : Ocean Best Practices                IOC IODE/OBPS
+17 February 2024 - 31 IOC/OTGA/OBIS: Contributing and publishing         IOC IODE/OBIS
+IOC/IODE-SG-OTGA-V
+Page 22
+
+        Dec 2025     datasets to OBIS (self-paced)
+ 1 February - 31May IOC/OTGA/VLIZ : Ocean Data Management 2025
+        2025        (self-paced)                                          IOC IODE/RTC Belgium
+                      IOC/OTGA/VLIZ : Biological Data Management 2025
+1 Apr to 31 July 2025 (self-paced)                                        IOC IODE/RTC Belgium
+ 01 July - 31 October IOC/OTGA/VLIZ : Ocean Data Management 2025
+         2025         (self-paced)                                        IOC IODE/RTC Belgium
+ 03 September - 30   IOC/OTGA/VLIZ : Biological Data Management 2025
+  November 2025      (self-paced)                                         IOC IODE/RTC Belgium
+  10 - 21 November   IOC/OTGA/DCO-ODS: Data quality assurance (QA)
+         2025        and quality control (QC) in the Ocean Decade         IOC IODE/DCO-ODS
+                    IOC/OTGA/DCO-ODS: De la observación a la acción,
+ 04 November 2025 - empoderando a las comunidades hacia la excelencia
+  28 February 2026 en datos marinos.                                  IOC IODE/DCO-ODS
+                    IOC/OTGA/DCO-ODS: From Observation to Action:
+ 04 November 2025 - Empowering communities towards excellence in
+  28 February 2026 marine data                                            IOC IODE/DCO-ODS
+                     IAEA/IOC/HAB/OTGA: IAEA-IOC Training Course and
+ 03 March - 09 April Certification on Identification of Harmful Marine
+       2025          Algae                                                IOC OSS/STC HAB
+                     IOC/OTGA/HAB: IOC Training Course and
+  06 October - 29    Identification Qualification in Harmful Marine
+  November 2025      Microalgae                                           IOC OSS/STC HAB
+   20 January - 15
+   December 2025     UNESCO-IOC Tsunami Awareness self-paced course       STC ITIC
+   17 January - 15   IOC/OTGA/ITIC: UNESCO-IOC Tsunami Ready
+   December 2025     self-paced course                                    STC ITIC
+
+
+
+She noted that having IOC sections leading training initiatives, all the courses are aligned with
+IOC Mandate, and may also be directly serving one of the programmes/sections. This
+information can be found within the tag system of OTGA e-Learning Platform.
+Ms Ana Carolina Mazzuco also recalled that OTGA also works with the IOC Regional Subsidiary
+Bodies to ensure the capacity development needs of the regions are being met by supporting
+the Regional and Specialized Training Centres. This regional input will result in:
+    ●     Promoting the use of local experts as facilitators and training assistants.
+    ●     Providing a programme of training courses related to IOC programmes, contributing to
+          the sustainable management of oceans and coastal areas and relevant to Member
+          States in the regions.
+    ●     Working in a regional context, addressing common regional goals as well as national
+          goals.
+    ●     Using the working language(s) of the countries in their region.
+
+
+List of courses collaboratively delivered with IOC Regional Subsidiary Bodies in 2024 and 2025:
+
+ Date                 Course                                               IOC Section/Unit/RSB
+                     IOC/OTGA/IOCAFRICA/RTC Kenya: Training on the
+  23-26 September    implementation of FAR Principles to African Marine
+        2024         and Coastal                                          IOCAFRICA
+                                                                                      IOC/IODE-SG-OTGA-V
+                                                                                                  Page 23
+
+                       IOC/OBPS/OTGA/RTC Colombia: ADAPT Curso de
+28 April to 2 May 2025 formación sobre mejores prácticas oceánicas        IOCARIBE
+                     IOC/IOCAFRICA/OBIS/OTGA: Environmental DNA
+  03 - 07 November
+                     (eDNA) Training for Africa and the Adjacent Island   IOCAFRICA
+         2025
+                     States
+
+
+
+
+2.3.1. IOC OCEAN SCIENCE SECTION AND IOC CAPACITY DEVELOPMENT UNIT
+
+Ms Ana Carolina Mazzuco informed that there will be no presentations in these Sections, but
+highlighted the planned support for the development of training modules on:
+    ●   Pollution, under the proposed project funded by the Nippon Foundation
+    ●   SDG Indicator 14.3.1 on ocean acidification.
+    ●   Blue carbon, funded through the Blue Carbon Initiative.
+She also highlighted that RTC Belgium is currently updating the IOC Ocean Acidification courses
+in OTGA (EN, FR) with IOC subject experts to re-launch as self-paced learning in early 2026. IOC
+Harmful Algal Bloom Programme activities were highlighted under STC HAB.
+
+2.3.2. IOC MARINE POLICE AND REGIONS SECTION
+
+Ms Nayeon Kim, Decade Capacity Development Facility coordinator, reported that the Facility
+has advanced Ocean Decade priorities by supporting training initiatives focused on integrating
+indigenous and local knowledge, strengthening science-policy co-design, and building capacity
+for implementing the Biodiversity Beyond National Jurisdiction (BBNJ) agreement. In
+collaboration with OTGA, CDF is developing a baseline BBNJ course and plans to expand with
+additional modules. Efforts also target enabling Least Developed Countries and early-career
+ocean professionals to adopt technological and digital innovations in ocean science, such as
+data interpretation. Key needs identified include improving regional coordination, ensuring
+country ownership, aligning training with long-term capacity outcomes, and creating systems
+for monitoring and reporting results. In 2025, the facility supported seven technical trainings
+reaching 34 countries, covering topics like co-design, eDNA, taxonomy, and ocean acidification.
+Lessons learned highlight the importance of linking initiatives to larger programs, engaging
+regional experts early, and standardizing reporting. Planned activities for 2026 include
+implementing the BBNJ baseline course, replicating successful trainings regionally, and
+collaborating with early-career networks to scale impact.
+Mr Niccolo Bassan reported the MSPglobal programme, in collaboration with OTGA, to
+advanced marine spatial planning capacity building under IOC initiatives. He reported that
+there were jointly developed and host of one self-paced MSPglobal online training course,
+available in English, Spanish, and French, which has reached over 400 participants since its
+launch during MSPglobal 2.0. Building on this success, MSPglobal 3.0 will introduce two new
+online courses: one on integrating biodiversity conservation and climate adaptation into
+marine spatial planning, and another on spatial data infrastructure and data toolboxes to
+address Member States’ challenges in accessing reliable, interoperable data. These courses will
+complement in-person regional trainings and strengthen technical skills for evidence-based
+decision-making. Additionally, it is envisioned that a course on sustainable ocean planning for
+decision-makers, linking policy frameworks with ecosystem-based management. All activities
+align with IOC’s capacity development and midterm strategies, addressing gaps in knowledge,
+data management, and cross-sectoral coordination to promote inclusive, sustainable ocean
+governance.
+IOC/IODE-SG-OTGA-V
+Page 24
+
+2.3.3. IOC TSUNAMI SECTION
+
+IOC Tsunami Section relevant topics were highlighted under STC ITIC.
+
+2.3.4. IOC OCEAN OBSERVATIONS SECTION
+
+There were no interventions or reports from this Unit.
+
+2.3.5. IOC INTERNATIONAL OCEAN DATA AND INFORMATION EXCHANGE PROGRAMME
+
+There were no interventions or reports from this Unit.
+
+2.3.6. IOCARIBE
+
+There were no interventions or reports from this Unit.
+
+2.3.7. IOCAFRICA
+
+There were no interventions or reports from this Unit.
+
+2.3.8. IOCINDIO
+
+There were no interventions or reports from this Unit.
+
+2.3.9. IOC WESTPAC
+
+There were no interventions or reports from this Unit.
+
+2.4     JOINT ACTIVITIES WITH PARTNER ORGANIZATIONS
+This item was introduced by Ms Ana Carolina Mazzuco, who highlighted that OTGA
+collaborates with a wide range of partners with the aim of:
+●       Expanding global awareness of learning opportunities.
+●       Increasing learning content.
+●       Developing new cross-cutting learning services.
+●       Developing and implementing quality standards for the delivery of learning services.
+Collaborations are channelled through OTGA Secretariat and RTC/STCs networks to accelerate
+response to IOC needs, priorities, and demands for training and other aligned requests from
+the global community. Affiliated partners complement OTGA network with expertise,
+infrastructure, funding, frameworks, and at the same time, they benefit from OTGA
+coordination, network, and learning management system. Current partners include UN
+Agencies, Educational Institutions, Multi-national and national initiatives, Governmental and
+Non-Governmental Organizations, Capacity Development Programmes and Projects, and
+others. OTGA Secretariat, reviewed OTGA course jointly developed on the request of partner
+organizations.
+
+
+List of courses on behalf of Affiliated partners in 2024:
+
+ Date                Course                                     Affiliated Partner (Leading
+                                                                Organization), Country
+                                                                                           IOC/IODE-SG-OTGA-V
+                                                                                                       Page 25
+
+                       IOC/OTGA/VLIZ/VLIR : NAGOYA Protocol and Access
+                       and Benefit Sharing (ABS) under the Convention on   Flanders Marine Institute (VLIZ),
+   23 Feb - 23 Feb     Biological Diversity (CBD)                          Belgium
+                                                                           Marine Environmental Data and
+                       IOC/OTGA/MEDIN : Marine Data Management,            Information Network, United
+     18 - 22 Mar       Governance and the MEDIN toolset (Mar 2024)         Kingdom
+                                                                           Marine Environmental Data and
+                       IOC/OTGA/MEDIN : Marine Data Management,            Information Network, United
+        3 - 7 June     Governance and the MEDIN toolset                    Kingdom
+                                                                           Marine Environmental Data and
+                       IOC/OTGA/MEDIN : Marine Data Management,            Information Network, United
+   2 - 6 September     Governance and the MEDIN toolset                    Kingdom
+   3 September - 3     IOC/OTGA/UFSCar: Microplástico: natureza,           Universidade Federal de São Carlos,
+      December         ocorrência e impacto ambiental 2025                 Brazil
+
+
+
+List of courses on behalf of Affiliated partners in 2025:
+ Date                   Course                                              Affiliated Partner (Leading
+                                                                            Organization), Country
+                       IOC/OTGA/UV/UdeC/IRD : Modelado numérico
+   13 - 17 January     básico del océano utilizando CROCO                  University of Concepción, Chile
+                                                                       Decade Collaborative Centre for
+                       IOC/OTGA/DCC-CR: Sustainable Coastal Growth and Coastal Resilience, University of
+ 27 January - 11 April Resilience, Italy                               Bologna, Italy
+                       IOC/OTGA/UPMSI/CMCC-CoastPredict/UniBo/DCC-C
+                       R/DOST PCAARRD: COMPASS - Philippines - “Coastal CoastPredict – Programme for the UN
+   24 February - 08    Observing and Modeling for Prediction and        Decade of Ocean Science,
+        March          Assessment to Support resilient Systems"         International
+                                                                           Marine Environmental Data and
+                       IOC/OTGA/MEDIN : Marine Data Management,            Information Network, United
+    19 to 23 May       Governance and the MEDIN toolset                    Kingdom
+                    IOC/OTGA/BlueCloud2026: How to use a Virtual
+17 September 2025 - Laboratory on Coastal Ocean Currents from              EU BlueCloud 2026 project,
+    31 July 2026    Observations                                           International
+                       IOC/OTGA/BlueCloud2026: How to use a Virtual        EU BlueCloud 2026 project,
+17 September - 31 July Laboratory on Carbon Plankton Dynamics              International
+                    IOC/OTGA/BlueCloud2026: Navigating the Global
+17 September 2025 - Fisheries Atlas Virtual Laboratory: Tools and          EU BlueCloud 2026 project,
+    31 July 2026    Techniques                                             International
+  02 September - 16    IOC/OTGA/UFSCar: Microplástico: natureza,           Universidade Federal de São Carlos,
+      December         ocorrência e impacto ambiental 2025                 Brazil
+                                                                           Marine Environmental Data and
+                       IOC/OTGA/MEDIN : Marine Data Management,            Information Network, United
+   13 - 17 October     Governance and the MEDIN toolset                    Kingdom
+                                                                           Decade Collaborative Centre for
+                                                                           Coastal Resilience, CMCC Foundation
+  24 November - 19     IOC/OTGA/DCC-CR: Coastal Resilience to Sea Level    Euro-Mediterranean Center on
+     December          Rise                                                Climate Change, Italy
+                       IOC/OTGA/UNIMI: Pharmacontamination of the
+  1 Nov - 31 January   Ocean                                               University of Milan, Italy
+IOC/IODE-SG-OTGA-V
+Page 26
+
+                     IOC/OTGA/NF-POGO(CofE): Online resources for
+                     marine ecosystem analysis for the NF-POGO Centre Nippon Foundation-POGO Centre of
+  24 - 28 November   of Excellence in Observational Oceanography (CofE) Excellence, International
+
+
+
+Interventions received from partner organizations included:
+Ms Rita Meneses, on behalf of the EU Blue-Cloud 2026 project, informed that in collaboration
+with OTGA, the project is advancing marine science capacity building by integrating its
+technical services into training programs. Blue-Cloud, part of the European Open Science Cloud
+initiative and contributing to the Digital Twin of the Ocean, provides data management
+services, thematic virtual labs, and workbenches for marine research. To ensure effective use of
+these tools, Blue-Cloud and OTGA have launched three online courses and plan to expand to
+five by January, covering all virtual labs, followed by courses on workbenches and virtual
+research environments in April. These courses, aimed at marine science researchers, will
+enhance skills in accessing and analyzing research data and will be available free of charge on
+the OTGA platform until July 2026. This collaboration strengthens OTGA’s course catalogue and
+extends Blue-Cloud’s reach beyond Europe, supporting global capacity development and
+training the next generation of ocean researchers.
+Ms Nadia Pinardi, on behalf of the Decade Collaborative Centre on Coastal Resilience,
+informed that in partnership with OTGA, launched a hybrid training course on coastal resilience
+combining online modules with an in-person component to foster community building.
+Targeting young professionals in coastal management and consulting, the course introduced
+innovative approaches to risk assessment, sustainable blue economy, and practical tools using
+cloud computing and Jupyter notebooks, supported by the Bologna Supercomputing Centre.
+Participants accessed global open-source ocean data for interactive exercises, enhancing
+technical skills regardless of prior computing experience. The program awarded OTGA ISO
+certificates, adding value for career development, and successfully attracted a diverse, global
+cohort, prioritizing under-resourced countries. The initiative demonstrated OTGA’s flexibility for
+structuring complex courses and highlighted the effectiveness of hybrid formats in promoting
+collaboration and long-term engagement among participants.
+The Steering Group discussed the potential of OTGA to support Decade trainings.
+
+3 OTGA OPERATIONS
+
+3.1       OTGA LEARNING MANAGEMENT SYSTEM AND SERVICES
+This agenda item was introduced by OTGA Secretariat, who cited the process for organizing and
+managing training activities in OTGA, currently running and frequently updated, such as:
+      ●   Planning, development, and delivery of training
+      ●   Coordination and management of courses and alumni.
+      ●   Shared e-Learning Platform
+      ●   Creation of learning resources and activities
+      ●   Mechanisms for connecting experts, facilitators, and centres
+      ●   Guidance on learning services procedures and standards
+      ●   Training and mentoring exchange and internships
+It was informed that that UNESCO/IOC Project Office for IODE had its ISO 29993:2017
+certification as Learning Service Provider renewed in 2025, after a full audit on procedures and
+standards. This internationally recognized standard is tailored to learning services outside
+formal education and has ensured unique learning experiences for the OTGA cohort. This
+achievement reflects the commitment of OTGA to the quality of its training. New
+                                                                                        IOC/IODE-SG-OTGA-V
+                                                                                                    Page 27
+
+improvements were implemented after that, and will be highlighted in item 3.2 of the
+Guidelines.
+Mr Cheikh Ould Moulaye informed and presented on OTGA qualitative-quantitative framework
+to assess the performance of training centres and courses to provide timely improvement of
+activities, strategic planning, and response to IOC Member States and Programmes. Description
+of the Five Key Performance Indicators:
+1.       Capacity to Develop and Deliver Training
+2.       Impact of Training Activities
+3.       Mobilization of Experts and Staff
+4.       Professional Values
+5.       Core Knowledge and Areas of Activity
+These KPIs provide a balanced assessment of training centre performance by examining their
+capacity, effectiveness, expertise, ethical practices, and contribution to IOC. Using these
+metrics ensures a comprehensive evaluation that provides valuable insights for improvement
+and strategic decision-making.
+The framework includes a Performance Assessment Rubric that provides a structured,
+objective, and transparent method to assess performance across the five key performance
+indicators. The rubric's clear scoring system (Excellent, Good, Fair, Poor) and the specific criteria
+for each score level make the evaluation process easily understandable. This transparency
+fosters trust and accountability, both for the centres being evaluated and for stakeholders
+reviewing the results.
+
+
+OTGA performance evaluation framework Key Performance Indicators:
+Key Performance Indicators Criteria                                        Questions
+
+KPI 1. Capacity to Develop   a. Number of New Courses Developed and        How many new courses were
+and Deliver Training         Delivered in the year of evaluation           developed and delivered this year?
+                             b. Number of Total Courses Developed          How does the number of
+                             and Delivered                                 courses compare to the previous
+                             c. Course Quality                             year?
+                             d. Resources and Infrastructure               How do the Centre’s courses score on
+                                                                           the OTGA Course Design Rubric?
+                                                                           Do resources and infrastructure
+                                                                           fully support course
+                                                                           development and delivery?
+
+KPI 2. Impact of Training    a. Number of Participants who completed       How many participants completed
+Activities                   training                                      the courses this year?
+                             b. Geographical and demographic reach         From how many different countries
+                                                                           do the participants come?
+                                                                           Do participants reflect
+                                                                           equal representation of
+                                                                           genders?
+
+KPI 3. Mobilization          a. Number of Trainers/Facilitators Involved   How many trainers/facilitators
+of Experts and Staff         b. Trainer/Facilitator Development            were involved in delivering courses
+                                                                           this year?
+                                                                           How do trainers/facilitators score
+                                                                           on the OTGA Competency
+                                                                           Self- Assessment Rubric?
+IOC/IODE-SG-OTGA-V
+Page 28
+
+                             a. Commitment to Continuous                 How often are training
+KPI 4. Professional Values
+                             Improvement                                 materials reviewed and
+                             b.Ethical Teaching and Learning Practices   updated?
+                                                                         Does the Centre have clear ethical
+                                                                         standards?
+                                                                         Does the Centre have clear
+                                                                         processes for managing
+                                                                         conflicts and ensuring fairness?
+
+                             a. Contribution to IOC Programmes and/or    Does the Centre contribute to IOC
+KPI 5. Core Knowledge and
+                             the United Nations Decade of Ocean          Programmes and/or the United
+Areas of Activity
+                             Science                                     Nations Decade of Ocean Science?
+
+
+
+
+The performance evaluation was tested on five OTGA training centres in October 2024. The
+centres chosen for the pilot were:
+•         RTC Colombia
+•         STC Argentina
+•         RTC Belgium
+•         RTC India
+•         RTC Mozambique
+These centres were selected based on their geographic distribution, the range of training
+programmes offered and their overall contribution to OTGA's objectives. The performance
+analysis for the selected centres was conducted using data for the period 2021–2023.
+The results show a mixed performance across the centres, with some centres consistently
+demonstrating high performance while others showed significant improvement over time. The
+overall trend indicates a positive trajectory toward enhanced capacity-building within the OTGA
+network. It also shows the need to address reporting gaps related to trainer development,
+continuous improvement, ethical standards and conflict management processes.
+The Steering Group shared doubts about the evaluation process and framework.
+
+3.2       REVIEW OF OTGA COURSE MANAGEMENT GUIDELINES
+This agenda item was introduced by Ms. Sofie De Baenst, who informed the Group that the
+OTGA Course Management Guidelines describe the process for organizing and managing
+training courses within the framework of the OTGA. The guidelines can also be used as a guide
+for organizing and hosting other training courses. A fully revised version of the guidelines was
+issued in Q4 2024, and updated in 2025 after the ISO-audit:
+The guidelines are intended to support the RTC/STC network by:
+      ●   Providing procedures on how to plan and design a course
+      ●   Providing recommendations on how to use the OceanTeacher Learning Management
+          System
+      ●   Providing instruction on administrative procedures for organizing OTGA courses
+It was reported the Group of the different documents listed in the OTGA guidelines, to be
+completed for all courses by the course organisers: Course proposal form (English and course
+language); OTGA Competency Assessment Form by Facilitators demonstrating their
+competencies that meet the learning outcomes of the course and subject expertise; Budget
+form for onsite courses; Onsite facilities and classroom information; and Lesson outline
+                                                                             IOC/IODE-SG-OTGA-V
+                                                                                         Page 29
+
+(skeleton of the course), based on the course proposal. Some attention points to be considered
+from the OTGA guidelines:
+            ●   Facilitators must register on OceanExpert and enroll in the course, and must
+                provide a description of their professional experience appropriate to the
+                course.
+             ● Onsite courses require course attendance.
+             ● Course feedback survey: All learners are required to complete the feedback
+                survey upon completion of each course.
+             ● Course evaluation and wrap-up meeting: All OTGA courses will be reviewed by
+                OTGA Secretariat against the criteria in the OTGA Course Design Rubric.
+                Feedback and recommendations for improvement will be provided to the
+                RTC/STC responsible for the course delivery. These should be applied to future
+                editions of the course.
+             ● Class observation report.
+             ● Pre and post test required for every course.
+             ● Complaint policy.
+The Steering Group noted that, based on their experience, pre-tests are not always well
+received, as participants often feel uncertain about taking them. A self-assessment approach
+was suggested as a possible alternative. It was also mentioned that some courses attract
+diverse audiences with varying levels of prior knowledge, which should be considered in course
+design. Additionally, the group highlighted that differences in terminology can create
+confusion; however, the clear definitions provided in the guidelines help address this issue. The
+guidelines were further commended for their usefulness in planning and for emphasizing that
+course development requires adequate time. The group recommended exploring various
+assistive technologies to enhance accessibility for all learners and suggested assessing their
+added value in future implementations.
+The Steering Group reviewed these guidelines, expressed ideas and concerns, and suggested
+inputs during the meeting and directly in the shared files. An updated version of OTGA Course
+Management Guidelines is published as Annex to this report.
+
+3.3     REVIEW OF OTGA TERMS OF REFERENCE
+On behalf of OTGA Secretariat, Ms Ana Carolina Mazzuco explained that OTGA was requested
+by IODE to develop a guiding document including its core components and governance
+procedures, here referred to as Terms of Reference. She highlighted that the document reflects
+the ongoing activities, participant entities/individuals within OTGA, and that procedures were
+aligned with IOC Rules and Procedures. This document reinforces the maturity of the
+programme and its cross-sectional contributions. She informed the group that, in 2026, OTGA
+is expected to remain as an activity of IOC Capacity Development, with further transition as a
+result of the IOC reform.
+She informed that OTGA has evolved significantly within IOC, transitioning from a project to a
+more consolidated programmatic component under IODE. This growth reflects IOC’s
+commitment to capacity development as a cross-cutting priority, with OTGA serving as a key
+implementer of training initiatives across ocean science disciplines. The development of Terms
+of Reference (ToR) aims to formalize governance, streamline procedures, and ensure alignment
+with IOC regulations and best practices. These guiding documents will provide clarity on
+programme objectives, operational standards, and membership requirements, reinforcing
+OTGA’s role in supporting equitable access to ocean research, observations, and services.
+The proposed Terms of Reference for OTGA outlines four core objectives: building a
+comprehensive capacity development platform, ensuring open and free access to knowledge
+IOC/IODE-SG-OTGA-V
+Page 30
+
+resources, coordinating and empowering the global network of training centres, and promoting
+international standards in ocean science training. To achieve these objectives, OTGA will focus
+on global coordination, delivery of customized training through a shared learning management
+system, development of learning resources, and fostering innovative opportunities for
+upskilling and institutional growth. Membership criteria for training centres emphasize
+resource adequacy, instructional competence, and responsiveness to emerging needs, with
+periodic reviews every five years to maintain network strength and relevance. These measures
+aim to consolidate OTGA’s governance framework and enhance its contribution to IOC’s
+capacity development mandate.
+The Steering Group discussed mainly the upcoming five-year renewal process for training
+centers and clarifications on the Terms of Reference. It was noted that IOC is expected to issue
+renewal notifications around February 2026, and the group agreed on the need to set
+deadlines and issue a circular letter for Regional and Specialized Training Centres as well as
+Member States. There was consensus on maintaining formal procedures for administrative
+purposes but simplifying documentation to avoid unnecessary complexity. Suggestions
+included streamlining the renewal process so that centers performing well would not need to
+submit a full application again, reducing the burden and ensuring continuity of training
+activities.
+The Steering Group reviewed these terms, expressed ideas and concerns, and suggested
+inputs during the meeting and directly in the shared files. An updated version of Terms of
+Reference for OTGA is published as Annex to this report.
+
+3.4     CHALLENGES AND EXPECTATIONS FOR OTGA
+The discussions highlighted several challenges in implementing self-paced and distance
+learning courses, including difficulties in maintaining participant engagement, language
+barriers, and internet connectivity issues. Both learners and facilitators often struggle to meet
+deadlines, while adapting to Learning Management Systems (LMS) and OTGA standards
+remains complex. Financial constraints and limited awareness of ISO standards further
+complicate implementation across RTCs. Additional concerns include balancing high-level
+objectives with local needs, managing centres, and conducting training needs analyses.
+Regarding the expansion of the programme, OTGA secretariat highlighted that improvements
+are needed to leverage RTC Belgium in combination with OTGA secretariat tasks. The
+Secretariat sees challenges to align internal procedures to comply with the ISO standards,
+particularly in creating awareness among all contributors on the importance of quality
+assurance, audits, deadlines to deliver courses, and peer review of course content. Sustainable
+financial resources are also needed to secure core services.
+The Steering Group expects and suggests to the members and network to advance on the
+following topics: more innovative tools, assistive technologies, offline LMS options, increased
+on-site training opportunities, improved training plans, analysis of the training gaps,
+support/training in Moodle, investment in offline-remote tools in courses, and enhancement of
+translations for replication. Collaboration among RTCs to adapt existing courses for regional
+contexts was also suggested to enhance efficiency and address training gaps.
+
+3.5     OTGA WORKPLAN AND BUDGET 2026/2027
+This item was introduced by Ms Ana Carolina Mazzuco, who reviewed the progress of actions
+agreed in OTGA-SG-IV and IODE-28.
+She explained that for the past years, planning was based on a predesigned project funded
+through the UNESCO/FUST. Starting in 2025, a new methodology was adopted, shifting from a
+                                                                             IOC/IODE-SG-OTGA-V
+                                                                                         Page 31
+
+project-based format to a vision-driven approach aligned with IOC’s medium-term strategy and
+capacity development framework. These strategies provide high-level objectives and expected
+outputs, ensuring that training activities remain consistent while introducing improved
+alignment with broader IOC and UNESCO priorities, including sustainable ocean planning and
+data strategies. The Secretariat emphasized the importance of collaboration among training
+centers to leverage expertise and maintain quality delivery. Core services such as hosting
+training materials, managing the e-learning platform, and providing technical support remain
+central to operations.
+In 2025, IOC Regular Budget (IODE/CD) requested to OTGA was estimated USD 150,000 for core
+activities, of which USD 70,000 was available and used after the freeze of expenditures from
+UNESCO. Estimated extra-budgetary resources mobilized by RTC/STC/IOC Units/Affiliated
+partners were over USD 600,000. In-kind contributions are not included in these figures. These
+resources are equivalent to 75% estimated needed for OTGA programmatic planning on a
+yearly basis, according to the new vision and planning elaborated during the IV Meeting of
+OTGA Steering Group in 2024.
+List of specific actions agreed for 2024/2025 biennium and the status:
+        Action 1. OTGA Steering Group to develop a work plan and budget to be submitted to
+        the IODE committee in 2025. Action by Steering Group members, coordinated by
+        Secretariat. Due by 1 December 2024. Status: concluded.
+        Action 2. Prepare a proposal for an onsite course, including course description, learning
+        outcomes and budget, which can be submitted to a funder in response to a call. Action
+        by STC Argentina. Due by 30 November 2024. Status: concluded.
+        Action 3. Provide examples of the different content styles (colours, styles, fonts)
+        needed to maintain document style content for the Secretariat to investigate. Action by
+        RTC Colombia. Due by 1 July 2024. Status: not concluded.
+        Action 4. All new course proposals will include the OTGA Competency Assessment
+        Form to be submitted together with the Course Proposal Form. Action by all RTC/STC.
+        Starting from 1 July. Status: concluded.
+        Action 5. Create an OTGA Instagram account. Action by OTGA Secretariat. Due by 30
+        June 2024. Status: not concluded.
+        Action 6. Add UNESCO-IOC logos in all IOC languages to the OTGA Project Management
+        site. Action by OTGA Secretariat. Due 1 August 2024. Status: concluded.
+        Action 7. Provide an estimated cost of RTC/STC contribution for delivering each course.
+        This should include documenting the cost of providing the service from the Secretariat.
+        Include hours needed for course preparation, hours for delivery, technical support,
+        logistics, licences, etc. Action by all RTC/STCs and Secretariat. RTC Colombia could
+        share the template they use. Due by 1 September 2024. Status: concluded.
+        Action 8. Submit comments and suggestions on the OTGA Vision 2025-2030 brochure
+        to the OTGA Secretariat (to be shared in Gdoc). Action by Steering Group members.
+        Due by 21 June 2024. Status: concluded.
+        Action 9. Submit comments and suggestions on the Concept Note for Project Proposals
+        to the OTGA Secretariat (to be shared on Gdoc). Action by Steering Group Due by 21
+        June 2024. Status: concluded.
+        Action 10. Define minimum requirements for RTCs/STCs. Refer to IODE NODC Health
+        check. Action for the OTGA Secretariat. by 31 October 2024. Status: concluded.
+IOC/IODE-SG-OTGA-V
+Page 32
+
+        Action 11. OTGA landing page to include descriptions of training centres. Action by Sec
+        by 31 October 2024. Status: in progress.
+        Action 12. Mapping the local and regional funding opportunities and assessing needs
+        and gaps within the region. Action by STCs/RTCs and OTGA secretariat and Regional
+        Subsidiary Bodies by 30 September 2024. Status: in progress.
+During the twenty-eighth session of the IOC Committee on International Oceanographic Data
+and Information Exchange (IODE-28) and Third International Ocean Data Conference (IODC-3),
+Santa Marta, Colombia, 10–14 March 2025. Related to OTGA activities and programme
+component, the Committee
+    ●   recommended that the OTGA Steering Group should develop a Resource Mobilization
+        Strategy and take action on its implementation. The Committee instructed all IODE
+        programme components and programme activities to prepare documentation for the
+        next meeting of the IODE Management Group detailing how the new Rules of
+        Procedure have been adopted in their management structure.
+    ●   urged IODE data centres as well as its three Programme Components OBIS, ODIS and
+        OTGA to actively participate in, and contribute to, the development and
+        implementation of science-based, sustainable ocean planning and management
+        activities and invited the IODE programme to collaborate with the IOC Secretariat’s
+        SOPM team for the development of a first pilot initiative that can inform and fine-tune
+        the design of targeted, future IODE data and information knowledge products for
+        SOPM.
+    ●   acknowledged the importance of collaboration with IOCINDIO and requested IODE
+        Programme Components to support data architecture efforts (similar to EMODNet /
+        MEDIN) in the region, with the help of RSB funded CD programmes supported or
+        hosted by OTGA RTCs, C2Cs and NODCs and ADUs (ODIS, OBIS nodes) already
+        established in the region.
+    ●   thanked the WDS for its ongoing work to enhance the capabilities, impact, and
+        sustainability of our data repositories worldwide, and encouraged IODE data centres
+        and programme components to collaborate on objectives of mutual interest such as
+        data preservation, sustainability, FAIR data and indigenous data governance.
+    ●   instructed the IODE Secretariat to focus on IODE and the various programme
+        components and activities in its communication actions, while also instructing IODE
+        programme components and activities to appropriately acknowledge IODE, when
+        participating in network events.
+    ●   instructed IODE programme components and IODE programme activities to actively
+        promote IODE in events and communications and invited other IOC programmes to
+        recognize IODE as a partner in their communication efforts.
+OTGA Secretariat reported that the above-listed requested action were successfully concluded
+and will be presented in progress report to IODE Management Group Meeting in January 2026.
+For 2026/2027, core training activities coordinated by OTGA Secretariat in collaboration with
+RTC/STCs are planned to be sustained with IOC regular budget and extra-budgetary resources:
+(1) Host training materials and provide technical support through a shared eLearning platform.
+(2) Design and develop new or existing course content to address the capacity needs of IOC
+Programmes.
+(3) Core support on learning management frameworks, including updating existing OTGA
+content to ensure it meets current OTGA course management guidelines, uploading training
+resources on the OTGA e-Learning Platform, and liaising with content providers on course
+design and presentation.
+                                                                                                       IOC/IODE-SG-OTGA-V
+                                                                                                                   Page 33
+
+(4) Organize and host on-site training courses, including providing travel grants to facilitate
+attendance of training.
+(5) Publish regular CD communication through social media, newsletters and other
+communication; provide project governance framework through a steering group (November);
+create and deliver online training for RTC/STC personnel; and participate in conferences and
+meetings to promote OTGA.
+(6) Audit LMS and confirm certification of the Project Office as LSP (April); Update and publish
+OTGA Guidelines and Best Practices documentation.
+
+
+   OTGA PROGRAMME COMPONENT: BUDGET BY OUTCOME, OUTPUT, ACTIVITY (2025-26); APPROVED IODE-28:                             2026
+
+             Increased capacity and skills by ocean specialists to use standards and best practices tools towards
+Outcome 1
+             achieving SDG 14.
+
+             Learners empowered to apply the skills learned and influencing the implementation and the use of
+Output 1
+             standards and best practices widely accepted
+
+Activity 1   Organize and host training courses relevant to the Regions                                                   USD 5.000
+
+Activity 2   Provide travel grants to facilitate attendance at training courses                                          USD 35.000
+
+Activity 3   Provide technical support eLearning platform                                                                USD 17.000
+
+Activity 4   Confirm certification of the Project Office as LSP (April)                                                   USD 3.500
+
+Output 2     Production of new knowledge and training resources
+
+Activity 1   Design and develop new or existing course content to address the capacity needs of IOC Programmes           USD 20.000
+
+Activity 2   Update existing OTGA content to ensure it meets current OTGA course management guidelines                   USD 10.000
+
+Activity 3   Upload training resources on the OTGA e-Learning Platform                                                   USD 10.000
+
+Activity 4   Liaise with content providers on course design and presentation                                              USD 5.000
+
+Output 3     Promote a network of support and community building
+
+             Update and publish regular CD communication through social media, newsletters and other
+Activity 1                                                                                                                USD 2.500
+             communication, guidelines and best Practices documentation
+
+Outcome 2 Regional and Specialized Training Centres efficiently develop and manage the training programme
+
+             Increase capacity of Regional and Specialized Training Centres to develop and implement relevant
+Output 1
+             training programmes
+
+Activity 1   Provide project governance framework through a steering group (November)                                    USD 25.000
+
+Activity 2   Create and deliver online training for RTC/STC personnel                                                     USD 5.000
+
+Activity 3   Update and publish OTGA Guidelines and Best Practices documentation                                          USD 5.000
+
+             Increase awareness and understanding by MS on the benefits of supporting and promoting OTGA and
+Output 2
+             the network of Training Centres
+
+Activity 1   Participate in conferences, meetings to promote OTGA                                                         USD 7.000
+
+                                                                                                                TOTAL   USD 150.000
+
+
+
+
+In preparation to the meeting, IOC Programmes, IOC Regional Subsidiary Bodies, RTCs and STCs
+were requested to nominate training courses to be delivered for 2026-27 to be included in the
+OTGA work plan. The List of courses pre-planned or requested for 2026 was presented and
+added as an Annex to this report.
+Based on the inputs of the meeting, the Steering Group suggested specific internal actions
+related to the training activities and learning management system for 2026/2027
+IOC/IODE-SG-OTGA-V
+Page 34
+
+       Action 1 – Revise and publish the agreed TOR.
+       Action 2 – Issue a call to renew of RTC/STC.
+       Action 3 – Share the compiled list of trainings for 2026.
+       Action 4 – Implement the courses listed, accounting for the prioritization and
+       resources.
+       Action 5 – Share training course figures and gap analysis by RTC/STC.
+       Action 6 – Carry out a training session on the LMS and update OTGA/LMS self-paced
+       course.
+       Action 7 – Implement expanded resource mobilization, including a focus on onsite
+       activities.
+       Action 8 – Pilot train-the-trainers approach.
+       Action 9 – Offline/remote tools implementation.
+       Action 10 – Pilot replication of courses.
+       Action 11 – Explore revising content to be more machine-accessible.
+Looking ahead, resource mobilization remains a priority, with strategies including voluntary
+contributions, trust funds, private sector engagement, and flagship initiatives. A potential
+mobilization strategy prioritization was presented by OTGA Secretariat, who presented that the
+resource pathways in UNESCO:
+   ●   Assessed Contributions
+   ●   Voluntary Contributions
+   ●   Structured Financing Dialogues
+   ●   Pooled / Trust Funds
+   ●   Private Sector & Philanthropy Engagement
+   ●   Government & Multilateral Partnerships
+   ●   Flagship & Initiative-Based Funding
+   ●   Core vs. Earmarked Funding Emphasis
+   ●   Enhanced Internal Capacity & Governance
+   ●   Multi-Year Investment Strategy
+The Steering Group indicated potential pathways for the next years, as: Voluntary
+Contributions, in support of small scale activities; Pooled / Trust Funds, Private Sector &
+Philanthropy Engagement, Government & Multilateral Partnerships, Flagship & Initiative-Based
+Funding for project proposals and partnership mechanisms regionally; and Enhanced Internal
+Capacity & Governance for core activities, and related to new programmatic developments and
+reforms in IOC.
+The Steering Group agreed on the need to break down the programmatic concept note into
+specific project proposals to attract funding and support national and regional opportunities.
+The Group reaffirmed commitments to implement the vision, strengthen governance, and
+enhance capacity development under IOC frameworks.
+The Steering Group suggested that a similar allocation of USD 150,000 from IOC regular
+budget, as a minimum, to sustain the programme at baseline levels; and that OTGA vision
+2025-2030 and associated budget planning should be envisioned as ideal and covered with
+extra-budgetary resources in case additional regular budget is not available. These documents
+are included as Annex to this report.
+                                                                        IOC/IODE-SG-OTGA-V
+                                                                                    Page 35
+
+4 SUMMARY AND DISCUSSION
+
+4.1    REVIEW OF THE MAIN DECISIONS AGREED DURING THE MEETING
+The Steering Group reviewed the above mentioned actions and agreements.
+
+4.2    ADOPTION OF THE WORK PLAN AND SUMMARY REPORT
+OTGA Secretariat committed to revising the documentation and workplan based on the inputs,
+and include in the meeting report.
+
+5      CLOSING
+The Co-Chairs thanked the Steering Group and closed the meeting.
+
+
+
+
+ANNEX I. LIST OF PARTICIPANTS
+OTGA RTC/STC Representatives                       Ms Fangfang CHEN
+                                                   RTC China
+IOC/IODE-SG-OTGA-V
+Page 36
+
+Ms Nancy CORREA                   Head of Section, Observations and
+STC Argentina                     Services
+
+Ms Carolina GARCIA VALENCIA       Ms Ana Carolina MAZZUCO
+RTC Colombia, OTGA Co-chair       Training Coordinator, OTGA Secretariat
+
+Ms Laura KONG                     Ms Sofie DE BAENST
+STC ITIC                          Administrative Assistant, OTGA
+                                  Secretariat
+Mr Aidy M MUSLIM
+RTC Malaysia                      Ms Katherina SCHOO
+                                  Associate Project Officer, Ocean
+Ms Filomena MARTINS               Acidification
+STC Portugal, OTGA Co-chair
+                                  Ms Johanna DIWA-ACALLAR
+Ms Clousa MAUEUA                  Capacity Development Manager
+RTC Mozambique
+                                  Mr Cheikh ABDALLAHI
+Mr Tata VS UDAYA BHASKAR          e-Learning Expert, OTGA Secretariat
+RTC India
+                                  Ms Ina TESSNOW-VON WYSOCKI
+Ms Dian XU                        BBNJ Expert
+RTC China
+                                  Mr Henrik ENEVOLDSEN
+Ms Shi XIAOXIAO                   IOC Science and Communication Centre
+RTC China                         on Harmful Algae
+
+Mr Harrison ONGANDA               Mr Niccolo BASSAN
+RTC Kenya                         Associate Project Officer, Marine Policy
+                                  and Regional Coordination Section
+Ms Maeva TESAN
+RTC Pacific Community             Ms Elizabeth LAWRENCE
+                                  Training officer, Ocean Biodiversity
+Ms Anni Arumsari FITRIANY         Information System
+STC Indonesia
+                                  Mr Adam Leadbetter
+Mr Benjamin BOTWE                 Lead Manager, Decade Coordination
+RTC Ghana                         Office for Ocean Data Sharing
+
+                                  Ms NaYeon KIM
+IOC Representatives               Coordinator, Capacity Development
+                                  Facility
+Ms Karen EVANS
+Head of Section, Ocean Science,   Ms Lucy SCOTT
+Capacity Development              Coordinator, Ocean Data and
+                                  Information System
+Ms Joanna POST
+                                                              IOC/IODE-SG-OTGA-V
+                                                                          Page 37
+
+                                      Institute of Electrical and Electronic
+Affiliated partners’ Representative   Engineering
+
+Ms Juana JIMENEZ                      Mr Gabriel JUMA
+Vlaams Instituut voor de Zee          Alfred Wegener Institute
+
+Ms Ann-Katrien LESCRAUWAET            Ms Anabel VON JACKOWSKI
+Vlaams Instituut voor de Zee          Stockholms Universitet
+
+Ms Cláudia DELGADO                    Mr Pier Luigi BUTTIGIEG
+Universiteit Gent                     Alfred-Wegener-Institut
+
+Ms Lilian KRUG                        Ms Rita MENESES
+Partnership for Observation of the    Blue-Cloud 2026
+Global Ocean
+                                      Ms Areeba MOIZ
+Mr Giovanni DAMIANI                   Centro euro-Mediterraneo sui
+Università degli studi di Milano      Cambiamenti Climatici
+
+Ms Rebecca LAHL
+Leibniz-Zentrum für Marine            IODE Programme Co-chairs
+Tropenforschung GmbH
+                                      Ms Katarina Lotta FYRBERG
+Ms Mairéad O'DONOVAN                  Co-Chair IODE 2023-2025,
+Centro euro-Mediterraneo sui          Sveriges Hdrologiska Institut
+Cambiamenti Climatici
+                                      Ms Paula Cristina SIERRA-CORREA
+Ms Nadia PINARDI                      Co-Chair IODE 2023-2026, Instituto de
+Università di Bologna                 Investigaciones Marinas y Costeras José
+                                      Benito Vives de Andreis
+Ms Cecilia BITTONI
+Università di Bologna
+
+Ms Joana BEJA
+Vlaams Instituut voor de Zee
+
+Mr Hector Hito SEPULVEDA
+University of Concepcion
+
+Ms Cyrielle DELVENNE
+Vlaams Instituut voor de Zee
+
+Ms Roseanna WRIGHT
+UK National Oceanography Centre
+
+Ms Pauline SIMPSON
+                                                      IOC/IODE-SG-OTGA-IV
+                                                                  Page 38
+
+
+
+ANNEX II. AGENDA OF THE MEETING
+Access link: https://oceanexpert.org/document/37281
+
+ANNEX III. OTGA GUIDELINES
+Access link: https://oceanexpert.org/document/37283
+
+ANNEX IV. OTGA TERMS OF REFERENCE
+Access link: https://oceanexpert.org/document/37726
+
+ANNEX IV. PROPOSED WORK PLAN AND BUDGET 2026-2027
+Access link: https://oceanexpert.org/document/37724
+
+ANNEX V. LIST OF PROPOSED TRAININGS 2026
+Access link: https://oceanexpert.org/document/37725
+

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>IOC Ocean Data and Information System Catalogue</title>
+        <link rel="icon"
+              type="image/png"
+              href="/assets/favicon.ico">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132979822-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-132979822-2');
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+                    <link rel="stylesheet"
+                  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+            <link rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+            <!-- link href="/select2-bootstrap-theme/select2-bootstrap.min.css" type="text/css" rel="stylesheet" / -->
+            <style type="text/css">
+
+                /* use waves image as background */
+                body {
+                    //background: linear-gradient(180deg, #FFFFFF 20%, #00517fff 100%);
+                    //background-color: #00517f;
+                    background-image: url('/assets/deZeeDrieLarge.svg');
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: 100%;
+                    width: 100%;
+                    height: auto;
+                }
+
+                /* make the background lighter where we show content */
+                #jumbo {
+                    background: rgba(240, 252, 255, 0.9);
+                    margin-top: 70px;
+                    padding-top: 40px;
+                    height: auto;
+                    padding-bottom: 70px;
+                }
+
+                /* add asterisk before the label text for required fields */
+                .required:before {
+                    content:"* ";
+                }
+
+                /* add stamp on the homepage */
+                div.putStampHere:after
+                {
+                    content:'Suggest an entry';
+                    position:absolute;
+                    top:-40px;
+                    left:-60px;
+                    z-index:1;
+                    font-family:Arial,sans-serif;
+                    -webkit-transform: rotate(45deg); /* Safari */
+                    -moz-transform: rotate(45deg); /* Firefox */
+                    -ms-transform: rotate(45deg); /* IE */
+                    -o-transform: rotate(45deg); /* Opera */
+                    transform: rotate(45deg);
+                    font-size:40px;
+                    color:#c00;
+                    background:#fff;
+                    border:solid 4px #c00;
+                    padding:5px;
+                    border-radius:25px;
+                    zoom:1;
+                    filter:alpha(opacity=20);
+                    opacity:0.2;
+                    -webkit-text-shadow: 0 0 2px #c00;
+                    text-shadow: 0 0 2px #c00;
+                    box-shadow: 0 0 2px #c00;
+                    cursor: pointer;
+                }
+
+                .break-all {
+                    word-break: break-all;
+                }
+
+                .hideSelections+.select2-container .select2-selection--multiple .select2-selection__choice {
+                     display: none;
+                }
+
+                .button-wrap {
+                    white-space: normal;
+                }
+
+                .w-min-content {
+                    width: min-content;
+                }
+
+                .min-width-auto {
+                    min-width: auto;
+                }
+
+                .bg-info-border {
+                    background: white;
+                }
+
+                .bg-info-border:hover {
+                    background: #17a2b8;
+                }
+
+            </style>
+
+            </head>
+    <body>
+    <nav
+            class="navbar navbar-light navbar-expand-md sticky-top p-0"
+            style="background-color: #00517f;">
+        <a
+                class="navbar-brand mr-0"
+                href="https://ioc.unesco.org/"
+                style="color: #bfe6ef">
+            <img src="/assets/combined_unesco_ioc_white_eng.png"
+                 alt="UNESCO IOC"
+                 class="mr-2 ml-2"
+                 style="height:42px;" />
+        </a>
+        <a
+                class="navbar-brand mr-0"
+                href="/"
+                style="color: #bfe6ef">
+            <img src=" data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgd2lkdGg9IjE0NTBtbSIKICAgaGVpZ2h0PSIxNDAwbW0iCiAgIHZpZXdCb3g9IjAgMCAxNDUwIDE0MDAiCiAgIHZlcnNpb249IjEuMSIKICAgaWQ9InN2ZzgiCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTIuMiA1YzNlODBkLCAyMDE3LTA4LTA2IgogICBzb2RpcG9kaTpkb2NuYW1lPSJvZGlzTG9nby5zdmciPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMyIj4KICAgIDxsaW5lYXJHcmFkaWVudAogICAgICAgaW5rc2NhcGU6Y29sbGVjdD0iYWx3YXlzIgogICAgICAgaWQ9ImxpbmVhckdyYWRpZW50MjMzMCI+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLWNvbG9yOiNmZjk1ZWM7c3RvcC1vcGFjaXR5OjE7IgogICAgICAgICBvZmZzZXQ9IjAiCiAgICAgICAgIGlkPSJzdG9wMjMyNiIgLz4KICAgICAgPHN0b3AKICAgICAgICAgc3R5bGU9InN0b3AtY29sb3I6I2ZmOTVlYztzdG9wLW9wYWNpdHk6MDsiCiAgICAgICAgIG9mZnNldD0iMSIKICAgICAgICAgaWQ9InN0b3AyMzI4IiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudAogICAgICAgaW5rc2NhcGU6Y29sbGVjdD0iYWx3YXlzIgogICAgICAgeGxpbms6aHJlZj0iI2xpbmVhckdyYWRpZW50MjMzMCIKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDIzMzIiCiAgICAgICB4MT0iMTU1LjkwMDE4IgogICAgICAgeTE9IjE4Ni4xMTI5OCIKICAgICAgIHgyPSIxNTYuODU0OTMiCiAgICAgICB5Mj0iMTEyLjkyNyIKICAgICAgIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiAvPgogICAgPGNsaXBQYXRoCiAgICAgICBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIKICAgICAgIGlkPSJjbGlwUGF0aDIwNjAiPgogICAgICA8Y2lyY2xlCiAgICAgICAgIHN0eWxlPSJvcGFjaXR5OjAuNzgyOTk5OTc7ZmlsbDojMDAzYjdmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDoxMi4wNjQ4ODAzNztzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDo0O3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2UtZGFzaG9mZnNldDowO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgIGlkPSJjaXJjbGUyMDYyIgogICAgICAgICBjeD0iNzI5LjI5Mjg1IgogICAgICAgICBjeT0iOTExLjExMTA4IgogICAgICAgICByPSI2NjQuNjQ2NDgiIC8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9ImJhc2UiCiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNpdHk9IjEuMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC4xMzA5Njg3NSIKICAgICBpbmtzY2FwZTpjeD0iMjQxMi43ODk0IgogICAgIGlua3NjYXBlOmN5PSIyNTA1LjY2OTciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9ImxheWVyMTEiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOnBhZ2VjaGVja2VyYm9hcmQ9InRydWUiCiAgICAgaW5rc2NhcGU6c25hcC1ub2Rlcz0idHJ1ZSIKICAgICBpbmtzY2FwZTpzbmFwLWJib3g9InRydWUiCiAgICAgaW5rc2NhcGU6c25hcC1nbG9iYWw9ImZhbHNlIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTY4MCIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIxMDA1IgogICAgIGlua3NjYXBlOndpbmRvdy14PSI3IgogICAgIGlua3NjYXBlOndpbmRvdy15PSIwIgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwMDAwIgogICAgIGlua3NjYXBlOnNuYXAtcGVycGVuZGljdWxhcj0iZmFsc2UiCiAgICAgc2hvd2d1aWRlcz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6Z3VpZGUtYmJveD0idHJ1ZSI+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSItNTQuNTQ1NDU0LDYyNi4yNjI2MiIKICAgICAgIG9yaWVudGF0aW9uPSIxLDAiCiAgICAgICBpZD0iZ3VpZGUyNjQxIgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICAgIDxzb2RpcG9kaTpndWlkZQogICAgICAgcG9zaXRpb249IjIwNjQuNjQ2NCw0NzQuNzQ3NDciCiAgICAgICBvcmllbnRhdGlvbj0iMSwwIgogICAgICAgaWQ9Imd1aWRlMjY0MyIKICAgICAgIGlua3NjYXBlOmxvY2tlZD0iZmFsc2UiIC8+CiAgICA8c29kaXBvZGk6Z3VpZGUKICAgICAgIHBvc2l0aW9uPSI3OTUuOTU5NTksLTI0LjI0MjQyNCIKICAgICAgIG9yaWVudGF0aW9uPSIwLDEiCiAgICAgICBpZD0iZ3VpZGUyNjQ1IgogICAgICAgaW5rc2NhcGU6bG9ja2VkPSJmYWxzZSIgLz4KICA8L3NvZGlwb2RpOm5hbWVkdmlldz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGE1Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT48L2RjOnRpdGxlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMTEiCiAgICAgaW5rc2NhcGU6bGFiZWw9ImFsbGVzIgogICAgIHN0eWxlPSJkaXNwbGF5OmlubGluZSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC0yMDApIj4KICAgIDxnCiAgICAgICBpZD0iZzkzNCIKICAgICAgIGNsaXAtcGF0aD0idXJsKCNjbGlwUGF0aDIwNjApIj4KICAgICAgPHBhdGgKICAgICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAgICAgaWQ9InBhdGgyNzE0IgogICAgICAgICBkPSJtIC01Ni41NjU2NTYsMjE3LjM1NzU0IGMgMzc5Ljc5Nzk4NiwxMzMuNTc1NjYgMzkzLjkzOTM3NiwtNTcuMjQ2NzMgNTI3LjI3MjcwNiw2LjM2MDc0IDEzMy4zMzMzNiw2My42MDc0NSAxNjMuNjM2MzgsLTI4LjYyMzM2IDI3Mi43MjcyOSwtMzEuODAzNzMgMTA5LjA5MDkxLC0zLjE4MDM3IDE3MS43MTcxNywxMjcuMjE0OTEgMzI3LjI3Mjc2LDc5LjUwOTMgMTU1LjU1NTUsLTQ3LjcwNTU3IDEzNS4zNTM1LC0xMjQuMDM0NTEgMjQ2LjQ2NDYsLTExNC40OTM0IDExMS4xMTExLDkuNTQxMSAyMTQuMTQxNCwxMDQuOTUyMjkgMzA1LjA1MDUsODIuNjg5NjcgOTAuOTA5MSwtMjIuMjYyNTggMTYxLjYxNjIsLTEwNC45NTIzIDI2MC42MDYxLC04Mi42ODk2NyA5OC45ODk4LDIyLjI2MjYyIDE4MS44MTgxLDczLjE0ODU2IDE4MS44MTgxLDczLjE0ODU2IGwgMi4wMjAyLDEzOTMuMDAzMTkgLTIxMjEuMjEyMDU0LDMuMTgwNCB6IgogICAgICAgICBzdHlsZT0iZGlzcGxheTppbmxpbmU7ZmlsbDojYmZlZGYwO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjMzMTk3NHB4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgIGNsaXAtcGF0aD0ibm9uZSIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjc3Nzc2NjY2MiCiAgICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICAgIGlkPSJwYXRoMjY5MSIKICAgICAgICAgZD0ibSAtNTQuNTQ1NDU0LDQzNi4wMzg3IGMgMCwwIDkwLjkwOTA5LC05Mi4wNDM5OCAzNjUuNjU2NTY0LC0yNS4zOTE0MyAyNzQuNzQ3NDUsNjYuNjUyNTMgMjI2LjI2MjYzLC03Ni4xNzQzMyA1MTEuMTExMTEsLTkuNTIxOCAyODQuODQ4MzgsNjYuNjUyNTUgMzQxLjQxNDE4LC01Ny4xMzA3NiA1MDUuMDUwNDgsLTE5LjA0MzYxIDE2My42MzY0LDM4LjA4NzIxIDI2MC42MDYxLC05NS4yMTc5IDQ2OC42ODY5LDkuNTIxODEgMjA4LjA4MDgsMTA0LjczOTcgMjY4LjY4NjgsLTEyNi45NTcyIDI2OC42ODY4LC0xMjYuOTU3MiBsIDIuMDIwMiwxMzU4LjQ0MjEzIC0yMTI1LjI1MjQ1OSwzLjE3NCB6IgogICAgICAgICBzdHlsZT0iZmlsbDojYzJlM2VjO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjMzMTYzNzYycHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgY2xpcC1wYXRoPSJub25lIiAvPgogICAgICA8cGF0aAogICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNzc3Nzc3Nzc2Nzc3NzY2NjYyIKICAgICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAgICAgaWQ9InBhdGgyNjg4IgogICAgICAgICBkPSJtIC01Mi41MjUyNTIsNTYwLjU4NzMyIGMgMCwwIDgwLjgwODA4LDExNi4xNDYyNiAxNzcuNzc3NzcyLDU1LjAxNjY0IDk2Ljk2OTcsLTYxLjEyOTYgODIuODI4MjksMjQuNDUxODYgMTgzLjgzODM4LDkuMTY5NDMgMTAxLjAxMDExLC0xNS4yODIzNyAxMDcuMDcwNzEsLTU1LjAxNjY0IDE1My41MzUzNSwtMzkuNzM0MjEgNDYuNDY0NjUsMTUuMjgyMzggNjIuNjI2MjcsNjQuMTg2MDggMTM1LjM1MzUzLDQ4LjkwMzY5IDcyLjcyNzI5LC0xNS4yODI0NCAxNDEuNDE0MTUsLTY3LjI0MjU4IDE4NS44NTg2LC00OC45MDM3MiA0NC40NDQ0NCwxOC4zMzg5MSAxMDUuMDUwNTEsNzAuMjk5MDYgMTY5LjY5Njk1LDMzLjYyMTI4IDY0LjY0NjQ3LC0zNi42Nzc3NSA5Mi45MjkzNywtNDguOTAzNjggMTM3LjM3Mzc3LC0zOS43MzQyNCA0NC40NDQ0LDkuMTY5NDYgODguODg4OSwzNi42Nzc3NyAxODEuODE4MiwxNS4yODI0IDkyLjkyOTIsLTIxLjM5NTM0IDg0Ljg0ODQsLTYxLjEyOTU3IDEyNS4yNTI1LC00NS44NDcxOCA0MC40MDQsMTUuMjgyNDEgODguODg4OSw0Mi43OTA3IDE0My40MzQzLDIxLjM5NTM2IDU0LjU0NTUsLTIxLjM5NTM2IDEzNS4zNTM1LC0zNi42Nzc3NSAxODUuODU4NiwtOS4xNjk0NSA1MC41MDUxLDI3LjUwODMyIDcwLjcwNzEsLTU4LjA3MzExIDE0OS40OTUsLTQyLjc5MDcyIDc4Ljc4NzgsMTUuMjgyNDIgMzIuMzIzMiwzLjA1NjQ3IDk2Ljk2OTYsNDIuNzkwNzIgOTIuNDUyNyw1Ni44MjUwOCA5MC45MDkxLDMuMDU2NTEgOTAuOTA5MSwzLjA1NjUxIFYgMTYyMS4xODU5IGwgLTIxMjEuMjEyMDU2LDMuMDU2NSB6IgogICAgICAgICBzdHlsZT0iZmlsbDojOWNkZGU4O2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjMyNTQ0MzY5cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MSIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjc3Nzc3NjY2NjIgogICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICBpZD0icGF0aDI2ODUiCiAgICAgICAgIGQ9Ik0gLTU2LjU2NTY1Niw3NzAuNDg0MzggQyAzNTcuNTc1NzYsNjk3LjcwNSAzNzkuNzk3OTcsODI2LjQ2ODU5IDU5OS45OTk5OSw3ODcuMjc5NiA4MjAuMjAyLDc0OC4wOTA3MSA3NjUuNjU2NTYsODYwLjA1OTA0IDk0MS40MTQxMyw4NDAuNDY0NjEgMTExNy4xNzE3LDgyMC44NzAwNSAxMTg1Ljg1ODUsNzIwLjA5ODY4IDEzMTcuMTcxNyw3NzYuMDgyNzkgYyAxMzEuMzEzMSw1NS45ODQwNyAxMzMuMzMzMywtNzIuNzc5MzggMjg0Ljg0ODUsLTE5LjU5NDQzIDE1MS41MTUxLDUzLjE4NDg3IDE0NS40NTQ1LC0yNy45OTIwOCAyMzYuMzYzNiwtMTYuNzk1MjcgOTAuOTA5MSwxMS4xOTY4NSAyMjYuMjYyNiw3OC4zNzc3NSAyMjYuMjYyNiw3OC4zNzc3NSBWIDE2MjQuMjQyNCBIIC01OC41ODU4NTkgWiIKICAgICAgICAgc3R5bGU9ImZpbGw6IzdjZDJlMztmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC4zMTE0NDU4M3B4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY3Nzc2NjY2MiCiAgICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICAgIGlkPSJwYXRoMjY4MiIKICAgICAgICAgZD0ibSAtNTQuNTQ1NDU0LDg5OC45ODk4NyBjIDMzMy4zMzMzMzQsMTM4LjE0MzUzIDI5MC45MDkwODQsOTYuMjA2OTUgNDU4LjU4NTg1NCw0Ni44NzAwOSAxNzAuMjQ1MDcsLTUwLjA5MjU1IDIyOC4yODI4MywxNTAuNDc3NjQgNjA4LjA4MDgsMjcuMTM1MjcgMzc5Ljc5OCwtMTIzLjM0MjIyIDQ2Ny44MjU4LDkyLjYwNzM3IDYwMCwyNy4xMzUyNyAyMTQuMTQxNCwtMTA2LjA3NDIgNDUyLjUyNTIsLTI3LjEzNTI3IDQ1Mi41MjUyLC0yNy4xMzUyNyBsIDIuMDIwMiw2NTEuMjQ3MTcgSCAtNTYuNTY1NjU2IFoiCiAgICAgICAgIHN0eWxlPSJkaXNwbGF5OmlubGluZTtmaWxsOiM2MmMzZDM7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMjkyMzcyMTdweDtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2Utb3BhY2l0eToxIiAvPgogICAgICA8cGF0aAogICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNzc3Nzc2NjY2MiCiAgICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICAgIGlkPSJwYXRoMjY3OSIKICAgICAgICAgZD0ibSAtMTIxLjIyMDYyLDExMjEuNDQwMiBjIDAsMCAxODEuODE4MTU1LC02Mi4wMjM0IDM2My42MzYxMSwtNC41OTQzIDE4MS44MTgxOCw1Ny40MjkxIDI0OS45MjI5Miw4My42ODAzIDM0MS40MTQxNCwxMy44MTU2IDEwOC41ODYzMywtODIuOTE5IC0zOS42MDkyOSwtNDI3LjIxMTY3IC0yMjcuNDY1OTIsLTMyMC4zMjUzMyAtNzMuNzc3MTYsNDEuOTc3NjEgLTQ3Ljk4MTI0LC0xMzIuMDQ4NzMgMTEwLjI5NDE4LC0yMDUuMDczODYgNDc1LjkxMzQ4LC0yMTkuNTc3MjYgNDU0LjU0NTM4LDM2NC4zMzY4OCAxMTE3LjE2NzkxLDU1Ny41MjY4OSAyMzUuNzA3OCw2OC43MjExIDQxMi4xMjEyLC0xMTAuMjY0IDQxMi4xMjEyLC0xMTAuMjY0IGwgMi4wMjAyLDU2OS42OTcgSCAtMTIzLjI0MDgzIFoiCiAgICAgICAgIHN0eWxlPSJmaWxsOiM1MDkyYmM7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOiNmYmY0ZmY7c3Ryb2tlLXdpZHRoOjIxLjM0Mjg3ODM0O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiIC8+CiAgICAgIDxwYXRoCiAgICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY3Nzc3NjY2NjIgogICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICBpZD0icGF0aDI2NzQiCiAgICAgICAgIGQ9Im0gLTU0LjU0NTQ1NCwxMTc3LjU3MDEgYyAwLDAgMTY3LjU5ODQ5NCwxODQuMzU3NCA1MDEuMDEwMDk0LDEwMS43NjUzIDM0NS40NTQ1MywtODUuNTc1MyAyNTQuNTQzNDIsODIuMjE1NiA0OTQuOTQ5NDgsMjAuODE1NiAyMzYuMjk1MDgsLTYwLjM1IDkyLjkyOTM4LC0yMy4xMjg1IDI5Mi45MjkzOCwtODUuNTc1MyAyMDAsLTYyLjQ0NyAzNDUuNDU0NCw4My4yNjI0IDQ4Ni44Njg2LDcxLjY5ODIgMTQxLjQxNDEsLTExLjU2NDIgMzQxLjQxNDEsLTE1NC45NjA4IDM0MS40MTQxLC0xNTQuOTYwOCB2IDQ5NC45NDk1IEggLTU2LjU2NTY1NiBaIgogICAgICAgICBzdHlsZT0iZmlsbDojMzQ4MzljO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjI4MzA5OTE3cHg7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW9wYWNpdHk6MSIgLz4KICAgICAgPHBhdGgKICAgICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjc3NzY2NjYyIKICAgICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAgICAgaWQ9InBhdGgyNjM5IgogICAgICAgICBkPSJtIC01NC40ODg1MTIsODUuNzYxMDg5IGMgNTQwLjQzNTg1MiwtNTMuMDU1NDE5IDQwMi45NTY1MzIsMCA2NzcuOTE1MTIyLDAgMjc0Ljk1ODU5LDAgMzEyLjg4MzkzLC05NC41NzcwNzIgNTExLjk5MTg5LC01Ny42Njg5MzEgMTk5LjEwNzksMzYuOTA4MTEgMzk4LjIxNTgsODMuMDQzMjcyIDU1OS4zOTg0LDU3LjY2ODkzMSAxNjEuMTgyNywtMjUuMzc0MzMyIDM2OS43NzE5LC03MS41MDk0OTIgMzY5Ljc3MTksLTcxLjUwOTQ5MiBsIDAuNTY1LDMwNy4yNjUwODMgLTIxMTkuMzkwOTgzLDAuNDQxNjIgeiIKICAgICAgICAgc3R5bGU9ImRpc3BsYXk6aW5saW5lO2ZpbGw6IzAwNTE3ZjtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC40MzMxMDAxM3B4O3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsMTMwMykiIC8+CiAgICAgIDx0ZXh0CiAgICAgICAgIHhtbDpzcGFjZT0icHJlc2VydmUiCiAgICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTAuNTgzMzMzMDJweDtsaW5lLWhlaWdodDoxLjI1O2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWY7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonc2Fucy1zZXJpZiBCb2xkJztsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuMjY0NTgzMzIiCiAgICAgICAgIHg9IjIwLjIwMjAyMSIKICAgICAgICAgeT0iNDY2LjY2NjY2IgogICAgICAgICBpZD0idGV4dDM4MzkiPjx0c3BhbgogICAgICAgICAgIHNvZGlwb2RpOnJvbGU9ImxpbmUiCiAgICAgICAgICAgaWQ9InRzcGFuMzgzNyIKICAgICAgICAgICB4PSIyMC4yMDIwMjEiCiAgICAgICAgICAgeT0iNDY2LjY2NjY2IgogICAgICAgICAgIHN0eWxlPSJzdHJva2Utd2lkdGg6MC4yNjQ1ODMzMiI+YXNkZmFzZGZhc2RmYXNkZmFzZGY8L3RzcGFuPjwvdGV4dD4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo="
+                 alt="ODIS Catalogue"
+                 class="rounded-circle mr-2"
+                 style="width:42px;" />
+            ODIS Catalogue
+        </a>
+
+        <div class="w-100 order-1 order-md-0">
+            <ul class="navbar-nav px-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="/search" style="color: #bfe6ef">search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/odis" style="color: #bfe6ef">ODIS nodes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/help" style="color: #bfe6ef">help</a>
+                </li>
+                <li class="nav-item text-nowrap">
+                    <a
+                                                    class="nav-link disabled"
+                                                href="/add">
+                        add
+                    </a>
+                </li>
+                            </ul>
+        </div>
+        <div class="order-2 order-md-1">
+            <ul class="navbar-nav px-3">
+                                    <li class="">
+                        <a class="btn btn-primary btn-sm"
+                           href="/login">Log in</a>
+                    </li>
+                            </ul>
+        </div>
+    </nav>
+
+    <!-- only to be shown in staging environment -->
+    
+    <!-- include the other pages -->
+    <div class="container" id="jumbo">
+            <div id="recordDetails" class="row">
+        <div class="col-sm-12">
+            <p class="pb-3">
+                <span class="float-left">
+                    <a
+                        href="/view/892"
+                        class="text-info">
+                        <i
+                            class="fa fa-arrow-left"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            title="previous record (892)"></i>
+                        previous record
+                    </a>
+                </span>
+                <span class="float-right">
+                <a
+                        href="/view/894"
+                        class="text-info">
+                        next record
+                        <i
+                            class="fa fa-arrow-right"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            data-html="true"
+                            title="next record (894)"></i>
+                </a>
+                </span>
+            </p>
+            <h2 class="h2 mb-2 font-weight-normal text-center text-uppercase">
+                Deep Seabed and Ocean Database - International Seabed Authority <span class="h5 float-right">(ODIS id: 893)
+                                <i
+                    style="font-size:16px;color:#00517f;"
+                    onclick="printInfo('recordDetails')"
+                    class="fa fa-print pl-3"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    data-html="true"
+                    title="print this page">
+                </i>
+                                    <a
+                        class="text-secondary"
+                        href="https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml"
+                        target="_blank">
+                        <img
+                                src="/assets/odisLogo_32x32.png"
+                                style="width:16px;height:16px;margin-left: 1rem;"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                data-html="true"
+                                title="ODIS-Arch: Sitemap">
+                    </a>
+                                </span>
+            </h2>
+            <span class="bg-success font-weight-normal">
+                
+            </span>
+            <div class="row mt-3 smaller" >
+                <div id="catalogueTable" class="col-sm-12">
+                    <table class="table table-sm table-bordered table-striped" style="width: 100%">
+                        <tbody id="myTable">
+                            <tr>
+                                <td colspan="2">
+                                    <table class="table table-sm" style="width: 100%">
+                                        <tbody id="datesTable">
+                                        <tr>
+                                            <td> This resource is
+                                                                                                    <span class="text-success">online</span>
+                                                                                            </td>
+                                            <td>
+                                                Last check was 10/09/2026 23:41
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>First entry: 03/04/2020</td>
+                                            <td>Last update: 14/10/2024</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">Submitter/Owner of this record</td>
+                                <td>
+                                    Mr. Sheldon Heron Carter ( OceanExpert :
+                                    <a
+                                        class="text-secondary"
+                                        href="https://oceanexpert.org/expert/31419"
+                                        target="_blank">
+                                        <i class="fa fa-external-link-square"></i>
+                                        31419
+                                    </a> )
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">Submitter/Owner Role</td>
+                                <td>
+                                    ISA
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Datasource URL</td>
+                                <td>
+                                    <a
+                                        class="text-secondary break-all"
+                                        href="https://data.isa.org.jm"
+                                        target="_blank">
+                                        <i class="fa fa-external-link-square"></i>
+                                        https://data.isa.org.jm
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Parent Project URL</td>
+                            <td>
+                                <a
+                                    class="text-secondary break-all"
+                                    href="https://www.isa.org.jm"
+                                    target="_blank">
+                                    <i class="fa fa-external-link-square"></i>
+                                    https://www.isa.org.jm
+                                </a>
+                            </td>
+                            <tr>
+                                <td>ODIS-Arch URL</td>
+                            <td>
+                                <a
+                                    class="text-secondary break-all"
+                                    href="https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml"
+                                    target="_blank">
+                                    <i class="fa fa-external-link-square"></i>
+                                    https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml
+                                </a>
+                            </td>
+                            <tr>
+                                <td>ODIS-Arch Type</td>
+                            <td>
+                                Sitemap
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>English name</td>
+                                <td>Deep Seabed and Ocean Database - International Seabed Authority</td>
+                            </tr>
+                            <tr>
+                                <td>Original (non-English) name</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Acronym</td>
+                                <td>DeepData - ISA</td>
+                            </tr>
+                            <tr>
+                                <td>Citation</td>
+                                <td> </td>
+                            </tr>
+                            <tr>
+                                <td>Abstract</td>
+                                                                <td>The ISA Deep Seabed and Ocean Database has been designed to serve as a spatial, internet-based data management system. Its main function is to host all deep seabed activities related data and in particular, data collected by the contractors on their exploration activities, as well as any other relevant environmental and resources related data for the Area.</td>
+                                                            </tr>
+                            <tr>
+                                <td>Host institution of the resource</td>
+                                <td>
+                                                                                                                        <a href="https://oceanexpert.org/institution/13169">
+                                                International Seabed Authority
+                                            </a>
+                                          
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Technical contact email</td>
+                                <td>                                        please login to see emails
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Technical notes</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Interface Languages</td>
+                                <td>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>English</button>
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Contributing Countries</td>
+                                <td>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>GLOBAL</button>
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Countries owning the source</td>
+                                <td>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>GLOBAL</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Jamaica</button>
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Sea Region</td>
+                                <td>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Atlantic Ocean</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Indian Ocean</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>North Atlantic Ocean</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>North Pacific Ocean</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Northeast Atlantic Ocean (40W)</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Northeast Pacific Ocean (180W)</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Northwest Atlantic Ocean (40W)</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Northwest Pacific Ocean (180W)</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>South Atlantic Ocean</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>South Pacific Ocean</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Southeast Atlantic Ocean (20W)</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Southeast Pacific Ocean (140W)</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Southern Ocean</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Southwest Atlantic Ocean (20W)</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Southwest Pacific Ocean (140W)</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>World</button>
+                                                                </tr>
+                            <tr>
+                                <td>Spatial Coverage</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Data access policy</td>
+                                <td>
+                                    <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>some content is restricted</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Metadata standard</td>
+                                <td>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>none</button>
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Keywords</td>
+                                <td>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>CTD</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Chlorophyll</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Ecosystems</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>GIS</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Geospatial data</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Multibeam</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Phytoplankton</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Zooplankton</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>bathymetry</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>biodiversity</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>biogeography</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>biology</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>document repository</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>ecology</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>geology</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>salinity</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>water temperature</button>
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Themes</td>
+                                <td>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>DS01 Biological oceanography</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>DS02 Chemical oceanography</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>DS10 Environment</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>DS04 Marine geology</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>DS03 Physical oceanography</button>
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>DOI's</td>
+                                <td>
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Types</td>
+                                <td>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Data catalogue</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Data systems/portals (allowing downloading of data sets)</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Maps and atlases (geospatial products)</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Multimedia content</button>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>Bibliographic infobases including library catalogues and document repositories</button>
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Interaction techs</td>
+                                <td>
+                                                                            <button type="button" class="btn  btn-info btn-sm mb-1 mw-90 button-wrap" disabled>ArcGIS REST Services</button>
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Contributing data to</td>
+                                <td>
+                                                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Obtaining data from</td>
+                                <td>
+                                                                    </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="pb-2">
+                <span class="float-left">
+                    <a
+                            href="/view/892"
+                            class="text-info">
+                        <i
+                                class="fa fa-arrow-left"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                data-html="true"
+                                title="previous record (892)"></i>
+                        previous record
+                    </a>
+                </span>
+                <span class="float-right">
+                <a
+                        href="/view/894"
+                        class="text-info">
+                        next record
+                        <i
+                                class="fa fa-arrow-right"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                data-html="true"
+                                title="next record (894)"></i>
+                </a>
+                </span>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        /**
+         * print the details page
+         *
+         * @param string ele id from the element to print
+         */
+        function printInfo(ele) {
+            var prtContent = document.getElementById(ele);
+            var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+            WinPrint.document.write(prtContent.innerHTML);
+            WinPrint.document.write('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">');
+            WinPrint.document.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">');
+            WinPrint.document.close();
+            WinPrint.focus();
+            WinPrint.print();
+            WinPrint.close();
+        }
+
+    </script>
+    </div>
+
+    <footer class="footer fixed-bottom" style="background-color: #00517f;">
+        <div class="row">
+            <div class="col-sm-6 pl-5 pt-1 pb-1"  style="color: #bfe6ef">
+                <a class="footer__link" target="_blank" href="https://www.iode.org">
+                    <img
+                            src="data:image/png;base64,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"
+                            alt="IODE Logo" />
+                </a>
+                <span class="small">Copyright © 2018</span> UNESCO/IOC Project office for <a
+                        class="footer__link text-secondary"
+                        target="_blank"
+                        href="https://www.iode.org">
+                    IODE
+                </a> Oostende, Belgium
+            </div>
+            <div class="col-sm-3 pt-1 pb-1">
+                <a href="mailto:it@iode.org"><i class="fa fa-envelope-o fa-fw text-secondary"></i></a>
+                <a href="https://www.facebook.com/IODE.Oostende/" target="_blank"><i class="fa fa-facebook-official fa-fw text-secondary"></i></a>
+                <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+                    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" />
+                </a>
+            </div>
+            <div class="col-sm-3 pt-1 pr-5 text-right">
+                <a href="/disclaimer" class="bold text-secondary">Disclaimer</a>
+            </div>
+        </div>
+    </footer>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                    crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                    crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+            <script type="text/javascript">
+
+                /**
+                 * things to be done once the page is loaded
+                 *
+                 */
+                $(document).ready(function(){
+
+                    //activate the bootstrap4 tooltips and popovers
+                    $('[data-toggle="tooltip"]').tooltip();
+                    $('[data-toggle="popover"]').popover();
+
+                    //go to top of the page
+                    document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+                });
+            </script>
+            </body>
+</html>

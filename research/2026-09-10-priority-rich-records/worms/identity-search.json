@@ -1,0 +1,134 @@
+{
+  "records": [
+    {
+      "id": "worms",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://www.marinespecies.org/about.php",
+      "recordDepth": "thin",
+      "title": "World Register of Marine Species",
+      "summary": "Authoritative marine taxonomic backbone",
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:03:20.936Z",
+      "recordUpdatedAt": "2026-09-10T20:03:20.936Z",
+      "score": 104.50000000000001,
+      "matchedLocale": "en"
+    },
+    {
+      "id": "worms-steering-committee",
+      "kind": "organization",
+      "countryCode": null,
+      "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+      "recordDepth": "stub",
+      "title": "WoRMS Steering Committee",
+      "summary": "Scientific leadership under the WoRMS terms of reference.",
+      "availableLocales": [
+        "en"
+      ],
+      "missingLocales": [
+        "ar",
+        "zh",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:03:21.677Z",
+      "recordUpdatedAt": "2026-09-10T20:03:21.677Z",
+      "score": 100,
+      "matchedLocale": "en"
+    },
+    {
+      "id": "fishbase",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://fishbase.se/home.htm",
+      "recordDepth": "thin",
+      "title": "FishBase",
+      "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:02:33.089Z",
+      "recordUpdatedAt": "2026-09-10T20:02:33.089Z",
+      "score": 20,
+      "matchedLocale": "en"
+    },
+    {
+      "id": "flanders-marine-institute",
+      "kind": "organization",
+      "countryCode": null,
+      "url": null,
+      "recordDepth": "stub",
+      "title": "Flanders Marine Institute",
+      "summary": null,
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:02:34.998Z",
+      "recordUpdatedAt": "2026-09-10T20:02:34.998Z",
+      "score": 18,
+      "matchedLocale": "en"
+    }
+  ],
+  "nextCursor": null,
+  "total": 4
+}

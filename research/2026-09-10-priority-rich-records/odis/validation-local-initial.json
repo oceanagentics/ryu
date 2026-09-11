@@ -1,0 +1,23 @@
+{
+  "shape": {
+    "valid": true,
+    "recordId": "odis",
+    "issues": []
+  },
+  "quality": {
+    "valid": true,
+    "recordId": "odis",
+    "issues": [],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 59,
+      "resolvedSources": 59,
+      "issues": []
+    }
+  }
+}

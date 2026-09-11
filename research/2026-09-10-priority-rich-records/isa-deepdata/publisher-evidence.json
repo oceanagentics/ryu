@@ -1,0 +1,119 @@
+[
+  {
+    "prefix": "oms",
+    "url": "https://datasets.obis.org/hosted/isa/omspmn12022_env_nhm_norce/omspmn12022_env_nhm_norce.zip",
+    "title": "OMSPMN12022 Env Template NHM-NORCE",
+    "creator": "Ocean Mineral Singapore Pte. Ltd.",
+    "pubDate": "2026-04-20",
+    "citation": "NA",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "uksrl",
+    "url": "https://datasets.obis.org/hosted/isa/uksrlpmn12019_nhm_norce_updated/uksrlpmn12019_nhm_norce_updated.zip",
+    "title": "UKSRLPMN12019 NHM-NORCE Updated",
+    "creator": "UK Seabed Resources Ltd. ",
+    "pubDate": "2026-04-20",
+    "citation": "NA",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "bgr",
+    "url": "https://datasets.obis.org/hosted/isa/bgrpmn12021_env_2018_biology/bgrpmn12021_env_2018_biology.zip",
+    "title": "BGRPMN12021 Env Template 2018 Biology",
+    "creator": "Federal Institute for Geosciences and Natural Resources of Germany",
+    "pubDate": "2026-04-20",
+    "citation": "NA",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "toml",
+    "url": "https://datasets.obis.org/hosted/isa/tomlpmn12024_env_20220212_bio/tomlpmn12024_env_20220212_bio.zip",
+    "title": "TOMLPMN12024 Env Template 20220212 Bio",
+    "creator": "Tonga Offshore Mining Limited",
+    "pubDate": "2026-04-20",
+    "citation": "NA",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "jogmec",
+    "url": "https://datasets.obis.org/hosted/isa/jogmeccrfc12024_env_20220212_2024/jogmeccrfc12024_env_20220212_2024.zip",
+    "title": "JOGMECCRFC12024 Env Template 20220212 2024",
+    "creator": "Japan Oil, Gas and Metals National Corporation",
+    "pubDate": "2026-04-20",
+    "citation": "NA",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "comra",
+    "url": "https://datasets.obis.org/hosted/isa/comracfc12017_dy36_meiofauna/comracfc12017_dy36_meiofauna.zip",
+    "title": "COMRACFC12017 DY36 meiofauna",
+    "creator": "China Ocean Mineral Resources Research and Development Association",
+    "pubDate": "2026-04-20",
+    "citation": "China Ocean Mineral Resources Research and Development Association, (2017). COMRACFC12017 DY36 meiofauna. Available : DeepData, International Seabed Authority https://data.isa.org.jm/ Accessed: [YYYY-MM-DD].",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "ifremer",
+    "url": "https://datasets.obis.org/hosted/isa/ifremerpmn12018_so239/ifremerpmn12018_so239.zip",
+    "title": "IFREMERPMN12018 SO239",
+    "creator": "Institut fran\u00e7ais de recherche pour l'exploitation de la mer",
+    "pubDate": "2026-04-20",
+    "citation": "Institut fran\u00e7ais de recherche pour l'exploitation de la mer, (2018). IFREMERPMN12018 SO239. Available : DeepData, International Seabed Authority https://data.isa.org.jm/ Accessed: [YYYY-MM-DD].",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "gsr",
+    "url": "https://datasets.obis.org/hosted/isa/gsrpmn12017_env_bioso239/gsrpmn12017_env_bioso239.zip",
+    "title": "GSRPMN12017 Env Template BIOSO239",
+    "creator": "Global Sea Mineral Resources NV",
+    "pubDate": "2026-04-20",
+    "citation": "Global Sea Mineral Resources NV, (2017). GSRPMN12017 Env Template BIOSO239. Available : DeepData, International Seabed Authority https://data.isa.org.jm/ Accessed: [YYYY-MM-DD].",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "iom",
+    "url": "https://datasets.obis.org/hosted/isa/iompmn12018_env_biol/iompmn12018_env_biol.zip",
+    "title": "IOMPMN12018 Env Template BIOL",
+    "creator": "Interoceanmetal Joint Organization",
+    "pubDate": "2026-04-20",
+    "citation": "Interoceanmetal Joint Organization, (2018). IOMPMN12018 Env Template BIOL. Available : DeepData, International Seabed Authority https://data.isa.org.jm/ Accessed: [YYYY-MM-DD].",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "yuzh",
+    "url": "https://datasets.obis.org/hosted/isa/yuzhpmn12015_biodata_b6/yuzhpmn12015_biodata_b6.zip",
+    "title": "YUZHPMN12015 Biodata B6",
+    "creator": "Yuzhmorgeologiya",
+    "pubDate": "2026-04-20",
+    "citation": "Yuzhmorgeologiya, (2015). YUZHPMN12015 Biodata B6. Available : DeepData, International Seabed Authority https://data.isa.org.jm/ Accessed: [YYYY-MM-DD].",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "dord",
+    "url": "https://datasets.obis.org/hosted/isa/dordpmn12018_env_mn_bio/dordpmn12018_env_mn_bio.zip",
+    "title": "DORDPMN12018 Env Mn Bio",
+    "creator": "Deep Ocean Resources Development Co. Ltd.",
+    "pubDate": "2026-04-20",
+    "citation": "Deep Ocean Resources Development Co. Ltd., (2018). DORDPMN12018 Env Mn Bio. Available : DeepData, International Seabed Authority https://data.isa.org.jm/ Accessed: [YYYY-MM-DD].",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "cmm",
+    "url": "https://datasets.obis.org/hosted/isa/cmmpmn12022_env/cmmpmn12022_env.zip",
+    "title": "CMMPMN12022 Env Template",
+    "creator": "China Minmetals Corporation",
+    "pubDate": "2026-04-20",
+    "citation": "NA",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  },
+  {
+    "prefix": "rusmnr",
+    "url": "https://datasets.obis.org/hosted/isa/rusmnrcrfc12015_env_biodata/rusmnrcrfc12015_env_biodata.zip",
+    "title": "RUSMNRCRFC12015 Env Template Biodata",
+    "creator": "Ministry of Natural resources and environment of the russian federation",
+    "pubDate": "2026-04-20",
+    "citation": "Ministry of Natural resources and environment of the russian federation, (2015). RUSMNRCRFC12015 Env Template Biodata. Available : DeepData, International Seabed Authority https://data.isa.org.jm/ Accessed: [YYYY-MM-DD].",
+    "licence": "This work is licensed under a Creative Commons Attribution (CC-BY) 4.0 License."
+  }
+]

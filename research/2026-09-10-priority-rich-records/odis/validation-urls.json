@@ -1,0 +1,244 @@
+{
+  "checkedAt": "2026-09-11T01:27:33.872179+00:00",
+  "method": "GET first2048bytes; browser and full content probes separately recorded",
+  "results": [
+    {
+      "url": "https://book.odis.org/",
+      "status": 200,
+      "finalUrl": "https://book.odis.org/",
+      "contentType": "text/html; charset=utf-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://book.odis.org/gettingStarted.html",
+      "status": 200,
+      "finalUrl": "https://book.odis.org/gettingStarted.html",
+      "contentType": "text/html; charset=utf-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://book.odis.org/validation/index.html",
+      "status": 200,
+      "finalUrl": "https://book.odis.org/validation/index.html",
+      "contentType": "text/html; charset=utf-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/disclaimer",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/disclaimer",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/odis",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/odis",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/view/3263",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/view/3263",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/view/3287",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/view/3287",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/view/3297",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/view/3297",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/view/3304",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/view/3304",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/view/3308",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/view/3308",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/view/364",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/view/364",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/view/4",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/view/4",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://catalogue.odis.org/view/893",
+      "status": 200,
+      "finalUrl": "https://catalogue.odis.org/view/893",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+      "status": 200,
+      "finalUrl": "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+      "contentType": "text/html",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+      "status": 200,
+      "finalUrl": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+      "contentType": "text/xml",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://fust.iode.org/en/oih",
+      "status": 200,
+      "finalUrl": "https://fust.iode.org/en/oih",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://iode.org/programme-components/",
+      "status": 200,
+      "finalUrl": "https://iode.org/programme-components/",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+      "status": 200,
+      "finalUrl": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://manual.obis.org/policy.html",
+      "status": 200,
+      "finalUrl": "https://manual.obis.org/policy.html",
+      "contentType": "text/html; charset=utf-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml",
+      "status": 200,
+      "finalUrl": "https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml",
+      "contentType": "application/xml",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml",
+      "status": 200,
+      "finalUrl": "https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml",
+      "contentType": "application/xml",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://oceaninfohub.org/",
+      "status": 200,
+      "finalUrl": "https://oceaninfohub.org/",
+      "contentType": "text/html",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://oceaninfohub.org/odis/",
+      "status": 200,
+      "finalUrl": "https://oceaninfohub.org/odis/",
+      "contentType": "text/html",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://odis.org/",
+      "status": 200,
+      "finalUrl": "https://odis.org/",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://odis.org/overview/",
+      "status": 200,
+      "finalUrl": "https://odis.org/overview/",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://odis.org/overview/governance/",
+      "status": 200,
+      "finalUrl": "https://odis.org/overview/governance/",
+      "contentType": "text/html; charset=UTF-8",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://search-demo.odis.org/",
+      "status": 200,
+      "finalUrl": "https://search-demo.odis.org/",
+      "contentType": "text/html",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+      "status": 200,
+      "finalUrl": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+      "contentType": "application/json",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Aocean-biodiversity-information-system%3Ahttps%253A%252F%252Fobis.org%252Fdataset%252F8935fb89-6494-4829-8b29-09022c3dbc90",
+      "status": 200,
+      "finalUrl": "https://search-demo.odis.org/api/v1/records/gleaner%3Aocean-biodiversity-information-system%3Ahttps%253A%252F%252Fobis.org%252Fdataset%252F8935fb89-6494-4829-8b29-09022c3dbc90",
+      "contentType": "application/json",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Aoceanexpert%3Acaf4562bcc499b395e484216b1d488130fe7ef28.json",
+      "status": 200,
+      "finalUrl": "https://search-demo.odis.org/api/v1/records/gleaner%3Aoceanexpert%3Acaf4562bcc499b395e484216b1d488130fe7ef28.json",
+      "contentType": "application/json",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://search-demo.odis.org/network",
+      "status": 200,
+      "finalUrl": "https://search-demo.odis.org/network",
+      "contentType": "text/html",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://www.oceanexpert.net/downloadFile/57704",
+      "status": 200,
+      "finalUrl": "https://www.oceanexpert.net/downloadFile/57704",
+      "contentType": "application/pdf",
+      "blockPageSuspected": false
+    },
+    {
+      "url": "https://www.un.org/Depts/los/consultative_process/icp25/DiwaAcallar.pdf",
+      "status": 200,
+      "finalUrl": "https://www.un.org/Depts/los/consultative_process/icp25/DiwaAcallar.pdf",
+      "contentType": "application/pdf",
+      "blockPageSuspected": false
+    }
+  ]
+}

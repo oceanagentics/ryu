@@ -1,0 +1,455 @@
+{
+  "id": "eurobis",
+  "kind": "system",
+  "countryCode": null,
+  "url": "https://www.eurobis.org/",
+  "recordDepth": "thin",
+  "title": "European Ocean Biodiversity Information System",
+  "summary": "European OBIS node and regional biodiversity publishing service",
+  "availableLocales": [
+    "ar",
+    "zh",
+    "en",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "missingLocales": [],
+  "reviewStatesByLocale": {
+    "ar": "needs_revision",
+    "en": "needs_revision",
+    "es": "needs_revision",
+    "fr": "needs_revision",
+    "ru": "needs_revision",
+    "zh": "needs_revision"
+  },
+  "requestedLocale": "en",
+  "displayLocale": "en",
+  "isLocaleFallback": false,
+  "updatedAt": "2026-09-10T20:02:30.906Z",
+  "recordUpdatedAt": "2026-09-10T20:02:30.906Z",
+  "sourceCompleteness": {
+    "status": "partial",
+    "referencedSources": 3,
+    "resolvedSources": 3,
+    "issues": [
+      {
+        "recordId": "eurobis",
+        "path": "record.properties.data.descriptors[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "eurobis",
+        "path": "record.properties.data.descriptors[1].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "eurobis",
+        "path": "record.properties.data.descriptors[2].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "eurobis",
+        "path": "localizations.ar.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "eurobis",
+        "path": "localizations.en.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "eurobis",
+        "path": "localizations.es.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "eurobis",
+        "path": "localizations.fr.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "eurobis",
+        "path": "localizations.ru.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "eurobis",
+        "path": "localizations.zh.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      }
+    ]
+  },
+  "record": {
+    "id": "eurobis",
+    "kind": "system",
+    "countryCode": null,
+    "url": "https://www.eurobis.org/",
+    "recordDepth": "thin",
+    "sources": {
+      "src-eurobis-home": {
+        "id": "src-eurobis-home",
+        "url": "https://www.eurobis.org/",
+        "title": {
+          "ar": "الصفحة الرئيسية لـ EurOBIS",
+          "en": "Home EurOBIS",
+          "es": "Página de inicio de EurOBIS",
+          "fr": "Page d’accueil d’EurOBIS",
+          "ru": "Главная страница EurOBIS",
+          "zh": "EurOBIS主页"
+        },
+        "accessedAt": "2026-05-26"
+      }
+    },
+    "properties": {
+      "data": {
+        "descriptors": [
+          {
+            "id": "eurobis-tag-data-format-darwin-core",
+            "label": "Darwin Core",
+            "source": null,
+            "category": "standard"
+          },
+          {
+            "id": "eurobis-tag-data-format-emof",
+            "label": "Extended MeasurementOrFact",
+            "source": null,
+            "category": "standard"
+          },
+          {
+            "id": "eurobis-tag-data-type-occurrence-observation",
+            "label": "occurrence_records",
+            "source": null,
+            "category": "type"
+          }
+        ],
+        "recordCount": null,
+        "storageSize": null
+      },
+      "usage": [],
+      "access": [
+        {
+          "id": "eurobis-tag-read-method-download",
+          "url": "https://www.eurobis.org/",
+          "type": "read",
+          "method": "download",
+          "source": "src-eurobis-home"
+        },
+        {
+          "id": "eurobis-tag-read-method-web",
+          "url": "https://www.eurobis.org/",
+          "type": "read",
+          "method": "web",
+          "source": "src-eurobis-home"
+        },
+        {
+          "id": "eurobis-tag-write-method-doi-archive-publish",
+          "url": "https://www.eurobis.org/",
+          "type": "submit",
+          "method": "doi_archive_publish",
+          "source": "src-eurobis-home"
+        },
+        {
+          "id": "eurobis-tag-write-method-ipt-publish",
+          "url": "https://www.eurobis.org/",
+          "type": "submit",
+          "method": "ipt_publish",
+          "source": "src-eurobis-home"
+        },
+        {
+          "id": "eurobis-tag-write-method-web-submission",
+          "url": "https://www.eurobis.org/",
+          "type": "submit",
+          "method": "web_submission",
+          "source": "src-eurobis-home"
+        }
+      ],
+      "gallery": [],
+      "disciplines": []
+    },
+    "createdAt": "2026-05-26T21:51:00.372Z",
+    "updatedAt": "2026-09-10T20:02:30.906Z"
+  },
+  "localizations": {
+    "ar": {
+      "locale": "ar",
+      "title": "نظام المعلومات الأوروبي للتنوع الحيوي في المحيطات",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "EurOBIS",
+          "European Ocean Biodiversity Information System"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:42.254Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.314289+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:42.254Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "en": {
+      "locale": "en",
+      "title": "European Ocean Biodiversity Information System",
+      "summary": "European OBIS node and regional biodiversity publishing service",
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "eurobis-tag-data-format-darwin-core",
+              "description": null
+            },
+            {
+              "id": "eurobis-tag-data-format-emof",
+              "description": null
+            },
+            {
+              "id": "eurobis-tag-data-type-occurrence-observation",
+              "description": null
+            }
+          ],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [
+          {
+            "id": "eurobis-tag-read-method-download",
+            "label": "Download",
+            "description": "Access via Download."
+          },
+          {
+            "id": "eurobis-tag-read-method-web",
+            "label": "Web UI",
+            "description": "Access via Web UI."
+          },
+          {
+            "id": "eurobis-tag-write-method-doi-archive-publish",
+            "label": "DOI archive publish",
+            "description": "Submission via DOI archive publish."
+          },
+          {
+            "id": "eurobis-tag-write-method-ipt-publish",
+            "label": "IPT publish",
+            "description": "Submission via IPT publish."
+          },
+          {
+            "id": "eurobis-tag-write-method-web-submission",
+            "label": "Web submission",
+            "description": "Submission via Web submission."
+          }
+        ],
+        "aliases": [
+          "EurOBIS"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": null,
+      "contentUpdatedAt": "2026-09-10T20:02:30.884Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.374583+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-05-26T21:51:00.372Z",
+      "updatedAt": "2026-09-10T20:02:30.884Z"
+    },
+    "es": {
+      "locale": "es",
+      "title": "Sistema Europeo de Información sobre Biodiversidad Oceánica",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "EurOBIS",
+          "European Ocean Biodiversity Information System"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:42.254Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.314794+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:42.254Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "fr": {
+      "locale": "fr",
+      "title": "Système européen d'information sur la biodiversité océanique",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "EurOBIS",
+          "European Ocean Biodiversity Information System"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:42.254Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.314529+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:42.254Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "ru": {
+      "locale": "ru",
+      "title": "Европейская информационная система океанического биоразнообразия",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "EurOBIS",
+          "European Ocean Biodiversity Information System"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:42.254Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.314662+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:42.254Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "zh": {
+      "locale": "zh",
+      "title": "欧洲海洋生物多样性信息系统",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "EurOBIS",
+          "European Ocean Biodiversity Information System"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:42.254Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.314421+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:42.254Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  },
+  "edges": [
+    {
+      "id": "link-eurobis-obis",
+      "sourceNodeId": "eurobis",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "EurOBIS contributes marine species distribution records to OBIS.",
+      "properties": {
+        "sourceRefs": [
+          "src-relationship-eurobis"
+        ]
+      },
+      "sources": {
+        "src-relationship-eurobis": {
+          "id": "src-relationship-eurobis",
+          "url": "https://www.eurobis.org/about",
+          "title": {
+            "ar": "حول EurOBIS",
+            "en": "About EurOBIS",
+            "es": "Acerca de EurOBIS",
+            "fr": "À propos de EurOBIS",
+            "ru": "О EurOBIS",
+            "zh": "关于EurOBIS"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-05-26T21:51:00.376Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    {
+      "id": "rel-flanders-marine-institute-operates-eurobis",
+      "sourceNodeId": "flanders-marine-institute",
+      "targetNodeId": "eurobis",
+      "kind": "operates",
+      "note": "VLIZ operates technical infrastructure and data management.",
+      "properties": {
+        "scope": "Technical infrastructure; scientific contributors retain their own roles",
+        "sourceRefs": [
+          "src-relationship-eurobis"
+        ]
+      },
+      "sources": {
+        "src-relationship-eurobis": {
+          "id": "src-relationship-eurobis",
+          "url": "https://www.eurobis.org/about",
+          "title": {
+            "ar": "حول EurOBIS",
+            "en": "About EurOBIS",
+            "es": "Acerca de EurOBIS",
+            "fr": "À propos de EurOBIS",
+            "ru": "О EurOBIS",
+            "zh": "关于EurOBIS"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-09-09T18:32:55.725Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  ],
+  "routes": []
+}

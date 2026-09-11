@@ -1,0 +1,395 @@
+{
+  "id": "algaebase",
+  "kind": "system",
+  "countryCode": null,
+  "url": "https://www.algaebase.org/",
+  "recordDepth": "thin",
+  "title": "AlgaeBase",
+  "summary": "Global algal taxonomy and distribution reference system",
+  "availableLocales": [
+    "ar",
+    "zh",
+    "en",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "missingLocales": [],
+  "reviewStatesByLocale": {
+    "ar": "needs_revision",
+    "en": "needs_revision",
+    "es": "needs_revision",
+    "fr": "needs_revision",
+    "ru": "needs_revision",
+    "zh": "needs_revision"
+  },
+  "requestedLocale": "en",
+  "displayLocale": "en",
+  "isLocaleFallback": false,
+  "updatedAt": "2026-09-10T20:02:09.122Z",
+  "recordUpdatedAt": "2026-09-10T20:02:09.122Z",
+  "sourceCompleteness": {
+    "status": "partial",
+    "referencedSources": 2,
+    "resolvedSources": 2,
+    "issues": [
+      {
+        "recordId": "algaebase",
+        "path": "record.properties.data.descriptors[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "algaebase",
+        "path": "record.properties.data.descriptors[1].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "algaebase",
+        "path": "record.properties.data.descriptors[2].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "algaebase",
+        "path": "record.properties.data.descriptors[3].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "algaebase",
+        "path": "localizations.ar.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "algaebase",
+        "path": "localizations.en.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "algaebase",
+        "path": "localizations.es.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "algaebase",
+        "path": "localizations.fr.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "algaebase",
+        "path": "localizations.ru.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "algaebase",
+        "path": "localizations.zh.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      }
+    ]
+  },
+  "record": {
+    "id": "algaebase",
+    "kind": "system",
+    "countryCode": null,
+    "url": "https://www.algaebase.org/",
+    "recordDepth": "thin",
+    "sources": {
+      "src-algaebase-content": {
+        "id": "src-algaebase-content",
+        "url": "https://admin.algaebase.org/content/",
+        "title": {
+          "ar": "محتوى AlgaeBase",
+          "en": "AlgaeBase Content",
+          "es": "Contenido de AlgaeBase",
+          "fr": "Contenu d’AlgaeBase",
+          "ru": "Содержимое AlgaeBase",
+          "zh": "AlgaeBase内容"
+        },
+        "accessedAt": "2026-05-26"
+      }
+    },
+    "properties": {
+      "data": {
+        "descriptors": [
+          {
+            "id": "algaebase-tag-data-type-images-media",
+            "label": "media",
+            "source": null,
+            "category": "type"
+          },
+          {
+            "id": "algaebase-tag-data-type-literature-reference",
+            "label": "bibliographic_records",
+            "source": null,
+            "category": "type"
+          },
+          {
+            "id": "algaebase-tag-data-type-occurrence-observation",
+            "label": "occurrence_records",
+            "source": null,
+            "category": "type"
+          },
+          {
+            "id": "algaebase-tag-data-type-taxonomy-nomenclature",
+            "label": "taxonomic_records",
+            "source": null,
+            "category": "type"
+          }
+        ],
+        "recordCount": null,
+        "storageSize": null
+      },
+      "usage": [],
+      "access": [
+        {
+          "id": "algaebase-tag-read-method-web",
+          "url": "https://www.algaebase.org/",
+          "type": "read",
+          "method": "web",
+          "source": "src-algaebase-content"
+        }
+      ],
+      "gallery": [],
+      "disciplines": [
+        "taxonomy"
+      ]
+    },
+    "createdAt": "2026-05-26T21:51:00.375Z",
+    "updatedAt": "2026-09-10T20:02:09.122Z"
+  },
+  "localizations": {
+    "ar": {
+      "locale": "ar",
+      "title": "AlgaeBase",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "قاعدة بيانات الطحالب",
+          "AlgaeBase"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:07.472Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.28995+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:07.472Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "en": {
+      "locale": "en",
+      "title": "AlgaeBase",
+      "summary": "Global algal taxonomy and distribution reference system",
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "algaebase-tag-data-type-images-media",
+              "description": null
+            },
+            {
+              "id": "algaebase-tag-data-type-literature-reference",
+              "description": null
+            },
+            {
+              "id": "algaebase-tag-data-type-occurrence-observation",
+              "description": null
+            },
+            {
+              "id": "algaebase-tag-data-type-taxonomy-nomenclature",
+              "description": null
+            }
+          ],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [
+          {
+            "id": "algaebase-tag-read-method-web",
+            "label": "Web UI",
+            "description": "Access via Web UI."
+          }
+        ],
+        "aliases": [
+          "AlgaeBase"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": null,
+      "contentUpdatedAt": "2026-09-10T20:02:09.021Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.370767+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-05-26T21:51:00.375Z",
+      "updatedAt": "2026-09-10T20:02:09.021Z"
+    },
+    "es": {
+      "locale": "es",
+      "title": "AlgaeBase",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "base de datos de algas",
+          "AlgaeBase"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:07.472Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.287803+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:07.472Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "fr": {
+      "locale": "fr",
+      "title": "AlgaeBase",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "base de données sur les algues",
+          "AlgaeBase"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:07.472Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.290167+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:07.472Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "ru": {
+      "locale": "ru",
+      "title": "AlgaeBase",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "база данных водорослей",
+          "AlgaeBase"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:07.472Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.287644+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:07.472Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "zh": {
+      "locale": "zh",
+      "title": "AlgaeBase",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "藻类数据库",
+          "AlgaeBase"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:07.472Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.290073+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:07.472Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-algaebase-operates-algaebase",
+      "sourceNodeId": "algaebase-operator",
+      "targetNodeId": "algaebase",
+      "kind": "operates",
+      "note": "Research team directed by Michael Guiry; mixed sponsorship is not EU governance.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "sourceRefs": [
+          "src-relationship-algaebase"
+        ]
+      },
+      "sources": {
+        "src-relationship-algaebase": {
+          "id": "src-relationship-algaebase",
+          "url": "https://admin.algaebase.org/team/",
+          "title": {
+            "ar": "فريق AlgaeBase",
+            "en": "AlgaeBase team",
+            "es": "Equipo de AlgaeBase",
+            "fr": "Équipe d’AlgaeBase",
+            "ru": "Команда AlgaeBase",
+            "zh": "AlgaeBase团队"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-05-26T21:51:00.376Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  ],
+  "routes": []
+}

@@ -1,0 +1,125 @@
+[
+  {
+    "key": "governance",
+    "status": 200,
+    "url": "https://oceanexpert.org/event/4852",
+    "links": [
+      {
+        "url": "/",
+        "text": " Ocean Expert  \n                     A Directory of Marine and Freshwater Professionals \n                "
+      },
+      {
+        "url": "/document/37282",
+        "text": "\n                                                                OCEANTEACHER GLOBAL ACADEMY COURSE MANAGEMENT GUIDELINES (version 5.0)\n                                                            "
+      },
+      {
+        "url": "/document/37743",
+        "text": "\n                                                                OTGA-SG V: proposed Terms of Reference for IOC OceanTeacher Global Academy\n                                                            "
+      },
+      {
+        "url": "/document/37726",
+        "text": "\n                                                                OTGA-SG V: Annex IV. OTGA Terms of Reference\n                                                            "
+      },
+      {
+        "url": "/document/37743",
+        "text": "\n                                                                OTGA-SG V: proposed Terms of Reference for IOC OceanTeacher Global Academy\n                                                            "
+      },
+      {
+        "url": "/document/37283",
+        "text": "\n                                                                OCEANTEACHER GLOBAL ACADEMY COURSE MANAGEMENT GUIDELINES (version 5.0)\n                                                            "
+      },
+      {
+        "url": "/expert/18126",
+        "text": "\n                                                                    SEPULVEDA Hector\n                                                                "
+      }
+    ]
+  },
+  {
+    "key": "odis-single",
+    "status": 200,
+    "url": "https://catalogue.odis.org/view/359",
+    "links": []
+  },
+  {
+    "key": "fust2",
+    "status": 200,
+    "url": "https://fust.iode.org/en/otga2",
+    "links": [
+      {
+        "url": "/en/oceanteacher-history",
+        "text": "OceanTeacher History"
+      },
+      {
+        "url": "/en/history",
+        "text": "History"
+      }
+    ]
+  },
+  {
+    "key": "courses2026",
+    "status": 200,
+    "url": "https://classroom.oceanteacher.org/course/index.php?categoryid=198",
+    "links": [
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1332",
+        "text": " "
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1332",
+        "text": "Erasmus Maris 2026: Monitoring microplastic pollution in coastal waters: From sampling and analysis to data"
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1317",
+        "text": " "
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1317",
+        "text": "Strengthening Sea Level Monitoring and Data Management in East Africa for Coastal Resilience and Community Safety Technical Training "
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1314",
+        "text": " "
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1314",
+        "text": "Marine Data Management, Governance and the MEDIN toolset (October 2026)"
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1313",
+        "text": " "
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1313",
+        "text": "Marine Data Management, Governance and the MEDIN toolset (September 2026)"
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1307",
+        "text": " "
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1307",
+        "text": "Monitoring microplastic pollution in coastal waters: From sampling and analysis to data "
+      },
+      {
+        "url": "https://iode.org/",
+        "text": "\u00a0International Ocean Data and Information Exchange (IODE) programme"
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1301",
+        "text": " "
+      },
+      {
+        "url": "https://classroom.oceanteacher.org/course/view.php?id=1301",
+        "text": "Regional Training Course on Ocean Acidification Monitoring, Data Management, and SDG 14.3.1 Reporting "
+      },
+      {
+        "url": "https://ioc.unesco.org",
+        "text": " "
+      },
+      {
+        "url": "https://fust.iode.org/ocean",
+        "text": " "
+      }
+    ]
+  }
+]

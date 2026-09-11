@@ -1,0 +1,873 @@
+{
+  "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v25.04/parquet/",
+  "observedAt": "2026-09-10",
+  "isTruncated": "false",
+  "objects": 216,
+  "parquetBytes": 194684778,
+  "files": [
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/abnorm.parquet",
+      "size": 25513
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/abnormref.parquet",
+      "size": 38882
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/abundance.parquet",
+      "size": 137413
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/abundancedelta.parquet",
+      "size": 3793
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/acknowledge.parquet",
+      "size": 922517
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/address.parquet",
+      "size": 8493
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/airbreathingref.parquet",
+      "size": 727
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/alieninvasive.parquet",
+      "size": 78434
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/allgenus.parquet",
+      "size": 52925
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/aquamaint.parquet",
+      "size": 34310
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/aquamaps.parquet",
+      "size": 786633
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/aquarium.parquet",
+      "size": 150217
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/aquariumpic.parquet",
+      "size": 7304
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/aquariumref.parquet",
+      "size": 6090
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/asfis.parquet",
+      "size": 935237
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/biblio.parquet",
+      "size": 14639593
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/biblio2.parquet",
+      "size": 6556
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/brains.parquet",
+      "size": 253768
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/broodstock.parquet",
+      "size": 145479
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/bruvssample.parquet",
+      "size": 326816
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/bruvsspecies.parquet",
+      "size": 618638
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/bruvssurvey.parquet",
+      "size": 8303
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/checklist.parquet",
+      "size": 3299
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/cigua.parquet",
+      "size": 55275
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/ciguafb.parquet",
+      "size": 14434
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/citesfb.parquet",
+      "size": 116275
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/cl50.parquet",
+      "size": 59333
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/classes.parquet",
+      "size": 8155
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/classification_tree.parquet",
+      "size": 387347
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/coffversions.parquet",
+      "size": 351
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/collaborators.parquet",
+      "size": 466548
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/collectionsref.parquet",
+      "size": 499184
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/comnames.parquet",
+      "size": 14280082
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/countecosystem.parquet",
+      "size": 833785
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/countfao.parquet",
+      "size": 1818303
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/countfaoref.parquet",
+      "size": 2549
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/countref.parquet",
+      "size": 418732
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/country.parquet",
+      "size": 9553921
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/country_presencestatusranked.parquet",
+      "size": 661
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/countrysub.parquet",
+      "size": 1156633
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/countrysubfaoref.parquet",
+      "size": 1513
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/countrysubref.parquet",
+      "size": 19722
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/cultspec.parquet",
+      "size": 22954
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/cultsys.parquet",
+      "size": 39891
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/cultures.parquet",
+      "size": 2340
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/diet.parquet",
+      "size": 310076
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/diet_items.parquet",
+      "size": 1013816
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/diseases.parquet",
+      "size": 175536
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/dispic.parquet",
+      "size": 45543
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/disref.parquet",
+      "size": 192328
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/ecology.parquet",
+      "size": 1418019
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/ecosysfam.parquet",
+      "size": 760
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/ecosyslhref.parquet",
+      "size": 1621
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/ecosystem.parquet",
+      "size": 3663325
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/ecosystemcntref.parquet",
+      "size": 14625
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/ecosystemcountry.parquet",
+      "size": 3045043
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/ecosystemfaoref.parquet",
+      "size": 8870
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/ecosystemref.parquet",
+      "size": 285023
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/eggdev.parquet",
+      "size": 20910
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/eggnurserysystem.parquet",
+      "size": 45549
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/eggs.parquet",
+      "size": 193466
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/elecdat.parquet",
+      "size": 185183
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/elecstudies.parquet",
+      "size": 50282
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/elecsub.parquet",
+      "size": 159131
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/enzymes.parquet",
+      "size": 2334
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/estimate.parquet",
+      "size": 2647555
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/estimatedepth.parquet",
+      "size": 54701
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/families.parquet",
+      "size": 427298
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/faoaquacult.parquet",
+      "size": 458610
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/faoareas.parquet",
+      "size": 1179199
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/faoarfam.parquet",
+      "size": 7934
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/faoarord.parquet",
+      "size": 2186
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/faoarref.parquet",
+      "size": 11143
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/faocatch.parquet",
+      "size": 2179515
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fbrelinks.parquet",
+      "size": 12653
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fbusers.parquet",
+      "size": 468885
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fecundity.parquet",
+      "size": 361529
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fieldguide_pic.parquet",
+      "size": 6194
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fl_datasource.parquet",
+      "size": 34682
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fl_fish.parquet",
+      "size": 9227
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fl_fishingdetails.parquet",
+      "size": 1321
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fl_location.parquet",
+      "size": 3496
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fl_losses.parquet",
+      "size": 16418
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fl_lossesfinance.parquet",
+      "size": 3634
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fl_lossesother.parquet",
+      "size": 2165
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fl_processdetails.parquet",
+      "size": 1784
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fl_storagedetails.parquet",
+      "size": 6857
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fl_transportdetails.parquet",
+      "size": 1820
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/flexionsize.parquet",
+      "size": 43004
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/food.parquet",
+      "size": 18903
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/foodecosystemtype.parquet",
+      "size": 3624
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fooditems.parquet",
+      "size": 1938628
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/foodtroph.parquet",
+      "size": 6400
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/frynurserysystem.parquet",
+      "size": 94255
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/fubh.parquet",
+      "size": 35372
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/gazetteer.parquet",
+      "size": 71389
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/gendiversity.parquet",
+      "size": 15012
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/genedat.parquet",
+      "size": 13462
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/genera.parquet",
+      "size": 1533756
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/genetics.parquet",
+      "size": 367573
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/gicim_photos.parquet",
+      "size": 1241917
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/gillarea.parquet",
+      "size": 12772
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/globi.parquet",
+      "size": 591376
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/glossary.parquet",
+      "size": 1546469
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/gomexsi.parquet",
+      "size": 12765
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/graphcateg.parquet",
+      "size": 135597
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/homerange.parquet",
+      "size": 119157
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/icescatch.parquet",
+      "size": 946137
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/institution.parquet",
+      "size": 1082517
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/instlanguage.parquet",
+      "size": 1683
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/instmembership.parquet",
+      "size": 31491
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/instspecies.parquet",
+      "size": 4030
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/intrcase.parquet",
+      "size": 456578
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/isscaap.parquet",
+      "size": 1197281
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/keyquestions.parquet",
+      "size": 1765968
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/keys.parquet",
+      "size": 87234
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/label_index.parquet",
+      "size": 782348
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/language.parquet",
+      "size": 61978
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/languagecountry.parquet",
+      "size": 16202
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/languagegroup.parquet",
+      "size": 5655
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/languagescript.parquet",
+      "size": 10902
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/larvae.parquet",
+      "size": 509818
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/larvaepresence.parquet",
+      "size": 34084
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/larvalnurserysystem.parquet",
+      "size": 155021
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/larvalswimspeed.parquet",
+      "size": 5864
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/larvdyn.parquet",
+      "size": 8600
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/latgraphs.parquet",
+      "size": 150001
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/massconversion.parquet",
+      "size": 80466
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/materialsexamined.parquet",
+      "size": 3317
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/matrix.parquet",
+      "size": 890312
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/maturity.parquet",
+      "size": 433647
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/maturitygills.parquet",
+      "size": 38589
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/miniessay.parquet",
+      "size": 135920
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/mirrorversions.parquet",
+      "size": 701
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/morphdat.parquet",
+      "size": 7551020
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/morphmet.parquet",
+      "size": 891213
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/morphmettlratios.parquet",
+      "size": 1602202
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/morphorders.parquet",
+      "size": 8023
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/museum.parquet",
+      "size": 18601
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/myersbiblio.parquet",
+      "size": 10195
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/myersdata.parquet",
+      "size": 392437
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/myersrecruitmentdatabase.parquet",
+      "size": 116496
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/nutrients.parquet",
+      "size": 41932
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/nutrientssummary.parquet",
+      "size": 48176
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/occurrence.parquet",
+      "size": 37357248
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/oceanadaptspecieslinks.parquet",
+      "size": 115310
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/oceanprovfaoref.parquet",
+      "size": 884
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/oceanprovinces.parquet",
+      "size": 276005
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/oceanprovincesref.parquet",
+      "size": 26988
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/orderage.parquet",
+      "size": 16728
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/orders.parquet",
+      "size": 49042
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/otoliths.parquet",
+      "size": 129921
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/oxygen.parquet",
+      "size": 177635
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/picturesmain.parquet",
+      "size": 3900547
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/pop_r.parquet",
+      "size": 183518
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/pop_rm.parquet",
+      "size": 10194
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/popchar.parquet",
+      "size": 807978
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/popgrowth.parquet",
+      "size": 933597
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/poplf.parquet",
+      "size": 150964
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/poplfdata.parquet",
+      "size": 774613
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/popll.parquet",
+      "size": 533155
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/poplw.parquet",
+      "size": 1198790
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/popqb.parquet",
+      "size": 16611
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/popular.parquet",
+      "size": 1058929
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/predatorecosystemtype.parquet",
+      "size": 2086
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/predatorhierarchy.parquet",
+      "size": 3747
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/predatortroph.parquet",
+      "size": 4140
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/predats.parquet",
+      "size": 240482
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/proxims.parquet",
+      "size": 120226
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/ration.parquet",
+      "size": 24644
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/refrens.parquet",
+      "size": 14593320
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/reproduc.parquet",
+      "size": 566805
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/revisions.parquet",
+      "size": 15076
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/rmcaphotos.parquet",
+      "size": 9468
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/rp_province.parquet",
+      "size": 2388
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/rp_region.parquet",
+      "size": 1198
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/seafoodad.parquet",
+      "size": 596644
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/seafoodadref.parquet",
+      "size": 7152
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/searchpagestats.parquet",
+      "size": 1704
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/sounds.parquet",
+      "size": 24873
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/spawnagg.parquet",
+      "size": 75724
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/spawning.parquet",
+      "size": 503892
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/species.parquet",
+      "size": 5272364
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/speciesauthorsnames.parquet",
+      "size": 1061126
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/specieswithoutphoto.parquet",
+      "size": 513489
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/specieswithpicture.parquet",
+      "size": 85858
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/speed.parquet",
+      "size": 13097
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/sponsors.parquet",
+      "size": 55876
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/stocks.parquet",
+      "size": 3600770
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/strains.parquet",
+      "size": 12119
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/swimming.parquet",
+      "size": 21482
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/synonyms.parquet",
+      "size": 9754687
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/tabnotes.parquet",
+      "size": 41710
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/taxamatch.parquet",
+      "size": 3928861
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/taxamatch_epithet.parquet",
+      "size": 1471028
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/vision.parquet",
+      "size": 14318
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/waterquality.parquet",
+      "size": 14433
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/webfish.parquet",
+      "size": 5943
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/webuse.parquet",
+      "size": 39864
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/whatsnew.parquet",
+      "size": 11336
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/withoutpicture.parquet",
+      "size": 299343
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/withphotos.parquet",
+      "size": 75678
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/wpicture.parquet",
+      "size": 105749
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_cn3.parquet",
+      "size": 8463895
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_continent.parquet",
+      "size": 635
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_country_importance.parquet",
+      "size": 545
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_factsheetmaint.parquet",
+      "size": 77916
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_factsheetmaint_aquaculture.parquet",
+      "size": 1699
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_foridentification.parquet",
+      "size": 159318
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_picturetype.parquet",
+      "size": 630
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_picturetype_lifestage.parquet",
+      "size": 471
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_rdecomnamescountry.parquet",
+      "size": 605
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_rdecomnameslanguage.parquet",
+      "size": 496
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_rdecountrycoordinators.parquet",
+      "size": 1586
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_tour.parquet",
+      "size": 7798
+    },
+    {
+      "key": "cboettig/fishbase/fb/v25.04/parquet/zweb_userstypelist.parquet",
+      "size": 583
+    }
+  ]
+}

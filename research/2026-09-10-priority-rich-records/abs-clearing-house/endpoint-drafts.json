@@ -1,0 +1,722 @@
+[
+  {
+    "id": "cbd-secretariat",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.cbd.int/secretariat/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "abs-modalities": {
+          "id": "abs-modalities",
+          "url": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+          "title": {
+            "en": "Decision NP-1/2: operating modalities",
+            "fr": "Décision NP-1/2 : modalités de fonctionnement",
+            "es": "Decisión NP-1/2: modalidades de funcionamiento",
+            "ar": "المقرر NP-1/2: طرائق التشغيل",
+            "ru": "Решение NP-1/2: условия функционирования",
+            "zh": "NP-1/2号决定：运作方式"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-decision2024": {
+          "id": "abs-decision2024",
+          "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+          "title": {
+            "en": "Decision NP-5/4: ABS Clearing-House and information-sharing (2024)",
+            "fr": "Décision NP-5/4 : Centre d’échange APA et échange d’informations (2024)",
+            "es": "Decisión NP-5/4: Centro de Intercambio de Información sobre APB e intercambio de información (2024)",
+            "ar": "المقرر NP-5/4: غرفة تبادل المعلومات وتبادل المعلومات (2024)",
+            "ru": "Решение NP-5/4: Механизм посредничества и обмен информацией (2024)",
+            "zh": "NP-5/4号决定：信息交换所与信息共享（2024年）"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Secretariat of the Convention on Biological Diversity",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Secrétariat de la Convention sur la diversité biologique",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Secretaría del Convenio sobre la Diversidad Biológica",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "أمانة اتفاقية التنوع البيولوجي",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Секретариат Конвенции о биологическом разнообразии",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "生物多样性公约秘书处",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "nagoya-protocol-cop-mop",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.cbd.int/abs/text/articles?sec=abs-26",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "abs-article14": {
+          "id": "abs-article14",
+          "url": "https://www.cbd.int/abs/text/articles/default.shtml?sec=abs-14",
+          "title": {
+            "en": "Nagoya Protocol Article 14: ABS Clearing-House",
+            "fr": "Article 14 du Protocole de Nagoya : Centre d’échange APA",
+            "es": "Artículo 14 del Protocolo de Nagoya: Centro de Intercambio de Información sobre APB",
+            "ar": "المادة 14 من بروتوكول ناغويا: غرفة تبادل المعلومات",
+            "ru": "Статья 14 Нагойского протокола: Механизм посредничества",
+            "zh": "《名古屋议定书》第14条：信息交换所"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-decision2024": {
+          "id": "abs-decision2024",
+          "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+          "title": {
+            "en": "Decision NP-5/4: ABS Clearing-House and information-sharing (2024)",
+            "fr": "Décision NP-5/4 : Centre d’échange APA et échange d’informations (2024)",
+            "es": "Decisión NP-5/4: Centro de Intercambio de Información sobre APB e intercambio de información (2024)",
+            "ar": "المقرر NP-5/4: غرفة تبادل المعلومات وتبادل المعلومات (2024)",
+            "ru": "Решение NP-5/4: Механизм посредничества и обмен информацией (2024)",
+            "zh": "NP-5/4号决定：信息交换所与信息共享（2024年）"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Conference of the Parties serving as the meeting of the Parties to the Nagoya Protocol",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Nagoya Protocol COP-MOP",
+            "NP COP-MOP"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-article14",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Conférence des Parties siégeant en tant que réunion des Parties au Protocole de Nagoya",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Nagoya Protocol COP-MOP",
+            "NP COP-MOP"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-article14",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Conferencia de las Partes que actúa como reunión de las Partes en el Protocolo de Nagoya",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Nagoya Protocol COP-MOP",
+            "NP COP-MOP"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-article14",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "مؤتمر الأطراف العامل بوصفه اجتماع الأطراف في بروتوكول ناغويا",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Nagoya Protocol COP-MOP",
+            "NP COP-MOP"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-article14",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Конференция Сторон, выступающая в качестве совещания Сторон Нагойского протокола",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Nagoya Protocol COP-MOP",
+            "NP COP-MOP"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-article14",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "作为《名古屋议定书》缔约方会议的缔约方大会",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Nagoya Protocol COP-MOP",
+            "NP COP-MOP"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-article14",
+              "abs-decision2024"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "declare",
+    "record": {
+      "kind": "system",
+      "url": "https://webgate.ec.europa.eu/declare",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "abs-declare-link": {
+          "id": "abs-declare-link",
+          "url": "https://green-forum.ec.europa.eu/nature-and-biodiversity/access-and-benefit-sharing-abs-implementation-eu-abs-regulation_en",
+          "title": {
+            "en": "European Commission: implementing the EU ABS Regulation",
+            "fr": "Commission européenne : mise en œuvre du règlement APA de l’UE",
+            "es": "Comisión Europea: aplicación del Reglamento de APB de la UE",
+            "ar": "المفوضية الأوروبية: تنفيذ لائحة الحصول وتقاسم المنافع",
+            "ru": "Европейская комиссия: выполнение Регламента ЕС о ДГРСИВ",
+            "zh": "欧盟委员会：实施欧盟获取和惠益分享条例"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-declare-guide": {
+          "id": "abs-declare-guide",
+          "url": "https://www.naturvardsverket.se/4ac4da/contentassets/09859c1d752d445ab59f06c0544fe6e0/question-and-answer-users.pdf",
+          "title": {
+            "en": "DECLARE Nagoya user guide (March 2018)",
+            "fr": "Guide utilisateur DECLARE Nagoya (mars 2018)",
+            "es": "Guía de usuario DECLARE Nagoya (marzo de 2018)",
+            "ar": "دليل مستخدم DECLARE ناغويا (مارس 2018)",
+            "ru": "Руководство пользователя DECLARE Nagoya (март 2018 года)",
+            "zh": "DECLARE名古屋用户指南（2018年3月）"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-eu2026": {
+          "id": "abs-eu2026",
+          "url": "https://environment.ec.europa.eu/document/download/c5a15594-3513-441c-978d-e5bc4bc26b53_en?filename=SWD_2026_66_1_EN_document_travail_service_part1_FINAL.pdf",
+          "title": {
+            "en": "European Union seventh CBD national report (2026), Target 13",
+            "fr": "Septième rapport national de l’UE à la CDB (2026), cible 13",
+            "es": "Séptimo informe nacional de la UE a la CDB (2026), meta 13",
+            "ar": "التقرير الوطني السابع للاتحاد الأوروبي إلى الاتفاقية (2026)، الهدف 13",
+            "ru": "Седьмой национальный доклад ЕС для КБР (2026), задача 13",
+            "zh": "欧盟向公约提交的第七次国家报告（2026年），目标13"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "DECLARE — Nagoya due-diligence declarations",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DECLARE",
+            "DECLARE Nagoya"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-declare-link",
+              "abs-declare-guide",
+              "abs-eu2026"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "DECLARE — déclarations de diligence nécessaire Nagoya",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DECLARE",
+            "DECLARE Nagoya"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-declare-link",
+              "abs-declare-guide",
+              "abs-eu2026"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "DECLARE — declaraciones de diligencia debida de Nagoya",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DECLARE",
+            "DECLARE Nagoya"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-declare-link",
+              "abs-declare-guide",
+              "abs-eu2026"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "DECLARE — إقرارات العناية الواجبة لناغويا",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DECLARE",
+            "DECLARE Nagoya"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-declare-link",
+              "abs-declare-guide",
+              "abs-eu2026"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "DECLARE — декларации о должной осмотрительности по Нагойскому протоколу",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DECLARE",
+            "DECLARE Nagoya"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-declare-link",
+              "abs-declare-guide",
+              "abs-eu2026"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "DECLARE — 名古屋尽职调查声明",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "DECLARE",
+            "DECLARE Nagoya"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-declare-link",
+              "abs-declare-guide",
+              "abs-eu2026"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "defra",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "abs-uk-checkpoint": {
+          "id": "abs-uk-checkpoint",
+          "url": "https://absch.cbd.int/database/CP/ABSCH-CP-GB-207653",
+          "title": {
+            "en": "UK checkpoint record: Defra publishing and OPSS enforcement roles",
+            "fr": "Point de contrôle britannique : publication par Defra et contrôle par OPSS",
+            "es": "Punto de verificación británico: publicación de Defra y supervisión de OPSS",
+            "ar": "نقطة التحقق البريطانية: دور النشر لدفرا والإنفاذ لمكتب OPSS",
+            "ru": "Контрольный пункт Великобритании: публикация Defra и надзор OPSS",
+            "zh": "英国检查站记录：Defra发布与OPSS执法职责"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Department for Environment, Food & Rural Affairs",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Defra",
+            "DEFRA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-uk-checkpoint"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Ministère britannique de l’Environnement, de l’Alimentation et des Affaires rurales",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Defra",
+            "DEFRA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-uk-checkpoint"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Departamento de Medio Ambiente, Alimentación y Asuntos Rurales del Reino Unido",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Defra",
+            "DEFRA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-uk-checkpoint"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "وزارة البيئة والغذاء والشؤون الريفية البريطانية",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Defra",
+            "DEFRA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-uk-checkpoint"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Департамент окружающей среды, продовольствия и сельского хозяйства Великобритании",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Defra",
+            "DEFRA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-uk-checkpoint"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "英国环境、食品与乡村事务部",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "Defra",
+            "DEFRA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-uk-checkpoint"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "moefcc",
+    "record": {
+      "kind": "organization",
+      "url": "https://moef.gov.in/",
+      "recordDepth": "thin",
+      "properties": {},
+      "sources": {
+        "abs-india2019": {
+          "id": "abs-india2019",
+          "url": "https://dste.py.gov.in/Envispdy/assets/pdf/Action%20Plan/IndiaNationalBiodiversityActionPlan2019.pdf",
+          "title": {
+            "en": "India biodiversity action plan implementation overview (2019), ABS roles",
+            "fr": "Mise en œuvre du plan indien pour la biodiversité (2019), rôles APA",
+            "es": "Aplicación del plan de biodiversidad de India (2019), funciones de APB",
+            "ar": "تنفيذ خطة التنوع البيولوجي الهندية (2019)، أدوار الحصول وتقاسم المنافع",
+            "ru": "Выполнение плана Индии по биоразнообразию (2019): роли ДГРСИВ",
+            "zh": "印度生物多样性行动计划实施概况（2019年）：获取和惠益分享角色"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Ministry of Environment, Forest and Climate Change (India)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MoEFCC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-india2019"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Ministère de l’Environnement, des Forêts et du Changement climatique (Inde)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MoEFCC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-india2019"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Ministerio de Medio Ambiente, Bosques y Cambio Climático (India)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MoEFCC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-india2019"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "وزارة البيئة والغابات وتغير المناخ (الهند)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MoEFCC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-india2019"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Министерство окружающей среды, лесов и изменения климата Индии",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MoEFCC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-india2019"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "印度环境、森林和气候变化部",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "MoEFCC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-india2019"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  }
+]

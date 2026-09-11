@@ -1,0 +1,258 @@
+{
+  "request": {
+    "valid": true,
+    "recordId": "fishbase",
+    "issues": []
+  },
+  "quality": {
+    "valid": true,
+    "recordId": "fishbase",
+    "issues": [],
+    "warnings": [
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 48,
+      "resolvedSources": 48,
+      "issues": []
+    }
+  },
+  "edgeIssues": [],
+  "endpointDependencies": [
+    "swedish-museum-of-natural-history",
+    "geomar",
+    "mundus-maris",
+    "worldfish",
+    "blue-abacus",
+    "bloom-association",
+    "csiro",
+    "minderoo-foundation",
+    "swire-institute-of-marine-science",
+    "university-of-lorraine",
+    "oman-ministry-of-agriculture-fisheries-and-water-resources"
+  ],
+  "endpoints": [
+    {
+      "id": "swedish-museum-of-natural-history",
+      "request": {
+        "valid": true,
+        "recordId": "swedish-museum-of-natural-history",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "swedish-museum-of-natural-history",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "geomar",
+      "request": {
+        "valid": true,
+        "recordId": "geomar",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "geomar",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "mundus-maris",
+      "request": {
+        "valid": true,
+        "recordId": "mundus-maris",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "mundus-maris",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "worldfish",
+      "request": {
+        "valid": true,
+        "recordId": "worldfish",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "worldfish",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "blue-abacus",
+      "request": {
+        "valid": true,
+        "recordId": "blue-abacus",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "blue-abacus",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "bloom-association",
+      "request": {
+        "valid": true,
+        "recordId": "bloom-association",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "bloom-association",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "csiro",
+      "request": {
+        "valid": true,
+        "recordId": "csiro",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "csiro",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "minderoo-foundation",
+      "request": {
+        "valid": true,
+        "recordId": "minderoo-foundation",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "minderoo-foundation",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "swire-institute-of-marine-science",
+      "request": {
+        "valid": true,
+        "recordId": "swire-institute-of-marine-science",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "swire-institute-of-marine-science",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "university-of-lorraine",
+      "request": {
+        "valid": true,
+        "recordId": "university-of-lorraine",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "university-of-lorraine",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "oman-ministry-of-agriculture-fisheries-and-water-resources",
+      "request": {
+        "valid": true,
+        "recordId": "oman-ministry-of-agriculture-fisheries-and-water-resources",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "oman-ministry-of-agriculture-fisheries-and-water-resources",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    }
+  ]
+}

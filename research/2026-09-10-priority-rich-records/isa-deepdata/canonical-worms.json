@@ -1,0 +1,469 @@
+{
+  "httpStatus": 200,
+  "result": {
+    "id": "worms",
+    "kind": "system",
+    "countryCode": null,
+    "url": "https://www.marinespecies.org/about.php",
+    "recordDepth": "thin",
+    "title": "World Register of Marine Species",
+    "summary": "Authoritative marine taxonomic backbone",
+    "availableLocales": [
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "missingLocales": [],
+    "reviewStatesByLocale": {
+      "ar": "needs_revision",
+      "en": "needs_revision",
+      "es": "needs_revision",
+      "fr": "needs_revision",
+      "ru": "needs_revision",
+      "zh": "needs_revision"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-10T20:03:20.936Z",
+    "recordUpdatedAt": "2026-09-10T20:03:20.936Z",
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 4,
+      "resolvedSources": 4,
+      "issues": [
+        {
+          "recordId": "worms",
+          "path": "record.properties.data.descriptors[0].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "record.properties.data.descriptors[1].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "record.properties.data.descriptors[2].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.ar.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.en.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.es.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.fr.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.ru.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.zh.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "record": {
+      "id": "worms",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://www.marinespecies.org/about.php",
+      "recordDepth": "thin",
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-05-26"
+        }
+      },
+      "properties": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "worms-tag-data-type-occurrence-observation",
+              "label": "occurrence_records",
+              "source": null,
+              "category": "type"
+            },
+            {
+              "id": "worms-tag-data-type-taxonomy-nomenclature",
+              "label": "taxonomic_records",
+              "source": null,
+              "category": "type"
+            },
+            {
+              "id": "worms-tag-data-type-trait-ecology",
+              "label": "biological_traits",
+              "source": null,
+              "category": "type"
+            }
+          ],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [
+          {
+            "id": "worms-tag-read-method-api",
+            "url": "https://www.marinespecies.org/about.php",
+            "type": "read",
+            "method": "api",
+            "source": "src-worms-about"
+          },
+          {
+            "id": "worms-tag-read-method-rest-api",
+            "url": "https://www.marinespecies.org/about.php",
+            "type": "read",
+            "method": "rest_api",
+            "source": "src-worms-about"
+          },
+          {
+            "id": "worms-tag-read-method-web",
+            "url": "https://www.marinespecies.org/about.php",
+            "type": "read",
+            "method": "web",
+            "source": "src-worms-about"
+          }
+        ],
+        "gallery": [],
+        "disciplines": [
+          "taxonomy"
+        ]
+      },
+      "createdAt": "2026-05-26T16:46:26.459Z",
+      "updatedAt": "2026-09-10T20:03:20.936Z"
+    },
+    "localizations": {
+      "ar": {
+        "locale": "ar",
+        "title": "السجل العالمي للأنواع البحرية",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "WoRMS",
+            "World Register of Marine Species"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:54.530Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.369724+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:54.530Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "en": {
+        "locale": "en",
+        "title": "World Register of Marine Species",
+        "summary": "Authoritative marine taxonomic backbone",
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [
+              {
+                "id": "worms-tag-data-type-occurrence-observation",
+                "description": null
+              },
+              {
+                "id": "worms-tag-data-type-taxonomy-nomenclature",
+                "description": null
+              },
+              {
+                "id": "worms-tag-data-type-trait-ecology",
+                "description": null
+              }
+            ],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [
+            {
+              "id": "worms-tag-read-method-api",
+              "label": "API",
+              "description": "Access via API."
+            },
+            {
+              "id": "worms-tag-read-method-rest-api",
+              "label": "REST API",
+              "description": "Access via REST API."
+            },
+            {
+              "id": "worms-tag-read-method-web",
+              "label": "Web UI",
+              "description": "Access via Web UI."
+            }
+          ],
+          "aliases": [
+            "WoRMS"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-10T20:03:20.913Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.377152+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-05-26T16:46:26.459Z",
+        "updatedAt": "2026-09-10T20:03:20.913Z"
+      },
+      "es": {
+        "locale": "es",
+        "title": "Registro Mundial de Especies Marinas",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "WoRMS",
+            "World Register of Marine Species"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:54.530Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.37015+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:54.530Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "fr": {
+        "locale": "fr",
+        "title": "Registre mondial des espèces marines",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "WoRMS",
+            "World Register of Marine Species"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:54.530Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.369941+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:54.530Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "ru": {
+        "locale": "ru",
+        "title": "Всемирный реестр морских видов",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "WoRMS",
+            "World Register of Marine Species"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:54.530Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.370038+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:54.530Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "zh": {
+        "locale": "zh",
+        "title": "世界海洋物种名录",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "WoRMS",
+            "World Register of Marine Species"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:54.530Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.36984+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:54.530Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-fishbase-syncs-to-worms",
+        "sourceNodeId": "fishbase",
+        "targetNodeId": "worms",
+        "kind": "syncs_to",
+        "note": "WoRMS explicitly identifies FishBase as an external database from which it currently imports information, principally taxonomy. This establishes FishBase-to-WoRMS transfer; no reciprocal transfer or fixed refresh schedule is asserted.",
+        "properties": {
+          "scope": "Fish taxonomy imported into Aphia and presented through WoRMS",
+          "status": "active",
+          "sourceRefs": [
+            "evidence"
+          ],
+          "transferMethod": "External database import; implementation and cadence unspecified"
+        },
+        "sources": {
+          "evidence": {
+            "id": "evidence",
+            "url": "https://www.marinespecies.org/about.php",
+            "title": {
+              "ar": "قواعد البيانات الخارجية الشريكة لـ WoRMS",
+              "en": "WoRMS external database partners",
+              "es": "Bases de datos externas asociadas a WoRMS",
+              "fr": "Bases partenaires externes de WoRMS",
+              "ru": "Внешние базы данных — партнёры WoRMS",
+              "zh": "WoRMS外部合作数据库"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-10T19:16:31.969Z",
+        "updatedAt": "2026-09-10T19:16:31.969Z"
+      },
+      {
+        "id": "rel-flanders-marine-institute-operates-world-register-of-marine-species",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "worms",
+        "kind": "operates",
+        "note": "VLIZ operates infrastructure; the elected Steering Committee has scientific policy authority. Advisory and operational roles are distinct.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-worms"
+          ]
+        },
+        "sources": {
+          "src-relationship-worms": {
+            "id": "src-relationship-worms",
+            "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+            "title": {
+              "ar": "اختصاصات WoRMS",
+              "en": "WoRMS terms of reference",
+              "es": "Términos de referencia de WoRMS",
+              "fr": "Mandat de WoRMS",
+              "ru": "Положение о деятельности WoRMS",
+              "zh": "WoRMS职权范围"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-05-26T16:46:26.459Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      {
+        "id": "rel-worms-steering-committee-governs-worms",
+        "sourceNodeId": "worms-steering-committee",
+        "targetNodeId": "worms",
+        "kind": "governs",
+        "note": "Scientific policy authority under the terms of reference.",
+        "properties": {
+          "scope": "Scientific policy; VLIZ retains technical operation",
+          "sourceRefs": [
+            "src-relationship-worms"
+          ]
+        },
+        "sources": {
+          "src-relationship-worms": {
+            "id": "src-relationship-worms",
+            "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+            "title": {
+              "ar": "اختصاصات WoRMS",
+              "en": "WoRMS terms of reference",
+              "es": "Términos de referencia de WoRMS",
+              "fr": "Mandat de WoRMS",
+              "ru": "Положение о деятельности WoRMS",
+              "zh": "WoRMS职权范围"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-09-09T18:33:43.034Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      }
+    ],
+    "routes": []
+  }
+}

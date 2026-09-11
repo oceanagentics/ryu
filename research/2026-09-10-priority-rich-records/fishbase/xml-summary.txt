@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8" ?><response xmlns="http://www.eol.org/transfer/content/0.1"
+	xmlns:xsd="https://www.w3.org/2001/XMLSchema"
+	xmlns:dc="https://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="https://purl.org/dc/terms/"
+	xmlns:geo="https://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:dwc="http://rs.tdwg.org/dwc/dwcore/"
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.eol.org/transfer/content/0.1 http://services.eol.org/schema/content_0_2.xsd">
+<taxon>
+	<dc:identifier>FB-69</dc:identifier>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=69</dc:source>
+	<dwc:Kingdom>Animalia</dwc:Kingdom>
+	<dwc:Phylum>Chordata</dwc:Phylum>
+	<dwc:Class>Teleostei</dwc:Class>
+	<dwc:Order>Gadiformes</dwc:Order>
+	<dwc:Family>Gadidae</dwc:Family>
+	<dwc:Genus>Gadus</dwc:Genus>
+	<dwc:ScientificName>Gadus morhua Linnaeus, 1758</dwc:ScientificName>
+	<commonName xml:lang='no'>Knor</commonName>
+	<commonName xml:lang='no'>Knurr</commonName>
+	<commonName xml:lang='no'>Knurrfisk</commonName>
+	<commonName xml:lang='no'>Vanlig knurr</commonName>
+	<commonName xml:lang='pl'>Kurek szary</commonName>
+	<commonName xml:lang='pt'>Cabra morena</commonName>
+	<commonName xml:lang='pt'>Cabra-morena</commonName>
+	<commonName xml:lang='pt'>Ruivo</commonName>
+	<commonName xml:lang='sq'>Gjel gri</commonName>
+	<commonName xml:lang='ar'>Djâj Sakhry</commonName>
+	<commonName xml:lang='da'>Grå knurhane</commonName>
+	<commonName xml:lang='da'>Graa knùrhane</commonName>
+	<commonName xml:lang='de'>Grauer</commonName>
+	<commonName xml:lang='de'>Grauer Knurrhahn</commonName>
+	<commonName xml:lang='de'>Knurrhahn</commonName>
+	<commonName xml:lang='en'>Grey gurnard</commonName>
+	<commonName xml:lang='et'>Hall merikukk</commonName>
+	<commonName xml:lang='et'>Hallmerikukk</commonName>
+	<commonName xml:lang='fo'>Knurrhani</commonName>
+	<commonName xml:lang='fi'>Kyhmykurnusimppu</commonName>
+	<commonName xml:lang='fr'>Grondin gris</commonName>
+	<commonName xml:lang='gv'>Crodane glass</commonName>
+	<commonName xml:lang='hr'>Kokot sivac</commonName>
+	<commonName xml:lang='is'>Urrari</commonName>
+	<commonName xml:lang='it'>Anzoleto piccolo</commonName>
+	<commonName xml:lang='it'>Capuene</commonName>
+	<commonName xml:lang='it'>Capocchione</commonName>
+	<commonName xml:lang='it'>Capone gorno</commonName>
+	<commonName xml:lang='it'>Capone liscio</commonName>
+	<commonName xml:lang='it'>Cappone gorno</commonName>
+	<commonName xml:lang='it'>Choeussanu</commonName>
+	<commonName xml:lang='it'>Cocciu</commonName>
+	<commonName xml:lang='it'>Cuoccio</commonName>
+	<commonName xml:lang='it'>Facianu</commonName>
+	<commonName xml:lang='it'>Facianu 'mperiali</commonName>
+	<commonName xml:lang='it'>Gallinella</commonName>
+	<commonName xml:lang='it'>Grugnau</commonName>
+	<commonName xml:lang='it'>Mazzola</commonName>
+	<commonName xml:lang='it'>Occhiobello di fora</commonName>
+	<commonName xml:lang='it'>Organo</commonName>
+	<commonName xml:lang='it'>Pesce capone</commonName>
+	<commonName xml:lang='it'>Pulicana</commonName>
+	<commonName xml:lang='it'>Testagrossa</commonName>
+	<commonName xml:lang='ja'>Hôbô</commonName>
+	<commonName xml:lang='ja'>Kanagashira</commonName>
+	<commonName xml:lang='mt'>Gallina</commonName>
+	<commonName xml:lang='mt'>Gallina griza</commonName>
+	<commonName xml:lang='mt'>Kappun tar-ramel</commonName>
+	<commonName xml:lang='mt'>Trigla</commonName>
+	<commonName xml:lang='ru'>Obyknovennyi morskoi petukh</commonName>
+	<commonName xml:lang='ru'>морской петух</commonName>
+	<commonName xml:lang='ru'>серая тригла</commonName>
+	<commonName xml:lang='ru'>Тригла серая (=морской петух)</commonName>
+	<commonName xml:lang='sr'>Kokot</commonName>
+	<commonName xml:lang='sr'>Lastavica</commonName>
+	<commonName xml:lang='sr'>Lastavica prasica</commonName>
+	<commonName xml:lang='sr'>Trilja (prasica)</commonName>
+	<commonName xml:lang=''>Captain</commonName>
+	<commonName xml:lang=''>Crointer</commonName>
+	<commonName xml:lang=''>Crooner</commonName>
+	<commonName xml:lang=''>Croonyi II</commonName>
+	<commonName xml:lang=''>Girnet</commonName>
+	<commonName xml:lang=''>Goukmey</commonName>
+	<commonName xml:lang=''>Gowdie</commonName>
+	<commonName xml:lang=''>Hurdy</commonName>
+	<commonName xml:lang=''>Krunter</commonName>
+	<commonName xml:lang=''>Noud</commonName>
+	<commonName xml:lang=''>Woof</commonName>
+	<commonName xml:lang='sv'>Gnoding</commonName>
+	<commonName xml:lang='sv'>Knorrhane</commonName>
+	<commonName xml:lang='sv'>Knot</commonName>
+	<commonName xml:lang='tr'>Benekli kirlangiç</commonName>
+	<commonName xml:lang='tr'>Benekli kırlangıç balığı</commonName>
+	<commonName xml:lang='tr'>Beneklikırlangıç balığı</commonName>
+	<commonName xml:lang='tr'>Kirlangiç</commonName>
+	<commonName xml:lang='tr'>Kırlangıç balığı</commonName>
+	<commonName xml:lang='uk'>Півень морський</commonName>
+	<commonName xml:lang='uk'>Півень морський сірий</commonName>
+	<commonName xml:lang='uk'>Тригла сіра</commonName>
+	<commonName xml:lang='es'>Borracho</commonName>
+	<commonName xml:lang='es'>Crego</commonName>
+	<commonName xml:lang='es'>Perlon</commonName>
+	<commonName xml:lang='es'>Perlón</commonName>
+	<commonName xml:lang='es'>Rubios</commonName>
+	<commonName xml:lang=''>Cap d'ase</commonName>
+	<commonName xml:lang=''>Grauwe poon</commonName>
+	<commonName xml:lang=''>Grizokaponi</commonName>
+	<commonName xml:lang=''>Kapóni</commonName>
+	<commonName xml:lang=''>Lluerna verda</commonName>
+	<commonName xml:lang=''>Sivi krulec</commonName>
+	<commonName xml:lang=''>Γκριζοκαπόνι</commonName>
+	<commonName xml:lang=''>Καπόνι</commonName>
+	<commonName xml:lang=''>Κούκος</commonName>
+	<commonName xml:lang=''>北海綠鰭魚</commonName>
+	<commonName xml:lang=''>北海绿鳍鱼</commonName>
+	<commonName xml:lang=''>真魴鮄</commonName>
+	<commonName xml:lang=''>真鲂鮄</commonName>
+	<synonym relationship='synonym'>Chelidonichthys gurnardus (Linnaeus, 1758)</synonym>
+	<synonym relationship='synonym'>Eutrigla gunardus (Linnaeus, 1758)</synonym>
+	<synonym relationship='synonym'>Eutrigla gurnardus gurnardus (Linnaeus, 1758)</synonym>
+	<synonym relationship='synonym'>Eutrigla gurnardus milvus (Lacepède, 1801)</synonym>
+	<synonym relationship='synonym'>Eutriglia gurnardus (Linnaeus, 1758)</synonym>
+	<synonym relationship='synonym'>Eutroigla gurnardus (Linnaeus, 1758)</synonym>
+	<synonym relationship='synonym'>Trigla gurnardus Linnaeus, 1758</synonym>
+	<synonym relationship='synonym'>Trigla milvus Lacepède, 1801</synonym>
+	<dcterms:created>1990-10-17</dcterms:created>
+	<dcterms:modified>2022-03-04</dcterms:modified>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=37&amp;speccode=68'>Russell, F.S.0 The eggs and planktonic stages of British marine fishes. Academic Press, London, UK. 524 p. (Ref. 37)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=39&amp;speccode=68'>Halbeisen, H.-W.0 Bestimmungsschlüssel für Fischlarven der Nordsee und angrenzender Gebiete. Ber. Inst. Meeresk. Nr. 178. (Ref. 39)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=41&amp;speccode=68'>Ehrenbaum, E.0 Eier und Larven von Fischen. p. 1-414. In Nordisches Plankton 1. Lipsius &amp; Tischer, Kiel-Leipzig. (Ref. 41)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=69&amp;speccode=68'>Marinaro, J.Y.0 Contribution à l'étude des oeufs et larves pélagiques de poissons Méditerranéens. V. Oeufs pélagiques de la Baie d'Alger. Bull. Inst. Océanogr. 3(1):1-118. (Ref. 69)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=76&amp;speccode=68'>Papasissi, C.0 A contribution to the study of the biology of the ichthyoplankton in the Gulf of Kissamos (N.W. Crete, Greece). Thesis. 300 p. (Ref. 76)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=194&amp;speccode=68'>Möller, H. and K. Anders0 Diseases and parasites of marine fishes. Verlag Möller, Kiel. 365 p. (Ref. 194)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=263&amp;speccode=68'>Tortonese, E.0 Fauna d'Italia. Vol. XI. Osteichthyes, part 2. Ediz. Calderini, Bologna:1-636. (Ref. 263)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=268&amp;speccode=68'>Coull, K.A., A.S. Jermyn, A.W. Newton, G.I. Henderson and W.B. Hall0 Length/weight relationships for 88 species of fish encountered in the North Atlantic. Scottish Fish. Res. Rep. (43):80 p. (Ref. 268)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=897&amp;speccode=68'>Svetovidov, A.N.0 Handbook of the fauna of the USSR, fishes of the Black Sea. Izdatel'stvo Nauka, Moscow, 550 p. (Ref. 897)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=1652&amp;speccode=68'>Linnaeus, C.0 Systema naturae per regna tria naturae, secundum classes, ordinus, genera, species, cum characteribus, differentiis, synonymis, locis. Tomus I. Editio decima, reformata. Impensis Direct. Laurentii Salvii, Holmiae. 824 p. (Ref. 1652)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=1756&amp;speccode=68'>Nijssen, H. and S.J. de Groot0 Catalogue of fish species of the Netherlands. Beaufortia 21(285):173-207. (Ref. 1756)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=2302&amp;speccode=68'>Hughes, G.M. and M. Morgan0 The structure of fish gills in relation to their respiratory function. Biol. Revs. 48(3):419-475. (Ref. 2302)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=2311&amp;speccode=68'>Hughes, G.M.0 The dimensions of fish gills in relation to their function. J. Exp. Biol. 45:177-195. (Ref. 2311)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=2723&amp;speccode=68'>Blanc, M. and J.-C. Hureau0 Triglidae. p. 586-590. In J.C. Hureau and Th. Monod (eds.) Check-list of the fishes of the north-eastern Atlantic and of the Mediterranean (CLOFNAM I). UNESCO, Paris. Vol. 1. (Ref. 2723)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=3383&amp;speccode=68'>Organisation for Economic Co-operation and Development0 Multilingual dictionary of fish and fish products. Fishing News Books, Oxford. (Ref. 3383)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=3397&amp;speccode=68'>Bauchot, M.-L.0 Poissons osseux. p. 891-1421. In W. Fischer, M.L. Bauchot and M. Schneider (eds.) Fiches FAO d'identification pour les besoins de la pêche. (rev. 1). Méditerranée et mer Noire. Zone de pêche 37. Vol. II. Commission des Communautés Européennes and FAO, Rome. (Ref. 3397)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=4517&amp;speccode=68'>Hureau, J.-C.0 La base de données GICIM: Gestion informatisée des collections ichthyologiques du Muséum. p. 225-227. In Atlas Préliminaire des Poissons d'Eau Douce de France. Conseil Supérieur de la Pêche, Ministère de l'Environnement, CEMAGREF et Muséum national d'Histoire naturelle, Paris. (Ref. 4517)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=4638&amp;speccode=68'>Pauly, D. and R.S.V. Pullin0 Hatching time in spherical, pelagic, marine fish eggs in response to temperature and egg size. Environ. Biol. Fishes 22(4):261-271. (Ref. 4638)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=4645&amp;speccode=68'>Muus, B. and P. Dahlström0 Meeresfische der Ostsee, der Nordsee, des Atlantiks. BLV Verlagsgesellschaft, München. 244 p. (Ref. 4645)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=4697&amp;speccode=68'>Hureau, J.-C.0 Triglidae. p. 1230-1238. In P.J.P. Whitehead, M.-L. Bauchot, J.-C. Hureau, J. Nielsen and E. Tortonese (eds.) Fishes of the North-eastern Atlantic and the Mediterranean. UNESCO, Paris. Vol. 3. (Ref. 4697)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=4931&amp;speccode=68'>FAO0 FAO yearbook. Fishery statistics: catches and landings. Vol. 70: 1990. FAO Fish. Ser. 38:647 p. (Ref. 4931)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=5760&amp;speccode=68'>Erzini, K.0 A compilation of data on variability in length-age in marine fishes. Fisheries Stock Assessment, Title XII, Collaborative Research Support Program, University of Rhode Island. Working paper 77, 36p. (Ref. 5760)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=5853&amp;speccode=68'>Papaconstantinou, C.0 Age and growth of grey gurnard (&lt;i&gt;Eutrigla gurnardos&lt;/i&gt;) in the Pagassitikos Gulf (Greece). Inv. Pesq. 46:191-213. (Ref. 5853)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=6014&amp;speccode=68'>Dorel, D.0 Poissons de l'Atlantique nord-est relations taille-poids. Institut Francais de Recherche pour l'Exploitation de la Mer. Nantes, France. 165 p. (Ref. 6014)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=6302&amp;speccode=68'>Muus, B.J. and P. Dahlstrøm0 Havfisk og Fiskeri i Nordvesteuropa. GEC Gads Forlag, København, 244 p. (in Danish). (Ref. 6302)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=7253&amp;speccode=68'>Campillo, A.0 Les pêcheries françaises de Méditeranée: synthèse des connaissances. Institut Francais de Recherche pour l'Exploitation de la Mer, France. 206 p. (Ref. 7253)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=7439&amp;speccode=68'>Carpenter, K.0 List of FAO names in the yearbook found inconsistent with FIRM's Species Identification and Data Programme publications and other primary sources. pers. comm. FIDI-FIRM List, FAO, Rome. (Ref. 7439)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=8984&amp;speccode=68'>FAO0 FAO Yearbook. Fishery statistics: catches and landings. Vol. 74: 1992. FAO Fish. Ser. 43:677 p. (Ref. 8984)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=9057&amp;speccode=68'>Economidis, P.S.0 Catalogue of the fishes of Greece. Reprinted from Hellenic Oceanology and Limnology, Praktika of the Inst. of Ocean. and Fishing Research, vol. 11 (1972). (Ref. 9057)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=9488&amp;speccode=68'>Bruce, J.R., J.S. Colman and N.S. Jones0 Marine fauna of the Isle of Man. Memoir No. 36. Liverpool University Press, Liverpool. (Ref. 9488)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=9610&amp;speccode=68'>Minchin, D.0 Fishes of the Lough Hyne marine reserve. J. Fish Biol. 31(3):343-352. (Ref. 9610)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=9690&amp;speccode=68'>Albert, O.T.0 Ecology of haddock (&lt;i&gt;Melanogrammus aeglefinus&lt;/i&gt; L.) in the Norwegian Deep. ICES J. Mar. Sci. 51:31-44. (Ref. 9690)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=9900&amp;speccode=68'>Flintegård, H.0 Fishes in the North Sea Museum's aquaria. North Sea Museum, North Sea Centre, DK-9850 Hirtshals. Hirtshals Bogtryk/Offset A/S. (Ref. 9900)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=9987&amp;speccode=68'>Frimodt, C.0 Multilingual illustrated guide to the world's commercial warmwater fish. Fishing News Books, Osney Mead, Oxford, England. 215 p. (Ref. 9987)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=10937&amp;speccode=68'>Anonymous0 Fish collection database of the University of British Columbia Fish Museum Fish Museum. University of British Columbia, Vancouver, Canada. (Ref. 10937)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=12052&amp;speccode=68'>Moreno-Amich, R.0 Feeding habits of grey gurnard, &lt;i&gt;Eutrigla gurnardus&lt;/i&gt; (L., 1758), along the Catalan coast (northwestern Mediterranean). Hydrobiologia 273(1):57-66. (Ref. 12052)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=12224&amp;speccode=68'>Sparholt, H.0 An estimate of the total biomass of fish in the North Sea. J. Cons. 46:200-210. (Ref. 12224)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=12302&amp;speccode=68'>Rass, T.S.0 Present status of the composition of the Black Sea ichthyofauna. J. Ichthyol. 27(3):64-72. (Ref. 12302)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=12462&amp;speccode=68'>Jonsson, G.0 Islenskir fiskar. Fiolvi, Reykjavik, 568 pp. (Ref. 12462)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=12577&amp;speccode=68'>Gibson, R.N. and I.A. Ezzi0 Feeding relationships of a demersal fish assemblage on the west coast of Scotland. J. Fish Biol. 31(1):55-69. (Ref. 12577)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=12818&amp;speccode=68'>Anonymous0 Fish registrations within the museum database of the Vertebrate Section of the Royal Museum for Central Africa. MRAC, Tervuren, Belgium. (Ref. 12818)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=13729&amp;speccode=68'>Amori, G., F.M. Angelici, S. Frugis, G. Gandolfi, R. Groppali, B. Lanza, G. Relini and G. Vicini0 Vertebrata. In A. Minelli, S. Ruffo and S. La Posta (eds.) Checklist delle specie della fauna Italiana, 110. Calderini, Bologna, 83 p. (Ref. 13729)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=26178&amp;speccode=68'>Merella, P., A. Quetglas, F. Alemany and A. Carbonell0 Length-weight relationship of fishes and cephalopods from the Balearic Islands (western Mediterranean). Naga, ICLARM Q. 20(3-4):66-68. (Ref. 26178)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=26321&amp;speccode=68'>Booth, A.J.0 On the life history of the lesser gurnard (Scorpaeniformes: Triglidae) inhabiting the Agulhas Bank, South Africa. J. Fish Biol. 51(6):1155-1173. (Ref. 26321)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=26335&amp;speccode=68'>Costa, F.0 Atlante dei pesci dei mari italiani. Gruppo Ugo Mursia Editore S.p.A. Milano, Italy. 438 p. (Ref. 26335)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=26388&amp;speccode=68'>Sanches, J.G.0 Nomenclatura Portuguesa de organismos aquáticos (proposta para normalização estatística). Publ. Avuls. Inst. Nac. Invest. Pescas 14:322 p. (Ref. 26388)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=26811&amp;speccode=68'>Baron, J.0 Les triglides (Téléostéens, Scorpaeniformes) de la baie de Douarnenez. II. La reproduccion de: &lt;i&gt;Eutrigla gurnardus, Trigla lucerna, Trigloporus lastoviza&lt;/i&gt; et &lt;i&gt;Aspitrigla cuculus&lt;/i&gt;. Cybium 9(3):255-281. (Ref. 26811)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=27030&amp;speccode=68'>Stergiou, K.I., E.D. Christou, D. Georgopoulous, A. Zenetos and C. Souvermezoglou0 The Hellenic seas: physics, chemistry, biology and fisheries. p. 415-538. In A.D. Ansell, R.N. Gibson and M. Barnes (eds.). Oceanography and marine biology: an annual review. UCL Press. (Ref. 27030)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=27156&amp;speccode=68'>Sánchez, F., F. de la Gándara and R. Gancedo0 Atlas de los peces demersales de Galicia y el Cantábrico. Otoño 1991-1993. Publicaciones Especiales, Instituto Español de Oceanografia, Madrid, Spain (20). 100 p. (Ref. 27156)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=27372&amp;speccode=68'>Jennings, S., S.P.R. Greenstreet and J.D. Reynolds0 Structural change in an exploited fish community: a consequence of differential fishing effects on species with contrasting life histories. J. Animal Ecol. 68:617-627. (Ref. 27372)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=27400&amp;speccode=68'>Damm, U.0 Growth of the grey gurnard &lt;i&gt;Eutrigla gurnardus&lt;/i&gt; L. in the North Sea. ICES Committee Meeting G:55. 10 p. (Ref. 27400)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=28130&amp;speccode=68'>Gibson, R.N. and L. Robb0 Piscine predation on juvenile fishes on a Scottish sandy beach. J. Fish Biol. 49(1):120-138. (Ref. 28130)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=28679&amp;speccode=68'>Went, A.E.J.0 List of Irish fishes. Department of Lands, Fisheries Division, Dublin. 31 p. (Ref. 28679)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=30402&amp;speccode=68'>Kullander, S.O.0 Swedish fishes: checklist of Swedish fishes. Swedish Museum of Natural History. http://www.nrm.se/ve/pisces/allfish.shtml.en, 25 May 1999. (Ref. 30402)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=31402&amp;speccode=68'>Swedish Museum of Natural History0 Fish collection database of the Naturhistoriska riksmuseet (Swedish Museum of Natural History). Ichthyology Section, Department of Vertebrate Zoology, Swedish Museum of Natural History, Stockholm, Sweden. (Ref. 31402)</reference>
+	<reference isbn='957-8596-59-6' url='http://www.fishbase.org/references/FBRefSummary.php?id=31517&amp;speccode=68'>Wu, H.L., K.-T. Shao and C.F. Lai (eds.)0 Latin-Chinese dictionary of fishes names. The Sueichan Press, Taiwan. 1028 p. (Ref. 31517)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=31982&amp;speccode=68'>Anonymous0 Fish collection database of the Natural History Museum, London (formerly British Museum of Natural History (BMNH)). Natural History Museum, London (formerly British Museum of Natural History (BMNH)). (Ref. 31982)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=33337&amp;speccode=68'>Anonymous0 Systematisk liste over norske fisk registert pr. 1997. http://alun.uio.no/zoomus/generell/avdelinger/fisk/fiskeliste.html (Ref. 33337)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=33798&amp;speccode=68'>Soljan, T.0 I pesci dell'Adriatico. Arnoldo Mondadori Editore, Verona, Italy. (Ref. 33798)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=33971&amp;speccode=68'>Lanfranco, G.G.0 The fish around Malta (Central Mediterranean). Progress Press Co. Ltd. (Malta). 132 p. (Ref. 33971)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=35117&amp;speccode=68'>Alegre, M., J. Lleonart and J. Veny0 Espècies pesqueres d'interès comercial. Nomenclatura oficial catalana. Departament de Cultura, Generalitat Catalunya, Barcelona, Spain. (Ref. 35117)</reference>
+	<reference isbn='87-90787-00-5' url='http://www.fishbase.org/references/FBRefSummary.php?id=35388&amp;speccode=68'>Muus, B.J. and J.G. Nielsen0 Sea fish. Scandinavian Fishing Year Book, Hedehusene, Denmark. 340 p. (Ref. 35388)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=35508&amp;speccode=68'>Anonymous0 The icthyological collection of the Zoological Museum Hamburg (ZMH). Division of Ichthyology and Herpetology, Zoological Museum Hamburg (ZMH). (Ref. 35508)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=35509&amp;speccode=68'>Anonymous0 Fish collection database of the Intitut fur Seefischerei (ISH). BIOLAB Forschungsinstitut, Hohenwestedt, Germany. (Ref. 35509)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=36252&amp;speccode=68'>Winkler, H.M., K. Skora, R. Repecka, M. Ploks, A. Neelov, L. Urho, A. Gushin and H. Jespersen0 Checklist and status of fish species in the Baltic Sea. ICES CM 2000/Mini:11, 15 p. (Ref. 36252)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=36372&amp;speccode=68'>Dolgov, A.V.0 New data on composition and distribution of the Barents Sea ichthyofauna. ICES CM2000/Mini:12, 12p. (Ref. 36372)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=37661&amp;speccode=68'>De Gee, A. and A.H. Kikkert0 Analysis of the grey gurnard (&lt;i&gt;Eutrigla gurnardus&lt;/i&gt;) samples collected during the 1991 International Stomach Sampling Project. ICES C.M. 1993/G:14. 25 p. (Ref. 37661)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=37668&amp;speccode=68'>Kaiser, M.J. and B.E. Spencer0 Opportunistic feeding on benthos by fishes after the passage of A 4-m beam trawl. ICES C.M. 1993/G:27. 6 p. (Ref. 37668)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=38038&amp;speccode=68'>Demestre, M., P. Sánchez and P. Abelló0 Demersal fish assemblages and habitat characteristics on the continental shelf and upper slope of the north-western Mediterranean. J. Mar. Biol. Ass. U.K. 80(6):981-988. (Ref. 38038)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=38732&amp;speccode=68'>Anonymous0 Fish collection database of the National Museum of Natural History (Smithsonian Institution). Smithsonian Institution-Division of Fishes. (Ref. 38732)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=39328&amp;speccode=68'>Anonymous0 Fish collection database of CSIC. CSIC, Spain. (Ref. 39328)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=39373&amp;speccode=68'>Froese, R.0 Moderne Methoden zur Bestimmung von Fischlarven. Faculty of Biology, University of Hamburg. Ph. D. thesis. (Ref. 39373)</reference>
+	<reference isbn='84-931926-0-0.' url='http://www.fishbase.org/references/FBRefSummary.php?id=39531&amp;speccode=68'>Crespo, J., J. Gajate and R. Ponce0 Clasificación científica e identificación de nombres vernáculos existentes en la base de datos de seguimiento informático de recursos naturales oceánicos. Instituto Español de Oceanografia, Madrid, Spain. 414 p. (Ref. 39531)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=40637&amp;speccode=68'>IGFA0 Database of IGFA angling records until 2001. IGFA, Fort Lauderdale, USA. (Ref. 40637)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=40919&amp;speccode=68'>Anonymous0 Fish collection database of the Zoological Museum, University of Copenhagen. Zoological Museum, University of Copenhagen. (Ref. 40919)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=41256&amp;speccode=68'>Sportfiskarna.se0 knot = &lt;i&gt;Chelidonichthys gurnadus&lt;/i&gt;. Swedish sportfishing records: http://www.sportfiskarna.com/. (Ref. 41256)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=41414&amp;speccode=68'>Anonymous0 Fish collection database of the American Museum of Natural History. American Museum of Natural History, Central Park West , NY 10024-5192, USA. (Ref. 41414)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=41474&amp;speccode=68'>Economidis, P.S.0 Common names of Hellenic marine fishes. Aristotle University, Unpublished Technical Report. (Ref. 41474)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=41475&amp;speccode=68'>Economidis, P.S. and E. Koutrakis0 Common names of comercially important Hellenic marine organisms. Aristotle University, Unpublished Technical Report. (Ref. 41475)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=41476&amp;speccode=68'>Deval, M.C.0 Common names of marine fishes of Turkey. Unpublished report. (Ref. 41476)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=41893&amp;speccode=68'>Bell, J.D. and M.L. Harmelin-Vivien0 Fish fauna of French Mediterranean Posidonia oceanica seagrass meadows. 2. Feeding habits. Tethys 11, 1-14. (Ref. 41893)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=42455&amp;speccode=68'>Stergiou, K.I. and D.K. Moutopoulos0 A review of length-weight relationships of fishes from Greek marine waters. Naga, ICLARM Q. 24(1-2):23-39. (Ref. 42455)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=43202&amp;speccode=68'>Andriyashev, A.P. and N.V. Chernova0 Annotated list of fishlike vertebrates and fish of the Arctic seas and adjacent waters. J. Ichthyol. 35(1):81-123. (Ref. 43202)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=47438&amp;speccode=68'>Anonymous0 Fish collection of the Royal Ontario Museum. Royal Ontario Museum. (Ref. 47438)</reference>
+	<reference isbn='88-7413-042-2' url='http://www.fishbase.org/references/FBRefSummary.php?id=48500&amp;speccode=68'>Luther, W. and K. Fiedler0 Guida della fauna marina costiera del Mediterraneo. Atlante illustrato a colori. Franco Muzzio &amp; C. (editore), Roma. 244p. (Ref. 48500)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=48657&amp;speccode=68'>Papaconstantinou, C.0 Check-list of marine fishes of Greece. Fauna Graeciae IV, 257 p. (Ref. 48657)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=49358&amp;speccode=68'>Hønes, A., O.A. Bergstad and O.T. Albert0 Seasonal variation of the diet of cod (&lt;i&gt;Gadus morhua&lt;/i&gt;L.) and haddock (&lt;i&gt;Melanogrammus aeglefinus&lt;/i&gt;L.) at a herring spawning ground. ICES (9):1-23. (Ref. 49358)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=49586&amp;speccode=68'>Labropoulou, M. and C. Papaconstantinou0 Community structure of deep-sea demersal fish in the North Aegean Sea (northeastern Mediterranean). Hydrobiologia 440:281-296. (Ref. 49586)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=50345&amp;speccode=68'>Quignard, J.P. and J.A. Tomasini0 Mediterranean fish biodiversity. Biol. Mar. Mediterr. 7(3):1-66. (Ref. 50345)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=51094&amp;speccode=68'>Mouritsen, R.0 Fiskanøvn. www.frs.fo/frame2.htm (Ref. 51094)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=51864&amp;speccode=68'>Clarke, M.W., C.J. Kelly, P.L. Conolly and J.P. Molloy0 A life history approach to the assessment and management of deepwater fisheries in the Northeast Atlantic. J. Northwest Atl. Fish. Sci. 31:401-411. (Ref. 51864)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=53689&amp;speccode=68'>O'Sullivan, S., C. Moriarity and J. Davenport0 Analysis of the stomach contents of the European conger eel &lt;i&gt;Conger conger&lt;/i&gt; in Irish waters. J. Mar. Biol. Ass. U.K. 84(4):823-826. (Ref. 53689)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=54515&amp;speccode=68'>Vinnichenko, V.I., V.N. Khlivnoy, N.M. Timoshenko and A. Newton0 The distribution of grey gurnard &lt;i&gt;Eutrigla gurnardus&lt;/i&gt; Linnaeus (Scorpaeniformes, Triglidae) in the Rockall area. J. Ichthyol. 45(2):165-174. (Ref. 54515)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=54730&amp;speccode=68'>Watt, R.A.0 A glossary of Scottish dialect fish and trade names. Scott. Fish. Inf. Pam. No. 17. (Ref. 54730)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=56504&amp;speccode=68'>Mytilineou, C., C.-Y. Politou, C. Papaconstantinou, S. Kavadas, G. D'Onghia and L. Sion0 Deep-water fish fauna in the Eastern Ionian Sea. Belg. J. Zool., 135(2):229-233. (Ref. 56504)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=57747&amp;speccode=68'>Ecomarg Project0 Biodiversity: Cantabrian Sea, Galician Shelf and Le Danois Bank. Ecomarg Project (ecomarg.net). (Ref. 57747)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=57855&amp;speccode=68'>Bilecenoğlu, M., Taskavak E., S. Mater and M. Kaya0 Checklist of the marine fishes of Turkey. Zootaxa 113(1):1-194. (Ref. 57855)</reference>
+	<reference isbn='84-7283-572-3' url='http://www.fishbase.org/references/FBRefSummary.php?id=57922&amp;speccode=68'>Mercader, L., D. Lloris and J. Rucabado0 Tots els peixos del mar Catala. Diagnosis I claus d'identifucació. Institut D'estudis Catalans. Barcelona. 350p. (Ref. 57922)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=58108&amp;speccode=68'>Chinese Academy of Fishery Sciences0 Chinese aquatic germplasm resources database. http://zzzy.fishinfo.cn (Ref. 58108)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=58342&amp;speccode=68'>Fricke, R., M. Bilecenoglu and H.M. Sari0 Annotated checklist of fish and lamprey species (Gnathostoma and Petromyzontomorphi) of Turkey, including a Red List of threatened and declining species. Stuttgarter Beitr. Naturk. Sea A (706):1-172. (Ref. 58342)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=58723&amp;speccode=68'>Plejic, T.0 Fische der Adria. Das romanische Element in der kroatischen Ichthyofauna. Mit Glossar der Adriafische Kroatisch-Englisch-Deutsch-Italienisch. Diploma Thesis. University of Leipzig Institute of Applied Linguistics and Translational Studies. (Ref. 58723)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=59117&amp;speccode=68'>Olim, S. and T.C. Borges0 Weight-length relationships for eight species of the family Triglidae discarded on the south coast of Portugal. J. Appl. Ichthyol. 22:257-259. (Ref. 59117)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=74354&amp;speccode=68'>Magnussen, E.0 Interpopulation comparison of growth patterns of 14 fish species on Faroe bank: are all fishes on the bank fast growing?. J. Fish Biol. 71(2):453-475. (Ref. 74354)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=74541&amp;speccode=68'>Wirtz, P., R. Fricke and M.J. Biscoito0 The coastal fishes of Madeira Island - new records and an annotated check-list. Zootaxa 1715:1-26. (Ref. 74541)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=75549&amp;speccode=68'>FAO-FIES0 Aquatic Sciences and Fisheries Information System (ASFIS) species list. Retrieved from http://www.fao.org/fishery/collection/asfis, 29 April 2008. (Ref. 75549)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=80786&amp;speccode=68'>Rogers, S.I. and R.S. Millner0 Factors affecting the annual abundance and regional distribution of English inshore demersal fish populations: 1973 to 1995. ICES J. Mar. Sci. 53:1094-1112. (Ref. 80786)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=80862&amp;speccode=68'>Dolgov, A.V.0 Trophic structure of the Barents Sea fish community with the special reference to the cod stock recovery ability. ICES CM2007/D:08. (Ref. 80862)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=82397&amp;speccode=68'>Rogers, S.I., D. Maxwell, A.D. Rijnsdorp, U. Damm and W. Vanheed0 Fishing effects in northeast Atlantic shelf seas: patterns in fishing effort, diversity and community structure. IV. Can comparisons of species diversity be used to assess human impacts on demersal fish faunas?. Fish. Res. 40(2):135-152. (Ref. 82397)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=83593&amp;speccode=68'>Gomon, M.F.0 A new species of the roughy genus &lt;i&gt;Hoplostethus&lt;/i&gt; (Trachichthyidae) off Northwestern Australia. Mem. Mus. Vict. 65:189-194. (Ref. 83593)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=83882&amp;speccode=68'>FAO-FIES0 Aquatic Sciences and Fisheries Information System (ASFIS) species list. Retrieved from http://www.fao.org/fishery/collection/asfis/en, March 2010. (Ref. 83882)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=86317&amp;speccode=68'>Ilkyaz, A.T., G.: Soykan, O. Metin and H.T. Kinacigil0 Length-weight relationship of 62 fish species from the Central Aegean Sea, Turkey. J. Appl. Ichthyol. 24:699-702. (Ref. 86317)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=86578&amp;speccode=68'>Bañón, R., D. Villegas-Ríos, A. Serrano, G. Mucientes and J.C. Arronte0 Marine fishes from Galicia (NW Spain): an updated checklist. Zootaxa 2667:1-27. (Ref. 86578)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=86713&amp;speccode=68'>Işmen, A., O. Ozen, U. Altinagac, U. Ozekinci and A. Ayaz0 Weight-length relationships of 63 fish species in Saros Bay, Turkey. J. Appl. Ichthyol. 23:707-708. (Ref. 86713)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=87676&amp;speccode=68'>Saad, A.0 Check-list of bony fish collected from the coast of Syria. Turk. J. Fish. Aquat. Sci. 5:99-106. (Ref. 87676)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=88088&amp;speccode=68'>Bok, T.D., SD. Gokturk, A.E. Kahraman, T.Z. Alicli, T. Acun and C. Ates0 Length-weight relationships of 34 fish species from the Sea of Marmara, Turkey. J. Anim. Vet. Adv. 10(23):3037-3042. (Ref. 88088)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=90062&amp;speccode=68'>FAO-FIES0 Aquatic Sciences and Fisheries Information System (ASFIS) species list. Retrieved from http://www.fao.org/fishery/collection/asfis/en, March 2012. (Ref. 90062)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=92354&amp;speccode=68'>ICES0 Stomach Dataset. ICES-CIEM Stomach Data (1981-2010).  Copenhagen.  Available online at http://ecosystemdata.ices.dk/stomachdata/index.aspx.  Consulted on 2012-10-22. (Ref. 92354)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=95235&amp;speccode=68'>Özaydin, O., D. Uçkun, S. Akalin, S. Leblebici and Z. Tosunoglu0 Length-weight relationships of fishes captured from Izmir Bay, Central Aegean Sea. J. Appl. Ichthyol. 23(6):695-696. (Ref. 95235)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=95489&amp;speccode=68'>Goren, M.0 The fishes of the Mediterranean: a biota under siege. pp. 385-400. In Goffredo, S. and Z. Dubinsky. 2014. The Mediterranean Sea: its history and present challenges. Springer Netherlands. 655 pp. (Ref. 95489)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=95632&amp;speccode=68'>FAO-FIES0 Aquatic Sciences and Fisheries Information System (ASFIS) species list. Retrieved from http://www.fao.org/fishery/collection/asfis/en, April 2014. (Ref. 95632)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=95727&amp;speccode=68'>Lloris, D., J. Rucabado, Ll. del Cerro, F. Portas, M. Demestre and A. Roig0 Tots els peixos del Mar Català. I: Llistat de cites I referències. Treballs Soc. Cat. Ict. Herp. 1:1-208. (Ref. 95727)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=95738&amp;speccode=68'>Trenkel, V.M., O. Berthelé, P. Lorance, J. Bertrand, A. BrindÁmour, M.-L. Cochard, F. Coppin, J.-P. Leauté, J.-C. Mahé, J. Morin, M.-J. Rochet, M. Salaun, A. Souplet and Y. Vérin0 Atlas des grands invertébrés et poissons observés par less campagnes scientifiques. Bilan 2008. Ifremer, Nantes, EMH:09-003. 100 p. (Ref. 95738)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=95871&amp;speccode=68'>Psomadakis, P.N., S. Giustino and M. Vacchi0 Mediterranean fish biodiversity: an updated inventory with focus on the Ligurian and Tyrrhenian seas. Zootaxa 3263:1-46. (Ref. 95871)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=96325&amp;speccode=68'>Miniconi, R.0 Complément à l'inventaire des poissons des eaux de Corse (1994-2011). Biologie - Pȇche - Localisation. Edition A Barcella Ajaccio, 50 p. (Ref. 96325)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=100713&amp;speccode=68'>de Leiva, I., C. Busuttil, M. Darmanin and m. Camilleri0 Artisanal fisheries in the western Mediterranean- Malta fisheries. Copemed - FAO Sub-regional project, Malta, 21p. (Ref. 100713)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=101110&amp;speccode=68'>FAO-FIES0 Aquatic Sciences and Fisheries Information System (ASFIS) species list. Retrieved from http://www.fao.org/fishery/collection/asfis/en, [accessed 13/04/2015]. (Ref. 101110)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=101194&amp;speccode=68'>Patzner, R.A.0 Reproductive strategies of fish. pp. 311-350.  In  Rocha, M.J., A. Arukwe and B.G. Kapoor (eds). Fish reproduction: cytology, biology and ecology. Science Publisher, Inc. Oxford. 631 p. (Ref. 101194)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=105472&amp;speccode=68'>Pihu, E.0 Loomade elu 4. köide. Kalad. Pihu, E. 1979. Loomade Elu, 4. Köide, Kalad. Valgus, Tallinn. (Ref. 105472)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=106276&amp;speccode=68'>Wilhelms, I.0 Atlas of length-weight relationships of 93 fish and crustacean species from the North Sea and the North-East Atlantic (No. 12). Johann Heinrich von Thünen Institute, Federal Research Institute for Rural Areas, Forestry and Fisheries, 552 p. (Ref. 106276)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=107945&amp;speccode=68'>Cheung, W.L., R. Watson and D. Pauly0 Signature of ocean warming in global fisheries catch. Nature 497:365-368. (Ref. 107945)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=113897&amp;speccode=68'>Papaconstantinou, C.0 Fauna Graeciae.  An updated checklist of the fishes in the Hellenic seas. Monagraphs on Marine Sciences 7 (Ref. 113897)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=115160&amp;speccode=68'>Neudecker, T. and M. Stein0 Occurrence of grey gurnard (&lt;i&gt;Eutrigla gurnardus&lt;/i&gt;, Linnaeus 1758) in west Greenland waters. J. Northw. Atl. Fish. Sci. 43:131-136. (Ref. 115160)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=115257&amp;speccode=68'>FAO-FIES0 Aquatic Sciences and Fisheries Information System (ASFIS) species list. Retrieved from http://www.fao.org/fishery/collection/asfis/en (accessed 08/06/2017). (Ref. 115257)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=116450&amp;speccode=68'>Béarez, P., P. Pruvost, É. Feunteun, S. Iglésias, P. Francour, R. Causse, J. De Mazières, S. Tercerie and N. Bailly0 Checklist of the marine fishes from metropolitan France. Cybium 41(4):351-371. (Ref. 116450)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=118193&amp;speccode=68'>Bílge, G., S. Yapici, H. Fíliíz and H. Cerím0 Weight-length relationshions for 103 fish species from the southern Aegean sea, Turkey. Acta Ichthyol. Piscat. 44(3):263-269. (Ref. 118193)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=118272&amp;speccode=68'>FAO-FIES0 Aquatic Sciences and Fisheries Information System (ASFIS) species list. Retrieved from htttps://www.fao.org/fishery/collection/asfis/en [accessed May, 2018] (Ref. 118272)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=118628&amp;speccode=68'>Palomares, M.L.D., R. Froese, B. Derrick, S.-L. Nöel, G. Tsui, J. Woroniak and D. Pauly0 A preliminary global assessment of the status of exploited marine fish and invertebrate populations. A report prepared by the Sea Around Us for OCEANA. The University of British Columbia, Vancouver, p. 64. (Ref. 118628)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=118717&amp;speccode=68'>Tsuboi, M., W. van der Bijl, B.T. Kopperud, J. Erritzoe, K.L. Voje, A. Kotrschal, K.E. Yopak, S.P. Collin, A.N. Iwaniuk and N. Kolm0 Breakdown of brain-body allometry and the encephalization of birds and mammals. Nat. Ecol. Evol. 2:1495-1500. (Ref. 118717)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=119547&amp;speccode=68'>Mahé, K., E. Bellamy, J.-P. Delpech, C. Lazard, M. Salaun, Y. Vérin, F. Coppin and M. Travers-Trolet0 Evidence of a relationship between weight and total length of marine fish in the North-eastern Atlantic Ocean: physiological, spatial and temporal variations. Journal of the Marine Biological Association of the United Kingdom 98(3):627-625. (Ref. 119547)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=120407&amp;speccode=68'>Wienerroither R., Johannesen E., Dolgov A., Byrkjedal I., Aglen A., Bjelland O., Drevetnyak K., Eriksen KB., Høines Å., Langhelle G., Langøy H., Murashko P., Prokhorova T., Prozorkevich D., Smirnov O., Wenneck T.0 Atlas of the Barents Sea Fishes based on the winter survey. IMR-PINRO Joint Report Series 2-2013:220 pp. (Ref. 120407)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=126095&amp;speccode=68'>Falsone, F., M.L. Geraci, D. Scanella, V. Gancitano, F. Di Maio, G. Sardo, F. Quattrocchi and S. Vitale0 Length-weight relationships of 52 species from the South of Sicily (Central Mediterranean Sea). Fishes 7(92). (Ref. 126095)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=128458&amp;speccode=68'>Martins, R. and M. Carneiro0 Manual de identificação de peixes ósseos da costa continental portuguesa. Principais características diagnosticantes. IPMA, Instituto Português do Mar e da Atmosfera, Lisboa:1-204. (Ref. 128458)</reference>
+	<reference isbn='2350-4757' url='http://www.fishbase.org/references/FBRefSummary.php?id=128520&amp;speccode=68'>Marčeta, B. and K. Pliberšek (eds)0 BiosWeb. Biological database of the Fisheries Research Institute of Slovenia. Ljubljana, Fisheries Research Institute of Slovenia, 2014. (www.biosweb.org. updated 13/04/2023). (Ref. 128520)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=137577&amp;speccode=68'>Price, S.A., S.T. Friedman, K.A. Corn, O. Larouche, K. Brockelsby, A.J. Lee, M. Nagaraj, N.G. Bertrand, M. Danao, M.C. Coyne, J.R. Estrada, R. Friedman, E. Hoeft, M. Iwan, D. Gross, J.H. Kao, B. Landry, M.J. Linares, C. McGlinn and …0 FishShapes v1: Functionally relevant measurements of teleost shape and size on three dimensions. Ecology 103(e3829):1-2. (Ref. 137577)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=137916&amp;speccode=68'>Uçkun, D.0 Investigation of the age and growth characteristics of the species belonging to the family Triglidae in Edremit Bay. Ege University Journal of Fisheries and Aquatic Sciences 22(3-4):363-369. (Ref. 137916)</reference><dataObject>
+	<dc:identifier>FB-pic-68-19526</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/StillImage</dataType>
+	<mimeType>image/gif</mimeType>
+	<agent homepage='http://www.fishbase.us/collaborators/CollaboratorSummary.php?id=823' logoURL='' role='photographer'> FAO</agent>
+	<dcterms:created>1999-03-14</dcterms:created>
+	<dcterms:modified>1999-06-02</dcterms:modified>
+	<dc:title></dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights>This work is licensed under a Creative Commons Attribution-Noncommercial 3.0 Unported License. Image can be freely copied and altered but may be used only for non-commercial purposes. Original author and source must be properly acknowledged</dc:rights>
+	<dcterms:rightsHolder>John E. Randall</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=68</dc:source>
+	<subject></subject>
+	<dc:description></dc:description>
+	<mediaURL>http://www.fishbase.us/images/species/Chgur_u0.gif</mediaURL>
+	<thumbnailURL>http://www.fishbase.us/images/thumbnails/gif/tn_Chgur_u0.gif</thumbnailURL>
+	<location></location></dataObject><dataObject>
+	<dc:identifier>FB-pic-68-27212</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/StillImage</dataType>
+	<mimeType>image/jpeg</mimeType>
+	<agent homepage='http://www.fishbase.us/collaborators/CollaboratorSummary.php?id=575' logoURL='' role='photographer'>Thorke A.S. Østergaard</agent>
+	<dcterms:created>2000-07-26</dcterms:created>
+	<dcterms:modified>2000-07-26</dcterms:modified>
+	<dc:title></dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights>This work is licensed under a Creative Commons Attribution-Noncommercial 3.0 Unported License. Image can be freely copied and altered but may be used only for non-commercial purposes. Original author and source must be properly acknowledged</dc:rights>
+	<dcterms:rightsHolder>WorldFish Center - FishBase</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=68</dc:source>
+	<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Distribution</subject>
+	<dc:description></dc:description>
+	<mediaURL>http://www.fishbase.us/images/species/Chgur_u3.jpg</mediaURL>
+	<thumbnailURL>http://www.fishbase.us/images/thumbnails/jpg/tn_Chgur_u3.jpg</thumbnailURL>
+	<location></location></dataObject><dataObject>
+	<dc:identifier>FB-pic-68-34563</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/StillImage</dataType>
+	<mimeType>image/jpeg</mimeType>
+	<agent homepage='http://www.fishbase.us/collaborators/CollaboratorSummary.php?id=575' logoURL='' role='photographer'>Thorke A.S. Østergaard</agent>
+	<dcterms:created>2002-10-10</dcterms:created>
+	<dcterms:modified>2002-10-10</dcterms:modified>
+	<dc:title></dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights>This work is licensed under a Creative Commons Attribution-Noncommercial 3.0 Unported License. Image can be freely copied and altered but may be used only for non-commercial purposes. Original author and source must be properly acknowledged</dc:rights>
+	<dcterms:rightsHolder>WorldFish Center - FishBase</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=68</dc:source>
+	<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Uses</subject>
+	<dc:description></dc:description>
+	<mediaURL>http://www.fishbase.us/images/species/Chgur_u7.jpg</mediaURL>
+	<thumbnailURL>http://www.fishbase.us/images/thumbnails/jpg/tn_Chgur_u7.jpg</thumbnailURL>
+	<location></location></dataObject><dataObject>
+	<dc:identifier>FB-GeneralDescr-68</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+	<mimeType>text/html</mimeType>
+	<agent homepage='http://www.fishbase.de/rfroese' logoURL='' role='recorder'>Rainer Froese</agent>
+	<dcterms:created>1990-10-17 00:00:00</dcterms:created>
+	<dcterms:modified>2014-02-27 00:00:00</dcterms:modified>
+	<dc:title>Biology</dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights></dc:rights>
+	<dcterms:rightsHolder>WorldFish Center - FishBase</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=68</dc:source>
+	<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#TrophicStrategy</subject>
+	<dc:description>Common on sandy grounds, sometimes on rocky bottoms, and also on mud between coastline to 140 m depth.  Up to depth of 340 m in the eastern Ionian Sea (Ref. 56504).  Feeds on crustaceans, mostly shrimps and shore crabs; fishes, mostly gobies, flatfish, young herring and sand eels.  Makes croaking sounds (Ref. 9987).  Utilized fresh and frozen; eaten fried and baked (Ref. 9987).</dc:description>
+	<mediaURL></mediaURL>
+	<thumbnailURL></thumbnailURL>
+	<location></location>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=3397&amp;speccode=68'>Bauchot, M.-L. 1987 Poissons osseux. p. 891-1421. In W. Fischer, M.L. Bauchot and M. Schneider (eds.) Fiches FAO d'identification pour les besoins de la pêche. (rev. 1). Méditerranée et mer Noire. Zone de pêche 37. Vol. II. Commission des Communautés Européennes and FAO, Rome. (Ref. 3397)</reference></dataObject><dataObject>
+	<dc:identifier>FB-DiagnosticDescr-68</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+	<mimeType>text/html</mimeType>
+	<agent homepage='' logoURL='' role='recorder'>Susan M. Luna</agent>
+	<dcterms:created>1991-02-07 00:00:00</dcterms:created>
+	<dcterms:modified>2013-01-16 00:00:00</dcterms:modified>
+	<dc:title></dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights></dc:rights>
+	<dcterms:rightsHolder>WorldFish Center - FishBase</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=68</dc:source>
+	<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Size</subject>
+	<dc:description>Head large without deep occipital groove.  Vertebrae 37-39 (11-13 precaudal and 25-27 caudal).</dc:description>
+	<mediaURL></mediaURL>
+	<thumbnailURL></thumbnailURL>
+	<location></location>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=231'>Fischer, W., M.-L. Bauchot and M. Schneider (eds.) 1987 Fiches FAO d'identification des espèces pour les besoins de la pêche. (Révision 1). Méditerranée et mer Noire. Zone de Pêche 37. FAO, Rome. 1529 p.</reference></dataObject><dataObject>
+	<dc:identifier>FB-Distribution-68</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+	<mimeType>text/html</mimeType>
+	<agent homepage='' logoURL='' role='recorder'>Susan M. Luna</agent>
+	<dcterms:created>1990-10-18 00:00:00</dcterms:created>
+	<dcterms:modified>2025-02-13 00:00:00</dcterms:modified>
+	<dc:title></dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights></dc:rights>
+	<dcterms:rightsHolder>WorldFish Center - FishBase</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=68</dc:source>
+	<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Threats</subject>
+	<dc:description>Eastern Atlantic:  Norway to Morocco, Madeira, Iceland (Ref. 2723), including Greenland (Ref. 115160).  Also known from the Mediterranean and Black Sea (Ref. 4697).</dc:description>
+	<mediaURL></mediaURL>
+	<thumbnailURL></thumbnailURL>
+	<location></location>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=2723&amp;speccode=68'>Blanc, M. and J.-C. Hureau 1979 Triglidae. p. 586-590. In J.C. Hureau and Th. Monod (eds.) Check-list of the fishes of the north-eastern Atlantic and of the Mediterranean (CLOFNAM I). UNESCO, Paris. Vol. 1. (Ref. 2723)</reference></dataObject><dataObject>
+	<dc:identifier>FB-Uses-68</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+	<mimeType>text/html</mimeType>
+	<agent homepage='http://www.fishbase.de/rfroese' logoURL='' role='recorder'>Rainer Froese</agent>
+	<dcterms:created>1990-10-17 00:00:00</dcterms:created>
+	<dcterms:modified>2014-02-27 00:00:00</dcterms:modified>
+	<dc:title>Importance</dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights></dc:rights>
+	<dcterms:rightsHolder>WorldFish Center - FishBase</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=68</dc:source>
+	<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Habitat</subject>
+	<dc:description>fisheries: commercial</dc:description>
+	<mediaURL></mediaURL>
+	<thumbnailURL></thumbnailURL>
+	<location></location>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=4931&amp;speccode=68'>FAO 1992 FAO yearbook. Fishery statistics: catches and landings. Vol. 70: 1990. FAO Fish. Ser. 38:647 p. (Ref. 4931)</reference></dataObject><dataObject>
+	<dc:identifier>FB-LifeCycle-68</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+	<mimeType>text/html</mimeType>
+	<agent homepage='' logoURL='' role='recorder'>Susan M. Luna</agent>
+	<dcterms:created>1990-10-17 00:00:00</dcterms:created>
+	<dcterms:modified>2014-02-27 00:00:00</dcterms:modified>
+	<dc:title></dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights></dc:rights>
+	<dcterms:rightsHolder>John E. Randall</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org//Reproduction/FishReproSummary.php?ID=68&amp;StockCode=78</dc:source>
+	<subject></subject>
+	<dc:description>The young are pelagic until attaining a length of 3 cm.      </dc:description>
+	<mediaURL></mediaURL>
+	<thumbnailURL></thumbnailURL>
+	<location></location>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=4697&amp;speccode=68'>Hureau, J.-C. 1986 Triglidae. p. 1230-1238. In P.J.P. Whitehead, M.-L. Bauchot, J.-C. Hureau, J. Nielsen and E. Tortonese (eds.) Fishes of the North-eastern Atlantic and the Mediterranean. UNESCO, Paris. Vol. 3. (Ref. 4697)</reference></dataObject><dataObject>
+	<dc:identifier>FB-TrophicStrategy-68</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+	<mimeType>text/html</mimeType>
+	<agent homepage='' logoURL='' role='recorder'>Susan M. Luna</agent>
+	<dcterms:created>1991-02-07 00:00:00</dcterms:created>
+	<dcterms:modified>2004-09-13 00:00:00</dcterms:modified>
+	<dc:title></dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights></dc:rights>
+	<dcterms:rightsHolder>John E. Randall</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>gurnardus</dc:source>
+	<subject></subject>
+	<dc:description>General migration towards the shore during summer, where it can enter estuaries.        </dc:description>
+	<mediaURL></mediaURL>
+	<thumbnailURL></thumbnailURL>
+	<location></location>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=231'>Fischer, W., M.-L. Bauchot and M. Schneider (eds.) 1987 Fiches FAO d'identification des espèces pour les besoins de la pêche. (Révision 1). Méditerranée et mer Noire. Zone de Pêche 37. FAO, Rome. 1529 p.</reference></dataObject><dataObject>
+	<dc:identifier>FB-Size-68</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+	<mimeType>text/html</mimeType>
+	<agent homepage='http://www.fishbase.de/rfroese' logoURL='' role='recorder'>Rainer Froese</agent>
+	<dcterms:created>1990-10-17 00:00:00</dcterms:created>
+	<dcterms:modified>2014-02-27 00:00:00</dcterms:modified>
+	<dc:title>Max. size</dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights></dc:rights>
+	<dcterms:rightsHolder>WorldFish Center - FishBase</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=68</dc:source>
+	<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#DiagnosticDescription</subject>
+	<dc:description>60.0 cm TL (male/unsexed; (Ref. 3397)); max. published weight: 956 g (Ref. 41256)</dc:description>
+	<mediaURL></mediaURL>
+	<thumbnailURL></thumbnailURL>
+	<location></location>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=3397&amp;speccode=68'>Bauchot, M.-L. 1987 Poissons osseux. p. 891-1421. In W. Fischer, M.L. Bauchot and M. Schneider (eds.) Fiches FAO d'identification pour les besoins de la pêche. (rev. 1). Méditerranée et mer Noire. Zone de pêche 37. Vol. II. Commission des Communautés Européennes and FAO, Rome. (Ref. 3397)</reference>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=41256&amp;speccode=68'>Sportfiskarna.se 2002 knot = &lt;i&gt;Chelidonichthys gurnadus&lt;/i&gt;. Swedish sportfishing records: http://www.sportfiskarna.com/. (Ref. 41256)</reference></dataObject><dataObject>
+	<dc:identifier>FB-Threats-2</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+	<mimeType>text/html</mimeType>
+	<agent homepage='' logoURL='' role='recorder'>Belen Acosta</agent>
+	<dcterms:created>1990-10-18 00:00:00</dcterms:created>
+	<dcterms:modified>2024-03-07 00:00:00</dcterms:modified>
+	<dc:title></dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights></dc:rights>
+	<dcterms:rightsHolder>WorldFish Center - FishBase</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=2</dc:source>
+	<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Morphology</subject>
+	<dc:description>Least Concern (LC) , IUCN Grouper and Wrasse Specialist Group</dc:description>
+	<mediaURL></mediaURL>
+	<thumbnailURL></thumbnailURL>
+	<location></location>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=57073'>IUCN 2006 2006 IUCN red list of threatened species. www.iucnredlist.org. Downloaded July 2006.</reference></dataObject><dataObject>
+	<dc:identifier>FB-Habitat-68</dc:identifier>
+	<dataType>http://purl.org/dc/dcmitype/Text</dataType>
+	<mimeType>text/html</mimeType>
+	<agent homepage='' logoURL='' role='recorder'>Susan M. Luna</agent>
+	<dcterms:created>1990-10-17 00:00:00</dcterms:created>
+	<dcterms:modified>2014-02-27 00:00:00</dcterms:modified>
+	<dc:title>Environment</dc:title>
+	<dc:language></dc:language>
+	<license>http://creativecommons.org/licenses/by-nc/3.0/</license>
+	<dc:rights></dc:rights>
+	<dcterms:rightsHolder>WorldFish Center - FishBase</dcterms:rightsHolder>
+	<dcterms:bibliographicCitation></dcterms:bibliographicCitation>
+	<audience>General public</audience>
+	<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=68</dc:source>
+	<subject>http://rs.tdwg.org/ontology/voc/SPMInfoItems#Distribution</subject>
+	<dc:description>demersal; brackish; marine; depth range 10 - 340 m (Ref. 56504), usually 10 - 150 m (Ref. 35388)</dc:description>
+	<mediaURL></mediaURL>
+	<thumbnailURL></thumbnailURL>
+	<location></location>
+	<reference isbn='' url='http://www.fishbase.org/references/FBRefSummary.php?id=56504&amp;speccode=68'>Mytilineou, C., C.-Y. Politou, C. Papaconstantinou, S. Kavadas, G. D'Onghia and L. Sion 2005 Deep-water fish fauna in the Eastern Ionian Sea. Belg. J. Zool., 135(2):229-233. (Ref. 56504)</reference>
+	<reference isbn='87-90787-00-5' url='http://www.fishbase.org/references/FBRefSummary.php?id=35388&amp;speccode=68'>Muus, B.J. and J.G. Nielsen 1999 Sea fish. Scandinavian Fishing Year Book, Hedehusene, Denmark. 340 p. (Ref. 35388)</reference></dataObject>
+</taxon>
+</response>

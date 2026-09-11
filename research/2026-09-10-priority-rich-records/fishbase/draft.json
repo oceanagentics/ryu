@@ -1,0 +1,2729 @@
+{
+  "id": "fishbase",
+  "record": {
+    "kind": "system",
+    "url": "https://fishbase.se/home.php",
+    "recordDepth": "rich",
+    "properties": {
+      "data": {
+        "descriptors": [
+          {
+            "id": "fishbase-data-format-parquet-csv",
+            "label": "csv",
+            "source": "fishbase-bruvs",
+            "category": "format"
+          },
+          {
+            "id": "fishbase-data-format-parquet-csv--format-parquet",
+            "label": "parquet",
+            "source": "src-fishbase-sourcecoop",
+            "category": "format"
+          },
+          {
+            "id": "fishbase-data-format-xml",
+            "label": "xml",
+            "source": "fishbase-xml",
+            "category": "format"
+          },
+          {
+            "id": "fishbase-data-format-web",
+            "label": "html",
+            "source": "src-fishbase-gadus-summary",
+            "category": "format"
+          },
+          {
+            "id": "fishbase-data-type-distribution",
+            "label": "occurrence_records",
+            "source": "src-fishbase-home",
+            "category": "type"
+          },
+          {
+            "id": "fishbase-data-type-ecology",
+            "label": "biological_interactions",
+            "source": "src-fishbase-gadus-summary",
+            "category": "type"
+          },
+          {
+            "id": "fishbase-data-type-images-media",
+            "label": "media",
+            "source": "src-fishbase-photo-gallery",
+            "category": "type"
+          },
+          {
+            "id": "fishbase-data-type-life-history",
+            "label": "biological_traits",
+            "source": "src-fishbase-gadus-summary",
+            "category": "type"
+          },
+          {
+            "id": "fishbase-data-type-references",
+            "label": "bibliographic_records",
+            "source": "src-fishbase-references-table",
+            "category": "type"
+          },
+          {
+            "id": "fishbase-data-type-taxonomy",
+            "label": "taxonomic_records",
+            "source": "src-fishbase-home",
+            "category": "type"
+          },
+          {
+            "id": "fishbase-standard-fao_fishing_areas",
+            "category": "standard",
+            "label": "fao_fishing_areas",
+            "source": "src-fishbase-faoareas"
+          },
+          {
+            "id": "fishbase-standard-asfis",
+            "category": "standard",
+            "label": "asfis",
+            "source": "src-fishbase-fisheries-classification"
+          },
+          {
+            "id": "fishbase-standard-isscaap",
+            "category": "standard",
+            "label": "isscaap",
+            "source": "src-fishbase-fisheries-classification"
+          },
+          {
+            "id": "fishbase-standard-darwin_core",
+            "category": "standard",
+            "label": "darwin_core",
+            "source": "src-fishbase-gbif-ipt"
+          },
+          {
+            "id": "fishbase-standard-eml",
+            "category": "standard",
+            "label": "eml",
+            "source": "src-fishbase-dwca"
+          },
+          {
+            "id": "fishbase-standard-dublin_core",
+            "category": "standard",
+            "label": "dublin_core",
+            "source": "src-fishbase-dwca"
+          },
+          {
+            "id": "fishbase-format-dwca",
+            "category": "format",
+            "label": "darwin_core_archive",
+            "source": "src-fishbase-gbif-ipt"
+          },
+          {
+            "id": "fishbase-type-surveys",
+            "category": "type",
+            "label": "survey_records",
+            "source": "fishbase-bruvs"
+          }
+        ]
+      },
+      "access": [
+        {
+          "id": "fishbase-access-sourcecoop",
+          "type": "read",
+          "methods": [
+            "download"
+          ],
+          "url": "https://source.coop/cboettig/fishbase",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "src-fishbase-sourcecoop",
+            "fishbase-s3-v2606"
+          ]
+        },
+        {
+          "id": "fishbase-access-downloads",
+          "type": "read",
+          "methods": [
+            "download"
+          ],
+          "url": "https://fishbase.se/Download/",
+          "requirements": null,
+          "cost": "unknown",
+          "sourceRefs": [
+            "src-fishbase-downloads"
+          ]
+        },
+        {
+          "id": "fishbase-access-rfishbase",
+          "type": "read",
+          "methods": [
+            "software"
+          ],
+          "url": "https://docs.ropensci.org/rfishbase/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "src-fishbase-rfishbase-docs"
+          ]
+        },
+        {
+          "id": "fishbase-access-species-summary",
+          "type": "read",
+          "methods": [
+            "browse",
+            "download"
+          ],
+          "url": "https://fishbase.se/summary/SpeciesSummary.php?id=69",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "src-fishbase-gadus-summary",
+            "fishbase-xml"
+          ]
+        },
+        {
+          "id": "fishbase-access-web",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://fishbase.se/home.php",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "src-fishbase-home"
+          ]
+        },
+        {
+          "id": "fishbase-submit-fishwatcher",
+          "url": "https://www.fishbase.se/fishwatcher/menu.php",
+          "type": "write",
+          "methods": [
+            "form",
+            "upload"
+          ],
+          "requirements": [
+            "account"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "src-fishbase-fishwatcher"
+          ]
+        },
+        {
+          "id": "fishbase-submit-collaborator",
+          "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
+          "type": "write",
+          "methods": [
+            "request"
+          ],
+          "requirements": null,
+          "cost": "unknown",
+          "sourceRefs": [
+            "src-fishbase-collaborator-guide"
+          ]
+        },
+        {
+          "id": "fishbase-submit-photos",
+          "url": "https://fishbase.se/contribu.htm",
+          "type": "write",
+          "methods": [
+            "form",
+            "upload",
+            "request"
+          ],
+          "requirements": null,
+          "cost": "unknown",
+          "sourceRefs": [
+            "src-fishbase-photo-contrib"
+          ]
+        },
+        {
+          "id": "fishbase-access-bruvs",
+          "type": "read",
+          "methods": [
+            "browse",
+            "download"
+          ],
+          "url": "https://fishbase.se/search.php",
+          "requirements": null,
+          "cost": "free",
+          "sourceRefs": [
+            "fishbase-bruvs",
+            "src-fishbase-search"
+          ]
+        },
+        {
+          "id": "fishbase-access-gbif-archive",
+          "type": "read",
+          "methods": [
+            "browse",
+            "download"
+          ],
+          "url": "https://www.gbif.se/ipt/resource?r=fishbase",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "src-fishbase-gbif-ipt",
+            "src-fishbase-dwca"
+          ]
+        }
+      ],
+      "gallery": [
+        {
+          "id": "fishbase-gallery-species-summary",
+          "url": "/gallery/fishbase/species-summary-gadus-morhua-high.png",
+          "type": "image",
+          "source": "src-fishbase-gadus-summary",
+          "sortOrder": 1,
+          "thumbnailUrl": "/gallery/fishbase/species-summary-gadus-morhua-thumb.png"
+        },
+        {
+          "id": "fishbase-gallery-search",
+          "url": "/gallery/fishbase/search-high.png",
+          "type": "image",
+          "source": "src-fishbase-search",
+          "sortOrder": 2,
+          "thumbnailUrl": "/gallery/fishbase/search-thumb.png"
+        },
+        {
+          "id": "fishbase-gallery-downloads",
+          "url": "/gallery/fishbase/download-high.png",
+          "type": "image",
+          "source": "src-fishbase-downloads",
+          "sortOrder": 3,
+          "thumbnailUrl": "/gallery/fishbase/download-thumb.png"
+        },
+        {
+          "id": "fishbase-gallery-home",
+          "url": "/gallery/fishbase/home-high.png",
+          "type": "image",
+          "source": "src-fishbase-home-rendered",
+          "sortOrder": 4,
+          "thumbnailUrl": "/gallery/fishbase/home-thumb.png"
+        }
+      ],
+      "metrics": [
+        {
+          "id": "fishbase-metric-record-count",
+          "key": "record_count",
+          "value": 3300000,
+          "source": "src-fishbase-home",
+          "observedAt": "2026-06"
+        },
+        {
+          "id": "fishbase-metric-storage-size-bytes",
+          "key": "storage_size_bytes",
+          "value": 194684778,
+          "source": "src-fishbase-sourcecoop-s3-v2504",
+          "observedAt": "2026-09-10"
+        },
+        {
+          "id": "fishbase-metric-citation-count-google-scholar",
+          "key": "citation_count",
+          "value": 15000,
+          "source": "src-fishbase-impact-study",
+          "observedAt": null,
+          "period": "cumulative"
+        },
+        {
+          "id": "fishbase-metric-contributor-count",
+          "key": "contributor_count",
+          "value": 2570,
+          "source": "src-fishbase-home",
+          "observedAt": "2026-06"
+        },
+        {
+          "id": "fishbase-metric-species-count",
+          "key": "species_count",
+          "value": 36761,
+          "source": "src-fishbase-home",
+          "observedAt": "2026-06"
+        },
+        {
+          "id": "fishbase-storage-v2606",
+          "key": "storage_size_bytes",
+          "value": 139929828,
+          "observedAt": "2026-09-10",
+          "source": "fishbase-s3-v2606"
+        }
+      ],
+      "disciplines": [
+        "zoology"
+      ]
+    },
+    "sources": {
+      "src-fishbase-home": {
+        "id": "src-fishbase-home",
+        "url": "https://fishbase.se/home.php",
+        "title": {
+          "ar": "الصفحة الرئيسية وإحصاءات البيانات في FishBase",
+          "en": "FishBase homepage and data statistics",
+          "es": "Página de inicio y estadísticas de datos de FishBase",
+          "fr": "Page d’accueil et statistiques des données de FishBase",
+          "ru": "Главная страница и статистика данных FishBase",
+          "zh": "FishBase主页与数据统计"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-fishbase-search": {
+        "id": "src-fishbase-search",
+        "url": "https://fishbase.se/search.php",
+        "title": {
+          "ar": "البحث في FishBase",
+          "en": "FishBase Search",
+          "es": "Búsqueda en FishBase",
+          "fr": "Recherche dans FishBase",
+          "ru": "Поиск в FishBase",
+          "zh": "FishBase搜索"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-fishbase-citation": {
+        "id": "src-fishbase-citation",
+        "url": "https://www.fishbase.se/summary/citation.php",
+        "title": {
+          "ar": "إرشادات FishBase للاستشهاد وحقوق النشر والتواصل",
+          "en": "FishBase citation, copyright, and contact guidance",
+          "es": "Guía de citas, derechos de autor y contacto de FishBase",
+          "fr": "Guide de citation, de droits d’auteur et de contact de FishBase",
+          "ru": "Рекомендации FishBase по цитированию, авторским правам и контактам",
+          "zh": "FishBase引用、版权与联系指南"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-downloads": {
+        "id": "src-fishbase-downloads",
+        "url": "https://fishbase.se/Download/",
+        "title": {
+          "ar": "قسم التنزيلات في FishBase",
+          "en": "FishBase Download Section",
+          "es": "Sección de descargas de FishBase",
+          "fr": "Section de téléchargement de FishBase",
+          "ru": "Раздел загрузок FishBase",
+          "zh": "FishBase下载专区"
+        },
+        "accessedAt": "2026-07-22"
+      },
+      "src-fishbase-sourcecoop": {
+        "id": "src-fishbase-sourcecoop",
+        "url": "https://source.coop/cboettig/fishbase",
+        "title": {
+          "ar": "لقطات بصيغة Parquet لقاعدة بيانات FishBase",
+          "en": "Parquet Snapshots of the FishBase Database",
+          "es": "Instantáneas Parquet de la base de datos FishBase",
+          "fr": "Instantanés Parquet de la base de données FishBase",
+          "ru": "Снимки базы данных FishBase в формате Parquet",
+          "zh": "FishBase数据库Parquet快照"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-fishbase-citing-refs": {
+        "id": "src-fishbase-citing-refs",
+        "url": "https://www.fishbase.se/references/FBRefList.php",
+        "title": {
+          "ar": "قائمة المراجع التي تستشهد بـ FishBase",
+          "en": "FishBase references citing FishBase",
+          "es": "Referencias que citan FishBase",
+          "fr": "Références citant FishBase",
+          "ru": "Публикации, цитирующие FishBase",
+          "zh": "引用FishBase的文献"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-fishwatcher": {
+        "id": "src-fishbase-fishwatcher",
+        "url": "https://www.fishbase.se/fishwatcher/menu.php",
+        "title": {
+          "ar": "قائمة رفع الملفات في FishWatcher",
+          "en": "FishWatcher upload menu",
+          "es": "Menú de carga de FishWatcher",
+          "fr": "Menu de téléversement de FishWatcher",
+          "ru": "Меню загрузки FishWatcher",
+          "zh": "FishWatcher上传菜单"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-impact-study": {
+        "id": "src-fishbase-impact-study",
+        "url": "https://digitalcommons.uri.edu/gsofacpubs/1538/",
+        "title": {
+          "ar": "قياس الأثر العلمي لـ FishBase بعد ثلاثة عقود",
+          "en": "Measuring the scientific impact of FishBase after three decades",
+          "es": "Medición del impacto científico de FishBase tras tres décadas",
+          "fr": "Mesurer l’impact scientifique de FishBase après trois décennies",
+          "ru": "Оценка научного влияния FishBase спустя три десятилетия",
+          "zh": "衡量FishBase三十年后的科学影响"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-fishbase-gadus-summary": {
+        "id": "src-fishbase-gadus-summary",
+        "url": "https://fishbase.se/summary/SpeciesSummary.php?id=69",
+        "title": {
+          "ar": "ملخص النوع Gadus morhua في FishBase",
+          "en": "FishBase species summary: Gadus morhua",
+          "es": "Resumen de la especie Gadus morhua en FishBase",
+          "fr": "Fiche de l’espèce Gadus morhua dans FishBase",
+          "ru": "Сводка о виде Gadus morhua в FishBase",
+          "zh": "FishBase物种摘要：Gadus morhua"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-fishbase-home-rendered": {
+        "id": "src-fishbase-home-rendered",
+        "url": "https://fishbase.se/home.htm",
+        "title": {
+          "ar": "الصفحة الرئيسية لـ FishBase",
+          "en": "FishBase homepage",
+          "es": "Página de inicio de FishBase",
+          "fr": "Page d’accueil de FishBase",
+          "ru": "Главная страница FishBase",
+          "zh": "FishBase主页"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-photo-contrib": {
+        "id": "src-fishbase-photo-contrib",
+        "url": "https://fishbase.se/contribu.htm",
+        "title": {
+          "ar": "FishBase يحتاج إلى صوركم",
+          "en": "FishBase needs your pictures",
+          "es": "FishBase necesita tus fotos",
+          "fr": "FishBase a besoin de vos photos",
+          "ru": "FishBase нужны ваши фотографии",
+          "zh": "FishBase需要您的照片"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-photo-gallery": {
+        "id": "src-fishbase-photo-gallery",
+        "url": "https://fishbase.se/gallery.htm",
+        "title": {
+          "ar": "معرض صور FishBase",
+          "en": "FishBase Photo Gallery",
+          "es": "Galería de fotos de FishBase",
+          "fr": "Galerie de photos de FishBase",
+          "ru": "Фотогалерея FishBase",
+          "zh": "FishBase图片库"
+        },
+        "accessedAt": "2026-07-22"
+      },
+      "src-fishbase-rfishbase-docs": {
+        "id": "src-fishbase-rfishbase-docs",
+        "url": "https://docs.ropensci.org/rfishbase/",
+        "title": {
+          "ar": "وثائق rfishbase",
+          "en": "rfishbase documentation",
+          "es": "Documentación de rfishbase",
+          "fr": "Documentation de rfishbase",
+          "ru": "Документация rfishbase",
+          "zh": "rfishbase文档"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-fishbase-references-table": {
+        "id": "src-fishbase-references-table",
+        "url": "https://fishbase.se/manual/fishbasethe_references_table.htm",
+        "title": {
+          "ar": "دليل FishBase: جدول REFERENCES",
+          "en": "FishBase manual: The REFERENCES Table",
+          "es": "Manual de FishBase: tabla REFERENCES",
+          "fr": "Manuel FishBase : table REFERENCES",
+          "ru": "Руководство FishBase: таблица REFERENCES",
+          "zh": "FishBase手册：REFERENCES表"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-collaborator-guide": {
+        "id": "src-fishbase-collaborator-guide",
+        "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
+        "title": {
+          "ar": "كيف تصبح متعاونًا مع FishBase",
+          "en": "How to Become a FishBase Collaborator",
+          "es": "Cómo colaborar con FishBase",
+          "fr": "Comment devenir collaborateur de FishBase",
+          "ru": "Как стать участником FishBase",
+          "zh": "如何成为FishBase协作者"
+        },
+        "accessedAt": "2026-07-21"
+      },
+      "src-fishbase-sourcecoop-s3-v2504": {
+        "id": "src-fishbase-sourcecoop-s3-v2504",
+        "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v25.04/parquet/",
+        "title": {
+          "ar": "قائمة ملفات Parquet لإصدار FishBase v25.04 على S3",
+          "en": "FishBase v25.04 parquet S3 listing",
+          "es": "Listado S3 de archivos Parquet de FishBase v25.04",
+          "fr": "Liste S3 des fichiers Parquet de FishBase v25.04",
+          "ru": "Список файлов Parquet FishBase v25.04 в S3",
+          "zh": "FishBase v25.04 Parquet文件S3列表"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-fishbase-faoareas": {
+        "id": "src-fishbase-faoareas",
+        "url": "https://www.fishbase.se/manual/english/FishBaseThe_FAOAREAS_Table.htm",
+        "title": {
+          "en": "FishBase manual: FAOAREAS table",
+          "fr": "Manuel FishBase : table FAOAREAS",
+          "es": "Manual de FishBase: tabla FAOAREAS",
+          "ar": "دليل FishBase: جدول FAOAREAS",
+          "zh": "FishBase 手册：FAOAREAS 表",
+          "ru": "Руководство FishBase: таблица FAOAREAS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-fishbase-fisheries-classification": {
+        "id": "src-fishbase-fisheries-classification",
+        "url": "https://www.fishbase.se/report/isscaap/isscaapsearchmenu.php",
+        "title": {
+          "en": "FishBase ISSCAAP and ASFIS lookup",
+          "fr": "Recherche ISSCAAP et ASFIS de FishBase",
+          "es": "Buscador ISSCAAP y ASFIS de FishBase",
+          "ar": "البحث في ISSCAAP وASFIS في FishBase",
+          "zh": "FishBase ISSCAAP 与 ASFIS 查询",
+          "ru": "Поиск ISSCAAP и ASFIS в FishBase"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-fishbase-gbif-ipt": {
+        "id": "src-fishbase-gbif-ipt",
+        "url": "https://www.gbif.se/ipt/resource?r=fishbase",
+        "title": {
+          "en": "FishBase Database: GBIF Sweden publication",
+          "fr": "FishBase Database : publication GBIF Suède",
+          "es": "FishBase Database: publicación en GBIF Suecia",
+          "ar": "قاعدة FishBase: النشر عبر GBIF السويد",
+          "zh": "FishBase Database：GBIF 瑞典发布",
+          "ru": "FishBase Database: публикация GBIF Швеция"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-fishbase-dwca": {
+        "id": "src-fishbase-dwca",
+        "url": "https://www.gbif.se/ipt/archive.do?r=fishbase",
+        "title": {
+          "en": "FishBase occurrence archive: manifest and EML metadata",
+          "fr": "Archive d’occurrences FishBase : manifeste et métadonnées EML",
+          "es": "Archivo de ocurrencias de FishBase: manifiesto y metadatos EML",
+          "ar": "أرشيف تواجد FishBase: البيان والبيانات الوصفية EML",
+          "zh": "FishBase 出现记录档案：清单与 EML 元数据",
+          "ru": "Архив встречаемости FishBase: манифест и метаданные EML"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "fishbase-s3-v2606": {
+        "id": "fishbase-s3-v2606",
+        "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v26.06/parquet/",
+        "title": {
+          "en": "FishBase v26.06 public Parquet object listing",
+          "fr": "Liste des objets Parquet publics FishBase v26.06",
+          "es": "Listado de objetos Parquet públicos FishBase v26.06",
+          "ar": "قائمة ملفات Parquet العامة لـ FishBase v26.06",
+          "zh": "FishBase v26.06公共Parquet对象列表",
+          "ru": "Список публичных объектов Parquet FishBase v26.06"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "fishbase-xml": {
+        "id": "fishbase-xml",
+        "url": "https://fishbase.se/webservice/summary/fb/showXML.php?identifier=FB-69&ProviderDbase=03",
+        "title": {
+          "en": "Gadus morhua species-summary XML response",
+          "fr": "Réponse XML de la fiche Gadus morhua",
+          "es": "Respuesta XML de la ficha de Gadus morhua",
+          "ar": "استجابة XML لملخص نوع Gadus morhua",
+          "zh": "Gadus morhua物种摘要XML响应",
+          "ru": "XML-ответ сводки о Gadus morhua"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "fishbase-bruvs": {
+        "id": "fishbase-bruvs",
+        "url": "https://fishbase.se/bruvs/manual/FishBaseBRUVS_2021_03.pdf",
+        "title": {
+          "en": "FishBase BRUVS survey and CSV manual (2021)",
+          "fr": "Manuel des relevés BRUVS et CSV de FishBase (2021)",
+          "es": "Manual de muestreos BRUVS y CSV de FishBase (2021)",
+          "ar": "دليل مسوحات BRUVS وCSV في FishBase (2021)",
+          "zh": "FishBase BRUVS调查及CSV手册（2021）",
+          "ru": "Руководство по съёмкам BRUVS и CSV FishBase (2021)"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "fishbase-nrm": {
+        "id": "fishbase-nrm",
+        "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+        "title": {
+          "en": "FishBase Sweden at the Swedish Museum of Natural History",
+          "fr": "FishBase Suède au Muséum suédois d’histoire naturelle",
+          "es": "FishBase Suecia en el Museo Sueco de Historia Natural",
+          "ar": "FishBase السويد في المتحف السويدي للتاريخ الطبيعي",
+          "zh": "瑞典自然历史博物馆的FishBase瑞典团队",
+          "ru": "FishBase Sweden в Шведском музее естественной истории"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "fishbase-annual-report": {
+        "id": "fishbase-annual-report",
+        "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+        "title": {
+          "en": "Q-quatics annual report 2023: project funding and usage",
+          "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+          "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+          "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+          "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+          "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "FishBase",
+      "summary": "قاعدة بيانات عالمية للتنوع الحيوي للأسماك الزعنفية تغطي التصنيف، والأحياء، والبيئة، وتاريخ الحياة، والتوزيعات، والاستخدامات السمكية، والصور، والمراجع، ومصدر بيانات المتعاونين.",
+      "description": "FishBase مرجع عالمي للأسماك البحرية وأسماك المياه الشروب والعذبة، بدأ تطويره في أواخر ثمانينيات القرن العشرين. يربط التصنيف والتوزيع بالبيئة وتاريخ الحياة والشكل واستخدامات المصايد والصور والمراجع العلمية. يستخدم الباحثون ومديرو المصايد والمعلمون والعاملون في الحفظ ملخصاته وأدواته التحليلية. تورد إحصاءات يونيو 2026 المؤرخة صراحةً 36761 نوعاً و333268 سجلاً للأسماء الشائعة ونحو 3.3 مليون صف عبر نحو 200 جدول. تمثل هذه الأعداد أجزاء مختلفة ولا يجوز جمعها.\n\nتستضيف Quantitative Aquatics ‏(Q-quatics) منصة FishBase وتديرها، ويشغّل المتحف السويدي للتاريخ الطبيعي مرآتها في ستوكهولم. يقدم اتحاد FishBase المشورة العلمية؛ تتعارض أعداد أعضائه المنشورة، لذا لا يُفترض عدد دقيق أو سلطة حوكمة ملزمة. تدعم المساهمات المؤسسية والمنح أنشطة محددة. تُراجع البيانات المستمدة من الأدبيات ومساهمات المتعاونين، وتربط أرقام المراجع السجلات بأدلتها. تمر المشاهدات والصور والتصحيحات ومجموعات البيانات عبر FishWatcher أو إجراءات بوساطة الفريق.\n\nالتصفح العام مجاني. تلبي ملخصات XML وملفات مسوحات BRUVS بصيغة CSV وأرشيف وجود Darwin Core ولقطات جداول Parquet احتياجات مختلفة. تقرأ حزمة rfishbase لقطات Source Cooperative ذات الإصدارات، وقد تتأخر عن الموقع وتتطلب ربط الجداول. يذكر README الإصدار v26.07، لكن المخزن العام احتوى v26.06 عند التحقق؛ تأكد من الإصدار المستخدم. لا تعني تغطية الأنواع اكتمال الصفات أو التغطية الجغرافية. تخضع النصوص والأرقام والخرائط لشروط نسب المصدر والاستخدام غير التجاري؛ وللصور والرسومات حقوق منفصلة. استشهد بمراجع البيانات الأصلية وإصدار FishBase.",
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "fishbase-data-format-parquet-csv",
+              "description": "تستخدم تنزيلات مسوحات BRUVS وبيانات نشر الأجهزة صيغة CSV. ولا يشمل هذا الادعاء اللقطة الحالية لقاعدة البيانات على Source Cooperative."
+            },
+            {
+              "id": "fishbase-data-format-parquet-csv--format-parquet",
+              "description": "يوزع Source Cooperative ملفات Parquet مضغوطة وذات إصدارات، ملفاً لكل جدول. يذكر README الإصدار v26.07، بينما أدرج المخزن العام v26.06 أثناء الفحص؛ تحقق من الإصدارات المتاحة."
+            },
+            {
+              "id": "fishbase-data-format-xml",
+              "description": "أعاد مسار ملخص Gadus morhua الفعلي XML يتضمن التصنيف والأسماء الشائعة والأوصاف. لم تُتحقق جميع روابط تصدير XML الأخرى."
+            },
+            {
+              "id": "fishbase-data-format-web",
+              "description": "واجهة ويب قابلة للقراءة البشرية مع البحث، وملخصات الأنواع، وصفحات الموضوعات، والتقارير، والخرائط، والأدوات، وعروض الأنواع القابلة للتنزيل."
+            },
+            {
+              "id": "fishbase-data-type-distribution",
+              "description": "معلومات البلد، والنظام البيئي، ومنطقة FAO، والنطاق الأصلي، وخريطة النقاط، والإدخال، والموئل المرتبطة بسجلات الأنواع."
+            },
+            {
+              "id": "fishbase-data-type-ecology",
+              "description": "النظام الغذائي، والبيئة الغذائية، وعناصر الغذاء، والمفترسات، واستهلاك الغذاء، والسجلات المرتبطة بالنظم البيئية المستخدمة في التحليلات البيئية والسمكية."
+            },
+            {
+              "id": "fishbase-data-type-images-media",
+              "description": "صور الأسماك الفوتوغرافية، والرسومات، والصور المصغرة، وبيانات تعريف الصور المساهمة، مع نسب المصور أو المؤسسة."
+            },
+            {
+              "id": "fishbase-data-type-life-history",
+              "description": "النمو، والنضج، وعلاقة الطول بالوزن، والخصوبة، والتفريخ، والتجنيد، والوفرة، والنفوق، ومعايير ديناميكيات الجماعات ذات الصلة."
+            },
+            {
+              "id": "fishbase-data-type-references",
+              "description": "مصدر الأدبيات المرقم بالمراجع، وروابط مراجع البيانات، والمتعاونون، وتعليمات الاستشهاد."
+            },
+            {
+              "id": "fishbase-data-type-taxonomy",
+              "description": "الأسماء المقبولة، والمرادفات، والتصنيف، والسلطات التصنيفية، وروابط موارد الفهرسة للأسماك الزعنفية."
+            },
+            {
+              "id": "fishbase-standard-fao_fishing_areas",
+              "description": "يصنف جدول FAOAREAS تواجد الأنواع حسب مناطق الصيد الرئيسية لدى FAO. هذه حدود إحصائية وقد تكون تغطية الأنواع غير مكتملة."
+            },
+            {
+              "id": "fishbase-standard-asfis",
+              "description": "يدعم بحث ISSCAAP/ASFIS في FishBase مدخلات الأنواع ASFIS والبحث بالرموز الأبجدية FAO. يخص هذا الوصف أداة البحث في المصايد."
+            },
+            {
+              "id": "fishbase-standard-isscaap",
+              "description": "يستخدم بحث المصايد في FishBase مجموعات ISSCAAP ويضيف بيانات التغذية والحجم. ينبه FishBase إلى احتمال عدم استيفاء قواعد FAO لضمان جودة النشر."
+            },
+            {
+              "id": "fishbase-standard-darwin_core",
+              "description": "ينشر FishBase مستخرج تواجد بصيغة Darwin Core Archive عبر GBIF السويد. الإصدار المدرج بتاريخ 23 مارس 2023؛ ولا يشمل الوصف قاعدة البيانات العلائقية الحية."
+            },
+            {
+              "id": "fishbase-standard-eml",
+              "description": "يوفر نشر FishBase عبر GBIF السويد بيانات وصفية وفق EML لأرشيف التواجد المدرج بتاريخ 23 مارس 2023."
+            },
+            {
+              "id": "fishbase-standard-dublin_core",
+              "description": "يربط أرشيف تواجد FishBase لدى GBIF السويد تواريخ التعديل بمصطلح modified من Dublin Core. يختلف اكتمال الحقل وصياغة التواريخ بين السجلات."
+            },
+            {
+              "id": "fishbase-format-dwca",
+              "description": "يوزع IPT التابع لـ GBIF السويد مقتطف سجلات وجود من FishBase بصيغة Darwin Core Archive، منشوراً في 23 مارس 2023؛ وهو مختلف عن قاعدة البيانات العلائقية الكاملة."
+            },
+            {
+              "id": "fishbase-type-surveys",
+              "description": "تتضمن بيانات BRUVS المسوحات وعمليات النشر والأصناف والوفرة النسبية (MaxN) والأطوال والكتلة الحيوية المشتقة. يؤثر الطعم وتصميم العينات في التفسير؛ MaxN ليس كثافة لكل وحدة مساحة."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "fishbase-access-sourcecoop",
+            "label": "لقطات الجداول الخام من Source Cooperative",
+            "description": "تتاح لقطات Parquet المضغوطة علناً دون حساب أو مفتاح API. تتطلب جداولها عمليات ربط وقد تتأخر عن الموقع. يذكر README ‏v26.07، لكن المخزن أدرج v26.06 عند الفحص. تطبق شروط FishBase للاستخدام غير التجاري؛ تجمع إحصاءات المستودع FishBase وSeaLifeBase."
+          },
+          {
+            "id": "fishbase-access-downloads",
+            "label": "قسم تنزيلات FishBase",
+            "description": "يوفر قسم التنزيل الرسمي في FishBase وثائق داعمة وجداول بيانات وملفات قواعد بيانات قديمة ورسومات وملصقات وعروضا تقديمية وتطبيقات. إنه منطقة تنزيلات مختلطة وليس تصديرا واحدا حديثا لقاعدة البيانات الحية؛ استخدم مضيف fishbase.se لأن مسار www.fishbase.org المكافئ قد يرجع 403."
+          },
+          {
+            "id": "fishbase-access-rfishbase",
+            "label": "حزمة rfishbase في R",
+            "description": "يتوفر الوصول البرمجي من خلال حزمة rfishbase في R. تقرأ الحزمة لقطات parquet ثابتة من Source Cooperative عبر وصول مباشر إلى الجداول بأسلوب S3/DuckDB؛ ولا يذكر وجود مفتاح API لـ FishBase، لكن اللقطات قد تتأخر عن الموقع الحي."
+          },
+          {
+            "id": "fishbase-access-species-summary",
+            "label": "صفحات الأنواع وتنزيلات XML",
+            "description": "تصفح ملخصات الأنواع مجاناً واتبع رابط ملخص XML للحصول على تصدير قابل للمعالجة آلياً. نجح جلب XML لـ Gadus morhua دون بيانات اعتماد؛ لم تتحقق إتاحة كل التنزيلات الأخرى."
+          },
+          {
+            "id": "fishbase-access-web",
+            "label": "بوابة ويب مجانية",
+            "description": "وصول ويب عام مجاني للبحث، وملخصات الأنواع، وصفحات الموضوعات، والخرائط، والرسوم البيانية، والتقارير، وأدوات FishBase. لا يلزم حساب أو مفتاح API للتصفح؛ استخدم مضيف fishbase.se لأن صفحة www.fishbase.org الرئيسية المكافئة قد ترجع Cloudflare 403."
+          },
+          {
+            "id": "fishbase-submit-fishwatcher",
+            "label": "مشاهدات FishWatcher",
+            "description": "يتيح FishWatcher للمستخدمين الحصول على معرف وكلمة مرور ورفع مشاهدات الأسماك والإحداثيات والتواريخ والأطوال والصور لاستخدامها في خرائط التوزيع ورصد التنوع الحيوي."
+          },
+          {
+            "id": "fishbase-submit-collaborator",
+            "label": "مساهمات المتعاونين المنظمة",
+            "description": "تدار إضافات البيانات والتصحيحات عبر مسارات المتعاونين في FishBase. يحصل المساهمون على الإقرار في أختام السجلات أو الشكر أو جداول المتعاونين أو جداول مخصصة عند إدراج مجموعات بيانات كبيرة."
+          },
+          {
+            "id": "fishbase-submit-photos",
+            "label": "مساهمات الصور",
+            "description": "يمكن للمساهمين بالصور الرفع عبر صفحات الأنواع، أو إرسال الملفات بالبريد الإلكتروني إلى FishBase/Q-quatics، أو إرسال وسائط مادية، أو توفير مواقع تنزيل. تبقى حقوق النشر للمساهمين وتضيف FishBase بيانات نسب تعريفية."
+          },
+          {
+            "id": "fishbase-access-bruvs",
+            "label": "تنزيلات مسوحات BRUVS",
+            "description": "اختر BRUVS من أدوات البحث ثم حدد الأصناف أو المنطقة ونزّل المسوحات المدرجة. تشمل ملفات CSV كامل مجتمع المسح، لذا رشّح الصنف المطلوب لاحقاً. يشرح الدليل أخذ العينات والقيم المشتقة؛ لم تُختبر جميع خطوات تأكيد التنزيل."
+          },
+          {
+            "id": "fishbase-access-gbif-archive",
+            "label": "أرشيف سجلات الوجود المنشور",
+            "description": "يتيح IPT التابع لـ GBIF السويد أرشيف وجود FishBase وبياناته الوصفية. الإصدار المدرج بتاريخ 23 مارس 2023 يضم 731043 سجلاً وتحديثاته غير منتظمة. إنه مقتطف مؤرخ لا تعداد حي للقاعدة الكاملة."
+          }
+        ],
+        "aliases": [
+          "قاعدة بيانات الأسماك",
+          "FishBase",
+          "FishBase.org",
+          "FishBase web electronic publication"
+        ],
+        "gallery": [
+          {
+            "id": "fishbase-gallery-species-summary",
+            "title": "بنية سجل النوع",
+            "altText": null,
+            "caption": "لقطة شاشة محلية ملتقطة لسجل نوع في FishBase تعرض التصنيف، والصورة، وخريطة التوزيع، والبيئة، والاستخدامات البشرية، والمراجع، والسجلات الفرعية المرتبطة."
+          },
+          {
+            "id": "fishbase-gallery-search",
+            "title": "فهارس البحث وحقول الاستعلام",
+            "altText": null,
+            "caption": "لقطة شاشة محلية ملتقطة لصفحة بحث FishBase تعرض أبعاد البحث بالاسم الشائع، والاسم العلمي، والمسرد، ومعرف النوع، واللغة، والنظام الكتابي."
+          },
+          {
+            "id": "fishbase-gallery-downloads",
+            "title": "منتجات بيانات قابلة للتنزيل",
+            "altText": null,
+            "caption": "لقطة شاشة محلية ملتقطة لقسم تنزيل FishBase تعرض وثائق ومنتجات بيانات قابلة للتنزيل مع العناوين والأوصاف وأحجام الملفات."
+          },
+          {
+            "id": "fishbase-gallery-home",
+            "title": "نطاق البوابة وسياقها",
+            "altText": null,
+            "caption": "لقطة تاريخية لصفحة FishBase توضح التنقل وسياق البوابة. الأعداد وعبارات العضوية في الصورة ليست قياسات حالية."
+          }
+        ],
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "نحو 3.3 مليون صف أصلي عبر نحو 200 جدول (نحو 60 رئيسياً)، وفق يونيو 2026؛ ليس عدد الأنواع أو سجلات الوجود."
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "اللقطة العامة التاريخية v25.04: ‏194684778 بايتاً مضغوطاً عبر 216 ملف Parquet، أعيد قياسها في 10 سبتمبر 2026. تستثني الصور وقاعدة البيانات الحية."
+          },
+          {
+            "id": "fishbase-metric-citation-count-google-scholar",
+            "description": "نحو 15000 استشهاد تراكمي في Google Scholar وفق دراسة 2023؛ تاريخ القياس الدقيق غير متحقق. وتتجاوز سلسلة Scopus المنفصلة 10000 استشهاد خلال 1994–2020."
+          },
+          {
+            "id": "fishbase-metric-contributor-count",
+            "description": "حد أدنى: أكثر من 2570 متعاوناً في صفحات إصدار يونيو 2026؛ ليس تعداداً دقيقاً أو عدد المتعاونين النشطين حالياً فقط."
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "36761 نوعاً في الإحصاءات الرئيسية المؤرخة صراحةً في يونيو 2026؛ الرقم البارز في الصفحة مقرب."
+          },
+          {
+            "id": "fishbase-storage-v2606",
+            "description": "اللقطة العامة v26.06: مجموع 139929828 بايتاً مضغوطاً في جميع ملفات Parquet البالغ عددها 222 بتاريخ 10 سبتمبر 2026. تستثني SeaLifeBase والصور والقاعدة الحية. كان مسار v26.07 المعلن فارغاً."
+          }
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-fishbase-home",
+            "src-fishbase-search",
+            "src-fishbase-impact-study",
+            "src-fishbase-rfishbase-docs",
+            "src-fishbase-sourcecoop",
+            "src-fishbase-citation",
+            "src-fishbase-references-table",
+            "src-fishbase-collaborator-guide",
+            "fishbase-nrm",
+            "fishbase-bruvs",
+            "fishbase-xml",
+            "fishbase-annual-report",
+            "fishbase-s3-v2606"
+          ]
+        },
+        "researchGaps": {
+          "data": "حجم القاعدة الحية وأرشيف الصور غير متحقق؛ تخص الأحجام المقاسة لقطات مضغوطة محددة. يتعارض README والمخزن بشأن أحدث إصدار. لا يوجد إجمالي حالي موحد لسجلات الوجود عبر الموقع وGBIF وOBIS.",
+          "usage": "لم يُعثر على إجمالي حالي متحقق لجلسات النظام أو أحداث التنزيل. تذكر الصفحة أكثر من 700000 زيارة شهرية لا جلسة. يورد تقرير 2023 ‏8731929 زيارة و4038119 مستخدماً فريداً؛ تجمع إحصاءات المستودع FishBase وSeaLifeBase.",
+          "access": "يعمل ملخص XML، لكن لم تُختبر كل روابط XML القديمة ومنتجات التنزيل المتنوعة. تكاليف المساهمة وبعض متطلبات الانضمام غير محددة. لا يوجد مسار آلي معتمد في Ryu حالياً."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "FishBase",
+      "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
+      "description": "FishBase is a global reference for marine, brackish-water and freshwater finfishes, developed since the late 1980s. It connects taxonomy and distribution with ecology, life history, morphology, fisheries uses, images and source literature. Researchers, fisheries managers, educators and conservation practitioners use its species pages and analytical tools. Its explicitly dated June 2026 statistics report 36,761 species, 333,268 common-name records and approximately 3.3 million rows across about 200 tables. These measures describe different parts of the database and should not be added together.\n\nQuantitative Aquatics (Q-quatics) hosts and manages FishBase, while the Swedish Museum of Natural History serves its Stockholm mirror. The FishBase Consortium provides scientific advice; its published membership counts disagree, so no exact count or binding governance role is assumed. Institutional contributions and project grants support specific activities. Data are curated from published literature and collaborator submissions, with reference numbers linking entries to their evidence. Contributions of observations, photos, corrections and datasets pass through FishWatcher or staff-mediated workflows.\n\nPublic browsing is free. Species-summary XML, BRUVS survey CSV, an occurrence Darwin Core Archive and compressed Parquet table snapshots serve different retrieval needs. The rfishbase package reads versioned Source Cooperative snapshots, which can lag the live site and require joins between tables. The repository README names v26.07, but the public bucket contained v26.06 at verification; confirm the release used. Species coverage does not imply complete trait or geographic coverage. FishBase text, numbers and maps carry non-commercial attribution terms, while photographs and drawings retain separate rights. Cite the underlying data references as well as the FishBase version.",
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "fishbase-data-format-parquet-csv",
+              "description": "BRUVS survey and deployment metadata downloads use CSV. This scope does not assert CSV distribution of the current Source Cooperative backend snapshot."
+            },
+            {
+              "id": "fishbase-data-format-parquet-csv--format-parquet",
+              "description": "Source Cooperative distributes versioned, compressed Parquet files, one per backend table. Its README names v26.07, while the public bucket listed v26.06 during this check; confirm available releases."
+            },
+            {
+              "id": "fishbase-data-format-xml",
+              "description": "A live Gadus morhua summary endpoint returned XML with taxonomy, common names and descriptive content. Other linked XML exports were not all verified."
+            },
+            {
+              "id": "fishbase-data-format-web",
+              "description": "Human-readable web UI with search, species summaries, topic pages, reports, maps, tools, and downloadable species views."
+            },
+            {
+              "id": "fishbase-data-type-distribution",
+              "description": "Country, ecosystem, FAO area, native range, point-map, introduction, and habitat information attached to species records."
+            },
+            {
+              "id": "fishbase-data-type-ecology",
+              "description": "Diet, trophic ecology, food items, predators, food consumption, and ecosystem-linked records used in ecological and fisheries analyses."
+            },
+            {
+              "id": "fishbase-data-type-images-media",
+              "description": "Fish photographs, drawings, thumbnails, and contributed photo metadata, with photographer/institution attribution."
+            },
+            {
+              "id": "fishbase-data-type-life-history",
+              "description": "Growth, maturity, length-weight, fecundity, spawning, recruitment, abundance, mortality, and related population-dynamics parameters."
+            },
+            {
+              "id": "fishbase-data-type-references",
+              "description": "Reference-numbered literature provenance, data-reference links, collaborators, and citation instructions."
+            },
+            {
+              "id": "fishbase-data-type-taxonomy",
+              "description": "Accepted names, synonyms, classification, taxonomic authorities, and links to cataloging resources for finfishes."
+            },
+            {
+              "id": "fishbase-standard-fao_fishing_areas",
+              "description": "FishBase’s FAOAREAS table classifies species occurrence by FAO major fishing areas. These are statistical boundaries; species-area coverage may be incomplete."
+            },
+            {
+              "id": "fishbase-standard-asfis",
+              "description": "FishBase’s ISSCAAP/ASFIS lookup supports ASFIS species entries and FAO alpha-code searches. This assignment covers that fisheries lookup."
+            },
+            {
+              "id": "fishbase-standard-isscaap",
+              "description": "FishBase’s fisheries lookup uses ISSCAAP species groups and adds trophic and size information. FishBase cautions that this service may not meet FAO dissemination QA rules."
+            },
+            {
+              "id": "fishbase-standard-darwin_core",
+              "description": "FishBase publishes an occurrence extract as a Darwin Core Archive through GBIF Sweden. The listed release is 23 March 2023; this scope excludes the live relational database."
+            },
+            {
+              "id": "fishbase-standard-eml",
+              "description": "FishBase’s GBIF Sweden publication provides EML dataset metadata for its occurrence archive, listed as published on 23 March 2023."
+            },
+            {
+              "id": "fishbase-standard-dublin_core",
+              "description": "FishBase’s GBIF Sweden occurrence archive maps modification dates to the Dublin Core modified term. Field population and date syntax vary across records."
+            },
+            {
+              "id": "fishbase-format-dwca",
+              "description": "The GBIF-Sweden IPT distributes a FishBase occurrence extract as a Darwin Core Archive, published 23 March 2023. It is distinct from the full relational database."
+            },
+            {
+              "id": "fishbase-type-surveys",
+              "description": "BRUVS datasets include surveys, deployments, identified taxa, relative abundance (MaxN), lengths and derived biomass. Bait and sampling design affect interpretation; MaxN is not density per unit area."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "fishbase-access-sourcecoop",
+            "label": "Source Cooperative raw snapshots",
+            "description": "Public compressed Parquet snapshots are available without an account or API key. They contain backend tables requiring joins and may lag the website. The README names v26.07, but the public bucket listed v26.06 during this check. FishBase non-commercial reuse terms apply; analytics for this repository combine FishBase and SeaLifeBase."
+          },
+          {
+            "id": "fishbase-access-downloads",
+            "label": "FishBase download section",
+            "description": "The official FishBase download section provides supporting documents, spreadsheets, legacy database files, graphs, posters, presentations, and applications. It is a mixed download area rather than a single current live-database export; use the fishbase.se host because the equivalent www.fishbase.org path can return 403."
+          },
+          {
+            "id": "fishbase-access-rfishbase",
+            "label": "rfishbase R package",
+            "description": "Programmatic access is available through the rfishbase R package. It reads static Source Cooperative parquet snapshots through direct S3/DuckDB-style table access; no FishBase API key is described, but snapshots can lag the live website."
+          },
+          {
+            "id": "fishbase-access-species-summary",
+            "label": "Species pages and XML downloads",
+            "description": "Browse species summaries for free and follow the XML summary link for a machine-readable export. The Gadus morhua XML endpoint was successfully retrieved without credentials; availability of every other linked export was not verified."
+          },
+          {
+            "id": "fishbase-access-web",
+            "label": "Free web portal",
+            "description": "Free public web access for search, species summaries, topic pages, maps, graphs, reports, and FishBase tools. No account or API key is required for browsing; use the fishbase.se host because the equivalent www.fishbase.org homepage can return Cloudflare 403."
+          },
+          {
+            "id": "fishbase-submit-fishwatcher",
+            "label": "FishWatcher observations",
+            "description": "FishWatcher lets users obtain an ID/password and upload fish observations, coordinates, dates, lengths, and photos for use in distribution mapping and biodiversity monitoring."
+          },
+          {
+            "id": "fishbase-submit-collaborator",
+            "label": "Curated collaborator contributions",
+            "description": "Data additions and corrections are mediated through FishBase collaborator workflows. Contributors receive credit in record stamps, acknowledgments, collaborator tables, or dedicated tables when substantial datasets are incorporated."
+          },
+          {
+            "id": "fishbase-submit-photos",
+            "label": "Photo contributions",
+            "description": "Photo contributors can upload through species pages, email files to FishBase/Q-quatics, send physical media, or provide download locations. Copyright remains with contributors and FishBase attaches attribution metadata."
+          },
+          {
+            "id": "fishbase-access-bruvs",
+            "label": "BRUVS survey downloads",
+            "description": "Choose BRUVS from the search tools, then select taxa or geography and download the listed surveys. CSV outputs contain the full survey community, so filter the requested taxon afterward. The manual explains sampling and derived values; not every download confirmation was tested."
+          },
+          {
+            "id": "fishbase-access-gbif-archive",
+            "label": "Published occurrence archive",
+            "description": "The GBIF-Sweden IPT offers the FishBase occurrence archive and dataset metadata. The listed release is 23 March 2023 with 731,043 archive records and irregular updates. This is a dated extract, not a live count of the whole FishBase database."
+          }
+        ],
+        "aliases": [
+          "FishBase",
+          "FishBase.org",
+          "FishBase web electronic publication"
+        ],
+        "gallery": [
+          {
+            "id": "fishbase-gallery-species-summary",
+            "title": "Species record structure",
+            "altText": null,
+            "caption": "Captured local screenshot of a FishBase species record showing taxonomy, photo, distribution map, ecology, human uses, references, and linked sub-records."
+          },
+          {
+            "id": "fishbase-gallery-search",
+            "title": "Search indexes and lookup fields",
+            "altText": null,
+            "caption": "Captured local screenshot of the FishBase search page showing common-name, scientific-name, glossary, species-ID, language, and script lookup dimensions."
+          },
+          {
+            "id": "fishbase-gallery-downloads",
+            "title": "Downloadable data products",
+            "altText": null,
+            "caption": "Captured local screenshot of the FishBase Download Section showing downloadable documents and data products with titles, descriptions, and file sizes."
+          },
+          {
+            "id": "fishbase-gallery-home",
+            "title": "Portal scope and context",
+            "altText": null,
+            "caption": "Historical capture of the FishBase homepage illustrating navigation and portal context. Counters and membership wording in the image are not current measurements."
+          }
+        ],
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "Approximately 3.3 million native rows across about 200 tables (about 60 main), reported for June 2026; not species or occurrence count."
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "Historical public v25.04 snapshot: 194,684,778 compressed bytes across 216 Parquet objects, remeasured 10 September 2026. Excludes images and the live database."
+          },
+          {
+            "id": "fishbase-metric-citation-count-google-scholar",
+            "description": "Approximately 15,000 cumulative Google Scholar citations in the 2023 impact paper; exact observation date is unverified. Its separate Scopus series exceeds 10,000 citations over 1994–2020."
+          },
+          {
+            "id": "fishbase-metric-contributor-count",
+            "description": "Lower bound: more than 2,570 collaborators on the June 2026 release pages; not an exact roster count or a count of current active contributors."
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "36,761 species in the explicitly dated June 2026 main statistics; the homepage headline is rounded."
+          },
+          {
+            "id": "fishbase-storage-v2606",
+            "description": "Public v26.06 snapshot: 139,929,828 compressed bytes summed over all 222 Parquet objects on 10 September 2026. This excludes SeaLifeBase, images and the live database. README v26.07 was not present at its documented bucket prefix."
+          }
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-fishbase-home",
+            "src-fishbase-search",
+            "src-fishbase-impact-study",
+            "src-fishbase-rfishbase-docs",
+            "src-fishbase-sourcecoop",
+            "src-fishbase-citation",
+            "src-fishbase-references-table",
+            "src-fishbase-collaborator-guide",
+            "fishbase-nrm",
+            "fishbase-bruvs",
+            "fishbase-xml",
+            "fishbase-annual-report",
+            "fishbase-s3-v2606"
+          ]
+        },
+        "researchGaps": {
+          "data": "Live database and image-archive sizes are unverified; the measured sizes are specific compressed snapshots. The README and public bucket disagree on the newest release. No single current occurrence total is established across website, GBIF and OBIS extracts.",
+          "usage": "No verified current system-wide sessions or download-event total was found. The homepage reports over 700,000 monthly visits, not sessions. The 2023 report separately lists 8,731,929 visits and 4,038,119 unique users; repository analytics combine FishBase and SeaLifeBase.",
+          "access": "The XML summary works, but every legacy XML link and mixed download product was not tested. Contribution costs and some onboarding requirements remain unspecified. No approved Ryu machine route is currently recorded."
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "es": {
+      "title": "FishBase",
+      "summary": "Base de datos mundial de biodiversidad de peces con aletas que cubre taxonomía, biología, ecología, historia de vida, distribuciones, usos pesqueros, imágenes, referencias y procedencia de colaboradores.",
+      "description": "FishBase es una referencia mundial sobre peces marinos, de aguas salobres y continentales, desarrollada desde finales de los años ochenta. Relaciona taxonomía y distribución con ecología, historia de vida, morfología, usos pesqueros, imágenes y literatura. Investigadores, gestores, educadores y profesionales de conservación usan sus fichas y herramientas. Sus estadísticas de junio de 2026 indican 36.761 especies, 333.268 entradas de nombres comunes y unos 3,3 millones de filas en unas 200 tablas. Son medidas de contenidos diferentes y no deben sumarse.\n\nQuantitative Aquatics (Q-quatics) aloja y gestiona FishBase; el Museo Sueco de Historia Natural sirve su réplica de Estocolmo. El Consorcio FishBase aporta asesoramiento científico; las cifras publicadas de miembros discrepan, por lo que no se afirma un número exacto ni autoridad vinculante. Aportaciones institucionales y subvenciones financian actividades concretas. Los datos se curan a partir de literatura y contribuciones, con números de referencia que enlazan cada entrada con su evidencia. Observaciones, fotos, correcciones y conjuntos pasan por FishWatcher o procesos mediados por el equipo.\n\nLa consulta es gratuita. El XML de fichas, CSV de muestreos BRUVS, archivo Darwin Core de presencias y las instantáneas Parquet responden a necesidades distintas. rfishbase lee instantáneas versionadas de Source Cooperative que pueden ir por detrás del sitio y requieren uniones entre tablas. El README anuncia v26.07, pero el depósito contenía v26.06 al comprobarlo; confirme la versión utilizada. La cobertura de especies no garantiza datos completos de rasgos o regiones. Texto, cifras y mapas exigen atribución y uso no comercial; fotos y dibujos conservan derechos separados. Cite las referencias originales y la versión de FishBase.",
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "fishbase-data-format-parquet-csv",
+              "description": "Las descargas de muestreos BRUVS y metadatos de despliegue usan CSV. Esto no afirma que la instantánea actual de Source Cooperative se distribuya en CSV."
+            },
+            {
+              "id": "fishbase-data-format-parquet-csv--format-parquet",
+              "description": "Source Cooperative distribuye archivos Parquet comprimidos y versionados, uno por tabla. El README indica v26.07, pero el depósito público mostraba v26.06; compruebe las versiones disponibles."
+            },
+            {
+              "id": "fishbase-data-format-xml",
+              "description": "El servicio de resumen de Gadus morhua devolvió XML con taxonomía, nombres comunes y descripciones. No se verificaron todos los demás enlaces XML."
+            },
+            {
+              "id": "fishbase-data-format-web",
+              "description": "Interfaz web legible por humanos con búsqueda, resúmenes de especies, páginas temáticas, informes, mapas, herramientas y vistas descargables de especies."
+            },
+            {
+              "id": "fishbase-data-type-distribution",
+              "description": "Información de país, ecosistema, área FAO, rango nativo, mapa de puntos, introducción y hábitat asociada a registros de especies."
+            },
+            {
+              "id": "fishbase-data-type-ecology",
+              "description": "Dieta, ecología trófica, elementos alimentarios, depredadores, consumo de alimento y registros vinculados a ecosistemas usados en análisis ecológicos y pesqueros."
+            },
+            {
+              "id": "fishbase-data-type-images-media",
+              "description": "Fotografías de peces, dibujos, miniaturas y metadatos de fotos aportadas, con atribución a fotógrafo o institución."
+            },
+            {
+              "id": "fishbase-data-type-life-history",
+              "description": "Crecimiento, madurez, relaciones longitud-peso, fecundidad, desove, reclutamiento, abundancia, mortalidad y parámetros relacionados de dinámica poblacional."
+            },
+            {
+              "id": "fishbase-data-type-references",
+              "description": "Procedencia bibliográfica numerada por referencia, enlaces entre datos y referencias, colaboradores e instrucciones de citación."
+            },
+            {
+              "id": "fishbase-data-type-taxonomy",
+              "description": "Nombres aceptados, sinónimos, clasificación, autoridades taxonómicas y enlaces a recursos de catalogación para peces con aletas."
+            },
+            {
+              "id": "fishbase-standard-fao_fishing_areas",
+              "description": "La tabla FAOAREAS clasifica las ocurrencias de especies por grandes áreas pesqueras FAO. Son límites estadísticos; la cobertura de especies puede ser incompleta."
+            },
+            {
+              "id": "fishbase-standard-asfis",
+              "description": "El buscador ISSCAAP/ASFIS de FishBase utiliza entradas de especies ASFIS y códigos alfabéticos FAO. Esta asignación abarca ese buscador pesquero."
+            },
+            {
+              "id": "fishbase-standard-isscaap",
+              "description": "El buscador pesquero FishBase usa grupos ISSCAAP y añade datos tróficos y de talla. FishBase advierte que puede no cumplir las reglas de calidad de difusión FAO."
+            },
+            {
+              "id": "fishbase-standard-darwin_core",
+              "description": "FishBase publica un extracto de ocurrencias como Darwin Core Archive mediante GBIF Suecia. La versión indicada es del 23 de marzo de 2023; no abarca la base relacional en vivo."
+            },
+            {
+              "id": "fishbase-standard-eml",
+              "description": "La publicación de FishBase en GBIF Suecia proporciona metadatos EML para su archivo de ocurrencias, fechado el 23 de marzo de 2023."
+            },
+            {
+              "id": "fishbase-standard-dublin_core",
+              "description": "El archivo de ocurrencias de FishBase en GBIF Suecia asigna las fechas de modificación al término modified de Dublin Core. La presencia y la sintaxis de las fechas varían entre registros."
+            },
+            {
+              "id": "fishbase-format-dwca",
+              "description": "El IPT de GBIF-Suecia distribuye un extracto de presencias de FishBase en Darwin Core Archive, publicado el 23 de marzo de 2023; no es la base relacional completa."
+            },
+            {
+              "id": "fishbase-type-surveys",
+              "description": "Los datos BRUVS incluyen muestreos, despliegues, taxones, abundancia relativa (MaxN), longitudes y biomasa derivada. El cebo y el diseño condicionan la interpretación; MaxN no es densidad por área."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "fishbase-access-sourcecoop",
+            "label": "Instantáneas sin procesar de Source Cooperative",
+            "description": "Las instantáneas Parquet comprimidas son públicas, sin cuenta ni clave API. Requieren uniones entre tablas y pueden retrasarse respecto al sitio. El README señala v26.07, pero el depósito mostraba v26.06. Se aplican las condiciones no comerciales de FishBase; las estadísticas del repositorio combinan FishBase y SeaLifeBase."
+          },
+          {
+            "id": "fishbase-access-downloads",
+            "label": "Sección de descargas de FishBase",
+            "description": "La sección oficial de descargas de FishBase proporciona documentos de apoyo, hojas de cálculo, archivos de bases de datos heredadas, gráficos, carteles, presentaciones y aplicaciones. Es un área mixta de descargas y no una única exportación actual de la base de datos en vivo; use el host fishbase.se porque la ruta equivalente de www.fishbase.org puede devolver 403."
+          },
+          {
+            "id": "fishbase-access-rfishbase",
+            "label": "Paquete R rfishbase",
+            "description": "El acceso programático está disponible mediante el paquete de R rfishbase. Lee instantáneas parquet estáticas de Source Cooperative mediante acceso directo a tablas estilo S3/DuckDB; no se describe una clave de API de FishBase, pero las instantáneas pueden ir por detrás del sitio en vivo."
+          },
+          {
+            "id": "fishbase-access-species-summary",
+            "label": "Páginas de especies y descargas XML",
+            "description": "Consulte fichas gratis y siga el enlace XML para obtener un archivo procesable. Se recuperó el XML de Gadus morhua sin credenciales; no se verificó la disponibilidad de todos los demás enlaces de exportación."
+          },
+          {
+            "id": "fishbase-access-web",
+            "label": "Portal web gratuito",
+            "description": "Acceso web público gratuito para búsqueda, resúmenes de especies, páginas temáticas, mapas, gráficos, informes y herramientas de FishBase. No se requiere cuenta ni clave de API para navegar; use el host fishbase.se porque la página principal equivalente de www.fishbase.org puede devolver Cloudflare 403."
+          },
+          {
+            "id": "fishbase-submit-fishwatcher",
+            "label": "Observaciones FishWatcher",
+            "description": "FishWatcher permite a los usuarios obtener un ID/contraseña y subir observaciones de peces, coordenadas, fechas, longitudes y fotos para uso en cartografía de distribución y monitoreo de biodiversidad."
+          },
+          {
+            "id": "fishbase-submit-collaborator",
+            "label": "Contribuciones curadas de colaboradores",
+            "description": "Las adiciones y correcciones de datos se median mediante flujos de trabajo de colaboradores de FishBase. Los colaboradores reciben crédito en sellos de registros, agradecimientos, tablas de colaboradores o tablas dedicadas cuando se incorporan conjuntos de datos sustanciales."
+          },
+          {
+            "id": "fishbase-submit-photos",
+            "label": "Contribuciones fotográficas",
+            "description": "Los colaboradores de fotos pueden subirlas mediante páginas de especies, enviar archivos por correo electrónico a FishBase/Q-quatics, enviar medios físicos o proporcionar ubicaciones de descarga. Los derechos de autor permanecen con los colaboradores y FishBase adjunta metadatos de atribución."
+          },
+          {
+            "id": "fishbase-access-bruvs",
+            "label": "Descargas de muestreos BRUVS",
+            "description": "Elija BRUVS en las herramientas, seleccione taxones o geografía y descargue los muestreos listados. Los CSV contienen toda la comunidad observada; filtre después el taxón solicitado. El manual explica el muestreo y valores derivados; no se probaron todas las confirmaciones."
+          },
+          {
+            "id": "fishbase-access-gbif-archive",
+            "label": "Archivo publicado de presencias",
+            "description": "El IPT de GBIF-Suecia ofrece el archivo de presencias FishBase y sus metadatos. La versión del 23 de marzo de 2023 contiene 731.043 registros y se actualiza irregularmente. Es un extracto fechado, no un total actual de toda la base."
+          }
+        ],
+        "aliases": [
+          "base de datos de peces",
+          "FishBase",
+          "FishBase.org",
+          "FishBase web electronic publication"
+        ],
+        "gallery": [
+          {
+            "id": "fishbase-gallery-species-summary",
+            "title": "Estructura del registro de especie",
+            "altText": null,
+            "caption": "Captura de pantalla local de un registro de especie de FishBase que muestra taxonomía, foto, mapa de distribución, ecología, usos humanos, referencias y subregistros vinculados."
+          },
+          {
+            "id": "fishbase-gallery-search",
+            "title": "Índices de búsqueda y campos de consulta",
+            "altText": null,
+            "caption": "Captura de pantalla local de la página de búsqueda de FishBase que muestra dimensiones de consulta por nombre común, nombre científico, glosario, ID de especie, idioma y escritura."
+          },
+          {
+            "id": "fishbase-gallery-downloads",
+            "title": "Productos de datos descargables",
+            "altText": null,
+            "caption": "Captura de pantalla local de la sección de descargas de FishBase que muestra documentos y productos de datos descargables con títulos, descripciones y tamaños de archivo."
+          },
+          {
+            "id": "fishbase-gallery-home",
+            "title": "Alcance y contexto del portal",
+            "altText": null,
+            "caption": "Captura histórica de la página de FishBase que muestra navegación y contexto. Los contadores y miembros de la imagen no representan cifras actuales."
+          }
+        ],
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "Aproximadamente 3,3 millones de filas en unas 200 tablas (unas 60 principales), en junio de 2026; no es un recuento de especies ni de presencias."
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "Instantánea pública histórica v25.04: 194.684.778 bytes comprimidos en 216 objetos Parquet, medidos de nuevo el 10 de septiembre de 2026. Excluye imágenes y base activa."
+          },
+          {
+            "id": "fishbase-metric-citation-count-google-scholar",
+            "description": "Unas 15.000 citas acumuladas en Google Scholar según el estudio de 2023; fecha exacta de observación no verificada. La serie separada de Scopus supera 10.000 en 1994–2020."
+          },
+          {
+            "id": "fishbase-metric-contributor-count",
+            "description": "Límite inferior: más de 2.570 colaboradores en las páginas de junio de 2026; no es un padrón exacto ni un recuento exclusivo de colaboradores activos."
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "36.761 especies en las estadísticas principales fechadas en junio de 2026; el titular está redondeado."
+          },
+          {
+            "id": "fishbase-storage-v2606",
+            "description": "Instantánea pública v26.06: 139.929.828 bytes comprimidos en los 222 objetos Parquet el 10 de septiembre de 2026. Excluye SeaLifeBase, imágenes y base activa. El prefijo anunciado para v26.07 estaba vacío."
+          }
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-fishbase-home",
+            "src-fishbase-search",
+            "src-fishbase-impact-study",
+            "src-fishbase-rfishbase-docs",
+            "src-fishbase-sourcecoop",
+            "src-fishbase-citation",
+            "src-fishbase-references-table",
+            "src-fishbase-collaborator-guide",
+            "fishbase-nrm",
+            "fishbase-bruvs",
+            "fishbase-xml",
+            "fishbase-annual-report",
+            "fishbase-s3-v2606"
+          ]
+        },
+        "researchGaps": {
+          "data": "No se verificó el tamaño de la base activa ni del archivo de imágenes; las medidas corresponden a instantáneas comprimidas concretas. README y depósito discrepan sobre la versión más reciente. No hay un total actual único de presencias para sitio, GBIF y OBIS.",
+          "usage": "No se encontró un total actual verificado de sesiones o descargas del sistema. La web indica más de 700.000 visitas mensuales, no sesiones. El informe 2023 contabiliza 8.731.929 visitas y 4.038.119 usuarios únicos; la analítica del repositorio combina FishBase y SeaLifeBase.",
+          "access": "El resumen XML funciona, pero no se probaron todos los enlaces XML antiguos ni productos de descarga. Los costes de contribución y algunos requisitos de incorporación siguen sin especificarse. No hay una ruta de máquina Ryu aprobada registrada."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "fr": {
+      "title": "FishBase",
+      "summary": "Base de données mondiale sur la biodiversité des poissons à nageoires couvrant la taxonomie, la biologie, l'écologie, les traits d'histoire de vie, les répartitions, les usages halieutiques, les images, les références et la provenance des collaborateurs.",
+      "description": "FishBase est une référence mondiale sur les poissons marins, d’eau saumâtre et d’eau douce, développée depuis la fin des années 1980. Elle relie taxonomie et répartition à l’écologie, au cycle de vie, à la morphologie, aux usages halieutiques, aux images et à la littérature. Chercheurs, gestionnaires des pêches, enseignants et acteurs de la conservation utilisent ses fiches et outils. Les statistiques datées de juin 2026 indiquent 36 761 espèces, 333 268 entrées de noms communs et environ 3,3 millions de lignes dans quelque 200 tables. Ces mesures portent sur des objets différents et ne s’additionnent pas.\n\nQuantitative Aquatics (Q-quatics) héberge et gère FishBase ; le Muséum suédois d’histoire naturelle assure le miroir de Stockholm. Le Consortium FishBase apporte des conseils scientifiques ; les nombres de membres publiés divergent, donc aucun effectif exact ni pouvoir de gouvernance contraignant n’est présumé. Contributions institutionnelles et subventions soutiennent des activités précises. Les données sont sélectionnées dans la littérature et les contributions, avec des numéros de références liant chaque entrée à ses sources. Observations, photos, corrections et jeux de données passent par FishWatcher ou une procédure avec l’équipe.\n\nLa consultation est gratuite. XML des fiches, CSV des relevés BRUVS, archive d’occurrences Darwin Core et instantanés Parquet répondent à des besoins distincts. rfishbase lit les instantanés versionnés de Source Cooperative, parfois en retard sur le site et nécessitant des jointures. Le README annonce v26.07, mais le dépôt contenait v26.06 lors du contrôle ; vérifier la version utilisée. La couverture des espèces ne garantit pas celle de chaque caractère ou région. Textes, chiffres et cartes sont soumis à l’attribution et à un usage non commercial ; photos et dessins conservent leurs droits propres. Citer les références sous-jacentes et la version FishBase.",
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "fishbase-data-format-parquet-csv",
+              "description": "Les téléchargements de relevés BRUVS et de métadonnées des déploiements utilisent CSV. Cela ne décrit pas le format de l’instantané actuel sur Source Cooperative."
+            },
+            {
+              "id": "fishbase-data-format-parquet-csv--format-parquet",
+              "description": "Source Cooperative diffuse des fichiers Parquet compressés et versionnés, un par table. Le README indique v26.07, mais le dépôt public listait v26.06 lors du contrôle ; vérifier les versions disponibles."
+            },
+            {
+              "id": "fishbase-data-format-xml",
+              "description": "Le service actif de résumé Gadus morhua a renvoyé du XML contenant taxonomie, noms communs et descriptions. Tous les autres exports XML liés n’ont pas été vérifiés."
+            },
+            {
+              "id": "fishbase-data-format-web",
+              "description": "Interface web lisible par l'humain avec recherche, résumés d'espèces, pages thématiques, rapports, cartes, outils et vues d'espèces téléchargeables."
+            },
+            {
+              "id": "fishbase-data-type-distribution",
+              "description": "Informations sur les pays, écosystèmes, zones FAO, aire native, cartes de points, introductions et habitats attachées aux enregistrements d'espèces."
+            },
+            {
+              "id": "fishbase-data-type-ecology",
+              "description": "Régime alimentaire, écologie trophique, éléments alimentaires, prédateurs, consommation alimentaire et enregistrements liés aux écosystèmes utilisés dans les analyses écologiques et halieutiques."
+            },
+            {
+              "id": "fishbase-data-type-images-media",
+              "description": "Photographies de poissons, dessins, vignettes et métadonnées de photos contribuées, avec attribution au photographe ou à l'institution."
+            },
+            {
+              "id": "fishbase-data-type-life-history",
+              "description": "Croissance, maturité, relations longueur-poids, fécondité, frai, recrutement, abondance, mortalité et paramètres connexes de dynamique des populations."
+            },
+            {
+              "id": "fishbase-data-type-references",
+              "description": "Provenance bibliographique numérotée par référence, liens entre données et références, collaborateurs et consignes de citation."
+            },
+            {
+              "id": "fishbase-data-type-taxonomy",
+              "description": "Noms acceptés, synonymes, classification, autorités taxonomiques et liens vers des ressources de catalogage pour les poissons à nageoires."
+            },
+            {
+              "id": "fishbase-standard-fao_fishing_areas",
+              "description": "La table FAOAREAS classe les occurrences des espèces par grandes zones de pêche FAO. Ces limites sont statistiques ; la couverture des espèces peut être incomplète."
+            },
+            {
+              "id": "fishbase-standard-asfis",
+              "description": "La recherche ISSCAAP/ASFIS de FishBase utilise les entrées d’espèces ASFIS et les codes alphabétiques FAO. Cette attribution concerne cet outil de recherche."
+            },
+            {
+              "id": "fishbase-standard-isscaap",
+              "description": "La recherche halieutique FishBase utilise les groupes ISSCAAP et ajoute des données trophiques et de taille. FishBase signale une possible non-conformité aux règles qualité de diffusion FAO."
+            },
+            {
+              "id": "fishbase-standard-darwin_core",
+              "description": "FishBase publie un extrait d’occurrences en Darwin Core Archive via GBIF Suède. La version affichée date du 23 mars 2023 ; ce périmètre exclut la base relationnelle actuelle."
+            },
+            {
+              "id": "fishbase-standard-eml",
+              "description": "La publication FishBase sur GBIF Suède fournit les métadonnées EML de son archive d’occurrences, datée du 23 mars 2023."
+            },
+            {
+              "id": "fishbase-standard-dublin_core",
+              "description": "L’archive d’occurrences FishBase sur GBIF Suède associe les dates de modification au terme Dublin Core modified. Le remplissage et la syntaxe des dates varient selon les enregistrements."
+            },
+            {
+              "id": "fishbase-format-dwca",
+              "description": "L’IPT GBIF-Suède diffuse un extrait d’occurrences FishBase en Darwin Core Archive, publié le 23 mars 2023. Il se distingue de la base relationnelle complète."
+            },
+            {
+              "id": "fishbase-type-surveys",
+              "description": "Les jeux BRUVS décrivent relevés, déploiements, taxons, abondance relative (MaxN), longueurs et biomasse dérivée. L’appât et le plan d’échantillonnage influencent l’interprétation ; MaxN n’est pas une densité surfacique."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "fishbase-access-sourcecoop",
+            "label": "Instantanés bruts Source Cooperative",
+            "description": "Les instantanés Parquet compressés sont publics, sans compte ni clé API. Leurs tables nécessitent des jointures et peuvent être en retard sur le site. Le README indique v26.07, mais le dépôt listait v26.06 lors du contrôle. Les conditions non commerciales de FishBase s’appliquent ; les statistiques du dépôt cumulent FishBase et SeaLifeBase."
+          },
+          {
+            "id": "fishbase-access-downloads",
+            "label": "Section de téléchargement FishBase",
+            "description": "La section officielle de téléchargement de FishBase fournit des documents d'appui, feuilles de calcul, anciens fichiers de base de données, graphiques, affiches, présentations et applications. C'est une zone de téléchargement mixte plutôt qu'un export unique et actuel de la base active; utiliser l'hôte fishbase.se, car le chemin équivalent sur www.fishbase.org peut renvoyer 403."
+          },
+          {
+            "id": "fishbase-access-rfishbase",
+            "label": "Paquet R rfishbase",
+            "description": "Un accès programmatique est disponible via le paquet R rfishbase. Il lit des instantanés parquet statiques de Source Cooperative par accès direct aux tables de type S3/DuckDB; aucune clé API FishBase n'est décrite, mais les instantanés peuvent être en retard sur le site actif."
+          },
+          {
+            "id": "fishbase-access-species-summary",
+            "label": "Pages d'espèces et téléchargements XML",
+            "description": "Consulter gratuitement les fiches et suivre le lien de résumé XML pour un export exploitable par logiciel. Le XML de Gadus morhua a été récupéré sans identifiants ; la disponibilité de tous les autres exports liés n’a pas été vérifiée."
+          },
+          {
+            "id": "fishbase-access-web",
+            "label": "Portail web gratuit",
+            "description": "Accès web public gratuit pour la recherche, les résumés d'espèces, les pages thématiques, les cartes, graphiques, rapports et outils FishBase. Aucun compte ni clé API n'est requis pour la navigation; utiliser l'hôte fishbase.se, car la page d'accueil équivalente www.fishbase.org peut renvoyer Cloudflare 403."
+          },
+          {
+            "id": "fishbase-submit-fishwatcher",
+            "label": "Observations FishWatcher",
+            "description": "FishWatcher permet aux utilisateurs d'obtenir un identifiant et un mot de passe et de téléverser des observations de poissons, coordonnées, dates, longueurs et photos pour la cartographie des distributions et le suivi de la biodiversité."
+          },
+          {
+            "id": "fishbase-submit-collaborator",
+            "label": "Contributions de collaborateurs avec curation",
+            "description": "Les ajouts et corrections de données passent par les flux de collaboration FishBase. Les contributeurs sont crédités dans les estampilles d'enregistrement, remerciements, tables de collaborateurs ou tables dédiées lorsque des jeux de données substantiels sont incorporés."
+          },
+          {
+            "id": "fishbase-submit-photos",
+            "label": "Contributions de photos",
+            "description": "Les contributeurs de photos peuvent téléverser via les pages d'espèces, envoyer des fichiers par courriel à FishBase/Q-quatics, envoyer des supports physiques ou fournir des emplacements de téléchargement. Le droit d'auteur reste aux contributeurs et FishBase ajoute des métadonnées d'attribution."
+          },
+          {
+            "id": "fishbase-access-bruvs",
+            "label": "Téléchargement des relevés BRUVS",
+            "description": "Choisir BRUVS dans les outils, puis des taxons ou une zone et télécharger les relevés proposés. Les CSV contiennent toute la communauté observée ; filtrer ensuite le taxon recherché. Le manuel explique échantillonnage et valeurs dérivées ; toutes les confirmations n’ont pas été testées."
+          },
+          {
+            "id": "fishbase-access-gbif-archive",
+            "label": "Archive d’occurrences publiée",
+            "description": "L’IPT GBIF-Suède propose l’archive d’occurrences FishBase et ses métadonnées. La version indiquée date du 23 mars 2023 avec 731 043 enregistrements et des mises à jour irrégulières. C’est un extrait daté, pas un total actuel de toute la base."
+          }
+        ],
+        "aliases": [
+          "base de données sur les poissons",
+          "FishBase",
+          "FishBase.org",
+          "FishBase web electronic publication"
+        ],
+        "gallery": [
+          {
+            "id": "fishbase-gallery-species-summary",
+            "title": "Structure d'un enregistrement d'espèce",
+            "altText": null,
+            "caption": "Capture d'écran locale d'un enregistrement d'espèce FishBase montrant taxonomie, photo, carte de distribution, écologie, usages humains, références et sous-enregistrements liés."
+          },
+          {
+            "id": "fishbase-gallery-search",
+            "title": "Index de recherche et champs de consultation",
+            "altText": null,
+            "caption": "Capture d'écran locale de la page de recherche FishBase montrant les dimensions de recherche par nom commun, nom scientifique, glossaire, identifiant d'espèce, langue et écriture."
+          },
+          {
+            "id": "fishbase-gallery-downloads",
+            "title": "Produits de données téléchargeables",
+            "altText": null,
+            "caption": "Capture d'écran locale de la section de téléchargement FishBase montrant documents et produits de données téléchargeables avec titres, descriptions et tailles de fichier."
+          },
+          {
+            "id": "fishbase-gallery-home",
+            "title": "Portée et contexte du portail",
+            "altText": null,
+            "caption": "Capture historique de l’accueil FishBase illustrant navigation et contexte. Les compteurs et mentions de membres dans l’image ne sont pas des mesures actuelles."
+          }
+        ],
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "Environ 3,3 millions de lignes dans quelque 200 tables (dont environ 60 principales), en juin 2026 ; ni un nombre d’espèces ni un nombre d’occurrences."
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "Instantané public historique v25.04 : 194 684 778 octets compressés dans 216 objets Parquet, remesurés le 10 septembre 2026. Images et base active exclues."
+          },
+          {
+            "id": "fishbase-metric-citation-count-google-scholar",
+            "description": "Environ 15 000 citations cumulées dans Google Scholar selon l’étude de 2023 ; date exacte de mesure non vérifiée. La série Scopus distincte dépasse 10 000 citations sur 1994–2020."
+          },
+          {
+            "id": "fishbase-metric-contributor-count",
+            "description": "Borne inférieure : plus de 2 570 collaborateurs sur les pages de la version de juin 2026 ; ni décompte exact ni nombre des seuls contributeurs actifs."
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "36 761 espèces dans les statistiques principales datées de juin 2026 ; le chiffre d’accroche est arrondi."
+          },
+          {
+            "id": "fishbase-storage-v2606",
+            "description": "Instantané public v26.06 : somme de 139 929 828 octets compressés dans 222 objets Parquet au 10 septembre 2026. SeaLifeBase, images et base active exclus. Le préfixe annoncé pour v26.07 était vide."
+          }
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-fishbase-home",
+            "src-fishbase-search",
+            "src-fishbase-impact-study",
+            "src-fishbase-rfishbase-docs",
+            "src-fishbase-sourcecoop",
+            "src-fishbase-citation",
+            "src-fishbase-references-table",
+            "src-fishbase-collaborator-guide",
+            "fishbase-nrm",
+            "fishbase-bruvs",
+            "fishbase-xml",
+            "fishbase-annual-report",
+            "fishbase-s3-v2606"
+          ]
+        },
+        "researchGaps": {
+          "data": "La taille de la base active et des images n’est pas vérifiée ; les tailles mesurées concernent des instantanés compressés précis. README et dépôt divergent sur la dernière version. Aucun total actuel unique d’occurrences ne réconcilie site, GBIF et OBIS.",
+          "usage": "Aucun total actuel vérifié de sessions ou téléchargements à l’échelle du système n’a été trouvé. Le site annonce plus de 700 000 visites mensuelles, pas des sessions. Le rapport 2023 compte 8 731 929 visites et 4 038 119 utilisateurs uniques ; l’analytique du dépôt cumule FishBase et SeaLifeBase.",
+          "access": "Le résumé XML fonctionne, mais tous les anciens liens XML et produits de téléchargement n’ont pas été testés. Coûts de contribution et certaines conditions d’inscription restent non précisés. Aucun itinéraire machine Ryu approuvé n’est enregistré."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "FishBase",
+      "summary": "Глобальная база данных о биоразнообразии лучеперых рыб, охватывающая таксономию, биологию, экологию, жизненный цикл, распространение, рыбохозяйственное использование, изображения, литературу и происхождение данных от участников.",
+      "description": "FishBase — глобальный справочник по морским, солоноватоводным и пресноводным рыбам, развиваемый с конца 1980-х годов. Он связывает таксономию и распространение с экологией, жизненным циклом, морфологией, промысловым использованием, изображениями и литературой. Видовые страницы и инструменты используют исследователи, управляющие рыболовством, преподаватели и специалисты по охране природы. Статистика за июнь 2026 года содержит 36 761 вид, 333 268 записей обиходных названий и около 3,3 млн строк примерно в 200 таблицах. Эти показатели описывают разные сущности и не суммируются.\n\nQuantitative Aquatics (Q-quatics) размещает FishBase и управляет им; Шведский музей естественной истории обслуживает зеркало в Стокгольме. Консорциум FishBase даёт научные рекомендации; опубликованные числа участников расходятся, поэтому точное число и обязательные властные полномочия не предполагаются. Институциональные вклады и гранты поддерживают конкретные работы. Данные проходят кураторскую обработку по литературе и материалам участников; номера ссылок соединяют записи с источниками. Наблюдения, фотографии, исправления и наборы поступают через FishWatcher или сотрудников.\n\nПубличный просмотр бесплатен. XML сводок, CSV съёмок BRUVS, Darwin Core Archive находок и сжатые снимки Parquet предназначены для разных задач. rfishbase читает версионные снимки Source Cooperative, которые могут отставать от сайта и требуют соединения таблиц. README указывает v26.07, но при проверке хранилище содержало v26.06; уточняйте используемую версию. Наличие вида не означает полноты признаков или географии. Текст, числа и карты доступны на условиях атрибуции и некоммерческого использования; фотографии и рисунки сохраняют отдельные права. Цитируйте исходные источники данных и версию FishBase.",
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "fishbase-data-format-parquet-csv",
+              "description": "Съёмки BRUVS и метаданные развёртываний выгружаются в CSV. Это не утверждение о формате текущего снимка базы на Source Cooperative."
+            },
+            {
+              "id": "fishbase-data-format-parquet-csv--format-parquet",
+              "description": "Source Cooperative публикует сжатые версионные файлы Parquet по одному на таблицу. README указывает v26.07, но при проверке в публичном хранилище был v26.06; уточняйте доступные версии."
+            },
+            {
+              "id": "fishbase-data-format-xml",
+              "description": "Рабочая сводка Gadus morhua вернула XML с таксономией, обиходными названиями и описаниями. Остальные связанные XML-экспорты проверены не все."
+            },
+            {
+              "id": "fishbase-data-format-web",
+              "description": "Читаемый человеком веб-интерфейс с поиском, сводками по видам, тематическими страницами, отчетами, картами, инструментами и загружаемыми представлениями видов."
+            },
+            {
+              "id": "fishbase-data-type-distribution",
+              "description": "Информация о странах, экосистемах, районах FAO, естественном ареале, точечных картах, интродукциях и местообитаниях, привязанная к записям видов."
+            },
+            {
+              "id": "fishbase-data-type-ecology",
+              "description": "Рацион, трофическая экология, пищевые объекты, хищники, потребление пищи и связанные с экосистемами записи, используемые в экологическом и рыбохозяйственном анализе."
+            },
+            {
+              "id": "fishbase-data-type-images-media",
+              "description": "Фотографии рыб, рисунки, миниатюры и метаданные предоставленных фотографий с указанием фотографа или учреждения."
+            },
+            {
+              "id": "fishbase-data-type-life-history",
+              "description": "Рост, половое созревание, соотношения длины и массы, плодовитость, нерест, пополнение, численность, смертность и связанные параметры динамики популяций."
+            },
+            {
+              "id": "fishbase-data-type-references",
+              "description": "Литературное происхождение с нумерацией источников, связи данных с источниками, участники и инструкции по цитированию."
+            },
+            {
+              "id": "fishbase-data-type-taxonomy",
+              "description": "Принятые названия, синонимы, классификация, таксономические авторитеты и ссылки на каталожные ресурсы для лучеперых рыб."
+            },
+            {
+              "id": "fishbase-standard-fao_fishing_areas",
+              "description": "Таблица FAOAREAS классифицирует встречаемость видов по основным рыболовным районам FAO. Границы статистические; сведения о видах в районах могут быть неполными."
+            },
+            {
+              "id": "fishbase-standard-asfis",
+              "description": "Поиск ISSCAAP/ASFIS в FishBase поддерживает видовые позиции ASFIS и буквенные коды FAO. Это относится к данному рыболовному поиску."
+            },
+            {
+              "id": "fishbase-standard-isscaap",
+              "description": "Рыболовный поиск FishBase использует группы ISSCAAP и добавляет трофические данные и размеры. FishBase предупреждает о возможном несоответствии правилам качества публикации FAO."
+            },
+            {
+              "id": "fishbase-standard-darwin_core",
+              "description": "FishBase публикует выборку встречаемости в Darwin Core Archive через GBIF Швеция. Указанный выпуск датирован 23 марта 2023 года; это не охватывает текущую реляционную базу."
+            },
+            {
+              "id": "fishbase-standard-eml",
+              "description": "Публикация FishBase на GBIF Швеция предоставляет метаданные EML для архива встречаемости, датированного 23 марта 2023 года."
+            },
+            {
+              "id": "fishbase-standard-dublin_core",
+              "description": "Архив встречаемости FishBase на GBIF Швеция сопоставляет даты изменения с термином modified Dublin Core. Заполненность поля и синтаксис дат различаются между записями."
+            },
+            {
+              "id": "fishbase-format-dwca",
+              "description": "IPT GBIF Sweden распространяет выборку находок FishBase как Darwin Core Archive от 23 марта 2023 года. Это отдельный продукт, не полная реляционная база."
+            },
+            {
+              "id": "fishbase-type-surveys",
+              "description": "BRUVS содержит съёмки, развёртывания, таксоны, относительную численность MaxN, длину и расчётную биомассу. Приманка и схема отбора влияют на интерпретацию; MaxN не является плотностью на единицу площади."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "fishbase-access-sourcecoop",
+            "label": "Сырые снимки Source Cooperative",
+            "description": "Публичные сжатые снимки Parquet доступны без аккаунта и API-ключа. Таблицы требуют соединений и могут отставать от сайта. README указывает v26.07, но хранилище при проверке содержало v26.06. Действуют некоммерческие условия FishBase; аналитика репозитория объединяет FishBase и SeaLifeBase."
+          },
+          {
+            "id": "fishbase-access-downloads",
+            "label": "Раздел загрузок FishBase",
+            "description": "Официальный раздел загрузок FishBase предоставляет вспомогательные документы, электронные таблицы, устаревшие файлы баз данных, графики, плакаты, презентации и приложения. Это смешанная зона загрузок, а не единый актуальный экспорт живой базы данных; используйте хост fishbase.se, потому что эквивалентный путь www.fishbase.org может возвращать 403."
+          },
+          {
+            "id": "fishbase-access-rfishbase",
+            "label": "Пакет R rfishbase",
+            "description": "Программный доступ доступен через пакет R rfishbase. Он читает статические parquet-снимки Source Cooperative через прямой доступ к таблицам в стиле S3/DuckDB; ключ FishBase API не описан, но снимки могут отставать от действующего сайта."
+          },
+          {
+            "id": "fishbase-access-species-summary",
+            "label": "Страницы видов и загрузки XML",
+            "description": "Бесплатно просматривайте сводки видов и переходите по ссылке XML для машиночитаемого экспорта. XML Gadus morhua получен без учётных данных; доступность всех остальных экспортов не проверена."
+          },
+          {
+            "id": "fishbase-access-web",
+            "label": "Бесплатный веб-портал",
+            "description": "Бесплатный публичный веб-доступ для поиска, сводок по видам, тематических страниц, карт, графиков, отчетов и инструментов FishBase. Для просмотра не требуется учетная запись или API-ключ; используйте хост fishbase.se, потому что эквивалентная главная страница www.fishbase.org может возвращать Cloudflare 403."
+          },
+          {
+            "id": "fishbase-submit-fishwatcher",
+            "label": "Наблюдения FishWatcher",
+            "description": "FishWatcher позволяет пользователям получить ID/пароль и загрузить наблюдения рыб, координаты, даты, длины и фотографии для картирования распространения и мониторинга биоразнообразия."
+          },
+          {
+            "id": "fishbase-submit-collaborator",
+            "label": "Курируемые вклады участников",
+            "description": "Добавления и исправления данных проходят через рабочие процессы участников FishBase. Участники получают признание в штампах записей, благодарностях, таблицах участников или отдельных таблицах, когда включаются значительные наборы данных."
+          },
+          {
+            "id": "fishbase-submit-photos",
+            "label": "Фотографические вклады",
+            "description": "Авторы фотографий могут загружать их через страницы видов, отправлять файлы по электронной почте в FishBase/Q-quatics, пересылать физические носители или предоставлять места загрузки. Авторские права остаются у участников, а FishBase добавляет метаданные атрибуции."
+          },
+          {
+            "id": "fishbase-access-bruvs",
+            "label": "Загрузка съёмок BRUVS",
+            "description": "Выберите BRUVS среди инструментов, затем таксоны или территорию и загрузите съёмки из списка. CSV содержит всё обследованное сообщество; нужный таксон отфильтруйте после загрузки. Методика объясняет отбор проб и расчётные значения; не все подтверждения загрузки проверены."
+          },
+          {
+            "id": "fishbase-access-gbif-archive",
+            "label": "Опубликованный архив находок",
+            "description": "IPT GBIF Sweden предоставляет архив находок FishBase и метаданные. Указан выпуск от 23 марта 2023 года: 731 043 записи, обновления нерегулярные. Это датированная выборка, не текущее число записей всей базы."
+          }
+        ],
+        "aliases": [
+          "база данных рыб",
+          "FishBase",
+          "FishBase.org",
+          "FishBase web electronic publication"
+        ],
+        "gallery": [
+          {
+            "id": "fishbase-gallery-species-summary",
+            "title": "Структура записи вида",
+            "altText": null,
+            "caption": "Локальный снимок экрана записи вида FishBase, показывающий таксономию, фотографию, карту распространения, экологию, использование человеком, источники и связанные подзаписи."
+          },
+          {
+            "id": "fishbase-gallery-search",
+            "title": "Поисковые индексы и поля запроса",
+            "altText": null,
+            "caption": "Локальный снимок экрана страницы поиска FishBase, показывающий измерения поиска по общеупотребительному названию, научному названию, глоссарию, ID вида, языку и письменности."
+          },
+          {
+            "id": "fishbase-gallery-downloads",
+            "title": "Загружаемые продукты данных",
+            "altText": null,
+            "caption": "Локальный снимок экрана раздела загрузок FishBase, показывающий загружаемые документы и продукты данных с названиями, описаниями и размерами файлов."
+          },
+          {
+            "id": "fishbase-gallery-home",
+            "title": "Охват и контекст портала",
+            "altText": null,
+            "caption": "Исторический снимок главной страницы FishBase, показывающий навигацию и контекст. Счётчики и сведения о членстве на изображении не являются текущими измерениями."
+          }
+        ],
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "Около 3,3 млн исходных строк примерно в 200 таблицах (около 60 основных), июнь 2026 года; не число видов или находок."
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "Исторический публичный снимок v25.04: 194 684 778 сжатых байтов в 216 объектах Parquet; повторно измерено 10 сентября 2026 года. Без изображений и рабочей базы."
+          },
+          {
+            "id": "fishbase-metric-citation-count-google-scholar",
+            "description": "Около 15 000 накопленных цитирований Google Scholar по статье 2023 года; точная дата измерения не подтверждена. Отдельный ряд Scopus превышает 10 000 за 1994–2020 годы."
+          },
+          {
+            "id": "fishbase-metric-contributor-count",
+            "description": "Нижняя граница: более 2 570 участников на страницах выпуска июня 2026 года; не точный реестр и не число только действующих участников."
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "36 761 вид в основных данных за июнь 2026 года; число в заголовке округлено."
+          },
+          {
+            "id": "fishbase-storage-v2606",
+            "description": "Публичный снимок v26.06: сумма 139 929 828 сжатых байтов по всем 222 объектам Parquet на 10 сентября 2026 года. Без SeaLifeBase, изображений и рабочей базы. Объявленный префикс v26.07 был пуст."
+          }
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-fishbase-home",
+            "src-fishbase-search",
+            "src-fishbase-impact-study",
+            "src-fishbase-rfishbase-docs",
+            "src-fishbase-sourcecoop",
+            "src-fishbase-citation",
+            "src-fishbase-references-table",
+            "src-fishbase-collaborator-guide",
+            "fishbase-nrm",
+            "fishbase-bruvs",
+            "fishbase-xml",
+            "fishbase-annual-report",
+            "fishbase-s3-v2606"
+          ]
+        },
+        "researchGaps": {
+          "data": "Размер рабочей базы и архива изображений не проверен; измерены конкретные сжатые снимки. README и хранилище расходятся в последней версии. Единое текущее число находок для сайта, GBIF и OBIS не установлено.",
+          "usage": "Текущие подтверждённые общесистемные итоги сессий или загрузок не найдены. Главная страница сообщает более 700 000 посещений в месяц, не сессий. Отчёт 2023 года приводит 8 731 929 посещений и 4 038 119 уникальных пользователей; аналитика репозитория объединяет FishBase и SeaLifeBase.",
+          "access": "XML-сводка работает, но не все старые XML-ссылки и продукты загрузки проверены. Стоимость участия и некоторые условия подключения не определены. Утверждённый машинный маршрут Ryu пока не записан."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "FishBase",
+      "summary": "全球性有鳍鱼类生物多样性数据库，涵盖分类学、生物学、生态学、生活史、分布、渔业用途、图像、参考文献和协作者来源。",
+      "description": "FishBase是覆盖海水、半咸水及淡水鱼类的全球参考数据库，自20世纪80年代末开始发展。它将分类和分布信息与生态、生活史、形态、渔业用途、图像和文献相连接，供研究人员、渔业管理者、教育工作者及保护实践者使用物种页面和分析工具。明确标注2026年6月的统计列出36,761个物种、333,268条俗名记录，以及约200张表中的约330万行数据。这些指标对应不同内容，不应相加。\n\nQuantitative Aquatics（Q-quatics）负责托管和管理FishBase，瑞典自然历史博物馆提供斯德哥尔摩镜像服务。FishBase联盟提供科学咨询；公开成员数量存在差异，因此不认定确切人数或具有约束力的治理权限。机构贡献和项目资助支持特定活动。团队整理出版文献及协作者提交的数据，通过参考文献编号将条目与证据关联。观测、照片、更正和数据集经FishWatcher或工作人员协调的流程提交。\n\n公众可免费浏览。物种摘要XML、BRUVS调查CSV、物种出现Darwin Core档案及压缩Parquet表快照分别满足不同获取需求。rfishbase读取Source Cooperative的版本化快照，可能落后于实时网站，使用时常需关联多张表。README标为v26.07，而本次公共存储桶中实际存在v26.06，须核实所用版本。收录某物种不代表其性状或地理信息完整。文字、数字及地图适用署名和非商业使用条款；照片和绘图保留各自权利。引用时应注明原始数据文献及FishBase版本。",
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "fishbase-data-format-parquet-csv",
+              "description": "BRUVS调查及设备部署元数据以CSV下载。此范围不表示当前Source Cooperative数据库快照提供CSV。"
+            },
+            {
+              "id": "fishbase-data-format-parquet-csv--format-parquet",
+              "description": "Source Cooperative按数据库表提供带版本的压缩Parquet文件。README标为v26.07，本次公共存储桶列出的最新版本为v26.06；使用前须确认可用版本。"
+            },
+            {
+              "id": "fishbase-data-format-xml",
+              "description": "Gadus morhua摘要端点实际返回了含分类、俗名及描述的XML。其他关联XML导出尚未全部验证。"
+            },
+            {
+              "id": "fishbase-data-format-web",
+              "description": "供人阅读的网页界面，包含搜索、物种摘要、专题页、报告、地图、工具和可下载的物种视图。"
+            },
+            {
+              "id": "fishbase-data-type-distribution",
+              "description": "附加到物种记录的国家、生态系统、FAO 区域、原生范围、点位图、引入和栖息地信息。"
+            },
+            {
+              "id": "fishbase-data-type-ecology",
+              "description": "用于生态和渔业分析的食性、营养生态、食物项目、捕食者、食物消耗和生态系统关联记录。"
+            },
+            {
+              "id": "fishbase-data-type-images-media",
+              "description": "鱼类照片、绘图、缩略图和贡献照片元数据，并附摄影者或机构署名。"
+            },
+            {
+              "id": "fishbase-data-type-life-history",
+              "description": "生长、成熟、体长-体重、繁殖力、产卵、补充量、丰度、死亡率及相关种群动态参数。"
+            },
+            {
+              "id": "fishbase-data-type-references",
+              "description": "带参考编号的文献来源、数据-参考链接、协作者和引用说明。"
+            },
+            {
+              "id": "fishbase-data-type-taxonomy",
+              "description": "有鳍鱼类的接受名、同物异名、分类、分类学权威以及编目资源链接。"
+            },
+            {
+              "id": "fishbase-standard-fao_fishing_areas",
+              "description": "FishBase 的 FAOAREAS 表按 FAO 主要渔区划分物种出现记录。这些边界用于统计，物种在各区域的记录可能不完整。"
+            },
+            {
+              "id": "fishbase-standard-asfis",
+              "description": "FishBase 的 ISSCAAP/ASFIS 查询支持 ASFIS 物种条目及 FAO 字母代码搜索。此项仅适用于该渔业查询功能。"
+            },
+            {
+              "id": "fishbase-standard-isscaap",
+              "description": "FishBase 渔业查询使用 ISSCAAP 物种组，并补充营养级和体型信息。FishBase 提醒，该服务可能未满足 FAO 信息发布质量保证规则。"
+            },
+            {
+              "id": "fishbase-standard-darwin_core",
+              "description": "FishBase 通过 GBIF 瑞典以 Darwin Core Archive 发布出现记录提取集。所列版本发布日期为 2023 年 3 月 23 日；此项不涵盖实时关系数据库。"
+            },
+            {
+              "id": "fishbase-standard-eml",
+              "description": "FishBase 在 GBIF 瑞典的发布提供出现记录档案的 EML 数据集元数据，所列发布日期为 2023 年 3 月 23 日。"
+            },
+            {
+              "id": "fishbase-standard-dublin_core",
+              "description": "FishBase 在 GBIF 瑞典的出现记录档案将修改日期映射到 Dublin Core 的 modified 术语。各记录的字段填充情况和日期语法不一。"
+            },
+            {
+              "id": "fishbase-format-dwca",
+              "description": "GBIF瑞典IPT以Darwin Core Archive发布FishBase物种出现记录摘录，发布日期为2023年3月23日；该档案并非完整关系数据库。"
+            },
+            {
+              "id": "fishbase-type-surveys",
+              "description": "BRUVS数据包括调查、设备部署、已鉴定分类单元、相对丰度（MaxN）、长度及推算生物量。诱饵和采样设计会影响解释；MaxN并非单位面积密度。"
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "fishbase-access-sourcecoop",
+            "label": "Source Cooperative 原始快照",
+            "description": "公共压缩Parquet快照无需账户或API密钥。其数据库表需要关联查询，且可能落后于网站。README标为v26.07，本次存储桶列出v26.06。适用FishBase非商业使用条款；该仓库分析统计合并了FishBase和SeaLifeBase。"
+          },
+          {
+            "id": "fishbase-access-downloads",
+            "label": "FishBase 下载区",
+            "description": "官方 FishBase 下载区提供支持文档、电子表格、旧版数据库文件、图表、海报、演示文稿和应用程序。它是混合下载区，而不是单一的当前实时数据库导出；应使用 fishbase.se 主机，因为等效的 www.fishbase.org 路径可能返回 403。"
+          },
+          {
+            "id": "fishbase-access-rfishbase",
+            "label": "rfishbase R 包",
+            "description": "可通过 R 语言 rfishbase 包进行程序化访问。它通过直接的 S3/DuckDB 式表访问读取 Source Cooperative 静态 parquet 快照；未说明需要 FishBase API 密钥，但快照可能滞后于实时网站。"
+          },
+          {
+            "id": "fishbase-access-species-summary",
+            "label": "物种页面和 XML 下载",
+            "description": "可免费浏览物种摘要，并通过XML摘要链接获取机器可读导出。Gadus morhua的XML已成功无凭据获取；其他所有关联导出是否可用尚未逐一验证。"
+          },
+          {
+            "id": "fishbase-access-web",
+            "label": "免费网页门户",
+            "description": "提供搜索、物种摘要、专题页、地图、图表、报告和 FishBase 工具的免费公共网页访问。浏览不需要账户或 API 密钥；应使用 fishbase.se 主机，因为等效的 www.fishbase.org 主页可能返回 Cloudflare 403。"
+          },
+          {
+            "id": "fishbase-submit-fishwatcher",
+            "label": "FishWatcher 观测",
+            "description": "FishWatcher 允许用户获取 ID/密码并上传鱼类观测、坐标、日期、长度和照片，用于分布制图和生物多样性监测。"
+          },
+          {
+            "id": "fishbase-submit-collaborator",
+            "label": "经整理的协作者贡献",
+            "description": "数据新增和更正通过 FishBase 协作者工作流调解。贡献者会在记录印章、致谢、协作者表或专用表中获得署名，特别是在纳入重要数据集时。"
+          },
+          {
+            "id": "fishbase-submit-photos",
+            "label": "照片贡献",
+            "description": "照片贡献者可通过物种页面上传，向 FishBase/Q-quatics 发送电子邮件文件，寄送实体介质，或提供下载位置。版权仍归贡献者所有，FishBase 会附加署名元数据。"
+          },
+          {
+            "id": "fishbase-access-bruvs",
+            "label": "BRUVS调查下载",
+            "description": "在搜索工具中选择BRUVS，再按分类或地理范围选择调查下载。CSV包含整次调查的群落记录，须随后筛选所需分类单元。手册解释采样及推算值；未测试所有下载确认步骤。"
+          },
+          {
+            "id": "fishbase-access-gbif-archive",
+            "label": "已发布的出现记录档案",
+            "description": "GBIF瑞典IPT提供FishBase出现记录档案及数据集元数据。所列版本发布于2023年3月23日，包含731,043条档案记录，更新不定期；这是有日期的摘录，不是整个FishBase的实时记录总数。"
+          }
+        ],
+        "aliases": [
+          "鱼类数据库",
+          "FishBase",
+          "FishBase.org",
+          "FishBase web electronic publication"
+        ],
+        "gallery": [
+          {
+            "id": "fishbase-gallery-species-summary",
+            "title": "物种记录结构",
+            "altText": null,
+            "caption": "FishBase 物种记录的本地截图，显示分类、照片、分布图、生态、人类用途、参考文献和链接的子记录。"
+          },
+          {
+            "id": "fishbase-gallery-search",
+            "title": "搜索索引和查询字段",
+            "altText": null,
+            "caption": "FishBase 搜索页面的本地截图，显示俗名、学名、术语表、物种 ID、语言和文字系统等查询维度。"
+          },
+          {
+            "id": "fishbase-gallery-downloads",
+            "title": "可下载数据产品",
+            "altText": null,
+            "caption": "FishBase 下载区的本地截图，显示可下载文档和数据产品及其标题、说明和文件大小。"
+          },
+          {
+            "id": "fishbase-gallery-home",
+            "title": "门户范围和背景",
+            "altText": null,
+            "caption": "FishBase首页的历史截图，展示导航及门户背景。图中的计数和成员表述不代表当前测量值。"
+          }
+        ],
+        "metrics": [
+          {
+            "id": "fishbase-metric-record-count",
+            "description": "2026年6月报告约330万条原生数据行，分布于约200张表（约60张主表）；不是物种数或出现记录数。"
+          },
+          {
+            "id": "fishbase-metric-storage-size-bytes",
+            "description": "历史公共v25.04快照：216个Parquet对象共194,684,778压缩字节，于2026年9月10日重新测得；不含图片和实时数据库。"
+          },
+          {
+            "id": "fishbase-metric-citation-count-google-scholar",
+            "description": "2023年影响力论文报告Google Scholar累计引用约15,000次，确切观测日期未核实；另行统计的Scopus序列在1994—2020年超过10,000次。"
+          },
+          {
+            "id": "fishbase-metric-contributor-count",
+            "description": "下限值：2026年6月版本页面称有超过2,570名协作者；不是精确名册人数，也不等于当前活跃贡献者人数。"
+          },
+          {
+            "id": "fishbase-metric-species-count",
+            "description": "明确标注2026年6月的主要统计列出36,761个物种；首页标题数字经过取整。"
+          },
+          {
+            "id": "fishbase-storage-v2606",
+            "description": "公共v26.06快照：2026年9月10日全部222个Parquet对象合计139,929,828压缩字节；不含SeaLifeBase、图片和实时数据库。README所称v26.07在指定存储桶前缀下不存在。"
+          }
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-fishbase-home",
+            "src-fishbase-search",
+            "src-fishbase-impact-study",
+            "src-fishbase-rfishbase-docs",
+            "src-fishbase-sourcecoop",
+            "src-fishbase-citation",
+            "src-fishbase-references-table",
+            "src-fishbase-collaborator-guide",
+            "fishbase-nrm",
+            "fishbase-bruvs",
+            "fishbase-xml",
+            "fishbase-annual-report",
+            "fishbase-s3-v2606"
+          ]
+        },
+        "researchGaps": {
+          "data": "实时数据库及图片档案大小未核实；测量值仅对应特定压缩快照。README与公共桶对最新版本的表述不一致。网站、GBIF和OBIS摘录之间尚无统一的当前出现记录总数。",
+          "usage": "未找到经验证的当前全系统会话数或下载事件总数。首页称每月超过700,000次访问，并非会话。2023年报告另列8,731,929次访问和4,038,119名独立用户；仓库分析合并FishBase及SeaLifeBase。",
+          "access": "XML摘要可用，但未逐一测试所有旧XML链接及各类下载产品。贡献费用和部分加入条件仍未说明。目前未登记获准使用的Ryu机器访问路径。"
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-fishbase-member-of-platform-obis",
+      "sourceNodeId": "fishbase",
+      "targetNodeId": "platform-obis",
+      "kind": "member_of",
+      "note": "The OBIS Fish OBIS node page explicitly identifies FishBase and FishNet2 as participating systems in the global thematic Fish OBIS node. This represents FishBase participation in OBIS through that node, not organizational membership or component ownership. The page describes intended FishBase contributions; current delivery is assessed separately.",
+      "properties": {
+        "via": "Fish OBIS",
+        "scope": "OBIS network participation through the Fish OBIS thematic node",
+        "status": "listed participant",
+        "sourceRefs": [
+          "evidence"
+        ]
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://portal.obis.org/node/dcb0c76d-46a1-4e07-9a69-98cf3fd67576",
+          "title": {
+            "ar": "العقدة الموضوعية Fish OBIS والأنظمة المشاركة",
+            "en": "Fish OBIS thematic node and participating systems",
+            "es": "Nodo temático Fish OBIS y sistemas participantes",
+            "fr": "Nœud thématique Fish OBIS et systèmes participants",
+            "ru": "Тематический узел Fish OBIS и участвующие системы",
+            "zh": "Fish OBIS专题节点与参与系统"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-fishbase-syncs-to-aquamaps",
+      "sourceNodeId": "fishbase",
+      "targetNodeId": "aquamaps",
+      "kind": "syncs_to",
+      "note": "AquaMaps uses FishBase FAO-area coverage, distribution bounds and depth ranges as inputs to species distribution modelling. This is a documented input-data transfer; the homepage model description is labelled version 10/2019 and does not establish a current ingestion date or cadence.",
+      "properties": {
+        "scope": "Fish distribution and habitat inputs to predictive range maps",
+        "status": "documented; latest transfer date unverified",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "transferMethod": "Model input extraction from FishBase; cadence unspecified"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://aquamaps.org/main/home.php",
+          "title": {
+            "ar": "نموذج AquaMaps والبيانات المستخدمة",
+            "en": "AquaMaps model and data inputs",
+            "es": "Modelo AquaMaps y datos utilizados",
+            "fr": "Modèle AquaMaps et données utilisées",
+            "ru": "Модель AquaMaps и исходные данные",
+            "zh": "AquaMaps模型与输入数据"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-fishbase-syncs-to-gbif",
+      "sourceNodeId": "fishbase",
+      "targetNodeId": "gbif",
+      "kind": "syncs_to",
+      "note": "FishBase publishes an occurrence dataset through the GBIF-Sweden IPT, registered with GBIF. The publisher lists 731,043 archive records, a latest publication date of 2023-03-23 and irregular updates. The archive count is not a verified count of currently indexed GBIF occurrences.",
+      "properties": {
+        "scope": "FishBase occurrence dataset via GBIF-Sweden",
+        "format": "Darwin Core Archive",
+        "status": "published snapshot; current refresh unverified",
+        "artifact": "https://www.gbif.se/ipt/resource?r=fishbase",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "transferMethod": "GBIF-Sweden IPT Darwin Core Archive publication",
+        "updateFrequency": "irregular",
+        "latestPublishedAt": "2023-03-23"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.gbif.se/ipt/resource?r=fishbase",
+          "title": {
+            "ar": "أرشيف سجلات وجود الأنواع في FishBase المنشور عبر GBIF-Sweden",
+            "en": "FishBase occurrence archive published through GBIF-Sweden",
+            "es": "Archivo de presencias de FishBase publicado mediante GBIF-Sweden",
+            "fr": "Archive des occurrences FishBase publiée via GBIF-Sweden",
+            "ru": "Архив находок FishBase, опубликованный через GBIF-Sweden",
+            "zh": "通过GBIF-Sweden发布的FishBase物种出现记录档案"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-fishbase-syncs-to-platform-obis",
+      "sourceNodeId": "fishbase",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "OBIS hosts an archive of FishBase occurrence records harvested from the GBIF-Sweden-hosted resource. The available archive was published on 2018-10-10 and lists an unknown update frequency. This records the historical transfer path; an ongoing refresh is not established.",
+      "properties": {
+        "scope": "Historical harvest of FishBase occurrence data via GBIF-Sweden",
+        "format": "Darwin Core Archive",
+        "status": "historical; current refresh unknown",
+        "artifact": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "transferMethod": "OBIS harvest of the GBIF-Sweden-hosted FishBase resource",
+        "updateFrequency": "unknown",
+        "latestPublishedAt": "2018-10-10"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+          "title": {
+            "ar": "أرشيف سجلات وجود الأنواع في FishBase الذي جمعه OBIS",
+            "en": "FishBase occurrence archive harvested by OBIS",
+            "es": "Archivo de presencias de FishBase recopilado por OBIS",
+            "fr": "Archive des occurrences FishBase collectée par OBIS",
+            "ru": "Архив находок FishBase, собранный OBIS",
+            "zh": "OBIS采集的FishBase物种出现记录档案"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-fishbase-syncs-to-source-cooperative",
+      "sourceNodeId": "fishbase",
+      "targetNodeId": "source-cooperative",
+      "kind": "syncs_to",
+      "note": "The FishBase team supplies backend MySQL dumps roughly annually to Carl Boettiger, who converts and publishes versioned Parquet snapshots on Source Cooperative for rfishbase. This is periodic redistribution through the named maintainer, not live replication. The README identifies fb/v26.07, but the public bucket listed fb/v26.06 and no objects under the documented v26.07 prefix on 10 September 2026; this version discrepancy is unresolved.",
+      "properties": {
+        "scope": "Versioned FishBase backend table exports",
+        "format": "parquet",
+        "status": "periodic",
+        "artifact": "cboettig/fishbase/fb/v26.06",
+        "sourceRefs": [
+          "evidence",
+          "bucket"
+        ],
+        "transferMethod": "FishBase team MySQL dump to Carl Boettiger; conversion to Parquet and publication on Source Cooperative",
+        "updateFrequency": "roughly annual"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://source.coop/cboettig/fishbase",
+          "title": {
+            "ar": "لقطات قاعدة بيانات FishBase على Source Cooperative",
+            "en": "FishBase backend snapshots on Source Cooperative",
+            "es": "Instantáneas de la base FishBase en Source Cooperative",
+            "fr": "Instantanés de la base FishBase sur Source Cooperative",
+            "ru": "Снимки базы FishBase на Source Cooperative",
+            "zh": "Source Cooperative上的FishBase数据库快照"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "bucket": {
+          "id": "bucket",
+          "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v26.06/parquet/",
+          "title": {
+            "en": "FishBase v26.06 public Parquet object listing",
+            "fr": "Liste des objets Parquet publics FishBase v26.06",
+            "es": "Listado de objetos Parquet públicos FishBase v26.06",
+            "ar": "قائمة ملفات Parquet العامة لـ FishBase v26.06",
+            "zh": "FishBase v26.06公共Parquet对象列表",
+            "ru": "Список публичных объектов Parquet FishBase v26.06"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-fishbase-syncs-to-worms",
+      "sourceNodeId": "fishbase",
+      "targetNodeId": "worms",
+      "kind": "syncs_to",
+      "note": "WoRMS explicitly identifies FishBase as an external database from which it currently imports information, principally taxonomy. This establishes FishBase-to-WoRMS transfer; no reciprocal transfer or fixed refresh schedule is asserted.",
+      "properties": {
+        "scope": "Fish taxonomy imported into Aphia and presented through WoRMS",
+        "status": "active",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "transferMethod": "External database import; implementation and cadence unspecified"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "قواعد البيانات الخارجية الشريكة لـ WoRMS",
+            "en": "WoRMS external database partners",
+            "es": "Bases de datos externas asociadas a WoRMS",
+            "fr": "Bases partenaires externes de WoRMS",
+            "ru": "Внешние базы данных — партнёры WoRMS",
+            "zh": "WoRMS外部合作数据库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-q-quatics-operates-fishbase",
+      "sourceNodeId": "q-quatics",
+      "targetNodeId": "fishbase",
+      "kind": "operates",
+      "note": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "sourceRefs": [
+          "src-relationship-fishbase"
+        ],
+        "status": "current documented hosting and management"
+      },
+      "sources": {
+        "src-relationship-fishbase": {
+          "id": "src-relationship-fishbase",
+          "url": "https://fishbase.se/home.php",
+          "title": {
+            "ar": "الصفحة الرئيسية لـ FishBase",
+            "en": "FishBase homepage",
+            "es": "Página de inicio de FishBase",
+            "fr": "Page d’accueil de FishBase",
+            "ru": "Главная страница FishBase",
+            "zh": "FishBase主页"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-royal-museum-for-central-africa-publishes-to-fishbase",
+      "sourceNodeId": "royal-museum-for-central-africa",
+      "targetNodeId": "fishbase",
+      "kind": "publishes_to",
+      "note": "The museum’s 2023 account documents FishBase contributions beginning with digitisation of its African fish collection in 1997 and, from 2001, checking and updating information on African freshwater and brackish-water fishes from published literature. This records evidenced historical contributions; continued activity in 2026 is unverified.",
+      "properties": {
+        "scope": "African fish collection data and curated freshwater/brackish-water fish information",
+        "period": "Collection contributions from 1997 and curated updates from 2001, documented in 2023",
+        "status": "documented historical contribution; current continuation unverified",
+        "sourceRefs": [
+          "evidence"
+        ]
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.africamuseum.be/en/staff/795/publication_detail_view?pubid=6525",
+          "title": {
+            "ar": "FishBase لأفريقيا: 25 عاماً من مساهمات المتحف الملكي لأفريقيا الوسطى (2023)",
+            "en": "FishBase for Africa: 25 years of contributions by the Royal Museum for Central Africa (2023)",
+            "es": "FishBase para África: 25 años de contribuciones del Museo Real de África Central (2023)",
+            "fr": "FishBase pour l’Afrique : 25 ans de contributions du Musée royal de l’Afrique centrale (2023)",
+            "ru": "FishBase для Африки: 25 лет вклада Королевского музея Центральной Африки (2023)",
+            "zh": "非洲FishBase：中非皇家博物馆25年的贡献（2023）"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-university-of-western-australia-funds-fishbase",
+      "sourceNodeId": "university-of-western-australia",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics identifies a University of Western Australia grant awarded to Q-quatics to improve Australian marine biodiversity coverage in FishBase and SeaLifeBase, described as since 2017. This edge covers the FishBase activity supported through Q-quatics; no amount, exclusive funding role, end date or continuation in 2026 is established.",
+      "properties": {
+        "scope": "Improving Australian marine biodiversity coverage in FishBase; grant also supports SeaLifeBase",
+        "period": "Support described as starting in 2017; end date and continuation in 2026 unverified",
+        "status": "documented funding; current continuation unverified",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "intermediary": "q-quatics"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.q-quatics.org/affiliated-projects/",
+          "title": {
+            "ar": "مشروعات Q-quatics وشركاؤها الممولون وعضوية الاتحاد",
+            "en": "Q-quatics projects, funding partners and consortium membership",
+            "es": "Proyectos, socios financiadores y miembros del consorcio de Q-quatics",
+            "fr": "Projets, partenaires financiers et membres du consortium de Q-quatics",
+            "ru": "Проекты, финансовые партнёры и членство в консорциуме Q-quatics",
+            "zh": "Q-quatics项目、资助伙伴与联盟成员"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-swedish-museum-of-natural-history-funds-fishbase",
+      "sourceNodeId": "swedish-museum-of-natural-history",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for New species and species updates in FishBase. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "New species and species updates in FishBase",
+        "period": "2023-01-30/2023-03-31",
+        "status": "completed in 2023",
+        "intermediary": "q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-geomar-funds-fishbase",
+      "sourceNodeId": "geomar",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for FishBase data and web services. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "FishBase data and web services",
+        "period": "2023-02-01/2023-12-31",
+        "status": "completed in 2023",
+        "intermediary": "q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-mundus-maris-funds-fishbase",
+      "sourceNodeId": "mundus-maris",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for FishBase Guide Android app version 2. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "FishBase Guide Android app version 2",
+        "period": "2023-05-01/2023-06-01",
+        "status": "completed in 2023",
+        "intermediary": "q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worldfish-funds-fishbase",
+      "sourceNodeId": "worldfish",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for FishBase ontology and taxonomy. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "FishBase ontology and taxonomy",
+        "period": "2023-09-01/2023-12-15",
+        "status": "completed in 2023",
+        "intermediary": "q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-oman-ministry-of-agriculture-fisheries-and-water-resources-funds-fishbase",
+      "sourceNodeId": "oman-ministry-of-agriculture-fisheries-and-water-resources",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for Oman biodiversity information updates in FishBase; a joint project also covering Sea Around Us and SeaLifeBase. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "Oman biodiversity information updates in FishBase; a joint project also covering Sea Around Us and SeaLifeBase",
+        "period": "2023-07-12/2024-01-11",
+        "status": "historical project; continuation after stated end unverified",
+        "intermediary": "Sea Around Us and Q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-swire-institute-of-marine-science-funds-fishbase",
+      "sourceNodeId": "swire-institute-of-marine-science",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for Phase 3 collaboration on FishBase and SeaLifeBase international marine databases. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "Phase 3 collaboration on FishBase and SeaLifeBase international marine databases",
+        "period": "2023-01-01/2025-12-31",
+        "status": "historical project; continuation after stated end unverified",
+        "intermediary": "Sea Around Us and Q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-university-of-lorraine-funds-fishbase",
+      "sourceNodeId": "university-of-lorraine",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for Saint-Pierre and Miquelon species-list updates in FishBase and SeaLifeBase. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "Saint-Pierre and Miquelon species-list updates in FishBase and SeaLifeBase",
+        "period": "2023-10/2025-12",
+        "status": "historical project; continuation after stated end unverified",
+        "intermediary": "Sea Around Us and Q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-minderoo-foundation-funds-fishbase",
+      "sourceNodeId": "minderoo-foundation",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for FishBase data-platform extension for baited remote underwater video systems (BRUVS). This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "FishBase data-platform extension for baited remote underwater video systems (BRUVS)",
+        "period": "2020-08-31/2025-07-31",
+        "status": "historical project; continuation after stated end unverified",
+        "intermediary": "University of Western Australia and Q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-blue-abacus-funds-fishbase",
+      "sourceNodeId": "blue-abacus",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for Joint FishBase/SeaLifeBase core support; FishBase share not itemized. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "Joint FishBase/SeaLifeBase core support; FishBase share not itemized",
+        "period": "2023-05",
+        "status": "reported contribution; later support unverified",
+        "intermediary": "q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-bloom-association-funds-fishbase",
+      "sourceNodeId": "bloom-association",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for Joint FishBase/SeaLifeBase general support; FishBase share not itemized. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "Joint FishBase/SeaLifeBase general support; FishBase share not itemized",
+        "period": "2023-12",
+        "status": "reported contribution; later support unverified",
+        "intermediary": "q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-csiro-funds-fishbase",
+      "sourceNodeId": "csiro",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for Joint FishBase/SeaLifeBase support; FishBase share not itemized. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "Joint FishBase/SeaLifeBase support; FishBase share not itemized",
+        "period": "2022-07-01/2023-06-30",
+        "status": "report describes support since July 2020; 2026 continuation unverified",
+        "intermediary": "q-quatics",
+        "sourceRefs": [
+          "report"
+        ]
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-swedish-museum-of-natural-history-operates-fishbase",
+      "sourceNodeId": "swedish-museum-of-natural-history",
+      "targetNodeId": "fishbase",
+      "kind": "operates",
+      "note": "FishBase’s current search page identifies the Swedish Museum of Natural History as serving fishbase.org and locates this mirror in Stockholm. The museum separately documents its FishBase Sweden team. This is scoped mirror/service operation, not exclusive global operation or governance.",
+      "properties": {
+        "scope": "Stockholm mirror and FishBase Sweden service team",
+        "status": "current documented service in June 2026 site release and August 2026 museum page",
+        "sourceRefs": [
+          "mirror",
+          "institution"
+        ]
+      },
+      "sources": {
+        "mirror": {
+          "id": "mirror",
+          "url": "https://fishbase.se/search.php",
+          "title": {
+            "ar": "البحث في FishBase",
+            "en": "FishBase Search",
+            "es": "Búsqueda en FishBase",
+            "fr": "Recherche dans FishBase",
+            "ru": "Поиск в FishBase",
+            "zh": "FishBase搜索"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "institution": {
+          "id": "institution",
+          "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+          "title": {
+            "en": "FishBase Sweden at the Swedish Museum of Natural History",
+            "fr": "FishBase Suède au Muséum suédois d’histoire naturelle",
+            "es": "FishBase Suecia en el Museo Sueco de Historia Natural",
+            "ar": "FishBase السويد في المتحف السويدي للتاريخ الطبيعي",
+            "zh": "瑞典自然历史博物馆的FishBase瑞典团队",
+            "ru": "FishBase Sweden в Шведском музее естественной истории"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-blue-abacus-publishes-to-fishbase",
+      "sourceNodeId": "blue-abacus",
+      "targetNodeId": "fishbase",
+      "kind": "publishes_to",
+      "note": "FishBase’s Blue Abacus collaborator profile explicitly records supplied BRUVS videos and photos, with participation listed since 2025. This covers documented media contributions, not all Blue Abacus survey data or a live automated feed.",
+      "properties": {
+        "scope": "BRUVS videos and photographs published in FishBase",
+        "period": "since 2025 as listed in collaborator profile",
+        "status": "documented institutional contribution",
+        "sourceRefs": [
+          "contributor"
+        ]
+      },
+      "sources": {
+        "contributor": {
+          "id": "contributor",
+          "url": "https://fishbase.se/collaborators/CollaboratorSummary.php?id=2903",
+          "title": {
+            "en": "FishBase Blue Abacus contributor profile",
+            "fr": "Profil du contributeur Blue Abacus dans FishBase",
+            "es": "Perfil del colaborador Blue Abacus en FishBase",
+            "ar": "ملف مساهم Blue Abacus في FishBase",
+            "zh": "FishBase中的Blue Abacus贡献者档案",
+            "ru": "Профиль участника Blue Abacus в FishBase"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-eschmeyers-catalog-of-fishes-syncs-to-fishbase",
+      "sourceNodeId": "eschmeyers-catalog-of-fishes",
+      "targetNodeId": "fishbase",
+      "kind": "syncs_to",
+      "note": "The Catalog’s official current project page states that FishBase uses its taxonomic information in its authority file. FishBase’s 2010 explanation documents editorial incorporation and reconciliation, including deliberate differences and update delays. This supports taxonomy flowing into FishBase; no automated feed, reciprocal transfer, full equivalence or current refresh interval is asserted.",
+      "properties": {
+        "scope": "Taxonomic and nomenclatural information used in the FishBase authority backbone",
+        "status": "Use corroborated by current Catalog project page; historical editorial workflow described in 2010",
+        "transferMethod": "Editorial incorporation and reconciliation; present technical transport unspecified",
+        "updateFrequency": "Not established",
+        "sourceRefs": [
+          "catalog-project",
+          "fishbase-taxonomy-note"
+        ]
+      },
+      "sources": {
+        "catalog-project": {
+          "id": "catalog-project",
+          "url": "https://www.calacademy.org/scientists/projects/catalog-of-fishes",
+          "title": {
+            "en": "Eschmeyer’s Catalog of Fishes: official project and FishBase use",
+            "fr": "Catalogue des poissons d’Eschmeyer : projet officiel et utilisation par FishBase",
+            "es": "Catálogo de peces de Eschmeyer: proyecto oficial y uso en FishBase",
+            "ar": "كتالوج أسماك إيشماير: المشروع الرسمي واستخدامه في FishBase",
+            "zh": "埃施迈尔鱼类目录：官方项目及FishBase使用说明",
+            "ru": "Каталог рыб Эшмейера: официальный проект и использование в FishBase"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "fishbase-taxonomy-note": {
+          "id": "fishbase-taxonomy-note",
+          "url": "https://fishbase.se/Nomenclature/FBCofFNames.php",
+          "title": {
+            "en": "FishBase and Catalog of Fishes taxonomy comparison (2010)",
+            "fr": "Comparaison taxonomique de FishBase et du Catalogue des poissons (2010)",
+            "es": "Comparación taxonómica de FishBase y el Catálogo de peces (2010)",
+            "ar": "مقارنة تصنيفية بين FishBase وكتالوج الأسماك (2010)",
+            "zh": "FishBase与鱼类目录的分类比较（2010年）",
+            "ru": "Сравнение таксономии FishBase и Каталога рыб (2010)"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

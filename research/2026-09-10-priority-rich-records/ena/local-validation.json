@@ -1,0 +1,298 @@
+{
+  "results": [
+    {
+      "id": "ena",
+      "shape": {
+        "valid": true,
+        "recordId": "ena",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "ena",
+        "issues": [],
+        "warnings": [
+          "No gallery: acceptable when no useful, accessible capture is available.",
+          "No approved machine route is recorded.",
+          "Documented research gaps remain; omitted values have not been invented."
+        ],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 38,
+          "resolvedSources": 38,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "bbsrc",
+      "shape": {
+        "valid": true,
+        "recordId": "bbsrc",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "bbsrc",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "wellcome",
+      "shape": {
+        "valid": true,
+        "recordId": "wellcome",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "wellcome",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "gordon-and-betty-moore-foundation",
+      "shape": {
+        "valid": true,
+        "recordId": "gordon-and-betty-moore-foundation",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "gordon-and-betty-moore-foundation",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "niaid",
+      "shape": {
+        "valid": true,
+        "recordId": "niaid",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "niaid",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "novo-nordisk-foundation",
+      "shape": {
+        "valid": true,
+        "recordId": "novo-nordisk-foundation",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "novo-nordisk-foundation",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "wellcome-sanger-institute",
+      "shape": {
+        "valid": true,
+        "recordId": "wellcome-sanger-institute",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "wellcome-sanger-institute",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "biosamples",
+      "shape": {
+        "valid": true,
+        "recordId": "biosamples",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "biosamples",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "genoscope",
+      "shape": {
+        "valid": true,
+        "recordId": "genoscope",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "genoscope",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "endpoints": [
+    {
+      "id": "link-ddbj-ena",
+      "valid": true,
+      "sourceKind": "system",
+      "targetKind": "system"
+    },
+    {
+      "id": "link-ena-genbank",
+      "valid": true,
+      "sourceKind": "system",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-embl-ebi-operates-european-nucleotide-archive",
+      "valid": true,
+      "sourceKind": "organization",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-ena-member-of-insdc",
+      "valid": true,
+      "sourceKind": "system",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-ena-syncs-to-ddbj",
+      "valid": true,
+      "sourceKind": "system",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-ena-syncs-to-mgnify",
+      "valid": true,
+      "sourceKind": "system",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-genbank-syncs-to-ena",
+      "valid": true,
+      "sourceKind": "system",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-embl-funds-ena",
+      "valid": true,
+      "sourceKind": "organization",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-eur-funds-ena",
+      "valid": true,
+      "sourceKind": "organization",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-bbsrc-funds-ena",
+      "valid": true,
+      "sourceKind": "organization",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-wellcome-funds-ena",
+      "valid": true,
+      "sourceKind": "organization",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-gordon-and-betty-moore-foundation-funds-ena",
+      "valid": true,
+      "sourceKind": "organization",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-niaid-funds-ena",
+      "valid": true,
+      "sourceKind": "organization",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-novo-nordisk-foundation-funds-ena",
+      "valid": true,
+      "sourceKind": "organization",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-wellcome-sanger-institute-publishes-to-ena",
+      "valid": true,
+      "sourceKind": "organization",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-ena-syncs-to-biosamples",
+      "valid": true,
+      "sourceKind": "system",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-biosamples-syncs-to-ena",
+      "valid": true,
+      "sourceKind": "system",
+      "targetKind": "system"
+    },
+    {
+      "id": "rel-genoscope-publishes-to-ena",
+      "valid": true,
+      "sourceKind": "organization",
+      "targetKind": "system"
+    }
+  ]
+}

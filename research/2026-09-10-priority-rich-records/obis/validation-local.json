@@ -1,0 +1,29 @@
+{
+  "request": {
+    "valid": true,
+    "recordId": "platform-obis",
+    "issues": []
+  },
+  "quality": {
+    "valid": true,
+    "recordId": "platform-obis",
+    "issues": [],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 39,
+      "resolvedSources": 39,
+      "issues": []
+    }
+  },
+  "edges": [],
+  "missingCanonicalEndpoints": [
+    "deepdata",
+    "international-seabed-authority",
+    "richard-lounsbery-foundation"
+  ]
+}

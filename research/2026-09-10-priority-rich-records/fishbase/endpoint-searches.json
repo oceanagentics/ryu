@@ -1,0 +1,177 @@
+[
+  {
+    "q": "Swedish Museum",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "q": "GEOMAR",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "q": "Mundus",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "q": "WorldFish",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "q": "Blue Abacus",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "q": "Bloom",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "q": "CSIRO",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "q": "Minderoo",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "q": "Oman",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "q": "Lorraine",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "q": "Muséum",
+    "status": 200,
+    "result": {
+      "records": [
+        {
+          "id": "royal-museum-for-central-africa",
+          "kind": "organization",
+          "countryCode": null,
+          "url": "https://www.africamuseum.be/en/about_us",
+          "recordDepth": "stub",
+          "title": "Royal Museum for Central Africa",
+          "summary": "Museum and research institute in Tervuren, Belgium, documenting contributions of African fish collection data and curated freshwater and brackish-water fish information to FishBase in a 2023 account.",
+          "availableLocales": [
+            "ar",
+            "zh",
+            "en",
+            "fr",
+            "ru",
+            "es"
+          ],
+          "missingLocales": [],
+          "reviewStatesByLocale": {
+            "ar": "agent_researched",
+            "en": "agent_researched",
+            "es": "agent_researched",
+            "fr": "agent_researched",
+            "ru": "agent_researched",
+            "zh": "agent_researched"
+          },
+          "requestedLocale": "en",
+          "displayLocale": "en",
+          "isLocaleFallback": false,
+          "updatedAt": "2026-09-10T19:16:32.219Z",
+          "recordUpdatedAt": "2026-09-10T19:16:32.219Z",
+          "score": 100,
+          "matchedLocale": "en"
+        },
+        {
+          "id": "fishbase",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://fishbase.se/home.htm",
+          "recordDepth": "thin",
+          "title": "FishBase",
+          "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
+          "availableLocales": [
+            "ar",
+            "zh",
+            "en",
+            "fr",
+            "ru",
+            "es"
+          ],
+          "missingLocales": [],
+          "reviewStatesByLocale": {
+            "ar": "needs_revision",
+            "en": "needs_revision",
+            "es": "needs_revision",
+            "fr": "needs_revision",
+            "ru": "needs_revision",
+            "zh": "needs_revision"
+          },
+          "requestedLocale": "en",
+          "displayLocale": "en",
+          "isLocaleFallback": false,
+          "updatedAt": "2026-09-10T20:02:33.089Z",
+          "recordUpdatedAt": "2026-09-10T20:02:33.089Z",
+          "score": 32,
+          "matchedLocale": "en"
+        }
+      ],
+      "nextCursor": null,
+      "total": 2
+    }
+  },
+  {
+    "q": "Swire",
+    "status": 200,
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  }
+]

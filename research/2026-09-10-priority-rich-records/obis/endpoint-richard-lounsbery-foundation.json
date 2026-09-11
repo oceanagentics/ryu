@@ -1,0 +1,112 @@
+{
+  "id": "richard-lounsbery-foundation",
+  "record": {
+    "kind": "organization",
+    "url": "https://www.rlounsbery.org/",
+    "recordDepth": "stub",
+    "properties": {},
+    "sources": {
+      "identity": {
+        "id": "identity",
+        "url": "https://www.rlounsbery.org/",
+        "title": {
+          "en": "Richard Lounsbery Foundation",
+          "fr": "Fondation Richard Lounsbery",
+          "es": "Fundación Richard Lounsbery",
+          "ar": "مؤسسة ريتشارد لونزبري",
+          "zh": "理查德·朗斯伯里基金会",
+          "ru": "Фонд Ричарда Лаунсбери"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "en": {
+      "title": "Richard Lounsbery Foundation",
+      "summary": "Foundation supporting science and technology research.",
+      "description": "Foundation supporting science and technology research.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Fondation Richard Lounsbery",
+      "summary": "Fondation soutenant la recherche scientifique et technologique.",
+      "description": "Fondation soutenant la recherche scientifique et technologique.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Fundación Richard Lounsbery",
+      "summary": "Fundación que apoya investigación científica y tecnológica.",
+      "description": "Fundación que apoya investigación científica y tecnológica.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ar": {
+      "title": "مؤسسة ريتشارد لونزبري",
+      "summary": "مؤسسة تدعم البحث في العلوم والتكنولوجيا.",
+      "description": "مؤسسة تدعم البحث في العلوم والتكنولوجيا.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "理查德·朗斯伯里基金会",
+      "summary": "支持科学与技术研究的基金会。",
+      "description": "支持科学与技术研究的基金会。",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Фонд Ричарда Лаунсбери",
+      "summary": "Фонд, поддерживающий исследования в науке и технике.",
+      "description": "Фонд, поддерживающий исследования в науке и технике.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [],
+  "routes": []
+}

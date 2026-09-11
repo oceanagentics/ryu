@@ -1,0 +1,88 @@
+{
+  "url": "https://data-gis.unep-wcmc.org/server/rest/services/ProtectedPlanet/WDPCA/FeatureServer/1/query?where=site_id%3D230&outFields=site_id%2Csite_pid%2Cname_eng%2Csite_type%2Cdesig_eng%2Cstatus%2Cstatus_yr%2Cmang_auth%2Cgov_type%2Cmetadataid&returnGeometry=false&f=json",
+  "status": 200,
+  "response": {
+    "objectIdFieldName": "objectid",
+    "globalIdFieldName": "",
+    "geometryType": "esriGeometryPolygon",
+    "spatialReference": {
+      "wkid": 102100,
+      "latestWkid": 3857
+    },
+    "fields": [
+      {
+        "name": "site_id",
+        "alias": "SITE_ID",
+        "type": "esriFieldTypeInteger"
+      },
+      {
+        "name": "site_pid",
+        "alias": "SITE_PID",
+        "type": "esriFieldTypeString",
+        "length": 52
+      },
+      {
+        "name": "name_eng",
+        "alias": "NAME_ENG",
+        "type": "esriFieldTypeString",
+        "length": 65536
+      },
+      {
+        "name": "site_type",
+        "alias": "SITE_TYPE",
+        "type": "esriFieldTypeString",
+        "length": 65536
+      },
+      {
+        "name": "desig_eng",
+        "alias": "DESIG_ENG",
+        "type": "esriFieldTypeString",
+        "length": 65536
+      },
+      {
+        "name": "status",
+        "alias": "STATUS",
+        "type": "esriFieldTypeString",
+        "length": 65536
+      },
+      {
+        "name": "status_yr",
+        "alias": "STATUS_YR",
+        "type": "esriFieldTypeInteger"
+      },
+      {
+        "name": "mang_auth",
+        "alias": "MANG_AUTH",
+        "type": "esriFieldTypeString",
+        "length": 65536
+      },
+      {
+        "name": "gov_type",
+        "alias": "GOV_TYPE",
+        "type": "esriFieldTypeString",
+        "length": 65536
+      },
+      {
+        "name": "metadataid",
+        "alias": "METADATAID",
+        "type": "esriFieldTypeInteger"
+      }
+    ],
+    "features": [
+      {
+        "attributes": {
+          "site_id": 230,
+          "site_pid": "230",
+          "name_eng": "Bonaire",
+          "site_type": "PA",
+          "desig_eng": "National Marine Park",
+          "status": "Designated",
+          "status_yr": 1979,
+          "mang_auth": "STINAPA Bonaire",
+          "gov_type": "Non-profit organisations",
+          "metadataid": 1899
+        }
+      }
+    ]
+  }
+}

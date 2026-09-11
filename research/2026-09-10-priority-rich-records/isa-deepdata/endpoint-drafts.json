@@ -1,0 +1,825 @@
+[
+  {
+    "id": "international-seabed-authority",
+    "record": {
+      "kind": "organization",
+      "url": "https://isa.org.jm/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "about": {
+          "id": "about",
+          "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+          "title": {
+            "en": "About DeepData",
+            "fr": "À propos de DeepData",
+            "es": "Acerca de DeepData",
+            "ar": "حول DeepData",
+            "zh": "关于DeepData",
+            "ru": "О DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-news": {
+          "id": "odis-news",
+          "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+          "title": {
+            "en": "DeepData joins ODIS, 6 May 2025",
+            "fr": "DeepData rejoint ODIS, 6 mai 2025",
+            "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+            "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+            "zh": "DeepData于2025年5月6日加入ODIS",
+            "ru": "DeepData присоединяется к ODIS, 6 мая 2025"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "International Seabed Authority",
+        "summary": "Intergovernmental organization responsible for mineral resources of the seabed beyond national jurisdiction and operator of DeepData.",
+        "description": "ISA is an autonomous intergovernmental organization established under the United Nations Convention on the Law of the Sea. Its DeepData responsibilities include contractor data reporting, database policy and Secretariat operation. This does not assert jurisdiction over all ocean activities or the entire water column.",
+        "details": {
+          "aliases": [
+            "ISA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "about",
+              "odis-news"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-international-seabed-authority-publishes-to-platform-obis",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "platform-obis",
+        "kind": "publishes_to",
+        "note": "ISA supplies publicly indexed environmental biodiversity datasets through the OBIS ISA thematic node. Node metadata identifies ISA and DeepData; underlying contractor data ownership is not transferred to OBIS. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
+        "properties": {
+          "scope": "ISA-node publication of the public DeepData biological subset",
+          "status": "published node datasets",
+          "sourceRefs": [
+            "evidence",
+            "archive"
+          ],
+          "via": "OBIS ISA"
+        },
+        "sources": {
+          "evidence": {
+            "id": "evidence",
+            "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+            "title": {
+              "en": "OBIS ISA node and DeepData source",
+              "fr": "Nœud OBIS ISA et source DeepData",
+              "es": "Nodo OBIS ISA y fuente DeepData",
+              "ar": "عقدة OBIS ISA ومصدر DeepData",
+              "zh": "OBIS ISA节点与DeepData来源",
+              "ru": "Узел OBIS ISA и источник DeepData"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "archive": {
+            "id": "archive",
+            "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+            "title": {
+              "en": "NORI 2022 biological archive: EML and archive metadata",
+              "fr": "Archive biologique NORI 2022 : EML et métadonnées",
+              "es": "Archivo biológico NORI 2022: EML y metadatos",
+              "ar": "أرشيف NORI البيولوجي 2022: بيانات EML ووصف الأرشيف",
+              "zh": "NORI 2022生物档案：EML和档案元数据",
+              "ru": "Биологический архив NORI 2022: EML и метаданные"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      }
+    ],
+    "routes": []
+  },
+  {
+    "id": "ocean-mineral-singapore",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/omspmn12022_env_nhm_norce/omspmn12022_env_nhm_norce.zip",
+          "title": {
+            "en": "OMSPMN12022 Env Template NHM-NORCE",
+            "fr": "OMSPMN12022 Env Template NHM-NORCE",
+            "es": "OMSPMN12022 Env Template NHM-NORCE",
+            "ar": "OMSPMN12022 Env Template NHM-NORCE",
+            "zh": "OMSPMN12022 Env Template NHM-NORCE",
+            "ru": "OMSPMN12022 Env Template NHM-NORCE"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Ocean Mineral Singapore Pte. Ltd.",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for OMSPMN12022 Env Template NHM-NORCE, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "OMS"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "uk-seabed-resources",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/uksrlpmn12019_nhm_norce_updated/uksrlpmn12019_nhm_norce_updated.zip",
+          "title": {
+            "en": "UKSRLPMN12019 NHM-NORCE Updated",
+            "fr": "UKSRLPMN12019 NHM-NORCE Updated",
+            "es": "UKSRLPMN12019 NHM-NORCE Updated",
+            "ar": "UKSRLPMN12019 NHM-NORCE Updated",
+            "zh": "UKSRLPMN12019 NHM-NORCE Updated",
+            "ru": "UKSRLPMN12019 NHM-NORCE Updated"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "UK Seabed Resources Ltd.",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for UKSRLPMN12019 NHM-NORCE Updated, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "UKSRL"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "bgr",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/bgrpmn12021_env_2018_biology/bgrpmn12021_env_2018_biology.zip",
+          "title": {
+            "en": "BGRPMN12021 Env Template 2018 Biology",
+            "fr": "BGRPMN12021 Env Template 2018 Biology",
+            "es": "BGRPMN12021 Env Template 2018 Biology",
+            "ar": "BGRPMN12021 Env Template 2018 Biology",
+            "zh": "BGRPMN12021 Env Template 2018 Biology",
+            "ru": "BGRPMN12021 Env Template 2018 Biology"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Federal Institute for Geosciences and Natural Resources of Germany",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for BGRPMN12021 Env Template 2018 Biology, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "BGR"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "tonga-offshore-mining",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/tomlpmn12024_env_20220212_bio/tomlpmn12024_env_20220212_bio.zip",
+          "title": {
+            "en": "TOMLPMN12024 Env Template 20220212 Bio",
+            "fr": "TOMLPMN12024 Env Template 20220212 Bio",
+            "es": "TOMLPMN12024 Env Template 20220212 Bio",
+            "ar": "TOMLPMN12024 Env Template 20220212 Bio",
+            "zh": "TOMLPMN12024 Env Template 20220212 Bio",
+            "ru": "TOMLPMN12024 Env Template 20220212 Bio"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Tonga Offshore Mining Limited",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for TOMLPMN12024 Env Template 20220212 Bio, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "TOML"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "jogmec",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/jogmeccrfc12024_env_20220212_2024/jogmeccrfc12024_env_20220212_2024.zip",
+          "title": {
+            "en": "JOGMECCRFC12024 Env Template 20220212 2024",
+            "fr": "JOGMECCRFC12024 Env Template 20220212 2024",
+            "es": "JOGMECCRFC12024 Env Template 20220212 2024",
+            "ar": "JOGMECCRFC12024 Env Template 20220212 2024",
+            "zh": "JOGMECCRFC12024 Env Template 20220212 2024",
+            "ru": "JOGMECCRFC12024 Env Template 20220212 2024"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "identity": {
+          "id": "identity",
+          "url": "https://isa.org.jm/exploration-contracts/cobalt-rich-ferromanganese-crusts/",
+          "title": {
+            "en": "ISA crust exploration contractors",
+            "fr": "Contractants AIFM pour les encroûtements",
+            "es": "Contratistas AIFM de costras",
+            "ar": "مقاولو السلطة لاستكشاف القشور",
+            "zh": "ISA结壳勘探承包者",
+            "ru": "Контракторы МОМД по разведке корок"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Japan Organization for Metals and Energy Security (JOGMEC)",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for JOGMECCRFC12024 Env Template 20220212 2024, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "JOGMEC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset",
+              "identity"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "comra",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/comracfc12017_dy36_meiofauna/comracfc12017_dy36_meiofauna.zip",
+          "title": {
+            "en": "COMRACFC12017 DY36 meiofauna",
+            "fr": "COMRACFC12017 DY36 meiofauna",
+            "es": "COMRACFC12017 DY36 meiofauna",
+            "ar": "COMRACFC12017 DY36 meiofauna",
+            "zh": "COMRACFC12017 DY36 meiofauna",
+            "ru": "COMRACFC12017 DY36 meiofauna"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "China Ocean Mineral Resources Research and Development Association",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for COMRACFC12017 DY36 meiofauna, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "COMRA"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "global-sea-mineral-resources",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/gsrpmn12017_env_bioso239/gsrpmn12017_env_bioso239.zip",
+          "title": {
+            "en": "GSRPMN12017 Env Template BIOSO239",
+            "fr": "GSRPMN12017 Env Template BIOSO239",
+            "es": "GSRPMN12017 Env Template BIOSO239",
+            "ar": "GSRPMN12017 Env Template BIOSO239",
+            "zh": "GSRPMN12017 Env Template BIOSO239",
+            "ru": "GSRPMN12017 Env Template BIOSO239"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Global Sea Mineral Resources NV",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for GSRPMN12017 Env Template BIOSO239, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "GSR"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "interoceanmetal",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/iompmn12018_env_biol/iompmn12018_env_biol.zip",
+          "title": {
+            "en": "IOMPMN12018 Env Template BIOL",
+            "fr": "IOMPMN12018 Env Template BIOL",
+            "es": "IOMPMN12018 Env Template BIOL",
+            "ar": "IOMPMN12018 Env Template BIOL",
+            "zh": "IOMPMN12018 Env Template BIOL",
+            "ru": "IOMPMN12018 Env Template BIOL"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Interoceanmetal Joint Organization",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for IOMPMN12018 Env Template BIOL, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "IOM"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "yuzhmorgeologiya",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/yuzhpmn12015_biodata_b6/yuzhpmn12015_biodata_b6.zip",
+          "title": {
+            "en": "YUZHPMN12015 Biodata B6",
+            "fr": "YUZHPMN12015 Biodata B6",
+            "es": "YUZHPMN12015 Biodata B6",
+            "ar": "YUZHPMN12015 Biodata B6",
+            "zh": "YUZHPMN12015 Biodata B6",
+            "ru": "YUZHPMN12015 Biodata B6"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Yuzhmorgeologiya",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for YUZHPMN12015 Biodata B6, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "YUZH"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "deep-ocean-resources-development",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/dordpmn12018_env_mn_bio/dordpmn12018_env_mn_bio.zip",
+          "title": {
+            "en": "DORDPMN12018 Env Mn Bio",
+            "fr": "DORDPMN12018 Env Mn Bio",
+            "es": "DORDPMN12018 Env Mn Bio",
+            "ar": "DORDPMN12018 Env Mn Bio",
+            "zh": "DORDPMN12018 Env Mn Bio",
+            "ru": "DORDPMN12018 Env Mn Bio"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Deep Ocean Resources Development Co. Ltd.",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for DORDPMN12018 Env Mn Bio, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "DORD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "china-minmetals",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/cmmpmn12022_env/cmmpmn12022_env.zip",
+          "title": {
+            "en": "CMMPMN12022 Env Template",
+            "fr": "CMMPMN12022 Env Template",
+            "es": "CMMPMN12022 Env Template",
+            "ar": "CMMPMN12022 Env Template",
+            "zh": "CMMPMN12022 Env Template",
+            "ru": "CMMPMN12022 Env Template"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "China Minmetals Corporation",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for CMMPMN12022 Env Template, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "CMM"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "russian-ministry-natural-resources",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/rusmnrcrfc12015_env_biodata/rusmnrcrfc12015_env_biodata.zip",
+          "title": {
+            "en": "RUSMNRCRFC12015 Env Template Biodata",
+            "fr": "RUSMNRCRFC12015 Env Template Biodata",
+            "es": "RUSMNRCRFC12015 Env Template Biodata",
+            "ar": "RUSMNRCRFC12015 Env Template Biodata",
+            "zh": "RUSMNRCRFC12015 Env Template Biodata",
+            "ru": "RUSMNRCRFC12015 Env Template Biodata"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Ministry of Natural resources and environment of the russian federation",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for RUSMNRCRFC12015 Env Template Biodata, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "RUSMNR"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "nauru-ocean-resources",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+          "title": {
+            "en": "NORIPMN12022 Env Template BIO",
+            "fr": "NORIPMN12022 Env Template BIO",
+            "es": "NORIPMN12022 Env Template BIO",
+            "ar": "NORIPMN12022 Env Template BIO",
+            "zh": "NORIPMN12022 Env Template BIO",
+            "ru": "NORIPMN12022 Env Template BIO"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Nauru Ocean Resources Inc.",
+        "summary": "Identified creator of a published DeepData biological dataset.",
+        "description": "The EML metadata for NORIPMN12022 Env Template BIO, published 2026-04-20, identifies this organization as creator. This minimal endpoint supports the specific publication relationship and does not assert its wider governance, ownership or present contract status.",
+        "details": {
+          "aliases": [
+            "NORI"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "dataset"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "beijing-pioneer-hi-tech",
+    "record": {
+      "kind": "organization",
+      "url": null,
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "odis-example": {
+          "id": "odis-example",
+          "url": "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+          "title": {
+            "en": "DeepData ODIS CTD metadata: Beijing Pioneer, 2021",
+            "fr": "Métadonnées CTD ODIS : Beijing Pioneer, 2021",
+            "es": "Metadatos CTD ODIS: Beijing Pioneer, 2021",
+            "ar": "بيانات CTD الوصفية عبر ODIS: بيجين بايونير، 2021",
+            "zh": "DeepData ODIS CTD元数据：北京先驱，2021",
+            "ru": "Метаданные CTD ODIS: Beijing Pioneer, 2021"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Beijing Pioneer Hi-Tech Development Corporation",
+        "summary": "Named source of a 2021 CTD dataset described in DeepData’s ODIS metadata.",
+        "description": "The DeepData metadata page identifies Beijing Pioneer Hi-Tech Development Corporation and a PMN water-property dataset covering 2021. This endpoint supports that archived contribution; it does not assert present contract status.",
+        "details": {
+          "aliases": [
+            "BPHDC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "odis-example"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null
+      }
+    },
+    "edges": [],
+    "routes": []
+  }
+]

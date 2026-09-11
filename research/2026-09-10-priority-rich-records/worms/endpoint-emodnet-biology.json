@@ -1,0 +1,494 @@
+{
+  "id": "emodnet-biology",
+  "kind": "system",
+  "countryCode": null,
+  "url": "https://emodnet.ec.europa.eu/en/biology-0",
+  "recordDepth": "thin",
+  "title": "EMODnet Biology",
+  "summary": "European marine biodiversity access point built on EurOBIS-style infrastructure",
+  "availableLocales": [
+    "ar",
+    "zh",
+    "en",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "missingLocales": [],
+  "reviewStatesByLocale": {
+    "ar": "needs_revision",
+    "en": "needs_revision",
+    "es": "needs_revision",
+    "fr": "needs_revision",
+    "ru": "needs_revision",
+    "zh": "needs_revision"
+  },
+  "requestedLocale": "en",
+  "displayLocale": "en",
+  "isLocaleFallback": false,
+  "updatedAt": "2026-09-10T20:02:27.416Z",
+  "recordUpdatedAt": "2026-09-10T20:02:27.416Z",
+  "sourceCompleteness": {
+    "status": "partial",
+    "referencedSources": 4,
+    "resolvedSources": 4,
+    "issues": [
+      {
+        "recordId": "emodnet-biology",
+        "path": "record.properties.data.descriptors[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "emodnet-biology",
+        "path": "record.properties.data.descriptors[1].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "emodnet-biology",
+        "path": "record.properties.data.descriptors[2].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "emodnet-biology",
+        "path": "record.properties.data.descriptors[3].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "emodnet-biology",
+        "path": "localizations.ar.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "emodnet-biology",
+        "path": "localizations.en.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "emodnet-biology",
+        "path": "localizations.es.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "emodnet-biology",
+        "path": "localizations.fr.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "emodnet-biology",
+        "path": "localizations.ru.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "emodnet-biology",
+        "path": "localizations.zh.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      }
+    ]
+  },
+  "record": {
+    "id": "emodnet-biology",
+    "kind": "system",
+    "countryCode": null,
+    "url": "https://emodnet.ec.europa.eu/en/biology-0",
+    "recordDepth": "thin",
+    "sources": {
+      "src-seadatanet-cdi": {
+        "id": "src-seadatanet-cdi",
+        "url": "https://cdi.seadatanet.org/",
+        "title": {
+          "ar": "فهرس البيانات المشترك لـ SeaDataNet",
+          "en": "SeaDataNet Common Data Index",
+          "es": "Índice Común de Datos de SeaDataNet",
+          "fr": "Index commun des données SeaDataNet",
+          "ru": "Общий индекс данных SeaDataNet",
+          "zh": "SeaDataNet公共数据索引"
+        },
+        "accessedAt": "2026-05-26"
+      }
+    },
+    "properties": {
+      "data": {
+        "descriptors": [
+          {
+            "id": "emodnet-biology-tag-data-format-darwin-core",
+            "label": "Darwin Core",
+            "source": null,
+            "category": "standard"
+          },
+          {
+            "id": "emodnet-biology-tag-data-format-netcdf",
+            "label": "netcdf",
+            "source": null,
+            "category": "format"
+          },
+          {
+            "id": "emodnet-biology-tag-data-type-occurrence-observation",
+            "label": "occurrence_records",
+            "source": null,
+            "category": "type"
+          },
+          {
+            "id": "emodnet-biology-tag-data-type-trait-ecology",
+            "label": "biological_traits",
+            "source": null,
+            "category": "type"
+          }
+        ],
+        "recordCount": null,
+        "storageSize": null
+      },
+      "usage": [],
+      "access": [
+        {
+          "id": "emodnet-biology-tag-write-method-harvested-node",
+          "url": "https://emodnet.ec.europa.eu/en/biology-0",
+          "type": "partner_sync",
+          "method": "harvested_node",
+          "source": "src-seadatanet-cdi"
+        },
+        {
+          "id": "emodnet-biology-tag-read-method-download",
+          "url": "https://emodnet.ec.europa.eu/en/biology-0",
+          "type": "read",
+          "method": "download",
+          "source": "src-seadatanet-cdi"
+        },
+        {
+          "id": "emodnet-biology-tag-read-method-ogc-wfs",
+          "url": "https://emodnet.ec.europa.eu/en/biology-0",
+          "type": "read",
+          "method": "ogc_wfs",
+          "source": "src-seadatanet-cdi"
+        },
+        {
+          "id": "emodnet-biology-tag-read-method-web",
+          "url": "https://emodnet.ec.europa.eu/en/biology-0",
+          "type": "read",
+          "method": "web",
+          "source": "src-seadatanet-cdi"
+        },
+        {
+          "id": "emodnet-biology-tag-write-method-web-submission",
+          "url": "https://emodnet.ec.europa.eu/en/biology-0",
+          "type": "submit",
+          "method": "web_submission",
+          "source": "src-seadatanet-cdi"
+        }
+      ],
+      "gallery": [],
+      "disciplines": []
+    },
+    "createdAt": "2026-05-26T16:46:26.459Z",
+    "updatedAt": "2026-09-10T20:02:27.416Z"
+  },
+  "localizations": {
+    "ar": {
+      "locale": "ar",
+      "title": "بيولوجيا EMODnet",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "EMODnet Biology"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:33.092Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.298559+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:33.092Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "en": {
+      "locale": "en",
+      "title": "EMODnet Biology",
+      "summary": "European marine biodiversity access point built on EurOBIS-style infrastructure",
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "emodnet-biology-tag-data-format-darwin-core",
+              "description": null
+            },
+            {
+              "id": "emodnet-biology-tag-data-format-netcdf",
+              "description": null
+            },
+            {
+              "id": "emodnet-biology-tag-data-type-occurrence-observation",
+              "description": null
+            },
+            {
+              "id": "emodnet-biology-tag-data-type-trait-ecology",
+              "description": null
+            }
+          ],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [
+          {
+            "id": "emodnet-biology-tag-write-method-harvested-node",
+            "label": "Harvested node",
+            "description": "Submission via Harvested node."
+          },
+          {
+            "id": "emodnet-biology-tag-read-method-download",
+            "label": "Download",
+            "description": "Access via Download."
+          },
+          {
+            "id": "emodnet-biology-tag-read-method-ogc-wfs",
+            "label": "WFS",
+            "description": "Access via WFS."
+          },
+          {
+            "id": "emodnet-biology-tag-read-method-web",
+            "label": "Web UI",
+            "description": "Access via Web UI."
+          },
+          {
+            "id": "emodnet-biology-tag-write-method-web-submission",
+            "label": "Web submission",
+            "description": "Submission via Web submission."
+          }
+        ],
+        "aliases": [],
+        "gallery": []
+      },
+      "translatedFromLocale": null,
+      "contentUpdatedAt": "2026-09-10T20:02:27.394Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.374174+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-05-26T16:46:26.459Z",
+      "updatedAt": "2026-09-10T20:02:27.394Z"
+    },
+    "es": {
+      "locale": "es",
+      "title": "Biología de EMODnet",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "EMODnet Biology"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:33.092Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.299988+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:33.092Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "fr": {
+      "locale": "fr",
+      "title": "Biologie EMODnet",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "EMODnet Biology"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:33.092Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.298743+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:33.092Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "ru": {
+      "locale": "ru",
+      "title": "биология EMODnet",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "EMODnet Biology"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:33.092Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.299641+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:33.092Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "zh": {
+      "locale": "zh",
+      "title": "EMODnet 生物学",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "EMODnet Biology"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:33.092Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.298653+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:33.092Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-emodnet-biology-consortium-operates-emodnet-biology",
+      "sourceNodeId": "emodnet-biology-consortium",
+      "targetNodeId": "emodnet-biology",
+      "kind": "operates",
+      "note": "VLIZ leads coordination, data management and infrastructure for the 2025–2027 consortium. Shared EurOBIS infrastructure and reference vocabularies do not alone prove separate synchronization.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "sourceRefs": [
+          "src-relationship-emodnet-biology"
+        ]
+      },
+      "sources": {
+        "src-relationship-emodnet-biology": {
+          "id": "src-relationship-emodnet-biology",
+          "url": "https://emodnet.ec.europa.eu/en/biology",
+          "title": {
+            "ar": "EMODnet: علم الأحياء",
+            "en": "EMODnet Biology",
+            "es": "Biología de EMODnet",
+            "fr": "Biologie d’EMODnet",
+            "ru": "Биология EMODnet",
+            "zh": "EMODnet生物学"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-05-26T16:46:26.459Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    {
+      "id": "rel-eur-funds-emodnet-biology",
+      "sourceNodeId": "eur",
+      "targetNodeId": "emodnet-biology",
+      "kind": "funds",
+      "note": "European Union programme funding.",
+      "properties": {
+        "scope": "EMFAF programme funding",
+        "sourceRefs": [
+          "src-relationship-emodnet"
+        ]
+      },
+      "sources": {
+        "src-relationship-emodnet": {
+          "id": "src-relationship-emodnet",
+          "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+          "title": {
+            "ar": "حول EMODnet",
+            "en": "About EMODnet",
+            "es": "Acerca de EMODnet",
+            "fr": "À propos de EMODnet",
+            "ru": "О EMODnet",
+            "zh": "关于EMODnet"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-09-09T18:32:51.118Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    {
+      "id": "rel-flanders-marine-institute-operates-emodnet-biology",
+      "sourceNodeId": "flanders-marine-institute",
+      "targetNodeId": "emodnet-biology",
+      "kind": "operates",
+      "note": "VLIZ operates technical infrastructure and data management.",
+      "properties": {
+        "scope": "Technical infrastructure; scientific contributors retain their own roles",
+        "sourceRefs": [
+          "src-relationship-emodnet-biology"
+        ]
+      },
+      "sources": {
+        "src-relationship-emodnet-biology": {
+          "id": "src-relationship-emodnet-biology",
+          "url": "https://emodnet.ec.europa.eu/en/biology",
+          "title": {
+            "ar": "EMODnet: علم الأحياء",
+            "en": "EMODnet Biology",
+            "es": "Biología de EMODnet",
+            "fr": "Biologie d’EMODnet",
+            "ru": "Биология EMODnet",
+            "zh": "EMODnet生物学"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-09-09T18:32:51.118Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  ],
+  "routes": []
+}

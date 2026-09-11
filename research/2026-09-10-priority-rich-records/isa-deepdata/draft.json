@@ -1,0 +1,2518 @@
+{
+  "id": "deepdata",
+  "record": {
+    "kind": "system",
+    "url": "https://isa.org.jm/deepdata-database/",
+    "recordDepth": "rich",
+    "properties": {
+      "disciplines": [
+        "marine_biology",
+        "ecology",
+        "oceanography",
+        "geology",
+        "chemistry"
+      ],
+      "data": {
+        "descriptors": [
+          {
+            "id": "deepdata-occurrence",
+            "category": "type",
+            "label": "occurrence_records",
+            "source": "collection"
+          },
+          {
+            "id": "deepdata-samples",
+            "category": "type",
+            "label": "sample_records",
+            "source": "about"
+          },
+          {
+            "id": "deepdata-environment",
+            "category": "type",
+            "label": "environmental_measurements",
+            "source": "about"
+          },
+          {
+            "id": "deepdata-geography",
+            "category": "type",
+            "label": "geographic_reference_data",
+            "source": "about"
+          },
+          {
+            "id": "deepdata-media",
+            "category": "type",
+            "label": "media",
+            "source": "about"
+          },
+          {
+            "id": "deepdata-documents",
+            "category": "type",
+            "label": "documents",
+            "source": "about"
+          },
+          {
+            "id": "deepdata-catalogue",
+            "category": "type",
+            "label": "catalogue_records",
+            "source": "sitemap"
+          },
+          {
+            "id": "deepdata-csv",
+            "category": "format",
+            "label": "csv",
+            "source": "manual"
+          },
+          {
+            "id": "deepdata-dwca",
+            "category": "format",
+            "label": "darwin_core_archive",
+            "source": "nori-archive"
+          },
+          {
+            "id": "deepdata-tsv",
+            "category": "format",
+            "label": "tsv",
+            "source": "nori-archive"
+          },
+          {
+            "id": "deepdata-xml",
+            "category": "format",
+            "label": "xml",
+            "source": "nori-archive"
+          },
+          {
+            "id": "deepdata-html",
+            "category": "format",
+            "label": "html",
+            "source": "collection"
+          },
+          {
+            "id": "deepdata-dwc",
+            "category": "standard",
+            "label": "darwin_core",
+            "source": "nori-archive"
+          },
+          {
+            "id": "deepdata-emof",
+            "category": "standard",
+            "label": "emof",
+            "source": "nori-archive"
+          },
+          {
+            "id": "deepdata-eml",
+            "category": "standard",
+            "label": "eml",
+            "source": "nori-archive"
+          },
+          {
+            "id": "deepdata-schema-org",
+            "category": "standard",
+            "label": "schema_org",
+            "source": "odis-example"
+          }
+        ]
+      },
+      "access": [
+        {
+          "id": "deepdata-map",
+          "type": "read",
+          "methods": [
+            "browse",
+            "download"
+          ],
+          "url": "https://data.isa.org.jm/isa/map",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "manual",
+            "terms"
+          ]
+        },
+        {
+          "id": "deepdata-dashboard",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://isa.org.jm/deepdata-database/deepdata-dashboard/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "dashboard"
+          ]
+        },
+        {
+          "id": "deepdata-obis",
+          "type": "read",
+          "methods": [
+            "browse",
+            "download"
+          ],
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "collection",
+            "nori-archive"
+          ]
+        },
+        {
+          "id": "deepdata-odis",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://catalogue.odis.org/view/893",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "odis-catalogue",
+            "sitemap",
+            "odis-news",
+            "odis-demo"
+          ]
+        },
+        {
+          "id": "deepdata-contractor",
+          "type": "write",
+          "methods": [
+            "upload"
+          ],
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "requirements": [
+            "account",
+            "approval",
+            "affiliation"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "templates",
+            "manual"
+          ]
+        },
+        {
+          "id": "deepdata-metadata",
+          "type": "read",
+          "methods": [
+            "download"
+          ],
+          "url": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "sitemap",
+            "odis-example"
+          ]
+        }
+      ],
+      "gallery": [],
+      "metrics": [
+        {
+          "id": "deepdata-metric-samples",
+          "key": "sample_count",
+          "value": 825747,
+          "observedAt": null,
+          "source": "dashboard"
+        },
+        {
+          "id": "deepdata-metric-occurrences",
+          "key": "occurrence_count",
+          "value": 201323,
+          "observedAt": null,
+          "source": "obis-stats"
+        },
+        {
+          "id": "deepdata-metric-species",
+          "key": "species_count",
+          "value": 931,
+          "observedAt": null,
+          "source": "obis-stats"
+        }
+      ]
+    },
+    "sources": {
+      "about": {
+        "id": "about",
+        "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+        "title": {
+          "en": "About DeepData",
+          "fr": "À propos de DeepData",
+          "es": "Acerca de DeepData",
+          "ar": "حول DeepData",
+          "zh": "关于DeepData",
+          "ru": "О DeepData"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "manual": {
+        "id": "manual",
+        "url": "https://www.isa.org.jm/wp-content/uploads/2022/04/UserManual_v1.1_20181119.pdf",
+        "title": {
+          "en": "DeepData user manual, version 1.1 (2018)",
+          "fr": "Manuel DeepData, version 1.1 (2018)",
+          "es": "Manual de DeepData, versión 1.1 (2018)",
+          "ar": "دليل DeepData الإصدار 1.1 (2018)",
+          "zh": "DeepData用户手册1.1版（2018）",
+          "ru": "Руководство DeepData, версия 1.1 (2018)"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "templates": {
+        "id": "templates",
+        "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+        "title": {
+          "en": "DeepData reporting templates",
+          "fr": "Modèles de déclaration DeepData",
+          "es": "Plantillas de informes DeepData",
+          "ar": "نماذج تقارير DeepData",
+          "zh": "DeepData报告模板",
+          "ru": "Шаблоны отчётности DeepData"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "terms": {
+        "id": "terms",
+        "url": "https://isa.org.jm/term-and-conditions-of-use-of-the-international-seabed-authority-website/",
+        "title": {
+          "en": "ISA website terms of use",
+          "fr": "Conditions d’utilisation du site de l’AIFM",
+          "es": "Condiciones de uso del sitio de la AIFM",
+          "ar": "شروط استخدام موقع السلطة الدولية لقاع البحار",
+          "zh": "国际海底管理局网站使用条款",
+          "ru": "Условия использования сайта МОМД"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "collection": {
+        "id": "collection",
+        "url": "https://datasets.obis.org/hosted/isa/index.html",
+        "title": {
+          "en": "DeepData datasets hosted by OBIS",
+          "fr": "Jeux de données DeepData hébergés par OBIS",
+          "es": "Conjuntos DeepData alojados en OBIS",
+          "ar": "مجموعات DeepData المستضافة لدى OBIS",
+          "zh": "OBIS托管的DeepData数据集",
+          "ru": "Наборы DeepData на OBIS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "nori-archive": {
+        "id": "nori-archive",
+        "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+        "title": {
+          "en": "NORI 2022 biological archive: EML and archive metadata",
+          "fr": "Archive biologique NORI 2022 : EML et métadonnées",
+          "es": "Archivo biológico NORI 2022: EML y metadatos",
+          "ar": "أرشيف NORI البيولوجي 2022: بيانات EML ووصف الأرشيف",
+          "zh": "NORI 2022生物档案：EML和档案元数据",
+          "ru": "Биологический архив NORI 2022: EML и метаданные"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "obis-stats": {
+        "id": "obis-stats",
+        "url": "https://api.obis.org/v3/statistics?nodeid=9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+        "title": {
+          "en": "OBIS API statistics for the ISA node",
+          "fr": "Statistiques API OBIS du nœud AIFM",
+          "es": "Estadísticas API OBIS del nodo AIFM",
+          "ar": "إحصاءات واجهة OBIS لعقدة السلطة",
+          "zh": "OBIS API中的ISA节点统计",
+          "ru": "Статистика API OBIS для узла МОМД"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "dashboard": {
+        "id": "dashboard",
+        "url": "https://isa.org.jm/deepdata-database/deepdata-dashboard/",
+        "title": {
+          "en": "DeepData dashboard",
+          "fr": "Tableau de bord DeepData",
+          "es": "Panel DeepData",
+          "ar": "لوحة DeepData",
+          "zh": "DeepData仪表板",
+          "ru": "Панель DeepData"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "odis-news": {
+        "id": "odis-news",
+        "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+        "title": {
+          "en": "DeepData joins ODIS, 6 May 2025",
+          "fr": "DeepData rejoint ODIS, 6 mai 2025",
+          "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+          "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+          "zh": "DeepData于2025年5月6日加入ODIS",
+          "ru": "DeepData присоединяется к ODIS, 6 мая 2025"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "odis-catalogue": {
+        "id": "odis-catalogue",
+        "url": "https://catalogue.odis.org/view/893",
+        "title": {
+          "en": "ODIS catalogue record 893: DeepData",
+          "fr": "Notice 893 du catalogue ODIS : DeepData",
+          "es": "Registro 893 del catálogo ODIS: DeepData",
+          "ar": "سجل ODIS رقم 893: DeepData",
+          "zh": "ODIS目录条目893：DeepData",
+          "ru": "Запись 893 каталога ODIS: DeepData"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "sitemap": {
+        "id": "sitemap",
+        "url": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+        "title": {
+          "en": "DeepData ODIS sitemap",
+          "fr": "Plan de site ODIS de DeepData",
+          "es": "Mapa del sitio ODIS de DeepData",
+          "ar": "خريطة موقع DeepData لخدمة ODIS",
+          "zh": "DeepData ODIS站点地图",
+          "ru": "Карта сайта DeepData для ODIS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "factcheck": {
+        "id": "factcheck",
+        "url": "https://isa.org.jm/isa-fact-check-2023-1/",
+        "title": {
+          "en": "ISA explanation of DeepData holdings and funding, July 2023",
+          "fr": "Explication des fonds et du financement DeepData, juillet 2023",
+          "es": "Explicación de fondos y financiación DeepData, julio de 2023",
+          "ar": "توضيح بيانات DeepData وتمويلها، يوليو 2023",
+          "zh": "2023年7月ISA对DeepData馆藏与经费的说明",
+          "ru": "Разъяснение о данных и финансировании DeepData, июль 2023"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "odis-example": {
+        "id": "odis-example",
+        "url": "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+        "title": {
+          "en": "DeepData ODIS CTD metadata: Beijing Pioneer, 2021",
+          "fr": "Métadonnées CTD ODIS : Beijing Pioneer, 2021",
+          "es": "Metadatos CTD ODIS: Beijing Pioneer, 2021",
+          "ar": "بيانات CTD الوصفية عبر ODIS: بيجين بايونير، 2021",
+          "zh": "DeepData ODIS CTD元数据：北京先驱，2021",
+          "ru": "Метаданные CTD ODIS: Beijing Pioneer, 2021"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "odis-demo": {
+        "id": "odis-demo",
+        "url": "https://search-demo.odis.org/?q=DeepData",
+        "title": {
+          "en": "ODIS development demo: DeepData metadata search",
+          "fr": "Démonstrateur ODIS : recherche de métadonnées DeepData",
+          "es": "Demostración de ODIS: búsqueda de metadatos de DeepData",
+          "ar": "عرض ODIS التجريبي: البحث في بيانات DeepData الوصفية",
+          "zh": "ODIS开发演示：DeepData元数据检索",
+          "ru": "Демонстрационный поиск ODIS: метаданные DeepData"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "en": {
+      "title": "DeepData — ISA Deep Seabed and Ocean Database",
+      "summary": "ISA repository for deep-seabed exploration data, with public environmental holdings and confidential mineral-resource information.",
+      "description": "DeepData is the International Seabed Authority’s spatial database for exploration data and related environmental information in the Area, the seabed beyond national jurisdiction. Launched in 2019, it consolidates contractor submissions and earlier ISA holdings. The Secretariat manages ingestion and quality control under ISA data policies and reporting guidance. Public holdings include biological records, physical and geochemical observations, sampling locations and supporting files; mineral-resource assessment data remain confidential. Native map access is subject to website terms, whose general reuse permission is limited to personal, non-commercial use. Separate published OBIS archives have dataset-specific licences, including CC BY 4.0 in the inspected exports. ODIS participation was announced in May 2025 and a public metadata sitemap is registered. Archive publication, dashboard totals and OBIS indexing describe different subsets and dates; none establishes a complete current inventory or uniform update schedule.",
+      "details": {
+        "aliases": [
+          "DeepData",
+          "ISA Deep Seabed and Ocean Database"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "about",
+            "manual",
+            "terms",
+            "collection",
+            "nori-archive",
+            "odis-news",
+            "factcheck"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "deepdata-occurrence",
+              "description": "Biological occurrence records collected during contractor exploration; the OBIS collection is a published subset."
+            },
+            {
+              "id": "deepdata-samples",
+              "description": "Sample locations and analyses for seabed sediments and the water column."
+            },
+            {
+              "id": "deepdata-environment",
+              "description": "Physical, biological and geochemical environmental parameters, including CTD observations. Mineral-resource assessment data have separate confidentiality controls."
+            },
+            {
+              "id": "deepdata-geography",
+              "description": "Contract areas, reserved areas, areas of particular environmental interest and sampling locations."
+            },
+            {
+              "id": "deepdata-media",
+              "description": "Contractor photographs, videos, maps and graphics are described as unstructured holdings; individual availability varies."
+            },
+            {
+              "id": "deepdata-documents",
+              "description": "Annual reports and relevant publications submitted by contractors accompany structured data."
+            },
+            {
+              "id": "deepdata-catalogue",
+              "description": "The public ODIS sitemap enumerates DeepData dataset metadata pages; these are catalogue entries, not sample counts."
+            },
+            {
+              "id": "deepdata-csv",
+              "description": "The linked 2018 manual documents biological and geochemical query exports as CSV; the current map export was not executed."
+            },
+            {
+              "id": "deepdata-dwca",
+              "description": "The OBIS-hosted NORI 2022 biological download is a Darwin Core Archive with occurrence, measurement and metadata files."
+            },
+            {
+              "id": "deepdata-tsv",
+              "description": "The inspected archive occurrence and extended-measurement tables use tab-delimited text."
+            },
+            {
+              "id": "deepdata-xml",
+              "description": "XML stores archive structure and EML metadata in the inspected OBIS-hosted export."
+            },
+            {
+              "id": "deepdata-html",
+              "description": "Public dataset landing pages and the DeepData portal provide human-readable context."
+            },
+            {
+              "id": "deepdata-dwc",
+              "description": "Darwin Core terms describe occurrence fields in the inspected NORI archive. This verifies the OBIS export, not every native DeepData table."
+            },
+            {
+              "id": "deepdata-emof",
+              "description": "The inspected archive declares an OBIS ExtendedMeasurementOrFact extension linked to occurrence records."
+            },
+            {
+              "id": "deepdata-eml",
+              "description": "The inspected export contains EML 2.1.1 metadata using the GBIF EML profile, including creator, publication date and licence."
+            },
+            {
+              "id": "deepdata-schema-org",
+              "description": "Schema.org Dataset and DataDownload are present in a public ODIS metadata page for a 2021 CTD dataset. The example has an invalid latitude; verify coordinates before spatial use."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "deepdata-map",
+            "label": "Public map and file library",
+            "description": "Browse environmental data by contract area and sampling context. The manual documents query exports and file downloads. The current map loaded slowly and displayed a terms-acceptance gate; its export was not tested. Public access excludes confidential mineral-resource data."
+          },
+          {
+            "id": "deepdata-dashboard",
+            "label": "Public statistics dashboard",
+            "description": "The embedded Power BI overview displays holdings by data category and cruise year. No reporting date was visible and one visual showed a filter error; totals are dashboard readings, not independently deduplicated inventories."
+          },
+          {
+            "id": "deepdata-obis",
+            "label": "Biological archives through OBIS",
+            "description": "Download dataset-specific Darwin Core Archives from the OBIS-hosted DeepData collection. The inspected NORI 2022 archive was published 20 April 2026 under CC BY 4.0; inspect each dataset’s metadata and rights. This covers the public biological subset, with no uniform refresh cadence established."
+          },
+          {
+            "id": "deepdata-odis",
+            "label": "ODIS metadata discovery",
+            "description": "The ODIS catalogue registers DeepData’s public sitemap, which listed 341 metadata pages in the retrieved file. The catalogue now reports the resource online, last checked 10 September 2026 at 23:41; the earlier offline flag was historical. The sitemap also responded during this research. A separate query of the ODIS development demo returned 335 DeepData dataset-metadata records, and a sample record API was readable. This verifies metadata presence in that demo, not full data replication, harvest completeness or a reliable update schedule. The May 2025 announcement mentions over 800 CTD stations, a different unit and scope."
+          },
+          {
+            "id": "deepdata-contractor",
+            "label": "Contractor data submission",
+            "description": "Authorized contractors use contract-specific credentials and the upload workflow; this is not public self-publishing. Use current reporting and metadata templates: environmental/geological downloads are dated 19 January 2026 and metadata 6 March 2026. Annual reports cover the previous year and are due by the end of March. No separate submission fee was established."
+          },
+          {
+            "id": "deepdata-metadata",
+            "label": "Public metadata sitemap",
+            "description": "Read the XML sitemap and its HTML pages containing Schema.org JSON-LD dataset descriptions and download links. These endpoints eventually returned HTTP 200; slow responses and invalid coordinates in one sampled record require checking before use. No native API stability or update guarantee is documented."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "deepdata-metric-samples",
+            "description": "Dashboard total: 203,589 biology samples plus 622,158 geochemical samples. No reporting date is shown; this is not proof of unique specimen deduplication."
+          },
+          {
+            "id": "deepdata-metric-occurrences",
+            "description": "OBIS API indexed occurrence count for the ISA node, retrieved 10 September 2026; the response covers records from 2004–2024 and provides no index reporting date. Not all DeepData holdings."
+          },
+          {
+            "id": "deepdata-metric-species",
+            "description": "Species in the same OBIS ISA-node API response; excludes higher-rank taxa and does not measure all species represented in native DeepData."
+          }
+        ],
+        "researchGaps": {
+          "data": "No current total storage size or complete file inventory was verified. Dashboard and OBIS totals have different scopes; the API also reports 2,860 taxa and 153 datasets, which are not species or occurrence totals.",
+          "usage": "No verified session, download-event, contributor or citation metric with a clear reporting scope was found. Contracts and cruises are not user counts.",
+          "standards": "Verified standards apply to the inspected OBIS export. Current native CSV output, the 2026 submission template mappings and uniform compliance across historical holdings were not verified.",
+          "access": "No documented stable native public API contract was established. Map terms acceptance remains pending; native exports were not tested. A general open licence for all DeepData content was not found; apply dataset-specific rights."
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "DeepData — Base AIFM des fonds marins et des océans",
+      "summary": "Dépôt AIFM des données d’exploration des grands fonds, avec données environnementales publiques et informations minérales confidentielles.",
+      "description": "DeepData est la base spatiale de l’Autorité internationale des fonds marins pour les données d’exploration et l’environnement de la Zone, les fonds marins au-delà des juridictions nationales. Lancée en 2019, elle rassemble les dépôts des contractants et les fonds antérieurs de l’AIFM. Le Secrétariat gère l’intégration et la qualité selon les politiques et recommandations de l’Autorité. Les données publiques incluent occurrences, observations physiques et géochimiques, sites de prélèvement et fichiers associés ; l’évaluation des ressources minérales reste confidentielle. Les conditions générales du site limitent la réutilisation à un usage personnel non commercial. Les archives publiées via OBIS ont leurs propres licences, dont CC BY 4.0 pour les exports inspectés. La participation à ODIS a été annoncée en mai 2025 et un plan de site public est enregistré. Archives, tableau de bord et index OBIS représentent des périmètres et dates différents ; ils ne donnent ni inventaire actuel exhaustif ni rythme commun de mise à jour.",
+      "details": {
+        "aliases": [
+          "DeepData",
+          "ISA Deep Seabed and Ocean Database"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "about",
+            "manual",
+            "terms",
+            "collection",
+            "nori-archive",
+            "odis-news",
+            "factcheck"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "deepdata-occurrence",
+              "description": "Occurrences biologiques recueillies pendant l’exploration ; la collection OBIS en est un sous-ensemble publié."
+            },
+            {
+              "id": "deepdata-samples",
+              "description": "Localisation et analyses d’échantillons de sédiments et de la colonne d’eau."
+            },
+            {
+              "id": "deepdata-environment",
+              "description": "Paramètres physiques, biologiques et géochimiques, dont les observations CTD. Les données d’évaluation minérale sont soumises à des règles de confidentialité distinctes."
+            },
+            {
+              "id": "deepdata-geography",
+              "description": "Zones de contrats, secteurs réservés, zones d’intérêt écologique particulier et sites d’échantillonnage."
+            },
+            {
+              "id": "deepdata-media",
+              "description": "Photographies, vidéos, cartes et graphiques des contractants figurent parmi les fonds non structurés ; leur disponibilité varie."
+            },
+            {
+              "id": "deepdata-documents",
+              "description": "Rapports annuels et publications remis par les contractants accompagnent les données structurées."
+            },
+            {
+              "id": "deepdata-catalogue",
+              "description": "Le plan de site ODIS énumère des pages de métadonnées ; ce sont des notices, et non des échantillons."
+            },
+            {
+              "id": "deepdata-csv",
+              "description": "Le manuel lié de 2018 décrit l’export CSV des requêtes biologiques et géochimiques ; l’export actuel n’a pas été exécuté."
+            },
+            {
+              "id": "deepdata-dwca",
+              "description": "Le téléchargement biologique NORI 2022 hébergé par OBIS est une archive Darwin Core contenant occurrences, mesures et métadonnées."
+            },
+            {
+              "id": "deepdata-tsv",
+              "description": "Les tables d’occurrences et de mesures étendues inspectées utilisent du texte séparé par tabulations."
+            },
+            {
+              "id": "deepdata-xml",
+              "description": "Le XML décrit la structure de l’archive et les métadonnées EML de l’export inspecté."
+            },
+            {
+              "id": "deepdata-html",
+              "description": "Les pages publiques des jeux de données et le portail DeepData fournissent un contexte lisible."
+            },
+            {
+              "id": "deepdata-dwc",
+              "description": "Les termes Darwin Core décrivent les occurrences de l’archive NORI inspectée ; cela vérifie l’export OBIS, pas toutes les tables natives."
+            },
+            {
+              "id": "deepdata-emof",
+              "description": "L’archive inspectée déclare une extension OBIS ExtendedMeasurementOrFact liée aux occurrences."
+            },
+            {
+              "id": "deepdata-eml",
+              "description": "L’export contient des métadonnées EML 2.1.1 suivant le profil GBIF, avec créateur, date de publication et licence."
+            },
+            {
+              "id": "deepdata-schema-org",
+              "description": "Schema.org Dataset et DataDownload figurent dans une page ODIS pour un jeu CTD de 2021. L’exemple comporte une latitude invalide ; vérifier les coordonnées."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "deepdata-map",
+            "label": "Carte publique et bibliothèque",
+            "description": "Parcourir les données environnementales par zone et contexte d’échantillonnage. Le manuel décrit exports et téléchargements. La carte actuelle charge lentement et exige l’acceptation des conditions ; son export n’a pas été testé. Les données minérales confidentielles sont exclues."
+          },
+          {
+            "id": "deepdata-dashboard",
+            "label": "Tableau de bord public",
+            "description": "La vue Power BI présente les fonds par catégorie et année de campagne. Aucune date statistique n’était visible et un visuel signalait une erreur de filtre ; les totaux ne constituent pas un inventaire dédoublonné indépendant."
+          },
+          {
+            "id": "deepdata-obis",
+            "label": "Archives biologiques via OBIS",
+            "description": "Télécharger les archives Darwin Core par jeu de données. L’archive NORI 2022 inspectée a été publiée le 20 avril 2026 sous CC BY 4.0 ; vérifier les droits de chaque jeu. Il s’agit du sous-ensemble biologique public, sans cadence uniforme établie."
+          },
+          {
+            "id": "deepdata-odis",
+            "label": "Découverte des métadonnées ODIS",
+            "description": "Le catalogue ODIS référence le plan de site public de DeepData, qui contenait 341 pages de métadonnées lors de la lecture. Il indique désormais la ressource en ligne, dernier contrôle le 10 septembre 2026 à 23:41 ; l’ancien signalement hors ligne est historique. Le fichier a aussi répondu durant cette recherche. Une requête distincte dans le démonstrateur ODIS a renvoyé 335 fiches de métadonnées de jeux de données DeepData, et une fiche API était lisible. Cela confirme leur présence dans ce démonstrateur, sans prouver une réplication complète des données, l’exhaustivité du moissonnage ou un calendrier fiable de mise à jour. Les plus de 800 stations CTD annoncées en mai 2025 ont une autre unité et portée."
+          },
+          {
+            "id": "deepdata-contractor",
+            "label": "Dépôt de données des contractants",
+            "description": "Les contractants autorisés utilisent des identifiants propres au contrat ; il ne s’agit pas d’auto-publication publique. Utiliser les modèles actuels : environnement/géologie du 19 janvier 2026, métadonnées du 6 mars 2026. Les rapports de l’année précédente sont dus fin mars. Aucun tarif distinct n’a été établi."
+          },
+          {
+            "id": "deepdata-metadata",
+            "label": "Plan de site des métadonnées",
+            "description": "Lire le plan XML et ses pages HTML contenant descriptions Schema.org JSON-LD et liens de téléchargement. Les points d’accès ont finalement répondu HTTP 200 ; lenteur et coordonnées invalides dans un exemple exigent une vérification. Aucune stabilité ni mise à jour d’API native n’est garantie."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "deepdata-metric-samples",
+            "description": "Total du tableau de bord : 203 589 échantillons biologiques et 622 158 géochimiques. Date statistique absente ; dédoublonnage des spécimens non démontré."
+          },
+          {
+            "id": "deepdata-metric-occurrences",
+            "description": "Occurrences indexées du nœud AIFM selon l’API OBIS, lue le 10 septembre 2026 ; données de 2004–2024, sans date statistique d’indexation. Ce n’est pas tout DeepData."
+          },
+          {
+            "id": "deepdata-metric-species",
+            "description": "Espèces dans la même réponse API du nœud AIFM ; exclut les taxons supérieurs et ne mesure pas toutes les espèces de DeepData."
+          }
+        ],
+        "researchGaps": {
+          "data": "Aucun volume de stockage actuel ni inventaire exhaustif n’a été vérifié. Les totaux ont des portées différentes ; l’API indique aussi 2 860 taxons et 153 jeux, distincts des espèces et occurrences.",
+          "usage": "Aucune mesure vérifiée de sessions, téléchargements, contributeurs ou citations avec périmètre défini. Contrats et campagnes ne sont pas des utilisateurs.",
+          "standards": "Les normes vérifiées concernent l’export OBIS inspecté. Le CSV natif actuel, les correspondances des modèles 2026 et la conformité uniforme des fonds historiques n’ont pas été vérifiés.",
+          "access": "Aucun contrat stable d’API publique native n’a été établi. L’acceptation des conditions de la carte reste en attente ; les exports natifs n’ont pas été testés. Aucune licence ouverte générale n’a été trouvée ; vérifier les droits par jeu."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "DeepData — Base AIFM de fondos marinos y océanos",
+      "summary": "Repositorio AIFM de exploración de fondos marinos, con datos ambientales públicos e información mineral confidencial.",
+      "description": "DeepData es la base espacial de la Autoridad Internacional de los Fondos Marinos para datos de exploración y medio ambiente de la Zona, los fondos marinos fuera de la jurisdicción nacional. Lanzada en 2019, reúne entregas de contratistas y fondos anteriores. La Secretaría gestiona la integración y calidad conforme a políticas y directrices de la Autoridad. Los datos públicos incluyen registros biológicos, observaciones físicas y geoquímicas, sitios de muestreo y archivos de apoyo; la evaluación de recursos minerales permanece confidencial. Las condiciones generales limitan la reutilización a fines personales no comerciales. Los archivos publicados mediante OBIS tienen licencias propias, incluida CC BY 4.0 en los examinados. La participación en ODIS se anunció en mayo de 2025 y existe un mapa público de metadatos registrado. Archivos, panel e índice OBIS describen subconjuntos y fechas diferentes; no constituyen un inventario actual completo ni una frecuencia uniforme de actualización.",
+      "details": {
+        "aliases": [
+          "DeepData",
+          "ISA Deep Seabed and Ocean Database"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "about",
+            "manual",
+            "terms",
+            "collection",
+            "nori-archive",
+            "odis-news",
+            "factcheck"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "deepdata-occurrence",
+              "description": "Registros de presencia biológica de exploraciones; la colección OBIS es un subconjunto publicado."
+            },
+            {
+              "id": "deepdata-samples",
+              "description": "Ubicaciones y análisis de muestras de sedimentos y columna de agua."
+            },
+            {
+              "id": "deepdata-environment",
+              "description": "Parámetros físicos, biológicos y geoquímicos, incluidas observaciones CTD. La evaluación de recursos minerales tiene controles de confidencialidad separados."
+            },
+            {
+              "id": "deepdata-geography",
+              "description": "Áreas de contratos, áreas reservadas, zonas de especial interés ambiental y sitios de muestreo."
+            },
+            {
+              "id": "deepdata-media",
+              "description": "Fotografías, vídeos, mapas y gráficos de contratistas forman parte de los fondos no estructurados; su disponibilidad varía."
+            },
+            {
+              "id": "deepdata-documents",
+              "description": "Informes anuales y publicaciones entregados por contratistas acompañan los datos estructurados."
+            },
+            {
+              "id": "deepdata-catalogue",
+              "description": "El mapa ODIS enumera páginas de metadatos; son entradas de catálogo, no muestras."
+            },
+            {
+              "id": "deepdata-csv",
+              "description": "El manual enlazado de 2018 documenta exportaciones CSV; no se ejecutó la exportación del mapa actual."
+            },
+            {
+              "id": "deepdata-dwca",
+              "description": "La descarga biológica NORI 2022 alojada en OBIS es un archivo Darwin Core con presencias, mediciones y metadatos."
+            },
+            {
+              "id": "deepdata-tsv",
+              "description": "Las tablas inspeccionadas de presencias y mediciones ampliadas usan texto separado por tabuladores."
+            },
+            {
+              "id": "deepdata-xml",
+              "description": "XML describe la estructura del archivo y sus metadatos EML en la exportación inspeccionada."
+            },
+            {
+              "id": "deepdata-html",
+              "description": "Las páginas públicas de conjuntos y el portal DeepData ofrecen contexto legible."
+            },
+            {
+              "id": "deepdata-dwc",
+              "description": "Los términos Darwin Core describen presencias del archivo NORI inspeccionado; se verifica la exportación OBIS, no todas las tablas nativas."
+            },
+            {
+              "id": "deepdata-emof",
+              "description": "El archivo inspeccionado declara una extensión OBIS ExtendedMeasurementOrFact vinculada a presencias."
+            },
+            {
+              "id": "deepdata-eml",
+              "description": "La exportación incluye EML 2.1.1 con perfil GBIF, creador, fecha de publicación y licencia."
+            },
+            {
+              "id": "deepdata-schema-org",
+              "description": "Schema.org Dataset y DataDownload aparecen en una página ODIS de un conjunto CTD de 2021. El ejemplo tiene latitud inválida; verifique las coordenadas."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "deepdata-map",
+            "label": "Mapa público y biblioteca",
+            "description": "Explore datos ambientales por área y muestreo. El manual documenta exportaciones y descargas. El mapa actual cargó lentamente y exigió aceptar condiciones; no se probó su exportación. Los datos minerales confidenciales están excluidos."
+          },
+          {
+            "id": "deepdata-dashboard",
+            "label": "Panel público de estadísticas",
+            "description": "Power BI muestra fondos por categoría y año de campaña. No había fecha estadística visible y un gráfico mostró un error de filtro; los totales no son inventarios deduplicados independientemente."
+          },
+          {
+            "id": "deepdata-obis",
+            "label": "Archivos biológicos mediante OBIS",
+            "description": "Descargue archivos Darwin Core por conjunto. NORI 2022 se publicó el 20 de abril de 2026 bajo CC BY 4.0; revise los derechos de cada conjunto. Cubre el subconjunto biológico público, sin frecuencia uniforme establecida."
+          },
+          {
+            "id": "deepdata-odis",
+            "label": "Descubrimiento de metadatos ODIS",
+            "description": "ODIS registra el mapa público de DeepData, cuyo archivo recuperado contiene 341 páginas de metadatos. El catálogo ahora indica que el recurso está en línea, con última comprobación el 10 de septiembre de 2026 a las 23:41; el aviso anterior sin conexión es histórico. El archivo también respondió durante esta investigación. Una consulta separada en la demostración de ODIS devolvió 335 registros de metadatos de conjuntos de datos de DeepData y permitió leer un registro de ejemplo mediante su API. Esto confirma su presencia en esa demostración, no una réplica completa de los datos, la integridad de la recolección ni un calendario fiable de actualización. Las más de 800 estaciones CTD anunciadas en mayo de 2025 tienen otro alcance y unidad."
+          },
+          {
+            "id": "deepdata-contractor",
+            "label": "Entrega de datos por contratistas",
+            "description": "Los contratistas autorizados usan credenciales por contrato; no es autopublicación pública. Use plantillas actuales: ambientales/geológicas del 19 de enero de 2026 y metadatos del 6 de marzo de 2026. Los informes del año anterior vencen a finales de marzo. No se estableció una tarifa separada."
+          },
+          {
+            "id": "deepdata-metadata",
+            "label": "Mapa público de metadatos",
+            "description": "Lea el mapa XML y páginas HTML con Schema.org JSON-LD y enlaces de descarga. Respondieron finalmente HTTP 200; la lentitud y coordenadas inválidas en un ejemplo requieren verificación. No se documenta garantía de estabilidad ni actualización de API nativa."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "deepdata-metric-samples",
+            "description": "Total del panel: 203.589 muestras biológicas y 622.158 geoquímicas. Sin fecha estadística; no demuestra deduplicación de especímenes."
+          },
+          {
+            "id": "deepdata-metric-occurrences",
+            "description": "Presencias indexadas del nodo AIFM según API OBIS, consultada el 10 de septiembre de 2026; datos de 2004–2024 sin fecha estadística del índice. No son todos los fondos DeepData."
+          },
+          {
+            "id": "deepdata-metric-species",
+            "description": "Especies en la misma respuesta API del nodo AIFM; excluye taxones superiores y no mide todas las especies de DeepData."
+          }
+        ],
+        "researchGaps": {
+          "data": "No se verificó almacenamiento actual ni inventario completo. Los totales tienen ámbitos distintos; la API también informa 2.860 taxones y 153 conjuntos, distintos de especies y presencias.",
+          "usage": "No se encontraron métricas verificadas de sesiones, descargas, contribuidores o citas con alcance definido. Contratos y campañas no son usuarios.",
+          "standards": "Las normas verificadas se limitan a la exportación OBIS inspeccionada. No se verificaron el CSV nativo actual, los mapeos de plantillas 2026 ni la conformidad de todos los fondos históricos.",
+          "access": "No se estableció un contrato documentado de API pública nativa estable. La aceptación de condiciones del mapa está pendiente y no se probaron exportaciones nativas. No se halló licencia abierta general; aplique derechos por conjunto."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ar": {
+      "title": "DeepData — قاعدة السلطة لقاع البحار والمحيطات",
+      "summary": "مستودع السلطة لبيانات استكشاف قاع البحار، يجمع بيانات بيئية عامة ومعلومات معدنية سرية.",
+      "description": "DeepData قاعدة بيانات مكانية للسلطة الدولية لقاع البحار تخص بيانات الاستكشاف والبيئة في المنطقة، أي قاع البحار خارج حدود الولاية الوطنية. أُطلقت في 2019 وتجمع إيداعات المقاولين والبيانات السابقة للسلطة. تتولى الأمانة الاستيعاب وضبط الجودة وفق سياسات السلطة وإرشادات التقارير. تشمل البيانات العامة السجلات البيولوجية والرصد الفيزيائي والجيوكيميائي ومواقع العينات والملفات الداعمة؛ وتبقى بيانات تقييم الموارد المعدنية سرية. تقصر شروط الموقع العامة إعادة الاستخدام على الأغراض الشخصية غير التجارية. وللأرشيفات المنشورة عبر OBIS تراخيص خاصة بكل مجموعة، منها CC BY 4.0 في الصادرات المفحوصة. أُعلن الانضمام إلى ODIS في مايو 2025 وسُجلت خريطة عامة للبيانات الوصفية. تمثل الأرشيفات ومجاميع اللوحة وفهرسة OBIS أجزاء وتواريخ مختلفة؛ ولا تثبت جرداً شاملاً حديثاً أو وتيرة تحديث موحدة.",
+      "details": {
+        "aliases": [
+          "DeepData",
+          "ISA Deep Seabed and Ocean Database"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "about",
+            "manual",
+            "terms",
+            "collection",
+            "nori-archive",
+            "odis-news",
+            "factcheck"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "deepdata-occurrence",
+              "description": "سجلات وجود أحيائي جُمعت أثناء الاستكشاف؛ وتمثل مجموعة OBIS جزءاً منشوراً منها."
+            },
+            {
+              "id": "deepdata-samples",
+              "description": "مواقع العينات وتحليلات رواسب القاع وعمود الماء."
+            },
+            {
+              "id": "deepdata-environment",
+              "description": "معلمات بيئية فيزيائية وبيولوجية وجيوكيميائية، بما فيها CTD؛ وتخضع بيانات تقييم الموارد المعدنية لسرية منفصلة."
+            },
+            {
+              "id": "deepdata-geography",
+              "description": "مناطق العقود والمناطق المحجوزة ومناطق الاهتمام البيئي الخاص ومواقع العينات."
+            },
+            {
+              "id": "deepdata-media",
+              "description": "تشمل المواد غير المنظمة صور المقاولين وفيديوهاتهم وخرائطهم ورسوماتهم؛ ويختلف توافرها."
+            },
+            {
+              "id": "deepdata-documents",
+              "description": "ترافق البيانات المنظمة تقارير سنوية ومنشورات يقدمها المقاولون."
+            },
+            {
+              "id": "deepdata-catalogue",
+              "description": "تسرد خريطة ODIS صفحات البيانات الوصفية؛ وهي سجلات فهرس وليست أعداد عينات."
+            },
+            {
+              "id": "deepdata-csv",
+              "description": "يوثق دليل 2018 تصدير الاستعلامات البيولوجية والجيوكيميائية بصيغة CSV؛ ولم يُنفذ التصدير الحالي."
+            },
+            {
+              "id": "deepdata-dwca",
+              "description": "تنزيل NORI البيولوجي لعام 2022 لدى OBIS هو أرشيف Darwin Core يحوي سجلات وجود وقياسات وبيانات وصفية."
+            },
+            {
+              "id": "deepdata-tsv",
+              "description": "تستخدم جداول الوجود والقياسات الممتدة المفحوصة نصاً تفصله علامات جدولة."
+            },
+            {
+              "id": "deepdata-xml",
+              "description": "تصف XML بنية الأرشيف وبيانات EML في التصدير المفحوص."
+            },
+            {
+              "id": "deepdata-html",
+              "description": "توفر صفحات مجموعات البيانات العامة وبوابة DeepData سياقاً مقروءاً للبشر."
+            },
+            {
+              "id": "deepdata-dwc",
+              "description": "تصف مصطلحات Darwin Core حقول الوجود في أرشيف NORI المفحوص؛ وهذا يثبت التصدير لدى OBIS لا جميع الجداول الأصلية."
+            },
+            {
+              "id": "deepdata-emof",
+              "description": "يعلن الأرشيف المفحوص امتداد OBIS ExtendedMeasurementOrFact المرتبط بسجلات الوجود."
+            },
+            {
+              "id": "deepdata-eml",
+              "description": "يحتوي التصدير على EML 2.1.1 وفق ملف GBIF، بما فيه المنشئ وتاريخ النشر والترخيص."
+            },
+            {
+              "id": "deepdata-schema-org",
+              "description": "تظهر Schema.org Dataset وDataDownload في صفحة ODIS لبيانات CTD لعام 2021. يتضمن المثال خط عرض غير صالح؛ تحقق من الإحداثيات."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "deepdata-map",
+            "label": "الخريطة العامة ومكتبة الملفات",
+            "description": "تصفح البيانات البيئية حسب مناطق العقود والعينات. يوثق الدليل التصدير والتنزيل. حُمّلت الخريطة ببطء وطلبت قبول الشروط؛ ولم يُختبر التصدير. تُستثنى بيانات الموارد المعدنية السرية."
+          },
+          {
+            "id": "deepdata-dashboard",
+            "label": "لوحة الإحصاءات العامة",
+            "description": "تعرض Power BI البيانات حسب الفئة وسنة الرحلة. لم يظهر تاريخ للإحصاءات وأظهر رسم خطأ في الترشيح؛ وليست المجاميع جرداً مستقلاً منزوع التكرار."
+          },
+          {
+            "id": "deepdata-obis",
+            "label": "الأرشيفات البيولوجية عبر OBIS",
+            "description": "نزّل أرشيفات Darwin Core لكل مجموعة. نُشر أرشيف NORI 2022 المفحوص في 20 أبريل 2026 بترخيص CC BY 4.0؛ راجع حقوق كل مجموعة. يقتصر المسار على الجزء البيولوجي العام بلا وتيرة تحديث موحدة مثبتة."
+          },
+          {
+            "id": "deepdata-odis",
+            "label": "اكتشاف البيانات الوصفية عبر ODIS",
+            "description": "يسجل دليل ODIS خريطة موقع DeepData العامة، التي تضمنت 341 صفحة وصفية في الملف المسترجع. يبين الدليل الآن أن المورد متصل، وآخر فحص في 10 سبتمبر 2026 الساعة 23:41؛ أما تنبيه عدم الاتصال السابق فهو تاريخي. استجاب الملف أيضاً أثناء هذا البحث. أعاد استعلام منفصل في عرض ODIS التجريبي 335 سجلاً وصفياً لمجموعات بيانات DeepData، وأمكنت قراءة سجل نموذجي عبر واجهة API. يثبت ذلك وجود البيانات الوصفية في العرض التجريبي، وليس نسخ البيانات الكاملة أو اكتمال الحصاد أو وجود جدول تحديث موثوق. وتمثل أكثر من 800 محطة CTD المعلنة في مايو 2025 وحدة ونطاقاً مختلفين."
+          },
+          {
+            "id": "deepdata-contractor",
+            "label": "إيداع بيانات المقاولين",
+            "description": "يستخدم المقاولون المخولون بيانات دخول خاصة بالعقد؛ وليس نشرًا ذاتياً للجمهور. استخدم نماذج البيئة والجيولوجيا المؤرخة 19 يناير 2026 ونموذج البيانات الوصفية 6 مارس 2026. تستحق تقارير السنة السابقة بنهاية مارس. لم تُثبت رسوم إيداع منفصلة."
+          },
+          {
+            "id": "deepdata-metadata",
+            "label": "خريطة البيانات الوصفية العامة",
+            "description": "اقرأ خريطة XML وصفحات HTML التي تحوي أوصاف Schema.org JSON-LD وروابط تنزيل. استجابت المسارات في النهاية برمز 200؛ ويستدعي البطء وإحداثيات غير صالحة في مثال التحقق قبل الاستخدام. لا يوجد ضمان موثق لاستقرار واجهة أصلية أو تحديثها."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "deepdata-metric-samples",
+            "description": "مجموع اللوحة: 203589 عينة بيولوجية و622158 جيوكيميائية. لا يظهر تاريخ إحصائي؛ ولا يثبت إزالة تكرار العينات."
+          },
+          {
+            "id": "deepdata-metric-occurrences",
+            "description": "عدد سجلات الوجود المفهرسة لعقدة السلطة من واجهة OBIS، مسترجع في 10 سبتمبر 2026؛ البيانات من 2004–2024 بلا تاريخ إحصائي للفهرسة. لا يشمل كل DeepData."
+          },
+          {
+            "id": "deepdata-metric-species",
+            "description": "أنواع في استجابة الواجهة نفسها لعقدة السلطة؛ تستثني المراتب الأعلى ولا تقيس جميع أنواع DeepData."
+          }
+        ],
+        "researchGaps": {
+          "data": "لم يُتحقق من حجم التخزين الحالي أو جرد ملفات كامل. تختلف نطاقات المجاميع؛ وتورد الواجهة أيضاً 2860 أصنوفة و153 مجموعة، وهي ليست أعداد أنواع أو سجلات وجود.",
+          "usage": "لم يُعثر على مقاييس موثقة للجلسات أو التنزيلات أو المساهمين أو الاستشهادات ذات نطاق واضح. العقود والرحلات ليست أعداد مستخدمين.",
+          "standards": "تنطبق المعايير المثبتة على تصدير OBIS المفحوص. لم تُتحقق صيغة CSV الحالية أو مطابقة نماذج 2026 أو امتثال جميع البيانات التاريخية.",
+          "access": "لم تُثبت واجهة عامة أصلية مستقرة ذات عقد موثق. قبول شروط الخريطة معلق ولم يُختبر التصدير الأصلي. لا يوجد ترخيص مفتوح عام مثبت لكل المحتوى؛ تُراعى حقوق كل مجموعة."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "DeepData — ISA海底与海洋数据库",
+      "summary": "ISA深海勘探数据存储库，包含公开环境资料和保密矿产资源信息。",
+      "description": "DeepData是国际海底管理局用于“区域”（国家管辖范围以外的海床）勘探数据和相关环境信息的空间数据库。它于2019年启用，整合承包者提交资料及管理局既有馆藏。秘书处依据管理局数据政策和报告指引开展数据接收与质量控制。公开内容包括生物记录、物理和地球化学观测、采样地点及支持文件；矿产资源评估数据仍保密。原生地图受网站条款约束，其一般再利用许可限于个人非商业用途。通过OBIS发布的档案采用数据集各自的许可，所检查导出包括CC BY 4.0。2025年5月公告加入ODIS，并注册了公共元数据站点地图。档案发布、仪表板总数及OBIS索引对应不同子集和日期，均不能证明完整的最新库存或统一更新周期。",
+      "details": {
+        "aliases": [
+          "DeepData",
+          "ISA Deep Seabed and Ocean Database"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "about",
+            "manual",
+            "terms",
+            "collection",
+            "nori-archive",
+            "odis-news",
+            "factcheck"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "deepdata-occurrence",
+              "description": "承包者勘探采集的生物出现记录；OBIS集合仅为已发布子集。"
+            },
+            {
+              "id": "deepdata-samples",
+              "description": "海底沉积物与水体样品的位置及分析。"
+            },
+            {
+              "id": "deepdata-environment",
+              "description": "包括CTD观测在内的物理、生物和地球化学环境参数；矿产资源评估数据另受保密管制。"
+            },
+            {
+              "id": "deepdata-geography",
+              "description": "合同区、保留区、特别环境利益区和采样地点。"
+            },
+            {
+              "id": "deepdata-media",
+              "description": "非结构化馆藏包括承包者的照片、视频、地图和图形；可用性各异。"
+            },
+            {
+              "id": "deepdata-documents",
+              "description": "承包者提交的年报及相关出版物与结构化数据一并保存。"
+            },
+            {
+              "id": "deepdata-catalogue",
+              "description": "ODIS站点地图列出DeepData数据集元数据页面；这是目录条目而非样品数。"
+            },
+            {
+              "id": "deepdata-csv",
+              "description": "链接的2018年手册记载生物及地球化学查询可导出CSV；未执行当前地图导出。"
+            },
+            {
+              "id": "deepdata-dwca",
+              "description": "OBIS托管的NORI 2022生物下载为Darwin Core Archive，含出现记录、测量和元数据。"
+            },
+            {
+              "id": "deepdata-tsv",
+              "description": "所检查的档案出现记录表和扩展测量表使用制表符分隔文本。"
+            },
+            {
+              "id": "deepdata-xml",
+              "description": "已检查的OBIS托管导出以XML保存档案结构和EML元数据。"
+            },
+            {
+              "id": "deepdata-html",
+              "description": "公共数据集着陆页和DeepData门户提供可读说明。"
+            },
+            {
+              "id": "deepdata-dwc",
+              "description": "检查的NORI档案使用Darwin Core出现记录字段；该验证限于OBIS导出，并非全部原生表。"
+            },
+            {
+              "id": "deepdata-emof",
+              "description": "检查的档案声明OBIS ExtendedMeasurementOrFact扩展，并关联出现记录。"
+            },
+            {
+              "id": "deepdata-eml",
+              "description": "检查的导出含采用GBIF配置的EML 2.1.1元数据，包含创建者、发布日期和许可。"
+            },
+            {
+              "id": "deepdata-schema-org",
+              "description": "2021年CTD数据集的公共ODIS元数据页含Schema.org Dataset和DataDownload。示例纬度无效；空间使用前须验证坐标。"
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "deepdata-map",
+            "label": "公共地图及文件库",
+            "description": "按合同区和采样背景浏览环境数据。手册记载查询导出和文件下载。当前地图加载缓慢并显示条款接受提示；未测试导出。公开访问不含保密矿产资源数据。"
+          },
+          {
+            "id": "deepdata-dashboard",
+            "label": "公共统计仪表板",
+            "description": "嵌入的Power BI概览按类别和航次年份显示馆藏。未显示统计日期，且一个图表报筛选错误；总数为仪表板读数，并非独立去重清单。"
+          },
+          {
+            "id": "deepdata-obis",
+            "label": "通过OBIS获取生物档案",
+            "description": "从OBIS托管集合下载各数据集的Darwin Core Archive。已检查的NORI 2022档案于2026年4月20日以CC BY 4.0发布；应逐一核查元数据和权利。仅涵盖公开生物子集，未证实统一更新频率。"
+          },
+          {
+            "id": "deepdata-odis",
+            "label": "ODIS元数据发现",
+            "description": "ODIS目录注册了DeepData公共站点地图，所获取文件列有341个元数据页面。目录现显示资源在线，最近检查时间为2026年9月10日23:41；此前的离线标志是历史状态。本次研究中站点地图也已响应。另一次ODIS开发演示查询返回了335条DeepData数据集元数据记录，并可通过API读取一条示例记录。这证实元数据存在于该演示中，但不证明完整数据复制、采集完整性或可靠的更新周期。2025年5月公告的800多个CTD站点属于不同单位和范围。"
+          },
+          {
+            "id": "deepdata-contractor",
+            "label": "承包者数据提交",
+            "description": "授权承包者使用合同专属凭据上传；不是公众自助发布。应使用现行模板：环境及地质模板日期为2026年1月19日，元数据模板为3月6日。上年年报于3月底前提交。未证实单独提交费用。"
+          },
+          {
+            "id": "deepdata-metadata",
+            "label": "公共元数据站点地图",
+            "description": "读取XML站点地图及其含Schema.org JSON-LD数据集描述和下载链接的HTML页面。这些端点最终返回HTTP 200；响应缓慢且一个样本坐标无效，使用前需核查。未记录原生API稳定性或更新保证。"
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "deepdata-metric-samples",
+            "description": "仪表板总数：203,589个生物样品加622,158个地球化学样品。无统计日期；不代表已证明独立标本去重。"
+          },
+          {
+            "id": "deepdata-metric-occurrences",
+            "description": "2026年9月10日读取的OBIS API中ISA节点出现记录数；响应涵盖2004–2024年记录，未给出索引统计日期。不代表DeepData全部馆藏。"
+          },
+          {
+            "id": "deepdata-metric-species",
+            "description": "同一OBIS ISA节点API响应中的物种数；不包括更高分类阶元，也不代表DeepData原生数据的全部物种。"
+          }
+        ],
+        "researchGaps": {
+          "data": "未核实当前总存储量或完整文件清单。仪表板与OBIS范围不同；API另报2,860个分类单元和153个数据集，不能当作物种或出现记录总数。",
+          "usage": "未找到统计范围明确且可核实的会话、下载事件、贡献者或引用指标。合同与航次不等于用户数量。",
+          "standards": "已验证标准限于检查的OBIS导出；未核实当前原生CSV输出、2026提交模板映射及历史馆藏的一致合规情况。",
+          "access": "未建立有文档支持的稳定原生公共API契约。地图条款接受仍待处理，原生导出未测试。未找到覆盖全部DeepData内容的一般开放许可；应按数据集权利使用。"
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "DeepData — База МОМД по морскому дну и океану",
+      "summary": "Репозиторий МОМД для глубоководной разведки с открытыми экологическими и конфиденциальными минеральными данными.",
+      "description": "DeepData — пространственная база Международного органа по морскому дну для разведочных и экологических данных Района, то есть морского дна за пределами национальной юрисдикции. Запущенная в 2019 году, она объединяет материалы контракторов и прежние фонды МОМД. Секретариат ведёт загрузку и контроль качества согласно политике и требованиям отчётности Органа. Открытые данные включают биологические записи, физические и геохимические наблюдения, места отбора проб и сопроводительные файлы; оценка минеральных ресурсов остаётся конфиденциальной. Общие условия сайта ограничивают повторное использование личными некоммерческими целями. Архивы, опубликованные через OBIS, имеют отдельные лицензии, включая CC BY 4.0 в проверенных выгрузках. Участие в ODIS объявлено в мае 2025 года, зарегистрирована открытая карта метаданных. Архивы, панель и индекс OBIS отражают разные части и даты; они не подтверждают полный текущий объём или единый график обновления.",
+      "details": {
+        "aliases": [
+          "DeepData",
+          "ISA Deep Seabed and Ocean Database"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "about",
+            "manual",
+            "terms",
+            "collection",
+            "nori-archive",
+            "odis-news",
+            "factcheck"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "deepdata-occurrence",
+              "description": "Записи встреч организмов при разведке; коллекция OBIS представляет опубликованную часть."
+            },
+            {
+              "id": "deepdata-samples",
+              "description": "Места отбора и анализы проб донных осадков и водной толщи."
+            },
+            {
+              "id": "deepdata-environment",
+              "description": "Физические, биологические и геохимические параметры, включая CTD; оценка минеральных ресурсов регулируется отдельными правилами конфиденциальности."
+            },
+            {
+              "id": "deepdata-geography",
+              "description": "Контрактные и зарезервированные участки, районы особого экологического интереса и места отбора проб."
+            },
+            {
+              "id": "deepdata-media",
+              "description": "Неструктурированные материалы включают фотографии, видео, карты и графики контракторов; доступность различается."
+            },
+            {
+              "id": "deepdata-documents",
+              "description": "Структурированные данные сопровождаются годовыми отчётами и публикациями контракторов."
+            },
+            {
+              "id": "deepdata-catalogue",
+              "description": "Карта ODIS перечисляет страницы метаданных; это записи каталога, а не число проб."
+            },
+            {
+              "id": "deepdata-csv",
+              "description": "Руководство 2018 года описывает экспорт биологических и геохимических запросов в CSV; текущий экспорт не выполнялся."
+            },
+            {
+              "id": "deepdata-dwca",
+              "description": "Биологическая выгрузка NORI 2022 на OBIS — архив Darwin Core с записями встреч, измерениями и метаданными."
+            },
+            {
+              "id": "deepdata-tsv",
+              "description": "Проверенные таблицы встреч и расширенных измерений разделены табуляцией."
+            },
+            {
+              "id": "deepdata-xml",
+              "description": "XML используется для структуры архива и метаданных EML в проверенной выгрузке."
+            },
+            {
+              "id": "deepdata-html",
+              "description": "Открытые страницы наборов и портал DeepData содержат описания для пользователей."
+            },
+            {
+              "id": "deepdata-dwc",
+              "description": "Термины Darwin Core описывают поля встреч в архиве NORI; подтверждена выгрузка OBIS, а не все исходные таблицы."
+            },
+            {
+              "id": "deepdata-emof",
+              "description": "Проверенный архив объявляет расширение OBIS ExtendedMeasurementOrFact, связанное с записями встреч."
+            },
+            {
+              "id": "deepdata-eml",
+              "description": "Выгрузка содержит EML 2.1.1 профиля GBIF с создателем, датой публикации и лицензией."
+            },
+            {
+              "id": "deepdata-schema-org",
+              "description": "Страница ODIS набора CTD за 2021 год содержит Schema.org Dataset и DataDownload. Широта в примере недопустима; проверяйте координаты."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "deepdata-map",
+            "label": "Открытая карта и библиотека",
+            "description": "Просмотр экологических данных по участкам и пробам. Руководство описывает экспорт и загрузку файлов. Карта загружалась медленно и требовала принятия условий; экспорт не проверен. Конфиденциальные минеральные данные исключены."
+          },
+          {
+            "id": "deepdata-dashboard",
+            "label": "Открытая статистическая панель",
+            "description": "Power BI показывает данные по категориям и годам рейсов. Дата статистики не указана, один график сообщал об ошибке фильтра; итоговые значения не являются независимо очищенным от дублей реестром."
+          },
+          {
+            "id": "deepdata-obis",
+            "label": "Биологические архивы через OBIS",
+            "description": "Загружайте отдельные архивы Darwin Core из коллекции OBIS. Проверенный NORI 2022 опубликован 20 апреля 2026 года по CC BY 4.0; права следует проверять для каждого набора. Доступна биологическая часть без установленной общей частоты обновления."
+          },
+          {
+            "id": "deepdata-odis",
+            "label": "Поиск метаданных через ODIS",
+            "description": "ODIS регистрирует открытую карту сайта DeepData с 341 страницей метаданных в полученном файле. Теперь каталог отмечает ресурс как доступный; последняя проверка — 10 сентября 2026 года в 23:41. Прежняя отметка о недоступности относится к прошлой проверке. Файл также ответил во время исследования. Отдельный запрос в демонстрационном поиске ODIS вернул 335 записей метаданных наборов DeepData; пример записи был доступен через API. Это подтверждает наличие метаданных в демонстрационной системе, но не полную репликацию данных, полноту сбора или надёжный график обновлений. Более 800 станций CTD из сообщения мая 2025 года имеют иной охват и единицу."
+          },
+          {
+            "id": "deepdata-contractor",
+            "label": "Представление данных контракторами",
+            "description": "Уполномоченные контракторы используют учётные данные по контракту; это не открытая самостоятельная публикация. Текущие экологические и геологические шаблоны датированы 19 января 2026 года, метаданные — 6 марта. Отчёт за предыдущий год подаётся до конца марта. Отдельная плата не установлена."
+          },
+          {
+            "id": "deepdata-metadata",
+            "label": "Открытая карта метаданных",
+            "description": "Читайте XML-карту и HTML-страницы с описаниями Schema.org JSON-LD и ссылками загрузки. Они в итоге ответили HTTP 200; медленная работа и неверные координаты в одном примере требуют проверки. Гарантии стабильности исходного API или обновления не установлены."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "deepdata-metric-samples",
+            "description": "Итог панели: 203 589 биологических и 622 158 геохимических проб. Дата статистики не указана; уникальность проб не подтверждена."
+          },
+          {
+            "id": "deepdata-metric-occurrences",
+            "description": "Число индексированных встреч узла МОМД по API OBIS, прочитано 10 сентября 2026 года; записи за 2004–2024 годы без даты статистики индекса. Это не все данные DeepData."
+          },
+          {
+            "id": "deepdata-metric-species",
+            "description": "Виды в том же ответе API узла МОМД; высшие таксоны исключены, это не все виды исходной DeepData."
+          }
+        ],
+        "researchGaps": {
+          "data": "Текущий объём хранения и полный перечень файлов не установлены. Охват итогов различается; API также сообщает 2 860 таксонов и 153 набора, не равные числу видов или встреч.",
+          "usage": "Не найдены проверенные показатели сессий, загрузок, участников или цитирований с ясным охватом. Контракты и рейсы не являются числом пользователей.",
+          "standards": "Подтверждённые стандарты относятся к проверенной выгрузке OBIS. Текущий исходный CSV, соответствия шаблонов 2026 и единое соблюдение стандартов историческими данными не проверены.",
+          "access": "Документированный стабильный контракт исходного публичного API не установлен. Условия карты пока не приняты, исходный экспорт не проверен. Общая открытая лицензия на всё содержимое не найдена; применяются права отдельных наборов."
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-international-seabed-authority-operates-deepdata",
+      "sourceNodeId": "international-seabed-authority",
+      "targetNodeId": "deepdata",
+      "kind": "operates",
+      "note": "ISA’s Secretariat Data Manager receives contractor submissions, manages validation and ingestion, maintains spatial data and administers the DeepData website. The operational workflow is documented in sections 6–6.2 of the linked manual.",
+      "properties": {
+        "scope": "DeepData ingestion, quality control, data maintenance and website administration",
+        "status": "current ISA service; manual workflow documented in 2018",
+        "sourceRefs": [
+          "manual",
+          "about"
+        ]
+      },
+      "sources": {
+        "manual": {
+          "id": "manual",
+          "url": "https://www.isa.org.jm/wp-content/uploads/2022/04/UserManual_v1.1_20181119.pdf",
+          "title": {
+            "en": "DeepData user manual, version 1.1 (2018)",
+            "fr": "Manuel DeepData, version 1.1 (2018)",
+            "es": "Manual de DeepData, versión 1.1 (2018)",
+            "ar": "دليل DeepData الإصدار 1.1 (2018)",
+            "zh": "DeepData用户手册1.1版（2018）",
+            "ru": "Руководство DeepData, версия 1.1 (2018)"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "about": {
+          "id": "about",
+          "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+          "title": {
+            "en": "About DeepData",
+            "fr": "À propos de DeepData",
+            "es": "Acerca de DeepData",
+            "ar": "حول DeepData",
+            "zh": "关于DeepData",
+            "ru": "О DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-international-seabed-authority-governs-deepdata",
+      "sourceNodeId": "international-seabed-authority",
+      "targetNodeId": "deepdata",
+      "kind": "governs",
+      "note": "ISA controls DeepData data policy and access classification under its exploration framework. Reporting templates and confidentiality rules distinguish public environmental data from confidential mineral-resource information; the Legal and Technical Commission supplies reporting guidance. This edge concerns authority over this database, not authority over all ocean science or the water column.",
+      "properties": {
+        "scope": "ISA database policy, contractor reporting requirements and confidentiality classification",
+        "status": "documented institutional authority; current templates linked in 2026",
+        "sourceRefs": [
+          "about",
+          "templates"
+        ]
+      },
+      "sources": {
+        "about": {
+          "id": "about",
+          "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+          "title": {
+            "en": "About DeepData",
+            "fr": "À propos de DeepData",
+            "es": "Acerca de DeepData",
+            "ar": "حول DeepData",
+            "zh": "关于DeepData",
+            "ru": "О DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-international-seabed-authority-funds-deepdata",
+      "sourceNodeId": "international-seabed-authority",
+      "targetNodeId": "deepdata",
+      "kind": "funds",
+      "note": "ISA’s July 2023 account identifies DeepData, launched in 2019, as its first database allocated dedicated programmatic funding by ISA Members. This establishes ISA programme funding; no specific member contribution, current annual amount or future mining revenue is inferred.",
+      "properties": {
+        "scope": "Dedicated ISA programme funding for DeepData",
+        "status": "historical funding documented July 2023; current amount not established",
+        "sourceRefs": [
+          "factcheck"
+        ]
+      },
+      "sources": {
+        "factcheck": {
+          "id": "factcheck",
+          "url": "https://isa.org.jm/isa-fact-check-2023-1/",
+          "title": {
+            "en": "ISA explanation of DeepData holdings and funding, July 2023",
+            "fr": "Explication des fonds et du financement DeepData, juillet 2023",
+            "es": "Explicación de fondos y financiación DeepData, julio de 2023",
+            "ar": "توضيح بيانات DeepData وتمويلها، يوليو 2023",
+            "zh": "2023年7月ISA对DeepData馆藏与经费的说明",
+            "ru": "Разъяснение о данных и финансировании DeepData, июль 2023"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-deepdata-syncs-to-platform-obis",
+      "sourceNodeId": "deepdata",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "The OBIS ISA node identifies DeepData as the source of contractor environmental data and exposes an ISA dataset feed. Its listed biological datasets establish the published subset, not transfer of confidential geological or all DeepData holdings. No uniform refresh schedule is established. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
+      "properties": {
+        "scope": "Public biological subset of ISA DeepData through OBIS ISA",
+        "status": "published harvested datasets; cadence unspecified",
+        "sourceRefs": [
+          "evidence",
+          "archive"
+        ],
+        "transferMethod": "ISA dataset feed harvested into OBIS",
+        "artifact": "https://datasets.obis.org/hosted/isa/rss.xml"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+          "title": {
+            "en": "OBIS ISA node and DeepData source",
+            "fr": "Nœud OBIS ISA et source DeepData",
+            "es": "Nodo OBIS ISA y fuente DeepData",
+            "ar": "عقدة OBIS ISA ومصدر DeepData",
+            "zh": "OBIS ISA节点与DeepData来源",
+            "ru": "Узел OBIS ISA и источник DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "archive": {
+          "id": "archive",
+          "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+          "title": {
+            "en": "NORI 2022 biological archive: EML and archive metadata",
+            "fr": "Archive biologique NORI 2022 : EML et métadonnées",
+            "es": "Archivo biológico NORI 2022: EML y metadatos",
+            "ar": "أرشيف NORI البيولوجي 2022: بيانات EML ووصف الأرشيف",
+            "zh": "NORI 2022生物档案：EML和档案元数据",
+            "ru": "Биологический архив NORI 2022: EML и метаданные"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-deepdata-member_of-odis",
+      "sourceNodeId": "deepdata",
+      "targetNodeId": "odis",
+      "kind": "member_of",
+      "note": "ISA announced integration of DeepData into the ODIS federation on 6 May 2025. This is documented participation of the database in a distributed system, not component hierarchy. A current development-search JSON response also confirms DeepData metadata is present downstream; full harvest coverage is not established. The development network monitor reports six DeepData page-parsing failures (five shown and one additional), so indexed presence is not evidence of complete ingestion; this research did not independently rerun the full crawl.",
+      "properties": {
+        "scope": "DeepData metadata discovery through the ODIS federation",
+        "status": "participation announced 2025-05-06; source sitemap retrieved 2026-09-10; catalogue reports online at check 10/09/2026 23:41 (timezone unspecified); downstream harvest time unverified",
+        "sourceRefs": [
+          "odis-news",
+          "odis-catalogue",
+          "sitemap",
+          "odis-example",
+          "demo-deepdata",
+          "network"
+        ],
+        "artifact": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml"
+      },
+      "sources": {
+        "odis-news": {
+          "id": "odis-news",
+          "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+          "title": {
+            "en": "DeepData joins ODIS, 6 May 2025",
+            "fr": "DeepData rejoint ODIS, 6 mai 2025",
+            "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+            "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+            "zh": "DeepData于2025年5月6日加入ODIS",
+            "ru": "DeepData присоединяется к ODIS, 6 мая 2025"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-catalogue": {
+          "id": "odis-catalogue",
+          "url": "https://catalogue.odis.org/view/893",
+          "title": {
+            "en": "ODIS catalogue record 893: DeepData",
+            "fr": "Notice 893 du catalogue ODIS : DeepData",
+            "es": "Registro 893 del catálogo ODIS: DeepData",
+            "ar": "سجل ODIS رقم 893: DeepData",
+            "zh": "ODIS目录条目893：DeepData",
+            "ru": "Запись 893 каталога ODIS: DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "sitemap": {
+          "id": "sitemap",
+          "url": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+          "title": {
+            "en": "DeepData ODIS sitemap",
+            "fr": "Plan de site ODIS de DeepData",
+            "es": "Mapa del sitio ODIS de DeepData",
+            "ar": "خريطة موقع DeepData لخدمة ODIS",
+            "zh": "DeepData ODIS站点地图",
+            "ru": "Карта сайта DeepData для ODIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-example": {
+          "id": "odis-example",
+          "url": "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+          "title": {
+            "en": "DeepData ODIS CTD metadata: Beijing Pioneer, 2021",
+            "fr": "Métadonnées CTD ODIS : Beijing Pioneer, 2021",
+            "es": "Metadatos CTD ODIS: Beijing Pioneer, 2021",
+            "ar": "بيانات CTD الوصفية عبر ODIS: بيجين بايونير، 2021",
+            "zh": "DeepData ODIS CTD元数据：北京先驱，2021",
+            "ru": "Метаданные CTD ODIS: Beijing Pioneer, 2021"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "demo-deepdata": {
+          "id": "demo-deepdata",
+          "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+          "title": {
+            "en": "ODIS demo JSON record for DeepData CTD metadata",
+            "fr": "Notice JSON de démonstration ODIS pour les métadonnées CTD DeepData",
+            "es": "Registro JSON de demostración ODIS con metadatos CTD de DeepData",
+            "ar": "سجل JSON في عرض ODIS لبيانات DeepData الوصفية عن CTD",
+            "ru": "JSON-запись демонстрационного поиска ODIS с метаданными CTD DeepData",
+            "zh": "ODIS演示中的DeepData CTD元数据JSON记录"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "network": {
+          "id": "network",
+          "url": "https://search-demo.odis.org/network",
+          "title": {
+            "en": "ODIS development network-status report",
+            "fr": "État du réseau ODIS en développement",
+            "es": "Estado de la red ODIS en desarrollo",
+            "ar": "تقرير حالة شبكة ODIS قيد التطوير",
+            "ru": "Состояние разрабатываемой сети ODIS",
+            "zh": "开发中的ODIS网络状态报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-deepdata-syncs_to-odis",
+      "sourceNodeId": "deepdata",
+      "targetNodeId": "odis",
+      "kind": "syncs_to",
+      "note": "ODIS catalogue record 893 registers DeepData’s sitemap; the upstream sample and sitemap support metadata exposure. On 10 September 2026, the development search displayed 335 DeepData dataset results and returned a public JSON record for COMRA CTD metadata with an ISA download link. Its source.last_indexed value is 2026-09-10T08:41:07.596052 (timezone unspecified), an index metadata field rather than proof of a complete latest-source harvest. ODISCat reported the source online at 10/09/2026 23:41; the earlier offline check is historical. This is verified downstream metadata presence, not replication of all DeepData files or a guaranteed refresh cadence. The development network monitor reports six DeepData page-parsing failures (five shown and one additional), so indexed presence is not evidence of complete ingestion; this research did not independently rerun the full crawl.",
+      "properties": {
+        "scope": "DeepData metadata discovery through the ODIS federation",
+        "status": "metadata present in ODIS development search on 2026-09-10; full coverage and refresh cadence unverified",
+        "sourceRefs": [
+          "odis-news",
+          "odis-catalogue",
+          "sitemap",
+          "odis-example",
+          "demo-deepdata",
+          "network"
+        ],
+        "artifact": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+        "sourceIndexReportedAt": "2026-09-10T08:41:07.596052 (timezone unspecified)"
+      },
+      "sources": {
+        "odis-news": {
+          "id": "odis-news",
+          "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+          "title": {
+            "en": "DeepData joins ODIS, 6 May 2025",
+            "fr": "DeepData rejoint ODIS, 6 mai 2025",
+            "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+            "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+            "zh": "DeepData于2025年5月6日加入ODIS",
+            "ru": "DeepData присоединяется к ODIS, 6 мая 2025"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-catalogue": {
+          "id": "odis-catalogue",
+          "url": "https://catalogue.odis.org/view/893",
+          "title": {
+            "en": "ODIS catalogue record 893: DeepData",
+            "fr": "Notice 893 du catalogue ODIS : DeepData",
+            "es": "Registro 893 del catálogo ODIS: DeepData",
+            "ar": "سجل ODIS رقم 893: DeepData",
+            "zh": "ODIS目录条目893：DeepData",
+            "ru": "Запись 893 каталога ODIS: DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "sitemap": {
+          "id": "sitemap",
+          "url": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+          "title": {
+            "en": "DeepData ODIS sitemap",
+            "fr": "Plan de site ODIS de DeepData",
+            "es": "Mapa del sitio ODIS de DeepData",
+            "ar": "خريطة موقع DeepData لخدمة ODIS",
+            "zh": "DeepData ODIS站点地图",
+            "ru": "Карта сайта DeepData для ODIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-example": {
+          "id": "odis-example",
+          "url": "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+          "title": {
+            "en": "DeepData ODIS CTD metadata: Beijing Pioneer, 2021",
+            "fr": "Métadonnées CTD ODIS : Beijing Pioneer, 2021",
+            "es": "Metadatos CTD ODIS: Beijing Pioneer, 2021",
+            "ar": "بيانات CTD الوصفية عبر ODIS: بيجين بايونير، 2021",
+            "zh": "DeepData ODIS CTD元数据：北京先驱，2021",
+            "ru": "Метаданные CTD ODIS: Beijing Pioneer, 2021"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "demo-deepdata": {
+          "id": "demo-deepdata",
+          "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+          "title": {
+            "en": "ODIS demo JSON record for DeepData CTD metadata",
+            "fr": "Notice JSON de démonstration ODIS pour les métadonnées CTD DeepData",
+            "es": "Registro JSON de demostración ODIS con metadatos CTD de DeepData",
+            "ar": "سجل JSON في عرض ODIS لبيانات DeepData الوصفية عن CTD",
+            "ru": "JSON-запись демонстрационного поиска ODIS с метаданными CTD DeepData",
+            "zh": "ODIS演示中的DeepData CTD元数据JSON记录"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "network": {
+          "id": "network",
+          "url": "https://search-demo.odis.org/network",
+          "title": {
+            "en": "ODIS development network-status report",
+            "fr": "État du réseau ODIS en développement",
+            "es": "Estado de la red ODIS en desarrollo",
+            "ar": "تقرير حالة شبكة ODIS قيد التطوير",
+            "ru": "Состояние разрабатываемой сети ODIS",
+            "zh": "开发中的ODIS网络状态报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worms-syncs-to-deepdata",
+      "sourceNodeId": "worms",
+      "targetNodeId": "deepdata",
+      "kind": "syncs_to",
+      "note": "ISA’s July 2023 account reports expert review and use of WoRMS tools on more than 60,000 biological records to improve DeepData taxonomy. This is scoped taxonomic reconciliation, not a copy of the WoRMS database or a demonstrated continuous synchronization. The 2022 partnership alone would not establish a data transfer.",
+      "properties": {
+        "scope": "Taxonomic reconciliation of DeepData biological records using WoRMS",
+        "status": "documented completed work as of July 2023; ongoing cadence not established",
+        "sourceRefs": [
+          "factcheck"
+        ]
+      },
+      "sources": {
+        "factcheck": {
+          "id": "factcheck",
+          "url": "https://isa.org.jm/isa-fact-check-2023-1/",
+          "title": {
+            "en": "ISA explanation of DeepData holdings and funding, July 2023",
+            "fr": "Explication des fonds et du financement DeepData, juillet 2023",
+            "es": "Explicación de fondos y financiación DeepData, julio de 2023",
+            "ar": "توضيح بيانات DeepData وتمويلها، يوليو 2023",
+            "zh": "2023年7月ISA对DeepData馆藏与经费的说明",
+            "ru": "Разъяснение о данных и финансировании DeepData, июль 2023"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ocean-mineral-singapore-publishes-to-deepdata",
+      "sourceNodeId": "ocean-mineral-singapore",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Ocean Mineral Singapore Pte. Ltd. is identified as the creator of OMSPMN12022 Env Template NHM-NORCE in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "OMSPMN12022 Env Template NHM-NORCE; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/omspmn12022_env_nhm_norce/omspmn12022_env_nhm_norce.zip",
+          "title": {
+            "en": "OMSPMN12022 Env Template NHM-NORCE",
+            "fr": "OMSPMN12022 Env Template NHM-NORCE",
+            "es": "OMSPMN12022 Env Template NHM-NORCE",
+            "ar": "OMSPMN12022 Env Template NHM-NORCE",
+            "zh": "OMSPMN12022 Env Template NHM-NORCE",
+            "ru": "OMSPMN12022 Env Template NHM-NORCE"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-uk-seabed-resources-publishes-to-deepdata",
+      "sourceNodeId": "uk-seabed-resources",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "UK Seabed Resources Ltd. is identified as the creator of UKSRLPMN12019 NHM-NORCE Updated in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "UKSRLPMN12019 NHM-NORCE Updated; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/uksrlpmn12019_nhm_norce_updated/uksrlpmn12019_nhm_norce_updated.zip",
+          "title": {
+            "en": "UKSRLPMN12019 NHM-NORCE Updated",
+            "fr": "UKSRLPMN12019 NHM-NORCE Updated",
+            "es": "UKSRLPMN12019 NHM-NORCE Updated",
+            "ar": "UKSRLPMN12019 NHM-NORCE Updated",
+            "zh": "UKSRLPMN12019 NHM-NORCE Updated",
+            "ru": "UKSRLPMN12019 NHM-NORCE Updated"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-bgr-publishes-to-deepdata",
+      "sourceNodeId": "bgr",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Federal Institute for Geosciences and Natural Resources of Germany is identified as the creator of BGRPMN12021 Env Template 2018 Biology in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "BGRPMN12021 Env Template 2018 Biology; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/bgrpmn12021_env_2018_biology/bgrpmn12021_env_2018_biology.zip",
+          "title": {
+            "en": "BGRPMN12021 Env Template 2018 Biology",
+            "fr": "BGRPMN12021 Env Template 2018 Biology",
+            "es": "BGRPMN12021 Env Template 2018 Biology",
+            "ar": "BGRPMN12021 Env Template 2018 Biology",
+            "zh": "BGRPMN12021 Env Template 2018 Biology",
+            "ru": "BGRPMN12021 Env Template 2018 Biology"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-tonga-offshore-mining-publishes-to-deepdata",
+      "sourceNodeId": "tonga-offshore-mining",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Tonga Offshore Mining Limited is identified as the creator of TOMLPMN12024 Env Template 20220212 Bio in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "TOMLPMN12024 Env Template 20220212 Bio; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/tomlpmn12024_env_20220212_bio/tomlpmn12024_env_20220212_bio.zip",
+          "title": {
+            "en": "TOMLPMN12024 Env Template 20220212 Bio",
+            "fr": "TOMLPMN12024 Env Template 20220212 Bio",
+            "es": "TOMLPMN12024 Env Template 20220212 Bio",
+            "ar": "TOMLPMN12024 Env Template 20220212 Bio",
+            "zh": "TOMLPMN12024 Env Template 20220212 Bio",
+            "ru": "TOMLPMN12024 Env Template 20220212 Bio"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-jogmec-publishes-to-deepdata",
+      "sourceNodeId": "jogmec",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Japan Oil, Gas and Metals National Corporation is identified as the creator of JOGMECCRFC12024 Env Template 20220212 2024 in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status. EML retains the former Japan Oil, Gas and Metals National Corporation name; ISA’s current crust-contract list uses Japan Organization for Metals and Energy Security (JOGMEC).",
+      "properties": {
+        "scope": "JOGMECCRFC12024 Env Template 20220212 2024; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates",
+          "identity"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/jogmeccrfc12024_env_20220212_2024/jogmeccrfc12024_env_20220212_2024.zip",
+          "title": {
+            "en": "JOGMECCRFC12024 Env Template 20220212 2024",
+            "fr": "JOGMECCRFC12024 Env Template 20220212 2024",
+            "es": "JOGMECCRFC12024 Env Template 20220212 2024",
+            "ar": "JOGMECCRFC12024 Env Template 20220212 2024",
+            "zh": "JOGMECCRFC12024 Env Template 20220212 2024",
+            "ru": "JOGMECCRFC12024 Env Template 20220212 2024"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "identity": {
+          "id": "identity",
+          "url": "https://isa.org.jm/exploration-contracts/cobalt-rich-ferromanganese-crusts/",
+          "title": {
+            "en": "ISA crust exploration contractors",
+            "fr": "Contractants AIFM pour les encroûtements",
+            "es": "Contratistas AIFM de costras",
+            "ar": "مقاولو السلطة لاستكشاف القشور",
+            "zh": "ISA结壳勘探承包者",
+            "ru": "Контракторы МОМД по разведке корок"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-comra-publishes-to-deepdata",
+      "sourceNodeId": "comra",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "China Ocean Mineral Resources Research and Development Association is identified as the creator of COMRACFC12017 DY36 meiofauna in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "COMRACFC12017 DY36 meiofauna; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/comracfc12017_dy36_meiofauna/comracfc12017_dy36_meiofauna.zip",
+          "title": {
+            "en": "COMRACFC12017 DY36 meiofauna",
+            "fr": "COMRACFC12017 DY36 meiofauna",
+            "es": "COMRACFC12017 DY36 meiofauna",
+            "ar": "COMRACFC12017 DY36 meiofauna",
+            "zh": "COMRACFC12017 DY36 meiofauna",
+            "ru": "COMRACFC12017 DY36 meiofauna"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ifremer-publishes-to-deepdata",
+      "sourceNodeId": "ifremer",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Institut français de recherche pour l'exploitation de la mer is identified as the creator of IFREMERPMN12018 SO239 in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "IFREMERPMN12018 SO239; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/ifremerpmn12018_so239/ifremerpmn12018_so239.zip",
+          "title": {
+            "en": "IFREMERPMN12018 SO239",
+            "fr": "IFREMERPMN12018 SO239",
+            "es": "IFREMERPMN12018 SO239",
+            "ar": "IFREMERPMN12018 SO239",
+            "zh": "IFREMERPMN12018 SO239",
+            "ru": "IFREMERPMN12018 SO239"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-global-sea-mineral-resources-publishes-to-deepdata",
+      "sourceNodeId": "global-sea-mineral-resources",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Global Sea Mineral Resources NV is identified as the creator of GSRPMN12017 Env Template BIOSO239 in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "GSRPMN12017 Env Template BIOSO239; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/gsrpmn12017_env_bioso239/gsrpmn12017_env_bioso239.zip",
+          "title": {
+            "en": "GSRPMN12017 Env Template BIOSO239",
+            "fr": "GSRPMN12017 Env Template BIOSO239",
+            "es": "GSRPMN12017 Env Template BIOSO239",
+            "ar": "GSRPMN12017 Env Template BIOSO239",
+            "zh": "GSRPMN12017 Env Template BIOSO239",
+            "ru": "GSRPMN12017 Env Template BIOSO239"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-interoceanmetal-publishes-to-deepdata",
+      "sourceNodeId": "interoceanmetal",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Interoceanmetal Joint Organization is identified as the creator of IOMPMN12018 Env Template BIOL in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "IOMPMN12018 Env Template BIOL; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/iompmn12018_env_biol/iompmn12018_env_biol.zip",
+          "title": {
+            "en": "IOMPMN12018 Env Template BIOL",
+            "fr": "IOMPMN12018 Env Template BIOL",
+            "es": "IOMPMN12018 Env Template BIOL",
+            "ar": "IOMPMN12018 Env Template BIOL",
+            "zh": "IOMPMN12018 Env Template BIOL",
+            "ru": "IOMPMN12018 Env Template BIOL"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-yuzhmorgeologiya-publishes-to-deepdata",
+      "sourceNodeId": "yuzhmorgeologiya",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Yuzhmorgeologiya is identified as the creator of YUZHPMN12015 Biodata B6 in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "YUZHPMN12015 Biodata B6; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/yuzhpmn12015_biodata_b6/yuzhpmn12015_biodata_b6.zip",
+          "title": {
+            "en": "YUZHPMN12015 Biodata B6",
+            "fr": "YUZHPMN12015 Biodata B6",
+            "es": "YUZHPMN12015 Biodata B6",
+            "ar": "YUZHPMN12015 Biodata B6",
+            "zh": "YUZHPMN12015 Biodata B6",
+            "ru": "YUZHPMN12015 Biodata B6"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-deep-ocean-resources-development-publishes-to-deepdata",
+      "sourceNodeId": "deep-ocean-resources-development",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Deep Ocean Resources Development Co. Ltd. is identified as the creator of DORDPMN12018 Env Mn Bio in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "DORDPMN12018 Env Mn Bio; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/dordpmn12018_env_mn_bio/dordpmn12018_env_mn_bio.zip",
+          "title": {
+            "en": "DORDPMN12018 Env Mn Bio",
+            "fr": "DORDPMN12018 Env Mn Bio",
+            "es": "DORDPMN12018 Env Mn Bio",
+            "ar": "DORDPMN12018 Env Mn Bio",
+            "zh": "DORDPMN12018 Env Mn Bio",
+            "ru": "DORDPMN12018 Env Mn Bio"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-china-minmetals-publishes-to-deepdata",
+      "sourceNodeId": "china-minmetals",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "China Minmetals Corporation is identified as the creator of CMMPMN12022 Env Template in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "CMMPMN12022 Env Template; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/cmmpmn12022_env/cmmpmn12022_env.zip",
+          "title": {
+            "en": "CMMPMN12022 Env Template",
+            "fr": "CMMPMN12022 Env Template",
+            "es": "CMMPMN12022 Env Template",
+            "ar": "CMMPMN12022 Env Template",
+            "zh": "CMMPMN12022 Env Template",
+            "ru": "CMMPMN12022 Env Template"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-russian-ministry-natural-resources-publishes-to-deepdata",
+      "sourceNodeId": "russian-ministry-natural-resources",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Ministry of Natural resources and environment of the russian federation is identified as the creator of RUSMNRCRFC12015 Env Template Biodata in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "RUSMNRCRFC12015 Env Template Biodata; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/rusmnrcrfc12015_env_biodata/rusmnrcrfc12015_env_biodata.zip",
+          "title": {
+            "en": "RUSMNRCRFC12015 Env Template Biodata",
+            "fr": "RUSMNRCRFC12015 Env Template Biodata",
+            "es": "RUSMNRCRFC12015 Env Template Biodata",
+            "ar": "RUSMNRCRFC12015 Env Template Biodata",
+            "zh": "RUSMNRCRFC12015 Env Template Biodata",
+            "ru": "RUSMNRCRFC12015 Env Template Biodata"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-nauru-ocean-resources-publishes-to-deepdata",
+      "sourceNodeId": "nauru-ocean-resources",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "Nauru Ocean Resources Inc. is identified as the creator of NORIPMN12022 Env Template BIO in an OBIS-hosted archive from the DeepData collection. Its EML publication date is 2026-04-20. ISA’s collection description identifies these archives as generated from DeepData; ISA reporting guidance requires contractor environmental submissions. This represents the named archived contribution, not proof of every annual submission or current contract status.",
+      "properties": {
+        "scope": "NORIPMN12022 Env Template BIO; environmental biological contribution through DeepData",
+        "status": "archived contribution; OBIS export published 2026-04-20",
+        "sourceRefs": [
+          "dataset",
+          "collection",
+          "templates"
+        ]
+      },
+      "sources": {
+        "dataset": {
+          "id": "dataset",
+          "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+          "title": {
+            "en": "NORIPMN12022 Env Template BIO",
+            "fr": "NORIPMN12022 Env Template BIO",
+            "es": "NORIPMN12022 Env Template BIO",
+            "ar": "NORIPMN12022 Env Template BIO",
+            "zh": "NORIPMN12022 Env Template BIO",
+            "ru": "NORIPMN12022 Env Template BIO"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "collection": {
+          "id": "collection",
+          "url": "https://datasets.obis.org/hosted/isa/index.html",
+          "title": {
+            "en": "DeepData datasets hosted by OBIS",
+            "fr": "Jeux de données DeepData hébergés par OBIS",
+            "es": "Conjuntos DeepData alojados en OBIS",
+            "ar": "مجموعات DeepData المستضافة لدى OBIS",
+            "zh": "OBIS托管的DeepData数据集",
+            "ru": "Наборы DeepData на OBIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "en": "DeepData reporting templates",
+            "fr": "Modèles de déclaration DeepData",
+            "es": "Plantillas de informes DeepData",
+            "ar": "نماذج تقارير DeepData",
+            "zh": "DeepData报告模板",
+            "ru": "Шаблоны отчётности DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-beijing-pioneer-hi-tech-publishes-to-deepdata",
+      "sourceNodeId": "beijing-pioneer-hi-tech",
+      "targetNodeId": "deepdata",
+      "kind": "publishes_to",
+      "note": "A public DeepData ODIS metadata page names Beijing Pioneer Hi-Tech Development Corporation and describes water-temperature and salinity data for temporal coverage 2021. This establishes a specific CTD contribution; the source’s latitude is invalid and its download was not tested.",
+      "properties": {
+        "scope": "2021 CTD water-property data under PMN exploration",
+        "status": "archived metadata; sitemap lastmod 2024-10-16; read 2026-09-10",
+        "sourceRefs": [
+          "odis-example"
+        ]
+      },
+      "sources": {
+        "odis-example": {
+          "id": "odis-example",
+          "url": "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+          "title": {
+            "en": "DeepData ODIS CTD metadata: Beijing Pioneer, 2021",
+            "fr": "Métadonnées CTD ODIS : Beijing Pioneer, 2021",
+            "es": "Metadatos CTD ODIS: Beijing Pioneer, 2021",
+            "ar": "بيانات CTD الوصفية عبر ODIS: بيجين بايونير، 2021",
+            "zh": "DeepData ODIS CTD元数据：北京先驱，2021",
+            "ru": "Метаданные CTD ODIS: Beijing Pioneer, 2021"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

@@ -1,0 +1,1869 @@
+{
+  "id": "ena",
+  "record": {
+    "kind": "system",
+    "url": "https://www.ebi.ac.uk/ena/browser/home",
+    "recordDepth": "rich",
+    "properties": {
+      "disciplines": [
+        "genetics"
+      ],
+      "data": {
+        "descriptors": [
+          {
+            "id": "ena-tag-data-type-genomic-sequence",
+            "category": "type",
+            "label": "sequence_data",
+            "source": "ena-2024"
+          },
+          {
+            "id": "ena-data-samples",
+            "category": "type",
+            "label": "sample_records",
+            "source": "ena-2025"
+          },
+          {
+            "id": "ena-format-embl",
+            "category": "format",
+            "label": "embl_flatfile",
+            "source": "ena-browser-api"
+          },
+          {
+            "id": "ena-format-fasta",
+            "category": "format",
+            "label": "fasta",
+            "source": "ena-browser-api"
+          },
+          {
+            "id": "ena-format-fastq",
+            "category": "format",
+            "label": "fastq",
+            "source": "ena-download"
+          },
+          {
+            "id": "ena-format-xml",
+            "category": "format",
+            "label": "xml",
+            "source": "ena-browser-api"
+          },
+          {
+            "id": "ena-format-json",
+            "category": "format",
+            "label": "json",
+            "source": "ena-portal-api"
+          },
+          {
+            "id": "ena-format-tsv",
+            "category": "format",
+            "label": "tsv",
+            "source": "ena-portal-api"
+          },
+          {
+            "id": "ena-standard-insdc",
+            "category": "standard",
+            "label": "insdc",
+            "source": "insdc-feature"
+          },
+          {
+            "id": "ena-standard-mixs",
+            "category": "standard",
+            "label": "mixs",
+            "source": "ena-mixs-example"
+          }
+        ]
+      },
+      "access": [
+        {
+          "id": "ena-tag-read-method-web",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://www.ebi.ac.uk/ena/browser/home",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "ena-2024",
+            "ena-tara"
+          ]
+        },
+        {
+          "id": "ena-tag-read-method-api",
+          "type": "read",
+          "methods": [
+            "api"
+          ],
+          "url": "https://www.ebi.ac.uk/ena/portal/api/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "ena-portal-api",
+            "ena-2024"
+          ]
+        },
+        {
+          "id": "ena-access-browser-api",
+          "type": "read",
+          "methods": [
+            "api",
+            "download"
+          ],
+          "url": "https://www.ebi.ac.uk/ena/browser/api/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "ena-browser-api",
+            "ena-2024"
+          ]
+        },
+        {
+          "id": "ena-tag-read-method-ftp",
+          "type": "read",
+          "methods": [
+            "download"
+          ],
+          "url": "https://ftp.sra.ebi.ac.uk/vol1/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "ena-download",
+            "ena-2024"
+          ]
+        },
+        {
+          "id": "ena-tag-write-method-web-submission",
+          "type": "write",
+          "methods": [
+            "form",
+            "upload"
+          ],
+          "url": "https://www.ebi.ac.uk/ena/submit/webin/",
+          "requirements": [
+            "account"
+          ],
+          "cost": "free",
+          "sourceRefs": [
+            "ena-submit",
+            "ena-account",
+            "ena-2024"
+          ]
+        },
+        {
+          "id": "ena-tag-write-method-api-write",
+          "type": "write",
+          "methods": [
+            "api",
+            "upload"
+          ],
+          "url": "https://www.ebi.ac.uk/ena/submit/webin-v2/",
+          "requirements": [
+            "account"
+          ],
+          "cost": "free",
+          "sourceRefs": [
+            "ena-submit-api",
+            "ena-account",
+            "ena-2024"
+          ]
+        },
+        {
+          "id": "ena-access-webin-cli",
+          "type": "write",
+          "methods": [
+            "software",
+            "upload"
+          ],
+          "url": "https://github.com/enasequence/webin-cli",
+          "requirements": [
+            "account"
+          ],
+          "cost": "free",
+          "sourceRefs": [
+            "ena-cli",
+            "ena-account",
+            "ena-2024"
+          ]
+        }
+      ],
+      "gallery": [],
+      "metrics": [
+        {
+          "id": "ena-metric-read-datasets-2025",
+          "key": "record_count",
+          "value": 37000000,
+          "observedAt": "2025",
+          "source": "ena-2025"
+        }
+      ]
+    },
+    "sources": {
+      "src-ena-what": {
+        "id": "src-ena-what",
+        "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+        "title": {
+          "ar": "ما هو ENA",
+          "en": "What is ENA",
+          "es": "Qué es ENA",
+          "fr": "Qu’est-ce que ENA",
+          "ru": "Что такое ENA",
+          "zh": "ENA是什么"
+        },
+        "accessedAt": "2026-05-26"
+      },
+      "ena-2025": {
+        "id": "ena-2025",
+        "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+        "title": {
+          "en": "The European Nucleotide Archive in 2025",
+          "fr": "L’Archive européenne des nucléotides en 2025",
+          "es": "El Archivo Europeo de Nucleótidos en 2025",
+          "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+          "ru": "Европейский нуклеотидный архив в 2025 году",
+          "zh": "2025年欧洲核苷酸档案库"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-2024": {
+        "id": "ena-2024",
+        "url": "https://academic.oup.com/nar/article/53/D1/D49/7903379",
+        "title": {
+          "en": "The European Nucleotide Archive in 2024",
+          "fr": "L’Archive européenne des nucléotides en 2024",
+          "es": "El Archivo Europeo de Nucleótidos en 2024",
+          "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2024",
+          "ru": "Европейский нуклеотидный архив в 2024 году",
+          "zh": "2024年欧洲核苷酸档案库"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "insdc": {
+        "id": "insdc",
+        "url": "https://www.insdc.org/about-insdc/",
+        "title": {
+          "en": "INSDC participation, governance and data exchange",
+          "fr": "Participation, gouvernance et échange de données de l’INSDC",
+          "es": "Participación, gobernanza e intercambio de datos de INSDC",
+          "ar": "المشاركة والحوكمة وتبادل البيانات في INSDC",
+          "ru": "Участие, управление и обмен данными INSDC",
+          "zh": "INSDC参与、治理与数据交换"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "genbank-exchange": {
+        "id": "genbank-exchange",
+        "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+        "title": {
+          "en": "GenBank overview and daily INSDC exchange",
+          "fr": "Présentation de GenBank et échanges quotidiens INSDC",
+          "es": "Descripción de GenBank e intercambio diario de INSDC",
+          "ar": "نظرة عامة على GenBank والتبادل اليومي في INSDC",
+          "ru": "Обзор GenBank и ежедневный обмен INSDC",
+          "zh": "GenBank概述与INSDC每日交换"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-retrieval": {
+        "id": "ena-retrieval",
+        "url": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html",
+        "title": {
+          "en": "Programmatic access to ENA",
+          "fr": "Accès programmatique à ENA",
+          "es": "Acceso programático a ENA",
+          "ar": "الوصول البرمجي إلى ENA",
+          "ru": "Программный доступ к ENA",
+          "zh": "ENA程序化访问"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-browser-api": {
+        "id": "ena-browser-api",
+        "url": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access/browser-api.html",
+        "title": {
+          "en": "ENA Browser API record retrieval",
+          "fr": "Récupération de notices avec l’API ENA Browser",
+          "es": "Recuperación de registros mediante la API ENA Browser",
+          "ar": "استرجاع السجلات باستخدام واجهة ENA Browser",
+          "ru": "Получение записей через API ENA Browser",
+          "zh": "通过ENA Browser API获取记录"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-portal-api": {
+        "id": "ena-portal-api",
+        "url": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access/advanced-search.html",
+        "title": {
+          "en": "ENA Portal API advanced metadata search",
+          "fr": "Recherche avancée de métadonnées avec l’API ENA Portal",
+          "es": "Búsqueda avanzada de metadatos con la API ENA Portal",
+          "ar": "البحث المتقدم في البيانات الوصفية عبر ENA Portal",
+          "ru": "Расширенный поиск метаданных через API ENA Portal",
+          "zh": "ENA Portal API高级元数据检索"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-download": {
+        "id": "ena-download",
+        "url": "https://ena-docs.readthedocs.io/en/latest/retrieval/file-download.html",
+        "title": {
+          "en": "Downloading ENA data files",
+          "fr": "Téléchargement des fichiers de données ENA",
+          "es": "Descarga de archivos de datos de ENA",
+          "ar": "تنزيل ملفات بيانات ENA",
+          "ru": "Загрузка файлов данных ENA",
+          "zh": "下载ENA数据文件"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-read-files": {
+        "id": "ena-read-files",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/reads.html",
+        "title": {
+          "en": "ENA raw read data model and files",
+          "fr": "Modèle et fichiers de lectures brutes ENA",
+          "es": "Modelo y archivos de lecturas sin procesar de ENA",
+          "ar": "نموذج وملفات القراءات الخام في ENA",
+          "ru": "Модель и файлы исходных прочтений ENA",
+          "zh": "ENA原始读段数据模型与文件"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-submit": {
+        "id": "ena-submit",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide.html",
+        "title": {
+          "en": "ENA submission guide",
+          "fr": "Guide de soumission à ENA",
+          "es": "Guía de envío de datos a ENA",
+          "ar": "دليل إيداع البيانات في ENA",
+          "ru": "Руководство по загрузке данных в ENA",
+          "zh": "ENA数据提交指南"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-account": {
+        "id": "ena-account",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/registration.html",
+        "title": {
+          "en": "Registering an ENA Webin account",
+          "fr": "Création d’un compte ENA Webin",
+          "es": "Registro de una cuenta ENA Webin",
+          "ar": "تسجيل حساب ENA Webin",
+          "ru": "Регистрация учётной записи ENA Webin",
+          "zh": "注册ENA Webin账户"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-submit-api": {
+        "id": "ena-submit-api",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/programmatic.html",
+        "title": {
+          "en": "Webin programmatic submission and release controls",
+          "fr": "Soumission programmatique Webin et contrôle de publication",
+          "es": "Envío programático Webin y controles de publicación",
+          "ar": "الإيداع البرمجي عبر Webin وضوابط النشر",
+          "ru": "Программная загрузка через Webin и управление публикацией",
+          "zh": "Webin程序化提交与发布控制"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-cli": {
+        "id": "ena-cli",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html",
+        "title": {
+          "en": "Webin-CLI validation and submission",
+          "fr": "Validation et soumission avec Webin-CLI",
+          "es": "Validación y envío con Webin-CLI",
+          "ar": "التحقق والإيداع باستخدام Webin-CLI",
+          "ru": "Проверка и загрузка через Webin-CLI",
+          "zh": "Webin-CLI验证与提交"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-samples": {
+        "id": "ena-samples",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/samples/programmatic.html",
+        "title": {
+          "en": "ENA sample metadata and checklist validation",
+          "fr": "Métadonnées d’échantillons ENA et validation par listes de contrôle",
+          "es": "Metadatos de muestras de ENA y validación con listas de control",
+          "ar": "البيانات الوصفية لعينات ENA والتحقق بقوائم المتطلبات",
+          "ru": "Метаданные образцов ENA и проверка по контрольным спискам",
+          "zh": "ENA样本元数据与检查清单验证"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "insdc-feature": {
+        "id": "insdc-feature",
+        "url": "https://www.insdc.org/submitting-standards/feature-table/",
+        "title": {
+          "en": "INSDC feature table definition, version 11.4",
+          "fr": "Définition de la table des caractéristiques INSDC, version 11.4",
+          "es": "Definición de la tabla de características INSDC, versión 11.4",
+          "ar": "تعريف جدول السمات في INSDC، الإصدار 11.4",
+          "ru": "Определение таблицы признаков INSDC, версия 11.4",
+          "zh": "INSDC特征表定义11.4版"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "insdc-location": {
+        "id": "insdc-location",
+        "url": "https://www.insdc.org/news/insdc-spatiotemporal-metadata-minimum-standards-update-03-03-2023/",
+        "title": {
+          "en": "INSDC minimum spatiotemporal metadata requirements",
+          "fr": "Exigences minimales de métadonnées spatiotemporelles INSDC",
+          "es": "Requisitos mínimos de metadatos espaciotemporales de INSDC",
+          "ar": "الحد الأدنى لمتطلبات البيانات الوصفية المكانية والزمانية في INSDC",
+          "ru": "Минимальные требования INSDC к пространственно-временным метаданным",
+          "zh": "INSDC时空元数据最低要求"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-mixs-example": {
+        "id": "ena-mixs-example",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERC000014",
+        "title": {
+          "en": "ENA GSC MIxS human-associated sample checklist",
+          "fr": "Liste ENA GSC MIxS pour les échantillons associés à l’humain",
+          "es": "Lista ENA GSC MIxS para muestras asociadas a humanos",
+          "ar": "قائمة ENA GSC MIxS للعينات المرتبطة بالإنسان",
+          "ru": "Контрольный список ENA GSC MIxS для образцов, связанных с человеком",
+          "zh": "ENA GSC MIxS人类相关样本检查清单"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ena-tara": {
+        "id": "ena-tara",
+        "url": "https://www.ebi.ac.uk/ena/browser/view/PRJEB402",
+        "title": {
+          "en": "ENA Tara Oceans project PRJEB402",
+          "fr": "Projet Tara Oceans PRJEB402 dans ENA",
+          "es": "Proyecto Tara Oceans PRJEB402 en ENA",
+          "ar": "مشروع Tara Oceans PRJEB402 في ENA",
+          "ru": "Проект Tara Oceans PRJEB402 в ENA",
+          "zh": "ENA Tara Oceans项目PRJEB402"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "en": {
+      "title": "European Nucleotide Archive",
+      "summary": "Global open archive of nucleotide reads, assemblies and annotated sequences linked to studies and sample metadata.",
+      "description": "ENA is operated by EMBL-EBI and archives nucleotide sequencing data across organisms and environments, including marine research. Its linked records describe studies, samples, sequencing experiments, runs, assemblies and annotations. ENA participates in INSDC with GenBank and DDBJ, exchanging public sequence data and updates daily; visibility still depends on release and processing status. The 2025 update reports more than 37 million archived raw-read datasets and 26 trillion nucleotide bases in assembled and annotated collections. The 2024 update reports 62.8 PB of immediately downloadable archived data, excluding backups; this is a historical archive footprint. ENA offers free public browsing, metadata search, accession retrieval and file download. Submission is also free, requires a Webin account and validation, and can use web forms, APIs or Webin-CLI, with release controls and institutional brokers. BioSamples became the authoritative sample-metadata service within ENA workflows in the integration reported in 2025. ENA is recognised as an ELIXIR Core Data Resource; that designation is not organizational membership. Geographic-origin metadata can name oceans and seas: sequence records use geo_loc_name, while sample fields and valid missing-value exemptions vary. These fields alone do not establish whether a collection was beyond national jurisdiction; the reviewed documentation did not establish a BBNJ batch-notification or benefit-sharing status field. The 2025 report gives roughly 28 million Portal API requests and over 90 million Browser API requests per month, which are not download-event or session counts.",
+      "details": {
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "ena-2025",
+            "ena-2024",
+            "insdc",
+            "genbank-exchange",
+            "ena-submit",
+            "ena-account",
+            "ena-submit-api",
+            "ena-tara",
+            "insdc-feature",
+            "insdc-location"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "ena-tag-data-type-genomic-sequence",
+              "description": "Raw nucleotide reads, assembled genomes and transcriptomes, and annotated sequences; read runs link files to experiments, studies and samples."
+            },
+            {
+              "id": "ena-data-samples",
+              "description": "Retrievable sample metadata describe biological material, taxonomy, collection and contextual attributes; BioSamples manages the underlying sample workflow."
+            },
+            {
+              "id": "ena-format-embl",
+              "description": "Browser API text output for annotated nucleotide sequences and WGS/TSA sequence sets."
+            },
+            {
+              "id": "ena-format-fasta",
+              "description": "Browser API sequence downloads; assembled sequence files can also be retrieved through file services."
+            },
+            {
+              "id": "ena-format-fastq",
+              "description": "Raw reads with quality scores, including archive-generated compressed FASTQ files where available."
+            },
+            {
+              "id": "ena-format-xml",
+              "description": "Browser API metadata records for studies, samples, runs, experiments, analyses and taxa."
+            },
+            {
+              "id": "ena-format-json",
+              "description": "Portal API metadata search results in JSON; this describes search output, not all sequence files."
+            },
+            {
+              "id": "ena-format-tsv",
+              "description": "Portal API tab-separated metadata reports with selectable columns and file locations."
+            },
+            {
+              "id": "ena-standard-insdc",
+              "description": "ENA uses the shared INSDC sequence-feature and qualifier specifications; version 11.4 (April 2026) defines geo_loc_name and collection_date annotation."
+            },
+            {
+              "id": "ena-standard-mixs",
+              "description": "ENA supports MIxS-based sample checklists, including the live human-associated checklist ERC000014; requirements depend on the chosen checklist, not every archive record."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "ena-tag-read-method-web",
+            "label": "ENA Browser",
+            "description": "Browse public studies, samples, reads and sequences free of charge without an account. Record pages link metadata, related records and downloads; private or suppressed content is not publicly accessible."
+          },
+          {
+            "id": "ena-tag-read-method-api",
+            "label": "Portal API: metadata search",
+            "description": "Search public metadata with fielded filters and retrieve selected columns as JSON or TSV, without an API key. Use result types and return-field definitions from the API documentation; file URLs identify separately downloaded sequence data."
+          },
+          {
+            "id": "ena-access-browser-api",
+            "label": "Browser API: accession retrieval",
+            "description": "Retrieve public records by accession as XML metadata, FASTA sequences or EMBL flat files according to record type. No account is needed; bulk raw-read files are obtained from linked file services, not embedded in each metadata response."
+          },
+          {
+            "id": "ena-tag-read-method-ftp",
+            "label": "Public read and analysis files",
+            "description": "Download public run and analysis files over HTTPS or anonymous FTP. Use file-report URLs and checksums for the required files; compressed FASTQ and submitted-file availability vary by record. Private Data Hub files require separate credentials."
+          },
+          {
+            "id": "ena-tag-write-method-web-submission",
+            "label": "Webin interactive submission",
+            "description": "Register a Webin account, create study and sample metadata, and submit supported read data through forms and uploaded templates/files. Submission is free and validated; publication follows release controls. Genome and transcriptome assemblies require Webin-CLI."
+          },
+          {
+            "id": "ena-tag-write-method-api-write",
+            "label": "Webin REST API",
+            "description": "Use Webin credentials with HTTPS authentication to submit supported metadata and pre-uploaded data. REST V2 accepts JSON or XML and supports queued submissions and receipts. Free submission does not publish every record immediately; check validation results and release dates."
+          },
+          {
+            "id": "ena-access-webin-cli",
+            "label": "Webin-CLI",
+            "description": "Use the documented Java or container client with a Webin account to validate, upload and submit reads, sequences and assemblies. Prepare a manifest and preregister studies and samples. The client is the required assembly-submission path; local computing and transfer setup remain the submitter’s responsibility."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "ena-metric-read-datasets-2025",
+            "description": "Lower bound reported as more than 37 million archived raw-read datasets in the 2025 annual update, including direct ENA submissions and INSDC exchange; not individual reads, bases or a September 2026 census."
+          }
+        ],
+        "researchGaps": {
+          "data": "No current archive-wide sample total or sequence-entry count was verified. The 26-trillion figure counts nucleotide bases; the 62.8-PB estimate describes 2024 downloadable storage, not current size.",
+          "usage": "The annual reports give API requests, visitors, transferred bytes and submitting accounts, not verified sessions, download events, individual contributors or citation-index counts; no approved Usage metric is assigned."
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Archive européenne des nucléotides",
+      "summary": "Archive mondiale ouverte de lectures nucléotidiques, d’assemblages et de séquences annotées, reliés aux études et aux métadonnées d’échantillons.",
+      "description": "ENA est exploité par EMBL-EBI et archive les données de séquençage nucléotidique de divers organismes et milieux, notamment marins. Ses notices relient études, échantillons, expériences de séquençage, runs, assemblages et annotations. ENA participe à l’INSDC avec GenBank et DDBJ et échange quotidiennement des données publiques de séquences et leurs mises à jour ; leur visibilité dépend néanmoins de leur publication et de leur traitement. Le bilan 2025 indique plus de 37 millions de jeux de lectures brutes archivés et 26 billions de bases nucléotidiques dans les collections assemblées et annotées. Le bilan 2024 indique 62,8 Po d’archives immédiatement téléchargeables, hors sauvegardes ; il s’agit d’une mesure historique. La consultation publique, la recherche de métadonnées, la récupération par accession et le téléchargement sont gratuits. Le dépôt est également gratuit, nécessite un compte Webin et une validation, et passe par des formulaires, des API ou Webin-CLI, avec contrôle de publication et intermédiaires institutionnels. L’intégration décrite en 2025 fait de BioSamples le service de référence pour les métadonnées d’échantillons dans les processus ENA. ENA est reconnu comme ELIXIR Core Data Resource ; cette désignation n’est pas une adhésion organisationnelle. L’origine géographique peut désigner des océans et des mers : les séquences utilisent geo_loc_name, tandis que les champs des échantillons et les exemptions pour valeurs manquantes varient. Ces champs seuls ne déterminent pas si une collecte a eu lieu au-delà des juridictions nationales ; la documentation examinée n’établit aucun champ de notification de lot BBNJ ni de statut de partage des avantages. Le bilan 2025 indique environ 28 millions de requêtes mensuelles pour l’API Portal et plus de 90 millions pour l’API Browser, sans qu’il s’agisse de sessions ou d’événements de téléchargement.",
+      "details": {
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "ena-2025",
+            "ena-2024",
+            "insdc",
+            "genbank-exchange",
+            "ena-submit",
+            "ena-account",
+            "ena-submit-api",
+            "ena-tara",
+            "insdc-feature",
+            "insdc-location"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "ena-tag-data-type-genomic-sequence",
+              "description": "Lectures nucléotidiques brutes, génomes et transcriptomes assemblés et séquences annotées ; les runs relient fichiers, expériences, études et échantillons."
+            },
+            {
+              "id": "ena-data-samples",
+              "description": "Les métadonnées consultables décrivent matériel biologique, taxonomie, collecte et contexte ; BioSamples gère le processus sous-jacent."
+            },
+            {
+              "id": "ena-format-embl",
+              "description": "Sortie texte de l’API Browser pour les séquences nucléotidiques annotées et les ensembles WGS/TSA."
+            },
+            {
+              "id": "ena-format-fasta",
+              "description": "Téléchargement de séquences par l’API Browser ; les services de fichiers fournissent aussi des séquences assemblées."
+            },
+            {
+              "id": "ena-format-fastq",
+              "description": "Lectures brutes avec scores de qualité, y compris les fichiers FASTQ compressés produits par l’archive lorsqu’ils sont disponibles."
+            },
+            {
+              "id": "ena-format-xml",
+              "description": "Notices de métadonnées de l’API Browser pour études, échantillons, runs, expériences, analyses et taxons."
+            },
+            {
+              "id": "ena-format-json",
+              "description": "Résultats de recherche de métadonnées de l’API Portal en JSON ; ce format ne décrit pas tous les fichiers de séquences."
+            },
+            {
+              "id": "ena-format-tsv",
+              "description": "Rapports de métadonnées de l’API Portal séparés par tabulations, avec colonnes sélectionnables et emplacements des fichiers."
+            },
+            {
+              "id": "ena-standard-insdc",
+              "description": "ENA utilise les spécifications INSDC des caractéristiques et qualificatifs des séquences ; la version 11.4 (avril 2026) définit geo_loc_name et collection_date."
+            },
+            {
+              "id": "ena-standard-mixs",
+              "description": "ENA prend en charge des listes d’échantillons fondées sur MIxS, dont ERC000014 pour les échantillons associés à l’humain ; les exigences dépendent de la liste choisie."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "ena-tag-read-method-web",
+            "label": "ENA Browser",
+            "description": "Consultez gratuitement études, échantillons, lectures et séquences publics, sans compte. Les notices relient métadonnées, documents associés et téléchargements ; les contenus privés ou masqués restent inaccessibles au public."
+          },
+          {
+            "id": "ena-tag-read-method-api",
+            "label": "API Portal : recherche de métadonnées",
+            "description": "Recherchez les métadonnées publiques par champs et récupérez des colonnes en JSON ou TSV, sans clé API. Consultez les types de résultats et champs disponibles ; les URL de fichiers renvoient aux séquences à télécharger séparément."
+          },
+          {
+            "id": "ena-access-browser-api",
+            "label": "API Browser : récupération par accession",
+            "description": "Récupérez les notices publiques par accession en XML, FASTA ou fichier plat EMBL selon leur type. Aucun compte requis ; les fichiers de lectures brutes proviennent des services liés, pas du corps des métadonnées."
+          },
+          {
+            "id": "ena-tag-read-method-ftp",
+            "label": "Fichiers publics de lectures et d’analyses",
+            "description": "Téléchargez les fichiers publics de runs et d’analyses par HTTPS ou FTP anonyme. Utilisez les URL et sommes de contrôle des rapports ; la disponibilité des FASTQ compressés et fichiers déposés varie. Les Data Hubs privés exigent d’autres identifiants."
+          },
+          {
+            "id": "ena-tag-write-method-web-submission",
+            "label": "Dépôt interactif Webin",
+            "description": "Créez un compte Webin, renseignez études et échantillons puis déposez les lectures prises en charge par formulaires et fichiers ou modèles téléversés. Le dépôt est gratuit et validé ; la publication suit les contrôles de diffusion. Les assemblages nécessitent Webin-CLI."
+          },
+          {
+            "id": "ena-tag-write-method-api-write",
+            "label": "API REST Webin",
+            "description": "Utilisez les identifiants Webin et HTTPS pour déposer métadonnées prises en charge et données préalablement téléversées. REST V2 accepte JSON ou XML, files d’attente et reçus. Le dépôt gratuit ne publie pas tout immédiatement ; vérifiez validation et dates."
+          },
+          {
+            "id": "ena-access-webin-cli",
+            "label": "Webin-CLI",
+            "description": "Utilisez le client Java ou conteneur avec un compte Webin pour valider, téléverser et déposer lectures, séquences et assemblages. Préparez un manifeste et enregistrez études et échantillons. Ce client est requis pour les assemblages ; calcul local et transfert restent à votre charge."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "ena-metric-read-datasets-2025",
+            "description": "Borne inférieure : plus de 37 millions de jeux de lectures brutes dans le bilan 2025, dépôts directs et échanges INSDC compris ; ni lectures individuelles, ni bases, ni recensement de septembre 2026."
+          }
+        ],
+        "researchGaps": {
+          "data": "Aucun total actuel d’échantillons ou d’entrées de séquences pour tout l’archive n’a été vérifié. Les 26 billions comptent des bases ; les 62,8 Po décrivent le stockage téléchargeable de 2024.",
+          "usage": "Les bilans donnent des requêtes API, visiteurs, octets transférés et comptes déposants, sans établir sessions, événements de téléchargement, contributeurs individuels ou citations indexées ; aucun indicateur Usage n’est attribué."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Archivo Europeo de Nucleótidos",
+      "summary": "Archivo mundial abierto de lecturas de nucleótidos, ensamblajes y secuencias anotadas vinculadas a estudios y metadatos de muestras.",
+      "description": "ENA, operado por EMBL-EBI, archiva datos de secuenciación de nucleótidos de organismos y ambientes diversos, incluida la investigación marina. Sus registros enlazan estudios, muestras, experimentos de secuenciación, ejecuciones, ensamblajes y anotaciones. Participa en INSDC con GenBank y DDBJ e intercambia diariamente secuencias públicas y actualizaciones; la visibilidad depende de la publicación y del procesamiento. La actualización de 2025 informa de más de 37 millones de conjuntos de lecturas sin procesar y 26 billones de bases de nucleótidos en las colecciones ensambladas y anotadas. La de 2024 informa de 62,8 PB de datos archivados inmediatamente descargables, sin copias de seguridad; es una medida histórica. La consulta pública, búsqueda de metadatos, recuperación por número de acceso y descarga son gratuitas. El depósito también es gratuito, exige cuenta Webin y validación, y permite formularios, API o Webin-CLI, con controles de publicación e intermediarios institucionales. La integración descrita en 2025 convirtió a BioSamples en el servicio de referencia de metadatos de muestras dentro de los flujos ENA. ENA está reconocido como ELIXIR Core Data Resource; esta designación no equivale a afiliación organizativa. El origen geográfico puede indicar océanos y mares: las secuencias utilizan geo_loc_name y los campos de muestras y las excepciones por valores ausentes varían. Estos campos por sí solos no determinan si una recolección ocurrió fuera de jurisdicciones nacionales; la documentación revisada no establece un campo de notificación de lote BBNJ ni de estado de participación en los beneficios. El informe de 2025 indica unos 28 millones de solicitudes mensuales a la API Portal y más de 90 millones a Browser, que no son recuentos de sesiones ni de eventos de descarga.",
+      "details": {
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "ena-2025",
+            "ena-2024",
+            "insdc",
+            "genbank-exchange",
+            "ena-submit",
+            "ena-account",
+            "ena-submit-api",
+            "ena-tara",
+            "insdc-feature",
+            "insdc-location"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "ena-tag-data-type-genomic-sequence",
+              "description": "Lecturas de nucleótidos, genomas y transcriptomas ensamblados y secuencias anotadas; las ejecuciones enlazan archivos, experimentos, estudios y muestras."
+            },
+            {
+              "id": "ena-data-samples",
+              "description": "Los metadatos recuperables describen material biológico, taxonomía, recolección y contexto; BioSamples gestiona el flujo de muestras subyacente."
+            },
+            {
+              "id": "ena-format-embl",
+              "description": "Salida de texto de la API Browser para secuencias anotadas y conjuntos WGS/TSA."
+            },
+            {
+              "id": "ena-format-fasta",
+              "description": "Descarga de secuencias mediante Browser API; los servicios de archivos también permiten recuperar secuencias ensambladas."
+            },
+            {
+              "id": "ena-format-fastq",
+              "description": "Lecturas con puntuaciones de calidad, incluidos archivos FASTQ comprimidos generados por el archivo cuando están disponibles."
+            },
+            {
+              "id": "ena-format-xml",
+              "description": "Registros de metadatos de Browser API para estudios, muestras, ejecuciones, experimentos, análisis y taxones."
+            },
+            {
+              "id": "ena-format-json",
+              "description": "Resultados de búsqueda de metadatos de Portal API en JSON; no describe todos los archivos de secuencias."
+            },
+            {
+              "id": "ena-format-tsv",
+              "description": "Informes de metadatos de Portal API separados por tabulaciones, con columnas seleccionables y ubicaciones de archivos."
+            },
+            {
+              "id": "ena-standard-insdc",
+              "description": "ENA utiliza las especificaciones INSDC de características y calificadores de secuencias; la versión 11.4 (abril de 2026) define geo_loc_name y collection_date."
+            },
+            {
+              "id": "ena-standard-mixs",
+              "description": "ENA admite listas de muestras basadas en MIxS, incluida ERC000014 para muestras asociadas a humanos; los requisitos dependen de la lista elegida, no de todo el archivo."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "ena-tag-read-method-web",
+            "label": "ENA Browser",
+            "description": "Consulte gratuitamente estudios, muestras, lecturas y secuencias públicas sin cuenta. Los registros enlazan metadatos, registros relacionados y descargas; el contenido privado u ocultado no es público."
+          },
+          {
+            "id": "ena-tag-read-method-api",
+            "label": "Portal API: búsqueda de metadatos",
+            "description": "Busque metadatos públicos por campos y recupere columnas en JSON o TSV sin clave API. Consulte tipos de resultados y campos admitidos; las URL apuntan a datos de secuencia que se descargan por separado."
+          },
+          {
+            "id": "ena-access-browser-api",
+            "label": "Browser API: recuperación por acceso",
+            "description": "Recupere registros públicos por acceso en XML, FASTA o archivo plano EMBL según el tipo. No requiere cuenta; los archivos de lecturas se obtienen de los servicios enlazados, no del contenido de metadatos."
+          },
+          {
+            "id": "ena-tag-read-method-ftp",
+            "label": "Archivos públicos de lecturas y análisis",
+            "description": "Descargue archivos públicos de ejecuciones y análisis por HTTPS o FTP anónimo. Use URL y sumas de comprobación de los informes; la disponibilidad de FASTQ comprimidos y archivos enviados varía. Los Data Hubs privados requieren credenciales aparte."
+          },
+          {
+            "id": "ena-tag-write-method-web-submission",
+            "label": "Envío interactivo Webin",
+            "description": "Registre una cuenta Webin, describa estudios y muestras y envíe lecturas admitidas mediante formularios, plantillas y archivos. El depósito es gratuito y validado; la publicación sigue los controles de liberación. Los ensamblajes genómicos y transcriptómicos requieren Webin-CLI."
+          },
+          {
+            "id": "ena-tag-write-method-api-write",
+            "label": "API REST Webin",
+            "description": "Use credenciales Webin y HTTPS para enviar metadatos admitidos y datos cargados previamente. REST V2 acepta JSON o XML y ofrece colas y recibos. El envío gratuito no publica todo inmediatamente; revise validación y fechas de publicación."
+          },
+          {
+            "id": "ena-access-webin-cli",
+            "label": "Webin-CLI",
+            "description": "Use el cliente Java o contenedor con cuenta Webin para validar, cargar y enviar lecturas, secuencias y ensamblajes. Prepare un manifiesto y registre estudios y muestras previamente. Es obligatorio para ensamblajes; el remitente configura cálculo local y transferencia."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "ena-metric-read-datasets-2025",
+            "description": "Límite inferior de más de 37 millones de conjuntos de lecturas archivados según el informe de 2025, incluidos depósitos ENA e intercambio INSDC; no son lecturas individuales, bases ni un censo de septiembre de 2026."
+          }
+        ],
+        "researchGaps": {
+          "data": "No se verificó un total actual de muestras ni de entradas de secuencia de todo el archivo. Los 26 billones cuentan bases; los 62,8 PB describen el almacenamiento descargable de 2024.",
+          "usage": "Los informes dan solicitudes API, visitantes, bytes transferidos y cuentas remitentes, no sesiones, eventos de descarga, colaboradores individuales ni citas indexadas verificados; no se asigna métrica de Uso."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ar": {
+      "title": "الأرشيف الأوروبي للنيوكليوتيدات",
+      "summary": "أرشيف عالمي مفتوح لقراءات النيوكليوتيدات والتجميعات والتسلسلات المشروحة المرتبطة بالدراسات والبيانات الوصفية للعينات.",
+      "description": "تدير EMBL-EBI أرشيف ENA لحفظ بيانات تسلسل النيوكليوتيدات لمختلف الكائنات والبيئات، بما فيها البحوث البحرية. وتربط سجلاته الدراسات والعينات وتجارب التسلسل وعمليات القراءة والتجميعات والتعليقات التوضيحية. يشارك ENA في INSDC مع GenBank وDDBJ ويتبادل بيانات التسلسل العامة وتحديثاتها يومياً؛ ويظل ظهور البيانات مرتبطاً بحالة النشر والمعالجة. يفيد تحديث 2025 بوجود أكثر من 37 مليون مجموعة من القراءات الخام و26 تريليون قاعدة نيوكليوتيدية في مجموعات التسلسلات المجمعة والمشروحة. ويفيد تحديث 2024 بأن حجم البيانات المؤرشفة المتاحة للتنزيل الفوري بلغ 62.8 بيتابايت، دون النسخ الاحتياطية؛ وهو قياس تاريخي. التصفح العام والبحث في البيانات الوصفية والاسترجاع برقم الإيداع وتنزيل الملفات مجانية. والإيداع مجاني أيضاً ويتطلب حساب Webin والتحقق من البيانات، عبر النماذج أو الواجهات البرمجية أو Webin-CLI، مع ضوابط النشر وإمكانية الاستعانة بوسطاء مؤسسيين. وأصبح BioSamples الخدمة المرجعية للبيانات الوصفية للعينات ضمن مسارات ENA وفق التكامل المعلن في 2025. وصُنّف ENA مورداً أساسياً للبيانات لدى ELIXIR؛ وهذا التصنيف لا يعني عضوية مؤسسية. قد يذكر الأصل الجغرافي المحيطات والبحار: تستخدم سجلات التسلسل geo_loc_name، بينما تختلف حقول العينات والاستثناءات المقبولة للقيم المفقودة. ولا تثبت هذه الحقول وحدها وقوع الجمع خارج الولاية الوطنية؛ ولم تثبت الوثائق المراجعة وجود حقل لإشعار دفعة BBNJ أو لحالة تقاسم المنافع. ويورد تقرير 2025 نحو 28 مليون طلب شهري لواجهة Portal وأكثر من 90 مليوناً لواجهة Browser، وهي ليست أعداد جلسات أو أحداث تنزيل.",
+      "details": {
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "ena-2025",
+            "ena-2024",
+            "insdc",
+            "genbank-exchange",
+            "ena-submit",
+            "ena-account",
+            "ena-submit-api",
+            "ena-tara",
+            "insdc-feature",
+            "insdc-location"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "ena-tag-data-type-genomic-sequence",
+              "description": "قراءات نيوكليوتيدية خام وجينومات وترانسكريبتومات مجمعة وتسلسلات مشروحة؛ تربط عمليات القراءة الملفات بالتجارب والدراسات والعينات."
+            },
+            {
+              "id": "ena-data-samples",
+              "description": "تصف البيانات الوصفية القابلة للاسترجاع المادة البيولوجية والتصنيف والجمع والسياق؛ ويدير BioSamples مسار العينات الأساسي."
+            },
+            {
+              "id": "ena-format-embl",
+              "description": "مخرجات نصية من واجهة Browser للتسلسلات المشروحة ومجموعات WGS/TSA."
+            },
+            {
+              "id": "ena-format-fasta",
+              "description": "تنزيل التسلسلات عبر واجهة Browser؛ وتتيح خدمات الملفات أيضاً استرجاع التسلسلات المجمعة."
+            },
+            {
+              "id": "ena-format-fastq",
+              "description": "قراءات خام مع درجات الجودة، بما فيها ملفات FASTQ المضغوطة التي ينشئها الأرشيف عند توفرها."
+            },
+            {
+              "id": "ena-format-xml",
+              "description": "سجلات بيانات وصفية للدراسات والعينات وعمليات القراءة والتجارب والتحليلات والأصناف عبر Browser؛ ويُقبل XML أيضاً للإيداع."
+            },
+            {
+              "id": "ena-format-json",
+              "description": "نتائج البحث في البيانات الوصفية عبر Portal بصيغة JSON؛ ولا يصف ذلك جميع ملفات التسلسل."
+            },
+            {
+              "id": "ena-format-tsv",
+              "description": "تقارير بيانات وصفية من Portal مفصولة بعلامات جدولة، بأعمدة قابلة للاختيار ومواقع الملفات."
+            },
+            {
+              "id": "ena-standard-insdc",
+              "description": "يستخدم ENA مواصفات INSDC المشتركة لسمات التسلسل ومؤهلاته؛ ويعرّف الإصدار 11.4 (أبريل 2026) geo_loc_name وcollection_date."
+            },
+            {
+              "id": "ena-standard-mixs",
+              "description": "يدعم ENA قوائم عينات مستندة إلى MIxS، ومنها ERC000014 للعينات المرتبطة بالإنسان؛ وتعتمد المتطلبات على القائمة المختارة لا على كل سجل."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "ena-tag-read-method-web",
+            "label": "متصفح ENA",
+            "description": "تصفح الدراسات والعينات والقراءات والتسلسلات العامة مجاناً دون حساب. تربط الصفحات البيانات الوصفية والسجلات والتنزيلات؛ ولا يتاح المحتوى الخاص أو المحجوب للعامة."
+          },
+          {
+            "id": "ena-tag-read-method-api",
+            "label": "واجهة Portal: البحث في البيانات الوصفية",
+            "description": "ابحث في البيانات الوصفية العامة بمرشحات الحقول واسترجع أعمدة بصيغتي JSON أو TSV دون مفتاح API. راجع أنواع النتائج والحقول في الوثائق؛ وتشير روابط الملفات إلى بيانات تسلسل تُنزّل منفصلة."
+          },
+          {
+            "id": "ena-access-browser-api",
+            "label": "واجهة Browser: الاسترجاع برقم الإيداع",
+            "description": "استرجع السجلات العامة برقم الإيداع بصيغة XML أو FASTA أو ملفات EMBL بحسب النوع، دون حساب. تُنزّل ملفات القراءات الخام من خدمات الملفات المرتبطة ولا تُضمّن في كل استجابة وصفية."
+          },
+          {
+            "id": "ena-tag-read-method-ftp",
+            "label": "ملفات القراءات والتحليلات العامة",
+            "description": "نزّل ملفات عمليات القراءة والتحليل العامة عبر HTTPS أو FTP المجهول. استخدم روابط تقارير الملفات وقيم التحقق؛ ويختلف توفر FASTQ المضغوط والملفات المودعة. تتطلب ملفات Data Hub الخاصة بيانات دخول منفصلة."
+          },
+          {
+            "id": "ena-tag-write-method-web-submission",
+            "label": "الإيداع التفاعلي عبر Webin",
+            "description": "سجّل حساب Webin وأنشئ بيانات الدراسات والعينات وأودع القراءات المدعومة عبر النماذج والقوالب والملفات. الإيداع مجاني ويخضع للتحقق، والنشر يتبع ضوابط الإتاحة. تتطلب تجميعات الجينوم والترانسكريبتوم Webin-CLI."
+          },
+          {
+            "id": "ena-tag-write-method-api-write",
+            "label": "واجهة Webin REST",
+            "description": "استخدم بيانات دخول Webin عبر HTTPS لإيداع البيانات الوصفية المدعومة والملفات المرفوعة مسبقاً. تقبل REST V2 صيغة JSON أو XML وتدعم قوائم الانتظار والإيصالات. لا يعني الإيداع المجاني النشر الفوري؛ راجع التحقق وتواريخ الإتاحة."
+          },
+          {
+            "id": "ena-access-webin-cli",
+            "label": "Webin-CLI",
+            "description": "استخدم عميل Java أو الحاوية مع حساب Webin للتحقق من القراءات والتسلسلات والتجميعات ورفعها وإيداعها. جهّز ملف بيان وسجّل الدراسات والعينات مسبقاً. العميل مطلوب للتجميعات؛ ويتولى المودع إعداد الحوسبة المحلية والنقل."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "ena-metric-read-datasets-2025",
+            "description": "حد أدنى أُبلغ عنه بأكثر من 37 مليون مجموعة قراءات خام في تحديث 2025، شاملاً إيداعات ENA وتبادل INSDC؛ وليس عدداً للقراءات الفردية أو القواعد أو إحصاءً لسبتمبر 2026."
+          }
+        ],
+        "researchGaps": {
+          "data": "لم يُتحقق من إجمالي حالي للعينات أو سجلات التسلسل في الأرشيف كله. يقيس رقم 26 تريليون القواعد؛ ويصف تقدير 62.8 بيتابايت التخزين القابل للتنزيل في 2024.",
+          "usage": "تعطي التقارير طلبات API والزوار والبايتات المنقولة وحسابات الإيداع، لا أعداداً مؤكدة للجلسات أو أحداث التنزيل أو المساهمين الأفراد أو الاستشهادات المفهرسة؛ لم يُسند مقياس استخدام معتمد."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Европейский нуклеотидный архив",
+      "summary": "Глобальный открытый архив нуклеотидных прочтений, сборок и аннотированных последовательностей, связанных с исследованиями и метаданными образцов.",
+      "description": "ENA, управляемый EMBL-EBI, хранит данные нуклеотидного секвенирования различных организмов и сред, включая морские исследования. Связанные записи описывают исследования, образцы, эксперименты секвенирования, запуски, сборки и аннотации. ENA участвует в INSDC вместе с GenBank и DDBJ и ежедневно обменивается публичными последовательностями и обновлениями; доступность отдельных записей зависит от публикации и обработки. Обзор за 2025 год сообщает о более чем 37 миллионах наборов исходных прочтений и 26 триллионах нуклеотидных оснований в собранных и аннотированных коллекциях. Обзор за 2024 год указывает 62,8 ПБ архивных данных, доступных для немедленной загрузки, без резервных копий; это историческая оценка объёма архива. Публичный просмотр, поиск метаданных, получение по регистрационному номеру и загрузка файлов бесплатны. Внесение данных также бесплатно, требует учётной записи Webin и проверки и выполняется через формы, API или Webin-CLI с управлением публикацией и участием институциональных посредников. По описанию интеграции 2025 года BioSamples стал основным источником метаданных образцов в процессах ENA. ENA признан ELIXIR Core Data Resource; этот статус не означает организационное членство. Географическое происхождение может указывать океаны и моря: в записях последовательностей используется geo_loc_name, а поля образцов и допустимые исключения для отсутствующих значений различаются. Эти поля сами по себе не устанавливают, проводился ли сбор за пределами национальной юрисдикции; изученная документация не подтверждает наличие поля уведомления о партии BBNJ или статуса распределения выгод. Обзор 2025 года сообщает примерно о 28 миллионах запросов к Portal API и более 90 миллионах к Browser API в месяц; это не число сеансов или событий загрузки.",
+      "details": {
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "ena-2025",
+            "ena-2024",
+            "insdc",
+            "genbank-exchange",
+            "ena-submit",
+            "ena-account",
+            "ena-submit-api",
+            "ena-tara",
+            "insdc-feature",
+            "insdc-location"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "ena-tag-data-type-genomic-sequence",
+              "description": "Исходные нуклеотидные прочтения, собранные геномы и транскриптомы, аннотированные последовательности; запуски связывают файлы с экспериментами, исследованиями и образцами."
+            },
+            {
+              "id": "ena-data-samples",
+              "description": "Доступные метаданные описывают биоматериал, таксономию, сбор и контекст; базовым процессом управления образцами ведает BioSamples."
+            },
+            {
+              "id": "ena-format-embl",
+              "description": "Текстовый вывод Browser API для аннотированных последовательностей и наборов WGS/TSA."
+            },
+            {
+              "id": "ena-format-fasta",
+              "description": "Загрузка последовательностей через Browser API; собранные последовательности также доступны через файловые сервисы."
+            },
+            {
+              "id": "ena-format-fastq",
+              "description": "Исходные прочтения с оценками качества, включая сжатые FASTQ-файлы, сформированные архивом, где они доступны."
+            },
+            {
+              "id": "ena-format-xml",
+              "description": "Метаданные исследований, образцов, запусков, экспериментов, анализов и таксонов через Browser API."
+            },
+            {
+              "id": "ena-format-json",
+              "description": "Результаты поиска метаданных Portal API в JSON; это формат поиска, а не всех файлов последовательностей."
+            },
+            {
+              "id": "ena-format-tsv",
+              "description": "Табличные отчёты Portal API с разделителями табуляцией, выбираемыми столбцами и адресами файлов."
+            },
+            {
+              "id": "ena-standard-insdc",
+              "description": "ENA использует общие спецификации признаков и квалификаторов INSDC; версия 11.4 (апрель 2026 года) определяет geo_loc_name и collection_date."
+            },
+            {
+              "id": "ena-standard-mixs",
+              "description": "ENA поддерживает списки требований MIxS, включая действующий ERC000014 для образцов, связанных с человеком; требования зависят от выбранного списка, а не охватывают весь архив."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "ena-tag-read-method-web",
+            "label": "Браузер ENA",
+            "description": "Бесплатно просматривайте публичные исследования, образцы, прочтения и последовательности без учётной записи. Страницы связывают метаданные, связанные записи и загрузки; частные или скрытые данные публично недоступны."
+          },
+          {
+            "id": "ena-tag-read-method-api",
+            "label": "Portal API: поиск метаданных",
+            "description": "Ищите публичные метаданные по полям и получайте столбцы в JSON или TSV без ключа API. Используйте документированные типы результатов и поля; адреса файлов указывают на отдельно загружаемые последовательности."
+          },
+          {
+            "id": "ena-access-browser-api",
+            "label": "Browser API: получение по регистрационному номеру",
+            "description": "Получайте публичные записи по номеру в XML, FASTA или плоском формате EMBL в зависимости от типа. Учётная запись не нужна; файлы исходных прочтений загружаются через ссылки, а не включаются в каждый ответ метаданных."
+          },
+          {
+            "id": "ena-tag-read-method-ftp",
+            "label": "Публичные файлы прочтений и анализов",
+            "description": "Загружайте публичные файлы запусков и анализов по HTTPS или анонимному FTP. Используйте адреса и контрольные суммы из отчётов; доступность сжатых FASTQ и исходных файлов различается. Частным Data Hub нужны отдельные учётные данные."
+          },
+          {
+            "id": "ena-tag-write-method-web-submission",
+            "label": "Интерактивная загрузка Webin",
+            "description": "Зарегистрируйте Webin, создайте метаданные исследований и образцов, затем отправьте поддерживаемые прочтения через формы, шаблоны и файлы. Загрузка бесплатна и проходит проверку; публикация регулируется отдельно. Сборки геномов и транскриптомов требуют Webin-CLI."
+          },
+          {
+            "id": "ena-tag-write-method-api-write",
+            "label": "REST API Webin",
+            "description": "Используйте учётные данные Webin и HTTPS для отправки поддерживаемых метаданных и предварительно загруженных файлов. REST V2 принимает JSON/XML, поддерживает очередь и квитанции. Бесплатная отправка не означает немедленную публикацию; проверяйте результаты и даты."
+          },
+          {
+            "id": "ena-access-webin-cli",
+            "label": "Webin-CLI",
+            "description": "Используйте Java-клиент или контейнер с Webin для проверки и отправки прочтений, последовательностей и сборок. Подготовьте манифест и заранее зарегистрируйте исследования и образцы. Клиент обязателен для сборок; локальные вычисления и передачу настраивает отправитель."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "ena-metric-read-datasets-2025",
+            "description": "Нижняя граница: более 37 миллионов архивных наборов прочтений по обзору 2025 года, включая ENA и обмен INSDC; это не отдельные прочтения, основания или перепись сентября 2026 года."
+          }
+        ],
+        "researchGaps": {
+          "data": "Текущие общие количества образцов и записей последовательностей не проверены. 26 триллионов — основания; оценка 62,8 ПБ относится к доступному для загрузки хранилищу 2024 года.",
+          "usage": "Обзоры сообщают запросы API, посетителей, переданные байты и учётные записи отправителей, а не проверенные сеансы, события загрузки, отдельных участников или индексированные цитирования; метрика использования не назначена."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "欧洲核苷酸档案库",
+      "summary": "全球开放的核苷酸读段、组装和注释序列档案库，关联研究项目与样本元数据。",
+      "description": "ENA由EMBL-EBI运营，保存跨生物类群和环境的核苷酸测序数据，包括海洋研究。关联记录描述研究、样本、测序实验、运行、组装和注释。ENA与GenBank、DDBJ共同参与INSDC，每日交换公开序列数据及更新；单条记录是否可见仍取决于发布和处理状态。2025年报告记载超过3700万个原始读段数据集，以及组装和注释集合中的26万亿个核苷酸碱基。2024年报告记载可立即下载的归档数据占62.8 PB，不含备份；这是历史存储规模。公开浏览、元数据检索、按登录号获取记录和文件下载均免费。数据提交也免费，需Webin账户及验证，可通过表单、API或Webin-CLI完成，并支持发布控制和机构代理提交。2025年报告的整合使BioSamples成为ENA流程中样本元数据的权威服务。ENA被认定为ELIXIR核心数据资源，该称号不等于组织成员资格。地理来源可以填写海洋和海域：序列记录使用geo_loc_name，样本字段及允许的缺失值例外有所不同。这些字段本身不能判定采集是否发生在国家管辖范围以外；所查文档未证实存在BBNJ批次通知或惠益分享状态字段。2025年报告称Portal API每月约2800万次请求，Browser API超过9000万次；这些不是会话或下载事件数量。",
+      "details": {
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "ena-2025",
+            "ena-2024",
+            "insdc",
+            "genbank-exchange",
+            "ena-submit",
+            "ena-account",
+            "ena-submit-api",
+            "ena-tara",
+            "insdc-feature",
+            "insdc-location"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "ena-tag-data-type-genomic-sequence",
+              "description": "原始核苷酸读段、组装基因组和转录组及注释序列；运行记录将文件与实验、研究及样本关联。"
+            },
+            {
+              "id": "ena-data-samples",
+              "description": "可检索的样本元数据描述生物材料、分类、采集及背景属性；底层样本流程由BioSamples管理。"
+            },
+            {
+              "id": "ena-format-embl",
+              "description": "Browser API为注释核苷酸序列和WGS/TSA序列集合提供文本输出。"
+            },
+            {
+              "id": "ena-format-fasta",
+              "description": "通过Browser API下载序列；组装序列文件也可经文件服务获取。"
+            },
+            {
+              "id": "ena-format-fastq",
+              "description": "带质量分数的原始读段，包括可用时由档案库生成的压缩FASTQ文件。"
+            },
+            {
+              "id": "ena-format-xml",
+              "description": "Browser API提供研究、样本、运行、实验、分析及分类单元的元数据记录。"
+            },
+            {
+              "id": "ena-format-json",
+              "description": "Portal API以JSON返回元数据检索结果；这不代表所有序列文件的格式。"
+            },
+            {
+              "id": "ena-format-tsv",
+              "description": "Portal API提供制表符分隔的元数据报告，可选择列并获取文件位置。"
+            },
+            {
+              "id": "ena-standard-insdc",
+              "description": "ENA采用INSDC共享的序列特征与限定符规范；11.4版（2026年4月）定义geo_loc_name和collection_date。"
+            },
+            {
+              "id": "ena-standard-mixs",
+              "description": "ENA支持基于MIxS的样本检查清单，包括现行人类相关清单ERC000014；要求取决于所选清单，不适用于全部档案记录。"
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "ena-tag-read-method-web",
+            "label": "ENA浏览器",
+            "description": "无需账户即可免费浏览公开研究、样本、读段和序列。记录页关联元数据、相关记录和下载；私有或隐藏内容不向公众开放。"
+          },
+          {
+            "id": "ena-tag-read-method-api",
+            "label": "Portal API：元数据检索",
+            "description": "无需API密钥即可按字段筛选公开元数据，以JSON或TSV获取所选列。结果类型与返回字段以API文档为准；文件URL指向需另行下载的序列数据。"
+          },
+          {
+            "id": "ena-access-browser-api",
+            "label": "Browser API：按登录号获取",
+            "description": "按登录号获取公开记录，依据记录类型返回XML元数据、FASTA序列或EMBL平面文件，无需账户。批量原始读段来自关联文件服务，不嵌入每条元数据响应。"
+          },
+          {
+            "id": "ena-tag-read-method-ftp",
+            "label": "公开读段与分析文件",
+            "description": "通过HTTPS或匿名FTP下载公开运行和分析文件。使用文件报告中的URL与校验和；压缩FASTQ及原始提交文件的可用性因记录而异。私有Data Hub文件需要另行提供凭据。"
+          },
+          {
+            "id": "ena-tag-write-method-web-submission",
+            "label": "Webin交互式提交",
+            "description": "注册Webin账户，创建研究和样本元数据，通过表单及上传模板或文件提交支持的读段数据。提交免费且需验证，公开时间受发布控制。基因组和转录组组装需使用Webin-CLI。"
+          },
+          {
+            "id": "ena-tag-write-method-api-write",
+            "label": "Webin REST API",
+            "description": "使用Webin凭据通过HTTPS认证提交支持的元数据和预上传数据。REST V2接受JSON或XML，支持排队提交和回执。免费提交不等于立即公开所有记录；须检查验证结果和发布日期。"
+          },
+          {
+            "id": "ena-access-webin-cli",
+            "label": "Webin-CLI",
+            "description": "使用文档提供的Java或容器客户端及Webin账户验证、上传并提交读段、序列和组装。准备清单并预注册研究与样本。组装必须经此客户端提交；本地计算及传输环境由提交者配置。"
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "ena-metric-read-datasets-2025",
+            "description": "2025年年度报告的下界：超过3700万个归档原始读段数据集，包括直接提交与INSDC交换；不是单条读段或碱基数量，也不是2026年9月的普查。"
+          }
+        ],
+        "researchGaps": {
+          "data": "未核实当前全库样本总数或序列条目总数。26万亿指碱基数；62.8 PB为2024年可下载存储规模，并非当前大小。",
+          "usage": "年度报告提供API请求、访客、传输字节和提交账户数量，未核实会话、下载事件、独立贡献者或引用索引计数，因此未赋予已批准的使用量指标。"
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "link-ddbj-ena",
+      "sourceNodeId": "ddbj",
+      "targetNodeId": "ena",
+      "kind": "syncs_to",
+      "note": "DDBJ provides public nucleotide sequence records and updates to ENA through INSDC exchange. NCBI documents daily exchange among ENA, GenBank and DDBJ; INSDC includes corrections and updates. This does not assert instantaneous visibility, private-data exchange or identical interfaces.",
+      "properties": {
+        "scope": "Public nucleotide sequence archive records and corrections",
+        "sourceRefs": [
+          "insdc",
+          "genbank-exchange"
+        ],
+        "status": "active documented exchange",
+        "transferMethod": "INSDC partner archive exchange",
+        "updateFrequency": "daily as documented by GenBank; no individual transfer timestamp verified"
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        },
+        "insdc": {
+          "id": "insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "en": "INSDC participation, governance and data exchange",
+            "fr": "Participation, gouvernance et échange de données de l’INSDC",
+            "es": "Participación, gobernanza e intercambio de datos de INSDC",
+            "ar": "المشاركة والحوكمة وتبادل البيانات في INSDC",
+            "ru": "Участие, управление и обмен данными INSDC",
+            "zh": "INSDC参与、治理与数据交换"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "genbank-exchange": {
+          "id": "genbank-exchange",
+          "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+          "title": {
+            "en": "GenBank overview and daily INSDC exchange",
+            "fr": "Présentation de GenBank et échanges quotidiens INSDC",
+            "es": "Descripción de GenBank e intercambio diario de INSDC",
+            "ar": "نظرة عامة على GenBank والتبادل اليومي في INSDC",
+            "ru": "Обзор GenBank и ежедневный обмен INSDC",
+            "zh": "GenBank概述与INSDC每日交换"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "link-ena-genbank",
+      "sourceNodeId": "ena",
+      "targetNodeId": "genbank",
+      "kind": "syncs_to",
+      "note": "ENA provides public nucleotide sequence records and updates to GenBank through INSDC exchange. NCBI documents daily exchange among ENA, GenBank and DDBJ; INSDC includes corrections and updates. This does not assert instantaneous visibility, private-data exchange or identical interfaces.",
+      "properties": {
+        "scope": "Public nucleotide sequence archive records and corrections",
+        "sourceRefs": [
+          "insdc",
+          "genbank-exchange"
+        ],
+        "status": "active documented exchange",
+        "transferMethod": "INSDC partner archive exchange",
+        "updateFrequency": "daily as documented by GenBank; no individual transfer timestamp verified"
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        },
+        "insdc": {
+          "id": "insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "en": "INSDC participation, governance and data exchange",
+            "fr": "Participation, gouvernance et échange de données de l’INSDC",
+            "es": "Participación, gobernanza e intercambio de datos de INSDC",
+            "ar": "المشاركة والحوكمة وتبادل البيانات في INSDC",
+            "ru": "Участие, управление и обмен данными INSDC",
+            "zh": "INSDC参与、治理与数据交换"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "genbank-exchange": {
+          "id": "genbank-exchange",
+          "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+          "title": {
+            "en": "GenBank overview and daily INSDC exchange",
+            "fr": "Présentation de GenBank et échanges quotidiens INSDC",
+            "es": "Descripción de GenBank e intercambio diario de INSDC",
+            "ar": "نظرة عامة على GenBank والتبادل اليومي في INSDC",
+            "ru": "Обзор GenBank и ежедневный обмен INSDC",
+            "zh": "GenBank概述与INSDC每日交换"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-embl-ebi-operates-european-nucleotide-archive",
+      "sourceNodeId": "embl-ebi",
+      "targetNodeId": "ena",
+      "kind": "operates",
+      "note": "EMBL-EBI maintains and operates ENA for nucleotide data submission, archiving and dissemination. Its role is distinct from grant funding and from the scientific advice provided by advisory boards.",
+      "properties": {
+        "scope": "ENA archive and submission/retrieval services",
+        "sourceRefs": [
+          "ena-2024"
+        ],
+        "status": "active; described in 2024 and 2025 updates"
+      },
+      "sources": {
+        "src-relationship-ena": {
+          "id": "src-relationship-ena",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        },
+        "ena-2024": {
+          "id": "ena-2024",
+          "url": "https://academic.oup.com/nar/article/53/D1/D49/7903379",
+          "title": {
+            "en": "The European Nucleotide Archive in 2024",
+            "fr": "L’Archive européenne des nucléotides en 2024",
+            "es": "El Archivo Europeo de Nucleótidos en 2024",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2024",
+            "ru": "Европейский нуклеотидный архив в 2024 году",
+            "zh": "2024年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ena-member-of-insdc",
+      "sourceNodeId": "ena",
+      "targetNodeId": "insdc",
+      "kind": "member_of",
+      "note": "ENA is the participating archive operated by EMBL-EBI within INSDC. This edge represents documented system participation; INSDC organizational membership belongs to EMBL-EBI and the other member institutions.",
+      "properties": {
+        "sourceRefs": [
+          "insdc"
+        ],
+        "scope": "Participating nucleotide sequence archive",
+        "status": "listed current participant"
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        },
+        "insdc": {
+          "id": "insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "en": "INSDC participation, governance and data exchange",
+            "fr": "Participation, gouvernance et échange de données de l’INSDC",
+            "es": "Participación, gobernanza e intercambio de datos de INSDC",
+            "ar": "المشاركة والحوكمة وتبادل البيانات في INSDC",
+            "ru": "Участие, управление и обмен данными INSDC",
+            "zh": "INSDC参与、治理与数据交换"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ena-syncs-to-ddbj",
+      "sourceNodeId": "ena",
+      "targetNodeId": "ddbj",
+      "kind": "syncs_to",
+      "note": "ENA provides public nucleotide sequence records and updates to DDBJ through INSDC exchange. NCBI documents daily exchange among ENA, GenBank and DDBJ; INSDC includes corrections and updates. This does not assert instantaneous visibility, private-data exchange or identical interfaces.",
+      "properties": {
+        "sourceRefs": [
+          "insdc",
+          "genbank-exchange"
+        ],
+        "scope": "Public nucleotide sequence archive records and corrections",
+        "status": "active documented exchange",
+        "transferMethod": "INSDC partner archive exchange",
+        "updateFrequency": "daily as documented by GenBank; no individual transfer timestamp verified"
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        },
+        "insdc": {
+          "id": "insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "en": "INSDC participation, governance and data exchange",
+            "fr": "Participation, gouvernance et échange de données de l’INSDC",
+            "es": "Participación, gobernanza e intercambio de datos de INSDC",
+            "ar": "المشاركة والحوكمة وتبادل البيانات في INSDC",
+            "ru": "Участие, управление и обмен данными INSDC",
+            "zh": "INSDC参与、治理与数据交换"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "genbank-exchange": {
+          "id": "genbank-exchange",
+          "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+          "title": {
+            "en": "GenBank overview and daily INSDC exchange",
+            "fr": "Présentation de GenBank et échanges quotidiens INSDC",
+            "es": "Descripción de GenBank e intercambio diario de INSDC",
+            "ar": "نظرة عامة على GenBank والتبادل اليومي في INSDC",
+            "ru": "Обзор GenBank и ежедневный обмен INSDC",
+            "zh": "GenBank概述与INSDC每日交换"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ena-syncs-to-mgnify",
+      "sourceNodeId": "ena",
+      "targetNodeId": "mgnify",
+      "kind": "syncs_to",
+      "note": "MGnify retrieves eligible metagenomic and metatranscriptomic reads or assemblies archived in ENA for analysis. Private inputs require explicit submitter consent and a request. This is a selective analysis-input flow, not mirroring of the entire archive.",
+      "properties": {
+        "scope": "Eligible ENA sequencing data used as MGnify analysis inputs",
+        "sourceRefs": [
+          "mgnify-flow"
+        ],
+        "status": "active documented workflow; guidance dated 2026-07-13",
+        "transferMethod": "MGnify retrieval after ENA validation and analysis request",
+        "updateFrequency": "request/analysis driven; no fixed complete-archive sync"
+      },
+      "sources": {
+        "src-relationship-mgnify": {
+          "id": "src-relationship-mgnify",
+          "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+          "title": {
+            "ar": "تدفق البيانات في MGnify",
+            "en": "MGnify data flow",
+            "es": "Flujo de datos de MGnify",
+            "fr": "Flux de données de MGnify",
+            "ru": "Поток данных MGnify",
+            "zh": "MGnify数据流程"
+          },
+          "accessedAt": "2026-09-09"
+        },
+        "mgnify-flow": {
+          "id": "mgnify-flow",
+          "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+          "title": {
+            "en": "MGnify data flow from ENA submission to analysis",
+            "fr": "Flux MGnify du dépôt ENA à l’analyse",
+            "es": "Flujo MGnify del depósito ENA al análisis",
+            "ar": "تدفق MGnify من الإيداع في ENA إلى التحليل",
+            "ru": "Поток MGnify от загрузки в ENA до анализа",
+            "zh": "MGnify从ENA提交到分析的数据流程"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-genbank-syncs-to-ena",
+      "sourceNodeId": "genbank",
+      "targetNodeId": "ena",
+      "kind": "syncs_to",
+      "note": "GenBank provides public nucleotide sequence records and updates to ENA through INSDC exchange. NCBI documents daily exchange among ENA, GenBank and DDBJ; INSDC includes corrections and updates. This does not assert instantaneous visibility, private-data exchange or identical interfaces.",
+      "properties": {
+        "sourceRefs": [
+          "insdc",
+          "genbank-exchange"
+        ],
+        "scope": "Public nucleotide sequence archive records and corrections",
+        "status": "active documented exchange",
+        "transferMethod": "INSDC partner archive exchange",
+        "updateFrequency": "daily as documented by GenBank; no individual transfer timestamp verified"
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        },
+        "insdc": {
+          "id": "insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "en": "INSDC participation, governance and data exchange",
+            "fr": "Participation, gouvernance et échange de données de l’INSDC",
+            "es": "Participación, gobernanza e intercambio de datos de INSDC",
+            "ar": "المشاركة والحوكمة وتبادل البيانات في INSDC",
+            "ru": "Участие, управление и обмен данными INSDC",
+            "zh": "INSDC参与、治理与数据交换"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "genbank-exchange": {
+          "id": "genbank-exchange",
+          "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+          "title": {
+            "en": "GenBank overview and daily INSDC exchange",
+            "fr": "Présentation de GenBank et échanges quotidiens INSDC",
+            "es": "Descripción de GenBank e intercambio diario de INSDC",
+            "ar": "نظرة عامة على GenBank والتبادل اليومي في INSDC",
+            "ru": "Обзор GenBank и ежедневный обмен INSDC",
+            "zh": "GenBank概述与INSDC每日交换"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-embl-funds-ena",
+      "sourceNodeId": "embl",
+      "targetNodeId": "ena",
+      "kind": "funds",
+      "note": "The ENA 2025 report states that EMBL provided project funding, separately from payment of the article’s open-access charge. Award amounts, exact grant periods, allocation to ENA and continuation in September 2026 are not established here.",
+      "properties": {
+        "scope": "ENA work described in the 2025 annual report; not a quantified whole-service budget",
+        "period": "Reported in the 2025 annual update, published 2025-12-03; grant start/end dates not established",
+        "status": "documented reported support; current award continuation unverified",
+        "sourceRefs": [
+          "ena-2025"
+        ]
+      },
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-eur-funds-ena",
+      "sourceNodeId": "eur",
+      "targetNodeId": "ena",
+      "kind": "funds",
+      "note": "The ENA 2025 report acknowledges European Union Horizon 2020/Horizon Europe support, including AtlantECO (862923), BioOcean5D (101059915) and Blue-Cloud 2026 (101094227), among other named awards. Award amounts, exact grant periods, allocation to ENA and continuation in September 2026 are not established here.",
+      "properties": {
+        "scope": "ENA-related project work reported in 2025; grant-specific support, not EU governance or exclusive funding",
+        "period": "Reported in the 2025 annual update, published 2025-12-03; grant start/end dates not established",
+        "status": "documented reported support; current award continuation unverified",
+        "sourceRefs": [
+          "ena-2025"
+        ]
+      },
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-bbsrc-funds-ena",
+      "sourceNodeId": "bbsrc",
+      "targetNodeId": "ena",
+      "kind": "funds",
+      "note": "The ENA 2025 report acknowledges BBSRC support through Metagenomics Portal IV (BB/V01868X/1). Award amounts, exact grant periods, allocation to ENA and continuation in September 2026 are not established here.",
+      "properties": {
+        "scope": "ENA work supported through the named metagenomics project; not a general archive budget",
+        "period": "Reported in the 2025 annual update, published 2025-12-03; grant start/end dates not established",
+        "status": "documented reported support; current award continuation unverified",
+        "sourceRefs": [
+          "ena-2025"
+        ]
+      },
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-wellcome-funds-ena",
+      "sourceNodeId": "wellcome",
+      "targetNodeId": "ena",
+      "kind": "funds",
+      "note": "The ENA 2025 report acknowledges Wellcome support through Darwin Tree of Life (226458/Z/22/Z), in part, and joint AEGIS support with the Novo Nordisk Foundation (NNF24SA0092560). Award amounts, exact grant periods, allocation to ENA and continuation in September 2026 are not established here.",
+      "properties": {
+        "scope": "Named Darwin Tree of Life and AEGIS contributions to work described in the ENA report",
+        "period": "Reported in the 2025 annual update, published 2025-12-03; grant start/end dates not established",
+        "status": "documented reported support; current award continuation unverified",
+        "sourceRefs": [
+          "ena-2025"
+        ]
+      },
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-gordon-and-betty-moore-foundation-funds-ena",
+      "sourceNodeId": "gordon-and-betty-moore-foundation",
+      "targetNodeId": "ena",
+      "kind": "funds",
+      "note": "The ENA 2025 report acknowledges Gordon and Betty Moore Foundation funding through Aquatic Symbiosis (MOORE-8897). Award amounts, exact grant periods, allocation to ENA and continuation in September 2026 are not established here.",
+      "properties": {
+        "scope": "Aquatic Symbiosis support for work described in the ENA annual report; not every ENA dataset",
+        "period": "Reported in the 2025 annual update, published 2025-12-03; grant start/end dates not established",
+        "status": "documented reported support; current award continuation unverified",
+        "sourceRefs": [
+          "ena-2025"
+        ]
+      },
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-niaid-funds-ena",
+      "sourceNodeId": "niaid",
+      "targetNodeId": "ena",
+      "kind": "funds",
+      "note": "The ENA 2025 report acknowledges National Institute of Allergy and Infectious Diseases support under U24AI183840 for the Pathogen Data Network. Award amounts, exact grant periods, allocation to ENA and continuation in September 2026 are not established here.",
+      "properties": {
+        "scope": "Pathogen Data Network work reported with ENA developments; not all archive operations",
+        "period": "Reported in the 2025 annual update, published 2025-12-03; grant start/end dates not established",
+        "status": "documented reported support; current award continuation unverified",
+        "sourceRefs": [
+          "ena-2025"
+        ]
+      },
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-novo-nordisk-foundation-funds-ena",
+      "sourceNodeId": "novo-nordisk-foundation",
+      "targetNodeId": "ena",
+      "kind": "funds",
+      "note": "The ENA 2025 report acknowledges project support from the Novo Nordisk Foundation and Wellcome via AEGIS (NNF24SA0092560). Award amounts, exact grant periods, allocation to ENA and continuation in September 2026 are not established here.",
+      "properties": {
+        "scope": "AEGIS support for project work described in the ENA annual report",
+        "period": "Reported in the 2025 annual update, published 2025-12-03; grant start/end dates not established",
+        "status": "documented reported support; current award continuation unverified",
+        "sourceRefs": [
+          "ena-2025"
+        ]
+      },
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-wellcome-sanger-institute-publishes-to-ena",
+      "sourceNodeId": "wellcome-sanger-institute",
+      "targetNodeId": "ena",
+      "kind": "publishes_to",
+      "note": "The Wellcome Sanger Institute’s 2022/23 report documents public ENA deposition of reference genomes from its Tree of Life programme, including Darwin Tree of Life and Aquatic Symbiosis projects. Its Aquatic Symbiosis policy names ENA as the destination for raw and assembled data. The historical deposition is evidenced; a 2026 delivery count is not asserted.",
+      "properties": {
+        "scope": "Tree of Life reference genomes and project sequence data",
+        "period": "Depositions reported for 2022/23; current project data-release policy also consulted",
+        "status": "historical deposition confirmed; current delivery totals unverified",
+        "sourceRefs": [
+          "sanger-release",
+          "sanger-policy"
+        ]
+      },
+      "sources": {
+        "sanger-release": {
+          "id": "sanger-release",
+          "url": "https://www.sanger.ac.uk/wp-content/uploads/WSI_Annual_Highlights_2023_Digital.pdf",
+          "title": {
+            "en": "Wellcome Sanger Institute Highlights 2022/23: Tree of Life data release",
+            "fr": "Bilan 2022/23 du Wellcome Sanger Institute : publication des données Tree of Life",
+            "es": "Informe 2022/23 del Wellcome Sanger Institute: publicación de datos Tree of Life",
+            "ar": "أبرز أعمال معهد ويلكوم سانغر 2022/23: نشر بيانات شجرة الحياة",
+            "ru": "Итоги Wellcome Sanger Institute за 2022/23: публикация данных Tree of Life",
+            "zh": "Wellcome Sanger Institute 2022/23年度亮点：生命之树数据发布"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "sanger-policy": {
+          "id": "sanger-policy",
+          "url": "https://www.sanger.ac.uk/collaboration/aquatic-symbiosis-genomics-project/",
+          "title": {
+            "en": "Sanger Aquatic Symbiosis Genomics: open data release",
+            "fr": "Génomique des symbioses aquatiques à Sanger : données ouvertes",
+            "es": "Genómica de simbiosis acuáticas de Sanger: datos abiertos",
+            "ar": "جينوميات التكافل المائي في سانغر: نشر البيانات المفتوحة",
+            "ru": "Геномика водных симбиозов Sanger: открытая публикация данных",
+            "zh": "Sanger水生共生基因组学：开放数据发布"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ena-syncs-to-biosamples",
+      "sourceNodeId": "ena",
+      "targetNodeId": "biosamples",
+      "kind": "syncs_to",
+      "note": "The 2025 ENA update reports transfer of its sample-management workflow—validation, storage, accessioning and sample-metadata exchange—to BioSamples. ENA submissions register sample metadata through that backend workflow. The report documents implemented integration; no latency guarantee or individual latest transfer is established.",
+      "properties": {
+        "scope": "ENA-submitted sample metadata sent to BioSamples for authoritative management",
+        "status": "implemented integration reported in 2025",
+        "transferMethod": "Integrated sample-management services and APIs",
+        "updateFrequency": "workflow driven; no fixed cadence established",
+        "sourceRefs": [
+          "ena-2025"
+        ]
+      },
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-biosamples-syncs-to-ena",
+      "sourceNodeId": "biosamples",
+      "targetNodeId": "ena",
+      "kind": "syncs_to",
+      "note": "The 2025 ENA update identifies BioSamples as the authoritative source for sample metadata in ENA workflows. Validated sample metadata support ENA sequence records; this is metadata integration, not transfer of raw sequence files back to ENA. The report documents implemented integration; no latency guarantee or individual latest transfer is established.",
+      "properties": {
+        "scope": "Authoritative BioSamples metadata used within ENA sequence-submission and presentation workflows",
+        "status": "implemented integration reported in 2025",
+        "transferMethod": "Integrated sample-management services and APIs",
+        "updateFrequency": "workflow driven; no fixed cadence established",
+        "sourceRefs": [
+          "ena-2025"
+        ]
+      },
+      "sources": {
+        "ena-2025": {
+          "id": "ena-2025",
+          "url": "https://academic.oup.com/nar/article/54/D1/D120/8363843",
+          "title": {
+            "en": "The European Nucleotide Archive in 2025",
+            "fr": "L’Archive européenne des nucléotides en 2025",
+            "es": "El Archivo Europeo de Nucleótidos en 2025",
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2025",
+            "ru": "Европейский нуклеотидный архив в 2025 году",
+            "zh": "2025年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-genoscope-publishes-to-ena",
+      "sourceNodeId": "genoscope",
+      "targetNodeId": "ena",
+      "kind": "publishes_to",
+      "note": "The live ENA XML record PRJEB402 names Genoscope CEA as its submitting centre. This Tara Oceans umbrella project links component sequencing studies and describes plankton sampling and sequencing. Its public date is 2012-08-22 and latest record update is 2026-09-08. This edge asserts publication of this project record; it does not attribute all linked datasets or all Tara work exclusively to Genoscope.",
+      "properties": {
+        "scope": "Tara Oceans umbrella project PRJEB402 metadata and links to component sequence studies",
+        "period": "First public 2012-08-22; latest record update 2026-09-08",
+        "status": "public record verified 2026-09-10",
+        "artifact": "https://www.ebi.ac.uk/ena/browser/view/PRJEB402",
+        "sourceRefs": [
+          "tara-project-xml"
+        ]
+      },
+      "sources": {
+        "tara-project-xml": {
+          "id": "tara-project-xml",
+          "url": "https://www.ebi.ac.uk/ena/browser/api/xml/PRJEB402",
+          "title": {
+            "en": "ENA Tara Oceans study metadata and submitting centre",
+            "fr": "Métadonnées ENA de Tara Oceans et centre déposant",
+            "es": "Metadatos de Tara Oceans en ENA y centro remitente",
+            "ar": "بيانات دراسة Tara Oceans في ENA والمركز المودع",
+            "ru": "Метаданные исследования Tara Oceans в ENA и центр-отправитель",
+            "zh": "ENA Tara Oceans研究元数据与提交机构"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

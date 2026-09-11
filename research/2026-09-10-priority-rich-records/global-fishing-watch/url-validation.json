@@ -1,0 +1,197 @@
+[
+  {
+    "url": "https://api-doc.globalfishingwatch.org/our-apis/documentation/docs/v3/4wings/report",
+    "httpStatus": 200,
+    "finalUrl": "https://api-doc.globalfishingwatch.org/our-apis/documentation/docs/v3/4wings/report"
+  },
+  {
+    "url": "https://console.cloud.google.com/bigquery?project=global-fishing-watch",
+    "httpStatus": 200,
+    "finalUrl": "https://accounts.google.com/v3/signin/identifier?continue=https://console.cloud.google.com/bigquery?project%3Dglobal-fishing-watch&followup=https://console.cloud.google.com/bigquery?project%3Dglobal-fishing-watch&osid=1&passive=1209600&service=cloudconsole&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S-1423737908:1789088609377655"
+  },
+  {
+    "url": "https://developers.google.com/earth-engine/datasets/catalog/GFW_GFF_V1_fishing_hours",
+    "httpStatus": 200,
+    "finalUrl": "https://developers.google.com/earth-engine/datasets/catalog/GFW_GFF_V1_fishing_hours"
+  },
+  {
+    "url": "https://globalfishingwatch.org/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/annual-report-2025/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/annual-report-2025/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/belize/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/belize/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/costa-rica/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/costa-rica/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/es/historias/panama-publica-los-datos-de-seguimiento-de-embarcaciones-en-el-mapa-de-global-fishing-watch/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/es/historias/panama-publica-los-datos-de-seguimiento-de-embarcaciones-en-el-mapa-de-global-fishing-watch/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/es/programa-transparencia-latinoamerica-ecuador/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/es/programa-transparencia-latinoamerica-ecuador/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/faqs/reference-layer-sources/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/faqs/reference-layer-sources/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/insights/ask-global-fishing-watch-optical-detections/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/insights/ask-global-fishing-watch-optical-detections/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/joint-analytical-cell/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/news-views/largest-commercial-fishery-tracked-gfw-map/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/news-views/largest-commercial-fishery-tracked-gfw-map/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/norway/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/norway/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/our-apis/documentation/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/our-apis/documentation/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/our-apis/documentation/docs/authentication",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/our-apis/documentation/docs/authentication"
+  },
+  {
+    "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits"
+  },
+  {
+    "url": "https://globalfishingwatch.org/our-apis/documentation/docs/v3/general-api-doc/data-caveats",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/our-apis/documentation/docs/v3/general-api-doc/data-caveats"
+  },
+  {
+    "url": "https://globalfishingwatch.org/our-platform/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/our-platform/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/our-work-in-chile/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/our-work-in-chile/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/our-work-in-papua-new-guinea/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/our-work-in-papua-new-guinea/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/platform-update/data-vendor-transition/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/platform-update/data-vendor-transition/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/platform-update/explore-global-fishing-watch-data-via-esris-arcgis-online/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/platform-update/explore-global-fishing-watch-data-via-esris-arcgis-online/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/platform-update/five-new-vessel-registry-data-sources-integrated/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/platform-update/five-new-vessel-registry-data-sources-integrated/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/platform-update/skylight-viirs-detections-added/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/platform-update/skylight-viirs-detections-added/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/platform-update/version-4-data-pipeline-release/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/platform-update/version-4-data-pipeline-release/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/platform/map",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/platform/map"
+  },
+  {
+    "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/press-release/new-partnership-transparency-fisheries-eastern-tropical-pacific/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/press-release/new-partnership-transparency-fisheries-eastern-tropical-pacific/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/success-story/chile-publishes-vessel-tracking-data/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/success-story/chile-publishes-vessel-tracking-data/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/user-guide/",
+    "httpStatus": 200,
+    "finalUrl": "https://globalfishingwatch.org/user-guide/"
+  },
+  {
+    "url": "https://www.gov.br/mpa/pt-br/assuntos/cadastro-registro-e-monitoramento/monitoramento-da-aquicultura-e-da-pesca-1/preps-1/global-fishing-watch",
+    "httpStatus": 200,
+    "finalUrl": "https://www.gov.br/mpa/pt-br/assuntos/cadastro-registro-e-monitoramento/monitoramento-da-aquicultura-e-da-pesca-1/preps-1/global-fishing-watch"
+  },
+  {
+    "url": "https://zenodo.org/api/records/14982712",
+    "httpStatus": 403,
+    "finalUrl": "https://zenodo.org/api/records/14982712"
+  },
+  {
+    "url": "https://zenodo.org/help/statistics",
+    "httpStatus": 403,
+    "finalUrl": "https://zenodo.org/help/statistics"
+  },
+  {
+    "url": "https://zenodo.org/records/14982712",
+    "httpStatus": 403,
+    "finalUrl": "https://zenodo.org/records/14982712"
+  },
+  {
+    "url": "https://api.protectedplanet.net/",
+    "httpStatus": 403,
+    "finalUrl": "https://api.protectedplanet.net/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/transparency/vms-layer-in-fishing-activity-map/",
+    "httpStatus": 403,
+    "finalUrl": "https://globalfishingwatch.org/transparency/vms-layer-in-fishing-activity-map/"
+  },
+  {
+    "url": "https://globalfishingwatch.org/wp-content/uploads/GFW-Poster-250530-01.pdf",
+    "httpStatus": 403,
+    "finalUrl": "https://globalfishingwatch.org/wp-content/uploads/GFW-Poster-250530-01.pdf"
+  },
+  {
+    "url": "https://globalfishingwatch.org/our-work-in-panama/",
+    "httpStatus": 403,
+    "finalUrl": "https://globalfishingwatch.org/our-work-in-panama/"
+  }
+]

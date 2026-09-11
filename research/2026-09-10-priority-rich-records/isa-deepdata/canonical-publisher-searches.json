@@ -1,0 +1,251 @@
+[
+  {
+    "query": "Nauru Ocean Resources",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "Ocean Mineral Singapore",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "UK Seabed Resources",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "Federal Institute for Geosciences",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "Tonga Offshore Mining",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "JOGMEC",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "China Ocean Mineral",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "Ifremer",
+    "result": {
+      "records": [
+        {
+          "id": "ifremer",
+          "kind": "organization",
+          "countryCode": null,
+          "url": "https://argo.ucsd.edu/organization/argo-data-system/",
+          "recordDepth": "stub",
+          "title": "IFREMER",
+          "summary": "GDAC operation at Coriolis/Brest.",
+          "availableLocales": [
+            "en"
+          ],
+          "missingLocales": [
+            "ar",
+            "zh",
+            "fr",
+            "ru",
+            "es"
+          ],
+          "reviewStatesByLocale": {
+            "en": "agent_researched"
+          },
+          "requestedLocale": "en",
+          "displayLocale": "en",
+          "isLocaleFallback": false,
+          "updatedAt": "2026-09-10T20:02:45.014Z",
+          "recordUpdatedAt": "2026-09-10T20:02:45.014Z",
+          "score": 110.00000000000001,
+          "matchedLocale": "en"
+        },
+        {
+          "id": "argo-gdac",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://argo.ucsd.edu/data/",
+          "recordDepth": "thin",
+          "title": "Argo Global Data Assembly Centers",
+          "summary": "Canonical access point for official Argo profile data",
+          "availableLocales": [
+            "ar",
+            "zh",
+            "en",
+            "fr",
+            "ru",
+            "es"
+          ],
+          "missingLocales": [],
+          "reviewStatesByLocale": {
+            "ar": "needs_revision",
+            "en": "needs_revision",
+            "es": "needs_revision",
+            "fr": "needs_revision",
+            "ru": "needs_revision",
+            "zh": "needs_revision"
+          },
+          "requestedLocale": "en",
+          "displayLocale": "en",
+          "isLocaleFallback": false,
+          "updatedAt": "2026-09-10T20:02:11.724Z",
+          "recordUpdatedAt": "2026-09-10T20:02:11.724Z",
+          "score": 75,
+          "matchedLocale": "en"
+        },
+        {
+          "id": "oceansites",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://www.oceansites.org/",
+          "recordDepth": "thin",
+          "title": "OceanSITES",
+          "summary": "Global sustained open ocean time series network",
+          "availableLocales": [
+            "ar",
+            "zh",
+            "en",
+            "fr",
+            "ru",
+            "es"
+          ],
+          "missingLocales": [],
+          "reviewStatesByLocale": {
+            "ar": "needs_revision",
+            "en": "needs_revision",
+            "es": "needs_revision",
+            "fr": "needs_revision",
+            "ru": "needs_revision",
+            "zh": "needs_revision"
+          },
+          "requestedLocale": "en",
+          "displayLocale": "en",
+          "isLocaleFallback": false,
+          "updatedAt": "2026-09-10T20:03:03.106Z",
+          "recordUpdatedAt": "2026-09-10T20:03:03.106Z",
+          "score": 20,
+          "matchedLocale": "en"
+        },
+        {
+          "id": "oceansites-programme",
+          "kind": "organization",
+          "countryCode": null,
+          "url": null,
+          "recordDepth": "stub",
+          "title": "OceanSITES programme",
+          "summary": null,
+          "availableLocales": [
+            "ar",
+            "zh",
+            "en",
+            "fr",
+            "ru",
+            "es"
+          ],
+          "missingLocales": [],
+          "reviewStatesByLocale": {
+            "ar": "needs_revision",
+            "en": "needs_revision",
+            "es": "needs_revision",
+            "fr": "needs_revision",
+            "ru": "needs_revision",
+            "zh": "needs_revision"
+          },
+          "requestedLocale": "en",
+          "displayLocale": "en",
+          "isLocaleFallback": false,
+          "updatedAt": "2026-09-10T20:03:03.597Z",
+          "recordUpdatedAt": "2026-09-10T20:03:03.597Z",
+          "score": 20,
+          "matchedLocale": "en"
+        }
+      ],
+      "nextCursor": null,
+      "total": 4
+    }
+  },
+  {
+    "query": "Global Sea Mineral",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "Interoceanmetal",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "Yuzhmorgeologiya",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "Deep Ocean Resources",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "China Minmetals",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "Ministry of Natural Resources",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  {
+    "query": "Legal and Technical Commission",
+    "result": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  }
+]

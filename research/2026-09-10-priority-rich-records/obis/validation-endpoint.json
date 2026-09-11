@@ -1,0 +1,20 @@
+{
+  "file": "endpoint-richard-lounsbery-foundation.json",
+  "request": {
+    "valid": true,
+    "recordId": "richard-lounsbery-foundation",
+    "issues": []
+  },
+  "quality": {
+    "valid": true,
+    "recordId": "richard-lounsbery-foundation",
+    "issues": [],
+    "warnings": [],
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 1,
+      "resolvedSources": 1,
+      "issues": []
+    }
+  }
+}

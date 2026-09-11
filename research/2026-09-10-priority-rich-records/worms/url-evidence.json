@@ -1,0 +1,82 @@
+[
+  {
+    "name": "rest-record",
+    "url": "https://www.marinespecies.org/rest/AphiaRecordByAphiaID/127160",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/rest/AphiaRecordByAphiaID/127160",
+    "type": null,
+    "sampleBytes": 919,
+    "contentLength": null,
+    "cors": null
+  },
+  {
+    "name": "rest-spec",
+    "url": "https://www.marinespecies.org/rest/swagger.json",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "name": "ldes",
+    "url": "https://aphia.org/feed",
+    "status": 200,
+    "finalUrl": "https://aphia.org/feed",
+    "type": null,
+    "sampleBytes": 2611,
+    "contentLength": null,
+    "cors": null
+  },
+  {
+    "name": "match",
+    "url": "https://www.marinespecies.org/aphia.php?p=match",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/aphia.php?p=match",
+    "type": null,
+    "sampleBytes": 40423,
+    "contentLength": null,
+    "cors": null
+  },
+  {
+    "name": "gbif-metadata",
+    "url": "https://api.gbif.org/v1/dataset/2d59e5db-57ad-41ff-97d6-11f5fb264527",
+    "status": 200,
+    "finalUrl": "https://api.gbif.org/v1/dataset/2d59e5db-57ad-41ff-97d6-11f5fb264527",
+    "type": "application/json",
+    "sampleBytes": 12003,
+    "contentLength": "12003",
+    "cors": null
+  },
+  {
+    "name": "type-localities",
+    "url": "https://ipt.vliz.be/eurobis/resource?r=worms_type_localities",
+    "status": 200,
+    "finalUrl": "https://ipt.vliz.be/eurobis/resource?r=worms_type_localities",
+    "type": null,
+    "sampleBytes": 61636,
+    "contentLength": null,
+    "cors": null
+  },
+  {
+    "name": "about",
+    "url": "https://marinespecies.org/about.php",
+    "status": 200,
+    "finalUrl": "https://marinespecies.org/about.php",
+    "type": null,
+    "sampleBytes": 113107,
+    "contentLength": null,
+    "cors": null
+  },
+  {
+    "name": "editor-login",
+    "url": "https://www.marinespecies.org/aphia.php?p=login",
+    "status": 200,
+    "finalUrl": "https://www.marinespecies.org/aphia.php?p=login",
+    "type": null,
+    "sampleBytes": 35555,
+    "contentLength": null,
+    "cors": null
+  },
+  {
+    "name": "worms-archive",
+    "url": "https://www.marinespecies.org/dwca/WoRMS_DwC-A.zip",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

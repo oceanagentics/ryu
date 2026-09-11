@@ -1,0 +1,45 @@
+{
+  "id": "rel-oceanteacher-syncs-to-oceanexpert",
+  "sourceNodeId": "oceanteacher",
+  "targetNodeId": "oceanexpert",
+  "kind": "syncs_to",
+  "note": "OTGA’s October 2024 data policy, repeated in the published 2026 guidelines, explicitly states that participant, facilitator and expert information is archived in the IODE OceanExpert database and linked to the OTGA Moodle alumni system. Full records are accessible only to the OTGA Secretariat and IODE IT support; course-completion information and profiles have a public subset. This edge describes that documented archival/linked-data flow. It does not assert a public bulk export, automatic refresh cadence, bidirectional replication or unrestricted personal-data access.",
+  "properties": {
+    "scope": "OTGA participation, facilitator and alumni/completion data archived in OceanExpert",
+    "period": "October 2024 policy reaffirmed in 2026 guidelines",
+    "status": "documented linked archival integration; transport and cadence unspecified",
+    "transferMethod": "Archival and linked alumni records; technical mechanism not published",
+    "sourceRefs": [
+      "data-policy",
+      "guidelines"
+    ]
+  },
+  "sources": {
+    "data-policy": {
+      "id": "data-policy",
+      "url": "https://classroom.oceanteacher.org/admin/tool/policy/view.php?versionid=8",
+      "title": {
+        "en": "OceanTeacher data policy, October 2024",
+        "fr": "Politique de données OceanTeacher, octobre 2024",
+        "es": "Política de datos de OceanTeacher, octubre de 2024",
+        "ar": "سياسة بيانات OceanTeacher، أكتوبر 2024",
+        "zh": "OceanTeacher数据政策，2024年10月",
+        "ru": "Политика данных OceanTeacher, октябрь 2024 года"
+      },
+      "accessedAt": "2026-09-10"
+    },
+    "guidelines": {
+      "id": "guidelines",
+      "url": "https://oceanexpert.org/downloadFile/61311",
+      "title": {
+        "en": "OceanTeacher Course Management Guidelines, version 5.0 (2026)",
+        "fr": "Directives de gestion des cours OceanTeacher, version 5.0 (2026)",
+        "es": "Directrices de gestión de cursos OceanTeacher, versión 5.0 (2026)",
+        "ar": "إرشادات إدارة دورات OceanTeacher، الإصدار 5.0 (2026)",
+        "zh": "OceanTeacher课程管理指南，第5.0版（2026年）",
+        "ru": "Руководство по управлению курсами OceanTeacher, версия 5.0 (2026)"
+      },
+      "accessedAt": "2026-09-10"
+    }
+  }
+}

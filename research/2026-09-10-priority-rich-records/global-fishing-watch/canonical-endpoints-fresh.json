@@ -1,0 +1,985 @@
+{
+  "global-fishing-watch": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: global-fishing-watch"
+    }
+  },
+  "global-fishing-watch-operator": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: global-fishing-watch-operator"
+    }
+  },
+  "kpler": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: kpler"
+    }
+  },
+  "planet-labs": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: planet-labs"
+    }
+  },
+  "protected-planet": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: protected-planet"
+    }
+  },
+  "protectedseas-navigator": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: protectedseas-navigator"
+    }
+  },
+  "google-earth-engine": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: google-earth-engine"
+    }
+  },
+  "google-bigquery": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: google-bigquery"
+    }
+  },
+  "skylight": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: skylight"
+    }
+  },
+  "arcgis-online": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: arcgis-online"
+    }
+  },
+  "trygg-mat-tracking": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: trygg-mat-tracking"
+    }
+  },
+  "dalio-philanthropies": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: dalio-philanthropies"
+    }
+  },
+  "hans-wilsdorf-foundation": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: hans-wilsdorf-foundation"
+    }
+  },
+  "walmart-foundation": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: walmart-foundation"
+    }
+  },
+  "minderoo-foundation": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: minderoo-foundation"
+    }
+  },
+  "sall-family-foundation": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: sall-family-foundation"
+    }
+  },
+  "audacious-project": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: audacious-project"
+    }
+  },
+  "islas-secas-foundation": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: islas-secas-foundation"
+    }
+  },
+  "oceana": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: oceana"
+    }
+  },
+  "coalition-for-fisheries-transparency": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: coalition-for-fisheries-transparency"
+    }
+  },
+  "norwegian-directorate-of-fisheries": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: norwegian-directorate-of-fisheries"
+    }
+  },
+  "brazil-ministry-fisheries-aquaculture": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: brazil-ministry-fisheries-aquaculture"
+    }
+  },
+  "incopesca": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: incopesca"
+    }
+  },
+  "panama-aquatic-resources-authority": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: panama-aquatic-resources-authority"
+    }
+  },
+  "peru-ministry-production": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: peru-ministry-production"
+    }
+  },
+  "sernapesca": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: sernapesca"
+    }
+  },
+  "ecuador-dirnea": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: ecuador-dirnea"
+    }
+  },
+  "belize-high-seas-fisheries-unit": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: belize-high-seas-fisheries-unit"
+    }
+  },
+  "papua-new-guinea-national-fisheries-authority": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: papua-new-guinea-national-fisheries-authority"
+    }
+  },
+  "marine-regions": {
+    "httpStatus": 200,
+    "body": {
+      "id": "marine-regions",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://www.marineregions.org/about.php",
+      "recordDepth": "thin",
+      "title": "Marine Regions",
+      "summary": "Marine geography and boundary backbone",
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:02:51.999Z",
+      "recordUpdatedAt": "2026-09-10T20:02:51.999Z",
+      "sourceCompleteness": {
+        "status": "partial",
+        "referencedSources": 2,
+        "resolvedSources": 2,
+        "issues": [
+          {
+            "recordId": "marine-regions",
+            "path": "record.properties.data.descriptors[0].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "marine-regions",
+            "path": "record.properties.data.descriptors[1].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "marine-regions",
+            "path": "localizations.ar.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "marine-regions",
+            "path": "localizations.en.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "marine-regions",
+            "path": "localizations.es.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "marine-regions",
+            "path": "localizations.fr.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "marine-regions",
+            "path": "localizations.ru.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "marine-regions",
+            "path": "localizations.zh.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          }
+        ]
+      },
+      "record": {
+        "id": "marine-regions",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.marineregions.org/about.php",
+        "recordDepth": "thin",
+        "sources": {
+          "src-marine-regions-about": {
+            "id": "src-marine-regions-about",
+            "url": "https://www.marineregions.org/about.php",
+            "title": {
+              "ar": "حول Marine Regions",
+              "en": "Marine Regions About",
+              "es": "Acerca de Marine Regions",
+              "fr": "À propos de Marine Regions",
+              "ru": "О Marine Regions",
+              "zh": "关于Marine Regions"
+            },
+            "accessedAt": "2026-05-26"
+          }
+        },
+        "properties": {
+          "data": {
+            "descriptors": [
+              {
+                "id": "marine-regions-tag-data-format-shapefile-gis",
+                "label": "shapefile",
+                "source": null,
+                "category": "format"
+              },
+              {
+                "id": "marine-regions-tag-data-type-geographic-spatial",
+                "label": "geographic_reference_data",
+                "source": null,
+                "category": "type"
+              }
+            ],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [
+            {
+              "id": "marine-regions-tag-read-method-download",
+              "url": "https://www.marineregions.org/about.php",
+              "type": "read",
+              "method": "download",
+              "source": "src-marine-regions-about"
+            },
+            {
+              "id": "marine-regions-tag-read-method-federated-portal",
+              "url": "https://www.marineregions.org/about.php",
+              "type": "read",
+              "method": "federated_portal",
+              "source": "src-marine-regions-about"
+            },
+            {
+              "id": "marine-regions-tag-read-method-web",
+              "url": "https://www.marineregions.org/about.php",
+              "type": "read",
+              "method": "web",
+              "source": "src-marine-regions-about"
+            }
+          ],
+          "gallery": [],
+          "disciplines": []
+        },
+        "createdAt": "2026-05-26T16:46:26.460Z",
+        "updatedAt": "2026-09-10T20:02:51.999Z"
+      },
+      "localizations": {
+        "ar": {
+          "locale": "ar",
+          "title": "المناطق البحرية",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "Marine Regions"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:09.974Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.334067+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:09.974Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "en": {
+          "locale": "en",
+          "title": "Marine Regions",
+          "summary": "Marine geography and boundary backbone",
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "marine-regions-tag-data-format-shapefile-gis",
+                  "description": null
+                },
+                {
+                  "id": "marine-regions-tag-data-type-geographic-spatial",
+                  "description": null
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "marine-regions-tag-read-method-download",
+                "label": "Download",
+                "description": "Access via Download."
+              },
+              {
+                "id": "marine-regions-tag-read-method-federated-portal",
+                "label": "Federated portal/service",
+                "description": "Access via Federated portal/service."
+              },
+              {
+                "id": "marine-regions-tag-read-method-web",
+                "label": "Web UI",
+                "description": "Access via Web UI."
+              }
+            ],
+            "aliases": [],
+            "gallery": []
+          },
+          "translatedFromLocale": null,
+          "contentUpdatedAt": "2026-09-10T20:02:51.976Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.281909+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-05-26T16:46:26.460Z",
+          "updatedAt": "2026-09-10T20:02:51.976Z"
+        },
+        "es": {
+          "locale": "es",
+          "title": "Regiones marinas",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "Marine Regions"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:09.974Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.334475+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:09.974Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "fr": {
+          "locale": "fr",
+          "title": "Régions marines",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "Marine Regions"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:09.974Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.33427+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:09.974Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "ru": {
+          "locale": "ru",
+          "title": "Морские регионы",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "Marine Regions"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:09.974Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.334365+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:09.974Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "zh": {
+          "locale": "zh",
+          "title": "海洋区域",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "Marine Regions"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:09.974Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.334174+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:09.974Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      },
+      "edges": [
+        {
+          "id": "rel-flanders-marine-institute-operates-marine-regions",
+          "sourceNodeId": "flanders-marine-institute",
+          "targetNodeId": "marine-regions",
+          "kind": "operates",
+          "note": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository.",
+          "properties": {
+            "scope": "Programme/team operation; no exclusivity inferred",
+            "sourceRefs": [
+              "src-relationship-marine-regions"
+            ]
+          },
+          "sources": {
+            "src-relationship-marine-regions": {
+              "id": "src-relationship-marine-regions",
+              "url": "https://www.marineregions.org/about.php",
+              "title": {
+                "ar": "حول Marine Regions",
+                "en": "About Marine Regions",
+                "es": "Acerca de Marine Regions",
+                "fr": "À propos de Marine Regions",
+                "ru": "О Marine Regions",
+                "zh": "关于Marine Regions"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.460Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      ],
+      "routes": []
+    }
+  },
+  "zenodo": {
+    "httpStatus": 200,
+    "body": {
+      "id": "zenodo",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://zenodo.org/",
+      "recordDepth": "thin",
+      "title": "Zenodo",
+      "summary": "Generalist catch-all repository for open science outputs",
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:03:22.151Z",
+      "recordUpdatedAt": "2026-09-10T20:03:22.151Z",
+      "sourceCompleteness": {
+        "status": "partial",
+        "referencedSources": 2,
+        "resolvedSources": 2,
+        "issues": [
+          {
+            "recordId": "zenodo",
+            "path": "record.properties.data.descriptors[0].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "zenodo",
+            "path": "record.properties.data.descriptors[1].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "zenodo",
+            "path": "localizations.ar.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "zenodo",
+            "path": "localizations.en.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "zenodo",
+            "path": "localizations.es.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "zenodo",
+            "path": "localizations.fr.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "zenodo",
+            "path": "localizations.ru.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "zenodo",
+            "path": "localizations.zh.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          }
+        ]
+      },
+      "record": {
+        "id": "zenodo",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://zenodo.org/",
+        "recordDepth": "thin",
+        "sources": {
+          "src-zenodo-about": {
+            "id": "src-zenodo-about",
+            "url": "https://about.zenodo.org/",
+            "title": {
+              "ar": "حول Zenodo",
+              "en": "About Zenodo",
+              "es": "Acerca de Zenodo",
+              "fr": "À propos de Zenodo",
+              "ru": "О Zenodo",
+              "zh": "关于Zenodo"
+            },
+            "accessedAt": "2026-05-26"
+          }
+        },
+        "properties": {
+          "data": {
+            "descriptors": [
+              {
+                "id": "zenodo-tag-data-type-research-artifact-publication",
+                "label": "documents",
+                "source": null,
+                "category": "type"
+              },
+              {
+                "id": "zenodo-tag-data-type-software-artifact",
+                "label": "software",
+                "source": null,
+                "category": "type"
+              }
+            ],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [
+            {
+              "id": "zenodo-tag-read-method-api",
+              "url": "https://zenodo.org/",
+              "type": "read",
+              "method": "api",
+              "source": "src-zenodo-about"
+            },
+            {
+              "id": "zenodo-tag-read-method-doi-landing-page",
+              "url": "https://zenodo.org/",
+              "type": "read",
+              "method": "doi_landing_page",
+              "source": "src-zenodo-about"
+            },
+            {
+              "id": "zenodo-tag-read-method-web",
+              "url": "https://zenodo.org/",
+              "type": "read",
+              "method": "web",
+              "source": "src-zenodo-about"
+            },
+            {
+              "id": "zenodo-tag-write-method-api-write",
+              "url": "https://zenodo.org/",
+              "type": "submit",
+              "method": "api_write",
+              "source": "src-zenodo-about"
+            },
+            {
+              "id": "zenodo-tag-write-method-doi-archive-publish",
+              "url": "https://zenodo.org/",
+              "type": "submit",
+              "method": "doi_archive_publish",
+              "source": "src-zenodo-about"
+            },
+            {
+              "id": "zenodo-tag-write-method-web-submission",
+              "url": "https://zenodo.org/",
+              "type": "submit",
+              "method": "web_submission",
+              "source": "src-zenodo-about"
+            }
+          ],
+          "gallery": [],
+          "disciplines": []
+        },
+        "createdAt": "2026-05-26T21:51:00.376Z",
+        "updatedAt": "2026-09-10T20:03:22.151Z"
+      },
+      "localizations": {
+        "ar": {
+          "locale": "ar",
+          "title": "Zenodo",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "مستودع Zenodo",
+              "Zenodo"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:55.543Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.363791+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:55.543Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "en": {
+          "locale": "en",
+          "title": "Zenodo",
+          "summary": "Generalist catch-all repository for open science outputs",
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "zenodo-tag-data-type-research-artifact-publication",
+                  "description": null
+                },
+                {
+                  "id": "zenodo-tag-data-type-software-artifact",
+                  "description": null
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "zenodo-tag-read-method-api",
+                "label": "API",
+                "description": "Access via API."
+              },
+              {
+                "id": "zenodo-tag-read-method-doi-landing-page",
+                "label": "DOI landing page",
+                "description": "Access via DOI landing page."
+              },
+              {
+                "id": "zenodo-tag-read-method-web",
+                "label": "Web UI",
+                "description": "Access via Web UI."
+              },
+              {
+                "id": "zenodo-tag-write-method-api-write",
+                "label": "API write",
+                "description": "Submission via API write."
+              },
+              {
+                "id": "zenodo-tag-write-method-doi-archive-publish",
+                "label": "DOI archive publish",
+                "description": "Submission via DOI archive publish."
+              },
+              {
+                "id": "zenodo-tag-write-method-web-submission",
+                "label": "Web submission",
+                "description": "Submission via Web submission."
+              }
+            ],
+            "aliases": [
+              "Zenodo"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": null,
+          "contentUpdatedAt": "2026-09-10T20:03:22.129Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.28936+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-05-26T21:51:00.376Z",
+          "updatedAt": "2026-09-10T20:03:22.129Z"
+        },
+        "es": {
+          "locale": "es",
+          "title": "Zenodo",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "repositorio Zenodo",
+              "Zenodo"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:55.543Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.364339+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:55.543Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "fr": {
+          "locale": "fr",
+          "title": "Zenodo",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "entrepôt Zenodo",
+              "Zenodo"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:55.543Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.36413+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:55.543Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "ru": {
+          "locale": "ru",
+          "title": "Zenodo",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "репозиторий Zenodo",
+              "Zenodo"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:55.543Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.36424+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:55.543Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "zh": {
+          "locale": "zh",
+          "title": "Zenodo",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "Zenodo 仓库",
+              "Zenodo"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:55.543Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.364015+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:55.543Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      },
+      "edges": [
+        {
+          "id": "rel-cern-operates-zenodo",
+          "sourceNodeId": "cern",
+          "targetNodeId": "zenodo",
+          "kind": "operates",
+          "note": "CERN operates the platform and data centre.",
+          "properties": {
+            "scope": "CERN operates the platform and data centre.",
+            "sourceRefs": [
+              "src-relationship-zenodo"
+            ]
+          },
+          "sources": {
+            "src-relationship-zenodo": {
+              "id": "src-relationship-zenodo",
+              "url": "https://about.zenodo.org/",
+              "title": {
+                "ar": "حول Zenodo",
+                "en": "About Zenodo",
+                "es": "Acerca de Zenodo",
+                "fr": "À propos de Zenodo",
+                "ru": "О Zenodo",
+                "zh": "关于Zenodo"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:33:43.773Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      ],
+      "routes": []
+    }
+  }
+}

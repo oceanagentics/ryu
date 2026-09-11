@@ -1,0 +1,9 @@
+{
+  "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v26.07/parquet/",
+  "observedAt": "2026-09-10",
+  "isTruncated": "false",
+  "objects": 0,
+  "parquetObjects": 0,
+  "parquetBytes": 0,
+  "files": []
+}

@@ -1,0 +1,67 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+  packageId="https://datasets.obis.org/deepdata" system="http://gbif.org" scope="system"
+  xml:lang="eng">
+
+<dataset>
+  <title xml:lang="eng">NORIPMN12022 Env Template BIO</title>
+  <pubDate>2026-04-20</pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>Sampling data captured in Oceanic Exploration Research NORI significantly advanced all aspects of work programme in 2022. Importantly, as in the previous year, NORI conducted all activities in 2022 safely with no significant health, safety, or environmental incidents. This section summarises some key achievements.
+The NORI-D environmental programme saw significant progress in 2022 as the company successfully tested a fully integrated polymetallic nodule collection system—the first time anyone has done so in over 50 years. Planning, preparing, and executing the integrated collection system test—which comprised five environmental baseline and monitoring campaigns from early July to late December 2022 (see below)—kept NORI’s environmental team occupied throughout the year. The campaigns involved thousands of work hours and hundreds of onshore and offshore personnel. In all, the campaigns recovered over 3,000 tonnes of polymetallic nodules from the seabed to the surface—the largest ever nodule-recovery effort from 4,000 m deep in the ocean.</para>
+  </abstract>
+  <keywordSet>
+    <keyword>Occurrence</keyword>
+    <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+  </keywordSet>
+  <intellectualRights>
+    <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+  </intellectualRights>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>unkown</maintenanceUpdateFrequency>
+  </maintenance>
+  <creator>
+    <individualName>
+    <givenName></givenName>
+    <surName></surName>
+    </individualName>
+    <organizationName>Nauru Ocean Resources Inc.</organizationName>
+    <positionName></positionName>
+    <electronicMailAddress></electronicMailAddress>
+  </creator>
+  <metadataProvider>
+    <individualName>
+    <givenName>Sheldon</givenName>
+    <surName>Carter</surName>
+    </individualName>
+    <organizationName>International Seabed Authority</organizationName>
+    <positionName>Database Manager</positionName>
+    <electronicMailAddress>scarter@isa.org.jm</electronicMailAddress>
+  </metadataProvider>
+  <contact>
+    <individualName>
+    <givenName>Sheldon</givenName>
+    <surName>Carter</surName>
+    </individualName>
+    <organizationName>International Seabed Authority</organizationName>
+    <positionName>Database Manager</positionName>
+    <electronicMailAddress>scarter@isa.org.jm</electronicMailAddress>
+  </contact>
+</dataset>
+<additionalMetadata>
+<metadata>
+<gbif>
+  <dateStamp>2026-04-20T20:08:14+0200</dateStamp>
+  <hierarchyLevel>dataset</hierarchyLevel>
+  <citation>Nauru Ocean Resources Inc., (2022). NORIPMN12022 Env Template BIO. Available : DeepData, International Seabed Authority https://data.isa.org.jm/ Accessed: [YYYY-MM-DD].</citation>
+</gbif>
+</metadata>
+</additionalMetadata>
+</eml:eml>
+

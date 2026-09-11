@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "swedish-museum-of-natural-history",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+          "title": {
+            "en": "Swedish Museum of Natural History",
+            "fr": "Muséum suédois d’histoire naturelle",
+            "es": "Museo Sueco de Historia Natural",
+            "ar": "المتحف السويدي للتاريخ الطبيعي",
+            "zh": "瑞典自然历史博物馆",
+            "ru": "Шведский музей естественной истории"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Swedish Museum of Natural History",
+        "summary": "Natural-history museum and home of FishBase Sweden.",
+        "description": "Natural-history museum and home of FishBase Sweden.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Muséum suédois d’histoire naturelle",
+        "summary": "Muséum d’histoire naturelle accueillant FishBase Suède.",
+        "description": "Muséum d’histoire naturelle accueillant FishBase Suède.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Museo Sueco de Historia Natural",
+        "summary": "Museo de historia natural que alberga FishBase Suecia.",
+        "description": "Museo de historia natural que alberga FishBase Suecia.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "المتحف السويدي للتاريخ الطبيعي",
+        "summary": "متحف للتاريخ الطبيعي يستضيف FishBase السويد.",
+        "description": "متحف للتاريخ الطبيعي يستضيف FishBase السويد.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "瑞典自然历史博物馆",
+        "summary": "自然历史博物馆及FishBase瑞典团队所在地。",
+        "description": "自然历史博物馆及FishBase瑞典团队所在地。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Шведский музей естественной истории",
+        "summary": "Музей естественной истории, где работает FishBase Sweden.",
+        "description": "Музей естественной истории, где работает FishBase Sweden.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "geomar",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.geomar.de/en/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.geomar.de/en/",
+          "title": {
+            "en": "GEOMAR Helmholtz Centre for Ocean Research Kiel",
+            "fr": "GEOMAR, Centre Helmholtz de recherche océanique de Kiel",
+            "es": "GEOMAR, Centro Helmholtz de Investigación Oceánica de Kiel",
+            "ar": "مركز GEOMAR هيلمهولتز لأبحاث المحيطات في كيل",
+            "zh": "基尔亥姆霍兹海洋研究中心（GEOMAR）",
+            "ru": "Центр океанических исследований имени Гельмгольца GEOMAR в Киле"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "GEOMAR Helmholtz Centre for Ocean Research Kiel",
+        "summary": "Ocean research institution in Kiel.",
+        "description": "Ocean research institution in Kiel.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "GEOMAR, Centre Helmholtz de recherche océanique de Kiel",
+        "summary": "Établissement de recherche océanique à Kiel.",
+        "description": "Établissement de recherche océanique à Kiel.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "GEOMAR, Centro Helmholtz de Investigación Oceánica de Kiel",
+        "summary": "Institución de investigación oceánica en Kiel.",
+        "description": "Institución de investigación oceánica en Kiel.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "مركز GEOMAR هيلمهولتز لأبحاث المحيطات في كيل",
+        "summary": "مؤسسة لأبحاث المحيطات في كيل.",
+        "description": "مؤسسة لأبحاث المحيطات في كيل.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "基尔亥姆霍兹海洋研究中心（GEOMAR）",
+        "summary": "位于基尔的海洋研究机构。",
+        "description": "位于基尔的海洋研究机构。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Центр океанических исследований имени Гельмгольца GEOMAR в Киле",
+        "summary": "Океанографический научный центр в Киле.",
+        "description": "Океанографический научный центр в Киле.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "mundus-maris",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.mundusmaris.org/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.mundusmaris.org/",
+          "title": {
+            "en": "Mundus maris",
+            "fr": "Mundus maris",
+            "es": "Mundus maris",
+            "ar": "موندوس ماريس",
+            "zh": "Mundus maris",
+            "ru": "Mundus maris"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Mundus maris",
+        "summary": "Association connecting science and arts for sustainability.",
+        "description": "Association connecting science and arts for sustainability.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Mundus maris",
+        "summary": "Association reliant sciences et arts pour la durabilité.",
+        "description": "Association reliant sciences et arts pour la durabilité.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Mundus maris",
+        "summary": "Asociación que une ciencias y artes para la sostenibilidad.",
+        "description": "Asociación que une ciencias y artes para la sostenibilidad.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "موندوس ماريس",
+        "summary": "جمعية تربط العلوم والفنون من أجل الاستدامة.",
+        "description": "جمعية تربط العلوم والفنون من أجل الاستدامة.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "Mundus maris",
+        "summary": "结合科学与艺术促进可持续发展的协会。",
+        "description": "结合科学与艺术促进可持续发展的协会。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Mundus maris",
+        "summary": "Ассоциация, объединяющая науку и искусство ради устойчивого развития.",
+        "description": "Ассоциация, объединяющая науку и искусство ради устойчивого развития.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "worldfish",
+    "record": {
+      "kind": "organization",
+      "url": "https://worldfishcenter.org/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://worldfishcenter.org/",
+          "title": {
+            "en": "WorldFish",
+            "fr": "WorldFish",
+            "es": "WorldFish",
+            "ar": "وورلدفيش",
+            "zh": "世界鱼类中心（WorldFish）",
+            "ru": "WorldFish"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "WorldFish",
+        "summary": "Research organization working on aquatic foods and sustainable food systems.",
+        "description": "Research organization working on aquatic foods and sustainable food systems.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "WorldFish",
+        "summary": "Organisme de recherche sur les aliments aquatiques et les systèmes alimentaires durables.",
+        "description": "Organisme de recherche sur les aliments aquatiques et les systèmes alimentaires durables.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "WorldFish",
+        "summary": "Organización de investigación sobre alimentos acuáticos y sistemas alimentarios sostenibles.",
+        "description": "Organización de investigación sobre alimentos acuáticos y sistemas alimentarios sostenibles.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "وورلدفيش",
+        "summary": "منظمة بحثية تعمل على الأغذية المائية والنظم الغذائية المستدامة.",
+        "description": "منظمة بحثية تعمل على الأغذية المائية والنظم الغذائية المستدامة.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "世界鱼类中心（WorldFish）",
+        "summary": "研究水产食品和可持续粮食系统的机构。",
+        "description": "研究水产食品和可持续粮食系统的机构。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "WorldFish",
+        "summary": "Исследовательская организация в области водных пищевых ресурсов и устойчивых продовольственных систем.",
+        "description": "Исследовательская организация в области водных пищевых ресурсов и устойчивых продовольственных систем.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "blue-abacus",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.blueabacus.org/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.blueabacus.org/",
+          "title": {
+            "en": "Blue Abacus",
+            "fr": "Blue Abacus",
+            "es": "Blue Abacus",
+            "ar": "بلو أباكوس",
+            "zh": "Blue Abacus",
+            "ru": "Blue Abacus"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Blue Abacus",
+        "summary": "Organization providing underwater video technology and fish-population data.",
+        "description": "Organization providing underwater video technology and fish-population data.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Blue Abacus",
+        "summary": "Organisme fournissant des technologies vidéo sous-marines et des données sur les populations de poissons.",
+        "description": "Organisme fournissant des technologies vidéo sous-marines et des données sur les populations de poissons.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Blue Abacus",
+        "summary": "Organización que proporciona tecnología de vídeo submarino y datos de poblaciones de peces.",
+        "description": "Organización que proporciona tecnología de vídeo submarino y datos de poblaciones de peces.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "بلو أباكوس",
+        "summary": "منظمة توفر تقنيات الفيديو تحت الماء وبيانات مجموعات الأسماك.",
+        "description": "منظمة توفر تقنيات الفيديو تحت الماء وبيانات مجموعات الأسماك.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "Blue Abacus",
+        "summary": "提供水下视频技术及鱼类种群数据的机构。",
+        "description": "提供水下视频技术及鱼类种群数据的机构。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Blue Abacus",
+        "summary": "Организация, предоставляющая технологии подводной видеосъёмки и данные о популяциях рыб.",
+        "description": "Организация, предоставляющая технологии подводной видеосъёмки и данные о популяциях рыб.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "bloom-association",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.bloomassociation.org/en/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.bloomassociation.org/en/",
+          "title": {
+            "en": "BLOOM Association",
+            "fr": "Association BLOOM",
+            "es": "Asociación BLOOM",
+            "ar": "جمعية بلوم",
+            "zh": "BLOOM协会",
+            "ru": "Ассоциация BLOOM"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "BLOOM Association",
+        "summary": "Non-governmental organization working on ocean conservation.",
+        "description": "Non-governmental organization working on ocean conservation.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Association BLOOM",
+        "summary": "Organisation non gouvernementale consacrée à la protection de l’océan.",
+        "description": "Organisation non gouvernementale consacrée à la protection de l’océan.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Asociación BLOOM",
+        "summary": "Organización no gubernamental dedicada a la conservación del océano.",
+        "description": "Organización no gubernamental dedicada a la conservación del océano.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "جمعية بلوم",
+        "summary": "منظمة غير حكومية تعمل على حماية المحيط.",
+        "description": "منظمة غير حكومية تعمل على حماية المحيط.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "BLOOM协会",
+        "summary": "从事海洋保护的非政府组织。",
+        "description": "从事海洋保护的非政府组织。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Ассоциация BLOOM",
+        "summary": "Неправительственная организация по охране океана.",
+        "description": "Неправительственная организация по охране океана.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "csiro",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.csiro.au/en/about",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.csiro.au/en/about",
+          "title": {
+            "en": "CSIRO",
+            "fr": "CSIRO",
+            "es": "CSIRO",
+            "ar": "منظمة الكومنولث للبحوث العلمية والصناعية (CSIRO)",
+            "zh": "澳大利亚联邦科学与工业研究组织（CSIRO）",
+            "ru": "Государственное объединение научных и прикладных исследований Австралии (CSIRO)"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "CSIRO",
+        "summary": "Australia’s national science agency.",
+        "description": "Australia’s national science agency.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "CSIRO",
+        "summary": "Agence scientifique nationale australienne.",
+        "description": "Agence scientifique nationale australienne.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "CSIRO",
+        "summary": "Agencia nacional de ciencia de Australia.",
+        "description": "Agencia nacional de ciencia de Australia.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "منظمة الكومنولث للبحوث العلمية والصناعية (CSIRO)",
+        "summary": "الوكالة الوطنية الأسترالية للعلوم.",
+        "description": "الوكالة الوطنية الأسترالية للعلوم.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "澳大利亚联邦科学与工业研究组织（CSIRO）",
+        "summary": "澳大利亚国家科学机构。",
+        "description": "澳大利亚国家科学机构。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Государственное объединение научных и прикладных исследований Австралии (CSIRO)",
+        "summary": "Национальное научное агентство Австралии.",
+        "description": "Национальное научное агентство Австралии.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "minderoo-foundation",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.minderoo.org/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.minderoo.org/",
+          "title": {
+            "en": "Minderoo Foundation",
+            "fr": "Fondation Minderoo",
+            "es": "Fundación Minderoo",
+            "ar": "مؤسسة مينديرو",
+            "zh": "明德罗基金会",
+            "ru": "Фонд Minderoo"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Minderoo Foundation",
+        "summary": "Philanthropic foundation supporting social and environmental initiatives.",
+        "description": "Philanthropic foundation supporting social and environmental initiatives.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Fondation Minderoo",
+        "summary": "Fondation philanthropique soutenant des initiatives sociales et environnementales.",
+        "description": "Fondation philanthropique soutenant des initiatives sociales et environnementales.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Fundación Minderoo",
+        "summary": "Fundación filantrópica que apoya iniciativas sociales y ambientales.",
+        "description": "Fundación filantrópica que apoya iniciativas sociales y ambientales.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "مؤسسة مينديرو",
+        "summary": "مؤسسة خيرية تدعم المبادرات الاجتماعية والبيئية.",
+        "description": "مؤسسة خيرية تدعم المبادرات الاجتماعية والبيئية.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "明德罗基金会",
+        "summary": "支持社会及环境倡议的慈善基金会。",
+        "description": "支持社会及环境倡议的慈善基金会。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Фонд Minderoo",
+        "summary": "Благотворительный фонд, поддерживающий социальные и экологические инициативы.",
+        "description": "Благотворительный фонд, поддерживающий социальные и экологические инициативы.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "swire-institute-of-marine-science",
+    "record": {
+      "kind": "organization",
+      "url": "https://swims.hku.hk/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://swims.hku.hk/",
+          "title": {
+            "en": "Swire Institute of Marine Science",
+            "fr": "Institut Swire des sciences marines",
+            "es": "Instituto Swire de Ciencias Marinas",
+            "ar": "معهد سواير للعلوم البحرية",
+            "zh": "太古海洋科学研究所",
+            "ru": "Институт морских наук Swire"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Swire Institute of Marine Science",
+        "summary": "Marine-science institute at the University of Hong Kong.",
+        "description": "Marine-science institute at the University of Hong Kong.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Institut Swire des sciences marines",
+        "summary": "Institut de sciences marines de l’Université de Hong Kong.",
+        "description": "Institut de sciences marines de l’Université de Hong Kong.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Instituto Swire de Ciencias Marinas",
+        "summary": "Instituto de ciencias marinas de la Universidad de Hong Kong.",
+        "description": "Instituto de ciencias marinas de la Universidad de Hong Kong.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "معهد سواير للعلوم البحرية",
+        "summary": "معهد للعلوم البحرية في جامعة هونغ كونغ.",
+        "description": "معهد للعلوم البحرية في جامعة هونغ كونغ.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "太古海洋科学研究所",
+        "summary": "香港大学的海洋科学研究所。",
+        "description": "香港大学的海洋科学研究所。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Институт морских наук Swire",
+        "summary": "Институт морских наук Гонконгского университета.",
+        "description": "Институт морских наук Гонконгского университета.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "university-of-lorraine",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.univ-lorraine.fr/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.univ-lorraine.fr/",
+          "title": {
+            "en": "University of Lorraine",
+            "fr": "Université de Lorraine",
+            "es": "Universidad de Lorena",
+            "ar": "جامعة لورين",
+            "zh": "洛林大学",
+            "ru": "Лотарингский университет"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "University of Lorraine",
+        "summary": "University in France.",
+        "description": "University in France.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Université de Lorraine",
+        "summary": "Université en France.",
+        "description": "Université en France.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Universidad de Lorena",
+        "summary": "Universidad en Francia.",
+        "description": "Universidad en Francia.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "جامعة لورين",
+        "summary": "جامعة في فرنسا.",
+        "description": "جامعة في فرنسا.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "洛林大学",
+        "summary": "法国大学。",
+        "description": "法国大学。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Лотарингский университет",
+        "summary": "Университет во Франции.",
+        "description": "Университет во Франции.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "oman-ministry-of-agriculture-fisheries-and-water-resources",
+    "record": {
+      "kind": "organization",
+      "url": "https://gov.om/en/ministry-of-agriculture-fisheries-and-water-resources",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://gov.om/en/ministry-of-agriculture-fisheries-and-water-resources",
+          "title": {
+            "en": "Oman Ministry of Agriculture, Fisheries and Water Resources",
+            "fr": "Ministère de l’Agriculture, des Pêches et des Ressources en eau d’Oman",
+            "es": "Ministerio de Agricultura, Pesca y Recursos Hídricos de Omán",
+            "ar": "وزارة الثروة الزراعية والسمكية وموارد المياه في عُمان",
+            "zh": "阿曼农业、渔业和水资源部",
+            "ru": "Министерство сельского хозяйства, рыболовства и водных ресурсов Омана"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Oman Ministry of Agriculture, Fisheries and Water Resources",
+        "summary": "Government ministry responsible for agricultural, fisheries and water resources in Oman.",
+        "description": "Government ministry responsible for agricultural, fisheries and water resources in Oman.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Ministère de l’Agriculture, des Pêches et des Ressources en eau d’Oman",
+        "summary": "Ministère chargé des ressources agricoles, halieutiques et hydriques d’Oman.",
+        "description": "Ministère chargé des ressources agricoles, halieutiques et hydriques d’Oman.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Ministerio de Agricultura, Pesca y Recursos Hídricos de Omán",
+        "summary": "Ministerio responsable de recursos agrícolas, pesqueros e hídricos de Omán.",
+        "description": "Ministerio responsable de recursos agrícolas, pesqueros e hídricos de Omán.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "وزارة الثروة الزراعية والسمكية وموارد المياه في عُمان",
+        "summary": "وزارة حكومية مسؤولة عن الموارد الزراعية والسمكية والمائية في عُمان.",
+        "description": "وزارة حكومية مسؤولة عن الموارد الزراعية والسمكية والمائية في عُمان.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "阿曼农业、渔业和水资源部",
+        "summary": "负责阿曼农业、渔业及水资源的政府部门。",
+        "description": "负责阿曼农业、渔业及水资源的政府部门。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Министерство сельского хозяйства, рыболовства и водных ресурсов Омана",
+        "summary": "Министерство, отвечающее за сельское хозяйство, рыболовство и водные ресурсы Омана.",
+        "description": "Министерство, отвечающее за сельское хозяйство, рыболовство и водные ресурсы Омана.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "eschmeyers-catalog-of-fishes",
+    "record": {
+      "kind": "system",
+      "url": "https://www.calacademy.org/scientists/projects/eschmeyers-catalog-of-fishes",
+      "recordDepth": "stub",
+      "properties": {
+        "disciplines": [],
+        "data": {
+          "descriptors": []
+        },
+        "access": [],
+        "gallery": [],
+        "metrics": []
+      },
+      "sources": {
+        "catalog-project": {
+          "id": "catalog-project",
+          "url": "https://www.calacademy.org/scientists/projects/catalog-of-fishes",
+          "title": {
+            "en": "Eschmeyer’s Catalog of Fishes: official project and FishBase use",
+            "fr": "Catalogue des poissons d’Eschmeyer : projet officiel et utilisation par FishBase",
+            "es": "Catálogo de peces de Eschmeyer: proyecto oficial y uso en FishBase",
+            "ar": "كتالوج أسماك إيشماير: المشروع الرسمي واستخدامه في FishBase",
+            "zh": "埃施迈尔鱼类目录：官方项目及FishBase使用说明",
+            "ru": "Каталог рыб Эшмейера: официальный проект и использование в FishBase"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Eschmeyer’s Catalog of Fishes",
+        "summary": "Searchable reference database of fish names, nomenclature and taxonomic status.",
+        "description": "California Academy of Sciences’ online catalogue of fish genera, species and references. This identity stub supports the evidenced use of catalogue taxonomy by FishBase.",
+        "details": {
+          "aliases": [
+            "Catalog of Fishes",
+            "CofF"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "catalog-project"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      },
+      "fr": {
+        "title": "Catalogue des poissons d’Eschmeyer",
+        "summary": "Base de référence consultable sur les noms, la nomenclature et le statut taxonomique des poissons.",
+        "description": "Catalogue en ligne des genres, espèces et références de poissons de l’Académie des sciences de Californie. Cette fiche d’identité documente la source taxonomique utilisée par FishBase.",
+        "details": {
+          "aliases": [
+            "Catalog of Fishes",
+            "CofF"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "catalog-project"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      },
+      "es": {
+        "title": "Catálogo de peces de Eschmeyer",
+        "summary": "Base de referencia consultable sobre nombres, nomenclatura y estado taxonómico de los peces.",
+        "description": "Catálogo en línea de géneros, especies y referencias de peces de la Academia de Ciencias de California. Esta ficha de identidad documenta la fuente taxonómica utilizada por FishBase.",
+        "details": {
+          "aliases": [
+            "Catalog of Fishes",
+            "CofF"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "catalog-project"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      },
+      "ar": {
+        "title": "كتالوج أسماك إيشماير",
+        "summary": "قاعدة بيانات مرجعية قابلة للبحث لأسماء الأسماك وتسميتها وحالتها التصنيفية.",
+        "description": "كتالوج أكاديمية كاليفورنيا للعلوم على الإنترنت لأجناس الأسماك وأنواعها ومراجعها. توثق هذه البطاقة التعريفية المصدر التصنيفي المستخدم في FishBase.",
+        "details": {
+          "aliases": [
+            "Catalog of Fishes",
+            "CofF"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "catalog-project"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      },
+      "zh": {
+        "title": "埃施迈尔鱼类目录",
+        "summary": "可检索的鱼类名称、命名法与分类地位参考数据库。",
+        "description": "加利福尼亚科学院的在线鱼类属、种及文献目录。本身份简表用于记录FishBase使用该目录分类信息的已证实关系。",
+        "details": {
+          "aliases": [
+            "Catalog of Fishes",
+            "CofF"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "catalog-project"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      },
+      "ru": {
+        "title": "Каталог рыб Эшмейера",
+        "summary": "Поисковая справочная база названий, номенклатуры и таксономического статуса рыб.",
+        "description": "Онлайн-каталог родов, видов и литературы по рыбам Калифорнийской академии наук. Эта краткая карточка определяет источник таксономических данных, используемых FishBase.",
+        "details": {
+          "aliases": [
+            "Catalog of Fishes",
+            "CofF"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "catalog-project"
+            ]
+          },
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "gallery": [],
+          "metrics": []
+        }
+      }
+    },
+    "edges": [],
+    "routes": []
+  }
+]

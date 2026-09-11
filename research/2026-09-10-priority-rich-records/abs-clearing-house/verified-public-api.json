@@ -1,0 +1,189 @@
+{
+  "readAt": "2026-09-11T00:56:57.728775+00:00",
+  "requests": [
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsPermit+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 6545,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": []
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsCheckpointCommunique+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 422,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": []
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3Ameasure+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 397,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": []
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+uniqueIdentifier_s%3Aabsch-ircc-za-300855-2&rows=1&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 1,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": [
+            {
+              "id": "52000000cbd0800000049737",
+              "schema_s": "absPermit",
+              "updatedDate_s": "2026-09-02T11:39:24.427Z",
+              "title_EN_s": "SOUTH AFRICA/MLRA/NEMA/NEMBA/SBSPA/PPSA/NEMPAA/NEMICMA/RES2026-11_&_RES2026-39",
+              "uniqueIdentifier_s": "absch-ircc-za-300855-2",
+              "identifier_s": "EFFA4C3F-1DAE-0EA9-3DA2-92DBF2EACA8C",
+              "_revision_i": 2,
+              "_state_s": "public",
+              "_latest_s": "true",
+              "government_s": "za",
+              "url_ss": [
+                "https://absch.cbd.int/database/record?documentID=300855"
+              ]
+            }
+          ]
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/documents/EFFA4C3F-1DAE-0EA9-3DA2-92DBF2EACA8C",
+      "status": 200,
+      "selection": {
+        "header": {
+          "identifier": "EFFA4C3F-1DAE-0EA9-3DA2-92DBF2EACA8C",
+          "schema": "absPermit",
+          "languages": [
+            "en"
+          ]
+        },
+        "title": {
+          "en": "SOUTH AFRICA/MLRA/NEMA/NEMBA/SBSPA/PPSA/NEMPAA/NEMICMA/RES2026-11_&_RES2026-39"
+        },
+        "dateOfExpiry": "2027-02-28",
+        "matEstablished": true,
+        "subjectMatter": {
+          "en": "<div><!--block-->This permit is intended to facilitate bona fide research and should not be used for the purposes of financial gain by the permit holder. Exact species covered by the collection permit outline in permit number Res2026/11 and Res2026/39.</div>"
+        },
+        "picGranted": true
+      },
+      "topLevelKeys": [
+        "header",
+        "government",
+        "absCNA",
+        "title",
+        "dateOfIssuance",
+        "dateOfExpiry",
+        "providers",
+        "picInformation",
+        "entitiesToWhomPICGranted",
+        "matEstablished",
+        "matInformation",
+        "subjectMatter",
+        "usages",
+        "keywords",
+        "usagesDescription",
+        "thirdPartyTransferCondition",
+        "picGranted",
+        "relevantInformation",
+        "amendmentDescription",
+        "amendmentIntent"
+      ],
+      "retainedContent": "Minimal public factual fields; personal contacts/submitter metadata omitted."
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+uniqueIdentifier_s%3Aabsch-cpc-gb-280530-1&rows=1&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 1,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": [
+            {
+              "id": "52000000cbd08000000447d2",
+              "schema_s": "absCheckpointCommunique",
+              "updatedDate_s": "2025-10-03T15:52:36.267Z",
+              "title_EN_s": "Using single-cell RNA-sequencing to investigate human malaria parasite transmission dynamics",
+              "uniqueIdentifier_s": "absch-cpc-gb-280530-1",
+              "identifier_s": "2DCC5FB9-D576-5D1D-1DF2-13E023E4A894",
+              "_revision_i": 1,
+              "_state_s": "public",
+              "_latest_s": "true",
+              "government_s": "gb",
+              "url_ss": [
+                "https://absch.cbd.int/database/record?documentID=280530"
+              ]
+            }
+          ]
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/documents/2DCC5FB9-D576-5D1D-1DF2-13E023E4A894",
+      "status": 200,
+      "selection": {
+        "header": {
+          "identifier": "2DCC5FB9-D576-5D1D-1DF2-13E023E4A894",
+          "schema": "absCheckpointCommunique",
+          "languages": [
+            "en"
+          ]
+        },
+        "title": {
+          "en": "Using single-cell RNA-sequencing to investigate human malaria parasite transmission dynamics"
+        },
+        "subjectMatter": {
+          "en": "<div><!--block-->Mosquito and plasmodium<br><br>*</div>"
+        },
+        "description": {
+          "en": "<div><!--block-->UK due diligence declaration form received by UK ABS NFP on 27 August 2024<br><br>Investigation of the transmission dynamics of malarial parasites using single-cell RNA-sequencing technology<br><br>*</div>"
+        }
+      },
+      "topLevelKeys": [
+        "header",
+        "government",
+        "title",
+        "absCheckpoints",
+        "absIRCCsNotAvailable",
+        "sourceCountries",
+        "subjectMatter",
+        "keywords",
+        "evidenceOfPIC",
+        "description",
+        "entityWhoGrantedPIC",
+        "entityToWhomPICGranted",
+        "evidenceOfMAT",
+        "dateOfAccess",
+        "personsAtCheckpoint",
+        "dateCollected",
+        "relevantInformation"
+      ],
+      "retainedContent": "Minimal public factual fields; personal contacts/submitter metadata omitted."
+    }
+  ]
+}

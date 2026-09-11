@@ -1,0 +1,167 @@
+{
+  "request": {
+    "valid": true,
+    "recordId": "oceanteacher",
+    "issues": []
+  },
+  "quality": {
+    "valid": true,
+    "recordId": "oceanteacher",
+    "issues": [],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 32,
+      "resolvedSources": 32,
+      "issues": []
+    }
+  },
+  "edgeIssues": [],
+  "duplicateTriples": [],
+  "endpoints": [
+    {
+      "id": "ioc-unesco",
+      "request": {
+        "valid": true,
+        "recordId": "ioc-unesco",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "ioc-unesco",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "medin",
+      "request": {
+        "valid": true,
+        "recordId": "medin",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "medin",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "oceanexpert",
+      "request": {
+        "valid": true,
+        "recordId": "oceanexpert",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "oceanexpert",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "norad",
+      "request": {
+        "valid": true,
+        "recordId": "norad",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "norad",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "lifewatch-eric",
+      "request": {
+        "valid": true,
+        "recordId": "lifewatch-eric",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "lifewatch-eric",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "marine-institute-ireland",
+      "request": {
+        "valid": true,
+        "recordId": "marine-institute-ireland",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "marine-institute-ireland",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "leibniz-centre-for-tropical-marine-research",
+      "request": {
+        "valid": true,
+        "recordId": "leibniz-centre-for-tropical-marine-research",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "leibniz-centre-for-tropical-marine-research",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    }
+  ]
+}

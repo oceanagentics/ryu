@@ -1,0 +1,497 @@
+{
+  "httpStatus": 200,
+  "response": {
+    "valid": false,
+    "recordId": "odis",
+    "issues": [
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[0].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[1].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[1].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[2].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[2].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[3].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[3].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[4].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[4].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[4].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[5].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[5].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "record.properties.access[5].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ar.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ar.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ar.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ar.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ar.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ar.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ar.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ar.details.data.descriptors.odis-standard-schema-org.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ar.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ar.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.zh.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.zh.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.zh.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.zh.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.zh.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.zh.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.zh.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.zh.details.data.descriptors.odis-standard-schema-org.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.zh.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.zh.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.en.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.en.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.en.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.en.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.en.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.en.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.en.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.en.details.data.descriptors.odis-standard-schema-org.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.en.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.en.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.fr.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.fr.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.fr.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.fr.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.fr.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.fr.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.fr.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.fr.details.data.descriptors.odis-standard-schema-org.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.fr.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.fr.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ru.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ru.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ru.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ru.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ru.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ru.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ru.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ru.details.data.descriptors.odis-standard-schema-org.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ru.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.ru.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.es.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.es.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.es.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.es.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.es.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.es.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.es.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.es.details.data.descriptors.odis-standard-schema-org.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.es.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "localizations.es.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "odis",
+        "path": "edges.rel-ioc-unesco-funds-odis",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "odis",
+        "path": "edges.rel-deepdata-member_of-odis",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "odis",
+        "path": "edges.rel-deepdata-syncs_to-odis",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "odis",
+        "path": "edges.rel-oceanexpert-member-of-odis",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "odis",
+        "path": "edges.rel-oceanexpert-syncs-to-odis",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "odis",
+        "path": "edges.rel-international-seabed-authority-publishes-to-odis",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "odis",
+        "path": "edges.rel-norad-funds-odis",
+        "message": "edge endpoints must exist and match the relationship kind"
+      }
+    ],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 69,
+      "resolvedSources": 69,
+      "issues": [
+        {
+          "recordId": "odis",
+          "path": "record.properties.access[0].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "odis",
+          "path": "record.properties.access[1].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "odis",
+          "path": "record.properties.access[2].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "odis",
+          "path": "record.properties.access[3].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "odis",
+          "path": "record.properties.access[4].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "odis",
+          "path": "record.properties.access[5].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.ar.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.zh.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.en.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.fr.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.ru.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.es.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "recordUpdatedAt": "2026-09-10T20:03:04.678Z",
+    "affectedSections": [
+      "record",
+      "localizations",
+      "edges",
+      "routes"
+    ]
+  },
+  "validatedAt": "2026-09-11T01:26:46.505935+00:00",
+  "recordUpdatedAt": "2026-09-10T20:03:04.678Z",
+  "sha256": "8957b685242a2bfa2d0f6ecced0c10b2b1a6f55088648b347e2420098f9e9aa6",
+  "validateOnly": true
+}

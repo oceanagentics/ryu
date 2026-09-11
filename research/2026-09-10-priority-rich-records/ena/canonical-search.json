@@ -1,0 +1,3047 @@
+{
+  "records": [
+    {
+      "id": "ena",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+      "recordDepth": "thin",
+      "title": "European Nucleotide Archive",
+      "summary": "Major open sequence archive and INSDC member",
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:02:28.495Z",
+      "recordUpdatedAt": "2026-09-10T20:02:28.495Z",
+      "score": 200,
+      "matchedLocale": "en",
+      "sourceCompleteness": {
+        "status": "partial",
+        "referencedSources": 8,
+        "resolvedSources": 8,
+        "issues": [
+          {
+            "recordId": "ena",
+            "path": "record.properties.data.descriptors[0].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "ena",
+            "path": "localizations.ar.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "ena",
+            "path": "localizations.en.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "ena",
+            "path": "localizations.es.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "ena",
+            "path": "localizations.fr.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "ena",
+            "path": "localizations.ru.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "ena",
+            "path": "localizations.zh.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          }
+        ]
+      },
+      "record": {
+        "id": "ena",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+        "recordDepth": "thin",
+        "sources": {
+          "src-ena-what": {
+            "id": "src-ena-what",
+            "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+            "title": {
+              "ar": "ما هو ENA",
+              "en": "What is ENA",
+              "es": "Qué es ENA",
+              "fr": "Qu’est-ce que ENA",
+              "ru": "Что такое ENA",
+              "zh": "ENA是什么"
+            },
+            "accessedAt": "2026-05-26"
+          }
+        },
+        "properties": {
+          "data": {
+            "descriptors": [
+              {
+                "id": "ena-tag-data-type-genomic-sequence",
+                "label": "sequence_data",
+                "source": null,
+                "category": "type"
+              }
+            ],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [
+            {
+              "id": "ena-tag-write-method-federated-sync",
+              "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+              "type": "partner_sync",
+              "method": "federated_sync",
+              "source": "src-ena-what"
+            },
+            {
+              "id": "ena-tag-read-method-api",
+              "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+              "type": "read",
+              "method": "api",
+              "source": "src-ena-what"
+            },
+            {
+              "id": "ena-tag-read-method-ftp",
+              "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+              "type": "read",
+              "method": "ftp",
+              "source": "src-ena-what"
+            },
+            {
+              "id": "ena-tag-read-method-web",
+              "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+              "type": "read",
+              "method": "web",
+              "source": "src-ena-what"
+            },
+            {
+              "id": "ena-tag-write-method-api-write",
+              "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+              "type": "submit",
+              "method": "api_write",
+              "source": "src-ena-what"
+            },
+            {
+              "id": "ena-tag-write-method-web-submission",
+              "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+              "type": "submit",
+              "method": "web_submission",
+              "source": "src-ena-what"
+            }
+          ],
+          "gallery": [],
+          "disciplines": [
+            "genetics"
+          ]
+        },
+        "createdAt": "2026-05-26T16:46:26.461Z",
+        "updatedAt": "2026-09-10T20:02:28.495Z"
+      },
+      "localizations": {
+        "ar": {
+          "locale": "ar",
+          "title": "الأرشيف الأوروبي للنيوكليوتيدات",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "ENA",
+              "European Nucleotide Archive"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.30737+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:41.232Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "en": {
+          "locale": "en",
+          "title": "European Nucleotide Archive",
+          "summary": "Major open sequence archive and INSDC member",
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "ena-tag-data-type-genomic-sequence",
+                  "description": null
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "ena-tag-write-method-federated-sync",
+                "label": "Federated sync",
+                "description": "Submission via Federated sync."
+              },
+              {
+                "id": "ena-tag-read-method-api",
+                "label": "API",
+                "description": "Access via API."
+              },
+              {
+                "id": "ena-tag-read-method-ftp",
+                "label": "FTP",
+                "description": "Access via FTP."
+              },
+              {
+                "id": "ena-tag-read-method-web",
+                "label": "Web UI",
+                "description": "Access via Web UI."
+              },
+              {
+                "id": "ena-tag-write-method-api-write",
+                "label": "API write",
+                "description": "Submission via API write."
+              },
+              {
+                "id": "ena-tag-write-method-web-submission",
+                "label": "Web submission",
+                "description": "Submission via Web submission."
+              }
+            ],
+            "aliases": [
+              "ENA"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": null,
+          "contentUpdatedAt": "2026-09-10T20:02:28.471Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.374289+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-10T20:02:28.471Z"
+        },
+        "es": {
+          "locale": "es",
+          "title": "Archivo Europeo de Nucleótidos",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "ENA",
+              "European Nucleotide Archive"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.308508+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:41.232Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "fr": {
+          "locale": "fr",
+          "title": "Archive européenne des nucléotides",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "ENA",
+              "European Nucleotide Archive"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.307596+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:41.232Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "ru": {
+          "locale": "ru",
+          "title": "Европейский нуклеотидный архив",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "ENA",
+              "European Nucleotide Archive"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.307691+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:41.232Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "zh": {
+          "locale": "zh",
+          "title": "欧洲核苷酸档案库",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "ENA",
+              "European Nucleotide Archive"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.307482+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:41.232Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      },
+      "edges": [
+        {
+          "id": "link-ddbj-ena",
+          "sourceNodeId": "ddbj",
+          "targetNodeId": "ena",
+          "kind": "syncs_to",
+          "note": "INSDC members exchange sequence data and corrections at regular intervals.",
+          "properties": {
+            "scope": "Sequence archive exchange",
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.465Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "link-ena-genbank",
+          "sourceNodeId": "ena",
+          "targetNodeId": "genbank",
+          "kind": "syncs_to",
+          "note": "INSDC members exchange sequence data and corrections at regular intervals.",
+          "properties": {
+            "scope": "Sequence archive exchange",
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.465Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-embl-ebi-operates-european-nucleotide-archive",
+          "sourceNodeId": "embl-ebi",
+          "targetNodeId": "ena",
+          "kind": "operates",
+          "note": "EMBL-EBI operates ENA; participating INSDC archive with reciprocal sequence exchange. EMBL is separate from the EU.",
+          "properties": {
+            "scope": "Programme/team operation; no exclusivity inferred",
+            "sourceRefs": [
+              "src-relationship-ena"
+            ]
+          },
+          "sources": {
+            "src-relationship-ena": {
+              "id": "src-relationship-ena",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-ena-member-of-insdc",
+          "sourceNodeId": "ena",
+          "targetNodeId": "insdc",
+          "kind": "member_of",
+          "note": "Participating sequence archive in INSDC.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:33:10.656Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-ena-syncs-to-ddbj",
+          "sourceNodeId": "ena",
+          "targetNodeId": "ddbj",
+          "kind": "syncs_to",
+          "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:32:46.033Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-ena-syncs-to-mgnify",
+          "sourceNodeId": "ena",
+          "targetNodeId": "mgnify",
+          "kind": "syncs_to",
+          "note": "ENA sequencing data are retrieved for MGnify analysis.",
+          "properties": {
+            "scope": "Analysis inputs; not complete archive mirroring",
+            "sourceRefs": [
+              "src-relationship-mgnify"
+            ]
+          },
+          "sources": {
+            "src-relationship-mgnify": {
+              "id": "src-relationship-mgnify",
+              "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+              "title": {
+                "ar": "تدفق البيانات في MGnify",
+                "en": "MGnify data flow",
+                "es": "Flujo de datos de MGnify",
+                "fr": "Flux de données de MGnify",
+                "ru": "Поток данных MGnify",
+                "zh": "MGnify数据流程"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:33:15.890Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-genbank-syncs-to-ena",
+          "sourceNodeId": "genbank",
+          "targetNodeId": "ena",
+          "kind": "syncs_to",
+          "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:32:52.793Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "id": "insdc",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://www.insdc.org/about-insdc/",
+      "recordDepth": "thin",
+      "title": "International Nucleotide Sequence Database Collaboration",
+      "summary": "Global umbrella for open nucleotide sequence archives",
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:02:45.554Z",
+      "recordUpdatedAt": "2026-09-10T20:02:45.554Z",
+      "score": 132,
+      "matchedLocale": "en",
+      "sourceCompleteness": {
+        "status": "partial",
+        "referencedSources": 5,
+        "resolvedSources": 5,
+        "issues": [
+          {
+            "recordId": "insdc",
+            "path": "record.properties.data.descriptors[0].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "insdc",
+            "path": "record.properties.data.descriptors[1].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "insdc",
+            "path": "localizations.ar.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "insdc",
+            "path": "localizations.en.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "insdc",
+            "path": "localizations.es.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "insdc",
+            "path": "localizations.fr.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "insdc",
+            "path": "localizations.ru.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "insdc",
+            "path": "localizations.zh.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          }
+        ]
+      },
+      "record": {
+        "id": "insdc",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.insdc.org/about-insdc/",
+        "recordDepth": "thin",
+        "sources": {
+          "src-insdc-about": {
+            "id": "src-insdc-about",
+            "url": "https://www.insdc.org/about-insdc/",
+            "title": {
+              "ar": "حول INSDC",
+              "en": "About INSDC",
+              "es": "Acerca de INSDC",
+              "fr": "À propos de INSDC",
+              "ru": "О INSDC",
+              "zh": "关于INSDC"
+            },
+            "accessedAt": "2026-05-26"
+          }
+        },
+        "properties": {
+          "data": {
+            "descriptors": [
+              {
+                "id": "insdc-tag-data-type-genomic-sequence",
+                "label": "sequence_data",
+                "source": null,
+                "category": "type"
+              },
+              {
+                "id": "insdc-tag-data-type-sample-biosample",
+                "label": "sample_records",
+                "source": null,
+                "category": "type"
+              }
+            ],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [
+            {
+              "id": "insdc-tag-read-method-api",
+              "url": "https://www.insdc.org/about-insdc/",
+              "type": "read",
+              "method": "api",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "insdc-tag-read-method-download",
+              "url": "https://www.insdc.org/about-insdc/",
+              "type": "read",
+              "method": "download",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "insdc-tag-read-method-federated-portal",
+              "url": "https://www.insdc.org/about-insdc/",
+              "type": "read",
+              "method": "federated_portal",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "insdc-tag-write-method-web-submission",
+              "url": "https://www.insdc.org/about-insdc/",
+              "type": "submit",
+              "method": "web_submission",
+              "source": "src-insdc-about"
+            }
+          ],
+          "gallery": [],
+          "disciplines": [
+            "genetics"
+          ]
+        },
+        "createdAt": "2026-05-26T16:46:26.461Z",
+        "updatedAt": "2026-09-10T20:02:45.554Z"
+      },
+      "localizations": {
+        "ar": {
+          "locale": "ar",
+          "title": "التعاون الدولي لقواعد بيانات تسلسل النيوكليوتيدات",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "INSDC",
+              "International Nucleotide Sequence Database Collaboration"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:06.944Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.328108+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:06.944Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "en": {
+          "locale": "en",
+          "title": "International Nucleotide Sequence Database Collaboration",
+          "summary": "Global umbrella for open nucleotide sequence archives",
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "insdc-tag-data-type-genomic-sequence",
+                  "description": null
+                },
+                {
+                  "id": "insdc-tag-data-type-sample-biosample",
+                  "description": null
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "insdc-tag-read-method-api",
+                "label": "API",
+                "description": "Access via API."
+              },
+              {
+                "id": "insdc-tag-read-method-download",
+                "label": "Download",
+                "description": "Access via Download."
+              },
+              {
+                "id": "insdc-tag-read-method-federated-portal",
+                "label": "Federated portal/service",
+                "description": "Access via Federated portal/service."
+              },
+              {
+                "id": "insdc-tag-write-method-web-submission",
+                "label": "Web submission",
+                "description": "Submission via Web submission."
+              }
+            ],
+            "aliases": [
+              "INSDC"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": null,
+          "contentUpdatedAt": "2026-09-10T20:02:45.532Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.281333+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-10T20:02:45.532Z"
+        },
+        "es": {
+          "locale": "es",
+          "title": "Colaboración Internacional de Bases de Datos de Secuencias de Nucleótidos",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "INSDC",
+              "International Nucleotide Sequence Database Collaboration"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:06.944Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.332847+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:06.944Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "fr": {
+          "locale": "fr",
+          "title": "Collaboration internationale des bases de données de séquences nucléotidiques",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "INSDC",
+              "International Nucleotide Sequence Database Collaboration"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:06.944Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.328299+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:06.944Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "ru": {
+          "locale": "ru",
+          "title": "Международное сотрудничество баз данных нуклеотидных последовательностей",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "INSDC",
+              "International Nucleotide Sequence Database Collaboration"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:06.944Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.332704+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:06.944Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "zh": {
+          "locale": "zh",
+          "title": "国际核苷酸序列数据库合作组织",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "INSDC",
+              "International Nucleotide Sequence Database Collaboration"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:06.944Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.328199+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:06.944Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      },
+      "edges": [
+        {
+          "id": "rel-ddbj-member-of-insdc",
+          "sourceNodeId": "ddbj",
+          "targetNodeId": "insdc",
+          "kind": "member_of",
+          "note": "Participating sequence archive in INSDC.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:33:10.656Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-ena-member-of-insdc",
+          "sourceNodeId": "ena",
+          "targetNodeId": "insdc",
+          "kind": "member_of",
+          "note": "Participating sequence archive in INSDC.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:33:10.656Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-genbank-member-of-insdc",
+          "sourceNodeId": "genbank",
+          "targetNodeId": "insdc",
+          "kind": "member_of",
+          "note": "Participating sequence archive in INSDC.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:33:10.656Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-insdc-members-operates-international-nucleotide-sequence-database-collaboration",
+          "sourceNodeId": "insdc-members",
+          "targetNodeId": "insdc",
+          "kind": "operates",
+          "note": "Independent institutional members operate the collaborating archives; Executive and Implementation Committees set common direction and policy.",
+          "properties": {
+            "scope": "Programme/team operation; no exclusivity inferred",
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "id": "embl-ebi",
+      "kind": "organization",
+      "countryCode": null,
+      "url": null,
+      "recordDepth": "stub",
+      "title": "EMBL-EBI",
+      "summary": null,
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:02:26.340Z",
+      "recordUpdatedAt": "2026-09-10T20:02:26.340Z",
+      "score": 70,
+      "matchedLocale": "en",
+      "sourceCompleteness": {
+        "status": "partial",
+        "referencedSources": 4,
+        "resolvedSources": 4,
+        "issues": [
+          {
+            "recordId": "embl-ebi",
+            "path": "localizations.ar.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "embl-ebi",
+            "path": "localizations.en.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "embl-ebi",
+            "path": "localizations.es.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "embl-ebi",
+            "path": "localizations.fr.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "embl-ebi",
+            "path": "localizations.ru.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "embl-ebi",
+            "path": "localizations.zh.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          }
+        ]
+      },
+      "record": {
+        "id": "embl-ebi",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "sources": {},
+        "properties": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "gallery": [],
+          "disciplines": []
+        },
+        "createdAt": "2026-05-26T16:46:26.461Z",
+        "updatedAt": "2026-09-10T20:02:26.340Z"
+      },
+      "localizations": {
+        "ar": {
+          "locale": "ar",
+          "title": "EMBL-EBI",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "المعهد الأوروبي للمعلوماتية الحيوية"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:32.070Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.296492+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:32.070Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "en": {
+          "locale": "en",
+          "title": "EMBL-EBI",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [],
+            "gallery": []
+          },
+          "translatedFromLocale": null,
+          "contentUpdatedAt": "2026-09-10T20:02:26.314Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.278623+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-10T20:02:26.314Z"
+        },
+        "es": {
+          "locale": "es",
+          "title": "EMBL-EBI",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "Instituto Europeo de Bioinformática"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:32.070Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.296885+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:32.070Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "fr": {
+          "locale": "fr",
+          "title": "EMBL-EBI",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "Institut européen de bioinformatique"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:32.070Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.296682+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:32.070Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "ru": {
+          "locale": "ru",
+          "title": "EMBL-EBI",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "Европейский институт биоинформатики"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:32.070Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.296772+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:32.070Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "zh": {
+          "locale": "zh",
+          "title": "EMBL-EBI",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "欧洲生物信息学研究所"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:32.070Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.296588+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:32.070Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      },
+      "edges": [
+        {
+          "id": "rel-embl-ebi-member-of-insdc-members",
+          "sourceNodeId": "embl-ebi",
+          "targetNodeId": "insdc-members",
+          "kind": "member_of",
+          "note": "Institutional member of INSDC; archive operation remains with each member.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:33:11.354Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-embl-ebi-operates-european-nucleotide-archive",
+          "sourceNodeId": "embl-ebi",
+          "targetNodeId": "ena",
+          "kind": "operates",
+          "note": "EMBL-EBI operates ENA; participating INSDC archive with reciprocal sequence exchange. EMBL is separate from the EU.",
+          "properties": {
+            "scope": "Programme/team operation; no exclusivity inferred",
+            "sourceRefs": [
+              "src-relationship-ena"
+            ]
+          },
+          "sources": {
+            "src-relationship-ena": {
+              "id": "src-relationship-ena",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-embl-ebi-operates-mgnify",
+          "sourceNodeId": "embl-ebi",
+          "targetNodeId": "mgnify",
+          "kind": "operates",
+          "note": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse.",
+          "properties": {
+            "scope": "Programme/team operation; no exclusivity inferred",
+            "sourceRefs": [
+              "src-relationship-mgnify"
+            ]
+          },
+          "sources": {
+            "src-relationship-mgnify": {
+              "id": "src-relationship-mgnify",
+              "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+              "title": {
+                "ar": "تدفق البيانات في MGnify",
+                "en": "MGnify data flow",
+                "es": "Flujo de datos de MGnify",
+                "fr": "Flux de données de MGnify",
+                "ru": "Поток данных MGnify",
+                "zh": "MGnify数据流程"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-embl-governs-embl-ebi",
+          "sourceNodeId": "embl",
+          "targetNodeId": "embl-ebi",
+          "kind": "governs",
+          "note": "EMBL-EBI is an institute of EMBL under its leadership and Council authority.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-ebi-leadership"
+            ]
+          },
+          "sources": {
+            "src-relationship-ebi-leadership": {
+              "id": "src-relationship-ebi-leadership",
+              "url": "https://www.ebi.ac.uk/about/leadership/",
+              "title": {
+                "ar": "قيادة EMBL-EBI",
+                "en": "EMBL-EBI leadership",
+                "es": "Dirección de EMBL-EBI",
+                "fr": "Direction de l’EMBL-EBI",
+                "ru": "Руководство EMBL-EBI",
+                "zh": "EMBL-EBI领导层"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:32:53.577Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "id": "ddbj",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://www.ddbj.nig.ac.jp/about/index-e.html",
+      "recordDepth": "thin",
+      "title": "DNA Data Bank of Japan",
+      "summary": "Japanese INSDC member archive",
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:02:21.281Z",
+      "recordUpdatedAt": "2026-09-10T20:02:21.281Z",
+      "score": 64,
+      "matchedLocale": "en",
+      "sourceCompleteness": {
+        "status": "partial",
+        "referencedSources": 7,
+        "resolvedSources": 7,
+        "issues": [
+          {
+            "recordId": "ddbj",
+            "path": "record.properties.data.descriptors[0].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "ddbj",
+            "path": "localizations.ar.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "ddbj",
+            "path": "localizations.en.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "ddbj",
+            "path": "localizations.es.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "ddbj",
+            "path": "localizations.fr.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "ddbj",
+            "path": "localizations.ru.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "ddbj",
+            "path": "localizations.zh.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          }
+        ]
+      },
+      "record": {
+        "id": "ddbj",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.ddbj.nig.ac.jp/about/index-e.html",
+        "recordDepth": "thin",
+        "sources": {
+          "src-insdc-about": {
+            "id": "src-insdc-about",
+            "url": "https://www.insdc.org/about-insdc/",
+            "title": {
+              "ar": "حول INSDC",
+              "en": "About INSDC",
+              "es": "Acerca de INSDC",
+              "fr": "À propos de INSDC",
+              "ru": "О INSDC",
+              "zh": "关于INSDC"
+            },
+            "accessedAt": "2026-05-26"
+          }
+        },
+        "properties": {
+          "data": {
+            "descriptors": [
+              {
+                "id": "ddbj-tag-data-type-genomic-sequence",
+                "label": "sequence_data",
+                "source": null,
+                "category": "type"
+              }
+            ],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [
+            {
+              "id": "ddbj-tag-write-method-federated-sync",
+              "url": "https://www.ddbj.nig.ac.jp/about/index-e.html",
+              "type": "partner_sync",
+              "method": "federated_sync",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "ddbj-tag-read-method-api",
+              "url": "https://www.ddbj.nig.ac.jp/about/index-e.html",
+              "type": "read",
+              "method": "api",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "ddbj-tag-read-method-download",
+              "url": "https://www.ddbj.nig.ac.jp/about/index-e.html",
+              "type": "read",
+              "method": "download",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "ddbj-tag-read-method-web",
+              "url": "https://www.ddbj.nig.ac.jp/about/index-e.html",
+              "type": "read",
+              "method": "web",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "ddbj-tag-write-method-api-write",
+              "url": "https://www.ddbj.nig.ac.jp/about/index-e.html",
+              "type": "submit",
+              "method": "api_write",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "ddbj-tag-write-method-web-submission",
+              "url": "https://www.ddbj.nig.ac.jp/about/index-e.html",
+              "type": "submit",
+              "method": "web_submission",
+              "source": "src-insdc-about"
+            }
+          ],
+          "gallery": [],
+          "disciplines": [
+            "genetics"
+          ]
+        },
+        "createdAt": "2026-05-26T16:46:26.461Z",
+        "updatedAt": "2026-09-10T20:02:21.281Z"
+      },
+      "localizations": {
+        "ar": {
+          "locale": "ar",
+          "title": "بنك بيانات DNA في اليابان",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "DDBJ",
+              "DNA Data Bank of Japan"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:28.995Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.298009+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:28.995Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "en": {
+          "locale": "en",
+          "title": "DNA Data Bank of Japan",
+          "summary": "Japanese INSDC member archive",
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "ddbj-tag-data-type-genomic-sequence",
+                  "description": null
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "ddbj-tag-write-method-federated-sync",
+                "label": "Federated sync",
+                "description": "Submission via Federated sync."
+              },
+              {
+                "id": "ddbj-tag-read-method-api",
+                "label": "API",
+                "description": "Access via API."
+              },
+              {
+                "id": "ddbj-tag-read-method-download",
+                "label": "Download",
+                "description": "Access via Download."
+              },
+              {
+                "id": "ddbj-tag-read-method-web",
+                "label": "Web UI",
+                "description": "Access via Web UI."
+              },
+              {
+                "id": "ddbj-tag-write-method-api-write",
+                "label": "API write",
+                "description": "Submission via API write."
+              },
+              {
+                "id": "ddbj-tag-write-method-web-submission",
+                "label": "Web submission",
+                "description": "Submission via Web submission."
+              }
+            ],
+            "aliases": [
+              "DDBJ"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": null,
+          "contentUpdatedAt": "2026-09-10T20:02:21.255Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.37164+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-10T20:02:21.255Z"
+        },
+        "es": {
+          "locale": "es",
+          "title": "Banco de Datos de ADN de Japón",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "DDBJ",
+              "DNA Data Bank of Japan"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:28.995Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.298456+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:28.995Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "fr": {
+          "locale": "fr",
+          "title": "Banque de données ADN du Japon",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "DDBJ",
+              "DNA Data Bank of Japan"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:28.995Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.29823+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:28.995Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "ru": {
+          "locale": "ru",
+          "title": "Банк данных ДНК Японии",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "DDBJ",
+              "DNA Data Bank of Japan"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:28.995Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.298323+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:28.995Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "zh": {
+          "locale": "zh",
+          "title": "日本 DNA 数据库",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "DDBJ",
+              "DNA Data Bank of Japan"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:28.995Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.298128+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:28.995Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      },
+      "edges": [
+        {
+          "id": "link-ddbj-ena",
+          "sourceNodeId": "ddbj",
+          "targetNodeId": "ena",
+          "kind": "syncs_to",
+          "note": "INSDC members exchange sequence data and corrections at regular intervals.",
+          "properties": {
+            "scope": "Sequence archive exchange",
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.465Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "link-ddbj-genbank",
+          "sourceNodeId": "ddbj",
+          "targetNodeId": "genbank",
+          "kind": "syncs_to",
+          "note": "INSDC members exchange sequence data and corrections at regular intervals.",
+          "properties": {
+            "scope": "Sequence archive exchange",
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.465Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-bioinformation-and-ddbj-center-nig-operates-dna-data-bank-of-japan",
+          "sourceNodeId": "bioinformation-and-ddbj-center-nig",
+          "targetNodeId": "ddbj",
+          "kind": "operates",
+          "note": "NIG/ROIS operates DDBJ; participating archive in INSDC with reciprocal sequence exchange.",
+          "properties": {
+            "scope": "Programme/team operation; no exclusivity inferred",
+            "sourceRefs": [
+              "src-relationship-ddbj"
+            ]
+          },
+          "sources": {
+            "src-relationship-ddbj": {
+              "id": "src-relationship-ddbj",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-ddbj-member-of-insdc",
+          "sourceNodeId": "ddbj",
+          "targetNodeId": "insdc",
+          "kind": "member_of",
+          "note": "Participating sequence archive in INSDC.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:33:10.656Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-ena-syncs-to-ddbj",
+          "sourceNodeId": "ena",
+          "targetNodeId": "ddbj",
+          "kind": "syncs_to",
+          "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:32:46.033Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-genbank-syncs-to-ddbj",
+          "sourceNodeId": "genbank",
+          "targetNodeId": "ddbj",
+          "kind": "syncs_to",
+          "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:32:46.033Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "id": "genbank",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+      "recordDepth": "thin",
+      "title": "GenBank",
+      "summary": "Major open sequence archive and INSDC member",
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:02:37.704Z",
+      "recordUpdatedAt": "2026-09-10T20:02:37.704Z",
+      "score": 64,
+      "matchedLocale": "en",
+      "sourceCompleteness": {
+        "status": "partial",
+        "referencedSources": 7,
+        "resolvedSources": 7,
+        "issues": [
+          {
+            "recordId": "genbank",
+            "path": "record.properties.data.descriptors[0].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "genbank",
+            "path": "record.properties.data.descriptors[1].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "genbank",
+            "path": "record.properties.data.descriptors[2].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "genbank",
+            "path": "localizations.ar.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "genbank",
+            "path": "localizations.en.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "genbank",
+            "path": "localizations.es.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "genbank",
+            "path": "localizations.fr.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "genbank",
+            "path": "localizations.ru.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "genbank",
+            "path": "localizations.zh.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          }
+        ]
+      },
+      "record": {
+        "id": "genbank",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+        "recordDepth": "thin",
+        "sources": {
+          "src-insdc-about": {
+            "id": "src-insdc-about",
+            "url": "https://www.insdc.org/about-insdc/",
+            "title": {
+              "ar": "حول INSDC",
+              "en": "About INSDC",
+              "es": "Acerca de INSDC",
+              "fr": "À propos de INSDC",
+              "ru": "О INSDC",
+              "zh": "关于INSDC"
+            },
+            "accessedAt": "2026-05-26"
+          }
+        },
+        "properties": {
+          "data": {
+            "descriptors": [
+              {
+                "id": "genbank-tag-data-format-fasta",
+                "label": "fasta",
+                "source": null,
+                "category": "format"
+              },
+              {
+                "id": "genbank-tag-data-format-genbank-flat-file",
+                "label": "genbank_flatfile",
+                "source": null,
+                "category": "format"
+              },
+              {
+                "id": "genbank-tag-data-type-genomic-sequence",
+                "label": "sequence_data",
+                "source": null,
+                "category": "type"
+              }
+            ],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [
+            {
+              "id": "genbank-tag-write-method-federated-sync",
+              "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+              "type": "partner_sync",
+              "method": "federated_sync",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "genbank-tag-read-method-api",
+              "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+              "type": "read",
+              "method": "api",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "genbank-tag-read-method-ftp",
+              "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+              "type": "read",
+              "method": "ftp",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "genbank-tag-read-method-web",
+              "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+              "type": "read",
+              "method": "web",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "genbank-tag-write-method-api-write",
+              "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+              "type": "submit",
+              "method": "api_write",
+              "source": "src-insdc-about"
+            },
+            {
+              "id": "genbank-tag-write-method-web-submission",
+              "url": "https://www.ncbi.nlm.nih.gov/genbank/",
+              "type": "submit",
+              "method": "web_submission",
+              "source": "src-insdc-about"
+            }
+          ],
+          "gallery": [],
+          "disciplines": [
+            "genetics"
+          ]
+        },
+        "createdAt": "2026-05-26T16:46:26.461Z",
+        "updatedAt": "2026-09-10T20:02:37.704Z"
+      },
+      "localizations": {
+        "ar": {
+          "locale": "ar",
+          "title": "GenBank",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "بنك الجينات"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:54.798Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.324878+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:54.798Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "en": {
+          "locale": "en",
+          "title": "GenBank",
+          "summary": "Major open sequence archive and INSDC member",
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "genbank-tag-data-format-fasta",
+                  "description": null
+                },
+                {
+                  "id": "genbank-tag-data-format-genbank-flat-file",
+                  "description": null
+                },
+                {
+                  "id": "genbank-tag-data-type-genomic-sequence",
+                  "description": null
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "genbank-tag-write-method-federated-sync",
+                "label": "Federated sync",
+                "description": "Submission via Federated sync."
+              },
+              {
+                "id": "genbank-tag-read-method-api",
+                "label": "API",
+                "description": "Access via API."
+              },
+              {
+                "id": "genbank-tag-read-method-ftp",
+                "label": "FTP",
+                "description": "Access via FTP."
+              },
+              {
+                "id": "genbank-tag-read-method-web",
+                "label": "Web UI",
+                "description": "Access via Web UI."
+              },
+              {
+                "id": "genbank-tag-write-method-api-write",
+                "label": "API write",
+                "description": "Submission via API write."
+              },
+              {
+                "id": "genbank-tag-write-method-web-submission",
+                "label": "Web submission",
+                "description": "Submission via Web submission."
+              }
+            ],
+            "aliases": [],
+            "gallery": []
+          },
+          "translatedFromLocale": null,
+          "contentUpdatedAt": "2026-09-10T20:02:37.679Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.374823+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-10T20:02:37.679Z"
+        },
+        "es": {
+          "locale": "es",
+          "title": "GenBank",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "banco de genes"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:54.798Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.32518+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:54.798Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "fr": {
+          "locale": "fr",
+          "title": "GenBank",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "banque de gènes"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:54.798Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.325083+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:54.798Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "ru": {
+          "locale": "ru",
+          "title": "GenBank",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "банк генов"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:54.798Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.323271+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:54.798Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "zh": {
+          "locale": "zh",
+          "title": "GenBank",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "基因库"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:18:54.798Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.324985+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:18:54.798Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      },
+      "edges": [
+        {
+          "id": "link-ddbj-genbank",
+          "sourceNodeId": "ddbj",
+          "targetNodeId": "genbank",
+          "kind": "syncs_to",
+          "note": "INSDC members exchange sequence data and corrections at regular intervals.",
+          "properties": {
+            "scope": "Sequence archive exchange",
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.465Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "link-ena-genbank",
+          "sourceNodeId": "ena",
+          "targetNodeId": "genbank",
+          "kind": "syncs_to",
+          "note": "INSDC members exchange sequence data and corrections at regular intervals.",
+          "properties": {
+            "scope": "Sequence archive exchange",
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.465Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-genbank-member-of-insdc",
+          "sourceNodeId": "genbank",
+          "targetNodeId": "insdc",
+          "kind": "member_of",
+          "note": "Participating sequence archive in INSDC.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:33:10.656Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-genbank-syncs-to-ddbj",
+          "sourceNodeId": "genbank",
+          "targetNodeId": "ddbj",
+          "kind": "syncs_to",
+          "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:32:46.033Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-genbank-syncs-to-ena",
+          "sourceNodeId": "genbank",
+          "targetNodeId": "ena",
+          "kind": "syncs_to",
+          "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
+          "properties": {
+            "sourceRefs": [
+              "src-relationship-insdc"
+            ]
+          },
+          "sources": {
+            "src-relationship-insdc": {
+              "id": "src-relationship-insdc",
+              "url": "https://www.insdc.org/about-insdc/",
+              "title": {
+                "ar": "العضوية وتبادل البيانات في INSDC",
+                "en": "INSDC membership and exchange",
+                "es": "Membresía e intercambio de datos de INSDC",
+                "fr": "Adhésion et échange de données au sein de l’INSDC",
+                "ru": "Членство и обмен данными в INSDC",
+                "zh": "INSDC成员与数据交换"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:32:52.793Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-ncbi-united-states-operates-genbank",
+          "sourceNodeId": "ncbi-united-states",
+          "targetNodeId": "genbank",
+          "kind": "operates",
+          "note": "NCBI within NLM/NIH operates GenBank; US federal institutional tie coexists with INSDC membership and exchange.",
+          "properties": {
+            "scope": "Programme/team operation; no exclusivity inferred",
+            "sourceRefs": [
+              "src-relationship-genbank"
+            ]
+          },
+          "sources": {
+            "src-relationship-genbank": {
+              "id": "src-relationship-genbank",
+              "url": "https://www.ncbi.nlm.nih.gov/home/about/",
+              "title": {
+                "ar": "حول NCBI",
+                "en": "About NCBI",
+                "es": "Acerca de NCBI",
+                "fr": "À propos de NCBI",
+                "ru": "О NCBI",
+                "zh": "关于NCBI"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      ],
+      "routes": []
+    },
+    {
+      "id": "mgnify",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://docs.mgnify.org/src/docs/about.html",
+      "recordDepth": "thin",
+      "title": "MGnify",
+      "summary": "Analysis hub layered on ENA archived sequence data",
+      "availableLocales": [
+        "ar",
+        "zh",
+        "en",
+        "fr",
+        "ru",
+        "es"
+      ],
+      "missingLocales": [],
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      },
+      "requestedLocale": "en",
+      "displayLocale": "en",
+      "isLocaleFallback": false,
+      "updatedAt": "2026-09-10T20:02:54.042Z",
+      "recordUpdatedAt": "2026-09-10T20:02:54.042Z",
+      "score": 64,
+      "matchedLocale": "en",
+      "sourceCompleteness": {
+        "status": "partial",
+        "referencedSources": 3,
+        "resolvedSources": 3,
+        "issues": [
+          {
+            "recordId": "mgnify",
+            "path": "record.properties.data.descriptors[0].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "mgnify",
+            "path": "localizations.ar.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "mgnify",
+            "path": "localizations.en.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "mgnify",
+            "path": "localizations.es.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "mgnify",
+            "path": "localizations.fr.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "mgnify",
+            "path": "localizations.ru.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "mgnify",
+            "path": "localizations.zh.details.profile.sourceRefs",
+            "message": "profile source references are required"
+          }
+        ]
+      },
+      "record": {
+        "id": "mgnify",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://docs.mgnify.org/src/docs/about.html",
+        "recordDepth": "thin",
+        "sources": {
+          "src-mgnify-about": {
+            "id": "src-mgnify-about",
+            "url": "https://docs.mgnify.org/src/docs/about.html",
+            "title": {
+              "ar": "حول MGnify",
+              "en": "About MGnify",
+              "es": "Acerca de MGnify",
+              "fr": "À propos de MGnify",
+              "ru": "О MGnify",
+              "zh": "关于MGnify"
+            },
+            "accessedAt": "2026-05-26"
+          }
+        },
+        "properties": {
+          "data": {
+            "descriptors": [
+              {
+                "id": "mgnify-tag-data-type-genomic-sequence",
+                "label": "sequence_data",
+                "source": null,
+                "category": "type"
+              }
+            ],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [
+            {
+              "id": "mgnify-tag-write-method-indirect-partner-submission",
+              "url": "https://docs.mgnify.org/src/docs/about.html",
+              "type": "partner_sync",
+              "method": "indirect_partner_submission",
+              "source": "src-mgnify-about"
+            },
+            {
+              "id": "mgnify-tag-read-method-api",
+              "url": "https://docs.mgnify.org/src/docs/about.html",
+              "type": "read",
+              "method": "api",
+              "source": "src-mgnify-about"
+            },
+            {
+              "id": "mgnify-tag-read-method-rest-api",
+              "url": "https://docs.mgnify.org/src/docs/about.html",
+              "type": "read",
+              "method": "rest_api",
+              "source": "src-mgnify-about"
+            },
+            {
+              "id": "mgnify-tag-read-method-web",
+              "url": "https://docs.mgnify.org/src/docs/about.html",
+              "type": "read",
+              "method": "web",
+              "source": "src-mgnify-about"
+            },
+            {
+              "id": "mgnify-tag-write-method-ipt-publish",
+              "url": "https://docs.mgnify.org/src/docs/about.html",
+              "type": "submit",
+              "method": "ipt_publish",
+              "source": "src-mgnify-about"
+            },
+            {
+              "id": "mgnify-tag-write-method-submission-workflow",
+              "url": "https://docs.mgnify.org/src/docs/about.html",
+              "type": "submit",
+              "method": "submission_workflow",
+              "source": "src-mgnify-about"
+            }
+          ],
+          "gallery": [],
+          "disciplines": [
+            "genetics"
+          ]
+        },
+        "createdAt": "2026-05-26T16:46:26.461Z",
+        "updatedAt": "2026-09-10T20:02:54.042Z"
+      },
+      "localizations": {
+        "ar": {
+          "locale": "ar",
+          "title": "MGnify",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "منصة تحليل الميكروبيوم MGnify"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:08.964Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.332998+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:08.964Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "en": {
+          "locale": "en",
+          "title": "MGnify",
+          "summary": "Analysis hub layered on ENA archived sequence data",
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "mgnify-tag-data-type-genomic-sequence",
+                  "description": null
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "mgnify-tag-write-method-indirect-partner-submission",
+                "label": "Indirect partner submission",
+                "description": "Submission via Indirect partner submission."
+              },
+              {
+                "id": "mgnify-tag-read-method-api",
+                "label": "API",
+                "description": "Access via API."
+              },
+              {
+                "id": "mgnify-tag-read-method-rest-api",
+                "label": "REST API",
+                "description": "Access via REST API."
+              },
+              {
+                "id": "mgnify-tag-read-method-web",
+                "label": "Web UI",
+                "description": "Access via Web UI."
+              },
+              {
+                "id": "mgnify-tag-write-method-ipt-publish",
+                "label": "IPT publish",
+                "description": "Submission via IPT publish."
+              },
+              {
+                "id": "mgnify-tag-write-method-submission-workflow",
+                "label": "Submission workflow",
+                "description": "Submission via Submission workflow."
+              }
+            ],
+            "aliases": [],
+            "gallery": []
+          },
+          "translatedFromLocale": null,
+          "contentUpdatedAt": "2026-09-10T20:02:54.019Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.283597+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-10T20:02:54.019Z"
+        },
+        "es": {
+          "locale": "es",
+          "title": "MGnify",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "plataforma de análisis de microbiomas MGnify"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:08.964Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.333405+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:08.964Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "fr": {
+          "locale": "fr",
+          "title": "MGnify",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "plateforme d'analyse du microbiome MGnify"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:08.964Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.333202+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:08.964Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "ru": {
+          "locale": "ru",
+          "title": "MGnify",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "платформа анализа микробиома MGnify"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:08.964Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.333297+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:08.964Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        "zh": {
+          "locale": "zh",
+          "title": "MGnify",
+          "summary": null,
+          "description": null,
+          "details": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "aliases": [
+              "MGnify 微生物组分析平台"
+            ],
+            "gallery": []
+          },
+          "translatedFromLocale": "en",
+          "contentUpdatedAt": "2026-09-04T02:19:08.964Z",
+          "review": {
+            "date": "2026-09-09T18:28:57.333102+00:00",
+            "note": "Country affiliation fields retired; relationship review is required.",
+            "state": "needs_revision",
+            "reviewer": null
+          },
+          "createdAt": "2026-09-04T02:19:08.964Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      },
+      "edges": [
+        {
+          "id": "rel-embl-ebi-operates-mgnify",
+          "sourceNodeId": "embl-ebi",
+          "targetNodeId": "mgnify",
+          "kind": "operates",
+          "note": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse.",
+          "properties": {
+            "scope": "Programme/team operation; no exclusivity inferred",
+            "sourceRefs": [
+              "src-relationship-mgnify"
+            ]
+          },
+          "sources": {
+            "src-relationship-mgnify": {
+              "id": "src-relationship-mgnify",
+              "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+              "title": {
+                "ar": "تدفق البيانات في MGnify",
+                "en": "MGnify data flow",
+                "es": "Flujo de datos de MGnify",
+                "fr": "Flux de données de MGnify",
+                "ru": "Поток данных MGnify",
+                "zh": "MGnify数据流程"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        },
+        {
+          "id": "rel-ena-syncs-to-mgnify",
+          "sourceNodeId": "ena",
+          "targetNodeId": "mgnify",
+          "kind": "syncs_to",
+          "note": "ENA sequencing data are retrieved for MGnify analysis.",
+          "properties": {
+            "scope": "Analysis inputs; not complete archive mirroring",
+            "sourceRefs": [
+              "src-relationship-mgnify"
+            ]
+          },
+          "sources": {
+            "src-relationship-mgnify": {
+              "id": "src-relationship-mgnify",
+              "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+              "title": {
+                "ar": "تدفق البيانات في MGnify",
+                "en": "MGnify data flow",
+                "es": "Flujo de datos de MGnify",
+                "fr": "Flux de données de MGnify",
+                "ru": "Поток данных MGnify",
+                "zh": "MGnify数据流程"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "createdAt": "2026-09-09T18:33:15.890Z",
+          "updatedAt": "2026-09-09T19:42:13.505Z"
+        }
+      ],
+      "routes": []
+    }
+  ],
+  "nextCursor": null,
+  "total": 6
+}

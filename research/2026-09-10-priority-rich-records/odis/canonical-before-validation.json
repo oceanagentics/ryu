@@ -1,0 +1,387 @@
+{
+  "readAt": "2026-09-11T01:26:46.043987+00:00",
+  "data": {
+    "id": "odis",
+    "kind": "system",
+    "countryCode": null,
+    "url": "https://oceaninfohub.org/odis/",
+    "recordDepth": "thin",
+    "title": "Ocean Data and Information System",
+    "summary": "Interoperability layer and federation of distributed ocean systems",
+    "availableLocales": [
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "missingLocales": [],
+    "reviewStatesByLocale": {
+      "ar": "needs_revision",
+      "en": "needs_revision",
+      "es": "needs_revision",
+      "fr": "needs_revision",
+      "ru": "needs_revision",
+      "zh": "needs_revision"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-10T20:03:04.678Z",
+    "recordUpdatedAt": "2026-09-10T20:03:04.678Z",
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 2,
+      "resolvedSources": 2,
+      "issues": [
+        {
+          "recordId": "odis",
+          "path": "record.properties.data.descriptors[0].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.ar.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.en.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.es.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.fr.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.ru.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "odis",
+          "path": "localizations.zh.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "record": {
+      "id": "odis",
+      "kind": "system",
+      "countryCode": null,
+      "url": "https://oceaninfohub.org/odis/",
+      "recordDepth": "thin",
+      "sources": {
+        "src-odis": {
+          "id": "src-odis",
+          "url": "https://oceaninfohub.org/odis/",
+          "title": {
+            "ar": "ODIS",
+            "en": "ODIS",
+            "es": "ODIS",
+            "fr": "ODIS",
+            "ru": "ODIS",
+            "zh": "ODIS"
+          },
+          "accessedAt": "2026-05-26"
+        }
+      },
+      "properties": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "odis-tag-data-type-metadata-catalog-registry",
+              "label": "catalogue_records",
+              "source": null,
+              "category": "type"
+            }
+          ],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [
+          {
+            "id": "odis-tag-write-method-harvested-node",
+            "url": "https://oceaninfohub.org/odis/",
+            "type": "partner_sync",
+            "method": "harvested_node",
+            "source": "src-odis"
+          },
+          {
+            "id": "odis-tag-read-method-dashboard-viewer",
+            "url": "https://oceaninfohub.org/odis/",
+            "type": "read",
+            "method": "dashboard_viewer",
+            "source": "src-odis"
+          },
+          {
+            "id": "odis-tag-read-method-harvest",
+            "url": "https://oceaninfohub.org/odis/",
+            "type": "read",
+            "method": "harvest",
+            "source": "src-odis"
+          },
+          {
+            "id": "odis-tag-read-method-web",
+            "url": "https://oceaninfohub.org/odis/",
+            "type": "read",
+            "method": "web",
+            "source": "src-odis"
+          }
+        ],
+        "gallery": [],
+        "disciplines": []
+      },
+      "createdAt": "2026-05-26T16:46:26.464Z",
+      "updatedAt": "2026-09-10T20:03:04.678Z"
+    },
+    "localizations": {
+      "ar": {
+        "locale": "ar",
+        "title": "نظام بيانات ومعلومات المحيط",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "ODIS",
+            "Ocean Data and Information System"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.346059+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:24.145Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "en": {
+        "locale": "en",
+        "title": "Ocean Data and Information System",
+        "summary": "Interoperability layer and federation of distributed ocean systems",
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [
+              {
+                "id": "odis-tag-data-type-metadata-catalog-registry",
+                "description": null
+              }
+            ],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [
+            {
+              "id": "odis-tag-write-method-harvested-node",
+              "label": "Harvested node",
+              "description": "Submission via Harvested node."
+            },
+            {
+              "id": "odis-tag-read-method-dashboard-viewer",
+              "label": "Dashboard / viewer",
+              "description": "Access via Dashboard / viewer."
+            },
+            {
+              "id": "odis-tag-read-method-harvest",
+              "label": "Harvest",
+              "description": "Access via Harvest."
+            },
+            {
+              "id": "odis-tag-read-method-web",
+              "label": "Web UI",
+              "description": "Access via Web UI."
+            }
+          ],
+          "aliases": [
+            "ODIS"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-10T20:03:04.655Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.285626+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-05-26T16:46:26.464Z",
+        "updatedAt": "2026-09-10T20:03:04.655Z"
+      },
+      "es": {
+        "locale": "es",
+        "title": "Sistema de Datos e Información Oceánicos",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "ODIS",
+            "Ocean Data and Information System"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.346479+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:24.145Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "fr": {
+        "locale": "fr",
+        "title": "Système de données et d'information océaniques",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "ODIS",
+            "Ocean Data and Information System"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.346265+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:24.145Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "ru": {
+        "locale": "ru",
+        "title": "Система океанических данных и информации",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "ODIS",
+            "Ocean Data and Information System"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.346369+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:24.145Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "zh": {
+        "locale": "zh",
+        "title": "海洋数据与信息系统",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "ODIS",
+            "Ocean Data and Information System"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.346158+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:24.145Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-ioc-unesco-iode-operates-ocean-data-and-information-system",
+        "sourceNodeId": "ioc-unesco-iode",
+        "targetNodeId": "odis",
+        "kind": "operates",
+        "note": "IODE coordinates distributed infrastructure under IOC; independent connected systems retain their own governance.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-odis"
+          ]
+        },
+        "sources": {
+          "src-relationship-odis": {
+            "id": "src-relationship-odis",
+            "url": "https://oceaninfohub.org/odis/",
+            "title": {
+              "ar": "نظام بيانات ومعلومات المحيطات",
+              "en": "Ocean Data and Information System",
+              "es": "Sistema de Datos e Información Oceánicos",
+              "fr": "Système de données et d’informations océaniques",
+              "ru": "Система океанических данных и информации",
+              "zh": "海洋数据与信息系统"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-05-26T16:46:26.464Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      }
+    ],
+    "routes": []
+  }
+}

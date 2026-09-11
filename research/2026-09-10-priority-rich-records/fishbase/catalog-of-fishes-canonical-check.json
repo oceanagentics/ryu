@@ -1,0 +1,64 @@
+{
+  "readAt": "2026-09-11T00:56:07.477Z",
+  "checks": [
+    {
+      "path": "?q=Catalog%20of%20Fishes",
+      "status": 200,
+      "data": {
+        "records": [
+          {
+            "id": "fishbase",
+            "kind": "system",
+            "countryCode": null,
+            "url": "https://fishbase.se/home.htm",
+            "recordDepth": "thin",
+            "title": "FishBase",
+            "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
+            "availableLocales": [
+              "ar",
+              "zh",
+              "en",
+              "fr",
+              "ru",
+              "es"
+            ],
+            "missingLocales": [],
+            "reviewStatesByLocale": {
+              "ar": "needs_revision",
+              "en": "needs_revision",
+              "es": "needs_revision",
+              "fr": "needs_revision",
+              "ru": "needs_revision",
+              "zh": "needs_revision"
+            },
+            "requestedLocale": "en",
+            "displayLocale": "en",
+            "isLocaleFallback": false,
+            "updatedAt": "2026-09-10T20:02:33.089Z",
+            "recordUpdatedAt": "2026-09-10T20:02:33.089Z",
+            "score": 181.08,
+            "matchedLocale": "en"
+          }
+        ],
+        "nextCursor": null,
+        "total": 1
+      }
+    },
+    {
+      "path": "?q=Eschmeyer",
+      "status": 200,
+      "data": {
+        "records": [],
+        "nextCursor": null,
+        "total": 0
+      }
+    },
+    {
+      "path": "/eschmeyers-catalog-of-fishes",
+      "status": 404,
+      "data": {
+        "error": "record not found: eschmeyers-catalog-of-fishes"
+      }
+    }
+  ]
+}

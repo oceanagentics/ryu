@@ -1,0 +1,738 @@
+{
+  "status": 200,
+  "precondition": "2026-09-10T20:02:33.089Z",
+  "result": {
+    "valid": false,
+    "recordId": "fishbase",
+    "issues": [
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[0].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[1].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[1].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[2].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[2].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[3].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[3].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[4].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[4].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[5].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[5].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[5].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[6].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[6].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[6].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[7].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[7].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[7].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[8].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[8].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[9].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "record.properties.access[9].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.data.descriptors.fishbase-standard-fao_fishing_areas.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.data.descriptors.fishbase-standard-asfis.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.data.descriptors.fishbase-standard-isscaap.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.data.descriptors.fishbase-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.data.descriptors.fishbase-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.data.descriptors.fishbase-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ar.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.data.descriptors.fishbase-standard-fao_fishing_areas.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.data.descriptors.fishbase-standard-asfis.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.data.descriptors.fishbase-standard-isscaap.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.data.descriptors.fishbase-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.data.descriptors.fishbase-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.data.descriptors.fishbase-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.zh.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.data.descriptors.fishbase-standard-fao_fishing_areas.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.data.descriptors.fishbase-standard-asfis.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.data.descriptors.fishbase-standard-isscaap.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.data.descriptors.fishbase-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.data.descriptors.fishbase-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.data.descriptors.fishbase-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.en.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.data.descriptors.fishbase-standard-fao_fishing_areas.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.data.descriptors.fishbase-standard-asfis.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.data.descriptors.fishbase-standard-isscaap.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.data.descriptors.fishbase-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.data.descriptors.fishbase-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.data.descriptors.fishbase-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.fr.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.data.descriptors.fishbase-standard-fao_fishing_areas.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.data.descriptors.fishbase-standard-asfis.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.data.descriptors.fishbase-standard-isscaap.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.data.descriptors.fishbase-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.data.descriptors.fishbase-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.data.descriptors.fishbase-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.ru.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.data.descriptors.fishbase-standard-fao_fishing_areas.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.data.descriptors.fishbase-standard-asfis.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.data.descriptors.fishbase-standard-isscaap.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.data.descriptors.fishbase-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.data.descriptors.fishbase-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.data.descriptors.fishbase-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "localizations.es.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-swedish-museum-of-natural-history-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-geomar-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-mundus-maris-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-worldfish-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-oman-ministry-of-agriculture-fisheries-and-water-resources-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-swire-institute-of-marine-science-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-university-of-lorraine-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-minderoo-foundation-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-blue-abacus-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-bloom-association-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-csiro-funds-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-swedish-museum-of-natural-history-operates-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "fishbase",
+        "path": "edges.rel-blue-abacus-publishes-to-fishbase",
+        "message": "edge endpoints must exist and match the relationship kind"
+      }
+    ],
+    "warnings": [
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 48,
+      "resolvedSources": 48,
+      "issues": [
+        {
+          "recordId": "fishbase",
+          "path": "record.properties.access[0].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "record.properties.access[1].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "record.properties.access[2].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "record.properties.access[3].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "record.properties.access[4].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "record.properties.access[5].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "record.properties.access[6].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "record.properties.access[7].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "record.properties.access[8].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "record.properties.access[9].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "localizations.ar.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "localizations.zh.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "localizations.en.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "localizations.fr.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "localizations.ru.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "fishbase",
+          "path": "localizations.es.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "recordUpdatedAt": "2026-09-10T20:02:33.089Z",
+    "affectedSections": [
+      "record",
+      "localizations",
+      "edges",
+      "routes"
+    ]
+  }
+}

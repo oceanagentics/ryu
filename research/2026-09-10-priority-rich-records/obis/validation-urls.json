@@ -1,0 +1,230 @@
+[
+  {
+    "url": "https://api.obis.org/",
+    "status": 200,
+    "finalUrl": "https://api.obis.org/",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 1392
+  },
+  {
+    "url": "https://api.obis.org/obis_v3.yml",
+    "status": 200,
+    "finalUrl": "https://api.obis.org/obis_v3.yml",
+    "contentType": "text/yaml; charset=UTF-8",
+    "sampleBytes": 39327
+  },
+  {
+    "url": "https://api.obis.org/v3/statistics",
+    "status": 200,
+    "finalUrl": "https://api.obis.org/v3/statistics",
+    "contentType": "application/json; charset=utf-8",
+    "sampleBytes": 117
+  },
+  {
+    "url": "https://aquamaps.org/main/home.php",
+    "status": 200,
+    "finalUrl": "https://aquamaps.org/main/home.php",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 13796
+  },
+  {
+    "url": "https://github.com/iobis/obis-open-data",
+    "status": 200,
+    "finalUrl": "https://github.com/iobis/obis-open-data",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 65536
+  },
+  {
+    "url": "https://github.com/iobis/xylookup",
+    "status": 200,
+    "finalUrl": "https://github.com/iobis/xylookup",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 65536
+  },
+  {
+    "url": "https://iobis.github.io/robis/",
+    "status": 200,
+    "finalUrl": "https://iobis.github.io/robis/",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 7861
+  },
+  {
+    "url": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+    "status": 200,
+    "finalUrl": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+    "contentType": "text/html;charset=UTF-8",
+    "sampleBytes": 46775
+  },
+  {
+    "url": "https://manual.obis.org/access",
+    "status": 200,
+    "finalUrl": "https://manual.obis.org/access",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 62115
+  },
+  {
+    "url": "https://manual.obis.org/access.html",
+    "status": 200,
+    "finalUrl": "https://manual.obis.org/access.html",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 62115
+  },
+  {
+    "url": "https://manual.obis.org/dna_data.html",
+    "status": 200,
+    "finalUrl": "https://manual.obis.org/dna_data.html",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 65536
+  },
+  {
+    "url": "https://manual.obis.org/format_emof.html",
+    "status": 200,
+    "finalUrl": "https://manual.obis.org/format_emof.html",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 50809
+  },
+  {
+    "url": "https://manual.obis.org/ipt",
+    "status": 200,
+    "finalUrl": "https://manual.obis.org/ipt",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 65536
+  },
+  {
+    "url": "https://manual.obis.org/policy.html",
+    "status": 200,
+    "finalUrl": "https://manual.obis.org/policy.html",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 57869
+  },
+  {
+    "url": "https://manual.obis.org/vocabulary.html",
+    "status": 200,
+    "finalUrl": "https://manual.obis.org/vocabulary.html",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 65536
+  },
+  {
+    "url": "https://mapper.obis.org/",
+    "status": 200,
+    "finalUrl": "https://mapper.obis.org/",
+    "contentType": "text/html",
+    "sampleBytes": 1937
+  },
+  {
+    "url": "https://obis-open-data.s3.amazonaws.com/?list-type=2&prefix=occurrence%2F",
+    "status": 200,
+    "finalUrl": "https://obis-open-data.s3.amazonaws.com/?list-type=2&prefix=occurrence%2F",
+    "contentType": "application/xml",
+    "sampleBytes": 65536
+  },
+  {
+    "url": "https://obis.org/",
+    "status": 200,
+    "finalUrl": "https://obis.org/",
+    "contentType": "text/html",
+    "sampleBytes": 28362
+  },
+  {
+    "url": "https://obis.org/about/governance/",
+    "status": 200,
+    "finalUrl": "https://obis.org/about/governance/",
+    "contentType": "text/html",
+    "sampleBytes": 24118
+  },
+  {
+    "url": "https://obis.org/data/access/",
+    "status": 200,
+    "finalUrl": "https://obis.org/data/access/",
+    "contentType": "text/html",
+    "sampleBytes": 20800
+  },
+  {
+    "url": "https://obis.org/data/contribute/",
+    "status": 200,
+    "finalUrl": "https://obis.org/data/contribute/",
+    "contentType": "text/html",
+    "sampleBytes": 15644
+  },
+  {
+    "url": "https://obis.org/dataset/471fe91a-2d5f-4651-b76b-e1e9cdba9940",
+    "status": 200,
+    "finalUrl": "https://obis.org/dataset/471fe91a-2d5f-4651-b76b-e1e9cdba9940",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 36107
+  },
+  {
+    "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+    "status": 200,
+    "finalUrl": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 43396
+  },
+  {
+    "url": "https://obis.org/search",
+    "status": 200,
+    "finalUrl": "https://obis.org/search/",
+    "contentType": "text/html",
+    "sampleBytes": 16034
+  },
+  {
+    "url": "https://obis.org/sources/worms/",
+    "status": 200,
+    "finalUrl": "https://obis.org/sources/worms/",
+    "contentType": "text/html",
+    "sampleBytes": 406
+  },
+  {
+    "url": "https://obis.org/whatwedo/impact/",
+    "status": 200,
+    "finalUrl": "https://obis.org/whatwedo/impact/",
+    "contentType": "text/html",
+    "sampleBytes": 23664
+  },
+  {
+    "url": "https://oceanexpert.org/downloadFile/55092",
+    "status": 200,
+    "finalUrl": "https://oceanexpert.org/downloadFile/55092",
+    "contentType": "application/pdf",
+    "sampleBytes": 65536
+  },
+  {
+    "url": "https://portal.obis.org/node/dcb0c76d-46a1-4e07-9a69-98cf3fd67576",
+    "status": 200,
+    "finalUrl": "https://portal.obis.org/node/dcb0c76d-46a1-4e07-9a69-98cf3fd67576",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 38773
+  },
+  {
+    "url": "https://www.eurobis.org/about",
+    "status": 200,
+    "finalUrl": "https://www.eurobis.org/about",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 9407
+  },
+  {
+    "url": "https://www.eurobis.org/data_flow",
+    "status": 200,
+    "finalUrl": "https://www.eurobis.org/data_flow",
+    "contentType": "text/html; charset=utf-8",
+    "sampleBytes": 7327
+  },
+  {
+    "url": "https://www.gbif.org/network/2b7c7b4f-4d4f-40d3-94de-c28b6fa054a6",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.godac.jamstec.go.jp/bismal/e/about.html",
+    "status": 200,
+    "finalUrl": "https://www.godac.jamstec.go.jp/bismal/e/about.html",
+    "contentType": "text/html; charset=UTF-8",
+    "sampleBytes": 11230
+  },
+  {
+    "url": "https://www.rlounsbery.org/_files/ugd/553dc0_1b662632ebdd410d97d7a0fa5e101d36.pdf",
+    "status": 200,
+    "finalUrl": "https://www.rlounsbery.org/_files/ugd/553dc0_1b662632ebdd410d97d7a0fa5e101d36.pdf",
+    "contentType": "application/pdf",
+    "sampleBytes": 65536
+  }
+]

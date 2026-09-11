@@ -1,0 +1,1138 @@
+{
+  "searches": [
+    {
+      "q": "OTGA",
+      "status": 200,
+      "result": {
+        "records": [],
+        "nextCursor": null,
+        "total": 0
+      }
+    },
+    {
+      "q": "Ocean Teacher",
+      "status": 200,
+      "result": {
+        "records": [],
+        "nextCursor": null,
+        "total": 0
+      }
+    },
+    {
+      "q": "oceanteacher",
+      "status": 200,
+      "result": {
+        "records": [],
+        "nextCursor": null,
+        "total": 0
+      }
+    },
+    {
+      "q": "oceanexpert",
+      "status": 200,
+      "result": {
+        "records": [],
+        "nextCursor": null,
+        "total": 0
+      }
+    }
+  ],
+  "reads": [
+    {
+      "id": "oceanteacher",
+      "status": 404,
+      "result": {
+        "error": "record not found: oceanteacher"
+      }
+    },
+    {
+      "id": "oceanexpert",
+      "status": 404,
+      "result": {
+        "error": "record not found: oceanexpert"
+      }
+    },
+    {
+      "id": "ioc-unesco-iode",
+      "status": 200,
+      "result": {
+        "id": "ioc-unesco-iode",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "IOC-UNESCO IODE",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:49.415Z",
+        "recordUpdatedAt": "2026-09-10T20:02:49.415Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 4,
+          "resolvedSources": 4,
+          "issues": [
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ioc-unesco-iode",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "ioc-unesco-iode",
+          "kind": "organization",
+          "countryCode": null,
+          "url": null,
+          "recordDepth": "stub",
+          "sources": {},
+          "properties": {
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [],
+            "gallery": [],
+            "disciplines": []
+          },
+          "createdAt": "2026-05-26T16:46:26.458Z",
+          "updatedAt": "2026-09-10T20:02:49.415Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "اللجنة الدولية الحكومية لعلوم المحيطات التابعة لليونسكو - تبادل البيانات والمعلومات الأوقيانوغرافية الدولي"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:03.928Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.331447+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:03.928Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:49.393Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.279693+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.458Z",
+            "updatedAt": "2026-09-10T20:02:49.393Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "Comisión Oceanográfica Intergubernamental de la UNESCO - Intercambio Internacional de Datos e Información Oceanográficos"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:03.928Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.331964+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:03.928Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "Commission océanographique intergouvernementale de l'UNESCO - Échange international des données et de l'information océanographiques"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:03.928Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.331668+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:03.928Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "Межправительственная океанографическая комиссия ЮНЕСКО - Международный обмен океанографическими данными и информацией"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:03.928Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.331826+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:03.928Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "IOC-UNESCO IODE",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "联合国教科文组织政府间海洋学委员会国际海洋数据和信息交换"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:03.928Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.331549+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:03.928Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-ioc-assembly-governs-ioc-unesco-iode",
+            "sourceNodeId": "ioc-assembly",
+            "targetNodeId": "ioc-unesco-iode",
+            "kind": "governs",
+            "note": "IODE recommendations are submitted to the IOC Assembly for adoption.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-platform-obis"
+              ]
+            },
+            "sources": {
+              "src-relationship-platform-obis": {
+                "id": "src-relationship-platform-obis",
+                "url": "https://obis.org/about/governance/",
+                "title": {
+                  "ar": "حوكمة OBIS",
+                  "en": "OBIS governance",
+                  "es": "Gobernanza de OBIS",
+                  "fr": "Gouvernance d’OBIS",
+                  "ru": "Управление OBIS",
+                  "zh": "OBIS治理"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:33:22.539Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-ioc-unesco-iode-operates-ocean-biodiversity-information-system",
+            "sourceNodeId": "ioc-unesco-iode",
+            "targetNodeId": "platform-obis",
+            "kind": "operates",
+            "note": "IODE/IOC-UNESCO coordinates OBIS with independently operated nodes. Node contributions do not imply ownership by one government.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-platform-obis"
+              ]
+            },
+            "sources": {
+              "src-relationship-platform-obis": {
+                "id": "src-relationship-platform-obis",
+                "url": "https://obis.org/about/governance/",
+                "title": {
+                  "ar": "حوكمة OBIS",
+                  "en": "OBIS governance",
+                  "es": "Gobernanza de OBIS",
+                  "fr": "Gouvernance d’OBIS",
+                  "ru": "Управление OBIS",
+                  "zh": "OBIS治理"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.458Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-ioc-unesco-iode-operates-ocean-data-and-information-system",
+            "sourceNodeId": "ioc-unesco-iode",
+            "targetNodeId": "odis",
+            "kind": "operates",
+            "note": "IODE coordinates distributed infrastructure under IOC; independent connected systems retain their own governance.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-odis"
+              ]
+            },
+            "sources": {
+              "src-relationship-odis": {
+                "id": "src-relationship-odis",
+                "url": "https://oceaninfohub.org/odis/",
+                "title": {
+                  "ar": "نظام بيانات ومعلومات المحيطات",
+                  "en": "Ocean Data and Information System",
+                  "es": "Sistema de Datos e Información Oceánicos",
+                  "fr": "Système de données et d’informations océaniques",
+                  "ru": "Система океанических данных и информации",
+                  "zh": "海洋数据与信息系统"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.464Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-ioc-unesco-iode-operates-ocean-infohub",
+            "sourceNodeId": "ioc-unesco-iode",
+            "targetNodeId": "oceaninfohub",
+            "kind": "operates",
+            "note": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-oceaninfohub"
+              ]
+            },
+            "sources": {
+              "src-relationship-oceaninfohub": {
+                "id": "src-relationship-oceaninfohub",
+                "url": "https://oceaninfohub.org/project-overview/",
+                "title": {
+                  "ar": "نظرة عامة على مشروع Ocean InfoHub",
+                  "en": "Ocean InfoHub project overview",
+                  "es": "Descripción general del proyecto Ocean InfoHub",
+                  "fr": "Présentation du projet Ocean InfoHub",
+                  "ru": "Обзор проекта Ocean InfoHub",
+                  "zh": "Ocean InfoHub项目概览"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.464Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "ioc-unesco",
+      "status": 404,
+      "result": {
+        "error": "record not found: ioc-unesco"
+      }
+    },
+    {
+      "id": "ioc-assembly",
+      "status": 200,
+      "result": {
+        "id": "ioc-assembly",
+        "kind": "organization",
+        "countryCode": null,
+        "url": "https://obis.org/about/governance/",
+        "recordDepth": "stub",
+        "title": "IOC Assembly",
+        "summary": "Member-state body adopting IODE recommendations and programmes.",
+        "availableLocales": [
+          "en"
+        ],
+        "missingLocales": [
+          "ar",
+          "zh",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "reviewStatesByLocale": {
+          "en": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:48.864Z",
+        "recordUpdatedAt": "2026-09-10T20:02:48.864Z",
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        },
+        "record": {
+          "id": "ioc-assembly",
+          "kind": "organization",
+          "countryCode": null,
+          "url": "https://obis.org/about/governance/",
+          "recordDepth": "stub",
+          "sources": {
+            "src-relationship-platform-obis": {
+              "id": "src-relationship-platform-obis",
+              "url": "https://obis.org/about/governance/",
+              "title": {
+                "ar": "حوكمة OBIS",
+                "en": "OBIS governance",
+                "es": "Gobernanza de OBIS",
+                "fr": "Gouvernance d’OBIS",
+                "ru": "Управление OBIS",
+                "zh": "OBIS治理"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "properties": {
+            "disciplines": [],
+            "gallery": [],
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "access": [],
+            "usage": []
+          },
+          "createdAt": "2026-09-09T18:32:29.921Z",
+          "updatedAt": "2026-09-10T20:02:48.864Z"
+        },
+        "localizations": {
+          "en": {
+            "locale": "en",
+            "title": "IOC Assembly",
+            "summary": "Member-state body adopting IODE recommendations and programmes.",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": [],
+              "profile": {
+                "sourceRefs": [
+                  "src-relationship-platform-obis"
+                ]
+              }
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:48.844Z",
+            "review": {
+              "date": "2026-09-09T18:32:29.921289+00:00",
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-09T18:32:29.921Z",
+            "updatedAt": "2026-09-10T20:02:48.844Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-ioc-assembly-governs-ioc-unesco-iode",
+            "sourceNodeId": "ioc-assembly",
+            "targetNodeId": "ioc-unesco-iode",
+            "kind": "governs",
+            "note": "IODE recommendations are submitted to the IOC Assembly for adoption.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-platform-obis"
+              ]
+            },
+            "sources": {
+              "src-relationship-platform-obis": {
+                "id": "src-relationship-platform-obis",
+                "url": "https://obis.org/about/governance/",
+                "title": {
+                  "ar": "حوكمة OBIS",
+                  "en": "OBIS governance",
+                  "es": "Gobernanza de OBIS",
+                  "fr": "Gouvernance d’OBIS",
+                  "ru": "Управление OBIS",
+                  "zh": "OBIS治理"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:33:22.539Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "government-of-flanders",
+      "status": 200,
+      "result": {
+        "id": "government-of-flanders",
+        "kind": "organization",
+        "countryCode": null,
+        "url": "https://oceaninfohub.org/project-overview/",
+        "recordDepth": "stub",
+        "title": "Government of Flanders",
+        "summary": "Government funder of the Ocean InfoHub project; a subnational authority is modeled as an organization.",
+        "availableLocales": [
+          "en"
+        ],
+        "missingLocales": [
+          "ar",
+          "zh",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "reviewStatesByLocale": {
+          "en": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:42.808Z",
+        "recordUpdatedAt": "2026-09-10T20:02:42.808Z",
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        },
+        "record": {
+          "id": "government-of-flanders",
+          "kind": "organization",
+          "countryCode": null,
+          "url": "https://oceaninfohub.org/project-overview/",
+          "recordDepth": "stub",
+          "sources": {
+            "src-relationship-oceaninfohub": {
+              "id": "src-relationship-oceaninfohub",
+              "url": "https://oceaninfohub.org/project-overview/",
+              "title": {
+                "ar": "نظرة عامة على مشروع Ocean InfoHub",
+                "en": "Ocean InfoHub project overview",
+                "es": "Descripción general del proyecto Ocean InfoHub",
+                "fr": "Présentation du projet Ocean InfoHub",
+                "ru": "Обзор проекта Ocean InfoHub",
+                "zh": "Ocean InfoHub项目概览"
+              },
+              "accessedAt": "2026-09-09"
+            }
+          },
+          "properties": {
+            "disciplines": [],
+            "gallery": [],
+            "data": {
+              "descriptors": [],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "access": [],
+            "usage": []
+          },
+          "createdAt": "2026-09-09T18:32:29.012Z",
+          "updatedAt": "2026-09-10T20:02:42.808Z"
+        },
+        "localizations": {
+          "en": {
+            "locale": "en",
+            "title": "Government of Flanders",
+            "summary": "Government funder of the Ocean InfoHub project; a subnational authority is modeled as an organization.",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [],
+              "gallery": [],
+              "profile": {
+                "sourceRefs": [
+                  "src-relationship-oceaninfohub"
+                ]
+              }
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:42.789Z",
+            "review": {
+              "date": "2026-09-09T18:32:29.012491+00:00",
+              "note": null,
+              "state": "agent_researched",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-09T18:32:29.012Z",
+            "updatedAt": "2026-09-10T20:02:42.789Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-government-of-flanders-funds-oceaninfohub",
+            "sourceNodeId": "government-of-flanders",
+            "targetNodeId": "oceaninfohub",
+            "kind": "funds",
+            "note": "Funding of the Ocean InfoHub project.",
+            "properties": {
+              "scope": "Documented project support; continuation terms not established",
+              "sourceRefs": [
+                "src-relationship-oceaninfohub"
+              ]
+            },
+            "sources": {
+              "src-relationship-oceaninfohub": {
+                "id": "src-relationship-oceaninfohub",
+                "url": "https://oceaninfohub.org/project-overview/",
+                "title": {
+                  "ar": "نظرة عامة على مشروع Ocean InfoHub",
+                  "en": "Ocean InfoHub project overview",
+                  "es": "Descripción general del proyecto Ocean InfoHub",
+                  "fr": "Présentation du projet Ocean InfoHub",
+                  "ru": "Обзор проекта Ocean InfoHub",
+                  "zh": "Ocean InfoHub项目概览"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:33:21.805Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "odis",
+      "status": 200,
+      "result": {
+        "id": "odis",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://oceaninfohub.org/odis/",
+        "recordDepth": "thin",
+        "title": "Ocean Data and Information System",
+        "summary": "Interoperability layer and federation of distributed ocean systems",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:04.678Z",
+        "recordUpdatedAt": "2026-09-10T20:03:04.678Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": [
+            {
+              "recordId": "odis",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "odis",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://oceaninfohub.org/odis/",
+          "recordDepth": "thin",
+          "sources": {
+            "src-odis": {
+              "id": "src-odis",
+              "url": "https://oceaninfohub.org/odis/",
+              "title": {
+                "ar": "ODIS",
+                "en": "ODIS",
+                "es": "ODIS",
+                "fr": "ODIS",
+                "ru": "ODIS",
+                "zh": "ODIS"
+              },
+              "accessedAt": "2026-05-26"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "odis-tag-data-type-metadata-catalog-registry",
+                  "label": "catalogue_records",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "odis-tag-write-method-harvested-node",
+                "url": "https://oceaninfohub.org/odis/",
+                "type": "partner_sync",
+                "method": "harvested_node",
+                "source": "src-odis"
+              },
+              {
+                "id": "odis-tag-read-method-dashboard-viewer",
+                "url": "https://oceaninfohub.org/odis/",
+                "type": "read",
+                "method": "dashboard_viewer",
+                "source": "src-odis"
+              },
+              {
+                "id": "odis-tag-read-method-harvest",
+                "url": "https://oceaninfohub.org/odis/",
+                "type": "read",
+                "method": "harvest",
+                "source": "src-odis"
+              },
+              {
+                "id": "odis-tag-read-method-web",
+                "url": "https://oceaninfohub.org/odis/",
+                "type": "read",
+                "method": "web",
+                "source": "src-odis"
+              }
+            ],
+            "gallery": [],
+            "disciplines": []
+          },
+          "createdAt": "2026-05-26T16:46:26.464Z",
+          "updatedAt": "2026-09-10T20:03:04.678Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "نظام بيانات ومعلومات المحيط",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ODIS",
+                "Ocean Data and Information System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.346059+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:24.145Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "Ocean Data and Information System",
+            "summary": "Interoperability layer and federation of distributed ocean systems",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "odis-tag-data-type-metadata-catalog-registry",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "odis-tag-write-method-harvested-node",
+                  "label": "Harvested node",
+                  "description": "Submission via Harvested node."
+                },
+                {
+                  "id": "odis-tag-read-method-dashboard-viewer",
+                  "label": "Dashboard / viewer",
+                  "description": "Access via Dashboard / viewer."
+                },
+                {
+                  "id": "odis-tag-read-method-harvest",
+                  "label": "Harvest",
+                  "description": "Access via Harvest."
+                },
+                {
+                  "id": "odis-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "Access via Web UI."
+                }
+              ],
+              "aliases": [
+                "ODIS"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:03:04.655Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.285626+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.464Z",
+            "updatedAt": "2026-09-10T20:03:04.655Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Sistema de Datos e Información Oceánicos",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ODIS",
+                "Ocean Data and Information System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.346479+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:24.145Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Système de données et d'information océaniques",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ODIS",
+                "Ocean Data and Information System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.346265+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:24.145Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Система океанических данных и информации",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ODIS",
+                "Ocean Data and Information System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.346369+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:24.145Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "海洋数据与信息系统",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ODIS",
+                "Ocean Data and Information System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.346158+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:24.145Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-ioc-unesco-iode-operates-ocean-data-and-information-system",
+            "sourceNodeId": "ioc-unesco-iode",
+            "targetNodeId": "odis",
+            "kind": "operates",
+            "note": "IODE coordinates distributed infrastructure under IOC; independent connected systems retain their own governance.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-odis"
+              ]
+            },
+            "sources": {
+              "src-relationship-odis": {
+                "id": "src-relationship-odis",
+                "url": "https://oceaninfohub.org/odis/",
+                "title": {
+                  "ar": "نظام بيانات ومعلومات المحيطات",
+                  "en": "Ocean Data and Information System",
+                  "es": "Sistema de Datos e Información Oceánicos",
+                  "fr": "Système de données et d’informations océaniques",
+                  "ru": "Система океанических данных и информации",
+                  "zh": "海洋数据与信息系统"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.464Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "incois",
+      "status": 404,
+      "result": {
+        "error": "record not found: incois"
+      }
+    },
+    {
+      "id": "institute-of-marine-research",
+      "status": 404,
+      "result": {
+        "error": "record not found: institute-of-marine-research"
+      }
+    },
+    {
+      "id": "pacific-community",
+      "status": 404,
+      "result": {
+        "error": "record not found: pacific-community"
+      }
+    }
+  ]
+}

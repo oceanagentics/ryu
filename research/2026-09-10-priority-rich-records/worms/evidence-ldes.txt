@@ -1,0 +1,60 @@
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix tree: <https://w3id.org/tree#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix taxon-name: <https://aphia.org/ns/taxon-name/> .
+@prefix skos-xl: <https://www.w3.org/2008/05/skos-xl#> .
+@prefix dwc: <https://rs.tdwg.org/dwc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tat: <https://aphia.org/ns/attribute-trait/> .
+
+<https://aphia.org/feed>
+  a ldes:EventStream ;
+  ldes:timestampPath dc:modified ;
+  ldes:versionOfPath dc:isVersionOf ;
+  tree:view <https://aphia.org/feed?page=2026-09-09T23%3A00%3A00Z%2F2026-09-10T00%3A00%3A00Z> ;
+  tree:member <https://aphia.org/id/taxname/1907043?t=1788998056> .
+
+<https://aphia.org/feed?page=2026-09-09T23%3A00%3A00Z%2F2026-09-10T00%3A00%3A00Z>
+  a tree:Node ;
+  tree:relation [
+    a tree:LessThanRelation ;
+    tree:node <https://aphia.org/feed?page=2026-09-09T20%3A00%3A00Z%2F2026-09-09T21%3A00%3A00Z> ;
+    tree:path dc:modified ;
+    tree:value "2026-09-09T21:00:00Z"^^xsd:dateTime
+  ] ;
+  ldes:retentionPolicy [
+    a ldes:LatestVersionSubset ;
+    ldes:amount 1 ;
+    ldes:versionKey ( dc:isVersionOf )
+  ] .
+
+<https://aphia.org/id/taxname/1907043?t=1788998056>
+  a taxon-name:TaxonName, skos-xl:Label ;
+  taxon-name:aphiaID 1907043 ;
+  dwc:scientificNameID 1907043 ;
+  taxon-name:scientificName "Nerocila domotoae"^^xsd:string ;
+  rdfs:label "Nerocila domotoae Kawanishi, 2026"^^xsd:string ;
+  taxon-name:fullScientificName "Nerocila domotoae Kawanishi, 2026"^^xsd:string ;
+  skos-xl:literalForm "Nerocila domotoae Kawanishi, 2026"^^xsd:string ;
+  dwc:scientificName "Nerocila domotoae Kawanishi, 2026"^^xsd:string ;
+  taxon-name:authorship "Kawanishi, 2026"^^xsd:string ;
+  dwc:scientificNameAuthorship "Kawanishi, 2026"^^xsd:string ;
+  dc:modified "2026-09-09T23:54:16Z"^^xsd:dateTime ;
+  dc:rightsHolder "WoRMS Editorial Board"^^xsd:string ;
+  dc:language "en"^^xsd:string ;
+  dc:isVersionOf <https://aphia.org/id/taxname/1907043> ;
+  taxon-name:hasStatus <https://aphia.org/ns/taxonomic-status#accepted> ;
+  taxon-name:isOfRank <https://aphia.org/ns/rank#species> ;
+  dc:isPartOf <https://marineinfo.org/id/dataset/3103> ;
+  taxon-name:denotes [
+    a taxon-name:Taxon, skos:Concept ;
+    taxon-name:hasAcceptedName <https://aphia.org/id/taxname/1907043> ;
+    tat:hasHabitat <https://aphia.org/id/environment/marine> ;
+    taxon-name:hasParent [
+      a taxon-name:Taxon, skos:Concept ;
+      taxon-name:hasAcceptedName <https://aphia.org/id/taxname/118417>
+    ]
+  ] .
+

@@ -1,0 +1,1238 @@
+{
+  "Flanders": {
+    "records": [
+      {
+        "id": "flanders-marine-institute",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "Flanders Marine Institute",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:34.998Z",
+        "recordUpdatedAt": "2026-09-10T20:02:34.998Z",
+        "score": 100,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "government-of-flanders",
+        "kind": "organization",
+        "countryCode": null,
+        "url": "https://oceaninfohub.org/project-overview/",
+        "recordDepth": "stub",
+        "title": "Government of Flanders",
+        "summary": "Government funder of the Ocean InfoHub project; a subnational authority is modeled as an organization.",
+        "availableLocales": [
+          "en"
+        ],
+        "missingLocales": [
+          "ar",
+          "zh",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "reviewStatesByLocale": {
+          "en": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:42.808Z",
+        "recordUpdatedAt": "2026-09-10T20:02:42.808Z",
+        "score": 100,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "emodnet-biology",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://emodnet.ec.europa.eu/en/biology-0",
+        "recordDepth": "thin",
+        "title": "EMODnet Biology",
+        "summary": "European marine biodiversity access point built on EurOBIS-style infrastructure",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:27.416Z",
+        "recordUpdatedAt": "2026-09-10T20:02:27.416Z",
+        "score": 75,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "eurobis",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.eurobis.org/",
+        "recordDepth": "thin",
+        "title": "European Ocean Biodiversity Information System",
+        "summary": "European OBIS node and regional biodiversity publishing service",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:30.906Z",
+        "recordUpdatedAt": "2026-09-10T20:02:30.906Z",
+        "score": 75,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "marine-regions",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.marineregions.org/about.php",
+        "recordDepth": "thin",
+        "title": "Marine Regions",
+        "summary": "Marine geography and boundary backbone",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:51.999Z",
+        "recordUpdatedAt": "2026-09-10T20:02:51.999Z",
+        "score": 75,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "molluscabase",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://molluscabase.org/about.php",
+        "recordDepth": "thin",
+        "title": "MolluscaBase",
+        "summary": "Global molluscan taxonomic backbone",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:54.638Z",
+        "recordUpdatedAt": "2026-09-10T20:02:54.638Z",
+        "score": 75,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "worms",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.marinespecies.org/about.php",
+        "recordDepth": "thin",
+        "title": "World Register of Marine Species",
+        "summary": "Authoritative marine taxonomic backbone",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:20.936Z",
+        "recordUpdatedAt": "2026-09-10T20:03:20.936Z",
+        "score": 75,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "oceaninfohub",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://oceaninfohub.org/project-overview/",
+        "recordDepth": "thin",
+        "title": "Ocean InfoHub",
+        "summary": "Discovery layer built through ODIS development",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:01.472Z",
+        "recordUpdatedAt": "2026-09-10T20:03:01.472Z",
+        "score": 32,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "ioc-unesco-iode",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "IOC-UNESCO IODE",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:49.415Z",
+        "recordUpdatedAt": "2026-09-10T20:02:49.415Z",
+        "score": 20,
+        "matchedLocale": "en"
+      }
+    ],
+    "nextCursor": null,
+    "total": 9
+  },
+  "LifeWatch": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "AlgaeBase": {
+    "records": [
+      {
+        "id": "algaebase",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.algaebase.org/",
+        "recordDepth": "thin",
+        "title": "AlgaeBase",
+        "summary": "Global algal taxonomy and distribution reference system",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:09.122Z",
+        "recordUpdatedAt": "2026-09-10T20:02:09.122Z",
+        "score": 110.00000000000001,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "algaebase-operator",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "AlgaeBase",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:09.604Z",
+        "recordUpdatedAt": "2026-09-10T20:02:09.604Z",
+        "score": 110.00000000000001,
+        "matchedLocale": "en"
+      }
+    ],
+    "nextCursor": null,
+    "total": 2
+  },
+  "SeaLifeBase": {
+    "records": [
+      {
+        "id": "sealifebase",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.sealifebase.ca/search.php",
+        "recordDepth": "thin",
+        "title": "SeaLifeBase",
+        "summary": "Global aquatic biodiversity database for non-fish aquatic organisms, with taxonomy, traits, distribution, ecology, images, references, and public table snapshots.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:17.207Z",
+        "recordUpdatedAt": "2026-09-10T20:03:17.207Z",
+        "score": 110.00000000000001,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "university-of-western-australia",
+        "kind": "organization",
+        "countryCode": null,
+        "url": "https://www.uwa.edu.au/home",
+        "recordDepth": "stub",
+        "title": "University of Western Australia",
+        "summary": "Australian university identified by Q-quatics as a grant funder for improving Australian marine biodiversity coverage in FishBase and SeaLifeBase; support is described as starting in 2017, with continuation in 2026 unverified.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "agent_researched",
+          "en": "agent_researched",
+          "es": "agent_researched",
+          "fr": "agent_researched",
+          "ru": "agent_researched",
+          "zh": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T19:16:32.215Z",
+        "recordUpdatedAt": "2026-09-10T19:16:32.215Z",
+        "score": 48,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "q-quatics",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:12.785Z",
+        "recordUpdatedAt": "2026-09-10T20:03:12.785Z",
+        "score": 38.5,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "fishbase",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://fishbase.se/home.htm",
+        "recordDepth": "thin",
+        "title": "FishBase",
+        "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:33.089Z",
+        "recordUpdatedAt": "2026-09-10T20:02:33.089Z",
+        "score": 24,
+        "matchedLocale": "en"
+      }
+    ],
+    "nextCursor": null,
+    "total": 4
+  },
+  "Catalogue of Life": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "GBIF": {
+    "records": [
+      {
+        "id": "gbif",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.gbif.org/what-is-gbif",
+        "recordDepth": "thin",
+        "title": "Global Biodiversity Information Facility",
+        "summary": "Global biodiversity infrastructure heavily used in marine workflows",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:35.528Z",
+        "recordUpdatedAt": "2026-09-10T20:02:35.528Z",
+        "score": 104.50000000000001,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "gbif-secretariat",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "GBIF Secretariat",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:36.070Z",
+        "recordUpdatedAt": "2026-09-10T20:02:36.070Z",
+        "score": 100,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "aquamaps",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://aquamaps.org/main/AboutAquaMaps.php",
+        "recordDepth": "thin",
+        "title": "AquaMaps",
+        "summary": "Global species range mapping system",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:10.084Z",
+        "recordUpdatedAt": "2026-09-10T20:02:10.084Z",
+        "score": 20,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "aquamaps-collaboration",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "AquaMaps collaboration",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:10.678Z",
+        "recordUpdatedAt": "2026-09-10T20:02:10.678Z",
+        "score": 20,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "fishbase",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://fishbase.se/home.htm",
+        "recordDepth": "thin",
+        "title": "FishBase",
+        "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:33.089Z",
+        "recordUpdatedAt": "2026-09-10T20:02:33.089Z",
+        "score": 20,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "platform-obis",
+        "kind": "system",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "thin",
+        "title": "Ocean Biodiversity Information System (OBIS)",
+        "summary": "Global marine biodiversity system receiving synchronized data from BISMaL.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:10.745Z",
+        "recordUpdatedAt": "2026-09-10T20:03:10.745Z",
+        "score": 20,
+        "matchedLocale": "en"
+      }
+    ],
+    "nextCursor": null,
+    "total": 6
+  },
+  "EurOBIS": {
+    "records": [
+      {
+        "id": "eurobis",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.eurobis.org/",
+        "recordDepth": "thin",
+        "title": "European Ocean Biodiversity Information System",
+        "summary": "European OBIS node and regional biodiversity publishing service",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:30.906Z",
+        "recordUpdatedAt": "2026-09-10T20:02:30.906Z",
+        "score": 104.50000000000001,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "emodnet-biology",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://emodnet.ec.europa.eu/en/biology-0",
+        "recordDepth": "thin",
+        "title": "EMODnet Biology",
+        "summary": "European marine biodiversity access point built on EurOBIS-style infrastructure",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:27.416Z",
+        "recordUpdatedAt": "2026-09-10T20:02:27.416Z",
+        "score": 48,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "emodnet-biology-consortium",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "EMODnet Biology consortium",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:27.916Z",
+        "recordUpdatedAt": "2026-09-10T20:02:27.916Z",
+        "score": 20,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "platform-obis",
+        "kind": "system",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "thin",
+        "title": "Ocean Biodiversity Information System (OBIS)",
+        "summary": "Global marine biodiversity system receiving synchronized data from BISMaL.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:10.745Z",
+        "recordUpdatedAt": "2026-09-10T20:03:10.745Z",
+        "score": 20,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "flanders-marine-institute",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "Flanders Marine Institute",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:34.998Z",
+        "recordUpdatedAt": "2026-09-10T20:02:34.998Z",
+        "score": 18,
+        "matchedLocale": "en"
+      }
+    ],
+    "nextCursor": null,
+    "total": 5
+  },
+  "EMODnet Biology": {
+    "records": [
+      {
+        "id": "emodnet-biology",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://emodnet.ec.europa.eu/en/biology-0",
+        "recordDepth": "thin",
+        "title": "EMODnet Biology",
+        "summary": "European marine biodiversity access point built on EurOBIS-style infrastructure",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:27.416Z",
+        "recordUpdatedAt": "2026-09-10T20:02:27.416Z",
+        "score": 200,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "emodnet-biology-consortium",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "EMODnet Biology consortium",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:27.916Z",
+        "recordUpdatedAt": "2026-09-10T20:02:27.916Z",
+        "score": 200,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "eur",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "European Union",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "agent_researched",
+          "en": "agent_researched",
+          "es": "agent_researched",
+          "fr": "agent_researched",
+          "ru": "agent_researched",
+          "zh": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:29.334Z",
+        "recordUpdatedAt": "2026-09-10T20:02:29.334Z",
+        "score": 70,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "flanders-marine-institute",
+        "kind": "organization",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "stub",
+        "title": "Flanders Marine Institute",
+        "summary": null,
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:34.998Z",
+        "recordUpdatedAt": "2026-09-10T20:02:34.998Z",
+        "score": 70,
+        "matchedLocale": "en"
+      }
+    ],
+    "nextCursor": null,
+    "total": 4
+  },
+  "European Commission": {
+    "records": [
+      {
+        "id": "ec-dg-mare",
+        "kind": "organization",
+        "countryCode": null,
+        "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+        "recordDepth": "stub",
+        "title": "European Commission DG MARE",
+        "summary": "Programme management of EMODnet, with technical delivery by consortia.",
+        "availableLocales": [
+          "en"
+        ],
+        "missingLocales": [
+          "ar",
+          "zh",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "reviewStatesByLocale": {
+          "en": "agent_researched"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:23.821Z",
+        "recordUpdatedAt": "2026-09-10T20:02:23.821Z",
+        "score": 200,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "emodnet",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://emodnet.ec.europa.eu/en/about_emodnet",
+        "recordDepth": "thin",
+        "title": "European Marine Observation and Data Network",
+        "summary": "European umbrella marine data network",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:26.803Z",
+        "recordUpdatedAt": "2026-09-10T20:02:26.803Z",
+        "score": 175,
+        "matchedLocale": "en"
+      }
+    ],
+    "nextCursor": null,
+    "total": 2
+  },
+  "Marine Life 2030": {
+    "records": [
+      {
+        "id": "ecotrust-oregon-fisheries-uses-values",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://offshorewind.westcoastoceans.org/orowindmap-data-catalog/fishing-ecotrust-uses-and-values-project/",
+        "recordDepth": "thin",
+        "title": "Ecotrust Oregon Marine Fisheries Uses and Values Project",
+        "summary": "Ecotrust Oregon fisheries uses and values layers provide participatory mapping context for commercial and recreational fishing along the Oregon coast.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:24.793Z",
+        "recordUpdatedAt": "2026-09-10T20:02:24.793Z",
+        "score": 151.2,
+        "matchedLocale": "en"
+      },
+      {
+        "id": "fishbase",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://fishbase.se/home.htm",
+        "recordDepth": "thin",
+        "title": "FishBase",
+        "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:33.089Z",
+        "recordUpdatedAt": "2026-09-10T20:02:33.089Z",
+        "score": 92.8,
+        "matchedLocale": "en"
+      }
+    ],
+    "nextCursor": null,
+    "total": 2
+  },
+  "Index Fungorum": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "FADA": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "Reptile": {
+    "records": [
+      {
+        "id": "sealifebase",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.sealifebase.ca/search.php",
+        "recordDepth": "thin",
+        "title": "SeaLifeBase",
+        "summary": "Global aquatic biodiversity database for non-fish aquatic organisms, with taxonomy, traits, distribution, ecology, images, references, and public table snapshots.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:17.207Z",
+        "recordUpdatedAt": "2026-09-10T20:03:17.207Z",
+        "score": 21.6,
+        "matchedLocale": "en"
+      }
+    ],
+    "nextCursor": null,
+    "total": 1
+  },
+  "Bryozoa": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "ICTV": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  },
+  "Ctenophora": {
+    "records": [],
+    "nextCursor": null,
+    "total": 0
+  }
+}

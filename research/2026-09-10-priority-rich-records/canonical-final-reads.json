@@ -1,0 +1,4156 @@
+{
+  "purpose": "Read-only research validation snapshots; not a registry.",
+  "reads": [
+    {
+      "id": "fishbase",
+      "readAt": "2026-09-11T01:28:38.482Z",
+      "httpStatus": 200,
+      "response": {
+        "id": "fishbase",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://fishbase.se/home.htm",
+        "recordDepth": "thin",
+        "title": "FishBase",
+        "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:33.089Z",
+        "recordUpdatedAt": "2026-09-10T20:02:33.089Z",
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 25,
+          "resolvedSources": 25,
+          "issues": []
+        },
+        "record": {
+          "id": "fishbase",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://fishbase.se/home.htm",
+          "recordDepth": "thin",
+          "sources": {
+            "src-fishbase-home": {
+              "id": "src-fishbase-home",
+              "url": "https://fishbase.se/home.htm",
+              "title": {
+                "ar": "الصفحة الرئيسية وإحصاءات البيانات في FishBase",
+                "en": "FishBase homepage and data statistics",
+                "es": "Página de inicio y estadísticas de datos de FishBase",
+                "fr": "Page d’accueil et statistiques des données de FishBase",
+                "ru": "Главная страница и статистика данных FishBase",
+                "zh": "FishBase主页与数据统计"
+              },
+              "accessedAt": "2026-07-22"
+            },
+            "src-fishbase-search": {
+              "id": "src-fishbase-search",
+              "url": "https://fishbase.se/search.php",
+              "title": {
+                "ar": "البحث في FishBase",
+                "en": "FishBase Search",
+                "es": "Búsqueda en FishBase",
+                "fr": "Recherche dans FishBase",
+                "ru": "Поиск в FishBase",
+                "zh": "FishBase搜索"
+              },
+              "accessedAt": "2026-07-22"
+            },
+            "src-fishbase-citation": {
+              "id": "src-fishbase-citation",
+              "url": "https://www.fishbase.se/summary/citation.php",
+              "title": {
+                "ar": "إرشادات FishBase للاستشهاد وحقوق النشر والتواصل",
+                "en": "FishBase citation, copyright, and contact guidance",
+                "es": "Guía de citas, derechos de autor y contacto de FishBase",
+                "fr": "Guide de citation, de droits d’auteur et de contact de FishBase",
+                "ru": "Рекомендации FishBase по цитированию, авторским правам и контактам",
+                "zh": "FishBase引用、版权与联系指南"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-downloads": {
+              "id": "src-fishbase-downloads",
+              "url": "https://fishbase.se/Download/",
+              "title": {
+                "ar": "قسم التنزيلات في FishBase",
+                "en": "FishBase Download Section",
+                "es": "Sección de descargas de FishBase",
+                "fr": "Section de téléchargement de FishBase",
+                "ru": "Раздел загрузок FishBase",
+                "zh": "FishBase下载专区"
+              },
+              "accessedAt": "2026-07-22"
+            },
+            "src-fishbase-sourcecoop": {
+              "id": "src-fishbase-sourcecoop",
+              "url": "https://source.coop/cboettig/fishbase",
+              "title": {
+                "ar": "لقطات بصيغة Parquet لقاعدة بيانات FishBase",
+                "en": "Parquet Snapshots of the FishBase Database",
+                "es": "Instantáneas Parquet de la base de datos FishBase",
+                "fr": "Instantanés Parquet de la base de données FishBase",
+                "ru": "Снимки базы данных FishBase в формате Parquet",
+                "zh": "FishBase数据库Parquet快照"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-citing-refs": {
+              "id": "src-fishbase-citing-refs",
+              "url": "https://www.fishbase.se/references/FBRefList.php",
+              "title": {
+                "ar": "قائمة المراجع التي تستشهد بـ FishBase",
+                "en": "FishBase references citing FishBase",
+                "es": "Referencias que citan FishBase",
+                "fr": "Références citant FishBase",
+                "ru": "Публикации, цитирующие FishBase",
+                "zh": "引用FishBase的文献"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-fishwatcher": {
+              "id": "src-fishbase-fishwatcher",
+              "url": "https://www.fishbase.se/fishwatcher/menu.php",
+              "title": {
+                "ar": "قائمة رفع الملفات في FishWatcher",
+                "en": "FishWatcher upload menu",
+                "es": "Menú de carga de FishWatcher",
+                "fr": "Menu de téléversement de FishWatcher",
+                "ru": "Меню загрузки FishWatcher",
+                "zh": "FishWatcher上传菜单"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-impact-study": {
+              "id": "src-fishbase-impact-study",
+              "url": "https://digitalcommons.uri.edu/gsofacpubs/1538/",
+              "title": {
+                "ar": "قياس الأثر العلمي لـ FishBase بعد ثلاثة عقود",
+                "en": "Measuring the scientific impact of FishBase after three decades",
+                "es": "Medición del impacto científico de FishBase tras tres décadas",
+                "fr": "Mesurer l’impact scientifique de FishBase après trois décennies",
+                "ru": "Оценка научного влияния FishBase спустя три десятилетия",
+                "zh": "衡量FishBase三十年后的科学影响"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-gadus-summary": {
+              "id": "src-fishbase-gadus-summary",
+              "url": "https://fishbase.se/summary/SpeciesSummary.php?id=69",
+              "title": {
+                "ar": "ملخص النوع Gadus morhua في FishBase",
+                "en": "FishBase species summary: Gadus morhua",
+                "es": "Resumen de la especie Gadus morhua en FishBase",
+                "fr": "Fiche de l’espèce Gadus morhua dans FishBase",
+                "ru": "Сводка о виде Gadus morhua в FishBase",
+                "zh": "FishBase物种摘要：Gadus morhua"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-home-rendered": {
+              "id": "src-fishbase-home-rendered",
+              "url": "https://fishbase.se/home.htm",
+              "title": {
+                "ar": "الصفحة الرئيسية لـ FishBase",
+                "en": "FishBase homepage",
+                "es": "Página de inicio de FishBase",
+                "fr": "Page d’accueil de FishBase",
+                "ru": "Главная страница FishBase",
+                "zh": "FishBase主页"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-photo-contrib": {
+              "id": "src-fishbase-photo-contrib",
+              "url": "https://fishbase.se/contribu.htm",
+              "title": {
+                "ar": "FishBase يحتاج إلى صوركم",
+                "en": "FishBase needs your pictures",
+                "es": "FishBase necesita tus fotos",
+                "fr": "FishBase a besoin de vos photos",
+                "ru": "FishBase нужны ваши фотографии",
+                "zh": "FishBase需要您的照片"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-photo-gallery": {
+              "id": "src-fishbase-photo-gallery",
+              "url": "https://fishbase.se/gallery.htm",
+              "title": {
+                "ar": "معرض صور FishBase",
+                "en": "FishBase Photo Gallery",
+                "es": "Galería de fotos de FishBase",
+                "fr": "Galerie de photos de FishBase",
+                "ru": "Фотогалерея FishBase",
+                "zh": "FishBase图片库"
+              },
+              "accessedAt": "2026-07-22"
+            },
+            "src-fishbase-rfishbase-docs": {
+              "id": "src-fishbase-rfishbase-docs",
+              "url": "https://docs.ropensci.org/rfishbase/",
+              "title": {
+                "ar": "وثائق rfishbase",
+                "en": "rfishbase documentation",
+                "es": "Documentación de rfishbase",
+                "fr": "Documentation de rfishbase",
+                "ru": "Документация rfishbase",
+                "zh": "rfishbase文档"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-references-table": {
+              "id": "src-fishbase-references-table",
+              "url": "https://fishbase.se/manual/fishbasethe_references_table.htm",
+              "title": {
+                "ar": "دليل FishBase: جدول REFERENCES",
+                "en": "FishBase manual: The REFERENCES Table",
+                "es": "Manual de FishBase: tabla REFERENCES",
+                "fr": "Manuel FishBase : table REFERENCES",
+                "ru": "Руководство FishBase: таблица REFERENCES",
+                "zh": "FishBase手册：REFERENCES表"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-collaborator-guide": {
+              "id": "src-fishbase-collaborator-guide",
+              "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
+              "title": {
+                "ar": "كيف تصبح متعاونًا مع FishBase",
+                "en": "How to Become a FishBase Collaborator",
+                "es": "Cómo colaborar con FishBase",
+                "fr": "Comment devenir collaborateur de FishBase",
+                "ru": "Как стать участником FishBase",
+                "zh": "如何成为FishBase协作者"
+              },
+              "accessedAt": "2026-07-21"
+            },
+            "src-fishbase-sourcecoop-s3-v2504": {
+              "id": "src-fishbase-sourcecoop-s3-v2504",
+              "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/v25.04/parquet/",
+              "title": {
+                "ar": "قائمة ملفات Parquet لإصدار FishBase v25.04 على S3",
+                "en": "FishBase v25.04 parquet S3 listing",
+                "es": "Listado S3 de archivos Parquet de FishBase v25.04",
+                "fr": "Liste S3 des fichiers Parquet de FishBase v25.04",
+                "ru": "Список файлов Parquet FishBase v25.04 в S3",
+                "zh": "FishBase v25.04 Parquet文件S3列表"
+              },
+              "accessedAt": "2026-07-21"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "fishbase-data-format-parquet-csv",
+                  "label": "csv",
+                  "source": "src-fishbase-sourcecoop",
+                  "category": "format"
+                },
+                {
+                  "id": "fishbase-data-format-parquet-csv--format-parquet",
+                  "label": "parquet",
+                  "source": "src-fishbase-sourcecoop",
+                  "category": "format"
+                },
+                {
+                  "id": "fishbase-data-format-xml",
+                  "label": "xml",
+                  "source": "src-fishbase-gadus-summary",
+                  "category": "format"
+                },
+                {
+                  "id": "fishbase-data-format-web",
+                  "label": "html",
+                  "source": "src-fishbase-gadus-summary",
+                  "category": "format"
+                },
+                {
+                  "id": "fishbase-data-standard-license",
+                  "label": "CC BY-NC 4.0 reuse terms",
+                  "source": "src-fishbase-citation",
+                  "category": "standard"
+                },
+                {
+                  "id": "fishbase-data-standard-refno",
+                  "label": "FishBase reference numbers",
+                  "source": "src-fishbase-references-table",
+                  "category": "standard"
+                },
+                {
+                  "id": "fishbase-data-type-distribution",
+                  "label": "occurrence_records",
+                  "source": "src-fishbase-home",
+                  "category": "type"
+                },
+                {
+                  "id": "fishbase-data-type-ecology",
+                  "label": "biological_interactions",
+                  "source": "src-fishbase-gadus-summary",
+                  "category": "type"
+                },
+                {
+                  "id": "fishbase-data-type-images-media",
+                  "label": "media",
+                  "source": "src-fishbase-photo-gallery",
+                  "category": "type"
+                },
+                {
+                  "id": "fishbase-data-type-life-history",
+                  "label": "biological_traits",
+                  "source": "src-fishbase-gadus-summary",
+                  "category": "type"
+                },
+                {
+                  "id": "fishbase-data-type-references",
+                  "label": "bibliographic_records",
+                  "source": "src-fishbase-references-table",
+                  "category": "type"
+                },
+                {
+                  "id": "fishbase-data-type-taxonomy",
+                  "label": "taxonomic_records",
+                  "source": "src-fishbase-home",
+                  "category": "type"
+                }
+              ],
+              "recordCount": {
+                "id": "fishbase-metric-record-count",
+                "key": "record_count",
+                "unit": "records",
+                "value": 3300000,
+                "source": "src-fishbase-home",
+                "observedAt": "2026-02"
+              },
+              "storageSize": {
+                "id": "fishbase-metric-storage-size-bytes",
+                "key": "storage_size_bytes",
+                "unit": "bytes",
+                "value": 194684778,
+                "source": "src-fishbase-sourcecoop-s3-v2504",
+                "observedAt": "2026-07-21"
+              }
+            },
+            "usage": [
+              {
+                "id": "fishbase-metric-citation-count-google-scholar",
+                "key": "citation_count",
+                "unit": "citations",
+                "value": 15000,
+                "source": "src-fishbase-impact-study",
+                "observedAt": "2021"
+              },
+              {
+                "id": "fishbase-metric-common-name-count",
+                "key": "common_name_count",
+                "unit": "common names",
+                "value": 333027,
+                "source": "src-fishbase-home",
+                "observedAt": "2026-02"
+              },
+              {
+                "id": "fishbase-metric-compiled-reference-count",
+                "key": "compiled_reference_count",
+                "unit": "references",
+                "value": 68300,
+                "source": "src-fishbase-home",
+                "observedAt": "2026-02"
+              },
+              {
+                "id": "fishbase-metric-contributor-count",
+                "key": "contributor_count",
+                "unit": "collaborators",
+                "value": 2570,
+                "source": "src-fishbase-home",
+                "observedAt": "2026-02"
+              },
+              {
+                "id": "fishbase-metric-picture-count",
+                "key": "image_count",
+                "unit": "pictures",
+                "value": 65800,
+                "source": "src-fishbase-home",
+                "observedAt": "2026-02"
+              },
+              {
+                "id": "fishbase-metric-publication-count",
+                "key": "publication_count",
+                "unit": "references citing FishBase",
+                "value": 2731,
+                "source": "src-fishbase-citing-refs",
+                "observedAt": "2026-07-21"
+              },
+              {
+                "id": "fishbase-metric-species-count",
+                "key": "species_count",
+                "unit": "species",
+                "value": 36535,
+                "source": "src-fishbase-home",
+                "observedAt": "2026-02"
+              },
+              {
+                "id": "fishbase-metric-monthly-visits",
+                "key": "view_count",
+                "unit": "visits/month",
+                "value": 700000,
+                "source": "src-fishbase-home",
+                "observedAt": "2026-02"
+              }
+            ],
+            "access": [
+              {
+                "id": "fishbase-access-sourcecoop",
+                "url": "https://source.coop/cboettig/fishbase",
+                "type": "read",
+                "method": "cloud_table_snapshot",
+                "source": "src-fishbase-sourcecoop"
+              },
+              {
+                "id": "fishbase-access-downloads",
+                "url": "https://fishbase.se/Download/",
+                "type": "read",
+                "method": "download_portal",
+                "source": "src-fishbase-downloads"
+              },
+              {
+                "id": "fishbase-access-rfishbase",
+                "url": "https://docs.ropensci.org/rfishbase/",
+                "type": "read",
+                "method": "r_package",
+                "source": "src-fishbase-rfishbase-docs"
+              },
+              {
+                "id": "fishbase-access-species-summary",
+                "url": "https://fishbase.se/summary/SpeciesSummary.php?id=69",
+                "type": "read",
+                "method": "species_page_downloads",
+                "source": "src-fishbase-gadus-summary"
+              },
+              {
+                "id": "fishbase-access-web",
+                "url": "https://fishbase.se/home.htm",
+                "type": "read",
+                "method": "web_ui",
+                "source": "src-fishbase-home"
+              },
+              {
+                "id": "fishbase-submit-fishwatcher",
+                "url": "https://www.fishbase.se/fishwatcher/menu.php",
+                "type": "submit",
+                "method": "authenticated_observation_upload",
+                "source": "src-fishbase-fishwatcher"
+              },
+              {
+                "id": "fishbase-submit-collaborator",
+                "url": "https://fishbase.se/manual/fishbasehow_to_become_a_fishbase_collabo.htm",
+                "type": "submit",
+                "method": "curated_collaboration",
+                "source": "src-fishbase-collaborator-guide"
+              },
+              {
+                "id": "fishbase-submit-photos",
+                "url": "https://fishbase.se/contribu.htm",
+                "type": "submit",
+                "method": "photo_upload_or_email",
+                "source": "src-fishbase-photo-contrib"
+              }
+            ],
+            "gallery": [
+              {
+                "id": "fishbase-gallery-species-summary",
+                "url": "/gallery/fishbase/species-summary-gadus-morhua-high.png",
+                "type": "image",
+                "source": "src-fishbase-gadus-summary",
+                "sortOrder": 1,
+                "thumbnailUrl": "/gallery/fishbase/species-summary-gadus-morhua-thumb.png"
+              },
+              {
+                "id": "fishbase-gallery-search",
+                "url": "/gallery/fishbase/search-high.png",
+                "type": "image",
+                "source": "src-fishbase-search",
+                "sortOrder": 2,
+                "thumbnailUrl": "/gallery/fishbase/search-thumb.png"
+              },
+              {
+                "id": "fishbase-gallery-downloads",
+                "url": "/gallery/fishbase/download-high.png",
+                "type": "image",
+                "source": "src-fishbase-downloads",
+                "sortOrder": 3,
+                "thumbnailUrl": "/gallery/fishbase/download-thumb.png"
+              },
+              {
+                "id": "fishbase-gallery-home",
+                "url": "/gallery/fishbase/home-high.png",
+                "type": "image",
+                "source": "src-fishbase-home-rendered",
+                "sortOrder": 4,
+                "thumbnailUrl": "/gallery/fishbase/home-thumb.png"
+              }
+            ],
+            "disciplines": [
+              "zoology"
+            ]
+          },
+          "createdAt": "2026-05-26T16:46:26.460Z",
+          "updatedAt": "2026-09-10T20:02:33.089Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "FishBase",
+            "summary": "قاعدة بيانات عالمية للتنوع الحيوي للأسماك الزعنفية تغطي التصنيف، والأحياء، والبيئة، وتاريخ الحياة، والتوزيعات، والاستخدامات السمكية، والصور، والمراجع، ومصدر بيانات المتعاونين.",
+            "description": "FishBase هو نظام معلومات عالمي للتنوع الحيوي للأسماك الزعنفية. بدأ كمرجع لديناميكيات الجماعات لـ 200 نوع تجاري رئيسي، ويغطي الآن جميع أنواع الأسماك المعروفة عبر التصنيف، والتسمية، والأحياء، والبيئة الغذائية، وتاريخ الحياة، والمورفولوجيا، والتوزيع، والاستخدامات السمكية، وسياق الحفظ والهشاشة، والأسماء الشائعة، والصور، ومصدر الأدبيات. يذكر الموقع الحي أكثر من 36,500 نوع، وأكثر من 333,000 اسم شائع، وأكثر من 65,800 صورة، وأكثر من 68,300 مرجع، وأكثر من 2,570 متعاونا، وأكثر من 700,000 زيارة شهرية، ونحو 3.3 مليون سجل عبر حوالي 200 جدول. تستضيف FishBase وتديرها Quantitative Aquatics, Inc. (Q-quatics)، مع إرشاد علمي من اتحاد FishBase المكون من 13 عضوا. يصل الباحثون عادة إلى FishBase من خلال واجهة الويب المجانية وملخصات الأنواع؛ ويمكن للمستخدمين التقنيين الاستعلام عن لقطات ثابتة من الواجهة الخلفية بصيغ CSV/parquet عبر Source Cooperative وحزمة rfishbase في R. تتم المساهمات عبر تنظيم تحريري لا كتابة مباشرة في قاعدة البيانات الأساسية: يمكن للمساهمين إرسال مشاهدات أو صور أو نسخ مطبوعة أو تصحيحات أو مجموعات بيانات من خلال مسارات المتعاونين في FishBase وFishWatcher. لقطة parquet العامة مضغوطة ومؤرخة وقد تتأخر عن الموقع الحي.\n\nتصدَّر بيانات FishBase الخلفية من قاعدة بيانات MySQL التي تشغل FishBase وSeaLifeBase.\n\nتوفر حزمة rfishbase جداول FishBase باستخدام تخزين parquet في Source Cooperative S3 وduckdbfs.",
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "fishbase-data-format-parquet-csv",
+                    "description": "توزع لقطات الجداول الخام العامة ذات الإصدارات كصادرات CSV وparquet عبر Source Cooperative."
+                  },
+                  {
+                    "id": "fishbase-data-format-parquet-csv--format-parquet",
+                    "description": "توزع لقطات الجداول الخام العامة ذات الإصدارات كصادرات CSV وparquet عبر Source Cooperative."
+                  },
+                  {
+                    "id": "fishbase-data-format-xml",
+                    "description": "تعرض صفحات ملخص الأنواع XML وطرقا قابلة للتنزيل ذات صلة مثل بيانات النقاط، والأسماء الشائعة، والصور."
+                  },
+                  {
+                    "id": "fishbase-data-format-web",
+                    "description": "واجهة ويب قابلة للقراءة البشرية مع البحث، وملخصات الأنواع، وصفحات الموضوعات، والتقارير، والخرائط، والأدوات، وعروض الأنواع القابلة للتنزيل."
+                  },
+                  {
+                    "id": "fishbase-data-standard-license",
+                    "description": "تتاح نصوص FishBase وأرقامها وخرائطها لإعادة الاستخدام غير التجاري مع نسب المصدر؛ وتحتفظ الصور والرسومات بحقوقها الخاصة."
+                  },
+                  {
+                    "id": "fishbase-data-standard-refno",
+                    "description": "تستشهد سجلات FishBase بالأدبيات المصدرية عبر أرقام مراجع متسلسلة مرتبطة بالاستشهادات الكاملة."
+                  },
+                  {
+                    "id": "fishbase-data-type-distribution",
+                    "description": "معلومات البلد، والنظام البيئي، ومنطقة FAO، والنطاق الأصلي، وخريطة النقاط، والإدخال، والموئل المرتبطة بسجلات الأنواع."
+                  },
+                  {
+                    "id": "fishbase-data-type-ecology",
+                    "description": "النظام الغذائي، والبيئة الغذائية، وعناصر الغذاء، والمفترسات، واستهلاك الغذاء، والسجلات المرتبطة بالنظم البيئية المستخدمة في التحليلات البيئية والسمكية."
+                  },
+                  {
+                    "id": "fishbase-data-type-images-media",
+                    "description": "صور الأسماك الفوتوغرافية، والرسومات، والصور المصغرة، وبيانات تعريف الصور المساهمة، مع نسب المصور أو المؤسسة."
+                  },
+                  {
+                    "id": "fishbase-data-type-life-history",
+                    "description": "النمو، والنضج، وعلاقة الطول بالوزن، والخصوبة، والتفريخ، والتجنيد، والوفرة، والنفوق، ومعايير ديناميكيات الجماعات ذات الصلة."
+                  },
+                  {
+                    "id": "fishbase-data-type-references",
+                    "description": "مصدر الأدبيات المرقم بالمراجع، وروابط مراجع البيانات، والمتعاونون، وتعليمات الاستشهاد."
+                  },
+                  {
+                    "id": "fishbase-data-type-taxonomy",
+                    "description": "الأسماء المقبولة، والمرادفات، والتصنيف، والسلطات التصنيفية، وروابط موارد الفهرسة للأسماك الزعنفية."
+                  }
+                ],
+                "recordCount": {
+                  "id": "fishbase-metric-record-count",
+                  "description": "إجمالي تقريبي للسجلات التي تبلغ عنها FishBase عبر حوالي 200 جدول، بما في ذلك نحو 60 جدولا رئيسيا."
+                },
+                "storageSize": {
+                  "id": "fishbase-metric-storage-size-bytes",
+                  "description": "حجم لقطة parquet العامة المضغوطة v25.04 محسوبا من 216 كائنا من نوع parquet في Source Cooperative S3؛ وليس هذا حجم قاعدة بيانات الإنتاج الحية أو أرشيف الصور."
+                }
+              },
+              "usage": [
+                {
+                  "id": "fishbase-metric-citation-count-google-scholar",
+                  "description": "عدد تقريبي للاستشهادات في Google Scholar كما أورده تقرير أثر 2023؛ ويورد التقرير نفسه أكثر من 10,000 استشهاد في Scopus حتى عام 2020."
+                },
+                {
+                  "id": "fishbase-metric-common-name-count",
+                  "description": "سجلات الأسماء الشائعة التي تبلغ عنها FishBase، وتشمل 30,208 أنواع، و260 منطقة شبيهة بالبلدان، و360 لغة."
+                },
+                {
+                  "id": "fishbase-metric-compiled-reference-count",
+                  "description": "الحد الأدنى لعدد المراجع المجمعة كما تذكره صفحة FishBase الرئيسية بأنه أكثر من 68,300 مرجع."
+                },
+                {
+                  "id": "fishbase-metric-contributor-count",
+                  "description": "الحد الأدنى لعدد المتعاونين كما تذكره صفحة FishBase الرئيسية بأنه أكثر من 2,570 متعاونا."
+                },
+                {
+                  "id": "fishbase-metric-picture-count",
+                  "description": "الحد الأدنى لعدد الصور كما تذكره صفحة FishBase الرئيسية بأنه أكثر من 65,800 صورة."
+                },
+                {
+                  "id": "fishbase-metric-publication-count",
+                  "description": "عدد قائمة المراجع التي تحتفظ بها FishBase للمنشورات والمراجع التي تستشهد بـ FishBase."
+                },
+                {
+                  "id": "fishbase-metric-species-count",
+                  "description": "عدد أنواع FishBase كما ورد في إحصاءات البيانات الرئيسية لشهر فبراير 2026."
+                },
+                {
+                  "id": "fishbase-metric-monthly-visits",
+                  "description": "الحد الأدنى لعدد زيارات الويب الشهرية كما تذكره صفحة FishBase الرئيسية بأنه أكثر من 700,000 زيارة شهريا."
+                }
+              ],
+              "access": [
+                {
+                  "id": "fishbase-access-sourcecoop",
+                  "label": "لقطات الجداول الخام من Source Cooperative",
+                  "description": "تتوفر لقطات عامة لجداول CSV وparquet من Source Cooperative. هذه صادرات خام من الواجهة الخلفية مخصصة للمستخدمين التقنيين؛ وإعادة الاستخدام غير تجارية بموجب شروط FishBase، وكثير من المهام يتطلب ربط جداول متعددة."
+                },
+                {
+                  "id": "fishbase-access-downloads",
+                  "label": "قسم تنزيلات FishBase",
+                  "description": "يوفر قسم التنزيل الرسمي في FishBase وثائق داعمة وجداول بيانات وملفات قواعد بيانات قديمة ورسومات وملصقات وعروضا تقديمية وتطبيقات. إنه منطقة تنزيلات مختلطة وليس تصديرا واحدا حديثا لقاعدة البيانات الحية؛ استخدم مضيف fishbase.se لأن مسار www.fishbase.org المكافئ قد يرجع 403."
+                },
+                {
+                  "id": "fishbase-access-rfishbase",
+                  "label": "حزمة rfishbase في R",
+                  "description": "يتوفر الوصول البرمجي من خلال حزمة rfishbase في R. تقرأ الحزمة لقطات parquet ثابتة من Source Cooperative عبر وصول مباشر إلى الجداول بأسلوب S3/DuckDB؛ ولا يذكر وجود مفتاح API لـ FishBase، لكن اللقطات قد تتأخر عن الموقع الحي."
+                },
+                {
+                  "id": "fishbase-access-species-summary",
+                  "label": "صفحات الأنواع وتنزيلات XML",
+                  "description": "تعرض صفحات ملخص الأنواع سجلات قابلة للقراءة البشرية وروابط لتنزيل XML وبيانات النقاط والأسماء الشائعة والصور والأدوات ذات الصلة. الوصول مجاني عبر واجهة الويب."
+                },
+                {
+                  "id": "fishbase-access-web",
+                  "label": "بوابة ويب مجانية",
+                  "description": "وصول ويب عام مجاني للبحث، وملخصات الأنواع، وصفحات الموضوعات، والخرائط، والرسوم البيانية، والتقارير، وأدوات FishBase. لا يلزم حساب أو مفتاح API للتصفح؛ استخدم مضيف fishbase.se لأن صفحة www.fishbase.org الرئيسية المكافئة قد ترجع Cloudflare 403."
+                },
+                {
+                  "id": "fishbase-submit-fishwatcher",
+                  "label": "مشاهدات FishWatcher",
+                  "description": "يتيح FishWatcher للمستخدمين الحصول على معرف وكلمة مرور ورفع مشاهدات الأسماك والإحداثيات والتواريخ والأطوال والصور لاستخدامها في خرائط التوزيع ورصد التنوع الحيوي."
+                },
+                {
+                  "id": "fishbase-submit-collaborator",
+                  "label": "مساهمات المتعاونين المنظمة",
+                  "description": "تدار إضافات البيانات والتصحيحات عبر مسارات المتعاونين في FishBase. يحصل المساهمون على الإقرار في أختام السجلات أو الشكر أو جداول المتعاونين أو جداول مخصصة عند إدراج مجموعات بيانات كبيرة."
+                },
+                {
+                  "id": "fishbase-submit-photos",
+                  "label": "مساهمات الصور",
+                  "description": "يمكن للمساهمين بالصور الرفع عبر صفحات الأنواع، أو إرسال الملفات بالبريد الإلكتروني إلى FishBase/Q-quatics، أو إرسال وسائط مادية، أو توفير مواقع تنزيل. تبقى حقوق النشر للمساهمين وتضيف FishBase بيانات نسب تعريفية."
+                }
+              ],
+              "aliases": [
+                "قاعدة بيانات الأسماك",
+                "FishBase",
+                "FishBase.org",
+                "FishBase web electronic publication"
+              ],
+              "gallery": [
+                {
+                  "id": "fishbase-gallery-species-summary",
+                  "title": "بنية سجل النوع",
+                  "altText": null,
+                  "caption": "لقطة شاشة محلية ملتقطة لسجل نوع في FishBase تعرض التصنيف، والصورة، وخريطة التوزيع، والبيئة، والاستخدامات البشرية، والمراجع، والسجلات الفرعية المرتبطة."
+                },
+                {
+                  "id": "fishbase-gallery-search",
+                  "title": "فهارس البحث وحقول الاستعلام",
+                  "altText": null,
+                  "caption": "لقطة شاشة محلية ملتقطة لصفحة بحث FishBase تعرض أبعاد البحث بالاسم الشائع، والاسم العلمي، والمسرد، ومعرف النوع، واللغة، والنظام الكتابي."
+                },
+                {
+                  "id": "fishbase-gallery-downloads",
+                  "title": "منتجات بيانات قابلة للتنزيل",
+                  "altText": null,
+                  "caption": "لقطة شاشة محلية ملتقطة لقسم تنزيل FishBase تعرض وثائق ومنتجات بيانات قابلة للتنزيل مع العناوين والأوصاف وأحجام الملفات."
+                },
+                {
+                  "id": "fishbase-gallery-home",
+                  "title": "نطاق البوابة وسياقها",
+                  "altText": null,
+                  "caption": "لقطة شاشة محلية ملتقطة لصفحة FishBase الرئيسية تعرض مقاييس النطاق، وسياق الاتحاد، وروابط المرايا، وتنقل البوابة."
+                }
+              ],
+              "profile": {
+                "sourceRefs": [
+                  "src-fishbase-rfishbase-docs",
+                  "src-fishbase-sourcecoop"
+                ]
+              }
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-10T20:02:32.978Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.377596+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-03T01:40:16.320Z",
+            "updatedAt": "2026-09-10T20:02:32.978Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "FishBase",
+            "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
+            "description": "FishBase is a global biodiversity information system for finfishes. It began as a population-dynamics reference for 200 major commercial species and now covers all known fish species across taxonomy, nomenclature, biology, trophic ecology, life history, morphology, distribution, fisheries uses, conservation and vulnerability context, common names, images, and literature provenance. The live website reports more than 36,500 species, more than 333,000 common names, more than 65,800 pictures, more than 68,300 references, more than 2,570 collaborators, more than 700,000 monthly visits, and approximately 3.3 million records across about 200 tables. FishBase is hosted and managed by Quantitative Aquatics, Inc. (Q-quatics), with scientific guidance from a 13-member FishBase Consortium. Researchers usually access FishBase through the free web UI and species summaries; technical users can query static backend snapshots as CSV/parquet through Source Cooperative and the rfishbase R package. Contributions are curated rather than directly written to the core database: contributors can submit observations, photos, reprints, corrections, or datasets through FishBase collaborator and FishWatcher workflows. The public parquet snapshot is compressed, versioned, and may lag the live website.\n\nFishBase backend data are exported from the MySQL database powering FishBase and SeaLifeBase.\n\nThe rfishbase package exposes FishBase tables using Source Cooperative S3 parquet storage and duckdbfs.",
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "fishbase-data-format-parquet-csv",
+                    "description": "Versioned public raw table snapshots are distributed as CSV and parquet exports through Source Cooperative."
+                  },
+                  {
+                    "id": "fishbase-data-format-parquet-csv--format-parquet",
+                    "description": "Versioned public raw table snapshots are distributed as CSV and parquet exports through Source Cooperative."
+                  },
+                  {
+                    "id": "fishbase-data-format-xml",
+                    "description": "Species summary pages expose XML and related downloadable views such as point data, common names, and photos."
+                  },
+                  {
+                    "id": "fishbase-data-format-web",
+                    "description": "Human-readable web UI with search, species summaries, topic pages, reports, maps, tools, and downloadable species views."
+                  },
+                  {
+                    "id": "fishbase-data-standard-license",
+                    "description": "FishBase text, numbers, and maps are offered for non-commercial reuse with attribution; photos and drawings retain their own copyrights."
+                  },
+                  {
+                    "id": "fishbase-data-standard-refno",
+                    "description": "FishBase records cite source literature through sequential reference numbers linked to full citations."
+                  },
+                  {
+                    "id": "fishbase-data-type-distribution",
+                    "description": "Country, ecosystem, FAO area, native range, point-map, introduction, and habitat information attached to species records."
+                  },
+                  {
+                    "id": "fishbase-data-type-ecology",
+                    "description": "Diet, trophic ecology, food items, predators, food consumption, and ecosystem-linked records used in ecological and fisheries analyses."
+                  },
+                  {
+                    "id": "fishbase-data-type-images-media",
+                    "description": "Fish photographs, drawings, thumbnails, and contributed photo metadata, with photographer/institution attribution."
+                  },
+                  {
+                    "id": "fishbase-data-type-life-history",
+                    "description": "Growth, maturity, length-weight, fecundity, spawning, recruitment, abundance, mortality, and related population-dynamics parameters."
+                  },
+                  {
+                    "id": "fishbase-data-type-references",
+                    "description": "Reference-numbered literature provenance, data-reference links, collaborators, and citation instructions."
+                  },
+                  {
+                    "id": "fishbase-data-type-taxonomy",
+                    "description": "Accepted names, synonyms, classification, taxonomic authorities, and links to cataloging resources for finfishes."
+                  }
+                ],
+                "recordCount": {
+                  "id": "fishbase-metric-record-count",
+                  "description": "Approximate total records reported by FishBase across about 200 tables, including about 60 main tables."
+                },
+                "storageSize": {
+                  "id": "fishbase-metric-storage-size-bytes",
+                  "description": "Compressed public v25.04 parquet snapshot size summed from 216 Source Cooperative S3 parquet objects; this is not the live production database or image archive size."
+                }
+              },
+              "usage": [
+                {
+                  "id": "fishbase-metric-citation-count-google-scholar",
+                  "description": "Approximate Google Scholar citation count reported by the 2023 impact study; the same study reports more than 10,000 Scopus citations through 2020."
+                },
+                {
+                  "id": "fishbase-metric-common-name-count",
+                  "description": "Common-name records reported by FishBase, spanning 30,208 species, 260 country-like areas, and 360 languages."
+                },
+                {
+                  "id": "fishbase-metric-compiled-reference-count",
+                  "description": "Minimum compiled-reference count reported by the FishBase homepage as more than 68,300 references."
+                },
+                {
+                  "id": "fishbase-metric-contributor-count",
+                  "description": "Minimum collaborator count reported by the FishBase homepage as more than 2,570 collaborators."
+                },
+                {
+                  "id": "fishbase-metric-picture-count",
+                  "description": "Minimum picture count reported by the FishBase homepage as more than 65,800 pictures."
+                },
+                {
+                  "id": "fishbase-metric-publication-count",
+                  "description": "FishBase-maintained reference list count for publications/references citing FishBase."
+                },
+                {
+                  "id": "fishbase-metric-species-count",
+                  "description": "FishBase species count reported in the February 2026 main data statistics."
+                },
+                {
+                  "id": "fishbase-metric-monthly-visits",
+                  "description": "Minimum monthly web-visit count reported by the FishBase homepage as more than 700,000 visits monthly."
+                }
+              ],
+              "access": [
+                {
+                  "id": "fishbase-access-sourcecoop",
+                  "label": "Source Cooperative raw snapshots",
+                  "description": "Public CSV and parquet table snapshots are available from Source Cooperative. These are raw backend exports intended for technical users; reuse is non-commercial under FishBase terms and many tasks require joins across tables."
+                },
+                {
+                  "id": "fishbase-access-downloads",
+                  "label": "FishBase download section",
+                  "description": "The official FishBase download section provides supporting documents, spreadsheets, legacy database files, graphs, posters, presentations, and applications. It is a mixed download area rather than a single current live-database export; use the fishbase.se host because the equivalent www.fishbase.org path can return 403."
+                },
+                {
+                  "id": "fishbase-access-rfishbase",
+                  "label": "rfishbase R package",
+                  "description": "Programmatic access is available through the rfishbase R package. It reads static Source Cooperative parquet snapshots through direct S3/DuckDB-style table access; no FishBase API key is described, but snapshots can lag the live website."
+                },
+                {
+                  "id": "fishbase-access-species-summary",
+                  "label": "Species pages and XML downloads",
+                  "description": "Species summary pages expose human-readable records and links for downloadable XML, point data, common names, photos, and related tools. Access is free through the web interface."
+                },
+                {
+                  "id": "fishbase-access-web",
+                  "label": "Free web portal",
+                  "description": "Free public web access for search, species summaries, topic pages, maps, graphs, reports, and FishBase tools. No account or API key is required for browsing; use the fishbase.se host because the equivalent www.fishbase.org homepage can return Cloudflare 403."
+                },
+                {
+                  "id": "fishbase-submit-fishwatcher",
+                  "label": "FishWatcher observations",
+                  "description": "FishWatcher lets users obtain an ID/password and upload fish observations, coordinates, dates, lengths, and photos for use in distribution mapping and biodiversity monitoring."
+                },
+                {
+                  "id": "fishbase-submit-collaborator",
+                  "label": "Curated collaborator contributions",
+                  "description": "Data additions and corrections are mediated through FishBase collaborator workflows. Contributors receive credit in record stamps, acknowledgments, collaborator tables, or dedicated tables when substantial datasets are incorporated."
+                },
+                {
+                  "id": "fishbase-submit-photos",
+                  "label": "Photo contributions",
+                  "description": "Photo contributors can upload through species pages, email files to FishBase/Q-quatics, send physical media, or provide download locations. Copyright remains with contributors and FishBase attaches attribution metadata."
+                }
+              ],
+              "aliases": [
+                "FishBase",
+                "FishBase.org",
+                "FishBase web electronic publication"
+              ],
+              "gallery": [
+                {
+                  "id": "fishbase-gallery-species-summary",
+                  "title": "Species record structure",
+                  "altText": null,
+                  "caption": "Captured local screenshot of a FishBase species record showing taxonomy, photo, distribution map, ecology, human uses, references, and linked sub-records."
+                },
+                {
+                  "id": "fishbase-gallery-search",
+                  "title": "Search indexes and lookup fields",
+                  "altText": null,
+                  "caption": "Captured local screenshot of the FishBase search page showing common-name, scientific-name, glossary, species-ID, language, and script lookup dimensions."
+                },
+                {
+                  "id": "fishbase-gallery-downloads",
+                  "title": "Downloadable data products",
+                  "altText": null,
+                  "caption": "Captured local screenshot of the FishBase Download Section showing downloadable documents and data products with titles, descriptions, and file sizes."
+                },
+                {
+                  "id": "fishbase-gallery-home",
+                  "title": "Portal scope and context",
+                  "altText": null,
+                  "caption": "Captured local screenshot of the FishBase homepage showing scope metrics, consortium context, mirror links, and portal navigation."
+                }
+              ],
+              "profile": {
+                "sourceRefs": [
+                  "src-fishbase-rfishbase-docs",
+                  "src-fishbase-sourcecoop"
+                ]
+              }
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:32.978Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.377304+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.460Z",
+            "updatedAt": "2026-09-10T20:02:32.978Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "FishBase",
+            "summary": "Base de datos mundial de biodiversidad de peces con aletas que cubre taxonomía, biología, ecología, historia de vida, distribuciones, usos pesqueros, imágenes, referencias y procedencia de colaboradores.",
+            "description": "FishBase es un sistema mundial de información sobre biodiversidad para peces con aletas. Comenzó como una referencia de dinámica poblacional para 200 especies comerciales principales y ahora cubre todas las especies de peces conocidas en taxonomía, nomenclatura, biología, ecología trófica, historia de vida, morfología, distribución, usos pesqueros, contexto de conservación y vulnerabilidad, nombres comunes, imágenes y procedencia bibliográfica. El sitio en vivo reporta más de 36.500 especies, más de 333.000 nombres comunes, más de 65.800 imágenes, más de 68.300 referencias, más de 2.570 colaboradores, más de 700.000 visitas mensuales y aproximadamente 3,3 millones de registros en unas 200 tablas. FishBase está alojada y gestionada por Quantitative Aquatics, Inc. (Q-quatics), con orientación científica de un Consorcio FishBase de 13 miembros. Los investigadores suelen acceder a FishBase mediante la interfaz web gratuita y los resúmenes de especies; los usuarios técnicos pueden consultar instantáneas backend estáticas como CSV/parquet a través de Source Cooperative y el paquete de R rfishbase. Las contribuciones se curan en lugar de escribirse directamente en la base de datos central: los colaboradores pueden enviar observaciones, fotos, separatas, correcciones o conjuntos de datos mediante los flujos de trabajo de colaboradores de FishBase y FishWatcher. La instantánea pública parquet está comprimida, versionada y puede ir por detrás del sitio en vivo.\n\nLos datos backend de FishBase se exportan desde la base de datos MySQL que impulsa FishBase y SeaLifeBase.\n\nEl paquete rfishbase expone tablas de FishBase usando almacenamiento parquet de Source Cooperative S3 y duckdbfs.",
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "fishbase-data-format-parquet-csv",
+                    "description": "Las instantáneas públicas versionadas de tablas sin procesar se distribuyen como exportaciones CSV y parquet a través de Source Cooperative."
+                  },
+                  {
+                    "id": "fishbase-data-format-parquet-csv--format-parquet",
+                    "description": "Las instantáneas públicas versionadas de tablas sin procesar se distribuyen como exportaciones CSV y parquet a través de Source Cooperative."
+                  },
+                  {
+                    "id": "fishbase-data-format-xml",
+                    "description": "Las páginas de resumen de especies exponen XML y vistas descargables relacionadas, como datos de puntos, nombres comunes y fotos."
+                  },
+                  {
+                    "id": "fishbase-data-format-web",
+                    "description": "Interfaz web legible por humanos con búsqueda, resúmenes de especies, páginas temáticas, informes, mapas, herramientas y vistas descargables de especies."
+                  },
+                  {
+                    "id": "fishbase-data-standard-license",
+                    "description": "Los textos, números y mapas de FishBase se ofrecen para reutilización no comercial con atribución; las fotos y dibujos conservan sus propios derechos de autor."
+                  },
+                  {
+                    "id": "fishbase-data-standard-refno",
+                    "description": "Los registros de FishBase citan literatura fuente mediante números de referencia secuenciales vinculados a citas completas."
+                  },
+                  {
+                    "id": "fishbase-data-type-distribution",
+                    "description": "Información de país, ecosistema, área FAO, rango nativo, mapa de puntos, introducción y hábitat asociada a registros de especies."
+                  },
+                  {
+                    "id": "fishbase-data-type-ecology",
+                    "description": "Dieta, ecología trófica, elementos alimentarios, depredadores, consumo de alimento y registros vinculados a ecosistemas usados en análisis ecológicos y pesqueros."
+                  },
+                  {
+                    "id": "fishbase-data-type-images-media",
+                    "description": "Fotografías de peces, dibujos, miniaturas y metadatos de fotos aportadas, con atribución a fotógrafo o institución."
+                  },
+                  {
+                    "id": "fishbase-data-type-life-history",
+                    "description": "Crecimiento, madurez, relaciones longitud-peso, fecundidad, desove, reclutamiento, abundancia, mortalidad y parámetros relacionados de dinámica poblacional."
+                  },
+                  {
+                    "id": "fishbase-data-type-references",
+                    "description": "Procedencia bibliográfica numerada por referencia, enlaces entre datos y referencias, colaboradores e instrucciones de citación."
+                  },
+                  {
+                    "id": "fishbase-data-type-taxonomy",
+                    "description": "Nombres aceptados, sinónimos, clasificación, autoridades taxonómicas y enlaces a recursos de catalogación para peces con aletas."
+                  }
+                ],
+                "recordCount": {
+                  "id": "fishbase-metric-record-count",
+                  "description": "Total aproximado de registros reportado por FishBase en unas 200 tablas, incluidas unas 60 tablas principales."
+                },
+                "storageSize": {
+                  "id": "fishbase-metric-storage-size-bytes",
+                  "description": "Tamaño comprimido de la instantánea pública parquet v25.04 sumado desde 216 objetos parquet de Source Cooperative S3; no es el tamaño de la base de datos de producción en vivo ni del archivo de imágenes."
+                }
+              },
+              "usage": [
+                {
+                  "id": "fishbase-metric-citation-count-google-scholar",
+                  "description": "Conteo aproximado de citas en Google Scholar reportado por el estudio de impacto de 2023; el mismo estudio reporta más de 10.000 citas en Scopus hasta 2020."
+                },
+                {
+                  "id": "fishbase-metric-common-name-count",
+                  "description": "Registros de nombres comunes reportados por FishBase, que abarcan 30.208 especies, 260 áreas similares a países y 360 idiomas."
+                },
+                {
+                  "id": "fishbase-metric-compiled-reference-count",
+                  "description": "Conteo mínimo de referencias compiladas reportado por la página principal de FishBase como más de 68.300 referencias."
+                },
+                {
+                  "id": "fishbase-metric-contributor-count",
+                  "description": "Conteo mínimo de colaboradores reportado por la página principal de FishBase como más de 2.570 colaboradores."
+                },
+                {
+                  "id": "fishbase-metric-picture-count",
+                  "description": "Conteo mínimo de imágenes reportado por la página principal de FishBase como más de 65.800 imágenes."
+                },
+                {
+                  "id": "fishbase-metric-publication-count",
+                  "description": "Conteo de la lista de referencias mantenida por FishBase para publicaciones y referencias que citan a FishBase."
+                },
+                {
+                  "id": "fishbase-metric-species-count",
+                  "description": "Conteo de especies de FishBase reportado en las estadísticas principales de datos de febrero de 2026."
+                },
+                {
+                  "id": "fishbase-metric-monthly-visits",
+                  "description": "Conteo mínimo de visitas web mensuales reportado por la página principal de FishBase como más de 700.000 visitas mensuales."
+                }
+              ],
+              "access": [
+                {
+                  "id": "fishbase-access-sourcecoop",
+                  "label": "Instantáneas sin procesar de Source Cooperative",
+                  "description": "Hay instantáneas públicas de tablas CSV y parquet disponibles en Source Cooperative. Son exportaciones backend sin procesar destinadas a usuarios técnicos; la reutilización es no comercial bajo los términos de FishBase y muchas tareas requieren uniones entre tablas."
+                },
+                {
+                  "id": "fishbase-access-downloads",
+                  "label": "Sección de descargas de FishBase",
+                  "description": "La sección oficial de descargas de FishBase proporciona documentos de apoyo, hojas de cálculo, archivos de bases de datos heredadas, gráficos, carteles, presentaciones y aplicaciones. Es un área mixta de descargas y no una única exportación actual de la base de datos en vivo; use el host fishbase.se porque la ruta equivalente de www.fishbase.org puede devolver 403."
+                },
+                {
+                  "id": "fishbase-access-rfishbase",
+                  "label": "Paquete R rfishbase",
+                  "description": "El acceso programático está disponible mediante el paquete de R rfishbase. Lee instantáneas parquet estáticas de Source Cooperative mediante acceso directo a tablas estilo S3/DuckDB; no se describe una clave de API de FishBase, pero las instantáneas pueden ir por detrás del sitio en vivo."
+                },
+                {
+                  "id": "fishbase-access-species-summary",
+                  "label": "Páginas de especies y descargas XML",
+                  "description": "Las páginas de resumen de especies exponen registros legibles por humanos y enlaces para descargar XML, datos de puntos, nombres comunes, fotos y herramientas relacionadas. El acceso es gratuito mediante la interfaz web."
+                },
+                {
+                  "id": "fishbase-access-web",
+                  "label": "Portal web gratuito",
+                  "description": "Acceso web público gratuito para búsqueda, resúmenes de especies, páginas temáticas, mapas, gráficos, informes y herramientas de FishBase. No se requiere cuenta ni clave de API para navegar; use el host fishbase.se porque la página principal equivalente de www.fishbase.org puede devolver Cloudflare 403."
+                },
+                {
+                  "id": "fishbase-submit-fishwatcher",
+                  "label": "Observaciones FishWatcher",
+                  "description": "FishWatcher permite a los usuarios obtener un ID/contraseña y subir observaciones de peces, coordenadas, fechas, longitudes y fotos para uso en cartografía de distribución y monitoreo de biodiversidad."
+                },
+                {
+                  "id": "fishbase-submit-collaborator",
+                  "label": "Contribuciones curadas de colaboradores",
+                  "description": "Las adiciones y correcciones de datos se median mediante flujos de trabajo de colaboradores de FishBase. Los colaboradores reciben crédito en sellos de registros, agradecimientos, tablas de colaboradores o tablas dedicadas cuando se incorporan conjuntos de datos sustanciales."
+                },
+                {
+                  "id": "fishbase-submit-photos",
+                  "label": "Contribuciones fotográficas",
+                  "description": "Los colaboradores de fotos pueden subirlas mediante páginas de especies, enviar archivos por correo electrónico a FishBase/Q-quatics, enviar medios físicos o proporcionar ubicaciones de descarga. Los derechos de autor permanecen con los colaboradores y FishBase adjunta metadatos de atribución."
+                }
+              ],
+              "aliases": [
+                "base de datos de peces",
+                "FishBase",
+                "FishBase.org",
+                "FishBase web electronic publication"
+              ],
+              "gallery": [
+                {
+                  "id": "fishbase-gallery-species-summary",
+                  "title": "Estructura del registro de especie",
+                  "altText": null,
+                  "caption": "Captura de pantalla local de un registro de especie de FishBase que muestra taxonomía, foto, mapa de distribución, ecología, usos humanos, referencias y subregistros vinculados."
+                },
+                {
+                  "id": "fishbase-gallery-search",
+                  "title": "Índices de búsqueda y campos de consulta",
+                  "altText": null,
+                  "caption": "Captura de pantalla local de la página de búsqueda de FishBase que muestra dimensiones de consulta por nombre común, nombre científico, glosario, ID de especie, idioma y escritura."
+                },
+                {
+                  "id": "fishbase-gallery-downloads",
+                  "title": "Productos de datos descargables",
+                  "altText": null,
+                  "caption": "Captura de pantalla local de la sección de descargas de FishBase que muestra documentos y productos de datos descargables con títulos, descripciones y tamaños de archivo."
+                },
+                {
+                  "id": "fishbase-gallery-home",
+                  "title": "Alcance y contexto del portal",
+                  "altText": null,
+                  "caption": "Captura de pantalla local de la página principal de FishBase que muestra métricas de alcance, contexto del consorcio, enlaces espejo y navegación del portal."
+                }
+              ],
+              "profile": {
+                "sourceRefs": [
+                  "src-fishbase-rfishbase-docs",
+                  "src-fishbase-sourcecoop"
+                ]
+              }
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-10T20:02:32.978Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.378477+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-03T01:40:16.320Z",
+            "updatedAt": "2026-09-10T20:02:32.978Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "FishBase",
+            "summary": "Base de données mondiale sur la biodiversité des poissons à nageoires couvrant la taxonomie, la biologie, l'écologie, les traits d'histoire de vie, les répartitions, les usages halieutiques, les images, les références et la provenance des collaborateurs.",
+            "description": "FishBase est un système mondial d'information sur la biodiversité des poissons à nageoires. Il a commencé comme référence de dynamique des populations pour 200 grandes espèces commerciales et couvre maintenant toutes les espèces de poissons connues: taxonomie, nomenclature, biologie, écologie trophique, traits d'histoire de vie, morphologie, distribution, usages halieutiques, contexte de conservation et de vulnérabilité, noms communs, images et provenance bibliographique. Le site actif indique plus de 36 500 espèces, plus de 333 000 noms communs, plus de 65 800 images, plus de 68 300 références, plus de 2 570 collaborateurs, plus de 700 000 visites mensuelles et environ 3,3 millions d'enregistrements répartis dans quelque 200 tables. FishBase est hébergé et géré par Quantitative Aquatics, Inc. (Q-quatics), avec l'orientation scientifique d'un consortium FishBase de 13 membres. Les chercheurs accèdent généralement à FishBase par l'interface web gratuite et les fiches d'espèces; les utilisateurs techniques peuvent interroger des instantanés statiques du backend en CSV/parquet via Source Cooperative et le paquet R rfishbase. Les contributions sont organisées par curation plutôt qu'écrites directement dans la base centrale: les contributeurs peuvent soumettre des observations, photos, tirés à part, corrections ou jeux de données via les flux de collaboration FishBase et FishWatcher. L'instantané parquet public est compressé, versionné et peut être en retard sur le site actif.\n\nLes données backend de FishBase sont exportées depuis la base MySQL qui alimente FishBase et SeaLifeBase.\n\nLe paquet rfishbase expose les tables FishBase en utilisant le stockage parquet S3 de Source Cooperative et duckdbfs.",
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "fishbase-data-format-parquet-csv",
+                    "description": "Des instantanés publics versionnés des tables brutes sont distribués sous forme d'exports CSV et parquet via Source Cooperative."
+                  },
+                  {
+                    "id": "fishbase-data-format-parquet-csv--format-parquet",
+                    "description": "Des instantanés publics versionnés des tables brutes sont distribués sous forme d'exports CSV et parquet via Source Cooperative."
+                  },
+                  {
+                    "id": "fishbase-data-format-xml",
+                    "description": "Les pages de résumé d'espèce exposent du XML et des vues téléchargeables connexes telles que les données de points, les noms communs et les photos."
+                  },
+                  {
+                    "id": "fishbase-data-format-web",
+                    "description": "Interface web lisible par l'humain avec recherche, résumés d'espèces, pages thématiques, rapports, cartes, outils et vues d'espèces téléchargeables."
+                  },
+                  {
+                    "id": "fishbase-data-standard-license",
+                    "description": "Les textes, chiffres et cartes de FishBase sont proposés pour une réutilisation non commerciale avec attribution; les photos et dessins conservent leurs propres droits d'auteur."
+                  },
+                  {
+                    "id": "fishbase-data-standard-refno",
+                    "description": "Les enregistrements FishBase citent la littérature source au moyen de numéros de référence séquentiels liés aux citations complètes."
+                  },
+                  {
+                    "id": "fishbase-data-type-distribution",
+                    "description": "Informations sur les pays, écosystèmes, zones FAO, aire native, cartes de points, introductions et habitats attachées aux enregistrements d'espèces."
+                  },
+                  {
+                    "id": "fishbase-data-type-ecology",
+                    "description": "Régime alimentaire, écologie trophique, éléments alimentaires, prédateurs, consommation alimentaire et enregistrements liés aux écosystèmes utilisés dans les analyses écologiques et halieutiques."
+                  },
+                  {
+                    "id": "fishbase-data-type-images-media",
+                    "description": "Photographies de poissons, dessins, vignettes et métadonnées de photos contribuées, avec attribution au photographe ou à l'institution."
+                  },
+                  {
+                    "id": "fishbase-data-type-life-history",
+                    "description": "Croissance, maturité, relations longueur-poids, fécondité, frai, recrutement, abondance, mortalité et paramètres connexes de dynamique des populations."
+                  },
+                  {
+                    "id": "fishbase-data-type-references",
+                    "description": "Provenance bibliographique numérotée par référence, liens entre données et références, collaborateurs et consignes de citation."
+                  },
+                  {
+                    "id": "fishbase-data-type-taxonomy",
+                    "description": "Noms acceptés, synonymes, classification, autorités taxonomiques et liens vers des ressources de catalogage pour les poissons à nageoires."
+                  }
+                ],
+                "recordCount": {
+                  "id": "fishbase-metric-record-count",
+                  "description": "Total approximatif des enregistrements signalés par FishBase dans environ 200 tables, dont quelque 60 tables principales."
+                },
+                "storageSize": {
+                  "id": "fishbase-metric-storage-size-bytes",
+                  "description": "Taille compressée de l'instantané parquet public v25.04, sommée à partir de 216 objets parquet S3 de Source Cooperative; ce n'est pas la taille de la base de production active ni celle de l'archive d'images."
+                }
+              },
+              "usage": [
+                {
+                  "id": "fishbase-metric-citation-count-google-scholar",
+                  "description": "Nombre approximatif de citations Google Scholar indiqué par l'étude d'impact 2023; la même étude rapporte plus de 10 000 citations Scopus jusqu'en 2020."
+                },
+                {
+                  "id": "fishbase-metric-common-name-count",
+                  "description": "Enregistrements de noms communs indiqués par FishBase, couvrant 30 208 espèces, 260 zones assimilables à des pays et 360 langues."
+                },
+                {
+                  "id": "fishbase-metric-compiled-reference-count",
+                  "description": "Nombre minimal de références compilées indiqué par la page d'accueil de FishBase comme supérieur à 68 300 références."
+                },
+                {
+                  "id": "fishbase-metric-contributor-count",
+                  "description": "Nombre minimal de collaborateurs indiqué par la page d'accueil de FishBase comme supérieur à 2 570 collaborateurs."
+                },
+                {
+                  "id": "fishbase-metric-picture-count",
+                  "description": "Nombre minimal d'images indiqué par la page d'accueil de FishBase comme supérieur à 65 800 images."
+                },
+                {
+                  "id": "fishbase-metric-publication-count",
+                  "description": "Nombre de la liste de références maintenue par FishBase pour les publications et références citant FishBase."
+                },
+                {
+                  "id": "fishbase-metric-species-count",
+                  "description": "Nombre d'espèces FishBase indiqué dans les statistiques principales de données de février 2026."
+                },
+                {
+                  "id": "fishbase-metric-monthly-visits",
+                  "description": "Nombre minimal de visites web mensuelles indiqué par la page d'accueil de FishBase comme supérieur à 700 000 visites par mois."
+                }
+              ],
+              "access": [
+                {
+                  "id": "fishbase-access-sourcecoop",
+                  "label": "Instantanés bruts Source Cooperative",
+                  "description": "Des instantanés publics de tables CSV et parquet sont disponibles auprès de Source Cooperative. Ce sont des exports backend bruts destinés aux utilisateurs techniques; la réutilisation est non commerciale selon les conditions de FishBase et de nombreuses tâches nécessitent des jointures entre tables."
+                },
+                {
+                  "id": "fishbase-access-downloads",
+                  "label": "Section de téléchargement FishBase",
+                  "description": "La section officielle de téléchargement de FishBase fournit des documents d'appui, feuilles de calcul, anciens fichiers de base de données, graphiques, affiches, présentations et applications. C'est une zone de téléchargement mixte plutôt qu'un export unique et actuel de la base active; utiliser l'hôte fishbase.se, car le chemin équivalent sur www.fishbase.org peut renvoyer 403."
+                },
+                {
+                  "id": "fishbase-access-rfishbase",
+                  "label": "Paquet R rfishbase",
+                  "description": "Un accès programmatique est disponible via le paquet R rfishbase. Il lit des instantanés parquet statiques de Source Cooperative par accès direct aux tables de type S3/DuckDB; aucune clé API FishBase n'est décrite, mais les instantanés peuvent être en retard sur le site actif."
+                },
+                {
+                  "id": "fishbase-access-species-summary",
+                  "label": "Pages d'espèces et téléchargements XML",
+                  "description": "Les pages de résumé d'espèce exposent des enregistrements lisibles par l'humain et des liens pour télécharger XML, données de points, noms communs, photos et outils connexes. L'accès est gratuit via l'interface web."
+                },
+                {
+                  "id": "fishbase-access-web",
+                  "label": "Portail web gratuit",
+                  "description": "Accès web public gratuit pour la recherche, les résumés d'espèces, les pages thématiques, les cartes, graphiques, rapports et outils FishBase. Aucun compte ni clé API n'est requis pour la navigation; utiliser l'hôte fishbase.se, car la page d'accueil équivalente www.fishbase.org peut renvoyer Cloudflare 403."
+                },
+                {
+                  "id": "fishbase-submit-fishwatcher",
+                  "label": "Observations FishWatcher",
+                  "description": "FishWatcher permet aux utilisateurs d'obtenir un identifiant et un mot de passe et de téléverser des observations de poissons, coordonnées, dates, longueurs et photos pour la cartographie des distributions et le suivi de la biodiversité."
+                },
+                {
+                  "id": "fishbase-submit-collaborator",
+                  "label": "Contributions de collaborateurs avec curation",
+                  "description": "Les ajouts et corrections de données passent par les flux de collaboration FishBase. Les contributeurs sont crédités dans les estampilles d'enregistrement, remerciements, tables de collaborateurs ou tables dédiées lorsque des jeux de données substantiels sont incorporés."
+                },
+                {
+                  "id": "fishbase-submit-photos",
+                  "label": "Contributions de photos",
+                  "description": "Les contributeurs de photos peuvent téléverser via les pages d'espèces, envoyer des fichiers par courriel à FishBase/Q-quatics, envoyer des supports physiques ou fournir des emplacements de téléchargement. Le droit d'auteur reste aux contributeurs et FishBase ajoute des métadonnées d'attribution."
+                }
+              ],
+              "aliases": [
+                "base de données sur les poissons",
+                "FishBase",
+                "FishBase.org",
+                "FishBase web electronic publication"
+              ],
+              "gallery": [
+                {
+                  "id": "fishbase-gallery-species-summary",
+                  "title": "Structure d'un enregistrement d'espèce",
+                  "altText": null,
+                  "caption": "Capture d'écran locale d'un enregistrement d'espèce FishBase montrant taxonomie, photo, carte de distribution, écologie, usages humains, références et sous-enregistrements liés."
+                },
+                {
+                  "id": "fishbase-gallery-search",
+                  "title": "Index de recherche et champs de consultation",
+                  "altText": null,
+                  "caption": "Capture d'écran locale de la page de recherche FishBase montrant les dimensions de recherche par nom commun, nom scientifique, glossaire, identifiant d'espèce, langue et écriture."
+                },
+                {
+                  "id": "fishbase-gallery-downloads",
+                  "title": "Produits de données téléchargeables",
+                  "altText": null,
+                  "caption": "Capture d'écran locale de la section de téléchargement FishBase montrant documents et produits de données téléchargeables avec titres, descriptions et tailles de fichier."
+                },
+                {
+                  "id": "fishbase-gallery-home",
+                  "title": "Portée et contexte du portail",
+                  "altText": null,
+                  "caption": "Capture d'écran locale de la page d'accueil FishBase montrant les métriques de portée, le contexte du consortium, les liens miroirs et la navigation du portail."
+                }
+              ],
+              "profile": {
+                "sourceRefs": [
+                  "src-fishbase-rfishbase-docs",
+                  "src-fishbase-sourcecoop"
+                ]
+              }
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-10T20:02:32.978Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.270711+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-03T01:40:16.320Z",
+            "updatedAt": "2026-09-10T20:02:32.978Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "FishBase",
+            "summary": "Глобальная база данных о биоразнообразии лучеперых рыб, охватывающая таксономию, биологию, экологию, жизненный цикл, распространение, рыбохозяйственное использование, изображения, литературу и происхождение данных от участников.",
+            "description": "FishBase — глобальная информационная система о биоразнообразии лучеперых рыб. Она начиналась как справочник по динамике популяций для 200 основных промысловых видов, а теперь охватывает все известные виды рыб по таксономии, номенклатуре, биологии, трофической экологии, жизненному циклу, морфологии, распространению, рыбохозяйственному использованию, контексту охраны и уязвимости, общеупотребительным названиям, изображениям и литературной основе. На действующем сайте указано более 36 500 видов, более 333 000 общеупотребительных названий, более 65 800 изображений, более 68 300 источников, более 2 570 участников, более 700 000 посещений в месяц и около 3,3 млн записей примерно в 200 таблицах. FishBase размещается и управляется Quantitative Aquatics, Inc. (Q-quatics) при научном сопровождении консорциума FishBase из 13 членов. Исследователи обычно обращаются к FishBase через бесплатный веб-интерфейс и сводки по видам; технические пользователи могут запрашивать статические снимки backend в форматах CSV/parquet через Source Cooperative и пакет R rfishbase. Вклады проходят кураторскую обработку, а не записываются напрямую в основную базу: участники могут отправлять наблюдения, фотографии, оттиски, исправления или наборы данных через рабочие процессы FishBase для участников и FishWatcher. Публичный parquet-снимок сжат, версионируется и может отставать от действующего сайта.\n\nBackend-данные FishBase экспортируются из базы MySQL, на которой работают FishBase и SeaLifeBase.\n\nПакет rfishbase предоставляет таблицы FishBase с использованием parquet-хранилища Source Cooperative S3 и duckdbfs.",
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "fishbase-data-format-parquet-csv",
+                    "description": "Версионированные публичные снимки сырых таблиц распространяются через Source Cooperative как экспорты CSV и parquet."
+                  },
+                  {
+                    "id": "fishbase-data-format-parquet-csv--format-parquet",
+                    "description": "Версионированные публичные снимки сырых таблиц распространяются через Source Cooperative как экспорты CSV и parquet."
+                  },
+                  {
+                    "id": "fishbase-data-format-xml",
+                    "description": "Страницы сводок по видам предоставляют XML и связанные загружаемые представления, такие как точечные данные, общеупотребительные названия и фотографии."
+                  },
+                  {
+                    "id": "fishbase-data-format-web",
+                    "description": "Читаемый человеком веб-интерфейс с поиском, сводками по видам, тематическими страницами, отчетами, картами, инструментами и загружаемыми представлениями видов."
+                  },
+                  {
+                    "id": "fishbase-data-standard-license",
+                    "description": "Тексты, числовые данные и карты FishBase предоставляются для некоммерческого повторного использования с указанием источника; фотографии и рисунки сохраняют собственные авторские права."
+                  },
+                  {
+                    "id": "fishbase-data-standard-refno",
+                    "description": "Записи FishBase ссылаются на исходную литературу через последовательные номера источников, связанные с полными библиографическими описаниями."
+                  },
+                  {
+                    "id": "fishbase-data-type-distribution",
+                    "description": "Информация о странах, экосистемах, районах FAO, естественном ареале, точечных картах, интродукциях и местообитаниях, привязанная к записям видов."
+                  },
+                  {
+                    "id": "fishbase-data-type-ecology",
+                    "description": "Рацион, трофическая экология, пищевые объекты, хищники, потребление пищи и связанные с экосистемами записи, используемые в экологическом и рыбохозяйственном анализе."
+                  },
+                  {
+                    "id": "fishbase-data-type-images-media",
+                    "description": "Фотографии рыб, рисунки, миниатюры и метаданные предоставленных фотографий с указанием фотографа или учреждения."
+                  },
+                  {
+                    "id": "fishbase-data-type-life-history",
+                    "description": "Рост, половое созревание, соотношения длины и массы, плодовитость, нерест, пополнение, численность, смертность и связанные параметры динамики популяций."
+                  },
+                  {
+                    "id": "fishbase-data-type-references",
+                    "description": "Литературное происхождение с нумерацией источников, связи данных с источниками, участники и инструкции по цитированию."
+                  },
+                  {
+                    "id": "fishbase-data-type-taxonomy",
+                    "description": "Принятые названия, синонимы, классификация, таксономические авторитеты и ссылки на каталожные ресурсы для лучеперых рыб."
+                  }
+                ],
+                "recordCount": {
+                  "id": "fishbase-metric-record-count",
+                  "description": "Приблизительное общее число записей, указанное FishBase для примерно 200 таблиц, включая около 60 основных таблиц."
+                },
+                "storageSize": {
+                  "id": "fishbase-metric-storage-size-bytes",
+                  "description": "Размер сжатого публичного parquet-снимка v25.04, суммированный по 216 parquet-объектам Source Cooperative S3; это не размер действующей производственной базы данных или архива изображений."
+                }
+              },
+              "usage": [
+                {
+                  "id": "fishbase-metric-citation-count-google-scholar",
+                  "description": "Приблизительное число цитирований Google Scholar, указанное в исследовании воздействия 2023 года; то же исследование сообщает более 10 000 цитирований Scopus до 2020 года."
+                },
+                {
+                  "id": "fishbase-metric-common-name-count",
+                  "description": "Записи общеупотребительных названий, указанные FishBase, охватывают 30 208 видов, 260 территорий, сопоставимых со странами, и 360 языков."
+                },
+                {
+                  "id": "fishbase-metric-compiled-reference-count",
+                  "description": "Минимальное число собранных источников, указанное на главной странице FishBase как более 68 300 ссылок."
+                },
+                {
+                  "id": "fishbase-metric-contributor-count",
+                  "description": "Минимальное число участников, указанное на главной странице FishBase как более 2 570 участников."
+                },
+                {
+                  "id": "fishbase-metric-picture-count",
+                  "description": "Минимальное число изображений, указанное на главной странице FishBase как более 65 800 изображений."
+                },
+                {
+                  "id": "fishbase-metric-publication-count",
+                  "description": "Количество в поддерживаемом FishBase списке публикаций и источников, цитирующих FishBase."
+                },
+                {
+                  "id": "fishbase-metric-species-count",
+                  "description": "Число видов FishBase, указанное в основной статистике данных за февраль 2026 года."
+                },
+                {
+                  "id": "fishbase-metric-monthly-visits",
+                  "description": "Минимальное число ежемесячных веб-посещений, указанное на главной странице FishBase как более 700 000 посещений в месяц."
+                }
+              ],
+              "access": [
+                {
+                  "id": "fishbase-access-sourcecoop",
+                  "label": "Сырые снимки Source Cooperative",
+                  "description": "Публичные снимки таблиц CSV и parquet доступны через Source Cooperative. Это сырые backend-экспорты для технических пользователей; повторное использование является некоммерческим по условиям FishBase, и многие задачи требуют объединения таблиц."
+                },
+                {
+                  "id": "fishbase-access-downloads",
+                  "label": "Раздел загрузок FishBase",
+                  "description": "Официальный раздел загрузок FishBase предоставляет вспомогательные документы, электронные таблицы, устаревшие файлы баз данных, графики, плакаты, презентации и приложения. Это смешанная зона загрузок, а не единый актуальный экспорт живой базы данных; используйте хост fishbase.se, потому что эквивалентный путь www.fishbase.org может возвращать 403."
+                },
+                {
+                  "id": "fishbase-access-rfishbase",
+                  "label": "Пакет R rfishbase",
+                  "description": "Программный доступ доступен через пакет R rfishbase. Он читает статические parquet-снимки Source Cooperative через прямой доступ к таблицам в стиле S3/DuckDB; ключ FishBase API не описан, но снимки могут отставать от действующего сайта."
+                },
+                {
+                  "id": "fishbase-access-species-summary",
+                  "label": "Страницы видов и загрузки XML",
+                  "description": "Страницы сводок по видам предоставляют читаемые человеком записи и ссылки для загрузки XML, точечных данных, общеупотребительных названий, фотографий и связанных инструментов. Доступ бесплатен через веб-интерфейс."
+                },
+                {
+                  "id": "fishbase-access-web",
+                  "label": "Бесплатный веб-портал",
+                  "description": "Бесплатный публичный веб-доступ для поиска, сводок по видам, тематических страниц, карт, графиков, отчетов и инструментов FishBase. Для просмотра не требуется учетная запись или API-ключ; используйте хост fishbase.se, потому что эквивалентная главная страница www.fishbase.org может возвращать Cloudflare 403."
+                },
+                {
+                  "id": "fishbase-submit-fishwatcher",
+                  "label": "Наблюдения FishWatcher",
+                  "description": "FishWatcher позволяет пользователям получить ID/пароль и загрузить наблюдения рыб, координаты, даты, длины и фотографии для картирования распространения и мониторинга биоразнообразия."
+                },
+                {
+                  "id": "fishbase-submit-collaborator",
+                  "label": "Курируемые вклады участников",
+                  "description": "Добавления и исправления данных проходят через рабочие процессы участников FishBase. Участники получают признание в штампах записей, благодарностях, таблицах участников или отдельных таблицах, когда включаются значительные наборы данных."
+                },
+                {
+                  "id": "fishbase-submit-photos",
+                  "label": "Фотографические вклады",
+                  "description": "Авторы фотографий могут загружать их через страницы видов, отправлять файлы по электронной почте в FishBase/Q-quatics, пересылать физические носители или предоставлять места загрузки. Авторские права остаются у участников, а FishBase добавляет метаданные атрибуции."
+                }
+              ],
+              "aliases": [
+                "база данных рыб",
+                "FishBase",
+                "FishBase.org",
+                "FishBase web electronic publication"
+              ],
+              "gallery": [
+                {
+                  "id": "fishbase-gallery-species-summary",
+                  "title": "Структура записи вида",
+                  "altText": null,
+                  "caption": "Локальный снимок экрана записи вида FishBase, показывающий таксономию, фотографию, карту распространения, экологию, использование человеком, источники и связанные подзаписи."
+                },
+                {
+                  "id": "fishbase-gallery-search",
+                  "title": "Поисковые индексы и поля запроса",
+                  "altText": null,
+                  "caption": "Локальный снимок экрана страницы поиска FishBase, показывающий измерения поиска по общеупотребительному названию, научному названию, глоссарию, ID вида, языку и письменности."
+                },
+                {
+                  "id": "fishbase-gallery-downloads",
+                  "title": "Загружаемые продукты данных",
+                  "altText": null,
+                  "caption": "Локальный снимок экрана раздела загрузок FishBase, показывающий загружаемые документы и продукты данных с названиями, описаниями и размерами файлов."
+                },
+                {
+                  "id": "fishbase-gallery-home",
+                  "title": "Охват и контекст портала",
+                  "altText": null,
+                  "caption": "Локальный снимок экрана главной страницы FishBase, показывающий показатели охвата, контекст консорциума, зеркальные ссылки и навигацию портала."
+                }
+              ],
+              "profile": {
+                "sourceRefs": [
+                  "src-fishbase-rfishbase-docs",
+                  "src-fishbase-sourcecoop"
+                ]
+              }
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-10T20:02:32.978Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.378191+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-03T01:40:16.320Z",
+            "updatedAt": "2026-09-10T20:02:32.978Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "FishBase",
+            "summary": "全球性有鳍鱼类生物多样性数据库，涵盖分类学、生物学、生态学、生活史、分布、渔业用途、图像、参考文献和协作者来源。",
+            "description": "FishBase 是一个面向有鳍鱼类的全球生物多样性信息系统。它最初是 200 种主要商业鱼种的种群动态参考库，现在覆盖所有已知鱼类物种，内容包括分类学、命名、生物学、营养生态、生活史、形态、分布、渔业用途、保护与脆弱性背景、俗名、图像和文献来源。实时网站报告超过 36,500 个物种、超过 333,000 个俗名、超过 65,800 张图片、超过 68,300 篇参考文献、超过 2,570 名协作者、每月超过 700,000 次访问，以及约 200 张表中的约 330 万条记录。FishBase 由 Quantitative Aquatics, Inc. (Q-quatics) 托管和管理，并由 13 个成员组成的 FishBase 联盟提供科学指导。研究人员通常通过免费的网页界面和物种摘要访问 FishBase；技术用户可通过 Source Cooperative 和 R 语言 rfishbase 包查询 CSV/parquet 格式的静态后端快照。贡献内容通过人工整理进入系统，而不是直接写入核心数据库：贡献者可通过 FishBase 协作者和 FishWatcher 工作流提交观测、照片、重印本、更正或数据集。公开 parquet 快照经过压缩和版本化，可能滞后于实时网站。\n\nFishBase 后端数据导出自支撑 FishBase 和 SeaLifeBase 的 MySQL 数据库。\n\nrfishbase 包使用 Source Cooperative S3 parquet 存储和 duckdbfs 暴露 FishBase 表。",
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "fishbase-data-format-parquet-csv",
+                    "description": "版本化的公开原始表快照通过 Source Cooperative 以 CSV 和 parquet 导出形式分发。"
+                  },
+                  {
+                    "id": "fishbase-data-format-parquet-csv--format-parquet",
+                    "description": "版本化的公开原始表快照通过 Source Cooperative 以 CSV 和 parquet 导出形式分发。"
+                  },
+                  {
+                    "id": "fishbase-data-format-xml",
+                    "description": "物种摘要页面提供 XML 以及相关可下载视图，例如点位数据、俗名和照片。"
+                  },
+                  {
+                    "id": "fishbase-data-format-web",
+                    "description": "供人阅读的网页界面，包含搜索、物种摘要、专题页、报告、地图、工具和可下载的物种视图。"
+                  },
+                  {
+                    "id": "fishbase-data-standard-license",
+                    "description": "FishBase 文本、数值和地图可在署名条件下用于非商业再利用；照片和绘图保留各自版权。"
+                  },
+                  {
+                    "id": "fishbase-data-standard-refno",
+                    "description": "FishBase 记录通过连续参考编号引用来源文献，并链接到完整引文。"
+                  },
+                  {
+                    "id": "fishbase-data-type-distribution",
+                    "description": "附加到物种记录的国家、生态系统、FAO 区域、原生范围、点位图、引入和栖息地信息。"
+                  },
+                  {
+                    "id": "fishbase-data-type-ecology",
+                    "description": "用于生态和渔业分析的食性、营养生态、食物项目、捕食者、食物消耗和生态系统关联记录。"
+                  },
+                  {
+                    "id": "fishbase-data-type-images-media",
+                    "description": "鱼类照片、绘图、缩略图和贡献照片元数据，并附摄影者或机构署名。"
+                  },
+                  {
+                    "id": "fishbase-data-type-life-history",
+                    "description": "生长、成熟、体长-体重、繁殖力、产卵、补充量、丰度、死亡率及相关种群动态参数。"
+                  },
+                  {
+                    "id": "fishbase-data-type-references",
+                    "description": "带参考编号的文献来源、数据-参考链接、协作者和引用说明。"
+                  },
+                  {
+                    "id": "fishbase-data-type-taxonomy",
+                    "description": "有鳍鱼类的接受名、同物异名、分类、分类学权威以及编目资源链接。"
+                  }
+                ],
+                "recordCount": {
+                  "id": "fishbase-metric-record-count",
+                  "description": "FishBase 报告的约 200 张表中的近似总记录数，其中包括约 60 张主表。"
+                },
+                "storageSize": {
+                  "id": "fishbase-metric-storage-size-bytes",
+                  "description": "公共 v25.04 parquet 压缩快照大小，按 216 个 Source Cooperative S3 parquet 对象求和；这不是实时生产数据库或图像档案的大小。"
+                }
+              },
+              "usage": [
+                {
+                  "id": "fishbase-metric-citation-count-google-scholar",
+                  "description": "2023 年影响研究报告的 Google Scholar 近似引用次数；同一研究报告称截至 2020 年 Scopus 引用超过 10,000 次。"
+                },
+                {
+                  "id": "fishbase-metric-common-name-count",
+                  "description": "FishBase 报告的俗名记录，覆盖 30,208 个物种、260 个类似国家的区域和 360 种语言。"
+                },
+                {
+                  "id": "fishbase-metric-compiled-reference-count",
+                  "description": "FishBase 主页报告的汇编参考文献最低数量，超过 68,300 篇。"
+                },
+                {
+                  "id": "fishbase-metric-contributor-count",
+                  "description": "FishBase 主页报告的协作者最低数量，超过 2,570 名。"
+                },
+                {
+                  "id": "fishbase-metric-picture-count",
+                  "description": "FishBase 主页报告的图片最低数量，超过 65,800 张。"
+                },
+                {
+                  "id": "fishbase-metric-publication-count",
+                  "description": "FishBase 维护的引用 FishBase 的出版物和参考文献列表数量。"
+                },
+                {
+                  "id": "fishbase-metric-species-count",
+                  "description": "2026 年 2 月主要数据统计中报告的 FishBase 物种数量。"
+                },
+                {
+                  "id": "fishbase-metric-monthly-visits",
+                  "description": "FishBase 主页报告的最低月度网页访问量，每月超过 700,000 次。"
+                }
+              ],
+              "access": [
+                {
+                  "id": "fishbase-access-sourcecoop",
+                  "label": "Source Cooperative 原始快照",
+                  "description": "Source Cooperative 提供公开 CSV 和 parquet 表快照。这些是面向技术用户的原始后端导出；再利用须遵守 FishBase 非商业条款，许多任务需要跨表连接。"
+                },
+                {
+                  "id": "fishbase-access-downloads",
+                  "label": "FishBase 下载区",
+                  "description": "官方 FishBase 下载区提供支持文档、电子表格、旧版数据库文件、图表、海报、演示文稿和应用程序。它是混合下载区，而不是单一的当前实时数据库导出；应使用 fishbase.se 主机，因为等效的 www.fishbase.org 路径可能返回 403。"
+                },
+                {
+                  "id": "fishbase-access-rfishbase",
+                  "label": "rfishbase R 包",
+                  "description": "可通过 R 语言 rfishbase 包进行程序化访问。它通过直接的 S3/DuckDB 式表访问读取 Source Cooperative 静态 parquet 快照；未说明需要 FishBase API 密钥，但快照可能滞后于实时网站。"
+                },
+                {
+                  "id": "fishbase-access-species-summary",
+                  "label": "物种页面和 XML 下载",
+                  "description": "物种摘要页面提供供人阅读的记录，以及可下载 XML、点位数据、俗名、照片和相关工具的链接。可通过网页界面免费访问。"
+                },
+                {
+                  "id": "fishbase-access-web",
+                  "label": "免费网页门户",
+                  "description": "提供搜索、物种摘要、专题页、地图、图表、报告和 FishBase 工具的免费公共网页访问。浏览不需要账户或 API 密钥；应使用 fishbase.se 主机，因为等效的 www.fishbase.org 主页可能返回 Cloudflare 403。"
+                },
+                {
+                  "id": "fishbase-submit-fishwatcher",
+                  "label": "FishWatcher 观测",
+                  "description": "FishWatcher 允许用户获取 ID/密码并上传鱼类观测、坐标、日期、长度和照片，用于分布制图和生物多样性监测。"
+                },
+                {
+                  "id": "fishbase-submit-collaborator",
+                  "label": "经整理的协作者贡献",
+                  "description": "数据新增和更正通过 FishBase 协作者工作流调解。贡献者会在记录印章、致谢、协作者表或专用表中获得署名，特别是在纳入重要数据集时。"
+                },
+                {
+                  "id": "fishbase-submit-photos",
+                  "label": "照片贡献",
+                  "description": "照片贡献者可通过物种页面上传，向 FishBase/Q-quatics 发送电子邮件文件，寄送实体介质，或提供下载位置。版权仍归贡献者所有，FishBase 会附加署名元数据。"
+                }
+              ],
+              "aliases": [
+                "鱼类数据库",
+                "FishBase",
+                "FishBase.org",
+                "FishBase web electronic publication"
+              ],
+              "gallery": [
+                {
+                  "id": "fishbase-gallery-species-summary",
+                  "title": "物种记录结构",
+                  "altText": null,
+                  "caption": "FishBase 物种记录的本地截图，显示分类、照片、分布图、生态、人类用途、参考文献和链接的子记录。"
+                },
+                {
+                  "id": "fishbase-gallery-search",
+                  "title": "搜索索引和查询字段",
+                  "altText": null,
+                  "caption": "FishBase 搜索页面的本地截图，显示俗名、学名、术语表、物种 ID、语言和文字系统等查询维度。"
+                },
+                {
+                  "id": "fishbase-gallery-downloads",
+                  "title": "可下载数据产品",
+                  "altText": null,
+                  "caption": "FishBase 下载区的本地截图，显示可下载文档和数据产品及其标题、说明和文件大小。"
+                },
+                {
+                  "id": "fishbase-gallery-home",
+                  "title": "门户范围和背景",
+                  "altText": null,
+                  "caption": "FishBase 主页的本地截图，显示范围指标、联盟背景、镜像链接和门户导航。"
+                }
+              ],
+              "profile": {
+                "sourceRefs": [
+                  "src-fishbase-rfishbase-docs",
+                  "src-fishbase-sourcecoop"
+                ]
+              }
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-10T20:02:32.978Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.377966+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-03T01:40:16.320Z",
+            "updatedAt": "2026-09-10T20:02:32.978Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-fishbase-member-of-platform-obis",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "platform-obis",
+            "kind": "member_of",
+            "note": "The OBIS Fish OBIS node page explicitly identifies FishBase and FishNet2 as participating systems in the global thematic Fish OBIS node. This represents FishBase participation in OBIS through that node, not organizational membership or component ownership. The page describes intended FishBase contributions; current delivery is assessed separately.",
+            "properties": {
+              "via": "Fish OBIS",
+              "scope": "OBIS network participation through the Fish OBIS thematic node",
+              "status": "listed participant",
+              "sourceRefs": [
+                "evidence"
+              ]
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://portal.obis.org/node/dcb0c76d-46a1-4e07-9a69-98cf3fd67576",
+                "title": {
+                  "ar": "العقدة الموضوعية Fish OBIS والأنظمة المشاركة",
+                  "en": "Fish OBIS thematic node and participating systems",
+                  "es": "Nodo temático Fish OBIS y sistemas participantes",
+                  "fr": "Nœud thématique Fish OBIS et systèmes participants",
+                  "ru": "Тематический узел Fish OBIS и участвующие системы",
+                  "zh": "Fish OBIS专题节点与参与系统"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-fishbase-syncs-to-aquamaps",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "aquamaps",
+            "kind": "syncs_to",
+            "note": "AquaMaps uses FishBase FAO-area coverage, distribution bounds and depth ranges as inputs to species distribution modelling. This is a documented input-data transfer; the homepage model description is labelled version 10/2019 and does not establish a current ingestion date or cadence.",
+            "properties": {
+              "scope": "Fish distribution and habitat inputs to predictive range maps",
+              "status": "documented; latest transfer date unverified",
+              "sourceRefs": [
+                "evidence"
+              ],
+              "transferMethod": "Model input extraction from FishBase; cadence unspecified"
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://aquamaps.org/main/home.php",
+                "title": {
+                  "ar": "نموذج AquaMaps والبيانات المستخدمة",
+                  "en": "AquaMaps model and data inputs",
+                  "es": "Modelo AquaMaps y datos utilizados",
+                  "fr": "Modèle AquaMaps et données utilisées",
+                  "ru": "Модель AquaMaps и исходные данные",
+                  "zh": "AquaMaps模型与输入数据"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-fishbase-syncs-to-gbif",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "gbif",
+            "kind": "syncs_to",
+            "note": "FishBase publishes an occurrence dataset through the GBIF-Sweden IPT, registered with GBIF. The publisher lists 731,043 archive records, a latest publication date of 2023-03-23 and irregular updates. The archive count is not a verified count of currently indexed GBIF occurrences.",
+            "properties": {
+              "scope": "FishBase occurrence dataset via GBIF-Sweden",
+              "format": "Darwin Core Archive",
+              "status": "published snapshot; current refresh unverified",
+              "artifact": "https://www.gbif.se/ipt/resource?r=fishbase",
+              "sourceRefs": [
+                "evidence"
+              ],
+              "transferMethod": "GBIF-Sweden IPT Darwin Core Archive publication",
+              "updateFrequency": "irregular",
+              "latestPublishedAt": "2023-03-23"
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://www.gbif.se/ipt/resource?r=fishbase",
+                "title": {
+                  "ar": "أرشيف سجلات وجود الأنواع في FishBase المنشور عبر GBIF-Sweden",
+                  "en": "FishBase occurrence archive published through GBIF-Sweden",
+                  "es": "Archivo de presencias de FishBase publicado mediante GBIF-Sweden",
+                  "fr": "Archive des occurrences FishBase publiée via GBIF-Sweden",
+                  "ru": "Архив находок FishBase, опубликованный через GBIF-Sweden",
+                  "zh": "通过GBIF-Sweden发布的FishBase物种出现记录档案"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-fishbase-syncs-to-platform-obis",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "platform-obis",
+            "kind": "syncs_to",
+            "note": "OBIS hosts an archive of FishBase occurrence records harvested from the GBIF-Sweden-hosted resource. The available archive was published on 2018-10-10 and lists an unknown update frequency. This records the historical transfer path; an ongoing refresh is not established.",
+            "properties": {
+              "scope": "Historical harvest of FishBase occurrence data via GBIF-Sweden",
+              "format": "Darwin Core Archive",
+              "status": "historical; current refresh unknown",
+              "artifact": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+              "sourceRefs": [
+                "evidence"
+              ],
+              "transferMethod": "OBIS harvest of the GBIF-Sweden-hosted FishBase resource",
+              "updateFrequency": "unknown",
+              "latestPublishedAt": "2018-10-10"
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+                "title": {
+                  "ar": "أرشيف سجلات وجود الأنواع في FishBase الذي جمعه OBIS",
+                  "en": "FishBase occurrence archive harvested by OBIS",
+                  "es": "Archivo de presencias de FishBase recopilado por OBIS",
+                  "fr": "Archive des occurrences FishBase collectée par OBIS",
+                  "ru": "Архив находок FishBase, собранный OBIS",
+                  "zh": "OBIS采集的FishBase物种出现记录档案"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-fishbase-syncs-to-source-cooperative",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "source-cooperative",
+            "kind": "syncs_to",
+            "note": "The FishBase team supplies backend MySQL dumps roughly annually to Carl Boettiger, who converts and publishes versioned Parquet snapshots on Source Cooperative for rfishbase. This is periodic redistribution through the named maintainer, not live replication. The dataset README identifies fb/v26.07 as the current FishBase snapshot.",
+            "properties": {
+              "scope": "Versioned FishBase backend table exports",
+              "format": "parquet",
+              "status": "periodic",
+              "artifact": "cboettig/fishbase/fb/v26.07",
+              "sourceRefs": [
+                "evidence"
+              ],
+              "transferMethod": "FishBase team MySQL dump to Carl Boettiger; conversion to Parquet and publication on Source Cooperative",
+              "updateFrequency": "roughly annual"
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://source.coop/cboettig/fishbase",
+                "title": {
+                  "ar": "لقطات قاعدة بيانات FishBase على Source Cooperative",
+                  "en": "FishBase backend snapshots on Source Cooperative",
+                  "es": "Instantáneas de la base FishBase en Source Cooperative",
+                  "fr": "Instantanés de la base FishBase sur Source Cooperative",
+                  "ru": "Снимки базы FishBase на Source Cooperative",
+                  "zh": "Source Cooperative上的FishBase数据库快照"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-fishbase-syncs-to-worms",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "worms",
+            "kind": "syncs_to",
+            "note": "WoRMS explicitly identifies FishBase as an external database from which it currently imports information, principally taxonomy. This establishes FishBase-to-WoRMS transfer; no reciprocal transfer or fixed refresh schedule is asserted.",
+            "properties": {
+              "scope": "Fish taxonomy imported into Aphia and presented through WoRMS",
+              "status": "active",
+              "sourceRefs": [
+                "evidence"
+              ],
+              "transferMethod": "External database import; implementation and cadence unspecified"
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://www.marinespecies.org/about.php",
+                "title": {
+                  "ar": "قواعد البيانات الخارجية الشريكة لـ WoRMS",
+                  "en": "WoRMS external database partners",
+                  "es": "Bases de datos externas asociadas a WoRMS",
+                  "fr": "Bases partenaires externes de WoRMS",
+                  "ru": "Внешние базы данных — партнёры WoRMS",
+                  "zh": "WoRMS外部合作数据库"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-q-quatics-operates-fishbase",
+            "sourceNodeId": "q-quatics",
+            "targetNodeId": "fishbase",
+            "kind": "operates",
+            "note": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-fishbase"
+              ]
+            },
+            "sources": {
+              "src-relationship-fishbase": {
+                "id": "src-relationship-fishbase",
+                "url": "https://fishbase.se/home.htm",
+                "title": {
+                  "ar": "الصفحة الرئيسية لـ FishBase",
+                  "en": "FishBase homepage",
+                  "es": "Página de inicio de FishBase",
+                  "fr": "Page d’accueil de FishBase",
+                  "ru": "Главная страница FishBase",
+                  "zh": "FishBase主页"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-07-21T00:00:00.000Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-royal-museum-for-central-africa-publishes-to-fishbase",
+            "sourceNodeId": "royal-museum-for-central-africa",
+            "targetNodeId": "fishbase",
+            "kind": "publishes_to",
+            "note": "The museum’s 2023 account documents FishBase contributions beginning with digitisation of its African fish collection in 1997 and, from 2001, checking and updating information on African freshwater and brackish-water fishes from published literature. This records evidenced historical contributions; continued activity in 2026 is unverified.",
+            "properties": {
+              "scope": "African fish collection data and curated freshwater/brackish-water fish information",
+              "period": "Collection contributions from 1997 and curated updates from 2001, documented in 2023",
+              "status": "documented historical contribution; current continuation unverified",
+              "sourceRefs": [
+                "evidence"
+              ]
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://www.africamuseum.be/en/staff/795/publication_detail_view?pubid=6525",
+                "title": {
+                  "ar": "FishBase لأفريقيا: 25 عاماً من مساهمات المتحف الملكي لأفريقيا الوسطى (2023)",
+                  "en": "FishBase for Africa: 25 years of contributions by the Royal Museum for Central Africa (2023)",
+                  "es": "FishBase para África: 25 años de contribuciones del Museo Real de África Central (2023)",
+                  "fr": "FishBase pour l’Afrique : 25 ans de contributions du Musée royal de l’Afrique centrale (2023)",
+                  "ru": "FishBase для Африки: 25 лет вклада Королевского музея Центральной Африки (2023)",
+                  "zh": "非洲FishBase：中非皇家博物馆25年的贡献（2023）"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-university-of-western-australia-funds-fishbase",
+            "sourceNodeId": "university-of-western-australia",
+            "targetNodeId": "fishbase",
+            "kind": "funds",
+            "note": "Q-quatics identifies a University of Western Australia grant awarded to Q-quatics to improve Australian marine biodiversity coverage in FishBase and SeaLifeBase, described as since 2017. This edge covers the FishBase activity supported through Q-quatics; no amount, exclusive funding role, end date or continuation in 2026 is established.",
+            "properties": {
+              "scope": "Improving Australian marine biodiversity coverage in FishBase; grant also supports SeaLifeBase",
+              "period": "Support described as starting in 2017; end date and continuation in 2026 unverified",
+              "status": "documented funding; current continuation unverified",
+              "sourceRefs": [
+                "evidence"
+              ],
+              "intermediary": "q-quatics"
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://www.q-quatics.org/affiliated-projects/",
+                "title": {
+                  "ar": "مشروعات Q-quatics وشركاؤها الممولون وعضوية الاتحاد",
+                  "en": "Q-quatics projects, funding partners and consortium membership",
+                  "es": "Proyectos, socios financiadores y miembros del consorcio de Q-quatics",
+                  "fr": "Projets, partenaires financiers et membres du consortium de Q-quatics",
+                  "ru": "Проекты, финансовые партнёры и членство в консорциуме Q-quatics",
+                  "zh": "Q-quatics项目、资助伙伴与联盟成员"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "platform-obis",
+      "readAt": "2026-09-11T01:28:38.487Z",
+      "httpStatus": 200,
+      "response": {
+        "id": "platform-obis",
+        "kind": "system",
+        "countryCode": null,
+        "url": null,
+        "recordDepth": "thin",
+        "title": "Ocean Biodiversity Information System (OBIS)",
+        "summary": "Global marine biodiversity system receiving synchronized data from BISMaL.",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:10.745Z",
+        "recordUpdatedAt": "2026-09-10T20:03:10.745Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 6,
+          "resolvedSources": 6,
+          "issues": [
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[1].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[2].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[3].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[4].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[5].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "record.properties.data.descriptors[6].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "platform-obis",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "platform-obis",
+          "kind": "system",
+          "countryCode": null,
+          "url": null,
+          "recordDepth": "thin",
+          "sources": {
+            "src-obis-ipt": {
+              "id": "src-obis-ipt",
+              "url": "https://manual.obis.org/ipt",
+              "title": {
+                "ar": "دليل OBIS: أداة IPT",
+                "en": "OBIS Manual IPT",
+                "es": "Manual de OBIS: IPT",
+                "fr": "Manuel OBIS : IPT",
+                "ru": "Руководство OBIS: IPT",
+                "zh": "OBIS手册：IPT"
+              },
+              "accessedAt": "2026-05-26"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "platform-obis-tag-data-format-darwin-core",
+                  "label": "Darwin Core",
+                  "source": null,
+                  "category": "standard"
+                },
+                {
+                  "id": "platform-obis-tag-data-format-darwin-core-archive",
+                  "label": "darwin_core_archive",
+                  "source": null,
+                  "category": "format"
+                },
+                {
+                  "id": "platform-obis-tag-data-format-eml",
+                  "label": "Ecological Metadata Language",
+                  "source": null,
+                  "category": "standard"
+                },
+                {
+                  "id": "platform-obis-tag-data-format-emof",
+                  "label": "Extended MeasurementOrFact",
+                  "source": null,
+                  "category": "standard"
+                },
+                {
+                  "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+                  "label": "catalogue_records",
+                  "source": null,
+                  "category": "type"
+                },
+                {
+                  "id": "platform-obis-tag-data-type-occurrence-observation",
+                  "label": "occurrence_records",
+                  "source": null,
+                  "category": "type"
+                },
+                {
+                  "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+                  "label": "taxonomic_records",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "platform-obis-tag-read-method-api",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "api",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-dashboard-viewer",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "dashboard_viewer",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-download",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "download",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-ipt",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "ipt",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-rest-api",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "rest_api",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-sdk-notebook",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "sdk_notebook",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-read-method-web",
+                "url": "https://manual.obis.org/ipt",
+                "type": "read",
+                "method": "web",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-write-method-ipt-publish",
+                "url": "https://manual.obis.org/ipt",
+                "type": "submit",
+                "method": "ipt_publish",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-write-method-manager-mediated-submission",
+                "url": "https://manual.obis.org/ipt",
+                "type": "submit",
+                "method": "manager_mediated_submission",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-write-method-template-csv-workflow",
+                "url": "https://manual.obis.org/ipt",
+                "type": "submit",
+                "method": "template_csv_workflow",
+                "source": "src-obis-ipt"
+              },
+              {
+                "id": "platform-obis-tag-write-method-upload",
+                "url": "https://manual.obis.org/ipt",
+                "type": "submit",
+                "method": "upload",
+                "source": "src-obis-ipt"
+              }
+            ],
+            "gallery": [],
+            "disciplines": []
+          },
+          "createdAt": "2026-04-24T00:00:00.000Z",
+          "updatedAt": "2026-09-10T20:03:10.745Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "نظام معلومات التنوع الحيوي في المحيطات (OBIS)",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "OBIS",
+                "Ocean Biodiversity Information System (OBIS)"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.342542+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:23.137Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "Ocean Biodiversity Information System (OBIS)",
+            "summary": "Global marine biodiversity system receiving synchronized data from BISMaL.",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "platform-obis-tag-data-format-darwin-core",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-format-darwin-core-archive",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-format-eml",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-format-emof",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-type-occurrence-observation",
+                    "description": null
+                  },
+                  {
+                    "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "platform-obis-tag-read-method-api",
+                  "label": "API",
+                  "description": "Access via API."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-dashboard-viewer",
+                  "label": "Dashboard / viewer",
+                  "description": "Access via Dashboard / viewer."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-download",
+                  "label": "Download",
+                  "description": "Access via Download."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-ipt",
+                  "label": "IPT",
+                  "description": "Access via IPT."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-rest-api",
+                  "label": "REST API",
+                  "description": "Access via REST API."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-sdk-notebook",
+                  "label": "SDK / notebook",
+                  "description": "Access via SDK / notebook."
+                },
+                {
+                  "id": "platform-obis-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "Access via Web UI."
+                },
+                {
+                  "id": "platform-obis-tag-write-method-ipt-publish",
+                  "label": "IPT publish",
+                  "description": "Submission via IPT publish."
+                },
+                {
+                  "id": "platform-obis-tag-write-method-manager-mediated-submission",
+                  "label": "Manager-mediated submission",
+                  "description": "Submission via Manager-mediated submission."
+                },
+                {
+                  "id": "platform-obis-tag-write-method-template-csv-workflow",
+                  "label": "Template / CSV workflow",
+                  "description": "Submission via Template / CSV workflow."
+                },
+                {
+                  "id": "platform-obis-tag-write-method-upload",
+                  "label": "Upload",
+                  "description": "Submission via Upload."
+                }
+              ],
+              "aliases": [],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:03:10.719Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.376639+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-04-24T00:00:00.000Z",
+            "updatedAt": "2026-09-10T20:03:10.719Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Sistema de Información sobre Biodiversidad Oceánica (OBIS)",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "OBIS",
+                "Ocean Biodiversity Information System (OBIS)"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.343836+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:23.137Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Système d'information sur la biodiversité océanique (OBIS)",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "OBIS",
+                "Ocean Biodiversity Information System (OBIS)"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.342762+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:23.137Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Информационная система океанического биоразнообразия (OBIS)",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "OBIS",
+                "Ocean Biodiversity Information System (OBIS)"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.342916+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:23.137Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "海洋生物多样性信息系统 (OBIS)",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "OBIS",
+                "Ocean Biodiversity Information System (OBIS)"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.342664+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:23.137Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "link-eurobis-obis",
+            "sourceNodeId": "eurobis",
+            "targetNodeId": "platform-obis",
+            "kind": "syncs_to",
+            "note": "EurOBIS contributes marine species distribution records to OBIS.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-eurobis"
+              ]
+            },
+            "sources": {
+              "src-relationship-eurobis": {
+                "id": "src-relationship-eurobis",
+                "url": "https://www.eurobis.org/about",
+                "title": {
+                  "ar": "حول EurOBIS",
+                  "en": "About EurOBIS",
+                  "es": "Acerca de EurOBIS",
+                  "fr": "À propos de EurOBIS",
+                  "ru": "О EurOBIS",
+                  "zh": "关于EurOBIS"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T21:51:00.376Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-bismal-syncs-to-obis",
+            "sourceNodeId": "bismal",
+            "targetNodeId": "platform-obis",
+            "kind": "syncs_to",
+            "note": "BISMaL distributes Japanese OBIS-node biodiversity records to OBIS.",
+            "properties": {
+              "format": "Darwin Core Archive",
+              "sourceRefs": [
+                "src-relationship-j-obis"
+              ],
+              "transferMethod": "IPT"
+            },
+            "sources": {
+              "src-relationship-j-obis": {
+                "id": "src-relationship-j-obis",
+                "url": "https://www.godac.jamstec.go.jp/bismal/e/about.html",
+                "title": {
+                  "ar": "حول BISMaL / J-OBIS",
+                  "en": "About BISMaL / J-OBIS",
+                  "es": "Acerca de BISMaL / J-OBIS",
+                  "fr": "À propos de BISMaL / J-OBIS",
+                  "ru": "О BISMaL / J-OBIS",
+                  "zh": "关于BISMaL / J-OBIS"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-04-24T00:00:00.000Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-fishbase-member-of-platform-obis",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "platform-obis",
+            "kind": "member_of",
+            "note": "The OBIS Fish OBIS node page explicitly identifies FishBase and FishNet2 as participating systems in the global thematic Fish OBIS node. This represents FishBase participation in OBIS through that node, not organizational membership or component ownership. The page describes intended FishBase contributions; current delivery is assessed separately.",
+            "properties": {
+              "via": "Fish OBIS",
+              "scope": "OBIS network participation through the Fish OBIS thematic node",
+              "status": "listed participant",
+              "sourceRefs": [
+                "evidence"
+              ]
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://portal.obis.org/node/dcb0c76d-46a1-4e07-9a69-98cf3fd67576",
+                "title": {
+                  "ar": "العقدة الموضوعية Fish OBIS والأنظمة المشاركة",
+                  "en": "Fish OBIS thematic node and participating systems",
+                  "es": "Nodo temático Fish OBIS y sistemas participantes",
+                  "fr": "Nœud thématique Fish OBIS et systèmes participants",
+                  "ru": "Тематический узел Fish OBIS и участвующие системы",
+                  "zh": "Fish OBIS专题节点与参与系统"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-fishbase-syncs-to-platform-obis",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "platform-obis",
+            "kind": "syncs_to",
+            "note": "OBIS hosts an archive of FishBase occurrence records harvested from the GBIF-Sweden-hosted resource. The available archive was published on 2018-10-10 and lists an unknown update frequency. This records the historical transfer path; an ongoing refresh is not established.",
+            "properties": {
+              "scope": "Historical harvest of FishBase occurrence data via GBIF-Sweden",
+              "format": "Darwin Core Archive",
+              "status": "historical; current refresh unknown",
+              "artifact": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+              "sourceRefs": [
+                "evidence"
+              ],
+              "transferMethod": "OBIS harvest of the GBIF-Sweden-hosted FishBase resource",
+              "updateFrequency": "unknown",
+              "latestPublishedAt": "2018-10-10"
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+                "title": {
+                  "ar": "أرشيف سجلات وجود الأنواع في FishBase الذي جمعه OBIS",
+                  "en": "FishBase occurrence archive harvested by OBIS",
+                  "es": "Archivo de presencias de FishBase recopilado por OBIS",
+                  "fr": "Archive des occurrences FishBase collectée par OBIS",
+                  "ru": "Архив находок FishBase, собранный OBIS",
+                  "zh": "OBIS采集的FishBase物种出现记录档案"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-ioc-unesco-iode-operates-ocean-biodiversity-information-system",
+            "sourceNodeId": "ioc-unesco-iode",
+            "targetNodeId": "platform-obis",
+            "kind": "operates",
+            "note": "IODE/IOC-UNESCO coordinates OBIS with independently operated nodes. Node contributions do not imply ownership by one government.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-platform-obis"
+              ]
+            },
+            "sources": {
+              "src-relationship-platform-obis": {
+                "id": "src-relationship-platform-obis",
+                "url": "https://obis.org/about/governance/",
+                "title": {
+                  "ar": "حوكمة OBIS",
+                  "en": "OBIS governance",
+                  "es": "Gobernanza de OBIS",
+                  "fr": "Gouvernance d’OBIS",
+                  "ru": "Управление OBIS",
+                  "zh": "OBIS治理"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.458Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "worms",
+      "readAt": "2026-09-11T01:28:38.496Z",
+      "httpStatus": 200,
+      "response": {
+        "id": "worms",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.marinespecies.org/about.php",
+        "recordDepth": "thin",
+        "title": "World Register of Marine Species",
+        "summary": "Authoritative marine taxonomic backbone",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:20.936Z",
+        "recordUpdatedAt": "2026-09-10T20:03:20.936Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 4,
+          "resolvedSources": 4,
+          "issues": [
+            {
+              "recordId": "worms",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "worms",
+              "path": "record.properties.data.descriptors[1].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "worms",
+              "path": "record.properties.data.descriptors[2].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "worms",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "worms",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "worms",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "worms",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "worms",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "worms",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "worms",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://www.marinespecies.org/about.php",
+          "recordDepth": "thin",
+          "sources": {
+            "src-worms-about": {
+              "id": "src-worms-about",
+              "url": "https://www.marinespecies.org/about.php",
+              "title": {
+                "ar": "حول WoRMS",
+                "en": "WoRMS About",
+                "es": "Acerca de WoRMS",
+                "fr": "À propos de WoRMS",
+                "ru": "О WoRMS",
+                "zh": "关于WoRMS"
+              },
+              "accessedAt": "2026-05-26"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "worms-tag-data-type-occurrence-observation",
+                  "label": "occurrence_records",
+                  "source": null,
+                  "category": "type"
+                },
+                {
+                  "id": "worms-tag-data-type-taxonomy-nomenclature",
+                  "label": "taxonomic_records",
+                  "source": null,
+                  "category": "type"
+                },
+                {
+                  "id": "worms-tag-data-type-trait-ecology",
+                  "label": "biological_traits",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "worms-tag-read-method-api",
+                "url": "https://www.marinespecies.org/about.php",
+                "type": "read",
+                "method": "api",
+                "source": "src-worms-about"
+              },
+              {
+                "id": "worms-tag-read-method-rest-api",
+                "url": "https://www.marinespecies.org/about.php",
+                "type": "read",
+                "method": "rest_api",
+                "source": "src-worms-about"
+              },
+              {
+                "id": "worms-tag-read-method-web",
+                "url": "https://www.marinespecies.org/about.php",
+                "type": "read",
+                "method": "web",
+                "source": "src-worms-about"
+              }
+            ],
+            "gallery": [],
+            "disciplines": [
+              "taxonomy"
+            ]
+          },
+          "createdAt": "2026-05-26T16:46:26.459Z",
+          "updatedAt": "2026-09-10T20:03:20.936Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "السجل العالمي للأنواع البحرية",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "WoRMS",
+                "World Register of Marine Species"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:54.530Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.369724+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:54.530Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "World Register of Marine Species",
+            "summary": "Authoritative marine taxonomic backbone",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "worms-tag-data-type-occurrence-observation",
+                    "description": null
+                  },
+                  {
+                    "id": "worms-tag-data-type-taxonomy-nomenclature",
+                    "description": null
+                  },
+                  {
+                    "id": "worms-tag-data-type-trait-ecology",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "worms-tag-read-method-api",
+                  "label": "API",
+                  "description": "Access via API."
+                },
+                {
+                  "id": "worms-tag-read-method-rest-api",
+                  "label": "REST API",
+                  "description": "Access via REST API."
+                },
+                {
+                  "id": "worms-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "Access via Web UI."
+                }
+              ],
+              "aliases": [
+                "WoRMS"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:03:20.913Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.377152+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.459Z",
+            "updatedAt": "2026-09-10T20:03:20.913Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Registro Mundial de Especies Marinas",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "WoRMS",
+                "World Register of Marine Species"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:54.530Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.37015+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:54.530Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Registre mondial des espèces marines",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "WoRMS",
+                "World Register of Marine Species"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:54.530Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.369941+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:54.530Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Всемирный реестр морских видов",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "WoRMS",
+                "World Register of Marine Species"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:54.530Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.370038+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:54.530Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "世界海洋物种名录",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "WoRMS",
+                "World Register of Marine Species"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:54.530Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.36984+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:54.530Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-fishbase-syncs-to-worms",
+            "sourceNodeId": "fishbase",
+            "targetNodeId": "worms",
+            "kind": "syncs_to",
+            "note": "WoRMS explicitly identifies FishBase as an external database from which it currently imports information, principally taxonomy. This establishes FishBase-to-WoRMS transfer; no reciprocal transfer or fixed refresh schedule is asserted.",
+            "properties": {
+              "scope": "Fish taxonomy imported into Aphia and presented through WoRMS",
+              "status": "active",
+              "sourceRefs": [
+                "evidence"
+              ],
+              "transferMethod": "External database import; implementation and cadence unspecified"
+            },
+            "sources": {
+              "evidence": {
+                "id": "evidence",
+                "url": "https://www.marinespecies.org/about.php",
+                "title": {
+                  "ar": "قواعد البيانات الخارجية الشريكة لـ WoRMS",
+                  "en": "WoRMS external database partners",
+                  "es": "Bases de datos externas asociadas a WoRMS",
+                  "fr": "Bases partenaires externes de WoRMS",
+                  "ru": "Внешние базы данных — партнёры WoRMS",
+                  "zh": "WoRMS外部合作数据库"
+                },
+                "accessedAt": "2026-09-10"
+              }
+            },
+            "createdAt": "2026-09-10T19:16:31.969Z",
+            "updatedAt": "2026-09-10T19:16:31.969Z"
+          },
+          {
+            "id": "rel-flanders-marine-institute-operates-world-register-of-marine-species",
+            "sourceNodeId": "flanders-marine-institute",
+            "targetNodeId": "worms",
+            "kind": "operates",
+            "note": "VLIZ operates infrastructure; the elected Steering Committee has scientific policy authority. Advisory and operational roles are distinct.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-worms"
+              ]
+            },
+            "sources": {
+              "src-relationship-worms": {
+                "id": "src-relationship-worms",
+                "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+                "title": {
+                  "ar": "اختصاصات WoRMS",
+                  "en": "WoRMS terms of reference",
+                  "es": "Términos de referencia de WoRMS",
+                  "fr": "Mandat de WoRMS",
+                  "ru": "Положение о деятельности WoRMS",
+                  "zh": "WoRMS职权范围"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.459Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-worms-steering-committee-governs-worms",
+            "sourceNodeId": "worms-steering-committee",
+            "targetNodeId": "worms",
+            "kind": "governs",
+            "note": "Scientific policy authority under the terms of reference.",
+            "properties": {
+              "scope": "Scientific policy; VLIZ retains technical operation",
+              "sourceRefs": [
+                "src-relationship-worms"
+              ]
+            },
+            "sources": {
+              "src-relationship-worms": {
+                "id": "src-relationship-worms",
+                "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+                "title": {
+                  "ar": "اختصاصات WoRMS",
+                  "en": "WoRMS terms of reference",
+                  "es": "Términos de referencia de WoRMS",
+                  "fr": "Mandat de WoRMS",
+                  "ru": "Положение о деятельности WoRMS",
+                  "zh": "WoRMS职权范围"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:33:43.034Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "ena",
+      "readAt": "2026-09-11T01:28:38.471Z",
+      "httpStatus": 200,
+      "response": {
+        "id": "ena",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+        "recordDepth": "thin",
+        "title": "European Nucleotide Archive",
+        "summary": "Major open sequence archive and INSDC member",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:02:28.495Z",
+        "recordUpdatedAt": "2026-09-10T20:02:28.495Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 8,
+          "resolvedSources": 8,
+          "issues": [
+            {
+              "recordId": "ena",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "ena",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ena",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ena",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ena",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ena",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "ena",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "ena",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+          "recordDepth": "thin",
+          "sources": {
+            "src-ena-what": {
+              "id": "src-ena-what",
+              "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+              "title": {
+                "ar": "ما هو ENA",
+                "en": "What is ENA",
+                "es": "Qué es ENA",
+                "fr": "Qu’est-ce que ENA",
+                "ru": "Что такое ENA",
+                "zh": "ENA是什么"
+              },
+              "accessedAt": "2026-05-26"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "ena-tag-data-type-genomic-sequence",
+                  "label": "sequence_data",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "ena-tag-write-method-federated-sync",
+                "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+                "type": "partner_sync",
+                "method": "federated_sync",
+                "source": "src-ena-what"
+              },
+              {
+                "id": "ena-tag-read-method-api",
+                "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+                "type": "read",
+                "method": "api",
+                "source": "src-ena-what"
+              },
+              {
+                "id": "ena-tag-read-method-ftp",
+                "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+                "type": "read",
+                "method": "ftp",
+                "source": "src-ena-what"
+              },
+              {
+                "id": "ena-tag-read-method-web",
+                "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+                "type": "read",
+                "method": "web",
+                "source": "src-ena-what"
+              },
+              {
+                "id": "ena-tag-write-method-api-write",
+                "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+                "type": "submit",
+                "method": "api_write",
+                "source": "src-ena-what"
+              },
+              {
+                "id": "ena-tag-write-method-web-submission",
+                "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+                "type": "submit",
+                "method": "web_submission",
+                "source": "src-ena-what"
+              }
+            ],
+            "gallery": [],
+            "disciplines": [
+              "genetics"
+            ]
+          },
+          "createdAt": "2026-05-26T16:46:26.461Z",
+          "updatedAt": "2026-09-10T20:02:28.495Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "الأرشيف الأوروبي للنيوكليوتيدات",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ENA",
+                "European Nucleotide Archive"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.30737+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:41.232Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "European Nucleotide Archive",
+            "summary": "Major open sequence archive and INSDC member",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "ena-tag-data-type-genomic-sequence",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "ena-tag-write-method-federated-sync",
+                  "label": "Federated sync",
+                  "description": "Submission via Federated sync."
+                },
+                {
+                  "id": "ena-tag-read-method-api",
+                  "label": "API",
+                  "description": "Access via API."
+                },
+                {
+                  "id": "ena-tag-read-method-ftp",
+                  "label": "FTP",
+                  "description": "Access via FTP."
+                },
+                {
+                  "id": "ena-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "Access via Web UI."
+                },
+                {
+                  "id": "ena-tag-write-method-api-write",
+                  "label": "API write",
+                  "description": "Submission via API write."
+                },
+                {
+                  "id": "ena-tag-write-method-web-submission",
+                  "label": "Web submission",
+                  "description": "Submission via Web submission."
+                }
+              ],
+              "aliases": [
+                "ENA"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:02:28.471Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.374289+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.461Z",
+            "updatedAt": "2026-09-10T20:02:28.471Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Archivo Europeo de Nucleótidos",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ENA",
+                "European Nucleotide Archive"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.308508+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:41.232Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Archive européenne des nucléotides",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ENA",
+                "European Nucleotide Archive"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.307596+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:41.232Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Европейский нуклеотидный архив",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ENA",
+                "European Nucleotide Archive"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.307691+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:41.232Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "欧洲核苷酸档案库",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ENA",
+                "European Nucleotide Archive"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.307482+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:18:41.232Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "link-ddbj-ena",
+            "sourceNodeId": "ddbj",
+            "targetNodeId": "ena",
+            "kind": "syncs_to",
+            "note": "INSDC members exchange sequence data and corrections at regular intervals.",
+            "properties": {
+              "scope": "Sequence archive exchange",
+              "sourceRefs": [
+                "src-relationship-insdc"
+              ]
+            },
+            "sources": {
+              "src-relationship-insdc": {
+                "id": "src-relationship-insdc",
+                "url": "https://www.insdc.org/about-insdc/",
+                "title": {
+                  "ar": "العضوية وتبادل البيانات في INSDC",
+                  "en": "INSDC membership and exchange",
+                  "es": "Membresía e intercambio de datos de INSDC",
+                  "fr": "Adhésion et échange de données au sein de l’INSDC",
+                  "ru": "Членство и обмен данными в INSDC",
+                  "zh": "INSDC成员与数据交换"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.465Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "link-ena-genbank",
+            "sourceNodeId": "ena",
+            "targetNodeId": "genbank",
+            "kind": "syncs_to",
+            "note": "INSDC members exchange sequence data and corrections at regular intervals.",
+            "properties": {
+              "scope": "Sequence archive exchange",
+              "sourceRefs": [
+                "src-relationship-insdc"
+              ]
+            },
+            "sources": {
+              "src-relationship-insdc": {
+                "id": "src-relationship-insdc",
+                "url": "https://www.insdc.org/about-insdc/",
+                "title": {
+                  "ar": "العضوية وتبادل البيانات في INSDC",
+                  "en": "INSDC membership and exchange",
+                  "es": "Membresía e intercambio de datos de INSDC",
+                  "fr": "Adhésion et échange de données au sein de l’INSDC",
+                  "ru": "Членство и обмен данными в INSDC",
+                  "zh": "INSDC成员与数据交换"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.465Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-embl-ebi-operates-european-nucleotide-archive",
+            "sourceNodeId": "embl-ebi",
+            "targetNodeId": "ena",
+            "kind": "operates",
+            "note": "EMBL-EBI operates ENA; participating INSDC archive with reciprocal sequence exchange. EMBL is separate from the EU.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-ena"
+              ]
+            },
+            "sources": {
+              "src-relationship-ena": {
+                "id": "src-relationship-ena",
+                "url": "https://www.insdc.org/about-insdc/",
+                "title": {
+                  "ar": "العضوية وتبادل البيانات في INSDC",
+                  "en": "INSDC membership and exchange",
+                  "es": "Membresía e intercambio de datos de INSDC",
+                  "fr": "Adhésion et échange de données au sein de l’INSDC",
+                  "ru": "Членство и обмен данными в INSDC",
+                  "zh": "INSDC成员与数据交换"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.461Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-ena-member-of-insdc",
+            "sourceNodeId": "ena",
+            "targetNodeId": "insdc",
+            "kind": "member_of",
+            "note": "Participating sequence archive in INSDC.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-insdc"
+              ]
+            },
+            "sources": {
+              "src-relationship-insdc": {
+                "id": "src-relationship-insdc",
+                "url": "https://www.insdc.org/about-insdc/",
+                "title": {
+                  "ar": "العضوية وتبادل البيانات في INSDC",
+                  "en": "INSDC membership and exchange",
+                  "es": "Membresía e intercambio de datos de INSDC",
+                  "fr": "Adhésion et échange de données au sein de l’INSDC",
+                  "ru": "Членство и обмен данными в INSDC",
+                  "zh": "INSDC成员与数据交换"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:33:10.656Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-ena-syncs-to-ddbj",
+            "sourceNodeId": "ena",
+            "targetNodeId": "ddbj",
+            "kind": "syncs_to",
+            "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-insdc"
+              ]
+            },
+            "sources": {
+              "src-relationship-insdc": {
+                "id": "src-relationship-insdc",
+                "url": "https://www.insdc.org/about-insdc/",
+                "title": {
+                  "ar": "العضوية وتبادل البيانات في INSDC",
+                  "en": "INSDC membership and exchange",
+                  "es": "Membresía e intercambio de datos de INSDC",
+                  "fr": "Adhésion et échange de données au sein de l’INSDC",
+                  "ru": "Членство и обмен данными в INSDC",
+                  "zh": "INSDC成员与数据交换"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:46.033Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-ena-syncs-to-mgnify",
+            "sourceNodeId": "ena",
+            "targetNodeId": "mgnify",
+            "kind": "syncs_to",
+            "note": "ENA sequencing data are retrieved for MGnify analysis.",
+            "properties": {
+              "scope": "Analysis inputs; not complete archive mirroring",
+              "sourceRefs": [
+                "src-relationship-mgnify"
+              ]
+            },
+            "sources": {
+              "src-relationship-mgnify": {
+                "id": "src-relationship-mgnify",
+                "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+                "title": {
+                  "ar": "تدفق البيانات في MGnify",
+                  "en": "MGnify data flow",
+                  "es": "Flujo de datos de MGnify",
+                  "fr": "Flux de données de MGnify",
+                  "ru": "Поток данных MGnify",
+                  "zh": "MGnify数据流程"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:33:15.890Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          {
+            "id": "rel-genbank-syncs-to-ena",
+            "sourceNodeId": "genbank",
+            "targetNodeId": "ena",
+            "kind": "syncs_to",
+            "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
+            "properties": {
+              "sourceRefs": [
+                "src-relationship-insdc"
+              ]
+            },
+            "sources": {
+              "src-relationship-insdc": {
+                "id": "src-relationship-insdc",
+                "url": "https://www.insdc.org/about-insdc/",
+                "title": {
+                  "ar": "العضوية وتبادل البيانات في INSDC",
+                  "en": "INSDC membership and exchange",
+                  "es": "Membresía e intercambio de datos de INSDC",
+                  "fr": "Adhésion et échange de données au sein de l’INSDC",
+                  "ru": "Членство и обмен данными в INSDC",
+                  "zh": "INSDC成员与数据交换"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-09-09T18:32:52.793Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    },
+    {
+      "id": "deepdata",
+      "readAt": "2026-09-11T01:28:38.476Z",
+      "httpStatus": 404,
+      "response": {
+        "error": "record not found: deepdata"
+      }
+    },
+    {
+      "id": "protected-planet",
+      "readAt": "2026-09-11T01:28:38.478Z",
+      "httpStatus": 404,
+      "response": {
+        "error": "record not found: protected-planet"
+      }
+    },
+    {
+      "id": "global-fishing-watch",
+      "readAt": "2026-09-11T01:28:38.476Z",
+      "httpStatus": 404,
+      "response": {
+        "error": "record not found: global-fishing-watch"
+      }
+    },
+    {
+      "id": "abs-clearing-house",
+      "readAt": "2026-09-11T01:28:38.475Z",
+      "httpStatus": 404,
+      "response": {
+        "error": "record not found: abs-clearing-house"
+      }
+    },
+    {
+      "id": "oceanteacher",
+      "readAt": "2026-09-11T01:28:38.477Z",
+      "httpStatus": 404,
+      "response": {
+        "error": "record not found: oceanteacher"
+      }
+    },
+    {
+      "id": "odis",
+      "readAt": "2026-09-11T01:28:38.482Z",
+      "httpStatus": 200,
+      "response": {
+        "id": "odis",
+        "kind": "system",
+        "countryCode": null,
+        "url": "https://oceaninfohub.org/odis/",
+        "recordDepth": "thin",
+        "title": "Ocean Data and Information System",
+        "summary": "Interoperability layer and federation of distributed ocean systems",
+        "availableLocales": [
+          "ar",
+          "zh",
+          "en",
+          "fr",
+          "ru",
+          "es"
+        ],
+        "missingLocales": [],
+        "reviewStatesByLocale": {
+          "ar": "needs_revision",
+          "en": "needs_revision",
+          "es": "needs_revision",
+          "fr": "needs_revision",
+          "ru": "needs_revision",
+          "zh": "needs_revision"
+        },
+        "requestedLocale": "en",
+        "displayLocale": "en",
+        "isLocaleFallback": false,
+        "updatedAt": "2026-09-10T20:03:04.678Z",
+        "recordUpdatedAt": "2026-09-10T20:03:04.678Z",
+        "sourceCompleteness": {
+          "status": "partial",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": [
+            {
+              "recordId": "odis",
+              "path": "record.properties.data.descriptors[0].source",
+              "message": "a source ID is required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.ar.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.en.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.es.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.fr.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.ru.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            },
+            {
+              "recordId": "odis",
+              "path": "localizations.zh.details.profile.sourceRefs",
+              "message": "profile source references are required"
+            }
+          ]
+        },
+        "record": {
+          "id": "odis",
+          "kind": "system",
+          "countryCode": null,
+          "url": "https://oceaninfohub.org/odis/",
+          "recordDepth": "thin",
+          "sources": {
+            "src-odis": {
+              "id": "src-odis",
+              "url": "https://oceaninfohub.org/odis/",
+              "title": {
+                "ar": "ODIS",
+                "en": "ODIS",
+                "es": "ODIS",
+                "fr": "ODIS",
+                "ru": "ODIS",
+                "zh": "ODIS"
+              },
+              "accessedAt": "2026-05-26"
+            }
+          },
+          "properties": {
+            "data": {
+              "descriptors": [
+                {
+                  "id": "odis-tag-data-type-metadata-catalog-registry",
+                  "label": "catalogue_records",
+                  "source": null,
+                  "category": "type"
+                }
+              ],
+              "recordCount": null,
+              "storageSize": null
+            },
+            "usage": [],
+            "access": [
+              {
+                "id": "odis-tag-write-method-harvested-node",
+                "url": "https://oceaninfohub.org/odis/",
+                "type": "partner_sync",
+                "method": "harvested_node",
+                "source": "src-odis"
+              },
+              {
+                "id": "odis-tag-read-method-dashboard-viewer",
+                "url": "https://oceaninfohub.org/odis/",
+                "type": "read",
+                "method": "dashboard_viewer",
+                "source": "src-odis"
+              },
+              {
+                "id": "odis-tag-read-method-harvest",
+                "url": "https://oceaninfohub.org/odis/",
+                "type": "read",
+                "method": "harvest",
+                "source": "src-odis"
+              },
+              {
+                "id": "odis-tag-read-method-web",
+                "url": "https://oceaninfohub.org/odis/",
+                "type": "read",
+                "method": "web",
+                "source": "src-odis"
+              }
+            ],
+            "gallery": [],
+            "disciplines": []
+          },
+          "createdAt": "2026-05-26T16:46:26.464Z",
+          "updatedAt": "2026-09-10T20:03:04.678Z"
+        },
+        "localizations": {
+          "ar": {
+            "locale": "ar",
+            "title": "نظام بيانات ومعلومات المحيط",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ODIS",
+                "Ocean Data and Information System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.346059+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:24.145Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "en": {
+            "locale": "en",
+            "title": "Ocean Data and Information System",
+            "summary": "Interoperability layer and federation of distributed ocean systems",
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [
+                  {
+                    "id": "odis-tag-data-type-metadata-catalog-registry",
+                    "description": null
+                  }
+                ],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [
+                {
+                  "id": "odis-tag-write-method-harvested-node",
+                  "label": "Harvested node",
+                  "description": "Submission via Harvested node."
+                },
+                {
+                  "id": "odis-tag-read-method-dashboard-viewer",
+                  "label": "Dashboard / viewer",
+                  "description": "Access via Dashboard / viewer."
+                },
+                {
+                  "id": "odis-tag-read-method-harvest",
+                  "label": "Harvest",
+                  "description": "Access via Harvest."
+                },
+                {
+                  "id": "odis-tag-read-method-web",
+                  "label": "Web UI",
+                  "description": "Access via Web UI."
+                }
+              ],
+              "aliases": [
+                "ODIS"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": null,
+            "contentUpdatedAt": "2026-09-10T20:03:04.655Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.285626+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-05-26T16:46:26.464Z",
+            "updatedAt": "2026-09-10T20:03:04.655Z"
+          },
+          "es": {
+            "locale": "es",
+            "title": "Sistema de Datos e Información Oceánicos",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ODIS",
+                "Ocean Data and Information System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.346479+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:24.145Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "fr": {
+            "locale": "fr",
+            "title": "Système de données et d'information océaniques",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ODIS",
+                "Ocean Data and Information System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.346265+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:24.145Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "ru": {
+            "locale": "ru",
+            "title": "Система океанических данных и информации",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ODIS",
+                "Ocean Data and Information System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.346369+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:24.145Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          },
+          "zh": {
+            "locale": "zh",
+            "title": "海洋数据与信息系统",
+            "summary": null,
+            "description": null,
+            "details": {
+              "data": {
+                "descriptors": [],
+                "recordCount": null,
+                "storageSize": null
+              },
+              "usage": [],
+              "access": [],
+              "aliases": [
+                "ODIS",
+                "Ocean Data and Information System"
+              ],
+              "gallery": []
+            },
+            "translatedFromLocale": "en",
+            "contentUpdatedAt": "2026-09-04T02:19:24.145Z",
+            "review": {
+              "date": "2026-09-09T18:28:57.346158+00:00",
+              "note": "Country affiliation fields retired; relationship review is required.",
+              "state": "needs_revision",
+              "reviewer": null
+            },
+            "createdAt": "2026-09-04T02:19:24.145Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        },
+        "edges": [
+          {
+            "id": "rel-ioc-unesco-iode-operates-ocean-data-and-information-system",
+            "sourceNodeId": "ioc-unesco-iode",
+            "targetNodeId": "odis",
+            "kind": "operates",
+            "note": "IODE coordinates distributed infrastructure under IOC; independent connected systems retain their own governance.",
+            "properties": {
+              "scope": "Programme/team operation; no exclusivity inferred",
+              "sourceRefs": [
+                "src-relationship-odis"
+              ]
+            },
+            "sources": {
+              "src-relationship-odis": {
+                "id": "src-relationship-odis",
+                "url": "https://oceaninfohub.org/odis/",
+                "title": {
+                  "ar": "نظام بيانات ومعلومات المحيطات",
+                  "en": "Ocean Data and Information System",
+                  "es": "Sistema de Datos e Información Oceánicos",
+                  "fr": "Système de données et d’informations océaniques",
+                  "ru": "Система океанических данных и информации",
+                  "zh": "海洋数据与信息系统"
+                },
+                "accessedAt": "2026-09-09"
+              }
+            },
+            "createdAt": "2026-05-26T16:46:26.464Z",
+            "updatedAt": "2026-09-09T19:42:13.505Z"
+          }
+        ],
+        "routes": []
+      }
+    }
+  ]
+}

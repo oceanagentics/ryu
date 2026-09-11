@@ -1,0 +1,86 @@
+[
+  {
+    "id": "protected-planet",
+    "status": 404,
+    "response": {
+      "error": "record not found: protected-planet"
+    }
+  },
+  {
+    "id": "unep",
+    "status": 404,
+    "response": {
+      "error": "record not found: unep"
+    }
+  },
+  {
+    "id": "iucn",
+    "status": 404,
+    "response": {
+      "error": "record not found: iucn"
+    }
+  },
+  {
+    "id": "unep-wcmc",
+    "status": 404,
+    "response": {
+      "error": "record not found: unep-wcmc"
+    }
+  },
+  {
+    "id": "arcadia",
+    "status": 404,
+    "response": {
+      "error": "record not found: arcadia"
+    }
+  },
+  {
+    "id": "proteus-partnership",
+    "status": 404,
+    "response": {
+      "error": "record not found: proteus-partnership"
+    }
+  },
+  {
+    "id": "bezos-earth-fund",
+    "status": 404,
+    "response": {
+      "error": "record not found: bezos-earth-fund"
+    }
+  },
+  {
+    "id": "usgs",
+    "status": 404,
+    "response": {
+      "error": "record not found: usgs"
+    }
+  },
+  {
+    "id": "dutch-caribbean-nature-alliance",
+    "status": 404,
+    "response": {
+      "error": "record not found: dutch-caribbean-nature-alliance"
+    }
+  },
+  {
+    "id": "ibat",
+    "status": 404,
+    "response": {
+      "error": "record not found: ibat"
+    }
+  },
+  {
+    "id": "google-earth-engine",
+    "status": 404,
+    "response": {
+      "error": "record not found: google-earth-engine"
+    }
+  },
+  {
+    "id": "mpatlas",
+    "status": 404,
+    "response": {
+      "error": "record not found: mpatlas"
+    }
+  }
+]

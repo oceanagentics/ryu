@@ -1,0 +1,187 @@
+{
+  "checkedAt": "2026-09-11T01:08:24.908Z",
+  "draftSha256": "4fec87534607c2df081a9e13d10f1a7ad6a114b225d40da711590236b6dcf473",
+  "endpointDraftsSha256": "509620c6dc0a07eac404f28c7d38492e7c5189f669ead9879df706a114d70926",
+  "records": [
+    {
+      "id": "abs-clearing-house",
+      "shape": {
+        "valid": true,
+        "recordId": "abs-clearing-house",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "abs-clearing-house",
+        "issues": [],
+        "warnings": [
+          "No gallery: acceptable when no useful, accessible capture is available.",
+          "No approved machine route is recorded.",
+          "Documented research gaps remain; omitted values have not been invented."
+        ],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 36,
+          "resolvedSources": 36,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "cbd-secretariat",
+      "shape": {
+        "valid": true,
+        "recordId": "cbd-secretariat",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "cbd-secretariat",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "nagoya-protocol-cop-mop",
+      "shape": {
+        "valid": true,
+        "recordId": "nagoya-protocol-cop-mop",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "nagoya-protocol-cop-mop",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "declare",
+      "shape": {
+        "valid": true,
+        "recordId": "declare",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "declare",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 3,
+          "resolvedSources": 3,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "defra",
+      "shape": {
+        "valid": true,
+        "recordId": "defra",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "defra",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "moefcc",
+      "shape": {
+        "valid": true,
+        "recordId": "moefcc",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "moefcc",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "rel-nagoya-protocol-cop-mop-governs-abs-clearing-house",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-cbd-secretariat-operates-abs-clearing-house",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-eur-funds-abs-clearing-house",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-jpn-funds-abs-clearing-house",
+      "sourceKind": "country",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-deu-funds-abs-clearing-house",
+      "sourceKind": "country",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-cbd-secretariat-publishes-to-abs-clearing-house",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-defra-publishes-to-abs-clearing-house",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-moefcc-publishes-to-abs-clearing-house",
+      "sourceKind": "organization",
+      "targetKind": "system",
+      "valid": true
+    },
+    {
+      "id": "rel-declare-syncs-to-abs-clearing-house",
+      "sourceKind": "system",
+      "targetKind": "system",
+      "valid": true
+    }
+  ]
+}

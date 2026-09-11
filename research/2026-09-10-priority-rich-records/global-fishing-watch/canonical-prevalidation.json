@@ -1,0 +1,1721 @@
+{
+  "checkedAt": "2026-09-11T01:03:41.049683+00:00",
+  "records": [
+    {
+      "id": "global-fishing-watch",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: global-fishing-watch"
+        }
+      }
+    },
+    {
+      "id": "global-fishing-watch-operator",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: global-fishing-watch-operator"
+        }
+      }
+    },
+    {
+      "id": "kpler",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: kpler"
+        }
+      }
+    },
+    {
+      "id": "planet-labs",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: planet-labs"
+        }
+      }
+    },
+    {
+      "id": "trygg-mat-tracking",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: trygg-mat-tracking"
+        }
+      }
+    },
+    {
+      "id": "fisheries-analytical-capacity-tool",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: fisheries-analytical-capacity-tool"
+        }
+      }
+    },
+    {
+      "id": "norwegian-directorate-of-fisheries",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: norwegian-directorate-of-fisheries"
+        }
+      }
+    },
+    {
+      "id": "brazil-ministry-fisheries-aquaculture",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: brazil-ministry-fisheries-aquaculture"
+        }
+      }
+    },
+    {
+      "id": "incopesca",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: incopesca"
+        }
+      }
+    },
+    {
+      "id": "panama-aquatic-resources-authority",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: panama-aquatic-resources-authority"
+        }
+      }
+    },
+    {
+      "id": "peru-ministry-production",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: peru-ministry-production"
+        }
+      }
+    },
+    {
+      "id": "sernapesca",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: sernapesca"
+        }
+      }
+    },
+    {
+      "id": "ecuador-dirnea",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: ecuador-dirnea"
+        }
+      }
+    },
+    {
+      "id": "belize-high-seas-fisheries-unit",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: belize-high-seas-fisheries-unit"
+        }
+      }
+    },
+    {
+      "id": "papua-new-guinea-national-fisheries-authority",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: papua-new-guinea-national-fisheries-authority"
+        }
+      }
+    },
+    {
+      "id": "protectedseas-navigator",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: protectedseas-navigator"
+        }
+      }
+    },
+    {
+      "id": "skylight",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: skylight"
+        }
+      }
+    },
+    {
+      "id": "google-bigquery",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: google-bigquery"
+        }
+      }
+    },
+    {
+      "id": "arcgis-online",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: arcgis-online"
+        }
+      }
+    },
+    {
+      "id": "dalio-philanthropies",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: dalio-philanthropies"
+        }
+      }
+    },
+    {
+      "id": "audacious-project",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: audacious-project"
+        }
+      }
+    },
+    {
+      "id": "hans-wilsdorf-foundation",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: hans-wilsdorf-foundation"
+        }
+      }
+    },
+    {
+      "id": "islas-secas-foundation",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: islas-secas-foundation"
+        }
+      }
+    },
+    {
+      "id": "walmart-foundation",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: walmart-foundation"
+        }
+      }
+    },
+    {
+      "id": "minderoo-foundation",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: minderoo-foundation"
+        }
+      }
+    },
+    {
+      "id": "sall-family-foundation",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: sall-family-foundation"
+        }
+      }
+    },
+    {
+      "id": "oceana",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [
+            {
+              "id": "cioos",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://catalogue.cioos.ca/about",
+              "recordDepth": "thin",
+              "title": "Canadian Integrated Ocean Observing System",
+              "summary": "National federation of regional ocean data catalogues in Canada",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:18.425Z",
+              "recordUpdatedAt": "2026-09-10T20:02:18.425Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "eurobis",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://www.eurobis.org/",
+              "recordDepth": "thin",
+              "title": "European Ocean Biodiversity Information System",
+              "summary": "European OBIS node and regional biodiversity publishing service",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:30.906Z",
+              "recordUpdatedAt": "2026-09-10T20:02:30.906Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "fisheries-and-oceans-canada",
+              "kind": "organization",
+              "countryCode": null,
+              "url": "https://cioos.ca/about-us/",
+              "recordDepth": "stub",
+              "title": "Fisheries and Oceans Canada",
+              "summary": "Canadian federal department supporting CIOOS.",
+              "availableLocales": [
+                "en"
+              ],
+              "missingLocales": [
+                "ar",
+                "zh",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "reviewStatesByLocale": {
+                "en": "agent_researched"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:34.482Z",
+              "recordUpdatedAt": "2026-09-10T20:02:34.482Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "glodap",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://glodap.info/",
+              "recordDepth": "thin",
+              "title": "Global Ocean Data Analysis Project",
+              "summary": "Global synthesis for interior ocean biogeochemical measurements",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:41.251Z",
+              "recordUpdatedAt": "2026-09-10T20:02:41.251Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "go-ship",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://www.go-ship.org/",
+              "recordDepth": "thin",
+              "title": "Global Ocean Ship-based Hydrographic Investigations Program",
+              "summary": "International repeat hydrography observing programme",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:42.295Z",
+              "recordUpdatedAt": "2026-09-10T20:02:42.295Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "mercator-ocean-international",
+              "kind": "organization",
+              "countryCode": null,
+              "url": "https://www.copernicus.eu/en/copernicus-services/marine",
+              "recordDepth": "stub",
+              "title": "Mercator Ocean International",
+              "summary": "Entrusted implementation of the Copernicus Marine service.",
+              "availableLocales": [
+                "en"
+              ],
+              "missingLocales": [
+                "ar",
+                "zh",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "reviewStatesByLocale": {
+                "en": "agent_researched"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:53.590Z",
+              "recordUpdatedAt": "2026-09-10T20:02:53.590Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "platform-obis",
+              "kind": "system",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "thin",
+              "title": "Ocean Biodiversity Information System (OBIS)",
+              "summary": "Global marine biodiversity system receiving synchronized data from BISMaL.",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:10.745Z",
+              "recordUpdatedAt": "2026-09-10T20:03:10.745Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "odis",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://oceaninfohub.org/odis/",
+              "recordDepth": "thin",
+              "title": "Ocean Data and Information System",
+              "summary": "Interoperability layer and federation of distributed ocean systems",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:04.678Z",
+              "recordUpdatedAt": "2026-09-10T20:03:04.678Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "oceaninfohub",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://oceaninfohub.org/project-overview/",
+              "recordDepth": "thin",
+              "title": "Ocean InfoHub",
+              "summary": "Discovery layer built through ODIS development",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:01.472Z",
+              "recordUpdatedAt": "2026-09-10T20:03:01.472Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "ocean-observatories-initiative",
+              "kind": "organization",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "stub",
+              "title": "Ocean Observatories Initiative",
+              "summary": null,
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:00.974Z",
+              "recordUpdatedAt": "2026-09-10T20:03:00.974Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "ooi-data",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://oceanobservatories.org/data-portal/",
+              "recordDepth": "thin",
+              "title": "Ocean Observatories Initiative Data Portal",
+              "summary": "Access point for OOI array data products",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:05.222Z",
+              "recordUpdatedAt": "2026-09-10T20:03:05.222Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "socat",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://socat.info/",
+              "recordDepth": "thin",
+              "title": "Surface Ocean CO2 Atlas",
+              "summary": "Global community synthesis of surface ocean CO2 observations",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:17.866Z",
+              "recordUpdatedAt": "2026-09-10T20:03:17.866Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "ioos",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://ioos.noaa.gov/about/about-us/",
+              "recordDepth": "thin",
+              "title": "U.S. Integrated Ocean Observing System",
+              "summary": "National observing network with many regional data portals",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:49.907Z",
+              "recordUpdatedAt": "2026-09-10T20:02:49.907Z",
+              "score": 64,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "gebco",
+              "kind": "organization",
+              "countryCode": null,
+              "url": "https://www.gebco.net/",
+              "recordDepth": "thin",
+              "title": "GEBCO",
+              "summary": "International bathymetry program providing global ocean depth data products and web services.",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:36.593Z",
+              "recordUpdatedAt": "2026-09-10T20:02:36.593Z",
+              "score": 57.6,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "cmems-datastore",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://data.marine.copernicus.eu/",
+              "recordDepth": "thin",
+              "title": "Copernicus Marine Data Store",
+              "summary": "Primary download and catalogue entry point for Copernicus Marine",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:19.584Z",
+              "recordUpdatedAt": "2026-09-10T20:02:19.584Z",
+              "score": 48,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "copernicus-marine",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://marine.copernicus.eu/about",
+              "recordDepth": "thin",
+              "title": "Copernicus Marine Service",
+              "summary": "EU marine service for delivery of model and observation products",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:20.218Z",
+              "recordUpdatedAt": "2026-09-10T20:02:20.218Z",
+              "score": 48,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "oregon-dlcd-coastal-gis",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://www.oregon.gov/lcd/about/pages/maps-data-tools.aspx",
+              "recordDepth": "thin",
+              "title": "Oregon DLCD Coastal GIS",
+              "summary": "Oregon coastal planning GIS downloads and services for coastal zone, shoreline, territorial sea, rocky habitat, and planning boundaries.",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-11T00:35:05.838Z",
+              "recordUpdatedAt": "2026-09-11T00:35:05.838Z",
+              "score": 47.36,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "platform-bbnj-chm",
+              "kind": "system",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "thin",
+              "title": "BBNJ Clearing-House Mechanism (CHM)",
+              "summary": "Planned downstream treaty system that may receive synchronized information from OBIS.",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:10.205Z",
+              "recordUpdatedAt": "2026-09-10T20:03:10.205Z",
+              "score": 32.4,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "argovis",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://argovis.colorado.edu/",
+              "recordDepth": "thin",
+              "title": "Argovis",
+              "summary": "Data access platform for colocated ocean profile workflows",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:12.242Z",
+              "recordUpdatedAt": "2026-09-10T20:02:12.242Z",
+              "score": 30.72,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "gebco-web-services",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://www.gebco.net/data-products/gebco-web-services/web-map-service",
+              "recordDepth": "thin",
+              "title": "GEBCO Web Services",
+              "summary": "GEBCO WMS raster service for global bathymetry and ocean relief context.",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-11T00:35:03.799Z",
+              "recordUpdatedAt": "2026-09-11T00:35:03.799Z",
+              "score": 30.72,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "government-of-flanders",
+              "kind": "organization",
+              "countryCode": null,
+              "url": "https://oceaninfohub.org/project-overview/",
+              "recordDepth": "stub",
+              "title": "Government of Flanders",
+              "summary": "Government funder of the Ocean InfoHub project; a subnational authority is modeled as an organization.",
+              "availableLocales": [
+                "en"
+              ],
+              "missingLocales": [
+                "ar",
+                "zh",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "reviewStatesByLocale": {
+                "en": "agent_researched"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:42.808Z",
+              "recordUpdatedAt": "2026-09-10T20:02:42.808Z",
+              "score": 30.72,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "oceanops",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://www.ioc.unesco.org/en/joint-centre-oceanographic-marine-meteorological-observing-programme",
+              "recordDepth": "thin",
+              "title": "OceanOPS",
+              "summary": "Operational support centre for global ocean observing programmes",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:02.064Z",
+              "recordUpdatedAt": "2026-09-10T20:03:02.064Z",
+              "score": 30.72,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "oceansites",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://www.oceansites.org/",
+              "recordDepth": "thin",
+              "title": "OceanSITES",
+              "summary": "Global sustained open ocean time series network",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:03.106Z",
+              "recordUpdatedAt": "2026-09-10T20:03:03.106Z",
+              "score": 30.72,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "cioos-operator",
+              "kind": "organization",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "stub",
+              "title": "CIOOS",
+              "summary": null,
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:19.045Z",
+              "recordUpdatedAt": "2026-09-10T20:02:19.045Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "flanders-marine-institute",
+              "kind": "organization",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "stub",
+              "title": "Flanders Marine Institute",
+              "summary": null,
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:34.998Z",
+              "recordUpdatedAt": "2026-09-10T20:02:34.998Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "glodap-community",
+              "kind": "organization",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "stub",
+              "title": "GLODAP community",
+              "summary": null,
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:41.824Z",
+              "recordUpdatedAt": "2026-09-10T20:02:41.824Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "international-go-ship-community",
+              "kind": "organization",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "stub",
+              "title": "International GO-SHIP community",
+              "summary": null,
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:48.379Z",
+              "recordUpdatedAt": "2026-09-10T20:02:48.379Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "ioc-unesco-iode",
+              "kind": "organization",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "stub",
+              "title": "IOC-UNESCO IODE",
+              "summary": null,
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:49.415Z",
+              "recordUpdatedAt": "2026-09-10T20:02:49.415Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "meopar",
+              "kind": "organization",
+              "countryCode": null,
+              "url": "https://cioos.ca/about-us/",
+              "recordDepth": "stub",
+              "title": "Marine Environmental Observation, Prediction and Response Network",
+              "summary": "Hosts and co-funds the CIOOS Coordination Office with DFO since 2025.",
+              "availableLocales": [
+                "en"
+              ],
+              "missingLocales": [
+                "ar",
+                "zh",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "reviewStatesByLocale": {
+                "en": "agent_researched"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:53.013Z",
+              "recordUpdatedAt": "2026-09-10T20:02:53.013Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "noaa-ioos",
+              "kind": "organization",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "stub",
+              "title": "NOAA IOOS",
+              "summary": null,
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:56.813Z",
+              "recordUpdatedAt": "2026-09-10T20:02:56.813Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "oregon-state-university",
+              "kind": "organization",
+              "countryCode": null,
+              "url": "https://oceanobservatories.org/about-ooi/",
+              "recordDepth": "stub",
+              "title": "Oregon State University",
+              "summary": "Operation of designated OOI components.",
+              "availableLocales": [
+                "en"
+              ],
+              "missingLocales": [
+                "ar",
+                "zh",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "reviewStatesByLocale": {
+                "en": "agent_researched"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:09.172Z",
+              "recordUpdatedAt": "2026-09-10T20:03:09.172Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "socat-community",
+              "kind": "organization",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "stub",
+              "title": "SOCAT community",
+              "summary": null,
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:18.374Z",
+              "recordUpdatedAt": "2026-09-10T20:03:18.374Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "university-of-washington",
+              "kind": "organization",
+              "countryCode": null,
+              "url": "https://oceanobservatories.org/about-ooi/",
+              "recordDepth": "stub",
+              "title": "University of Washington",
+              "summary": "Operation of designated OOI components.",
+              "availableLocales": [
+                "en"
+              ],
+              "missingLocales": [
+                "ar",
+                "zh",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "reviewStatesByLocale": {
+                "en": "agent_researched"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:19.394Z",
+              "recordUpdatedAt": "2026-09-10T20:03:19.394Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "nsf",
+              "kind": "organization",
+              "countryCode": null,
+              "url": "https://www.nsf.gov/about",
+              "recordDepth": "stub",
+              "title": "US National Science Foundation",
+              "summary": "US federal science funding agency.",
+              "availableLocales": [
+                "en"
+              ],
+              "missingLocales": [
+                "ar",
+                "zh",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "reviewStatesByLocale": {
+                "en": "agent_researched"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:59.983Z",
+              "recordUpdatedAt": "2026-09-10T20:02:59.983Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "whoi",
+              "kind": "organization",
+              "countryCode": null,
+              "url": "https://www.bco-dmo.org/about",
+              "recordDepth": "stub",
+              "title": "Woods Hole Oceanographic Institution",
+              "summary": "WHOI operates the BCO-DMO office and designated OOI components.",
+              "availableLocales": [
+                "en"
+              ],
+              "missingLocales": [
+                "ar",
+                "zh",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "reviewStatesByLocale": {
+                "en": "agent_researched"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:03:20.423Z",
+              "recordUpdatedAt": "2026-09-10T20:03:20.423Z",
+              "score": 22.400000000000002,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "bismal",
+              "kind": "system",
+              "countryCode": null,
+              "url": null,
+              "recordDepth": "thin",
+              "title": "BISMaL",
+              "summary": "Japanese biodiversity system that receives publication from JAMSTEC and syncs onward to OBIS.",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:15.603Z",
+              "recordUpdatedAt": "2026-09-10T20:02:15.603Z",
+              "score": 20.48,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "fishbase",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://fishbase.se/home.htm",
+              "recordDepth": "thin",
+              "title": "FishBase",
+              "summary": "Global finfish biodiversity database covering taxonomy, biology, ecology, life history, distributions, fisheries uses, images, references, and collaborator provenance.",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-10T20:02:33.089Z",
+              "recordUpdatedAt": "2026-09-10T20:02:33.089Z",
+              "score": 20.48,
+              "matchedLocale": "en"
+            },
+            {
+              "id": "ecotrust-oregon-fisheries-uses-values",
+              "kind": "system",
+              "countryCode": null,
+              "url": "https://offshorewind.westcoastoceans.org/orowindmap-data-catalog/fishing-ecotrust-uses-and-values-project/",
+              "recordDepth": "thin",
+              "title": "Ecotrust Oregon Marine Fisheries Uses and Values Project",
+              "summary": "Ecotrust Oregon fisheries uses and values layers provide participatory mapping context for commercial and recreational fishing along the Oregon coast.",
+              "availableLocales": [
+                "ar",
+                "zh",
+                "en",
+                "fr",
+                "ru",
+                "es"
+              ],
+              "missingLocales": [],
+              "reviewStatesByLocale": {
+                "ar": "needs_revision",
+                "en": "needs_revision",
+                "es": "needs_revision",
+                "fr": "needs_revision",
+                "ru": "needs_revision",
+                "zh": "needs_revision"
+              },
+              "requestedLocale": "en",
+              "displayLocale": "en",
+              "isLocaleFallback": false,
+              "updatedAt": "2026-09-11T00:35:03.432Z",
+              "recordUpdatedAt": "2026-09-11T00:35:03.432Z",
+              "score": 15.36,
+              "matchedLocale": "en"
+            }
+          ],
+          "nextCursor": null,
+          "total": 38
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: oceana"
+        }
+      }
+    },
+    {
+      "id": "coalition-for-fisheries-transparency",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: coalition-for-fisheries-transparency"
+        }
+      }
+    },
+    {
+      "id": "joint-analytical-cell",
+      "search": {
+        "httpStatus": 200,
+        "body": {
+          "records": [],
+          "nextCursor": null,
+          "total": 0
+        }
+      },
+      "record": {
+        "httpStatus": 404,
+        "body": {
+          "error": "record not found: joint-analytical-cell"
+        }
+      }
+    }
+  ]
+}

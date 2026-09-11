@@ -1,0 +1,354 @@
+{
+  "checkedAt": "2026-09-11T01:03:41.180233+00:00",
+  "method": "limited unauthenticated GET with browser user agent; not a browser rendering test",
+  "results": [
+    {
+      "url": "https://absch.cbd.int/",
+      "owners": [
+        "abs-browse",
+        "abs-clearing-house node",
+        "abs-national-submit",
+        "abs-reference-submit"
+      ],
+      "status": 206,
+      "finalUrl": "https://absch.cbd.int/en/",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false,
+      "markerReview": "The CAPTCHA substring is the normal hidden g-recaptcha element in the ABSCH application shell, not an access challenge. Root Browser rendered the live public IRCC content anonymously."
+    },
+    {
+      "url": "https://www.cbd.int/abs/theabsch.shtml",
+      "owners": [
+        "abs-about"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.cbd.int/abs/theabsch.shtml",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://www.cbd.int/abs/text/articles/default.shtml?sec=abs-14",
+      "owners": [
+        "abs-article14"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.cbd.int/abs/text/articles/default.shtml?sec=abs-14",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://www.cbd.int/abs/text/articles/default.shtml?sec=abs-17",
+      "owners": [
+        "abs-article17"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.cbd.int/abs/text/articles/default.shtml?sec=abs-17",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://www.cbd.int/abs/text/articles?sec=abs-03",
+      "owners": [
+        "abs-scope"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.cbd.int/abs/text/articles?sec=abs-03",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+      "owners": [
+        "abs-modalities"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+      "owners": [
+        "abs-decision2024"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+      "contentType": "application/pdf",
+      "challenge": false
+    },
+    {
+      "url": "https://developer.cbd.int/",
+      "owners": [
+        "abs-api"
+      ],
+      "status": 200,
+      "finalUrl": "https://developer.cbd.int/",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://developer.cbd.int/clearing-house/absch/ircc/solr.html",
+      "owners": [
+        "abs-api-read"
+      ],
+      "status": 206,
+      "finalUrl": "https://developer.cbd.int/clearing-house/absch/ircc/solr.html",
+      "contentType": "text/html;charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://developer.cbd.int/clearing-house/absch/ircc/create.html",
+      "owners": [
+        "abs-api-write"
+      ],
+      "status": 206,
+      "finalUrl": "https://developer.cbd.int/clearing-house/absch/ircc/create.html",
+      "contentType": "text/html;charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://absch.cbd.int/about/accounts",
+      "owners": [
+        "abs-accounts"
+      ],
+      "status": 206,
+      "finalUrl": "https://absch.cbd.int/en/about/accounts",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false,
+      "markerReview": "The CAPTCHA substring is the normal hidden g-recaptcha element in the ABSCH application shell, not an access challenge. Root Browser rendered the live public IRCC content anonymously."
+    },
+    {
+      "url": "https://absch.cbd.int/kb/tags/getting-started/Getting-started-using-the-ABS-Clearing-House-for-Stakeholders/5bbe3a4d64f00600011e20d9",
+      "owners": [
+        "abs-stakeholders"
+      ],
+      "status": 206,
+      "finalUrl": "https://absch.cbd.int/en/kb/tags/getting-started/Getting-started-using-the-ABS-Clearing-House-for-Stakeholders/5bbe3a4d64f00600011e20d9",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false,
+      "markerReview": "The CAPTCHA substring is the normal hidden g-recaptcha element in the ABSCH application shell, not an access challenge. Root Browser rendered the live public IRCC content anonymously."
+    },
+    {
+      "url": "https://absch.cbd.int/commonformats",
+      "owners": [
+        "abs-commonformats",
+        "abs-offline-submit"
+      ],
+      "status": 206,
+      "finalUrl": "https://absch.cbd.int/en/commonformats",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false,
+      "markerReview": "The CAPTCHA substring is the normal hidden g-recaptcha element in the ABSCH application shell, not an access challenge. Root Browser rendered the live public IRCC content anonymously."
+    },
+    {
+      "url": "https://absch.cbd.int/en/database/IRCC/ABSCH-IRCC-ZA-300855-2",
+      "owners": [
+        "abs-ircc-example"
+      ],
+      "status": 206,
+      "finalUrl": "https://absch.cbd.int/en/database/IRCC/ABSCH-IRCC-ZA-300855-2",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false,
+      "markerReview": "The CAPTCHA substring is the normal hidden g-recaptcha element in the ABSCH application shell, not an access challenge. Root Browser rendered the live public IRCC content anonymously."
+    },
+    {
+      "url": "https://www.cbd.int/terms",
+      "owners": [
+        "abs-terms"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.cbd.int/terms",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://absch.cbd.int/api/v2013/documents/3B50BCD4-C829-5953-9528-6FA9375176BB/attachments/An%20Explanatory%20Guide%20to%20the%20Nagoya%20Protocol%20on%20Access%20and%20Benefit-sharing%20%28English%29.pdf",
+      "owners": [
+        "abs-download",
+        "abs-virtual-pdf"
+      ],
+      "status": 200,
+      "finalUrl": "https://absch.cbd.int/api/v2013/documents/3B50BCD4-C829-5953-9528-6FA9375176BB/attachments/202695/An%20Explanatory%20Guide%20to%20the%20Nagoya%20Protocol%20on%20Access%20and%20Benefit-sharing%20(English).pdf",
+      "contentType": "application/pdf",
+      "challenge": false
+    },
+    {
+      "url": "https://www.cbd.int/doc/c/e1c2/4b9c/68bbb45c8d34f6cacf2b9f03/np-absch-iac-2024-01-02-en.pdf",
+      "owners": [
+        "abs-progress2024"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.cbd.int/doc/c/e1c2/4b9c/68bbb45c8d34f6cacf2b9f03/np-absch-iac-2024-01-02-en.pdf",
+      "contentType": "application/pdf",
+      "challenge": false
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsPermit+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "owners": [
+        "abs-ircc-count"
+      ],
+      "status": 200,
+      "finalUrl": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsPermit+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "contentType": "application/json; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsCheckpointCommunique+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "owners": [
+        "abs-cpc-count"
+      ],
+      "status": 200,
+      "finalUrl": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsCheckpointCommunique+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "contentType": "application/json; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3Ameasure+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "owners": [
+        "abs-measure-count"
+      ],
+      "status": 200,
+      "finalUrl": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3Ameasure+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=0&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "contentType": "application/json; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://www.cbd.int/doc/meetings/abs/np-mop-02/information/np-mop-02-inf-03-en.pdf",
+      "owners": [
+        "abs-support2016"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.cbd.int/doc/meetings/abs/np-mop-02/information/np-mop-02-inf-03-en.pdf",
+      "contentType": "application/pdf",
+      "challenge": false
+    },
+    {
+      "url": "https://absch.cbd.int/database/CP/ABSCH-CP-GB-207653",
+      "owners": [
+        "abs-uk-checkpoint"
+      ],
+      "status": 206,
+      "finalUrl": "https://absch.cbd.int/en/database/CP/ABSCH-CP-GB-207653",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false,
+      "markerReview": "The CAPTCHA substring is the normal hidden g-recaptcha element in the ABSCH application shell, not an access challenge. Root Browser rendered the live public IRCC content anonymously."
+    },
+    {
+      "url": "https://dste.py.gov.in/Envispdy/assets/pdf/Action%20Plan/IndiaNationalBiodiversityActionPlan2019.pdf",
+      "owners": [
+        "abs-india2019"
+      ],
+      "status": 206,
+      "finalUrl": "https://dste.py.gov.in/Envispdy/assets/pdf/Action%20Plan/IndiaNationalBiodiversityActionPlan2019.pdf",
+      "contentType": "application/pdf",
+      "challenge": false
+    },
+    {
+      "url": "https://www.naturvardsverket.se/4ac4da/contentassets/09859c1d752d445ab59f06c0544fe6e0/question-and-answer-users.pdf",
+      "owners": [
+        "abs-declare-guide"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.naturvardsverket.se/4ac4da/contentassets/09859c1d752d445ab59f06c0544fe6e0/question-and-answer-users.pdf",
+      "contentType": "application/pdf",
+      "challenge": false
+    },
+    {
+      "url": "https://environment.ec.europa.eu/document/download/c5a15594-3513-441c-978d-e5bc4bc26b53_en?filename=SWD_2026_66_1_EN_document_travail_service_part1_FINAL.pdf",
+      "owners": [
+        "abs-eu2026"
+      ],
+      "status": 206,
+      "finalUrl": "https://environment.ec.europa.eu/document/download/c5a15594-3513-441c-978d-e5bc4bc26b53_en?filename=SWD_2026_66_1_EN_document_travail_service_part1_FINAL.pdf",
+      "contentType": "application/pdf",
+      "challenge": false
+    },
+    {
+      "url": "https://developer.cbd.int/clearing-house/absch/",
+      "owners": [
+        "abs-api-read"
+      ],
+      "status": 206,
+      "finalUrl": "https://developer.cbd.int/clearing-house/absch/",
+      "contentType": "text/html;charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://www.cbd.int/secretariat/",
+      "owners": [
+        "cbd-secretariat node"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.cbd.int/secretariat",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://www.cbd.int/abs/cop-mop/",
+      "owners": [
+        "nagoya-protocol-cop-mop node"
+      ],
+      "status": 404,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://webgate.ec.europa.eu/declare",
+      "owners": [
+        "declare node"
+      ],
+      "status": 307,
+      "error": "HTTP Error 307: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nUnknown"
+    },
+    {
+      "url": "https://green-forum.ec.europa.eu/nature-and-biodiversity/access-and-benefit-sharing-abs-implementation-eu-abs-regulation_en",
+      "owners": [
+        "abs-declare-link"
+      ],
+      "status": 206,
+      "finalUrl": "https://green-forum.ec.europa.eu/nature-and-biodiversity/access-and-benefit-sharing-abs-implementation-eu-abs-regulation_en",
+      "contentType": "text/html; charset=UTF-8",
+      "challenge": false
+    },
+    {
+      "url": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",
+      "owners": [
+        "defra node"
+      ],
+      "status": 206,
+      "finalUrl": "https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs",
+      "contentType": "text/html; charset=utf-8",
+      "challenge": false
+    },
+    {
+      "url": "https://moef.gov.in/",
+      "owners": [
+        "moefcc node"
+      ],
+      "status": 200,
+      "finalUrl": "https://moef.gov.in/",
+      "contentType": "text/html; charset=UTF-8",
+      "challenge": false
+    },
+    {
+      "url": "https://www.cbd.int/abs/text/articles?sec=abs-26",
+      "owners": [
+        "nagoya-protocol-cop-mop node"
+      ],
+      "status": 206,
+      "challenge": false
+    }
+  ],
+  "corrections": [
+    {
+      "oldUrl": "https://www.cbd.int/abs/cop-mop/",
+      "status": 404,
+      "replacement": "https://www.cbd.int/abs/text/articles?sec=abs-26",
+      "replacementStatus": 206,
+      "scope": "Formal treaty article establishing COP-MOP role; do not confuse with Cartagena COP-MOP."
+    }
+  ],
+  "notes": [
+    "DECLARE redirects toward the EC login flow; endpoint draft is a minimal identity, no public data route asserted.",
+    "The initial CAPTCHA-marker heuristic matched hidden app code; successful root Browser content rendering and public JSON retrieval resolve that false positive."
+  ]
+}

@@ -1,0 +1,66 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+  packageId="https://datasets.obis.org/deepdata" system="http://gbif.org" scope="system"
+  xml:lang="eng">
+
+<dataset>
+  <title xml:lang="eng">DORDPMN12018 Env Mn Bio</title>
+  <pubDate>2026-04-20</pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>Sampling data captured in Oceanic Exploration Research In accordance with Section 10, Appendix II of the Contract for Exploration, Deep Ocean Resources Development Co., Ltd. (DORD) hereby submits to the International Seabed Authority (ISA) the Annual Report for 2018 (the 3 rd year of the 5-year plan (June 2016 – June 2021)) on the ex ploration of polymetallic nodules. This report contains our activities conducted in 2018 as follows: Survey cruise in DORD’s license area from 18 September to 8 October 2018 Geological analysis on the resource data collected from th e cruise surveyconducted in 2017; Environmental analysis on samples collected from the cruise survey conductedin 2017; Consideration on a collector system Research and development on mining systems and metallurgical processing Economic assessment Training Programme Other items included in this report are a certified financial statement of actual and direct exploration expenditure and a program of activities for the following year.</para>
+  </abstract>
+  <keywordSet>
+    <keyword>Occurrence</keyword>
+    <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+  </keywordSet>
+  <intellectualRights>
+    <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+  </intellectualRights>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>unkown</maintenanceUpdateFrequency>
+  </maintenance>
+  <creator>
+    <individualName>
+    <givenName></givenName>
+    <surName></surName>
+    </individualName>
+    <organizationName>Deep Ocean Resources Development Co. Ltd.</organizationName>
+    <positionName></positionName>
+    <electronicMailAddress></electronicMailAddress>
+  </creator>
+  <metadataProvider>
+    <individualName>
+    <givenName>Sheldon</givenName>
+    <surName>Carter</surName>
+    </individualName>
+    <organizationName>International Seabed Authority</organizationName>
+    <positionName>Database Manager</positionName>
+    <electronicMailAddress>scarter@isa.org.jm</electronicMailAddress>
+  </metadataProvider>
+  <contact>
+    <individualName>
+    <givenName>Sheldon</givenName>
+    <surName>Carter</surName>
+    </individualName>
+    <organizationName>International Seabed Authority</organizationName>
+    <positionName>Database Manager</positionName>
+    <electronicMailAddress>scarter@isa.org.jm</electronicMailAddress>
+  </contact>
+</dataset>
+<additionalMetadata>
+<metadata>
+<gbif>
+  <dateStamp>2026-04-20T20:08:25+0200</dateStamp>
+  <hierarchyLevel>dataset</hierarchyLevel>
+  <citation>Deep Ocean Resources Development Co. Ltd., (2018). DORDPMN12018 Env Mn Bio. Available : DeepData, International Seabed Authority https://data.isa.org.jm/ Accessed: [YYYY-MM-DD].</citation>
+</gbif>
+</metadata>
+</additionalMetadata>
+</eml:eml>
+

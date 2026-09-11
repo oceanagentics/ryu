@@ -1,0 +1,1881 @@
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+              OCEANTEACHER GLOBAL ACADEMY
+             COURSE MANAGEMENT GUIDELINES
+                               Version 5.0​
+                             November 2025
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+                                                  Document History
+
+                                  The version status of this document is the same for all pages
+
+Version                     DESCRIPTION OF CHANGE                            Date                   Author          Approved
+
+  1.0     Initial version                                                August 2016          C Delgado, G Reed,    C Delgado
+                                                                                               K de Lichtervelde
+
+  1.1     Add Copyright and Recording Consent Form (section                May 2017                 G Reed          C Delgado
+          3.2.3)
+          Revise course activities section and add process
+  2                                                                     December 2017               G Reed          C Delgado
+          diagrams. Change terminology to follow ISO 29990
+          definitions. Revise Annex D. OTGA Back Office
+          Include requirement to complete Competency
+  2.1                                                                     April 2018                G Reed          C Delgado
+          Assessment Form (3.1.2), mandatory training (new
+          section), record attendance (new section), update
+          process diagrams.
+          Include system for handling complaints (section 3.3.1)
+  2.2                                                                    20 April 2018              G Reed          C Delgado
+          Revise competency assessment requirements (section
+  2.3                                                                   February 2019             G Reed, K de      C Delgado
+          3.1.3), add GDPR consent form, update process
+                                                                                                  Lichtervelde
+          diagrams (Annex F, Annex H)
+          Complete revision to include requirements for OTGA-2
+  3.0                                                                      May 2021          G Reed, C Delgado,     C Delgado
+                                                                                             K de Lichtervelde, S
+                                                                                                  de Baenst
+          Update UNESCO-IOC logos, add feedback survey
+  3.1                                                                    October 2021               G Reed          C Delgado
+          template, certificate template, course design rubric
+          Revise section 3.3; add section 3.7 Cancellation Policy;
+  3.2                                                                      July 2022                G Reed          C Delgado
+          update section 8.3 on Copyright
+          General revision
+  3.3                                                                    January 2023               G. Reed         C Delgado
+          Complete revision
+  4.0                                                                  November 2024                G Reed           ACA
+                                                                                                                    Mazzuco
+          General revision to comply with OTGA Terms of
+  5.0                                                                  November 2025          ACA Mazzuco, S de      ACA
+          Reference. Sections added and/or modified:
+                                                                                                 Baenst, CO         Mazzuco
+                                                                                                  Moulaye
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+For bibliographic purposes, this document should be cited as follows:
+OceanTeacher Global Academy Course Management Guidelines.​
+Oostende, Belgium, UNESCO-IOC Project Office for IODE, 52pp. 2026. (Document No. OTGA01)
+
+
+© UNESCO 2026
+Unless otherwise stated, all OceanTeacher Global Academy material is licensed under
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+
+
+
+
+Page | 3 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+TABLE OF CONTENT
+1. Purpose of the Guide​                                     6
+2. Introduction to OTGA​                                     6
+    2.1 Core Learning Services and Governance​                8
+3. Course Planning​                                          10
+    3.1 Course proposal​                                     12
+    3.2 Lesson plan​                                         13
+    3.3 Course announcement​                                 13
+    3.4 Course facilitators​                                 14
+        3.4.1 Professional development plan and reporting​   15
+    3.5 Course fees​                                         15
+    3.6 Course applications​                                 15
+    3.7 Cancellation policy​                                 15
+    3.8 Participant selection​                               16
+        3.8.1 Eligibility check​                             16
+        3.8.2 Selection committee​                           16
+        3.8.3 Scoring applications​                          17
+    3.9 Official invitation to selected participants​        17
+    3.10 Feedback to unsuccessful applicants​                18
+    3.11 Local information to participants​                  18
+4. Course Design​                                            19
+    4.1 OceanTeacher Global Academy e-Learning Platform​     19
+        4.1.1. Active policies​                              20
+    4.2 Course templates​                                    21
+    4.3. Moodle resources​                                   22
+    4.4. Moodle assessment activities​                       23
+5. Course Facilitation​                                      25
+    5.1 Course enrolment​                                    25
+        5.1.1 Enrolment disclaimer​                          26
+    5.2 Record attendance​                                   26
+    5.3 Learner assessment​                                  26
+    5.4 Course completion​                                   27
+    5.5 Certificates​                                        27
+    5.6 Web conferencing​                                    27
+6. Course Feedback and Evaluation​                           28
+    6.1 Course evaluation​                                   28
+    6.2 Rate this module​                                    28
+    6.3 Complaints​                                          29
+    6.4 Class observation​                                   29
+
+
+
+Page | 4 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+    6.5 RTC/STC Performance evaluation​                             29
+7. Onsite courses Administration Procedures​                        30
+    7.1 Travel grants​                                              30
+    7.2 Contract for services​                                      31
+    7.3 Visas​                                                      32
+    7.4 Ground transport​                                           32
+8. Quality Management​                                              32
+    8.1 Course Design Rubric​                                       33
+    8.2 Quality Management System for Learning Service Providers​   33
+    8.3 Copyright​                                                  33
+Annex A. Course Planning Timeline​                                  36
+Annex B. OTGA Training Course Proposal form (design rubric)​        38
+Annex C. OTGA Lesson/Module Outline​                                41
+Annex D. OTGA Competency Assessment Form​                           43
+Annex E. OTGA Template for Local Information to Participants​       45
+Annex F. OTGA certificate template​                                 46
+Annex G. Standard post-course feedback template​                    48
+Annex H. OTGA Class observation report​                             50
+Annex I. OTGA Evaluation Framework​                                 52
+
+
+
+
+Page | 5 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+1.​ PURPOSE OF THE GUIDE
+The IOC OceanTeacher Global Academy (OTGA) of the Intergovernmental Oceanographic Commission
+(IOC) of UNESCO has established a global Learning Management System (LMS) and a network of
+Regional Training Centres (RTC), Specialized Training Centres (STC), and Affiliates to deliver
+customized training for ocean experts and practitioners and to increase national and regional
+capacity in coastal and marine knowledge and management.
+This guide describes the process for organizing and managing training courses within the framework
+of OTGA and has been produced primarily for the OTGA RTC/STC coordinators, further extended to
+the affiliated partners and related community. It can also be used as a guide for organizing and
+hosting other training courses. These guidelines are intended to support OTGA by:
+    ●​ Providing procedures on how to plan, design, and deliver a course;
+    ●​ Providing recommendations on how to use the OceanTeacher Learning Management System;
+    ●​ Providing instruction on administrative procedures for organizing OTGA courses.
+
+
+2.​ INTRODUCTION TO OTGA
+The Intergovernmental Oceanographic Commission is building capacity through its OceanTeacher
+Global Academy training system, which provides specialized training related to ocean science,
+observation, data/information management, and policy. The OceanTeacher Global Academy,
+operating through a network of Regional Training Centres (RTCs), Specialized Training Centres (STCs)
+and affiliated partners, is delivering initiatives to support the 2030 Agenda and its SDGs and the UN
+Decade of Ocean Science for Sustainable Development to build equitable capacity and promote
+expertise available worldwide. Training topics can assist Member States in achieving the SDGs as well
+as enhance capacity in emerging fields. OTGA encourages collaboration beyond IOC to position itself
+as the training platform for ocean-related topics within the UN and for the global community.
+OTGA courses cover a range of topics related to the IOC high-level priorities, contributing to the IOC
+Mandate and the implementation of the IOC Capacity Development Strategy (2023-2030), enabling
+equitable participation of all IOC Member States, IOC Programmes, IOC Regional Sub-Commissions
+and IOC Technical Subsidiary Bodies. Examples of this support include:
+    •​ Tsunami Resilience Section (TRS). The TRS has recognized the rapid turnover of trained
+       personnel from national institutions and evolving priorities of Member States has led to
+       continued capacity gaps and thus pressure on IOC to sustain these trainings on a long-term
+       basis. OTGA provides a framework for sustainable delivery of tsunami-related training
+       programmes to meet the capacity development priorities of Member States. Some
+       immediate areas where OTGA contributes are by leveraging the RTCs/STCs and co-located
+       Regional Tsunami Service Providers (RTSP) to routinely deliver tsunami-related training,
+       development of online training modules for priority tsunami-related areas to support
+       self-paced training, provision of an effective online training management system, and
+       complementing global TRS capacity development activities and projects.
+    •​ Marine Policy and Regional Coordination Section (MPR). MPR is engaged in multi-agency
+       consultation processes with the aim of fostering partnerships related to ocean and coastal
+       matters. Its work covers science-policy-society interfaces to increase scientific knowledge
+       and exchange of experiences, develop research capacities and transfer marine technology to
+       improve ocean health and the sustainable management of coastal and marine resources.
+       OTGA provides additional support to the training needs of MPR for a number of activities and
+       projects such as multi-language online training in Marine Spatial Planning; various learning
+       frameworks and competencies for the Ocean Decade, including the close collaboration with
+
+
+Page | 6 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+       the Capacity Development Facility and Decade Collaborative Centres and Coordination
+       Offices; and wide subjects related to the international ocean governance, i.e., BBNJ
+       Agreement and Sustainable Ocean Planning.
+    •​ Ocean Literacy. Ocean literacy is focused on increasing awareness of the state of the ocean
+       and providing tools and approaches to transform ocean knowledge into actions to promote
+       ocean sustainability. The challenge is to create a comprehensive ocean literacy training
+       programme for different sectors and segments of society, with the aim of empowering a
+       wide range of stakeholders and being able to track changes in behaviour, policies and
+       processes and consideration of the ocean in all decision-making. OTGA supports IOC ocean
+       literacy programmatic activities by providing both online and self-paced training materials
+       and facilitating onsite workshops for business, policy, education and civic groups.
+    •​ Ocean Science Section (OSS). IOC is the custodian agency for the SDG 14.3.1 indicator:
+       Average marine acidity (pH) measured at an agreed suite of representative sampling stations.
+       The SDG Indicator 14.3.1 Methodology has been developed to provide the necessary
+       guidance to researchers and Member States on how to conduct ocean acidification
+       observation, using different types of technology and measuring different variables and
+       provides support on how to and what kind of data sets to submit to IOC for annual reporting
+       purposes. OTGA supports courses that improve the participants' ocean acidification data
+       management skills and familiarize national experts with the 14.3.1 data portal and tools. IOC
+       Intergovernmental Panel on Harmful Algal Blooms (IPHAB). The IOC technical subsidiary
+       body, IPHAB, has identified that the lack of taxonomic skills, toxin chemistry and toxicology is
+       acute in many parts of the world. This limits the ability of many countries to detect and
+       respond to harmful algal blooms, with subsequent impacts on food security and human
+       health. IOC HAB training courses, supported by OTGA, improve the taxonomic skills of
+       individuals and institutions, enabling them to reliably identify phytoplankton species related
+       to harmful algal events and to build up capacity in quantitative and qualitative determination
+       of toxins. These include the IOC Identification Qualification in Harmful Marine Microalgae,
+       the IPI Marine Phytoplankton enumeration and identification, the IOC UNESCO Advanced
+       Phytoplankton Course, and many others.
+    •​ The International Oceanographic Data and Information Programme (IODE). The objective of
+       IODE is to enhance marine research, exploitation and development by facilitating the
+       exchange of oceanographic data and information between participating Member States, and
+       by meeting the needs of users for data and information products. OTGA, created and hosted
+       by IODE, dedicates core training activities to teach the principles of data and information
+       management and promote the use of standards across IODE centres to achieve
+       interoperability. Specific training can include Research Data Management, Discovery and Use
+       of Operational Ocean Data Products and Services, Introduction to Coastal Atlases, Biological
+       Data Management and Monitoring, Quality Management Framework and Marine GIS
+       Applications.
+OTGA also works with the IOC Regional Sub-Commissionsto ensure the capacity development needs
+of the regions are being met by supporting the Regional and Specialized Training Centres. This
+regional input will result in:
+    •​ Promoting the use of local experts as facilitators and training assistants.
+    •​ Providing a programme of training courses related to IOC programmes, contributing to the
+       sustainable management of oceans and coastal areas and relevant to Member States in the
+       regions.
+    •​ Working in a regional context, addressing common regional goals as well as national goals.
+    •​ Using the working language(s) of the countries in their region.
+
+
+
+Page | 7 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+Beyond the above-mentioned, OTGA collaborates with a wide range of partners with the aim of:
+    ●​   Expanding global awareness of learning opportunities.
+    ●​   Increasing learning content.
+    ●​   Developing new cross-cutting learning services.
+    ●​   Developing and implementing quality standards for the delivery of learning services.
+Collaborations are channelled through OTGA Secretariat and RTC/STCs networks to accelerate
+response to IOC needs, priorities, and demands for training and other aligned requests from the
+global community. Affiliated partners complement OTGA network with expertise, infrastructure,
+funding, frameworks, and at the same time, they benefit from OTGA coordination, network, and
+learning management system. Current partners include UN Agencies, Educational Institutions,
+Multi-national and national initiatives, Governmental and Non-Governmental Organizations, Capacity
+Development Programmes and Projects, and others.
+2.1​ Core Learning Services and Governance
+OTGA provides a comprehensive set of learning services aligned with IOC priorities and broader
+needs, contributing to knowledge sharing and capacity development in ocean research, services, and
+management, openly available to the global community. OTGA core services are:
+    ●​   Coordination of a network of training centres, experts, and learners
+    ●​   Access to a specialized Learning Management System
+    ●​   Planning, development, and delivery of training activities
+    ●​   Coordination and management of courses and alumni
+    ●​   Development and implementation of a shared e-learning platform
+    ●​   Creation of learning resources and activities
+    ●​   Providing mechanisms for connecting with experts, facilitators, and training centres.
+    ●​   Guidance on learning services procedures and standards
+    ●​   Promoting opportunities for upskilling, exchange, and internships
+Aligned with OTGA Terms of Reference, for the purpose of this document and beyond, the following
+definitions, roles, and responsibilities are applied to OTGA network and learning management
+system:
+    ●​ Secretariat is the central coordination team for OTGA and representation within IOC. It is
+       hosted by the IOC Project Office for IODE in Oostende, Belgium, comprising human resources
+       and infrastructure essential for the successful implementation of the training programme.
+       OTGA Secretariat provides direct support to all members of OTGA. OTGA secretariat
+       coordinates and manages OTGA and its learning service activities, and is responsible (or
+       co-responsible, when applicable) for: monitoring standards and procedures for quality
+       assurance; supporting the development of courses and materials; hosting the e-Learning
+       Platform; internal and external communication and outreach; administrative and financial
+       coordination; documenting, assessing, and reporting; international liaison and partnership
+       coordination; strategic planning and risk management; promoting and representing the
+       programme in meetings and forums; other designated tasks. OTGA Secretariat staff includes
+       an IODE Training Coordinator, Administrative Officer, e-Learning Expert, IT Manager, and
+       others. Note that these positions may change.
+    ●​ Co-chairs are the central representatives of the training centres within OTGA, appointed
+       from the Regional and Specialized Training Centres and/or Affiliated Partners during OTGA
+       Steering Group (OTGA-SG) Meetings, with 2-year terms. OTGA co-chairs assist OTGA
+       Secretariat on high-level decisions and management of the training programme, and are
+       expected to: support representation and reporting during IOC sessions; advise on standards,
+
+
+
+Page | 8 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+         procedures, planning, monitoring, and assessment of its activities; assist in promoting OTGA
+         in meetings and forums; and engage in other associated activities upon demand.
+    ●​   Regional Training Centres (RTCs) and Specialized Training Centres (STCs) are institutions or
+         coordinated groups of institutions that undertake delivery of training on a broad range of
+         topics or targeted specialized training in ocean science that contribute to the high-level
+         objectives of the IOC. RTCs and STCs are nominated by IOC Member States and undergo an
+         official selection process. They provide the institutional backbone for the training activities.
+         As hosting organizations, they ensure the human and financial resources and facilities to
+         design and deliver targeted learning services, responding to the training needs of the IOC
+         Programmes, IOC Regions, and IOC Member States. Each RTC and STCs contact point,
+         Coordinator, is responsible for managing its training activities, including representing the
+         RTC/STC in designated meetings, proposing new courses, providing workplans, monitoring,
+         evaluating, and reporting according to OTGA guidelines. An RTC or STC shares responsibilities
+         with OTGA Secretariat whenever the need is identified and agreed.
+    ●​   Affiliated Partner is a national or international organization that collaborates with OTGA in
+         training activities, other than IOC Programmes, IOC Sections, IOC Regional Subsidiary Bodies,
+         and OTGA Regional and Specialized Training Centres. Affiliated partners can contribute with
+         expertise, infrastructure, funding, learning frameworks, and others, upon invitation by OTGA
+         Secretariat, an RTC or STC, or external demand. Affiliated Partners collaborate with OTGA
+         training activities to expand global awareness of learning opportunities, increase learning
+         content offers, develop new cross-cutting learning services, and improve quality standards.
+         Partners are connected to specific training courses. When leading a course, partnering
+         organizations and their individuals must comply with the same rules as for RTCs and STCs.
+    ●​   Course Coordinator is the leading person and focal point during a training course for OTGA.
+         Course Coordinators lead the development and delivery of courses in close coordination with
+         OTGA Secretariat, being responsible for: detailing all the information about the proposed
+         trainings and learning approaches; identifying and liaising with Facilitators; coordinating and
+         assisting the development of training materials, including appointing roles within their team;
+         responding to queries and demands of learners, experts, and Secretariat; and assisting on
+         quality assurance and best practices based on OTGA guidelines.
+    ●​   Facilitators are the personnel assisting in the planning, delivery, and development of a
+         course, including groups, such as:
+              ○​ Instructors are subject experts leading the content development and knowledge
+                  sharing. Instructors shall create the content and provide guidance for the
+                  development of learning resources and activities, in accordance with OTGA formats
+                  and templates within its online LMS (e-Learning Platform) used for all courses.
+                  Content shall be provided in a timely manner to allow delivery of the training with
+                  the best standards and procedures. Instructors are expected to: attest competency
+                  and subject expertise; respect Copyright and knowledge-sharing licenses; strictly
+                  follow OTGA guidelines and UNESCO code of conduct and regulations when
+                  preparing and delivering classes.
+              ○​ Staff are any other personnel involved in the training activities. Staff members are
+                  designated by Course Coordinators to assist in the training activities on demand and
+                  must follow the same procedures and guidelines detailed for the other members,
+                  including course reviewers, support officers, communications personnel, managers,
+                  and others.
+    ●​   Learner is an individual participating in a course for the purpose of acquiring knowledge and
+         skills through experience, practice, study, or instruction. Learners shall independently
+         conduct their learning experience, following the instructions announced within each course,
+         accessing the resources provided, and respecting procedures and deadlines.
+
+
+Page | 9 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+All OTGA members are required to follow these guidelines for their training activities and comply
+with IOC rules and regulations.
+All individuals and institutions within OTGA training activities must keep updated and open profiles in
+OceanExpert (https://oceanexpert.org/) and OTGA e-Learning Platform, being required to comply
+with policies and disclaimers of these platforms. Whenever possible, all RTC/STCs should host a
+dedicated page about their training activities contributing to OTGA within their own
+websites/platform, with linked profiles in OceanExpert repository.
+See OTGA Terms of Reference for full details on rules and procedures. Updates on OTGA governance,
+procedures, and action plans are available for online access as part of IOC documentation, i.e., latest
+meeting reports of the IODE Steering Group for the OceanTeacher Global Academy (referred to as
+OTGA Steering Group OTGA-SG), IOC Committee on International Oceanographic Data and
+Information Exchange, IOC Assembly, and others. Other specific procedures and standards related to
+each OTGA member are mentioned throughout the guidelines.
+
+
+3.​ COURSE PLANNING
+OTGA training course content is delivered by subject matter experts who are responsible for
+contributing new content and/or revising and updating existing content. Course content focuses on
+scientific and technical content to support IOC programmes, IOC Regional Sub-Commissions and IOC
+Technical Subsidiary Bodies and links to activities associated with the UN Decade of Ocean Science
+for Sustainable Development, 2030 Agenda for Sustainable Development and IOC-wide Strategy on
+Sustainable Ocean Planning and Management, and others, as requested. A detailed syllabus for each
+course is developed in consultation with relevant experts from the IOC.
+Planning OTGA training courses is guided by the Learning Orientation Compass, which describes the
+many facets of designing training courses and defines each process in the learning lifecycle.
+
+
+
+
+The components of the Learning Orientation Compass are:
+
+
+
+Page | 10 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+    ●​ Course proposal. Decide when and where the course will be held and the outline of the
+       training; submit the course proposal form (see Section 3.1).
+    ●​ Course event. Which learning model will be used: onsite, online, or blended?
+    ●​ Look and feel. A well-designed course is easy for learners to navigate and interact with.
+    ●​ Open or closed. Will the course be open to everyone or available only to selected learners?
+    ●​ Activities. Which learning activities will be included in the course (see Section 4.3)?
+    ●​ Contents. Content in Moodle includes Files, Folders, Pages and Labels (see Section 4.2).
+    ●​ Pedagogy approach. Will the course be held onsite or via distance learning? Will learners
+       work in groups or individually?
+    ●​ Course team. Identify the course facilitators and course editors; assess facilitator
+       competency.
+    ●​ Help desk. Who are the points of contact for technical and administrative support?
+    ●​ Structure. Which Moodle resources and assessment activities will be used?
+    ●​ Certificates. Will a Certificate be issued (see Section 5.5)? If a certificate is to be awarded,
+       which criteria will apply? (linked to assessment activities above).
+    ●​ Reporting and feedback. A post-course evaluation questionnaire is used to measure how a
+       course has met learner expectations (see Section 6.1).
+The design of training courses involves either creating a new course or adapting an existing one. The
+following steps are used in the design and development of courses:
+    1.​ Identify learning needs and specify learning outcomes. Identify organizational and/or
+        individual learning needs, then specify these in terms of learning outcomes that describe
+        what learners should be able to do after training in terms of new skills and competencies.
+    2.​ Determine a learning solution. Depending on the competencies to be developed, practical
+        exercises using, for example, real or simulated workstations or instruments may be desirable.
+        In such cases, on-site learning in equipped laboratories or on-the-job training could be the
+        best learning solutions. Alternative solutions, such as the use of augmented reality or
+        simulators (e.g., virtual reality), could be explored.
+Proposals for new courses are coordinated through IOC Programmes and its sections, IOC Regional
+Subsidiary Bodies, RTC/STC or Affiliated partners, and submitted to the OTGA Secretariat for
+prioritization and approval. If the development of new course content is identified, a budget for the
+work may be submitted to the OTGA Secretariat, and a Contract for Services may be entered with
+UNESCO for development of course content as well as other learning services (see Section 7.2). For
+project proposals, it is highly recommended to involve OTGA Secretariat and/or RTC/STCs
+Coordination at early stages of development to ensure adequate planning and enhance alignment
+with IOC needs and priorities.
+Note: Course planning should begin a minimum sixteen weeks before the start of the course for
+onsite courses. The course planning timeline, with steps to consider when preparing for a course, is
+described in Annex A. Course Planning Timeline.
+OTGA offers three different modes for the delivery of training courses:
+    ●​ Onsite instruction. Courses are instructor-led and are held in a classroom environment at an
+       RTC or STC or another approved venue. Theoretical content and assignment tracking is
+       reflected on OTGA e-Learning Platform.
+    ●​ Online instruction. All course interactions are delivered online and can be completely
+       synchronous, completely asynchronous, or may involve a mix of both modalities. Learners
+       are not required to be in the same location and synchronous sessions, such as live
+       discussions, can use a virtual classroom, such BigBlueButton, Zoom, Microsoft Teams, and
+       GoogleMeet.
+
+
+Page | 11 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+    ●​ Blended Instruction. Learning is achieved through a mix of online and onsite sessions and can
+       include synchronous and asynchronous activities. All learners will participate together in the
+       onsite sessions.
+    ●​ Self-paced instruction. These courses are designed for learners who want the flexibility to
+       study at their own pace. Learners progress through the material at their own speed and on
+       their own schedule.
+3.1​ Course proposal
+When planning a course, it is important to explain to the learner what will be gained from the course.
+The outcomes associated with designing, organizing and planning an OTGA course should include the
+course objectives, learning outcomes, topics, learning activities, target audience, schedules,
+facilitators, assessment process and learning resources. The course proposal is the baseline
+document to be reviewed by OTGA Secretariat in comparison to these guidelines, and other items.
+Course objectives describe what will be covered in the course and focus on the intended results of
+learning. Course objectives can include statements such as:
+        -​   At the end of this course, the learner should be able to ...
+        -​   On successful completion of this course, the learner will be able to ...
+Needs analysis details how the course responds and addresses the needs and priorities of IOC
+Programmes, IOC Regional Sub-Commissions, IOC Technical Subsidiary Bodies, and IOC Member
+States. Needs analysis should specify which IOC assessment, strategy, reports, and/or
+implementation plan the course will respond to. Including the connection to the implementation of
+IOC Capacity Development Strategy is strongly recommended. IOC documentation is available for
+open access through its digital platforms (not limited to), such as https://www.ioc.unesco.org/en,
+https://oceanexpert.org/, https://www.ioc-cd.org/. OTGA Secretariat will facilitate access to this
+documentation by providing reference pathways to this documentation, as well as regularly
+informing RTCs, STCs, and Affiliated Partners of major updates.
+Learning outcomes provide the basis for designing the course proposal. Learning outcomes describe
+the knowledge, skills and understanding students will achieve as a result of the course. Learning
+outcomes should be provided as a concise list of measurable items that complete the prefacing
+statement. Examples include:
+        -​   Understand the importance of maintaining integrity of data
+        -​   Explain the importance of following standards, both for the data and the metadata
+        -​   Perform quality control tests of ocean currents data
+        -​   Describe data processing and file formats
+Learning outcomes are not instructional objectives (what will be covered in the course) or activities
+that the learner will complete during the course. Learning outcomes should be the starting point for
+designing a course.
+The OTGA Training Course Proposal Form (Document No. IODE.F08) should be completed for all
+proposals for new courses. This form should also be used for proposals to redevelop or extend
+existing courses. The form is provided as Annex B. OTGA Training Course Proposal form. For courses
+to be held in languages other than English, the course proposal form should be submitted in the
+language of the course and in English.
+For onsite courses, information about the classroom and other training facilities shall be provided for
+every course, including:
+    ●​ Classroom dimensions and adequacy for the number of participants
+
+
+
+Page | 12 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+    ●​ Organization of tables and chairs
+    ●​ Infrastructure for interactive learning
+    ●​ Teaching tools and devices
+    ●​ Cleaning and maintenance
+    ●​ Ventilation, temperature control, and noise insulation
+    ●​ Safety facilities and equipment, emergency and security procedures
+This information will be collected through written description and photographic evidence, to be
+reviewed and approved by OTGA Secretariat.
+3.2​ Lesson plan
+A lesson plan is a detailed description for each lesson or module to guide the learning activity and it
+includes the aims and objects of the lesson, the pedagogic approach to be used (such as group or
+individual learning, classroom or distance), the lesson format, how the lesson or module meets the
+expected learning outcomes of the course and the way of measuring how well the goal was reached
+(learner assessment).
+The OTGA Lesson/Module Outline (Document No. IODE.F09) can be used to facilitate the
+organization of this information, or it can be completed directly in the course page/Moodle online. A
+sample of this document is provided as Annex C. OTGA OTGA Lesson/Module Outline.
+3.3​ Course announcement
+For each training event, the OTGA Secretariat will create an event on the IOC OceanExpert event
+calendar (https://oceanexpert.org/events/calendar?group=325). The course announcement will
+include the following details:
+    ●​   Course title
+    ●​   Start and end date
+    ●​   Course description
+    ●​   Learning outcomes
+    ●​   Course content
+    ●​   Target audience
+    ●​   Language of instruction
+    ●​   List of facilitators with a link to their OceanExpert profiles
+    ●​   Organizers. Including their leading categories (i.e., RTC/STC, IOC Section or Programme,
+         Affiliated partner)
+    ●​   Course duration and format. Number of hours and format (i.e., synchronous/asynchronous
+         session for online courses)
+    ●​   Venue. For onsite courses only
+    ●​   Learner assessment and certificate. The methods to be used to assess learners and
+         certificate awarded
+    ●​   Pre-requisites. Any course prerequisites, such as technical and language skills
+    ●​   Application process. Including link to the online application form for courses requiring
+         application
+    ●​   How to enrol. Details on how to enrol, link to the course page, enrolment key
+    ●​   Costs. No tuition fees
+    ●​   Cancellation policy
+Course announcement must follow IOC Communication active recommendations. OTGA courses are
+also promoted through IOC communication and social media platforms. The OTGA Secretariat will
+
+
+Page | 13 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+create a new empty course on the OceanTeacher Moodle platform using the course template. OTGA
+course templates are provided in English, French, Spanish, and Portuguese, and may be adapted to
+other languages upon request and available means.
+3.4​ Course facilitators
+OTGA course facilitators/trainers must demonstrate competencies that meet the learning outcomes
+of the training course, such as pedagogical, technical, communicational, interpersonal skills, etc.
+Facilitators are also expected to demonstrate competency to support distance and classroom
+learning and should also participate in professional development, such as learning and teaching
+principles, teaching competences, and practical experience in the subject matter.
+All course facilitators must complete the OTGA Competency Assessment Form (see Annex D), which
+assesses the two core competences:
+    A.​ Competences related to the delivery of learning services
+    B.​ Personal competences
+Evaluation of competences requires assessment based on the key qualifications and experience. The
+completed Competency Assessment Form must be submitted to the OTGA Secretariat.
+All course facilitators must maintain a current record on OceanExpert (https://oceanexpert.org/)
+outlining professional experience, including filling out the skills field respective mention to the
+participation in training activities, such as “Training coordination/lecturing/expert in Ocean Sciences,
+including the following subject areas: …”. Other professional networking sites (e.g., ResearchGate,
+LinkedIn) or a link to their organization website can also be referenced.
+             3.4.1​ Professional development plan and reporting
+Facilitators shall participate in professional development, which can include:
+    ●​ Learning and teaching principles, sound practice and latest research in learning and teaching
+       methods relevant to the curriculum;
+    ●​ Teaching competencies, resources relevant to the curriculum, including instructional and
+       informational technologies;
+    ●​ Competence in using learning resources relevant to the learning services;
+    ●​ Practical experience in subject matter;
+    ●​ Competence in classroom management;
+    ●​ Assessment for the subject being learned.
+Individual participation must be reported every 2 years to OTGA Secretariat. This information will be
+gathered through an online questionnaire hosted within the e-Learning Platform and shared with
+the active Facilitators. Results of this survey will be compiled and shared with the members of
+OTGA-SG, for evaluation and improvement action.
+All course facilitators are offered the opportunity to receive additional training materials by OTGA
+Secretariat, such as the OTGA Introduction to designing and teaching online courses course, so they
+have a clear understanding of the Moodle tools available for use during a course. Other training
+materials and development opportunities can be included based on demand and resource
+availability.
+
+
+
+
+Page | 14 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+Professional development can also be offered and managed by RTCs, STCs, and Affiliated partners.
+Information about these initiatives and results shall be reported during OTGA-SG meetings.
+3.5​ Course fees
+Regular tuition fees cannot be requested from attendees for OTGA courses. However, cost recovery
+for items such as printed resources materials, consumables, catering, facilitation, lodging, etc., may
+be allowable for onsite courses and requested for participation - considering this is not the preferred
+modality and understood as an exception. In these cases, invoices shall be managed by the RTCs,
+STCs, and Affiliated partners, and must include detailed information on the service ( service, number
+of persons, cost in total or per person).
+For further information, contact the OTGA Secretariat.
+3.6​ Course applications
+For both onsite and online courses, interested candidates can apply for an OTGA Training Course by
+completing an online application form. The online application form will be accessible for each OTGA
+course using the Wufoo online forms system. This is the official application form for each course and
+allows all information to be provided online. All applicants are required to have a current entry in
+OceanExpert (https://oceanexpert.org/). Candidates should be acquainted with these requirements
+before applying. The course description, topics to be covered, expected learning outcomes and
+pre-requisites (if any) will be made available on the OceanExpert calendar.
+Before starting an application, the applicants should ensure they have the following available:
+    ●​ a motivation statement (text file) of a maximum of 300 words.
+    ●​ link to their OceanExpert profile.
+Additional personal and professional information and documentation can be requested in the
+application form to facilitate selection according to the target audience and requirements.
+For onsite courses and some online courses, applicants will be required to provide an endorsement
+letter1 from the applicant’s current employer or host institution stating the applicant's present
+position within the organization along with a description of the applicant's professional
+responsibilities. The employer should explain the importance of the training course for the
+applicant's position and for the organization. The employer should demonstrate the possibility of
+transferring the acquired knowledge to the home institution/country.
+Applications that are incomplete or illegible will be rejected. Documents should be submitted in the
+language of instruction. For documents which are not submitted in English, a translated version may
+be requested.
+A course application may not be required for self-paced courses with no limits of participation, which
+mostly adopt an open and continuous registration format.
+3.7​ Cancellation policy
+The following cancellation paragraph should be included in the course announcement on
+OceanExpert translated into the language of instruction.
+       In the event of cancellation of a course by the OTGA or its affiliates, we will provide notification
+       of cancellation at least 7 days prior to the course date. In the event of cancellation by the
+       attendee, we should receive notification of cancellation at least 7 days prior to the course date.
+
+1
+  A valid endorsement letter should be issued using the official letterhead of the applicant’s host institute,
+signed by the Institute director or the applicant’s supervisor displaying the Institute’s stamp.
+
+
+Page | 15 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+3.8​ Participant selection
+If a course has a limited number of places, there will be a selection of the top applicants. The
+selection process will take into consideration the following:
+    ●​ expected impact of the training on the applicant's career development and/or institution
+       capacity development
+    ●​ available budget (for onsite courses)
+    ●​ endorsement letter from the applicant’s employer
+    ●​ availability of any co-sponsoring (co-sponsoring is encouraged)
+    ●​ gender and geographical balance
+A limited number of travel grants are available for participants attending onsite courses (see Section
+8).
+             3.8.1​ Eligibility check
+After the reception of applications, an eligibility check will be completed for all participants. This
+eligibility check takes into account the following parameters:
+    ●​   overall completion of the application
+    ●​   endorsement letter (if requested)
+    ●​   valid OceanExpert ID and profile
+    ●​   ability to meet any course-specific requirements, for example, knowledge of the language of
+         instruction
+The selection of participants will take into consideration:
+    ●​ educational and/or professional background, including compliance with any course
+       pre-requisites
+    ●​ demonstrated strong institutional support from the applicant’s employer in the official
+       endorsement letter (for onsite courses requesting full or partial funding)
+    ●​ ability of the applicant to understand and communicate in the language of the training
+       course
+    ●​ appropriate skills specific to the course
+For onsite courses and some online courses the maximum number of seats available will be defined
+depending on resources available (infrastructure, number of instructors and teaching assistants).
+             3.8.2​ Selection committee
+A selection committee will evaluate all applications and make a recommendation on the successful
+applicants. The composition of the selection committee should comprise a minimum of 2 people, but
+ideally 3 or more, as follows:
+    ●​ RTC/STC Coordinator
+    ●​ Principal course facilitator
+If required, IOC staff may join the selection committee or be consulted. Final selection should be sent
+to the OTGA secretariat as soon as the application overview is complete (refer to Annex A. Course
+Planning Timeline).
+Exceptions to the above selection structure and criteria may be allowed when core principles are
+aligned to OTGA procedures and standards. These exceptions will be evaluated case by case by OTGA
+Secretariat, which should have access to source documentation if requested.
+
+
+
+
+Page | 16 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+             3.8.3​ Scoring applications
+Each member of the selection committee should score individual applications with a value between 0
+and 3, using 0,5 increments, as follows:
+                  Score​        Description
+                  3​            Excellent
+                  2​            Good
+                  1​            Poor
+                  0​            Does not qualify
+The criteria for scoring should consider the following aspects of the application:
+    ●​   Technical quality of the candidate (educational/technical background)
+    ●​   Motivation of the candidate (refer to their motivation statement)
+    ●​   Endorsement by the host institute (if required)
+    ●​   Candidate language skills (refers to language of instruction)
+    ●​   Compliance with any specific pre-requisites as described on the call for applications for the
+         course (e.g., computer / IT skills)
+The above criteria can be adapted depending on the course format of participation, aim of the
+course, region, and number of places available.
+UNESCO is committed to promote gender equality, therefore applications from women are strongly
+encouraged. When scoring, an additional 0.5 points for female applicants may be included (if there is
+no balanced gender in the initial pool of applications). Geographical balance is strongly
+recommended for training courses with international participation.
+3.9​ Official invitation to selected participants
+All participants selected to attend onsite and online courses will be sent an email confirmation by
+the OTGA Secretariat.
+Box 3.1. Example email confirmation to successful applicants for online courses
+Dear applicant
+We are pleased to inform you that you have been selected and invited to attend the <<course name>> delivered
+by << name of RTC/STC>>. This course will take place online <<date of course>> on the OTGA eLearning
+platform.
+Please confirm your participation by responding to this email.
+As part of the training, all participants are required to access UNESCO-IOC OceanTeacher Global Academy
+e-Learning Platform, direct LINK. Training material, activities, and certificates will be issued through this
+channel. Please, follow the instructions below to confirm your registration and enrol in the training:
+Please register on the OceanExpert website (www.oceanexpert.org). In case you already have an OceanExpert
+account, ignore this request (please do not create duplicate profiles); if you have trouble logging in / forgot your
+password, you can request a new one in the system and if the problem persists, send an email to
+info@oceanexpert.org or ioc.training@unesco.org (we suggest you look at your spam box first). Note that you
+may receive automatic emails from OceanTeacher once you are enrolled in the event and these may be
+considered SPAM; please make sure to regularly check your SPAM box. To avoid missing emails, we advise using
+a non-institutional email address as these are less likely to be treated as SPAM. You can watch this tutorial to
+better Understand how the OceanTeacher platform works.
+Once your OceanExpert account is approved, log in OTGA e-learning platform.
+Go to the course page to self-enrol <<course page link>> using the enrolment key <<enrolment key>>.
+Once you are enrolled, please take some time to do the following:
+
+
+Page | 17 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+- Get familiar with the use of the e-learning platform.
+- Check the information about the event (Start Here), including the agenda/timeline and the FAQs
+- Introduce yourself on the dedicated forum
+If you have any questions about these steps, please contact the OTGA Secretariat (ioc.training@unesco.org),
+always using the name of the training as the email subject.
+
+For participants attending onsite courses, an official letter is often required by those participants
+requiring a visa. In the case of selected participants receiving travel grants to attend an onsite course,
+an official notification letter issued by the host organization should be sent, with the following
+default text:
+Box 3.2. Notification letter to successful applicants (receiving travel grants)
+Dear Applicant,
+Subject: Invitation to attend the OceanTeacher Global Academy <<name of course>>, <<venue>>, <<dates>>.
+We have the pleasure of inviting you to attend the -OceanTeacher Global Academy: <<name of course>>,
+hosted at the <<name of RTC/STC>> in <<venue>>. Details of the agenda and programme is available on the
+OceanExpert website <<course url>>.
+We are pleased to inform you that UNESCO-IOC will provide you with financial support for your participation in
+the training course. [INSERT THE SUPPORT TO BE PROVIDED, E.G., AIRFARE, HOTEL, MEALS, ETC.].
+We recommend you to immediately start arrangements for obtaining a visa for <<country>> (in case you need
+one) for which you can use this letter.
+Looking forward to meeting with you in <<venue>>, we remain,
+Yours sincerely,
+RTC/STC Coordinator
+
+3.10​ Feedback to unsuccessful applicants
+All unsuccessful applicants for onsite courses and distance learning courses should receive a
+notification regarding the result of their application immediately after the final selection has been
+approved. An email should be sent informing them of the reason. For non-selected participants, the
+following default text should be used or adapted:
+
+ Box 3.3. Notification letter to unsuccessful applicants
+ Dear Applicant,
+ Subject: Invitation to attend the OceanTeacher Global Academy <<name of course>>, <<dates>>
+ Thank you very much for your application.
+ We regret to inform you that your application has not been selected. Due to the large number of applications
+ received and the limited places available, we were not able to invite all applicants.
+ The fact that you have not been selected for this course has no implications for future applications.
+ We kindly invite you to register on the OceanExpert and OTGA pages to receive our announcements. All
+ courses are also advertised on our social media. Many courses are still open for application or self-enrolment.
+
+3.11​ Local information to participants
+For onsite courses, information on the course logistics should be provided to all participants at least
+two weeks before the start of the course. Information to be provided should include:
+    ●​ Venue
+
+
+Page | 18 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+    ●​   Arrival information
+    ●​   Local transport
+    ●​   Weather
+    ●​   Contact person
+Annex E. Template for Local Information to Participants provides a template for the local information,
+as an example, that can be adapted by the RTC/STC/Affiliated partner to include relevant
+information.
+
+
+4.​ COURSE DESIGN
+OceanTeacher uses the Moodle learning platform (http://www.moodle.org). Moodle is an
+open-source software learning management system (LMS) that provides an integrated system to
+create personalised learning environments. Moodle provides a collaborative learning environment
+that can include resources such as course information, handouts, presentations, video and web links
+and activities such as discussion forums, assignments, online tests and quizzes, online submission of
+assignments by the learners, subsequent online grading by the facilitators, and certification. Moodle
+is the world’s most widely used LMS. Currently there are over 150,000 Moodle sites deployed
+worldwide in more than 230 countries and benefiting more than 480,000,000 of users.
+
+Box 4.1. Learning Management System (LMS)
+A Learning Management System (LMS) is an online system for delivering subject content to learners.
+A LMS supports the delivery and management of training resources and events and can be used for a
+wide variety of purposes, including managing training records, registering for courses, providing
+learning resources, delivering on­line courses, facilitating communication between learners and
+facilitators, and assisting in the assessment of outcomes.
+4.1 OceanTeacher Global Academy e-Learning Platform
+All material used during a course is accessible from the OceanTeacher e-Learning – Moodle based
+platform (https://classroom.oceanteacher.org/). This includes presentations, documents, images,
+videos, assignments and activities. All training resources are uploaded to the e-learning platform2.
+It is important to engage learners interactively during the course, and Moodle provides different
+options such as forums, chat rooms, assessments and multimedia. The use of formatting options
+such as images, colour and videos will improve the design of the course page and enhance the
+learning experience. Include activities and resources that visually engage, such as videos and images.
+The use of diagrams, charts and graphs can aid the processing of text-based information.
+Careful planning of each OTGA course is essential for creating a positive and effective learning
+experience for the learner. Before designing a course, review the current teaching strategies, the
+course learning outcomes and the learning activities used to assess the outcomes. Effective course
+design minimises course navigation time, leaving more time for students to spend collaborating,
+communicating and engaging with the course.
+Course material that a learner observes or reads, such as web or text pages, hyperlinks, and
+multimedia files, is known as a Resource. Course material that a learner interacts with, or that
+enables interaction among learners and facilitators, is called an Activity. Some Moodle Activities may
+
+
+2
+ The exception is copyrighted material. Such resources can be referred to (e.g., using an URL or DOI) but not
+uploaded on the OTGA Platform (see section 8.3 below).
+
+
+Page | 19 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+be used as assessment tools. Moodle allows creation of learning paths specific to the needs of the
+learner through the sequencing of resources and activities.
+Access to the e-Learning Platform is coordinated by OTGA Secretariat with the assistance of Course
+Coordinators and Facilitators. Accessing rights and participants’ categories to be used in the course
+page in OTGA e-Learning Platform:
+        Manager – full access to the course content and editing rights – assigned to Course
+        Coordinators.
+        Course editor/Instructor – full access to the course content, editing rights of content and
+        major settings – assigned to Facilitators leading or assisting the course development and
+        delivery.
+        Non-editing teacher – full access to the course content, editing is not possible – assigned to
+        Lecturers for reporting purposes
+        Course Reviewer – full access to the course and activities, editing is not possible – assigned
+        to Staff participating in the testing or reviewing of the learning materials.
+After a course is launched and/or closed, OTGA Secretariat can at any time remove editing rights
+from Course Coordinators and Facilitators to ensure the quality and well-functioning of trainings. The
+same procedure may be adopted when OTGA Secretariat identifies a mismatch with guidelines, such
+as changes in the course settings and materials. This action must be immediately communicated to
+the Course Coordinator accompanied by an explanation of the reasons. Rights can be restored upon
+approval of OTGA Secretariat and the solution accomplished.
+Similarly, learners’ access can be removed at any time when OTGA Secretariat, Course Coordinator or
+Facilitators identify a mismatch with the participant’s list, mode of enrolment, inappropriate conduct,
+or any emergency issue. This action must be immediately communicated to the course participant,
+accompanied by an explanation of the reasons. Rights can be restored upon approval of OTGA
+Secretariat and the solution accomplished.
+        4.1.1. Active policies
+Following UNESCO, IOC, and IODE regulations and instructions, the following policies are applied to
+all users of OTGA e-Learning Platform:
+
+
+    ●​ OTGA Privacy Notice
+    Summary
+    This privacy notice relates to user accounts created on this site.
+    Full policy
+    Privacy and personal data
+    We take your privacy very seriously. In order to provide access to this site, we need to collect and
+    store personal information about you. We respect your privacy and your email address will not be
+    shared or sold to any third party. We may send you follow-up emails after the course to ask for
+    your evaluation and inform of you future training options or other resources.
+    What is collected?
+    We collect the data that you provide when creating an account, such as name and email. We also
+    collect data about your activity on the site, including any contributions that you make.
+
+
+
+Page | 20 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+    How is this information used?
+    This information is only used to provide access to the online courses on this site.
+    How long is my data stored?
+    Your personal data is stored as long as your account is active on this site.
+    Select NEXT to go to the Consent page
+
+
+    ●​ Data Policy
+    Summary
+    Data policy
+    Full policy
+    OTGA handles mostly data and information from participation in capacity development activities,
+    specifically, training courses and associated learning activities. Currently, all data and information
+    from participants, facilitators, and experts are archived in IODE OceanExpert database, linked to
+    OTGA e-Learning platform (Moodle) alumni system. The full database is only accessed by OTGA
+    secretariat and IODE IT support, and personal information is not openly available. The database
+    is used to report on course performance and impact. Information on completion of training
+    courses and profiles is open to anyone through OceanExpert. This data is digitalized, and
+    quality-controlled, and it complies with IOC Data Policy and Terms of Use (2023). OTGA
+    documentation and metadata can be accessed upon request (e.g., OTGA Course Management
+    Guidelines, assessment forms, etc).
+
+
+4.2 Course templates
+All OTGA courses use a standard template. The template comprises a set of standard screens/pages
+that provide a consistent and familiar navigation experience for learners. This is especially important
+for participants new to online learning, and it reduces the cognitive load for learners. For the subject
+matter experts and course designers, the template provides a professional look to a course and saves
+time and effort compared to starting a new course from scratch.
+The course template consists of the following items:
+
+     ●​ Start Here. This section includes instructions on how to get
+        started and where to find various course components.
+        Learners are introduced to the purpose and structure of the
+        course.
+
+
+
+
+Page | 21 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+    ●​ Pre and Post Assessments. Manual or automated graded evaluations designed based on the
+       learning outcomes.
+    ●​ Modules. The modules assist the course creators in structuring a course in small chunks to
+       help learners solidify the relationships between concepts. Modules can be divided into
+       lessons and lessons can be divided into learning activities. All learning activities, except
+       Quizzes and Assignments, must be inside the lessons. This will ensure the Moodle Lesson
+       Activity is used to its full potential.
+    ●​ Announcements and discussion forums. Interactive tool to allow information sharing and
+       discussions during the course, for the use of Facilitators and Learners.
+    ●​ Feedback Survey (see item 6)
+    ●​ Certificates (see item 5.5)
+    ●​ Back office. Session available only for Facilitators and OTGA Secretariat to store useful course
+       documentation and instructions.
+The OTGA course templates are currently available in English, French, Spanish and Portuguese.
+
+
+4.3. Moodle resources
+A resource in Moodle is an item that can be used to support learning, such as a file or link. Moodle
+supports a range of resource types which can be included in a course. A resource can be used for any
+kind of non-interactive content in a course. The following types of Resources can be used to present
+course material:
+
+
+
+
+                                  Table 4.1 Resource types in Moodle
+Some of the resources are:
+Book. The book module enables a facilitator to create a multi-page resource in a book-like format,
+with chapters and subchapters. Books can contain media files as well as text and are useful for
+displaying lengthy passages of information which can be broken down into sections.
+File. The file module enables a facilitator to provide a file as a course resource. Where possible, the
+file will be displayed within the course interface, otherwise students will be prompted to download
+it. The file may include supporting files, for example, an HTML page may have embedded images. The
+learner may need to have the appropriate software on their computers to open the file.
+Folder. The folder module can be used to display a number of related files inside a single folder,
+reducing scrolling on the course page. A zipped folder may be uploaded and unzipped for display, or
+an empty folder created, and files uploaded into it.
+
+
+
+Page | 22 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+Page. The page module enables a facilitator to create a web page resource using the text editor. A
+page can display text, images, sound, video, web links and embedded code, such as Google maps.
+Advantages of using the page module rather than the file module include the resource being more
+accessible (for example, to users of mobile devices) and easier to update. For large amounts of
+content, it is recommended that a book be used rather than a page.
+URL. The URL module enables a facilitator to provide a web link as a course resource. There are a
+number of display options for the URL, such as embedded or opening in a new window.
+Lightbox Gallery. This module allows course editors to create image galleries within a course. Small
+thumbnails are used to view the gallery, and clicking on any of the thumbnails enlarges the image.
+
+
+4.4. Moodle assessment activities
+Moodle activities can be used as Assessments tools, either for self-assessment and/or to allow the
+learner to demonstrate the understanding they have developed for the lesson or topic and
+demonstrate to the facilitator the knowledge that has been gained. Moodle provides a number of
+options for assessing learners, including assignments, lessons, forums, questionnaires, quizzes and
+chat, and these are referred to as Activities. The following types of Activities are available in Moodle:
+
+
+
+
+                                   Table 4.2 Activity types in Moodle
+Some of the more commonly used activities include:
+Assignment. The assignment activity enables a facilitator to communicate tasks, collect work and
+provide grades and feedback. Learners can submit digital content, such as word-processed
+documents, spreadsheets, images, or audio and video clips. The assignment may require students to
+type text directly into the text editor. Learners can submit work individually or as a member of a
+
+
+Page | 23 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+group. When reviewing assignments, facilitators can leave feedback comments and upload files, such
+as marked-up student submissions, documents with comments or spoken audio feedback.
+Assignments can be graded and grades recorded in the gradebook.
+Lesson. A lesson activity is made up of pages which may have content for the learner to read or
+questions for them to answer. A lesson can be created as a linear set of content pages or
+instructional activities that offer a variety of paths or options for the learner. The facilitator can
+decide on the level of engagement by including a variety of questions, such as multiple choice,
+matching and short answer. Depending on the learner’s choice of answer, they may progress to the
+next page, be taken back to a previous page or redirected down a different path entirely. A lesson
+may be graded, with the grade recorded in the gradebook.
+Quiz. The quiz activity enables a facilitator to create quizzes comprising questions of various types,
+including multiple choice, matching, short-answer and numerical. The facilitator can allow the quiz to
+be attempted multiple times, with the questions shuffled or randomly selected from the question
+bank. A time limit may be set. Each attempt is marked automatically, except for essay questions, and
+the grade is recorded in the gradebook. Hints, feedback and correct answers may be shown to
+learner. The Question Bank can be used as a repository for quiz questions. The Question Bank
+provides a simple way to organize and manage questions for future use. It also allows the use
+random questions as well as re-use questions in later quizzes. Questions can be added to the
+Question Bank without first creating a quiz, and the questions can be used later. The Question Bank
+is organized in categories and subcategories similar to the way files are stored in folders and
+subfolders.
+H5P Interactive Content. H5P is an abbreviation for HTML5 Package. The H5P activity enables H5P to
+be uploaded and added to a course. The H5P activity module enables creation of interactive content
+such as Interactive Videos, Question Sets, Drag and Drop Questions, Multi-Choice Questions,
+Presentations and much more. Interactive H5P content can be created using the built-in authoring
+tool or uploading H5P files found on other H5P-enabled sites.
+SCORM. SCORM (Sharable Content Object Reference Model) is a collection of specifications that
+enable interoperability, accessibility and re-usability of web-based learning content. For example,
+PowerPoint presentations (with or without video and audio) can be converted to a SCORM package
+and presented as interactive content. OTGA uses ScormHero (https://scormhero.com/) to create a
+SCORM-compliant presentations from PowerPoint, videos, documents or from scratch.
+Forum. The forum activity module enables participants to have asynchronous discussions i.e.,
+discussions that take place over an extended period of time. There are several forum types to choose
+from, such as a standard forum where anyone can start a new discussion at any time; a forum where
+each learner can post exactly one discussion; or a question-and-answer forum where leaners must
+first post before being able to view other learners' posts. Participants can subscribe to a forum to
+receive notifications of new forum posts. Forum posts can be rated by facilitators or learners (peer
+evaluation). Ratings can be aggregated to form a final grade which is recorded in the gradebook.
+Chat. The chat activity module enables participants to have text-based, real-time synchronous
+discussions. The chat may be a one-time activity or it may be repeated at the same time each day or
+each week. Chats are especially useful when the group chatting is not able to meet onsite.
+BigBlueButton. BBB is a virtual classroom system for online learning that provides real-time sharing
+of audio, video, slides, whiteboard, chat and screen. It also allows participants to join the
+conferences with their webcams and invite guest speakers.
+Attendance. The attendance activity enables a teacher to take attendance during class and students
+to view their own attendance record. Attendance should be used for all onsite courses.
+
+
+Page | 24 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+The use of Activity Completion allows the facilitator to set completion criteria for specific activities.
+A check (tick)     appears against the activity when the learner meets this criterion. The criterion
+might be viewing content, participating in a forum, or completing a lesson, quiz or assignment. The
+activity completion tracking should be enabled for all courses. This provides the learner with a
+checklist of what has been completed and can be linked to course completion to allow both the
+learner and facilitator to monitor progress through a course. This also allows the facilitator to
+monitor progress. Facilitators can retrieve activity and completion reports for the courses if they have
+editing rights.
+
+
+Note: Course content must not be changed once a course is open and running, or after a course is
+closed, unless there is a meaningful justification for this action or it is a minor correction. In this case,
+the Course Coordinator or Facilitators must contact OTGA Secretariat and agree on the best
+procedure for that. OTGA may proceed with minor changes for a smoother delivery or quality delivery
+at any time when this situation is identified. Secretariat may remove editing rights of a course after
+launched to prevent modifications and/or exclusion of relevant content.
+Note: Major changes in course content, such as the addition of modules and modification of
+activities, or others, that can impact the learning outcomes and certification, will be treated as new
+courses or updated versions. In this case, the Course Coordinator or Facilitators must contact OTGA
+Secretariat and agree on the best procedure for that. All course management documentation will be
+updated accordingly.
+
+
+5.​ COURSE FACILITATION
+Activities to be organized during the course include:
+    ●​   Course enrolment
+    ●​   Record attendance
+    ●​   Learner assessment
+    ●​   Course completion
+    ●​   Certificates
+    ●​   Web conferencing
+5.1​ Course enrolment
+Moodle allows different methods to enrol in a course, including manual enrolment, self-enrolment
+and guest access. For OTGA courses, self-enrolment is enabled with an enrolment key, which is used
+to restrict enrolment. Guest access is disabled. Manual enrolment is enabled to OTGA Secretariat,
+Course Coordinators, and a selected group of Facilitators (e.g., Course editor). The enrolment key is
+provided to those learners selected for a course. For self-paced courses, the enrolment key is
+published on course announcement on the OceanExpert event calendar. Self-enrolment allows users
+to enrol themselves into a course using the enrolment key and there is no need to manually add
+learners. To send a welcome message to new learners, use the following text in the custom welcome
+message text box:
+         Dear {$a->fullname},
+         Welcome to the course.
+         In case of any questions regarding the OTGA e-Learning Platform please contact the OTGA
+         Secretariat (ioc.training@unesco.org). For any questions regarding course content please
+         contact the course coordinator <name and email for the course coordinator>, always using
+         the name of the course as email subject.
+
+
+Page | 25 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+        Kind regards
+        OTGA Secretariat
+The welcome message can be personalized for each course.
+Self-paced courses. Unless specifically requested, all SP courses should be open for a limited period.
+This will ensure (i) incentivisation by indicating a fixed time frame for completion and (ii) allow for
+compilation of annual statistics.
+Group enrolment can be used to enrol students into a course and directly into groups. For example,
+enrolment for a 2024 cohort would have a group enrolment key and enrolment for a 2025 cohort
+would use a different enrolment key. Create the relevant groups in Course administration > Users >
+Groups then add the enrolment key and select Use group enrolment keys > Yes. Note that the group
+enrolment key should be provided to learners and should be different from the self-enrolment key.
+             5.1.1​ Enrolment disclaimer
+Upon enrolment, all learners will be requested to agree to the following terms:
+       Enrolment is the official registration as a course participant. By clicking on this button, I agree
+with the course details and terms (available in the course announcement in OceanExpert
+and/or course front page in OTGA e-Learning Platform). I also agree that OTGA content is under
+all Creative Commons Attribution 4.0 licence to be respected by all participants and
+personnel-machine accessing this course.
+5.2​ Record attendance
+Onsite courses. The attendance of all learners should be recorded for all onsite courses.
+The Moodle Attendance activity is used to record attendance, which allows the course facilitator to
+register attendance during class. The attendance status of a learner can be marked as "Present",
+"Absent", "Late" or "Excused". These status descriptions are configurable and extra status
+descriptions can be added if needed. The Attendance activity will be added to each onsite course
+page, and attendance can be tracked for each session. The Attendance activity can generate reports
+for either the entire class or for individual students. Learner attendance will be confirmed before
+certificates are awarde,d and any learner who does not attend the full course may not be eligible for
+a certificate. More information on how to setup and use the Attendance activity see:
+https://docs.moodle.org/404/en/Attendance_quick_guide.
+Online courses. The attendance record may be required for online courses with live sessions. The use
+of Activity Completion allows the facilitator to monitor progress through a course.
+5.3​ Learner assessment
+Activities can be used for assessment if they provide the option to grade or provide feedback for
+students. There are two main ways of assessing OTGA learners — formative assessment and
+summative assessment.
+Formative assessment allows facilitators and learners to closely monitor progress and achievement.
+To identify prior knowledge or any gaps in understanding, formative assessment may begin with a
+diagnostic assessment and questions such as, "What do you already know? What do you
+remember?" Formative assessment includes a range of strategies such as classroom discussions and
+quizzes designed to generate feedback on performance.
+Summative assessment summarises what a learner has achieved related to learning objectives. The
+goal of summative assessment is to evaluate student learning at the end of an instructional unit by
+comparing it against some standard or benchmark. Summative assessments are designed to measure
+
+
+Page | 26 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+learner achievement relative to the subject’s overall learning goals as set out in the relevant
+curriculum standards. All courses opened from 2026 must include pre and post assessment to
+evaluate learning outcomes achievement, specifically designed for each course.
+Moodle provides a number of tools to help with formative and summative assessment (see Section
+4.3)
+5.4​ Course completion
+Course completion allows the facilitator to choose which activities in a course must be completed by
+learners. Course completion tracking must be enabled in the course settings. Select the activities to
+count towards completion of the course in the Course Completion settings. These can be lessons,
+quizzes, assignments, etc. The course satisfaction survey should always be selected. Select if ALL the
+activities must be completed or ANY selected activities to be completed. The Course Completion
+criteria must be set before the commencement of the course.
+Activity Completion must also be enabled. For each activity required for completion, select the
+option “Show activity as complete when conditions are met” then select the completion criteria. This
+could be Student must view this activity to complete it and Student must reach the end of lesson page
+to complete this activity, in the case of a lesson or Student must receive a grade to complete this
+activity in the case of a quiz.
+The Course Completion report lists the progress towards completion for each of the required
+activities. The report can be viewed by course editors and non-editing teachers in Course
+administration >Reports > Course completion.
+5.5​ Certificates
+An OTGA course certificate will be awarded to those learners who successfully complete the course.
+The Moodle custom certificate module is used to generate dynamic certificates, and these will be
+made available to participants who successfully meet the course completion criteria.
+Each course organizer can decide the criteria for course completion, for example, the pass mark to be
+achieved for quizzes and assignments. This must be communicated to learners prior to the course.
+The course certificate will include the following information:
+    ●​   Name of the certificate recipient
+    ●​   Name of the training course
+    ●​   Number of hours of instruction
+    ●​   Name of the course organizer
+    ●​   Date of issue of the certificate
+    ●​   Unique certificate number
+Certificates will be issued based on the template to be provided by the OTGA Secretariat (see Annex
+F. OTGA certificate template) and should be made available in the language of tuition, or
+alternatively, bilingual. Each certificate can be signed by the Course Coordinator. Optionally, the head
+of the host institution may also sign the certificate.
+The     course     certificate can     be     verified by anyone      by          visiting the      link
+https://classroom.oceanteacher.org/mod/customcert/verify_certificate.php         and entering       the
+verification code, which appears on the certificate.
+5.6​ Web conferencing
+Web conferencing systems deliver interactive visual solutions that can be used to improve OTGA
+courses by providing facilitators with tools to engage learners with interactive experiences. Web
+
+
+Page | 27 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+conferencing can enable multi-site classrooms and supports the creation of a global programme
+enabling learners to be involved in OTGA activities at the same time, even though they may be far
+from each other.
+BigBlueButton, an activity module in Moodle, is the preferred web conferencing solution for OTGA
+online learning. BigBlueButton supports real-time sharing of slides, webcams, whiteboard, chat and
+presenter's desktop. It can also record and playback sessions (slides, audio, and chat) and allow
+participants to join the conferences with their webcams and to invite guest speakers. BigBlueButton
+also allows tracking attendance. BigBlueButton can also be used to pre-record lectures for learners to
+watch at their leisure and use scheduled class time for Q & A via BigBlueButton. It is recommended
+that hosting sessions be limited to 100 or fewer users as overall performance will degrade over 100
+users. If recording a session, the recording will appear at the same location in the course. Other web
+conferencing tools can also be used.
+
+
+6.​ COURSE FEEDBACK AND EVALUATION
+Finding out about the satisfaction of the learner provides feedback to the course organizers on how
+to improve the learning process, administration, facilities and domestic arrangements. Seeking their
+views, gives the learner a role in the learning process, which can result in continual improvement.
+6.1​ Course evaluation
+All OTGA courses are evaluated using a standardized, anonymous online feedback survey, which is
+used to collect the opinions from the course participants. Each course is assessed against the
+required learning outcomes, training activities and arrangements to improve the learning processes.
+The post-course survey question topics to be evaluated. Include (i) course expectations, (ii) course
+organization and layout design, (iii) course content and teaching/learning activities, (iv) course load,
+(v) support, and (vi) overall Experience. The standard post-course feedback survey questions are
+listed in Annex G. Standard post course feedback template.
+It should be noted that feedback may not reflect the true feelings of some learners: they may, for
+example, give a high rating to avoid offending anyone, or a low rating because they were unwilling
+participants. Ratings can be subjective and influenced by a variety of factors, for example, an opinion
+about one part of an activity can affect the attitude of others.
+At the completion of each course, learners are required to complete the feedback survey to measure
+how the course has met their expectations. The feedback survey is an activity module in Moodle and
+is included in each course. The feedback survey should be made available to the learner on the last
+day of the course and must be completed by all learners. A template and standard feedback survey is
+made available in the language, or languages, of the course. Results of the feedback survey are
+available to the course organisers, facilitators, and the OTGA Secretariat, and a wrap-up meeting
+should be scheduled following the course to discuss the course valuation. The results are used for
+continuous improvement for future training courses.
+6.2​ Rate this module
+For each module or lesson in a course, there should be a Choice activity that asks the learner to rate
+each module/lesso,n including the organization, content and learning activities. This is a five-star
+rating where one star is poor and 5 stars is excellent.
+
+
+
+The result of the rating is included in the course review using the OTGA Course Design Rubric (see
+Section 8.1).
+
+Page | 28 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+6.3​ Complaints
+Definition of a complaint: An expression of dissatisfaction or concern raised by a participant, trainer,
+or stakeholder regarding any aspect of the training program, such as its content, delivery,
+environment, or interactions.
+Any formal complaint received, whether verbal or written, needs to be acknowledged, investigated
+and addressed to promptly resolve the complaint. All complaints will be entered into the OTGA
+Complaint Register, which is maintained by the OTGA Secretariat. Complaints relating to OTGA
+training courses received by email are to be registered on the group email account
+(ioc.training@unesco.org).
+The RTC/STC Coordinator will investigate the complaints within 5 working days and notify the
+complainant of the outcome. The details of the investigation, outcome and discussions with the
+complainant will be entered in OTGA Complaints Register. The OTGA Secretariat will be copied in any
+correspondence at ioc.training@unesco.org.
+The OTGA website has a contact form where complaints can be addressed.
+6.4​ Class observation
+Periodic observation of teaching and learning for quality assurance purposes shall include:
+(i) Onsite courses. Representative of the RTC/STC to observe a minimum of one session of the
+training course and report.
+(ii) Online courses. Representative of the RTC/STC or the OTGA Secretariat to observe a minimum of
+one session of the training course and report.
+(iii) Self-paced online courses. No observation required, but recommended when class
+video-recordings are available.
+Reports must contain notes on teaching structure, format, resources, interaction, and overall
+didactics – using a designated template (Annex H. OTGA Class observation report). The results of the
+report will be revised by OTGA Secretariat for compiled reporting every 2 to 4 years. OTGA
+Secretariat can request focused improvement action and suggest professional development for
+Facilitators for the next editions. The action plan to remediate shall be coordinated between OTGA
+Secretariat, the Course Coordinator, and the RTC/STC/Affiliated partners for the next edition of the
+course. Implementation of the action plan will be monitored in the following course review.
+6.5​   RTC/STC Performance evaluation
+Evaluating the performance of RTCs/STCs is crucial to ensure the consistent delivery of training that
+meets international standards and effectively addresses the specific needs of trainees and the
+broader ocean science community. It also ensures the alignment of RTCs/STCs with OTGA's overall
+strategic goals, as well as with those of the IOC's wider capacity-building efforts and the UN Decade
+of Ocean Science for Sustainable Development.
+A qualitative-quantitative framework has been developed to assess the performance of OTGA
+training centres and trainers to enable real-time result assessment to improve the activities and
+strategic planning. The framework has defined five key performance indicators (KPIs):
+        1.​ Capacity to Develop and Deliver Training
+        2.​ Impact of Training Activities
+        3.​ Mobilization of Experts and Staff
+        4.​ Professional Values
+        5.​ Core Knowledge and Areas of Activity
+
+
+Page | 29 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+The framework includes a Performance Assessment Rubric that provides a structured, objective, and
+transparent method to assess performance across the five key performance indicators. The rubric's
+clear scoring system (Excellent, Good, Fair, Poor) and the specific criteria for each score level make
+the evaluation process easily understandable. This transparency fosters trust and accountability, both
+for the centres being evaluated and for stakeholders reviewing the results.
+
+All RTCs/STCs are evaluated on an annual basis using the Performance Assessment Rubric (see Annex
+I. OTGA Evaluation Framework).
+
+
+7.​ ONSITE COURSES ADMINISTRATION PROCEDURES
+It is expected that RTCs and STCs become less reliant on travel grant support for learners to attend
+onsite courses and will contribute to the course budget from their own resources or resources
+mobilized externally. This will increase the long-term sustainability of the RTC/STCs, associated
+networks, and OTGA as a whole. While it is expected that most learners will be self-funded, a limited
+number of travel grants is available for eligible participants who are selected to attend OTGA onsite
+courses. The administrative procedures described in items 8.1, 8.2, and 8.3 are also applied to
+Affiliated partners, and should be communicated to OTGA Secretariat.
+Note: Administrative procedures for onsite courses should begin a minimum sixteen weeks before the
+start of the course. The course planning timeline, with the administrative steps required, is described
+in Annex A. Course Planning Timeline.
+7.1​ Travel grants
+There is a provision for travel grants to facilitate learner attendance at onsite courses. The choice of
+participants to receive travel grants will be agreed upon between the Course Coordinator and the
+OTGA Secretariat.
+Travel grants can cover the cost of one or more of the following:
+    ●​ Flight or train tickets for approved international participants receiving travel grants
+    ●​ Accommodation cost for approved international participants receiving travel grants
+
+
+Page | 30 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+Travel for course participants approved for travel grants will be organized taking into account:
+    ●​ Participants arrive as close as possible to the start date of the course
+    ●​ Participants leave as close as possible after the end date of the course
+    ●​ Travel should start from the closest international airport in the country of residence of the
+       participant (if major domestic travel is required this can be considered on a case-by-case
+       basis) and arrive at the closest international airport in the country where the course will be
+       held
+    ●​ Travel proposed to the participants will be the cheapest available
+    ●​ A proposal will be submitted to and accepted by the participant
+    ●​ If the participant requests a change, the participant should justify why this change is
+       requested. Changes can be granted providing they do not have an influence on the price of
+       the ticket and do not have an effect on the visa application
+Accommodation for participants approved for a travel grant should cover the room rate, taxes and, if
+agreed as suc,h breakfast and/or use of WIFI (if not included). All extras, i.e., minibar, use of wellness
+facilities (if not free), must be paid directly by the participant to the hotel. If the RTC/STC/Affiliated
+partner has negotiated rates at a hotel in the neighbourhood of the venue for other participants, it
+may be more economical for the RTC/STC/Affiliated partner to book and pay for the accommodation
+for participants approved for a travel grant. If the RTC/STC/Affiliated partner arranges the booking
+and payment for the accommodation, the hotel must provide one invoice for each participant clearly
+stating the name, check-in and check-out date as well as the (full) room rate and taxes.
+Accommodation payments made by the RTC/STC/Affiliated partner for eligible course participants
+approved for travel grants, should be included in a Contract for Services (see Section 8.2). This must
+be discussed and agreed upon with the OTGA Secretariat beforehand.
+Travel arrangements, including purchase of tickets and accommodation, can be made in cooperation
+with the OTGA Secretariat.
+Catering for participants approved for a travel grant can be organized in different ways and this is the
+decision of the RTC/STC/Affiliated partner. If, for example, the venue has a cafeteria where food can
+be purchased or if there is a facility in the direct neighbourhood of the venue where food and
+refreshments can be purchased at a reasonable price and within a reasonable time period, there is
+no need to organize specific catering. If the RTC/STC/Affiliated partner provides catering for other
+course participants then the cost of providing catering to participants approved for a travel grant can
+be claimed in a Contract for Services (see Section 8.2).
+7.2​ Contract for services
+For travel grants funded through UNESCO-IOC resources (regular and extra-budgetary), a UN
+Contract for Services will be requested between UNESCO-IOC and the RTC/STC/Affiliated partner
+institution. To prepare, execute and finally liquidate this contract and receive this funding, a number
+of documents need to be submitted both before and after the course. The request, based on the
+documents submitted, has to comply with the UNESCO-IOC rules and regulations with regard to
+Contracts for Services in general and the organization of the activity (the course) in particular.
+The Contract for Services must be signed by both parties (UNESCO-IOC and the RTC/STC/Affiliated
+partner organization) before the start of the activity and before any funds can be transferred.
+Therefore, it is highly recommended to start this process as soon as possible after the announcement
+of the course as the administrative process can take some time.
+Note:​ UNESCO Rules and regulations are updated on a regular basis. RTCs, STCs, and Affiliated
+       partners should check with the OTGA Secretariat before each new request to avoid
+       misunderstandings and disappointments.
+
+
+Page | 31 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+The basis of the Contract for Services will be a budget submitted by the RTC/STC/Affiliated partner.
+The number of approved international participants receiving travel grants will determine the
+preparation of the budget. The budget will always be prepared in the local currency. The total
+amount will be converted into USD once the final budget is established using the official UN
+exchange rate at the time of the establishment of the contract.
+Note:​ A budget is not considered a final cost overview. By definition, it is an amount of money
+       made available for the organization of an activity on the basis of a plan on how it will be
+       spent. It does NOT mean that the funds made available can be used to cover any kind of cost.
+       All eligible costs can only be reimbursed up to the amount made available. Therefore, the
+       total amount of the budget should be as close as possible to the final costs, taking into
+       account a small margin.
+
+In general, all other costs related to the organization and facilitation of the course are the
+responsibility of the RTC/STC/Affiliated partner. Items which are not eligible and cannot be included
+in the Contract for Services, including:
+    ●​   Promotion materials such as t-shirts, banners, etc.
+    ●​   Visa costs
+    ●​   Renting classrooms
+    ●​   Internet
+Note: ​ If you are not sure if a cost is eligible or not, check with the OTGA Secretariat beforehand.
+
+7.3​ Visas
+Course participants are responsible for their visa application. However, the RTC/STC/Affiliated
+partner should provide the necessary documents for the application. Examples of documents
+required to be submitted for the visa application are (i) an invitation letter, (ii) proof of travel (either
+final e-ticket or travel proposal), and (iii) confirmation of accommodation (for Europe, a Schengen
+Medical Insurance might also be required for non-European participants). Sometimes embassies may
+request the organizer to directly confirm that a participant has been invited. RTC/STC/Affiliated
+partner should directly reply to the embassy in question in a timely way. The cost of visas is not
+covered by the Contract for Services and the cost of visas will not be reimbursed to participants.
+OTGA Secretariat can support these arrangements and communication once requested.
+7.4​ Ground transport
+The cost of ground transportation between airport and accommodation and/or accommodation and
+course venue is the responsibility of the participant or the RTC/STC. If participants can join the
+accommodation/venue themselves in a safe way (walk, regular public transport), there is no need to
+arrange ground transportation. However, if the RTC/STC decides that it would be better to organize
+this transportation (airport/accommodation and/or accommodation/venue,) this should be
+discussed with the OTGA Secretariat and any agreed cost can be included in a Contract for Services.
+
+
+8.​ QUALITY MANAGEMENT
+Quality management refers to the coordinated activities to direct and control an organization with
+respect to quality. Quality management focuses on the quality of products and services as well as on
+the means to achieve it by undertaking the following activities: quality planning, quality assurance,
+quality control and quality improvement. Quality management of learning resources and facilities
+can be used to support the learning process of an RTC/STC/Affiliated partner, or others interested in
+this guidance.
+
+
+Page | 32 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+8.1​ Course Design Rubric
+The OTGA Course Design Rubric3 is used to evaluate and improve OTGA courses. All OTGA courses
+will be reviewed annually by the OTGA Secretariat against the criteria and must achieve an overall
+score of 80% of the possible points to attain endorsement as an OTGA course. Feedback and
+recommendations for improvement will be provided to the RTC/STC/Affiliated partner responsible
+for the course delivery. Future editions of courses that have been evaluated must address the
+recommendations provided. The standard post-course feedback survey questions are listed in Annex
+B. OTGA Course Proposal Form - Design Rubric.
+8.2​ Quality Management System for Learning Service Providers
+The International Standard ISO 29993 (Learning services outside formal education – Service
+requirements) is a service standard that specifies a set of minimum requirements for learning
+services outside formal education. It has been developed to promote the understanding and
+awareness of learners and/or sponsors as to the quality, sequence and outputs of learning services
+outside formal education, and their informed decision on the purchase of such services. The ISO
+29993 standard is also aimed at helping learning service providers deliver the services that fulfil the
+needs of learners and/or sponsors.
+Learning services outside formal education means learning services provided by private organizations
+or individuals other than established recognized formal systems of education, such as elementary,
+secondary or higher education. They include all types of lifelong learnin,g such as vocational training,
+in-company training (either outsourced or in-house). They also include learning services addressed to
+learners themselves, as well as their sponsors who purchase the services on behalf of the learners.
+The learning can be onsite, mediated by technology, or a blend of both.
+The quality of learning services provided by OTGA is underpinned by the certification of the
+UNESCO-IOC Project Office for IODE as an ISO 29993 Learning Services Provider. The Project Office is
+accredited by having satisfied the requirements of the International Standard. This certification is a
+recognition of the quality of learning opportunities offered by OTGA, through the Project Office and
+the high standard of quality learning services delivered that can support all IOC programmes in
+providing specialized training. Courses delivered by an RTC/STC/Affiliated partner that comply with
+these Course Management Guidelines will meet the ISO requirements for learning services outside
+formal education.
+Action plans for improvement in OTGA LMS will be developed and implemented on demand, after
+internal and external audits, or whenever issues are identified by one of the members of OTGA.
+Reporting and collaborative assessment of quality assurance action will be carried out during OTGA
+SG meetings.
+8.3​ Copyright
+Original works and other subject matter may be subject to copyright protection. Copyright is
+intended to provide a balance between rewarding creators for the use of their works and allowing
+users reasonable access to those works. It is likely you will want to include copyright-protected
+material in your course. Proper authorization needs to be acquired to use copyrighted photos. You
+need to acquire a licence for photos which are copyright-protected, whatever the use. Avoid illegal
+copying or reproduction of copyrighted works. This includes printed material, graphics, video, audio
+and peer-reviewed papers or books. Attribution for all third-party material used in OTGA activities
+
+
+
+3
+    Based on the QM CPE Rubric
+
+
+Page | 33 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+should be clearly displayed. Some examples of attribution can                           be    found    at
+https://wiki.creativecommons.org/Marking/Users#Examples_of_attribution.
+If using material from the internet in any OTGA course, check the copyright statement on each
+website before you download and communicate any material. If possible, provide a link to the
+website, rather than copying material directly from the site. You must acknowledge the source of the
+work by author and title.
+All OTGA content is covered by the Creative Commons Attribution 4.0 licence. (see
+https://creativecommons.org/licenses/by/4.0/). The CC BY-NC-SA licence lets others remix, tweak,
+and build upon your work even for commercial purposes, as long as they credit you and license their
+new creations under the identical terms. All new works based on yours will carry the same licence, so
+any derivatives will also allow commercial use. The following terms apply to this licence:
+           Attribution — You must give appropriate credit, provide a link to the licence, and indicate if
+           changes were made. You may do so in any reasonable manner, but not in any way that
+           suggests the licensor endorses you or your use.
+           ShareAlike — If you remix, transform, or build upon the material, you must distribute your
+           contributions under the same licence as the original.
+The following copyright statement is to be displayed on all OTGA content, including websites,
+presentations, documents, videos, etc.
+
+Box 9.1. Copyright statement
+     Unless otherwise stated, all OceanTeacher training material is licensed under Creative Commons
+               Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA 4.0)
+
+
+The use of copyrighted material as part of a training course is subject to permission of the copyright
+owner, and it is the responsibility of the authors/content providers to obtain such permission.
+All course facilitators should complete the OTGA Copyright Rules4 tutorial so they have a clear
+understanding of what they can and cannot do when using third-party materials for their online
+courses on the OTGA platform.
+In some instances, the material used in OTGA courses may not be original, and it is important that
+the original source is acknowledged. Plagiarism refers to presenting someone else’s work, in any
+format, as your own original work without appropriate acknowledgement of the author or their
+source. Box 6.4 gives some examples of plagiarism.
+
+Box 9.2. Examples of plagiarism
+●​ Direct copying of text (e.g., reproducing material that has been published or is available from the
+   internet).
+●​ Presenting data or graphics produced by others without acknowledging the source (e.g.,
+   downloading material from the internet).
+●​ Paraphrasing material produced by others (e.g., changing the sentence structure but not the
+   words or changing the words without changing the structure).
+
+
+
+4
+    https://classroom.oceanteacher.org/course/view.php?id=777
+
+
+Page | 34 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+●​ Collusion with others which has not been authorized (e.g., work produced by several people
+   working together is presented as the work of one person).
+It is most important that all OTGA instructors and learners are fully aware that plagiarism is not
+acceptable and that there are consequences for anyone indulging in plagiarism.
+
+
+
+
+Page | 35 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+ANNEX A. COURSE PLANNING TIMELINE
+Course planning timeline (online)
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+                             )Course planning timeline (onsite
+
+
+
+
+Page | 37 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+ANNEX B. OTGA TRAINING COURSE PROPOSAL FORM (DESIGN RUBRIC)
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+Page | 39 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+Page | 40 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+ANNEX C. OTGA LESSON/MODULE OUTLINE
+
+
+
+
+Page | 41 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+Page | 42 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+ANNEX D. OTGA COMPETENCY ASSESSMENT FORM
+
+
+
+
+Page | 43 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+Page | 44 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+ANNEX E. OTGA TEMPLATE FOR LOCAL INFORMATION TO PARTICIPANTS
+
+
+
+
+Page | 45 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+Page | 46 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+ANNEX F. OTGA CERTIFICATE TEMPLATE
+
+
+
+
+Page | 47 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+ANNEX G. STANDARD POST-COURSE FEEDBACK TEMPLATE
+
+ Course                 The learning outcomes are clearly stated, measurable and are appropriate to the
+ expectations           level of the target audience.
+
+                        Expectations for student learning were clearly defined.
+
+                        The course covered the content announced/expected.
+
+                        I achieved the course stated aims and objectives.
+
+ Course                 The course platform is well-organized and easy to navigate.
+ organization and
+ layout design          All course pages are readable and visually consistent.
+
+                        All course pages are functionally consistent and communicate course information
+                        clearly and in sequential order throughout the course.
+
+                        Multimedia files are clear, adequate, compatible with multiple operating systems
+                        and requires only a free, standard, and easily downloadable plug-in.
+
+ Course content    The course content is appropriate to the goals of the course.
+ and
+ teaching/learning The learning activities helped me achieve the stated learning outcomes.
+ activities
+                        The relationship between completing learning activities and meeting the learning
+                        outcomes was clearly explained.
+
+                        During this course, I was often engaged in learning activities such as discussion
+                        forums, wikis, chat, projects, group work, etc.
+
+                        The course facilitators provided effective guidance and feedback.
+
+ Course load            Was the amount of time it took to complete this course appropriate?
+
+                        On average, how many hours did you spend on this course?
+
+ Interactivity          During this course, I had the opportunity to interact with the instructor as often as
+                        needed.
+
+                        During this course, I had the opportunity to interact with other learners
+
+ Support                How do you rate the response from the course facilitators to your questions or issues
+                        raised?
+
+
+
+
+Page | 48 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+                        How do you rate the response from the OTGA Secretariat to your questions or issues
+                        raised regarding the use of the OTGA e-Learning Platform?
+
+                        Did you encounter any technical problems during the course?
+
+ Overall                What 2-3 things did you find most useful or valuable for learning?
+ Experience
+                        What 2-3 suggestions do you think would make this course a better learning
+                        experience?
+
+                        How do you plan to apply what you’ve learned during the training in your work or
+                        studies?
+
+                        What is your opinion about online learning?
+
+                        Would you prefer to take this course online or in the classroom? Please explain.
+
+
+
+
+Page | 49 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+ANNEX H. OTGA CLASS OBSERVATION REPORT
+
+
+
+
+Page | 50 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+Page | 51 Version 5.0
+IOC Manuals and guides No.
+OTGA Document No. OTGA01
+
+
+
+
+ANNEX I. OTGA EVALUATION FRAMEWORK
+
+    Key Performance Indicators       Criteria                     Questions
+    KPI 1. Capacity to Develop and   a.​ Number of New            ●​ How many new courses were developed
+    Deliver Training                     Courses Developed and       and delivered this year?
+                                         Delivered in the year    ●​ How does the number of courses
+                                         of evaluation               compare to the previous year?
+                                     b.​ Number of Total          ●​ How do the Centre’s courses score
+                                         Courses Developed           on the OTGA Course Design Rubric?
+                                         and Delivered
+                                                                  ●​ Do resources and infrastructure fully
+                                     c.​ Course Quality
+                                                                     support course development and
+                                     d.​ Resources and
+                                                                     delivery?
+                                         Infrastructure
+    KPI 2. Impact of Training        a.​ Number of Participants   ●​ How many participants completed the
+    Activities                           who Completed the           courses this year?
+                                         trainings                ●​ From how many different countries do the
+                                     b.​ Geographical and            participants come?
+                                         Demographic Reach        ●​ Do participants reflect equal
+                                                                     representation of genders?
+
+    KPI 3. Mobilization of           a.​ Number of                ●​ How many trainers/facilitators were
+    Experts and Staff                    Trainers/Facilitators       involved in delivering courses this year?
+                                         Involved                 ●​ How do trainers/facilitators score
+                                     b.​ Trainer/Facilitator         on the OTGA Competency Self-
+                                         Development                 Assessment Rubric?
+
+                                     a.​ Commitment to            ●​ How often are training materials
+    KPI 4. Professional Values
+                                         Continuous                  reviewed and updated?
+                                         Improvement              ●​ Does the Centre have clear ethical
+                                     b.​ Ethical Teaching and        standards?
+                                         Learning Practices       ●​ Does the Centre have clear processes
+                                                                     for managing conflicts and ensuring
+                                                                     fairness?
+
+                                     a.​ Contribution to IOC      ●​ Does the Centre contribute to IOC
+    KPI 5. Core Knowledge and
+                                         Programmes and/or           Programmes and/or the United Nations
+    Areas of Activity
+                                         the United Nations          Decade of Ocean Science?
+                                         Decade of Ocean
+                                         Science
+
+
+
+
+Page | 52 Version 5.0
+

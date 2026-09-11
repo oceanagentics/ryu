@@ -1,0 +1,161 @@
+{
+  "total": 76131491,
+  "results": [
+    {
+      "basisOfRecord": "HumanObservation",
+      "brackish": true,
+      "class": "Teleostei",
+      "classid": 293496,
+      "country": "Canada",
+      "date_end": 1084060800000,
+      "date_mid": 1084060800000,
+      "date_start": 1084060800000,
+      "date_year": 2004,
+      "day": "9",
+      "decimalLatitude": 49.27975,
+      "decimalLongitude": -126.95142,
+      "eventDate": "2004-05-09T20:58:00",
+      "eventID": "PBS-SMMS-12649",
+      "eventRemarks": "Source of data: Research Survey; Vessel Name: Ricker",
+      "eventType": "survey",
+      "family": "Osmeridae",
+      "familyid": 125513,
+      "fieldNumber": "95",
+      "footprintWKT": "LINESTRING(49.27975 -126.95142, 49.29575 -126.96933)",
+      "genus": "Thaleichthys",
+      "genusid": 271074,
+      "gigaclass": "Actinopterygii",
+      "gigaclassid": 10194,
+      "infraphylum": "Gnathostomata",
+      "infraphylumid": 1828,
+      "institutionCode": "PBS",
+      "institutionID": "https://edmo.seadatanet.org/report/4180",
+      "kingdom": "Animalia",
+      "kingdomid": 2,
+      "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "locality": "Pacific Fisheries Management Area (PMFA) & Subarea: 125-5",
+      "marine": true,
+      "month": "5",
+      "occurrenceID": "PBS-SMMS-12649:148:96",
+      "occurrenceStatus": "present",
+      "order": "Osmeriformes",
+      "orderid": 10304,
+      "parvphylum": "Osteichthyes",
+      "parvphylumid": 152352,
+      "phylum": "Chordata",
+      "phylumid": 1821,
+      "rightsHolder": "His Majesty the King in right of Canada, as represented by the Minister of Fisheries and Oceans",
+      "scientificName": "Thaleichthys pacificus",
+      "scientificNameID": "urn:lsid:marinespecies.org:taxname:282959",
+      "species": "Thaleichthys pacificus",
+      "speciesid": 282959,
+      "specificEpithet": "pacificus",
+      "subphylum": "Vertebrata",
+      "subphylumid": 146419,
+      "superclass": "Actinopteri",
+      "superclassid": 843664,
+      "taxonRank": "species",
+      "vernacularName": "Eulachon",
+      "waterBody": "North Pacific Ocean",
+      "year": "2004",
+      "id": "0000003f-f44a-4a64-a878-71ef3943ce4d",
+      "dataset_id": "5061d21c-6161-4ea2-a8d4-38f8285dfc47",
+      "node_id": [
+        "7dfb2d90-9317-434d-8d4e-64adf324579a"
+      ],
+      "dropped": false,
+      "absence": false,
+      "originalScientificName": "Thaleichthys pacificus",
+      "aphiaID": 282959,
+      "flags": [
+        "NO_DEPTH"
+      ],
+      "bathymetry": 159,
+      "shoredistance": 29824,
+      "sst": 10.78,
+      "sss": 31.01,
+      "mof": [
+        {
+          "measurementType": "Length of biological entity specified elsewhere",
+          "measurementTypeID": "http://vocab.nerc.ac.uk/collection/P01/current/SL01XX01/",
+          "measurementUnit": "centimeters",
+          "measurementUnitID": "http://vocab.nerc.ac.uk/collection/P06/current/ULCM/",
+          "measurementValue": "13.8",
+          "occurrenceID": "PBS-SMMS-12649:148:96",
+          "level": 0
+        },
+        {
+          "measurementType": "sex",
+          "measurementTypeID": "http://vocab.nerc.ac.uk/collection/P01/current/ENTSEX01/",
+          "measurementValue": "Unknown",
+          "occurrenceID": "PBS-SMMS-12649:148:96",
+          "level": 0
+        },
+        {
+          "measurementRemarks": "High Lift Trawl, Footrope length from 51 to 70 feet, headropes can be different, vertical opening greater than 5 feet.",
+          "measurementType": "Gear type",
+          "measurementTypeID": "http://vocab.nerc.ac.uk/collection/P01/current/NMSPINST/",
+          "measurementValue": "Otter Trawl",
+          "level": 1
+        },
+        {
+          "measurementRemarks": "The Effective Width (approximate) of the net opening, calculated field. For beam trawls, it's about 2 feet less than the beam width, for Doors, it's about 1/2 the footrope length.",
+          "measurementType": "Width of sample collector (aperture) {mouth width}",
+          "measurementTypeID": "http://vocab.nerc.ac.uk/collection/P01/current/MTHWDTH1/",
+          "measurementUnit": "metres",
+          "measurementUnitID": "http://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+          "measurementValue": "10.643616",
+          "level": 1
+        },
+        {
+          "measurementType": "Depth (spatial coordinate) of sampling event start relative to water surface in the water body",
+          "measurementTypeID": "http://vocab.nerc.ac.uk/collection/P01/current/DXPHPRST/",
+          "measurementUnit": "metres",
+          "measurementUnitID": "http://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+          "measurementValue": "146",
+          "level": 1
+        },
+        {
+          "measurementType": "Depth (spatial coordinate) of sampling event end relative to water surface in the water body",
+          "measurementTypeID": "http://vocab.nerc.ac.uk/collection/P01/current/DXPHPRXN/",
+          "measurementUnit": "metres",
+          "measurementUnitID": "http://vocab.nerc.ac.uk/collection/P06/current/ULAA/",
+          "measurementValue": "152",
+          "level": 1
+        },
+        {
+          "measurementType": "Sample duration",
+          "measurementTypeID": "http://vocab.nerc.ac.uk/collection/P01/current/AZDRZZ01/",
+          "measurementUnit": "minutes",
+          "measurementUnitID": "http://vocab.nerc.ac.uk/collection/P06/current/UMIN/",
+          "measurementValue": "30",
+          "level": 1
+        },
+        {
+          "measurementRemarks": "Distance in Nautical Miles as recorded on the hardcopy bridgelog, or calculated.",
+          "measurementType": "Length of sampling track",
+          "measurementTypeID": "http://vocab.nerc.ac.uk/collection/P01/current/LENTRACK/",
+          "measurementUnit": "nautical miles",
+          "measurementUnitID": "http://vocab.nerc.ac.uk/collection/P06/current/NTML/",
+          "measurementValue": "1.20000004768372",
+          "level": 1
+        },
+        {
+          "measurementType": "Speed of towing platform",
+          "measurementTypeID": "http://vocab.nerc.ac.uk/collection/P01/current/TOWSPEED/",
+          "measurementUnit": "knots",
+          "measurementUnitID": "http://vocab.nerc.ac.uk/collection/P06/current/UKNT/",
+          "measurementValue": "2.40000009536743",
+          "level": 1
+        },
+        {
+          "measurementType": "Direction of Tow",
+          "measurementUnit": "Degrees",
+          "measurementUnitID": "http://vocab.nerc.ac.uk/collection/P06/current/UAAA/",
+          "measurementValue": "325",
+          "level": 1
+        }
+      ]
+    }
+  ]
+}

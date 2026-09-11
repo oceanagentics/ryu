@@ -1,0 +1,687 @@
+{
+  "httpStatus": 200,
+  "result": {
+    "id": "platform-obis",
+    "kind": "system",
+    "countryCode": null,
+    "url": null,
+    "recordDepth": "thin",
+    "title": "Ocean Biodiversity Information System (OBIS)",
+    "summary": "Global marine biodiversity system receiving synchronized data from BISMaL.",
+    "availableLocales": [
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "missingLocales": [],
+    "reviewStatesByLocale": {
+      "ar": "needs_revision",
+      "en": "needs_revision",
+      "es": "needs_revision",
+      "fr": "needs_revision",
+      "ru": "needs_revision",
+      "zh": "needs_revision"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-10T20:03:10.745Z",
+    "recordUpdatedAt": "2026-09-10T20:03:10.745Z",
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 6,
+      "resolvedSources": 6,
+      "issues": [
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.data.descriptors[0].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.data.descriptors[1].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.data.descriptors[2].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.data.descriptors[3].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.data.descriptors[4].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.data.descriptors[5].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "record.properties.data.descriptors[6].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.ar.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.en.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.es.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.fr.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.ru.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "platform-obis",
+          "path": "localizations.zh.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "record": {
+      "id": "platform-obis",
+      "kind": "system",
+      "countryCode": null,
+      "url": null,
+      "recordDepth": "thin",
+      "sources": {
+        "src-obis-ipt": {
+          "id": "src-obis-ipt",
+          "url": "https://manual.obis.org/ipt",
+          "title": {
+            "ar": "دليل OBIS: أداة IPT",
+            "en": "OBIS Manual IPT",
+            "es": "Manual de OBIS: IPT",
+            "fr": "Manuel OBIS : IPT",
+            "ru": "Руководство OBIS: IPT",
+            "zh": "OBIS手册：IPT"
+          },
+          "accessedAt": "2026-05-26"
+        }
+      },
+      "properties": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "platform-obis-tag-data-format-darwin-core",
+              "label": "Darwin Core",
+              "source": null,
+              "category": "standard"
+            },
+            {
+              "id": "platform-obis-tag-data-format-darwin-core-archive",
+              "label": "darwin_core_archive",
+              "source": null,
+              "category": "format"
+            },
+            {
+              "id": "platform-obis-tag-data-format-eml",
+              "label": "Ecological Metadata Language",
+              "source": null,
+              "category": "standard"
+            },
+            {
+              "id": "platform-obis-tag-data-format-emof",
+              "label": "Extended MeasurementOrFact",
+              "source": null,
+              "category": "standard"
+            },
+            {
+              "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+              "label": "catalogue_records",
+              "source": null,
+              "category": "type"
+            },
+            {
+              "id": "platform-obis-tag-data-type-occurrence-observation",
+              "label": "occurrence_records",
+              "source": null,
+              "category": "type"
+            },
+            {
+              "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+              "label": "taxonomic_records",
+              "source": null,
+              "category": "type"
+            }
+          ],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [
+          {
+            "id": "platform-obis-tag-read-method-api",
+            "url": "https://manual.obis.org/ipt",
+            "type": "read",
+            "method": "api",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-read-method-dashboard-viewer",
+            "url": "https://manual.obis.org/ipt",
+            "type": "read",
+            "method": "dashboard_viewer",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-read-method-download",
+            "url": "https://manual.obis.org/ipt",
+            "type": "read",
+            "method": "download",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-read-method-ipt",
+            "url": "https://manual.obis.org/ipt",
+            "type": "read",
+            "method": "ipt",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-read-method-rest-api",
+            "url": "https://manual.obis.org/ipt",
+            "type": "read",
+            "method": "rest_api",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-read-method-sdk-notebook",
+            "url": "https://manual.obis.org/ipt",
+            "type": "read",
+            "method": "sdk_notebook",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-read-method-web",
+            "url": "https://manual.obis.org/ipt",
+            "type": "read",
+            "method": "web",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-write-method-ipt-publish",
+            "url": "https://manual.obis.org/ipt",
+            "type": "submit",
+            "method": "ipt_publish",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-write-method-manager-mediated-submission",
+            "url": "https://manual.obis.org/ipt",
+            "type": "submit",
+            "method": "manager_mediated_submission",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-write-method-template-csv-workflow",
+            "url": "https://manual.obis.org/ipt",
+            "type": "submit",
+            "method": "template_csv_workflow",
+            "source": "src-obis-ipt"
+          },
+          {
+            "id": "platform-obis-tag-write-method-upload",
+            "url": "https://manual.obis.org/ipt",
+            "type": "submit",
+            "method": "upload",
+            "source": "src-obis-ipt"
+          }
+        ],
+        "gallery": [],
+        "disciplines": []
+      },
+      "createdAt": "2026-04-24T00:00:00.000Z",
+      "updatedAt": "2026-09-10T20:03:10.745Z"
+    },
+    "localizations": {
+      "ar": {
+        "locale": "ar",
+        "title": "نظام معلومات التنوع الحيوي في المحيطات (OBIS)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "OBIS",
+            "Ocean Biodiversity Information System (OBIS)"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.342542+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:23.137Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "en": {
+        "locale": "en",
+        "title": "Ocean Biodiversity Information System (OBIS)",
+        "summary": "Global marine biodiversity system receiving synchronized data from BISMaL.",
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [
+              {
+                "id": "platform-obis-tag-data-format-darwin-core",
+                "description": null
+              },
+              {
+                "id": "platform-obis-tag-data-format-darwin-core-archive",
+                "description": null
+              },
+              {
+                "id": "platform-obis-tag-data-format-eml",
+                "description": null
+              },
+              {
+                "id": "platform-obis-tag-data-format-emof",
+                "description": null
+              },
+              {
+                "id": "platform-obis-tag-data-type-metadata-catalog-registry",
+                "description": null
+              },
+              {
+                "id": "platform-obis-tag-data-type-occurrence-observation",
+                "description": null
+              },
+              {
+                "id": "platform-obis-tag-data-type-taxonomy-nomenclature",
+                "description": null
+              }
+            ],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [
+            {
+              "id": "platform-obis-tag-read-method-api",
+              "label": "API",
+              "description": "Access via API."
+            },
+            {
+              "id": "platform-obis-tag-read-method-dashboard-viewer",
+              "label": "Dashboard / viewer",
+              "description": "Access via Dashboard / viewer."
+            },
+            {
+              "id": "platform-obis-tag-read-method-download",
+              "label": "Download",
+              "description": "Access via Download."
+            },
+            {
+              "id": "platform-obis-tag-read-method-ipt",
+              "label": "IPT",
+              "description": "Access via IPT."
+            },
+            {
+              "id": "platform-obis-tag-read-method-rest-api",
+              "label": "REST API",
+              "description": "Access via REST API."
+            },
+            {
+              "id": "platform-obis-tag-read-method-sdk-notebook",
+              "label": "SDK / notebook",
+              "description": "Access via SDK / notebook."
+            },
+            {
+              "id": "platform-obis-tag-read-method-web",
+              "label": "Web UI",
+              "description": "Access via Web UI."
+            },
+            {
+              "id": "platform-obis-tag-write-method-ipt-publish",
+              "label": "IPT publish",
+              "description": "Submission via IPT publish."
+            },
+            {
+              "id": "platform-obis-tag-write-method-manager-mediated-submission",
+              "label": "Manager-mediated submission",
+              "description": "Submission via Manager-mediated submission."
+            },
+            {
+              "id": "platform-obis-tag-write-method-template-csv-workflow",
+              "label": "Template / CSV workflow",
+              "description": "Submission via Template / CSV workflow."
+            },
+            {
+              "id": "platform-obis-tag-write-method-upload",
+              "label": "Upload",
+              "description": "Submission via Upload."
+            }
+          ],
+          "aliases": [],
+          "gallery": []
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-10T20:03:10.719Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.376639+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-04-24T00:00:00.000Z",
+        "updatedAt": "2026-09-10T20:03:10.719Z"
+      },
+      "es": {
+        "locale": "es",
+        "title": "Sistema de Información sobre Biodiversidad Oceánica (OBIS)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "OBIS",
+            "Ocean Biodiversity Information System (OBIS)"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.343836+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:23.137Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "fr": {
+        "locale": "fr",
+        "title": "Système d'information sur la biodiversité océanique (OBIS)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "OBIS",
+            "Ocean Biodiversity Information System (OBIS)"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.342762+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:23.137Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "ru": {
+        "locale": "ru",
+        "title": "Информационная система океанического биоразнообразия (OBIS)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "OBIS",
+            "Ocean Biodiversity Information System (OBIS)"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.342916+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:23.137Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      "zh": {
+        "locale": "zh",
+        "title": "海洋生物多样性信息系统 (OBIS)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": [],
+            "recordCount": null,
+            "storageSize": null
+          },
+          "usage": [],
+          "access": [],
+          "aliases": [
+            "OBIS",
+            "Ocean Biodiversity Information System (OBIS)"
+          ],
+          "gallery": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-04T02:19:23.137Z",
+        "review": {
+          "date": "2026-09-09T18:28:57.342664+00:00",
+          "note": "Country affiliation fields retired; relationship review is required.",
+          "state": "needs_revision",
+          "reviewer": null
+        },
+        "createdAt": "2026-09-04T02:19:23.137Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "link-eurobis-obis",
+        "sourceNodeId": "eurobis",
+        "targetNodeId": "platform-obis",
+        "kind": "syncs_to",
+        "note": "EurOBIS contributes marine species distribution records to OBIS.",
+        "properties": {
+          "sourceRefs": [
+            "src-relationship-eurobis"
+          ]
+        },
+        "sources": {
+          "src-relationship-eurobis": {
+            "id": "src-relationship-eurobis",
+            "url": "https://www.eurobis.org/about",
+            "title": {
+              "ar": "حول EurOBIS",
+              "en": "About EurOBIS",
+              "es": "Acerca de EurOBIS",
+              "fr": "À propos de EurOBIS",
+              "ru": "О EurOBIS",
+              "zh": "关于EurOBIS"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-05-26T21:51:00.376Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      {
+        "id": "rel-bismal-syncs-to-obis",
+        "sourceNodeId": "bismal",
+        "targetNodeId": "platform-obis",
+        "kind": "syncs_to",
+        "note": "BISMaL distributes Japanese OBIS-node biodiversity records to OBIS.",
+        "properties": {
+          "format": "Darwin Core Archive",
+          "sourceRefs": [
+            "src-relationship-j-obis"
+          ],
+          "transferMethod": "IPT"
+        },
+        "sources": {
+          "src-relationship-j-obis": {
+            "id": "src-relationship-j-obis",
+            "url": "https://www.godac.jamstec.go.jp/bismal/e/about.html",
+            "title": {
+              "ar": "حول BISMaL / J-OBIS",
+              "en": "About BISMaL / J-OBIS",
+              "es": "Acerca de BISMaL / J-OBIS",
+              "fr": "À propos de BISMaL / J-OBIS",
+              "ru": "О BISMaL / J-OBIS",
+              "zh": "关于BISMaL / J-OBIS"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-04-24T00:00:00.000Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      {
+        "id": "rel-fishbase-member-of-platform-obis",
+        "sourceNodeId": "fishbase",
+        "targetNodeId": "platform-obis",
+        "kind": "member_of",
+        "note": "The OBIS Fish OBIS node page explicitly identifies FishBase and FishNet2 as participating systems in the global thematic Fish OBIS node. This represents FishBase participation in OBIS through that node, not organizational membership or component ownership. The page describes intended FishBase contributions; current delivery is assessed separately.",
+        "properties": {
+          "via": "Fish OBIS",
+          "scope": "OBIS network participation through the Fish OBIS thematic node",
+          "status": "listed participant",
+          "sourceRefs": [
+            "evidence"
+          ]
+        },
+        "sources": {
+          "evidence": {
+            "id": "evidence",
+            "url": "https://portal.obis.org/node/dcb0c76d-46a1-4e07-9a69-98cf3fd67576",
+            "title": {
+              "ar": "العقدة الموضوعية Fish OBIS والأنظمة المشاركة",
+              "en": "Fish OBIS thematic node and participating systems",
+              "es": "Nodo temático Fish OBIS y sistemas participantes",
+              "fr": "Nœud thématique Fish OBIS et systèmes participants",
+              "ru": "Тематический узел Fish OBIS и участвующие системы",
+              "zh": "Fish OBIS专题节点与参与系统"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-10T19:16:31.969Z",
+        "updatedAt": "2026-09-10T19:16:31.969Z"
+      },
+      {
+        "id": "rel-fishbase-syncs-to-platform-obis",
+        "sourceNodeId": "fishbase",
+        "targetNodeId": "platform-obis",
+        "kind": "syncs_to",
+        "note": "OBIS hosts an archive of FishBase occurrence records harvested from the GBIF-Sweden-hosted resource. The available archive was published on 2018-10-10 and lists an unknown update frequency. This records the historical transfer path; an ongoing refresh is not established.",
+        "properties": {
+          "scope": "Historical harvest of FishBase occurrence data via GBIF-Sweden",
+          "format": "Darwin Core Archive",
+          "status": "historical; current refresh unknown",
+          "artifact": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+          "sourceRefs": [
+            "evidence"
+          ],
+          "transferMethod": "OBIS harvest of the GBIF-Sweden-hosted FishBase resource",
+          "updateFrequency": "unknown",
+          "latestPublishedAt": "2018-10-10"
+        },
+        "sources": {
+          "evidence": {
+            "id": "evidence",
+            "url": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
+            "title": {
+              "ar": "أرشيف سجلات وجود الأنواع في FishBase الذي جمعه OBIS",
+              "en": "FishBase occurrence archive harvested by OBIS",
+              "es": "Archivo de presencias de FishBase recopilado por OBIS",
+              "fr": "Archive des occurrences FishBase collectée par OBIS",
+              "ru": "Архив находок FishBase, собранный OBIS",
+              "zh": "OBIS采集的FishBase物种出现记录档案"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-10T19:16:31.969Z",
+        "updatedAt": "2026-09-10T19:16:31.969Z"
+      },
+      {
+        "id": "rel-ioc-unesco-iode-operates-ocean-biodiversity-information-system",
+        "sourceNodeId": "ioc-unesco-iode",
+        "targetNodeId": "platform-obis",
+        "kind": "operates",
+        "note": "IODE/IOC-UNESCO coordinates OBIS with independently operated nodes. Node contributions do not imply ownership by one government.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-platform-obis"
+          ]
+        },
+        "sources": {
+          "src-relationship-platform-obis": {
+            "id": "src-relationship-platform-obis",
+            "url": "https://obis.org/about/governance/",
+            "title": {
+              "ar": "حوكمة OBIS",
+              "en": "OBIS governance",
+              "es": "Gobernanza de OBIS",
+              "fr": "Gouvernance d’OBIS",
+              "ru": "Управление OBIS",
+              "zh": "OBIS治理"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-05-26T16:46:26.458Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      }
+    ],
+    "routes": []
+  }
+}

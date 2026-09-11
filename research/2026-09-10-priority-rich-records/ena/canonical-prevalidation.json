@@ -1,0 +1,587 @@
+{
+  "id": "ena",
+  "kind": "system",
+  "countryCode": null,
+  "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+  "recordDepth": "thin",
+  "title": "European Nucleotide Archive",
+  "summary": "Major open sequence archive and INSDC member",
+  "availableLocales": [
+    "ar",
+    "zh",
+    "en",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "missingLocales": [],
+  "reviewStatesByLocale": {
+    "ar": "needs_revision",
+    "en": "needs_revision",
+    "es": "needs_revision",
+    "fr": "needs_revision",
+    "ru": "needs_revision",
+    "zh": "needs_revision"
+  },
+  "requestedLocale": "en",
+  "displayLocale": "en",
+  "isLocaleFallback": false,
+  "updatedAt": "2026-09-10T20:02:28.495Z",
+  "recordUpdatedAt": "2026-09-10T20:02:28.495Z",
+  "sourceCompleteness": {
+    "status": "partial",
+    "referencedSources": 8,
+    "resolvedSources": 8,
+    "issues": [
+      {
+        "recordId": "ena",
+        "path": "record.properties.data.descriptors[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "ena",
+        "path": "localizations.ar.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "ena",
+        "path": "localizations.en.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "ena",
+        "path": "localizations.es.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "ena",
+        "path": "localizations.fr.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "ena",
+        "path": "localizations.ru.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "ena",
+        "path": "localizations.zh.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      }
+    ]
+  },
+  "record": {
+    "id": "ena",
+    "kind": "system",
+    "countryCode": null,
+    "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+    "recordDepth": "thin",
+    "sources": {
+      "src-ena-what": {
+        "id": "src-ena-what",
+        "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+        "title": {
+          "ar": "ما هو ENA",
+          "en": "What is ENA",
+          "es": "Qué es ENA",
+          "fr": "Qu’est-ce que ENA",
+          "ru": "Что такое ENA",
+          "zh": "ENA是什么"
+        },
+        "accessedAt": "2026-05-26"
+      }
+    },
+    "properties": {
+      "data": {
+        "descriptors": [
+          {
+            "id": "ena-tag-data-type-genomic-sequence",
+            "label": "sequence_data",
+            "source": null,
+            "category": "type"
+          }
+        ],
+        "recordCount": null,
+        "storageSize": null
+      },
+      "usage": [],
+      "access": [
+        {
+          "id": "ena-tag-write-method-federated-sync",
+          "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+          "type": "partner_sync",
+          "method": "federated_sync",
+          "source": "src-ena-what"
+        },
+        {
+          "id": "ena-tag-read-method-api",
+          "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+          "type": "read",
+          "method": "api",
+          "source": "src-ena-what"
+        },
+        {
+          "id": "ena-tag-read-method-ftp",
+          "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+          "type": "read",
+          "method": "ftp",
+          "source": "src-ena-what"
+        },
+        {
+          "id": "ena-tag-read-method-web",
+          "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+          "type": "read",
+          "method": "web",
+          "source": "src-ena-what"
+        },
+        {
+          "id": "ena-tag-write-method-api-write",
+          "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+          "type": "submit",
+          "method": "api_write",
+          "source": "src-ena-what"
+        },
+        {
+          "id": "ena-tag-write-method-web-submission",
+          "url": "https://www.ebi.ac.uk/training/online/course/nucleotide-sequence-data-resources-ebi/what-ena",
+          "type": "submit",
+          "method": "web_submission",
+          "source": "src-ena-what"
+        }
+      ],
+      "gallery": [],
+      "disciplines": [
+        "genetics"
+      ]
+    },
+    "createdAt": "2026-05-26T16:46:26.461Z",
+    "updatedAt": "2026-09-10T20:02:28.495Z"
+  },
+  "localizations": {
+    "ar": {
+      "locale": "ar",
+      "title": "الأرشيف الأوروبي للنيوكليوتيدات",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.30737+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:41.232Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "en": {
+      "locale": "en",
+      "title": "European Nucleotide Archive",
+      "summary": "Major open sequence archive and INSDC member",
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "ena-tag-data-type-genomic-sequence",
+              "description": null
+            }
+          ],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [
+          {
+            "id": "ena-tag-write-method-federated-sync",
+            "label": "Federated sync",
+            "description": "Submission via Federated sync."
+          },
+          {
+            "id": "ena-tag-read-method-api",
+            "label": "API",
+            "description": "Access via API."
+          },
+          {
+            "id": "ena-tag-read-method-ftp",
+            "label": "FTP",
+            "description": "Access via FTP."
+          },
+          {
+            "id": "ena-tag-read-method-web",
+            "label": "Web UI",
+            "description": "Access via Web UI."
+          },
+          {
+            "id": "ena-tag-write-method-api-write",
+            "label": "API write",
+            "description": "Submission via API write."
+          },
+          {
+            "id": "ena-tag-write-method-web-submission",
+            "label": "Web submission",
+            "description": "Submission via Web submission."
+          }
+        ],
+        "aliases": [
+          "ENA"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": null,
+      "contentUpdatedAt": "2026-09-10T20:02:28.471Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.374289+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-05-26T16:46:26.461Z",
+      "updatedAt": "2026-09-10T20:02:28.471Z"
+    },
+    "es": {
+      "locale": "es",
+      "title": "Archivo Europeo de Nucleótidos",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.308508+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:41.232Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "fr": {
+      "locale": "fr",
+      "title": "Archive européenne des nucléotides",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.307596+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:41.232Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "ru": {
+      "locale": "ru",
+      "title": "Европейский нуклеотидный архив",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.307691+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:41.232Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "zh": {
+      "locale": "zh",
+      "title": "欧洲核苷酸档案库",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "ENA",
+          "European Nucleotide Archive"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:41.232Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.307482+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:41.232Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  },
+  "edges": [
+    {
+      "id": "link-ddbj-ena",
+      "sourceNodeId": "ddbj",
+      "targetNodeId": "ena",
+      "kind": "syncs_to",
+      "note": "INSDC members exchange sequence data and corrections at regular intervals.",
+      "properties": {
+        "scope": "Sequence archive exchange",
+        "sourceRefs": [
+          "src-relationship-insdc"
+        ]
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-05-26T16:46:26.465Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    {
+      "id": "link-ena-genbank",
+      "sourceNodeId": "ena",
+      "targetNodeId": "genbank",
+      "kind": "syncs_to",
+      "note": "INSDC members exchange sequence data and corrections at regular intervals.",
+      "properties": {
+        "scope": "Sequence archive exchange",
+        "sourceRefs": [
+          "src-relationship-insdc"
+        ]
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-05-26T16:46:26.465Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    {
+      "id": "rel-embl-ebi-operates-european-nucleotide-archive",
+      "sourceNodeId": "embl-ebi",
+      "targetNodeId": "ena",
+      "kind": "operates",
+      "note": "EMBL-EBI operates ENA; participating INSDC archive with reciprocal sequence exchange. EMBL is separate from the EU.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "sourceRefs": [
+          "src-relationship-ena"
+        ]
+      },
+      "sources": {
+        "src-relationship-ena": {
+          "id": "src-relationship-ena",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-05-26T16:46:26.461Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    {
+      "id": "rel-ena-member-of-insdc",
+      "sourceNodeId": "ena",
+      "targetNodeId": "insdc",
+      "kind": "member_of",
+      "note": "Participating sequence archive in INSDC.",
+      "properties": {
+        "sourceRefs": [
+          "src-relationship-insdc"
+        ]
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-09-09T18:33:10.656Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    {
+      "id": "rel-ena-syncs-to-ddbj",
+      "sourceNodeId": "ena",
+      "targetNodeId": "ddbj",
+      "kind": "syncs_to",
+      "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
+      "properties": {
+        "sourceRefs": [
+          "src-relationship-insdc"
+        ]
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-09-09T18:32:46.033Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    {
+      "id": "rel-ena-syncs-to-mgnify",
+      "sourceNodeId": "ena",
+      "targetNodeId": "mgnify",
+      "kind": "syncs_to",
+      "note": "ENA sequencing data are retrieved for MGnify analysis.",
+      "properties": {
+        "scope": "Analysis inputs; not complete archive mirroring",
+        "sourceRefs": [
+          "src-relationship-mgnify"
+        ]
+      },
+      "sources": {
+        "src-relationship-mgnify": {
+          "id": "src-relationship-mgnify",
+          "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+          "title": {
+            "ar": "تدفق البيانات في MGnify",
+            "en": "MGnify data flow",
+            "es": "Flujo de datos de MGnify",
+            "fr": "Flux de données de MGnify",
+            "ru": "Поток данных MGnify",
+            "zh": "MGnify数据流程"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-09-09T18:33:15.890Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    {
+      "id": "rel-genbank-syncs-to-ena",
+      "sourceNodeId": "genbank",
+      "targetNodeId": "ena",
+      "kind": "syncs_to",
+      "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
+      "properties": {
+        "sourceRefs": [
+          "src-relationship-insdc"
+        ]
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-09-09T18:32:52.793Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  ],
+  "routes": []
+}

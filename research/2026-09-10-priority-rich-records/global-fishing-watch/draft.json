@@ -1,0 +1,2332 @@
+{
+  "id": "global-fishing-watch",
+  "record": {
+    "kind": "system",
+    "url": "https://globalfishingwatch.org/platform/map",
+    "recordDepth": "rich",
+    "properties": {
+      "disciplines": [
+        "fisheries_science",
+        "spatial_planning",
+        "ecology"
+      ],
+      "data": {
+        "descriptors": [
+          {
+            "id": "gfw-effort",
+            "category": "type",
+            "label": "fisheries_statistics",
+            "source": "zenodo"
+          },
+          {
+            "id": "gfw-models",
+            "category": "type",
+            "label": "model_outputs",
+            "source": "caveats"
+          },
+          {
+            "id": "gfw-vessels",
+            "category": "type",
+            "label": "platform_records",
+            "source": "tmt"
+          },
+          {
+            "id": "gfw-boundaries",
+            "category": "type",
+            "label": "geographic_reference_data",
+            "source": "reference"
+          },
+          {
+            "id": "gfw-csv",
+            "category": "format",
+            "label": "csv",
+            "source": "zenodo"
+          },
+          {
+            "id": "gfw-json",
+            "category": "format",
+            "label": "json",
+            "source": "api"
+          },
+          {
+            "id": "gfw-geojson",
+            "category": "format",
+            "label": "geojson",
+            "source": "guide"
+          },
+          {
+            "id": "gfw-shapefile",
+            "category": "format",
+            "label": "shapefile",
+            "source": "guide"
+          },
+          {
+            "id": "gfw-kml",
+            "category": "format",
+            "label": "kml",
+            "source": "guide"
+          },
+          {
+            "id": "gfw-pdf",
+            "category": "format",
+            "label": "pdf",
+            "source": "guide"
+          },
+          {
+            "id": "gfw-fao",
+            "category": "standard",
+            "label": "fao_fishing_areas",
+            "source": "guide"
+          }
+        ]
+      },
+      "access": [
+        {
+          "id": "gfw-map",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://globalfishingwatch.org/platform/map",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "platform",
+            "guide"
+          ]
+        },
+        {
+          "id": "gfw-reports",
+          "type": "read",
+          "methods": [
+            "download"
+          ],
+          "url": "https://globalfishingwatch.org/platform/map",
+          "requirements": [
+            "account"
+          ],
+          "cost": "free",
+          "sourceRefs": [
+            "guide"
+          ]
+        },
+        {
+          "id": "gfw-api",
+          "type": "read",
+          "methods": [
+            "api",
+            "software"
+          ],
+          "url": "https://globalfishingwatch.org/our-apis/documentation/",
+          "requirements": [
+            "account",
+            "api_key",
+            "affiliation"
+          ],
+          "cost": "free",
+          "sourceRefs": [
+            "api",
+            "auth",
+            "terms"
+          ]
+        },
+        {
+          "id": "gfw-zenodo",
+          "type": "read",
+          "methods": [
+            "browse",
+            "download",
+            "api"
+          ],
+          "url": "https://zenodo.org/records/14982712",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "zenodo",
+            "zenodo-api"
+          ]
+        },
+        {
+          "id": "gfw-bigquery",
+          "type": "read",
+          "methods": [
+            "api",
+            "software"
+          ],
+          "url": "https://console.cloud.google.com/bigquery?project=global-fishing-watch",
+          "requirements": [
+            "account"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "zenodo"
+          ]
+        },
+        {
+          "id": "gfw-earth-engine",
+          "type": "read",
+          "methods": [
+            "api",
+            "software"
+          ],
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/GFW_GFF_V1_fishing_hours",
+          "requirements": [
+            "account"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "ee"
+          ]
+        },
+        {
+          "id": "gfw-upload",
+          "type": "write",
+          "methods": [
+            "form",
+            "upload"
+          ],
+          "url": "https://globalfishingwatch.org/platform/map",
+          "requirements": [
+            "account"
+          ],
+          "cost": "free",
+          "sourceRefs": [
+            "guide"
+          ]
+        },
+        {
+          "id": "gfw-contribute",
+          "type": "write",
+          "methods": [
+            "request"
+          ],
+          "url": "https://globalfishingwatch.org/our-platform/",
+          "requirements": [
+            "affiliation",
+            "approval"
+          ],
+          "cost": "unknown",
+          "sourceRefs": [
+            "coalition",
+            "panama-current"
+          ]
+        }
+      ],
+      "gallery": [],
+      "metrics": [
+        {
+          "id": "gfw-v3-package-size",
+          "key": "storage_size_bytes",
+          "value": 26294789287,
+          "observedAt": "2025-03-11",
+          "source": "zenodo-api"
+        },
+        {
+          "id": "gfw-v3-file-downloads",
+          "key": "download_count",
+          "value": 22877,
+          "observedAt": null,
+          "period": "cumulative",
+          "source": "zenodo-api"
+        }
+      ]
+    },
+    "sources": {
+      "platform": {
+        "id": "platform",
+        "url": "https://globalfishingwatch.org/our-platform/",
+        "title": {
+          "en": "Global Fishing Watch platform",
+          "fr": "Plateforme Global Fishing Watch",
+          "es": "Plataforma Global Fishing Watch",
+          "ar": "منصة Global Fishing Watch",
+          "zh": "Global Fishing Watch平台",
+          "ru": "Платформа Global Fishing Watch"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "guide": {
+        "id": "guide",
+        "url": "https://globalfishingwatch.org/user-guide/",
+        "title": {
+          "en": "Map user guide",
+          "fr": "Guide de la carte",
+          "es": "Guía del mapa",
+          "ar": "دليل استخدام الخريطة",
+          "zh": "地图使用指南",
+          "ru": "Руководство по карте"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "api": {
+        "id": "api",
+        "url": "https://globalfishingwatch.org/our-apis/documentation/",
+        "title": {
+          "en": "API documentation",
+          "fr": "Documentation API",
+          "es": "Documentación API",
+          "ar": "توثيق واجهة API",
+          "zh": "API文档",
+          "ru": "Документация API"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "auth": {
+        "id": "auth",
+        "url": "https://globalfishingwatch.org/our-apis/documentation/docs/authentication",
+        "title": {
+          "en": "API authentication",
+          "fr": "Authentification API",
+          "es": "Autenticación API",
+          "ar": "مصادقة API",
+          "zh": "API身份验证",
+          "ru": "Аутентификация API"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "terms": {
+        "id": "terms",
+        "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+        "title": {
+          "en": "API licence and limits",
+          "fr": "Licence et limites API",
+          "es": "Licencia y límites API",
+          "ar": "ترخيص API وحدودها",
+          "zh": "API许可与限额",
+          "ru": "Лицензия и ограничения API"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "caveats": {
+        "id": "caveats",
+        "url": "https://globalfishingwatch.org/our-apis/documentation/docs/v3/general-api-doc/data-caveats",
+        "title": {
+          "en": "Data caveats",
+          "fr": "Limites des données",
+          "es": "Limitaciones de los datos",
+          "ar": "قيود البيانات",
+          "zh": "数据局限",
+          "ru": "Ограничения данных"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "v4": {
+        "id": "v4",
+        "url": "https://globalfishingwatch.org/platform-update/version-4-data-pipeline-release/",
+        "title": {
+          "en": "Data pipeline version 4, 26 February 2026",
+          "fr": "Traitement des données version 4, 26 février 2026",
+          "es": "Procesamiento de datos versión 4, 26 febrero 2026",
+          "ar": "معالجة البيانات بالإصدار 4، 26 فبراير 2026",
+          "zh": "数据处理流程第4版，2026年2月26日",
+          "ru": "Обработка данных версии 4, 26 февраля 2026"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "kpler": {
+        "id": "kpler",
+        "url": "https://globalfishingwatch.org/platform-update/data-vendor-transition/",
+        "title": {
+          "en": "AIS provider transition, 25 April 2026",
+          "fr": "Changement de fournisseur AIS, 25 avril 2026",
+          "es": "Cambio de proveedor AIS, 25 abril 2026",
+          "ar": "تغيير مزود AIS، 25 أبريل 2026",
+          "zh": "AIS供应商变更，2026年4月25日",
+          "ru": "Смена поставщика AIS, 25 апреля 2026"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "zenodo": {
+        "id": "zenodo",
+        "url": "https://zenodo.org/records/14982712",
+        "title": {
+          "en": "Global AIS-based Apparent Fishing Effort v3.0.0",
+          "fr": "Effort de pêche apparent mondial issu de l’AIS v3.0.0",
+          "es": "Esfuerzo pesquero aparente mundial basado en AIS v3.0.0",
+          "ar": "جهد الصيد الظاهر العالمي المستند إلى AIS، الإصدار 3.0.0",
+          "zh": "全球AIS表观捕捞努力量v3.0.0",
+          "ru": "Глобальное предполагаемое рыболовное усилие по AIS v3.0.0"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "zenodo-api": {
+        "id": "zenodo-api",
+        "url": "https://zenodo.org/api/records/14982712",
+        "title": {
+          "en": "Zenodo v3 release metadata and counters",
+          "fr": "Métadonnées et compteurs Zenodo v3",
+          "es": "Metadatos y contadores Zenodo v3",
+          "ar": "بيانات Zenodo الوصفية وعدادات الإصدار 3",
+          "zh": "Zenodo第3版元数据与计数器",
+          "ru": "Метаданные и счётчики Zenodo v3"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "statistics": {
+        "id": "statistics",
+        "url": "https://zenodo.org/help/statistics",
+        "title": {
+          "en": "Zenodo statistics definitions",
+          "fr": "Définitions des statistiques Zenodo",
+          "es": "Definiciones estadísticas de Zenodo",
+          "ar": "تعريفات إحصاءات Zenodo",
+          "zh": "Zenodo统计定义",
+          "ru": "Определения статистики Zenodo"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ee": {
+        "id": "ee",
+        "url": "https://developers.google.com/earth-engine/datasets/catalog/GFW_GFF_V1_fishing_hours",
+        "title": {
+          "en": "Earth Engine: GFW fishing hours v1",
+          "fr": "Earth Engine : heures de pêche GFW v1",
+          "es": "Earth Engine: horas de pesca GFW v1",
+          "ar": "Earth Engine: ساعات الصيد GFW بالإصدار 1",
+          "zh": "Earth Engine：GFW第1版捕捞时长",
+          "ru": "Earth Engine: часы рыболовства GFW v1"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "reports": {
+        "id": "reports",
+        "url": "https://api-doc.globalfishingwatch.org/our-apis/documentation/docs/v3/4wings/report",
+        "title": {
+          "en": "4Wings report API",
+          "fr": "API de rapports 4Wings",
+          "es": "API de informes 4Wings",
+          "ar": "واجهة تقارير 4Wings",
+          "zh": "4Wings报告API",
+          "ru": "API отчётов 4Wings"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "reference": {
+        "id": "reference",
+        "url": "https://globalfishingwatch.org/faqs/reference-layer-sources/",
+        "title": {
+          "en": "Reference layer sources",
+          "fr": "Sources des couches de référence",
+          "es": "Fuentes de las capas de referencia",
+          "ar": "مصادر الطبقات المرجعية",
+          "zh": "参考图层来源",
+          "ru": "Источники справочных слоёв"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "optical": {
+        "id": "optical",
+        "url": "https://globalfishingwatch.org/insights/ask-global-fishing-watch-optical-detections/",
+        "title": {
+          "en": "Optical vessel detections",
+          "fr": "Détections optiques de navires",
+          "es": "Detecciones ópticas de buques",
+          "ar": "الرصد البصري للسفن",
+          "zh": "船舶光学探测",
+          "ru": "Оптическое обнаружение судов"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "skylight": {
+        "id": "skylight",
+        "url": "https://globalfishingwatch.org/platform-update/skylight-viirs-detections-added/",
+        "title": {
+          "en": "Skylight VIIRS integration, 31 March 2026",
+          "fr": "Intégration Skylight VIIRS, 31 mars 2026",
+          "es": "Integración Skylight VIIRS, 31 marzo 2026",
+          "ar": "دمج Skylight VIIRS، 31 مارس 2026",
+          "zh": "Skylight VIIRS集成，2026年3月31日",
+          "ru": "Интеграция Skylight VIIRS, 31 марта 2026"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "tmt": {
+        "id": "tmt",
+        "url": "https://globalfishingwatch.org/platform-update/five-new-vessel-registry-data-sources-integrated/",
+        "title": {
+          "en": "Vessel registry integrations, 1 June 2026",
+          "fr": "Intégration des registres de navires, 1 juin 2026",
+          "es": "Integración de registros de buques, 1 junio 2026",
+          "ar": "دمج سجلات السفن، 1 يونيو 2026",
+          "zh": "船舶登记数据集成，2026年6月1日",
+          "ru": "Интеграция судовых реестров, 1 июня 2026"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "arcgis": {
+        "id": "arcgis",
+        "url": "https://globalfishingwatch.org/platform-update/explore-global-fishing-watch-data-via-esris-arcgis-online/",
+        "title": {
+          "en": "ArcGIS Online layers, 15 January 2026",
+          "fr": "Couches ArcGIS Online, 15 janvier 2026",
+          "es": "Capas ArcGIS Online, 15 enero 2026",
+          "ar": "طبقات ArcGIS Online، 15 يناير 2026",
+          "zh": "ArcGIS Online图层，2026年1月15日",
+          "ru": "Слои ArcGIS Online, 15 января 2026"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "annual": {
+        "id": "annual",
+        "url": "https://globalfishingwatch.org/annual-report-2025/",
+        "title": {
+          "en": "Annual report 2025",
+          "fr": "Rapport annuel 2025",
+          "es": "Informe anual 2025",
+          "ar": "التقرير السنوي 2025",
+          "zh": "2025年年度报告",
+          "ru": "Годовой отчёт 2025"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "coalition": {
+        "id": "coalition",
+        "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+        "title": {
+          "en": "Ocean transparency commitments, 18 June 2026",
+          "fr": "Engagements de transparence océanique, 18 juin 2026",
+          "es": "Compromisos de transparencia oceánica, 18 junio 2026",
+          "ar": "التزامات شفافية المحيطات، 18 يونيو 2026",
+          "zh": "海洋透明度承诺，2026年6月18日",
+          "ru": "Обязательства по прозрачности океана, 18 июня 2026"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "jac": {
+        "id": "jac",
+        "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+        "title": {
+          "en": "Joint Analytical Cell",
+          "fr": "Cellule analytique conjointe",
+          "es": "Célula Analítica Conjunta",
+          "ar": "الخلية التحليلية المشتركة",
+          "zh": "联合分析小组",
+          "ru": "Совместная аналитическая группа"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "provider-1": {
+        "id": "provider-1",
+        "url": "https://globalfishingwatch.org/norway/",
+        "title": {
+          "en": "Norway VMS data partnership",
+          "fr": "Partenariat de données VMS : Norwegian Directorate of Fisheries",
+          "es": "Asociación de datos VMS: Norwegian Directorate of Fisheries",
+          "ar": "شراكة بيانات VMS: Norwegian Directorate of Fisheries",
+          "zh": "VMS数据合作：Norwegian Directorate of Fisheries",
+          "ru": "Партнёрство по данным VMS: Norwegian Directorate of Fisheries"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "provider-2": {
+        "id": "provider-2",
+        "url": "https://www.gov.br/mpa/pt-br/assuntos/cadastro-registro-e-monitoramento/monitoramento-da-aquicultura-e-da-pesca-1/preps-1/global-fishing-watch",
+        "title": {
+          "en": "Brazil PREPS and GFW partnership",
+          "fr": "Partenariat de données VMS : Brazil Ministry of Fisheries and Aquaculture",
+          "es": "Asociación de datos VMS: Brazil Ministry of Fisheries and Aquaculture",
+          "ar": "شراكة بيانات VMS: Brazil Ministry of Fisheries and Aquaculture",
+          "zh": "VMS数据合作：Brazil Ministry of Fisheries and Aquaculture",
+          "ru": "Партнёрство по данным VMS: Brazil Ministry of Fisheries and Aquaculture"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "provider-3": {
+        "id": "provider-3",
+        "url": "https://globalfishingwatch.org/costa-rica/",
+        "title": {
+          "en": "Costa Rica VMS data partnership",
+          "fr": "Partenariat de données VMS : Costa Rican Institute of Fisheries and Aquaculture",
+          "es": "Asociación de datos VMS: Costa Rican Institute of Fisheries and Aquaculture",
+          "ar": "شراكة بيانات VMS: Costa Rican Institute of Fisheries and Aquaculture",
+          "zh": "VMS数据合作：Costa Rican Institute of Fisheries and Aquaculture",
+          "ru": "Партнёрство по данным VMS: Costa Rican Institute of Fisheries and Aquaculture"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "provider-4": {
+        "id": "provider-4",
+        "url": "https://globalfishingwatch.org/es/historias/panama-publica-los-datos-de-seguimiento-de-embarcaciones-en-el-mapa-de-global-fishing-watch/",
+        "title": {
+          "en": "Panama publishes vessel tracking data",
+          "fr": "Partenariat de données VMS : Aquatic Resources Authority of Panama",
+          "es": "Asociación de datos VMS: Aquatic Resources Authority of Panama",
+          "ar": "شراكة بيانات VMS: Aquatic Resources Authority of Panama",
+          "zh": "VMS数据合作：Aquatic Resources Authority of Panama",
+          "ru": "Партнёрство по данным VMS: Aquatic Resources Authority of Panama"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "provider-5": {
+        "id": "provider-5",
+        "url": "https://globalfishingwatch.org/press-release/new-partnership-transparency-fisheries-eastern-tropical-pacific/",
+        "title": {
+          "en": "Peru Ministry of Production data partnership",
+          "fr": "Partenariat de données VMS : Peru Ministry of Production",
+          "es": "Asociación de datos VMS: Peru Ministry of Production",
+          "ar": "شراكة بيانات VMS: Peru Ministry of Production",
+          "zh": "VMS数据合作：Peru Ministry of Production",
+          "ru": "Партнёрство по данным VMS: Peru Ministry of Production"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "provider-6": {
+        "id": "provider-6",
+        "url": "https://globalfishingwatch.org/our-work-in-chile/",
+        "title": {
+          "en": "Chile Sernapesca data partnership",
+          "fr": "Partenariat de données VMS : Chile National Fisheries and Aquaculture Service",
+          "es": "Asociación de datos VMS: Chile National Fisheries and Aquaculture Service",
+          "ar": "شراكة بيانات VMS: Chile National Fisheries and Aquaculture Service",
+          "zh": "VMS数据合作：Chile National Fisheries and Aquaculture Service",
+          "ru": "Партнёрство по данным VMS: Chile National Fisheries and Aquaculture Service"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "provider-7": {
+        "id": "provider-7",
+        "url": "https://globalfishingwatch.org/es/programa-transparencia-latinoamerica-ecuador/",
+        "title": {
+          "en": "Ecuador DIRNEA data partnership",
+          "fr": "Partenariat de données VMS : Ecuador National Directorate of Aquatic Spaces",
+          "es": "Asociación de datos VMS: Ecuador National Directorate of Aquatic Spaces",
+          "ar": "شراكة بيانات VMS: Ecuador National Directorate of Aquatic Spaces",
+          "zh": "VMS数据合作：Ecuador National Directorate of Aquatic Spaces",
+          "ru": "Партнёрство по данным VMS: Ecuador National Directorate of Aquatic Spaces"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "provider-8": {
+        "id": "provider-8",
+        "url": "https://globalfishingwatch.org/belize/",
+        "title": {
+          "en": "Belize high-seas fleet partnership",
+          "fr": "Partenariat de données VMS : Belize High Seas Fisheries Unit",
+          "es": "Asociación de datos VMS: Belize High Seas Fisheries Unit",
+          "ar": "شراكة بيانات VMS: Belize High Seas Fisheries Unit",
+          "zh": "VMS数据合作：Belize High Seas Fisheries Unit",
+          "ru": "Партнёрство по данным VMS: Belize High Seas Fisheries Unit"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "provider-9": {
+        "id": "provider-9",
+        "url": "https://globalfishingwatch.org/our-work-in-papua-new-guinea/",
+        "title": {
+          "en": "Papua New Guinea VMS partnership",
+          "fr": "Partenariat de données VMS : Papua New Guinea National Fisheries Authority",
+          "es": "Asociación de datos VMS: Papua New Guinea National Fisheries Authority",
+          "ar": "شراكة بيانات VMS: Papua New Guinea National Fisheries Authority",
+          "zh": "VMS数据合作：Papua New Guinea National Fisheries Authority",
+          "ru": "Партнёрство по данным VMS: Papua New Guinea National Fisheries Authority"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "peru-public": {
+        "id": "peru-public",
+        "url": "https://globalfishingwatch.org/news-views/largest-commercial-fishery-tracked-gfw-map/",
+        "title": {
+          "en": "Peruvian tracking data publicly available",
+          "fr": "Données péruviennes publiquement accessibles",
+          "es": "Datos peruanos de seguimiento públicos",
+          "ar": "إتاحة بيانات التتبع البيروفية للعامة",
+          "zh": "秘鲁跟踪数据公开",
+          "ru": "Публичные данные слежения Перу"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "chile-public": {
+        "id": "chile-public",
+        "url": "https://globalfishingwatch.org/success-story/chile-publishes-vessel-tracking-data/",
+        "title": {
+          "en": "Chile publishes vessel data",
+          "fr": "Publication des données de navires du Chili",
+          "es": "Chile publica datos de buques",
+          "ar": "نشر بيانات السفن التشيلية",
+          "zh": "智利发布船舶数据",
+          "ru": "Чили публикует данные судов"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "wdpca-transition": {
+        "id": "wdpca-transition",
+        "url": "https://api.protectedplanet.net/",
+        "title": {
+          "en": "Protected Planet WDPCA migration notice",
+          "fr": "Avis de migration WDPCA de Protected Planet",
+          "es": "Aviso de migración WDPCA de Protected Planet",
+          "ar": "إشعار انتقال Protected Planet إلى WDPCA",
+          "zh": "Protected Planet WDPCA迁移通知",
+          "ru": "Уведомление о переходе Protected Planet на WDPCA"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "indonesia": {
+        "id": "indonesia",
+        "url": "https://globalfishingwatch.org/transparency/vms-layer-in-fishing-activity-map/",
+        "title": {
+          "en": "Indonesia VMS public release, 2017",
+          "fr": "Publication VMS indonésienne, 2017",
+          "es": "Publicación VMS de Indonesia, 2017",
+          "ar": "نشر بيانات VMS الإندونيسية، 2017",
+          "zh": "印度尼西亚VMS公开发布，2017年",
+          "ru": "Публикация VMS Индонезии, 2017"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "vms-history": {
+        "id": "vms-history",
+        "url": "https://globalfishingwatch.org/wp-content/uploads/GFW-Poster-250530-01.pdf",
+        "title": {
+          "en": "Public vessel tracking, 2012–2024",
+          "fr": "Suivi public des navires, 2012–2024",
+          "es": "Seguimiento público de buques, 2012–2024",
+          "ar": "التتبع العام للسفن، 2012–2024",
+          "zh": "公开船舶跟踪，2012–2024年",
+          "ru": "Публичное слежение за судами, 2012–2024"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "panama-current": {
+        "id": "panama-current",
+        "url": "https://globalfishingwatch.org/our-work-in-panama/",
+        "title": {
+          "en": "GFW in Panama: public domestic fleet in 2026",
+          "fr": "GFW au Panama : flotte nationale publique en 2026",
+          "es": "GFW en Panamá: flota nacional pública en 2026",
+          "ar": "GFW في بنما: نشر الأسطول المحلي في 2026",
+          "zh": "GFW在巴拿马：2026年国内船队公开",
+          "ru": "GFW в Панаме: публичный национальный флот в 2026 году"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "en": {
+      "title": "Global Fishing Watch",
+      "summary": "Public vessel-activity maps and data products combining AIS, government VMS, satellite detections and vessel registries.",
+      "description": "Global Fishing Watch, Inc. owns and operates this platform for research and ocean monitoring. The February 2026 version 4 pipeline processes AIS, VMS, identity and detection products; the public API remains version 3. Kpler became the unified AIS provider in April 2026. Fishing effort estimates, encounters and detection gaps require interpretation alongside coverage and registry quality: they do not measure catch or establish illegal activity. Public access differs by dataset, partner permissions and licence. The separate Zenodo v3.0.0 release covers 2012–2024; its MMSI values do not uniquely identify vessels across time.",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch map"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "platform",
+            "terms",
+            "v4",
+            "kpler",
+            "caveats",
+            "zenodo",
+            "statistics"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "gfw-effort",
+              "description": "Gridded apparent fishing hours by date, flag, gear or MMSI; these estimate activity rather than catch."
+            },
+            {
+              "id": "gfw-models",
+              "description": "Modelled fishing events, encounters, loitering, AIS gaps and satellite detections; none alone establishes an offence."
+            },
+            {
+              "id": "gfw-vessels",
+              "description": "Vessel identity and history combine AIS self-reports and registries. Some TMT indicators and Brazilian registry fields require partner access."
+            },
+            {
+              "id": "gfw-boundaries",
+              "description": "Reference boundaries include EEZs, protected areas and fishing regions; layer versions and legal meaning require source-specific checks."
+            },
+            {
+              "id": "gfw-csv",
+              "description": "Version 3 bulk tables and schemas describe CSV files, often packaged in ZIP archives."
+            },
+            {
+              "id": "gfw-json",
+              "description": "Documented APIs return JSON and support bulk reports in JSON."
+            },
+            {
+              "id": "gfw-geojson",
+              "description": "Custom polygon uploads accept GeoJSON; report APIs also accept GeoJSON areas."
+            },
+            {
+              "id": "gfw-shapefile",
+              "description": "User-uploaded geometry supports Shapefile; required companion files must be packaged correctly."
+            },
+            {
+              "id": "gfw-kml",
+              "description": "KML is supported for custom map data uploads, not claimed as a universal export."
+            },
+            {
+              "id": "gfw-pdf",
+              "description": "Vessel-profile reports can be downloaded as PDF; bulk analytical tables use other formats."
+            },
+            {
+              "id": "gfw-fao",
+              "description": "FAO major fishing areas are offered as statistical reference boundaries; this does not standardize every GFW product or prove jurisdiction."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "gfw-map",
+            "label": "Public map",
+            "description": "Browse activity layers, vessels and reference areas without an account. Coverage and update lag vary by dataset."
+          },
+          {
+            "id": "gfw-reports",
+            "label": "Map reports",
+            "description": "Sign in for area and vessel reports. Public map downloads do not expose raw VMS data or unrestricted AIS vessel tracks."
+          },
+          {
+            "id": "gfw-api",
+            "label": "Documented API v3",
+            "description": "Create your own bearer token after registration and acceptance of terms. Terms require an eligible organizational affiliation. Noncommercial use and attribution apply; limits are 50,000 requests/day and 1,500,000/month across a user’s tokens. Dataset permissions vary. Not authenticated in this research."
+          },
+          {
+            "id": "gfw-zenodo",
+            "label": "Versioned bulk release",
+            "description": "Zenodo v3.0.0 covers 2012–2024 and carries CC BY-NC 4.0. Metadata, schemas and small README files were retrieved; the full archive was not downloaded. This frozen release differs from the live v4 pipeline."
+          },
+          {
+            "id": "gfw-bigquery",
+            "label": "BigQuery distribution",
+            "description": "The v3 release cites global-fishing-watch.fishing_effort_v3. Query with your Google account/project; cloud charges and exact permissions were not tested."
+          },
+          {
+            "id": "gfw-earth-engine",
+            "label": "Historical Earth Engine collection",
+            "description": "Google’s GFW/GFF/V1/fishing_hours catalogue covers 2012 to the start of 2017 and states CC BY-SA 4.0. This legacy collection has different coverage and terms from the v3 release. Requires a registered project; access charges were not established here."
+          },
+          {
+            "id": "gfw-upload",
+            "label": "Custom workspace data",
+            "description": "Registered users can draw areas and upload polygon, point or track layers, keeping them private or sharing them with a workspace. This does not submit data to GFW’s curated public feeds."
+          },
+          {
+            "id": "gfw-contribute",
+            "label": "Institutional data partnership",
+            "description": "Public VMS and registry sharing is arranged through institutional agreements; contact GFW to establish scope, permissions and delivery. GFW reports Panama’s domestic-fleet VMS subset publicly shared in 2026; a partnership does not make every national dataset public."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "gfw-v3-package-size",
+            "description": "Sum of the 48 file sizes in the Zenodo v3.0.0 release published 11 March 2025: 26,294,789,287 bytes. This is the downloadable package, not total GFW storage."
+          },
+          {
+            "id": "gfw-v3-file-downloads",
+            "description": "Zenodo’s cumulative file-download counter for record 14982712 was 22,877 when retrieved. Each downloaded file counts; humans and user-initiated machines are included, robots and double-clicks excluded. This is not unique users or global GFW usage. No counter reporting timestamp is supplied."
+          }
+        ],
+        "researchGaps": {
+          "data": "No exact current whole-platform record or unique-vessel count was established. AIS devices, model detections and vessels are different units; the scoped archive size does not cover live holdings.",
+          "usage": "API requests, registered users and website visitors in annual reports cannot be relabelled as downloads, contributors or sessions. Only the explicitly scoped Zenodo download measure is recorded.",
+          "standards": "The FAO assignment covers reference areas only. No approved metadata/interchange standard was verified across GFW products; AIS conventions, MMSI and licences are not additional vocabulary assignments. GeoTIFF export is documented but has no approved format ID.",
+          "access": "No personal GFW token was available, so authenticated API operations and restricted datasets were not tested. Public source retrieval worked for Zenodo; several GFW web pages returned 403 and were researched through indexed primary text. No approved Ryu operational route or public gallery asset is staged."
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Global Fishing Watch",
+      "summary": "Cartes et produits d’activité des navires combinant AIS, VMS publics, détections satellitaires et registres.",
+      "description": "Global Fishing Watch, Inc. possède et exploite cette plateforme pour la recherche et le suivi océanique. Le traitement version 4 de février 2026 couvre AIS, VMS, identité et détection ; l’API publique reste en version 3. Kpler est devenu le fournisseur AIS unifié en avril 2026. Effort estimé, rencontres et interruptions doivent être interprétés selon couverture et qualité des registres : ils ne mesurent pas les captures et ne prouvent pas une activité illégale. L’accès varie selon données, droits des partenaires et licence. Le lot Zenodo v3.0.0 couvre 2012–2024 ; ses MMSI ne désignent pas des navires uniques dans le temps.",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch map"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "platform",
+            "terms",
+            "v4",
+            "kpler",
+            "caveats",
+            "zenodo",
+            "statistics"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "gfw-effort",
+              "description": "Heures de pêche apparente agrégées par date, pavillon, engin ou MMSI ; elles estiment une activité, pas les captures."
+            },
+            {
+              "id": "gfw-models",
+              "description": "Événements de pêche, rencontres, attente, interruptions AIS et détections satellitaires modélisés ; aucun ne prouve seul une infraction."
+            },
+            {
+              "id": "gfw-vessels",
+              "description": "L’identité et l’historique des navires combinent déclarations AIS et registres. Certains indicateurs TMT et champs brésiliens sont réservés aux partenaires."
+            },
+            {
+              "id": "gfw-boundaries",
+              "description": "Les limites de référence comprennent ZEE, aires protégées et zones de pêche ; versions et portée juridique doivent être vérifiées à la source."
+            },
+            {
+              "id": "gfw-csv",
+              "description": "Les tables et schémas du lot version 3 décrivent des fichiers CSV, souvent regroupés en ZIP."
+            },
+            {
+              "id": "gfw-json",
+              "description": "Les API documentées renvoient du JSON et proposent des rapports groupés JSON."
+            },
+            {
+              "id": "gfw-geojson",
+              "description": "Les polygones personnalisés acceptent GeoJSON ; les API de rapport acceptent aussi ces zones."
+            },
+            {
+              "id": "gfw-shapefile",
+              "description": "Les géométries importées acceptent Shapefile ; les fichiers associés doivent être regroupés correctement."
+            },
+            {
+              "id": "gfw-kml",
+              "description": "KML est accepté pour les données cartographiques importées, sans être un export universel."
+            },
+            {
+              "id": "gfw-pdf",
+              "description": "Les profils de navires peuvent être téléchargés en PDF ; les tables analytiques utilisent d’autres formats."
+            },
+            {
+              "id": "gfw-fao",
+              "description": "Les grandes zones de pêche FAO servent de limites statistiques de référence ; elles ne normalisent pas tous les produits et ne prouvent pas la juridiction."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "gfw-map",
+            "label": "Carte publique",
+            "description": "Consultez couches d’activité, navires et zones sans compte. Couverture et délai varient selon le jeu de données."
+          },
+          {
+            "id": "gfw-reports",
+            "label": "Rapports cartographiques",
+            "description": "Connectez-vous pour les rapports de zones et navires. Les téléchargements publics ne livrent pas les données VMS brutes ni tous les trajets AIS."
+          },
+          {
+            "id": "gfw-api",
+            "label": "API v3 documentée",
+            "description": "Créez votre jeton personnel après inscription et acceptation des conditions, qui exigent une affiliation admissible. Usage non commercial et attribution ; limites de 50 000 requêtes/jour et 1 500 000/mois par utilisateur. Droits variables selon les données. Aucun test authentifié ici."
+          },
+          {
+            "id": "gfw-zenodo",
+            "label": "Publication groupée versionnée",
+            "description": "Zenodo v3.0.0 couvre 2012–2024 sous CC BY-NC 4.0. Métadonnées, schémas et petits fichiers README ont été lus, sans télécharger l’archive complète. Ce lot diffère du traitement v4 en ligne."
+          },
+          {
+            "id": "gfw-bigquery",
+            "label": "Diffusion BigQuery",
+            "description": "Le lot v3 cite global-fishing-watch.fishing_effort_v3. Utilisez votre compte/projet Google ; frais et droits exacts non testés."
+          },
+          {
+            "id": "gfw-earth-engine",
+            "label": "Collection historique Earth Engine",
+            "description": "Le catalogue GFW/GFF/V1/fishing_hours couvre 2012 au début de 2017 et indique CC BY-SA 4.0. Cette collection ancienne diffère du lot v3. Un projet enregistré est nécessaire ; frais non établis ici."
+          },
+          {
+            "id": "gfw-upload",
+            "label": "Données d’espace personnel",
+            "description": "Les inscrits peuvent dessiner des zones et importer polygones, points ou trajets, privés ou partagés avec l’espace. Cela n’alimente pas les flux publics validés de GFW."
+          },
+          {
+            "id": "gfw-contribute",
+            "label": "Partenariat institutionnel de données",
+            "description": "Le partage public VMS et registres relève d’accords institutionnels définissant périmètre, droits et livraison avec GFW. Le sous-ensemble panaméen national est déclaré public en 2026 ; un partenariat ne publie pas toutes les données nationales."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "gfw-v3-package-size",
+            "description": "Somme des tailles des 48 fichiers Zenodo v3.0.0 publiés le 11 mars 2025 : 26 294 789 287 octets. Il s’agit du lot téléchargeable, pas du stockage total GFW."
+          },
+          {
+            "id": "gfw-v3-file-downloads",
+            "description": "Le compteur cumulé de téléchargements de fichiers Zenodo 14982712 indiquait 22 877 lors de la consultation. Chaque fichier compte ; humains et requêtes automatisées d’utilisateurs sont inclus, robots et doubles clics exclus. Ni utilisateurs uniques ni usage global GFW. Aucun horodatage du compteur fourni."
+          }
+        ],
+        "researchGaps": {
+          "data": "Aucun total exact actuel de fiches ou navires uniques de la plateforme n’a été établi. Dispositifs AIS, détections et navires sont distincts ; la taille du lot ne couvre pas les fonds en ligne.",
+          "usage": "Requêtes API, inscrits et visiteurs des rapports annuels ne sont pas des téléchargements, contributeurs ou sessions. Seule la mesure Zenodo délimitée est retenue.",
+          "standards": "L’attribution FAO ne couvre que les zones de référence. Aucune norme approuvée de métadonnées/échange n’a été vérifiée pour tous les produits ; AIS, MMSI et licences ne sont pas ajoutés. L’export GeoTIFF documenté n’a pas d’identifiant de format approuvé.",
+          "access": "Aucun jeton personnel GFW n’était disponible : opérations authentifiées et données restreintes non testées. Zenodo était accessible ; plusieurs pages GFW ont renvoyé 403, avec texte primaire indexé consultable. Aucun parcours opérationnel Ryu approuvé ni image publique n’est préparé."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Global Fishing Watch",
+      "summary": "Mapas y productos de actividad de buques que combinan AIS, VMS gubernamental, detecciones satelitales y registros.",
+      "description": "Global Fishing Watch, Inc. posee y opera esta plataforma para investigación y seguimiento oceánico. El procesamiento versión 4 de febrero de 2026 abarca AIS, VMS, identidad y detecciones; la API pública sigue en versión 3. Kpler pasó a ser el proveedor AIS unificado en abril de 2026. Esfuerzo estimado, encuentros e interrupciones deben interpretarse según cobertura y calidad registral: no miden capturas ni prueban actividades ilegales. El acceso varía por conjunto, permisos de socios y licencia. La publicación Zenodo v3.0.0 cubre 2012–2024; sus MMSI no identifican buques únicos a lo largo del tiempo.",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch map"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "platform",
+            "terms",
+            "v4",
+            "kpler",
+            "caveats",
+            "zenodo",
+            "statistics"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "gfw-effort",
+              "description": "Horas de pesca aparente en cuadrículas por fecha, pabellón, arte o MMSI; estiman actividad, no capturas."
+            },
+            {
+              "id": "gfw-models",
+              "description": "Eventos modelados de pesca, encuentros, permanencia, interrupciones AIS y detecciones satelitales; ninguno demuestra por sí solo una infracción."
+            },
+            {
+              "id": "gfw-vessels",
+              "description": "La identidad e historial de buques combinan datos AIS declarados y registros. Algunos indicadores TMT y campos brasileños requieren acceso de socio."
+            },
+            {
+              "id": "gfw-boundaries",
+              "description": "Los límites de referencia incluyen ZEE, áreas protegidas y regiones pesqueras; la versión y el significado jurídico requieren comprobar cada fuente."
+            },
+            {
+              "id": "gfw-csv",
+              "description": "Las tablas y esquemas de la versión 3 describen archivos CSV, frecuentemente agrupados en ZIP."
+            },
+            {
+              "id": "gfw-json",
+              "description": "Las API documentadas devuelven JSON y ofrecen informes masivos en JSON."
+            },
+            {
+              "id": "gfw-geojson",
+              "description": "Las cargas de polígonos aceptan GeoJSON; las API de informes también aceptan áreas GeoJSON."
+            },
+            {
+              "id": "gfw-shapefile",
+              "description": "Las geometrías del usuario admiten Shapefile; los archivos auxiliares deben empaquetarse correctamente."
+            },
+            {
+              "id": "gfw-kml",
+              "description": "KML se admite en cargas cartográficas personalizadas, sin afirmarse como exportación universal."
+            },
+            {
+              "id": "gfw-pdf",
+              "description": "Los perfiles de buques pueden descargarse en PDF; las tablas analíticas usan otros formatos."
+            },
+            {
+              "id": "gfw-fao",
+              "description": "Las principales zonas de pesca FAO se ofrecen como límites estadísticos de referencia; no normalizan todos los productos ni prueban jurisdicción."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "gfw-map",
+            "label": "Mapa público",
+            "description": "Explore actividad, buques y zonas sin cuenta. La cobertura y el retraso varían según el conjunto."
+          },
+          {
+            "id": "gfw-reports",
+            "label": "Informes del mapa",
+            "description": "Inicie sesión para informes de áreas y buques. Las descargas públicas no ofrecen VMS bruto ni acceso irrestricto a trayectorias AIS."
+          },
+          {
+            "id": "gfw-api",
+            "label": "API v3 documentada",
+            "description": "Cree un token propio tras registrarse y aceptar las condiciones, que requieren afiliación organizativa elegible. Uso no comercial y atribución; 50.000 solicitudes/día y 1.500.000/mes por usuario. Los permisos dependen del conjunto. No se probó acceso autenticado."
+          },
+          {
+            "id": "gfw-zenodo",
+            "label": "Publicación masiva versionada",
+            "description": "Zenodo v3.0.0 cubre 2012–2024 bajo CC BY-NC 4.0. Se recuperaron metadatos, esquemas y archivos README, no el archivo completo. Esta versión difiere del procesamiento v4 actual."
+          },
+          {
+            "id": "gfw-bigquery",
+            "label": "Distribución BigQuery",
+            "description": "La versión v3 cita global-fishing-watch.fishing_effort_v3. Use su cuenta/proyecto Google; no se verificaron costes ni permisos exactos."
+          },
+          {
+            "id": "gfw-earth-engine",
+            "label": "Colección histórica Earth Engine",
+            "description": "El catálogo GFW/GFF/V1/fishing_hours cubre 2012 hasta comienzos de 2017 y declara CC BY-SA 4.0. Difiere de la versión v3. Requiere proyecto registrado; no se determinaron costes."
+          },
+          {
+            "id": "gfw-upload",
+            "label": "Datos del espacio de trabajo",
+            "description": "Los usuarios registrados pueden dibujar áreas y cargar polígonos, puntos o trayectorias privados o compartidos. Esto no incorpora datos a las fuentes públicas curadas de GFW."
+          },
+          {
+            "id": "gfw-contribute",
+            "label": "Asociación institucional de datos",
+            "description": "La publicación de VMS y registros se acuerda institucionalmente con GFW, definiendo alcance, permisos y entrega. GFW informa que el subconjunto de la flota nacional panameña se publicó en 2026; una asociación no hace públicos todos los datos nacionales."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "gfw-v3-package-size",
+            "description": "Suma de los 48 archivos Zenodo v3.0.0 publicados el 11 marzo 2025: 26.294.789.287 bytes. Mide el paquete descargable, no el almacenamiento total de GFW."
+          },
+          {
+            "id": "gfw-v3-file-downloads",
+            "description": "El contador acumulado de descargas de archivos de Zenodo 14982712 era 22.877. Cuenta cada archivo y solicitudes humanas o automatizadas por usuarios, excluyendo robots y dobles clics. No mide usuarios únicos ni todo GFW. No se proporciona fecha del contador."
+          }
+        ],
+        "researchGaps": {
+          "data": "No se estableció un total actual exacto de registros o buques únicos. Dispositivos AIS, detecciones y buques son unidades distintas; el tamaño del archivo no cubre las existencias actuales.",
+          "usage": "Las solicitudes API, usuarios registrados y visitantes anuales no equivalen a descargas, colaboradores o sesiones. Solo se registra la medida Zenodo delimitada.",
+          "standards": "La asignación FAO cubre solo áreas de referencia. No se verificó un estándar aprobado de metadatos/intercambio común; AIS, MMSI y licencias no se añaden. GeoTIFF está documentado, pero no tiene identificador de formato aprobado.",
+          "access": "Sin token personal GFW no se probaron API autenticada ni datos restringidos. Zenodo respondió; varias páginas GFW devolvieron 403 y se investigaron mediante texto primario indexado. No hay ruta operativa Ryu aprobada ni imagen pública preparada."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ar": {
+      "title": "Global Fishing Watch",
+      "summary": "خرائط ومنتجات لنشاط السفن تجمع AIS وVMS الحكومي والرصد الفضائي وسجلات السفن.",
+      "description": "تمتلك Global Fishing Watch, Inc. هذه المنصة وتديرها للبحث ورصد المحيطات. تعالج منظومة الإصدار 4 منذ فبراير 2026 بيانات AIS وVMS والهوية والرصد؛ وتظل الواجهة العامة API بالإصدار 3. أصبح Kpler المزود الموحد لبيانات AIS في أبريل 2026. تتطلب تقديرات جهد الصيد والالتقاء والفجوات مراعاة التغطية وجودة السجلات؛ ولا تقيس المصيد أو تثبت نشاطًا غير قانوني. يختلف الوصول حسب البيانات وصلاحيات الشركاء والترخيص. يغطي إصدار Zenodo v3.0.0 الفترة 2012–2024؛ ولا تحدد أرقام MMSI فيه سفنًا فريدة عبر الزمن.",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch map"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "platform",
+            "terms",
+            "v4",
+            "kpler",
+            "caveats",
+            "zenodo",
+            "statistics"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "gfw-effort",
+              "description": "ساعات الصيد الظاهر ضمن شبكة حسب التاريخ أو العلم أو المعدات أو MMSI؛ وهي تقدير للنشاط لا للمصيد."
+            },
+            {
+              "id": "gfw-models",
+              "description": "أحداث صيد والتقاء وتوقف وفجوات AIS ورصد فضائي مشتقة من نماذج؛ لا يثبت أي منها وحده وقوع مخالفة."
+            },
+            {
+              "id": "gfw-vessels",
+              "description": "تجمع هوية السفن وتاريخها بين بيانات AIS الذاتية والسجلات. تتطلب بعض مؤشرات TMT وحقول السجل البرازيلي صلاحيات الشركاء."
+            },
+            {
+              "id": "gfw-boundaries",
+              "description": "تشمل الحدود المرجعية المناطق الاقتصادية الخالصة والمحميات ومناطق الصيد؛ يلزم التحقق من الإصدار والدلالة القانونية لكل مصدر."
+            },
+            {
+              "id": "gfw-csv",
+              "description": "تصف جداول الإصدار 3 ومخططاته ملفات CSV، غالبًا داخل أرشيفات ZIP."
+            },
+            {
+              "id": "gfw-json",
+              "description": "تعيد الواجهات الموثقة JSON وتدعم التقارير المجمعة بهذا التنسيق."
+            },
+            {
+              "id": "gfw-geojson",
+              "description": "تقبل طبقات المضلعات المخصصة GeoJSON كما تقبله واجهات التقارير لتحديد المناطق."
+            },
+            {
+              "id": "gfw-shapefile",
+              "description": "تدعم الأشكال التي يرفعها المستخدم Shapefile مع تجميع الملفات المرافقة بصورة صحيحة."
+            },
+            {
+              "id": "gfw-kml",
+              "description": "يدعم رفع بيانات الخرائط المخصصة KML؛ ولا يُفترض أنه تنسيق تصدير عام."
+            },
+            {
+              "id": "gfw-pdf",
+              "description": "يمكن تنزيل تقارير ملفات السفن بصيغة PDF؛ وتستخدم الجداول التحليلية تنسيقات أخرى."
+            },
+            {
+              "id": "gfw-fao",
+              "description": "تتاح مناطق الصيد الرئيسية للفاو كحدود مرجعية إحصائية؛ ولا توحّد جميع المنتجات أو تثبت الولاية القانونية."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "gfw-map",
+            "label": "الخريطة العامة",
+            "description": "تصفح طبقات النشاط والسفن والمناطق دون حساب؛ تختلف التغطية وحداثة البيانات حسب المجموعة."
+          },
+          {
+            "id": "gfw-reports",
+            "label": "تقارير الخريطة",
+            "description": "سجّل الدخول لتقارير المناطق والسفن. لا تتيح تنزيلات الخريطة العامة بيانات VMS الخام أو مسارات AIS غير المقيدة."
+          },
+          {
+            "id": "gfw-api",
+            "label": "واجهة API v3 الموثقة",
+            "description": "أنشئ رمزًا شخصيًا بعد التسجيل وقبول الشروط التي تتطلب انتسابًا مؤسسيًا مؤهلًا. الاستخدام غير تجاري مع الإسناد؛ الحد 50,000 طلب يوميًا و1,500,000 شهريًا لكل مستخدم. تختلف الصلاحيات حسب البيانات. لم يُختبر وصول مصادق عليه."
+          },
+          {
+            "id": "gfw-zenodo",
+            "label": "إصدار مجمع محدد النسخة",
+            "description": "يغطي Zenodo v3.0.0 الفترة 2012–2024 بترخيص CC BY-NC 4.0. جُلبت البيانات الوصفية والمخططات وملفات README الصغيرة فقط. يختلف الإصدار الثابت عن المعالجة الحية v4."
+          },
+          {
+            "id": "gfw-bigquery",
+            "label": "توزيع BigQuery",
+            "description": "يشير الإصدار v3 إلى global-fishing-watch.fishing_effort_v3. استخدم حسابك ومشروعك لدى Google؛ لم تُختبر الرسوم أو الصلاحيات الدقيقة."
+          },
+          {
+            "id": "gfw-earth-engine",
+            "label": "مجموعة Earth Engine التاريخية",
+            "description": "يغطي كتالوج GFW/GFF/V1/fishing_hours من 2012 إلى بداية 2017 بترخيص CC BY-SA 4.0. تختلف هذه المجموعة القديمة عن v3. يلزم مشروع مسجل؛ لم تُحدد رسوم الخدمة هنا."
+          },
+          {
+            "id": "gfw-upload",
+            "label": "بيانات مساحة العمل المخصصة",
+            "description": "يمكن للمسجلين رسم مناطق ورفع مضلعات أو نقاط أو مسارات خاصة أو مشتركة. لا يُعد ذلك تقديمًا إلى تدفقات GFW العامة المنقحة."
+          },
+          {
+            "id": "gfw-contribute",
+            "label": "شراكة مؤسسية للبيانات",
+            "description": "يُنظم نشر VMS والسجلات باتفاقات مؤسسية تحدد النطاق والصلاحيات والتسليم مع GFW. تفيد GFW بنشر جزء من أسطول بنما المحلي في 2026؛ ولا تجعل الشراكة كل البيانات الوطنية عامة."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "gfw-v3-package-size",
+            "description": "مجموع أحجام ملفات Zenodo v3.0.0 البالغ عددها 48 والمنشورة في 11 مارس 2025: 26,294,789,287 بايت. يخص الحزمة القابلة للتنزيل لا إجمالي تخزين GFW."
+          },
+          {
+            "id": "gfw-v3-file-downloads",
+            "description": "بلغ عداد تنزيل الملفات التراكمي لسجل Zenodo 14982712 عدد 22,877 عند الجلب. يُحسب كل ملف مع طلبات البشر والأتمتة التي يطلقها المستخدم، باستثناء الزواحف والنقر المكرر. لا يقيس مستخدمين فريدين أو استخدام GFW الكلي. لا يوجد توقيت منشور للعداد."
+          }
+        ],
+        "researchGaps": {
+          "data": "لم يُثبت عدد دقيق حالي لكل السجلات أو السفن الفريدة؛ أجهزة AIS والرصد والسفن وحدات مختلفة، وحجم الأرشيف لا يشمل المحتوى الحي.",
+          "usage": "لا يجوز اعتبار طلبات API أو المسجلين أو زوار التقارير السنوية تنزيلات أو مساهمين أو جلسات. سُجل فقط مقياس Zenodo المحدد النطاق.",
+          "standards": "ينحصر معيار الفاو في المناطق المرجعية. لم يُتحقق من معيار معتمد شامل للبيانات الوصفية أو التبادل؛ لم تُضف AIS أو MMSI أو التراخيص كمعايير. تصدير GeoTIFF موثق لكن لا يملك معرف تنسيق معتمدًا.",
+          "access": "لم يتوفر رمز GFW شخصي، لذا لم تُختبر الواجهات المصادق عليها أو البيانات المقيدة. نجح جلب Zenodo؛ أعادت صفحات GFW عديدة 403 واستُخدم نصها الرسمي المفهرس. لا يوجد مسار Ryu تشغيلي معتمد أو صورة عامة مجهزة."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "Global Fishing Watch",
+      "summary": "结合AIS、政府VMS、卫星探测与船舶登记信息的公开船舶活动地图和数据产品。",
+      "description": "该平台由Global Fishing Watch, Inc.所有并运营，用于研究和海洋监测。2026年2月发布的数据处理流程第4版涵盖AIS、VMS、身份与探测产品；公开API仍为第3版。2026年4月，Kpler成为统一AIS供应商。解释表观捕捞努力量、会合和信号中断时，须考虑覆盖范围及登记资料质量；这些结果不测量捕获量，也不证明违法。访问权限因数据集、合作方资格及许可而异。独立的Zenodo v3.0.0发布覆盖2012–2024年，其中MMSI不等于跨时期唯一船舶。",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch map"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "platform",
+            "terms",
+            "v4",
+            "kpler",
+            "caveats",
+            "zenodo",
+            "statistics"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "gfw-effort",
+              "description": "按日期、船旗、渔具或MMSI汇总的网格表观捕捞时长；估计的是活动而非捕获量。"
+            },
+            {
+              "id": "gfw-models",
+              "description": "模型生成的捕捞事件、会合、徘徊、AIS中断和卫星探测；单项结果不能证明违法。"
+            },
+            {
+              "id": "gfw-vessels",
+              "description": "船舶身份与历史结合AIS自报信息和登记资料。部分TMT指标及巴西登记字段仅供获授权合作方访问。"
+            },
+            {
+              "id": "gfw-boundaries",
+              "description": "参考边界包括专属经济区、保护区和捕捞区域；须逐源核实图层版本及法律含义。"
+            },
+            {
+              "id": "gfw-csv",
+              "description": "第3版批量表格和模式描述CSV文件，常以ZIP打包。"
+            },
+            {
+              "id": "gfw-json",
+              "description": "已公开文档的API返回JSON，并支持JSON批量报告。"
+            },
+            {
+              "id": "gfw-geojson",
+              "description": "自定义多边形上传支持GeoJSON；报告API也接受GeoJSON区域。"
+            },
+            {
+              "id": "gfw-shapefile",
+              "description": "用户几何数据上传支持Shapefile，须正确打包必需的配套文件。"
+            },
+            {
+              "id": "gfw-kml",
+              "description": "自定义地图数据上传支持KML；不表示所有数据均可导出为KML。"
+            },
+            {
+              "id": "gfw-pdf",
+              "description": "船舶档案报告可下载为PDF；批量分析表使用其他格式。"
+            },
+            {
+              "id": "gfw-fao",
+              "description": "FAO主要捕捞区域用作统计参考边界；这不表示所有GFW产品均采用该标准，也不证明管辖权。"
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "gfw-map",
+            "label": "公开地图",
+            "description": "无需账户即可浏览活动图层、船舶和参考区域；覆盖范围及更新延迟因数据集而异。"
+          },
+          {
+            "id": "gfw-reports",
+            "label": "地图报告",
+            "description": "登录后可下载区域和船舶报告。公开地图下载不提供VMS原始数据或无限制的AIS船舶轨迹。"
+          },
+          {
+            "id": "gfw-api",
+            "label": "API v3文档接口",
+            "description": "注册并接受条款后创建个人Bearer令牌。条款要求符合条件的机构身份；限非商业使用并须署名。每位用户所有令牌合计限每日50,000次、每月1,500,000次请求。权限因数据集而异；本次未进行认证查询。"
+          },
+          {
+            "id": "gfw-zenodo",
+            "label": "版本化批量发布",
+            "description": "Zenodo v3.0.0覆盖2012–2024年，采用CC BY-NC 4.0。已读取元数据、模式及小型README文件，未下载全部归档；该固定版本不同于在线v4流程。"
+          },
+          {
+            "id": "gfw-bigquery",
+            "label": "BigQuery分发",
+            "description": "第3版引用global-fishing-watch.fishing_effort_v3。请使用自有Google账户及项目；未实测费用和具体权限。"
+          },
+          {
+            "id": "gfw-earth-engine",
+            "label": "Earth Engine历史集合",
+            "description": "GFW/GFF/V1/fishing_hours目录覆盖2012年至2017年初，标明CC BY-SA 4.0；该旧集合的覆盖与条款不同于v3。须注册项目；本次未确认服务费用。"
+          },
+          {
+            "id": "gfw-upload",
+            "label": "自定义工作区数据",
+            "description": "注册用户可绘制区域并上传多边形、点或轨迹图层，可设为私有或随工作区共享；此操作不向GFW经审核的公开数据源投稿。"
+          },
+          {
+            "id": "gfw-contribute",
+            "label": "机构数据合作",
+            "description": "公开VMS及登记信息需通过机构协议，与GFW确定范围、权限和交付方式。GFW报告巴拿马国内船队子集于2026年公开；合作协议不意味着全部国家数据均已公开。"
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "gfw-v3-package-size",
+            "description": "2025年3月11日发布的Zenodo v3.0.0中48个文件大小合计26,294,789,287字节；仅指可下载包，不是GFW全部存储量。"
+          },
+          {
+            "id": "gfw-v3-file-downloads",
+            "description": "读取时，Zenodo记录14982712的累计文件下载次数为22,877。每个下载文件各计一次，包括用户发起的人工或机器请求，排除爬虫和双击；不是独立用户数或GFW整体用量。未提供计数器统计日期。"
+          }
+        ],
+        "researchGaps": {
+          "data": "未核实全平台当前精确记录数或独立船舶数。AIS设备、模型探测及船舶属于不同计量单位；归档大小不涵盖在线全部数据。",
+          "usage": "年度报告的API请求、注册用户和网站访客不能改称下载、贡献者或会话。这里只记录范围明确的Zenodo下载指标。",
+          "standards": "FAO标准仅涵盖参考区域。未核实适用于所有产品的已批准元数据或交换标准；AIS惯例、MMSI及许可证不另作标准标签。文档支持GeoTIFF导出，但词表尚无该格式ID。",
+          "access": "未取得个人GFW令牌，故未测试认证API或受限数据。Zenodo可成功读取；部分GFW页面返回403，研究使用其官方索引文本。尚未配置获批准的Ryu运行路由或公开图库素材。"
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Global Fishing Watch",
+      "summary": "Общедоступные карты и продукты активности судов, объединяющие AIS, государственный VMS, спутниковые обнаружения и реестры.",
+      "description": "Платформа принадлежит Global Fishing Watch, Inc. и эксплуатируется ею для исследований и мониторинга океана. Обработка версии 4 с февраля 2026 года охватывает AIS, VMS, идентичность и обнаружения; публичный API остаётся версии 3. В апреле 2026 года Kpler стал единым поставщиком AIS. Предполагаемое усилие, встречи и пропуски сигналов требуют учёта охвата и качества реестров: они не измеряют улов и не доказывают незаконную деятельность. Доступ зависит от набора, прав партнёров и лицензии. Отдельный выпуск Zenodo v3.0.0 охватывает 2012–2024 годы; его MMSI не являются уникальными идентификаторами судов во времени.",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch map"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "platform",
+            "terms",
+            "v4",
+            "kpler",
+            "caveats",
+            "zenodo",
+            "statistics"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "gfw-effort",
+              "description": "Предполагаемые часы рыболовства по ячейкам, датам, флагу, орудию или MMSI; это оценка активности, а не улова."
+            },
+            {
+              "id": "gfw-models",
+              "description": "Модельные события рыболовства, встречи, дрейф, пропуски AIS и спутниковые обнаружения; сами по себе они не доказывают нарушение."
+            },
+            {
+              "id": "gfw-vessels",
+              "description": "Идентичность и история судов объединяют сообщения AIS и реестры. Некоторые индикаторы TMT и поля Бразилии доступны лишь партнёрам."
+            },
+            {
+              "id": "gfw-boundaries",
+              "description": "Справочные границы включают ИЭЗ, охраняемые территории и рыбопромысловые районы; версии и правовое значение проверяются по источнику."
+            },
+            {
+              "id": "gfw-csv",
+              "description": "Таблицы и схемы версии 3 описывают CSV, часто упакованные в ZIP."
+            },
+            {
+              "id": "gfw-json",
+              "description": "Документированные API возвращают JSON и поддерживают массовые отчёты JSON."
+            },
+            {
+              "id": "gfw-geojson",
+              "description": "Загрузка пользовательских полигонов и задание областей отчётов поддерживают GeoJSON."
+            },
+            {
+              "id": "gfw-shapefile",
+              "description": "Пользовательская геометрия поддерживает Shapefile с корректной упаковкой сопутствующих файлов."
+            },
+            {
+              "id": "gfw-kml",
+              "description": "KML поддерживается для загрузки пользовательских слоёв, но не заявляется универсальным экспортом."
+            },
+            {
+              "id": "gfw-pdf",
+              "description": "Отчёты профилей судов доступны в PDF; аналитические таблицы используют другие форматы."
+            },
+            {
+              "id": "gfw-fao",
+              "description": "Основные рыболовные районы ФАО представлены как статистические границы; это не стандартизация всех продуктов и не доказательство юрисдикции."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "gfw-map",
+            "label": "Общедоступная карта",
+            "description": "Просматривайте активность, суда и районы без аккаунта. Охват и задержка обновления зависят от набора."
+          },
+          {
+            "id": "gfw-reports",
+            "label": "Отчёты карты",
+            "description": "Войдите для отчётов по районам и судам. Публичная загрузка не раскрывает необработанный VMS или неограниченные треки AIS."
+          },
+          {
+            "id": "gfw-api",
+            "label": "Документированный API v3",
+            "description": "Создайте личный bearer-токен после регистрации и принятия условий, требующих подходящей организационной принадлежности. Некоммерческое использование с атрибуцией; 50 000 запросов в день и 1 500 000 в месяц на пользователя. Права зависят от набора. Аутентифицированный запрос не выполнялся."
+          },
+          {
+            "id": "gfw-zenodo",
+            "label": "Версионный пакет данных",
+            "description": "Zenodo v3.0.0 охватывает 2012–2024 годы по CC BY-NC 4.0. Получены метаданные, схемы и небольшие README, но не весь архив. Этот выпуск отличается от текущей обработки v4."
+          },
+          {
+            "id": "gfw-bigquery",
+            "label": "Распространение BigQuery",
+            "description": "Выпуск v3 ссылается на global-fishing-watch.fishing_effort_v3. Используйте свой аккаунт/проект Google; тарифы и точные права не проверены."
+          },
+          {
+            "id": "gfw-earth-engine",
+            "label": "Историческая коллекция Earth Engine",
+            "description": "Каталог GFW/GFF/V1/fishing_hours охватывает 2012 — начало 2017 года и указывает CC BY-SA 4.0. Охват и условия отличаются от v3. Нужен зарегистрированный проект; стоимость здесь не установлена."
+          },
+          {
+            "id": "gfw-upload",
+            "label": "Данные рабочего пространства",
+            "description": "Зарегистрированные пользователи рисуют области и загружают полигоны, точки или треки для личного или общего пространства. Это не публикация в курируемых потоках GFW."
+          },
+          {
+            "id": "gfw-contribute",
+            "label": "Институциональное партнёрство",
+            "description": "Публичная передача VMS и реестров оформляется соглашениями с GFW об охвате, правах и доставке. GFW сообщает о публикации части национального флота Панамы в 2026 году; партнёрство не открывает все национальные данные."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "gfw-v3-package-size",
+            "description": "Сумма размеров 48 файлов Zenodo v3.0.0, опубликованных 11 марта 2025 года: 26 294 789 287 байт. Это размер пакета, а не всего хранилища GFW."
+          },
+          {
+            "id": "gfw-v3-file-downloads",
+            "description": "Накопительный счётчик скачиваний файлов Zenodo 14982712 показал 22 877. Каждый файл учитывается отдельно; включены люди и запущенные ими машинные запросы, исключены роботы и двойные клики. Это не уникальные пользователи и не всё использование GFW. Дата счётчика не указана."
+          }
+        ],
+        "researchGaps": {
+          "data": "Точное текущее число записей или уникальных судов всей платформы не установлено. Устройства AIS, обнаружения и суда — разные единицы; размер архива не охватывает текущие фонды.",
+          "usage": "Запросы API, регистрации и посетители из годовых отчётов не равны скачиваниям, участникам или сессиям. Учтён только определённый показатель Zenodo.",
+          "standards": "Назначение ФАО относится лишь к справочным районам. Общий утверждённый стандарт метаданных/обмена не подтверждён; AIS, MMSI и лицензии не добавлены. Экспорт GeoTIFF описан, но утверждённого ID формата нет.",
+          "access": "Личного токена GFW не было: аутентифицированные операции и закрытые наборы не проверены. Zenodo доступен; ряд страниц GFW вернул 403, изучен индексированный официальный текст. Одобренный маршрут Ryu и публичные изображения не подготовлены."
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-global-fishing-watch-operator-operates-global-fishing-watch",
+      "sourceNodeId": "global-fishing-watch-operator",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "operates",
+      "note": "GFW Inc. states that it owns and operates its data products and associated services.",
+      "properties": {
+        "scope": "Ownership and daily operation of the GFW platform and APIs",
+        "status": "current published terms",
+        "sourceRefs": [
+          "terms"
+        ]
+      },
+      "sources": {
+        "terms": {
+          "id": "terms",
+          "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+          "title": {
+            "en": "API licence and limits",
+            "fr": "Licence et limites API",
+            "es": "Licencia y límites API",
+            "ar": "ترخيص API وحدودها",
+            "zh": "API许可与限额",
+            "ru": "Лицензия и ограничения API"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-global-fishing-watch-operator-governs-global-fishing-watch",
+      "sourceNodeId": "global-fishing-watch-operator",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "governs",
+      "note": "GFW Inc. sets service access, licensing and account policies, and reserves service modification and access-revocation authority. This concerns platform policy, not authority over fishing activity or maritime jurisdictions.",
+      "properties": {
+        "scope": "Formal authority over platform terms, access and service policies",
+        "status": "current published terms",
+        "sourceRefs": [
+          "terms"
+        ]
+      },
+      "sources": {
+        "terms": {
+          "id": "terms",
+          "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+          "title": {
+            "en": "API licence and limits",
+            "fr": "Licence et limites API",
+            "es": "Licencia y límites API",
+            "ar": "ترخيص API وحدودها",
+            "zh": "API许可与限额",
+            "ru": "Лицензия и ограничения API"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-kpler-publishes-to-global-fishing-watch",
+      "sourceNodeId": "kpler",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "Kpler became the unified AIS provider with the live switch on 22 April 2026. Previous Spire, ExactEarth and MarineTraffic feeds are not represented as unchanged current contracts. Receiver-ID changes and geographic coverage differences are documented.",
+      "properties": {
+        "scope": "Unified AIS feed powering GFW products",
+        "status": "live after 22 April 2026",
+        "sourceRefs": [
+          "kpler"
+        ],
+        "transferMethod": "contracted AIS feed"
+      },
+      "sources": {
+        "kpler": {
+          "id": "kpler",
+          "url": "https://globalfishingwatch.org/platform-update/data-vendor-transition/",
+          "title": {
+            "en": "AIS provider transition, 25 April 2026",
+            "fr": "Changement de fournisseur AIS, 25 avril 2026",
+            "es": "Cambio de proveedor AIS, 25 abril 2026",
+            "ar": "تغيير مزود AIS، 25 أبريل 2026",
+            "zh": "AIS供应商变更，2026年4月25日",
+            "ru": "Смена поставщика AIS, 25 апреля 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-planet-labs-publishes-to-global-fishing-watch",
+      "sourceNodeId": "planet-labs",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "GFW documents purchased PlanetScope imagery and a 2025 agreement for daily imagery covering two million square kilometres. The 2025 coastal processing campaign is not proof that every processed image was publicly released.",
+      "properties": {
+        "scope": "PlanetScope imagery supplied for optical vessel detection",
+        "status": "commercial imagery partnership reported in 2025",
+        "sourceRefs": [
+          "optical",
+          "annual"
+        ]
+      },
+      "sources": {
+        "optical": {
+          "id": "optical",
+          "url": "https://globalfishingwatch.org/insights/ask-global-fishing-watch-optical-detections/",
+          "title": {
+            "en": "Optical vessel detections",
+            "fr": "Détections optiques de navires",
+            "es": "Detecciones ópticas de buques",
+            "ar": "الرصد البصري للسفن",
+            "zh": "船舶光学探测",
+            "ru": "Оптическое обнаружение судов"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "en": "Annual report 2025",
+            "fr": "Rapport annuel 2025",
+            "es": "Informe anual 2025",
+            "ar": "التقرير السنوي 2025",
+            "zh": "2025年年度报告",
+            "ru": "Годовой отчёт 2025"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-trygg-mat-tracking-publishes-to-global-fishing-watch",
+      "sourceNodeId": "trygg-mat-tracking",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "TMT supplies curated vessel identity and registry information. The June 2026 release integrates additional sources; some partner indicators and Brazilian RGP fields are restricted. Source badges are not legal findings.",
+      "properties": {
+        "scope": "Vessel identity and history information from TMT",
+        "status": "monthly updates documented June 2026",
+        "sourceRefs": [
+          "tmt"
+        ]
+      },
+      "sources": {
+        "tmt": {
+          "id": "tmt",
+          "url": "https://globalfishingwatch.org/platform-update/five-new-vessel-registry-data-sources-integrated/",
+          "title": {
+            "en": "Vessel registry integrations, 1 June 2026",
+            "fr": "Intégration des registres de navires, 1 juin 2026",
+            "es": "Integración de registros de buques, 1 junio 2026",
+            "ar": "دمج سجلات السفن، 1 يونيو 2026",
+            "zh": "船舶登记数据集成，2026年6月1日",
+            "ru": "Интеграция судовых реестров, 1 июня 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-fisheries-analytical-capacity-tool-syncs-to-global-fishing-watch",
+      "sourceNodeId": "fisheries-analytical-capacity-tool",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "syncs_to",
+      "note": "GFW describes continuing import from TMT FACT into its platform and identity pipeline, updated monthly. Restricted partner fields are not assumed publicly exposed.",
+      "properties": {
+        "scope": "Selected FACT vessel identity and history fields",
+        "status": "monthly integration documented June 2026",
+        "sourceRefs": [
+          "tmt"
+        ],
+        "transferMethod": "data-pipeline import"
+      },
+      "sources": {
+        "tmt": {
+          "id": "tmt",
+          "url": "https://globalfishingwatch.org/platform-update/five-new-vessel-registry-data-sources-integrated/",
+          "title": {
+            "en": "Vessel registry integrations, 1 June 2026",
+            "fr": "Intégration des registres de navires, 1 juin 2026",
+            "es": "Integración de registros de buques, 1 junio 2026",
+            "ar": "دمج سجلات السفن، 1 يونيو 2026",
+            "zh": "船舶登记数据集成，2026年6月1日",
+            "ru": "Интеграция судовых реестров, 1 июня 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-norwegian-directorate-of-fisheries-publishes-to-global-fishing-watch",
+      "sourceNodeId": "norwegian-directorate-of-fisheries",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "Norwegian VMS feed made public on the GFW map in March 2023, following the May 2022 agreement. The published vessel counts are historical; this edge does not claim all Norwegian vessels are included.",
+      "properties": {
+        "scope": "Norwegian partner VMS vessel-position data",
+        "status": "public since March 2023",
+        "sourceRefs": [
+          "provider-1"
+        ],
+        "transferMethod": "partner VMS feed"
+      },
+      "sources": {
+        "provider-1": {
+          "id": "provider-1",
+          "url": "https://globalfishingwatch.org/norway/",
+          "title": {
+            "en": "Norway VMS data partnership",
+            "fr": "Partenariat de données VMS : Norwegian Directorate of Fisheries",
+            "es": "Asociación de datos VMS: Norwegian Directorate of Fisheries",
+            "ar": "شراكة بيانات VMS: Norwegian Directorate of Fisheries",
+            "zh": "VMS数据合作：Norwegian Directorate of Fisheries",
+            "ru": "Партнёрство по данным VMS: Norwegian Directorate of Fisheries"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-brazil-ministry-fisheries-aquaculture-publishes-to-global-fishing-watch",
+      "sourceNodeId": "brazil-ministry-fisheries-aquaculture",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "The ministry states that GFW mirrors PREPS tracking data under the partnership established in 2021. Public VMS sharing does not imply that restricted Brazilian RGP registry fields are publicly available.",
+      "properties": {
+        "scope": "Brazilian PREPS tracking data published to GFW",
+        "status": "partnership since 2021; government page updated September 2025",
+        "sourceRefs": [
+          "provider-2"
+        ],
+        "transferMethod": "partner VMS feed"
+      },
+      "sources": {
+        "provider-2": {
+          "id": "provider-2",
+          "url": "https://www.gov.br/mpa/pt-br/assuntos/cadastro-registro-e-monitoramento/monitoramento-da-aquicultura-e-da-pesca-1/preps-1/global-fishing-watch",
+          "title": {
+            "en": "Brazil PREPS and GFW partnership",
+            "fr": "Partenariat de données VMS : Brazil Ministry of Fisheries and Aquaculture",
+            "es": "Asociación de datos VMS: Brazil Ministry of Fisheries and Aquaculture",
+            "ar": "شراكة بيانات VMS: Brazil Ministry of Fisheries and Aquaculture",
+            "zh": "VMS数据合作：Brazil Ministry of Fisheries and Aquaculture",
+            "ru": "Партнёрство по данным VMS: Brazil Ministry of Fisheries and Aquaculture"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-incopesca-publishes-to-global-fishing-watch",
+      "sourceNodeId": "incopesca",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "INCOPESCA agreed to share VMS data in July 2020; the industrial longline and purse-seine subset was made public in January 2022. This does not establish universal coverage of Costa Rican boats.",
+      "properties": {
+        "scope": "Costa Rica industrial-fleet VMS subset",
+        "status": "public since January 2022",
+        "sourceRefs": [
+          "provider-3"
+        ],
+        "transferMethod": "partner VMS feed"
+      },
+      "sources": {
+        "provider-3": {
+          "id": "provider-3",
+          "url": "https://globalfishingwatch.org/costa-rica/",
+          "title": {
+            "en": "Costa Rica VMS data partnership",
+            "fr": "Partenariat de données VMS : Costa Rican Institute of Fisheries and Aquaculture",
+            "es": "Asociación de datos VMS: Costa Rican Institute of Fisheries and Aquaculture",
+            "ar": "شراكة بيانات VMS: Costa Rican Institute of Fisheries and Aquaculture",
+            "zh": "VMS数据合作：Costa Rican Institute of Fisheries and Aquaculture",
+            "ru": "Партнёрство по данным VMS: Costa Rican Institute of Fisheries and Aquaculture"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-panama-aquatic-resources-authority-publishes-to-global-fishing-watch",
+      "sourceNodeId": "panama-aquatic-resources-authority",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "ARAP shared international-fleet tracking data from 2019. GFW’s current Panama page reports public sharing of approximately 200 domestic longline and trawl vessels in 2026, advancing beyond the June agreement announcement. The exact domestic launch day and complete fleet coverage are not established.",
+      "properties": {
+        "scope": "Panama international-fleet VMS and 2026 domestic longline/trawl subset",
+        "status": "international fleet public since 2019; domestic subset reported public in 2026",
+        "sourceRefs": [
+          "provider-4",
+          "panama-current"
+        ],
+        "transferMethod": "partner VMS feed"
+      },
+      "sources": {
+        "provider-4": {
+          "id": "provider-4",
+          "url": "https://globalfishingwatch.org/es/historias/panama-publica-los-datos-de-seguimiento-de-embarcaciones-en-el-mapa-de-global-fishing-watch/",
+          "title": {
+            "en": "Panama publishes vessel tracking data",
+            "fr": "Partenariat de données VMS : Aquatic Resources Authority of Panama",
+            "es": "Asociación de datos VMS: Aquatic Resources Authority of Panama",
+            "ar": "شراكة بيانات VMS: Aquatic Resources Authority of Panama",
+            "zh": "VMS数据合作：Aquatic Resources Authority of Panama",
+            "ru": "Партнёрство по данным VMS: Aquatic Resources Authority of Panama"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "panama-current": {
+          "id": "panama-current",
+          "url": "https://globalfishingwatch.org/our-work-in-panama/",
+          "title": {
+            "en": "GFW in Panama: public domestic fleet in 2026",
+            "fr": "GFW au Panama : flotte nationale publique en 2026",
+            "es": "GFW en Panamá: flota nacional pública en 2026",
+            "ar": "GFW في بنما: نشر الأسطول المحلي في 2026",
+            "zh": "GFW在巴拿马：2026年国内船队公开",
+            "ru": "GFW в Панаме: публичный национальный флот в 2026 году"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-peru-ministry-production-publishes-to-global-fishing-watch",
+      "sourceNodeId": "peru-ministry-production",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "The ministry and GFW agreed to public VMS access; GFW subsequently reports publication from October 2018. Historical positions extend back to 2012. This edge concerns shared vessel tracking, not public access to every Peruvian fisheries record.",
+      "properties": {
+        "scope": "Peruvian partner VMS data",
+        "status": "public since October 2018",
+        "sourceRefs": [
+          "provider-5",
+          "peru-public"
+        ],
+        "transferMethod": "partner VMS feed"
+      },
+      "sources": {
+        "provider-5": {
+          "id": "provider-5",
+          "url": "https://globalfishingwatch.org/press-release/new-partnership-transparency-fisheries-eastern-tropical-pacific/",
+          "title": {
+            "en": "Peru Ministry of Production data partnership",
+            "fr": "Partenariat de données VMS : Peru Ministry of Production",
+            "es": "Asociación de datos VMS: Peru Ministry of Production",
+            "ar": "شراكة بيانات VMS: Peru Ministry of Production",
+            "zh": "VMS数据合作：Peru Ministry of Production",
+            "ru": "Партнёрство по данным VMS: Peru Ministry of Production"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "peru-public": {
+          "id": "peru-public",
+          "url": "https://globalfishingwatch.org/news-views/largest-commercial-fishery-tracked-gfw-map/",
+          "title": {
+            "en": "Peruvian tracking data publicly available",
+            "fr": "Données péruviennes publiquement accessibles",
+            "es": "Datos peruanos de seguimiento públicos",
+            "ar": "إتاحة بيانات التتبع البيروفية للعامة",
+            "zh": "秘鲁跟踪数据公开",
+            "ru": "Публичные данные слежения Перу"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-sernapesca-publishes-to-global-fishing-watch",
+      "sourceNodeId": "sernapesca",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "Sernapesca agreed to public vessel tracking in 2019; GFW reports that data became public in 2020. Industrial and small-scale vessel subsets are included, with no claim that all Chilean boats are tracked.",
+      "properties": {
+        "scope": "Chilean VMS data shared with GFW",
+        "status": "public since 2020",
+        "sourceRefs": [
+          "provider-6",
+          "chile-public"
+        ],
+        "transferMethod": "partner VMS feed"
+      },
+      "sources": {
+        "provider-6": {
+          "id": "provider-6",
+          "url": "https://globalfishingwatch.org/our-work-in-chile/",
+          "title": {
+            "en": "Chile Sernapesca data partnership",
+            "fr": "Partenariat de données VMS : Chile National Fisheries and Aquaculture Service",
+            "es": "Asociación de datos VMS: Chile National Fisheries and Aquaculture Service",
+            "ar": "شراكة بيانات VMS: Chile National Fisheries and Aquaculture Service",
+            "zh": "VMS数据合作：Chile National Fisheries and Aquaculture Service",
+            "ru": "Партнёрство по данным VMS: Chile National Fisheries and Aquaculture Service"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "chile-public": {
+          "id": "chile-public",
+          "url": "https://globalfishingwatch.org/success-story/chile-publishes-vessel-tracking-data/",
+          "title": {
+            "en": "Chile publishes vessel data",
+            "fr": "Publication des données de navires du Chili",
+            "es": "Chile publica datos de buques",
+            "ar": "نشر بيانات السفن التشيلية",
+            "zh": "智利发布船舶数据",
+            "ru": "Чили публикует данные судов"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ecuador-dirnea-publishes-to-global-fishing-watch",
+      "sourceNodeId": "ecuador-dirnea",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "DIRNEA signed a sharing agreement in December 2020; GFW reports that industrial fishing-vessel VMS data became public in October 2021.",
+      "properties": {
+        "scope": "Ecuadorian industrial-fleet VMS data",
+        "status": "public since October 2021",
+        "sourceRefs": [
+          "provider-7"
+        ],
+        "transferMethod": "partner VMS feed"
+      },
+      "sources": {
+        "provider-7": {
+          "id": "provider-7",
+          "url": "https://globalfishingwatch.org/es/programa-transparencia-latinoamerica-ecuador/",
+          "title": {
+            "en": "Ecuador DIRNEA data partnership",
+            "fr": "Partenariat de données VMS : Ecuador National Directorate of Aquatic Spaces",
+            "es": "Asociación de datos VMS: Ecuador National Directorate of Aquatic Spaces",
+            "ar": "شراكة بيانات VMS: Ecuador National Directorate of Aquatic Spaces",
+            "zh": "VMS数据合作：Ecuador National Directorate of Aquatic Spaces",
+            "ru": "Партнёрство по данным VMS: Ecuador National Directorate of Aquatic Spaces"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-belize-high-seas-fisheries-unit-publishes-to-global-fishing-watch",
+      "sourceNodeId": "belize-high-seas-fisheries-unit",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "The Belize High Seas Fisheries Unit signed an agreement in June 2021; its high-seas fleet VMS subset became public in March 2022. This is not the Belize domestic fleet.",
+      "properties": {
+        "scope": "Belize high-seas fishing-fleet VMS subset",
+        "status": "public since March 2022",
+        "sourceRefs": [
+          "provider-8"
+        ],
+        "transferMethod": "partner VMS feed"
+      },
+      "sources": {
+        "provider-8": {
+          "id": "provider-8",
+          "url": "https://globalfishingwatch.org/belize/",
+          "title": {
+            "en": "Belize high-seas fleet partnership",
+            "fr": "Partenariat de données VMS : Belize High Seas Fisheries Unit",
+            "es": "Asociación de datos VMS: Belize High Seas Fisheries Unit",
+            "ar": "شراكة بيانات VMS: Belize High Seas Fisheries Unit",
+            "zh": "VMS数据合作：Belize High Seas Fisheries Unit",
+            "ru": "Партнёрство по данным VMS: Belize High Seas Fisheries Unit"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-papua-new-guinea-national-fisheries-authority-publishes-to-global-fishing-watch",
+      "sourceNodeId": "papua-new-guinea-national-fisheries-authority",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "The National Fisheries Authority signed an agreement in October 2022, supported by the Fisheries Industry Association. GFW identifies June 2023 as publication of the FIA purse-seine subset; broader national coverage is not established.",
+      "properties": {
+        "scope": "Papua New Guinea FIA purse-seine VMS subset",
+        "status": "public since June 2023",
+        "sourceRefs": [
+          "provider-9"
+        ],
+        "transferMethod": "partner VMS feed"
+      },
+      "sources": {
+        "provider-9": {
+          "id": "provider-9",
+          "url": "https://globalfishingwatch.org/our-work-in-papua-new-guinea/",
+          "title": {
+            "en": "Papua New Guinea VMS partnership",
+            "fr": "Partenariat de données VMS : Papua New Guinea National Fisheries Authority",
+            "es": "Asociación de datos VMS: Papua New Guinea National Fisheries Authority",
+            "ar": "شراكة بيانات VMS: Papua New Guinea National Fisheries Authority",
+            "zh": "VMS数据合作：Papua New Guinea National Fisheries Authority",
+            "ru": "Партнёрство по данным VMS: Papua New Guinea National Fisheries Authority"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-marine-regions-syncs-to-global-fishing-watch",
+      "sourceNodeId": "marine-regions",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "syncs_to",
+      "note": "GFW identifies Marine Regions as the source of EEZ reference geometry. Its FAQ says reference layers are reviewed annually; the stale displayed update date is not used as proof of the current deployed geometry.",
+      "properties": {
+        "scope": "EEZ reference boundaries",
+        "status": "documented integration; deployed version unverified",
+        "sourceRefs": [
+          "reference"
+        ],
+        "transferMethod": "reference-layer import"
+      },
+      "sources": {
+        "reference": {
+          "id": "reference",
+          "url": "https://globalfishingwatch.org/faqs/reference-layer-sources/",
+          "title": {
+            "en": "Reference layer sources",
+            "fr": "Sources des couches de référence",
+            "es": "Fuentes de las capas de referencia",
+            "ar": "مصادر الطبقات المرجعية",
+            "zh": "参考图层来源",
+            "ru": "Источники справочных слоёв"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-protected-planet-syncs-to-global-fishing-watch",
+      "sourceNodeId": "protected-planet",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "syncs_to",
+      "note": "GFW imports a protected-area reference layer labelled WDPA and documents monthly MPA updates. Protected Planet has since merged WDPA/WD-OECM into WDPCA; no claim is made that GFW already imports all WDPCA fields or OECMs.",
+      "properties": {
+        "scope": "Protected-area reference geometry in the GFW map",
+        "status": "documented monthly update policy; current source release unverified",
+        "sourceRefs": [
+          "reference",
+          "guide",
+          "wdpca-transition"
+        ],
+        "transferMethod": "reference-layer import"
+      },
+      "sources": {
+        "reference": {
+          "id": "reference",
+          "url": "https://globalfishingwatch.org/faqs/reference-layer-sources/",
+          "title": {
+            "en": "Reference layer sources",
+            "fr": "Sources des couches de référence",
+            "es": "Fuentes de las capas de referencia",
+            "ar": "مصادر الطبقات المرجعية",
+            "zh": "参考图层来源",
+            "ru": "Источники справочных слоёв"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "guide": {
+          "id": "guide",
+          "url": "https://globalfishingwatch.org/user-guide/",
+          "title": {
+            "en": "Map user guide",
+            "fr": "Guide de la carte",
+            "es": "Guía del mapa",
+            "ar": "دليل استخدام الخريطة",
+            "zh": "地图使用指南",
+            "ru": "Руководство по карте"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "wdpca-transition": {
+          "id": "wdpca-transition",
+          "url": "https://api.protectedplanet.net/",
+          "title": {
+            "en": "Protected Planet WDPCA migration notice",
+            "fr": "Avis de migration WDPCA de Protected Planet",
+            "es": "Aviso de migración WDPCA de Protected Planet",
+            "ar": "إشعار انتقال Protected Planet إلى WDPCA",
+            "zh": "Protected Planet WDPCA迁移通知",
+            "ru": "Уведомление о переходе Protected Planet на WDPCA"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-protectedseas-navigator-syncs-to-global-fishing-watch",
+      "sourceNodeId": "protectedseas-navigator",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "syncs_to",
+      "note": "GFW offers the ProtectedSeas Navigator reference layer, including Level of Fishing Protection filtering. This is reference-data incorporation; update cadence is not established.",
+      "properties": {
+        "scope": "Managed-area boundaries and fishing-protection attributes",
+        "status": "available in current map guide",
+        "sourceRefs": [
+          "guide"
+        ]
+      },
+      "sources": {
+        "guide": {
+          "id": "guide",
+          "url": "https://globalfishingwatch.org/user-guide/",
+          "title": {
+            "en": "Map user guide",
+            "fr": "Guide de la carte",
+            "es": "Guía del mapa",
+            "ar": "دليل استخدام الخريطة",
+            "zh": "地图使用指南",
+            "ru": "Руководство по карте"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-skylight-syncs-to-global-fishing-watch",
+      "sourceNodeId": "skylight",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "syncs_to",
+      "note": "The 31 March 2026 release integrates Skylight VIIRS vessel detections, with daily global satellite coverage at 750-metre resolution. Unmatched AIS detections are not themselves proof of illegal activity.",
+      "properties": {
+        "scope": "Processed nighttime VIIRS vessel detections",
+        "status": "available from 31 March 2026",
+        "sourceRefs": [
+          "skylight"
+        ],
+        "transferMethod": "detection-layer integration"
+      },
+      "sources": {
+        "skylight": {
+          "id": "skylight",
+          "url": "https://globalfishingwatch.org/platform-update/skylight-viirs-detections-added/",
+          "title": {
+            "en": "Skylight VIIRS integration, 31 March 2026",
+            "fr": "Intégration Skylight VIIRS, 31 mars 2026",
+            "es": "Integración Skylight VIIRS, 31 marzo 2026",
+            "ar": "دمج Skylight VIIRS، 31 مارس 2026",
+            "zh": "Skylight VIIRS集成，2026年3月31日",
+            "ru": "Интеграция Skylight VIIRS, 31 марта 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-global-fishing-watch-syncs-to-zenodo",
+      "sourceNodeId": "global-fishing-watch",
+      "targetNodeId": "zenodo",
+      "kind": "syncs_to",
+      "note": "GFW deposited the fixed v3.0.0 apparent-fishing-effort release on 11 March 2025, covering 2012–2024 with CSV data, schemas and README files. No continuing synchronization cadence or parity with live v4 is asserted.",
+      "properties": {
+        "scope": "Versioned apparent-fishing-effort release",
+        "status": "v3.0.0 publication 11 March 2025",
+        "sourceRefs": [
+          "zenodo"
+        ],
+        "transferMethod": "versioned data deposit",
+        "format": "CSV files and metadata packaged in ZIP"
+      },
+      "sources": {
+        "zenodo": {
+          "id": "zenodo",
+          "url": "https://zenodo.org/records/14982712",
+          "title": {
+            "en": "Global AIS-based Apparent Fishing Effort v3.0.0",
+            "fr": "Effort de pêche apparent mondial issu de l’AIS v3.0.0",
+            "es": "Esfuerzo pesquero aparente mundial basado en AIS v3.0.0",
+            "ar": "جهد الصيد الظاهر العالمي المستند إلى AIS، الإصدار 3.0.0",
+            "zh": "全球AIS表观捕捞努力量v3.0.0",
+            "ru": "Глобальное предполагаемое рыболовное усилие по AIS v3.0.0"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-global-fishing-watch-syncs-to-google-earth-engine",
+      "sourceNodeId": "global-fishing-watch",
+      "targetNodeId": "google-earth-engine",
+      "kind": "syncs_to",
+      "note": "Google hosts the historical GFW/GFF/V1/fishing_hours collection, with catalogue coverage from 2012-01-01 to 2017-01-01 and CC BY-SA 4.0. This is a legacy subset, not the live v4 platform or the separately licensed v3 release.",
+      "properties": {
+        "scope": "Legacy gridded fishing-hours collection",
+        "status": "published historical v1 collection",
+        "sourceRefs": [
+          "ee"
+        ]
+      },
+      "sources": {
+        "ee": {
+          "id": "ee",
+          "url": "https://developers.google.com/earth-engine/datasets/catalog/GFW_GFF_V1_fishing_hours",
+          "title": {
+            "en": "Earth Engine: GFW fishing hours v1",
+            "fr": "Earth Engine : heures de pêche GFW v1",
+            "es": "Earth Engine: horas de pesca GFW v1",
+            "ar": "Earth Engine: ساعات الصيد GFW بالإصدار 1",
+            "zh": "Earth Engine：GFW第1版捕捞时长",
+            "ru": "Earth Engine: часы рыболовства GFW v1"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-global-fishing-watch-syncs-to-google-bigquery",
+      "sourceNodeId": "global-fishing-watch",
+      "targetNodeId": "google-bigquery",
+      "kind": "syncs_to",
+      "note": "The GFW release identifies global-fishing-watch.fishing_effort_v3 as its BigQuery distribution. Live row counts, update cadence and current permissions were not independently queried.",
+      "properties": {
+        "scope": "Version 3 apparent fishing effort tables",
+        "status": "distribution documented in March 2025 release",
+        "sourceRefs": [
+          "zenodo"
+        ],
+        "transferMethod": "cloud table publication"
+      },
+      "sources": {
+        "zenodo": {
+          "id": "zenodo",
+          "url": "https://zenodo.org/records/14982712",
+          "title": {
+            "en": "Global AIS-based Apparent Fishing Effort v3.0.0",
+            "fr": "Effort de pêche apparent mondial issu de l’AIS v3.0.0",
+            "es": "Esfuerzo pesquero aparente mundial basado en AIS v3.0.0",
+            "ar": "جهد الصيد الظاهر العالمي المستند إلى AIS، الإصدار 3.0.0",
+            "zh": "全球AIS表观捕捞努力量v3.0.0",
+            "ru": "Глобальное предполагаемое рыболовное усилие по AIS v3.0.0"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-global-fishing-watch-syncs-to-arcgis-online",
+      "sourceNodeId": "global-fishing-watch",
+      "targetNodeId": "arcgis-online",
+      "kind": "syncs_to",
+      "note": "GFW announced 13 hosted layers on 15 January 2026, sourced from 4Wings/Datasets APIs: fishing effort, vessel presence, SAR detections and fixed infrastructure. Their respective advertised lags differ; no universal real-time guarantee is implied.",
+      "properties": {
+        "scope": "Selected GFW raster and vector layers",
+        "status": "available from 15 January 2026",
+        "sourceRefs": [
+          "arcgis"
+        ],
+        "transferMethod": "hosted tile and feature services"
+      },
+      "sources": {
+        "arcgis": {
+          "id": "arcgis",
+          "url": "https://globalfishingwatch.org/platform-update/explore-global-fishing-watch-data-via-esris-arcgis-online/",
+          "title": {
+            "en": "ArcGIS Online layers, 15 January 2026",
+            "fr": "Couches ArcGIS Online, 15 janvier 2026",
+            "es": "Capas ArcGIS Online, 15 enero 2026",
+            "ar": "طبقات ArcGIS Online، 15 يناير 2026",
+            "zh": "ArcGIS Online图层，2026年1月15日",
+            "ru": "Слои ArcGIS Online, 15 января 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-dalio-philanthropies-funds-global-fishing-watch",
+      "sourceNodeId": "dalio-philanthropies",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "funds",
+      "note": "First grant supporting the GFW technology platform reported in the 2025 annual report; amount and exact grant dates are not stated.",
+      "properties": {
+        "scope": "Technology platform support reported for 2025",
+        "status": "reported in 2025 annual report; final disbursement unverified",
+        "sourceRefs": [
+          "annual"
+        ]
+      },
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "en": "Annual report 2025",
+            "fr": "Rapport annuel 2025",
+            "es": "Informe anual 2025",
+            "ar": "التقرير السنوي 2025",
+            "zh": "2025年年度报告",
+            "ru": "Годовой отчёт 2025"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-indonesia-ministry-marine-affairs-fisheries-publishes-to-global-fishing-watch",
+      "sourceNodeId": "indonesia-ministry-marine-affairs-fisheries",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "publishes_to",
+      "note": "The ministry partnered with GFW to publish Indonesian VMS data in June 2017. GFW’s 2012–2024 tracking poster explicitly attributes the drop in VMS fishing in 2020 to Indonesia ending data sharing. This historical connection does not claim a current live feed or resumed sharing.",
+      "properties": {
+        "scope": "Historical Indonesian VMS publication",
+        "status": "public sharing began June 2017 and ended in 2020; resumption unverified",
+        "sourceRefs": [
+          "indonesia",
+          "vms-history"
+        ],
+        "transferMethod": "historical partner VMS feed"
+      },
+      "sources": {
+        "indonesia": {
+          "id": "indonesia",
+          "url": "https://globalfishingwatch.org/transparency/vms-layer-in-fishing-activity-map/",
+          "title": {
+            "en": "Indonesia VMS public release, 2017",
+            "fr": "Publication VMS indonésienne, 2017",
+            "es": "Publicación VMS de Indonesia, 2017",
+            "ar": "نشر بيانات VMS الإندونيسية، 2017",
+            "zh": "印度尼西亚VMS公开发布，2017年",
+            "ru": "Публикация VMS Индонезии, 2017"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "vms-history": {
+          "id": "vms-history",
+          "url": "https://globalfishingwatch.org/wp-content/uploads/GFW-Poster-250530-01.pdf",
+          "title": {
+            "en": "Public vessel tracking, 2012–2024",
+            "fr": "Suivi public des navires, 2012–2024",
+            "es": "Seguimiento público de buques, 2012–2024",
+            "ar": "التتبع العام للسفن، 2012–2024",
+            "zh": "公开船舶跟踪，2012–2024年",
+            "ru": "Публичное слежение за судами, 2012–2024"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

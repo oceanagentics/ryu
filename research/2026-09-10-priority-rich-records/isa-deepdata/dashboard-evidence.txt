@@ -1,0 +1,243 @@
+Browser tab: 7, Title: "DeepData Dashboard - International Seabed Authority", URL: "https://isa.org.jm/deepdata-database/deepdata-dashboard/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 53, 57-59, 61
++						124 container
++							125 container Overview
++								126 container
++									127 content list
++										128 button Show keyboard shortcuts
++										129 container
++											130 link Description: Show screen reader tips (opens in new tab), Value: go.microsoft.com/fwlink/?linkid=852575
++											131 image
++										132 button Skip to main content
++									133 container
++										134 container Power BI Report
++											135 heading Description: Power BI Report, Value: 2, ID: defaultTitle
++												136 text Power BI Report
++											137 container
++												138 container Overview
++													139 text Overview
++											140 container Image
++											141 container Image
++											142 container Image
++											143 container Image
++											144 container Cruises per Year 
++												145 container
++													146 heading Cruises per Year, Value: 3
++														147 text Cruises per Year
++													148 image
++														149 image
++														150 container Total Cruises
++															151 text Total Cruises
++														152 container
++															153 list
++																154 container 2024
++																	155 text 2024
++																156 container 2023
++																	157 text 2023
++																158 container 2022
++																	159 text 2022
++																160 container 2021
++																	161 text 2021
++																162 container 2020
++																	163 text 2020
++																164 container 2019
++																	165 text 2019
++																166 container 2018
++																	167 text 2018
++																168 container 2017
++																	169 text 2017
++																170 container 2016
++																	171 text 2016
++																172 container 2015
++																	173 text 2015
++																174 container 2014
++																	175 text 2014
++															176 container Plot area
++																177 list (Blank)
++																	178 null
++																	179 1
++																	180 null
++																	181 1
++																	182 null
++																	183 null
++																	184 1
++																	185 1
++																	186 null
++																	187 null
++																	188 null
++																189 list CRFC
++																	190 1
++																	191 1
++																	192 2
++																	193 3
++																	194 5
++																	195 3
++																	196 8
++																	197 8
++																	198 5
++																	199 2
++																	200 3
++																201 list PMN
++																	202 2
++																	203 5
++																	204 16
++																	205 11
++																	206 18
++																	207 10
++																	208 3
++																	209 3
++																	210 16
++																	211 8
++																212 list PMS
++																	213 3
++																	214 4
++																	215 3
++																	216 4
++																	217 2
++																	218 4
++																	219 7
++																	220 7
++																	221 7
++																	222 9
++																	223 10
++														224 text 4
++														225 text 8
++														226 text 10
++														227 text 24
++														228 text 18
++														229 text 25
++														230 text 26
++														231 text 19
++														232 text 15
++														233 text 27
++														234 text 21
++														235 list Series labels
++													236 container Legend ContractType
++														237 text ContractType
++														238 list ContractType
++															239 (Blank)
++																240 image
++																	241 image
++																	242 image (Blank)
++																243 text (Blank)
++															244 CRFC
++																245 image
++																	246 image
++																	247 image CRFC
++																248 text CRFC
++															249 PMN
++																250 image
++																	251 image
++																	252 image PMN
++																253 text PMN
++															254 PMS
++																255 image
++																	256 image
++																	257 image PMS
++																258 text PMS
++											259 container 6 items
++												260 container
++													261 container
++														262 image Contracts 31.
++															263 text 31
++															264 text Contracts
++													265 container
++														266 image Area Blocks 85949.
++															267 text 85949
++															268 text Area Blocks
++													269 container
++														270 image Total Cruises 213.
++															271 text 213
++															272 text Total Cruises
++													273 container
++														274 image Biology Samples 203589.
++															275 text 203589
++															276 text Biology Samples
++													277 container
++														278 image Geochem Samples 622158.
++															279 text 622158
++															280 text Geochem Samples
++													281 container
++														282 image Total Samples 825747.
++															283 text 825747
++															284 text Total Samples
++											285 container . Visual error: Something's wrong with one or more filters.
++												286 container
++													287 text 
++													288 link Description: See details, Value: app.powerbi.com/
++													289 button Fix this
++														290 text Fix this
++											291 container Image
++											292 container
++												293 container Select options from the filters below. To drill through, right-click any of the selections made and select the target destination from the drill through pop up menu. If no selections are made, drill through will be based on the right click selection only.
++													294 text Select options from the filters below. To drill through, right-click any of the selections made and select the target destination from the drill through pop up menu. If no selections are made, drill through will be based on the right click selection only.
++											295 container
++												296 container
++													297 heading Description: Contract, Value: 3
++														298 text Contract
++													299 container Contract
++														300 checkbox BGRPMN1, Value: 0
++														301 checkbox BGRPMS1, Value: 0
++														302 checkbox BMJPMN1, Value: 0
++														303 checkbox BPHDCPMN1, Value: 0
++														304 checkbox BrazilCRFC1, Value: 0
++														305 checkbox CIICPMN1, Value: 0
++														306 checkbox CMMPMN1, Value: 0
++														307 checkbox COMRACRFC1, Value: 0
++											308 container
++												309 container
++													310 heading Description: Contract Type, Value: 3
++														311 text Contract Type
++													312 container Contract Type
++														313 checkbox CRFC, Value: 0
++														314 checkbox PMN, Value: 0
++														315 checkbox PMS, Value: 0
++											316 container
++												317 container
++													318 heading Description: Sponsoring State, Value: 3
++														319 text Sponsoring State
++													320 container Sponsoring State
++														321 checkbox Belgium, Value: 0
++														322 checkbox Brazil, Value: 0
++														323 checkbox Bulgaria, Cuba, Czech Republic, Poland, Russian Federation and Slovakia, Value: 0
++														324 checkbox Cook Islands, Value: 0
++														325 checkbox France, Value: 0
++														326 checkbox Germany, Value: 0
++														327 checkbox India, Value: 0
++											328 container
++												329 container
++													330 heading Description: Area Sector, Value: 3
++														331 text Area Sector
++													332 container Area Sector
++														333 checkbox Central Indian Ocean, Value: 0
++														334 checkbox Central Indian Ridge and Southeast Indian Ridge, Value: 0
++														335 checkbox Clarion-Clipperton Fracture Zone, Value: 0
++														336 checkbox Indian Ocean, Value: 0
++														337 checkbox Indian Ocean Ridge, Value: 0
++														338 checkbox Mid-Atlantic Ridge, Value: 0
++														339 checkbox Rio Grande Rise, South Atlantic Ocean, Value: 0
++											340 button Page navigation . View Dashboard Summary
++											341 button Page navigation . View Drill Through Guide
++											342 button Clear all slicers . Click here to follow
++							343 button Description: Zoom Out, ID: zoomOutButton
++							344 container
++							345 button Description: Zoom In, ID: zoomInButton
++							346 button Description: Zoom level. Click to open the Zoom dialog box, ID: zoomValueButton
++							347 button Description: Fit to page, ID: fitToPageButton
++								348 text 
++							349 button Previous Page
++								350 text 
++							351 link Pages
++								352 text Pages
++							353 button Next Page
++								354 text 
++							355 button (collapsed) Description: Share, Secondary Actions: Expand
++								356 text 
++								357 text 
++					358 text Report Zoomed To 77%
++					359 image
++			360 AXWebArea reCAPTCHA, URL: google.com/recaptcha/api2/anchor?ar=1&k=6LdqN0AqAAAAAMQ8TMKDqoxyKQdj7etVVPizP5CI&co=aHR0cHM6Ly9pc2Eub3JnLmptOjQ0Mw..&hl=en&v=8x-4t2pegToiW8KmThtO4AQt&size=invisible&anchor-ms=20000&execute-ms=30000&cb=7zjgoicgf72a
++				361 text protected by 
++				362 text reCAPTCHA
+The focused UI element is 0 AXWebArea DeepData Dashboard - International Seabed Authority, URL: isa.org.jm/deepdata-database/deepdata-dashboard/

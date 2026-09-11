@@ -1,0 +1,122 @@
+[
+  {
+    "url": "https://catalogue.odis.org/view/359",
+    "status": 200,
+    "final": "https://catalogue.odis.org/view/359",
+    "type": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://classroom.oceanteacher.org/",
+    "status": 200,
+    "final": "https://classroom.oceanteacher.org/",
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://classroom.oceanteacher.org/admin/tool/policy/view.php?versionid=4",
+    "status": 200,
+    "final": "https://classroom.oceanteacher.org/admin/tool/policy/view.php?versionid=4",
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://classroom.oceanteacher.org/admin/tool/policy/view.php?versionid=8",
+    "status": 200,
+    "final": "https://classroom.oceanteacher.org/admin/tool/policy/view.php?versionid=8",
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://classroom.oceanteacher.org/course/index.php?categoryid=198&perpage=all",
+    "status": 200,
+    "final": "https://classroom.oceanteacher.org/course/index.php?categoryid=198&perpage=all",
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://classroom.oceanteacher.org/course/search.php?lang=en&search=ADAPT&perpage=all",
+    "status": 200,
+    "final": "https://classroom.oceanteacher.org/course/search.php?lang=en&search=ADAPT&perpage=all",
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://classroom.oceanteacher.org/login/index.php",
+    "status": 200,
+    "final": "https://classroom.oceanteacher.org/login/index.php",
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://fust.iode.org/en/otga2",
+    "status": 200,
+    "final": "https://fust.iode.org/en/otga2",
+    "type": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://iode.org/actions/capacity-development/",
+    "status": 200,
+    "final": "https://iode.org/actions/capacity-development/",
+    "type": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://medin.org.uk/about",
+    "status": 200,
+    "final": "https://medin.org.uk/about",
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://medin.org.uk/data-standards/medin-workshops",
+    "status": 200,
+    "final": "https://medin.org.uk/data-standards/medin-workshops",
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://oceandecade.org/fr/news/ocean-decade-launches-new-online-course-on-co-design/",
+    "status": 403,
+    "final": "https://oceandecade.org/fr/news/ocean-decade-launches-new-online-course-on-co-design/",
+    "type": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://oceanexpert.org/",
+    "status": 200,
+    "final": "https://oceanexpert.org/",
+    "type": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://oceanexpert.org/downloadFile/61264",
+    "status": 200,
+    "final": "https://oceanexpert.org/downloadFile/61264",
+    "type": "application/pdf"
+  },
+  {
+    "url": "https://oceanexpert.org/downloadFile/61311",
+    "status": 200,
+    "final": "https://oceanexpert.org/downloadFile/61311",
+    "type": "application/pdf"
+  },
+  {
+    "url": "https://www.anep.edu.uy/sites/default/files/2026-04/Convocatoria.pdf",
+    "status": 200,
+    "final": "https://www.anep.edu.uy/sites/default/files/2026-04/Convocatoria.pdf",
+    "type": "application/pdf"
+  },
+  {
+    "url": "https://www.leibniz-zmt.de/en/",
+    "status": 200,
+    "final": "https://www.leibniz-zmt.de/en/",
+    "type": "text/html; charset=utf-8"
+  },
+  {
+    "url": "https://www.lifewatch.eu/who-we-are/",
+    "status": 200,
+    "final": "https://www.lifewatch.eu/who-we-are/",
+    "type": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://www.marine.ie/",
+    "status": 200,
+    "final": "https://www.marine.ie/",
+    "type": "text/html; charset=UTF-8"
+  },
+  {
+    "url": "https://www.norad.no/en/",
+    "status": 200,
+    "final": "https://www.norad.no/en/",
+    "type": "text/html; charset=utf-8"
+  }
+]

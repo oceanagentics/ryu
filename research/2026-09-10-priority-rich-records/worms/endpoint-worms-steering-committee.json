@@ -1,0 +1,135 @@
+{
+  "id": "worms-steering-committee",
+  "kind": "organization",
+  "countryCode": null,
+  "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+  "recordDepth": "stub",
+  "title": "WoRMS Steering Committee",
+  "summary": "Scientific leadership under the WoRMS terms of reference.",
+  "availableLocales": [
+    "en"
+  ],
+  "missingLocales": [
+    "ar",
+    "zh",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "reviewStatesByLocale": {
+    "en": "agent_researched"
+  },
+  "requestedLocale": "en",
+  "displayLocale": "en",
+  "isLocaleFallback": false,
+  "updatedAt": "2026-09-10T20:03:21.677Z",
+  "recordUpdatedAt": "2026-09-10T20:03:21.677Z",
+  "sourceCompleteness": {
+    "status": "complete",
+    "referencedSources": 2,
+    "resolvedSources": 2,
+    "issues": []
+  },
+  "record": {
+    "id": "worms-steering-committee",
+    "kind": "organization",
+    "countryCode": null,
+    "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+    "recordDepth": "stub",
+    "sources": {
+      "src-relationship-worms": {
+        "id": "src-relationship-worms",
+        "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+        "title": {
+          "ar": "اختصاصات WoRMS",
+          "en": "WoRMS terms of reference",
+          "es": "Términos de referencia de WoRMS",
+          "fr": "Mandat de WoRMS",
+          "ru": "Положение о деятельности WoRMS",
+          "zh": "WoRMS职权范围"
+        },
+        "accessedAt": "2026-09-09"
+      }
+    },
+    "properties": {
+      "disciplines": [],
+      "gallery": [],
+      "data": {
+        "descriptors": [],
+        "recordCount": null,
+        "storageSize": null
+      },
+      "access": [],
+      "usage": []
+    },
+    "createdAt": "2026-09-09T18:32:27.681Z",
+    "updatedAt": "2026-09-10T20:03:21.677Z"
+  },
+  "localizations": {
+    "en": {
+      "locale": "en",
+      "title": "WoRMS Steering Committee",
+      "summary": "Scientific leadership under the WoRMS terms of reference.",
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [],
+        "gallery": [],
+        "profile": {
+          "sourceRefs": [
+            "src-relationship-worms"
+          ]
+        }
+      },
+      "translatedFromLocale": null,
+      "contentUpdatedAt": "2026-09-10T20:03:21.658Z",
+      "review": {
+        "date": "2026-09-09T18:32:27.681239+00:00",
+        "note": null,
+        "state": "agent_researched",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-09T18:32:27.681Z",
+      "updatedAt": "2026-09-10T20:03:21.658Z"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-worms-steering-committee-governs-worms",
+      "sourceNodeId": "worms-steering-committee",
+      "targetNodeId": "worms",
+      "kind": "governs",
+      "note": "Scientific policy authority under the terms of reference.",
+      "properties": {
+        "scope": "Scientific policy; VLIZ retains technical operation",
+        "sourceRefs": [
+          "src-relationship-worms"
+        ]
+      },
+      "sources": {
+        "src-relationship-worms": {
+          "id": "src-relationship-worms",
+          "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+          "title": {
+            "ar": "اختصاصات WoRMS",
+            "en": "WoRMS terms of reference",
+            "es": "Términos de referencia de WoRMS",
+            "fr": "Mandat de WoRMS",
+            "ru": "Положение о деятельности WoRMS",
+            "zh": "WoRMS职权范围"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-09-09T18:33:43.034Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  ],
+  "routes": []
+}

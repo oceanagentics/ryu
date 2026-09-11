@@ -1,0 +1,218 @@
+{
+  "readAt": "2026-09-11T00:56:09.858284+00:00",
+  "queries": [
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsPermit&rows=1&wt=json",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 6545,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": [
+            {
+              "id": "52000000cbd0800000032db0",
+              "schema_s": "absPermit",
+              "updatedDate_s": "2016-11-22T09:51:05.313Z",
+              "title_EN_s": "India/NBA/9/Appl/895",
+              "uniqueIdentifier_s": "absch-ircc-in-208304-1",
+              "identifier_s": "42C063B2-902C-2A40-304D-2B74D1FB67CD",
+              "_revision_i": 1,
+              "_state_s": "public",
+              "_latest_s": "true",
+              "government_s": "in",
+              "url_ss": [
+                "https://absch.cbd.int/database/record?documentID=208304"
+              ]
+            }
+          ]
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsCheckpointCommunique&rows=1&wt=json",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 422,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": [
+            {
+              "id": "52000000cbd080000003de8c",
+              "schema_s": "absCheckpointCommunique",
+              "updatedDate_s": "2021-01-13T16:13:20.837Z",
+              "title_EN_s": "Research - Genetic resources: EN",
+              "uniqueIdentifier_s": "absch-cpc-de-253580-1",
+              "identifier_s": "DECLARE-DDDResearch_1401_20210113171318999",
+              "_revision_i": 1,
+              "_state_s": "public",
+              "_latest_s": "true",
+              "government_s": "de",
+              "url_ss": [
+                "https://absch.cbd.int/database/record?documentID=253580"
+              ]
+            }
+          ]
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3Ameasure&rows=1&wt=json",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 397,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": [
+            {
+              "id": "52000000cbd080000003301c",
+              "_revision_i": 10,
+              "_state_s": "public",
+              "_latest_s": "true",
+              "schema_s": "measure",
+              "updatedDate_s": "2022-12-10T22:09:15.553Z",
+              "identifier_s": "E5168AEE-ABA9-949E-BC8A-47ED80A24E30",
+              "url_ss": [
+                "https://absch.cbd.int/database/record?documentID=208924"
+              ],
+              "uniqueIdentifier_s": "absch-msr-es-208924-10",
+              "title_EN_s": "Real Decreto 124/2017, de 24 de febrero, relativo al acceso a los recursos gen\u00e9ticos procedentes de taxones silvestres y al control de la utilizaci\u00f3n.",
+              "government_s": "es"
+            }
+          ]
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+uniqueId_s%3AABSCH-IRCC-ZA-300855-2&rows=1&wt=json",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 0,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": []
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsPermit+AND+_state_s%3Apublic+AND+_latest_s%3Atrue&rows=1&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 6545,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": [
+            {
+              "id": "52000000cbd0800000032db0",
+              "schema_s": "absPermit",
+              "updatedDate_s": "2016-11-22T09:51:05.313Z",
+              "title_EN_s": "India/NBA/9/Appl/895",
+              "uniqueIdentifier_s": "absch-ircc-in-208304-1",
+              "identifier_s": "42C063B2-902C-2A40-304D-2B74D1FB67CD",
+              "_revision_i": 1,
+              "_state_s": "public",
+              "_latest_s": "true",
+              "government_s": "in",
+              "url_ss": [
+                "https://absch.cbd.int/database/record?documentID=208304"
+              ]
+            }
+          ]
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsPermit+AND+_state_s%3Apublic&rows=1&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 6545,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": [
+            {
+              "id": "52000000cbd0800000032db0",
+              "schema_s": "absPermit",
+              "updatedDate_s": "2016-11-22T09:51:05.313Z",
+              "title_EN_s": "India/NBA/9/Appl/895",
+              "uniqueIdentifier_s": "absch-ircc-in-208304-1",
+              "identifier_s": "42C063B2-902C-2A40-304D-2B74D1FB67CD",
+              "_revision_i": 1,
+              "_state_s": "public",
+              "_latest_s": "true",
+              "government_s": "in",
+              "url_ss": [
+                "https://absch.cbd.int/database/record?documentID=208304"
+              ]
+            }
+          ]
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+schema_s%3AabsPermit+AND+_latest_s%3Atrue&rows=1&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 6545,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": [
+            {
+              "id": "52000000cbd0800000032db0",
+              "schema_s": "absPermit",
+              "updatedDate_s": "2016-11-22T09:51:05.313Z",
+              "title_EN_s": "India/NBA/9/Appl/895",
+              "uniqueIdentifier_s": "absch-ircc-in-208304-1",
+              "identifier_s": "42C063B2-902C-2A40-304D-2B74D1FB67CD",
+              "_revision_i": 1,
+              "_state_s": "public",
+              "_latest_s": "true",
+              "government_s": "in",
+              "url_ss": [
+                "https://absch.cbd.int/database/record?documentID=208304"
+              ]
+            }
+          ]
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+uniqueIdentifier_s%3AABSCH-IRCC-ZA-300855-2&rows=1&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 0,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": []
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+uniqueIdentifier_s%3AABSCH-CPC-GB-280530-1&rows=1&fl=id%2Cidentifier_s%2CuniqueIdentifier_s%2Cschema_s%2C_state_s%2C_latest_s%2C_revision_i%2Cgovernment_s%2Ctitle_EN_s%2Curl_ss%2CupdatedDate_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 0,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": []
+        },
+        "nonSupportedParams": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+[
+  {
+    "url": "https://api.protectedplanet.net/documentation",
+    "status": 403
+  },
+  {
+    "url": "https://api.protectedplanet.net/documentation/whats_new_in_v4",
+    "status": 403
+  },
+  {
+    "url": "https://api.protectedplanet.net/request",
+    "status": 403
+  },
+  {
+    "url": "https://data-gis.unep-wcmc.org/server/rest/services/ProtectedPlanet/WDPCA/FeatureServer",
+    "status": 200,
+    "finalUrl": "https://data-gis.unep-wcmc.org/server/rest/services/ProtectedPlanet/WDPCA/FeatureServer"
+  },
+  {
+    "url": "https://data-gis.unep-wcmc.org/server/rest/services/ProtectedPlanet/WDPCA/FeatureServer/1",
+    "status": 200,
+    "finalUrl": "https://data-gis.unep-wcmc.org/server/rest/services/ProtectedPlanet/WDPCA/FeatureServer/1"
+  },
+  {
+    "url": "https://dcnanature.org/",
+    "status": 200,
+    "finalUrl": "https://dcnanature.org/"
+  },
+  {
+    "url": "https://developers.google.com/earth-engine/datasets/catalog/WCMC_WDPA_current_polygons",
+    "status": 200,
+    "finalUrl": "https://developers.google.com/earth-engine/datasets/catalog/WCMC_WDPA_current_polygons"
+  },
+  {
+    "url": "https://developers.google.com/earth-engine/guides/noncommercial_tiers",
+    "status": 200,
+    "finalUrl": "https://developers.google.com/earth-engine/guides/noncommercial_tiers"
+  },
+  {
+    "url": "https://earthengine.google.com/",
+    "status": 200,
+    "finalUrl": "https://earthengine.google.com/"
+  },
+  {
+    "url": "https://iucn.org/our-union",
+    "status": 403
+  },
+  {
+    "url": "https://marine-conservation.org/on-the-tide/halfway-to-30x30/",
+    "status": 403
+  },
+  {
+    "url": "https://mpatlas.org/",
+    "status": 200,
+    "finalUrl": "https://mpatlas.org/"
+  },
+  {
+    "url": "https://old.mpatlas.org/about/data/",
+    "error": "<urlopen error [SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1006)>"
+  },
+  {
+    "url": "https://www.arcadiafund.org.uk/",
+    "status": 403
+  },
+  {
+    "url": "https://www.bezosearthfund.org/",
+    "status": 200,
+    "finalUrl": "https://www.bezosearthfund.org/"
+  },
+  {
+    "url": "https://www.ibat-alliance.org/",
+    "status": 200,
+    "finalUrl": "https://www.ibat-alliance.org/"
+  },
+  {
+    "url": "https://www.ibat-alliance.org/datasets/wdpca",
+    "status": 200,
+    "finalUrl": "https://www.ibat-alliance.org/datasets/wdpca"
+  },
+  {
+    "url": "https://www.ibat-alliance.org/services",
+    "status": 200,
+    "finalUrl": "https://www.ibat-alliance.org/services"
+  },
+  {
+    "url": "https://www.protectedplanet.net/230",
+    "status": 403
+  },
+  {
+    "url": "https://www.protectedplanet.net/en",
+    "status": 403
+  },
+  {
+    "url": "https://www.protectedplanet.net/en/legal",
+    "status": 403
+  },
+  {
+    "url": "https://www.protectedplanet.net/en/news-and-stories/introducing-the-wdpca",
+    "status": 403
+  },
+  {
+    "url": "https://www.protectedplanet.net/en/resources/protected-planet-and-the-online-reporting-tool-of-the-convention-on-biological-diversity",
+    "status": 403
+  },
+  {
+    "url": "https://www.protectedplanet.net/en/resources/wdpa-manual",
+    "status": 403
+  },
+  {
+    "url": "https://www.protectedplanet.net/en/thematic-areas/wdpa",
+    "status": 403
+  },
+  {
+    "url": "https://www.protectedplanet.net/news-and-stories/launch-of-new-wdpca-user-manual",
+    "status": 403
+  },
+  {
+    "url": "https://www.proteuspartners.org/",
+    "status": 200,
+    "finalUrl": "https://www.proteuspartners.org/"
+  },
+  {
+    "url": "https://www.proteuspartners.org/content/uploads/2017/07/Proteus-2021-25-Strategy-Document.pdf",
+    "status": 200,
+    "finalUrl": "https://www.proteuspartners.org/wordpress/wp-login.php?redirect_to=https%3A%2F%2Fwww.proteuspartners.org%2Fcontent%2Fuploads%2F2017%2F07%2FProteus-2021-25-Strategy-Document.pdf"
+  },
+  {
+    "url": "https://www.unep-wcmc.org/",
+    "status": 200,
+    "finalUrl": "https://www.unep-wcmc.org/en"
+  },
+  {
+    "url": "https://www.unep-wcmc.org/en/news/five-steps-to-strengthen-data-justice-as-we-conserve-30-of-the-planet",
+    "status": 200,
+    "finalUrl": "https://www.unep-wcmc.org/en/news/five-steps-to-strengthen-data-justice-as-we-conserve-30-of-the-planet"
+  },
+  {
+    "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+    "status": 200,
+    "finalUrl": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding"
+  },
+  {
+    "url": "https://www.unep-wcmc.org/en/news/towards-30x30-new-grant-supports-major-progress-for-protected-and-conserved-areas",
+    "status": 200,
+    "finalUrl": "https://www.unep-wcmc.org/en/news/towards-30x30-new-grant-supports-major-progress-for-protected-and-conserved-areas"
+  },
+  {
+    "url": "https://www.unep-wcmc.org/en/our-funders",
+    "status": 200,
+    "finalUrl": "https://www.unep-wcmc.org/en/our-funders"
+  },
+  {
+    "url": "https://www.unep.org/who-we-are/about-us",
+    "status": 403
+  },
+  {
+    "url": "https://www.usgs.gov/",
+    "status": 200,
+    "finalUrl": "https://www.usgs.gov/"
+  },
+  {
+    "url": "https://www.usgs.gov/data/protected-areas-database-united-states-pad-us-30-world-database-protected-areas-wdpa",
+    "status": 200,
+    "finalUrl": "https://www.usgs.gov/data/protected-areas-database-united-states-pad-us-30-world-database-protected-areas-wdpa"
+  }
+]

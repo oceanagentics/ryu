@@ -1,0 +1,415 @@
+Browser tab: 13, Title: "ODIS Search", URL: "https://search-demo.odis.org/network".
+1 AXWebArea ODIS Search, URL: search-demo.odis.org/network
+	2 container app
+		3 container
+			4 text ODIS Search is under active development, so features and data may change without notice. Found a bug or have a suggestion? 
+			5 link Description: Open an issue on GitHub, Value: github.com/iodepo/odis-ui/issues
+			6 text .
+			7 button Dismiss banner
+		8 container
+			9 link Description: Intergovernmental Oceanographic Commission (IOC) of UNESCO ODIS Search, Value: search-demo.odis.org/
+			10 link Description: Network status, Value: search-demo.odis.org/network
+			11 link Description: Search settings, Value: search-demo.odis.org/network#settings
+			12 link Description: View source on GitHub, Value: github.com/iobis/odis-ui
+		13 container
+			14 heading ODIS network status, Value: 1
+				15 text ODIS network status
+			16 text Status of the federated nodes of the ODIS network.
+			17 heading Summary, Value: 2
+				18 text Summary
+			19 definition list
+				20 container Total nodes
+					21 text Total nodes
+				22 text 66
+				23 container Reporting errors
+					24 text Reporting errors
+				25 text 41
+				26 container Unresponsive
+					27 text Unresponsive
+				28 text 18
+				29 container Parsing errors
+					30 text Parsing errors
+				31 text 23
+			32 heading Unresponsive nodes (18), Value: 2
+				33 text Unresponsive nodes (18)
+			34 table
+				35 row
+					36 cell
+						37 text Name
+					38 cell
+						39 text Errors
+				40 row
+					41 cell
+						42 text geonova-geographic-catalog
+					43 cell
+						44 content list
+							45 text Could not parse sitemap https://gcat.gatewaygeo.ca/geonetwork/srv/api/sitemap (text/html;charset=utf-8): Invalid XML sitemap: mismatched tag: line 23, column 5
+							46 text no page URLs from sitemap
+				47 row
+					48 cell
+						49 link Description: OceanExpert, Value: oceanexpert.org/assets/sitemaps/sitemapIndex.xml
+					50 cell
+						51 content list
+							52 text Failed to fetch sitemap https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml: Client error '404 Not Found' for url 'https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+							53 text no page URLs from sitemap
+				54 row
+					55 cell
+						56 link Description: Ocean Data and Information Network for Africa - Projects Portal, Value: ioc-africa.org/sitemap.xml
+					57 cell
+						58 content list
+							59 text Failed to fetch sitemap https://ioc-africa.org/sitemap.xml: Client error '404 Not Found' for url 'https://ioc-africa.org/sitemap.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+							60 text no page URLs from sitemap
+				61 row
+					62 cell
+						63 link Description: Marine Training - European Marine Biological Resource Centre, Value: marinetraining.eu/sitemap.xml
+					64 cell
+						65 content list
+							66 text Failed to fetch sitemap https://www.marinetraining.eu/sitemap.xml: Client error '403 Forbidden' for url 'https://www.marinetraining.eu/sitemap.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+							67 text no page URLs from sitemap
+				68 row
+					69 cell
+						70 link Description: Indonesia NODC, Value: geonode.nodc.id/sitemap.xml
+					71 cell
+						72 content list
+							73 text Failed to fetch sitemap https://geonode.nodc.id/sitemap.xml: [Errno -2] Name or service not known
+							74 text no page URLs from sitemap
+				75 row
+					76 cell
+						77 link Description: CIOOS Data Catalogue, Value: catalogue.cioos.ca/sitemap/sitemap.xml
+					78 cell
+						79 content list
+							80 text Failed to fetch sitemap https://catalogue.cioos.ca/sitemap/sitemap.xml: Client error '403 Forbidden' for url 'https://catalogue.cioos.ca/sitemap/sitemap.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+							81 text no page URLs from sitemap
+				82 row
+					83 cell
+						84 link Description: Pacific Data Hub Data Catalogue - Pacific Community, Value: pacificdata.org/organization/sitemap.xml
+					85 cell
+						86 content list
+							87 text Failed to fetch sitemap https://pacificdata.org/organization/sitemap.xml: Client error '403 Forbidden' for url 'https://pacificdata.org/organization/sitemap.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+							88 text no page URLs from sitemap
+				89 row
+					90 cell
+						91 link Description: INSTITUTIONAL VIDEOS - Hydrography and Navigation Directorate of Perú, Value: dhn.mil.pe/portal/videos-institucionales
+					92 cell
+						93 content list
+							94 text Could not parse sitemap https://www.dhn.mil.pe/portal/videos-institucionales (text/html; charset=utf-8): Invalid XML sitemap: mismatched tag: line 64, column 2
+							95 text no page URLs from sitemap
+				96 row
+					97 cell
+						98 link Description: National Marine Data and Information Service, Value: 221.186.3.18:8888/erddap/sitemap.xml
+					99 cell
+						100 content list
+							101 text Failed to fetch sitemap http://221.186.3.18:8888/erddap/sitemap.xml: timed out
+							102 text no page URLs from sitemap
+				103 row
+					104 cell
+						105 link Description: CCLME Eco-GIS Viewer, Value: ideo-cclme.ieo.es/odis/odis_sitemap.xml
+					106 cell
+						107 content list
+							108 text Failed to fetch sitemap https://ideo-cclme.ieo.es/odis/odis_sitemap.xml: [Errno 104] Connection reset by peer
+							109 text no page URLs from sitemap
+				110 row
+					111 cell
+						112 link Description: Pacific Environment Portal, Value: raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-pedp/sitemap.xml
+					113 cell
+						114 content list
+							115 text Failed to fetch sitemap https://pacificdata.org/data/sitemap/sprep/sitemap.xml: Client error '403 Forbidden' for url 'https://pacificdata.org/data/sitemap/sprep/sitemap.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+							116 text Failed to fetch sitemap https://pacificdata.org/data/sitemap/cookislands-data/sitemap.xml: Client error '403 Forbidden' for url 'https://pacificdata.org/data/sitemap/cookislands-data/sitemap.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+							117 text Failed to fetch sitemap https://pacificdata.org/data/sitemap/fsm-data/sitemap.xml: Client error '403 Forbidden' for url 'https://pacificdata.org/data/sitemap/fsm-data/sitemap.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+							118 text Failed to fetch sitemap https://pacificdata.org/data/sitemap/fiji-data/sitemap.xml: Client error '403 Forbidden' for url 'https://pacificdata.org/data/sitemap/fiji-data/sitemap.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+							119 text Failed to fetch sitemap https://pacificdata.org/data/sitemap/kiribati-data/sitemap.xml: Client error '403 Forbidden' for url 'https://pacificdata.org/data/sitemap/kiribati-data/sitemap.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+							120 text … and 7 more
+				121 row
+					122 cell
+						123 link Value: ioc-africa.org/sitemap.xml, Description: ODINAFRICA portal for marine-related projects, research vessels, past and upcoming research cruises in the region, and other ocean observation platforms
+					124 cell
+						125 content list
+							126 text Failed to fetch sitemap https://ioc-africa.org/sitemap.xml: Client error '404 Not Found' for url 'https://ioc-africa.org/sitemap.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+							127 text no page URLs from sitemap
+				128 row
+					129 cell
+						130 link Description: Global Biodiversity Information Facility, Value: gbif.org/sitemap-dataset.xml
+					131 cell
+						132 content list
+							133 text Failed to fetch sitemap https://www.gbif.org/sitemap-dataset.xml: Client error '403 Forbidden' for url 'https://www.gbif.org/sitemap-dataset.xml' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+							134 text no page URLs from sitemap
+				135 row
+					136 cell
+						137 link Description: Marine Information Management System: South Africa's oceans and coastal data archive, Value: data.ocean.gov.za/mims/catalog/sitemap.xml
+					138 cell
+						139 content list
+							140 text Could not parse sitemap https://data.ocean.gov.za/mims/catalog/sitemap.xml (text/html; charset=utf-8): Invalid XML sitemap: mismatched tag: line 42, column 2
+							141 text no page URLs from sitemap
+				142 row
+					143 cell
+						144 link Description: UNEP Data Catalogue, Value: data.unep.org/oceans_sitemap2.xml
+					145 cell
+						146 content list
+							147 text Could not parse sitemap https://data.unep.org/oceans_sitemap2.xml (text/html): Invalid XML sitemap: syntax error: line 1, column 0
+							148 text no page URLs from sitemap
+				149 row
+					150 cell
+						151 link Description: ARPHA Journals - Мarine content source journals, Value: pensoft.net/marine-sitemap.xml
+					152 cell
+						153 content list
+							154 text Could not parse sitemap https://bdj.pensoft.net/article/961 (text/html; charset=utf-8): Invalid XML sitemap: not well-formed (invalid token): line 134, column 131
+							155 text Could not parse sitemap https://bdj.pensoft.net/article/969 (text/html; charset=utf-8): Invalid XML sitemap: not well-formed (invalid token): line 112, column 131
+							156 text Could not parse sitemap https://bdj.pensoft.net/article/975 (text/html; charset=utf-8): Invalid XML sitemap: not well-formed (invalid token): line 107, column 131
+							157 text Could not parse sitemap https://bdj.pensoft.net/article/1024 (text/html; charset=utf-8): Invalid XML sitemap: not well-formed (invalid token): line 171, column 131
+							158 text Could not parse sitemap https://bdj.pensoft.net/article/1093 (text/html; charset=utf-8): Invalid XML sitemap: not well-formed (invalid token): line 117, column 131
+							159 text … and 8 more
+				160 row
+					161 cell
+						162 link Description: NOAA Fisheries Distribution Mapping and Analysis Portal, Value: apps-st.fisheries.noaa.gov/dismap/DisMAP.html
+					163 cell
+						164 content list
+							165 text Could not parse sitemap https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html (text/html; charset=utf-8): Invalid XML sitemap: syntax error: line 1, column 0
+							166 text no page URLs from sitemap
+				167 row
+					168 cell
+						169 link Description: Catalogue - NODC Spanish Institute of Oceanography (IEO-CSIC), Value: nodc.ieo.es/geonetwork/srv/api/sitemap
+					170 cell
+						171 content list
+							172 text Failed to fetch sitemap https://nodc.ieo.es:8443/geonetwork/srv/api/sitemap?format=html&doc=1: [Errno 111] Connection refused
+							173 text Failed to fetch sitemap https://nodc.ieo.es:8443/geonetwork/srv/api/sitemap?format=html&doc=2: [Errno 111] Connection refused
+							174 text Failed to fetch sitemap https://nodc.ieo.es:8443/geonetwork/srv/api/sitemap?format=html&doc=3: [Errno 111] Connection refused
+							175 text Failed to fetch sitemap https://nodc.ieo.es:8443/geonetwork/srv/api/sitemap?format=html&doc=4: [Errno 111] Connection refused
+							176 text no page URLs from sitemap
+			177 heading Nodes with parsing errors (23), Value: 2
+				178 text Nodes with parsing errors (23)
+			179 table
+				180 row
+					181 cell
+						182 text Name
+					183 cell
+						184 text Errors
+				185 row
+					186 cell
+						187 link Description: Marine Spatial Atlas for the Western Indian Ocean, Value: raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/sitemap.xml
+					188 cell
+						189 content list
+							190 text https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-simple-graph.json: Client error '404 Not Found' for url 'https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-simple-graph.json' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+							191 text https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-simple-graph-template.json: Client error '404 Not Found' for url 'https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/maspawio-simple-graph-template.json' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+				192 row
+					193 cell
+						194 link Description: All data series - UK National Oceanographic Database, Value: api.linked-systems.uk/sitemap_pap_api.xml
+					195 cell
+						196 content list
+							197 text https://api.linked-systems.uk/api/schema-org/dataset/2074669: Server error '555 status code 555' for url 'https://api.linked-systems.uk/api/schema-org/dataset/2074669' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/555
+				198 row
+					199 cell
+						200 link Description: Deep Seabed and Ocean Database - International Seabed Authority, Value: data.isa.org.jm/static/oih/site_map_oih_deepdata.xml
+					201 cell
+						202 content list
+							203 text https://data.isa.org.jm/static/oih/odis_comracfc12022_mooringctd2019.zip.html: no application/ld+json script tags found
+							204 text https://data.isa.org.jm/static/oih/odis_comrapms12021_dy65-swir-s018ctd02.zip.html: no application/ld+json script tags found
+							205 text https://data.isa.org.jm/static/oih/odis_comrapms12021_dy65-swir-s061ctd03.zip.html: no application/ld+json script tags found
+							206 text https://data.isa.org.jm/static/oih/odis_comracrfc12017_mooring_ctd.zip.html: no application/ld+json script tags found
+							207 text https://data.isa.org.jm/static/oih/odis_koreapms12014_env_cir_ctd.zip.html: no application/ld+json script tags found
+							208 text … and 1 more
+				209 row
+					210 cell
+						211 link Description: Partnership for Observation of the Global Ocean, Value: pogo-ocean.org/sitemap.xml
+					212 cell
+						213 content list
+							214 text https://pogo-ocean.org/sitemap.html: no application/ld+json script tags found
+							215 text https://pogo-ocean.org/capacity-development/pogo-scor-fellowship-programme/pogo-scor-fellowships-2013/: Server disconnected without sending a response.
+				216 row
+					217 cell
+						218 link Description: Caribbean Marine Atlas, Value: raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/sitemap.xml
+					219 cell
+						220 content list
+							221 text https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph-template.json: Client error '404 Not Found' for url 'https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph-template.json' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+							222 text https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json: Client error '404 Not Found' for url 'https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/caribbeanmarineatlas-simple-graph.json' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+				223 row
+					224 cell
+						225 link Description: National Marine Data and Information Service, Value: 222.186.3.18:8888/erddap/sitemap.xml
+					226 cell
+						227 content list
+							228 text http://222.186.3.18:8888/erddap/categorize/index.html: no application/ld+json script tags found
+							229 text http://222.186.3.18:8888/erddap/convert/oceanicAtmosphericAcronyms.html: no application/ld+json script tags found
+							230 text http://222.186.3.18:8888/erddap/convert/oceanicAtmosphericVariableNames.html: no application/ld+json script tags found
+							231 text http://222.186.3.18:8888/erddap/convert/index.html: no application/ld+json script tags found
+							232 text http://222.186.3.18:8888/erddap/convert/keywords.html: no application/ld+json script tags found
+							233 text … and 6 more
+				234 row
+					235 cell
+						236 link Description: Catalogue - European Marine Observation and Data Network, Value: emodnet.ec.europa.eu/geonetwork/srv/api/sitemap
+					237 cell
+						238 content list
+							239 text https://emodnet.ec.europa.eu/geonetwork/srv/api/records/930f3d19-72dd-4052-9e00-b75733bfab59?language=all: no application/ld+json script tags found
+							240 text https://emodnet.ec.europa.eu/geonetwork/srv/api/records/978c7aa2-48e8-4834-a861-fcbb0f8b05b6?language=all: no application/ld+json script tags found
+							241 text https://emodnet.ec.europa.eu/geonetwork/srv/api/records/d2864fdd-5572-4b2c-93c5-3b18e80840bd?language=all: no application/ld+json script tags found
+							242 text https://emodnet.ec.europa.eu/geonetwork/srv/api/records/6d617269-6e65-696e-666f-000000009107?language=all: no application/ld+json script tags found
+							243 text https://emodnet.ec.europa.eu/geonetwork/srv/api/records/6d617269-6e65-696e-666f-000000009110?language=all: no application/ld+json script tags found
+							244 text … and 6 more
+				245 row
+					246 cell
+						247 link Description: Earth System Science Data Portal - Ministry of Earth Sciences, Government of India, Value: incois.gov.in/essdp/xml/sitemap.xml
+					248 cell
+						249 content list
+							250 text https://incois.gov.in/essdp/ViewMetadata?fileid=5f7f56a5-2868-4baf-acc4-d37595774ce2: no application/ld+json script tags found
+							251 text https://incois.gov.in/essdp/ViewMetadata?fileid=7d051f4f-98cd-4578-861a-6bfb5f6c03af: no application/ld+json script tags found
+							252 text https://incois.gov.in/essdp/ViewMetadata?fileid=b58558b9-8ad5-40bb-9c25-39d5184b0ba4: no application/ld+json script tags found
+							253 text https://incois.gov.in/essdp/ViewMetadata?fileid=c03a8ba4-3dc0-4527-9b28-2777f10a7a81: no application/ld+json script tags found
+							254 text https://incois.gov.in/essdp/ViewMetadata?fileid=76dd8f21-8a5f-43a0-bde8-2ee764fb149c: no application/ld+json script tags found
+							255 text … and 8 more
+				256 row
+					257 cell
+						258 link Description: Ocean Biodiversity Information System, Value: obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml
+					259 cell
+						260 content list
+							261 text https://obis.org/dataset/e981eab6-f849-4891-8fac-495852829456: no application/ld+json script tags found
+							262 text https://obis.org/dataset/d2caf73d-7e52-4113-b2f6-b89b439a9a2f: no application/ld+json script tags found
+							263 text https://obis.org/dataset/9651c30a-ea93-4e20-8cce-e9e951d9fe68: no application/ld+json script tags found
+							264 text https://obis.org/dataset/ac9233e9-170a-49ab-9505-46f09ac3c90f: no application/ld+json script tags found
+							265 text https://obis.org/dataset/c87cb4d8-0757-442f-9166-fbc0489b9149: no application/ld+json script tags found
+							266 text … and 6 more
+				267 row
+					268 cell
+						269 link Description: Biological and Chemical Oceanography Data Management Office, Value: bco-dmo.org/sitemap.xml
+					270 cell
+						271 content list
+							272 text https://www.bco-dmo.org/about-us: no application/ld+json script tags found
+							273 text https://www.bco-dmo.org/search/dataset: no application/ld+json script tags found
+							274 text https://www.bco-dmo.org/instrument/953384: no application/ld+json script tags found
+							275 text https://www.bco-dmo.org/instrument/953381: no application/ld+json script tags found
+							276 text https://www.bco-dmo.org/instrument/953024: no application/ld+json script tags found
+							277 text … and 6 more
+				278 row
+					279 cell
+						280 link Description: CLIVAR and Carbon Hydrographic Data, Value: cchdo.ucsd.edu/sitemap.xml
+					281 cell
+						282 content list
+							283 text https://cchdo.ucsd.edu/search/map: no application/ld+json script tags found
+							284 text https://cchdo.ucsd.edu/search/advanced: no application/ld+json script tags found
+							285 text https://cchdo.ucsd.edu/contact: no application/ld+json script tags found
+							286 text https://cchdo.ucsd.edu/formats: no application/ld+json script tags found
+							287 text https://cchdo.ucsd.edu/citation: no application/ld+json script tags found
+							288 text … and 1 more
+				289 row
+					290 cell
+						291 link Description: California Cooperative Oceanic Fisheries Investigations, Value: calcofi.io/workflows/datasets/sitemap.xml
+					292 cell
+						293 content list
+							294 text https://coastwatch.pfeg.noaa.gov/erddap/info/erdCalCOFIcufes/index.html: [Errno 104] Connection reset by peer
+							295 text https://coastwatch.pfeg.noaa.gov/erddap/info/erdCalCOFIcruises/index.html: [Errno 97] Address family not supported by protocol
+							296 text https://coastwatch.pfeg.noaa.gov/erddap/info/erdCalCOFIeggstg/index.html: [Errno 97] Address family not supported by protocol
+							297 text https://coastwatch.pfeg.noaa.gov/erddap/info/erdCalCOFIlrvsiz/index.html: [Errno 104] Connection reset by peer
+							298 text https://coastwatch.pfeg.noaa.gov/erddap/info/erdCalCOFIlrvcnt/index.html: [Errno 97] Address family not supported by protocol
+							299 text … and 17 more
+				300 row
+					301 cell
+						302 link Description: Space Physics Archive Search and Extract, Value: github.com/lechatpito/NASA-ODIS-Examples/raw/main/sitemap.xml
+					303 cell
+						304 content list
+							305 text https://raw.githubusercontent.com/lechatpito/SPASE-to-schemaorg-converter/main/ODIS_JSONLD/NumericalData/PT60s.jsonld: Client error '404 Not Found' for url 'https://raw.githubusercontent.com/lechatpito/SPASE-to-schemaorg-converter/main/ODIS_JSONLD/NumericalData/PT60s.jsonld' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+							306 text https://raw.githubusercontent.com/lechatpito/SPASE-to-schemaorg-converter/main/ODIS_JSONLD/NumericalData/Data.jsonld: Client error '404 Not Found' for url 'https://raw.githubusercontent.com/lechatpito/SPASE-to-schemaorg-converter/main/ODIS_JSONLD/NumericalData/Data.jsonld' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+							307 text https://raw.githubusercontent.com/lechatpito/SPASE-to-schemaorg-converter/main/ODIS_JSONLD/NumericalData/PT30m.jsonld: Client error '404 Not Found' for url 'https://raw.githubusercontent.com/lechatpito/SPASE-to-schemaorg-converter/main/ODIS_JSONLD/NumericalData/PT30m.jsonld' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+							308 text https://raw.githubusercontent.com/lechatpito/SPASE-to-schemaorg-converter/main/ODIS_JSONLD/NumericalData/PT1s.jsonld: Client error '404 Not Found' for url 'https://raw.githubusercontent.com/lechatpito/SPASE-to-schemaorg-converter/main/ODIS_JSONLD/NumericalData/PT1s.jsonld' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+							309 text https://raw.githubusercontent.com/lechatpito/SPASE-to-schemaorg-converter/main/ODIS_JSONLD/NumericalData/PT96s.jsonld: Client error '404 Not Found' for url 'https://raw.githubusercontent.com/lechatpito/SPASE-to-schemaorg-converter/main/ODIS_JSONLD/NumericalData/PT96s.jsonld' For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+							310 text … and 6 more
+				311 row
+					312 cell
+						313 link Description: MARCO-BOLO dataset catalogue, Value: lab.marcobolo-project.eu/csv-to-json-ld/sitemap.xml
+					314 cell
+						315 content list
+							316 text https://lab.marcobolo-project.eu/csv-to-json-ld/Audience.html: no application/ld+json script tags found
+							317 text https://lab.marcobolo-project.eu/csv-to-json-ld/Action.html: no application/ld+json script tags found
+							318 text https://lab.marcobolo-project.eu/csv-to-json-ld/404.html: no application/ld+json script tags found
+							319 text https://lab.marcobolo-project.eu/csv-to-json-ld/ContactPoint.html: no application/ld+json script tags found
+							320 text https://lab.marcobolo-project.eu/csv-to-json-ld/Boolean.html: no application/ld+json script tags found
+							321 text … and 7 more
+				322 row
+					323 cell
+						324 link Description: OpenASFA, Value: fao.org/fishery/sitemap.xml
+					325 cell
+						326 content list
+							327 text https://www.fao.org/fishery/aqspecies/18171/en: no application/ld+json script tags found
+							328 text https://www.fao.org/fishery/aqspecies/2408/en: no application/ld+json script tags found
+							329 text https://www.fao.org/fishery/aqspecies/13863/en: no application/ld+json script tags found
+							330 text https://www.fao.org/fishery/aqspecies/2116/en: no application/ld+json script tags found
+							331 text https://www.fao.org/fishery/aqspecies/10188/en: no application/ld+json script tags found
+							332 text … and 14 more
+				333 row
+					334 cell
+						335 link Description: Ocean Data Platform, Value: api.hubocean.earth/api/public/catalog/v1/sitemap.xml
+					336 cell
+						337 content list
+							338 text https://app.hubocean.earth/catalog/dataset/2765d291-2dd7-4dca-9b53-256d5e9ebad4: no application/ld+json script tags found
+							339 text https://app.hubocean.earth/catalog/dataset/63d2397d-c69c-496b-b031-90c3e1224f88: no application/ld+json script tags found
+							340 text https://app.hubocean.earth/catalog/dataset/dec474d3-758c-422f-a93e-ec1177af3da9: no application/ld+json script tags found
+							341 text https://app.hubocean.earth/catalog/dataset/3ec88f08-9d2b-44de-a125-38dc3663bad5: no application/ld+json script tags found
+							342 text https://app.hubocean.earth/catalog/dataset/e7e891a1-ddb4-4af7-b582-5e1316a97930: no application/ld+json script tags found
+							343 text … and 6 more
+				344 row
+					345 cell
+						346 link Description: GOOS OCG ERDDAP server, Value: osmc.noaa.gov/erddap/sitemap.xml
+					347 cell
+						348 content list
+							349 text https://osmc.noaa.gov/erddap/categorize/index.html: no application/ld+json script tags found
+							350 text https://osmc.noaa.gov/erddap/convert/keywords.html: no application/ld+json script tags found
+							351 text https://osmc.noaa.gov/erddap/convert/fipscounty.html: no application/ld+json script tags found
+							352 text https://osmc.noaa.gov/erddap/convert/oceanicAtmosphericAcronyms.html: no application/ld+json script tags found
+							353 text https://osmc.noaa.gov/erddap/convert/index.html: no application/ld+json script tags found
+							354 text … and 7 more
+				355 row
+					356 cell
+						357 link Description: Portal - Marine Environmental Data and Information Network, Value: portal.medin.org.uk/portal/sitemap.php
+					358 cell
+						359 content list
+							360 text https://portal.medin.org.uk/portal/browse_step.php: no application/ld+json script tags found
+				361 row
+					362 cell
+						363 link Description: MBA Data Catalogue (CKAN), Value: ckan.mba.ac.uk/sitemap_index.xml
+					364 cell
+						365 content list
+							366 text https://ckan.mba.ac.uk/: no application/ld+json script tags found
+							367 text https://ckan.mba.ac.uk/group/: no application/ld+json script tags found
+							368 text https://ckan.mba.ac.uk/dataset/: no application/ld+json script tags found
+							369 text https://ckan.mba.ac.uk/organization/: no application/ld+json script tags found
+							370 text https://ckan.mba.ac.uk/dataset/17-year-time-series/resource/7a2a204f-86ae-4f02-8d78-d03807e3ce0b: no application/ld+json script tags found
+							371 text … and 6 more
+				372 row
+					373 cell
+						374 link Description: European Directory of Marine Organisations, Value: edmo.seadatanet.org/sitemap.xml
+					375 cell
+						376 content list
+							377 text https://edmo.seadatanet.org/: no application/ld+json script tags found
+							378 text https://edmo.seadatanet.org/search: no application/ld+json script tags found
+							379 text https://edmo.seadatanet.org/sparql: no application/ld+json script tags found
+				380 row
+					381 cell
+						382 link Description: European Directory of Marine Environmental Research Projects, Value: edmerp.seadatanet.org/sitemap.xml
+					383 cell
+						384 content list
+							385 text https://edmerp.seadatanet.org/: no application/ld+json script tags found
+							386 text https://edmerp.seadatanet.org/sparql: no application/ld+json script tags found
+							387 text https://edmerp.seadatanet.org/search: no application/ld+json script tags found
+							388 text https://edmerp.seadatanet.org/report/13696: no application/ld+json script tags found
+							389 text https://edmerp.seadatanet.org/report/12436: no application/ld+json script tags found
+							390 text … and 1 more
+				391 row
+					392 cell
+						393 link Description: The Rolling Deck to Repository, Value: service.rvdata.us/api/sitemap/
+					394 cell
+						395 content list
+							396 text https://www.rvdata.us/search/fileset/100136: no application/ld+json script tags found
+							397 text https://www.rvdata.us/search/fileset/100137: no application/ld+json script tags found
+							398 text https://www.rvdata.us/search/fileset/100139: no application/ld+json script tags found
+							399 text https://www.rvdata.us/search/fileset/100138: no application/ld+json script tags found
+							400 text https://www.rvdata.us/search/fileset/100135: no application/ld+json script tags found
+							401 text … and 508 more
+				402 row
+					403 cell
+						404 link Description: Integrated Ocean Observing System (IOOS®) Data Catalog, Value: data.ioos.us/sitemap.xml
+					405 cell
+						406 content list
+							407 text https://data.ioos.us/dataset/surfrider-station-11711: no application/ld+json script tags found
+							408 text https://data.ioos.us/dataset/kigul-island-ak: no application/ld+json script tags found
+							409 text https://data.ioos.us/dataset/punta-gorda-charlotte-county-fl-kpgd: no application/ld+json script tags found
+							410 text https://data.ioos.us/dataset/first-100-rows-of-obis-export: no application/ld+json script tags found
+							411 text https://data.ioos.us/dataset/walton-smith-ctd-ws1418-ws1418_49-2014-12-03-25-583n-81-3188w: no application/ld+json script tags found
+							412 text … and 23 more
+
+The focused UI element is 10 link Description: Network status, URL: search-demo.odis.org/network

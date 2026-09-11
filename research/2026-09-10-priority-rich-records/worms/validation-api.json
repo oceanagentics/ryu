@@ -1,0 +1,610 @@
+{
+  "httpStatus": 200,
+  "edgeCount": 18,
+  "recordUpdatedAt": "2026-09-10T20:03:20.936Z",
+  "result": {
+    "valid": false,
+    "recordId": "worms",
+    "issues": [
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[0].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[1].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[1].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[2].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[2].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[3].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[3].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[4].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[4].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[5].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[5].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[6].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[6].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[7].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[7].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[7].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[8].type",
+        "message": "invalid access type"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[8].method",
+        "message": "a lower_snake_case method is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "record.properties.access[8].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.data.descriptors.worms-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.data.descriptors.worms-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.data.descriptors.worms-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ar.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.data.descriptors.worms-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.data.descriptors.worms-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.data.descriptors.worms-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.zh.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.data.descriptors.worms-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.data.descriptors.worms-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.data.descriptors.worms-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.en.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.data.descriptors.worms-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.data.descriptors.worms-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.data.descriptors.worms-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.fr.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.data.descriptors.worms-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.data.descriptors.worms-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.data.descriptors.worms-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.ru.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.relationshipReview.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.relationshipReview.findings.governs",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.relationshipReview.findings.operates",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.relationshipReview.findings.funds",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.relationshipReview.findings.member_of",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.relationshipReview.findings.publishes_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.relationshipReview.findings.syncs_to",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.data.descriptors.worms-standard-darwin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.data.descriptors.worms-standard-dublin_core.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.data.descriptors.worms-standard-eml.label",
+        "message": "non-empty text is required"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.researchGaps.recordCount",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "localizations.es.details.researchGaps.storageSize",
+        "message": "document the research gap when this information is unavailable"
+      },
+      {
+        "recordId": "worms",
+        "path": "edges.rel-index-fungorum-syncs-to-worms",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "worms",
+        "path": "edges.rel-ictv-taxonomy-syncs-to-worms",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "worms",
+        "path": "edges.rel-ctenophora-species-list-syncs-to-worms",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "worms",
+        "path": "edges.rel-reptile-database-syncs-to-worms",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "worms",
+        "path": "edges.rel-freshwater-animal-diversity-assessment-syncs-to-worms",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "worms",
+        "path": "edges.rel-recent-fossil-bryozoa-syncs-to-worms",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "worms",
+        "path": "edges.rel-worms-syncs-to-catalogue-of-life",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "worms",
+        "path": "edges.rel-lifewatch-belgium-funds-worms",
+        "message": "edge endpoints must exist and match the relationship kind"
+      },
+      {
+        "recordId": "worms",
+        "path": "edges.rel-worms-editorial-board-publishes-to-worms",
+        "message": "edge endpoints must exist and match the relationship kind"
+      }
+    ],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 37,
+      "resolvedSources": 37,
+      "issues": [
+        {
+          "recordId": "worms",
+          "path": "record.properties.access[0].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "record.properties.access[1].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "record.properties.access[2].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "record.properties.access[3].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "record.properties.access[4].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "record.properties.access[5].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "record.properties.access[6].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "record.properties.access[7].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "record.properties.access[8].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.ar.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.zh.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.en.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.fr.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.ru.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "worms",
+          "path": "localizations.es.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "recordUpdatedAt": "2026-09-10T20:03:20.936Z",
+    "affectedSections": [
+      "record",
+      "localizations",
+      "edges",
+      "routes"
+    ]
+  }
+}

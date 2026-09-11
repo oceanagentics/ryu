@@ -1,0 +1,2030 @@
+{
+  "id": "worms",
+  "record": {
+    "kind": "system",
+    "url": "https://www.marinespecies.org/",
+    "recordDepth": "rich",
+    "properties": {
+      "disciplines": [
+        "taxonomy",
+        "marine_biology"
+      ],
+      "data": {
+        "descriptors": [
+          {
+            "id": "worms-tag-data-type-taxonomy-nomenclature",
+            "category": "type",
+            "label": "taxonomic_records",
+            "source": "src-worms-about"
+          },
+          {
+            "id": "worms-tag-data-type-occurrence-observation",
+            "category": "type",
+            "label": "occurrence_records",
+            "source": "type-localities"
+          },
+          {
+            "id": "worms-tag-data-type-trait-ecology",
+            "category": "type",
+            "label": "biological_traits",
+            "source": "src-worms-about"
+          },
+          {
+            "id": "worms-type-specimens",
+            "category": "type",
+            "label": "sample_records",
+            "source": "src-worms-about"
+          },
+          {
+            "id": "worms-type-literature",
+            "category": "type",
+            "label": "bibliographic_records",
+            "source": "src-worms-about"
+          },
+          {
+            "id": "worms-type-media",
+            "category": "type",
+            "label": "media",
+            "source": "src-worms-about"
+          },
+          {
+            "id": "worms-format-json",
+            "category": "format",
+            "label": "json",
+            "source": "rest"
+          },
+          {
+            "id": "worms-format-xml",
+            "category": "format",
+            "label": "xml",
+            "source": "services"
+          },
+          {
+            "id": "worms-format-html",
+            "category": "format",
+            "label": "html",
+            "source": "src-worms-about"
+          },
+          {
+            "id": "worms-format-csv",
+            "category": "format",
+            "label": "csv",
+            "source": "request"
+          },
+          {
+            "id": "worms-format-dwca",
+            "category": "format",
+            "label": "darwin_core_archive",
+            "source": "type-localities"
+          },
+          {
+            "id": "worms-standard-darwin_core",
+            "category": "standard",
+            "label": "darwin_core",
+            "source": "request"
+          },
+          {
+            "id": "worms-standard-dublin_core",
+            "category": "standard",
+            "label": "dublin_core",
+            "source": "ldes"
+          },
+          {
+            "id": "worms-standard-eml",
+            "category": "standard",
+            "label": "eml",
+            "source": "type-localities"
+          }
+        ]
+      },
+      "access": [
+        {
+          "id": "worms-tag-read-method-web",
+          "type": "read",
+          "methods": [
+            "browse"
+          ],
+          "url": "https://www.marinespecies.org/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "home",
+            "src-worms-about"
+          ]
+        },
+        {
+          "id": "worms-tag-read-method-api",
+          "type": "read",
+          "methods": [
+            "api"
+          ],
+          "url": "https://www.marinespecies.org/aphia.php?p=webservice",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "services",
+            "rest"
+          ]
+        },
+        {
+          "id": "worms-access-match",
+          "type": "read",
+          "methods": [
+            "browse",
+            "download"
+          ],
+          "url": "https://www.marinespecies.org/aphia.php?p=match",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "match"
+          ]
+        },
+        {
+          "id": "worms-access-request",
+          "type": "read",
+          "methods": [
+            "request"
+          ],
+          "url": "https://www.marinespecies.org/usersrequest.php",
+          "requirements": [
+            "account",
+            "affiliation",
+            "approval"
+          ],
+          "cost": "free",
+          "sourceRefs": [
+            "request"
+          ]
+        },
+        {
+          "id": "worms-access-ldes",
+          "type": "read",
+          "methods": [
+            "api"
+          ],
+          "url": "https://aphia.org/feed",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "services",
+            "ldes"
+          ]
+        },
+        {
+          "id": "worms-access-type-localities",
+          "type": "read",
+          "methods": [
+            "download"
+          ],
+          "url": "https://ipt.vliz.be/eurobis/resource?r=worms_type_localities",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "type-localities"
+          ]
+        },
+        {
+          "id": "worms-access-r-client",
+          "type": "read",
+          "methods": [
+            "software"
+          ],
+          "url": "https://docs.ropensci.org/worrms/",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "worrms",
+            "services"
+          ]
+        },
+        {
+          "id": "worms-write-editor",
+          "type": "write",
+          "methods": [
+            "form",
+            "request"
+          ],
+          "url": "https://www.marinespecies.org/aphia.php?p=editors",
+          "requirements": [
+            "account",
+            "approval"
+          ],
+          "cost": "free",
+          "sourceRefs": [
+            "tor",
+            "src-worms-about"
+          ]
+        },
+        {
+          "id": "worms-write-feedback",
+          "type": "write",
+          "methods": [
+            "request"
+          ],
+          "url": "https://www.marinespecies.org/contribute.php",
+          "requirements": [],
+          "cost": "free",
+          "sourceRefs": [
+            "contribute"
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "worms-metric-species",
+          "key": "species_count",
+          "value": 250610,
+          "observedAt": "2026-09-10",
+          "source": "home"
+        },
+        {
+          "id": "worms-metric-names",
+          "key": "record_count",
+          "value": 524148,
+          "observedAt": "2026-09-10",
+          "source": "home"
+        },
+        {
+          "id": "worms-metric-editors",
+          "key": "contributor_count",
+          "value": 371,
+          "observedAt": "2026-09-10",
+          "source": "home"
+        },
+        {
+          "id": "worms-metric-type-localities",
+          "key": "occurrence_count",
+          "value": 40961,
+          "observedAt": "2026-08-23",
+          "source": "type-localities"
+        }
+      ],
+      "gallery": []
+    },
+    "sources": {
+      "src-worms-about": {
+        "id": "src-worms-about",
+        "url": "https://www.marinespecies.org/about.php",
+        "title": {
+          "ar": "حول WoRMS",
+          "en": "WoRMS About",
+          "es": "Acerca de WoRMS",
+          "fr": "À propos de WoRMS",
+          "ru": "О WoRMS",
+          "zh": "关于WoRMS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "home": {
+        "id": "home",
+        "url": "https://www.marinespecies.org/",
+        "title": {
+          "en": "WoRMS live statistics",
+          "fr": "Statistiques actuelles de WoRMS",
+          "es": "Estadísticas actuales de WoRMS",
+          "ar": "إحصاءات WoRMS الحالية",
+          "zh": "WoRMS当前统计",
+          "ru": "Текущая статистика WoRMS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "services": {
+        "id": "services",
+        "url": "https://www.marinespecies.org/aphia.php?p=webservice",
+        "title": {
+          "en": "WoRMS web services",
+          "fr": "Services web de WoRMS",
+          "es": "Servicios web de WoRMS",
+          "ar": "خدمات WoRMS الشبكية",
+          "zh": "WoRMS网络服务",
+          "ru": "Веб-сервисы WoRMS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "request": {
+        "id": "request",
+        "url": "https://www.marinespecies.org/usersrequest.php",
+        "title": {
+          "en": "WoRMS taxonomic download requests",
+          "fr": "Demandes de téléchargement taxonomique WoRMS",
+          "es": "Solicitudes de descarga taxonómica WoRMS",
+          "ar": "طلبات تنزيل بيانات WoRMS التصنيفية",
+          "zh": "WoRMS分类数据下载申请",
+          "ru": "Запросы таксономических выгрузок WoRMS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "contribute": {
+        "id": "contribute",
+        "url": "https://www.marinespecies.org/contribute.php",
+        "title": {
+          "en": "Contributing to WoRMS",
+          "fr": "Contribuer à WoRMS",
+          "es": "Contribuir a WoRMS",
+          "ar": "المساهمة في WoRMS",
+          "zh": "向WoRMS贡献内容",
+          "ru": "Участие в WoRMS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "tor": {
+        "id": "tor",
+        "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+        "title": {
+          "en": "WoRMS terms of reference (2015)",
+          "fr": "Mandat de WoRMS (2015)",
+          "es": "Términos de referencia de WoRMS (2015)",
+          "ar": "اختصاصات WoRMS (2015)",
+          "zh": "WoRMS职权范围（2015）",
+          "ru": "Положение о деятельности WoRMS (2015)"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "match": {
+        "id": "match",
+        "url": "https://www.marinespecies.org/aphia.php?p=match",
+        "title": {
+          "en": "WoRMS taxon matching",
+          "fr": "Correspondance des taxons WoRMS",
+          "es": "Correspondencia de taxones WoRMS",
+          "ar": "مطابقة الأصناف في WoRMS",
+          "zh": "WoRMS分类名称匹配",
+          "ru": "Сопоставление таксонов WoRMS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "rest": {
+        "id": "rest",
+        "url": "https://www.marinespecies.org/rest/AphiaRecordByAphiaID/127160",
+        "title": {
+          "en": "WoRMS REST taxon response: Solea solea",
+          "fr": "Réponse taxonomique REST WoRMS : Solea solea",
+          "es": "Respuesta taxonómica REST WoRMS: Solea solea",
+          "ar": "استجابة WoRMS REST للصنف Solea solea",
+          "zh": "WoRMS REST分类响应：Solea solea",
+          "ru": "Ответ REST WoRMS для таксона Solea solea"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "ldes": {
+        "id": "ldes",
+        "url": "https://aphia.org/feed",
+        "title": {
+          "en": "Aphia linked data event stream",
+          "fr": "Flux d’événements de données liées Aphia",
+          "es": "Flujo de eventos de datos enlazados Aphia",
+          "ar": "تدفق أحداث البيانات المترابطة Aphia",
+          "zh": "Aphia关联数据事件流",
+          "ru": "Поток событий связанных данных Aphia"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "type-localities": {
+        "id": "type-localities",
+        "url": "https://ipt.vliz.be/eurobis/resource?r=worms_type_localities",
+        "title": {
+          "en": "WoRMS type-locality occurrence archive",
+          "fr": "Archive des localités types de WoRMS",
+          "es": "Archivo de localidades tipo de WoRMS",
+          "ar": "أرشيف المواقع النمطية في WoRMS",
+          "zh": "WoRMS模式产地出现记录档案",
+          "ru": "Архив типовых местонахождений WoRMS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "worrms": {
+        "id": "worrms",
+        "url": "https://docs.ropensci.org/worrms/",
+        "title": {
+          "en": "worrms R client documentation",
+          "fr": "Documentation du client R worrms",
+          "es": "Documentación del cliente R worrms",
+          "ar": "وثائق عميل R المسمى worrms",
+          "zh": "worrms R客户端文档",
+          "ru": "Документация клиента R worrms"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "gbif": {
+        "id": "gbif",
+        "url": "https://api.gbif.org/v1/dataset/2d59e5db-57ad-41ff-97d6-11f5fb264527",
+        "title": {
+          "en": "GBIF registry: WoRMS checklist",
+          "fr": "Registre GBIF : liste WoRMS",
+          "es": "Registro GBIF: lista WoRMS",
+          "ar": "سجل GBIF: قائمة WoRMS",
+          "zh": "GBIF注册表：WoRMS名录",
+          "ru": "Реестр GBIF: список WoRMS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "sc-2025": {
+        "id": "sc-2025",
+        "url": "https://marinespecies.org/documents/Steering%20Committee%20reports/20250422_WoRMS_SC_meeting_Ostend_report.pdf",
+        "title": {
+          "en": "WoRMS Steering Committee report, April 2025",
+          "fr": "Rapport du comité directeur WoRMS, avril 2025",
+          "es": "Informe del comité directivo WoRMS, abril de 2025",
+          "ar": "تقرير اللجنة التوجيهية لـWoRMS، أبريل 2025",
+          "zh": "WoRMS指导委员会报告，2025年4月",
+          "ru": "Отчёт руководящего комитета WoRMS, апрель 2025"
+        },
+        "accessedAt": "2026-09-10"
+      }
+    }
+  },
+  "localizations": {
+    "en": {
+      "title": "World Register of Marine Species (WoRMS)",
+      "summary": "Expert-curated global marine taxonomic register linking accepted names, synonyms, classification and literature to traits, distributions, specimens and images.",
+      "description": "WoRMS brings together marine taxonomic registers in the Aphia platform maintained by the Flanders Marine Institute (VLIZ). Taxonomic and thematic editors curate their groups; the elected Steering Committee sets scientific priorities and appoints editors, while VLIZ’s Data Management Team operates the database. The live homepage observed on 10 September 2026 reported 250,610 accepted marine species, 524,148 marine species names including synonyms and 371 editors. The register is edited continuously and supplies name reconciliation rather than a complete inventory of marine observations or genetic sequences. Traits and other supplementary information have uneven coverage. Researchers can browse species pages, query REST/SOAP services, match name lists, follow the Aphia event stream or request a taxonomic CSV copy. Public feedback goes through the Data Management Team; direct editing requires appointed access. Page text is generally CC BY and images generally CC BY-NC-SA, subject to individual exceptions. Whole-database redistribution needs prior written agreement. A public type-locality extract contains 40,961 occurrence records in its 23 August 2026 release; the full checklist archive registered in GBIF is restricted to GBIF. LifeWatch Belgium funds the DMT, with transition funding documented for 2025–2026; the proposed incorporation into regular VLIZ subsidies from 2027 was still a future plan in the April 2025 report.",
+      "details": {
+        "aliases": [
+          "WoRMS",
+          "MarineSpecies.org"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-worms-about",
+            "home",
+            "tor",
+            "request",
+            "sc-2025",
+            "type-localities",
+            "gbif"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "worms-tag-data-type-taxonomy-nomenclature",
+              "description": "Accepted names, synonyms, authorities, vernacular names and classification."
+            },
+            {
+              "id": "worms-tag-data-type-occurrence-observation",
+              "description": "Georeferenced type-locality records exported to EurOBIS; not a global observation inventory."
+            },
+            {
+              "id": "worms-tag-data-type-trait-ecology",
+              "description": "Taxon-linked ecological attributes and traits; coverage varies among groups."
+            },
+            {
+              "id": "worms-type-specimens",
+              "description": "Specimen information in the Aphia specimen module, including type material."
+            },
+            {
+              "id": "worms-type-literature",
+              "description": "Searchable literature records supporting names, distributions and other assertions."
+            },
+            {
+              "id": "worms-type-media",
+              "description": "Taxon-linked photographs and illustrations; individual image rights can differ."
+            },
+            {
+              "id": "worms-format-json",
+              "description": "JSON taxon records returned by the REST service."
+            },
+            {
+              "id": "worms-format-xml",
+              "description": "SOAP XML responses and RDF/XML representations of taxon metadata."
+            },
+            {
+              "id": "worms-format-html",
+              "description": "Human-readable taxon, literature, distribution and specimen pages."
+            },
+            {
+              "id": "worms-format-csv",
+              "description": "Approved taxonomic-only bulk copies are supplied as Darwin Core CSV."
+            },
+            {
+              "id": "worms-format-dwca",
+              "description": "Public type-locality occurrence extract packaged as a Darwin Core Archive; the full checklist archive is restricted to GBIF."
+            },
+            {
+              "id": "worms-standard-darwin_core",
+              "description": "Darwin Core structures the approved taxonomic CSV export; this does not assert that REST responses use the same schema."
+            },
+            {
+              "id": "worms-standard-dublin_core",
+              "description": "Aphia LDES uses Dublin Core modified and isVersionOf terms for event timing and version identity."
+            },
+            {
+              "id": "worms-standard-eml",
+              "description": "The public type-locality occurrence archive supplies dataset metadata in EML."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "worms-tag-read-method-web",
+            "label": "WoRMS portal",
+            "description": "Browse taxon pages, literature, distributions, specimens and images without an account. Retain AphiaIDs for name reconciliation and check image-specific reuse terms."
+          },
+          {
+            "id": "worms-tag-read-method-api",
+            "label": "REST and SOAP services",
+            "description": "Free public HTTPS services return taxonomy, synonyms, sources, distributions and attributes. REST returns JSON; SOAP returns XML. Do not harvest the full database through these services; request a bulk copy. Browser clients should verify cross-origin support."
+          },
+          {
+            "id": "worms-access-match",
+            "label": "Taxon match",
+            "description": "Upload or paste a name list and choose returned fields to obtain matched names, AphiaIDs and classification. Public matching is free; inspect ambiguous matches before reuse."
+          },
+          {
+            "id": "worms-access-request",
+            "label": "Approved taxonomic download",
+            "description": "Register with an institutional email, log in and describe the intended use for approval. The free Darwin Core CSV copy contains taxonomy only, excludes AlgaeBase content, and is offered quarterly under the request agreement. Whole-database redistribution needs written agreement."
+          },
+          {
+            "id": "worms-access-ldes",
+            "label": "Aphia event stream",
+            "description": "Read the public Aphia linked-data feed with versioned taxon URIs and hourly pages. Content negotiation supports RDF serializations; unavailable historical versions return HTTP 410. This spans Aphia, including non-marine records."
+          },
+          {
+            "id": "worms-access-type-localities",
+            "label": "Type-locality extract",
+            "description": "Download the free CC BY 4.0 occurrence archive and EML metadata from VLIZ IPT. Version 1.12, published 23 August 2026, contains 40,961 records; update frequency is listed as unknown. This is a subset, not the complete taxonomy."
+          },
+          {
+            "id": "worms-access-r-client",
+            "label": "worrms R client",
+            "description": "Install the rOpenSci R package for programmatic name matching and taxon retrieval through WoRMS services. No WoRMS key is required for public queries; upstream service limits still apply."
+          },
+          {
+            "id": "worms-write-editor",
+            "label": "Appointed editor contributions",
+            "description": "Contact the Data Management Team or relevant editor about contributing expertise. Appointed editors use controlled online editing accounts; they add published taxa, corrections and evidence within their assigned groups, with DMT support for bulk imports."
+          },
+          {
+            "id": "worms-write-feedback",
+            "label": "Public corrections and additions",
+            "description": "Send missing taxa, duplicates or suspected errors to the Data Management Team using the contact link. No editing account is needed; staff resolve simple issues and forward taxonomic questions to editors before changes are published."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "worms-metric-species",
+            "description": "Accepted marine species on the live homepage observed on 10 September 2026; 98% were marked checked. This is not the count of all names or all Aphia records."
+          },
+          {
+            "id": "worms-metric-names",
+            "description": "Marine species-name entries including synonyms on the live homepage, observed 10 September 2026. These overlap the accepted-species count and must not be added to it."
+          },
+          {
+            "id": "worms-metric-editors",
+            "description": "Editors reported on the homepage on 10 September 2026; a roster count, not monthly active contributors or institutional users."
+          },
+          {
+            "id": "worms-metric-type-localities",
+            "description": "Occurrence rows in the type-locality extract, version 1.12 published 23 August 2026. The figure is the archive core-table count, not all WoRMS taxa or current OBIS indexing."
+          }
+        ],
+        "researchGaps": {
+          "data": "No verified production storage size was found. The homepage also reported 55,271 species with an image; this is a coverage count, not an image-file count.",
+          "usage": "The 300,429,734 webhits reported for 2025 are not sessions and the 428 registered institutions are not contributors. No comparable session or download-event metric was established.",
+          "access": "The GBIF checklist archive is explicitly restricted to GBIF and returned HTTP 403. Use the approved bulk-request process for a complete taxonomic copy; it excludes supplementary data."
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Registre mondial des espèces marines (WoRMS)",
+      "summary": "Registre taxonomique marin mondial expert reliant noms acceptés, synonymes, classification et références aux traits, distributions, spécimens et images.",
+      "description": "WoRMS rassemble des registres taxonomiques marins dans Aphia, plateforme maintenue par l’Institut marin de Flandre (VLIZ). Les experts éditent leurs groupes ; le comité directeur élu définit les priorités scientifiques et nomme les éditeurs, tandis que l’équipe de gestion des données du VLIZ exploite la base. La page d’accueil observée le 10 septembre 2026 signalait 250 610 espèces marines acceptées, 524 148 noms marins avec les synonymes et 371 éditeurs. Le registre est mis à jour en continu et sert au rapprochement des noms ; il ne constitue pas un inventaire exhaustif des observations marines ou des séquences génétiques. Les traits et autres informations complémentaires sont inégalement renseignés. Les chercheurs peuvent consulter les pages, interroger REST/SOAP, rapprocher des listes, suivre le flux Aphia ou demander une copie taxonomique CSV. Les signalements publics passent par l’équipe de gestion ; l’édition directe exige une autorisation. Les textes sont généralement sous CC BY et les images sous CC BY-NC-SA, avec des exceptions individuelles. La redistribution de toute la base nécessite un accord écrit préalable. L’extrait public des localités types contient 40 961 occurrences dans sa version du 23 août 2026 ; l’archive complète inscrite dans GBIF est réservée à GBIF. LifeWatch Belgium finance l’équipe, avec un financement transitoire documenté pour 2025–2026 ; son intégration aux subventions ordinaires du VLIZ dès 2027 restait un projet dans le rapport d’avril 2025.",
+      "details": {
+        "aliases": [
+          "WoRMS",
+          "MarineSpecies.org"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-worms-about",
+            "home",
+            "tor",
+            "request",
+            "sc-2025",
+            "type-localities",
+            "gbif"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "worms-tag-data-type-taxonomy-nomenclature",
+              "description": "Noms acceptés, synonymes, autorités, noms vernaculaires et classification."
+            },
+            {
+              "id": "worms-tag-data-type-occurrence-observation",
+              "description": "Localités types géoréférencées exportées vers EurOBIS ; pas un inventaire mondial des observations."
+            },
+            {
+              "id": "worms-tag-data-type-trait-ecology",
+              "description": "Attributs écologiques et traits liés aux taxons ; couverture variable selon les groupes."
+            },
+            {
+              "id": "worms-type-specimens",
+              "description": "Informations sur les spécimens dans Aphia, notamment le matériel type."
+            },
+            {
+              "id": "worms-type-literature",
+              "description": "Références consultables étayant noms, distributions et autres informations."
+            },
+            {
+              "id": "worms-type-media",
+              "description": "Photographies et illustrations liées aux taxons ; droits variables selon l’image."
+            },
+            {
+              "id": "worms-format-json",
+              "description": "Fiches taxonomiques JSON renvoyées par REST."
+            },
+            {
+              "id": "worms-format-xml",
+              "description": "Réponses SOAP XML et représentations RDF/XML des métadonnées taxonomiques."
+            },
+            {
+              "id": "worms-format-html",
+              "description": "Pages lisibles de taxons, références, distributions et spécimens."
+            },
+            {
+              "id": "worms-format-csv",
+              "description": "Copies taxonomiques autorisées fournies en CSV Darwin Core."
+            },
+            {
+              "id": "worms-format-dwca",
+              "description": "Extrait public des localités types en archive Darwin Core ; archive complète des noms réservée à GBIF."
+            },
+            {
+              "id": "worms-standard-darwin_core",
+              "description": "Darwin Core structure l’export taxonomique CSV autorisé ; cela ne décrit pas le schéma REST."
+            },
+            {
+              "id": "worms-standard-dublin_core",
+              "description": "Le flux LDES Aphia utilise modified et isVersionOf de Dublin Core pour les dates et versions."
+            },
+            {
+              "id": "worms-standard-eml",
+              "description": "L’archive publique des localités types fournit les métadonnées du jeu en EML."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "worms-tag-read-method-web",
+            "label": "Portail WoRMS",
+            "description": "Consultez taxons, littérature, distributions, spécimens et images sans compte. Conservez les AphiaID et vérifiez les droits propres aux images."
+          },
+          {
+            "id": "worms-tag-read-method-api",
+            "label": "Services REST et SOAP",
+            "description": "Services HTTPS publics gratuits : taxonomie, synonymes, sources, distributions et attributs. REST renvoie JSON, SOAP XML. Ne récoltez pas toute la base ; demandez une copie. Vérifiez les contraintes interorigines du navigateur."
+          },
+          {
+            "id": "worms-access-match",
+            "label": "Correspondance des taxons",
+            "description": "Chargez ou collez une liste et choisissez les champs retournés : noms, AphiaID et classification. Service public gratuit ; vérifiez les résultats ambigus."
+          },
+          {
+            "id": "worms-access-request",
+            "label": "Téléchargement taxonomique autorisé",
+            "description": "Inscrivez-vous avec une adresse institutionnelle, connectez-vous et décrivez l’usage pour approbation. La copie gratuite CSV Darwin Core ne contient que la taxonomie, exclut AlgaeBase et est proposée trimestriellement selon l’accord. Redistribution complète soumise à accord écrit."
+          },
+          {
+            "id": "worms-access-ldes",
+            "label": "Flux d’événements Aphia",
+            "description": "Lisez le flux public Aphia avec URI versionnées et pages horaires. Plusieurs sérialisations RDF sont négociables ; une version historique indisponible renvoie HTTP 410. Inclut aussi les taxons non marins."
+          },
+          {
+            "id": "worms-access-type-localities",
+            "label": "Extrait des localités types",
+            "description": "Téléchargez gratuitement l’archive CC BY 4.0 et les métadonnées EML depuis l’IPT VLIZ. Version 1.12 du 23 août 2026 : 40 961 occurrences ; fréquence inconnue. C’est un sous-ensemble, pas toute la taxonomie."
+          },
+          {
+            "id": "worms-access-r-client",
+            "label": "Client R worrms",
+            "description": "Installez le paquet R de rOpenSci pour rapprocher les noms et obtenir des taxons via WoRMS. Aucune clé WoRMS pour les requêtes publiques ; limites du service applicables."
+          },
+          {
+            "id": "worms-write-editor",
+            "label": "Contributions des éditeurs nommés",
+            "description": "Contactez l’équipe ou l’éditeur compétent pour proposer votre expertise. Les éditeurs nommés utilisent des comptes contrôlés pour ajouter taxons publiés, corrections et preuves dans leurs groupes ; l’équipe aide aux imports."
+          },
+          {
+            "id": "worms-write-feedback",
+            "label": "Corrections et ajouts du public",
+            "description": "Signalez taxons manquants, doublons ou erreurs via le contact de l’équipe. Aucun compte d’édition requis ; les agents traitent les points simples et transmettent les questions taxonomiques aux éditeurs."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "worms-metric-species",
+            "description": "Espèces marines acceptées observées le 10 septembre 2026 ; 98 % marquées vérifiées. Ni tous les noms ni toutes les entrées Aphia."
+          },
+          {
+            "id": "worms-metric-names",
+            "description": "Noms d’espèces marines avec synonymes observés le 10 septembre 2026. Ils recoupent le nombre d’espèces acceptées ; ne pas les additionner."
+          },
+          {
+            "id": "worms-metric-editors",
+            "description": "Éditeurs indiqués le 10 septembre 2026 ; effectif du réseau, pas contributeurs mensuels actifs ni utilisateurs institutionnels."
+          },
+          {
+            "id": "worms-metric-type-localities",
+            "description": "Lignes d’occurrence de l’extrait des localités types, version 1.12 du 23 août 2026. Compte de la table principale, pas de tous les taxons ni de l’indexation OBIS."
+          }
+        ],
+        "researchGaps": {
+          "data": "Aucune taille de stockage en production vérifiée. La page indiquait aussi 55 271 espèces illustrées ; couverture, pas nombre de fichiers image.",
+          "usage": "Les 300 429 734 accès web de 2025 ne sont pas des sessions ; les 428 institutions inscrites ne sont pas des contributeurs. Aucun indicateur comparable de sessions ou téléchargements établi.",
+          "access": "L’archive taxonomique GBIF est réservée à GBIF et renvoie HTTP 403. Utilisez la demande autorisée pour la copie taxonomique complète, sans données complémentaires."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Registro Mundial de Especies Marinas (WoRMS)",
+      "summary": "Registro taxonómico marino mundial revisado por expertos que relaciona nombres aceptados, sinónimos, clasificación y bibliografía con rasgos, distribuciones, ejemplares e imágenes.",
+      "description": "WoRMS reúne registros taxonómicos marinos en Aphia, plataforma mantenida por el Instituto Marino de Flandes (VLIZ). Los editores expertos revisan sus grupos; el comité directivo electo fija prioridades científicas y nombra editores, mientras el equipo de gestión de datos del VLIZ opera la base. La portada observada el 10 de septiembre de 2026 mostraba 250.610 especies marinas aceptadas, 524.148 nombres marinos con sinónimos y 371 editores. El registro se actualiza continuamente y permite reconciliar nombres; no constituye un inventario exhaustivo de observaciones marinas o secuencias genéticas. Los rasgos y datos complementarios tienen cobertura desigual. Se pueden consultar páginas, usar REST/SOAP, comparar listas de nombres, seguir el flujo de Aphia o solicitar una copia taxonómica CSV. Las correcciones públicas pasan por el equipo de gestión; la edición directa requiere acceso autorizado. Los textos suelen estar bajo CC BY y las imágenes bajo CC BY-NC-SA, con excepciones individuales. Redistribuir toda la base exige un acuerdo escrito previo. El extracto público de localidades tipo contiene 40.961 ocurrencias en su versión del 23 de agosto de 2026; el archivo completo registrado en GBIF está restringido a GBIF. LifeWatch Belgium financia al equipo, con financiación transitoria documentada para 2025–2026; incorporarlo a las subvenciones ordinarias del VLIZ desde 2027 seguía siendo un plan en el informe de abril de 2025.",
+      "details": {
+        "aliases": [
+          "WoRMS",
+          "MarineSpecies.org"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-worms-about",
+            "home",
+            "tor",
+            "request",
+            "sc-2025",
+            "type-localities",
+            "gbif"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "worms-tag-data-type-taxonomy-nomenclature",
+              "description": "Nombres aceptados, sinónimos, autoridades, nombres comunes y clasificación."
+            },
+            {
+              "id": "worms-tag-data-type-occurrence-observation",
+              "description": "Localidades tipo georreferenciadas exportadas a EurOBIS; no es un inventario mundial de observaciones."
+            },
+            {
+              "id": "worms-tag-data-type-trait-ecology",
+              "description": "Atributos ecológicos y rasgos asociados a taxones; cobertura desigual entre grupos."
+            },
+            {
+              "id": "worms-type-specimens",
+              "description": "Información sobre ejemplares en Aphia, incluido material tipo."
+            },
+            {
+              "id": "worms-type-literature",
+              "description": "Referencias consultables que respaldan nombres, distribuciones y otras afirmaciones."
+            },
+            {
+              "id": "worms-type-media",
+              "description": "Fotografías e ilustraciones de taxones; los derechos pueden variar por imagen."
+            },
+            {
+              "id": "worms-format-json",
+              "description": "Registros taxonómicos JSON del servicio REST."
+            },
+            {
+              "id": "worms-format-xml",
+              "description": "Respuestas SOAP XML y representaciones RDF/XML de metadatos taxonómicos."
+            },
+            {
+              "id": "worms-format-html",
+              "description": "Páginas de taxones, referencias, distribuciones y ejemplares para consulta humana."
+            },
+            {
+              "id": "worms-format-csv",
+              "description": "Copias taxonómicas aprobadas suministradas en CSV Darwin Core."
+            },
+            {
+              "id": "worms-format-dwca",
+              "description": "Extracto público de localidades tipo en Darwin Core Archive; el archivo completo de nombres está restringido a GBIF."
+            },
+            {
+              "id": "worms-standard-darwin_core",
+              "description": "Darwin Core estructura el CSV taxonómico aprobado; no implica el mismo esquema en REST."
+            },
+            {
+              "id": "worms-standard-dublin_core",
+              "description": "LDES de Aphia utiliza modified e isVersionOf de Dublin Core para fechas e identidad de versiones."
+            },
+            {
+              "id": "worms-standard-eml",
+              "description": "El archivo público de localidades tipo proporciona metadatos del conjunto en EML."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "worms-tag-read-method-web",
+            "label": "Portal WoRMS",
+            "description": "Consulte taxones, bibliografía, distribuciones, ejemplares e imágenes sin cuenta. Conserve los AphiaID y compruebe los derechos de cada imagen."
+          },
+          {
+            "id": "worms-tag-read-method-api",
+            "label": "Servicios REST y SOAP",
+            "description": "Servicios HTTPS públicos gratuitos de taxonomía, sinónimos, fuentes, distribuciones y atributos. REST devuelve JSON; SOAP, XML. No recopile toda la base mediante estos servicios; solicite una copia. Verifique restricciones de origen en el navegador."
+          },
+          {
+            "id": "worms-access-match",
+            "label": "Comparación de taxones",
+            "description": "Cargue o pegue nombres y elija campos de salida para obtener coincidencias, AphiaID y clasificación. Servicio público gratuito; revise coincidencias ambiguas."
+          },
+          {
+            "id": "worms-access-request",
+            "label": "Descarga taxonómica aprobada",
+            "description": "Regístrese con correo institucional, inicie sesión y describa el uso para aprobación. La copia gratuita CSV Darwin Core solo contiene taxonomía, excluye AlgaeBase y se ofrece trimestralmente según el acuerdo. Redistribución completa sujeta a acuerdo escrito."
+          },
+          {
+            "id": "worms-access-ldes",
+            "label": "Flujo de eventos Aphia",
+            "description": "Consulte el flujo público Aphia con URI versionadas y páginas horarias. Admite serializaciones RDF; versiones históricas no disponibles devuelven HTTP 410. Incluye registros no marinos de Aphia."
+          },
+          {
+            "id": "worms-access-type-localities",
+            "label": "Extracto de localidades tipo",
+            "description": "Descargue gratis el archivo CC BY 4.0 y metadatos EML del IPT VLIZ. Versión 1.12 del 23 de agosto de 2026: 40.961 ocurrencias; frecuencia desconocida. Es un subconjunto, no toda la taxonomía."
+          },
+          {
+            "id": "worms-access-r-client",
+            "label": "Cliente R worrms",
+            "description": "Instale el paquete R de rOpenSci para comparar nombres y obtener taxones mediante WoRMS. Las consultas públicas no requieren clave; se mantienen los límites del servicio."
+          },
+          {
+            "id": "worms-write-editor",
+            "label": "Contribuciones de editores nombrados",
+            "description": "Contacte al equipo o editor pertinente para aportar experiencia. Los editores nombrados usan cuentas controladas para añadir taxones publicados, correcciones y evidencia en sus grupos; el equipo ayuda con cargas masivas."
+          },
+          {
+            "id": "worms-write-feedback",
+            "label": "Correcciones y adiciones públicas",
+            "description": "Envíe taxones ausentes, duplicados o errores mediante el contacto del equipo. No requiere cuenta de edición; el personal resuelve asuntos simples y deriva cuestiones taxonómicas a editores."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "worms-metric-species",
+            "description": "Especies marinas aceptadas observadas el 10 de septiembre de 2026; 98 % marcadas como revisadas. No equivale a todos los nombres ni a todos los registros Aphia."
+          },
+          {
+            "id": "worms-metric-names",
+            "description": "Nombres de especies marinas con sinónimos observados el 10 de septiembre de 2026. Se solapan con las especies aceptadas; no deben sumarse."
+          },
+          {
+            "id": "worms-metric-editors",
+            "description": "Editores indicados el 10 de septiembre de 2026; recuento de integrantes, no colaboradores mensuales activos ni usuarios institucionales."
+          },
+          {
+            "id": "worms-metric-type-localities",
+            "description": "Filas de ocurrencias del extracto de localidades tipo, versión 1.12 del 23 de agosto de 2026. Cuenta de la tabla central, no todos los taxones ni la indexación actual de OBIS."
+          }
+        ],
+        "researchGaps": {
+          "data": "No se verificó el tamaño de almacenamiento en producción. La portada también indicaba 55.271 especies con imagen; cobertura, no número de archivos.",
+          "usage": "Los 300.429.734 accesos web de 2025 no son sesiones, y las 428 instituciones registradas no son colaboradores. No se establecieron métricas comparables de sesiones o descargas.",
+          "access": "El archivo taxonómico GBIF está restringido a GBIF y devolvió HTTP 403. Use la solicitud aprobada para una copia taxonómica completa, sin datos complementarios."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ar": {
+      "title": "السجل العالمي للأنواع البحرية (WoRMS)",
+      "summary": "سجل تصنيفي بحري عالمي يحرره خبراء ويربط الأسماء المقبولة والمرادفات والتصنيف والمراجع بالصفات والتوزيعات والعينات والصور.",
+      "description": "يجمع WoRMS السجلات التصنيفية البحرية في منصة Aphia التي يديرها معهد فلاندرز البحري (VLIZ). يحرر الخبراء مجموعاتهم، وتحدد اللجنة التوجيهية المنتخبة الأولويات العلمية وتعين المحررين، بينما يتولى فريق إدارة البيانات في VLIZ تشغيل القاعدة. عرضت الصفحة الرئيسية التي روجعت في 10 سبتمبر 2026 عدد 250610 أنواع بحرية مقبولة و524148 اسماً بحرياً مع المرادفات و371 محرراً. يُحدَّث السجل باستمرار ويخدم توحيد الأسماء، ولا يمثل جرداً شاملاً للمشاهدات البحرية أو التسلسلات الجينية. تتفاوت تغطية الصفات والمعلومات الإضافية. يمكن تصفح الصفحات والاستعلام عبر REST/SOAP ومطابقة قوائم الأسماء ومتابعة تدفق Aphia أو طلب نسخة تصنيفية بصيغة CSV. تمر ملاحظات الجمهور عبر فريق إدارة البيانات؛ ويتطلب التحرير المباشر صلاحية معتمدة. تُتاح النصوص عادة وفق CC BY والصور وفق CC BY-NC-SA مع استثناءات فردية. تتطلب إعادة توزيع القاعدة كاملة اتفاقاً كتابياً مسبقاً. يضم مستخرج المواقع النمطية العام 40961 سجل تواجد في إصدار 23 أغسطس 2026؛ أما أرشيف القائمة الكامل المسجل لدى GBIF فمخصص لـGBIF. يمول LifeWatch Belgium فريق الإدارة، مع تمويل انتقالي موثق للفترة 2025–2026؛ وظل إدراجه ضمن إعانات VLIZ العادية ابتداءً من 2027 خطة مستقبلية في تقرير أبريل 2025.",
+      "details": {
+        "aliases": [
+          "WoRMS",
+          "MarineSpecies.org"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-worms-about",
+            "home",
+            "tor",
+            "request",
+            "sc-2025",
+            "type-localities",
+            "gbif"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "worms-tag-data-type-taxonomy-nomenclature",
+              "description": "الأسماء المقبولة والمرادفات والمؤلفون والأسماء الشائعة والتصنيف."
+            },
+            {
+              "id": "worms-tag-data-type-occurrence-observation",
+              "description": "سجلات مواقع نمطية محددة جغرافياً تُصدَّر إلى EurOBIS؛ وليست جرداً عالمياً للمشاهدات."
+            },
+            {
+              "id": "worms-tag-data-type-trait-ecology",
+              "description": "سمات وصفات بيئية مرتبطة بالأصناف؛ تختلف التغطية بين المجموعات."
+            },
+            {
+              "id": "worms-type-specimens",
+              "description": "معلومات العينات في وحدة العينات لدى Aphia، بما فيها المواد النمطية."
+            },
+            {
+              "id": "worms-type-literature",
+              "description": "مراجع أدبية قابلة للبحث تسند الأسماء والتوزيعات وغيرها من المعلومات."
+            },
+            {
+              "id": "worms-type-media",
+              "description": "صور ورسوم مرتبطة بالأصناف؛ قد تختلف الحقوق باختلاف الصورة."
+            },
+            {
+              "id": "worms-format-json",
+              "description": "سجلات تصنيفية بصيغة JSON تعيدها خدمة REST."
+            },
+            {
+              "id": "worms-format-xml",
+              "description": "استجابات SOAP XML وتمثيلات RDF/XML للبيانات الوصفية التصنيفية."
+            },
+            {
+              "id": "worms-format-html",
+              "description": "صفحات للأصناف والمراجع والتوزيعات والعينات مخصصة للقراءة البشرية."
+            },
+            {
+              "id": "worms-format-csv",
+              "description": "تُقدَّم النسخ التصنيفية الجماعية المعتمدة بصيغة Darwin Core CSV."
+            },
+            {
+              "id": "worms-format-dwca",
+              "description": "مستخرج المواقع النمطية العام بحزمة Darwin Core Archive؛ أرشيف القائمة الكامل مخصص لـGBIF."
+            },
+            {
+              "id": "worms-standard-darwin_core",
+              "description": "ينظم Darwin Core التصدير التصنيفي المعتمد بصيغة CSV؛ ولا يعني أن REST يستخدم المخطط ذاته."
+            },
+            {
+              "id": "worms-standard-dublin_core",
+              "description": "يستخدم تدفق Aphia LDES مصطلحي modified وisVersionOf من Dublin Core للتوقيت وهوية الإصدار."
+            },
+            {
+              "id": "worms-standard-eml",
+              "description": "يقدم أرشيف المواقع النمطية العام بيانات وصفية للمجموعة بصيغة EML."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "worms-tag-read-method-web",
+            "label": "بوابة WoRMS",
+            "description": "تصفح الأصناف والمراجع والتوزيعات والعينات والصور دون حساب. احتفظ بمعرفات AphiaID وتحقق من شروط إعادة استخدام كل صورة."
+          },
+          {
+            "id": "worms-tag-read-method-api",
+            "label": "خدمات REST وSOAP",
+            "description": "خدمات HTTPS عامة مجانية للتصنيف والمرادفات والمصادر والتوزيعات والسمات. يعيد REST صيغة JSON وSOAP صيغة XML. لا تجمع القاعدة كاملة بهذه الخدمات؛ اطلب نسخة جماعية. تحقق من دعم الطلبات عبر الأصول في المتصفح."
+          },
+          {
+            "id": "worms-access-match",
+            "label": "مطابقة الأصناف",
+            "description": "حمّل أو الصق قائمة أسماء واختر حقول النتيجة للحصول على الأسماء المطابقة ومعرفات AphiaID والتصنيف. الخدمة العامة مجانية؛ راجع المطابقات الملتبسة."
+          },
+          {
+            "id": "worms-access-request",
+            "label": "تنزيل تصنيفي معتمد",
+            "description": "سجّل ببريد مؤسسي وادخل الحساب واشرح الاستخدام للحصول على الموافقة. نسخة Darwin Core CSV المجانية تصنيفية فقط وتستثني AlgaeBase وتتاح فصلياً وفق الاتفاق. تتطلب إعادة التوزيع الكاملة اتفاقاً مكتوباً."
+          },
+          {
+            "id": "worms-access-ldes",
+            "label": "تدفق أحداث Aphia",
+            "description": "اقرأ تدفق Aphia العام بعناوين أصناف ذات إصدارات وصفحات ساعية. يدعم صيغ RDF؛ تعيد الإصدارات التاريخية غير المتاحة HTTP 410. يشمل سجلات Aphia غير البحرية أيضاً."
+          },
+          {
+            "id": "worms-access-type-localities",
+            "label": "مستخرج المواقع النمطية",
+            "description": "نزّل أرشيف التواجد المجاني بترخيص CC BY 4.0 وبيانات EML من IPT لدى VLIZ. الإصدار 1.12 المنشور في 23 أغسطس 2026 يضم 40961 سجلاً وتواتر التحديث غير معروف. هذا جزء من البيانات لا التصنيف الكامل."
+          },
+          {
+            "id": "worms-access-r-client",
+            "label": "عميل R المسمى worrms",
+            "description": "ثبّت حزمة R من rOpenSci لمطابقة الأسماء واسترجاع الأصناف عبر WoRMS. لا تتطلب الاستعلامات العامة مفتاح WoRMS؛ تبقى حدود الخدمة سارية."
+          },
+          {
+            "id": "worms-write-editor",
+            "label": "مساهمات المحررين المعينين",
+            "description": "تواصل مع فريق الإدارة أو المحرر المختص للمساهمة بالخبرة. يستخدم المحررون المعينون حسابات خاضعة للتحكم لإضافة أصناف منشورة وتصحيحات وأدلة ضمن مجموعاتهم، مع دعم الفريق للاستيراد الجماعي."
+          },
+          {
+            "id": "worms-write-feedback",
+            "label": "تصحيحات وإضافات الجمهور",
+            "description": "أرسل الأصناف الناقصة أو المكررة أو الأخطاء المحتملة عبر رابط التواصل مع الفريق. لا يلزم حساب تحرير؛ يحل الموظفون المسائل البسيطة ويحيلون الأسئلة التصنيفية للمحررين قبل نشر التغييرات."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "worms-metric-species",
+            "description": "أنواع بحرية مقبولة شوهد عددها في 10 سبتمبر 2026؛ وُسم 98% منها بالمراجعة. لا يشمل العدد جميع الأسماء أو سجلات Aphia."
+          },
+          {
+            "id": "worms-metric-names",
+            "description": "أسماء أنواع بحرية مع المرادفات شوهد عددها في 10 سبتمبر 2026. تتداخل مع عدد الأنواع المقبولة ولا يجوز جمع العددين."
+          },
+          {
+            "id": "worms-metric-editors",
+            "description": "محررون مذكورون في 10 سبتمبر 2026؛ تعداد للقائمة لا للمساهمين النشطين شهرياً أو المستخدمين المؤسسيين."
+          },
+          {
+            "id": "worms-metric-type-localities",
+            "description": "صفوف التواجد في مستخرج المواقع النمطية، الإصدار 1.12 بتاريخ 23 أغسطس 2026. عدد جدول الأرشيف الأساسي لا جميع الأصناف أو فهرسة OBIS الحالية."
+          }
+        ],
+        "researchGaps": {
+          "data": "لم يُتحقق من حجم تخزين القاعدة التشغيلية. عرضت الصفحة أيضاً 55271 نوعاً له صورة؛ هذا تعداد تغطية لا عدد ملفات الصور.",
+          "usage": "عدد 300429734 طلب ويب في 2025 لا يمثل جلسات، والمؤسسات المسجلة البالغ عددها 428 ليست مساهمين. لم يُثبت مقياس قابل للمقارنة للجلسات أو أحداث التنزيل.",
+          "access": "أرشيف قائمة GBIF مخصص لـGBIF وأعاد HTTP 403. استخدم مسار الطلب المعتمد للنسخة التصنيفية الكاملة التي تستثني البيانات الإضافية."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "世界海洋物种名录（WoRMS）",
+      "summary": "由专家维护的全球海洋分类名录，将接受名、异名、分类和文献与性状、分布、标本及图像关联。",
+      "description": "WoRMS在弗兰德斯海洋研究所（VLIZ）维护的Aphia平台上整合海洋分类名录。分类和专题编辑负责各自类群，选举产生的指导委员会制定科学优先事项并任命编辑，VLIZ数据管理团队运行数据库。2026年9月10日查看的主页报告250610个接受的海洋物种、524148个包括异名的海洋物种名称及371名编辑。名录持续更新，主要用于名称协调，并非完整的海洋观测或基因序列清单。性状等补充信息覆盖不均。研究者可浏览物种页面、调用REST/SOAP、匹配名称列表、跟踪Aphia事件流或申请分类CSV副本。公众纠错通过数据管理团队提交；直接编辑须获得授权。页面文字通常遵循CC BY，图像通常遵循CC BY-NC-SA，各条目可能例外。重新分发整个数据库需要事先书面协议。公开模式产地摘录的2026年8月23日版本含40961条出现记录；在GBIF注册的完整名录档案仅供GBIF使用。LifeWatch Belgium资助数据管理团队，2025—2026年过渡资金已有记录；在2025年4月报告中，2027年起纳入VLIZ常规补贴仍是未来计划。",
+      "details": {
+        "aliases": [
+          "WoRMS",
+          "MarineSpecies.org"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-worms-about",
+            "home",
+            "tor",
+            "request",
+            "sc-2025",
+            "type-localities",
+            "gbif"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "worms-tag-data-type-taxonomy-nomenclature",
+              "description": "接受名、异名、命名人、俗名和分类。"
+            },
+            {
+              "id": "worms-tag-data-type-occurrence-observation",
+              "description": "导出至EurOBIS的地理定位模式产地记录；并非全球观测清单。"
+            },
+            {
+              "id": "worms-tag-data-type-trait-ecology",
+              "description": "与分类单元关联的生态属性和性状；各类群覆盖不一。"
+            },
+            {
+              "id": "worms-type-specimens",
+              "description": "Aphia标本模块中的标本信息，包括模式材料。"
+            },
+            {
+              "id": "worms-type-literature",
+              "description": "可检索的文献记录，支撑名称、分布及其他信息。"
+            },
+            {
+              "id": "worms-type-media",
+              "description": "与分类单元关联的照片和插图；各图像的权利可能不同。"
+            },
+            {
+              "id": "worms-format-json",
+              "description": "REST服务返回的JSON分类记录。"
+            },
+            {
+              "id": "worms-format-xml",
+              "description": "SOAP XML响应及分类元数据的RDF/XML表示。"
+            },
+            {
+              "id": "worms-format-html",
+              "description": "供人阅读的分类、文献、分布和标本页面。"
+            },
+            {
+              "id": "worms-format-csv",
+              "description": "获批的仅分类数据批量副本以Darwin Core CSV提供。"
+            },
+            {
+              "id": "worms-format-dwca",
+              "description": "公开模式产地出现记录以Darwin Core Archive打包；完整名录档案仅供GBIF使用。"
+            },
+            {
+              "id": "worms-standard-darwin_core",
+              "description": "Darwin Core用于获批分类CSV导出；不代表REST响应采用同一模式。"
+            },
+            {
+              "id": "worms-standard-dublin_core",
+              "description": "Aphia LDES使用Dublin Core的modified和isVersionOf表示事件时间及版本身份。"
+            },
+            {
+              "id": "worms-standard-eml",
+              "description": "公开模式产地出现记录档案以EML提供数据集元数据。"
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "worms-tag-read-method-web",
+            "label": "WoRMS门户",
+            "description": "无需账户即可浏览分类、文献、分布、标本和图像。保留AphiaID以协调名称，并核对各图像的再利用条款。"
+          },
+          {
+            "id": "worms-tag-read-method-api",
+            "label": "REST和SOAP服务",
+            "description": "免费公开HTTPS服务提供分类、异名、来源、分布和属性。REST返回JSON，SOAP返回XML。禁止用这些服务采集整个数据库，应申请批量副本。浏览器客户端应核验跨源支持。"
+          },
+          {
+            "id": "worms-access-match",
+            "label": "分类名称匹配",
+            "description": "上传或粘贴名称列表并选择输出字段，获取匹配名称、AphiaID及分类。公开匹配免费；再利用前应检查歧义结果。"
+          },
+          {
+            "id": "worms-access-request",
+            "label": "获批分类数据下载",
+            "description": "使用机构邮箱注册并登录，说明用途以获得批准。免费Darwin Core CSV副本仅含分类数据，不包括AlgaeBase内容，依申请协议按季度提供。整个数据库再分发须有书面协议。"
+          },
+          {
+            "id": "worms-access-ldes",
+            "label": "Aphia事件流",
+            "description": "读取公开Aphia关联数据流，含带版本分类URI和每小时页面。支持RDF序列化内容协商；不可用的历史版本返回HTTP 410。范围涵盖Aphia，包括非海洋记录。"
+          },
+          {
+            "id": "worms-access-type-localities",
+            "label": "模式产地摘录",
+            "description": "从VLIZ IPT免费下载CC BY 4.0出现记录档案及EML元数据。2026年8月23日发布的1.12版含40961条记录；标示更新频率未知。这是子集，并非完整分类数据。"
+          },
+          {
+            "id": "worms-access-r-client",
+            "label": "worrms R客户端",
+            "description": "安装rOpenSci R包，通过WoRMS服务进行名称匹配和分类检索。公开查询无需WoRMS密钥；仍须遵守上游服务限制。"
+          },
+          {
+            "id": "worms-write-editor",
+            "label": "获任编辑贡献",
+            "description": "联系数据管理团队或相关编辑贡献专业知识。获任编辑使用受控在线账户，在所负责类群内添加已发表分类单元、更正及证据；团队协助批量导入。"
+          },
+          {
+            "id": "worms-write-feedback",
+            "label": "公众更正及补充",
+            "description": "通过团队联系链接报告遗漏分类单元、重复项或疑似错误。无需编辑账户；工作人员解决简单问题，并在发布修改前将分类问题交给编辑。"
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "worms-metric-species",
+            "description": "2026年9月10日主页的接受海洋物种数；98%标为已检查。并非全部名称或全部Aphia记录数。"
+          },
+          {
+            "id": "worms-metric-names",
+            "description": "2026年9月10日主页包括异名的海洋物种名称记录数，与接受物种数重叠，不可相加。"
+          },
+          {
+            "id": "worms-metric-editors",
+            "description": "2026年9月10日主页报告的编辑名册人数，并非月活跃贡献者或机构用户数。"
+          },
+          {
+            "id": "worms-metric-type-localities",
+            "description": "2026年8月23日1.12版模式产地摘录的出现记录行数。是档案核心表计数，并非全部WoRMS分类单元或当前OBIS索引数。"
+          }
+        ],
+        "researchGaps": {
+          "data": "未核实生产数据库存储大小。主页另报告55271个物种有图像；这是覆盖计数，并非图像文件数。",
+          "usage": "2025年的300429734次webhits并非会话，428家注册机构并非贡献者。未获得可比会话或下载事件指标。",
+          "access": "GBIF名录档案明确仅供GBIF，返回HTTP 403。完整分类副本应通过批准的批量申请流程获取，不含补充数据。"
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Всемирный реестр морских видов (WoRMS)",
+      "summary": "Глобальный морской таксономический реестр, в котором эксперты связывают принятые названия, синонимы, классификацию и литературу с признаками, распространением, образцами и изображениями.",
+      "description": "WoRMS объединяет морские таксономические реестры на платформе Aphia, поддерживаемой Фламандским морским институтом (VLIZ). Эксперты редактируют свои группы; избираемый руководящий комитет определяет научные приоритеты и назначает редакторов, а группа управления данными VLIZ обеспечивает работу базы. На главной странице, просмотренной 10 сентября 2026 года, указаны 250 610 принятых морских видов, 524 148 морских названий с синонимами и 371 редактор. Реестр постоянно обновляется и служит для согласования названий, а не для полного учёта морских наблюдений или генетических последовательностей. Признаки и дополнительные сведения представлены неравномерно. Доступны просмотр страниц, REST/SOAP, сопоставление списков названий, поток событий Aphia и запрос таксономической копии CSV. Сообщения пользователей поступают группе управления; прямое редактирование требует назначенных прав. Тексты обычно доступны по CC BY, изображения — по CC BY-NC-SA с отдельными исключениями. Для распространения всей базы требуется предварительное письменное соглашение. Открытая выгрузка типовых местонахождений от 23 августа 2026 года содержит 40 961 запись; полный архив списка, зарегистрированный в GBIF, доступен только GBIF. LifeWatch Belgium финансирует группу управления; переходное финансирование подтверждено на 2025–2026 годы. Включение этих работ в обычные субсидии VLIZ с 2027 года в отчёте за апрель 2025 года оставалось планом.",
+      "details": {
+        "aliases": [
+          "WoRMS",
+          "MarineSpecies.org"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "src-worms-about",
+            "home",
+            "tor",
+            "request",
+            "sc-2025",
+            "type-localities",
+            "gbif"
+          ]
+        },
+        "data": {
+          "descriptors": [
+            {
+              "id": "worms-tag-data-type-taxonomy-nomenclature",
+              "description": "Принятые названия, синонимы, авторство, народные названия и классификация."
+            },
+            {
+              "id": "worms-tag-data-type-occurrence-observation",
+              "description": "Геопривязанные типовые местонахождения, экспортируемые в EurOBIS; не глобальный реестр наблюдений."
+            },
+            {
+              "id": "worms-tag-data-type-trait-ecology",
+              "description": "Экологические признаки таксонов; полнота различается между группами."
+            },
+            {
+              "id": "worms-type-specimens",
+              "description": "Сведения об образцах в модуле Aphia, включая типовой материал."
+            },
+            {
+              "id": "worms-type-literature",
+              "description": "Поиск библиографических записей, подтверждающих названия, распространение и другие сведения."
+            },
+            {
+              "id": "worms-type-media",
+              "description": "Фотографии и рисунки таксонов; права на отдельные изображения могут различаться."
+            },
+            {
+              "id": "worms-format-json",
+              "description": "Таксономические записи JSON из REST-сервиса."
+            },
+            {
+              "id": "worms-format-xml",
+              "description": "Ответы SOAP XML и представления таксономических метаданных в RDF/XML."
+            },
+            {
+              "id": "worms-format-html",
+              "description": "Страницы таксонов, литературы, распространения и образцов для чтения человеком."
+            },
+            {
+              "id": "worms-format-csv",
+              "description": "Одобренные выгрузки только таксономических данных предоставляются как Darwin Core CSV."
+            },
+            {
+              "id": "worms-format-dwca",
+              "description": "Открытая выгрузка типовых местонахождений в Darwin Core Archive; полный список доступен только GBIF."
+            },
+            {
+              "id": "worms-standard-darwin_core",
+              "description": "Darwin Core задаёт структуру одобренного таксономического CSV; это не утверждение о схеме REST."
+            },
+            {
+              "id": "worms-standard-dublin_core",
+              "description": "LDES Aphia использует термины Dublin Core modified и isVersionOf для времени и версий."
+            },
+            {
+              "id": "worms-standard-eml",
+              "description": "Открытый архив типовых местонахождений предоставляет метаданные набора в EML."
+            }
+          ]
+        },
+        "access": [
+          {
+            "id": "worms-tag-read-method-web",
+            "label": "Портал WoRMS",
+            "description": "Просматривайте таксоны, литературу, распространение, образцы и изображения без учётной записи. Сохраняйте AphiaID и проверяйте права на изображения."
+          },
+          {
+            "id": "worms-tag-read-method-api",
+            "label": "Сервисы REST и SOAP",
+            "description": "Бесплатные публичные HTTPS-сервисы возвращают таксономию, синонимы, источники, распространение и признаки. REST выдаёт JSON, SOAP — XML. Не собирайте всю базу через API; запросите выгрузку. В браузере проверьте междоменные ограничения."
+          },
+          {
+            "id": "worms-access-match",
+            "label": "Сопоставление таксонов",
+            "description": "Загрузите или вставьте список и выберите поля результата: названия, AphiaID и классификацию. Публичное сопоставление бесплатно; проверяйте неоднозначные результаты."
+          },
+          {
+            "id": "worms-access-request",
+            "label": "Одобренная таксономическая выгрузка",
+            "description": "Зарегистрируйтесь с институциональной почтой, войдите и опишите цель для согласования. Бесплатная копия Darwin Core CSV содержит только таксономию, исключает AlgaeBase и предоставляется ежеквартально по соглашению. Полное распространение требует письменного согласия."
+          },
+          {
+            "id": "worms-access-ldes",
+            "label": "Поток событий Aphia",
+            "description": "Читайте открытый поток Aphia с версионированными URI и почасовыми страницами. Доступны разные сериализации RDF; отсутствующие исторические версии возвращают HTTP 410. Включает неморские записи Aphia."
+          },
+          {
+            "id": "worms-access-type-localities",
+            "label": "Выгрузка типовых местонахождений",
+            "description": "Бесплатно загрузите архив CC BY 4.0 и метаданные EML через IPT VLIZ. Версия 1.12 от 23 августа 2026 года содержит 40 961 запись; частота обновления неизвестна. Это подмножество, не вся таксономия."
+          },
+          {
+            "id": "worms-access-r-client",
+            "label": "Клиент R worrms",
+            "description": "Установите пакет R от rOpenSci для сопоставления названий и получения таксонов через WoRMS. Для публичных запросов ключ не нужен; ограничения сервиса сохраняются."
+          },
+          {
+            "id": "worms-write-editor",
+            "label": "Вклад назначенных редакторов",
+            "description": "Свяжитесь с группой управления или профильным редактором. Назначенные редакторы через контролируемые учётные записи добавляют опубликованные таксоны, исправления и источники в своих группах; группа управления помогает с массовым импортом."
+          },
+          {
+            "id": "worms-write-feedback",
+            "label": "Исправления и дополнения от пользователей",
+            "description": "Сообщайте о пропусках, дублях и ошибках через контакт группы управления. Учётная запись редактора не нужна; простые вопросы решает персонал, таксономические передаются редакторам."
+          }
+        ],
+        "gallery": [],
+        "metrics": [
+          {
+            "id": "worms-metric-species",
+            "description": "Принятые морские виды на 10 сентября 2026 года; 98 % отмечены как проверенные. Это не число всех названий или записей Aphia."
+          },
+          {
+            "id": "worms-metric-names",
+            "description": "Записи названий морских видов с синонимами на 10 сентября 2026 года. Пересекаются с числом принятых видов; складывать нельзя."
+          },
+          {
+            "id": "worms-metric-editors",
+            "description": "Редакторы, указанные на 10 сентября 2026 года; численность списка, не месячные активные участники или учреждения."
+          },
+          {
+            "id": "worms-metric-type-localities",
+            "description": "Строки встречаемости в выгрузке типовых местонахождений версии 1.12 от 23 августа 2026 года. Число строк основной таблицы, не всех таксонов или текущего индекса OBIS."
+          }
+        ],
+        "researchGaps": {
+          "data": "Подтверждённый размер рабочей базы не найден. На странице также указано 55 271 проиллюстрированный вид; это охват, не число файлов.",
+          "usage": "300 429 734 веб-обращения за 2025 год не являются сессиями, а 428 зарегистрированных учреждений — участниками. Сопоставимые показатели сессий и скачиваний не установлены.",
+          "access": "Архив списка GBIF доступен только GBIF и вернул HTTP 403. Полную таксономическую копию запрашивайте по установленной процедуре; дополнительные данные в неё не входят."
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-fishbase-syncs-to-worms",
+      "sourceNodeId": "fishbase",
+      "targetNodeId": "worms",
+      "kind": "syncs_to",
+      "note": "WoRMS explicitly identifies FishBase as an external database from which it currently imports information, principally taxonomy. This establishes FishBase-to-WoRMS transfer; no reciprocal transfer or fixed refresh schedule is asserted.",
+      "properties": {
+        "scope": "Fish taxonomy imported into Aphia and presented through WoRMS",
+        "status": "active",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "transferMethod": "External database import; implementation and cadence unspecified"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "قواعد البيانات الخارجية الشريكة لـ WoRMS",
+            "en": "WoRMS external database partners",
+            "es": "Bases de datos externas asociadas a WoRMS",
+            "fr": "Bases partenaires externes de WoRMS",
+            "ru": "Внешние базы данных — партнёры WoRMS",
+            "zh": "WoRMS外部合作数据库"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-flanders-marine-institute-operates-world-register-of-marine-species",
+      "sourceNodeId": "flanders-marine-institute",
+      "targetNodeId": "worms",
+      "kind": "operates",
+      "note": "VLIZ appoints the WoRMS Data Management Team to run the database, maintain online publishing, preserve identifiers, support editors and manage approved exports. The public terms of reference are dated 2015-05-08 and the current About page continues to identify VLIZ as the operational host.",
+      "properties": {
+        "scope": "Technical and scientific data management, hosting and publication support",
+        "sourceRefs": [
+          "src-relationship-worms",
+          "src-worms-about"
+        ],
+        "status": "current role documented",
+        "period": "2015 terms of reference, reconfirmed by current About page"
+      },
+      "sources": {
+        "src-relationship-worms": {
+          "id": "src-relationship-worms",
+          "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+          "title": {
+            "ar": "اختصاصات WoRMS",
+            "en": "WoRMS terms of reference",
+            "es": "Términos de referencia de WoRMS",
+            "fr": "Mandat de WoRMS",
+            "ru": "Положение о деятельности WoRMS",
+            "zh": "WoRMS职权范围"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worms-steering-committee-governs-worms",
+      "sourceNodeId": "worms-steering-committee",
+      "targetNodeId": "worms",
+      "kind": "governs",
+      "note": "The elected WoRMS Steering Committee has formal responsibility for scientific correctness, appointment/replacement of editors, and licensing database downloads. It consults with the VLIZ Data Management Team on policy; the committee is not the technical operator.",
+      "properties": {
+        "scope": "Scientific policy, editorial appointments and data-licensing decisions under the 2015-05-08 terms of reference",
+        "sourceRefs": [
+          "src-relationship-worms"
+        ],
+        "status": "current role documented"
+      },
+      "sources": {
+        "src-relationship-worms": {
+          "id": "src-relationship-worms",
+          "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+          "title": {
+            "ar": "اختصاصات WoRMS",
+            "en": "WoRMS terms of reference",
+            "es": "Términos de referencia de WoRMS",
+            "fr": "Mandat de WoRMS",
+            "ru": "Положение о деятельности WoRMS",
+            "zh": "WoRMS职权范围"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-algaebase-syncs-to-worms",
+      "sourceNodeId": "algaebase",
+      "targetNodeId": "worms",
+      "kind": "syncs_to",
+      "note": "WoRMS lists AlgaeBase among the externally hosted and managed species databases from which it currently imports content into Aphia. The imported information is principally taxonomy; the source retains responsibility for its own content. No reciprocal transfer, fixed cadence or latest completed import date is established.",
+      "properties": {
+        "scope": "External taxonomic information imported into Aphia and displayed through WoRMS",
+        "status": "current import relationship documented; last import date unknown",
+        "sourceRefs": [
+          "src-worms-about"
+        ],
+        "transferMethod": "External database import into Aphia; implementation and schedule unreported"
+      },
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-sealifebase-syncs-to-worms",
+      "sourceNodeId": "sealifebase",
+      "targetNodeId": "worms",
+      "kind": "syncs_to",
+      "note": "WoRMS lists SeaLifeBase among the externally hosted and managed species databases from which it currently imports content into Aphia. The imported information is principally taxonomy; the source retains responsibility for its own content. No reciprocal transfer, fixed cadence or latest completed import date is established.",
+      "properties": {
+        "scope": "External taxonomic information imported into Aphia and displayed through WoRMS",
+        "status": "current import relationship documented; last import date unknown",
+        "sourceRefs": [
+          "src-worms-about"
+        ],
+        "transferMethod": "External database import into Aphia; implementation and schedule unreported"
+      },
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-index-fungorum-syncs-to-worms",
+      "sourceNodeId": "index-fungorum",
+      "targetNodeId": "worms",
+      "kind": "syncs_to",
+      "note": "WoRMS lists Index Fungorum among the externally hosted and managed species databases from which it currently imports content into Aphia. The imported information is principally taxonomy; the source retains responsibility for its own content. No reciprocal transfer, fixed cadence or latest completed import date is established.",
+      "properties": {
+        "scope": "External taxonomic information imported into Aphia and displayed through WoRMS",
+        "status": "current import relationship documented; last import date unknown",
+        "sourceRefs": [
+          "src-worms-about"
+        ],
+        "transferMethod": "External database import into Aphia; implementation and schedule unreported"
+      },
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ictv-taxonomy-syncs-to-worms",
+      "sourceNodeId": "ictv-taxonomy",
+      "targetNodeId": "worms",
+      "kind": "syncs_to",
+      "note": "WoRMS lists ICTV taxonomy database among the externally hosted and managed species databases from which it currently imports content into Aphia. The imported information is principally taxonomy; the source retains responsibility for its own content. No reciprocal transfer, fixed cadence or latest completed import date is established.",
+      "properties": {
+        "scope": "External taxonomic information imported into Aphia and displayed through WoRMS",
+        "status": "current import relationship documented; last import date unknown",
+        "sourceRefs": [
+          "src-worms-about"
+        ],
+        "transferMethod": "External database import into Aphia; implementation and schedule unreported"
+      },
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ctenophora-species-list-syncs-to-worms",
+      "sourceNodeId": "ctenophora-species-list",
+      "targetNodeId": "worms",
+      "kind": "syncs_to",
+      "note": "WoRMS lists Claudia Mills’s Ctenophora species-name list among the externally hosted and managed species databases from which it currently imports content into Aphia. The imported information is principally taxonomy; the source retains responsibility for its own content. No reciprocal transfer, fixed cadence or latest completed import date is established.",
+      "properties": {
+        "scope": "External taxonomic information imported into Aphia and displayed through WoRMS",
+        "status": "current import relationship documented; last import date unknown",
+        "sourceRefs": [
+          "src-worms-about"
+        ],
+        "transferMethod": "External database import into Aphia; implementation and schedule unreported"
+      },
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-reptile-database-syncs-to-worms",
+      "sourceNodeId": "reptile-database",
+      "targetNodeId": "worms",
+      "kind": "syncs_to",
+      "note": "WoRMS lists The Reptile Database among the externally hosted and managed species databases from which it currently imports content into Aphia. The imported information is principally taxonomy; the source retains responsibility for its own content. No reciprocal transfer, fixed cadence or latest completed import date is established.",
+      "properties": {
+        "scope": "External taxonomic information imported into Aphia and displayed through WoRMS",
+        "status": "current import relationship documented; last import date unknown",
+        "sourceRefs": [
+          "src-worms-about"
+        ],
+        "transferMethod": "External database import into Aphia; implementation and schedule unreported"
+      },
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-freshwater-animal-diversity-assessment-syncs-to-worms",
+      "sourceNodeId": "freshwater-animal-diversity-assessment",
+      "targetNodeId": "worms",
+      "kind": "syncs_to",
+      "note": "WoRMS lists Freshwater Animal Diversity Assessment (FADA) among the externally hosted and managed species databases from which it currently imports content into Aphia. The imported information is principally taxonomy; the source retains responsibility for its own content. No reciprocal transfer, fixed cadence or latest completed import date is established.",
+      "properties": {
+        "scope": "External taxonomic information imported into Aphia and displayed through WoRMS",
+        "status": "current import relationship documented; last import date unknown",
+        "sourceRefs": [
+          "src-worms-about"
+        ],
+        "transferMethod": "External database import into Aphia; implementation and schedule unreported"
+      },
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-recent-fossil-bryozoa-syncs-to-worms",
+      "sourceNodeId": "recent-fossil-bryozoa",
+      "targetNodeId": "worms",
+      "kind": "syncs_to",
+      "note": "WoRMS lists Recent & Fossil Bryozoa among the externally hosted and managed species databases from which it currently imports content into Aphia. The imported information is principally taxonomy; the source retains responsibility for its own content. No reciprocal transfer, fixed cadence or latest completed import date is established.",
+      "properties": {
+        "scope": "External taxonomic information imported into Aphia and displayed through WoRMS",
+        "status": "current import relationship documented; last import date unknown",
+        "sourceRefs": [
+          "src-worms-about"
+        ],
+        "transferMethod": "External database import into Aphia; implementation and schedule unreported"
+      },
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worms-syncs-to-platform-obis",
+      "sourceNodeId": "worms",
+      "targetNodeId": "platform-obis",
+      "kind": "syncs_to",
+      "note": "OBIS matches submitted scientific names or WoRMS LSIDs against WoRMS and includes the resulting taxonomic information in its occurrence exports. Synonyms resolve to accepted names. This is taxonomic enrichment during OBIS ingestion; no fixed refresh schedule or latest taxonomic snapshot date is established.",
+      "properties": {
+        "scope": "Taxonomic name reconciliation and enrichment of OBIS occurrence records",
+        "status": "active documented integration",
+        "sourceRefs": [
+          "obis-taxonomy",
+          "obis-access"
+        ],
+        "transferMethod": "WoRMS web services and taxon identifiers used in OBIS ingestion",
+        "updateFrequency": "unspecified"
+      },
+      "sources": {
+        "obis-taxonomy": {
+          "id": "obis-taxonomy",
+          "url": "https://obis.org/sources/worms/",
+          "title": {
+            "en": "OBIS taxonomic backbone: WoRMS",
+            "fr": "Référentiel taxonomique OBIS : WoRMS",
+            "es": "Referencia taxonómica de OBIS: WoRMS",
+            "ar": "مرجع OBIS التصنيفي: WoRMS",
+            "zh": "OBIS分类主干：WoRMS",
+            "ru": "Таксономическая основа OBIS: WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "obis-access": {
+          "id": "obis-access",
+          "url": "https://manual.obis.org/access.html",
+          "title": {
+            "en": "OBIS data access and enrichment",
+            "fr": "Accès et enrichissement des données OBIS",
+            "es": "Acceso y enriquecimiento de datos OBIS",
+            "ar": "الوصول إلى بيانات OBIS وإثراؤها",
+            "zh": "OBIS数据访问及丰富",
+            "ru": "Доступ к данным OBIS и их обогащение"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worms-syncs-to-eurobis",
+      "sourceNodeId": "worms",
+      "targetNodeId": "eurobis",
+      "kind": "syncs_to",
+      "note": "WoRMS sends georeferenced type-locality records to OBIS through its European node EurOBIS. The VLIZ IPT publication exposes a Darwin Core occurrence archive: version 1.12, published 2026-08-23, with 40,961 core-table records. Its update frequency is explicitly unknown; the count does not establish current OBIS indexing. Separately, the shared EurOBIS/EMODnet Biology pipeline incorporates WoRMS taxonomic reconciliation for submitted occurrence data.",
+      "properties": {
+        "scope": "Type-locality occurrence extract and taxonomic reconciliation in the EurOBIS infrastructure",
+        "status": "published recurring versions; cadence unspecified",
+        "sourceRefs": [
+          "src-worms-about",
+          "type-localities",
+          "emodnet-biology"
+        ],
+        "transferMethod": "VLIZ/EurOBIS IPT Darwin Core Archive publication",
+        "format": "darwin_core_archive",
+        "latestPublishedAt": "2026-08-23",
+        "updateFrequency": "unknown",
+        "artifact": "https://ipt.vliz.be/eurobis/resource?r=worms_type_localities"
+      },
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "type-localities": {
+          "id": "type-localities",
+          "url": "https://ipt.vliz.be/eurobis/resource?r=worms_type_localities",
+          "title": {
+            "en": "WoRMS type-locality occurrence archive",
+            "fr": "Archive des localités types de WoRMS",
+            "es": "Archivo de localidades tipo de WoRMS",
+            "ar": "أرشيف المواقع النمطية في WoRMS",
+            "zh": "WoRMS模式产地出现记录档案",
+            "ru": "Архив типовых местонахождений WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "emodnet-biology": {
+          "id": "emodnet-biology",
+          "url": "https://emodnet.ec.europa.eu/en/biology",
+          "title": {
+            "en": "EMODnet Biology data infrastructure and taxonomy",
+            "fr": "Infrastructure de données et taxonomie EMODnet Biology",
+            "es": "Infraestructura de datos y taxonomía de EMODnet Biology",
+            "ar": "بنية بيانات EMODnet Biology وتصنيفها",
+            "zh": "EMODnet Biology数据基础设施与分类",
+            "ru": "Инфраструктура данных и таксономия EMODnet Biology"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worms-syncs-to-gbif",
+      "sourceNodeId": "worms",
+      "targetNodeId": "gbif",
+      "kind": "syncs_to",
+      "note": "The GBIF registry lists the WoRMS checklist with a publication date of 2026-09-01 and a Darwin Core Archive endpoint explicitly described as Restricted to GBIF. This confirms a direct registered checklist-delivery path, not unrestricted public download or a claim that every WoRMS name is indexed in the GBIF backbone.",
+      "properties": {
+        "scope": "WoRMS taxonomic checklist delivered to GBIF",
+        "status": "registered publication; release 2026-09-01",
+        "sourceRefs": [
+          "gbif"
+        ],
+        "transferMethod": "GBIF ingestion from VLIZ-hosted Darwin Core Archive restricted to GBIF",
+        "format": "darwin_core_archive",
+        "latestPublishedAt": "2026-09-01",
+        "updateFrequency": "unspecified",
+        "artifact": "https://www.gbif.org/dataset/2d59e5db-57ad-41ff-97d6-11f5fb264527"
+      },
+      "sources": {
+        "gbif": {
+          "id": "gbif",
+          "url": "https://api.gbif.org/v1/dataset/2d59e5db-57ad-41ff-97d6-11f5fb264527",
+          "title": {
+            "en": "GBIF registry: WoRMS checklist",
+            "fr": "Registre GBIF : liste WoRMS",
+            "es": "Registro GBIF: lista WoRMS",
+            "ar": "سجل GBIF: قائمة WoRMS",
+            "zh": "GBIF注册表：WoRMS名录",
+            "ru": "Реестр GBIF: список WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worms-syncs-to-catalogue-of-life",
+      "sourceNodeId": "worms",
+      "targetNodeId": "catalogue-of-life",
+      "kind": "syncs_to",
+      "note": "Catalogue of Life’s own January 2026 release checklist records WoRMS content as synced on 2026-01-03. The entry labels the supplied WoRMS version 2025-01-01; that date is preserved as reported, not silently corrected. This establishes an import, not the latest complete WoRMS snapshot in every present-day COL product.",
+      "properties": {
+        "scope": "Taxonomic content contributed from WoRMS/Aphia to Catalogue of Life",
+        "status": "documented import on 2026-01-03; later refresh not verified",
+        "sourceRefs": [
+          "col-sync"
+        ],
+        "transferMethod": "Catalogue of Life source import/synchronization",
+        "latestSyncedAt": "2026-01-03",
+        "updateFrequency": "not established"
+      },
+      "sources": {
+        "col-sync": {
+          "id": "col-sync",
+          "url": "https://github.com/CatalogueOfLife/testing/issues/299",
+          "title": {
+            "en": "Catalogue of Life January 2026 import log",
+            "fr": "Journal des imports Catalogue of Life, janvier 2026",
+            "es": "Registro de importaciones de Catalogue of Life, enero de 2026",
+            "ar": "سجل استيراد Catalogue of Life، يناير 2026",
+            "zh": "Catalogue of Life 2026年1月导入日志",
+            "ru": "Журнал импорта Catalogue of Life за январь 2026"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-lifewatch-belgium-funds-worms",
+      "sourceNodeId": "lifewatch-belgium",
+      "targetNodeId": "worms",
+      "kind": "funds",
+      "note": "The April 2025 WoRMS Steering Committee report states that LifeWatch Belgium largely funds the WoRMS Data Management Team and that transition funding was secured for 2025–2026. The current About page continues to identify this funding route. The report’s proposed 2027 integration into regular VLIZ subsidies is not treated as an already implemented grant.",
+      "properties": {
+        "scope": "WoRMS Data Management Team and supporting activities through LifeWatch Belgium",
+        "status": "funding documented for 2025–2026",
+        "sourceRefs": [
+          "sc-2025",
+          "src-worms-about"
+        ],
+        "period": "2025–2026 transition funding; programme support listed from 2012",
+        "intermediary": "flanders-marine-institute"
+      },
+      "sources": {
+        "sc-2025": {
+          "id": "sc-2025",
+          "url": "https://marinespecies.org/documents/Steering%20Committee%20reports/20250422_WoRMS_SC_meeting_Ostend_report.pdf",
+          "title": {
+            "en": "WoRMS Steering Committee report, April 2025",
+            "fr": "Rapport du comité directeur WoRMS, avril 2025",
+            "es": "Informe del comité directivo WoRMS, abril de 2025",
+            "ar": "تقرير اللجنة التوجيهية لـWoRMS، أبريل 2025",
+            "zh": "WoRMS指导委员会报告，2025年4月",
+            "ru": "Отчёт руководящего комитета WoRMS, апрель 2025"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worms-editorial-board-publishes-to-worms",
+      "sourceNodeId": "worms-editorial-board",
+      "targetNodeId": "worms",
+      "kind": "publishes_to",
+      "note": "The WoRMS terms of reference identify the Editorial Board as all active editors and data providers, who submit data through the online interface or communicate directly with the Data Management Team. The current About page describes their ongoing additions of published taxa, corrections and supporting information. Individual editors’ institutional affiliations are not treated as separate institutional publishing mandates.",
+      "properties": {
+        "scope": "Expert-curated taxonomic and thematic record contributions",
+        "status": "ongoing documented editorial contribution",
+        "sourceRefs": [
+          "tor",
+          "src-worms-about"
+        ]
+      },
+      "sources": {
+        "tor": {
+          "id": "tor",
+          "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+          "title": {
+            "en": "WoRMS terms of reference (2015)",
+            "fr": "Mandat de WoRMS (2015)",
+            "es": "Términos de referencia de WoRMS (2015)",
+            "ar": "اختصاصات WoRMS (2015)",
+            "zh": "WoRMS职权范围（2015）",
+            "ru": "Положение о деятельности WoRMS (2015)"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worms-syncs-to-emodnet-biology",
+      "sourceNodeId": "worms",
+      "targetNodeId": "emodnet-biology",
+      "kind": "syncs_to",
+      "note": "EMODnet Biology documents WoRMS as the taxonomic backbone used in its shared EurOBIS data infrastructure. Its publication workflow links submitted taxon names to WoRMS and exposes data through GeoServer services. This represents taxonomic enrichment through that shared infrastructure, not a separately verified full-database replica or a reciprocal transfer.",
+      "properties": {
+        "scope": "WoRMS taxonomic information used in the EMODnet Biology/EurOBIS publication pipeline",
+        "status": "active documented integration",
+        "transferMethod": "Taxon reconciliation in shared EurOBIS infrastructure and downstream publication",
+        "updateFrequency": "not specified",
+        "sourceRefs": [
+          "emodnet-biology"
+        ]
+      },
+      "sources": {
+        "emodnet-biology": {
+          "id": "emodnet-biology",
+          "url": "https://emodnet.ec.europa.eu/en/biology",
+          "title": {
+            "en": "EMODnet Biology data infrastructure and taxonomy",
+            "fr": "Infrastructure de données et taxonomie EMODnet Biology",
+            "es": "Infraestructura de datos y taxonomía de EMODnet Biology",
+            "ar": "بنية بيانات EMODnet Biology وتصنيفها",
+            "zh": "EMODnet Biology数据基础设施与分类",
+            "ru": "Инфраструктура данных и таксономия EMODnet Biology"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-worms-syncs-to-deepdata",
+      "sourceNodeId": "worms",
+      "targetNodeId": "deepdata",
+      "kind": "syncs_to",
+      "note": "ISA’s July 2023 account reports expert review and use of WoRMS tools on more than 60,000 biological records to improve DeepData taxonomy. This is scoped taxonomic reconciliation, not a copy of the WoRMS database or a demonstrated continuous synchronization. The 2022 partnership alone would not establish a data transfer.",
+      "properties": {
+        "scope": "Taxonomic reconciliation of DeepData biological records using WoRMS",
+        "status": "documented completed work as of July 2023; ongoing cadence not established",
+        "sourceRefs": [
+          "factcheck"
+        ]
+      },
+      "sources": {
+        "factcheck": {
+          "id": "factcheck",
+          "url": "https://isa.org.jm/isa-fact-check-2023-1/",
+          "title": {
+            "en": "ISA explanation of DeepData holdings and funding, July 2023",
+            "fr": "Explication des fonds et du financement DeepData, juillet 2023",
+            "es": "Explicación de fondos y financiación DeepData, julio de 2023",
+            "ar": "توضيح بيانات DeepData وتمويلها، يوليو 2023",
+            "zh": "2023年7月ISA对DeepData馆藏与经费的说明",
+            "ru": "Разъяснение о данных и финансировании DeepData, июль 2023"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

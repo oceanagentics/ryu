@@ -1,0 +1,786 @@
+[
+  {
+    "id": "ioc-unesco",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.ioc.unesco.org/en",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://iode.org/actions/capacity-development/",
+          "title": {
+            "en": "Intergovernmental Oceanographic Commission of UNESCO",
+            "fr": "Commission océanographique intergouvernementale de l’UNESCO",
+            "es": "Comisión Oceanográfica Intergubernamental de la UNESCO",
+            "ar": "اللجنة الأوقيانوغرافية الحكومية الدولية لليونسكو",
+            "zh": "联合国教科文组织政府间海洋学委员会",
+            "ru": "Межправительственная океанографическая комиссия ЮНЕСКО"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Intergovernmental Oceanographic Commission of UNESCO",
+        "summary": "UNESCO commission coordinating international ocean science and capacity development, including the OceanTeacher programme.",
+        "description": "UNESCO commission coordinating international ocean science and capacity development, including the OceanTeacher programme.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Commission océanographique intergouvernementale de l’UNESCO",
+        "summary": "Commission de l’UNESCO coordonnant les sciences océaniques et le développement des capacités, dont OceanTeacher.",
+        "description": "Commission de l’UNESCO coordonnant les sciences océaniques et le développement des capacités, dont OceanTeacher.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Comisión Oceanográfica Intergubernamental de la UNESCO",
+        "summary": "Comisión de la UNESCO que coordina ciencias oceánicas y desarrollo de capacidades, incluido OceanTeacher.",
+        "description": "Comisión de la UNESCO que coordina ciencias oceánicas y desarrollo de capacidades, incluido OceanTeacher.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "اللجنة الأوقيانوغرافية الحكومية الدولية لليونسكو",
+        "summary": "لجنة اليونسكو لتنسيق علوم المحيطات وتنمية القدرات دولياً، بما في ذلك OceanTeacher.",
+        "description": "لجنة اليونسكو لتنسيق علوم المحيطات وتنمية القدرات دولياً، بما في ذلك OceanTeacher.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "联合国教科文组织政府间海洋学委员会",
+        "summary": "协调国际海洋科学和能力建设的教科文组织委员会，包括OceanTeacher计划。",
+        "description": "协调国际海洋科学和能力建设的教科文组织委员会，包括OceanTeacher计划。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Межправительственная океанографическая комиссия ЮНЕСКО",
+        "summary": "Комиссия ЮНЕСКО, координирующая международную науку об океане и развитие потенциала, включая OceanTeacher.",
+        "description": "Комиссия ЮНЕСКО, координирующая международную науку об океане и развитие потенциала, включая OceanTeacher.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "medin",
+    "record": {
+      "kind": "organization",
+      "url": "https://medin.org.uk/about",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://medin.org.uk/about",
+          "title": {
+            "en": "Marine Environmental Data and Information Network",
+            "fr": "Réseau de données et d’informations sur le milieu marin",
+            "es": "Red de Datos e Información del Medio Marino",
+            "ar": "شبكة بيانات ومعلومات البيئة البحرية",
+            "zh": "海洋环境数据与信息网络",
+            "ru": "Сеть данных и информации о морской среде"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Marine Environmental Data and Information Network",
+        "summary": "UK organisational partnership promoting marine-data sharing and good data management; distinct from its data-discovery portal.",
+        "description": "UK organisational partnership promoting marine-data sharing and good data management; distinct from its data-discovery portal.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Réseau de données et d’informations sur le milieu marin",
+        "summary": "Partenariat britannique promouvant le partage et la gestion des données marines, distinct de son portail de découverte.",
+        "description": "Partenariat britannique promouvant le partage et la gestion des données marines, distinct de son portail de découverte.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Red de Datos e Información del Medio Marino",
+        "summary": "Asociación de organizaciones británicas que promueve compartir y gestionar datos marinos, distinta de su portal de búsqueda.",
+        "description": "Asociación de organizaciones británicas que promueve compartir y gestionar datos marinos, distinta de su portal de búsqueda.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "شبكة بيانات ومعلومات البيئة البحرية",
+        "summary": "شراكة مؤسسات بريطانية لتعزيز تبادل البيانات البحرية وإدارتها، منفصلة عن بوابتها لاكتشاف البيانات.",
+        "description": "شراكة مؤسسات بريطانية لتعزيز تبادل البيانات البحرية وإدارتها، منفصلة عن بوابتها لاكتشاف البيانات.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "海洋环境数据与信息网络",
+        "summary": "促进海洋数据共享及规范管理的英国机构合作网络，与其数据检索门户区分。",
+        "description": "促进海洋数据共享及规范管理的英国机构合作网络，与其数据检索门户区分。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Сеть данных и информации о морской среде",
+        "summary": "Партнёрство организаций Великобритании по обмену и управлению морскими данными, отдельное от портала поиска данных.",
+        "description": "Партнёрство организаций Великобритании по обмену и управлению морскими данными, отдельное от портала поиска данных.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "oceanexpert",
+    "record": {
+      "kind": "system",
+      "url": "https://oceanexpert.org/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://oceanexpert.org/",
+          "title": {
+            "en": "OceanExpert",
+            "fr": "OceanExpert",
+            "es": "OceanExpert",
+            "ar": "OceanExpert",
+            "zh": "OceanExpert",
+            "ru": "OceanExpert"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "OceanExpert",
+        "summary": "IODE’s directory of marine and freshwater experts, institutions, events and documents. This minimal endpoint supports the documented OTGA alumni-data link.",
+        "description": "IODE’s directory of marine and freshwater experts, institutions, events and documents. This minimal endpoint supports the documented OTGA alumni-data link.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "OceanExpert",
+        "summary": "Annuaire IODE des experts, institutions, événements et documents marins et d’eau douce. Cette notice minimale permet de représenter le lien documenté des anciens apprenants OTGA.",
+        "description": "Annuaire IODE des experts, institutions, événements et documents marins et d’eau douce. Cette notice minimale permet de représenter le lien documenté des anciens apprenants OTGA.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "OceanExpert",
+        "summary": "Directorio IODE de expertos, instituciones, eventos y documentos marinos y de agua dulce. Este registro mínimo permite representar el vínculo documentado con datos de antiguos alumnos OTGA.",
+        "description": "Directorio IODE de expertos, instituciones, eventos y documentos marinos y de agua dulce. Este registro mínimo permite representar el vínculo documentado con datos de antiguos alumnos OTGA.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "OceanExpert",
+        "summary": "دليل IODE للخبراء والمؤسسات والفعاليات والوثائق البحرية والمتعلقة بالمياه العذبة. يدعم هذا السجل المختصر رابط بيانات خريجي OTGA الموثق.",
+        "description": "دليل IODE للخبراء والمؤسسات والفعاليات والوثائق البحرية والمتعلقة بالمياه العذبة. يدعم هذا السجل المختصر رابط بيانات خريجي OTGA الموثق.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "OceanExpert",
+        "summary": "IODE海洋及淡水专家、机构、活动和文档目录。此最小记录用于表示已记录的OTGA校友数据关联。",
+        "description": "IODE海洋及淡水专家、机构、活动和文档目录。此最小记录用于表示已记录的OTGA校友数据关联。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "OceanExpert",
+        "summary": "Каталог IODE специалистов, учреждений, мероприятий и документов по морским и пресноводным вопросам. Эта минимальная запись представляет подтверждённую связь данных выпускников OTGA.",
+        "description": "Каталог IODE специалистов, учреждений, мероприятий и документов по морским и пресноводным вопросам. Эта минимальная запись представляет подтверждённую связь данных выпускников OTGA.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "norad",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.norad.no/en/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.norad.no/en/",
+          "title": {
+            "en": "Norwegian Agency for Development Cooperation",
+            "fr": "Agence norvégienne de coopération au développement",
+            "es": "Agencia Noruega de Cooperación para el Desarrollo",
+            "ar": "الوكالة النرويجية للتعاون الإنمائي",
+            "zh": "挪威发展合作署",
+            "ru": "Норвежское агентство по сотрудничеству в целях развития"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Norwegian Agency for Development Cooperation",
+        "summary": "Norwegian government agency managing development assistance and providing specialist advice.",
+        "description": "Norwegian government agency managing development assistance and providing specialist advice.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Agence norvégienne de coopération au développement",
+        "summary": "Agence publique norvégienne gérant l’aide au développement et fournissant des conseils spécialisés.",
+        "description": "Agence publique norvégienne gérant l’aide au développement et fournissant des conseils spécialisés.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Agencia Noruega de Cooperación para el Desarrollo",
+        "summary": "Agencia gubernamental noruega que gestiona ayuda al desarrollo y ofrece asesoramiento especializado.",
+        "description": "Agencia gubernamental noruega que gestiona ayuda al desarrollo y ofrece asesoramiento especializado.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "الوكالة النرويجية للتعاون الإنمائي",
+        "summary": "وكالة حكومية نرويجية تدير المساعدة الإنمائية وتقدم المشورة المتخصصة.",
+        "description": "وكالة حكومية نرويجية تدير المساعدة الإنمائية وتقدم المشورة المتخصصة.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "挪威发展合作署",
+        "summary": "管理发展援助并提供专业咨询的挪威政府机构。",
+        "description": "管理发展援助并提供专业咨询的挪威政府机构。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Норвежское агентство по сотрудничеству в целях развития",
+        "summary": "Государственное агентство Норвегии, управляющее помощью развитию и предоставляющее экспертные консультации.",
+        "description": "Государственное агентство Норвегии, управляющее помощью развитию и предоставляющее экспертные консультации.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "lifewatch-eric",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.lifewatch.eu/who-we-are/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.lifewatch.eu/who-we-are/",
+          "title": {
+            "en": "LifeWatch ERIC",
+            "fr": "LifeWatch ERIC",
+            "es": "LifeWatch ERIC",
+            "ar": "LifeWatch ERIC",
+            "zh": "LifeWatch ERIC",
+            "ru": "LifeWatch ERIC"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "LifeWatch ERIC",
+        "summary": "European Research Infrastructure Consortium providing e-Science facilities for biodiversity and ecosystem research.",
+        "description": "European Research Infrastructure Consortium providing e-Science facilities for biodiversity and ecosystem research.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "LifeWatch ERIC",
+        "summary": "Consortium européen d’infrastructure de recherche proposant des services numériques pour la biodiversité et les écosystèmes.",
+        "description": "Consortium européen d’infrastructure de recherche proposant des services numériques pour la biodiversité et les écosystèmes.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "LifeWatch ERIC",
+        "summary": "Consorcio Europeo de Infraestructuras de Investigación que proporciona servicios digitales para investigar biodiversidad y ecosistemas.",
+        "description": "Consorcio Europeo de Infraestructuras de Investigación que proporciona servicios digitales para investigar biodiversidad y ecosistemas.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "LifeWatch ERIC",
+        "summary": "اتحاد أوروبي للبنية التحتية البحثية يوفر مرافق رقمية لدراسة التنوع الحيوي والنظم البيئية.",
+        "description": "اتحاد أوروبي للبنية التحتية البحثية يوفر مرافق رقمية لدراسة التنوع الحيوي والنظم البيئية.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "LifeWatch ERIC",
+        "summary": "为生物多样性和生态系统研究提供电子科学设施的欧洲研究基础设施联盟。",
+        "description": "为生物多样性和生态系统研究提供电子科学设施的欧洲研究基础设施联盟。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "LifeWatch ERIC",
+        "summary": "Европейский консорциум исследовательской инфраструктуры, предоставляющий цифровые средства изучения биоразнообразия и экосистем.",
+        "description": "Европейский консорциум исследовательской инфраструктуры, предоставляющий цифровые средства изучения биоразнообразия и экосистем.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "marine-institute-ireland",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.marine.ie/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.marine.ie/",
+          "title": {
+            "en": "Marine Institute (Ireland)",
+            "fr": "Institut marin d’Irlande",
+            "es": "Instituto Marino de Irlanda",
+            "ar": "المعهد البحري الأيرلندي",
+            "zh": "爱尔兰海洋研究所",
+            "ru": "Морской институт Ирландии"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Marine Institute (Ireland)",
+        "summary": "Ireland’s state agency for marine research, technology development and innovation.",
+        "description": "Ireland’s state agency for marine research, technology development and innovation.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Institut marin d’Irlande",
+        "summary": "Agence publique irlandaise pour la recherche marine, le développement technologique et l’innovation.",
+        "description": "Agence publique irlandaise pour la recherche marine, le développement technologique et l’innovation.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Instituto Marino de Irlanda",
+        "summary": "Agencia estatal irlandesa de investigación marina, desarrollo tecnológico e innovación.",
+        "description": "Agencia estatal irlandesa de investigación marina, desarrollo tecnológico e innovación.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "المعهد البحري الأيرلندي",
+        "summary": "الوكالة الحكومية الأيرلندية للبحوث البحرية والتطوير التقني والابتكار.",
+        "description": "الوكالة الحكومية الأيرلندية للبحوث البحرية والتطوير التقني والابتكار.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "爱尔兰海洋研究所",
+        "summary": "爱尔兰负责海洋研究、技术开发及创新的国家机构。",
+        "description": "爱尔兰负责海洋研究、技术开发及创新的国家机构。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Морской институт Ирландии",
+        "summary": "Государственное агентство Ирландии по морским исследованиям, технологическому развитию и инновациям.",
+        "description": "Государственное агентство Ирландии по морским исследованиям, технологическому развитию и инновациям.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  },
+  {
+    "id": "leibniz-centre-for-tropical-marine-research",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.leibniz-zmt.de/en/",
+      "recordDepth": "stub",
+      "properties": {},
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.leibniz-zmt.de/en/",
+          "title": {
+            "en": "Leibniz Centre for Tropical Marine Research",
+            "fr": "Centre Leibniz de recherche marine tropicale",
+            "es": "Centro Leibniz de Investigación Marina Tropical",
+            "ar": "مركز لايبنتز لأبحاث البحار الاستوائية",
+            "zh": "莱布尼茨热带海洋研究中心",
+            "ru": "Центр тропических морских исследований имени Лейбница"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    "localizations": {
+      "en": {
+        "title": "Leibniz Centre for Tropical Marine Research",
+        "summary": "Research institute studying tropical coastal ecosystems and supporting their sustainable use through research, training and advice.",
+        "description": "Research institute studying tropical coastal ecosystems and supporting their sustainable use through research, training and advice.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Centre Leibniz de recherche marine tropicale",
+        "summary": "Institut étudiant les écosystèmes côtiers tropicaux et leur utilisation durable par la recherche, la formation et le conseil.",
+        "description": "Institut étudiant les écosystèmes côtiers tropicaux et leur utilisation durable par la recherche, la formation et le conseil.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Centro Leibniz de Investigación Marina Tropical",
+        "summary": "Instituto que estudia ecosistemas costeros tropicales y fomenta su uso sostenible mediante investigación, formación y asesoramiento.",
+        "description": "Instituto que estudia ecosistemas costeros tropicales y fomenta su uso sostenible mediante investigación, formación y asesoramiento.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ar": {
+        "title": "مركز لايبنتز لأبحاث البحار الاستوائية",
+        "summary": "معهد يدرس النظم البيئية الساحلية الاستوائية ويدعم استخدامها المستدام بالبحوث والتدريب والمشورة.",
+        "description": "معهد يدرس النظم البيئية الساحلية الاستوائية ويدعم استخدامها المستدام بالبحوث والتدريب والمشورة.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "莱布尼茨热带海洋研究中心",
+        "summary": "通过研究、培训及咨询促进热带海岸生态系统保护与可持续利用的研究机构。",
+        "description": "通过研究、培训及咨询促进热带海岸生态系统保护与可持续利用的研究机构。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Центр тропических морских исследований имени Лейбница",
+        "summary": "Институт изучения тропических прибрежных экосистем, поддерживающий их устойчивое использование исследованиями, обучением и консультациями.",
+        "description": "Институт изучения тропических прибрежных экосистем, поддерживающий их устойчивое использование исследованиями, обучением и консультациями.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [],
+    "routes": []
+  }
+]

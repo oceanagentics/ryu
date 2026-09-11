@@ -1,0 +1,111 @@
+{
+  "readAt": "2026-09-11T00:58:08.216860+00:00",
+  "requests": [
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+uniqueIdentifier_s%3Aabsch-cp-gb-207653-5&rows=1&fl=identifier_s%2CuniqueIdentifier_s%2C_state_s%2C_latest_s%2Cschema_s%2Ctitle_EN_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 1,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": [
+            {
+              "_latest_s": "true",
+              "title_EN_s": "The Office for Product Safety and Standards (OPSS)",
+              "identifier_s": "E91592E0-00DD-7BE2-A5AE-8637751EBC41",
+              "_state_s": "public",
+              "uniqueIdentifier_s": "absch-cp-gb-207653-5",
+              "schema_s": "absCheckpoint"
+            }
+          ]
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/documents/E91592E0-00DD-7BE2-A5AE-8637751EBC41",
+      "status": 200,
+      "selection": {
+        "header": {
+          "identifier": "E91592E0-00DD-7BE2-A5AE-8637751EBC41",
+          "schema": "absCheckpoint",
+          "languages": [
+            "en"
+          ]
+        },
+        "responsibilities": {
+          "en": "<div><!--block-->The National Focal Point in the Department for Environment, Food &amp; Rural Affairs (Defra) is responsible for:<br><br>- requesting due diligence declarations from users on receipt of research funding;<br><br>- the receipt of due diligence declarations from users conducting research and development in the UK at two checkpoints (receipt of research funding and placing a product on the market);&nbsp;<br><br></div><div><!--block-->- submitting due diligence declarations as checkpoint communiqu\u00e9s on the ABS Clearing House.</div><div><!--block--><br>&nbsp;The Office for Product Safety and Standards (OPSS) is responsible for:<br><br></div><div><!--block-->- monitoring user compliance in the UK;&nbsp;<br><br></div><div><!--block-->- where necessary enforcing compliance obligations of UK users of genetic resources and genetic resources associated with traditional knowledge.&nbsp;<br><br></div>"
+        }
+      },
+      "topLevelKeys": [
+        "header",
+        "government",
+        "name",
+        "jurisdiction",
+        "informAllAuthorities",
+        "responsibilities"
+      ]
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/index?q=realm_ss%3Aabs+AND+uniqueIdentifier_s%3Aabsch-cpc-gb-300921-1&rows=1&fl=identifier_s%2CuniqueIdentifier_s%2C_state_s%2C_latest_s%2Cschema_s%2Ctitle_EN_s",
+      "status": 200,
+      "data": {
+        "response": {
+          "numFound": 1,
+          "start": 0,
+          "numFoundExact": true,
+          "docs": [
+            {
+              "_latest_s": "true",
+              "title_EN_s": "The Fish Diversity of the Rufiji River, an Economically and Ecologically Significant Threatened Habitat in East Africa",
+              "identifier_s": "2690FCE0-B9D4-AE50-3997-D713E28A48FB",
+              "_state_s": "public",
+              "uniqueIdentifier_s": "absch-cpc-gb-300921-1",
+              "schema_s": "absCheckpointCommunique"
+            }
+          ]
+        },
+        "nonSupportedParams": []
+      }
+    },
+    {
+      "url": "https://api.cbd.int/api/v2013/documents/2690FCE0-B9D4-AE50-3997-D713E28A48FB",
+      "status": 200,
+      "selection": {
+        "header": {
+          "identifier": "2690FCE0-B9D4-AE50-3997-D713E28A48FB",
+          "schema": "absCheckpointCommunique",
+          "languages": [
+            "en"
+          ]
+        },
+        "title": {
+          "en": "The Fish Diversity of the Rufiji River, an Economically and Ecologically Significant Threatened Habitat in East Africa"
+        },
+        "description": {
+          "en": "<div><!--block-->The fish samples will be used for non-commercial biodiversity focussed research, including morphological and phylogenetic study, with a view to building a catalogue of the diversity of the focal freshwater habitat.<br><br>*</div>"
+        }
+      },
+      "topLevelKeys": [
+        "header",
+        "government",
+        "title",
+        "absCheckpoints",
+        "absIRCCsNotAvailable",
+        "sourceCountries",
+        "subjectMatter",
+        "keywords",
+        "evidenceOfPIC",
+        "evidenceOfMAT",
+        "entityWhoGrantedPIC",
+        "entityToWhomPICGranted",
+        "dateOfAccess",
+        "description",
+        "relevantInformation",
+        "personsAtCheckpoint",
+        "dateCollected"
+      ]
+    }
+  ]
+}

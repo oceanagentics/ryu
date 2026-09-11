@@ -1,0 +1,162 @@
+[
+  {
+    "id": "cbd-secretariat",
+    "readAt": "2026-09-11T01:05:17.116115+00:00",
+    "preconditionRead": {
+      "status": 404,
+      "data": {
+        "error": "record not found: cbd-secretariat"
+      }
+    },
+    "validation": {
+      "status": 200,
+      "data": {
+        "valid": true,
+        "recordId": "cbd-secretariat",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        },
+        "recordUpdatedAt": null,
+        "affectedSections": [
+          "record",
+          "localizations",
+          "edges",
+          "routes"
+        ]
+      }
+    }
+  },
+  {
+    "id": "nagoya-protocol-cop-mop",
+    "readAt": "2026-09-11T01:05:17.568164+00:00",
+    "preconditionRead": {
+      "status": 404,
+      "data": {
+        "error": "record not found: nagoya-protocol-cop-mop"
+      }
+    },
+    "validation": {
+      "status": 200,
+      "data": {
+        "valid": true,
+        "recordId": "nagoya-protocol-cop-mop",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        },
+        "recordUpdatedAt": null,
+        "affectedSections": [
+          "record",
+          "localizations",
+          "edges",
+          "routes"
+        ]
+      }
+    }
+  },
+  {
+    "id": "declare",
+    "readAt": "2026-09-11T01:05:18.115042+00:00",
+    "preconditionRead": {
+      "status": 404,
+      "data": {
+        "error": "record not found: declare"
+      }
+    },
+    "validation": {
+      "status": 200,
+      "data": {
+        "valid": true,
+        "recordId": "declare",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 3,
+          "resolvedSources": 3,
+          "issues": []
+        },
+        "recordUpdatedAt": null,
+        "affectedSections": [
+          "record",
+          "localizations",
+          "edges",
+          "routes"
+        ]
+      }
+    }
+  },
+  {
+    "id": "defra",
+    "readAt": "2026-09-11T01:05:18.589963+00:00",
+    "preconditionRead": {
+      "status": 404,
+      "data": {
+        "error": "record not found: defra"
+      }
+    },
+    "validation": {
+      "status": 200,
+      "data": {
+        "valid": true,
+        "recordId": "defra",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        },
+        "recordUpdatedAt": null,
+        "affectedSections": [
+          "record",
+          "localizations",
+          "edges",
+          "routes"
+        ]
+      }
+    }
+  },
+  {
+    "id": "moefcc",
+    "readAt": "2026-09-11T01:05:19.083360+00:00",
+    "preconditionRead": {
+      "status": 404,
+      "data": {
+        "error": "record not found: moefcc"
+      }
+    },
+    "validation": {
+      "status": 200,
+      "data": {
+        "valid": true,
+        "recordId": "moefcc",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        },
+        "recordUpdatedAt": null,
+        "affectedSections": [
+          "record",
+          "localizations",
+          "edges",
+          "routes"
+        ]
+      }
+    }
+  }
+]

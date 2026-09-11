@@ -1,0 +1,16 @@
+{
+  "search": {
+    "httpStatus": 200,
+    "body": {
+      "records": [],
+      "nextCursor": null,
+      "total": 0
+    }
+  },
+  "record": {
+    "httpStatus": 404,
+    "body": {
+      "error": "record not found: indonesia-ministry-marine-affairs-fisheries"
+    }
+  }
+}

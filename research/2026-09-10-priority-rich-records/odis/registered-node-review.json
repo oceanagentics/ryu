@@ -1,0 +1,1833 @@
+{
+  "reviewedAt": "2026-09-11T01:27:51.278270+00:00",
+  "scope": "Bounded reconciliation of 65 ODIS node-designated catalogue rows against the ten-item research batch and supplied canonical index. This is not a comprehensive research audit of all ODIS providers.",
+  "inventoryObservedAt": "2026-09-10",
+  "inventorySource": "https://catalogue.odis.org/odis",
+  "probeReadAt": "2026-09-11T01:14:08.233214+00:00",
+  "summary": {
+    "catalogueRows": 65,
+    "covered_by_proposed_edge": 9,
+    "unresolved_in_batch": 54,
+    "duplicate_catalogue_identity": 2,
+    "coveredSystemIdentities": 9,
+    "coveredProposedEdges": 13,
+    "coveredWithRecipientDemoEvidence": 3,
+    "coveredByParticipationOnly": 6,
+    "duplicateGroups": 2,
+    "expansionRows": 54
+  },
+  "interpretationRules": [
+    "Catalogue registration supports documented participation when exact identity is verified; it does not itself establish current harvesting.",
+    "A readable sitemap or catalogue online/offline check is not a full ingestion test. Client HTTP403/404 observations do not establish permanent source failure.",
+    "Organization endpoints are not substitutes for portal/system endpoints on system-to-system edges. Shared domains, homepage URLs, operators or programme names do not alone establish identity.",
+    "Covered refers to proposed research-draft edges, not a production write or approval. Downstream metadata evidence is limited to the ODIS development search and the scope stated on each edge.",
+    "Duplicate classifications preserve the original rows; they are reconciliation findings, not catalogue deletions. The 65 rows are not asserted to represent 65 distinct organizations or successful feeds.",
+    "Unresolved rows are retained as an explicit future expansion list. No new canonical IDs are invented and no outside-batch resource is described as deeply researched."
+  ],
+  "inputSnapshots": [
+    {
+      "path": "research/2026-09-10-priority-rich-records/odis/registered-node-inventory.json",
+      "sha256": "702046d3a3c26b70d6ef5e011ca22426660340393a1e06a7d4455801ec2c175d"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/odis/registered-node-probes.json",
+      "sha256": "d95c75f8d9cddffb140a30ec203873b96dd40a2a3db8479970230066940df328"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/odis/draft.json",
+      "sha256": "8957b685242a2bfa2d0f6ecced0c10b2b1a6f55088648b347e2420098f9e9aa6"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+      "sha256": "9d0a824b7519bdda599a9de47a32ba57ea23bad40cb78b80bfb463ca206e36f0"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/abs-clearing-house/endpoint-drafts.json",
+      "sha256": "509620c6dc0a07eac404f28c7d38492e7c5189f669ead9879df706a114d70926"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/ena/endpoint-drafts.json",
+      "sha256": "9dd71910f85f865630fcff16aa07f00e5543fda6c3b8397b4af364ea1f30715a"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "sha256": "053adf28668ab66f356a2e774af6dffee3caa6b7bc38df07db89a17b6c2e7b83"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "sha256": "55109fd4f0148acd2c6ac0c0afc6eeafd24d836262729b30dfab75248744dcb8"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "sha256": "0e92d17b6ae48601e415353d23337221b84cafa4896f0d6adca8755c573035ef"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+      "sha256": "8876cec249162a26d4d8888287486bd45ade9819031b3018d8e86da12c4aed1b"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/odis/endpoint-drafts.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "sha256": "a411d7c88f342712c9777b245fa70bf1fa4488af744704b7608f2705e3db029a"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/worms/endpoint-drafts.json",
+      "sha256": "38a8785e91d75d1a37595acb5639ba8d56a88d75ab77f91891d712d65a23d4bc"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/abs-clearing-house/draft.json",
+      "sha256": "4fec87534607c2df081a9e13d10f1a7ad6a114b225d40da711590236b6dcf473"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/ena/draft.json",
+      "sha256": "f03a32fdd5d50985fd48db7fa912e93de24e236dc4273100475d1a0d027f65af"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/fishbase/draft.json",
+      "sha256": "ce60f199a41d8a7e5ccc145f5371238016a0a2eadf88545a8d7e240704cc6ee3"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/global-fishing-watch/draft.json",
+      "sha256": "45b5ff4fe5882759738a97ebbf67bd8ea5a8c7befdb7834998c0517e88a766df"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/isa-deepdata/draft.json",
+      "sha256": "7968cf92f7552dee74ce6631e840f4cabbcb9b02adcc4435d67ee62377b535e4"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/obis/draft.json",
+      "sha256": "20e6088d2a8e4752a85085fb549d4bc8f57fc064277b41db51fe263b4a30190a"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/oceanteacher/draft.json",
+      "sha256": "e326e052c3385352f3d1e4c65511862c72255f502393a80bb3d39149788c4dca"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/protected-planet/draft.json",
+      "sha256": "5d003a9c73b813232990fd8fd1353ff90277a636f824372cab2cb9a9ddfd1f71"
+    },
+    {
+      "path": "research/2026-09-10-priority-rich-records/worms/draft.json",
+      "sha256": "9f4602da931a223a7be6f5d608e4af20550cce8a96e08c6084bdfdc08b901a65"
+    }
+  ],
+  "proposedEdgeIdsCovered": [
+    "rel-argovis-member-of-odis",
+    "rel-bco-dmo-member-of-odis",
+    "rel-cioos-member-of-odis",
+    "rel-deepdata-member_of-odis",
+    "rel-deepdata-syncs_to-odis",
+    "rel-emodnet-member-of-odis",
+    "rel-gbif-member-of-odis",
+    "rel-international-seabed-authority-publishes-to-odis",
+    "rel-ioos-member-of-odis",
+    "rel-oceanexpert-member-of-odis",
+    "rel-oceanexpert-syncs-to-odis",
+    "rel-platform-obis-member-of-odis",
+    "rel-platform-obis-syncs-to-odis"
+  ],
+  "expansionCatalogueIds": [
+    29,
+    40,
+    283,
+    292,
+    351,
+    616,
+    689,
+    728,
+    1098,
+    1390,
+    1972,
+    3125,
+    3246,
+    3247,
+    3267,
+    3270,
+    3271,
+    3274,
+    3276,
+    3277,
+    3288,
+    3289,
+    3290,
+    3291,
+    3292,
+    3293,
+    3294,
+    3295,
+    3298,
+    3299,
+    3300,
+    3302,
+    3303,
+    3305,
+    3306,
+    3307,
+    3310,
+    3312,
+    3313,
+    3314,
+    3315,
+    3316,
+    3318,
+    3320,
+    3321,
+    3322,
+    3323,
+    3324,
+    3325,
+    3326,
+    3327,
+    3328,
+    3329,
+    3330
+  ],
+  "rows": [
+    {
+      "rowNumber": 1,
+      "catalogueId": 4,
+      "catalogueUrl": "https://catalogue.odis.org/view/4",
+      "name": "OceanExpert",
+      "datasource": "https://oceanexpert.org",
+      "registeredEndpoint": "https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": "oceanexpert",
+      "proposedEdges": [
+        {
+          "id": "rel-oceanexpert-member-of-odis",
+          "sourceNodeId": "oceanexpert",
+          "targetNodeId": "odis",
+          "kind": "member_of",
+          "scope": "Expert, institution, event and related OceanExpert metadata",
+          "evidenceUrls": [
+            "https://catalogue.odis.org/odis",
+            "https://catalogue.odis.org/view/4",
+            "https://book.odis.org/gettingStarted.html",
+            "https://search-demo.odis.org/network"
+          ]
+        },
+        {
+          "id": "rel-oceanexpert-syncs-to-odis",
+          "sourceNodeId": "oceanexpert",
+          "targetNodeId": "odis",
+          "kind": "syncs_to",
+          "scope": "OceanExpert event and related descriptive metadata in the development search",
+          "evidenceUrls": [
+            "https://search-demo.odis.org/api/v1/records/gleaner%3Aoceanexpert%3Acaf4562bcc499b395e484216b1d488130fe7ef28.json",
+            "https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml",
+            "https://catalogue.odis.org/odis",
+            "https://search-demo.odis.org/network"
+          ]
+        }
+      ],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [
+        {
+          "url": "https://catalogue.odis.org/view/4",
+          "status": 200,
+          "statusText": "This resource is online Last check was 10/09/2026 23:41 First entry: 10/01/2021 Last update: 17/07/2026 Submitter"
+        },
+        {
+          "url": "https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml",
+          "status": 200,
+          "finalUrl": "https://oceanexpert.org/assets/sitemaps/sitemapIndex.xml",
+          "contentType": "application/xml"
+        }
+      ],
+      "classification": "covered_by_proposed_edge",
+      "endpointRecordPath": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+      "reasonCode": "verified_demo_presence_limited_scope",
+      "reason": "The proposed edges match this catalogue identity. Recipient development-search metadata is evidenced in the draft, with limited content scope; complete current harvesting and a refresh cadence are not established. The draft reports a monitor HTTP404 alongside this client’s HTTP200 and visible indexed records; differing execution contexts are retained rather than resolved into an uninterrupted-health claim.",
+      "nextStep": "Retain the scoped proposed edge(s); any stronger current-harvest claim requires independent recipient-side coverage and freshness evidence.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 2,
+      "catalogueId": 29,
+      "catalogueUrl": "https://catalogue.odis.org/view/29",
+      "name": "All data series - UK National Oceanographic Database",
+      "datasource": "https://www.bodc.ac.uk/data/bodc_database/nodb/",
+      "registeredEndpoint": "https://api.linked-systems.uk/sitemap_pap_api.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The UK National Oceanographic Database data-series catalogue and its linked-systems.uk PAP sitemap require scope reconciliation; no matching system endpoint was established in the canonical index or this batch.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 3,
+      "catalogueId": 40,
+      "catalogueUrl": "https://catalogue.odis.org/view/40",
+      "name": "Portal - Marine Environmental Data and Information Network",
+      "datasource": "https://portal.medin.org.uk/portal/start.php",
+      "registeredEndpoint": "https://portal.medin.org.uk/portal/sitemap.php",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "medin",
+          "kind": "organization",
+          "path": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "organization_system_distinction",
+      "reason": "The batch endpoint medin is an organization. This row registers the MEDIN catalogue portal; an organization cannot substitute for a system endpoint on member_of or syncs_to to ODIS. Portal identity and downstream transfer need separate verification.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 4,
+      "catalogueId": 283,
+      "catalogueUrl": "https://catalogue.odis.org/view/283",
+      "name": "Aquadocs",
+      "datasource": "https://www.aquadocs.org",
+      "registeredEndpoint": "https://oih.aquadocs.org/aquadocs.json",
+      "registeredEndpointType": "Sitegraph",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "AquaDocs has a registered sitegraph but no matched system draft or independently verified downstream transfer in this bounded review.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 5,
+      "catalogueId": 292,
+      "catalogueUrl": "https://catalogue.odis.org/view/292",
+      "name": "Ocean Best Practices System (OBPS) no original name",
+      "datasource": "https://www.oceanbestpractices.org/",
+      "registeredEndpoint": "https://oih.oceanbestpractices.org/obps.json",
+      "registeredEndpointType": "Sitegraph",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The registered Ocean Best Practices System sitegraph has no matched system record in this batch. Its repository identity and downstream transfer remain to be reviewed; the catalogue name also retains the text no original name.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 6,
+      "catalogueId": 343,
+      "catalogueUrl": "https://catalogue.odis.org/view/343",
+      "name": "Ocean Biodiversity Information System",
+      "datasource": "https://obis.org/",
+      "registeredEndpoint": "https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": "platform-obis",
+      "proposedEdges": [
+        {
+          "id": "rel-platform-obis-member-of-odis",
+          "sourceNodeId": "platform-obis",
+          "targetNodeId": "odis",
+          "kind": "member_of",
+          "scope": "Participation in the ODIS interoperability federation",
+          "evidenceUrls": [
+            "https://manual.obis.org/policy.html"
+          ]
+        },
+        {
+          "id": "rel-platform-obis-syncs-to-odis",
+          "sourceNodeId": "platform-obis",
+          "targetNodeId": "odis",
+          "kind": "syncs_to",
+          "scope": "OBIS dataset-level metadata in the development search, not all occurrence records",
+          "evidenceUrls": [
+            "https://search-demo.odis.org/api/v1/records/gleaner%3Aocean-biodiversity-information-system%3Ahttps%253A%252F%252Fobis.org%252Fdataset%252F8935fb89-6494-4829-8b29-09022c3dbc90",
+            "https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml",
+            "https://catalogue.odis.org/odis"
+          ]
+        }
+      ],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [
+        {
+          "url": "https://catalogue.odis.org/view/343",
+          "status": 200,
+          "statusText": "This resource is online Last check was 10/09/2026 23:41 First entry: 11/01/2019 Last update: 05/11/2024 Submitter"
+        },
+        {
+          "url": "https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml",
+          "status": 200,
+          "finalUrl": "https://obis-sitemaps.s3.amazonaws.com/sitemap_datasets.xml",
+          "contentType": "application/xml"
+        }
+      ],
+      "classification": "covered_by_proposed_edge",
+      "endpointRecordPath": "research/2026-09-10-priority-rich-records/obis/draft.json",
+      "reasonCode": "verified_demo_presence_limited_scope",
+      "reason": "The proposed edges match this catalogue identity. Recipient development-search metadata is evidenced in the draft, with limited content scope; complete current harvesting and a refresh cadence are not established.",
+      "nextStep": "Retain the scoped proposed edge(s); any stronger current-harvest claim requires independent recipient-side coverage and freshness evidence.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 7,
+      "catalogueId": 351,
+      "catalogueUrl": "https://catalogue.odis.org/view/351",
+      "name": "Marine Spatial Atlas for the Western Indian Ocean",
+      "datasource": "http://maspawio.net/",
+      "registeredEndpoint": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-maspawio/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The MASPAWIO atlas registers a GitHub tempHosting sitemap. Hosting that file does not establish the atlas operator, a canonical endpoint identity, or a current ODIS ingest.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 8,
+      "catalogueId": 364,
+      "catalogueUrl": "https://catalogue.odis.org/view/364",
+      "name": "Catalogue - European Marine Observation and Data Network",
+      "datasource": "https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/search",
+      "registeredEndpoint": "https://emodnet.ec.europa.eu/geonetwork/srv/api/sitemap",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": "emodnet",
+      "proposedEdges": [
+        {
+          "id": "rel-emodnet-member-of-odis",
+          "sourceNodeId": "emodnet",
+          "targetNodeId": "odis",
+          "kind": "member_of",
+          "scope": "Participation through the central EMODnet metadata catalogue, not every thematic portal",
+          "evidenceUrls": [
+            "https://catalogue.odis.org/odis",
+            "https://catalogue.odis.org/view/364"
+          ]
+        }
+      ],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [
+        {
+          "url": "https://catalogue.odis.org/view/364",
+          "status": 200,
+          "statusText": "This resource is online Last check was 10/09/2026 23:41 First entry: 15/02/2020 Last update: 02/06/2025 Submitter"
+        },
+        {
+          "url": "https://emodnet.ec.europa.eu/geonetwork/srv/api/sitemap",
+          "status": 200,
+          "finalUrl": "https://emodnet.ec.europa.eu/geonetwork/srv/api/sitemap",
+          "contentType": "application/xml"
+        }
+      ],
+      "classification": "covered_by_proposed_edge",
+      "endpointRecordPath": "research/2026-09-10-priority-rich-records/canonical-index.json",
+      "reasonCode": "documented_participation_no_verified_transfer",
+      "reason": "The proposed member_of edge matches this catalogue identity and records documented federation participation. Registration and any readable sitemap do not by themselves verify successful downstream harvesting; no syncs_to edge is claimed for this row.",
+      "nextStep": "Retain the scoped proposed edge(s); any stronger current-harvest claim requires independent recipient-side coverage and freshness evidence.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 9,
+      "catalogueId": 616,
+      "catalogueUrl": "https://catalogue.odis.org/view/616",
+      "name": "Caribbean Marine Atlas",
+      "datasource": "https://www.caribbeanmarineatlas.net/home/",
+      "registeredEndpoint": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-caribbeanmarineatlas/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The Caribbean Marine Atlas registers a GitHub tempHosting sitemap. Its system identity and current publication/harvest scope were not established in this batch.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 10,
+      "catalogueId": 689,
+      "catalogueUrl": "https://catalogue.odis.org/view/689",
+      "name": "Pacific Data Hub Data Catalogue - Pacific Community Pacific Data Hub Data Catalogue - Pacific Community",
+      "datasource": "https://pacificdata.org/data/dataset",
+      "registeredEndpoint": "https://pacificdata.org/organization/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "Pacific Data Hub has a dataset-catalogue datasource but an organization sitemap. The registered resource scope and system identity need reconciliation before an edge is drafted; repeated words within the name are not a second catalogue row.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 11,
+      "catalogueId": 728,
+      "catalogueUrl": "https://catalogue.odis.org/view/728",
+      "name": "INSTITUTIONAL VIDEOS - Hydrography and Navigation Directorate of Perú VIDEOS INSTITUCIONALES - Dirección de Hidrografía y Navegación de Perú",
+      "datasource": "https://www.dhn.mil.pe/portal/videos-institucionales",
+      "registeredEndpoint": "https://www.dhn.mil.pe/portal/videos-institucionales",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "This row registers an institutional-video page and repeats that page as a Sitemap endpoint. A video collection, its publisher organization, and a machine-readable metadata feed have not been independently distinguished.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 12,
+      "catalogueId": 893,
+      "catalogueUrl": "https://catalogue.odis.org/view/893",
+      "name": "Deep Seabed and Ocean Database - International Seabed Authority",
+      "datasource": "https://data.isa.org.jm",
+      "registeredEndpoint": "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": "deepdata",
+      "proposedEdges": [
+        {
+          "id": "rel-deepdata-member_of-odis",
+          "sourceNodeId": "deepdata",
+          "targetNodeId": "odis",
+          "kind": "member_of",
+          "scope": "DeepData metadata discovery through the ODIS federation",
+          "evidenceUrls": [
+            "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+            "https://catalogue.odis.org/view/893",
+            "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+            "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+            "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+            "https://search-demo.odis.org/network"
+          ]
+        },
+        {
+          "id": "rel-deepdata-syncs_to-odis",
+          "sourceNodeId": "deepdata",
+          "targetNodeId": "odis",
+          "kind": "syncs_to",
+          "scope": "DeepData metadata discovery through the ODIS federation",
+          "evidenceUrls": [
+            "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+            "https://catalogue.odis.org/view/893",
+            "https://data.isa.org.jm/static/oih/site_map_oih_deepdata.xml",
+            "https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html",
+            "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+            "https://search-demo.odis.org/network"
+          ]
+        },
+        {
+          "id": "rel-international-seabed-authority-publishes-to-odis",
+          "sourceNodeId": "international-seabed-authority",
+          "targetNodeId": "odis",
+          "kind": "publishes_to",
+          "scope": "ISA environmental and scientific metadata supplied through DeepData",
+          "evidenceUrls": [
+            "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+            "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html"
+          ]
+        }
+      ],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "covered_by_proposed_edge",
+      "endpointRecordPath": "research/2026-09-10-priority-rich-records/isa-deepdata/draft.json",
+      "reasonCode": "verified_demo_presence_limited_scope",
+      "reason": "The proposed edges match this catalogue identity. Recipient development-search metadata is evidenced in the draft, with limited content scope; complete current harvesting and a refresh cadence are not established. The draft records development-monitor parsing failures; no full crawl was rerun in this review.",
+      "nextStep": "Retain the scoped proposed edge(s); any stronger current-harvest claim requires independent recipient-side coverage and freshness evidence.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 13,
+      "catalogueId": 1098,
+      "catalogueUrl": "https://catalogue.odis.org/view/1098",
+      "name": "Oceanscape",
+      "datasource": "https://oceanscape.org",
+      "registeredEndpoint": "https://oceanscape.org/organisation-sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "Oceanscape registers an organization sitemap. A canonical system identity and the registered metadata scope were not established in this batch.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 14,
+      "catalogueId": 1390,
+      "catalogueUrl": "https://catalogue.odis.org/view/1390",
+      "name": "Ocean Data and Information Network for Africa - Projects Portal Marine Projects Database",
+      "datasource": "https://ioc-africa.org/dbs/displayData.php",
+      "registeredEndpoint": "https://ioc-africa.org/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "duplicate_group_primary_unresolved",
+      "reason": "Retained as the reference row for duplicate 3296 because datasource and sitemap are identical. The ODINAFRICA projects portal still lacks a reconciled system identity and independently verified downstream transfer.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 15,
+      "catalogueId": 1972,
+      "catalogueUrl": "https://catalogue.odis.org/view/1972",
+      "name": "Marine Training - European Marine Biological Resource Centre",
+      "datasource": "https://www.marinetraining.eu/",
+      "registeredEndpoint": "https://www.marinetraining.eu/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "Marine Training is a named portal associated in the catalogue title with EMBRC. Neither its system identity nor an operator or downstream-transfer relationship was researched sufficiently in this batch.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 16,
+      "catalogueId": 3125,
+      "catalogueUrl": "https://catalogue.odis.org/view/3125",
+      "name": "African Coastal and Marine Atlas African Marine Atlas",
+      "datasource": "https://acma.africanmarineatlas.org/",
+      "registeredEndpoint": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-acma/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "African Coastal and Marine Atlas registers a GitHub tempHosting sitemap. This is a distinct catalogue entry from MASPAWIO and ODINAFRICA; their geographic overlap does not establish shared identity.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 17,
+      "catalogueId": 3246,
+      "catalogueUrl": "https://catalogue.odis.org/view/3246",
+      "name": "Indonesia NODC",
+      "datasource": "https://geonode.nodc.id/",
+      "registeredEndpoint": "https://geonode.nodc.id/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "Indonesia NODC registers a GeoNode sitemap. The national portal identity is not established by the unrelated Indonesian fisheries-ministry endpoint in the GFW batch, and downstream transfer remains unverified.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 18,
+      "catalogueId": 3247,
+      "catalogueUrl": "https://catalogue.odis.org/view/3247",
+      "name": "Partnership for Observation of the Global Ocean",
+      "datasource": "https://pogo-ocean.org",
+      "registeredEndpoint": "https://pogo-ocean.org/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "organization_system_distinction",
+      "reason": "The row names the Partnership for Observation of the Global Ocean and a website sitemap. Its organization versus publication-system identity requires review before selecting a valid relationship kind.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 19,
+      "catalogueId": 3263,
+      "catalogueUrl": "https://catalogue.odis.org/view/3263",
+      "name": "CIOOS Data Catalogue Catalogue de données ouvertes du Système intégré des observations des océans du Canada",
+      "datasource": "https://catalogue.cioos.ca/",
+      "registeredEndpoint": "https://catalogue.cioos.ca/sitemap/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": "cioos",
+      "proposedEdges": [
+        {
+          "id": "rel-cioos-member-of-odis",
+          "sourceNodeId": "cioos",
+          "targetNodeId": "odis",
+          "kind": "member_of",
+          "scope": "Participation through the CIOOS data catalogue",
+          "evidenceUrls": [
+            "https://catalogue.odis.org/odis",
+            "https://catalogue.odis.org/view/3263",
+            "https://search-demo.odis.org/network"
+          ]
+        }
+      ],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [
+        {
+          "url": "https://catalogue.odis.org/view/3263",
+          "status": 200,
+          "statusText": "This resource is offline Last check was 10/09/2026 23:41 First entry: 13/03/2023 Last update: 03/04/2025 Submitte"
+        },
+        {
+          "url": "https://catalogue.cioos.ca/sitemap/sitemap.xml",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "classification": "covered_by_proposed_edge",
+      "endpointRecordPath": "research/2026-09-10-priority-rich-records/canonical-index.json",
+      "reasonCode": "documented_participation_no_verified_transfer",
+      "reason": "The proposed member_of edge matches this catalogue identity and records documented federation participation. Registration and any readable sitemap do not by themselves verify successful downstream harvesting; no syncs_to edge is claimed for this row. The captured catalogue check says offline and this client received HTTP403 for the feed. These scoped observations do not prove that the provider is dead or that every client is blocked.",
+      "nextStep": "Retain the scoped proposed edge(s); any stronger current-harvest claim requires independent recipient-side coverage and freshness evidence.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 20,
+      "catalogueId": 3267,
+      "catalogueUrl": "https://catalogue.odis.org/view/3267",
+      "name": "Research Data Australia",
+      "datasource": "https://researchdata.edu.au",
+      "registeredEndpoint": "https://researchdata.edu.au/home/sitemap/?ds=384,393,16",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "Research Data Australia registers a sitemap filtered by three datasource IDs. The participating subset and system identity were not verified in this batch; no whole-platform harvest is inferred.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 21,
+      "catalogueId": 3270,
+      "catalogueUrl": "https://catalogue.odis.org/view/3270",
+      "name": "Marine Scotland Open Data Marine Scotland Open Data",
+      "datasource": "https://data.marine.gov.scot",
+      "registeredEndpoint": "https://data.marine.gov.scot/data.json",
+      "registeredEndpointType": "Sitegraph",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "Marine Scotland Open Data registers data.json as a sitegraph. The portal identity and present downstream presence are unverified here; a registered JSON URL alone is insufficient for syncs_to.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 22,
+      "catalogueId": 3271,
+      "catalogueUrl": "https://catalogue.odis.org/view/3271",
+      "name": "Royal Belgian Institute of Natural Sciences Metadata Portal",
+      "datasource": "https://metadata.naturalsciences.be",
+      "registeredEndpoint": "https://metadata.naturalsciences.be/geonetwork/srv/api/sitemap",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "organization_system_distinction",
+      "reason": "The Royal Belgian Institute of Natural Sciences metadata portal requires a distinct system identity review. An institutional name does not establish the identity or authority of the catalogue system.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 23,
+      "catalogueId": 3274,
+      "catalogueUrl": "https://catalogue.odis.org/view/3274",
+      "name": "National Marine Data and Information Service",
+      "datasource": "http://222.186.3.18:8888/erddap/index.html",
+      "registeredEndpoint": "http://222.186.3.18:8888/erddap/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "duplicate_group_primary_unresolved",
+      "reason": "Retained as reference for duplicate 3275: identical name and datasource but sitemap hosts disagree (222.186.3.18 versus 221.186.3.18). Neither endpoint was selected as authoritative and no system identity or harvest was verified.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 24,
+      "catalogueId": 3275,
+      "catalogueUrl": "https://catalogue.odis.org/view/3275",
+      "name": "National Marine Data and Information Service",
+      "datasource": "http://222.186.3.18:8888/erddap/index.html",
+      "registeredEndpoint": "http://221.186.3.18:8888/erddap/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": 3274,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "duplicate_catalogue_identity",
+      "reasonCode": "same_identity_conflicting_feed",
+      "reason": "Catalogue name and datasource match row 3274, while the registered sitemap IP differs (221.186.3.18 here versus 222.186.3.18 there). Treat as a duplicate catalogue identity with a conflicting endpoint; do not choose either sitemap as authoritative or infer two independent systems.",
+      "nextStep": "Reconcile the duplicate with the catalogue/operator during expansion research; the reference row remains unresolved. No source inventory row or record is changed.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 25,
+      "catalogueId": 3276,
+      "catalogueUrl": "https://catalogue.odis.org/view/3276",
+      "name": "CCLME Eco-GIS Viewer",
+      "datasource": "https://www.ideo-cclme.ieo.es",
+      "registeredEndpoint": "https://ideo-cclme.ieo.es/odis/odis_sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "CCLME Eco-GIS Viewer is a separate registered resource from the CCLME Training Portal; the two systems cannot be merged from their shared programme acronym.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 26,
+      "catalogueId": 3277,
+      "catalogueUrl": "https://catalogue.odis.org/view/3277",
+      "name": "OpenASFA",
+      "datasource": "https://www.fao.org/fishery/en/openasfa",
+      "registeredEndpoint": "https://www.fao.org/fishery/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "fao",
+          "kind": "organization",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        },
+        {
+          "id": "fao-fishstat",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "organization_system_distinction",
+      "reason": "OpenASFA is the registered resource; existing fao is an organization and fao-fishstat is a different statistical system. Neither is a verified substitute for an OpenASFA system endpoint.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 27,
+      "catalogueId": 3287,
+      "catalogueUrl": "https://catalogue.odis.org/view/3287",
+      "name": "Biological and Chemical Oceanography Data Management Office",
+      "datasource": "https://www.bco-dmo.org",
+      "registeredEndpoint": "https://www.bco-dmo.org/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": "bco-dmo",
+      "proposedEdges": [
+        {
+          "id": "rel-bco-dmo-member-of-odis",
+          "sourceNodeId": "bco-dmo",
+          "targetNodeId": "odis",
+          "kind": "member_of",
+          "scope": "Registered BCO-DMO metadata source",
+          "evidenceUrls": [
+            "https://catalogue.odis.org/odis",
+            "https://catalogue.odis.org/view/3287"
+          ]
+        }
+      ],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [
+        {
+          "url": "https://catalogue.odis.org/view/3287",
+          "status": 200,
+          "statusText": "This resource is online Last check was 10/09/2026 23:41 First entry: 17/11/2023 Last update: 17/11/2023 Submitter"
+        },
+        {
+          "url": "https://www.bco-dmo.org/sitemap.xml",
+          "status": 200,
+          "finalUrl": "https://www.bco-dmo.org/sitemap.xml",
+          "contentType": "text/xml"
+        }
+      ],
+      "classification": "covered_by_proposed_edge",
+      "endpointRecordPath": "research/2026-09-10-priority-rich-records/canonical-index.json",
+      "reasonCode": "documented_participation_no_verified_transfer",
+      "reason": "The proposed member_of edge matches this catalogue identity and records documented federation participation. Registration and any readable sitemap do not by themselves verify successful downstream harvesting; no syncs_to edge is claimed for this row.",
+      "nextStep": "Retain the scoped proposed edge(s); any stronger current-harvest claim requires independent recipient-side coverage and freshness evidence.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 28,
+      "catalogueId": 3288,
+      "catalogueUrl": "https://catalogue.odis.org/view/3288",
+      "name": "UNEP Data Catalogue",
+      "datasource": "https://data.unep.org/app",
+      "registeredEndpoint": "https://data.unep.org/oceans_sitemap2.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "unep",
+          "kind": "organization",
+          "path": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "organization_system_distinction",
+      "reason": "The UNEP Data Catalogue is a portal with a registered oceans sitemap. The batch unep endpoint is an organization, not this catalogue system; dataset/portal identity and transfer scope remain unverified.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 29,
+      "catalogueId": 3289,
+      "catalogueUrl": "https://catalogue.odis.org/view/3289",
+      "name": "ZMT DataPortal",
+      "datasource": "https://dataportal.leibniz-zmt.de/",
+      "registeredEndpoint": "https://dataportal.leibniz-zmt.de/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "leibniz-centre-for-tropical-marine-research",
+          "kind": "organization",
+          "path": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "organization_system_distinction",
+      "reason": "The ZMT DataPortal is a system candidate, whereas the batch leibniz-centre-for-tropical-marine-research endpoint is an organization. Its institutional association does not itself establish a valid system-to-ODIS edge.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 30,
+      "catalogueId": 3290,
+      "catalogueUrl": "https://catalogue.odis.org/view/3290",
+      "name": "WIO Symphony: a tool for cumulative impact assessment in the Western Indian Ocean",
+      "datasource": "https://symphony.nairobiconvention.org/",
+      "registeredEndpoint": "https://raw.githubusercontent.com/WIOSymphony/wiosym/main/metadata/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "WIO Symphony is a separately named cumulative-impact tool with a GitHub metadata sitemap. Regional overlap with MASPAWIO and other western Indian Ocean entries does not establish duplicate identity.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 31,
+      "catalogueId": 3291,
+      "catalogueUrl": "https://catalogue.odis.org/view/3291",
+      "name": "CLIVAR and Carbon Hydrographic Data",
+      "datasource": "https://cchdo.ucsd.edu/",
+      "registeredEndpoint": "https://cchdo.ucsd.edu/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "go-ship",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "related_system_scope_unverified",
+      "reason": "CCHDO is the named archive. Existing go-ship is a programme system with different scope; a programme/archive connection is not identity equivalence. A CCHDO endpoint and downstream transfer remain unverified in this batch.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 32,
+      "catalogueId": 3292,
+      "catalogueUrl": "https://catalogue.odis.org/view/3292",
+      "name": "The Rolling Deck to Repository",
+      "datasource": "https://www.rvdata.us/",
+      "registeredEndpoint": "https://service.rvdata.us/api/sitemap/",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "Rolling Deck to Repository registers an API sitemap but has no exact matched system record in this batch; metadata transfer and operator identity were not independently investigated.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 33,
+      "catalogueId": 3293,
+      "catalogueUrl": "https://catalogue.odis.org/view/3293",
+      "name": "Pacific Environment Portal Pacific Environment Portal",
+      "datasource": "https://pacific-data.sprep.org",
+      "registeredEndpoint": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-pedp/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The Pacific Environment Portal uses a GitHub tempHosting sitemap. It is not the same catalogue entry as Pacific Data Hub, and neither shared geography nor temporary hosting supplies a verified identity/transfer link.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 34,
+      "catalogueId": 3294,
+      "catalogueUrl": "https://catalogue.odis.org/view/3294",
+      "name": "Better Biomolecular Ocean Practices",
+      "datasource": "https://github.com/BeBOP-OBON",
+      "registeredEndpoint": "https://raw.githubusercontent.com/BeBOP-OBON/odis-interface/main/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "Better Biomolecular Ocean Practices registers a GitHub interface. Its project/interface identity is not automatically the Ocean Best Practices System or ENA; a separate endpoint decision and transfer evidence are needed.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 35,
+      "catalogueId": 3295,
+      "catalogueUrl": "https://catalogue.odis.org/view/3295",
+      "name": "NOAA NCEI Marine Microplastics Database",
+      "datasource": "https://marinemicroplastics-noaa.hub.arcgis.com/",
+      "registeredEndpoint": "https://www.ncei.noaa.gov/sites/default/files/2024-04/microplastics-sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "noaa-ncei-marine",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        },
+        {
+          "id": "noaa-ncei",
+          "kind": "organization",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "related_system_scope_unverified",
+      "reason": "This registration is specifically the NOAA NCEI Marine Microplastics Database, with a dated sitemap file path. The broader canonical noaa-ncei-marine system may be related, but exact representation and scope require verification before using its ID. A 2024 path does not establish a dead feed.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 36,
+      "catalogueId": 3296,
+      "catalogueUrl": "https://catalogue.odis.org/view/3296",
+      "name": "ODINAFRICA portal for marine-related projects, research vessels, past and upcoming research cruises in the region, and other ocean observation platforms",
+      "datasource": "https://ioc-africa.org/dbs/displayData.php",
+      "registeredEndpoint": "https://ioc-africa.org/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": 1390,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "duplicate_catalogue_identity",
+      "reasonCode": "same_datasource_and_feed",
+      "reason": "This row and 1390 use the identical ioc-africa.org projects datasource and sitemap. The broader descriptive title does not establish a separate system or feed; treat it as a duplicate catalogue identity pending operator confirmation.",
+      "nextStep": "Reconcile the duplicate with the catalogue/operator during expansion research; the reference row remains unresolved. No source inventory row or record is changed.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 37,
+      "catalogueId": 3297,
+      "catalogueUrl": "https://catalogue.odis.org/view/3297",
+      "name": "Global Biodiversity Information Facility",
+      "datasource": "https://gbif.org",
+      "registeredEndpoint": "https://www.gbif.org/sitemap-dataset.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": "gbif",
+      "proposedEdges": [
+        {
+          "id": "rel-gbif-member-of-odis",
+          "sourceNodeId": "gbif",
+          "targetNodeId": "odis",
+          "kind": "member_of",
+          "scope": "Registered GBIF dataset-metadata source; no claim that all biodiversity occurrences are indexed",
+          "evidenceUrls": [
+            "https://catalogue.odis.org/odis",
+            "https://catalogue.odis.org/view/3297",
+            "https://search-demo.odis.org/network"
+          ]
+        }
+      ],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [
+        {
+          "url": "https://catalogue.odis.org/view/3297",
+          "status": 200,
+          "statusText": "This resource is offline Last check was 10/09/2026 23:41 First entry: 06/05/2024 Last update: 26/03/2026 Submitte"
+        },
+        {
+          "url": "https://www.gbif.org/sitemap-dataset.xml",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "classification": "covered_by_proposed_edge",
+      "endpointRecordPath": "research/2026-09-10-priority-rich-records/canonical-index.json",
+      "reasonCode": "documented_participation_no_verified_transfer",
+      "reason": "The proposed member_of edge matches this catalogue identity and records documented federation participation. Registration and any readable sitemap do not by themselves verify successful downstream harvesting; no syncs_to edge is claimed for this row. The captured catalogue check says offline and this client received HTTP403 for the feed. These scoped observations do not prove that the provider is dead or that every client is blocked.",
+      "nextStep": "Retain the scoped proposed edge(s); any stronger current-harvest claim requires independent recipient-side coverage and freshness evidence.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 38,
+      "catalogueId": 3298,
+      "catalogueUrl": "https://catalogue.odis.org/view/3298",
+      "name": "CCLME Training Portal",
+      "datasource": "http://cclme.training.ieo.es",
+      "registeredEndpoint": "http://cclme.training.ieo.es/odis/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "CCLME Training Portal has a different datasource and sitemap from CCLME Eco-GIS Viewer. Neither a shared programme nor a training role makes it the current batch OceanTeacher platform.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 39,
+      "catalogueId": 3299,
+      "catalogueUrl": "https://catalogue.odis.org/view/3299",
+      "name": "Ocean Data Platform",
+      "datasource": "https://app.hubocean.earth/",
+      "registeredEndpoint": "https://api.hubocean.earth/api/public/catalog/v1/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "Ocean Data Platform at HUB Ocean has an API sitemap. Its generic name is distinct from the PTTEP Ocean Data Platform registration, and the system identity and transfer scope have not been independently resolved.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 40,
+      "catalogueId": 3300,
+      "catalogueUrl": "https://catalogue.odis.org/view/3300",
+      "name": "Earth System Science Data Portal - Ministry of Earth Sciences, Government of India",
+      "datasource": "https://incois.gov.in/essdp/",
+      "registeredEndpoint": "https://incois.gov.in/essdp/xml/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The Earth System Science Data Portal registration identifies an INCOIS-hosted resource, not a verified government organization endpoint. The portal identity and any mediated publication relationship require later research.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 41,
+      "catalogueId": 3302,
+      "catalogueUrl": "https://catalogue.odis.org/view/3302",
+      "name": "GeoNova Geographic Catalog (gCat)",
+      "datasource": "https://gcat.novascotia.ca/geonetwork/",
+      "registeredEndpoint": "https://gcat.novascotia.ca/geonetwork/srv/api/sitemap",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "GeoNova gCat registers a GeoNetwork sitemap. The software interface and provincial name do not establish a canonical system identity or current ODIS indexing.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 42,
+      "catalogueId": 3303,
+      "catalogueUrl": "https://catalogue.odis.org/view/3303",
+      "name": "Marine Information Management System: South Africa's oceans and coastal data archive",
+      "datasource": "https://data.ocean.gov.za/mims/catalog/?q=",
+      "registeredEndpoint": "https://data.ocean.gov.za/mims/catalog/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "South Africa MIMS is a named archive/catalogue requiring its own system identity review. Its national scope does not establish a governing or publishing organization edge.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 43,
+      "catalogueId": 3304,
+      "catalogueUrl": "https://catalogue.odis.org/view/3304",
+      "name": "Argovis Argo collection",
+      "datasource": "https://argovis.colorado.edu/argoURLhelper",
+      "registeredEndpoint": "https://argovis.colorado.edu/argo_sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": "argovis",
+      "proposedEdges": [
+        {
+          "id": "rel-argovis-member-of-odis",
+          "sourceNodeId": "argovis",
+          "targetNodeId": "odis",
+          "kind": "member_of",
+          "scope": "Registered Argovis Argo collection, not every Argovis collection",
+          "evidenceUrls": [
+            "https://catalogue.odis.org/odis",
+            "https://catalogue.odis.org/view/3304"
+          ]
+        }
+      ],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [
+        {
+          "url": "https://catalogue.odis.org/view/3304",
+          "status": 200,
+          "statusText": "This resource is online Last check was 10/09/2026 23:41 First entry: 12/06/2024 Last update: 03/10/2024 Submitter"
+        },
+        {
+          "url": "https://argovis.colorado.edu/argo_sitemap.xml",
+          "status": 200,
+          "finalUrl": "https://argovis.colorado.edu/argo_sitemap.xml",
+          "contentType": "application/xml"
+        }
+      ],
+      "classification": "covered_by_proposed_edge",
+      "endpointRecordPath": "research/2026-09-10-priority-rich-records/canonical-index.json",
+      "reasonCode": "documented_participation_no_verified_transfer",
+      "reason": "The proposed member_of edge matches this catalogue identity and records documented federation participation. Registration and any readable sitemap do not by themselves verify successful downstream harvesting; no syncs_to edge is claimed for this row.",
+      "nextStep": "Retain the scoped proposed edge(s); any stronger current-harvest claim requires independent recipient-side coverage and freshness evidence.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 44,
+      "catalogueId": 3305,
+      "catalogueUrl": "https://catalogue.odis.org/view/3305",
+      "name": "MARCO-BOLO dataset catalogue",
+      "datasource": "https://lab.marcobolo-project.eu/csv-to-json-ld/schema-jsonld/",
+      "registeredEndpoint": "https://lab.marcobolo-project.eu/csv-to-json-ld/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "MARCO-BOLO registers a project dataset catalogue and CSV-to-JSON-LD sitemap. This does not establish identity with a broader marine archive or prove current recipient indexing.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 45,
+      "catalogueId": 3306,
+      "catalogueUrl": "https://catalogue.odis.org/view/3306",
+      "name": "GOOS BioEco metadata portal",
+      "datasource": "https://bioeco.goosocean.org/",
+      "registeredEndpoint": "https://bioeco-graph.s3.amazonaws.com/bioeco_graph.jsonld",
+      "registeredEndpointType": "Sitegraph",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "platform-obis",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/obis/draft.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        },
+        {
+          "id": "oceanops",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "related_system_scope_unverified",
+      "reason": "GOOS BioEco is a distinct metadata portal with a JSON-LD sitegraph. Its relationship to OceanOPS, OBIS, or the GOOS OCG server cannot be inferred from programme association.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 46,
+      "catalogueId": 3307,
+      "catalogueUrl": "https://catalogue.odis.org/view/3307",
+      "name": "GOOS OCG ERDDAP server",
+      "datasource": "https://osmc.noaa.gov/erddap/",
+      "registeredEndpoint": "https://osmc.noaa.gov/erddap/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "observations-coordination-group",
+          "kind": "organization",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        },
+        {
+          "id": "oceanops",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "organization_system_distinction",
+      "reason": "The GOOS OCG ERDDAP server is a system candidate. Existing observations-coordination-group is an organization and oceanops is a different system; neither supplies an exact endpoint identity for this server.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 47,
+      "catalogueId": 3308,
+      "catalogueUrl": "https://catalogue.odis.org/view/3308",
+      "name": "Integrated Ocean Observing System (IOOS®) Data Catalog",
+      "datasource": "https://data.ioos.us/",
+      "registeredEndpoint": "https://data.ioos.us/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": "ioos",
+      "proposedEdges": [
+        {
+          "id": "rel-ioos-member-of-odis",
+          "sourceNodeId": "ioos",
+          "targetNodeId": "odis",
+          "kind": "member_of",
+          "scope": "Participation through the IOOS data catalogue, not every regional observing service",
+          "evidenceUrls": [
+            "https://catalogue.odis.org/odis",
+            "https://catalogue.odis.org/view/3308",
+            "https://search-demo.odis.org/network"
+          ]
+        }
+      ],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [
+        {
+          "url": "https://catalogue.odis.org/view/3308",
+          "status": 200,
+          "statusText": "This resource is online Last check was 10/09/2026 23:41 First entry: 19/07/2024 Last update: 19/07/2024 Submitter"
+        },
+        {
+          "url": "https://data.ioos.us/sitemap.xml",
+          "status": 200,
+          "finalUrl": "https://data.ioos.us/sitemap.xml",
+          "contentType": "text/xml"
+        }
+      ],
+      "classification": "covered_by_proposed_edge",
+      "endpointRecordPath": "research/2026-09-10-priority-rich-records/canonical-index.json",
+      "reasonCode": "documented_participation_no_verified_transfer",
+      "reason": "The proposed member_of edge matches this catalogue identity and records documented federation participation. Registration and any readable sitemap do not by themselves verify successful downstream harvesting; no syncs_to edge is claimed for this row. The draft records development-monitor parsing failures; no full crawl was rerun in this review.",
+      "nextStep": "Retain the scoped proposed edge(s); any stronger current-harvest claim requires independent recipient-side coverage and freshness evidence.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 48,
+      "catalogueId": 3310,
+      "catalogueUrl": "https://catalogue.odis.org/view/3310",
+      "name": "Space Physics Archive Search and Extract",
+      "datasource": "https://github.com/lechatpito/NASA-ODIS-Examples/",
+      "registeredEndpoint": "https://github.com/lechatpito/NASA-ODIS-Examples/raw/main/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The SPASE row points to a NASA-ODIS-Examples GitHub repository and sitemap. A demonstration repository is not enough to choose the identity or operational status of a production archive.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 49,
+      "catalogueId": 3312,
+      "catalogueUrl": "https://catalogue.odis.org/view/3312",
+      "name": "ARPHA Journals - Мarine content source journals",
+      "datasource": "https://arphahub.com/about/browse_journals/",
+      "registeredEndpoint": "https://pensoft.net/marine-sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The ARPHA registration covers marine-content source journals and a Pensoft sitemap. It does not establish coverage of all journals or resolve publisher-organization versus publishing-system endpoints.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 50,
+      "catalogueId": 3313,
+      "catalogueUrl": "https://catalogue.odis.org/view/3313",
+      "name": "Benguela Current Convention Spatial Data Portal",
+      "datasource": "https://geodata.benguelacc.org/",
+      "registeredEndpoint": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-benguelacc/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "organization_system_distinction",
+      "reason": "The Benguela Current Convention spatial portal is a distinct system candidate with a GitHub tempHosting sitemap. A convention name is not sufficient to choose an organization endpoint or governance edge.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 51,
+      "catalogueId": 3314,
+      "catalogueUrl": "https://catalogue.odis.org/view/3314",
+      "name": "Monitoring of harmful phytoplankton Réseau de surveillance du phytoplancton toxique",
+      "datasource": "http://www.instm.agrinet.tn/",
+      "registeredEndpoint": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-instm/sitemap-phytoplankton.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "distinct_collection_shared_homepage",
+      "reason": "This harmful-phytoplankton monitoring collection shares the INSTM homepage with rows 3315 and 3316, but registers a different sitemap. These are not collapsed as duplicates; collection/system identity and transfer remain unverified.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 52,
+      "catalogueId": 3315,
+      "catalogueUrl": "https://catalogue.odis.org/view/3315",
+      "name": "Real-time monitoring of phytoplankton Monitorage à haute fréquence du phytoplacton",
+      "datasource": "http://www.instm.agrinet.tn/",
+      "registeredEndpoint": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-instm/sitemap-realtime-phytoplankton.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "distinct_collection_shared_homepage",
+      "reason": "This real-time phytoplankton collection shares the INSTM homepage with rows 3314 and 3316, but registers a different sitemap. Distinct collection scope prevents treating it as an exact duplicate without further evidence.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 53,
+      "catalogueId": 3316,
+      "catalogueUrl": "https://catalogue.odis.org/view/3316",
+      "name": "Tunisian FerryBox project",
+      "datasource": "http://www.instm.agrinet.tn/",
+      "registeredEndpoint": "https://raw.githubusercontent.com/iodepo/odis-arch/master/collection/tempHosting/data-instm/sitemap-ferrybox.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "distinct_collection_shared_homepage",
+      "reason": "Tunisian FerryBox shares the INSTM homepage with two phytoplankton collections but has its own sitemap. The project/collection identity and any common system representation require investigation.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 54,
+      "catalogueId": 3318,
+      "catalogueUrl": "https://catalogue.odis.org/view/3318",
+      "name": "California Cooperative Oceanic Fisheries Investigations California Cooperative Oceanic Fisheries Investigations",
+      "datasource": "https://calcofi.org",
+      "registeredEndpoint": "https://calcofi.io/workflows/datasets/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "CalCOFI registers a workflow dataset sitemap on calcofi.io. Programme versus catalogue identity and downstream metadata presence were not independently established in this batch.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 55,
+      "catalogueId": 3320,
+      "catalogueUrl": "https://catalogue.odis.org/view/3320",
+      "name": "Universal Plastic Universal Plastic",
+      "datasource": "https://unesco.universalplastic.io/",
+      "registeredEndpoint": "https://unesco.universalplastic.io/unesco/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "Universal Plastic registers a UNESCO-named subdomain and sitemap. A subdomain label is not evidence of UNESCO governance, funding or operational responsibility; system identity and ODIS transfer need primary verification.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 56,
+      "catalogueId": 3321,
+      "catalogueUrl": "https://catalogue.odis.org/view/3321",
+      "name": "European Directory of Marine Organisations",
+      "datasource": "https://edmo.seadatanet.org",
+      "registeredEndpoint": "https://edmo.seadatanet.org/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "seadatanet",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        },
+        {
+          "id": "seadatanet-cdi",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "related_system_scope_unverified",
+      "reason": "EDMO is a directory of organizations, distinct in function from the SeaDataNet CDI data-discovery system. A shared seadatanet.org domain does not decide whether it merits a separate endpoint or a scoped SeaDataNet relationship.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 57,
+      "catalogueId": 3322,
+      "catalogueUrl": "https://catalogue.odis.org/view/3322",
+      "name": "European Directory of Marine Environmental Research Projects",
+      "datasource": "https://edmerp.seadatanet.org",
+      "registeredEndpoint": "https://edmerp.seadatanet.org/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "seadatanet",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        },
+        {
+          "id": "seadatanet-cdi",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "related_system_scope_unverified",
+      "reason": "EDMERP is a directory of research projects, distinct from EDMO and the SeaDataNet CDI. Its shared domain does not prove identical system identity or that a broader SeaDataNet edge covers this registration.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 58,
+      "catalogueId": 3323,
+      "catalogueUrl": "https://catalogue.odis.org/view/3323",
+      "name": "NOAA Fisheries Distribution Mapping and Analysis Portal",
+      "datasource": "https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html",
+      "registeredEndpoint": "https://apps-st.fisheries.noaa.gov/dismap/DisMAP.html",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "noaa-ncei-marine",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "NOAA Fisheries DisMAP repeats its HTML application page as the registered Sitemap endpoint. The actual metadata interface and exact system identity need verification; this is not automatically NOAA NCEI Marine Data.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 59,
+      "catalogueId": 3324,
+      "catalogueUrl": "https://catalogue.odis.org/view/3324",
+      "name": "MBA Data Catalogue (CKAN)",
+      "datasource": "https://ckan.mba.ac.uk/",
+      "registeredEndpoint": "https://ckan.mba.ac.uk/sitemap_index.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The MBA CKAN catalogue is a system candidate; naming its software does not establish the archive identity or a verified publishing organization. No downstream transfer was checked for this row.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 60,
+      "catalogueId": 3325,
+      "catalogueUrl": "https://catalogue.odis.org/view/3325",
+      "name": "Synthesis Product for Ocean Time Series",
+      "datasource": "https://www.bco-dmo.org/dataset/896862",
+      "registeredEndpoint": "https://raw.githubusercontent.com/NmdWork/SPOTS/refs/heads/main/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "bco-dmo",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/canonical-index.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "dataset_archive_scope_distinction",
+      "reason": "SPOTS is registered separately with a BCO-DMO dataset URL and its own GitHub sitemap. The proposed bco-dmo membership edge covers the archive registration 3287, not a separately verified SPOTS identity or feed; it is therefore not counted twice as covered.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 61,
+      "catalogueId": 3326,
+      "catalogueUrl": "https://catalogue.odis.org/view/3326",
+      "name": "Portuguese National Oceanographic Data Centre Centro Nacional de Dados Oceanográficos de Portugal",
+      "datasource": "https://data.nodc-portugal.pt/geonetwork/srv/por/catalog.search#/home",
+      "registeredEndpoint": "https://media.hidrografico.pt/dtcd/nodc-pt/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The Portuguese NODC catalogue and Hidrografico sitemap require a system identity decision. Shared national/institutional context is insufficient to infer operator, governance or downstream-transfer edges.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 62,
+      "catalogueId": 3327,
+      "catalogueUrl": "https://catalogue.odis.org/view/3327",
+      "name": "EOV Metadata Submission Application",
+      "datasource": "https://eovmetadata.obis.org/",
+      "registeredEndpoint": "https://raw.githubusercontent.com/BioEcoOcean/metadata-tracking-dev/refs/heads/main/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [
+        {
+          "id": "platform-obis",
+          "kind": "system",
+          "path": "research/2026-09-10-priority-rich-records/obis/draft.json",
+          "matchStatus": "related candidate only; not an exact identity assignment"
+        }
+      ],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "related_system_scope_unverified",
+      "reason": "The EOV Metadata Submission Application is a distinct application on an OBIS subdomain with a BioEcoOcean GitHub sitemap. The OBIS dataset-level sync edge does not establish this application or feed as covered.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 63,
+      "catalogueId": 3328,
+      "catalogueUrl": "https://catalogue.odis.org/view/3328",
+      "name": "PTTEP Ocean Data Platform",
+      "datasource": "https://oceandata.pttep.com/unesco",
+      "registeredEndpoint": "https://oceandata.pttep.com/sitemap.xml",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "PTTEP Ocean Data Platform is a distinct registration from HUB Ocean, with a different datasource and sitemap. Shared words in the names are insufficient to merge identities or infer a transfer between them.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 64,
+      "catalogueId": 3329,
+      "catalogueUrl": "https://catalogue.odis.org/view/3329",
+      "name": "UFZ Spatial Data Catalogue",
+      "datasource": "https://web.app.ufz.de/geonetwork/",
+      "registeredEndpoint": "https://web.app.ufz.de/geonetwork/srv/api/sitemap",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "UFZ Spatial Data Catalogue registers a GeoNetwork sitemap. Institutional naming and common software do not establish an existing system identity or successful ODIS indexing.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    },
+    {
+      "rowNumber": 65,
+      "catalogueId": 3330,
+      "catalogueUrl": "https://catalogue.odis.org/view/3330",
+      "name": "Catalogue - NODC Spanish Institute of Oceanography (IEO-CSIC)",
+      "datasource": "https://nodc.ieo.es/geonetwork",
+      "registeredEndpoint": "https://nodc.ieo.es/geonetwork/srv/api/sitemap",
+      "registeredEndpointType": "Sitemap",
+      "endpointId": null,
+      "proposedEdges": [],
+      "duplicateOfCatalogueId": null,
+      "relatedExistingEndpoints": [],
+      "probeEvidence": [],
+      "classification": "unresolved_in_batch",
+      "reasonCode": "unverified_system_identity",
+      "reason": "The IEO-CSIC NODC catalogue is distinct from the two CCLME portals in this inventory. Shared institutional domains do not establish identical systems or a current metadata-transfer relationship.",
+      "nextStep": "Expansion review: verify this named resource’s system identity and participation scope, then inspect source metadata and recipient-side evidence before proposing any transfer edge. This inventory pass did not deeply research the resource.",
+      "evidenceScope": "Supplied catalogue inventory plus the recorded probe evidence and proposed edge sources, where present; no new network probe in this review."
+    }
+  ],
+  "validation": {
+    "rowCount": 65,
+    "uniqueCatalogueIds": 65,
+    "allRowsClassified": true,
+    "allCoveredEdgeIdsPresentInDraft": true,
+    "coveredEdgesUseKnownEndpoints": true,
+    "allDuplicateReferencesPresent": true,
+    "sourceInventoryAndDraftNotEdited": true,
+    "networkRequestsMade": 0,
+    "recordApiMutationsMade": 0,
+    "coveredEdgesRecheckedAgainstFrozenDraft": true
+  },
+  "reviewedDraftEdgeCount": 18
+}

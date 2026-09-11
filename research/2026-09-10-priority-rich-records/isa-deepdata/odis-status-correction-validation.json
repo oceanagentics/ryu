@@ -1,0 +1,23 @@
+{
+  "shape": {
+    "valid": true,
+    "recordId": "deepdata",
+    "issues": []
+  },
+  "quality": {
+    "valid": true,
+    "recordId": "deepdata",
+    "issues": [],
+    "warnings": [
+      "No gallery: acceptable when no useful, accessible capture is available.",
+      "No approved machine route is recorded.",
+      "Documented research gaps remain; omitted values have not been invented."
+    ],
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 73,
+      "resolvedSources": 73,
+      "issues": []
+    }
+  }
+}

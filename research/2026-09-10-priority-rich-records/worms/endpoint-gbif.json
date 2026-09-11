@@ -1,0 +1,474 @@
+{
+  "id": "gbif",
+  "kind": "system",
+  "countryCode": null,
+  "url": "https://www.gbif.org/what-is-gbif",
+  "recordDepth": "thin",
+  "title": "Global Biodiversity Information Facility",
+  "summary": "Global biodiversity infrastructure heavily used in marine workflows",
+  "availableLocales": [
+    "ar",
+    "zh",
+    "en",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "missingLocales": [],
+  "reviewStatesByLocale": {
+    "ar": "needs_revision",
+    "en": "needs_revision",
+    "es": "needs_revision",
+    "fr": "needs_revision",
+    "ru": "needs_revision",
+    "zh": "needs_revision"
+  },
+  "requestedLocale": "en",
+  "displayLocale": "en",
+  "isLocaleFallback": false,
+  "updatedAt": "2026-09-10T20:02:35.528Z",
+  "recordUpdatedAt": "2026-09-10T20:02:35.528Z",
+  "sourceCompleteness": {
+    "status": "partial",
+    "referencedSources": 3,
+    "resolvedSources": 3,
+    "issues": [
+      {
+        "recordId": "gbif",
+        "path": "record.properties.data.descriptors[0].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "gbif",
+        "path": "record.properties.data.descriptors[1].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "gbif",
+        "path": "record.properties.data.descriptors[2].source",
+        "message": "a source ID is required"
+      },
+      {
+        "recordId": "gbif",
+        "path": "localizations.ar.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "gbif",
+        "path": "localizations.en.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "gbif",
+        "path": "localizations.es.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "gbif",
+        "path": "localizations.fr.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "gbif",
+        "path": "localizations.ru.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      },
+      {
+        "recordId": "gbif",
+        "path": "localizations.zh.details.profile.sourceRefs",
+        "message": "profile source references are required"
+      }
+    ]
+  },
+  "record": {
+    "id": "gbif",
+    "kind": "system",
+    "countryCode": null,
+    "url": "https://www.gbif.org/what-is-gbif",
+    "recordDepth": "thin",
+    "sources": {
+      "src-gbif-what-is": {
+        "id": "src-gbif-what-is",
+        "url": "https://techdocs.gbif.org/en/",
+        "title": {
+          "ar": "الوثائق التقنية لـ GBIF",
+          "en": "GBIF technical documentation",
+          "es": "Documentación técnica de GBIF",
+          "fr": "Documentation technique de GBIF",
+          "ru": "Техническая документация GBIF",
+          "zh": "GBIF技术文档"
+        },
+        "accessedAt": "2026-07-22"
+      }
+    },
+    "properties": {
+      "data": {
+        "descriptors": [
+          {
+            "id": "gbif-tag-data-format-darwin-core",
+            "label": "Darwin Core",
+            "source": null,
+            "category": "standard"
+          },
+          {
+            "id": "gbif-tag-data-format-darwin-core-archive",
+            "label": "darwin_core_archive",
+            "source": null,
+            "category": "format"
+          },
+          {
+            "id": "gbif-tag-data-type-occurrence-observation",
+            "label": "occurrence_records",
+            "source": null,
+            "category": "type"
+          }
+        ],
+        "recordCount": null,
+        "storageSize": null
+      },
+      "usage": [],
+      "access": [
+        {
+          "id": "gbif-tag-read-method-api",
+          "url": "https://techdocs.gbif.org/en/",
+          "type": "read",
+          "method": "api",
+          "source": "src-gbif-what-is"
+        },
+        {
+          "id": "gbif-tag-read-method-download",
+          "url": "https://techdocs.gbif.org/en/",
+          "type": "read",
+          "method": "download",
+          "source": "src-gbif-what-is"
+        },
+        {
+          "id": "gbif-tag-read-method-ipt",
+          "url": "https://techdocs.gbif.org/en/",
+          "type": "read",
+          "method": "ipt",
+          "source": "src-gbif-what-is"
+        },
+        {
+          "id": "gbif-tag-read-method-web",
+          "url": "https://techdocs.gbif.org/en/",
+          "type": "read",
+          "method": "web",
+          "source": "src-gbif-what-is"
+        },
+        {
+          "id": "gbif-tag-write-method-ipt-publish",
+          "url": "https://techdocs.gbif.org/en/",
+          "type": "submit",
+          "method": "ipt_publish",
+          "source": "src-gbif-what-is"
+        },
+        {
+          "id": "gbif-tag-write-method-web-submission",
+          "url": "https://techdocs.gbif.org/en/",
+          "type": "submit",
+          "method": "web_submission",
+          "source": "src-gbif-what-is"
+        }
+      ],
+      "gallery": [],
+      "disciplines": []
+    },
+    "createdAt": "2026-05-26T16:46:26.459Z",
+    "updatedAt": "2026-09-10T20:02:35.528Z"
+  },
+  "localizations": {
+    "ar": {
+      "locale": "ar",
+      "title": "المرفق العالمي لمعلومات التنوع البيولوجي",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "GBIF",
+          "Global Biodiversity Information Facility"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:56.834Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.326361+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:56.834Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "en": {
+      "locale": "en",
+      "title": "Global Biodiversity Information Facility",
+      "summary": "Global biodiversity infrastructure heavily used in marine workflows",
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [
+            {
+              "id": "gbif-tag-data-format-darwin-core",
+              "description": null
+            },
+            {
+              "id": "gbif-tag-data-format-darwin-core-archive",
+              "description": null
+            },
+            {
+              "id": "gbif-tag-data-type-occurrence-observation",
+              "description": null
+            }
+          ],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [
+          {
+            "id": "gbif-tag-read-method-api",
+            "label": "API",
+            "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+          },
+          {
+            "id": "gbif-tag-read-method-download",
+            "label": "Download",
+            "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+          },
+          {
+            "id": "gbif-tag-read-method-ipt",
+            "label": "IPT",
+            "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+          },
+          {
+            "id": "gbif-tag-read-method-web",
+            "label": "Web UI",
+            "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+          },
+          {
+            "id": "gbif-tag-write-method-ipt-publish",
+            "label": "IPT publish",
+            "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+          },
+          {
+            "id": "gbif-tag-write-method-web-submission",
+            "label": "Web submission",
+            "description": "GBIF technical documentation describes API access, downloads, IPT publishing, data use, and publishing workflows. The public GBIF website remains the user-facing portal, but technical docs are the stable validated access URL for this record."
+          }
+        ],
+        "aliases": [
+          "GBIF"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": null,
+      "contentUpdatedAt": "2026-09-10T20:02:35.504Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.374685+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-05-26T16:46:26.459Z",
+      "updatedAt": "2026-09-10T20:02:35.504Z"
+    },
+    "es": {
+      "locale": "es",
+      "title": "Infraestructura Mundial de Información en Biodiversidad",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "GBIF",
+          "Global Biodiversity Information Facility"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:56.834Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.326895+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:56.834Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "fr": {
+      "locale": "fr",
+      "title": "Système mondial d'information sur la biodiversité",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "GBIF",
+          "Global Biodiversity Information Facility"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:56.834Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.326653+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:56.834Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "ru": {
+      "locale": "ru",
+      "title": "Глобальная информационная система по биоразнообразию",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "GBIF",
+          "Global Biodiversity Information Facility"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:56.834Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.326751+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:56.834Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    },
+    "zh": {
+      "locale": "zh",
+      "title": "全球生物多样性信息设施",
+      "summary": null,
+      "description": null,
+      "details": {
+        "data": {
+          "descriptors": [],
+          "recordCount": null,
+          "storageSize": null
+        },
+        "usage": [],
+        "access": [],
+        "aliases": [
+          "GBIF",
+          "Global Biodiversity Information Facility"
+        ],
+        "gallery": []
+      },
+      "translatedFromLocale": "en",
+      "contentUpdatedAt": "2026-09-04T02:18:56.834Z",
+      "review": {
+        "date": "2026-09-09T18:28:57.326528+00:00",
+        "note": "Country affiliation fields retired; relationship review is required.",
+        "state": "needs_revision",
+        "reviewer": null
+      },
+      "createdAt": "2026-09-04T02:18:56.834Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-fishbase-syncs-to-gbif",
+      "sourceNodeId": "fishbase",
+      "targetNodeId": "gbif",
+      "kind": "syncs_to",
+      "note": "FishBase publishes an occurrence dataset through the GBIF-Sweden IPT, registered with GBIF. The publisher lists 731,043 archive records, a latest publication date of 2023-03-23 and irregular updates. The archive count is not a verified count of currently indexed GBIF occurrences.",
+      "properties": {
+        "scope": "FishBase occurrence dataset via GBIF-Sweden",
+        "format": "Darwin Core Archive",
+        "status": "published snapshot; current refresh unverified",
+        "artifact": "https://www.gbif.se/ipt/resource?r=fishbase",
+        "sourceRefs": [
+          "evidence"
+        ],
+        "transferMethod": "GBIF-Sweden IPT Darwin Core Archive publication",
+        "updateFrequency": "irregular",
+        "latestPublishedAt": "2023-03-23"
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.gbif.se/ipt/resource?r=fishbase",
+          "title": {
+            "ar": "أرشيف سجلات وجود الأنواع في FishBase المنشور عبر GBIF-Sweden",
+            "en": "FishBase occurrence archive published through GBIF-Sweden",
+            "es": "Archivo de presencias de FishBase publicado mediante GBIF-Sweden",
+            "fr": "Archive des occurrences FishBase publiée via GBIF-Sweden",
+            "ru": "Архив находок FishBase, опубликованный через GBIF-Sweden",
+            "zh": "通过GBIF-Sweden发布的FishBase物种出现记录档案"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "createdAt": "2026-09-10T19:16:31.969Z",
+      "updatedAt": "2026-09-10T19:16:31.969Z"
+    },
+    {
+      "id": "rel-gbif-secretariat-operates-global-biodiversity-information-facility",
+      "sourceNodeId": "gbif-secretariat",
+      "targetNodeId": "gbif",
+      "kind": "operates",
+      "note": "GBIF Secretariat runs the infrastructure for an international network of countries and organizations. Secretariat location is not governing nationality.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "sourceRefs": [
+          "src-relationship-gbif"
+        ]
+      },
+      "sources": {
+        "src-relationship-gbif": {
+          "id": "src-relationship-gbif",
+          "url": "https://www.gbif.org/what-is-gbif",
+          "title": {
+            "ar": "ما هو GBIF",
+            "en": "What is GBIF",
+            "es": "Qué es GBIF",
+            "fr": "Qu’est-ce que GBIF",
+            "ru": "Что такое GBIF",
+            "zh": "GBIF是什么"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      },
+      "createdAt": "2026-05-26T16:46:26.459Z",
+      "updatedAt": "2026-09-09T19:42:13.505Z"
+    }
+  ],
+  "routes": []
+}

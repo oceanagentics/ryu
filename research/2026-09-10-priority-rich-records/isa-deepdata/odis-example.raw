@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="application/ld+json">
+        {"@context":{"@vocab":"https://schema.org/"},"@type":"Dataset","@id":"https://data.isa.org.jm/static/oih/odis_bphdcpmn12021_env_template_ctd.zip.html","name":"Beijing Pioneer Hi-Tech Development Corporation - PMN","keywords":["Oceanography","CTD","DeepData","ISA","DeepSea"],"description":"Water Properties measured within the Water Column by Contractors to the ISA in for exploration","distribution":{"@type":"DataDownload","contentUrl":"https://data.isa.org.jm/isa/map/download/bphdcpmn12021_env_template_ctdzip","encodingFormat":"application.zip"},"url":"https://data.isa.org.jm","temporalCoverage":"2021","spatialCoverage":{"@type":"Place","geo":{"@type":"GeoCoordinates","longitude":18.83100000,"latitude":152.90210000}},"variableMeasured":[{"@type":"PropertyValue","name":"Water Temperature","unitText":"C","minValue":"1.458","maxValue":"9.963"},{"@type":"PropertyValue","name":"Salinity","unitText":"PPTH","minValue":"34.131","maxValue":"35.037"}]}
+        </script>
+	</head>
+</html>

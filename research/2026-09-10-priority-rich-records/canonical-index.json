@@ -1,0 +1,1916 @@
+{
+  "readAt": "2026-09-11T00:28:31.109Z",
+  "purpose": "Read-only research snapshot; not a canonical registry",
+  "records": [
+    {
+      "id": "awi",
+      "kind": "organization",
+      "title": "Alfred Wegener Institute",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:12.786Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "algaebase",
+      "kind": "system",
+      "title": "AlgaeBase",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:09.122Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "algaebase-operator",
+      "kind": "organization",
+      "title": "AlgaeBase",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:09.604Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "aquamaps",
+      "kind": "system",
+      "title": "AquaMaps",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:10.084Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "aquamaps-collaboration",
+      "kind": "organization",
+      "title": "AquaMaps collaboration",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:10.678Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "argo-data-management-team",
+      "kind": "organization",
+      "title": "Argo Data Management Team",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:11.136Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "argo-gdac",
+      "kind": "system",
+      "title": "Argo Global Data Assembly Centers",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:11.724Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "argovis",
+      "kind": "system",
+      "title": "Argovis",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:12.242Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "bold",
+      "kind": "system",
+      "title": "Barcode of Life Data System",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:16.145Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "platform-bbnj-chm",
+      "kind": "system",
+      "title": "BBNJ Clearing-House Mechanism (CHM)",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:10.205Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "bco-dmo",
+      "kind": "system",
+      "title": "BCO-DMO",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:13.258Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "bio-oracle",
+      "kind": "system",
+      "title": "Bio-ORACLE",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:13.987Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "bio-oracle-team",
+      "kind": "organization",
+      "title": "Bio-ORACLE team",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:14.571Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "bioinformation-and-ddbj-center-nig",
+      "kind": "organization",
+      "title": "Bioinformation and DDBJ Center NIG",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:15.037Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "bismal",
+      "kind": "system",
+      "title": "BISMaL",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:15.603Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "can",
+      "kind": "country",
+      "title": "Canada",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:16.744Z",
+      "reviewStatesByLocale": {
+        "ar": "agent_researched",
+        "en": "agent_researched",
+        "es": "agent_researched",
+        "fr": "agent_researched",
+        "ru": "agent_researched",
+        "zh": "agent_researched"
+      }
+    },
+    {
+      "id": "cioos",
+      "kind": "system",
+      "title": "Canadian Integrated Ocean Observing System",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:18.425Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "centre-for-biodiversity-genomics",
+      "kind": "organization",
+      "title": "Centre for Biodiversity Genomics, University of Guelph",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:17.208Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "cern",
+      "kind": "organization",
+      "title": "CERN",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:17.955Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "cioos-operator",
+      "kind": "organization",
+      "title": "CIOOS",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:19.045Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "cmems-datastore",
+      "kind": "system",
+      "title": "Copernicus Marine Data Store",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:19.584Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "copernicus-marine",
+      "kind": "system",
+      "title": "Copernicus Marine Service",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:20.218Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "datras",
+      "kind": "system",
+      "title": "DATRAS",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:20.787Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ddbj",
+      "kind": "system",
+      "title": "DNA Data Bank of Japan",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:21.281Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "dryad",
+      "kind": "system",
+      "title": "Dryad",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:22.881Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "dryad-operator",
+      "kind": "organization",
+      "title": "Dryad",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:23.356Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ecotrust",
+      "kind": "organization",
+      "title": "Ecotrust",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:24.303Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ecotrust-oregon-fisheries-uses-values",
+      "kind": "system",
+      "title": "Ecotrust Oregon Marine Fisheries Uses and Values Project",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:24.793Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "embl-council",
+      "kind": "organization",
+      "title": "EMBL Council",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:25.796Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "embl-ebi",
+      "kind": "organization",
+      "title": "EMBL-EBI",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:26.340Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "emodnet-biology",
+      "kind": "system",
+      "title": "EMODnet Biology",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:27.416Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "emodnet-biology-consortium",
+      "kind": "organization",
+      "title": "EMODnet Biology consortium",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:27.916Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "euro-argo",
+      "kind": "system",
+      "title": "Euro-Argo ERIC",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:29.843Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "euro-argo-eric",
+      "kind": "organization",
+      "title": "Euro-Argo ERIC",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:30.385Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ec-dg-mare",
+      "kind": "organization",
+      "title": "European Commission DG MARE",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:23.821Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "emodnet",
+      "kind": "system",
+      "title": "European Marine Observation and Data Network",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:26.803Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "embl",
+      "kind": "organization",
+      "title": "European Molecular Biology Laboratory",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:25.331Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "ena",
+      "kind": "system",
+      "title": "European Nucleotide Archive",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:28.495Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "eurobis",
+      "kind": "system",
+      "title": "European Ocean Biodiversity Information System",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:30.906Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "eur",
+      "kind": "organization",
+      "title": "European Union",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:29.334Z",
+      "reviewStatesByLocale": {
+        "ar": "agent_researched",
+        "en": "agent_researched",
+        "es": "agent_researched",
+        "fr": "agent_researched",
+        "ru": "agent_researched",
+        "zh": "agent_researched"
+      }
+    },
+    {
+      "id": "fao",
+      "kind": "organization",
+      "title": "FAO",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:31.517Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "fao-fishstat",
+      "kind": "system",
+      "title": "FAO FishStat and Fishery Statistics",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:32.040Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "fishbase",
+      "kind": "system",
+      "title": "FishBase",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:33.089Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "fishbase-consortium",
+      "kind": "organization",
+      "title": "FishBase Consortium",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:33.950Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "fisheries-and-oceans-canada",
+      "kind": "organization",
+      "title": "Fisheries and Oceans Canada",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:34.482Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "flanders-marine-institute",
+      "kind": "organization",
+      "title": "Flanders Marine Institute",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:34.998Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "gbif-secretariat",
+      "kind": "organization",
+      "title": "GBIF Secretariat",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:36.070Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "gebco",
+      "kind": "organization",
+      "title": "GEBCO",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:36.593Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "gebco-web-services",
+      "kind": "system",
+      "title": "GEBCO Web Services",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:37.086Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "genbank",
+      "kind": "system",
+      "title": "GenBank",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:37.704Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "geome",
+      "kind": "system",
+      "title": "Genomic Observatories MetaDatabase",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:38.220Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "geome-collaboration",
+      "kind": "organization",
+      "title": "GEOME collaboration",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:38.739Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "deu",
+      "kind": "country",
+      "title": "Germany",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:22.283Z",
+      "reviewStatesByLocale": {
+        "ar": "agent_researched",
+        "en": "agent_researched",
+        "es": "agent_researched",
+        "fr": "agent_researched",
+        "ru": "agent_researched",
+        "zh": "agent_researched"
+      }
+    },
+    {
+      "id": "ggbn-consortium",
+      "kind": "organization",
+      "title": "GGBN consortium",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:39.843Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ggbn-executive-committee",
+      "kind": "organization",
+      "title": "GGBN Executive Committee",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:40.272Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "ggbn-technical-office",
+      "kind": "organization",
+      "title": "GGBN Technical Management Office, Botanic Garden Berlin",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:40.811Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "gbif",
+      "kind": "system",
+      "title": "Global Biodiversity Information Facility",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:35.528Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ggbn",
+      "kind": "system",
+      "title": "Global Genome Biodiversity Network",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:39.245Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "glodap",
+      "kind": "system",
+      "title": "Global Ocean Data Analysis Project",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:41.251Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "go-ship",
+      "kind": "system",
+      "title": "Global Ocean Ship-based Hydrographic Investigations Program",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:42.295Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "glodap-community",
+      "kind": "organization",
+      "title": "GLODAP community",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:41.824Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "observations-coordination-group",
+      "kind": "organization",
+      "title": "GOOS Observations Coordination Group",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:00.473Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "government-of-flanders",
+      "kind": "organization",
+      "title": "Government of Flanders",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:42.808Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "ices",
+      "kind": "organization",
+      "title": "ICES",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:43.293Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ices-council",
+      "kind": "organization",
+      "title": "ICES Council",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:43.861Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "ices-data",
+      "kind": "system",
+      "title": "ICES Marine Data",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:44.423Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ifremer",
+      "kind": "organization",
+      "title": "IFREMER",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:45.014Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "insdc-executive-committee",
+      "kind": "organization",
+      "title": "INSDC Executive Committee",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:46.221Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "insdc-implementation-committee",
+      "kind": "organization",
+      "title": "INSDC Implementation Committee",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:46.727Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "insdc-members",
+      "kind": "organization",
+      "title": "INSDC members",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:47.292Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "intercatch",
+      "kind": "system",
+      "title": "InterCatch",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:47.799Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "international-go-ship-community",
+      "kind": "organization",
+      "title": "International GO-SHIP community",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:48.379Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "insdc",
+      "kind": "system",
+      "title": "International Nucleotide Sequence Database Collaboration",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:45.554Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ioc-assembly",
+      "kind": "organization",
+      "title": "IOC Assembly",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:48.864Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "ioc-unesco-iode",
+      "kind": "organization",
+      "title": "IOC-UNESCO IODE",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:49.415Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "jpn",
+      "kind": "country",
+      "title": "Japan",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:50.981Z",
+      "reviewStatesByLocale": {
+        "ar": "agent_researched",
+        "en": "agent_researched",
+        "es": "agent_researched",
+        "fr": "agent_researched",
+        "ru": "agent_researched",
+        "zh": "agent_researched"
+      }
+    },
+    {
+      "id": "jamstec",
+      "kind": "organization",
+      "title": "Japan Agency for Marine-Earth Science and Technology (JAMSTEC)",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:50.469Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "kit",
+      "kind": "organization",
+      "title": "Karlsruhe Institute of Technology",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:51.533Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "meopar",
+      "kind": "organization",
+      "title": "Marine Environmental Observation, Prediction and Response Network",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:53.013Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "marine-regions",
+      "kind": "system",
+      "title": "Marine Regions",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:51.999Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "marum",
+      "kind": "organization",
+      "title": "MARUM, University of Bremen",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:52.503Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "mercator-ocean-international",
+      "kind": "organization",
+      "title": "Mercator Ocean International",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:53.590Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "mgnify",
+      "kind": "system",
+      "title": "MGnify",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:54.042Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "molluscabase",
+      "kind": "system",
+      "title": "MolluscaBase",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:54.638Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "nrl-marine-meteorology",
+      "kind": "organization",
+      "title": "Naval Research Laboratory Marine Meteorology Division",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:59.440Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "ncbi-united-states",
+      "kind": "organization",
+      "title": "NCBI United States",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:55.147Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "noaa-cetacean-bia",
+      "kind": "system",
+      "title": "NOAA Cetacean Biologically Important Areas",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:55.730Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "noaa-esi-wa-or-marine-mammals",
+      "kind": "system",
+      "title": "NOAA ESI Outer Coast WA/OR Marine Mammal Polygons",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:56.205Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "noaa-ioos",
+      "kind": "organization",
+      "title": "NOAA IOOS",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:56.813Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "noaa-ncei",
+      "kind": "organization",
+      "title": "NOAA NCEI",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:57.317Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "noaa-ncei-marine",
+      "kind": "system",
+      "title": "NOAA NCEI Marine Data",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:57.886Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "noaa-office-for-coastal-management",
+      "kind": "organization",
+      "title": "NOAA Office for Coastal Management",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:58.445Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "noaa-office-of-response-and-restoration",
+      "kind": "organization",
+      "title": "NOAA Office of Response and Restoration",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:58.956Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "platform-obis",
+      "kind": "system",
+      "title": "Ocean Biodiversity Information System (OBIS)",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:10.745Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "odis",
+      "kind": "system",
+      "title": "Ocean Data and Information System",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:04.678Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "oceaninfohub",
+      "kind": "system",
+      "title": "Ocean InfoHub",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:01.472Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ocean-observatories-initiative",
+      "kind": "organization",
+      "title": "Ocean Observatories Initiative",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:00.974Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ooi-data",
+      "kind": "system",
+      "title": "Ocean Observatories Initiative Data Portal",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:05.222Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "oceanops",
+      "kind": "system",
+      "title": "OceanOPS",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:02.064Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "oceanops-centre",
+      "kind": "organization",
+      "title": "OceanOPS coordination centre",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:02.542Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "oceansites",
+      "kind": "system",
+      "title": "OceanSITES",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:03.106Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "oceansites-programme",
+      "kind": "organization",
+      "title": "OceanSITES programme",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:03.597Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "odfw-commercial-landings",
+      "kind": "system",
+      "title": "ODFW Commercial Landing Statistics",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:04.170Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "openstreetmap-foundation",
+      "kind": "organization",
+      "title": "OpenStreetMap Foundation",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:05.724Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "openstreetmap-standard-raster-tiles",
+      "kind": "system",
+      "title": "OpenStreetMap Standard Map",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:06.378Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "oregon-department-of-fish-and-wildlife",
+      "kind": "organization",
+      "title": "Oregon Department of Fish and Wildlife",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:06.927Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "oregon-dlcd",
+      "kind": "organization",
+      "title": "Oregon Department of Land Conservation and Development",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:07.457Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "oregon-dlcd-coastal-gis",
+      "kind": "system",
+      "title": "Oregon DLCD Coastal GIS",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:08.047Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "oregon-state-university",
+      "kind": "organization",
+      "title": "Oregon State University",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:09.172Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "pangaea",
+      "kind": "system",
+      "title": "PANGAEA",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:09.659Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "protomaps",
+      "kind": "organization",
+      "title": "Protomaps",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:11.278Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "protomaps-basemap",
+      "kind": "system",
+      "title": "Protomaps Basemap",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:11.725Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "purdue-university-libraries",
+      "kind": "organization",
+      "title": "Purdue University Libraries",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:12.302Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "q-quatics",
+      "kind": "organization",
+      "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:12.785Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "re3data",
+      "kind": "system",
+      "title": "re3data",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:13.819Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "rdbes",
+      "kind": "system",
+      "title": "Regional DataBase and Estimation System",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:13.333Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "royal-museum-for-central-africa",
+      "kind": "organization",
+      "title": "Royal Museum for Central Africa",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T19:16:32.219Z",
+      "reviewStatesByLocale": {
+        "ar": "agent_researched",
+        "en": "agent_researched",
+        "es": "agent_researched",
+        "fr": "agent_researched",
+        "ru": "agent_researched",
+        "zh": "agent_researched"
+      }
+    },
+    {
+      "id": "sea-around-us",
+      "kind": "system",
+      "title": "Sea Around Us",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:14.440Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "sea-around-us-operator",
+      "kind": "organization",
+      "title": "Sea Around Us",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:14.937Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "seadatanet",
+      "kind": "system",
+      "title": "SeaDataNet",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:15.530Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "seadatanet-cdi",
+      "kind": "system",
+      "title": "SeaDataNet Common Data Index",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:16.060Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "seadatanet-consortium",
+      "kind": "organization",
+      "title": "SeaDataNet consortium",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:16.670Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "sealifebase",
+      "kind": "system",
+      "title": "SeaLifeBase",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:17.207Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "socat-community",
+      "kind": "organization",
+      "title": "SOCAT community",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:18.374Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "source-cooperative",
+      "kind": "system",
+      "title": "Source Cooperative",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T19:16:32.203Z",
+      "reviewStatesByLocale": {
+        "ar": "agent_researched",
+        "en": "agent_researched",
+        "es": "agent_researched",
+        "fr": "agent_researched",
+        "ru": "agent_researched",
+        "zh": "agent_researched"
+      }
+    },
+    {
+      "id": "oregon-government",
+      "kind": "organization",
+      "title": "State of Oregon government",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:08.572Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "socat",
+      "kind": "system",
+      "title": "Surface Ocean CO2 Atlas",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:17.866Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "ioos",
+      "kind": "system",
+      "title": "U.S. Integrated Ocean Observing System",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:02:49.907Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "usa",
+      "kind": "country",
+      "title": "United States",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:19.923Z",
+      "reviewStatesByLocale": {
+        "ar": "agent_researched",
+        "en": "agent_researched",
+        "es": "agent_researched",
+        "fr": "agent_researched",
+        "ru": "agent_researched",
+        "zh": "agent_researched"
+      }
+    },
+    {
+      "id": "university-of-colorado-boulder-and-collaborators",
+      "kind": "organization",
+      "title": "University of Colorado Boulder and collaborators",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:18.866Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "university-of-washington",
+      "kind": "organization",
+      "title": "University of Washington",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:19.394Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "university-of-western-australia",
+      "kind": "organization",
+      "title": "University of Western Australia",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T19:16:32.215Z",
+      "reviewStatesByLocale": {
+        "ar": "agent_researched",
+        "en": "agent_researched",
+        "es": "agent_researched",
+        "fr": "agent_researched",
+        "ru": "agent_researched",
+        "zh": "agent_researched"
+      }
+    },
+    {
+      "id": "nsf",
+      "kind": "organization",
+      "title": "US National Science Foundation",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:02:59.983Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "whoi",
+      "kind": "organization",
+      "title": "Woods Hole Oceanographic Institution",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:20.423Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "worms",
+      "kind": "system",
+      "title": "World Register of Marine Species",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:20.936Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    },
+    {
+      "id": "worms-steering-committee",
+      "kind": "organization",
+      "title": "WoRMS Steering Committee",
+      "recordDepth": "stub",
+      "recordUpdatedAt": "2026-09-10T20:03:21.677Z",
+      "reviewStatesByLocale": {
+        "en": "agent_researched"
+      }
+    },
+    {
+      "id": "zenodo",
+      "kind": "system",
+      "title": "Zenodo",
+      "recordDepth": "thin",
+      "recordUpdatedAt": "2026-09-10T20:03:22.151Z",
+      "reviewStatesByLocale": {
+        "ar": "needs_revision",
+        "en": "needs_revision",
+        "es": "needs_revision",
+        "fr": "needs_revision",
+        "ru": "needs_revision",
+        "zh": "needs_revision"
+      }
+    }
+  ]
+}

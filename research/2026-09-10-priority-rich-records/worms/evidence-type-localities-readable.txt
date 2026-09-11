@@ -1,0 +1,519 @@
+:root {
+            --color-gbif-primary: 97,168,97;
+            --color-gbif-danger: 227, 99, 112;
+            --color-gbif-secondary: 78, 86, 95;
+            --color-gbif-warning: 255, 193, 8;
+            --navbar-color: 120,181,120;
+            --navbar-link-color: 255,255,255;
+            --navbar-gbif-logo-color: 255,255,255;
+            --navbar-active-tab-color: 255,255,255;
+            --link-color: 75,162,206;
+        }
+window.addEventListener("scroll", () => {
+            const header = document.querySelector("header");
+            const scrollY = window.scrollY;
+
+            if (scrollY > 100) { // Adjust the scroll position where the header should shrink
+                header.classList.add("shrink");
+            } else {
+                header.classList.remove("shrink");
+            }
+        });
+setTimeout(function(){
+          window.location.reload();
+        }, 600000);
+Type locality distributions from the World Register of Marine Species
+function handleCustomLogoError() {
+        document.getElementById("gbif-logo-custom").style = "display: none;";
+        document.getElementById("gbif-logo").style = "display: inline-block;";
+
+        var loginPageLogoCustom = document.getElementById("login-page-logo-custom");
+        if (loginPageLogoCustom) {
+            loginPageLogoCustom.style = "display: none;";
+        }
+
+        var loginPageLogo = document.getElementById("login-page-logo");
+        if (loginPageLogo) {
+            loginPageLogo.style = "display: inline-block;";
+        }
+    }
+// Check if the public URL is correct, otherwise display the fallback page
+    document.addEventListener("DOMContentLoaded", function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://ipt.vliz.be/eurobis/styles/main.css");
+        xhr.onload = function() {
+            if (xhr.status !== 200) {
+                window.location.href = "/fallback.do";
+            }
+        };
+        xhr.onerror = function() {
+            window.location.href = "/fallback.do";
+        };
+        xhr.send();
+    });
+Home
+About
+English
+Française
+Español
+繁體中文
+Português
+日本語
+Русский
+login
+login
+h1, h2, h3, h4, h5 {
+        font-size: 1.25rem !important;
+    }
+$(document).ready(function() {
+        // spy scroll and manage sidebar menu
+        $(window).scroll(function () {
+            var scrollPosition = $(document).scrollTop();
+
+            $('.bd-toc nav a').each(function () {
+                var currentLink = $(this);
+                var anchor = $(currentLink.attr("href"));
+                var sectionId = anchor[0].id.replace("anchor-", "");
+                var section = $("#" + sectionId);
+
+                var sectionsContainer = $("#sections");
+
+                if (sectionsContainer.position().top - 120 > scrollPosition) {
+                    var removeActiveFromThisLink = $('.bd-toc nav a.active');
+                    removeActiveFromThisLink.removeClass('active');
+                } else if (section.position().top - 120 <= scrollPosition
+                    && section.position().top + section.height() > scrollPosition) {
+                    if (!currentLink.hasClass("active")) {
+                        var removeFromThisLink = $('.bd-toc nav a.active');
+                        removeFromThisLink.removeClass('active');
+                        $(this).addClass('active');
+                    }
+                }
+            });
+        })
+
+        function renderDocBook(fieldValue, elementId) {
+            if (!fieldValue || fieldValue.trim().length === 0) return;
+
+            const el = document.getElementById(elementId);
+            if (el) el.innerHTML = convertToHtml(fieldValue);
+        }
+
+        const fields = [
+            { value: '&lt;para&gt;Extraction of type locality information from the World Register of Marine Species.&lt;/para&gt;',      id: 'description-container' },
+            { value: '',     id: 'introduction-container' },
+            { value: '',          id: 'purpose-container' },
+            { value: '', id: 'acknowledgements-container' },
+            { value: '',   id: 'gettingStarted-container' }
+        ];
+
+        fields.forEach(f => renderDocBook(f.value, f.id));
+    })
+Home
+Resource
+Type locality distributions from the World Register of Marine Species
+Occurrence
+Observation
+Latest version
+                                published by
+Flanders Marine Institute
+on
+Aug 23, 2026
+Flanders Marine Institute
+Home:
+https://emodnet.ec.europa.eu/geonetwork/srv/eng/catalog.search#/metadata/6d617269-6e65-696e-666f-000000005184
+GBIF UUID:
+2f7c33b3-ea7a-40ac-a3b7-bace96f978f7
+Publication date:
+23 August 2026
+Published by:
+Flanders Marine Institute
+License:
+CC-BY 4.0
+How to cite
+Download the latest version of this resource data as a Darwin Core Archive (DwC-A) or the resource metadata as EML or RTF:
+Data as a DwC-A file
+download
+40,961 records  (4 MB) - Update frequency: unknown
+Metadata as an EML file
+download
+(13 KB)
+Metadata as an RTF file
+download
+(12 KB)
+Description
+Data Records
+Versions
+How to cite
+Rights
+GBIF Registration
+Keywords
+External data
+Contacts
+Geographic Coverage
+Temporal Coverage
+Additional Metadata
+Description
+Extraction of type locality information from the World Register of Marine Species.
+Data Records
+The data in this occurrence resource has been published as a Darwin Core Archive (DwC-A), which is a standardized format for sharing biodiversity data as a set of one or more data tables.
+                                    The core data table contains 40,961 records.
+This IPT archives the data and thus serves as the data repository. The data and resource metadata are available for download in the
+downloads
+section. The
+versions
+table lists other versions of the resource that have been made publicly available and allows tracking changes made to the resource over time.
+Versions
+The table below shows only published versions of the resource that are publicly accessible.
+/* version history list */
+        var aDataSet = [
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersion" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/>1.12',
+                '2026-08-23 12:00:30',
+                '40,961',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.11">1.11</a>',
+                '2026-08-06 14:46:07',
+                '40,860',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.10">1.10</a>',
+                '2026-06-23 12:00:22',
+                '40,768',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.9">1.9</a>',
+                '2026-05-23 12:00:40',
+                '40,618',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.8">1.8</a>',
+                '2026-04-23 12:00:22',
+                '40,523',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.7">1.7</a>',
+                '2026-03-23 12:00:44',
+                '40,383',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.6">1.6</a>',
+                '2026-02-23 12:00:26',
+                '40,259',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.5">1.5</a>',
+                '2026-01-23 12:00:29',
+                '40,113',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.4">1.4</a>',
+                '2025-12-23 12:00:26',
+                '40,015',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.3">1.3</a>',
+                '2025-11-23 12:00:23',
+                '39,935',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.2">1.2</a>',
+                '2025-10-23 12:00:26',
+                '39,859',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.1">1.1</a>',
+                '2025-09-23 12:00:35',
+                '39,762',
+                "None provided&nbsp;",
+                '',
+                ""],
+            /* only show released versions. The version must be public unless user has manager rights in which case they can see all released versions */
+            ['<img class="latestVersionHidden" src="https://ipt.vliz.be/eurobis/images/dataTables/forward_enabled_hover.png"/><a href="https://ipt.vliz.be/eurobis/resource?r=worms_type_localities&amp;v=1.0">1.0</a>',
+                '2025-09-17 11:55:59',
+                '39,633',
+                "None provided&nbsp;",
+                '',
+                'Dante Dumon']
+        ];
+
+        $(document).ready(function() {
+            $('#vtableContainer').html( '<table class="hover row-border dataTable compact" id="rtable"></table>' );
+            $('#rtable').dataTable( {
+                "bFilter": false,
+                "aaData": aDataSet,
+                "iDisplayLength": 3,
+                "bLengthChange": false,
+                "bAutoWidth": false,
+                "bSort": false,
+                "oLanguage": {
+                    "sEmptyTable": "No versions are currently available",
+                    "sZeroRecords": "No versions were found",
+                    "sInfo": "Showing _START_ to _END_ of _TOTAL_",
+                    "sInfoEmpty": "Showing 0 to 0 of 0",
+                    "sInfoFiltered": "(filtered from _MAX_ total)",
+                    "oPaginate": {
+                        "sNext": "next",
+                        "sPrevious": "previous"
+
+                    }
+                },
+                "aoColumns": [
+                    { "sTitle": "Version", "bSearchable": false},
+                    { "sTitle": "Published on", "bSearchable": false},
+                    { "sTitle": "Records", "bSearchable": false},
+                    { "sTitle": "Change summary", "bSearchable": false},
+                    { "sTitle": "DOI handle", "bSearchable": false},
+                    { "sTitle": "Last modified by", "bSearchable": false}
+                ],
+                "aoColumnDefs": [
+                    { 'bSortable': false, 'aTargets': [ 0,1,2,3,4,5] }
+                ]
+            } );
+        } );
+How to cite
+Researchers should cite this work as follows:
+WoRMS Editorial Board (2021). Type locality distributions from the World Register of Marine Species. Available from
+http://www.marinespecies.org
+at VLIZ. Accessed on YYYY-MM-DD.
+Rights
+Researchers should respect the following rights statement:
+The publisher and rights holder of this work is Flanders Marine Institute.
+This work is licensed under a
+Creative Commons Attribution (CC-BY 4.0) License
+.
+GBIF Registration
+This resource has been registered with GBIF, and assigned the following GBIF UUID:
+2f7c33b3-ea7a-40ac-a3b7-bace96f978f7
+.
+Flanders Marine Institute
+publishes this resource, and is itself registered in GBIF as a data publisher endorsed by
+Belgian Biodiversity Platform
+.
+Keywords
+Bio-geographical regions; Habitats and biotopes; Sea regions; Biota; Environment; Geoscientific Information; Oceans; EurOBIS calculated BBOX; Metadata non conformant; Metadata not evaluated; No limitations to public access; Type localities; WGS84 (EPSG:4326); World Oceans; XYZ ASCII; Occurrence; Observation
+External data
+The resource data is also available in other formats
+Online dataset
+https://emodnet.ec.europa.eu/geoviewer/?layers=6d617269-6e65-696e-666f-000000001510:1:1&basemap=ebwbl&active=12639&bounds=-12530604,-7655416,12530604,7655416&filters=12639:datasetid__datasetid=5184--&projection=EPSG:3857
+UTF-8 HTML
+Online dataset
+https://www.eurobis.org/toolbox/en/download/occurrence/dataset/5184
+UTF-8 HTML
+GBIF dataset
+https://www.gbif.org/dataset/2f7c33b3-ea7a-40ac-a3b7-bace96f978f7
+UTF-8 HTML
+INSPIRE Download Service (WFS)
+https://geo.vliz.be/geoserver/Dataportal/wfs?service=wfs&version=1.1.0&typeName=eurobis-obisenv_full&request=GetFeature&outputFormat=text%2Fcsv&viewParams=datasetid%3A5184
+UTF-8 HTML
+INSPIRE WMS
+https://geo.vliz.be/geoserver/wms?service=WMS&request=getCapabilities&layer=Dataportal:eurobis_rasters-obisenv
+UTF-8 HTML
+IPT
+http://ipt.vliz.be/eurobis/resource?r=worms_type_localities
+UTF-8 HTML
+Online dataset
+https://obis.org/dataset/b74b429a-4052-4f5b-bff3-fe0b5a2e8669
+UTF-8 HTML
+Project home page
+http://www.marinespecies.org
+UTF-8 HTML
+Metadata
+https://www.eurobis.org/imis?dasid=5184
+UTF-8 HTML
+Contacts
+WoRMS Steering Committee
+Flanders Marine Institute (VLIZ)
+BE
+info@vliz.be
+https://www.vliz.be
+Leen Vandepitte
+Point Of Contact
+Vlaams Instituut voor de Zee
+BE
+leen.vandepitte@vliz.be
+https://orcid.org/0000-0002-8160-7941
+Geographic Coverage
+EurOBIS calculated BBOX > station Bounding Box
+Bounding Coordinates
+South West [-78.867, -180], North East [89.017, 180]
+Temporal Coverage
+Start Date / End Date
+1816-06-19 / 2024-01-19
+Additional Metadata
+Alternative Identifiers
+2f7c33b3-ea7a-40ac-a3b7-bace96f978f7
+https://ipt.vliz.be/eurobis/resource?r=worms_type_localities
+Integrated Publishing Toolkit (IPT) Version 3.2.3
+About the IPT
+User manual
+Report a bug
+Request new feature
+document.addEventListener('DOMContentLoaded', () => {
+        const modalEl = document.getElementById('unsavedChangesModal');
+        const stayButton = document.getElementById('stayButton');
+        const leaveButton = document.getElementById('leaveButton');
+
+        if (!modalEl || !leaveButton) {
+            console.warn("Unsaved changes modal not found.");
+            return;
+        }
+
+        const bsModal = new bootstrap.Modal(modalEl);
+        let hasUnsavedChanges = false;
+        let redirectUrl = null;
+        let isIntentionalUnload = false;
+
+        // Track form changes
+        const form = document.querySelector('.track-unsaved');
+
+        form.querySelectorAll('button[type="submit"], input[type="submit"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                isIntentionalUnload = true;
+                hasUnsavedChanges = false;
+            });
+        });
+
+        if (form) {
+            // inputs
+            form.addEventListener('input', () => {
+                hasUnsavedChanges = true;
+            });
+
+            // dropdowns (select2)
+            $(document).on('select2:select select2:unselect change', 'select', function () {
+                if ($(this).data('select2')) {
+                    hasUnsavedChanges = true;
+                }
+            });
+
+            // copy agent button
+            document.getElementById('copy-agent-button')?.addEventListener('click', () => {
+                hasUnsavedChanges = true;
+            });
+
+            // Disable warning before submitting the form
+            form.addEventListener('submit', () => {
+                isIntentionalUnload = true;
+                hasUnsavedChanges = false;
+            });
+        }
+
+        // Warn before browser unload (refresh, close tab)
+        window.addEventListener('beforeunload', (e) => {
+            if (!hasUnsavedChanges || isIntentionalUnload) {
+                return;
+            }
+
+            e.preventDefault();
+            e.returnValue = '';
+        });
+
+        // Intercept internal link clicks
+        document.querySelectorAll('a[href]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Skip links that should not trigger the unsaved-changes modal
+                if (link.id === 're-infer-link') {
+                    console.log("link.id=" + link.id);
+                    console.log("skipping!")
+                    isIntentionalUnload = true;
+                    hasUnsavedChanges = false;
+                    return;
+                }
+
+                const href = link.getAttribute('href');
+
+                // Ignore non-links and JS links
+                if (!href ||
+                    href === '#' ||
+                    href.startsWith('#') ||
+                    href.startsWith('javascript:') ||
+                    link.target === '_blank') {
+                    return;
+                }
+
+                // Compute resolved URL
+                const targetUrl = new URL(link.href);
+                const currentUrl = new URL(window.location.href);
+
+                // Only warn if the target is a DIFFERENT page
+                const isRealNavigation =
+                    targetUrl.pathname !== currentUrl.pathname ||
+                    targetUrl.search !== currentUrl.search ||
+                    targetUrl.hash === '' && currentUrl.hash !== '';
+
+                if (!isRealNavigation) {
+                    return;
+                }
+
+                if (hasUnsavedChanges) {
+                    e.preventDefault();
+                    redirectUrl = link.href;
+                    bsModal.show();
+                }
+            });
+        });
+
+        // Stay -> close modal only
+        if (stayButton) {
+            stayButton.addEventListener('click', () => {
+                redirectUrl = null;
+            });
+        }
+
+        // Leave -> proceed to stored URL
+        leaveButton.addEventListener('click', () => {
+            if (redirectUrl) {
+                isIntentionalUnload = true;
+                hasUnsavedChanges = false;
+                window.location.href = redirectUrl;
+            }
+        });
+    });
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    try {
+        var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+            trigger: 'focus'
+        })
+    } catch (TypeError) {}
+$('.confirmDeleteVersion').jConfirmAction({
+        titleQuestion : "Are you sure?",
+        question : "Do you still want to delete this archived version?</br></br>Please ensure this version has not been cited in a scientific publication.</br></br>This operation cannot be reverted.",
+        yesAnswer : "Yes",
+        cancelAnswer : "No",
+        buttonType: "danger"
+    });
+
+    $(function() {
+    });
+
+    // show extension description in tooltip in data records section
+    $(function() {
+        $('.ext-tooltip').tooltip({track: true});
+    });

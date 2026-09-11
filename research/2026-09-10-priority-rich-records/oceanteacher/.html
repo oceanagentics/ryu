@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>OceanExpert - A Directory of Marine and Freshwater Professionals</title>
+            <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <!-- link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" -->
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome-free-6.7.2-web/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome-free-6.7.2-web/css/brands.css">
+    <link rel="stylesheet" type="text/css" href="/css/navbar-login.css">
+    <link rel="stylesheet" type="text/css" href="/css/social-buttons.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/google-fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/AdminLTE.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/leaflet.zoomhome.css">
+    <link rel="stylesheet" type="text/css" href="/css/leaflet.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/MarkerCluster.Default.css">
+    <link rel="stylesheet" type="text/css" href="/css/easy-button.css">
+    <link rel="stylesheet" type="text/css" href="/css/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="/css/homepage.css">
+        <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/fontawesome-free-6.7.2-web/css/fontawesome.css">
+        <link rel="stylesheet" type="text/css" href="/css/fontawesome-free-6.7.2-web/css/brands.css">
+        <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/AdminLTE.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/css/square/blue.css">
+        <link rel="stylesheet" type="text/css" href="/css/jquery-confirm.min.css">
+        <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
+    </head>
+    <body>
+        <span
+                style="display:none" id="meli">
+            <a
+                    title="meli"
+                    href="/meli/meli.php"
+                    class="btn btn-default btn-sm">
+                <i class="fa fa-rocket"></i>
+                Meli
+            </a>
+        </span>
+            <style media="screen">
+
+    </style>
+    <!-- tmp message because we are working on OE -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <a
+                href="/"
+                title="">
+            <img
+                    src="/images/combined_unesco_ioc_white_eng.png"
+                    alt="mainlogo"
+                    class="mainlogo"/>
+        </a>
+        <div class="navbar-header page-scroll">
+            <button
+                    type="button"
+                    class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="section-header">
+                <a href="/" title=""><span>Ocean<strong>Expert</strong></span>
+                    <div class="sub-head">A Directory of Marine and Freshwater Professionals</div>
+                </a>
+            </span>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a class="page-scroll" href="#page-top"></a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                                <li class="">
+                    <a class="highlight calendar" href="/events/calendar">Events</a>
+                </li>
+                <li class="">
+                    <a class="highlight documents" href="/documents">Documents</a>
+                </li>
+                <li class="">
+                    <a class="highlight institutes" href="/institutes">Institutes</a>
+                </li>
+                <li class="">
+                    <a class="highlight groups" href="/groups">Groups</a>
+                </li>
+                <li class="">
+                    <a class="highlight search" href="/advancedSearch">Search</a>
+                </li>
+
+                                    <li><a
+                                href="/register/"
+                                title="Register"
+                                class="highlight register-btn">
+                            Register
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a
+                                href="#"
+                                class="dropdown-toggle highlight"
+                                data-toggle="dropdown">
+                            <b>Login</b> <span class="caret"></span>
+                        </a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Expert Login</label>
+                                        <form
+                                                class="form"
+                                                method="post"
+                                                action="/login_check"
+                                                accept-charset="UTF-8"
+                                                id="login-nav">
+                                                                                        <input
+                                                    type="hidden"
+                                                    name="_csrf_token"
+                                                    value="oAz9lW9Wi4FfO7Fg0DgFBLkR27Tg3LGmbHtjlAGF9tQ" />
+                                            <div class="form-group">
+                                                <label
+                                                        class="sr-only"
+                                                        for="username">Username
+                                                </label>
+                                                <div class="input-group">
+                                                    <span
+                                                            class="input-group-addon">
+                                                        <i class="glyphicon glyphicon-user"></i>
+                                                    </span>
+                                                    <input
+                                                            type="text"
+                                                            class="form-control"
+                                                            placeholder="Username / Email"
+                                                            aria-describedby="basic-addon1"
+                                                            id="username"
+                                                            name="_username"
+                                                            value=""
+                                                            required="required" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label
+                                                        class="sr-only"
+                                                        for="password">Password
+                                                </label>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="glyphicon glyphicon-lock"></i>
+                                                    </span>
+                                                    <input
+                                                            type="password"
+                                                            class="form-control"
+                                                            placeholder="Password"
+                                                            aria-describedby=""
+                                                            id="password"
+                                                            name="_password"
+                                                            required="required">
+                                                </div>
+                                                <div class="help-block text-right">
+                                                    <a
+                                                        href="/reset/request">
+                                                        Forgot Password?
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button
+                                                        type="submit"
+                                                        class="btn btn-primary btn-block"
+                                                        id="submit"
+                                                        name="_submit">Log in
+                                                </button>
+                                            </div>
+
+                                            <div class="checkbox icheck">
+                                                <label>
+                                                    <input
+                                                            type="checkbox"
+                                                            id="remember_me"
+                                                            name="_remember_me"
+                                                            value="on"/>
+                                                    Remember me
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="bottom text-center">
+                                        New Here?
+                                        <a
+                                                href="/register/">
+                                            <b> Register</b>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+
+    <!-- /.container -->
+</nav>
+<script type="text/javascript">
+    //give the username input the focus once the dropdown menu is shown
+    //#406
+    /* seems not to work
+    arno 27/11/24
+
+    $('.dropdown').on('shown.bs.dropdown', function () {
+       $("#username").focus();
+    });
+    */
+</script>
+
+    <div class="col-sm-12 col-md-12 col-md-5 pull-right searchBlock">
+        <div class="container-fluid top-buffer50">
+    <div class="search">
+        <h3>Search <small class="options"><a href="/advancedSearch" title="">More Options</a></small></h3>
+        <hr class="nopadding"/>
+    </div>
+    <div class="row top-buffer50">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="input-group">
+                <div class="input-group-btn search-panel">
+                    input
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span id="search_concept">All </span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" id="searchType">
+                        <li data-value="experts"><a href="#">Experts</a></li>
+                        <li data-value="institutions"><a href="#">Institutes</a></li>
+                        <li data-value="events"><a href="#">Events</a></li>
+                        <li data-value="documents"><a href="#">Documents</a></li>
+                        <li class="divider"></li>
+                        <li data-value="all"><a href="#">All</a></li>
+                    </ul>
+                </div>
+                <!--
+                think this is useless Arno 12/05/22
+                <input
+                        type="hidden"
+                        name="search_param"
+                        value="all"
+                        id="search_param"/>
+                -->
+                <input
+                        type="text"
+                        class="form-control"
+                        name="searchString"
+                        id="searchString"
+                        value=""
+                        placeholder="Enter your search text here..." />
+                <span class="input-group-btn">
+					<button
+                            class="btn btn-default"
+                            type="button"
+                            id="searchBtn">
+                        <span
+                                class="fa fa-search fa-fw"></span>
+                        Go
+                    </button>
+				</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="search top-buffer50">
+        <h3>Browse</h3>
+        <hr class="nopadding"/>
+    </div>
+    <div class="row ">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 experts">
+            <h4 class="heading">Experts By:</h4>
+            <div class="panel-group" id="accordion_reg" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="last-name">
+                        <a
+                                class="collapsed"
+                                role="button"
+                                data-toggle="collapse"
+                                data-parent="#accordion_reg"
+                                href="#collapseLastName_reg"
+                                aria-expanded="false"
+                                aria-controls="collapseLastName_reg">
+                            <h4 class="panel-title">
+                                <i class="fa fa-plus pull-right"></i>
+                                Last Name
+                            </h4>
+                        </a>
+                    </div>
+                    <div
+                            id="collapseLastName_reg"
+                            class="panel-collapse collapse"
+                            role="tabpanel"
+                            aria-labelledby="last-name">
+                        <div class="panel-body" id="expert-lastname">
+                            <div class="text-center">
+                                <img src="/images/ezgif-2-3cce8bb4ae.gif" alt="EZGIF">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="country">
+                        <a
+                                class="collapsed"
+                                role="button"
+                                data-toggle="collapse"
+                                data-parent="#accordion_reg"
+                                href="#collapseCountry_reg"
+                                aria-expanded="false"
+                                aria-controls="collapseCountry_reg">
+                            <h4 class="panel-title">
+                                <i class="fa fa-plus pull-right"></i>
+                                Worklocation (country)
+                            </h4>
+                        </a>
+                    </div>
+                    <div
+                            id="collapseCountry_reg"
+                            class="panel-collapse collapse"
+                            role="tabpanel"
+                            aria-labelledby="country">
+                        <div class="panel-body" id="expert-country">
+                            <div class="text-center">
+                                <img src="/images/ezgif-2-3cce8bb4ae.gif" alt="EZGIF">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="subject">
+                        <a
+                                class="collapsed"
+                                role="button"
+                                data-toggle="collapse"
+                                data-parent="#accordion_reg"
+                                href="#collapseSubject_reg"
+                                aria-expanded="false"
+                                aria-controls="collapseSubject_reg">
+                            <h4 class="panel-title">
+                                <i class="fa fa-plus pull-right"></i>
+                                Subject of research
+                            </h4>
+                        </a>
+                    </div>
+                    <div
+                            id="collapseSubject_reg"
+                            class="panel-collapse collapse"
+                            role="tabpanel"
+                            aria-labelledby="subject">
+                        <div class="panel-body" id="expert-subject">
+                            <div class="text-center">
+                                <img src="/images/ezgif-2-3cce8bb4ae.gif" alt="EZGIF">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="region">
+                        <a
+                                class="collapsed"
+                                role="button"
+                                data-toggle="collapse"
+                                data-parent="#accordion_reg"
+                                href="#collapseRegion_reg"
+                                aria-expanded="false"
+                                aria-controls="collapseRegion_reg">
+                            <h4 class="panel-title">
+                                <i class="fa fa-plus pull-right"></i>
+                                Sea region of research
+                            </h4>
+                        </a>
+                    </div>
+                    <div
+                            id="collapseRegion_reg"
+                            class="panel-collapse collapse"
+                            role="tabpanel"
+                            aria-labelledby="region">
+                        <div class="panel-body" id="expert-region">
+                            <div class="text-center">
+                                <img src="/images/ezgif-2-3cce8bb4ae.gif" alt="EZGIF">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 institutions">
+            <h4 class="heading">Institutes By:</h4>
+            <div class="panel-group" id="accordion_reg_inst" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="inst-name">
+                        <a
+                                class="collapsed"
+                                role="button"
+                                data-toggle="collapse"
+                                data-parent="#accordion_reg_inst"
+                                href="#collapseInstName_reg"
+                                aria-expanded="true"
+                                aria-controls="collapseInstName_reg">
+                            <h4 class="panel-title">
+                                <i class="fa fa-plus pull-right"></i>
+                                Institute name
+                            </h4>
+                        </a>
+                    </div>
+                    <div id="collapseInstName_reg" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="inst-name">
+                        <div class="panel-body" id="inst-name">
+                            <div class="text-center">
+                                <img src="/images/ezgif-2-3cce8bb4ae.gif" alt="EZGIF">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="inst-country">
+                        <a
+                                class="collapsed"
+                                role="button"
+                                data-toggle="collapse"
+                                data-parent="#accordion_reg_inst"
+                                href="#collapseInstCountry_reg"
+                                aria-expanded="false"
+                                aria-controls="collapseInstCountry_reg">
+                            <h4 class="panel-title">
+                                <i class="fa fa-plus pull-right"></i>
+                                Country
+                            </h4>
+                        </a>
+                    </div>
+                    <div id="collapseInstCountry_reg" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="inst-country">
+                        <div class="panel-body" id="inst-country">
+                            <div class="text-center">
+                                <img src="/images/ezgif-2-3cce8bb4ae.gif" alt="EZGIF">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="inst-subject">
+                        <a
+                                class="collapsed"
+                                role="button"
+                                data-toggle="collapse"
+                                data-parent="#accordion_reg_inst"
+                                href="#collapseInstSubject_reg"
+                                aria-expanded="false"
+                                aria-controls="collapseInstSubject_reg">
+                            <h4 class="panel-title">
+                                <i class="fa fa-plus pull-right"></i>
+                                Sea region of research
+                            </h4>
+                        </a>
+                    </div>
+
+                    <div id="collapseInstSubject_reg" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="inst-subject">
+                        <div class="panel-body" id="inst-searegion">
+                            <div class="text-center">
+                                <img src="/images/ezgif-2-3cce8bb4ae.gif" alt="EZGIF">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="inst-type">
+                        <a
+                                class="collapsed"
+                                role="button"
+                                data-toggle="collapse"
+                                data-parent="#accordion_reg_inst"
+                                href="#collapseInstType_reg"
+                                aria-expanded="false"
+                                aria-controls="collapseInstType_reg">
+                            <h4 class="panel-title">
+                                <i class="fa fa-plus pull-right"></i>
+                                Type of Organization
+                            </h4>
+                        </a>
+                    </div>
+                    <div id="collapseInstType_reg" class="panel-collapse collapse" role="tabpanel"
+                         aria-labelledby="inst-type">
+                        <div class="panel-body" id="inst-type">
+                            <div class="text-center">
+                                <img src="/images/ezgif-2-3cce8bb4ae.gif" alt="EZGIF">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <script src="/js/jquery.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/icheck.min.js" type="text/javascript"></script>
+<script src="/js/validator.min.js" type="text/javascript"></script>
+<script src="/js/select2.full.min.js" type="text/javascript"></script>
+<script src="/js/jquery.inputmask.js" type="text/javascript"></script>
+<script src="/js/bootstrap-typeahead.min.js" type="text/javascript"></script>
+<script src="/js/jquery-ui.js" type="text/javascript"></script>
+<script src="/js/jquery.lazyload.min.js" type="text/javascript"></script>
+<script src="/js/jquery.noty.packaged.min.js" type="text/javascript"></script>
+<script src="/js/jquery-confirm.min.js"></script>
+<script type="text/javascript">
+     $(function() {
+         $('#remember_me').iCheck({
+             checkboxClass: 'icheckbox_square-blue',
+             radioClass: 'iradio_square-blue',
+             increaseArea: '20%'
+         });
+          $("img.lazy").lazyload({effect: "fadeIn"});
+          $(".select2").select2();
+          $('select').on('change', function (evt) {
+              $(".select2-selection__rendered").attr("title","");
+          });
+          $(".select2-selection__rendered").attr("title","");
+         
+         function notify(type, text) {
+             var n = noty({
+                 text: text,
+                 layout: 'top',
+                 theme: 'relax', // or 'relax'
+                 type: type
+             });
+         }
+         if (!navigator.cookieEnabled){
+             notify('error', '<i class="fa fa-exclamation-triangle fa-fw"></i> OceanExpert uses cookies to provide you with all the cool functionality.' +
+                 ' We see that your browser has cookies disabled. Make sure your cookies are enabled or you will not be able to use OceanExpert optimally.' +
+                 ' <span class="cookie-ok">I understand</span>');
+         }
+      });
+
+     
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-20494768-5', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+<div class="row footer">
+    <div class="text-center top-buffer">
+        <h4><strong>UNESCO/IOC Project Office for IODE</strong>
+        </h4>
+        <p>InnovOcean Campus - Jacobsenstraat 1<br>8400 Oostende, Belgium</p>
+        <ul class="list-inline social-icons">
+            <li>
+                <a
+                        href="mailto:info@oceanexpert.org"
+                        target="_blank">
+                    <i class="fa fa-envelope-o fa-fw fa-2x"></i>
+                </a>
+            </li>
+            <li>
+                <a
+                        href="https://www.facebook.com/IODE.Oostende/"
+                        target="_blank">
+                    <i class="fa fa-facebook-official fa-fw fa-2x"></i>
+                </a>
+            </li>
+            <li>
+                <a
+                        href="https://bsky.app/profile/iodeoostende.bsky.social"
+                        target="_blank">
+                    <i class="fa-2x fa-brands fa-bluesky"></i>
+                </a>
+            </li>
+            <li>
+                <a
+                        href="https://x.com/IODEocean"
+                        target="_blank"
+                        title="Twitter"
+                        style = "font-size: 65%;">
+                    <i class="fa-fw fa-2x fa-brands fa-x-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a
+                        href="https://youtu.be/IiW7WwvqWcw"
+                        target="_blank">
+                    <i class="fa-fw fa-brands fa-youtube" style="color: red"></i><br />
+                    <span class="sub-head">English</span>
+                </a>
+            </li>
+            <li>
+                <a
+                        href="https://youtu.be/v3As2gqyBfo"
+                        target="_blank">
+                    <i class="fa-fw fa-brands fa-youtube" style="color: red"> </i><br />
+                    <span class="sub-head">Español</span>
+                </a>
+            </li>
+        </ul>
+        <p class="center-block">
+            <a href="/documentation/manual.php" class="bold">Manual</a>
+            | <a href="/disclaimer" class="bold">Disclaimer</a>
+            | <a href="/statistics" class="bold">Statistics</a>
+            | <a href="/documentation/api.php" class="bold">API Documentation</a>
+        </p>
+        <hr class="small compact darkgrey">
+        <p class="text-muted copyright">
+            <a
+                    rel="license"
+                    href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                    target="_blank">
+                <img
+                        alt="Creative Commons License"
+                        style="border-width:0"
+                        src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"/>
+            </a>
+            Version 2.6.5
+            Copyright &copy; 2026,
+            UNESCO/IOC Project Office for IODE,
+            Ostend,
+            Belgium
+        </p>
+    </div>
+</div>    </div>
+<script type="text/javascript">
+
+    var expertLnameStartWith = "/expertLnameStartWith";
+    var expertCountriesStartWith = "/expertCountriesStartWith";
+    var expertSubjects = "/expertSubjects";
+    var expertSeaRegions = "/expertSeaRegions";
+    var instituteNameStartsWith = "/instituteNameStartsWith";
+    var instituteCountriesStartsWith = "/instituteCountriesStartsWith";
+    var instituteTypes = "/instituteTypes";
+    var instituteAreas = "/instituteAreas";
+
+    $('.search-panel .dropdown-menu').find('a').click(function (e) {
+        e.preventDefault();
+        var concept = $(this).text();
+        $('.search-panel span#search_concept').text(concept);
+    });
+    var aSearchType = 'all';
+    $("#searchType").on("click", "a", function (e) {
+        aSearchType = $(this).parent().data("value");
+    });
+
+    $("#searchBtn").click(function ()
+    {
+        $(this).parent().parent().removeClass('has-error');
+        var searchString = $("#searchString");
+        if ($.trim(searchString.val()) !== "") {
+            $(this).parent().parent().removeClass('has-error');
+            window.location.href = "/advancedSearch?"
+                + "action=browse"
+                + "&type=" + aSearchType
+                + "&query=" + encodeURIComponent(searchString.val());
+        } else {
+            $(this).parent().parent().addClass('has-error');
+        }
+    });
+
+    $(".experts").find(".panel-heading>a").click(function (e)
+    {
+        e.preventDefault();
+        $(".experts").find(".panel-heading").find('.fa').removeClass('fa-minus').addClass('fa-plus');
+        if ($(this).hasClass('collapsed')) {
+            $(this).find('.fa').removeClass('fa-plus').addClass('fa-minus');
+        } else {
+            $(this).find('.fa').removeClass('fa-minus').addClass('fa-plus');
+        }
+        $this = $(this);
+        var section = $this.parents('.panel').find(".panel-body");
+        var sectionid = section.attr("id");
+        switch (sectionid) {
+            case 'expert-lastname':
+                if (typeof expertlname == 'undefined') {
+                    section.html("<center><img src=\'/images/ezgif-2-3cce8bb4ae.gif\'></center>");
+                    $.ajax({
+                        url: expertLnameStartWith,
+                    }).done(function (expertlname) {
+                        var html = "<p>Starts with:</p>";
+                        html += "<div class='btn-group btn-group-sm expertlname'>";
+                        for (var i = 65; i <= 90; i++) {
+                            if ($.inArray(String.fromCharCode(i), expertlname)) {
+                                var url = "/advancedSearch?action=browse&amp;expertLname=idLetter";
+                                url = url.replace("idLetter", String.fromCharCode(i));
+                                html += "<a href='" + url + "' class='btn btn-default'><strong>" + String.fromCharCode(i) + "</strong></a>";
+                            } else {
+                                html += "<button class='btn btn-default' disabled=''><strong>" + String.fromCharCode(i) + "</strong></button>";
+                            }
+                        }
+                        html += "</div>";
+                        section.html(html);
+                        window.expertlname = "set";
+                    });
+                }
+                break;
+
+            case 'expert-country':
+                if (typeof expertcountry == 'undefined') {
+                    section.html("<center><img src=\'/images/ezgif-2-3cce8bb4ae.gif\'></center>");
+                    $.ajax({
+                        url: expertCountriesStartWith,
+                    }).done(function (expertcountry) {
+                        console.log(expertcountry);
+                        var html = "<p>Country Name Starts with:</p>";
+                        html += "<div class='btn-group btn-group-sm'>";
+                        for (var i = 65; i <= 90; i++) {
+                            console.log(i + ' ' + String.fromCharCode(i));
+                            console.log($.inArray(String.fromCharCode(i), expertcountry));
+                            if ($.inArray(String.fromCharCode(i), expertcountry) !== -1) {
+                                var url = "/advancedSearch?action=browse&amp;countryName=idLetter&amp;type=experts";
+                                url = url.replace("idLetter", String.fromCharCode(i));
+                                html += "<a href='" + url + "' class='btn btn-default'><strong>" + String.fromCharCode(i) + "</strong></a>";
+                            } else {
+                                html += "<button class='btn btn-default' disabled=''><strong>" + String.fromCharCode(i) + "</strong></button>";
+                            }
+                        }
+                        html += "</div>";
+                        section.html(html);
+                        window.expertcountry = "set";
+                    });
+                }
+                break;
+
+            case 'expert-subject':
+                if (typeof expertsub == 'undefined') {
+                    section.html("<center><img src=\'/images/ezgif-2-3cce8bb4ae.gif\'></center>");
+                    $.ajax({
+                        url: expertSubjects,
+                    }).done(function (expertsub) {
+                        //var data = $.parseJSON(expertsub);
+                        var html = "<p>Subject of Research in :</p>";
+                        html += "<ul class='list-group boxed'>";
+                        $.each(expertsub, function (key, value) {
+                            var url = "/advancedSearch?action=browse&amp;expertSubject=idSub";
+                            url = url.replace("idSub", value.idSub);
+                            html += "<li class='list-group-item strong'><a href=" + url + " >" + value.subname + "</a></li>";
+                        })
+                        html += "</ul>";
+                        section.html(html);
+                        window.expertsub = "set";
+                    });
+                }
+                break;
+
+            case 'expert-region':
+                if (typeof expertregions == 'undefined') {
+                    section.html("<center><img src=\'/images/ezgif-2-3cce8bb4ae.gif\'></center>");
+                    $.ajax({
+                        url: expertSeaRegions,
+                    }).done(function (expertregions) {
+                        //var data = $.parseJSON(expertregions);
+                        var html = "<p>Sea region of study:</p>";
+                        html += "<ul class='list-group boxed'>";
+                        $.each(expertregions, function (key, value) {
+                            var url = "/advancedSearch?action=browse&amp;expertRegion=idKey";
+                            url = url.replace("idKey", key);
+                            html += "<li class='list-group-item strong'><a href=" + url + " >" + value + "</a></li>";
+                        })
+                        html += "</ul>";
+                        section.html(html);
+                        window.expertregions = "set";
+                    });
+                }
+                break;
+        }
+    });
+
+    $(".institutions").find(".panel-heading>a").click(function (e) {
+        e.preventDefault();
+        $(".institutions").find(".panel-heading").find('.fa').removeClass('fa-minus').addClass('fa-plus');
+        if ($(this).hasClass('collapsed')) {
+            $(this).find('.fa').removeClass('fa-plus').addClass('fa-minus');
+        } else {
+            $(this).find('.fa').removeClass('fa-minus').addClass('fa-plus');
+        }
+        $this = $(this);
+        var section = $this.parents('.panel').find(".panel-body");
+        var sectionid = section.attr("id");
+        switch (sectionid) {
+            case 'inst-name':
+                if (typeof instnames == 'undefined') {
+                    $.ajax({
+                        url: instituteNameStartsWith,
+                    }).done(function (instnames) {
+                        var html = "<p>Starts with:</p>";
+                        html += "<div class='btn-group btn-group-sm expertlname'>";
+                        for (var i = 65; i <= 90; i++) {
+                            if ($.inArray(String.fromCharCode(i), instnames)) {
+                                var url = "/advancedSearch?action=browse&amp;instName=idLetter";
+                                url = url.replace("idLetter", String.fromCharCode(i));
+                                html += "<a href='" + url + "' class='btn btn-default'><strong>" + String.fromCharCode(i) + "</strong></a>";
+                            } else {
+                                html += "<button class='btn btn-default' disabled=''><strong>" + String.fromCharCode(i) + "</strong></button>";
+                            }
+                        }
+                        html += "</div>";
+                        section.html(html);
+                        window.instnames = "set";
+                    });
+                }
+                break;
+
+            case 'inst-country':
+                if (typeof instcountries == 'undefined') {
+                    $.ajax({
+                        url: instituteCountriesStartsWith,
+                    }).done(function (instcountries) {
+                        var html = "<p>Country Name Starts with:</p>";
+                        html += "<div class='btn-group btn-group-sm'>";
+                        for (var i = 65; i <= 90; i++) {
+                            if ($.inArray(String.fromCharCode(i), instcountries) !== -1) {
+                                var url = "/advancedSearch?action=browse&amp;instCountry=idLetter";
+                                url = url.replace("idLetter", String.fromCharCode(i));
+                                html += "<a href='" + url + "' class='btn btn-default'><strong>" + String.fromCharCode(i) + "</strong></a>";
+                            } else {
+                                html += "<button class='btn btn-default' disabled=''><strong>" + String.fromCharCode(i) + "</strong></button>";
+                            }
+                        }
+                        html += "</div>";
+                        section.html(html);
+                        window.instcountries = "set";
+                    });
+                }
+                break;
+
+            case 'inst-searegion':
+                if (typeof instareas == 'undefined') {
+                    $.ajax({
+                        url: instituteAreas,
+                    }).done(function (instareas) {
+                        //var data = $.parseJSON(instareas);
+                        var html = "<p>Sea region of study:</p>";
+                        html += "<ul class='list-group boxed'>";
+                        $.each(instareas, function (key, value) {
+                            var url = "/advancedSearch?action=browse&amp;expertRegion=idKey";
+                            url = url.replace("idKey", value.idRegion);
+                            html += "<li class='list-group-item strong'><a href=" + url + " >" + value.name + "</a></li>";
+                        })
+                        html += "</ul>";
+                        section.html(html);
+                        window.instareas = "set";
+                    });
+                }
+                break;
+
+            case 'inst-type':
+                if (typeof insttypes == 'undefined') {
+                    $.ajax({
+                        url: instituteTypes,
+                    }).done(function (insttypes) {
+                        //var data = $.parseJSON(insttypes);
+                        var html = "<p>Sea region of study:</p>";
+                        html += "<ul class='list-group boxed'>";
+                        $.each(insttypes, function (key, value) {
+                            var url = "/advancedSearch?action=browse&amp;instType=insttype";
+                            url = url.replace("insttype", value.idInsttype);
+                            html += "<li class='list-group-item strong'><a href=" + url + " >" + value.insttypeName + "</a></li>";
+                        })
+                        html += "</ul>";
+                        section.html(html);
+                        window.insttypes = "set";
+                    });
+                }
+                break;
+        }
+    });
+
+    
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-20494768-5', 'auto');
+    ga('send', 'pageview');
+
+</script>
+    </div>
+
+    <div class="col-md-12 col-md-7 nopadding mapArea">
+        <div id="map"></div>
+            </div>
+    <div class="clearfix"></div>
+    <script src="/js/leaflet-src.js"></script>
+    <script src="/js/esri-leaflet.js"></script>
+    <script src="/js/leaflet.markercluster.js"></script>
+    <script src="/js/easy-button.js"></script>
+    <script src="/js/institutes.json"></script>
+    <script src="/js/experts.json"></script>
+    <script src="/js/leaflet.zoomhome.min.js"></script>
+    <script>
+        var tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+                maxZoom: 10,
+                attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'
+            }),
+            latlng = L.latLng(18.23, 16);
+
+        var expert = L.markerClusterGroup({
+            spiderfyOnMaxZoom: false,
+            showCoverageOnHover: false,
+            zoomToBoundsOnClick: false,
+            chunkedLoading: true,
+            maxClusterRadius: function (zoom) {
+                return 80;
+            }
+        });
+        var institution = L.markerClusterGroup({
+            spiderfyOnMaxZoom: false, showCoverageOnHover: false,
+            zoomToBoundsOnClick: false, chunkedLoading: true, maxClusterRadius: function (zoom) {
+                return 80;
+            }
+        });
+
+        if (typeof experts !== 'undefined') {
+            $.each(experts[0], function (index, val) {
+                if (val.count > 1) {
+                    for (var j = 0; j < val.count; j++) {
+                        var marker = L.marker(L.latLng(val.latitude, val.longitude), {
+                            title: val.country, url: "/advancedSearch?action=browse&referrer=map&type=experts&countryName=" + val.country
+                        });
+                        expert.addLayer(marker);
+                    }
+                } else {
+                    // L.marker([51.941196,4.512291], {icon: L.AwesomeMarkers.icon({icon: 'spinner', markerColor: 'red', prefix: 'fa', spin:true}) }).addTo(map);
+                }
+            });
+        }
+
+        if (typeof institutes !== 'undefined') {
+            $.each(institutes[0], function (index, val) {
+                if (val.count > 1) {
+                    for (var j = 0; j < val.count; j++) {
+                        var marker = L.marker(L.latLng(val.latitude, val.longitude), {
+                            title: val.country, url: "/advancedSearch?action=browse&referrer=map&type=institution&countryName=" + val.country
+                        });
+                        institution.addLayer(marker);
+                    }
+                } else {
+                    // L.marker([51.941196,4.512291], {icon: L.AwesomeMarkers.icon({icon: 'spinner', markerColor: 'red', prefix: 'fa', spin:true}) }).addTo(map);
+                }
+            });
+        }
+
+        var map = L.map('map', {
+            center: latlng,
+            zoom: 2,
+            layers: [tiles, expert],
+            minZoom: 2,
+            borderPan: true,
+            scrollWheelZoom: false,
+            worldCopyJump: true,
+            zoomControl: false
+        });
+
+        var zoomHome = L.Control.zoomHome();
+        zoomHome.addTo(map);
+
+        var overlays = {
+            "Experts": expert,
+            "Institutions": institution,
+        };
+
+        L.control.layers(overlays, null, {collapsed: false}).addTo(map);
+
+        L.easyButton('<i class="fa fa-arrows-alt tagfull" aria-hidden="true"></i> Full Screen', function () {
+            doResize($(".tagfull").parents(".easy-button-button"));
+        }).addTo(map);
+
+        expert.on('clusterclick', function (a) {
+            var dupes = {};
+            var singles = [];
+            $.each(a.layer.getAllChildMarkers(), function (index, val) {
+                if (!dupes[val.options.title]) {
+                    dupes[val.options.title] = true;
+                    singles.push(val.options.title);
+                }
+            });
+            if (singles.length > 1) {
+                var zoomLev = map.getZoom();
+                map.setView(new L.LatLng(a.latlng.lat, a.latlng.lng), zoomLev + 1);
+            } else {
+                window.location.href = a.layer.getAllChildMarkers()[0].options.url;
+            }
+        });
+
+        institution.on('clusterclick', function (a) {
+            var dupes = {};
+            var singles = [];
+            $.each(a.layer.getAllChildMarkers(), function (index, val) {
+                if (!dupes[val.options.title]) {
+                    dupes[val.options.title] = true;
+                    singles.push(val.options.title);
+                }
+            });
+            if (singles.length > 1) {
+                var zoomLev = map.getZoom();
+                map.setView(new L.LatLng(a.latlng.lat, a.latlng.lng), zoomLev + 1);
+            } else {
+                window.location.href = a.layer.getAllChildMarkers()[0].options.url;
+            }
+        });
+
+        expert.on('click', function (a) {
+            window.location.href = a.layer.options.url;
+        });
+        institution.on('click', function (a) {
+            window.location.href = a.layer.options.url;
+        });
+
+        function doResize($this) {
+            if ($this.hasClass('resized')) {
+                map.setView([18.23, 16], 2);
+                $this.removeClass('resized');
+                $('.searchBlock').stop();
+                $('.searchBlock').show('slow');
+                $this.html('<i class="fa fa-arrows-alt tagfull" aria-hidden="true"></i> Full Screen')
+                $(".mapArea").removeClass('col-md-12').addClass('col-md-7');
+            } else {
+                $('.searchBlock').stop();
+                $this.addClass('resized');
+                $this.html('<i class="fa fa-compress tagfull" aria-hidden="true"></i> Back to Search');
+                $(".mapArea").removeClass('col-md-7').addClass('col-md-12');
+                $('.searchBlock').hide('slow');
+            }
+            map._onResize();
+        }
+
+    </script>
+    <script src="/js/oejs.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#searchString").keyup(function (event) {
+                if (event.keyCode == 13) {
+                    $("#searchBtn").click();
+                }
+            });
+        });
+    </script>
+                    </body>
+</html>

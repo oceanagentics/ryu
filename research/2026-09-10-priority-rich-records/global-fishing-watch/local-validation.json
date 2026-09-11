@@ -1,0 +1,596 @@
+{
+  "checkedAt": "2026-09-11T01:05:54.004Z",
+  "records": [
+    {
+      "id": "global-fishing-watch",
+      "shape": {
+        "valid": true,
+        "recordId": "global-fishing-watch",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "global-fishing-watch",
+        "issues": [],
+        "warnings": [
+          "No gallery: acceptable when no useful, accessible capture is available.",
+          "No approved machine route is recorded.",
+          "Documented research gaps remain; omitted values have not been invented."
+        ],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 48,
+          "resolvedSources": 48,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "global-fishing-watch-operator",
+      "shape": {
+        "valid": true,
+        "recordId": "global-fishing-watch-operator",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "global-fishing-watch-operator",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 13,
+          "resolvedSources": 13,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "kpler",
+      "shape": {
+        "valid": true,
+        "recordId": "kpler",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "kpler",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "planet-labs",
+      "shape": {
+        "valid": true,
+        "recordId": "planet-labs",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "planet-labs",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "trygg-mat-tracking",
+      "shape": {
+        "valid": true,
+        "recordId": "trygg-mat-tracking",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "trygg-mat-tracking",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "fisheries-analytical-capacity-tool",
+      "shape": {
+        "valid": true,
+        "recordId": "fisheries-analytical-capacity-tool",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "fisheries-analytical-capacity-tool",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "norwegian-directorate-of-fisheries",
+      "shape": {
+        "valid": true,
+        "recordId": "norwegian-directorate-of-fisheries",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "norwegian-directorate-of-fisheries",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "brazil-ministry-fisheries-aquaculture",
+      "shape": {
+        "valid": true,
+        "recordId": "brazil-ministry-fisheries-aquaculture",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "brazil-ministry-fisheries-aquaculture",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "incopesca",
+      "shape": {
+        "valid": true,
+        "recordId": "incopesca",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "incopesca",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "panama-aquatic-resources-authority",
+      "shape": {
+        "valid": true,
+        "recordId": "panama-aquatic-resources-authority",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "panama-aquatic-resources-authority",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "peru-ministry-production",
+      "shape": {
+        "valid": true,
+        "recordId": "peru-ministry-production",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "peru-ministry-production",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "sernapesca",
+      "shape": {
+        "valid": true,
+        "recordId": "sernapesca",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "sernapesca",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "ecuador-dirnea",
+      "shape": {
+        "valid": true,
+        "recordId": "ecuador-dirnea",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "ecuador-dirnea",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "belize-high-seas-fisheries-unit",
+      "shape": {
+        "valid": true,
+        "recordId": "belize-high-seas-fisheries-unit",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "belize-high-seas-fisheries-unit",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "papua-new-guinea-national-fisheries-authority",
+      "shape": {
+        "valid": true,
+        "recordId": "papua-new-guinea-national-fisheries-authority",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "papua-new-guinea-national-fisheries-authority",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "protectedseas-navigator",
+      "shape": {
+        "valid": true,
+        "recordId": "protectedseas-navigator",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "protectedseas-navigator",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "skylight",
+      "shape": {
+        "valid": true,
+        "recordId": "skylight",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "skylight",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "google-bigquery",
+      "shape": {
+        "valid": true,
+        "recordId": "google-bigquery",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "google-bigquery",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "arcgis-online",
+      "shape": {
+        "valid": true,
+        "recordId": "arcgis-online",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "arcgis-online",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "dalio-philanthropies",
+      "shape": {
+        "valid": true,
+        "recordId": "dalio-philanthropies",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "dalio-philanthropies",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "audacious-project",
+      "shape": {
+        "valid": true,
+        "recordId": "audacious-project",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "audacious-project",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "hans-wilsdorf-foundation",
+      "shape": {
+        "valid": true,
+        "recordId": "hans-wilsdorf-foundation",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "hans-wilsdorf-foundation",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "islas-secas-foundation",
+      "shape": {
+        "valid": true,
+        "recordId": "islas-secas-foundation",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "islas-secas-foundation",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "walmart-foundation",
+      "shape": {
+        "valid": true,
+        "recordId": "walmart-foundation",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "walmart-foundation",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "sall-family-foundation",
+      "shape": {
+        "valid": true,
+        "recordId": "sall-family-foundation",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "sall-family-foundation",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "oceana",
+      "shape": {
+        "valid": true,
+        "recordId": "oceana",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "oceana",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "coalition-for-fisheries-transparency",
+      "shape": {
+        "valid": true,
+        "recordId": "coalition-for-fisheries-transparency",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "coalition-for-fisheries-transparency",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "joint-analytical-cell",
+      "shape": {
+        "valid": true,
+        "recordId": "joint-analytical-cell",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "joint-analytical-cell",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 1,
+          "resolvedSources": 1,
+          "issues": []
+        }
+      }
+    },
+    {
+      "id": "indonesia-ministry-marine-affairs-fisheries",
+      "shape": {
+        "valid": true,
+        "recordId": "indonesia-ministry-marine-affairs-fisheries",
+        "issues": []
+      },
+      "quality": {
+        "valid": true,
+        "recordId": "indonesia-ministry-marine-affairs-fisheries",
+        "issues": [],
+        "warnings": [],
+        "sourceCompleteness": {
+          "status": "complete",
+          "referencedSources": 2,
+          "resolvedSources": 2,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "edgeCount": 34,
+  "invalidEndpointPairs": [],
+  "files": {
+    "draft.json": "45b5ff4fe5882759738a97ebbf67bd8ea5a8c7befdb7834998c0517e88a766df",
+    "endpoint-drafts.json": "55109fd4f0148acd2c6ac0c0afc6eeafd24d836262729b30dfab75248744dcb8",
+    "shared-edges.json": "eee6487e27061e221e5a5c636af62434a610b6b8fe738fa5de886406d51633d7"
+  }
+}

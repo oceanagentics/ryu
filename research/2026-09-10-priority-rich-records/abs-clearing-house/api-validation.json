@@ -1,0 +1,494 @@
+{
+  "checkedAt": "2026-09-11T01:07:56.286784+00:00",
+  "id": "abs-clearing-house",
+  "preconditionRead": {
+    "status": 404,
+    "data": {
+      "error": "record not found: abs-clearing-house"
+    }
+  },
+  "draftSha256": "4fec87534607c2df081a9e13d10f1a7ad6a114b225d40da711590236b6dcf473",
+  "validation": {
+    "status": 200,
+    "data": {
+      "valid": false,
+      "recordId": "abs-clearing-house",
+      "issues": [
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[0].method",
+          "message": "a lower_snake_case method is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[0].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[1].method",
+          "message": "a lower_snake_case method is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[1].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[2].method",
+          "message": "a lower_snake_case method is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[2].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[3].type",
+          "message": "invalid access type"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[3].method",
+          "message": "a lower_snake_case method is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[3].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[4].type",
+          "message": "invalid access type"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[4].method",
+          "message": "a lower_snake_case method is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[4].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[5].type",
+          "message": "invalid access type"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[5].method",
+          "message": "a lower_snake_case method is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[5].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[6].type",
+          "message": "invalid access type"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[6].method",
+          "message": "a lower_snake_case method is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "record.properties.access[6].source",
+          "message": "a source ID is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ar.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ar.details.relationshipReview.findings.governs",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ar.details.relationshipReview.findings.operates",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ar.details.relationshipReview.findings.funds",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ar.details.relationshipReview.findings.member_of",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ar.details.relationshipReview.findings.publishes_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ar.details.relationshipReview.findings.syncs_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ar.details.researchGaps.recordCount",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ar.details.researchGaps.storageSize",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.zh.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.zh.details.relationshipReview.findings.governs",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.zh.details.relationshipReview.findings.operates",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.zh.details.relationshipReview.findings.funds",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.zh.details.relationshipReview.findings.member_of",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.zh.details.relationshipReview.findings.publishes_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.zh.details.relationshipReview.findings.syncs_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.zh.details.researchGaps.recordCount",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.zh.details.researchGaps.storageSize",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.en.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.en.details.relationshipReview.findings.governs",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.en.details.relationshipReview.findings.operates",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.en.details.relationshipReview.findings.funds",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.en.details.relationshipReview.findings.member_of",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.en.details.relationshipReview.findings.publishes_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.en.details.relationshipReview.findings.syncs_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.en.details.researchGaps.recordCount",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.en.details.researchGaps.storageSize",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.fr.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.fr.details.relationshipReview.findings.governs",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.fr.details.relationshipReview.findings.operates",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.fr.details.relationshipReview.findings.funds",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.fr.details.relationshipReview.findings.member_of",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.fr.details.relationshipReview.findings.publishes_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.fr.details.relationshipReview.findings.syncs_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.fr.details.researchGaps.recordCount",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.fr.details.researchGaps.storageSize",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ru.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ru.details.relationshipReview.findings.governs",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ru.details.relationshipReview.findings.operates",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ru.details.relationshipReview.findings.funds",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ru.details.relationshipReview.findings.member_of",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ru.details.relationshipReview.findings.publishes_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ru.details.relationshipReview.findings.syncs_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ru.details.researchGaps.recordCount",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.ru.details.researchGaps.storageSize",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.es.details.relationshipReview.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.es.details.relationshipReview.findings.governs",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.es.details.relationshipReview.findings.operates",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.es.details.relationshipReview.findings.funds",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.es.details.relationshipReview.findings.member_of",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.es.details.relationshipReview.findings.publishes_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.es.details.relationshipReview.findings.syncs_to",
+          "message": "non-empty text is required"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.es.details.researchGaps.recordCount",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "localizations.es.details.researchGaps.storageSize",
+          "message": "document the research gap when this information is unavailable"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "edges.rel-nagoya-protocol-cop-mop-governs-abs-clearing-house",
+          "message": "edge endpoints must exist and match the relationship kind"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "edges.rel-cbd-secretariat-operates-abs-clearing-house",
+          "message": "edge endpoints must exist and match the relationship kind"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "edges.rel-cbd-secretariat-publishes-to-abs-clearing-house",
+          "message": "edge endpoints must exist and match the relationship kind"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "edges.rel-defra-publishes-to-abs-clearing-house",
+          "message": "edge endpoints must exist and match the relationship kind"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "edges.rel-moefcc-publishes-to-abs-clearing-house",
+          "message": "edge endpoints must exist and match the relationship kind"
+        },
+        {
+          "recordId": "abs-clearing-house",
+          "path": "edges.rel-declare-syncs-to-abs-clearing-house",
+          "message": "edge endpoints must exist and match the relationship kind"
+        }
+      ],
+      "warnings": [
+        "No gallery: acceptable when no useful, accessible capture is available.",
+        "No approved machine route is recorded.",
+        "Documented research gaps remain; omitted values have not been invented."
+      ],
+      "sourceCompleteness": {
+        "status": "partial",
+        "referencedSources": 36,
+        "resolvedSources": 36,
+        "issues": [
+          {
+            "recordId": "abs-clearing-house",
+            "path": "record.properties.access[0].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "record.properties.access[1].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "record.properties.access[2].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "record.properties.access[3].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "record.properties.access[4].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "record.properties.access[5].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "record.properties.access[6].source",
+            "message": "a source ID is required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "localizations.ar.details.relationshipReview.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "localizations.zh.details.relationshipReview.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "localizations.en.details.relationshipReview.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "localizations.fr.details.relationshipReview.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "localizations.ru.details.relationshipReview.sourceRefs",
+            "message": "profile source references are required"
+          },
+          {
+            "recordId": "abs-clearing-house",
+            "path": "localizations.es.details.relationshipReview.sourceRefs",
+            "message": "profile source references are required"
+          }
+        ]
+      },
+      "recordUpdatedAt": null,
+      "affectedSections": [
+        "record",
+        "localizations",
+        "edges",
+        "routes"
+      ]
+    }
+  }
+}

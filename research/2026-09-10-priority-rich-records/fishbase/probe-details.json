@@ -1,0 +1,39 @@
+[
+  {
+    "key": "s3-parent",
+    "url": "https://s3.us-west-2.amazonaws.com/us-west-2.opendata.source.coop?list-type=2&prefix=cboettig/fishbase/fb/&delimiter=/",
+    "status": 200,
+    "contentType": "application/xml",
+    "bytes": 852,
+    "sample": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ListBucketResult xmlns=\"http://s3.amazonaws.com/doc/2006-03-01/\"><Name>us-west-2.opendata.source.coop</Name><Prefix>cboettig/fishbase/fb/</Prefix><KeyCount>7</KeyCount><MaxKeys>1000</MaxKeys><Delimiter>/</Delimiter><IsTruncated>false</IsTruncated><CommonPrefixes><Prefix>cboettig/fishbase/fb/v19.04/</Prefix></CommonPrefixes><CommonPrefixes><Prefix>cboettig/fishbase/fb/v21.06/</Prefix></CommonPrefixes><CommonPrefixes><Prefix>cboettig/fishbase/fb/v23.01/</Prefix></CommonPrefixes><CommonPrefixes><Prefix>cboettig/fishbase/fb/v23.05/</Prefix></CommonPrefixes><CommonPrefixes><Prefix>cboettig/fishbase/fb/v24.07/</Prefix></CommonPrefixes><CommonPrefixes><Prefix>cboettig/fishbase/fb/v25.04/</Prefix></CommonPrefixes><CommonPrefixes><Prefix>cboettig/fishbase/fb/v26.06/</Prefix></CommonPrefixes></ListBucketResult>"
+  },
+  {
+    "key": "xml-summary",
+    "url": "https://fishbase.se/webservice/summary/fb/showXML.php?identifier=FB-69&ProviderDbase=03",
+    "status": 200,
+    "contentType": "text/xml;charset=UTF-8",
+    "bytes": 65735,
+    "sample": "<?xml version=\"1.0\" encoding=\"utf-8\" ?><response xmlns=\"http://www.eol.org/transfer/content/0.1\"\r\n\txmlns:xsd=\"https://www.w3.org/2001/XMLSchema\"\r\n\txmlns:dc=\"https://purl.org/dc/elements/1.1/\"\r\n\txmlns:dcterms=\"https://purl.org/dc/terms/\"\r\n\txmlns:geo=\"https://www.w3.org/2003/01/geo/wgs84_pos#\"\r\n\txmlns:dwc=\"http://rs.tdwg.org/dwc/dwcore/\"\r\n\txmlns:xsi=\"https://www.w3.org/2001/XMLSchema-instance\"\r\n\txsi:schemaLocation=\"http://www.eol.org/transfer/content/0.1 http://services.eol.org/schema/content_0_2.xsd\">\n<taxon>\n\t<dc:identifier>FB-69</dc:identifier>\n\t<dc:source>http://www.fishbase.org/summary/SpeciesSummary.php?id=69</dc:source>\n\t<dwc:Kingdom>Animalia</dwc:Kingdom>\n\t<dwc:Phylum>Chordata</dwc:Phylum>\n\t<dwc:Class>Teleostei</dwc:Class>\n\t<dwc:Order>Gadiformes</dwc:Order>\n\t<dwc:Family>Gadidae</dwc:Family>\n\t<dwc:Genus>Gadus</dwc:Genus>\n\t<dwc:ScientificName>Gadus morhua Linnaeus, 1758</dwc:ScientificName>\n\t<commonName xml:lang='no'>Knor</commonName>\n\t<commonName xml:lang='no'>Knurr</commonName>\n\t"
+  },
+  {
+    "key": "xml-common",
+    "url": "https://fishbase.se/webservice/comnames/ComNamesXML.php?Genus=Gadus&Species=morhua",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "key": "bruvs-manual",
+    "url": "https://fishbase.se/bruvs/manual/FishBaseBRUVS_2021_03.pdf",
+    "status": 200,
+    "contentType": "application/pdf",
+    "bytes": 198155,
+    "sample": ""
+  },
+  {
+    "key": "col",
+    "url": "https://api.checklistbank.org/dataset/1010",
+    "status": 200,
+    "contentType": "application/json",
+    "bytes": 2395,
+    "sample": "{\"created\":\"2019-11-20T11:07:46.255777\",\"createdBy\":101,\"modified\":\"2026-09-02T00:10:26.970597\",\"modifiedBy\":304,\"key\":1010,\"type\":\"taxonomic\",\"origin\":\"external\",\"attempt\":30,\"imported\":\"2026-09-02T00:12:34.755548\",\"lastImportAttempt\":\"2026-09-02T00:12:34.850597\",\"lastImportState\":\"finished\",\"size\":108155,\"doi\":\"10.48580/d37v\",\"versionDoi\":\"10.48580/d37v.v30\",\"title\":\"FishBase\",\"alias\":\"WoRMS FishBase\",\"description\":\"FishBase is a global information system with extensive information on all species and subspecies of fish. In addition to the data contributed to the Catalogue of Life, the original FishBase database also includes descriptive, biological, ecological, physiological and conservation data and more, and onward links to information in many other databases. Data entry and maintenance is done mainly at the FishBase Information and Research Group, Inc. (FIN) in the Philippines since the 1st January 2011 in collaboration with many colleagues and institutions around the world. The t"
+  }
+]
