@@ -18,8 +18,8 @@ export const detailsMessages = {
     en: "Review", fr: "Révision", es: "Revisión", ar: "المراجعة", zh: "审核", ru: "Проверка",
   },
   "details.reviewHistory": {
-    en: "Review history", fr: "Historique des révisions", es: "Historial de revisiones", ar: "سجل المراجعات", zh: "审核历史",
-    ru: "История проверок",
+    en: "Revision history", fr: "Historique des révisions", es: "Historial de revisiones", ar: "سجل التنقيحات", zh: "修订历史",
+    ru: "История изменений",
   },
   "details.localization": {
     en: "Localization", fr: "Localisation", es: "Localización", ar: "الترجمة المحلية", zh: "本地化", ru: "Локализация",
