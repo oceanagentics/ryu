@@ -1,7 +1,9 @@
 # Write access cleanup — 2026-09-10
 
-Prepared implementation and research delta. **No production content writes,
-deployment or public export refresh have been applied.**
+**Applied in production** on 2026-09-11 UTC as part of release `8aa2b8d6c8af`.
+All 60 combined patches passed new-contract API dry runs, timestamped writes and
+full 137-record readback. The public export is refreshed. See
+[release evidence](../../documentation/deployment-recommendations.md#completed-2026-09-10-data-release).
 
 [access.json](access.json) replaces 67 legacy contribution entries on 36 systems
 with 47 Write entries on 35 systems. BBNJ CHM has no verified live contribution
@@ -92,7 +94,9 @@ The final application requires both access deltas. Do not deploy it against
 legacy records, or apply the new shape while the old reader still serves them.
 No permanent compatibility branch is included.
 
-## Validation
+## Historical validation before the coordinated release
+
+These preparation checks preceded the completed production release above.
 
 - Production build and all 93 tests pass. Focused access, vocabulary and search
   checks pass after the final neutral cost-label correction.

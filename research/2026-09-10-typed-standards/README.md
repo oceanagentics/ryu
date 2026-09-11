@@ -1,6 +1,9 @@
 # Typed Standards graph rollout — 2026-09-10
 
-Status: **prepared; production deployment and graph writes pending Google Cloud reauthentication**.
+**Applied in production** on 2026-09-11 UTC as part of release `8aa2b8d6c8af`.
+All 60 combined patches passed new-contract API dry runs, timestamped writes and
+full 137-record readback. The public export is refreshed. See
+[release evidence](../../documentation/deployment-recommendations.md#completed-2026-09-10-data-release).
 
 Implementation commit: `4830a74`. The [canonical agent instructions](../../documentation/RICH_RESEARCH_RECORDS.md#approved-standards) define the 41-ID vocabulary, evidence requirements, six-language scope descriptions, and Record API write procedure.
 
@@ -77,7 +80,9 @@ The existing 14 descriptors include 11 unsourced entries. Replace them with sour
 | World Register of Marine Species (`worms`) | `darwin_core` | Approved WoRMS taxonomic bulk downloads are provided as Darwin Core CSV. This applies to the requested taxonomic export; it does not imply the web-service responses share that schema. | [Source 1](https://www.marinespecies.org/usersrequest.php) |
 | Zenodo (`zenodo`) | `dublin_core`, `datacite`, `dcat`, `schema_org`, `dcat_ap` | Zenodo exposes repository metadata in Dublin Core, DataCite, DCAT and Schema.org JSON-LD. These describe deposited resources without imposing those schemas on uploaded files. Zenodo documents its DCAT metadata export as a DataCite-to-DCAT-AP transformation. This assignment covers that export, not every metadata interface. | [Source 1](https://about.zenodo.org/principles/); [Source 2](https://developers.zenodo.org/) |
 
-## Validation and remaining application
+## Historical validation before the coordinated release
+
+These preparation checks and application steps preceded the completed production release above.
 
 - All 60 merged records pass the new local Record API shape and quality validators. All 60 also passed the live API’s `validateOnly=true` check with no validation issues. The live API still runs the prior contract; the local checks cover the new typed requirements.
 - The focused [FishBase follow-up](FISHBASE.md) re-ran local typed validation and the live API dry-run for its six added standards; both passed without issues. The other 59 records retain their previous checks.

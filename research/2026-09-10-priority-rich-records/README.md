@@ -33,9 +33,9 @@ Root validation hashes use SHA-256 of JSON.stringify(parsed payload); some worke
 
 ## Application boundary
 
-No production content or review-state changes were applied. This batch also made no code, schema, vocabulary, deployment or commit changes. Cloud SQL remains canonical.
+No production content or review-state changes were applied. The research itself made no code, schema or vocabulary changes; its drafts and evidence are now committed. Cloud SQL remains canonical.
 
-The separate rollout task reports the eight legacy metadata repairs complete and a successful rehearsal of 137 prepared records. Production metrics/standards/access conversion and deployment of the new contract remain pending. Applying these candidates requires that rollout, explicit implementation authorization, fresh canonical reads, dependency ordering and successful new-contract dry runs. New gallery screenshots remain local evidence, and no operational Ryu routes were approved by this research.
+The prerequisite production metrics/standards/access conversion and system-shape rollout completed in release `8aa2b8d6c8af` on 2026-09-11 UTC, with all 137 canonical records verified. Applying these candidates still requires explicit implementation authorization, fresh canonical reads, dependency ordering and successful new-contract dry runs. New gallery screenshots remain local evidence, and no operational Ryu routes were approved by this research.
 
 ## Private research snapshots
 

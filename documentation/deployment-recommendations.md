@@ -62,7 +62,35 @@ from Git, Cloud Build uploads and Docker context. Keep private migration snapsho
 there; do not commit them. Automatic releases are serialized in Actions, and a
 publish stops if production traffic changed during its preparation.
 
-## Pending 2026-09-10 data release
+## Completed 2026-09-10 data release
+
+Published on 2026-09-11 UTC (2026-09-10 local) from commit
+`8aa2b8d6c8afcdf26ced0b9930ae92c7540ae8d6`. Public, admin and API each serve
+100% traffic on their `release-8aa2b8d6c8af` revision.
+
+- Cloud SQL backup `1789091540017` completed successfully before cutover.
+- Prepared-image metrics rehearsal `explorer-migrate-8aa2b8d6c8af-7ft44`
+  rolled back; apply execution `explorer-migrate-8aa2b8d6c8af-cftqh` committed
+  migration 013 and removed all legacy metric fields.
+- All 60 Record API patches passed new-contract dry runs and timestamped writes.
+  Readback matched all 137 records: 61 systems, 128 edges, 10 operational routes,
+  87 standard assignments, 110 Read paths, 47 Write paths and eight metrics.
+  Existing sources, depth, relationships, routes and reviews were preserved.
+- Schema 014 execution `explorer-migrate-8aa2b8d6c8af-2rd6n` installed both
+  structural guards, passed a repeat execution and preserved all record content.
+- The production build, 95 application tests and six release-runner tests passed.
+  Live checks passed for public page/data, admin IAP and API authentication.
+  An unknown-property dry run was rejected with the record unchanged. The browser
+  displayed FishBase's standards, measurements, Read/Write access and revision history.
+- The public export was refreshed from the canonical production public endpoint.
+  Temporary schema jobs and maintenance revisions were deleted; service templates
+  were restored to normal startup. Private evidence remains in
+  `.release/8aa2b8d6c8afcdf26ced0b9930ae92c7540ae8d6/`.
+
+The priority rich-record research drafts are a separate batch and were not applied
+by this release.
+
+### Procedure used for the coordinated cutover
 
 The closed system contract additionally requires the repairs and schema step in
 [the system shape rollout audit](SYSTEM_RECORD_SHAPE_ROLLOUT.md). The previously
@@ -94,7 +122,7 @@ fresh record timestamps and verifies each result. A retry recognizes completed
 records and refuses unexpected concurrent edits. Completed writes are recorded
 in `applied.json`; verification covers the whole graph and preserved content.
 
-The coordinated cutover remains deliberate:
+The coordinated cutover procedure is:
 
 1. Commit source, run release `prepare`, and prepare the data using the same
    commit/state directory. Obtain a successful Cloud SQL backup.
@@ -106,7 +134,8 @@ The coordinated cutover remains deliberate:
    apply the metrics migration, and move API traffic to its prepared revision.
 4. Run the data runner's `apply` and `verify`. These use authenticated API
    reads and writes while the browser services are in maintenance.
-5. Run release `publish`. With `RYU_API_TOKEN` set, preflight reads the canonical
+5. Apply schema 014 after aggregate validation, then run release `publish`. With
+   `RYU_API_TOKEN` set, preflight reads the canonical
    record API, so it can validate the converted graph before reopening public/admin.
    It reuses the already prepared images and skips the API if it is already current.
 6. Verify the live UI, refresh the public export from canonical Postgres, record

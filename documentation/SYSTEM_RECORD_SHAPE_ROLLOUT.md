@@ -6,6 +6,16 @@ FishBase shape. The API validates final PUT/PATCH aggregates at all depths;
 reference schema contains the same guard. Neither validator removes unknown
 content, and migration 014 refuses installation over incompatible records.
 
+## Production status
+
+The complete rollout is live as of 2026-09-11 UTC, release `8aa2b8d6c8af`.
+Metrics migration 013, all 60 reviewed standards/access patches and schema 014
+were applied in the coordinated cutover. Full readback and aggregate validation
+passed for 137 canonical records, including all 61 systems, with preserved
+sources, depth, relationships, routes and reviews. The live API rejects unknown
+system properties, and the public/admin/API services run the same release.
+See [release evidence and checks](deployment-recommendations.md#completed-2026-09-10-data-release).
+
 ## Reviewed data and completed metadata repairs
 
 The audit used the prepared 2026-09-10 data release at commit
@@ -42,9 +52,9 @@ conversion and recognizes already repaired records. The fresh post-repair
 preparation is in `.release/90cd46f-system-shape-repairs/migration-after-metadata`;
 use it instead of the earlier pre-repair state. Aggregate validation passes for
 all 137 prepared records, including all 61 systems, and migration 014 passes
-twice locally. The full pending release was also rehearsed through repository
-dry-run/apply/readback for 60 patches. The metrics/access conversion and schema
-014 have not been applied in production.
+twice locally. Before production cutover, the full release was also rehearsed
+through repository dry-run/apply/readback for 60 patches. The conversion and
+schema 014 are now applied; the evidence above supersedes this preparation snapshot.
 
 The batch retains the exact legacy values and previous descriptions as conflict
 checks. Preparation refuses changed values, changed profiles or changed orphan
@@ -84,7 +94,7 @@ not malformed structure. Their supplied IDs must resolve to neutral items;
 complete ID coverage is required for rich. Existing stricter access, standard
 and metric localization requirements still apply.
 
-## Release sequence
+## Completed release sequence
 
 1. Fresh-read canonical records, reconcile the prepared repairs with current data,
    and retain existing sources, substantive prose, edges, routes and review
@@ -94,10 +104,10 @@ and metric localization requirements still apply.
    verify the intended discovery behavior. An older preparation result is not
    proof of compatibility. Preparation also rehearses migration 014 twice on
    the converted local snapshot. The eight metadata repairs are already live;
-   the metrics, standards, access and schema cutover remains pending.
+   the metrics, standards, access and schema cutover followed in the release above.
 3. Follow the coordinated maintenance/backup procedure in
    [deployment recommendations](deployment-recommendations.md). During cutover,
-   complete the pending metrics migration and validated record repairs.
+   complete the metrics migration and validated record repairs.
 4. Apply `014_system_record_shape.sql` with schema-capable credentials after the
    content is compatible. It is transactional and repeatable; a failed audit
    rolls back its installation without changing record content. For historical

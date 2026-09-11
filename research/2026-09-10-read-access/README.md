@@ -1,8 +1,12 @@
 # Read access cleanup — 2026-09-10
 
-Prepared research delta for the 60 systems with Read access in the original
-canonical audit. The separate `source-cooperative` system had no Read entries
-and is outside this batch. **No production writes or deployment have been applied.**
+**Applied in production** on 2026-09-11 UTC as part of release `8aa2b8d6c8af`.
+All 60 combined patches passed new-contract API dry runs, timestamped writes and
+full 137-record readback. The public export is refreshed. See
+[release evidence](../../documentation/deployment-recommendations.md#completed-2026-09-10-data-release).
+
+Research delta for the 60 systems with Read access in the original canonical audit.
+The separate `source-cooperative` system had no Read entries and is outside this batch.
 
 [access.json](access.json) replaces 158 legacy Read rows with 110 entries on 59
 systems. The BBNJ CHM record has an explicit access research gap instead of its
@@ -64,7 +68,9 @@ The subsequent [Write cleanup](../2026-09-10-write-access/README.md) uses the sa
 shape for contribution entries. The final application release requires both
 deltas; the validation notes below describe the Read-only checkpoint.
 
-## Validation and release state
+## Historical validation before the coordinated release
+
+These preparation checks preceded the completed production release above.
 
 - Application build and all 93 tests pass.
 - Local assembly introduces no new validation issues against the audited
