@@ -14,6 +14,8 @@ RUN npm ci
 
 COPY shared ./shared
 COPY server ./server
+COPY client/public/gallery ./client/public/gallery
+COPY documentation/contracts ./documentation/contracts
 RUN npm --workspace server run build
 
 ENV NODE_ENV=production

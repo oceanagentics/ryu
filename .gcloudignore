@@ -10,7 +10,9 @@ client/dist/
 server/dist/
 npm-debug.log
 
-documentation/
+documentation/*
+!documentation/contracts/
+!documentation/contracts/**
 research/
 data/*.sqlite
 data/*.sqlite-*

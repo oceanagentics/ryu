@@ -90,7 +90,6 @@ export type SystemDataDescriptor = {
 
 export interface LocalizedSystemDataDescriptor {
   id: string;
-  label?: string | null;
   description: string | null;
 }
 
@@ -213,7 +212,7 @@ export interface LocalizedNodeDataDetails {
   descriptors: LocalizedSystemDataDescriptor[];
 }
 
-export interface NodeLocalizationDetails extends Record<string, unknown> {
+export type NodeLocalizationDetails = {
   profile?: { sourceRefs: string[] };
   researchGaps?: Partial<Record<MetricGroup | "standards" | "access", string>>;
   aliases: string[];
@@ -223,7 +222,7 @@ export interface NodeLocalizationDetails extends Record<string, unknown> {
   metrics: LocalizedSourcedMetric[];
 }
 
-export interface NodeProperties extends Record<string, unknown> {
+export type NodeProperties = {
   disciplines?: Discipline[];
   gallery?: SystemGalleryItem[];
   data?: NodeDataDetails;

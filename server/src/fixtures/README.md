@@ -1,38 +1,35 @@
-# Rich record example
+# Canonical system record example
 
-`rich-record.json` is a compact, content-only FishBase example derived from an
-authenticated `GET /api/records/fishbase?include=localizations,sources,edges,routes`
-on 2026-09-07. The canonical response had `recordUpdatedAt`:
-`2026-09-04T02:18:45.664Z`.
+`rich-record.json` freezes the full FishBase content in the approved system shape.
+It includes six localizations, 20 node-owned sources, 16 descriptors (including
+six standards), eight Read/Write access paths, five metrics, four gallery items,
+nine relationships with their own sources, and no operational routes.
 
-The example retains the canonical six-language profile, two representative
-source-backed descriptors, two access paths, three data metrics, a documented usage gap,
-one gallery item, and the operator edge. Sources belong to their node or edge.
-Dates/counts are preserved historical assertions; this fixture does not claim a
-fresh factual or URL review. No machine route was present in the response.
+The content comes from the prepared 2026-09-10 metrics/standards/access release
+at commit `3b103c189498c757948f98f99d32632c6fe9d845`. That preparation fresh-read
+the canonical Record API, converted legacy metrics and merged the reviewed
+standards and access batches. Production FishBase was still `thin` with legacy
+fields at the review read (`recordUpdatedAt: 2026-09-10T20:02:33.089Z`). The
+prepared record also preserves `thin`; this fixture sets `rich` to exercise the
+full contract and includes empty `researchGaps` objects to illustrate omission.
+These example choices do not promote or certify the production record.
 
-Fixture-only additions: explicit profile/edge source references and
-six-language source titles. The retired operator country code is null.
-Relationship descriptions and evidence are stored on the operator edge.
-These translations are
-agent-authored examples, not human-approved source publications. No review or
-audit fields are supplied. The existing gallery files are reused.
+API response fields, timestamps and review metadata are excluded. Content,
+source dates, values, IDs and translations are preserved from the preparation.
+The operator edge is ordered first for readability; array order alone does not
+establish graph semantics. Dates and counts remain historical assertions. This
+is not a fresh factual or URL review, and translations are not certified as
+human-reviewed.
 
-The integration test seeds the required `q-quatics` organization in its isolated
-PostgreSQL instance, then writes and reads this payload through the repository.
-Invalid cases are derived from the same fixture, avoiding competing examples.
+Tests seed the connected endpoint nodes in isolated PostgreSQL, then exercise
+this payload through transactional PUT/PATCH and the SQL structural guards.
+Invalid variants come from this same example. Tests also cover allowed gaps,
+unfinished thin records, and synthetic active routes; FishBase's empty routes
+do not remove routes from the supported aggregate contract.
 
-Do not import this abridged example over the production FishBase record. Postgres
-remains canonical. Change this fixture deliberately when the record contract
-changes; do not automatically refresh it from the live database during tests.
+Copy the format, never apply this fixture over production FishBase or reuse its
+facts and IDs for another system. Postgres remains the canonical graph. Update
+the fixture deliberately with contract changes; never fetch live data in tests.
 
-See `documentation/RICH_RESEARCH_RECORDS.md` for the complete authoring standard.
-
-Sources use the current node/edge-owned four-field collections. Citation references are IDs; source titles are locale maps. The fixture remains an example, not production data.
-
-The format example uses the approved `parquet` ID with shared display labels;
-its historical description retains the broader snapshot context.
-
-The retired license-as-standard descriptor is preserved in profile prose with its
-citation. Standards remain empty with a six-language research gap; synthetic
-standard claims are introduced only within the relevant contract tests.
+See [the authoring guide](../../../documentation/RICH_RESEARCH_RECORDS.md) for
+the exact field contract, research requirements and review workflow.

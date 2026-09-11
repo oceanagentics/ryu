@@ -34,7 +34,7 @@ test("read and write access require evidence, typed conditions and all six trans
   for (const direction of ["read", "write"]) for (const depth of ["stub", "thin", "rich"]) {
     const valid = fixture();
     valid.record.recordDepth = depth;
-    const index = direction === "write" ? 1 : 0;
+    const index = valid.record.properties.access.findIndex((path: any) => path.type === direction);
     valid.localizations.en.details.researchGaps.access = "An additional provider endpoint has not been verified.";
     const path = valid.record.properties.access[index];
     for (const requirements of [null, [], ["account", "api_key"]]) {

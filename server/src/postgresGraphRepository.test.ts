@@ -159,12 +159,12 @@ test("discipline vocabulary and retired fields are validated at every record dep
 test("data types, formats and standards reject invented names, duplicate assignments and localized overrides at every depth", () => {
   for (const [category, vocabulary] of [["type", dataTypes], ["format", dataFormats], ["standard", dataStandards]] as const) {
     const fixture = richRecordFixture();
-    if (category === "standard") {
-      fixture.record.properties.data.descriptors.push({ id: "test-standard", category, label: "darwin_core", source: "src-fishbase-home" });
-      for (const localization of Object.values(fixture.localizations) as any[]) {
-        localization.details.data.descriptors.push({ id: "test-standard", description: "Synthetic standard scope for contract validation" });
-      }
-    }
+    // Isolate one assignment in this category so testing another approved ID
+    // does not accidentally duplicate a different FishBase assignment.
+    const descriptor = fixture.record.properties.data.descriptors.find((d: any) => d.category === category);
+    const removed = new Set(fixture.record.properties.data.descriptors.filter((d: any) => d.category === category && d.id !== descriptor.id).map((d: any) => d.id));
+    fixture.record.properties.data.descriptors = fixture.record.properties.data.descriptors.filter((d: any) => !removed.has(d.id));
+    for (const l of Object.values(fixture.localizations) as any[]) l.details.data.descriptors = l.details.data.descriptors.filter((d: any) => !removed.has(d.id));
     for (const recordDepth of ["stub", "thin", "rich"]) {
       for (const label of [null, 42, "invented_value", "Taxonomic records", "CSV and parquet snapshots", ...vocabulary]) {
         const input = structuredClone(fixture);
@@ -189,13 +189,13 @@ test("data types, formats and standards reject invented names, duplicate assignm
         for (const source of [null, "missing-source"]) {
           const uncited = structuredClone(fixture);
           uncited.record.recordDepth = recordDepth;
-          uncited.record.properties.data.descriptors.find((d: any) => d.id === "test-standard").source = source;
+          uncited.record.properties.data.descriptors.find((d: any) => d.id === descriptor.id).source = source;
           assert.equal(validateRecordQuality(uncited.id, uncited).valid, false);
         }
         const untranslated = structuredClone(fixture);
         untranslated.record.recordDepth = recordDepth;
         delete untranslated.localizations.fr;
-        assert.ok(validateRecordQuality(untranslated.id, untranslated).issues.some(issue => issue.path?.includes("localizations.fr.details.data.descriptors.test-standard.description")));
+        assert.ok(validateRecordQuality(untranslated.id, untranslated).issues.some(issue => issue.path?.includes(`localizations.fr.details.data.descriptors.${descriptor.id}.description`)));
         const organization = structuredClone(fixture);
         organization.record.kind = "organization";
         organization.record.recordDepth = recordDepth;
@@ -204,9 +204,9 @@ test("data types, formats and standards reject invented names, duplicate assignm
     }
   }
   const generalist = richRecordFixture();
-  const typeId = generalist.record.properties.data.descriptors.find((d: any) => d.category === "type").id;
-  generalist.record.properties.data.descriptors = generalist.record.properties.data.descriptors.filter((d: any) => d.id !== typeId);
-  for (const l of Object.values(generalist.localizations) as any[]) l.details.data.descriptors = l.details.data.descriptors.filter((d: any) => d.id !== typeId);
+  const typeIds = new Set(generalist.record.properties.data.descriptors.filter((d: any) => d.category === "type").map((d: any) => d.id));
+  generalist.record.properties.data.descriptors = generalist.record.properties.data.descriptors.filter((d: any) => !typeIds.has(d.id));
+  for (const l of Object.values(generalist.localizations) as any[]) l.details.data.descriptors = l.details.data.descriptors.filter((d: any) => !typeIds.has(d.id));
   assert.equal(validateRecordQuality(generalist.id, generalist).valid, true);
 });
 
@@ -265,6 +265,7 @@ test("discipline migration preserves new tags and unrelated content and is safe 
   const db = new PGlite();
   try {
     await db.exec(fs.readFileSync(new URL("../schema/001_create_explorer_schema.sql", import.meta.url), "utf8"));
+    await db.exec("DROP TRIGGER trg_nodes_record_shape ON nodes; DROP TRIGGER trg_localizations_record_shape ON node_localizations;");
     const cases = [
       ["argo", "oceanography", ["oceanography"]],
       ["genbank", "genetics", ["genetics"]],
@@ -338,6 +339,7 @@ test("geographic scope migration preserves other metadata and prose and is safe 
   const db = new PGlite();
   try {
     await db.exec(fs.readFileSync(new URL("../schema/001_create_explorer_schema.sql", import.meta.url), "utf8"));
+    await db.exec("DROP TRIGGER trg_nodes_record_shape ON nodes; DROP TRIGGER trg_localizations_record_shape ON node_localizations;");
     await db.query("INSERT INTO nodes (id, kind, properties_json) VALUES ('fishbase', 'system', $1)", [JSON.stringify({ geographicScope: "global", disciplines: ["zoology"] })]);
     await db.query("UPDATE nodes SET sources=$1 WHERE id='fishbase'", [JSON.stringify({ source: { id: "source", url: "https://example.org", title: { en: "Source" }, accessedAt: "2026-09-09" } })]);
     await db.query("INSERT INTO node_localizations (node_id, locale, title, description, details_json) VALUES ('fishbase', 'en', 'FishBase', 'Fish information from around the world.', $1)", [JSON.stringify({ geographicScope: "global", profile: { sourceRefs: ["source"] } })]);
@@ -483,7 +485,12 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
   const version = async () => buildRecordUpdatedAt(await read());
   try {
     await db.exec(fs.readFileSync(new URL("../schema/001_create_explorer_schema.sql", import.meta.url), "utf8"));
-    await db.query("INSERT INTO nodes (id, kind) VALUES ('q-quatics', 'organization')");
+    const endpoints = new Map<string, string>();
+    for (const edge of richRecordFixture().edges) {
+      if (edge.sourceNodeId !== "fishbase") endpoints.set(edge.sourceNodeId, "organization");
+      if (edge.targetNodeId !== "fishbase") endpoints.set(edge.targetNodeId, "system");
+    }
+    for (const [id, kind] of endpoints) await db.query("INSERT INTO nodes (id, kind) VALUES ($1, $2)", [id, kind]);
     const fixture = readRecordAggregateContentInput("fishbase", richRecordFixture());
     await t.test("dry run does not write and apply round-trips all source localizations", async () => {
       const dry = await repository.upsertRecord("fishbase", fixture, { createOnly: true, validateOnly: true });
@@ -493,12 +500,12 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
       assert.ok("node" in applied);
       assert.equal(applied.node.recordDepth, "rich");
       assert.equal("subtype" in applied.node, false);
-      assert.deepEqual(applied.node.properties.disciplines, ["zoology", "taxonomy", "ecology", "fisheries_science"]);
+      assert.deepEqual(applied.node.properties.disciplines, fixture.record.properties?.disciplines);
       assert.equal("role" in applied.node.properties, false);
       assert.equal("disciplineFamily" in applied.node.properties, false);
       assert.equal("geographicScope" in applied.node.properties, false);
       assert.deepEqual(applied.node.sources, fixture.record.sources);
-      assert.deepEqual(applied.edges[0].sources, fixture.edges![0].sources);
+      assert.deepEqual(applied.edges.find(edge => edge.kind === "operates")!.sources, fixture.edges![0].sources);
       const dto = toDefaultRecordDetailDto(applied, "public", [], "fr");
       assert.equal("subtype" in dto, false);
       assert.equal("subtype" in dto.record, false);
@@ -535,6 +542,7 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
         for (const descriptor of [type, format]) {
           const before = await read();
           const details = structuredClone(before.node.localizations.en!.details);
+          // @ts-expect-error Deliberately invalid input must be rejected at runtime.
           details.data.descriptors.find(d => d.id === descriptor.id)!.label = "Invented label";
           for (const validateOnly of [true, false]) {
             const options = { recordUpdatedAt: await version(), validateOnly };
@@ -593,7 +601,7 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
       const applied = await repository.upsertRecord("fishbase", { record: fixture.record }, { recordUpdatedAt: await version() });
       assert.ok("node" in applied, JSON.stringify(applied));
       assert.equal(applied.node.availableLocales.length, 6);
-      assert.equal(Object.keys(applied.node.sources).length, 6);
+      assert.equal(Object.keys(applied.node.sources).length, Object.keys(fixture.record.sources!).length);
     });
     await t.test("note-only review saves append a full snapshot without changing content or sibling reviews", async () => {
       const before = (await read()).node;
@@ -630,7 +638,7 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
       const rejected = await repository.patchRecord("q-quatics", { edges: { delete: [fixture.edges![0].id] } }, { recordUpdatedAt: buildRecordUpdatedAt(operator) });
       assert.ok("valid" in rejected && !rejected.valid);
       assert.ok(rejected.issues.some(issue => issue.recordId === "fishbase" && issue.path === "edges"));
-      assert.equal((await read()).edges.length, 1);
+      assert.equal((await read()).edges.length, fixture.edges!.length);
     });
     await t.test("an incomplete record can be saved as thin but cannot be promoted with a bare PATCH", async () => {
       await repository.patchRecord("fishbase", { record: { recordDepth: "thin" }, localizations: { en: { mode: "patch", summary: null } } }, { recordUpdatedAt: await version() });

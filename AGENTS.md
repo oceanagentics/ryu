@@ -55,6 +55,21 @@
 - `syncs_to`
 
 ## Validation Rules
+### System record contract
+- Use the content-only FishBase example in `server/src/fixtures/rich-record.json`
+  and the field contract in `documentation/RICH_RESEARCH_RECORDS.md`.
+- All system depths use the same closed structure. `stub` and `thin` may omit
+  unfinished sections; supplied fields must still have the approved shape.
+  Never invent fields, nested metadata bags, identifiers, or hidden relationships.
+- `rich` requires the complete six-language record and completed relationship
+  research. It does not mean human-reviewed. Use specific research gaps instead
+  of invented measurements, standards, gallery images, or machine routes.
+- The API validates the resulting aggregate on PUT/PATCH, including stored
+  content. Fix reported paths; do not bypass structural errors by lowering depth.
+- Contract changes require a code/documentation release with an updated example
+  and tests. Audit existing data before schema migration 014; it rejects
+  incompatible records and never removes unknown content automatically.
+
 ### Nodes
 - `country`, `organization`, and `system` are flat node types. Do not add a `subtype` field.
 - Do not add hidden hierarchy fields. Use explicit edges for graph relationships.

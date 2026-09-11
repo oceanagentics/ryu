@@ -34,6 +34,11 @@ Use `Ryu` terminology in new notes, source records, route labels, and review lan
    - Ryu action: snapshot relevant boundary layers to GeoJSON and retain the ArcGIS REST route for refresh.
    - Why first: gives Oregon-specific management context for all later layers.
 
+4. OpenStreetMap Standard Raster Tiles
+   - Role: alternative global reference map with land and label context for Oregon.
+   - Ryu action: retain the explicit show/hide raster-tile route, separate from Protomaps.
+   - Priority: the existing `MVP-0` assignment is kept here after removal from node metadata.
+
 ### MVP-1: Core Oregon Whale And Fisheries Evidence
 
 1. NOAA Biologically Important Areas

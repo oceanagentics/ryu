@@ -81,14 +81,6 @@ function jsonText(value: unknown): string | null {
   return typeof value === "string" ? value : JSON.stringify(value);
 }
 
-function stripRetiredNodeProperties(
-  value: Record<string, unknown> | undefined,
-): Record<string, unknown> {
-  const properties = { ...(value ?? {}) };
-  delete properties.operator;
-  return properties;
-}
-
 function timestampText(value: unknown): string {
   return value instanceof Date ? value.toISOString() : String(value);
 }
@@ -297,7 +289,7 @@ export class PostgresGraphRepository implements GraphRepository {
           input.record.countryCode ?? null,
           input.record.url ?? null,
           input.record.recordDepth ?? "stub",
-          stringifyJson(stripRetiredNodeProperties(input.record.properties)),
+          stringifyJson(input.record.properties ?? {}),
           JSON.stringify(prepared.candidate.record.sources),
         ],
       );
@@ -521,6 +513,7 @@ export class PostgresGraphRepository implements GraphRepository {
     ids: string[],
     requestedLocale: SupportedLocale,
     client: Pool | PoolClient = this.pool,
+    preserveContent = false,
   ): Promise<RecordAggregate[]> {
     if (ids.length === 0) {
       return [];
@@ -551,16 +544,19 @@ export class PostgresGraphRepository implements GraphRepository {
     const localizationsByNodeId = new Map<string, NodeLocalization[]>();
     for (const row of localizationRows) {
       const nodeId = String(row.node_id);
+      // Display defaults must not hide malformed or unknown stored fields from
+      // aggregate validation. Database JSON is inspected before accepting edits.
       localizationsByNodeId.set(nodeId, [
         ...(localizationsByNodeId.get(nodeId) ?? []),
-        mapPostgresNodeLocalization(row),
+        { ...mapPostgresNodeLocalization(row), ...(preserveContent ? { details: row.details_json as NodeLocalization["details"] } : {}) },
       ]);
     }
 
     const nodesById = new Map(
       nodeRows.map((row) => [
         String(row.id),
-        mapPostgresNode(row, localizationsByNodeId.get(String(row.id)) ?? [], requestedLocale),
+        { ...mapPostgresNode(row, localizationsByNodeId.get(String(row.id)) ?? [], requestedLocale),
+          ...(preserveContent ? { properties: row.properties_json as GraphNode["properties"] } : {}) },
       ]),
     );
     const edges = edgeRows.map(mapPostgresEdge);
@@ -633,7 +629,7 @@ export class PostgresGraphRepository implements GraphRepository {
     input: RecordAggregateContentInput | RecordPatchInput,
     patch: boolean,
   ) {
-    const [existing] = await this.getRecordAggregatesByIds([id], defaultLocale, client);
+    const [existing] = await this.getRecordAggregatesByIds([id], defaultLocale, client, true);
     const before = existing ? recordContent(existing) : undefined;
     const full = input as RecordAggregateContentInput;
     const changes = input as RecordPatchInput;
@@ -643,7 +639,7 @@ export class PostgresGraphRepository implements GraphRepository {
         kind: full.record.kind, countryCode: full.record.countryCode ?? null,
         url: full.record.url ?? null,
         sources: full.record.sources ?? before?.record.sources ?? {},
-        recordDepth: full.record.recordDepth ?? "stub", properties: stripRetiredNodeProperties(full.record.properties),
+        recordDepth: full.record.recordDepth ?? "stub", properties: full.record.properties ?? {},
       },
       localizations: { ...before?.localizations },
       edges: [...before?.edges ?? []], routes: [...before?.routes ?? []],
@@ -652,7 +648,7 @@ export class PostgresGraphRepository implements GraphRepository {
       const { propertiesReplace, sourcesReplace, ...neutral } = changes.record;
       Object.assign(candidate.record, Object.fromEntries(Object.entries(neutral).filter(([, value]) => value !== undefined)));
       if (sourcesReplace !== undefined) candidate.record.sources = sourcesReplace;
-      if (propertiesReplace !== undefined) candidate.record.properties = stripRetiredNodeProperties(propertiesReplace);
+      if (propertiesReplace !== undefined) candidate.record.properties = propertiesReplace;
     }
     const mergeRows = <T extends { id: string }>(old: T[], upsert: T[], deleted: string[] = []) =>
       [...new Map([...old.filter(row => !deleted.includes(row.id)), ...upsert].map(row => [row.id, row])).values()];
@@ -734,7 +730,7 @@ export class PostgresGraphRepository implements GraphRepository {
     const relatedIds = new Set(edgeRecordIds);
     if (relatedIds.size) {
       await client.query("SELECT id FROM nodes WHERE id = ANY($1::text[]) ORDER BY id FOR UPDATE", [[...relatedIds]]);
-      const related = await this.getRecordAggregatesByIds([...relatedIds], defaultLocale, client);
+      const related = await this.getRecordAggregatesByIds([...relatedIds], defaultLocale, client, true);
       for (const record of related) {
         invalidate(record.node.id, [...supportedLocales]);
         if (record.node.id === id) continue;
@@ -862,7 +858,7 @@ export class PostgresGraphRepository implements GraphRepository {
     if (input.propertiesReplace !== undefined) {
       addField(
         "properties_json",
-        stringifyJson(stripRetiredNodeProperties(input.propertiesReplace)),
+        stringifyJson(input.propertiesReplace),
         "::jsonb",
       );
     }

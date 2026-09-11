@@ -94,7 +94,7 @@ test("ranking keeps exact, prefix and typo matches, requires every token and exp
 test("filters intersect across groups and OR within groups, using typed access and descriptor fields", () => {
   const record = node("filtered");
   record.recordDepth = "rich";
-  record.properties = { disciplines: ["ecology", "taxonomy"], geographicScope: "Global",
+  record.properties = { disciplines: ["ecology", "taxonomy"],
     access: [{ id: "api", type: "read", methods: ["browse", "api"], url: "https://example.org", requirements: ["api_key"], cost: "free", sourceRefs: ["src-api"] }],
     data: { descriptors: [
       { id: "type", category: "type", label: "occurrence_records", source: "src-api" },
@@ -181,6 +181,7 @@ test("data type search and display use canonical translations and preserve recor
   record.properties.data = { descriptors: [
     { id: "type", category: "type", label: "taxonomic_records", source: null },
   ] };
+  // @ts-expect-error Deliberate legacy payload: display must still use the shared label.
   record.localizations.en!.details.data.descriptors = [{ id: "type", label: "LegacyOverrideMarker", description: "Nomenclatural evidence" }];
   const resolved = systemDataDescriptors(record, resolveNodeLocalization(record, "fr"))[0];
   assert.equal(resolved.localizedLabel, "Registres taxonomiques");
@@ -224,6 +225,7 @@ test("format search, details and filters use shared labels with localized descri
   record.properties.data = { descriptors: [
     { id: "format", category: "format", label: "genbank_flatfile", source: null },
   ] };
+  // @ts-expect-error Deliberate legacy payload: display must still use the shared label.
   record.localizations.en!.details.data.descriptors = [{ id: "format", label: "LegacyOverrideMarker", description: "Annotated sequence exports" }];
   const resolved = systemDataDescriptors(record, resolveNodeLocalization(record, "fr"))[0];
   assert.equal(resolved.localizedLabel, "Fichier plat GenBank");
@@ -247,6 +249,7 @@ test("standard search and filters use canonical IDs and shared translations", ()
   record.properties.data = { descriptors: [
     { id: "standard", category: "standard", label: "cf", source: null },
   ] };
+  // @ts-expect-error Deliberate legacy payload: display must still use the shared label.
   record.localizations.en!.details.data.descriptors = [{ id: "standard", label: "LegacyOverrideMarker", description: "NetCDF product conventions" }];
   const resolved = systemDataDescriptors(record, resolveNodeLocalization(record, "fr"))[0];
   assert.equal(resolved.localizedLabel, "Conventions climat et prévisions (CF)");

@@ -39,7 +39,9 @@ test("API and database enforce the closed source shape at every record depth", a
       await assert.rejects(db.query("INSERT INTO nodes(id,kind,sources) VALUES ('invalid','system',$1)", [JSON.stringify(collection)]));
     }
     readRecordPatchInput("a", { record: { sourcesReplace: valid } });
-    await db.query("INSERT INTO nodes(id,kind,sources,properties_json) VALUES ('a','system',$1,'{\"source\":\"docs\"}')", [JSON.stringify(valid)]);
+    await db.query("INSERT INTO nodes(id,kind,sources,properties_json) VALUES ('a','system',$1,$2)", [JSON.stringify(valid), JSON.stringify({
+      data: { descriptors: [{ id: "taxonomy", category: "type", label: "taxonomic_records", source: "docs" }] },
+    })]);
     for (const properties of [{ source: { id: "docs", url: valid.docs.url } }, { source: "missing" }, { sourceRefs: [null] }, { sources: valid }]) {
       await assert.rejects(db.query("UPDATE nodes SET properties_json=$1 WHERE id='a'", [JSON.stringify(properties)]));
     }

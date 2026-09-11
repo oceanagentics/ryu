@@ -378,8 +378,90 @@ export function validateRecordAggregateContentInput(
 // Validate the merged, stored shape; PUT/PATCH request fragments are not records.
 export type RecordQualityInput = RecordAggregateContentInput;
 
-export function validateRecordQuality(id: string, input: RecordQualityInput): RecordValidationResult {
+// Structure is independent of research depth. Missing sections are allowed on
+// incomplete records; supplied objects never have an open-ended extension bag.
+function validateSystemStructure(id: string, input: RecordQualityInput): RecordValidationIssue[] {
+  if (input.record.kind !== "system") return [];
   const issues: RecordValidationIssue[] = [];
+  const issue = (path: string, message: string) => issues.push({ recordId: id, path, message });
+  const text = (value: unknown) => typeof value === "string" && value.trim().length > 0;
+  const slug = (value: unknown) => typeof value === "string" && /^[a-z0-9][a-z0-9._:-]*$/.test(value);
+  const closed = (value: unknown, path: string, fields: string[], required = fields) => {
+    if (!isRecord(value)) { issue(path, "must be an object"); return {}; }
+    for (const key of Object.keys(value)) if (!fields.includes(key)) issue(`${path}.${key}`, "unknown system record field");
+    for (const key of required) if (!hasOwn(value, key)) issue(`${path}.${key}`, "field is required");
+    return value;
+  };
+  const strings = (value: unknown, path: string, ids = false) => {
+    if (!Array.isArray(value) || value.some(item => !(ids ? slug(item) : text(item))) || new Set(value).size !== value.length) {
+      issue(path, ids ? "must be an array of unique source IDs" : "must be an array of unique non-empty strings");
+    }
+  };
+  const rows = (value: unknown, path: string, fields: string[], required = fields) => {
+    if (value === undefined) return [];
+    if (!Array.isArray(value)) { issue(path, "must be an array of objects"); return []; }
+    const ids = new Set<unknown>();
+    return value.map((item, index) => {
+      const field = `${path}[${index}]`;
+      const row = closed(item, field, fields, required);
+      if (!slug(row.id) || ids.has(row.id)) issue(`${field}.id`, "item IDs must be deterministic slugs and unique within the section");
+      ids.add(row.id);
+      return row;
+    });
+  };
+  const rich = input.record.recordDepth === "rich";
+  const keys = ["disciplines", "data", "access", "gallery", "metrics"];
+  const p = closed(input.record.properties === undefined ? {} : input.record.properties, "record.properties", keys, rich ? keys : []);
+  const data = p.data === undefined ? {} : closed(p.data, "record.properties.data", ["descriptors"]);
+  rows(data.descriptors, "record.properties.data.descriptors", ["id", "category", "label", "source"]).forEach((row, i) => {
+    const field = `record.properties.data.descriptors[${i}]`;
+    if (!["type", "format", "standard"].some(category => category === row.category)) issue(`${field}.category`, "invalid descriptor category");
+    if (!text(row.label)) issue(`${field}.label`, "an approved vocabulary ID is required");
+    if (row.source !== null && !slug(row.source)) issue(`${field}.source`, "must be a source ID or null while research is incomplete");
+  });
+  rows(p.access, "record.properties.access", ["id", "type", "methods", "url", "requirements", "cost", "sourceRefs"]);
+  rows(p.metrics, "record.properties.metrics", ["id", "key", "value", "observedAt", "period", "source"], ["id", "key", "value", "observedAt", "source"]);
+  rows(p.gallery, "record.properties.gallery", ["id", "type", "url", "thumbnailUrl", "source", "sortOrder"]).forEach((row, i) => {
+    const field = `record.properties.gallery[${i}]`;
+    if (row.type !== "image" && row.type !== "embed") issue(`${field}.type`, "invalid gallery type");
+    if (!text(row.url)) issue(`${field}.url`, "non-empty text is required");
+    if (row.thumbnailUrl !== null && !text(row.thumbnailUrl)) issue(`${field}.thumbnailUrl`, "must be non-empty text or null");
+    if (!slug(row.source)) issue(`${field}.source`, "a source ID is required");
+    if (!Number.isSafeInteger(row.sortOrder) || Number(row.sortOrder) < 0) issue(`${field}.sortOrder`, "must be a non-negative safe integer");
+  });
+  for (const [locale, l] of Object.entries(input.localizations ?? {})) {
+    if (!l) continue;
+    const field = `localizations.${locale}.details`;
+    const keys = ["aliases", "profile", "data", "access", "gallery", "metrics", "researchGaps"];
+    const d = closed(l.details === undefined ? {} : l.details, field, keys, rich ? keys.filter(key => key !== "researchGaps") : []);
+    if (d.aliases !== undefined) strings(d.aliases, `${field}.aliases`);
+    if (d.profile !== undefined) {
+      const profile = closed(d.profile, `${field}.profile`, ["sourceRefs"]);
+      strings(profile.sourceRefs, `${field}.profile.sourceRefs`, true);
+    }
+    if (d.researchGaps !== undefined) {
+      const gaps = closed(d.researchGaps, `${field}.researchGaps`, ["data", "usage", "standards", "access"], []);
+      for (const [key, value] of Object.entries(gaps)) if (!text(value)) issue(`${field}.researchGaps.${key}`, "a non-empty research explanation is required");
+    }
+    const localizedData = d.data === undefined ? {} : closed(d.data, `${field}.data`, ["descriptors"]);
+    for (const [section, value, fields, required] of [
+      ["data.descriptors", localizedData.descriptors, ["id", "description"], ["id", "description"]],
+      ["access", d.access, ["id", "label", "description"], ["id", "label", "description"]],
+      ["gallery", d.gallery, ["id", "title", "caption", "altText"], ["id", "title", "caption"]],
+      ["metrics", d.metrics, ["id", "description"], ["id", "description"]],
+    ] as const) {
+      rows(value, `${field}.${section}`, [...fields], [...required]).forEach((row, i) => {
+        for (const key of fields) if (key !== "id" && row[key] !== undefined && row[key] !== null && typeof row[key] !== "string") {
+          issue(`${field}.${section}[${i}].${key}`, "must be text or null");
+        }
+      });
+    }
+  }
+  return issues;
+}
+
+export function validateRecordQuality(id: string, input: RecordQualityInput): RecordValidationResult {
+  const issues: RecordValidationIssue[] = validateSystemStructure(id, input);
   const sourceIssues: RecordValidationIssue[] = [];
   const warnings: string[] = [];
   const rich = input.record.recordDepth === "rich";
@@ -459,11 +541,12 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     if (text(value) && value.startsWith("/gallery/")) {
       const root = fileURLToPath(new URL("../../client/public/gallery/", import.meta.url));
       const target = path.resolve(root, value.slice("/gallery/".length));
-      if (!target.startsWith(root) || !fs.existsSync(target)) add(field, "gallery asset must exist under client/public/gallery");
-    } else if (!httpUrl(value)) add(field, "a usable HTTP(S) URL or local gallery asset is required");
+      if (!target.startsWith(root) || !fs.existsSync(target)) add(field, "gallery asset must exist under client/public/gallery", false, true);
+    } else if (!httpUrl(value)) add(field, "a usable HTTP(S) URL or local gallery asset is required", false, true);
   };
 
   if (rich && !httpUrl(input.record.url)) add("record.url", "a canonical HTTP(S) URL is required");
+  if (input.record.kind === "system" && input.record.url != null && !httpUrl(input.record.url)) add("record.url", "a canonical HTTP(S) URL is required", false, true);
   if (input.record.kind === "system") {
     if (!descriptors.some(item => item.category === "format")) add("record.properties.data.descriptors", "at least one format descriptor is required");
     if (!access.some(item => item.type === "read")) add("record.properties.access", "at least one actual read access path is required");
@@ -566,8 +649,8 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     for (const [section, neutral, localized, fields] of sections) {
       const rows = array(localized);
       const ids = new Set(neutral.map(item => item.id));
-      if (ids.size !== neutral.length || neutral.some(item => !text(item.id))) add(`record.properties.${section}`, "item IDs must be present and unique");
-      if (rows.length !== neutral.length || new Set(rows.map(item => item.id)).size !== rows.length || rows.some(item => !ids.has(item.id))) add(`${field}.details.${section}`, "localized item IDs must exactly match neutral item IDs");
+      if (ids.size !== neutral.length || neutral.some(item => !text(item.id))) add(`record.properties.${section}`, "item IDs must be present and unique", false, true);
+      if ((rich && rows.length !== neutral.length) || new Set(rows.map(item => item.id)).size !== rows.length || rows.some(item => !ids.has(item.id))) add(`${field}.details.${section}`, rich ? "localized item IDs must exactly match neutral item IDs" : "localized item IDs must be unique and resolve to neutral items", false, true);
       for (const item of neutral) {
         const translated = rows.find(row => row.id === item.id) ?? {};
         for (const key of fields) {
@@ -971,7 +1054,7 @@ function readLocalizationContentInput(input: unknown, path: string): Localizatio
       ? readNullableString(body.description, `${path}.description`)
       : undefined,
     details: hasOwn(body, "details")
-      ? readJsonObject(body.details, `${path}.details`) as NodeLocalizationDetails
+      ? readJsonObject(body.details, `${path}.details`) as Partial<NodeLocalizationDetails>
       : undefined,
     translatedFromLocale: hasOwn(body, "translatedFromLocale")
       ? readOptionalEnum(body.translatedFromLocale, isSupportedLocale, `${path}.translatedFromLocale`) ?? null
@@ -1017,7 +1100,7 @@ function readLocalizationPatchInput(input: unknown, path: string): LocalizationP
       ? readNullableString(body.description, `${path}.description`)
       : undefined,
     detailsReplace: hasOwn(body, "detailsReplace")
-      ? readJsonObject(body.detailsReplace, `${path}.detailsReplace`) as NodeLocalizationDetails
+      ? readJsonObject(body.detailsReplace, `${path}.detailsReplace`) as Partial<NodeLocalizationDetails>
       : undefined,
     translatedFromLocale: hasOwn(body, "translatedFromLocale")
       ? readOptionalEnum(body.translatedFromLocale, isSupportedLocale, `${path}.translatedFromLocale`) ?? null

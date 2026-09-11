@@ -6,6 +6,88 @@ For shared vocabulary labels, UI messages, lookup APIs and translation extension
 checks, see [the shared code guide](../shared/README.md). Record-specific prose
 and source titles continue to follow the ownership rules below.
 
+## Canonical System Contract
+
+The [FishBase content example](../server/src/fixtures/rich-record.json) is the
+reference for system records. Its [snapshot notes](../server/src/fixtures/README.md)
+identify its provenance and example-only choices. Copy the structure, not its
+claims, IDs, sources, counts, or particular relationships. The approved format
+is enforced by `server/src/recordContracts.ts`, with closed shared types and
+PostgreSQL structural guards in `server/schema/014_system_record_shape.sql`.
+
+Every depth uses this format. A `stub` identifies a system; `thin` holds partial
+research; `rich` means the complete profile and relationship research described
+below. Incomplete work may omit sections, but supplied fields must be valid.
+Changing depth never permits unknown keys, wrong types, or mismatched item IDs.
+
+Content PUT bodies contain only `id` (optional, matching the path), `record`,
+`localizations`, `edges`, `routes`, and optional `incomplete`. Record fields are
+`kind`, `url`, `recordDepth`, `properties`, and `sources`; system `countryCode`
+is omitted or null. PATCH uses the documented section replacements/upserts.
+Do not send a GET response back unchanged: computed summaries, timestamps,
+localization `locale`, and review/audit metadata are response fields.
+
+The following objects are closed: no additional keys or extension bags.
+
+| Object | Fields |
+| --- | --- |
+| `record.properties` | `disciplines`, `data`, `access`, `gallery`, `metrics` |
+| `properties.data` | `descriptors` |
+| Neutral descriptor | `id`, `category`, `label`, `source` |
+| Neutral access | `id`, `type`, `methods`, `url`, `requirements`, `cost`, `sourceRefs` |
+| Neutral gallery item | `id`, `type`, `url`, `thumbnailUrl`, `source`, `sortOrder` |
+| Neutral metric | `id`, `key`, `value`, `observedAt`, optional `period`, `source` |
+| Localization content | `title`, `summary`, `description`, `details`, optional `translatedFromLocale` |
+| `details` | `aliases`, `profile`, `data`, `access`, `gallery`, `metrics`, optional `researchGaps` |
+| `details.profile` | `sourceRefs` |
+| `details.data` | `descriptors` |
+| Localized descriptor or metric | `id`, `description` |
+| Localized access | `id`, `label`, `description` |
+| Localized gallery item | `id`, `title`, `caption`, optional `altText` |
+| `details.researchGaps` | Optional `data`, `usage`, `standards`, `access` explanations |
+| Owned source | `id`, `url`, `title`, `accessedAt` |
+
+Array sections use `[]` when empty, never null, strings, or an object keyed by
+item ID. Every supplied data object has a `descriptors` array. IDs are stable
+slugs, unique within their section. Localized IDs must resolve to neutral items;
+rich localizations must match the complete neutral ID sets. Incomplete records
+may leave descriptor/gallery translations unfinished; access and standards
+require all six locales at every depth, and metric IDs must match in each
+existing locale. Aliases and source-reference lists contain no duplicates.
+`sortOrder` is a non-negative safe integer. Missing research-gap keys are allowed;
+present gaps contain a specific nonblank explanation.
+
+Permitted nulls have explicit meanings: an incomplete descriptor's `source` may
+be null; a metric's unknown `observedAt` is null; optional `period` may be null;
+access `requirements: null` means unknown; an embed may have `thumbnailUrl: null`.
+Localized descriptor/metric descriptions and gallery title/caption/alt text may
+be null during incomplete research. Rich descriptions, gallery titles and captions
+must be nonblank. Access labels and descriptions are always nonblank. Shared
+vocabulary labels and metric units cannot be overridden, even with null.
+
+Before marking a system rich:
+
+1. Read its complete canonical record and incident relationships. Research the
+   profile, holdings, formats/standards, Read/Write access, Data/Usage measurements,
+   and all six relationship types using primary sources.
+2. Assemble all five neutral sections and all six complete localizations with
+   profile citations. Use approved vocabulary IDs and owner-local sources.
+3. Add verified relationships with evidence, scope and time/status on the edges.
+   Complete material connection research; report specific unresolved candidates.
+4. Record supported metrics or specific Data/Usage gaps, and supported standards
+   or a standards gap. Gallery and operational routes are optional; empty arrays
+   are valid. No minimum discipline, type, standard, gallery or connection count
+   substitutes for evidence; the existing operator and read/format requirements apply.
+5. Validate the merged candidate with `validateOnly=true`, fix every issue, apply
+   with a fresh record timestamp, and re-read it. Review state changes use the
+   separate review endpoint. Rich does not imply human review or factual verification
+   by the validator.
+
+Change this contract deliberately with shared types, runtime validation, SQL
+guards, example, tests and this guide in one release. Do not automatically
+refresh the fixture from production. Audit existing records before enforcement;
+see [the shape rollout audit](SYSTEM_RECORD_SHAPE_ROLLOUT.md).
+
 ## Source Of Truth
 
 - Treat Cloud SQL/Postgres as the canonical editable graph.
@@ -15,9 +97,10 @@ and source titles continue to follow the ownership rules below.
   section-aware updates, and `PATCH /api/records/:id/review` for review state
   changes. Direct Postgres edits should be reserved for deliberate migration or
   repair work.
-- After DB edits, regenerate the public bootstrap with `npm --workspace server run export:public`.
-- If UI-facing data changed, verify with `npm run build`.
-- `client/public/bootstrap.public.json` is generated output. Keep it in sync, but do not edit it by hand.
+- When updating the launch export, regenerate the public bootstrap with
+  `npm --workspace server run export:public`; never edit it by hand. Routine
+  authoring verifies the canonical record API rather than a bootstrap artifact.
+- If application code or UI-facing contracts changed, verify with `npm run build`.
 
 ## Record Shape
 
@@ -150,12 +233,13 @@ review status remains on each localization.
 
 ## Executable Example
 
-`server/src/fixtures/rich-record.json` is a compact FishBase content payload derived
-from the canonical record API. Its adjacent README records the snapshot and
-fixture-only additions. It is a test/documentation artifact, never a production
-source of truth or a payload to apply unchanged.
+`server/src/fixtures/rich-record.json` freezes the complete prepared FishBase
+content in the canonical shape, including all six languages, standards,
+Read/Write access, metrics, gallery and relationships. Its adjacent README
+records the snapshot and example-only choices. It is a test/documentation
+artifact, never a production source of truth or a payload to apply unchanged.
 
-`server/src/postgresGraphRepository.test.ts` loads the fixture, checks invalid
+`server/src/postgresGraphRepository.test.ts` and `systemRecordShape.test.ts` load the fixture, check invalid
 variants, and uses PGlite (PostgreSQL in process) to exercise the actual schema,
 transactional PUT/PATCH, localization round-trips, dry runs, review invalidation,
 and owner-scoped source behavior. Run `npm --workspace server test`; tests require no
@@ -205,7 +289,9 @@ Use the target `node_localizations` row, usually `locale='en'` for current backf
 - `summary`: one sentence saying what the database is and what kind of data it provides.
 - `description`: one substantial paragraph covering scope, data categories, headline size, operator or manager, governance/consortium context, access model, contribution model, and important caveats.
 - `details_json.aliases`: useful localized search/citation aliases.
-- `review_state`: set `agent_researched` after an agent completes a rich backfill, `human_reviewed` after human acceptance, or `needs_revision` when follow-up changes are required.
+- Review state: use the dedicated review endpoint to set `agent_researched` after
+  research or `needs_revision` for follow-up. Only authorized human acceptance
+  should set `human_reviewed`; do not put review metadata in localization content.
 
 Keep organization rows minimal: localized identity and source-backed relationships. Do not assign a country code or `INT`. Use actual
 responsible institutions; split combined operator labels when their members have
@@ -784,38 +870,26 @@ Do not delete unrelated rows for other systems. Do not change existing user or a
 
 ## Validation Checklist
 
-Run these checks before finishing:
-
-```sh
-npm --workspace server run export:public
-npm run build
-```
-
-For the target system, also check:
-
-```sh
-psql "$DATABASE_URL" -c \
-  "SELECT id, url, record_depth, properties_json FROM nodes WHERE id='<node-id>';"
-
-psql "$DATABASE_URL" -c \
-  "SELECT node_id, locale, title, summary, description, review_state, details_json FROM node_localizations WHERE node_id='<node-id>' ORDER BY locale;"
-
-psql "$DATABASE_URL" -c \
-  "SELECT kind, source_node_id, target_node_id, note FROM edges WHERE source_node_id='<node-id>' OR target_node_id='<node-id>' ORDER BY kind;"
-
-psql "$DATABASE_URL" -c \
-  "SELECT id, status, mode, priority, format, contract_ref FROM ryu_routes WHERE node_id='<node-id>' ORDER BY priority;"
-```
+Use a fresh authenticated `GET /api/records/:id?include=localizations,sources,edges,routes`
+for the target system. Validate the intended PUT/PATCH with `validateOnly=true`
+and its record timestamp before applying, then re-read and compare the result.
 
 Confirm:
 
+- Neutral fields and all localized detail objects match the closed contract;
+  supplied arrays have matching, unique item IDs.
 - All six relationship types have been investigated; verified material connections
   are persisted as edges with their own evidence, scope, and time/status caveats.
   No material connection research remains unfinished.
-- Required access URLs, descriptions, and sources are present.
-- Required metric sources are present.
+- Required access URLs, descriptions, sources and metric evidence are present.
+- Missing standards or Data/Usage metrics have specific localized research gaps.
 - Gallery local files exist for every local `url` and `thumbnailUrl`.
-- The public bootstrap exports the same values you expect from Postgres.
+- The write preserved unrelated content and used the expected review workflow.
+
+For code/contract changes, run `npm run build` and `npm test`. These use local
+PostgreSQL tests; production credentials are unnecessary. Direct database repairs
+must separately run aggregate validation and handle review invalidation. The SQL
+shape guard does not certify research depth, evidence truth, or translations.
 
 ## Final Summary For Users
 

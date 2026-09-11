@@ -116,7 +116,7 @@ export function parseJson(value: string | null): JsonValue {
   return JSON.parse(value) as JsonValue;
 }
 
-export function stringifyJson(value: Record<string, unknown>): string {
+export function stringifyJson(value: object): string {
   return JSON.stringify(value ?? {});
 }
 

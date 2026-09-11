@@ -1,3 +1,4 @@
+import { readStringArray } from "./graphRepositorySupport";
 import { metricDefinitions } from "../../shared/domain";
 import type { GraphNode, ResolvedNodeLocalization, Source, SupportedLocale, SystemDataDescriptorCategory } from "../../shared/domain";
 import type { IndexedGraph } from "../../shared/indexGraph";
@@ -550,7 +551,7 @@ function matchesFilters(entity: GraphNode, graph: IndexedGraph, query: RecordSea
     && matchesAny(countryCodes, query.countryCode)
     && matchesAny(properties.disciplines ?? [], query.disciplines)
     && (query.geography.length === 0 || query.geography.some(value =>
-      collectText([entity.countryCode, properties.geographies])
+      collectText([entity.countryCode, readStringArray(properties, "geographies")])
         .some(candidate => normalizeSearchValue(candidate).includes(normalizeSearchValue(value)))))
     && ([["type", query.dataType], ["format", query.dataFormat], ["standard", query.dataStandard]] as const)
       .every(([category, selected]) => matchesAny(

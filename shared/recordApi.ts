@@ -102,7 +102,7 @@ export interface RecordNeutralDto {
   countryCode: string | null;
   url: string | null;
   recordDepth: RecordDepth;
-  properties?: NodeProperties | Record<string, unknown>;
+  properties?: NodeProperties;
   createdAt: string;
   updatedAt: string;
 }
@@ -194,7 +194,7 @@ export interface LocalizationContentInput {
   title: string;
   summary?: string | null;
   description?: string | null;
-  details?: NodeLocalizationDetails;
+  details?: Partial<NodeLocalizationDetails>;
   translatedFromLocale?: SupportedLocale | null;
 }
 
@@ -204,7 +204,7 @@ export interface RecordNeutralContentInput {
   countryCode?: string | null;
   url?: string | null;
   recordDepth?: RecordDepth;
-  properties?: NodeProperties | Record<string, unknown>;
+  properties?: NodeProperties;
 }
 
 export interface RecordEdgeInput {
@@ -247,14 +247,14 @@ export interface RecordNeutralPatchInput {
   countryCode?: string | null;
   url?: string | null;
   recordDepth?: RecordDepth;
-  propertiesReplace?: NodeProperties | Record<string, unknown>;
+  propertiesReplace?: NodeProperties;
 }
 
 export type LocalizationPatchInput =
   | ({
       mode: "patch";
     } & Partial<Omit<LocalizationContentInput, "details">> & {
-      detailsReplace?: NodeLocalizationDetails;
+      detailsReplace?: Partial<NodeLocalizationDetails>;
     })
   | ({
       mode: "replace";

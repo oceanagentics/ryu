@@ -1,4 +1,4 @@
-// One-time metrics/standards/access release. Production writes use the Record API.
+// One-time metrics/standards/access/shape release. Production writes use the Record API.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -36,9 +36,9 @@ const before=await readCanonicalRecords();
 write('records-before',{records:before,total:before.length});
 const records=structuredClone(before);
 const db=new PGlite();
-await db.exec('CREATE TABLE nodes(id text PRIMARY KEY, properties_json jsonb, sources jsonb); CREATE TABLE node_localizations(node_id text, locale text, description text, details_json jsonb, review_json jsonb);');
+await db.exec('CREATE TABLE nodes(id text PRIMARY KEY, kind text, properties_json jsonb, sources jsonb); CREATE TABLE node_localizations(node_id text, locale text, description text, details_json jsonb, review_json jsonb);');
 for(const r of records){
-  await db.query('INSERT INTO nodes VALUES ($1,$2,$3)',[r.id,r.record.properties,r.record.sources]);
+  await db.query('INSERT INTO nodes VALUES ($1,$2,$3,$4)',[r.id,r.record.kind,r.record.properties,r.record.sources]);
   for(const [locale,l] of Object.entries(r.localizations)) await db.query('INSERT INTO node_localizations VALUES ($1,$2,$3,$4,$5)',[r.id,locale,l.description,l.details,l.review]);
 }
 const sql=fs.readFileSync(`${root}/server/schema/013_system_metrics.sql`,'utf8');
@@ -56,7 +56,6 @@ for(const r of records){
     r.localizations[l.locale].details=l.details_json;
   }
 }
-await db.close();
 write('records-after-metrics',records);
 const byId=new Map(records.map(r=>[r.id,r]));
 function mergeSources(r,sources){
@@ -100,6 +99,26 @@ for(const direction of ['read','write']){
     }
   }
 }
+const repairs=read(`${root}/research/2026-09-10-system-shape-repairs/repairs.json`);
+for(const batch of repairs){
+  const r=byId.get(batch.id); assert.ok(r,batch.id);
+  for(const [key,value] of Object.entries(batch.legacyProperties)){
+    if(key in r.record.properties)assert.deepEqual(r.record.properties[key],value,`${r.id}: legacy ${key} changed`);
+    delete r.record.properties[key];
+  }
+  for(const [locale,description] of Object.entries(batch.description)){
+    const l=r.localizations[locale]; assert.ok(l,`${r.id}: missing ${locale}`);
+    assert.ok(l.description===batch.previousDescriptions[locale]||l.description===description,`${r.id}: ${locale} profile changed; reconcile before preparation`);
+    l.description=description;
+    l.details.profile={...l.details.profile,sourceRefs:[...new Set([...(l.details.profile?.sourceRefs??[]),...batch.legacyProperties.sourceRefs])]};
+    for(const orphan of batch.orphanDescriptors[locale]??[]){
+      assert.ok(!r.record.properties.data.descriptors.some(d=>d.id===orphan.id),`${r.id}: ${orphan.id} is no longer orphaned`);
+      const old=l.details.data.descriptors.find(d=>d.id===orphan.id);
+      if(old)assert.deepEqual(old,orphan,`${r.id}: ${orphan.id} changed`);
+      l.details.data.descriptors=l.details.data.descriptors.filter(d=>d.id!==orphan.id);
+    }
+  }
+}
 const pick=(obj,keys)=>Object.fromEntries(keys.filter(k=>k in obj).map(k=>[k,obj[k]]));
 const results=[];
 for(const r of records){
@@ -116,11 +135,11 @@ write('records-after',records); write('validation',results);
 const metrics=read(`${dir}/records-after-metrics.json`);
 const patches=records.flatMap(r=>{
   const previous=metrics.find(m=>m.id===r.id),patch={};
-  if(JSON.stringify(r.record.properties)!==JSON.stringify(previous.record.properties)||JSON.stringify(r.record.sources)!==JSON.stringify(previous.record.sources))patch.record={propertiesReplace:r.record.properties,sourcesReplace:r.record.sources};
+  if(!isDeepStrictEqual(r.record.properties,previous.record.properties)||!isDeepStrictEqual(r.record.sources,previous.record.sources))patch.record={propertiesReplace:r.record.properties,sourcesReplace:r.record.sources};
   const localizations={};
   for(const [locale,l] of Object.entries(r.localizations)){
     const old=previous.localizations[locale],p={mode:'patch'};
-    if(JSON.stringify(l.details)!==JSON.stringify(old.details))p.detailsReplace=l.details;
+    if(!isDeepStrictEqual(l.details,old.details))p.detailsReplace=l.details;
     if(l.description!==old.description)p.description=l.description;
     if(Object.keys(p).length>1)localizations[locale]=p;
   }
@@ -129,8 +148,17 @@ const patches=records.flatMap(r=>{
 });
 write('patches',patches);
 const failures=results.filter(r=>!r.valid);
-console.log(JSON.stringify({records:records.length,patches:patches.length,standards:records.reduce((s,r)=>s+(r.record.properties.data?.descriptors??[]).filter(d=>d.category==='standard').length,0),access:records.reduce((s,r)=>s+(r.record.properties.access?.length??0),0),preserved:['edges','routes','depth','review history','existing sources'],failures},null,2));
+console.log(JSON.stringify({records:records.length,patches:patches.length,shapeRepairs:repairs.length,standards:records.reduce((s,r)=>s+(r.record.properties.data?.descriptors??[]).filter(d=>d.category==='standard').length,0),access:records.reduce((s,r)=>s+(r.record.properties.access?.length??0),0),preserved:['edges','routes','depth','review history','existing sources'],failures},null,2));
 if(failures.length)throw Error('Prepared data has validation issues; no writes applied.');
+for(const r of records){
+  await db.query('UPDATE nodes SET properties_json=$2 WHERE id=$1',[r.id,r.record.properties]);
+  for(const [locale,l] of Object.entries(r.localizations))await db.query('UPDATE node_localizations SET details_json=$3 WHERE node_id=$1 AND locale=$2',[r.id,locale,l.details]);
+}
+const shapeSql=fs.readFileSync(`${root}/server/schema/014_system_record_shape.sql`,'utf8');
+await db.exec(shapeSql);
+await db.exec(shapeSql);
+await db.close();
+write('shape-audit',{valid:true,systems:records.filter(r=>r.record.kind==='system').length,repairs:repairs.map(r=>r.id),migrationRuns:2});
 
 }
 async function applyRecords(){

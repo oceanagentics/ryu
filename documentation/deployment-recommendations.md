@@ -64,6 +64,17 @@ publish stops if production traffic changed during its preparation.
 
 ## Pending 2026-09-10 data release
 
+The closed system contract additionally requires the repairs and schema step in
+[the system shape rollout audit](SYSTEM_RECORD_SHAPE_ROLLOUT.md). The previously
+prepared data had eight incompatible systems; their metadata-only repairs are
+now live and verified. The runner recognizes them and rehearses migration 014
+locally. Rerun preparation against a fresh read before cutover; earlier snapshots
+predating the repairs will conflict. Apply `014_system_record_shape.sql` only after the
+metrics, standards, access and shape repairs have passed aggregate validation,
+before reopening public/admin traffic. Migration 014 performs no content cleanup
+and refuses incompatible data. Do not treat an older successful preparation as
+validation for the new contract.
+
 The committed one-time runner is
 `scripts/releases/2026-09-10-data.mjs`. It requires `RYU_API_TOKEN` and uses the
 canonical Record API. Its modes accept an optional state-directory argument:
@@ -76,7 +87,7 @@ node --import tsx scripts/releases/2026-09-10-data.mjs verify
 ```
 
 `prepare` fresh-reads the complete graph, rehearses metrics SQL locally, merges
-the reviewed standards and Read/Write batches, validates the resulting records,
+the reviewed standards, Read/Write and system-shape repair batches, validates the resulting records,
 and saves expected before/after content plus minimal patches. No production
 writes occur. `apply` first dry-runs every outstanding patch, then applies with
 fresh record timestamps and verifies each result. A retry recognizes completed

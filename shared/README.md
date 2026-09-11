@@ -41,6 +41,13 @@ same shared lookup.
 
 ## Text ownership and storage
 
+System properties and localized details are closed types in `domain.ts`.
+The runtime contract in `server/src/recordContracts.ts` rejects unknown fields
+and malformed nested objects at every depth; PostgreSQL migration 014 guards
+stored structure. Do not restore index signatures or generic-record unions to
+permit new system fields. Update the contract, SQL guards, FishBase fixture,
+tests and authoring guide together when deliberately changing the shape.
+
 | Content | Owner |
 | --- | --- |
 | Approved IDs such as `botany`, `occurrence_records`, `csv` | `domain.ts`; records store these IDs |

@@ -1,0 +1,320 @@
+[
+  {
+    "id": "ecotrust-oregon-fisheries-uses-values",
+    "legacyProperties": {
+      "caveats": [
+        "Participatory mapping data from 2009-2010, not live fishing effort.",
+        "Not a regulatory boundary."
+      ],
+      "domains": [
+        "fisheries",
+        "human_use",
+        "ocean_planning"
+      ],
+      "priority": "MVP-1",
+      "sourceRefs": [
+        "src-ecotrust-oregon-fisheries-uses-values"
+      ],
+      "geographies": [
+        "Oregon coast"
+      ],
+      "capabilities": [
+        "map_layers",
+        "fishery_use_areas",
+        "dungeness_crab_context"
+      ]
+    },
+    "previousDescriptions": {
+      "ar": null,
+      "en": "The Oregon Marine Fisheries Uses and Values Project mapped fishing use patterns and value areas using fishermen knowledge collected around 2009-2010. For the Deeptime MVP, these layers should be fishery-use context, especially Dungeness crab, not regulatory boundaries or live fishing effort.",
+      "es": null,
+      "fr": null,
+      "ru": null,
+      "zh": null
+    },
+    "orphanDescriptors": {},
+    "description": {
+      "en": "The Oregon Marine Fisheries Uses and Values Project mapped fishing use patterns and value areas along the Oregon coast using fishermen’s knowledge collected around 2009–2010. Its participatory mapping layers provide fisheries, human-use and ocean-planning context, especially for Dungeness crab. They do not represent regulatory boundaries or live fishing effort.",
+      "fr": "Le projet Oregon Marine Fisheries Uses and Values a cartographié les pratiques de pêche et les zones de valeur le long de la côte de l’Oregon à partir des connaissances de pêcheurs recueillies vers 2009–2010. Ces couches de cartographie participative apportent un contexte sur la pêche, les usages humains et la planification maritime, notamment pour le crabe de Dungeness. Elles ne représentent ni des limites réglementaires ni l’effort de pêche en temps réel.",
+      "es": "El proyecto Oregon Marine Fisheries Uses and Values cartografió patrones de uso pesquero y áreas de valor en la costa de Oregón a partir de conocimientos de pescadores recopilados hacia 2009–2010. Sus capas de cartografía participativa ofrecen contexto sobre pesca, usos humanos y planificación marina, especialmente para el cangrejo Dungeness. No representan límites normativos ni esfuerzo pesquero en tiempo real.",
+      "ar": "رسم مشروع استخدامات المصايد البحرية وقيمها في أوريغون خرائط لأنماط الصيد ومناطق القيمة على ساحل أوريغون استناداً إلى معارف الصيادين التي جُمعت نحو عامي 2009–2010. توفر طبقات الخرائط التشاركية سياقاً للمصايد والاستخدامات البشرية والتخطيط البحري، وخاصة لسرطان دنغنس. وهي لا تمثل حدوداً تنظيمية أو جهد الصيد الآني.",
+      "zh": "俄勒冈海洋渔业用途与价值项目利用约2009—2010年收集的渔民知识，绘制了俄勒冈海岸的捕捞活动模式和价值区域。这些参与式制图图层为渔业、人类利用和海洋规划提供背景，尤其涉及珍宝蟹。它们不代表法规边界或实时捕捞强度。",
+      "ru": "Проект Oregon Marine Fisheries Uses and Values картировал характер рыболовной деятельности и ценные промысловые районы вдоль побережья Орегона на основе знаний рыбаков, собранных примерно в 2009–2010 годах. Эти слои совместного картирования дают контекст для рыболовства, использования моря человеком и морского планирования, особенно в отношении дандженесского краба. Они не отражают нормативные границы или промысловое усилие в реальном времени."
+    }
+  },
+  {
+    "id": "gebco-web-services",
+    "legacyProperties": {
+      "priority": "MVP-0",
+      "sourceRefs": [
+        "src-gebco-wms"
+      ]
+    },
+    "previousDescriptions": {
+      "ar": null,
+      "en": "GEBCO Web Services expose GEBCO grid map layers through WMS. For Ryu MVP-0, the service should be registered as an ocean relief and bathymetry underlay behind Oregon marine data.\n\nGeo-referenced raster map images for bathymetry and ocean relief context.",
+      "es": null,
+      "fr": null,
+      "ru": null,
+      "zh": null
+    },
+    "orphanDescriptors": {
+      "en": [
+        {
+          "id": "gebco-web-services-use-context",
+          "description": "Visual context layer for interpreting Oregon marine boundaries, ecology, and fisheries overlays."
+        }
+      ]
+    },
+    "description": {
+      "en": "GEBCO Web Services expose GEBCO grid map layers through WMS as georeferenced raster map images. They provide ocean relief and bathymetry context behind Oregon marine data.\n\nVisual context layer for interpreting Oregon marine boundaries, ecology, and fisheries overlays.",
+      "fr": "Les services web GEBCO diffusent les couches cartographiques de la grille GEBCO via WMS sous forme d’images raster géoréférencées. Ils apportent un contexte de relief océanique et de bathymétrie en arrière-plan des données marines de l’Oregon.\n\nCette couche de contexte visuel aide à interpréter les couches superposées de limites marines, d’écologie et de pêche de l’Oregon.",
+      "es": "Los servicios web de GEBCO ofrecen capas cartográficas de la cuadrícula GEBCO mediante WMS como imágenes ráster georreferenciadas. Aportan contexto de relieve oceánico y batimetría como fondo de los datos marinos de Oregón.\n\nEsta capa de contexto visual ayuda a interpretar las capas superpuestas de límites marinos, ecología y pesca de Oregón.",
+      "ar": "تتيح خدمات الويب GEBCO طبقات خرائط شبكة GEBCO عبر WMS في صورة خرائط نقطية ذات إسناد جغرافي. وهي توفر سياقاً لتضاريس المحيط وأعماق البحر خلف البيانات البحرية لأوريغون.\n\nتساعد طبقة السياق البصري هذه على تفسير طبقات الحدود البحرية والبيئة والمصايد المتراكبة في أوريغون.",
+      "zh": "GEBCO网络服务通过WMS将GEBCO网格地图图层作为地理配准的栅格地图图像提供，为俄勒冈海洋数据提供海底地形和水深背景。\n\n该视觉背景图层有助于解读叠加的俄勒冈海洋边界、生态和渔业图层。",
+      "ru": "Веб-сервисы GEBCO предоставляют картографические слои сетки GEBCO через WMS в виде геопривязанных растровых изображений. Они дают контекст рельефа океанского дна и батиметрии под морскими данными Орегона.\n\nЭтот слой визуального контекста помогает интерпретировать наложенные слои морских границ, экологии и рыболовства Орегона."
+    }
+  },
+  {
+    "id": "noaa-cetacean-bia",
+    "legacyProperties": {
+      "caveats": [
+        "Planning/evidence polygons, not whale probability surfaces."
+      ],
+      "domains": [
+        "whale_ecology",
+        "habitat_context"
+      ],
+      "priority": "MVP-1",
+      "sourceRefs": [
+        "src-noaa-bia-inport",
+        "src-noaa-bia-feeding-mapserver",
+        "src-noaa-bia-small-resident-mapserver"
+      ],
+      "geographies": [
+        "Oregon coast",
+        "US West Coast"
+      ],
+      "capabilities": [
+        "map_layers",
+        "whale_habitat_shapes",
+        "important_areas"
+      ]
+    },
+    "previousDescriptions": {
+      "ar": null,
+      "en": "NOAA Cetacean Biologically Important Areas identify feeding, reproductive, migratory, and small/resident population areas for cetaceans. For the Deeptime MVP, Ryu should expose these as whale ecology shape/context layers for Oregon coast waters, not as probability maps.\n\nNOAA OceanReports exposes selected BIA layers through ArcGIS REST services.",
+      "es": null,
+      "fr": null,
+      "ru": null,
+      "zh": null
+    },
+    "orphanDescriptors": {},
+    "description": {
+      "en": "NOAA Cetacean Biologically Important Areas identify feeding, reproductive, migratory, and small/resident population areas for cetaceans. The areas provide whale ecology and habitat context for the US West Coast, including Oregon coastal waters. These are evidence and planning polygons, not whale probability surfaces. NOAA OceanReports exposes selected BIA layers through ArcGIS REST services.",
+      "fr": "Les zones d’importance biologique pour les cétacés de la NOAA identifient des zones d’alimentation, de reproduction, de migration et de petites populations ou populations résidentes. Elles apportent un contexte sur l’écologie et les habitats des cétacés de la côte ouest des États-Unis, notamment dans les eaux côtières de l’Oregon. Ces polygones servent à documenter et à planifier ; ils ne sont pas des surfaces de probabilité de présence des baleines. NOAA OceanReports diffuse certaines couches BIA via des services ArcGIS REST.",
+      "es": "Las Áreas de Importancia Biológica para Cetáceos de NOAA identifican zonas de alimentación, reproducción, migración y poblaciones pequeñas o residentes. Aportan contexto sobre la ecología y los hábitats de cetáceos de la costa oeste de Estados Unidos, incluidas las aguas costeras de Oregón. Son polígonos de evidencia y planificación, no superficies de probabilidad de presencia de ballenas. NOAA OceanReports ofrece determinadas capas BIA mediante servicios ArcGIS REST.",
+      "ar": "تحدد مناطق الأهمية البيولوجية للحيتانيات التابعة لـ NOAA مناطق التغذية والتكاثر والهجرة ومناطق التجمعات الصغيرة أو المقيمة. وهي توفر سياقاً لبيئة الحيتانيات وموائلها على الساحل الغربي للولايات المتحدة، بما في ذلك المياه الساحلية لأوريغون. هذه مضلعات للأدلة والتخطيط وليست أسطحاً لاحتمال وجود الحيتان. يتيح NOAA OceanReports طبقات مختارة من هذه المناطق عبر خدمات ArcGIS REST.",
+      "zh": "NOAA鲸类生物重要区域标识鲸类的觅食、繁殖、迁徙以及小型或定居种群区域，为美国西海岸（包括俄勒冈近岸水域）的鲸类生态和栖息地提供背景。这些多边形用于证据展示和规划，不是鲸类出现概率分布面。NOAA OceanReports通过ArcGIS REST服务提供部分BIA图层。",
+      "ru": "Биологически важные районы для китообразных NOAA обозначают районы питания, размножения, миграции, а также малых или оседлых популяций. Они дают контекст экологии и местообитаний китообразных западного побережья США, включая прибрежные воды Орегона. Это полигоны для представления свидетельств и планирования, а не поверхности вероятности присутствия китов. NOAA OceanReports предоставляет отдельные слои BIA через сервисы ArcGIS REST."
+    }
+  },
+  {
+    "id": "noaa-esi-wa-or-marine-mammals",
+    "legacyProperties": {
+      "caveats": [
+        "Oil-spill response planning dataset, not a real-time observation layer.",
+        "Not a probability surface."
+      ],
+      "domains": [
+        "whale_ecology",
+        "marine_mammals",
+        "response_planning"
+      ],
+      "priority": "MVP-1",
+      "sourceRefs": [
+        "src-noaa-esi-wa-or-marine-mammals-inport",
+        "src-noaa-esi-downloads"
+      ],
+      "geographies": [
+        "Oregon coast",
+        "Washington coast"
+      ],
+      "capabilities": [
+        "map_layers",
+        "marine_mammal_shapes",
+        "distribution_areas"
+      ]
+    },
+    "previousDescriptions": {
+      "ar": null,
+      "en": "The NOAA Environmental Sensitivity Index Outer Coast WA/OR marine mammal polygons include distributions, concentration areas, migratory routes, haul-out sites, and rookeries for marine mammals. For the Deeptime MVP, these are whale and marine mammal context shapes, not real-time presence or probability layers.",
+      "es": null,
+      "fr": null,
+      "ru": null,
+      "zh": null
+    },
+    "orphanDescriptors": {},
+    "description": {
+      "en": "The NOAA Environmental Sensitivity Index marine mammal polygons for the outer coast of Washington and Oregon describe distributions, concentration areas, migratory routes, haul-out sites, and rookeries. They provide whale and marine mammal context for oil-spill response planning. They are not real-time observation layers or probability surfaces.",
+      "fr": "Les polygones de mammifères marins de l’Environmental Sensitivity Index de la NOAA pour la côte extérieure de Washington et de l’Oregon décrivent les distributions, les zones de concentration, les voies migratoires, les sites de repos à terre et les colonies de reproduction. Ils apportent un contexte sur les cétacés et les mammifères marins pour planifier la réponse aux déversements d’hydrocarbures. Ce ne sont ni des couches d’observation en temps réel ni des surfaces de probabilité.",
+      "es": "Los polígonos de mamíferos marinos del Índice de Sensibilidad Ambiental de NOAA para la costa exterior de Washington y Oregón describen distribuciones, áreas de concentración, rutas migratorias, lugares de descanso en tierra y colonias reproductoras. Aportan contexto sobre cetáceos y mamíferos marinos para planificar la respuesta a derrames de petróleo. No son capas de observación en tiempo real ni superficies de probabilidad.",
+      "ar": "تصف مضلعات الثدييات البحرية في مؤشر الحساسية البيئية التابع لـ NOAA للساحل الخارجي لواشنطن وأوريغون التوزيعات ومناطق التجمع ومسارات الهجرة ومواقع الاستراحة على اليابسة ومستعمرات التكاثر. وهي توفر سياقاً للحيتانيات والثدييات البحرية للتخطيط للاستجابة لانسكابات النفط. وهي ليست طبقات رصد آني أو أسطح احتمالات.",
+      "zh": "NOAA环境敏感性指数中，华盛顿州和俄勒冈州外海岸的海洋哺乳动物多边形描述其分布、集中区域、迁徙路线、上岸休息地点和繁殖群聚地。它们为溢油应急规划提供鲸类及海洋哺乳动物背景，不是实时观测图层或概率分布面。",
+      "ru": "Полигоны морских млекопитающих индекса экологической чувствительности NOAA для внешнего побережья Вашингтона и Орегона описывают распространение, районы концентрации, миграционные пути, места выхода на сушу и размножения. Они дают контекст о китообразных и морских млекопитающих для планирования реагирования на разливы нефти. Это не слои наблюдений в реальном времени и не поверхности вероятности."
+    }
+  },
+  {
+    "id": "odfw-commercial-landings",
+    "legacyProperties": {
+      "caveats": [
+        "Port landings economics, not offshore fishing effort geometry."
+      ],
+      "domains": [
+        "fisheries",
+        "landings",
+        "economics"
+      ],
+      "priority": "MVP-1",
+      "sourceRefs": [
+        "src-odfw-commercial-landings"
+      ],
+      "geographies": [
+        "Oregon coast"
+      ],
+      "capabilities": [
+        "port_landings",
+        "tabular_data",
+        "geojson_points"
+      ]
+    },
+    "previousDescriptions": {
+      "ar": null,
+      "en": "ODFW commercial landing statistics are useful for port-level fisheries economics context. They do not describe offshore fishing effort geometry and should not be used as a fishery boundary or use-area layer.",
+      "es": null,
+      "fr": null,
+      "ru": null,
+      "zh": null
+    },
+    "orphanDescriptors": {},
+    "description": {
+      "en": "ODFW commercial landing statistics provide tabular fisheries and economics context for ports along the Oregon coast. They do not describe offshore fishing effort geometry and should not be used as a fishery boundary or use-area layer.",
+      "fr": "Les statistiques des débarquements commerciaux de l’ODFW fournissent des données tabulaires sur la pêche et son économie dans les ports de la côte de l’Oregon. Elles ne décrivent pas la géométrie de l’effort de pêche au large et ne doivent pas être utilisées comme couche de limites ou de zones d’activité de pêche.",
+      "es": "Las estadísticas de desembarques comerciales de ODFW aportan datos tabulares sobre pesca y economía de los puertos de la costa de Oregón. No describen la geometría del esfuerzo pesquero mar adentro y no deben utilizarse como capa de límites o áreas de uso pesquero.",
+      "ar": "توفر إحصاءات إنزال المصيد التجاري لدى ODFW بيانات جدولية عن المصايد والاقتصاد في موانئ ساحل أوريغون. وهي لا تصف التوزيع المكاني لجهد الصيد في البحر، ولا ينبغي استخدامها كطبقة لحدود المصايد أو مناطق نشاط الصيد.",
+      "zh": "ODFW商业渔获卸载统计以表格形式提供俄勒冈沿岸港口的渔业和经济背景。它们不描述离岸捕捞强度的空间分布，不应被用作渔业边界或捕捞利用区域图层。",
+      "ru": "Статистика выгрузки промыслового улова ODFW предоставляет табличные данные о рыболовстве и экономике портов побережья Орегона. Она не описывает пространственное распределение промыслового усилия в открытом море и не должна использоваться как слой промысловых границ или районов рыболовной деятельности."
+    }
+  },
+  {
+    "id": "openstreetmap-standard-raster-tiles",
+    "legacyProperties": {
+      "domains": [
+        "map_context",
+        "cartographic_context",
+        "reference_map_context"
+      ],
+      "families": [
+        "map_context",
+        "reference_map_context"
+      ],
+      "priority": "MVP-0",
+      "sourceRefs": [
+        "src-openstreetmap-standard-tile-layer",
+        "src-openstreetmap-copyright"
+      ],
+      "geographies": [
+        "global",
+        "Oregon coast"
+      ],
+      "capabilities": [
+        "map_context",
+        "reference_map_context",
+        "cartographic_context",
+        "land_context",
+        "label_context",
+        "map_layers"
+      ],
+      "layerBehavior": "normal_show_hide_layer",
+      "implicitBackground": false
+    },
+    "previousDescriptions": {
+      "ar": null,
+      "en": "The OpenStreetMap Standard tile layer serves map tiles from tile.openstreetmap.org. For Deeptime MVP use it as an explicit connector-backed map context layer that clients can show or hide, separate from Protomaps PMTiles context routes.",
+      "es": null,
+      "fr": null,
+      "ru": null,
+      "zh": null
+    },
+    "orphanDescriptors": {},
+    "description": {
+      "en": "The OpenStreetMap Standard tile layer serves global reference map tiles from tile.openstreetmap.org, including land and label context for the Oregon coast. The Deeptime plan treats it as an explicit connector-backed map context layer that clients can show or hide, separate from Protomaps PMTiles context routes; it is not an implicit background.",
+      "fr": "La couche de tuiles standard d’OpenStreetMap fournit des tuiles cartographiques de référence mondiales depuis tile.openstreetmap.org, notamment le contexte terrestre et les libellés pour la côte de l’Oregon. Le plan de Deeptime la prévoit comme une couche de contexte cartographique explicite via un connecteur, que les clients peuvent afficher ou masquer, distincte des routes de contexte Protomaps PMTiles ; elle ne constitue pas un arrière-plan implicite.",
+      "es": "La capa estándar de teselas de OpenStreetMap ofrece teselas cartográficas de referencia global desde tile.openstreetmap.org, incluido el contexto terrestre y las etiquetas para la costa de Oregón. El plan de Deeptime la contempla como una capa explícita de contexto cartográfico mediante un conector, que los clientes pueden mostrar u ocultar, separada de las rutas de contexto Protomaps PMTiles; no es un fondo implícito.",
+      "ar": "تقدم طبقة مربعات الخرائط القياسية في OpenStreetMap خرائط مرجعية عالمية من tile.openstreetmap.org، بما فيها سياق اليابسة والتسميات لساحل أوريغون. تتصورها خطة Deeptime كطبقة سياق خرائطي صريحة عبر موصّل يمكن للعملاء إظهارها أو إخفاؤها، وهي منفصلة عن مسارات سياق Protomaps PMTiles وليست خلفية ضمنية.",
+      "zh": "OpenStreetMap标准瓦片图层从tile.openstreetmap.org提供全球参考地图瓦片，包括俄勒冈海岸的陆地和地名标注背景。Deeptime计划将其用作通过连接器提供的显式地图背景图层，客户端可以显示或隐藏；它与Protomaps PMTiles背景路由分开，不是隐式背景。",
+      "ru": "Стандартный тайловый слой OpenStreetMap предоставляет глобальные справочные карты с tile.openstreetmap.org, включая сушу и подписи для побережья Орегона. План Deeptime предусматривает его как явно подключаемый через коннектор слой картографического контекста, который клиенты могут показывать или скрывать отдельно от маршрутов контекста Protomaps PMTiles; это не неявный фон."
+    }
+  },
+  {
+    "id": "oregon-dlcd-coastal-gis",
+    "legacyProperties": {
+      "priority": "MVP-0",
+      "sourceRefs": [
+        "src-dlcd-maps-data-tools",
+        "src-dlcd-territorial-sea-mapserver"
+      ]
+    },
+    "previousDescriptions": {
+      "ar": null,
+      "en": "Oregon DLCD and OCMP publish coastal GIS datasets and web services. For Ryu MVP-0, this node covers the Oregon coastal boundary/context package, including the Territorial Sea Plan MapServer as a machine-access route rather than a separate node.\n\nTerritorial Sea Plan service supports map export, query, and layer inspection through ArcGIS REST.",
+      "es": null,
+      "fr": null,
+      "ru": null,
+      "zh": null
+    },
+    "orphanDescriptors": {},
+    "description": {
+      "en": "Oregon DLCD and OCMP publish coastal GIS datasets and web services for Oregon coastal boundaries and context. The system includes the Territorial Sea Plan MapServer as a machine-access route. Its ArcGIS REST service supports map export, query, and layer inspection.",
+      "fr": "Le DLCD de l’Oregon et l’OCMP publient des jeux de données SIG côtières et des services web sur les limites et le contexte du littoral de l’Oregon. Le système comprend le MapServer du plan de la mer territoriale comme route d’accès machine. Son service ArcGIS REST permet l’export de cartes, les requêtes et l’inspection des couches.",
+      "es": "El DLCD de Oregón y el OCMP publican conjuntos de datos SIG costeros y servicios web sobre límites y contexto del litoral de Oregón. El sistema incluye el MapServer del Plan del Mar Territorial como ruta de acceso automatizado. Su servicio ArcGIS REST permite exportar mapas, realizar consultas e inspeccionar capas.",
+      "ar": "تنشر إدارة DLCD في أوريغون وبرنامج OCMP مجموعات بيانات نظم المعلومات الجغرافية الساحلية وخدمات ويب لحدود ساحل أوريغون وسياقه. يتضمن النظام خادم خرائط خطة البحر الإقليمي كمسار وصول آلي. تدعم خدمة ArcGIS REST الخاصة به تصدير الخرائط والاستعلام وفحص الطبقات.",
+      "zh": "俄勒冈州DLCD和OCMP发布有关俄勒冈海岸边界及背景的沿海GIS数据集和网络服务。该系统包含作为机器访问路由的领海规划MapServer，其ArcGIS REST服务支持地图导出、查询和图层检查。",
+      "ru": "DLCD штата Орегон и OCMP публикуют прибрежные наборы ГИС-данных и веб-сервисы о границах и контексте побережья Орегона. Система включает MapServer плана территориального моря как маршрут машинного доступа. Его сервис ArcGIS REST поддерживает экспорт карт, запросы и просмотр информации о слоях."
+    }
+  },
+  {
+    "id": "protomaps-basemap",
+    "legacyProperties": {
+      "priority": "MVP-0",
+      "sourceRefs": [
+        "src-protomaps-docs",
+        "src-protomaps-basemap-downloads"
+      ]
+    },
+    "previousDescriptions": {
+      "ar": null,
+      "en": "The Protomaps Basemap is a general purpose vector basemap derived from OpenStreetMap and distributed as PMTiles. For Ryu MVP-0 it should supply default land, coast, road, water feature, and label context behind Oregon marine layers.",
+      "es": null,
+      "fr": null,
+      "ru": null,
+      "zh": null
+    },
+    "orphanDescriptors": {
+      "en": [
+        {
+          "id": "protomaps-basemap-method-regional-extract",
+          "description": "Use PMTiles extract workflow for an Oregon or Pacific Northwest cutout instead of storing the full planet file."
+        }
+      ]
+    },
+    "description": {
+      "en": "The Protomaps Basemap is a general purpose vector basemap derived from OpenStreetMap and distributed as PMTiles. It supplies land, coast, road, water feature, and label context; the Oregon marine mapping plan uses it as a default basemap.\n\nUse PMTiles extract workflow for an Oregon or Pacific Northwest cutout instead of storing the full planet file.",
+      "fr": "Le fond de carte Protomaps est un fond vectoriel généraliste issu d’OpenStreetMap et distribué au format PMTiles. Il fournit le contexte terrestre, les côtes, les routes, les éléments hydrographiques et les libellés ; le plan de cartographie marine de l’Oregon le prévoit comme fond de carte par défaut.\n\nUtiliser le processus d’extraction PMTiles pour obtenir un extrait de l’Oregon ou du Nord-Ouest Pacifique plutôt que stocker le fichier de la planète entière.",
+      "es": "El mapa base de Protomaps es un mapa vectorial de propósito general derivado de OpenStreetMap y distribuido como PMTiles. Aporta contexto de tierra, costas, carreteras, elementos hidrográficos y etiquetas; el plan de cartografía marina de Oregón lo contempla como mapa base predeterminado.\n\nUtilizar el proceso de extracción de PMTiles para obtener un recorte de Oregón o del Noroeste del Pacífico en lugar de almacenar el archivo de todo el planeta.",
+      "ar": "خريطة الأساس Protomaps هي خريطة متجهة للأغراض العامة مشتقة من OpenStreetMap وموزعة بصيغة PMTiles. توفر سياقاً لليابسة والسواحل والطرق والمعالم المائية والتسميات؛ وتعتمدها خطة الخرائط البحرية لأوريغون كخريطة أساس افتراضية.\n\nاستخدم سير عمل الاستخراج في PMTiles للحصول على مقتطف لأوريغون أو شمال غرب المحيط الهادئ بدلاً من تخزين ملف الكوكب بالكامل.",
+      "zh": "Protomaps底图是源自OpenStreetMap、以PMTiles分发的通用矢量底图，提供陆地、海岸、道路、水体和地名标注背景；俄勒冈海洋制图计划将其作为默认底图。\n\n使用PMTiles提取工作流生成俄勒冈或太平洋西北地区的区域裁剪文件，而不是存储整个地球的文件。",
+      "ru": "Базовая карта Protomaps — универсальная векторная карта на основе OpenStreetMap, распространяемая в формате PMTiles. Она предоставляет контекст суши, берегов, дорог, водных объектов и подписей; план морского картирования Орегона предусматривает её как базовую карту по умолчанию.\n\nИспользуйте процесс извлечения PMTiles для вырезки Орегона или Тихоокеанского Северо-Запада вместо хранения файла всей планеты."
+    }
+  }
+]
