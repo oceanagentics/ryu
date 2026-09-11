@@ -1,0 +1,904 @@
+{
+  "verifiedAt": "2026-09-11T02:14:11.315Z",
+  "api": "https://chm.oceanagentics.org/api/records",
+  "beforeRecords": 137,
+  "afterRecords": 238,
+  "createdRecords": 101,
+  "supportingRecords": 96,
+  "richRecords": 10,
+  "beforeEdges": 128,
+  "afterEdges": 285,
+  "newEdges": 157,
+  "batchUniqueEdges": 179,
+  "contentWrites": 113,
+  "reviewTransitions": 30,
+  "mainLocalizationsAgentResearched": 60,
+  "allContentMatchesExpected": true,
+  "allRecordsValidate": true,
+  "preservedOldReviewHistories": 677,
+  "preservedAllOriginalEdgeIds": true,
+  "preservedAllOriginalSourceIds": true,
+  "preservedAllRoutes": true,
+  "comparison": "Every content field compared after adding normal empty API display defaults to sparse sections; edge/route collections matched by ID independent of database collation. Descriptor/access/metric/gallery order remains exact.",
+  "hashMethod": "SHA-256 of JSON.stringify(parsed payload)",
+  "main": [
+    {
+      "id": "fishbase",
+      "depth": "rich",
+      "locales": [
+        "ar",
+        "en",
+        "es",
+        "fr",
+        "ru",
+        "zh"
+      ],
+      "reviewState": "agent_researched",
+      "edges": 23,
+      "metrics": 6,
+      "nodeSources": 25,
+      "recordUpdatedAt": "2026-09-11T02:11:20.596Z",
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 50,
+        "resolvedSources": 50,
+        "issues": []
+      },
+      "payloadSha256": "578c9ffae2abf24b2c5fc4ae291f5299b81ff4949e4c34ae58cbb9de57040591"
+    },
+    {
+      "id": "platform-obis",
+      "depth": "rich",
+      "locales": [
+        "ar",
+        "en",
+        "es",
+        "fr",
+        "ru",
+        "zh"
+      ],
+      "reviewState": "agent_researched",
+      "edges": 23,
+      "metrics": 5,
+      "nodeSources": 26,
+      "recordUpdatedAt": "2026-09-11T02:11:22.900Z",
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 49,
+        "resolvedSources": 49,
+        "issues": []
+      },
+      "payloadSha256": "6dbfbeb1241509fdee097169bb85b9e9a0eb0e727b2d08cc93e9fd2074d86ca7"
+    },
+    {
+      "id": "worms",
+      "depth": "rich",
+      "locales": [
+        "ar",
+        "en",
+        "es",
+        "fr",
+        "ru",
+        "zh"
+      ],
+      "reviewState": "agent_researched",
+      "edges": 19,
+      "metrics": 4,
+      "nodeSources": 17,
+      "recordUpdatedAt": "2026-09-11T02:11:25.061Z",
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 38,
+        "resolvedSources": 38,
+        "issues": []
+      },
+      "payloadSha256": "d826eedd0bc1ebeb2a7df9ccdb58fb0917d25b707be23094210c04bee9ac8851"
+    },
+    {
+      "id": "ena",
+      "depth": "rich",
+      "locales": [
+        "ar",
+        "en",
+        "es",
+        "fr",
+        "ru",
+        "zh"
+      ],
+      "reviewState": "agent_researched",
+      "edges": 18,
+      "metrics": 1,
+      "nodeSources": 26,
+      "recordUpdatedAt": "2026-09-11T02:11:27.209Z",
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 41,
+        "resolvedSources": 41,
+        "issues": []
+      },
+      "payloadSha256": "5748f2cae0f0e1dfb2bb0e012f297e62047964a189cd03279a30b977ba3737a1"
+    },
+    {
+      "id": "deepdata",
+      "depth": "rich",
+      "locales": [
+        "ar",
+        "en",
+        "es",
+        "fr",
+        "ru",
+        "zh"
+      ],
+      "reviewState": "agent_researched",
+      "edges": 22,
+      "metrics": 3,
+      "nodeSources": 14,
+      "recordUpdatedAt": "2026-09-11T02:10:49.774Z",
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 78,
+        "resolvedSources": 78,
+        "issues": []
+      },
+      "payloadSha256": "52ef1051a0bc5a2bf1ec80347b7c8b27d9983e3e1da0b7dc42d2cb6b26e3b9d8"
+    },
+    {
+      "id": "protected-planet",
+      "depth": "rich",
+      "locales": [
+        "ar",
+        "en",
+        "es",
+        "fr",
+        "ru",
+        "zh"
+      ],
+      "reviewState": "agent_researched",
+      "edges": 12,
+      "metrics": 2,
+      "nodeSources": 23,
+      "recordUpdatedAt": "2026-09-11T02:10:46.987Z",
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 38,
+        "resolvedSources": 38,
+        "issues": []
+      },
+      "payloadSha256": "6c6a60aa88b5838a4c5832ae03d2e0238f0fa541d2e9a62ba7a81c77efd511a8"
+    },
+    {
+      "id": "global-fishing-watch",
+      "depth": "rich",
+      "locales": [
+        "ar",
+        "en",
+        "es",
+        "fr",
+        "ru",
+        "zh"
+      ],
+      "reviewState": "agent_researched",
+      "edges": 25,
+      "metrics": 2,
+      "nodeSources": 36,
+      "recordUpdatedAt": "2026-09-11T02:10:47.118Z",
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 48,
+        "resolvedSources": 48,
+        "issues": []
+      },
+      "payloadSha256": "bcef8061e27b74bafc91043738d595c97dce7b965179a6d5968a8454765487a1"
+    },
+    {
+      "id": "abs-clearing-house",
+      "depth": "rich",
+      "locales": [
+        "ar",
+        "en",
+        "es",
+        "fr",
+        "ru",
+        "zh"
+      ],
+      "reviewState": "agent_researched",
+      "edges": 9,
+      "metrics": 3,
+      "nodeSources": 19,
+      "recordUpdatedAt": "2026-09-11T02:10:48.156Z",
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 36,
+        "resolvedSources": 36,
+        "issues": []
+      },
+      "payloadSha256": "c7b12766f868a21b4ee147bb6ee61253c5dfa4c3bd690cd38e268025b151b026"
+    },
+    {
+      "id": "oceanteacher",
+      "depth": "rich",
+      "locales": [
+        "ar",
+        "en",
+        "es",
+        "fr",
+        "ru",
+        "zh"
+      ],
+      "reviewState": "agent_researched",
+      "edges": 12,
+      "metrics": 1,
+      "nodeSources": 12,
+      "recordUpdatedAt": "2026-09-11T02:10:48.942Z",
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 32,
+        "resolvedSources": 32,
+        "issues": []
+      },
+      "payloadSha256": "0a81980a5501cf02f21730c3551fde66475c59ae6fb5ed690990a42ac2219bfe"
+    },
+    {
+      "id": "odis",
+      "depth": "rich",
+      "locales": [
+        "ar",
+        "en",
+        "es",
+        "fr",
+        "ru",
+        "zh"
+      ],
+      "reviewState": "agent_researched",
+      "edges": 18,
+      "metrics": 4,
+      "nodeSources": 32,
+      "recordUpdatedAt": "2026-09-11T02:11:32.471Z",
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 69,
+        "resolvedSources": 69,
+        "issues": []
+      },
+      "payloadSha256": "39d9ba7c81e0bc4883782c6f25accf4d9c2d4e45e1af3a41a95bb737d0ea6374"
+    }
+  ],
+  "payloads": [
+    {
+      "id": "swedish-museum-of-natural-history",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "838b2b8a35412bcaff58efb89b7a0b4680fe3fb314586730c5923ec0ac397000"
+    },
+    {
+      "id": "geomar",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "5bf12f8102b8e10c23705128aed83a0772936cc03e81d9571fee05e7df76a24d"
+    },
+    {
+      "id": "mundus-maris",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "71e3217924df5e07aba6d595dc2684fac12619add8269e208881f396b1b0da49"
+    },
+    {
+      "id": "worldfish",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "279f88a1f6e044299883edec392d43ef6432e2b7f1342f5cd931b5a7234e871f"
+    },
+    {
+      "id": "blue-abacus",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "b552a8fede8fa0ebd6e05441ba0939cd8a7084b0b4b3bb85fe06a0c07c156aa9"
+    },
+    {
+      "id": "bloom-association",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "0723c453e9c0603366e05bc035c3d5fefdb56ee8499858b17c16b9de2d03d36e"
+    },
+    {
+      "id": "csiro",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "8dcde7f15df48093f37a3adbc07aaef2d25b0a4bb71c8e20d6677f10f451592e"
+    },
+    {
+      "id": "minderoo-foundation",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "2b9ad9294967b25a411f93c3ed281853f471dee34c2a6e7c2f953dd13e793f0e"
+    },
+    {
+      "id": "swire-institute-of-marine-science",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "d2e332372cc1e931f88ca222b1719112e398bb7459b83aecb322b811ded5623d"
+    },
+    {
+      "id": "university-of-lorraine",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "6efcdb70348651f67c85e0ff4660affd53107206576cc60c4dfb7529a60e0274"
+    },
+    {
+      "id": "oman-ministry-of-agriculture-fisheries-and-water-resources",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "cd00a7521f4edd385ce4cb76c2b921b53e550fe553fe025bfa5d4187ad2c46e4"
+    },
+    {
+      "id": "eschmeyers-catalog-of-fishes",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/endpoint-drafts.json",
+      "main": false,
+      "sha256": "807cd934b0a923b1b8f6728569a3a763b952c3181e505e44d7429e92f7843fd2"
+    },
+    {
+      "id": "richard-lounsbery-foundation",
+      "file": "research/2026-09-10-priority-rich-records/obis/endpoint-richard-lounsbery-foundation.json",
+      "main": false,
+      "sha256": "eb8a07c6b960d20a6938f268961487be5776cd27e2899f088f19fd4ada4a8aa0"
+    },
+    {
+      "id": "lifewatch-belgium",
+      "file": "research/2026-09-10-priority-rich-records/worms/endpoint-drafts.json",
+      "main": false,
+      "sha256": "4fc45be749f136e9eb84829f07ca4fe55373ab76b1eba8b7320efa98e8591499"
+    },
+    {
+      "id": "catalogue-of-life",
+      "file": "research/2026-09-10-priority-rich-records/worms/endpoint-drafts.json",
+      "main": false,
+      "sha256": "4b91a7bc785f9d3c056b041e3da2ab7f74daa339d1770458f16cc6efbd46b681"
+    },
+    {
+      "id": "worms-editorial-board",
+      "file": "research/2026-09-10-priority-rich-records/worms/endpoint-drafts.json",
+      "main": false,
+      "sha256": "9962edbfe06b1b342e8d0c10f4c25e343caf566da5b6c4926a4de5e1fec79e48"
+    },
+    {
+      "id": "index-fungorum",
+      "file": "research/2026-09-10-priority-rich-records/worms/endpoint-drafts.json",
+      "main": false,
+      "sha256": "70a5d371565dc3b30a1a0e6baa82ac04ec5dc1386fcae7be3ae15c345deb7dbf"
+    },
+    {
+      "id": "ictv-taxonomy",
+      "file": "research/2026-09-10-priority-rich-records/worms/endpoint-drafts.json",
+      "main": false,
+      "sha256": "84157b830587c65618ce3d21fbde8073b174ca50855426b73321a95bb94e4908"
+    },
+    {
+      "id": "ctenophora-species-list",
+      "file": "research/2026-09-10-priority-rich-records/worms/endpoint-drafts.json",
+      "main": false,
+      "sha256": "9cef30d9a51ef9e2eaaf9e6f4fa1737844591fc15fd848f21e166c3d8ead5cf2"
+    },
+    {
+      "id": "reptile-database",
+      "file": "research/2026-09-10-priority-rich-records/worms/endpoint-drafts.json",
+      "main": false,
+      "sha256": "7167759714244cbe8fc8fa486e6b6511d552c171deb3210b660ce8451fb2e978"
+    },
+    {
+      "id": "freshwater-animal-diversity-assessment",
+      "file": "research/2026-09-10-priority-rich-records/worms/endpoint-drafts.json",
+      "main": false,
+      "sha256": "d6aec9189acb76dac3f6fd1078ed1d9f617e175f46d7a86e2c4331e223571f6e"
+    },
+    {
+      "id": "recent-fossil-bryozoa",
+      "file": "research/2026-09-10-priority-rich-records/worms/endpoint-drafts.json",
+      "main": false,
+      "sha256": "aee267e43801e2daeced2ae560f093186aaef10a1e6238958963cf2e7874f0c8"
+    },
+    {
+      "id": "bbsrc",
+      "file": "research/2026-09-10-priority-rich-records/ena/endpoint-drafts.json",
+      "main": false,
+      "sha256": "9a7f115ae549d0a2e45db00ae5b3dd38102ecee6b707c9333ce156b743ba1a85"
+    },
+    {
+      "id": "wellcome",
+      "file": "research/2026-09-10-priority-rich-records/ena/endpoint-drafts.json",
+      "main": false,
+      "sha256": "3db5b067f6f8ab60add589824a749e8b85fdac87e98716f60b51e9456d9acec2"
+    },
+    {
+      "id": "gordon-and-betty-moore-foundation",
+      "file": "research/2026-09-10-priority-rich-records/ena/endpoint-drafts.json",
+      "main": false,
+      "sha256": "fa1a5c4b8c9b161f5446f166e7fd81ca1316425faf90a0cf4b9ce30d3c43236c"
+    },
+    {
+      "id": "niaid",
+      "file": "research/2026-09-10-priority-rich-records/ena/endpoint-drafts.json",
+      "main": false,
+      "sha256": "2e9d5337910464bdc9b07eaf69619eea7869301eda0b3608bc7fc2f56b92da39"
+    },
+    {
+      "id": "novo-nordisk-foundation",
+      "file": "research/2026-09-10-priority-rich-records/ena/endpoint-drafts.json",
+      "main": false,
+      "sha256": "bc769db29a7793f5162d54bab9e799ee3578abd153b3f6f3aeaa9b0f56b89694"
+    },
+    {
+      "id": "wellcome-sanger-institute",
+      "file": "research/2026-09-10-priority-rich-records/ena/endpoint-drafts.json",
+      "main": false,
+      "sha256": "a71cb2438a390da81c8fd0d9b452a034174c36d5021d6e143072553658d5f8ee"
+    },
+    {
+      "id": "biosamples",
+      "file": "research/2026-09-10-priority-rich-records/ena/endpoint-drafts.json",
+      "main": false,
+      "sha256": "56349deecf4635f79b2bf3fe92b1b5eb38d219ca034551c16e878f2066b67922"
+    },
+    {
+      "id": "genoscope",
+      "file": "research/2026-09-10-priority-rich-records/ena/endpoint-drafts.json",
+      "main": false,
+      "sha256": "5277324e2ccbafe1fb9bc885c299fd1592302b09e74fb46c0e212b297ba32e7a"
+    },
+    {
+      "id": "international-seabed-authority",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "028f31640c9703e8112958b14e11f15e173c67750936b72f0e2f1122e4a2ae0e"
+    },
+    {
+      "id": "ocean-mineral-singapore",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "c9d1cf5ab185eee9740820202131b798b7b5ce4768ddb3a6900d2b9680bf876e"
+    },
+    {
+      "id": "uk-seabed-resources",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "0e4d896fe8c24a5b20e6abb7d07accd73659aef490ef6a2b3dde979a10df1256"
+    },
+    {
+      "id": "bgr",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "548f3f45b817aa616dec0c72aaf4d0af7bec3ff76f74e46936108ee5feefdd7d"
+    },
+    {
+      "id": "tonga-offshore-mining",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "201de9bee8ae128c0926195a868fd50ca46a29fed6459970fb2843df274dff34"
+    },
+    {
+      "id": "jogmec",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "b4cee08ae663d1ffa61a039f703b3c360c92f0557e1b1a2f6d4324628705f7ed"
+    },
+    {
+      "id": "comra",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "e546f2d34dc3bfd51d54aacdb9309789a9924247bad14d9e9c47e3dc2742b57d"
+    },
+    {
+      "id": "global-sea-mineral-resources",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "529eaa0662ddb0eced3ff36b8efcbf9398be8626c76600476943faa6e91735ff"
+    },
+    {
+      "id": "interoceanmetal",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "a49f1c4b1e4dcb73de7d94a4298225a39755cad614e2b0cd0924aac7bd8e993d"
+    },
+    {
+      "id": "yuzhmorgeologiya",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "7250a6cae14bafbb14d8e2cc372dab6fb893eb4b36ffa7904346b4125e48ff74"
+    },
+    {
+      "id": "deep-ocean-resources-development",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "e3d69177d935807e40ead0ed6c1a434d44f6ee6b21093fd40b6058f7bdfd73a0"
+    },
+    {
+      "id": "china-minmetals",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "27ba1f71f461c49d2256dd6ce6e5a4fb8c7487e6d020736153960341051ca282"
+    },
+    {
+      "id": "russian-ministry-natural-resources",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "5e57cf4cddb118e8baa002aad2b95052d4a80ed5ea8837f7341857d0067b194a"
+    },
+    {
+      "id": "nauru-ocean-resources",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "f8f5a26a5b46c1636e1480e858f3376d5dd0f6efe2a3eea82b710d1594b7fd82"
+    },
+    {
+      "id": "beijing-pioneer-hi-tech",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/endpoint-drafts.json",
+      "main": false,
+      "sha256": "59df00a3ea66d20ae2a8c5681dd6a5826e94a4eb0e97b7ca3a8f8d18801da45d"
+    },
+    {
+      "id": "unep",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "6c9d6c469e516a5fced5fd405a62ba67fb365d49f976dcbd679de60a92d93573"
+    },
+    {
+      "id": "iucn",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "66aa4082f12862d2b4a755b3265ac1cc2448777cf18933e58951b29b84c3844f"
+    },
+    {
+      "id": "unep-wcmc",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "1a0c97bd01ab92b2eed347f5774d7f6b30f0a49be28bb07ff8e06249d5a02c58"
+    },
+    {
+      "id": "arcadia",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "f51a1da1b59e4216aca48b714a7577cc68a5f458fa3e7f190e6d8578e9e85699"
+    },
+    {
+      "id": "proteus-partnership",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "1c98e2f9c4162927ba303e5bf4c3eba5544242ae07a134d6eb9d3506324acebd"
+    },
+    {
+      "id": "bezos-earth-fund",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "b5bdb017e73b4a40964a1df777efcb36829fb51aa583906bd585ab345452ad68"
+    },
+    {
+      "id": "usgs",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "0bc3978a9ce3a3625aa777f0a15971b9d8bcf01afebc06771e8914a539d5716a"
+    },
+    {
+      "id": "dutch-caribbean-nature-alliance",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "fd148464ab383fea4e49dda0d9ff007f0707586d07fd9a8dfba54d03a7b75858"
+    },
+    {
+      "id": "ibat",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "0821f71af11ae72e13dda16734dc5b7d2e04a04cf0f50b22cb6713ee616fdcc8"
+    },
+    {
+      "id": "google-earth-engine",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "b8d9f3ca73746e835b37cd88d650c6d99d5ac0c63124eef6b64e1189c86334da"
+    },
+    {
+      "id": "mpatlas",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/endpoint-drafts.json",
+      "main": false,
+      "sha256": "6076c50055a7fa8e0337bd2fd7d7bfc4121c8d9df8e30fafe99bf8a6c679999b"
+    },
+    {
+      "id": "global-fishing-watch-operator",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "68f49135a14f7d6e748e4ae0a005649b34abc5ce2090242e1e35d9c83ea5d3a6"
+    },
+    {
+      "id": "kpler",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "bd39a737d48fc0ba750da5b4b8daf38927772c4646142445a51ba6834e934790"
+    },
+    {
+      "id": "planet-labs",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "3aece8bc7906369de20b52aba390ee99ee0d852c559851eb12d774e5624e8187"
+    },
+    {
+      "id": "trygg-mat-tracking",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "85cf5d009de9dd2b266fa91741c20148fdeedd14c0df1c82782cf912fc2427f7"
+    },
+    {
+      "id": "fisheries-analytical-capacity-tool",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "c3ba1bcb7b358955ac4beecb4313dc85eb88a43e1c2f18306e3558bf55c7ceb9"
+    },
+    {
+      "id": "norwegian-directorate-of-fisheries",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "bd09562201226f7e75e8561fffc3b69295647921f4010f67229accb0e32981b9"
+    },
+    {
+      "id": "brazil-ministry-fisheries-aquaculture",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "a5470a1af9fca00c9770def7fe3ce032f63bd3b09a1cc7695fce20b243a3214f"
+    },
+    {
+      "id": "incopesca",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "66d60a143866e24db5f1b2780f8035c68d7087772457fbc869cb33bb40f0498f"
+    },
+    {
+      "id": "panama-aquatic-resources-authority",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "92393cd7c77c51acb47f553ecfd91e74ab5543025f8d3065bc39ac6b3e99ebc2"
+    },
+    {
+      "id": "peru-ministry-production",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "0d10b8ecf49a31ea1753c1a69071976996565d782402f79873693cab09674b5e"
+    },
+    {
+      "id": "sernapesca",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "8eecd4a1adb44ed4097321c3a093e0595824fb2d37bd4e446a52fde026a40d8a"
+    },
+    {
+      "id": "ecuador-dirnea",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "fbc576a406f07b82ee0e35ebecb9bf813792fc7e32fd4892f7b6299a65d55556"
+    },
+    {
+      "id": "belize-high-seas-fisheries-unit",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "3953949687f263783dff895ca2fc68274120a27f8a70c7c1ab9bbe58cc395e25"
+    },
+    {
+      "id": "papua-new-guinea-national-fisheries-authority",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "360b43f12bc2e031dc958edfdbf93c1f66b513f47bbabdfe898fa987fad8c42c"
+    },
+    {
+      "id": "protectedseas-navigator",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "bf5f258231431872c732f223455c01c768ebc26cb03c058f320d939ffa68d82c"
+    },
+    {
+      "id": "skylight",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "29e6aaed1eeadd476af716afc3ad03a1b38d3dccd737275757ac6a191e89ae23"
+    },
+    {
+      "id": "google-bigquery",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "d07eb6e46a8ccb28708b85a1c67c6cb6932a7971c1ef96ca55e5320274367094"
+    },
+    {
+      "id": "arcgis-online",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "6e50dd4d9990615c982fd9d35daa8889a1c382fea764c126b7224a96389d29b6"
+    },
+    {
+      "id": "dalio-philanthropies",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "75b4c3f3cc5f3ac078969c68bb0fb797f240cec0ed4ad2880fb65ba4cd5195a0"
+    },
+    {
+      "id": "audacious-project",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "9f20b8237cdbf6198b8547d8e8ecebe712c8d272181c9265254431b843e85429"
+    },
+    {
+      "id": "hans-wilsdorf-foundation",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "a7cd66c59f07999ddd3b222366b2bed48876dc2a784fabeecd5c3f6021036e49"
+    },
+    {
+      "id": "islas-secas-foundation",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "841f79d45b077d32a636b674ad28be1d318535305f351ed0141781b571f91ab8"
+    },
+    {
+      "id": "walmart-foundation",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "601b8ab5d9c8438f6f7669702053a01160b45dabeecca9763fdb21895125f46e"
+    },
+    {
+      "id": "sall-family-foundation",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "66392ba2f65dc9b3a4d0da95183ef7404a346049e3181b8c854ec17445058a9f"
+    },
+    {
+      "id": "oceana",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "2dc20bfa1e12b1a231561ea9051a4c61199eadeb553375b44f59f32c2268c9b5"
+    },
+    {
+      "id": "coalition-for-fisheries-transparency",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "4687b2ffb99779f487ffd4a1b4468cdf46901cb1082a41f8f36d718ef2b0aff2"
+    },
+    {
+      "id": "joint-analytical-cell",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "bdc20b38e4c94f44f3c2c8a52f1c32fd706903f7fbf735dce883492748853419"
+    },
+    {
+      "id": "indonesia-ministry-marine-affairs-fisheries",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/endpoint-drafts.json",
+      "main": false,
+      "sha256": "51f4c283c2e6ca81b22fdc3d9a27a56753f3956d774f695c58956f76cde629a9"
+    },
+    {
+      "id": "cbd-secretariat",
+      "file": "research/2026-09-10-priority-rich-records/abs-clearing-house/endpoint-drafts.json",
+      "main": false,
+      "sha256": "844a3aaf392aea0d8ad21a14804df9457e61d4c42db35368058c217590ac60e0"
+    },
+    {
+      "id": "nagoya-protocol-cop-mop",
+      "file": "research/2026-09-10-priority-rich-records/abs-clearing-house/endpoint-drafts.json",
+      "main": false,
+      "sha256": "0cd147148db7297857f817d4bb0cf6148aaaef35bcd8e08428358223164390aa"
+    },
+    {
+      "id": "declare",
+      "file": "research/2026-09-10-priority-rich-records/abs-clearing-house/endpoint-drafts.json",
+      "main": false,
+      "sha256": "965d923b798357db0afc9d728fabb41c1eb2b7930cd12fdb2fb5b0b0bc728cf4"
+    },
+    {
+      "id": "defra",
+      "file": "research/2026-09-10-priority-rich-records/abs-clearing-house/endpoint-drafts.json",
+      "main": false,
+      "sha256": "d4a30cd90ece07d80035ca35aa157c36c50366082e93d6837edcd1185634f1ae"
+    },
+    {
+      "id": "moefcc",
+      "file": "research/2026-09-10-priority-rich-records/abs-clearing-house/endpoint-drafts.json",
+      "main": false,
+      "sha256": "c59a3c00fcbde6c23b1ad9d8ce00d765e08580e86625f70b0f499b7e533aedd3"
+    },
+    {
+      "id": "ioc-unesco",
+      "file": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+      "main": false,
+      "sha256": "16467557a7a638c1fe1ebf410cea334827cb37c24eb1933cdb478175dc82fe41"
+    },
+    {
+      "id": "medin",
+      "file": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+      "main": false,
+      "sha256": "c2c2f2493cd224096b65ebd8643fa006268c62805785025555cbe66df68f685e"
+    },
+    {
+      "id": "oceanexpert",
+      "file": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+      "main": false,
+      "sha256": "73ddfa191fca58e191976af5fd99cbacd0fc7d29c791728488c8992acbebb172"
+    },
+    {
+      "id": "norad",
+      "file": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+      "main": false,
+      "sha256": "49cd54a423b60a3c7e99b29d3e76f97518556da97d7fdb00930ca74acb94bc37"
+    },
+    {
+      "id": "lifewatch-eric",
+      "file": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+      "main": false,
+      "sha256": "25397d43d135c9402fc5fc0b80cc7f8c7d6a6089b6ca53cbb13b6ee3d521aa7c"
+    },
+    {
+      "id": "marine-institute-ireland",
+      "file": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+      "main": false,
+      "sha256": "809817500172a6e2eade924325c2dcbc1e8d709fd1e529211254a1ccd4bbad38"
+    },
+    {
+      "id": "leibniz-centre-for-tropical-marine-research",
+      "file": "research/2026-09-10-priority-rich-records/oceanteacher/endpoint-drafts.json",
+      "main": false,
+      "sha256": "eeb391c49483c17fcb8b2c64947489d4282533b952a047b175dee6847dd728ef"
+    },
+    {
+      "id": "fishbase",
+      "file": "research/2026-09-10-priority-rich-records/fishbase/draft.json",
+      "main": true,
+      "sha256": "578c9ffae2abf24b2c5fc4ae291f5299b81ff4949e4c34ae58cbb9de57040591"
+    },
+    {
+      "id": "platform-obis",
+      "file": "research/2026-09-10-priority-rich-records/obis/draft.json",
+      "main": true,
+      "sha256": "6dbfbeb1241509fdee097169bb85b9e9a0eb0e727b2d08cc93e9fd2074d86ca7"
+    },
+    {
+      "id": "worms",
+      "file": "research/2026-09-10-priority-rich-records/worms/draft.json",
+      "main": true,
+      "sha256": "d826eedd0bc1ebeb2a7df9ccdb58fb0917d25b707be23094210c04bee9ac8851"
+    },
+    {
+      "id": "ena",
+      "file": "research/2026-09-10-priority-rich-records/ena/draft.json",
+      "main": true,
+      "sha256": "5748f2cae0f0e1dfb2bb0e012f297e62047964a189cd03279a30b977ba3737a1"
+    },
+    {
+      "id": "deepdata",
+      "file": "research/2026-09-10-priority-rich-records/isa-deepdata/draft.json",
+      "main": true,
+      "sha256": "52ef1051a0bc5a2bf1ec80347b7c8b27d9983e3e1da0b7dc42d2cb6b26e3b9d8"
+    },
+    {
+      "id": "protected-planet",
+      "file": "research/2026-09-10-priority-rich-records/protected-planet/draft.json",
+      "main": true,
+      "sha256": "6c6a60aa88b5838a4c5832ae03d2e0238f0fa541d2e9a62ba7a81c77efd511a8"
+    },
+    {
+      "id": "global-fishing-watch",
+      "file": "research/2026-09-10-priority-rich-records/global-fishing-watch/draft.json",
+      "main": true,
+      "sha256": "bcef8061e27b74bafc91043738d595c97dce7b965179a6d5968a8454765487a1"
+    },
+    {
+      "id": "abs-clearing-house",
+      "file": "research/2026-09-10-priority-rich-records/abs-clearing-house/draft.json",
+      "main": true,
+      "sha256": "c7b12766f868a21b4ee147bb6ee61253c5dfa4c3bd690cd38e268025b151b026"
+    },
+    {
+      "id": "oceanteacher",
+      "file": "research/2026-09-10-priority-rich-records/oceanteacher/draft.json",
+      "main": true,
+      "sha256": "0a81980a5501cf02f21730c3551fde66475c59ae6fb5ed690990a42ac2219bfe"
+    },
+    {
+      "id": "odis",
+      "file": "research/2026-09-10-priority-rich-records/odis/draft.json",
+      "main": true,
+      "sha256": "39d9ba7c81e0bc4883782c6f25accf4d9c2d4e45e1af3a41a95bb737d0ea6374"
+    }
+  ]
+}

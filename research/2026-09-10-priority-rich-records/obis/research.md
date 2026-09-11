@@ -1,5 +1,7 @@
 # OBIS rich-record research — 10 September 2026
 
+Production status: applied and verified on 2026-09-11 UTC. See the [application report](../application-report.md). The research-time notes and validation outcomes below are retained as history.
+
 Review candidate only. `draft.json` proposes the existing **platform-obis** system as rich, with six complete locales, 15 data descriptors, 7 access paths, 5 measurements and 23 incident edges. The canonical identity and all 5 stored incident edges were read afresh from the authenticated Record API; their IDs are preserved. Existing owner-local sources and unrelated content were retained or deliberately normalized to the current closed contract. No production content or review state was changed.
 
 ## Identity, scope and evidence
@@ -74,3 +76,5 @@ Root captured `solea-occurrence-map.png` in the in-app browser from [Solea solea
 All counts and sources were researched on 2026-09-10. Remaining uncertainties are stated in localized research gaps or edge scope/status. This is a complete research candidate for review, pending endpoint coordination, optional gallery handling and validation against the released current contract.
 
 Final orchestration added the verified OBIS → ODIS metadata edge from the ODIS job, bringing this draft to 23 incident edges. The final root batch validation files supersede earlier hashes after this reconciliation.
+
+Application preservation update (2026-09-11 UTC): retained 7 additional owner-local source entries from the completed production contract rollout. Reviewed claims and relationship payloads remain intact; final production application evidence supersedes prior draft hashes.

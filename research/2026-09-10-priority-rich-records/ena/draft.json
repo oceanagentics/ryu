@@ -145,7 +145,8 @@
           "sourceRefs": [
             "ena-submit",
             "ena-account",
-            "ena-2024"
+            "ena-2024",
+            "write-access-interactive"
           ]
         },
         {
@@ -163,7 +164,8 @@
           "sourceRefs": [
             "ena-submit-api",
             "ena-account",
-            "ena-2024"
+            "ena-2024",
+            "write-access-api"
           ]
         },
         {
@@ -181,7 +183,8 @@
           "sourceRefs": [
             "ena-cli",
             "ena-account",
-            "ena-2024"
+            "ena-2024",
+            "write-access-cli"
           ]
         }
       ],
@@ -443,6 +446,97 @@
           "zh": "ENA Tara Oceans项目PRJEB402"
         },
         "accessedAt": "2026-09-10"
+      },
+      "read-access-api": {
+        "id": "read-access-api",
+        "url": "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access.html",
+        "title": {
+          "ar": "ENA — واجهة برمجة التطبيقات",
+          "en": "ENA — API",
+          "es": "ENA — API",
+          "fr": "ENA — API",
+          "ru": "ENA — API",
+          "zh": "ENA — API"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "read-access-web": {
+        "id": "read-access-web",
+        "url": "https://ena-docs.readthedocs.io/en/latest/retrieval/general-guide.html",
+        "title": {
+          "ar": "ENA — بوابة البيانات",
+          "en": "ENA — Data portal",
+          "es": "ENA — Portal de datos",
+          "fr": "ENA — Portail de données",
+          "ru": "ENA — Портал данных",
+          "zh": "ENA — 数据门户"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-standards-1": {
+        "id": "src-standards-1",
+        "url": "https://www.insdc.org/technical-specifications/",
+        "title": {
+          "ar": "INSDC technical specifications — الوثائق التقنية",
+          "en": "INSDC technical specifications — technical documentation",
+          "es": "INSDC technical specifications — documentación técnica",
+          "fr": "INSDC technical specifications — documentation technique",
+          "ru": "INSDC technical specifications — техническая документация",
+          "zh": "INSDC technical specifications — 技术文档"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-standards-2": {
+        "id": "src-standards-2",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/samples/programmatic.html",
+        "title": {
+          "ar": "ENA sample submission — الوثائق التقنية",
+          "en": "ENA sample submission — technical documentation",
+          "es": "ENA sample submission — documentación técnica",
+          "fr": "ENA sample submission — documentation technique",
+          "ru": "ENA sample submission — техническая документация",
+          "zh": "ENA sample submission — 技术文档"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-api": {
+        "id": "write-access-api",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/programmatic.html",
+        "title": {
+          "ar": "ENA Webin — واجهة إرسال البيانات",
+          "en": "ENA Webin — Submission API",
+          "es": "ENA Webin — API de envío",
+          "fr": "ENA Webin — API de soumission",
+          "ru": "ENA Webin — API передачи данных",
+          "zh": "ENA Webin — 提交 API"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-cli": {
+        "id": "write-access-cli",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html",
+        "title": {
+          "ar": "ENA Webin-CLI — أداة إرسال البيانات",
+          "en": "ENA Webin-CLI — Submission tool",
+          "es": "ENA Webin-CLI — Herramienta de envío",
+          "fr": "ENA Webin-CLI — Outil de soumission",
+          "ru": "ENA Webin-CLI — Инструмент передачи данных",
+          "zh": "ENA Webin-CLI — 提交工具"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-interactive": {
+        "id": "write-access-interactive",
+        "url": "https://ena-docs.readthedocs.io/en/latest/submit/general-guide/interactive.html",
+        "title": {
+          "ar": "ENA Webin — إرسال البيانات",
+          "en": "ENA Webin — Submit data",
+          "es": "ENA Webin — Enviar datos",
+          "fr": "ENA Webin — Soumettre des données",
+          "ru": "ENA Webin — Передача данных",
+          "zh": "ENA Webin — 提交数据"
+        },
+        "accessedAt": "2026-09-10"
       }
     }
   },
@@ -538,17 +632,17 @@
           {
             "id": "ena-tag-write-method-web-submission",
             "label": "Webin interactive submission",
-            "description": "Register a Webin account, create study and sample metadata, and submit supported read data through forms and uploaded templates/files. Submission is free and validated; publication follows release controls. Genome and transcriptome assemblies require Webin-CLI."
+            "description": "Register a Webin account, create study and sample metadata, and submit supported read data through forms and uploaded templates/files. Submission is free and validated; publication follows release controls. Genome and transcriptome assemblies require Webin-CLI. Upload read files before completing the interactive submission."
           },
           {
             "id": "ena-tag-write-method-api-write",
             "label": "Webin REST API",
-            "description": "Use Webin credentials with HTTPS authentication to submit supported metadata and pre-uploaded data. REST V2 accepts JSON or XML and supports queued submissions and receipts. Free submission does not publish every record immediately; check validation results and release dates."
+            "description": "Use Webin credentials with HTTPS authentication to submit supported metadata and pre-uploaded data. REST V2 accepts JSON or XML and supports queued submissions and receipts. Free submission does not publish every record immediately; check validation results and release dates. The test and production services are separate."
           },
           {
             "id": "ena-access-webin-cli",
             "label": "Webin-CLI",
-            "description": "Use the documented Java or container client with a Webin account to validate, upload and submit reads, sequences and assemblies. Prepare a manifest and preregister studies and samples. The client is the required assembly-submission path; local computing and transfer setup remain the submitter’s responsibility."
+            "description": "Use the documented Java or container client with a Webin account to validate, upload and submit reads, sequences and assemblies. Prepare a manifest and preregister studies and samples. The client is the required assembly-submission path; local computing and transfer setup remain the submitter’s responsibility. Use test mode before submitting to production."
           }
         ],
         "gallery": [],
@@ -656,17 +750,17 @@
           {
             "id": "ena-tag-write-method-web-submission",
             "label": "Dépôt interactif Webin",
-            "description": "Créez un compte Webin, renseignez études et échantillons puis déposez les lectures prises en charge par formulaires et fichiers ou modèles téléversés. Le dépôt est gratuit et validé ; la publication suit les contrôles de diffusion. Les assemblages nécessitent Webin-CLI."
+            "description": "Créez un compte Webin, renseignez études et échantillons puis déposez les lectures prises en charge par formulaires et fichiers ou modèles téléversés. Le dépôt est gratuit et validé ; la publication suit les contrôles de diffusion. Les assemblages nécessitent Webin-CLI. Téléversez les fichiers de lectures avant de finaliser le dépôt interactif."
           },
           {
             "id": "ena-tag-write-method-api-write",
             "label": "API REST Webin",
-            "description": "Utilisez les identifiants Webin et HTTPS pour déposer métadonnées prises en charge et données préalablement téléversées. REST V2 accepte JSON ou XML, files d’attente et reçus. Le dépôt gratuit ne publie pas tout immédiatement ; vérifiez validation et dates."
+            "description": "Utilisez les identifiants Webin et HTTPS pour déposer métadonnées prises en charge et données préalablement téléversées. REST V2 accepte JSON ou XML, files d’attente et reçus. Le dépôt gratuit ne publie pas tout immédiatement ; vérifiez validation et dates. Les services de test et de production sont distincts."
           },
           {
             "id": "ena-access-webin-cli",
             "label": "Webin-CLI",
-            "description": "Utilisez le client Java ou conteneur avec un compte Webin pour valider, téléverser et déposer lectures, séquences et assemblages. Préparez un manifeste et enregistrez études et échantillons. Ce client est requis pour les assemblages ; calcul local et transfert restent à votre charge."
+            "description": "Utilisez le client Java ou conteneur avec un compte Webin pour valider, téléverser et déposer lectures, séquences et assemblages. Préparez un manifeste et enregistrez études et échantillons. Ce client est requis pour les assemblages ; calcul local et transfert restent à votre charge. Utilisez le mode test avant de soumettre en production."
           }
         ],
         "gallery": [],
@@ -774,17 +868,17 @@
           {
             "id": "ena-tag-write-method-web-submission",
             "label": "Envío interactivo Webin",
-            "description": "Registre una cuenta Webin, describa estudios y muestras y envíe lecturas admitidas mediante formularios, plantillas y archivos. El depósito es gratuito y validado; la publicación sigue los controles de liberación. Los ensamblajes genómicos y transcriptómicos requieren Webin-CLI."
+            "description": "Registre una cuenta Webin, describa estudios y muestras y envíe lecturas admitidas mediante formularios, plantillas y archivos. El depósito es gratuito y validado; la publicación sigue los controles de liberación. Los ensamblajes genómicos y transcriptómicos requieren Webin-CLI. Cargue los archivos de lecturas antes de completar el envío interactivo."
           },
           {
             "id": "ena-tag-write-method-api-write",
             "label": "API REST Webin",
-            "description": "Use credenciales Webin y HTTPS para enviar metadatos admitidos y datos cargados previamente. REST V2 acepta JSON o XML y ofrece colas y recibos. El envío gratuito no publica todo inmediatamente; revise validación y fechas de publicación."
+            "description": "Use credenciales Webin y HTTPS para enviar metadatos admitidos y datos cargados previamente. REST V2 acepta JSON o XML y ofrece colas y recibos. El envío gratuito no publica todo inmediatamente; revise validación y fechas de publicación. Los servicios de prueba y producción son independientes."
           },
           {
             "id": "ena-access-webin-cli",
             "label": "Webin-CLI",
-            "description": "Use el cliente Java o contenedor con cuenta Webin para validar, cargar y enviar lecturas, secuencias y ensamblajes. Prepare un manifiesto y registre estudios y muestras previamente. Es obligatorio para ensamblajes; el remitente configura cálculo local y transferencia."
+            "description": "Use el cliente Java o contenedor con cuenta Webin para validar, cargar y enviar lecturas, secuencias y ensamblajes. Prepare un manifiesto y registre estudios y muestras previamente. Es obligatorio para ensamblajes; el remitente configura cálculo local y transferencia. Use el modo de prueba antes de enviar a producción."
           }
         ],
         "gallery": [],
@@ -892,17 +986,17 @@
           {
             "id": "ena-tag-write-method-web-submission",
             "label": "الإيداع التفاعلي عبر Webin",
-            "description": "سجّل حساب Webin وأنشئ بيانات الدراسات والعينات وأودع القراءات المدعومة عبر النماذج والقوالب والملفات. الإيداع مجاني ويخضع للتحقق، والنشر يتبع ضوابط الإتاحة. تتطلب تجميعات الجينوم والترانسكريبتوم Webin-CLI."
+            "description": "سجّل حساب Webin وأنشئ بيانات الدراسات والعينات وأودع القراءات المدعومة عبر النماذج والقوالب والملفات. الإيداع مجاني ويخضع للتحقق، والنشر يتبع ضوابط الإتاحة. تتطلب تجميعات الجينوم والترانسكريبتوم Webin-CLI. ارفع ملفات القراءات قبل إكمال الإيداع التفاعلي."
           },
           {
             "id": "ena-tag-write-method-api-write",
             "label": "واجهة Webin REST",
-            "description": "استخدم بيانات دخول Webin عبر HTTPS لإيداع البيانات الوصفية المدعومة والملفات المرفوعة مسبقاً. تقبل REST V2 صيغة JSON أو XML وتدعم قوائم الانتظار والإيصالات. لا يعني الإيداع المجاني النشر الفوري؛ راجع التحقق وتواريخ الإتاحة."
+            "description": "استخدم بيانات دخول Webin عبر HTTPS لإيداع البيانات الوصفية المدعومة والملفات المرفوعة مسبقاً. تقبل REST V2 صيغة JSON أو XML وتدعم قوائم الانتظار والإيصالات. لا يعني الإيداع المجاني النشر الفوري؛ راجع التحقق وتواريخ الإتاحة. خدمتا الاختبار والإنتاج منفصلتان."
           },
           {
             "id": "ena-access-webin-cli",
             "label": "Webin-CLI",
-            "description": "استخدم عميل Java أو الحاوية مع حساب Webin للتحقق من القراءات والتسلسلات والتجميعات ورفعها وإيداعها. جهّز ملف بيان وسجّل الدراسات والعينات مسبقاً. العميل مطلوب للتجميعات؛ ويتولى المودع إعداد الحوسبة المحلية والنقل."
+            "description": "استخدم عميل Java أو الحاوية مع حساب Webin للتحقق من القراءات والتسلسلات والتجميعات ورفعها وإيداعها. جهّز ملف بيان وسجّل الدراسات والعينات مسبقاً. العميل مطلوب للتجميعات؛ ويتولى المودع إعداد الحوسبة المحلية والنقل. استخدم وضع الاختبار قبل الإيداع في بيئة الإنتاج."
           }
         ],
         "gallery": [],
@@ -1010,17 +1104,17 @@
           {
             "id": "ena-tag-write-method-web-submission",
             "label": "Интерактивная загрузка Webin",
-            "description": "Зарегистрируйте Webin, создайте метаданные исследований и образцов, затем отправьте поддерживаемые прочтения через формы, шаблоны и файлы. Загрузка бесплатна и проходит проверку; публикация регулируется отдельно. Сборки геномов и транскриптомов требуют Webin-CLI."
+            "description": "Зарегистрируйте Webin, создайте метаданные исследований и образцов, затем отправьте поддерживаемые прочтения через формы, шаблоны и файлы. Загрузка бесплатна и проходит проверку; публикация регулируется отдельно. Сборки геномов и транскриптомов требуют Webin-CLI. Загрузите файлы прочтений до завершения интерактивной отправки."
           },
           {
             "id": "ena-tag-write-method-api-write",
             "label": "REST API Webin",
-            "description": "Используйте учётные данные Webin и HTTPS для отправки поддерживаемых метаданных и предварительно загруженных файлов. REST V2 принимает JSON/XML, поддерживает очередь и квитанции. Бесплатная отправка не означает немедленную публикацию; проверяйте результаты и даты."
+            "description": "Используйте учётные данные Webin и HTTPS для отправки поддерживаемых метаданных и предварительно загруженных файлов. REST V2 принимает JSON/XML, поддерживает очередь и квитанции. Бесплатная отправка не означает немедленную публикацию; проверяйте результаты и даты. Тестовый и рабочий сервисы разделены."
           },
           {
             "id": "ena-access-webin-cli",
             "label": "Webin-CLI",
-            "description": "Используйте Java-клиент или контейнер с Webin для проверки и отправки прочтений, последовательностей и сборок. Подготовьте манифест и заранее зарегистрируйте исследования и образцы. Клиент обязателен для сборок; локальные вычисления и передачу настраивает отправитель."
+            "description": "Используйте Java-клиент или контейнер с Webin для проверки и отправки прочтений, последовательностей и сборок. Подготовьте манифест и заранее зарегистрируйте исследования и образцы. Клиент обязателен для сборок; локальные вычисления и передачу настраивает отправитель. Используйте тестовый режим перед отправкой в рабочую среду."
           }
         ],
         "gallery": [],
@@ -1128,17 +1222,17 @@
           {
             "id": "ena-tag-write-method-web-submission",
             "label": "Webin交互式提交",
-            "description": "注册Webin账户，创建研究和样本元数据，通过表单及上传模板或文件提交支持的读段数据。提交免费且需验证，公开时间受发布控制。基因组和转录组组装需使用Webin-CLI。"
+            "description": "注册Webin账户，创建研究和样本元数据，通过表单及上传模板或文件提交支持的读段数据。提交免费且需验证，公开时间受发布控制。基因组和转录组组装需使用Webin-CLI。 先上传读段文件，再完成交互式提交。"
           },
           {
             "id": "ena-tag-write-method-api-write",
             "label": "Webin REST API",
-            "description": "使用Webin凭据通过HTTPS认证提交支持的元数据和预上传数据。REST V2接受JSON或XML，支持排队提交和回执。免费提交不等于立即公开所有记录；须检查验证结果和发布日期。"
+            "description": "使用Webin凭据通过HTTPS认证提交支持的元数据和预上传数据。REST V2接受JSON或XML，支持排队提交和回执。免费提交不等于立即公开所有记录；须检查验证结果和发布日期。 测试服务与生产服务相互独立。"
           },
           {
             "id": "ena-access-webin-cli",
             "label": "Webin-CLI",
-            "description": "使用文档提供的Java或容器客户端及Webin账户验证、上传并提交读段、序列和组装。准备清单并预注册研究与样本。组装必须经此客户端提交；本地计算及传输环境由提交者配置。"
+            "description": "使用文档提供的Java或容器客户端及Webin账户验证、上传并提交读段、序列和组装。准备清单并预注册研究与样本。组装必须经此客户端提交；本地计算及传输环境由提交者配置。 正式提交前先使用测试模式。"
           }
         ],
         "gallery": [],

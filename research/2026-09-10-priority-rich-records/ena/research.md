@@ -1,5 +1,7 @@
 # ENA rich-record research draft
 
+Production status: applied and verified on 2026-09-11 UTC. See the [application report](../application-report.md). The research-time notes and validation outcomes below are retained as history.
+
 Prepared 2026-09-10. **Research only: nothing applied.** `draft.json` is a complete six-language candidate for `ena`; its proposed rich depth is conditional on the current contract release and creation of the eight minimal endpoint dependencies. Canonical ENA remains thin. `endpoint-drafts.json` contains independently applicable content bodies for root deduplication, not a bulk launch API request.
 
 The candidate contains 10 descriptors (2 types, 6 formats, 2 standards), 7 access paths (4 Read, 3 Write), 1 metric, 18 incident edges (7 retained/researched, 11 proposed additions), no gallery items and no operational routes. Passing structural checks is not human acceptance.
@@ -68,3 +70,5 @@ Eight missing endpoint drafts: `bbsrc`, `wellcome`, `gordon-and-betty-moore-foun
 - OUP and ENA ReadTheDocs sources returned 403 to Python while the web research tool read the primary articles/documentation. Retained source URLs are the authoritative references, not fabricated working mirrors. Endpoint-home limitations: Wellcome returned 202, Novo Nordisk 403 and NIAID 405; their source-backed identities remain reviewable from the annual report. The Genoscope CEA institutional source returned HTTP 200. No blocked page was added to the gallery.
 
 Authenticated endpoint snapshots containing reviewer metadata are stored under the local `.release/research-evidence/2026-09-10-priority-rich-records/` archive; see the batch README.
+
+Preservation before application, 2026-09-11: merged seven rollout-added owner-local sources from the fresh canonical snapshot, retaining reviewed values for any existing IDs. Added cited guidance in all six locales to upload read files before interactive submission, use Webin-CLI test mode before production, and distinguish Webin API test and production services. Existing research facts, IDs and all edge payloads remain unchanged. Local shape and quality checks pass with 41/41 referenced sources resolved; no API call was made for this correction. Payload SHA-256 (`JSON.stringify`): `5748f2cae0f0e1dfb2bb0e012f297e62047964a189cd03279a30b977ba3737a1`.

@@ -1,5 +1,7 @@
 # DeepData research draft — 10 September 2026
 
+Production status: applied and verified on 2026-09-11 UTC. See the [application report](../application-report.md). The research-time notes and validation outcomes below are retained as history.
+
 **Review candidate only.** No production content/review write, commit or deployment was made. `draft.json` uses the new local closed contract: six languages, **16 descriptors (7 types, 5 formats, 4 standards), 6 access paths (5 read, 1 write), 3 metrics, 22 incident edges, no gallery, no approved operational route**. `endpoint-drafts.json` supplies 15 minimal organization endpoints; these are stubs, not claims that those organizations have completed rich research. Local validation passes. Production still uses the older contract and cannot accept this draft yet.
 
 ## Identity and evidence

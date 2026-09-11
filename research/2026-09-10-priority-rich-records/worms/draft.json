@@ -263,6 +263,45 @@
       "gallery": []
     },
     "sources": {
+      "read-access-api": {
+        "id": "read-access-api",
+        "url": "https://www.marinespecies.org/aphia.php?p=webservice",
+        "title": {
+          "ar": "WoRMS — واجهة برمجة التطبيقات",
+          "en": "WoRMS — API",
+          "es": "WoRMS — API",
+          "fr": "WoRMS — API",
+          "ru": "WoRMS — API",
+          "zh": "WoRMS — API"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "read-access-web": {
+        "id": "read-access-web",
+        "url": "https://www.marinespecies.org/",
+        "title": {
+          "ar": "WoRMS — بوابة البيانات",
+          "en": "WoRMS — Data portal",
+          "es": "WoRMS — Portal de datos",
+          "fr": "WoRMS — Portail de données",
+          "ru": "WoRMS — Портал данных",
+          "zh": "WoRMS — 数据门户"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-standards-1": {
+        "id": "src-standards-1",
+        "url": "https://www.marinespecies.org/usersrequest.php",
+        "title": {
+          "ar": "WoRMS taxonomic downloads — الوثائق التقنية",
+          "en": "WoRMS taxonomic downloads — technical documentation",
+          "es": "WoRMS taxonomic downloads — documentación técnica",
+          "fr": "WoRMS taxonomic downloads — documentation technique",
+          "ru": "WoRMS taxonomic downloads — техническая документация",
+          "zh": "WoRMS taxonomic downloads — 技术文档"
+        },
+        "accessedAt": "2026-09-10"
+      },
       "src-worms-about": {
         "id": "src-worms-about",
         "url": "https://www.marinespecies.org/about.php",
@@ -273,6 +312,19 @@
           "fr": "À propos de WoRMS",
           "ru": "О WoRMS",
           "zh": "关于WoRMS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "read-access-request": {
+        "id": "read-access-request",
+        "url": "https://www.marinespecies.org/aphia.php?p=webservice",
+        "title": {
+          "ar": "WoRMS — طلبات البيانات",
+          "en": "WoRMS — Data requests",
+          "es": "WoRMS — Solicitudes de datos",
+          "fr": "WoRMS — Demandes de données",
+          "ru": "WoRMS — Запросы данных",
+          "zh": "WoRMS — 数据申请"
         },
         "accessedAt": "2026-09-10"
       },

@@ -1,5 +1,7 @@
 # Global Fishing Watch — research handoff
 
+Production status: applied and verified on 2026-09-11 UTC. See the [application report](../application-report.md). The research-time notes and validation outcomes below are retained as history.
+
 Research date: 2026-09-10. Draft only; no production content or review-state writes.
 
 `draft.json` is a complete six-language rich candidate: 11 approved descriptors, eight access paths, two scoped metrics and 25 incident relationships. `endpoint-drafts.json` contains 28 minimal identity stubs and nine additional operator funding/membership edges. Across both files there are 34 relationships. The stubs deliberately do not imply completed research of those organizations/systems.

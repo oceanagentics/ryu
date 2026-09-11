@@ -1,5 +1,7 @@
 # ABS Clearing-House — research handoff
 
+Production status: applied and verified on 2026-09-11 UTC. See the [application report](../application-report.md). The research-time notes and validation outcomes below are retained as history.
+
 Draft only. Research completed 10 September 2026, America/Kralendijk; machine logs after midnight use 11 September UTC. Main ID: `abs-clearing-house`. No production content, review state, schema, vocabulary, code or deployment changed.
 
 `draft.json` contains six complete locales, five descriptors (two types; JSON, HTML and PDF), seven access paths, three scoped metrics, nine incident edges, and empty gallery/routes. `endpoint-drafts.json` contains five minimal identities; root must deduplicate and coordinate them. The source-title inventory is job-local in `source-evidence.json`, not a canonical registry.

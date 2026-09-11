@@ -182,6 +182,58 @@
         },
         "accessedAt": "2026-05-26"
       },
+      "read-access-web": {
+        "id": "read-access-web",
+        "url": "https://odis.org/",
+        "title": {
+          "ar": "ODIS — الفهرس",
+          "en": "ODIS — Catalogue",
+          "es": "ODIS — Catálogo",
+          "fr": "ODIS — Catalogue",
+          "ru": "ODIS — Каталог",
+          "zh": "ODIS — 目录"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-standards-1": {
+        "id": "src-standards-1",
+        "url": "https://book.odis.org/gettingStarted.html",
+        "title": {
+          "ar": "ODIS publishing guidance — الوثائق التقنية",
+          "en": "ODIS publishing guidance — technical documentation",
+          "es": "ODIS publishing guidance — documentación técnica",
+          "fr": "ODIS publishing guidance — documentation technique",
+          "ru": "ODIS publishing guidance — техническая документация",
+          "zh": "ODIS publishing guidance — 技术文档"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "read-access-sparql": {
+        "id": "read-access-sparql",
+        "url": "https://book.odis.org/users/apis.html",
+        "title": {
+          "ar": "ODIS SPARQL — واجهة برمجة التطبيقات",
+          "en": "ODIS SPARQL — API",
+          "es": "ODIS SPARQL — API",
+          "fr": "ODIS SPARQL — API",
+          "ru": "ODIS SPARQL — API",
+          "zh": "ODIS SPARQL — API"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-register": {
+        "id": "write-access-register",
+        "url": "https://book.odis.org/gettingStarted.html",
+        "title": {
+          "ar": "ODIS — تسجيل مصدر بيانات",
+          "en": "ODIS — Register a data source",
+          "es": "ODIS — Registrar una fuente de datos",
+          "fr": "ODIS — Enregistrer une source de données",
+          "ru": "ODIS — Регистрация источника данных",
+          "zh": "ODIS — 注册数据源"
+        },
+        "accessedAt": "2026-09-10"
+      },
       "home": {
         "id": "home",
         "url": "https://odis.org/",

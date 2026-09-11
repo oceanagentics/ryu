@@ -1,5 +1,7 @@
 # ODIS rich-record research — 10 September 2026
 
+Production status: applied and verified on 2026-09-11 UTC. See the [application report](../application-report.md). The research-time notes and validation outcomes below are retained as history.
+
 Review candidate for the existing `odis` system. The fresh canonical read in `canonical-before.json` found a thin record using the former Ocean InfoHub URL and one IODE operation edge. The candidate preserves that identity and edge ID, updates the homepage to `https://odis.org/`, and supplies six locales. The final candidate has 5 descriptors, 6 access paths, 4 scoped `record_count` measurements and 18 incident edges including the final verified NORAD funding addition. Network-health caveats and current-contract local validation are complete. No production content or review state was changed by this research.
 
 ## Identity and primary findings
@@ -69,3 +71,5 @@ Root's browser evidence is saved as `deepdata-source-view.png`, `deepdata-demo-s
 Observation dates use 10 September 2026 in America/Kralendijk; tool logs after local evening use 11 September UTC. Application version dates and upstream record-update dates were not substituted for counter observation dates. The retired generic dashboard access row was removed from the candidate; its old source is preserved, and failures are explained in the access gap. No source-specific discipline was added to this general ocean-resource discovery system.
 
 `registered-node-review.json` classifies all 65 inventory rows: nine matched system identities covered by the candidate, two duplicate catalogue identities (3275/3274 and 3296/1390), and 54 expansion rows with specific endpoint-identity or scope gaps. Three matched systems have observed recipient-demo metadata; six have participation-only coverage. The covered rows map to 13 proposed incident edges including the mediated ISA publication. Remaining catalogue registrations are not silently treated as verified transfers. This is the bounded expansion inventory agreed with the orchestrator, not a claim to have created or checked 65 unique production endpoints.
+
+Application preservation update (2026-09-11 UTC): retained 4 additional owner-local source entries from the completed production contract rollout. Reviewed claims and relationship payloads remain intact; final production application evidence supersedes prior draft hashes.

@@ -268,6 +268,97 @@
         },
         "accessedAt": "2026-09-10"
       },
+      "read-access-api": {
+        "id": "read-access-api",
+        "url": "https://manual.obis.org/access",
+        "title": {
+          "ar": "OBIS — واجهة برمجة التطبيقات",
+          "en": "OBIS — API",
+          "es": "OBIS — API",
+          "fr": "OBIS — API",
+          "ru": "OBIS — API",
+          "zh": "OBIS — API"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "read-access-web": {
+        "id": "read-access-web",
+        "url": "https://manual.obis.org/access",
+        "title": {
+          "ar": "OBIS — بوابة البيانات",
+          "en": "OBIS — Data portal",
+          "es": "OBIS — Portal de datos",
+          "fr": "OBIS — Portail de données",
+          "ru": "OBIS — Портал данных",
+          "zh": "OBIS — 数据门户"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-standards-1": {
+        "id": "src-standards-1",
+        "url": "https://manual.obis.org/data_format.html",
+        "title": {
+          "ar": "OBIS data format — الوثائق التقنية",
+          "en": "OBIS data format — technical documentation",
+          "es": "OBIS data format — documentación técnica",
+          "fr": "OBIS data format — documentation technique",
+          "ru": "OBIS data format — техническая документация",
+          "zh": "OBIS data format — 技术文档"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "src-standards-2": {
+        "id": "src-standards-2",
+        "url": "https://manual.obis.org/dna_data",
+        "title": {
+          "ar": "OBIS DNA-derived data — الوثائق التقنية",
+          "en": "OBIS DNA-derived data — technical documentation",
+          "es": "OBIS DNA-derived data — documentación técnica",
+          "fr": "OBIS DNA-derived data — documentation technique",
+          "ru": "OBIS DNA-derived data — техническая документация",
+          "zh": "OBIS DNA-derived data — 技术文档"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-ipt": {
+        "id": "write-access-ipt",
+        "url": "https://manual.obis.org/ipt",
+        "title": {
+          "ar": "OBIS IPT — تسجيل مصدر بيانات",
+          "en": "OBIS IPT — Register a data source",
+          "es": "OBIS IPT — Registrar una fuente de datos",
+          "fr": "OBIS IPT — Enregistrer une source de données",
+          "ru": "OBIS IPT — Регистрация источника данных",
+          "zh": "OBIS IPT — 注册数据源"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "write-access-node": {
+        "id": "write-access-node",
+        "url": "https://manual.obis.org/contribute.html",
+        "title": {
+          "ar": "OBIS nodes — الاستفسار عن المساهمة",
+          "en": "OBIS nodes — Contribution enquiries",
+          "es": "OBIS nodes — Consultas sobre contribuciones",
+          "fr": "OBIS nodes — Demandes de contribution",
+          "ru": "OBIS nodes — Согласование передачи",
+          "zh": "OBIS nodes — 贡献咨询"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "read-access-software": {
+        "id": "read-access-software",
+        "url": "https://iobis.github.io/robis/",
+        "title": {
+          "ar": "robis — أدوات العميل",
+          "en": "robis — Client tools",
+          "es": "robis — Herramientas cliente",
+          "fr": "robis — Outils clients",
+          "ru": "robis — Клиентские инструменты",
+          "zh": "robis — 客户端工具"
+        },
+        "accessedAt": "2026-09-10"
+      },
       "obis-home": {
         "id": "obis-home",
         "url": "https://obis.org/",

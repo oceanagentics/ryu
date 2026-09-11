@@ -1,10 +1,12 @@
 # Priority rich-record research
 
-All ten backlog items are researched and prepared as reviewable rich-record drafts. Three subagents worked through the queue; the orchestrator reconciled shared identities and relationships and completed combined validation. Every main draft has six locales. Supporting endpoint drafts remain thin or stub.
+Nine priority systems remain in production. On 2026-09-11, the user removed OceanTeacher because its training platform does not fit the current system scope. Its research is retained for a future suitable record type; do not reimport it as a system.
+
+The original ten-item batch was applied as rich records, with agent_researched review state in all six locales. See the historical [production application report](application-report.md) and [verified payload manifest](application-validation.json). Three subagents worked through the queue; the orchestrator reconciled shared identities and relationships and completed combined validation. Every main draft has six locales. Supporting endpoint drafts remain thin or stub.
 
 Backlog: [Record Shape of CHM & top 10 Databases](https://docs.google.com/document/d/1e-QWi7_gg8eNogyJ0edgxaaS5bQn2qiNCzotH3UDpt0/edit). The prerequisite task “Review rich record shape plan” completed before research started, and its current local contract was used.
 
-## Completed queue
+## Original research queue
 
 | Order | Record and research memo | Draft | Main edges | Metrics | Primary worker |
 | --- | --- | --- | ---: | ---: | --- |
@@ -25,17 +27,17 @@ Main-edge counts overlap where a relationship appears in both endpoint drafts. T
 
 Start with the [orchestration review](orchestration-review.md) for material corrections, evidence limits and release dependencies. Each folder contains its research memo, draft, primary-source evidence and historical validation results. The [ODIS source-inventory review](odis/registered-node-review.json) classifies all 65 catalogue rows, including two duplicate identities and 54 explicit expansion candidates.
 
-The final [combined PostgreSQL validation](validation-postgres-batch.json) passed the current shape and quality rules, real SQL constraints, repository dry runs and complete supplied-field readback for **106 records**. All main-record references resolve, all six locales are present, and shared edge payloads have no conflicts. The rehearsal baseline contains canonical identities and kinds only; a future merge with concurrent production content requires fresh validation.
+The research-time [combined PostgreSQL validation](validation-postgres-batch.json) passed the current shape and quality rules, real SQL constraints, repository dry runs and complete supplied-field readback for **106 records**. All main-record references resolve, all six locales are present, and shared edge payloads have no conflicts. The rehearsal baseline contains canonical identities and kinds only; a future merge with concurrent production content requires fresh validation.
 
-The final [API validation](api-validation-batch.json) used fresh authenticated reads followed only by PUT validateOnly=true. All ten calls returned HTTP 200 / valid:false under the older deployed contract: retired access fields, relationship-review sections, localized standard labels, retired metric-gap fields, and missing endpoints. Exact issues and payload hashes are saved. Fresh reads confirmed preservation of all 25 existing incident-edge IDs and their source IDs across the five existing main records, plus existing node-source IDs. The other five main records were absent and were checked with create-only preconditions.
+The pre-rollout [API validation](api-validation-batch.json) used fresh authenticated reads followed only by PUT validateOnly=true. All ten calls returned HTTP 200 / valid:false under the older deployed contract: retired access fields, relationship-review sections, localized standard labels, retired metric-gap fields, and missing endpoints. Exact issues and payload hashes are saved. Fresh reads confirmed preservation of all 25 existing incident-edge IDs and their source IDs across the five existing main records, plus existing node-source IDs. The other five main records were absent and were checked with create-only preconditions.
 
-Root validation hashes use SHA-256 of JSON.stringify(parsed payload); some worker files instead hash the formatted file bytes. Root files are the final evidence after reconciliation. canonical-index.json and canonical-final-reads.json are immutable research snapshots, not a registry or runtime source of truth.
+Root validation hashes use SHA-256 of JSON.stringify(parsed payload); some worker files instead hash the formatted file bytes. The application-validation.json manifest is the final evidence after rollout preservation and production application; earlier root/worker files are historical. canonical-index.json and canonical-final-reads.json are immutable research snapshots, not a registry or runtime source of truth.
 
-## Application boundary
+## Production application
 
-No production content or review-state changes were applied. The research itself made no code, schema or vocabulary changes; its drafts and evidence are now committed. Cloud SQL remains canonical.
+The user authorized application after the contract rollout. All ten main records and 96 supporting identities are now persisted; 157 new relationships were added, bringing the canonical graph to 238 records and 285 edges. All content writes passed live validation and readback. The full graph audit preserved original sources, relationships, routes and review history. Details and exact applied hashes are in the [application report](application-report.md).
 
-The prerequisite production metrics/standards/access conversion and system-shape rollout completed in release `8aa2b8d6c8af` on 2026-09-11 UTC, with all 137 canonical records verified. Applying these candidates still requires explicit implementation authorization, fresh canonical reads, dependency ordering and successful new-contract dry runs. New gallery screenshots remain local evidence, and no operational Ryu routes were approved by this research.
+The prerequisite production metrics/standards/access conversion and system-shape rollout completed in release 8aa2b8d6c8af. This application used the Record API and made no code, schema, vocabulary or deployment changes. New gallery screenshots remain local evidence, and no operational Ryu routes were approved by this research.
 
 ## Private research snapshots
 

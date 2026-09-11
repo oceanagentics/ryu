@@ -1,5 +1,7 @@
 # WoRMS rich-record research draft
 
+Production status: applied and verified on 2026-09-11 UTC. See the [application report](../application-report.md). The research-time notes and validation outcomes below are retained as history.
+
 Prepared 2026-09-10 (America/Kralendijk). **Research only: nothing applied.** `draft.json` is content-only, uses the current local closed contract, and proposes rich depth conditional on resolving the nine endpoint dependencies. Local validation passes; live API validation is blocked by its old deployed contract and missing endpoints. Do not apply until the coordinated release and endpoint preparation are complete.
 
 ## Identity and preserved content
@@ -54,3 +56,5 @@ Before any authorized apply: finish the deployed contract rollout; deduplicate/p
 ## Root cross-record reconciliation
 
 DeepData research verified WoRMS taxonomic reconciliation for ISA, so the exact `rel-worms-syncs-to-deepdata` payload was added to this candidate. The draft now has 19 edges; the earlier individual 18-edge validation files are historical. Parent batch validation uses the reconciled payload and includes a content hash. No reverse ISA→WoRMS publication was inferred from collaboration plans.
+
+Application preservation update (2026-09-11 UTC): retained 4 additional owner-local source entries from the completed production contract rollout. Reviewed claims and relationship payloads remain intact; final production application evidence supersedes prior draft hashes.

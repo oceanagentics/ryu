@@ -1,5 +1,7 @@
 # Protected Planet — research handoff
 
+Production status: applied and verified on 2026-09-11 UTC. See the [application report](../application-report.md). The research-time notes and validation outcomes below are retained as history.
+
 Research date: 2026-09-10. Draft only; no production content or review-state writes.
 
 `draft.json` proposes the new `protected-planet` system as a six-language rich candidate. It has 7 descriptors, 8 access paths, 2 scoped measurements, 12 relationships and no gallery or operational routes. `endpoint-drafts.json` contains 11 minimal thin dependencies. Root must deduplicate dependencies and revalidate after the pending contract release before any authorized application.

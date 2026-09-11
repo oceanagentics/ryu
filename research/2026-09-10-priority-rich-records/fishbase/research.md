@@ -1,5 +1,7 @@
 # FishBase rich-record requalification — 10 September 2026
 
+Production status: applied and verified on 2026-09-11 UTC. See the [application report](../application-report.md). The research-time notes and validation outcomes below are retained as history.
+
 `draft.json` is a six-language review candidate: 18 descriptors, 10 access paths, 6 measurements, 23 edges and the 4 preserved gallery items. Fresh canonical reads confirm `fishbase` remains thin/needs_revision; all 9 stored incident edges were reviewed and retained by ID. No production content, review state, code, schema or vocabulary was changed. The initial draft came from canonical content and the reviewed contract/access/standards work, not from the fixture.
 
 ## Principal corrections

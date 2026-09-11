@@ -1,5 +1,9 @@
 # OceanTeacher rich-record research — 10 September 2026
 
+**Deferred:** Removed from production on 2026-09-11 at the user's direction because the training platform does not fit the current system scope. Do not reimport it as a system; reconsider only when a suitable record type exists. Research remains here, with a private pre-deletion record snapshot and verified deletion receipt under `.release/oceanteacher-removal-2026-09-11/`. The removal deleted its six localizations and twelve incident relationships; all other records and unrelated relationships remained.
+
+Production status: applied and verified on 2026-09-11 UTC. See the [application report](../application-report.md). The research-time notes and validation outcomes below are retained as history.
+
 `draft.json` proposes a new `oceanteacher` system: six languages, 5 data descriptors, 6 access paths, 1 measurement and 12 cited edges. All six relationship types were investigated. `endpoint-drafts.json` contains seven minimal, separately cited dependencies. No production content or review state was changed. No code, schema, vocabulary, reusable scripts or public gallery assets were changed.
 
 ## Identity and scope

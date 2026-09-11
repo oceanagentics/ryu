@@ -299,6 +299,15 @@ export function SystemDirectoryView({
                 allowClear
                 mode="multiple"
                 maxTagCount="responsive"
+                placeholder={t(locale, "details.recordDepth")}
+                value={filters.recordDepth}
+                options={filterOptions.recordDepth}
+                onChange={(value) => patchFilters({ recordDepth: value })}
+              />
+              <Select
+                allowClear
+                mode="multiple"
+                maxTagCount="responsive"
                 placeholder={t(locale, "directory.languageCoverage")}
                 value={filters.localizationCoverage}
                 options={localizationCoverageFilterOptions(locale)}

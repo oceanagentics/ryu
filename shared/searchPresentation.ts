@@ -5,6 +5,7 @@ import type {
   Discipline,
   GraphEdge,
   GraphNode,
+  RecordDepth,
   ResolvedNodeLocalization,
   ReviewState,
   RyuRoute,
@@ -32,6 +33,7 @@ export type LocalizationCoverageFilter =
   | "missing_current_locale";
 
 export type GraphSearchFilters = {
+  recordDepth: RecordDepth[];
   disciplines: Discipline[];
   dataClaims: Record<ClaimFilterKey, string[]>;
   accessTypes: SystemAccessType[];
@@ -111,6 +113,7 @@ export function reviewStateFilterOptions(
 }
 
 export const emptySearchFilters = (): GraphSearchFilters => ({
+  recordDepth: [],
   disciplines: [],
   dataClaims: {
     type: [],
@@ -144,6 +147,7 @@ export function selectOptions<Value extends string>(
 
 export function countActiveFilters(filters: GraphSearchFilters): number {
   return [
+    filters.recordDepth,
     filters.disciplines,
     filters.accessTypes,
     filters.accessMethods,
@@ -247,6 +251,10 @@ export function getSystemFilterOptions(
   locale: SupportedLocale,
 ) {
   return {
+    recordDepth: selectOptions(
+      records.map((record) => record.entity.recordDepth),
+      value => vocabularyLabel(locale, "recordDepths", value),
+    ),
     disciplines: selectOptions(
       records.flatMap((record) => record.disciplines),
       value => vocabularyLabel(locale, "disciplines", value),

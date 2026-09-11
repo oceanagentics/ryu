@@ -151,12 +151,16 @@ function descriptorList(
   return descriptors.filter((descriptor) => descriptor.category === category);
 }
 
-function DescriptorTags({ descriptors }: { descriptors: ResolvedSystemDataDescriptor[] }) {
+function DescriptorTags({ descriptors, emptyDescription }: { descriptors: ResolvedSystemDataDescriptor[]; emptyDescription?: string }) {
   const locale = useGraphStore((state) => state.locale);
   const sources = useGraphStore((state) => state.selectedEntityId ? state.graph?.nodeById[state.selectedEntityId]?.sources : undefined);
 
   if (descriptors.length === 0) {
-    return <EmptyValue />;
+    return emptyDescription ? (
+      <Tooltip title={<Flex className="source-record-tooltip"><Typography.Text>{emptyDescription}</Typography.Text></Flex>} trigger={["hover", "focus"]}>
+        <Tag bordered={false} tabIndex={0}>{t(locale, "common.notRecorded")}</Tag>
+      </Tooltip>
+    ) : <EmptyValue />;
   }
 
   return (
@@ -167,20 +171,23 @@ function DescriptorTags({ descriptors }: { descriptors: ResolvedSystemDataDescri
         return (
           <Tooltip
             key={descriptor.id}
+            trigger={["hover", "focus"]}
             title={(descriptor.description || sourceTitle) ? (
               <Flex className="source-record-tooltip" vertical gap={2}>
                 {descriptor.description ? <Typography.Text>{descriptor.description}</Typography.Text> : null}
-                {sourceTitle ? <Typography.Text>{t(locale, "common.source")}: {sourceTitle}</Typography.Text> : null}
+                {sourceTitle ? (
+                  <Typography.Text>
+                    {t(locale, "common.source")}: {source ? (
+                      <Typography.Link href={source.url} target="_blank" rel="noreferrer" underline>{sourceTitle}</Typography.Link>
+                    ) : sourceTitle}
+                  </Typography.Text>
+                ) : null}
                 {source ? <Typography.Text>{t(locale, "source.accessed")}: {source.accessedAt}</Typography.Text> : null}
               </Flex>
             ) : null}
           >
-            <Tag bordered={false}>
-              {source ? (
-                <Typography.Link href={source.url} title={sourceTitle ?? undefined} target="_blank" rel="noreferrer">
-                  {descriptor.localizedLabel}
-                </Typography.Link>
-              ) : descriptor.localizedLabel}
+            <Tag bordered={false} tabIndex={0}>
+              {descriptor.localizedLabel}
             </Tag>
           </Tooltip>
         );
@@ -859,7 +866,7 @@ export function EntityDetailsPanel({
                 <DescriptorTags descriptors={descriptorList(resolvedDescriptors, "format")} />
               </InlineField>
               <InlineField label={t(locale, "details.standards")}>
-                <DescriptorTags descriptors={descriptorList(resolvedDescriptors, "standard")} />
+                <DescriptorTags descriptors={descriptorList(resolvedDescriptors, "standard")} emptyDescription={systemLocalization?.details.researchGaps?.standards} />
               </InlineField>
               {dataMetrics.map(metric => (
                 <InlineField key={metric.id} label={metric.label}>

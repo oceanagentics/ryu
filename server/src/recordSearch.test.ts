@@ -159,8 +159,10 @@ test("access filters match one path and Write vocabulary is searchable in every 
 
 test("discipline tags are independently searchable and produce localized, deduplicated filter options", () => {
   const first = node("first");
+  first.recordDepth = "rich";
   first.properties.disciplines = ["ecology", "taxonomy"];
   const second = node("second");
+  second.recordDepth = "thin";
   second.properties.disciplines = ["taxonomy", "marine_biology"];
   const graph = indexGraph({ nodes: [first, second, node("generalist")], edges: [], ryuRoutes: [], savedViews: [] });
   const records = buildSystemRecords(graph, "fr");
@@ -169,6 +171,11 @@ test("discipline tags are independently searchable and produce localized, dedupl
     { value: "ecology", label: "Écologie" },
     { value: "marine_biology", label: "Biologie marine" },
     { value: "taxonomy", label: "Taxonomie" },
+  ]);
+  assert.deepEqual(getSystemFilterOptions(records, "fr").recordDepth, [
+    { value: "rich", label: "Riche" },
+    { value: "stub", label: "Ébauche" },
+    { value: "thin", label: "Léger" },
   ]);
   first.localizations.fr = { ...first.localizations.en!, locale: "fr" };
   const matches = search([first], { q: "taxonomie", locale: "fr" });
