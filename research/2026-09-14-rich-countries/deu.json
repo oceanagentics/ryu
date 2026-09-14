@@ -1,0 +1,162 @@
+{
+  "id": "deu",
+  "record": {
+    "kind": "country",
+    "countryCode": "DEU",
+    "url": "https://www.bundesregierung.de/breg-en",
+    "recordDepth": "rich",
+    "properties": {
+      "treatyParticipation": [
+        {
+          "id": "bbnj-agreement",
+          "status": "signatory_not_party",
+          "signatureDate": "2023-09-20",
+          "consentMethod": null,
+          "depositDate": null,
+          "effectiveDate": null,
+          "focalPointUrl": null,
+          "sourceRefs": ["bbnj-status", "bbnj-domestic-process"]
+        }
+      ]
+    },
+    "sources": {
+      "official-government": {
+        "id": "official-government",
+        "url": "https://www.bundesregierung.de/breg-en",
+        "title": {
+          "ar": "الموقع الرسمي للحكومة الاتحادية الألمانية",
+          "zh": "德国联邦政府官方网站",
+          "en": "Official website of the German Federal Government",
+          "fr": "Site officiel du Gouvernement fédéral allemand",
+          "ru": "Официальный сайт Федерального правительства Германии",
+          "es": "Sitio oficial del Gobierno Federal de Alemania"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "bbnj-status": {
+        "id": "bbnj-status",
+        "url": "https://treaties.un.org/doc/Publication/MTDSG/Volume%20II/Chapter%20XXI/XXI-10.en.xml",
+        "title": {
+          "ar": "حالة اتفاق BBNJ لدى الوديع في الأمم المتحدة",
+          "zh": "联合国保存人所载BBNJ协定状态",
+          "en": "UN depositary status for the BBNJ Agreement",
+          "fr": "État de l’Accord BBNJ auprès du dépositaire de l’ONU",
+          "ru": "Статус Соглашения BBNJ у депозитария ООН",
+          "es": "Estado del Acuerdo BBNJ ante el depositario de la ONU"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "bbnj-domestic-process": {
+        "id": "bbnj-domestic-process",
+        "url": "https://www.bundesregierung.de/breg-de/bundesregierung/bundeskanzleramt/un-hochseeschutzabkommen-2397340",
+        "title": {
+          "ar": "الحكومة الاتحادية الألمانية: موافقة البوندستاغ على اتفاق حماية أعالي البحار",
+          "zh": "德国联邦政府：联邦议院批准公海保护协定",
+          "en": "German Federal Government: Bundestag approval of the High Seas Agreement",
+          "fr": "Gouvernement fédéral allemand : approbation de l’accord sur la haute mer par le Bundestag",
+          "ru": "Федеральное правительство Германии: одобрение соглашения об открытом море Бундестагом",
+          "es": "Gobierno Federal de Alemania: aprobación del Acuerdo de Alta Mar por el Bundestag"
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "ألمانيا",
+      "summary": "يعرض ملف ألمانيا في Ryu سياق الحوكمة البحرية الاتحادية وبعض العضويات والدعم العلمي وحالتها بموجب اتفاق BBNJ.",
+      "description": "تظهر ألمانيا في Ryu من خلال عضويات موثقة في المجلس الدولي لاستكشاف البحار والمختبر الأوروبي للبيولوجيا الجزيئية، ومساهمات في برامج المختبر ودعم محدد النطاق لآلية تقاسم المنافع. وقعت ألمانيا اتفاق BBNJ في 20 سبتمبر 2023. ووافق البوندستاغ على الانضمام في فبراير 2026، لكن وديع الأمم المتحدة لا يسجل إيداع صك حتى 14 سبتمبر 2026؛ لذلك تظل ألمانيا دولة موقعة وليست طرفاً، ولا توجد لها جهة اتصال رسمية مخصصة للأطراف.",
+      "details": {
+        "aliases": ["جمهورية ألمانيا الاتحادية"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-domestic-process"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "اتفاق BBNJ",
+          "description": "وقعت ألمانيا الاتفاق في 20 سبتمبر 2023. ورغم الموافقة البرلمانية الداخلية في فبراير 2026، لا يسجل وديع الأمم المتحدة إيداع صك للتصديق أو القبول أو الموافقة حتى 14 سبتمبر 2026، ولذلك لم يدخل الاتفاق حيز النفاذ بالنسبة إلى ألمانيا.",
+          "focalPoint": null
+        }]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "德国",
+      "summary": "德国的Ryu档案记录其联邦海洋治理背景、部分科学成员关系与支持以及《BBNJ协定》状态。",
+      "description": "在Ryu中，德国通过有来源支持的关系连接到国际海洋考察理事会和欧洲分子生物学实验室，并记录其对实验室项目的出资及对惠益分享机制的限定支持。德国于2023年9月20日签署《BBNJ协定》。联邦议院于2026年2月批准加入，但截至2026年9月14日，联合国保存人尚未记录德国交存文书；因此德国仍是签署方而非缔约方，也没有仅适用于缔约方的正式联络点。",
+      "details": {
+        "aliases": ["德意志联邦共和国"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-domestic-process"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "BBNJ协定",
+          "description": "德国于2023年9月20日签署该协定。尽管国内议会于2026年2月批准加入，截至2026年9月14日，联合国保存人尚未记录批准、接受或核准文书的交存，因此该协定尚未对德国生效。",
+          "focalPoint": null
+        }]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "Germany",
+      "summary": "Germany’s Ryu profile records its federal ocean-governance context, selected scientific memberships and support, and BBNJ Agreement status.",
+      "description": "Germany is represented in Ryu by sourced memberships in the International Council for the Exploration of the Sea and the European Molecular Biology Laboratory, program contributions to EMBL, and scoped support for an access-and-benefit-sharing mechanism. Germany signed the BBNJ Agreement on 20 September 2023. The Bundestag approved joining in February 2026, but the United Nations depositary records no deposited instrument as of 14 September 2026. Germany therefore remains a signatory, not a Party, and no Party focal point is recorded.",
+      "details": {
+        "aliases": ["Federal Republic of Germany"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-domestic-process"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "BBNJ Agreement",
+          "description": "Germany signed the Agreement on 20 September 2023. Although its parliament approved joining in February 2026, the UN depositary lists no deposited instrument of ratification, acceptance, or approval as of 14 September 2026, so the Agreement is not yet in force for Germany.",
+          "focalPoint": null
+        }]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Allemagne",
+      "summary": "Le profil Ryu de l’Allemagne présente son contexte fédéral de gouvernance des océans, certaines adhésions et aides scientifiques et son statut au regard de l’Accord BBNJ.",
+      "description": "Dans Ryu, l’Allemagne est reliée, avec des sources, au Conseil international pour l’exploration de la mer et au Laboratoire européen de biologie moléculaire, ainsi qu’à des contributions aux programmes de l’EMBL et à un soutien ciblé à un mécanisme d’accès et de partage des avantages. L’Allemagne a signé l’Accord BBNJ le 20 septembre 2023. Le Bundestag a approuvé l’adhésion en février 2026, mais le dépositaire des Nations Unies n’enregistre aucun instrument déposé au 14 septembre 2026. L’Allemagne reste donc signataire, mais pas Partie, et aucun point focal réservé aux Parties n’est enregistré.",
+      "details": {
+        "aliases": ["République fédérale d’Allemagne"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-domestic-process"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "Accord BBNJ",
+          "description": "L’Allemagne a signé l’Accord le 20 septembre 2023. Malgré l’approbation parlementaire interne en février 2026, le dépositaire de l’ONU ne mentionne aucun dépôt d’instrument de ratification, d’acceptation ou d’approbation au 14 septembre 2026; l’Accord n’est donc pas encore en vigueur pour l’Allemagne.",
+          "focalPoint": null
+        }]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Германия",
+      "summary": "Профиль Германии в Ryu отражает федеральный контекст управления океаном, отдельные научные членства и поддержку и статус по Соглашению BBNJ.",
+      "description": "В Ryu Германия представлена подтверждённым источниками членством в Международном совете по исследованию моря и Европейской лаборатории молекулярной биологии, взносами в программы EMBL и целевой поддержкой механизма доступа и совместного использования выгод. Германия подписала Соглашение BBNJ 20 сентября 2023 года. Бундестаг одобрил присоединение в феврале 2026 года, однако по состоянию на 14 сентября 2026 года депозитарий ООН не зарегистрировал сданный на хранение документ. Поэтому Германия остаётся подписантом, но не Стороной, и официальный координатор для Сторон не указан.",
+      "details": {
+        "aliases": ["Федеративная Республика Германия"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-domestic-process"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "Соглашение BBNJ",
+          "description": "Германия подписала Соглашение 20 сентября 2023 года. Несмотря на внутреннее парламентское одобрение в феврале 2026 года, по состоянию на 14 сентября 2026 года депозитарий ООН не указывает документа о ратификации, принятии или одобрении, поэтому Соглашение ещё не вступило в силу для Германии.",
+          "focalPoint": null
+        }]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Alemania",
+      "summary": "El perfil de Alemania en Ryu documenta su contexto federal de gobernanza oceánica, determinadas membresías y ayudas científicas y su situación respecto del Acuerdo BBNJ.",
+      "description": "En Ryu, Alemania está vinculada mediante fuentes con el Consejo Internacional para la Exploración del Mar y el Laboratorio Europeo de Biología Molecular, además de aportaciones a los programas del EMBL y apoyo acotado a un mecanismo de acceso y participación en los beneficios. Alemania firmó el Acuerdo BBNJ el 20 de septiembre de 2023. El Bundestag aprobó la adhesión en febrero de 2026, pero el depositario de las Naciones Unidas no registra un instrumento depositado al 14 de septiembre de 2026. Alemania sigue siendo, por tanto, signataria y no Parte, y no se registra un punto focal reservado a las Partes.",
+      "details": {
+        "aliases": ["República Federal de Alemania"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-domestic-process"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "Acuerdo BBNJ",
+          "description": "Alemania firmó el Acuerdo el 20 de septiembre de 2023. Pese a la aprobación parlamentaria interna de febrero de 2026, el depositario de la ONU no registra al 14 de septiembre de 2026 un instrumento de ratificación, aceptación o aprobación, por lo que el Acuerdo aún no está en vigor para Alemania.",
+          "focalPoint": null
+        }]
+      },
+      "translatedFromLocale": "en"
+    }
+  }
+}

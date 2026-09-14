@@ -1,0 +1,162 @@
+{
+  "id": "jpn",
+  "record": {
+    "kind": "country",
+    "countryCode": "JPN",
+    "url": "https://www.japan.go.jp/",
+    "recordDepth": "rich",
+    "properties": {
+      "treatyParticipation": [
+        {
+          "id": "bbnj-agreement",
+          "status": "party",
+          "signatureDate": null,
+          "consentMethod": "accession",
+          "depositDate": "2025-12-12",
+          "effectiveDate": "2026-01-17",
+          "focalPointUrl": "https://www.un.org/bbnjagreement/en/focal-points-formal-communications",
+          "sourceRefs": ["bbnj-status", "bbnj-focal-directory"]
+        }
+      ]
+    },
+    "sources": {
+      "official-government": {
+        "id": "official-government",
+        "url": "https://www.japan.go.jp/",
+        "title": {
+          "ar": "الموقع الرسمي لحكومة اليابان",
+          "zh": "日本政府官方网站",
+          "en": "Official website of the Government of Japan",
+          "fr": "Site officiel du Gouvernement du Japon",
+          "ru": "Официальный сайт правительства Японии",
+          "es": "Sitio oficial del Gobierno de Japón"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "bbnj-status": {
+        "id": "bbnj-status",
+        "url": "https://treaties.un.org/doc/Publication/MTDSG/Volume%20II/Chapter%20XXI/XXI-10.en.xml",
+        "title": {
+          "ar": "حالة اتفاق BBNJ لدى الوديع في الأمم المتحدة",
+          "zh": "联合国保存人所载BBNJ协定状态",
+          "en": "UN depositary status for the BBNJ Agreement",
+          "fr": "État de l’Accord BBNJ auprès du dépositaire de l’ONU",
+          "ru": "Статус Соглашения BBNJ у депозитария ООН",
+          "es": "Estado del Acuerdo BBNJ ante el depositario de la ONU"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "bbnj-focal-directory": {
+        "id": "bbnj-focal-directory",
+        "url": "https://www.un.org/bbnjagreement/en/focal-points-formal-communications",
+        "title": {
+          "ar": "دليل الأمم المتحدة لجهات الاتصال الخاصة بالمراسلات الرسمية لاتفاق BBNJ",
+          "zh": "联合国BBNJ协定正式通信联络点名录",
+          "en": "UN directory of BBNJ focal points for formal communications",
+          "fr": "Répertoire de l’ONU des points focaux BBNJ pour les communications officielles",
+          "ru": "Справочник ООН по координаторам BBNJ для официальных сообщений",
+          "es": "Directorio de la ONU de puntos focales BBNJ para comunicaciones oficiales"
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "اليابان",
+      "summary": "يعرض ملف اليابان في Ryu مؤسساتها الوطنية للعلوم البحرية وبعض الدعم الدولي وحالتها طرفاً في اتفاق BBNJ.",
+      "description": "تظهر اليابان في Ryu من خلال روابط موثقة بوكالة اليابان لعلوم وتكنولوجيا البحار والأرض ومركز المعلومات الحيوية وDDBJ، ودعم محدد النطاق من صندوق اليابان للتنوع البيولوجي. أودعت اليابان صك الانضمام إلى اتفاق BBNJ في 12 ديسمبر 2025، ودخل الاتفاق حيز النفاذ بالنسبة إليها في 17 يناير 2026. ويورد الإيداع إعلاناً بشأن عدم تطبيق الجزء الثاني بأثر رجعي على الموارد الجينية البحرية والمعلومات الرقمية المرتبطة بها قبل دخول الاتفاق حيز النفاذ لليابان.",
+      "details": {
+        "aliases": ["حكومة اليابان"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-focal-directory"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "اتفاق BBNJ",
+          "description": "انضمت اليابان إلى الاتفاق بإيداع صكها في 12 ديسمبر 2025، ودخل الاتفاق حيز النفاذ بالنسبة إليها في 17 يناير 2026. وتحدد جهة الاتصال الرسمية بمستوى المكتب المؤسسي الثابت بدلاً من اسم شخص قد يتغير.",
+          "focalPoint": "شعبة قانون البحار، مكتب الشؤون القانونية الدولية، وزارة الخارجية"
+        }]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "日本",
+      "summary": "日本的Ryu档案记录其国家海洋科学机构、部分国际支持以及作为《BBNJ协定》缔约方的状态。",
+      "description": "在Ryu中，日本通过有来源支持的关系连接到日本海洋研究开发机构和国立遗传学研究所生命信息与DDBJ中心，并记录日本生物多样性基金的限定支持。日本于2025年12月12日交存加入书，该协定于2026年1月17日对日本生效。其加入声明规定，第二部分不追溯适用于协定对日本生效前采集的海洋遗传资源或生成的相关数字序列信息。",
+      "details": {
+        "aliases": ["日本政府"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-focal-directory"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "BBNJ协定",
+          "description": "日本于2025年12月12日交存加入书，协定于2026年1月17日对日本生效。正式联络点记录为稳定的机构办公室，而非可能变动的个人姓名。",
+          "focalPoint": "外务省国际法局海洋法课"
+        }]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "Japan",
+      "summary": "Japan’s Ryu profile records its national marine-science institutions, selected international support, and status as a Party to the BBNJ Agreement.",
+      "description": "Japan is represented in Ryu by sourced links to the Japan Agency for Marine-Earth Science and Technology and the Bioinformation and DDBJ Center at the National Institute of Genetics, plus scoped support from the Japan Biodiversity Fund. Japan deposited an instrument of accession to the BBNJ Agreement on 12 December 2025, and the Agreement entered into force for Japan on 17 January 2026. Its accession declaration addresses non-retroactive application of Part II to marine genetic resources collected, and related digital sequence information generated, before entry into force for Japan.",
+      "details": {
+        "aliases": ["Government of Japan"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-focal-directory"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "BBNJ Agreement",
+          "description": "Japan acceded by depositing its instrument on 12 December 2025, and the Agreement entered into force for Japan on 17 January 2026. The formal focal point is recorded at the stable institutional-office level rather than as a person whose assignment may change.",
+          "focalPoint": "Law of the Sea Division, International Legal Affairs Bureau, Ministry of Foreign Affairs"
+        }]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Japon",
+      "summary": "Le profil Ryu du Japon présente ses institutions nationales de sciences marines, certains soutiens internationaux et son statut de Partie à l’Accord BBNJ.",
+      "description": "Dans Ryu, le Japon est relié, avec des sources, à l’Agence japonaise pour les sciences et technologies marines et terrestres et au centre Bioinformation and DDBJ de l’Institut national de génétique, ainsi qu’à un soutien ciblé du Fonds japonais pour la biodiversité. Le Japon a déposé un instrument d’adhésion à l’Accord BBNJ le 12 décembre 2025, et l’Accord est entré en vigueur pour le Japon le 17 janvier 2026. Sa déclaration d’adhésion traite de la non-rétroactivité de la partie II pour les ressources génétiques marines collectées et les informations de séquençage numérique connexes produites avant l’entrée en vigueur pour le Japon.",
+      "details": {
+        "aliases": ["Gouvernement du Japon"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-focal-directory"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "Accord BBNJ",
+          "description": "Le Japon a adhéré en déposant son instrument le 12 décembre 2025, et l’Accord est entré en vigueur pour lui le 17 janvier 2026. Le point focal officiel est enregistré au niveau stable du service institutionnel plutôt qu’au nom d’une personne susceptible de changer.",
+          "focalPoint": "Division du droit de la mer, Bureau des affaires juridiques internationales, ministère des Affaires étrangères"
+        }]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Япония",
+      "summary": "Профиль Японии в Ryu отражает национальные морские научные учреждения, отдельные формы международной поддержки и статус Стороны Соглашения BBNJ.",
+      "description": "В Ryu Япония представлена подтверждёнными источниками связями с Японским агентством морских и земных наук и технологий и Центром биоинформации и DDBJ Национального института генетики, а также целевой поддержкой Японского фонда биоразнообразия. Япония сдала на хранение документ о присоединении к Соглашению BBNJ 12 декабря 2025 года, и Соглашение вступило в силу для Японии 17 января 2026 года. Её заявление о присоединении касается неприменения части II задним числом к морским генетическим ресурсам и связанным данным цифрового секвенирования, полученным до вступления в силу для Японии.",
+      "details": {
+        "aliases": ["Правительство Японии"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-focal-directory"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "Соглашение BBNJ",
+          "description": "Япония присоединилась, сдав документ на хранение 12 декабря 2025 года; Соглашение вступило в силу для неё 17 января 2026 года. Официальный координатор указан на уровне устойчивого подразделения учреждения, а не как конкретное лицо, назначение которого может измениться.",
+          "focalPoint": "Отдел морского права, Бюро международно-правовых вопросов, Министерство иностранных дел"
+        }]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Japón",
+      "summary": "El perfil de Japón en Ryu documenta sus instituciones nacionales de ciencias marinas, determinadas ayudas internacionales y su condición de Parte en el Acuerdo BBNJ.",
+      "description": "En Ryu, Japón está vinculado mediante fuentes con la Agencia Japonesa de Ciencia y Tecnología Marina y Terrestre y el Centro de Bioinformación y DDBJ del Instituto Nacional de Genética, además de apoyo acotado del Fondo Japonés para la Biodiversidad. Japón depositó un instrumento de adhesión al Acuerdo BBNJ el 12 de diciembre de 2025, y el Acuerdo entró en vigor para Japón el 17 de enero de 2026. Su declaración de adhesión trata la no aplicación retroactiva de la Parte II a los recursos genéticos marinos recolectados y la información digital sobre secuencias generada antes de su entrada en vigor para Japón.",
+      "details": {
+        "aliases": ["Gobierno de Japón"],
+        "profile": {"sourceRefs": ["official-government", "bbnj-status", "bbnj-focal-directory"]},
+        "treatyParticipation": [{
+          "id": "bbnj-agreement",
+          "title": "Acuerdo BBNJ",
+          "description": "Japón se adhirió depositando su instrumento el 12 de diciembre de 2025, y el Acuerdo entró en vigor para Japón el 17 de enero de 2026. El punto focal oficial se registra al nivel estable de la oficina institucional, no como una persona cuya designación puede cambiar.",
+          "focalPoint": "División del Derecho del Mar, Oficina de Asuntos Jurídicos Internacionales, Ministerio de Asuntos Exteriores"
+        }]
+      },
+      "translatedFromLocale": "en"
+    }
+  }
+}
