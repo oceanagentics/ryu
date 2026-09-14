@@ -40,7 +40,10 @@ test('revision provenance uses the serving revision label or an explicit image c
 test('preflight rejects malformed graph responses and accepts the complete current record contract', () => {
   assert.throws(() => dataIssues({ nodes: [], edges: [] }), /empty or malformed/);
   assert.throws(() => dataIssues({ error: 'unauthorized' }), /empty or malformed/);
-  assert.deepEqual(dataIssues(fixture()), []);
+  const graph = fixture();
+  graph.nodes[0].createdAt = '2026-09-14T00:00:00.000Z';
+  graph.nodes[0].localizations.en.review = { state: 'agent_researched' };
+  assert.deepEqual(dataIssues(graph), []);
 });
 
 test('preflight catches the pending metrics, access and standards migrations before any builds', () => {

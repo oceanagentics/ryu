@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { validateRecordQuality } from '../server/src/recordContracts.ts';
+import { localizationContentFields, recordContentFields } from '../shared/domain.ts';
 
 const exec = promisify(execFile);
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -36,8 +37,9 @@ export function revisionCommit(revision) {
 export function dataIssues(graph) {
   if (!Array.isArray(graph.nodes) || !graph.nodes.length || !Array.isArray(graph.edges)) throw Error('Canonical graph response is empty or malformed');
   return graph.nodes.flatMap(node => validateRecordQuality(node.id, {
-    record: node,
-    localizations: node.localizations,
+    record: Object.fromEntries(recordContentFields[node.kind].filter(field => field in node).map(field => [field, node[field]])),
+    localizations: Object.fromEntries(Object.entries(node.localizations ?? {}).map(([locale, localization]) =>
+      [locale, Object.fromEntries(localizationContentFields[node.kind].filter(field => field in localization).map(field => [field, localization[field]]))])),
     edges: graph.edges.filter(edge => edge.sourceNodeId === node.id || edge.targetNodeId === node.id),
     routes: (graph.ryuRoutes ?? []).filter(route => route.nodeId === node.id),
   }).issues);
