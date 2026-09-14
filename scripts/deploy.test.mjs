@@ -18,7 +18,7 @@ test('missing resources can be prepared, but authentication and permission error
 
 test('UI changes omit API; runtime, shared contracts and dependencies include every service', () => {
   assert.deepEqual(affectedServices(['client/src/app/components/LegendPanel.tsx']), all.slice(0, 2));
-  for (const file of ['server/src/server.ts', 'shared/domain.ts', 'package-lock.json', 'client/package.json', 'Dockerfile', 'cloudbuild.yaml']) {
+  for (const file of ['server/src/server.ts', 'shared/domain.ts', 'client/public/gallery/example.png', 'package-lock.json', 'client/package.json', 'Dockerfile', 'cloudbuild.yaml']) {
     assert.deepEqual(affectedServices([file]), all, file);
   }
 });

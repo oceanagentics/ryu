@@ -19,7 +19,8 @@ export function affectedServices(files) {
   for (const file of files) {
     if (/^(documentation\/|research\/|\.github\/|scripts\/|\.release\/)/.test(file) || /(^|\/)([^/]*\.md|[^/]*\.test\.[^/]+)$/.test(file)) continue;
     if (file === 'client/public/bootstrap.public.json') continue; // Export only; Postgres is canonical.
-    const targets = file.startsWith('client/') && !/^client\/package(-lock)?\.json$/.test(file)
+    const targets = file.startsWith('client/public/gallery/') ? services
+      : file.startsWith('client/') && !/^client\/package(-lock)?\.json$/.test(file)
       ? services.slice(0, 2) : services;
     targets.forEach(service => affected.add(service));
   }

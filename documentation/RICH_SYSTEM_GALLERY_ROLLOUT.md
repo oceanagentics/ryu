@@ -24,32 +24,32 @@ brittle keyword or filename checks.
 
 ## Canonical audit
 
-An authenticated read of the production Record API on 2026-09-14 returned nine
-systems with `recordDepth=rich`. Eight had empty galleries and were demoted to
-`thin` through depth-only Record API patches after successful validation dry
-runs:
+An authenticated read of the production Record API on 2026-09-14 initially
+returned nine rich systems. Eight had empty galleries and were demoted to `thin`
+through depth-only Record API patches. Representative record or data views were
+then captured from their cited public sources:
 
-| System ID | Gallery items | Current depth | Required follow-up |
-| --- | ---: | --- | --- |
-| `abs-clearing-house` | 0 | `thin` | Capture a representative ABS record or data-content view. |
-| `deepdata` | 0 | `thin` | Capture a representative DeepData record or data-content view. |
-| `ena` | 0 | `thin` | Capture a representative ENA record or data-content view. |
-| `global-fishing-watch` | 0 | `thin` | Capture a representative data or analysis view. |
-| `platform-obis` | 0 | `thin` | Capture a representative OBIS record or data-content view. |
-| `odis` | 0 | `thin` | Capture a representative ODIS record or data-content view. |
-| `protected-planet` | 0 | `thin` | Capture a representative Protected Planet record or data-content view. |
-| `worms` | 0 | `thin` | Capture a representative WoRMS record or data-content view. |
+| System ID | Captured view | Source ID | Final depth |
+| --- | --- | --- | --- |
+| `abs-clearing-house` | Published South African IRCC record | `abs-ircc-example` | `rich` |
+| `deepdata` | Dataset inventory | `collection` | `rich` |
+| `ena` | Tara project record | `ena-tara` | `rich` |
+| `global-fishing-watch` | Fishing-hours dataset record | `ee` | `rich` |
+| `platform-obis` | OBIS dataset record | `obis-dfo-dataset` | `rich` |
+| `odis` | Catalogue record | `node-gbif` | `rich` |
+| `protected-planet` | Bonaire protected-site record | `pp-bonaire` | `rich` |
+| `worms` | *Solea solea* taxon record | `worms-taxon-solea-solea` | `rich` |
 
-`fishbase` has four production gallery items. Its species record, search fields,
-and downloadable-product views satisfy the requirement; its homepage view is
-supplemental rather than the qualifying evidence. The canonical fixture keeps
-only the three substantive slides so new authors do not copy a generic homepage
-as the exemplar.
+The high-resolution and thumbnail PNGs were published in compatibility release
+`49b5bd2` without bundling the pending node-kind contract migrations. All 16
+public image URLs returned HTTP 200 with `image/png`. Each record patch added one
+neutral gallery item and matching title, caption, and alt text in all six
+locales; WoRMS also gained the owner-local source used by its new item.
 
-The demotions changed only `recordDepth`: all record content, localizations,
-relationships, routes, and review states were preserved. No images were
-fabricated. FishBase remains `rich`; the eight systems must remain `thin` until
-their images are researched and captured according to the authoring guide,
-translated consistently across all six locales, dry-run with `validateOnly=true`,
-and applied with a fresh record timestamp. If access is blocked, keep the system
-thin rather than substituting a weak image.
+All eight patches passed `validateOnly=true`, used fresh
+`x-ryu-record-updated-at` preconditions, and were read back as rich with their
+unrelated content unchanged. FishBase remained rich with its four production
+gallery items. The production-compatible enforcement release `ecf5f8f` then
+made an empty gallery invalid for rich systems. Final inventory returned exactly
+nine rich systems, and a live validation-only removal test was rejected at
+`record.properties.gallery` with the expected requirement message.
