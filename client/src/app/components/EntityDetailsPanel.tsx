@@ -36,7 +36,7 @@ import type {
 } from "../../../../shared/domain";
 import type { RecordDetailDto, RecordLocalizationDto } from "../../../../shared/recordApi";
 import { fetchRecord, updateNodeLocalizationReview } from "../api";
-import { appPath, canReviewNodes, isPublicApp } from "../config";
+import { appPath, canReviewNodes, isPublicApp, isStaticPreview } from "../config";
 import {
   vocabularyLabel,
   formatDateTime,
@@ -581,6 +581,10 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
     let active = true;
     setReviewHistory(undefined);
     setHistoryError(false);
+    if (isStaticPreview) {
+      setReviewHistory([]);
+      return () => { active = false; };
+    }
     fetchRecord(entity.id, new URLSearchParams({ include: "reviewHistory" }))
       .then((record) => {
         if (active) setReviewHistory(Object.values(record.localizations ?? {}).flatMap(localization =>

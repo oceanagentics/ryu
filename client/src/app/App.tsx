@@ -145,7 +145,7 @@ export function App() {
     useGraphStore.setState({ searchLoading: true, searchError: null, searchResult: null,
       searchEntityIds: active ? new Set() : null });
     const timer = setTimeout(() => {
-      fetchGraphSearch({ query: searchQuery, filters: searchFilters, searchAllLanguages }, locale, controller.signal)
+      fetchGraphSearch({ query: searchQuery, filters: searchFilters, searchAllLanguages }, locale, controller.signal, graph)
         .then(result => {
           if (!controller.signal.aborted) useGraphStore.setState({
             searchResult: result, searchEntityIds: active ? new Set(result.matchingIds) : null,

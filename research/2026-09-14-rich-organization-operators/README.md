@@ -29,8 +29,15 @@ The records preserve 37 canonical incident relationships. Research added one mat
 - `batch.json`: the nine payloads as one reviewable batch.
 - `validation-local.json`: contract validation produced while generating the drafts.
 - `validation-postgres.json`: validation after each payload was dry-run, applied, read back, and revalidated through `PostgresGraphRepository` against the current PostgreSQL schema in PGlite.
-- `preview-local.ts`: reproducible localhost preview harness using the production public graph snapshot as context without writing to production.
+- `preview-local.ts`: fetches the production public graph, applies the country and organization batches in PGlite, converts edges to the migration 018 contract, validates every rich record, and writes `client/public/bootstrap.preview.json` without writing to production.
 
 Both validation reports contain nine valid records, zero issues, and complete source resolution. The PostgreSQL pass exposed a missing-parentheses bug in the SQL `researchGaps` shape check; the schema, migration, and regression test now cover that case.
 
 The batch has not been applied to the production Cloud SQL graph.
+
+Generate and serve the read-only static preview from the main checkout:
+
+```sh
+node --import tsx research/2026-09-14-rich-organization-operators/preview-local.ts
+VITE_APP_MODE=public VITE_STATIC_PREVIEW=true VITE_BOOTSTRAP_PATH=/bootstrap.preview.json npm --workspace client run dev
+```

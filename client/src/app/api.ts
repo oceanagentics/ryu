@@ -13,9 +13,14 @@ import type {
   RecordListDto,
   RecordPatchInput,
   RecordReviewInput,
+  RecordSearchQuery,
+  RecordSummaryDto,
   RecordValidationResult,
 } from "../../../shared/recordApi";
-import { appPath, bootstrapPath } from "./config";
+import type { IndexedGraph } from "../../../shared/indexGraph";
+import { supportedLocales } from "../../../shared/localization";
+import { resolveNodeDisplay } from "../../../shared/recordDisplay";
+import { appPath, bootstrapPath, isStaticPreview } from "./config";
 
 async function request<T>(input: RequestInfo, init?: RequestInit): Promise<T> {
   const response = await fetch(input, {
@@ -55,8 +60,62 @@ export async function fetchGraphSearch(
   intent: GraphSearchIntent,
   locale: SupportedLocale,
   signal: AbortSignal,
+  graph?: IndexedGraph,
 ): Promise<RecordListDto> {
   const filters = intent.filters;
+  if (isStaticPreview) {
+    if (!graph) throw new Error("Static preview search requires the loaded graph.");
+    const query: RecordSearchQuery = {
+      q: intent.query,
+      scope: "public",
+      countryCode: [],
+      disciplines: filters.disciplines,
+      dataFormat: filters.dataClaims.format as RecordSearchQuery["dataFormat"],
+      dataStandard: filters.dataClaims.standard as RecordSearchQuery["dataStandard"],
+      kind: filters.nodeKinds,
+      geography: [],
+      dataType: filters.dataClaims.type as RecordSearchQuery["dataType"],
+      recordDepth: filters.recordDepth,
+      reviewState: filters.reviewState,
+      locale,
+      localeMode: intent.searchAllLanguages ? "all_locales" : "display_locale",
+      localeAvailability: filters.localizationCoverage.length === 1
+        ? filters.localizationCoverage[0] === "current_locale" ? "available" : "missing"
+        : undefined,
+      reviewLocale: "requested",
+      routeStatus: [],
+      routeCapability: [],
+      accessType: filters.accessTypes,
+      accessMethod: filters.accessMethods,
+      include: ["matchReasons", "matchingIds"],
+      limit: 100,
+    };
+    const { searchRecords } = await import("../../../server/src/recordSearch");
+    if (signal.aborted) throw new DOMException("Search aborted", "AbortError");
+    const records = searchRecords(graph, query).map(({ entity, ...match }): RecordSummaryDto => {
+      const localization = resolveNodeDisplay(entity, locale);
+      return {
+        id: entity.id,
+        kind: entity.kind,
+        ...(entity.kind === "country" ? { countryCode: entity.countryCode } : { url: entity.url }),
+        recordDepth: entity.recordDepth,
+        title: localization.title,
+        summary: localization.summary,
+        availableLocales: entity.availableLocales,
+        missingLocales: supportedLocales.filter(value => !entity.availableLocales.includes(value)),
+        reviewStatesByLocale: Object.fromEntries(Object.entries(entity.localizations).map(([key, value]) => [key, value?.review.state])),
+        requestedLocale: localization.requestedLocale,
+        displayLocale: match.displayLocale,
+        isLocaleFallback: match.isLocaleFallback,
+        updatedAt: entity.updatedAt,
+        recordUpdatedAt: entity.updatedAt,
+        score: match.score,
+        matchedLocale: match.matchedLocale,
+        matchReasons: match.reasons,
+      } as RecordSummaryDto;
+    });
+    return { records, nextCursor: null, total: records.length, matchingIds: records.map(record => record.id) };
+  }
   const params = new URLSearchParams({
     q: intent.query, locale,
     localeMode: intent.searchAllLanguages ? "all_locales" : "display_locale",

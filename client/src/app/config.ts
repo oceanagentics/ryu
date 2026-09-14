@@ -2,6 +2,7 @@ export const appMode = import.meta.env.VITE_APP_MODE === "public" || (
   import.meta.env.DEV && typeof window !== "undefined" && !/\/admin(?:\/|$)/.test(window.location.pathname)
 ) ? "public" : "author";
 export const isPublicApp = appMode === "public";
+export const isStaticPreview = import.meta.env.VITE_STATIC_PREVIEW === "true";
 export const canReviewNodes = import.meta.env.VITE_CAN_REVIEW_NODES === "false"
   ? false
   : !isPublicApp;
