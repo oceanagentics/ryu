@@ -6,7 +6,13 @@ import { vocabularyLabel } from "../../shared/i18n";
 import { indexGraph } from "../../shared/indexGraph";
 import { emptyLocalizationDetails, resolveNodeLocalization, supportedLocales } from "../../shared/localization";
 import { systemDataDescriptors, systemMetrics } from "../../shared/recordDisplay";
-import { buildSystemRecords, getSystemFilterOptions } from "../../shared/searchPresentation";
+import {
+  buildSearchRecords,
+  buildSystemRecords,
+  countActiveFilters,
+  emptySearchFilters,
+  getSearchFilterOptions,
+} from "../../shared/searchPresentation";
 import { readRecordSearchQuery } from "./recordContracts";
 import { searchRecords } from "./recordSearch";
 
@@ -74,6 +80,48 @@ test("aliases match every record kind in the displayed localization, with Englis
       assert.equal(search([record], { q: alias, locale }).length, 1, `${kind}/${locale}`);
     }
   }
+});
+
+test("search presentation includes country, organization and system records with distinct metadata", () => {
+  const country = node("canada", "country", "Canada");
+  country.countryCode = "CAN";
+  const organization = node("ocean-agency", "organization", "Ocean Agency");
+  const system = node("ocean-catalogue", "system", "Ocean Catalogue");
+  system.properties.disciplines = ["oceanography"];
+  const graph = indexGraph({ nodes: [country, organization, system], edges: [], ryuRoutes: [], savedViews: [] });
+
+  const records = buildSearchRecords(graph, "en");
+  assert.deepEqual(records.map(record => record.kind), ["country", "organization", "system"]);
+  assert.equal(records[0].kind === "country" && records[0].countryCode, "CAN");
+  assert.equal("operatorName" in records[0], false);
+  assert.equal("operatorName" in records[1], false);
+  assert.deepEqual(records[2].kind === "system" ? records[2].disciplines : null, ["oceanography"]);
+  assert.deepEqual(getSearchFilterOptions(records, "en").nodeKinds, [
+    { value: "country", label: "Country" },
+    { value: "organization", label: "Organization" },
+    { value: "system", label: "System" },
+  ]);
+});
+
+test("search returns, filters and empties results across every node kind", () => {
+  const records = [
+    node("country", "country", "Ocean Country"),
+    node("organization", "organization", "Ocean Organization"),
+    node("system", "system", "Ocean System"),
+  ];
+
+  assert.deepEqual(search(records, { q: "Ocean" }).map(result => result.entity.kind), [
+    "country", "organization", "system",
+  ]);
+  for (const kind of ["country", "organization", "system"] as const) {
+    assert.deepEqual(search(records, { kind }).map(result => result.entity.kind), [kind]);
+  }
+  assert.deepEqual(search(records, { q: "no-match-marker" }), []);
+
+  const filters = emptySearchFilters();
+  assert.equal(countActiveFilters(filters), 0);
+  filters.nodeKinds = ["organization"];
+  assert.equal(countActiveFilters(filters), 1);
 });
 
 test("ranking keeps exact, prefix and typo matches, requires every token and explains the strongest fields", () => {
@@ -167,12 +215,12 @@ test("discipline tags are independently searchable and produce localized, dedupl
   const graph = indexGraph({ nodes: [first, second, node("generalist")], edges: [], ryuRoutes: [], savedViews: [] });
   const records = buildSystemRecords(graph, "fr");
   assert.deepEqual(records.map(record => record.disciplines), [["ecology", "taxonomy"], ["taxonomy", "marine_biology"], []]);
-  assert.deepEqual(getSystemFilterOptions(records, "fr").disciplines, [
+  assert.deepEqual(getSearchFilterOptions(records, "fr").disciplines, [
     { value: "ecology", label: "Écologie" },
     { value: "marine_biology", label: "Biologie marine" },
     { value: "taxonomy", label: "Taxonomie" },
   ]);
-  assert.deepEqual(getSystemFilterOptions(records, "fr").recordDepth, [
+  assert.deepEqual(getSearchFilterOptions(records, "fr").recordDepth, [
     { value: "rich", label: "Riche" },
     { value: "stub", label: "Ébauche" },
     { value: "thin", label: "Léger" },
@@ -194,7 +242,7 @@ test("data type search and display use canonical translations and preserve recor
   assert.equal(resolved.localizedLabel, "Registres taxonomiques");
   assert.equal(resolved.description, "Nomenclatural evidence");
   const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [], savedViews: [] });
-  assert.deepEqual(getSystemFilterOptions(buildSystemRecords(graph, "fr"), "fr").dataClaims.type, [
+  assert.deepEqual(getSearchFilterOptions(buildSearchRecords(graph, "fr"), "fr").dataClaims.type, [
     { value: "taxonomic_records", label: "Registres taxonomiques" },
   ]);
   const matches = search([record], { q: "Registres taxonomiques", locale: "fr" });
@@ -216,7 +264,7 @@ test("discipline and occurrence labels remain searchable and filterable in every
   for (const locale of supportedLocales) {
     const botany = vocabularyLabel(locale, "disciplines", "botany");
     const occurrences = vocabularyLabel(locale, "dataTypes", "occurrence_records");
-    const options = getSystemFilterOptions(buildSystemRecords(graph, locale), locale);
+    const options = getSearchFilterOptions(buildSearchRecords(graph, locale), locale);
     assert.deepEqual(options.disciplines, [{ value: "botany", label: botany }]);
     assert.deepEqual(options.dataClaims.type, [{ value: "occurrence_records", label: occurrences }]);
     for (const [q, field] of [[botany, "system.disciplines"], [occurrences, "data.descriptors.type"]]) {
@@ -238,7 +286,7 @@ test("format search, details and filters use shared labels with localized descri
   assert.equal(resolved.localizedLabel, "Fichier plat GenBank");
   assert.equal(resolved.description, "Annotated sequence exports");
   const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [], savedViews: [] });
-  assert.deepEqual(getSystemFilterOptions(buildSystemRecords(graph, "fr"), "fr").dataClaims.format, [
+  assert.deepEqual(getSearchFilterOptions(buildSearchRecords(graph, "fr"), "fr").dataClaims.format, [
     { value: "genbank_flatfile", label: "Fichier plat GenBank" },
   ]);
   assert.equal(search([record], { q: "Fichier plat GenBank", locale: "fr" })[0].reasons[0].field, "data.descriptors.format");
@@ -262,7 +310,7 @@ test("standard search and filters use canonical IDs and shared translations", ()
   assert.equal(resolved.localizedLabel, "Conventions climat et prévisions (CF)");
   assert.equal(resolved.description, "NetCDF product conventions");
   const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [], savedViews: [] });
-  assert.deepEqual(getSystemFilterOptions(buildSystemRecords(graph, "fr"), "fr").dataClaims.standard, [
+  assert.deepEqual(getSearchFilterOptions(buildSearchRecords(graph, "fr"), "fr").dataClaims.standard, [
     { value: "cf", label: "Conventions climat et prévisions (CF)" },
   ]);
   assert.equal(search([record], { q: "Conventions climat", locale: "fr" })[0].reasons[0].field, "data.descriptors.standard");

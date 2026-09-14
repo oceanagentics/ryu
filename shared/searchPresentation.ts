@@ -5,6 +5,7 @@ import type {
   Discipline,
   GraphEdge,
   GraphNode,
+  GraphNodeKind,
   RecordDepth,
   ResolvedNodeLocalization,
   ReviewState,
@@ -33,6 +34,7 @@ export type LocalizationCoverageFilter =
   | "missing_current_locale";
 
 export type GraphSearchFilters = {
+  nodeKinds: GraphNodeKind[];
   recordDepth: RecordDepth[];
   disciplines: Discipline[];
   dataClaims: Record<ClaimFilterKey, string[]>;
@@ -56,12 +58,29 @@ export type SearchMatchReason = {
   score: number;
 };
 
-export type SystemSearchRecord = {
-  entity: GraphNode<"system">;
-  system: GraphNode<"system">;
+export type SearchRecordBase<Node extends GraphNode> = {
+  kind: Node["kind"];
+  entity: Node;
   title: string;
   summary: string | null;
-  localization: ResolvedNodeLocalization<"system">;
+  localization: ResolvedNodeLocalization<Node["kind"]>;
+  hasCurrentLocale: boolean;
+  currentLocaleReviewState: ReviewState | null;
+  sourceTitles: string[];
+  connectedNames: string[];
+  relationships: GraphEdge[];
+  score: number;
+  matchReasons: SearchMatchReason[];
+};
+
+export type CountrySearchRecord = SearchRecordBase<GraphNode<"country">> & {
+  countryCode: string | null;
+};
+
+export type OrganizationSearchRecord = SearchRecordBase<GraphNode<"organization">>;
+
+export type SystemSearchRecord = SearchRecordBase<GraphNode<"system">> & {
+  system: GraphNode<"system">;
   operatorName: string;
   disciplines: Discipline[];
   dataTypes: DataType[];
@@ -70,15 +89,13 @@ export type SystemSearchRecord = {
   accessTypes: SystemAccessType[];
   accessMethods: AccessMethod[];
   accessLabels: string[];
-  hasCurrentLocale: boolean;
-  currentLocaleReviewState: ReviewState | null;
-  sourceTitles: string[];
-  connectedNames: string[];
-  relationships: GraphEdge[];
   ryuRoutes: RyuRoute[];
-  score: number;
-  matchReasons: SearchMatchReason[];
 };
+
+export type SearchRecord =
+  | CountrySearchRecord
+  | OrganizationSearchRecord
+  | SystemSearchRecord;
 
 export const claimFilterKeys = ["type", "format", "standard"] as const;
 
@@ -113,6 +130,7 @@ export function reviewStateFilterOptions(
 }
 
 export const emptySearchFilters = (): GraphSearchFilters => ({
+  nodeKinds: [],
   recordDepth: [],
   disciplines: [],
   dataClaims: {
@@ -147,6 +165,7 @@ export function selectOptions<Value extends string>(
 
 export function countActiveFilters(filters: GraphSearchFilters): number {
   return [
+    filters.nodeKinds,
     filters.recordDepth,
     filters.disciplines,
     filters.accessTypes,
@@ -184,6 +203,32 @@ export function getConnectedNames(
   );
 }
 
+function buildSearchRecordBase<Node extends GraphNode>(
+  entity: Node,
+  graph: IndexedGraph,
+  locale: SupportedLocale,
+): Omit<SearchRecordBase<Node>, "kind"> {
+  const localization = resolveNodeDisplay(entity, locale);
+  const currentLocalization = entity.localizations[locale] ?? null;
+  const relationships = getRelationships(entity.id, graph);
+  return {
+    entity,
+    title: localization.title,
+    summary: localization.summary,
+    localization,
+    hasCurrentLocale: Boolean(currentLocalization),
+    currentLocaleReviewState: currentLocalization?.review.state ?? null,
+    sourceTitles: uniqueSorted([
+      ...Object.values(entity.sources),
+      ...relationships.flatMap(edge => Object.values(edge.sources)),
+    ].map(source => source.title[locale] ?? source.id)),
+    connectedNames: getConnectedNames(entity, graph, locale),
+    relationships,
+    score: 0,
+    matchReasons: [],
+  };
+}
+
 export function buildSystemRecord(
   entity: GraphNode,
   graph: IndexedGraph,
@@ -194,11 +239,9 @@ export function buildSystemRecord(
   }
 
   const system = entity;
-  const localization = resolveNodeDisplay(system, locale);
-  const currentLocalization = system.localizations[locale] ?? null;
+  const common = buildSearchRecordBase(system, graph, locale);
+  const localization = common.localization;
   const accessPaths = systemAccessPaths(system, localization);
-  const relationships = getRelationships(entity.id, graph);
-  const connectedNames = getConnectedNames(entity, graph, locale);
   const operatorNodes = operatorNodesForSystem(graph, entity.id);
   const descriptors = system.properties.data?.descriptors ?? [];
   const dataTypes = uniqueSorted(descriptors.filter(d => d.category === "type").map(d => d.label));
@@ -207,11 +250,9 @@ export function buildSystemRecord(
   const ryuRoutes = graph.ryuRoutesByNodeId[entity.id] ?? [];
 
   return {
-    entity,
+    ...common,
+    kind: "system",
     system,
-    title: localization.title,
-    summary: localization.summary,
-    localization,
     operatorName: uniqueSorted(operatorNodes.map((node) => nodeTitle(node, locale))).join(", "),
     disciplines: system.properties.disciplines ?? [],
     dataTypes,
@@ -220,18 +261,35 @@ export function buildSystemRecord(
     accessTypes: uniqueSorted(accessPaths.map((path) => path.type)),
     accessMethods: uniqueSorted(accessPaths.flatMap((path) => path.methods)),
     accessLabels: uniqueSorted(accessPaths.map(path => path.label)),
-    hasCurrentLocale: Boolean(currentLocalization),
-    currentLocaleReviewState: currentLocalization?.review.state ?? null,
-    sourceTitles: uniqueSorted([
-      ...Object.values(system.sources),
-      ...getRelationships(system.id, graph).flatMap(edge => Object.values(edge.sources)),
-    ].map(source => source.title[locale] ?? source.id)),
-    connectedNames,
-    relationships,
     ryuRoutes,
-    score: 0,
-    matchReasons: [],
   };
+}
+
+export function buildSearchRecord(
+  entity: GraphNode,
+  graph: IndexedGraph,
+  locale: SupportedLocale,
+): SearchRecord {
+  if (entity.kind === "system") {
+    return buildSystemRecord(entity, graph, locale)!;
+  }
+
+  if (entity.kind === "country") {
+    return {
+      ...buildSearchRecordBase(entity, graph, locale),
+      kind: "country",
+      countryCode: entity.countryCode,
+    };
+  }
+
+  return { ...buildSearchRecordBase(entity, graph, locale), kind: "organization" };
+}
+
+export function buildSearchRecords(
+  graph: IndexedGraph,
+  locale: SupportedLocale,
+): SearchRecord[] {
+  return graph.nodes.map(entity => buildSearchRecord(entity, graph, locale));
 }
 
 export function buildSystemRecords(
@@ -246,25 +304,32 @@ export function buildSystemRecords(
     });
 }
 
-export function getSystemFilterOptions(
-  records: SystemSearchRecord[],
+export function getSearchFilterOptions(
+  records: SearchRecord[],
   locale: SupportedLocale,
 ) {
+  const systemRecords = records.filter(
+    (record): record is SystemSearchRecord => record.kind === "system",
+  );
   return {
+    nodeKinds: selectOptions(
+      records.map(record => record.kind),
+      value => vocabularyLabel(locale, "nodeKinds", value),
+    ),
     recordDepth: selectOptions(
-      records.map((record) => record.entity.recordDepth),
+      records.map(record => record.entity.recordDepth),
       value => vocabularyLabel(locale, "recordDepths", value),
     ),
     disciplines: selectOptions(
-      records.flatMap((record) => record.disciplines),
+      systemRecords.flatMap(record => record.disciplines),
       value => vocabularyLabel(locale, "disciplines", value),
     ),
     dataClaims: {
-      type: selectOptions(records.flatMap((record) => record.dataTypes), value => vocabularyLabel(locale, "dataTypes", value)),
-      format: selectOptions(records.flatMap((record) => record.dataFormats), value => vocabularyLabel(locale, "dataFormats", value)),
-      standard: selectOptions(records.flatMap((record) => record.dataStandards), value => vocabularyLabel(locale, "dataStandards", value)),
+      type: selectOptions(systemRecords.flatMap(record => record.dataTypes), value => vocabularyLabel(locale, "dataTypes", value)),
+      format: selectOptions(systemRecords.flatMap(record => record.dataFormats), value => vocabularyLabel(locale, "dataFormats", value)),
+      standard: selectOptions(systemRecords.flatMap(record => record.dataStandards), value => vocabularyLabel(locale, "dataStandards", value)),
     },
-    accessTypes: selectOptions(records.flatMap((record) => record.accessTypes), value => vocabularyLabel(locale, "accessTypes", value)),
-    accessMethods: selectOptions(records.flatMap((record) => record.accessMethods), value => vocabularyLabel(locale, "accessMethods", value)),
+    accessTypes: selectOptions(systemRecords.flatMap(record => record.accessTypes), value => vocabularyLabel(locale, "accessTypes", value)),
+    accessMethods: selectOptions(systemRecords.flatMap(record => record.accessMethods), value => vocabularyLabel(locale, "accessMethods", value)),
   };
 }

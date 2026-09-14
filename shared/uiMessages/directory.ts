@@ -28,6 +28,13 @@ export const directoryMessages = {
   "directory.systems": {
     en: "Systems", fr: "Systèmes", es: "Sistemas", ar: "الأنظمة", zh: "系统", ru: "Системы",
   },
+  "directory.searchResults": {
+    en: "Search results", fr: "Résultats de recherche", es: "Resultados de búsqueda", ar: "نتائج البحث", zh: "搜索结果", ru: "Результаты поиска",
+  },
+  "directory.resultCount": {
+    en: "{filtered} of {total} nodes", fr: "{filtered} sur {total} nœuds", es: "{filtered} de {total} nodos",
+    ar: "{filtered} من {total} عقد", zh: "{filtered} / {total} 个节点", ru: "{filtered} из {total} узлов",
+  },
   "directory.systemCount": {
     en: "{filtered} of {total} systems", fr: "{filtered} sur {total} systèmes", es: "{filtered} de {total} sistemas",
     ar: "{filtered} من {total} نظام", zh: "{filtered} / {total} 个系统", ru: "{filtered} из {total} систем",
@@ -79,6 +86,16 @@ export const directoryMessages = {
     es: "Ningún sistema coincide con la búsqueda y los filtros actuales.",
     ar: "لا توجد أنظمة تطابق البحث وعوامل التصفية الحالية.", zh: "没有系统符合当前搜索和筛选条件。",
     ru: "Нет систем, соответствующих текущему поиску и фильтрам.",
+  },
+  "directory.noResultsMatch": {
+    en: "No nodes match the current search and filters.",
+    fr: "Aucun nœud ne correspond à la recherche et aux filtres actuels.",
+    es: "Ningún nodo coincide con la búsqueda y los filtros actuales.",
+    ar: "لا توجد عقد تطابق البحث وعوامل التصفية الحالية.", zh: "没有节点符合当前搜索和筛选条件。",
+    ru: "Нет узлов, соответствующих текущему поиску и фильтрам.",
+  },
+  "directory.context": {
+    en: "Context", fr: "Contexte", es: "Contexto", ar: "السياق", zh: "上下文", ru: "Контекст",
   },
   "directory.unknownOperator": {
     en: "Unknown operator", fr: "Opérateur inconnu", es: "Operador desconocido", ar: "مشغّل غير معروف", zh: "未知运营方",

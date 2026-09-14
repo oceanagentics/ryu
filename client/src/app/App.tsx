@@ -25,7 +25,7 @@ import { fetchBootstrap, fetchGraphSearch } from "./api";
 import { EntityDetailsPanel } from "./components/EntityDetailsPanel";
 import { GraphLanguageSelector } from "./components/GraphLanguageSelector";
 import { LegendPanel } from "./components/LegendPanel";
-import { SystemDirectoryView } from "./components/SystemDirectoryView";
+import { SearchDirectoryView } from "./components/SystemDirectoryView";
 import type { NodeMap3dArrangement } from "./graph/nodeMap3dLayout";
 import { t } from "./i18n";
 import { countActiveFilters } from "./search";
@@ -617,10 +617,10 @@ export function App() {
       <div className="app-body ryu-workspace">
         {renderPaneSlot(
           "search",
-          <SystemDirectoryView
+          <SearchDirectoryView
             variant="rail"
             showTitle={false}
-            onSelectSystem={() => setMobileSearchOpen(false)}
+            onSelectEntity={() => setMobileSearchOpen(false)}
           />,
         )}
         {renderPaneSlot(

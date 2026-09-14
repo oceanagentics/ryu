@@ -23,20 +23,20 @@ import {
   claimFilterKeys,
   claimFilterLabel,
   countActiveFilters,
-  getSystemFilterOptions,
+  getSearchFilterOptions,
   localizationCoverageFilterOptions,
-  buildSystemRecords,
+  buildSearchRecords,
   reviewStateFilterOptions,
   type ClaimFilterKey,
   type GraphSearchFilters,
   type SearchMatchReason,
-  type SystemSearchRecord,
+  type SearchRecord,
 } from "../search";
 import { vocabularyLabel, localeName, t } from "../i18n";
 import { useGraphStore } from "../state/graphStore";
 
 type DirectoryMode = "cards" | "table";
-type SystemDirectoryVariant = "page" | "rail";
+type SearchDirectoryVariant = "page" | "rail";
 
 function CompactTags({
   values,
@@ -84,14 +84,14 @@ function MatchReasons({ reasons }: { reasons: SearchMatchReason[] }) {
   );
 }
 
-export function SystemDirectoryView({
-  onSelectSystem,
+export function SearchDirectoryView({
+  onSelectEntity,
   showTitle = true,
   variant = "page",
 }: {
-  onSelectSystem?: (systemId: string) => void;
+  onSelectEntity?: (entityId: string) => void;
   showTitle?: boolean;
-  variant?: SystemDirectoryVariant;
+  variant?: SearchDirectoryVariant;
 }) {
   const graph = useGraphStore((state) => state.graph);
   const searchResult = useGraphStore((state) => state.searchResult);
@@ -110,23 +110,28 @@ export function SystemDirectoryView({
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [mode, setMode] = useState<DirectoryMode>("cards");
 
-  const records = useMemo(() => graph ? buildSystemRecords(graph, locale) : [], [graph, locale]);
+  const records = useMemo(() => graph ? buildSearchRecords(graph, locale) : [], [graph, locale]);
   const filteredRecords = useMemo(() => {
     const byId = new Map(records.map(record => [record.entity.id, record]));
     return (searchResult?.records ?? []).flatMap(match => {
       const record = byId.get(match.id);
-      return record ? [{ ...record, title: match.title, summary: match.summary,
+      if (!record) {
+        return [];
+      }
+
+      const matchedRecord = { ...record, title: match.title, summary: match.summary,
         score: match.score ?? 0, matchReasons: match.matchReasons ?? [],
         localization: { ...record.localization, title: match.title, summary: match.summary,
           requestedLocale: match.requestedLocale, displayLocale: match.displayLocale,
           isLocaleFallback: match.isLocaleFallback },
         hasCurrentLocale: match.availableLocales.includes(locale),
         currentLocaleReviewState: match.reviewStatesByLocale[locale] ?? null,
-      }] : [];
+      } as SearchRecord;
+      return [matchedRecord];
     });
   }, [locale, records, searchResult]);
   const filterOptions = useMemo(
-    () => getSystemFilterOptions(records, locale),
+    () => getSearchFilterOptions(records, locale),
     [locale, records],
   );
 
@@ -148,16 +153,16 @@ export function SystemDirectoryView({
     });
   }
 
-  function selectSystem(record: SystemSearchRecord) {
+  function selectRecord(record: SearchRecord) {
     setSelectedEntityId(record.entity.id);
-    onSelectSystem?.(record.entity.id);
+    onSelectEntity?.(record.entity.id);
   }
 
   const columns = [
     {
-      title: t(locale, "directory.system"),
-      key: "system",
-      render: (_: unknown, record: SystemSearchRecord) => (
+      title: t(locale, "search.field.name"),
+      key: "entity",
+      render: (_: unknown, record: SearchRecord) => (
         <Flex vertical gap={2}>
           <Typography.Text strong>{record.title}</Typography.Text>
           <Typography.Text type="secondary">
@@ -177,16 +182,25 @@ export function SystemDirectoryView({
       ),
     },
     {
-      title: t(locale, "directory.operator"),
-      dataIndex: "operatorName",
-      key: "operatorName",
-      render: (value: string) =>
-        value || <Typography.Text type="secondary">{t(locale, "directory.unknown")}</Typography.Text>,
+      title: t(locale, "search.field.nodeType"),
+      key: "kind",
+      render: (_: unknown, record: SearchRecord) => (
+        <Tag bordered={false}>{vocabularyLabel(locale, "nodeKinds", record.kind)}</Tag>
+      ),
+    },
+    {
+      title: t(locale, "directory.context"),
+      key: "context",
+      render: (_: unknown, record: SearchRecord) => record.kind === "system"
+        ? record.operatorName || <Typography.Text type="secondary">{t(locale, "directory.unknownOperator")}</Typography.Text>
+        : record.kind === "country"
+          ? record.countryCode || <Typography.Text type="secondary">{t(locale, "directory.notSet")}</Typography.Text>
+          : t(locale, "directory.relationshipCount", { count: record.relationships.length }),
     },
     {
       title: t(locale, "directory.localization"),
       key: "localization",
-      render: (_: unknown, record: SystemSearchRecord) => (
+      render: (_: unknown, record: SearchRecord) => (
         <Flex gap={4} wrap>
           <Tag bordered={false}>
             {record.hasCurrentLocale
@@ -200,31 +214,20 @@ export function SystemDirectoryView({
       ),
     },
     {
-      title: t(locale, "details.discipline"),
-      key: "disciplines",
-      render: (_: unknown, record: SystemSearchRecord) => (
-        <CompactTags values={record.disciplines.map(value => vocabularyLabel(locale, "disciplines", value))} />
-      ),
-    },
-    {
-      title: t(locale, "directory.data"),
-      key: "data",
-      render: (_: unknown, record: SystemSearchRecord) => (
-        <CompactTags
-          values={[
+      title: t(locale, "details.profile"),
+      key: "details",
+      render: (_: unknown, record: SearchRecord) => record.kind === "system" ? (
+        <Flex vertical gap={4}>
+          <CompactTags values={record.disciplines.map(value => vocabularyLabel(locale, "disciplines", value))} />
+          <CompactTags values={[
             ...record.dataTypes.map(value => vocabularyLabel(locale, "dataTypes", value)),
             ...record.dataFormats.map(value => vocabularyLabel(locale, "dataFormats", value)),
             ...record.dataStandards.map(value => vocabularyLabel(locale, "dataStandards", value)),
-          ]}
-          limit={4}
-        />
-      ),
-    },
-    {
-      title: t(locale, "directory.access"),
-      key: "access",
-      render: (_: unknown, record: SystemSearchRecord) => (
-        <CompactTags values={record.accessLabels} limit={4} />
+          ]} limit={4} />
+          <CompactTags values={record.accessLabels} limit={4} />
+        </Flex>
+      ) : (
+        <CompactTags values={record.connectedNames} limit={4} />
       ),
     },
   ];
@@ -239,10 +242,10 @@ export function SystemDirectoryView({
         <Flex align="center" justify="space-between" gap={12} wrap>
           <Flex vertical gap={2} className="systems-directory-summary">
             {showTitle ? (
-              <Typography.Title level={isRail ? 4 : 2}>{t(locale, "directory.systems")}</Typography.Title>
+              <Typography.Title level={isRail ? 4 : 2}>{t(locale, "directory.searchResults")}</Typography.Title>
             ) : null}
             <Typography.Text type="secondary">
-              {t(locale, "directory.systemCount", {
+              {t(locale, "directory.resultCount", {
                 filtered: filteredRecords.length,
                 total: records.length,
               })}
@@ -295,6 +298,15 @@ export function SystemDirectoryView({
         {filtersOpen ? (
           <div className="systems-filter-panel">
             <div className="systems-filter-grid">
+              <Select
+                allowClear
+                mode="multiple"
+                maxTagCount="responsive"
+                placeholder={t(locale, "search.field.nodeType")}
+                value={filters.nodeKinds}
+                options={filterOptions.nodeKinds}
+                onChange={(value) => patchFilters({ nodeKinds: value })}
+              />
               <Select
                 allowClear
                 mode="multiple"
@@ -370,7 +382,7 @@ export function SystemDirectoryView({
         ) : searchLoading ? (
           <Spin />
         ) : filteredRecords.length === 0 ? (
-          <Empty description={t(locale, "directory.noSystemsMatch")} />
+          <Empty description={t(locale, "directory.noResultsMatch")} />
         ) : displayMode === "cards" ? (
           <div className="systems-card-grid">
             {filteredRecords.map((record) => (
@@ -382,16 +394,23 @@ export function SystemDirectoryView({
                     : "systems-card"
                 }
                 type="button"
-                onClick={() => selectSystem(record)}
+                onClick={() => selectRecord(record)}
               >
                 <Flex vertical gap={12}>
                   <Flex align="flex-start" justify="space-between" gap={8}>
                     <Flex vertical gap={2}>
                       <Typography.Text strong>{record.title}</Typography.Text>
                       <Typography.Text type="secondary">
-                        {record.operatorName || t(locale, "directory.unknownOperator")}
+                        {record.kind === "system"
+                          ? record.operatorName || t(locale, "directory.unknownOperator")
+                          : record.kind === "country"
+                            ? record.countryCode || t(locale, "directory.notSet")
+                            : t(locale, "directory.relationshipCount", { count: record.relationships.length })}
                       </Typography.Text>
                     </Flex>
+                    <Tag bordered={false}>
+                      {vocabularyLabel(locale, "nodeKinds", record.kind)}
+                    </Tag>
                     {record.localization.isLocaleFallback ? (
                       <Tag bordered={false}>
                         {record.localization.displayLocale
@@ -417,17 +436,23 @@ export function SystemDirectoryView({
                   ) : null}
                   <MatchReasons reasons={record.matchReasons} />
                   <div className="systems-card-meta">
-                    <CompactTags values={record.disciplines.map(value => vocabularyLabel(locale, "disciplines", value))} />
+                    {record.kind === "system" ? (
+                      <CompactTags values={record.disciplines.map(value => vocabularyLabel(locale, "disciplines", value))} />
+                    ) : (
+                      <CompactTags values={record.connectedNames} />
+                    )}
                     <span>
                       {t(locale, "directory.relationshipCount", {
                         count: record.relationships.length,
                       })}
                     </span>
                   </div>
-                  <Flex vertical gap={8}>
-                    <CompactTags values={record.dataTypes.map(value => vocabularyLabel(locale, "dataTypes", value))} />
-                    <CompactTags values={record.accessLabels} />
-                  </Flex>
+                  {record.kind === "system" ? (
+                    <Flex vertical gap={8}>
+                      <CompactTags values={record.dataTypes.map(value => vocabularyLabel(locale, "dataTypes", value))} />
+                      <CompactTags values={record.accessLabels} />
+                    </Flex>
+                  ) : null}
                   <Flex align="center" justify="space-between" gap={8}>
                     <Typography.Text type="secondary">
                       {t(locale, "directory.sourceCount", {
@@ -452,7 +477,7 @@ export function SystemDirectoryView({
             scroll={isRail ? { x: 920 } : undefined}
             size={isRail ? "small" : "middle"}
             onRow={(record) => ({
-              onClick: () => selectSystem(record),
+              onClick: () => selectRecord(record),
             })}
           />
         )}
