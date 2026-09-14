@@ -95,15 +95,19 @@ test("stored rich example enforces content, evidence, localization and allowed g
     assert.equal(result.valid, false, path);
     assert.ok(result.issues.some(issue => issue.path === path), `${path}: ${JSON.stringify(result.issues)}`);
   }
-  const gaps = richRecordFixture();
-  gaps.record.properties.metrics = [];
-  gaps.record.properties.gallery = [];
-  for (const l of Object.values(gaps.localizations) as any[]) {
+  const missingGallery = richRecordFixture();
+  missingGallery.record.properties.gallery = [];
+  for (const l of Object.values(missingGallery.localizations) as any[]) l.details.gallery = [];
+  const missingGalleryResult = validateRecordQuality(missingGallery.id, missingGallery);
+  assert.equal(missingGalleryResult.valid, false);
+  assert.ok(missingGalleryResult.issues.some(issue => issue.path === "record.properties.gallery" && issue.message === "at least one useful gallery item showing a representative record or data content is required"));
+  const metricGaps = richRecordFixture();
+  metricGaps.record.properties.metrics = [];
+  for (const l of Object.values(metricGaps.localizations) as any[]) {
     l.details.metrics = [];
-    l.details.gallery = [];
     l.details.researchGaps = { ...l.details.researchGaps, data: "Not published", usage: "Not published" };
   }
-  const result = validateRecordQuality(gaps.id, gaps);
+  const result = validateRecordQuality(metricGaps.id, metricGaps);
   assert.equal(result.valid, true, JSON.stringify(result.issues));
   assert.ok(result.warnings?.length);
   assert.throws(() => readRecordAggregateContentInput(fixture.id, { ...fixture, incomplete: true }), /incomplete records/);

@@ -132,6 +132,7 @@ export function validateSystemResearch(id: string, input: RecordQualityInput, ad
   if (input.record.kind === "system") {
     if (!descriptors.some(item => item.category === "format")) add("record.properties.data.descriptors", "at least one format descriptor is required");
     if (!access.some(item => item.type === "read")) add("record.properties.access", "at least one actual read access path is required");
+    if (!gallery.length) add("record.properties.gallery", "at least one useful gallery item showing a representative record or data content is required");
     if (!input.edges?.some(edge => edge.kind === "operates" && edge.targetNodeId === id)) add("edges", "an incoming operates relationship is required");
   }
   const assignedDataTypes = new Set<unknown>();
@@ -259,7 +260,6 @@ export function validateSystemResearch(id: string, input: RecordQualityInput, ad
     }
   }
   if (rich && input.record.kind === "system") {
-    if (!gallery.length) warnings.push("No gallery: acceptable when no useful, accessible capture is available.");
     if (!input.routes?.length) warnings.push("No approved machine route is recorded.");
     if (Object.values(input.localizations ?? {}).some(l => Object.keys(object(l?.details).researchGaps ?? {}).length)) warnings.push("Documented research gaps remain; omitted values have not been invented.");
   }

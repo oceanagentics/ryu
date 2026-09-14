@@ -101,9 +101,10 @@ Before marking a system rich:
 3. Add verified relationships with evidence, scope and time/status on the edges.
    Complete material connection research; report specific unresolved candidates.
 4. Record supported metrics or specific Data/Usage gaps, and supported standards
-   or a standards gap. Gallery and operational routes are optional; empty arrays
-   are valid. No minimum discipline, type, standard, gallery or connection count
-   substitutes for evidence; the existing operator and read/format requirements apply.
+   or a standards gap. Include at least one useful gallery item showing a
+   representative record or data content. Operational routes remain optional.
+   No minimum discipline, type, standard or connection count substitutes for
+   evidence; the existing operator and read/format requirements apply.
 5. Validate the merged candidate with `validateOnly=true`, fix every issue, apply
    with a fresh record timestamp, and re-read it. Review state changes use the
    separate review endpoint. Rich does not imply human review or factual verification
@@ -112,7 +113,8 @@ Before marking a system rich:
 Change this contract deliberately with shared types, runtime validation, SQL
 guards, example, tests and this guide in one release. Do not automatically
 refresh the fixture from production. Audit existing records before enforcement;
-see [the shape rollout audit](SYSTEM_RECORD_SHAPE_ROLLOUT.md).
+see [the shape rollout audit](SYSTEM_RECORD_SHAPE_ROLLOUT.md) and
+[the rich system gallery rollout](RICH_SYSTEM_GALLERY_ROLLOUT.md).
 
 ## Canonical Organization Contract
 
@@ -357,6 +359,10 @@ A rich system must have:
   descriptions; all descriptor labels come from the shared vocabularies.
   Type and format labels come from the shared vocabularies. Access paths need labels and descriptions; gallery items
   need titles and captions; metrics need localized descriptions.
+- At least one sourced gallery item that shows a representative record, data
+  product, data structure, or the kinds of data a researcher can retrieve. A
+  generic homepage, logo, navigation view, or decorative image does not satisfy
+  the rich-system requirement by itself.
 - Source-backed metrics using only the ten approved keys, finite non-negative
   values, and observation dates (YYYY, YYYY-MM, YYYY-MM-DD, or null when unknown).
   Units and Data/Usage groups come from `shared/domain.ts`. Rich records require
@@ -369,8 +375,8 @@ A rich system must have:
   candidates to the user. The API validates edge evidence references; passing
   validation alone does not establish adequate research or the truth of a claim.
 
-Gallery and machine routes are optional. No approved route produces a warning;
-do not invent one. When present, gallery assets must exist or have HTTP(S) URLs.
+Machine routes are optional. No approved route produces a warning; do not invent
+one. Gallery assets must exist or have HTTP(S) URLs.
 Active routes need a target, capabilities, and a contract reference. Local contract
 references must resolve under `documentation/contracts`. Network liveness checks
 remain outside the write transaction; follow URL Validation below.
@@ -1034,7 +1040,21 @@ Research rules:
 
 ## Gallery Images
 
-Gallery images should be local, stable, and useful. Avoid blocked iframes and decorative screenshots.
+Gallery images should be local, stable, and useful. Every rich system requires
+at least one gallery item. `stub` and `thin` systems may keep the neutral and
+localized gallery arrays empty while useful captures are still being researched.
+Countries and organizations do not inherit this system-only requirement.
+
+The existing gallery shape carries the necessary meaning without a new category:
+the neutral item identifies the captured asset and source, while each localized
+title and caption explains the representative record or data content shown. One
+image may show both a representative record and several data types. Runtime
+validation enforces a nonempty rich-system gallery, resolved sources, existing or
+HTTP(S) assets, matching IDs, and nonblank titles and captions in all six locales.
+Human review confirms that the described content is actually visible; do not use
+keyword checks or filenames as a substitute for reviewing the image.
+
+Avoid blocked iframes and decorative screenshots.
 
 Preferred capture path:
 
@@ -1056,6 +1076,12 @@ Storage convention:
 Use `type='embed'` only when the target site works reliably in an iframe. If an embed renders as a grey or blank square, replace it with local image captures.
 
 Choose images that show what kinds of data the database contains and how those data are structured. The gallery should visually answer what a researcher or ocean stakeholder can expect to find in the system, not merely how to use the website.
+
+A generic homepage, logo, navigation menu, sign-in page, or decorative image may
+be supplemental context after the requirement is met, but none qualifies by
+itself. If no useful capture is currently available, keep the record `thin`,
+document the blocked target for the human, and do not fabricate an image or
+silently promote the record to `rich`.
 
 ## Identifiers
 
@@ -1091,6 +1117,8 @@ Confirm:
   No material connection research remains unfinished.
 - Required access URLs, descriptions, sources and metric evidence are present.
 - Missing standards or Data/Usage metrics have specific localized research gaps.
+- At least one gallery item shows a representative record or data content; its
+  title and caption describe the same evidence consistently in all six locales.
 - Gallery local files exist for every local `url` and `thumbnailUrl`.
 - The write preserved unrelated content and used the expected review workflow.
 

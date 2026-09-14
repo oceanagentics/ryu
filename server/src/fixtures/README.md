@@ -1,8 +1,8 @@
 # Canonical system record example
 
 `rich-record.json` freezes the full FishBase content in the approved system shape.
-It includes six localizations, 20 node-owned sources, 16 descriptors (including
-six standards), eight Read/Write access paths, five metrics, four gallery items,
+It includes six localizations, 19 node-owned sources, 16 descriptors (including
+six standards), eight Read/Write access paths, five metrics, three gallery items,
 nine relationships with their own sources, and no operational routes.
 
 The content comes from the prepared 2026-09-10 metrics/standards/access release
@@ -46,5 +46,5 @@ Each example owns only its kind's facts and localized details. Countries have
 one summary and treaty participation. Organizations have an introduction,
 institutional context, mission, establishment, scale and office locations.
 Both share source ownership and review infrastructure with systems. Only systems
-have a routes section or gallery. Empty system galleries remain valid for rich
-records when no useful accessible capture is available.
+have a routes section or gallery. Rich systems require a useful gallery item;
+thin systems may keep the gallery empty while a qualifying capture is unavailable.

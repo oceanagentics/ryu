@@ -61,9 +61,11 @@
 - All system depths use the same closed structure. `stub` and `thin` may omit
   unfinished sections; supplied fields must still have the approved shape.
   Never invent fields, nested metadata bags, identifiers, or hidden relationships.
-- `rich` requires the complete six-language record and completed relationship
+- `rich` requires the complete six-language record, at least one useful gallery
+  item showing a representative record or data content, and completed relationship
   research. It does not mean human-reviewed. Use specific research gaps instead
-  of invented measurements, standards, gallery images, or machine routes.
+  of invented measurements, standards, gallery images, or machine routes; keep a
+  system `thin` when no qualifying gallery capture is available.
 - The API validates the resulting aggregate on PUT/PATCH, including stored
   content. Fix reported paths; do not bypass structural errors by lowering depth.
 - Contract changes require a code/documentation release with an updated example
@@ -170,7 +172,7 @@
 ## Rich Record Screenshots
 - For rich record gallery screenshots, use the Codex in-app Browser as the preferred capture path before standalone headless browser tools.
 - If the in-app Browser or all available capture paths are blocked by login, CAPTCHA, Cloudflare verification, browser-security pages, or other non-content screens, do not add gallery images for that record just to fill the slot.
-- When capture is blocked, report the blocker and target URL back to the human so they can provide access, clear the session, or supply screenshots.
+- When capture is blocked, keep the system `thin` and report the blocker and target URL back to the human so they can provide access, clear the session, or supply screenshots.
 
 ## Startup Behavior
 - On startup, the server connects to the configured Postgres database.

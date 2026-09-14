@@ -93,8 +93,11 @@ test("canonical system objects reject unknown fields and malformed structures at
       l.details.data.descriptors = l.details.data.descriptors.filter((row: any) => incomplete.record.properties.data.descriptors.some((d: any) => d.category === "standard" && d.id === row.id));
     }
     assert.equal(validateRecordQuality(incomplete.id, incomplete).valid, true, "incomplete descriptor/gallery translations remain thin");
+    incomplete.record.properties.gallery = [];
     incomplete.record.recordDepth = "rich";
-    assert.equal(validateRecordQuality(incomplete.id, incomplete).valid, false);
+    const richResult = validateRecordQuality(incomplete.id, incomplete);
+    assert.equal(richResult.valid, false);
+    assert.ok(richResult.issues.some(issue => issue.path === "record.properties.gallery" && issue.message === "at least one useful gallery item showing a representative record or data content is required"));
   } finally { await db.close(); }
 });
 

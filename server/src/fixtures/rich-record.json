@@ -241,14 +241,6 @@
           "source": "src-fishbase-downloads",
           "sortOrder": 3,
           "thumbnailUrl": "/gallery/fishbase/download-thumb.png"
-        },
-        {
-          "id": "fishbase-gallery-home",
-          "url": "/gallery/fishbase/home-high.png",
-          "type": "image",
-          "source": "src-fishbase-home-rendered",
-          "sortOrder": 4,
-          "thumbnailUrl": "/gallery/fishbase/home-thumb.png"
         }
       ],
       "metrics": [
@@ -407,19 +399,6 @@
           "fr": "Fiche de l’espèce Gadus morhua dans FishBase",
           "ru": "Сводка о виде Gadus morhua в FishBase",
           "zh": "FishBase物种摘要：Gadus morhua"
-        },
-        "accessedAt": "2026-07-21"
-      },
-      "src-fishbase-home-rendered": {
-        "id": "src-fishbase-home-rendered",
-        "url": "https://fishbase.se/home.htm",
-        "title": {
-          "ar": "الصفحة الرئيسية لـ FishBase",
-          "en": "FishBase homepage",
-          "es": "Página de inicio de FishBase",
-          "fr": "Page d’accueil de FishBase",
-          "ru": "Главная страница FishBase",
-          "zh": "FishBase主页"
         },
         "accessedAt": "2026-07-21"
       },
@@ -695,12 +674,6 @@
             "title": "منتجات بيانات قابلة للتنزيل",
             "altText": null,
             "caption": "لقطة شاشة محلية ملتقطة لقسم تنزيل FishBase تعرض وثائق ومنتجات بيانات قابلة للتنزيل مع العناوين والأوصاف وأحجام الملفات."
-          },
-          {
-            "id": "fishbase-gallery-home",
-            "title": "نطاق البوابة وسياقها",
-            "altText": null,
-            "caption": "لقطة شاشة محلية ملتقطة لصفحة FishBase الرئيسية تعرض مقاييس النطاق، وسياق الاتحاد، وروابط المرايا، وتنقل البوابة."
           }
         ],
         "metrics": [
@@ -877,12 +850,6 @@
             "title": "Downloadable data products",
             "altText": null,
             "caption": "Captured local screenshot of the FishBase Download Section showing downloadable documents and data products with titles, descriptions, and file sizes."
-          },
-          {
-            "id": "fishbase-gallery-home",
-            "title": "Portal scope and context",
-            "altText": null,
-            "caption": "Captured local screenshot of the FishBase homepage showing scope metrics, consortium context, mirror links, and portal navigation."
           }
         ],
         "metrics": [
@@ -1060,12 +1027,6 @@
             "title": "Productos de datos descargables",
             "altText": null,
             "caption": "Captura de pantalla local de la sección de descargas de FishBase que muestra documentos y productos de datos descargables con títulos, descripciones y tamaños de archivo."
-          },
-          {
-            "id": "fishbase-gallery-home",
-            "title": "Alcance y contexto del portal",
-            "altText": null,
-            "caption": "Captura de pantalla local de la página principal de FishBase que muestra métricas de alcance, contexto del consorcio, enlaces espejo y navegación del portal."
           }
         ],
         "metrics": [
@@ -1243,12 +1204,6 @@
             "title": "Produits de données téléchargeables",
             "altText": null,
             "caption": "Capture d'écran locale de la section de téléchargement FishBase montrant documents et produits de données téléchargeables avec titres, descriptions et tailles de fichier."
-          },
-          {
-            "id": "fishbase-gallery-home",
-            "title": "Portée et contexte du portail",
-            "altText": null,
-            "caption": "Capture d'écran locale de la page d'accueil FishBase montrant les métriques de portée, le contexte du consortium, les liens miroirs et la navigation du portail."
           }
         ],
         "metrics": [
@@ -1426,12 +1381,6 @@
             "title": "Загружаемые продукты данных",
             "altText": null,
             "caption": "Локальный снимок экрана раздела загрузок FishBase, показывающий загружаемые документы и продукты данных с названиями, описаниями и размерами файлов."
-          },
-          {
-            "id": "fishbase-gallery-home",
-            "title": "Охват и контекст портала",
-            "altText": null,
-            "caption": "Локальный снимок экрана главной страницы FishBase, показывающий показатели охвата, контекст консорциума, зеркальные ссылки и навигацию портала."
           }
         ],
         "metrics": [
@@ -1609,12 +1558,6 @@
             "title": "可下载数据产品",
             "altText": null,
             "caption": "FishBase 下载区的本地截图，显示可下载文档和数据产品及其标题、说明和文件大小。"
-          },
-          {
-            "id": "fishbase-gallery-home",
-            "title": "门户范围和背景",
-            "altText": null,
-            "caption": "FishBase 主页的本地截图，显示范围指标、联盟背景、镜像链接和门户导航。"
           }
         ],
         "metrics": [
