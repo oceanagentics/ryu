@@ -1,0 +1,3259 @@
+[
+  {
+    "id": "cbd-secretariat",
+    "kind": "organization",
+    "countryCode": null,
+    "url": "https://www.cbd.int/secretariat/",
+    "recordDepth": "thin",
+    "title": "Secretariat of the Convention on Biological Diversity",
+    "summary": null,
+    "availableLocales": [
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "missingLocales": [],
+    "reviewStatesByLocale": {
+      "ar": "agent_researched",
+      "en": "agent_researched",
+      "es": "agent_researched",
+      "fr": "agent_researched",
+      "ru": "agent_researched",
+      "zh": "agent_researched"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-11T02:10:48.163Z",
+    "recordUpdatedAt": "2026-09-11T02:10:48.163Z",
+    "score": 0,
+    "matchedLocale": null,
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 5,
+      "resolvedSources": 5,
+      "issues": []
+    },
+    "record": {
+      "id": "cbd-secretariat",
+      "kind": "organization",
+      "countryCode": null,
+      "url": "https://www.cbd.int/secretariat/",
+      "recordDepth": "thin",
+      "sources": {
+        "abs-modalities": {
+          "id": "abs-modalities",
+          "url": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+          "title": {
+            "ar": "المقرر NP-1/2: طرائق التشغيل",
+            "en": "Decision NP-1/2: operating modalities",
+            "es": "Decisión NP-1/2: modalidades de funcionamiento",
+            "fr": "Décision NP-1/2 : modalités de fonctionnement",
+            "ru": "Решение NP-1/2: условия функционирования",
+            "zh": "NP-1/2号决定：运作方式"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-decision2024": {
+          "id": "abs-decision2024",
+          "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+          "title": {
+            "ar": "المقرر NP-5/4: غرفة تبادل المعلومات وتبادل المعلومات (2024)",
+            "en": "Decision NP-5/4: ABS Clearing-House and information-sharing (2024)",
+            "es": "Decisión NP-5/4: Centro de Intercambio de Información sobre APB e intercambio de información (2024)",
+            "fr": "Décision NP-5/4 : Centre d’échange APA et échange d’informations (2024)",
+            "ru": "Решение NP-5/4: Механизм посредничества и обмен информацией (2024)",
+            "zh": "NP-5/4号决定：信息交换所与信息共享（2024年）"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "createdAt": "2026-09-11T02:08:18.182Z",
+      "updatedAt": "2026-09-11T02:10:48.163Z"
+    },
+    "localizations": {
+      "ar": {
+        "locale": "ar",
+        "title": "أمانة اتفاقية التنوع البيولوجي",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:08:18.182Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:18.182156+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:18.182Z",
+        "updatedAt": "2026-09-11T02:08:18.182Z"
+      },
+      "en": {
+        "locale": "en",
+        "title": "Secretariat of the Convention on Biological Diversity",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-11T02:08:18.182Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:18.182156+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:18.182Z",
+        "updatedAt": "2026-09-11T02:08:18.182Z"
+      },
+      "es": {
+        "locale": "es",
+        "title": "Secretaría del Convenio sobre la Diversidad Biológica",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:08:18.182Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:18.182156+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:18.182Z",
+        "updatedAt": "2026-09-11T02:08:18.182Z"
+      },
+      "fr": {
+        "locale": "fr",
+        "title": "Secrétariat de la Convention sur la diversité biologique",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:08:18.182Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:18.182156+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:18.182Z",
+        "updatedAt": "2026-09-11T02:08:18.182Z"
+      },
+      "ru": {
+        "locale": "ru",
+        "title": "Секретариат Конвенции о биологическом разнообразии",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:08:18.182Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:18.182156+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:18.182Z",
+        "updatedAt": "2026-09-11T02:08:18.182Z"
+      },
+      "zh": {
+        "locale": "zh",
+        "title": "生物多样性公约秘书处",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "CBD Secretariat",
+            "SCBD"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:08:18.182Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:18.182156+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:18.182Z",
+        "updatedAt": "2026-09-11T02:08:18.182Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-cbd-secretariat-operates-abs-clearing-house",
+        "sourceNodeId": "cbd-secretariat",
+        "targetNodeId": "abs-clearing-house",
+        "kind": "operates",
+        "note": "The CBD Secretariat administers the Internet portal and central database, supports users and implements development work within the COP-MOP mandate. Decision NP-5/4 requests continued development and administration. National publication decisions remain with national publishing authorities.",
+        "properties": {
+          "scope": "Central portal/database operation and technical support",
+          "period": "2014 modalities; continued mandate in decision NP-5/4 of 30 October 2024",
+          "status": "current documented mandate",
+          "sourceRefs": [
+            "abs-modalities",
+            "abs-decision2024"
+          ]
+        },
+        "sources": {
+          "abs-modalities": {
+            "id": "abs-modalities",
+            "url": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+            "title": {
+              "ar": "المقرر NP-1/2: طرائق التشغيل",
+              "en": "Decision NP-1/2: operating modalities",
+              "es": "Decisión NP-1/2: modalidades de funcionamiento",
+              "fr": "Décision NP-1/2 : modalités de fonctionnement",
+              "ru": "Решение NP-1/2: условия функционирования",
+              "zh": "NP-1/2号决定：运作方式"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "abs-decision2024": {
+            "id": "abs-decision2024",
+            "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+            "title": {
+              "ar": "المقرر NP-5/4: غرفة تبادل المعلومات وتبادل المعلومات (2024)",
+              "en": "Decision NP-5/4: ABS Clearing-House and information-sharing (2024)",
+              "es": "Decisión NP-5/4: Centro de Intercambio de Información sobre APB e intercambio de información (2024)",
+              "fr": "Décision NP-5/4 : Centre d’échange APA et échange d’informations (2024)",
+              "ru": "Решение NP-5/4: Механизм посредничества и обмен информацией (2024)",
+              "zh": "NP-5/4号决定：信息交换所与信息共享（2024年）"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:48.066Z",
+        "updatedAt": "2026-09-11T02:10:48.066Z"
+      },
+      {
+        "id": "rel-cbd-secretariat-publishes-to-abs-clearing-house",
+        "sourceNodeId": "cbd-secretariat",
+        "targetNodeId": "abs-clearing-house",
+        "kind": "publishes_to",
+        "note": "The CBD Secretariat acts as publishing authority for reference records submitted by registered stakeholders, validating them before final publication. This covers reference materials rather than replacing the national authorities who approve national records.",
+        "properties": {
+          "scope": "Validation and publication of stakeholder reference records",
+          "period": "Official stakeholder workflow dated 10 October 2018 and still published at research date",
+          "status": "documented continuing workflow",
+          "sourceRefs": [
+            "abs-stakeholders"
+          ]
+        },
+        "sources": {
+          "abs-stakeholders": {
+            "id": "abs-stakeholders",
+            "url": "https://absch.cbd.int/kb/tags/getting-started/Getting-started-using-the-ABS-Clearing-House-for-Stakeholders/5bbe3a4d64f00600011e20d9",
+            "title": {
+              "ar": "تقديم أصحاب المصلحة للمعلومات ونشر الأمانة لها",
+              "en": "ABSCH stakeholder submission and Secretariat publication",
+              "es": "Presentación por interesados y publicación por la Secretaría",
+              "fr": "Soumission par les parties prenantes et publication par le Secrétariat",
+              "ru": "Подача материалов заинтересованными сторонами и публикация Секретариатом",
+              "zh": "利益攸关方提交与秘书处发布"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:48.066Z",
+        "updatedAt": "2026-09-11T02:10:48.066Z"
+      }
+    ]
+  },
+  {
+    "id": "embl-ebi",
+    "kind": "organization",
+    "countryCode": null,
+    "url": null,
+    "recordDepth": "stub",
+    "title": "EMBL-EBI",
+    "summary": null,
+    "availableLocales": [
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "missingLocales": [],
+    "reviewStatesByLocale": {
+      "ar": "needs_revision",
+      "en": "needs_revision",
+      "es": "needs_revision",
+      "fr": "needs_revision",
+      "ru": "needs_revision",
+      "zh": "needs_revision"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-11T02:10:43.993Z",
+    "recordUpdatedAt": "2026-09-11T02:10:43.993Z",
+    "score": 0,
+    "matchedLocale": null,
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 4,
+      "resolvedSources": 4,
+      "issues": [
+        {
+          "recordId": "embl-ebi",
+          "path": "localizations.ar.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "embl-ebi",
+          "path": "localizations.en.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "embl-ebi",
+          "path": "localizations.es.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "embl-ebi",
+          "path": "localizations.fr.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "embl-ebi",
+          "path": "localizations.ru.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "embl-ebi",
+          "path": "localizations.zh.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "record": {
+      "id": "embl-ebi",
+      "kind": "organization",
+      "countryCode": null,
+      "url": null,
+      "recordDepth": "stub",
+      "sources": {},
+      "createdAt": "2026-05-26T16:46:26.461Z",
+      "updatedAt": "2026-09-11T02:10:43.993Z"
+    },
+    "localizations": {
+      "ar": {
+        "locale": "ar",
+        "title": "EMBL-EBI",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "المعهد الأوروبي للمعلوماتية الحيوية"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.296492+00:00"
+        },
+        "createdAt": "2026-09-04T02:18:32.070Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "en": {
+        "locale": "en",
+        "title": "EMBL-EBI",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.278623+00:00"
+        },
+        "createdAt": "2026-05-26T16:46:26.461Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "es": {
+        "locale": "es",
+        "title": "EMBL-EBI",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Instituto Europeo de Bioinformática"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.296885+00:00"
+        },
+        "createdAt": "2026-09-04T02:18:32.070Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "fr": {
+        "locale": "fr",
+        "title": "EMBL-EBI",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Institut européen de bioinformatique"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.296682+00:00"
+        },
+        "createdAt": "2026-09-04T02:18:32.070Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "ru": {
+        "locale": "ru",
+        "title": "EMBL-EBI",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Европейский институт биоинформатики"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.296772+00:00"
+        },
+        "createdAt": "2026-09-04T02:18:32.070Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "zh": {
+        "locale": "zh",
+        "title": "EMBL-EBI",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "欧洲生物信息学研究所"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.296588+00:00"
+        },
+        "createdAt": "2026-09-04T02:18:32.070Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-embl-ebi-member-of-insdc-members",
+        "sourceNodeId": "embl-ebi",
+        "targetNodeId": "insdc-members",
+        "kind": "member_of",
+        "note": "Institutional member of INSDC; archive operation remains with each member.",
+        "properties": {
+          "sourceRefs": [
+            "src-relationship-insdc"
+          ]
+        },
+        "sources": {
+          "src-relationship-insdc": {
+            "id": "src-relationship-insdc",
+            "url": "https://www.insdc.org/about-insdc/",
+            "title": {
+              "ar": "العضوية وتبادل البيانات في INSDC",
+              "en": "INSDC membership and exchange",
+              "es": "Membresía e intercambio de datos de INSDC",
+              "fr": "Adhésion et échange de données au sein de l’INSDC",
+              "ru": "Членство и обмен данными в INSDC",
+              "zh": "INSDC成员与数据交换"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-09-09T18:33:11.354Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      {
+        "id": "rel-embl-ebi-operates-european-nucleotide-archive",
+        "sourceNodeId": "embl-ebi",
+        "targetNodeId": "ena",
+        "kind": "operates",
+        "note": "EMBL-EBI maintains and operates ENA for nucleotide data submission, archiving and dissemination. Its role is distinct from grant funding and from the scientific advice provided by advisory boards.",
+        "properties": {
+          "scope": "ENA archive and submission/retrieval services",
+          "status": "active; described in 2024 and 2025 updates",
+          "sourceRefs": [
+            "ena-2024"
+          ]
+        },
+        "sources": {
+          "ena-2024": {
+            "id": "ena-2024",
+            "url": "https://academic.oup.com/nar/article/53/D1/D49/7903379",
+            "title": {
+              "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2024",
+              "en": "The European Nucleotide Archive in 2024",
+              "es": "El Archivo Europeo de Nucleótidos en 2024",
+              "fr": "L’Archive européenne des nucléotides en 2024",
+              "ru": "Европейский нуклеотидный архив в 2024 году",
+              "zh": "2024年欧洲核苷酸档案库"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "src-relationship-ena": {
+            "id": "src-relationship-ena",
+            "url": "https://www.insdc.org/about-insdc/",
+            "title": {
+              "ar": "العضوية وتبادل البيانات في INSDC",
+              "en": "INSDC membership and exchange",
+              "es": "Membresía e intercambio de datos de INSDC",
+              "fr": "Adhésion et échange de données au sein de l’INSDC",
+              "ru": "Членство и обмен данными в INSDC",
+              "zh": "INSDC成员与数据交换"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-05-26T16:46:26.461Z",
+        "updatedAt": "2026-09-11T02:10:43.870Z"
+      },
+      {
+        "id": "rel-embl-ebi-operates-mgnify",
+        "sourceNodeId": "embl-ebi",
+        "targetNodeId": "mgnify",
+        "kind": "operates",
+        "note": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-mgnify"
+          ]
+        },
+        "sources": {
+          "src-relationship-mgnify": {
+            "id": "src-relationship-mgnify",
+            "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+            "title": {
+              "ar": "تدفق البيانات في MGnify",
+              "en": "MGnify data flow",
+              "es": "Flujo de datos de MGnify",
+              "fr": "Flux de données de MGnify",
+              "ru": "Поток данных MGnify",
+              "zh": "MGnify数据流程"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-05-26T16:46:26.461Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      {
+        "id": "rel-embl-governs-embl-ebi",
+        "sourceNodeId": "embl",
+        "targetNodeId": "embl-ebi",
+        "kind": "governs",
+        "note": "EMBL-EBI is an institute of EMBL under its leadership and Council authority.",
+        "properties": {
+          "sourceRefs": [
+            "src-relationship-ebi-leadership"
+          ]
+        },
+        "sources": {
+          "src-relationship-ebi-leadership": {
+            "id": "src-relationship-ebi-leadership",
+            "url": "https://www.ebi.ac.uk/about/leadership/",
+            "title": {
+              "ar": "قيادة EMBL-EBI",
+              "en": "EMBL-EBI leadership",
+              "es": "Dirección de EMBL-EBI",
+              "fr": "Direction de l’EMBL-EBI",
+              "ru": "Руководство EMBL-EBI",
+              "zh": "EMBL-EBI领导层"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-09-09T18:32:53.577Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      }
+    ]
+  },
+  {
+    "id": "flanders-marine-institute",
+    "kind": "organization",
+    "countryCode": null,
+    "url": null,
+    "recordDepth": "stub",
+    "title": "Flanders Marine Institute",
+    "summary": null,
+    "availableLocales": [
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "missingLocales": [],
+    "reviewStatesByLocale": {
+      "ar": "needs_revision",
+      "en": "needs_revision",
+      "es": "needs_revision",
+      "fr": "needs_revision",
+      "ru": "needs_revision",
+      "zh": "needs_revision"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-11T02:10:48.959Z",
+    "recordUpdatedAt": "2026-09-11T02:10:48.959Z",
+    "score": 0,
+    "matchedLocale": null,
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 6,
+      "resolvedSources": 6,
+      "issues": [
+        {
+          "recordId": "flanders-marine-institute",
+          "path": "localizations.ar.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "flanders-marine-institute",
+          "path": "localizations.en.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "flanders-marine-institute",
+          "path": "localizations.es.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "flanders-marine-institute",
+          "path": "localizations.fr.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "flanders-marine-institute",
+          "path": "localizations.ru.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "flanders-marine-institute",
+          "path": "localizations.zh.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "record": {
+      "id": "flanders-marine-institute",
+      "kind": "organization",
+      "countryCode": null,
+      "url": null,
+      "recordDepth": "stub",
+      "sources": {},
+      "createdAt": "2026-05-26T16:46:26.459Z",
+      "updatedAt": "2026-09-11T02:10:48.959Z"
+    },
+    "localizations": {
+      "ar": {
+        "locale": "ar",
+        "title": "معهد فلاندرز البحري",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "VLIZ",
+            "Flanders Marine Institute"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.323542+00:00"
+        },
+        "createdAt": "2026-09-04T02:18:47.745Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "en": {
+        "locale": "en",
+        "title": "Flanders Marine Institute",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.280628+00:00"
+        },
+        "createdAt": "2026-05-26T16:46:26.459Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "es": {
+        "locale": "es",
+        "title": "Instituto Marino de Flandes",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "VLIZ",
+            "Flanders Marine Institute"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.324183+00:00"
+        },
+        "createdAt": "2026-09-04T02:18:47.745Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "fr": {
+        "locale": "fr",
+        "title": "Institut marin flamand",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "VLIZ",
+            "Flanders Marine Institute"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.323798+00:00"
+        },
+        "createdAt": "2026-09-04T02:18:47.745Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "ru": {
+        "locale": "ru",
+        "title": "Фландрский морской институт",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "VLIZ",
+            "Flanders Marine Institute"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.324061+00:00"
+        },
+        "createdAt": "2026-09-04T02:18:47.745Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "zh": {
+        "locale": "zh",
+        "title": "佛兰德海洋研究所",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "VLIZ",
+            "Flanders Marine Institute"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.323694+00:00"
+        },
+        "createdAt": "2026-09-04T02:18:47.745Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-flanders-marine-institute-operates-emodnet-biology",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "emodnet-biology",
+        "kind": "operates",
+        "note": "VLIZ operates technical infrastructure and data management.",
+        "properties": {
+          "scope": "Technical infrastructure; scientific contributors retain their own roles",
+          "sourceRefs": [
+            "src-relationship-emodnet-biology"
+          ]
+        },
+        "sources": {
+          "src-relationship-emodnet-biology": {
+            "id": "src-relationship-emodnet-biology",
+            "url": "https://emodnet.ec.europa.eu/en/biology",
+            "title": {
+              "ar": "EMODnet: علم الأحياء",
+              "en": "EMODnet Biology",
+              "es": "Biología de EMODnet",
+              "fr": "Biologie d’EMODnet",
+              "ru": "Биология EMODnet",
+              "zh": "EMODnet生物学"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-09-09T18:32:51.118Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      {
+        "id": "rel-flanders-marine-institute-operates-eurobis",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "eurobis",
+        "kind": "operates",
+        "note": "VLIZ operates technical infrastructure and data management.",
+        "properties": {
+          "scope": "Technical infrastructure; scientific contributors retain their own roles",
+          "sourceRefs": [
+            "src-relationship-eurobis"
+          ]
+        },
+        "sources": {
+          "src-relationship-eurobis": {
+            "id": "src-relationship-eurobis",
+            "url": "https://www.eurobis.org/about",
+            "title": {
+              "ar": "حول EurOBIS",
+              "en": "About EurOBIS",
+              "es": "Acerca de EurOBIS",
+              "fr": "À propos de EurOBIS",
+              "ru": "О EurOBIS",
+              "zh": "关于EurOBIS"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-09-09T18:32:55.725Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      {
+        "id": "rel-flanders-marine-institute-operates-marine-regions",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "marine-regions",
+        "kind": "operates",
+        "note": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-marine-regions"
+          ]
+        },
+        "sources": {
+          "src-relationship-marine-regions": {
+            "id": "src-relationship-marine-regions",
+            "url": "https://www.marineregions.org/about.php",
+            "title": {
+              "ar": "حول Marine Regions",
+              "en": "About Marine Regions",
+              "es": "Acerca de Marine Regions",
+              "fr": "À propos de Marine Regions",
+              "ru": "О Marine Regions",
+              "zh": "关于Marine Regions"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-05-26T16:46:26.460Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      {
+        "id": "rel-flanders-marine-institute-operates-molluscabase",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "molluscabase",
+        "kind": "operates",
+        "note": "VLIZ operates technical infrastructure and data management.",
+        "properties": {
+          "scope": "Technical infrastructure; scientific contributors retain their own roles",
+          "sourceRefs": [
+            "src-relationship-molluscabase"
+          ]
+        },
+        "sources": {
+          "src-relationship-molluscabase": {
+            "id": "src-relationship-molluscabase",
+            "url": "https://molluscabase.org/about.php",
+            "title": {
+              "ar": "حول MolluscaBase",
+              "en": "About MolluscaBase",
+              "es": "Acerca de MolluscaBase",
+              "fr": "À propos de MolluscaBase",
+              "ru": "О MolluscaBase",
+              "zh": "关于MolluscaBase"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-09-09T18:33:16.584Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      {
+        "id": "rel-flanders-marine-institute-operates-world-register-of-marine-species",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "worms",
+        "kind": "operates",
+        "note": "VLIZ appoints the WoRMS Data Management Team to run the database, maintain online publishing, preserve identifiers, support editors and manage approved exports. The public terms of reference are dated 2015-05-08 and the current About page continues to identify VLIZ as the operational host.",
+        "properties": {
+          "scope": "Technical and scientific data management, hosting and publication support",
+          "period": "2015 terms of reference, reconfirmed by current About page",
+          "status": "current role documented",
+          "sourceRefs": [
+            "src-relationship-worms",
+            "src-worms-about"
+          ]
+        },
+        "sources": {
+          "src-worms-about": {
+            "id": "src-worms-about",
+            "url": "https://www.marinespecies.org/about.php",
+            "title": {
+              "ar": "حول WoRMS",
+              "en": "WoRMS About",
+              "es": "Acerca de WoRMS",
+              "fr": "À propos de WoRMS",
+              "ru": "О WoRMS",
+              "zh": "关于WoRMS"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "src-relationship-worms": {
+            "id": "src-relationship-worms",
+            "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+            "title": {
+              "ar": "اختصاصات WoRMS",
+              "en": "WoRMS terms of reference",
+              "es": "Términos de referencia de WoRMS",
+              "fr": "Mandat de WoRMS",
+              "ru": "Положение о деятельности WoRMS",
+              "zh": "WoRMS职权范围"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-05-26T16:46:26.459Z",
+        "updatedAt": "2026-09-11T02:10:42.758Z"
+      }
+    ]
+  },
+  {
+    "id": "global-fishing-watch-operator",
+    "kind": "organization",
+    "countryCode": null,
+    "url": "https://globalfishingwatch.org/",
+    "recordDepth": "stub",
+    "title": "Global Fishing Watch, Inc.",
+    "summary": "Independent nonprofit that owns and operates the Global Fishing Watch platform and participates in fisheries-transparency partnerships.",
+    "availableLocales": [
+      "en"
+    ],
+    "missingLocales": [
+      "ar",
+      "zh",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "reviewStatesByLocale": {
+      "en": "agent_researched"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-11T02:10:47.124Z",
+    "recordUpdatedAt": "2026-09-11T02:10:47.124Z",
+    "score": 0,
+    "matchedLocale": null,
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 15,
+      "resolvedSources": 15,
+      "issues": []
+    },
+    "record": {
+      "id": "global-fishing-watch-operator",
+      "kind": "organization",
+      "countryCode": null,
+      "url": "https://globalfishingwatch.org/",
+      "recordDepth": "stub",
+      "sources": {
+        "jac": {
+          "id": "jac",
+          "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+          "title": {
+            "ar": "الخلية التحليلية المشتركة",
+            "en": "Joint Analytical Cell",
+            "es": "Célula Analítica Conjunta",
+            "fr": "Cellule analytique conjointe",
+            "ru": "Совместная аналитическая группа",
+            "zh": "联合分析小组"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "terms": {
+          "id": "terms",
+          "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+          "title": {
+            "ar": "ترخيص API وحدودها",
+            "en": "API licence and limits",
+            "es": "Licencia y límites API",
+            "fr": "Licence et limites API",
+            "ru": "Лицензия и ограничения API",
+            "zh": "API许可与限额"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "ar": "التقرير السنوي 2025",
+            "en": "Annual report 2025",
+            "es": "Informe anual 2025",
+            "fr": "Rapport annuel 2025",
+            "ru": "Годовой отчёт 2025",
+            "zh": "2025年年度报告"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "coalition": {
+          "id": "coalition",
+          "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+          "title": {
+            "ar": "التزامات شفافية المحيطات، 18 يونيو 2026",
+            "en": "Ocean transparency commitments, 18 June 2026",
+            "es": "Compromisos de transparencia oceánica, 18 junio 2026",
+            "fr": "Engagements de transparence océanique, 18 juin 2026",
+            "ru": "Обязательства по прозрачности океана, 18 июня 2026",
+            "zh": "海洋透明度承诺，2026年6月18日"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "createdAt": "2026-09-11T02:08:08.322Z",
+      "updatedAt": "2026-09-11T02:10:47.124Z"
+    },
+    "localizations": {
+      "en": {
+        "locale": "en",
+        "title": "Global Fishing Watch, Inc.",
+        "summary": "Independent nonprofit that owns and operates the Global Fishing Watch platform and participates in fisheries-transparency partnerships.",
+        "description": "Independent nonprofit that owns and operates the Global Fishing Watch platform and participates in fisheries-transparency partnerships.",
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "GFW"
+          ],
+          "gallery": [],
+          "metrics": [],
+          "profile": {
+            "sourceRefs": [
+              "terms",
+              "annual",
+              "coalition",
+              "jac"
+            ]
+          }
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-11T02:08:08.322Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:08.322666+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:08.322Z",
+        "updatedAt": "2026-09-11T02:10:39.027Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-audacious-project-funds-global-fishing-watch-operator",
+        "sourceNodeId": "audacious-project",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "USD 60 million commitment via the Audacious Project, described by GFW as five-year support for 2023–2028, for mapping human activity and scaling ocean governance. This is a commitment, not USD 60 million disbursed in 2025.",
+        "properties": {
+          "scope": "2023–2028 commitment supporting GFW strategy",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:39.027Z",
+        "updatedAt": "2026-09-11T02:10:39.027Z"
+      },
+      {
+        "id": "rel-global-fishing-watch-operator-governs-global-fishing-watch",
+        "sourceNodeId": "global-fishing-watch-operator",
+        "targetNodeId": "global-fishing-watch",
+        "kind": "governs",
+        "note": "GFW Inc. sets service access, licensing and account policies, and reserves service modification and access-revocation authority. This concerns platform policy, not authority over fishing activity or maritime jurisdictions.",
+        "properties": {
+          "scope": "Formal authority over platform terms, access and service policies",
+          "status": "current published terms",
+          "sourceRefs": [
+            "terms"
+          ]
+        },
+        "sources": {
+          "terms": {
+            "id": "terms",
+            "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+            "title": {
+              "ar": "ترخيص API وحدودها",
+              "en": "API licence and limits",
+              "es": "Licencia y límites API",
+              "fr": "Licence et limites API",
+              "ru": "Лицензия и ограничения API",
+              "zh": "API许可与限额"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:46.987Z",
+        "updatedAt": "2026-09-11T02:10:46.987Z"
+      },
+      {
+        "id": "rel-global-fishing-watch-operator-member-of-coalition-for-fisheries-transparency",
+        "sourceNodeId": "global-fishing-watch-operator",
+        "targetNodeId": "coalition-for-fisheries-transparency",
+        "kind": "member_of",
+        "note": "GFW identifies itself as a member of the coalition. This is organizational participation, not system hierarchy or unilateral governance.",
+        "properties": {
+          "scope": "Organizational participation in fisheries transparency",
+          "status": "documented June 2026",
+          "sourceRefs": [
+            "coalition"
+          ]
+        },
+        "sources": {
+          "coalition": {
+            "id": "coalition",
+            "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+            "title": {
+              "ar": "التزامات شفافية المحيطات، 18 يونيو 2026",
+              "en": "Ocean transparency commitments, 18 June 2026",
+              "es": "Compromisos de transparencia oceánica, 18 junio 2026",
+              "fr": "Engagements de transparence océanique, 18 juin 2026",
+              "ru": "Обязательства по прозрачности океана, 18 июня 2026",
+              "zh": "海洋透明度承诺，2026年6月18日"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:39.027Z",
+        "updatedAt": "2026-09-11T02:10:39.027Z"
+      },
+      {
+        "id": "rel-global-fishing-watch-operator-member-of-joint-analytical-cell",
+        "sourceNodeId": "global-fishing-watch-operator",
+        "targetNodeId": "joint-analytical-cell",
+        "kind": "member_of",
+        "note": "The official JAC page lists GFW among its members. Membership does not assign authority over every member or transfer confidential operational data to the public map.",
+        "properties": {
+          "scope": "Participation in the Joint Analytical Cell",
+          "status": "listed on current official page",
+          "sourceRefs": [
+            "jac"
+          ]
+        },
+        "sources": {
+          "jac": {
+            "id": "jac",
+            "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+            "title": {
+              "ar": "الخلية التحليلية المشتركة",
+              "en": "Joint Analytical Cell",
+              "es": "Célula Analítica Conjunta",
+              "fr": "Cellule analytique conjointe",
+              "ru": "Совместная аналитическая группа",
+              "zh": "联合分析小组"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:39.027Z",
+        "updatedAt": "2026-09-11T02:10:39.027Z"
+      },
+      {
+        "id": "rel-global-fishing-watch-operator-operates-global-fishing-watch",
+        "sourceNodeId": "global-fishing-watch-operator",
+        "targetNodeId": "global-fishing-watch",
+        "kind": "operates",
+        "note": "GFW Inc. states that it owns and operates its data products and associated services.",
+        "properties": {
+          "scope": "Ownership and daily operation of the GFW platform and APIs",
+          "status": "current published terms",
+          "sourceRefs": [
+            "terms"
+          ]
+        },
+        "sources": {
+          "terms": {
+            "id": "terms",
+            "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+            "title": {
+              "ar": "ترخيص API وحدودها",
+              "en": "API licence and limits",
+              "es": "Licencia y límites API",
+              "fr": "Licence et limites API",
+              "ru": "Лицензия и ограничения API",
+              "zh": "API许可与限额"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:46.987Z",
+        "updatedAt": "2026-09-11T02:10:46.987Z"
+      },
+      {
+        "id": "rel-hans-wilsdorf-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "hans-wilsdorf-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "Three-year USD 5.1 million partnership secured in 2025, supporting marine-protection and fisheries work in West/Central Africa, the Mediterranean and the Pacific. Exact start/end dates are unstated.",
+        "properties": {
+          "scope": "Three-year regional program partnership reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:39.027Z",
+        "updatedAt": "2026-09-11T02:10:39.027Z"
+      },
+      {
+        "id": "rel-islas-secas-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "islas-secas-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "Renewed funding for Panama marine-protected-area enforcement reported in 2025; amount and exact dates are unstated.",
+        "properties": {
+          "scope": "Panama program support reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:39.027Z",
+        "updatedAt": "2026-09-11T02:10:39.027Z"
+      },
+      {
+        "id": "rel-minderoo-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "minderoo-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "One-year USD 200,000 extension reported in 2025 for reliable models and risk assessment related to forced labour and illegal fishing.",
+        "properties": {
+          "scope": "One-year model and risk-assessment support reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:39.027Z",
+        "updatedAt": "2026-09-11T02:10:39.027Z"
+      },
+      {
+        "id": "rel-oceana-funds-global-fishing-watch-operator",
+        "sourceNodeId": "oceana",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "USD 115,000 subgrant at the end of 2025 for Coalition for Fisheries Transparency work supporting the Global Charter for Fisheries Transparency. Founding collaboration does not establish current governance.",
+        "properties": {
+          "scope": "Coalition transparency work, subgrant reported in late 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:39.027Z",
+        "updatedAt": "2026-09-11T02:10:39.027Z"
+      },
+      {
+        "id": "rel-sall-family-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "sall-family-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "One-year USD 150,000 unrestricted grant reported in 2025.",
+        "properties": {
+          "scope": "One-year unrestricted organizational support reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:39.027Z",
+        "updatedAt": "2026-09-11T02:10:39.027Z"
+      },
+      {
+        "id": "rel-walmart-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "walmart-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "Two-year USD 450,000 grant renewed in 2025 for industry Vessel Viewer training and integration with partner platforms. Not assigned in full to generic database operations.",
+        "properties": {
+          "scope": "Vessel Viewer training and partner integrations",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:39.027Z",
+        "updatedAt": "2026-09-11T02:10:39.027Z"
+      }
+    ]
+  },
+  {
+    "id": "international-seabed-authority",
+    "kind": "organization",
+    "countryCode": null,
+    "url": "https://isa.org.jm/",
+    "recordDepth": "stub",
+    "title": "International Seabed Authority",
+    "summary": "Intergovernmental organization responsible for mineral resources of the seabed beyond national jurisdiction and operator of DeepData.",
+    "availableLocales": [
+      "en"
+    ],
+    "missingLocales": [
+      "ar",
+      "zh",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "reviewStatesByLocale": {
+      "en": "agent_researched"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-11T02:10:49.921Z",
+    "recordUpdatedAt": "2026-09-11T02:10:49.921Z",
+    "score": 0,
+    "matchedLocale": null,
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 11,
+      "resolvedSources": 11,
+      "issues": []
+    },
+    "record": {
+      "id": "international-seabed-authority",
+      "kind": "organization",
+      "countryCode": null,
+      "url": "https://isa.org.jm/",
+      "recordDepth": "stub",
+      "sources": {
+        "about": {
+          "id": "about",
+          "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+          "title": {
+            "ar": "حول DeepData",
+            "en": "About DeepData",
+            "es": "Acerca de DeepData",
+            "fr": "À propos de DeepData",
+            "ru": "О DeepData",
+            "zh": "关于DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-news": {
+          "id": "odis-news",
+          "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+          "title": {
+            "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+            "en": "DeepData joins ODIS, 6 May 2025",
+            "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+            "fr": "DeepData rejoint ODIS, 6 mai 2025",
+            "ru": "DeepData присоединяется к ODIS, 6 мая 2025",
+            "zh": "DeepData于2025年5月6日加入ODIS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "createdAt": "2026-09-11T02:07:58.925Z",
+      "updatedAt": "2026-09-11T02:10:49.921Z"
+    },
+    "localizations": {
+      "en": {
+        "locale": "en",
+        "title": "International Seabed Authority",
+        "summary": "Intergovernmental organization responsible for mineral resources of the seabed beyond national jurisdiction and operator of DeepData.",
+        "description": "ISA is an autonomous intergovernmental organization established under the United Nations Convention on the Law of the Sea. Its DeepData responsibilities include contractor data reporting, database policy and Secretariat operation. This does not assert jurisdiction over all ocean activities or the entire water column.",
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "ISA"
+          ],
+          "gallery": [],
+          "metrics": [],
+          "profile": {
+            "sourceRefs": [
+              "about",
+              "odis-news"
+            ]
+          }
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-11T02:07:58.925Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:07:58.925264+00:00"
+        },
+        "createdAt": "2026-09-11T02:07:58.925Z",
+        "updatedAt": "2026-09-11T02:10:38.409Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-international-seabed-authority-funds-deepdata",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "deepdata",
+        "kind": "funds",
+        "note": "ISA’s July 2023 account identifies DeepData, launched in 2019, as its first database allocated dedicated programmatic funding by ISA Members. This establishes ISA programme funding; no specific member contribution, current annual amount or future mining revenue is inferred.",
+        "properties": {
+          "scope": "Dedicated ISA programme funding for DeepData",
+          "status": "historical funding documented July 2023; current amount not established",
+          "sourceRefs": [
+            "factcheck"
+          ]
+        },
+        "sources": {
+          "factcheck": {
+            "id": "factcheck",
+            "url": "https://isa.org.jm/isa-fact-check-2023-1/",
+            "title": {
+              "ar": "توضيح بيانات DeepData وتمويلها، يوليو 2023",
+              "en": "ISA explanation of DeepData holdings and funding, July 2023",
+              "es": "Explicación de fondos y financiación DeepData, julio de 2023",
+              "fr": "Explication des fonds et du financement DeepData, juillet 2023",
+              "ru": "Разъяснение о данных и финансировании DeepData, июль 2023",
+              "zh": "2023年7月ISA对DeepData馆藏与经费的说明"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:44.894Z",
+        "updatedAt": "2026-09-11T02:10:44.894Z"
+      },
+      {
+        "id": "rel-international-seabed-authority-governs-deepdata",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "deepdata",
+        "kind": "governs",
+        "note": "ISA controls DeepData data policy and access classification under its exploration framework. Reporting templates and confidentiality rules distinguish public environmental data from confidential mineral-resource information; the Legal and Technical Commission supplies reporting guidance. This edge concerns authority over this database, not authority over all ocean science or the water column.",
+        "properties": {
+          "scope": "ISA database policy, contractor reporting requirements and confidentiality classification",
+          "status": "documented institutional authority; current templates linked in 2026",
+          "sourceRefs": [
+            "about",
+            "templates"
+          ]
+        },
+        "sources": {
+          "about": {
+            "id": "about",
+            "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+            "title": {
+              "ar": "حول DeepData",
+              "en": "About DeepData",
+              "es": "Acerca de DeepData",
+              "fr": "À propos de DeepData",
+              "ru": "О DeepData",
+              "zh": "关于DeepData"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "templates": {
+            "id": "templates",
+            "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+            "title": {
+              "ar": "نماذج تقارير DeepData",
+              "en": "DeepData reporting templates",
+              "es": "Plantillas de informes DeepData",
+              "fr": "Modèles de déclaration DeepData",
+              "ru": "Шаблоны отчётности DeepData",
+              "zh": "DeepData报告模板"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:44.894Z",
+        "updatedAt": "2026-09-11T02:10:44.894Z"
+      },
+      {
+        "id": "rel-international-seabed-authority-operates-deepdata",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "deepdata",
+        "kind": "operates",
+        "note": "ISA’s Secretariat Data Manager receives contractor submissions, manages validation and ingestion, maintains spatial data and administers the DeepData website. The operational workflow is documented in sections 6–6.2 of the linked manual.",
+        "properties": {
+          "scope": "DeepData ingestion, quality control, data maintenance and website administration",
+          "status": "current ISA service; manual workflow documented in 2018",
+          "sourceRefs": [
+            "manual",
+            "about"
+          ]
+        },
+        "sources": {
+          "about": {
+            "id": "about",
+            "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+            "title": {
+              "ar": "حول DeepData",
+              "en": "About DeepData",
+              "es": "Acerca de DeepData",
+              "fr": "À propos de DeepData",
+              "ru": "О DeepData",
+              "zh": "关于DeepData"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "manual": {
+            "id": "manual",
+            "url": "https://www.isa.org.jm/wp-content/uploads/2022/04/UserManual_v1.1_20181119.pdf",
+            "title": {
+              "ar": "دليل DeepData الإصدار 1.1 (2018)",
+              "en": "DeepData user manual, version 1.1 (2018)",
+              "es": "Manual de DeepData, versión 1.1 (2018)",
+              "fr": "Manuel DeepData, version 1.1 (2018)",
+              "ru": "Руководство DeepData, версия 1.1 (2018)",
+              "zh": "DeepData用户手册1.1版（2018）"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:44.894Z",
+        "updatedAt": "2026-09-11T02:10:44.894Z"
+      },
+      {
+        "id": "rel-international-seabed-authority-publishes-to-odis",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "odis",
+        "kind": "publishes_to",
+        "note": "ISA announced the integration of its DeepData database with ODIS on 6 May 2025 to expose environmental and scientific information submitted by exploration contractors. A current ODIS demo JSON record shows the resulting provider-attributed metadata and an ISA download link. This is ISA’s mediated publication through DeepData, not direct publishing by every contractor or transfer of ownership to ODIS.",
+        "properties": {
+          "via": "deepdata",
+          "scope": "ISA environmental and scientific metadata supplied through DeepData",
+          "status": "announced 2025-05-06; downstream demo presence verified 2026-09-10",
+          "sourceRefs": [
+            "isa-integration",
+            "demo-deepdata"
+          ]
+        },
+        "sources": {
+          "demo-deepdata": {
+            "id": "demo-deepdata",
+            "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+            "title": {
+              "ar": "سجل JSON في عرض ODIS لبيانات DeepData الوصفية عن CTD",
+              "en": "ODIS demo JSON record for DeepData CTD metadata",
+              "es": "Registro JSON de demostración ODIS con metadatos CTD de DeepData",
+              "fr": "Notice JSON de démonstration ODIS pour les métadonnées CTD DeepData",
+              "ru": "JSON-запись демонстрационного поиска ODIS с метаданными CTD DeepData",
+              "zh": "ODIS演示中的DeepData CTD元数据JSON记录"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "isa-integration": {
+            "id": "isa-integration",
+            "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+            "title": {
+              "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+              "en": "DeepData joins ODIS, 6 May 2025",
+              "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+              "fr": "DeepData rejoint ODIS, 6 mai 2025",
+              "ru": "DeepData присоединяется к ODIS, 6 мая 2025",
+              "zh": "DeepData于2025年5月6日加入ODIS"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:49.774Z",
+        "updatedAt": "2026-09-11T02:10:49.774Z"
+      },
+      {
+        "id": "rel-international-seabed-authority-publishes-to-platform-obis",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "platform-obis",
+        "kind": "publishes_to",
+        "note": "ISA supplies publicly indexed environmental biodiversity datasets through the OBIS ISA thematic node. Node metadata identifies ISA and DeepData; underlying contractor data ownership is not transferred to OBIS. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
+        "properties": {
+          "via": "OBIS ISA",
+          "scope": "ISA-node publication of the public DeepData biological subset",
+          "status": "published node datasets",
+          "sourceRefs": [
+            "evidence",
+            "archive"
+          ]
+        },
+        "sources": {
+          "archive": {
+            "id": "archive",
+            "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+            "title": {
+              "ar": "أرشيف NORI البيولوجي 2022: بيانات EML ووصف الأرشيف",
+              "en": "NORI 2022 biological archive: EML and archive metadata",
+              "es": "Archivo biológico NORI 2022: EML y metadatos",
+              "fr": "Archive biologique NORI 2022 : EML et métadonnées",
+              "ru": "Биологический архив NORI 2022: EML и метаданные",
+              "zh": "NORI 2022生物档案：EML和档案元数据"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "evidence": {
+            "id": "evidence",
+            "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+            "title": {
+              "ar": "عقدة OBIS ISA ومصدر DeepData",
+              "en": "OBIS ISA node and DeepData source",
+              "es": "Nodo OBIS ISA y fuente DeepData",
+              "fr": "Nœud OBIS ISA et source DeepData",
+              "ru": "Узел OBIS ISA и источник DeepData",
+              "zh": "OBIS ISA节点与DeepData来源"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:38.409Z",
+        "updatedAt": "2026-09-11T02:10:41.496Z"
+      }
+    ]
+  },
+  {
+    "id": "ioc-unesco-iode",
+    "kind": "organization",
+    "countryCode": null,
+    "url": null,
+    "recordDepth": "stub",
+    "title": "IOC-UNESCO IODE",
+    "summary": null,
+    "availableLocales": [
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "missingLocales": [],
+    "reviewStatesByLocale": {
+      "ar": "needs_revision",
+      "en": "needs_revision",
+      "es": "needs_revision",
+      "fr": "needs_revision",
+      "ru": "needs_revision",
+      "zh": "needs_revision"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-11T02:10:49.887Z",
+    "recordUpdatedAt": "2026-09-11T02:10:49.887Z",
+    "score": 0,
+    "matchedLocale": null,
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 7,
+      "resolvedSources": 7,
+      "issues": [
+        {
+          "recordId": "ioc-unesco-iode",
+          "path": "localizations.ar.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "ioc-unesco-iode",
+          "path": "localizations.en.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "ioc-unesco-iode",
+          "path": "localizations.es.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "ioc-unesco-iode",
+          "path": "localizations.fr.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "ioc-unesco-iode",
+          "path": "localizations.ru.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "ioc-unesco-iode",
+          "path": "localizations.zh.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "record": {
+      "id": "ioc-unesco-iode",
+      "kind": "organization",
+      "countryCode": null,
+      "url": null,
+      "recordDepth": "stub",
+      "sources": {},
+      "createdAt": "2026-05-26T16:46:26.458Z",
+      "updatedAt": "2026-09-11T02:10:49.887Z"
+    },
+    "localizations": {
+      "ar": {
+        "locale": "ar",
+        "title": "IOC-UNESCO IODE",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "اللجنة الدولية الحكومية لعلوم المحيطات التابعة لليونسكو - تبادل البيانات والمعلومات الأوقيانوغرافية الدولي"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.331447+00:00"
+        },
+        "createdAt": "2026-09-04T02:19:03.928Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "en": {
+        "locale": "en",
+        "title": "IOC-UNESCO IODE",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.279693+00:00"
+        },
+        "createdAt": "2026-05-26T16:46:26.458Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "es": {
+        "locale": "es",
+        "title": "IOC-UNESCO IODE",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Comisión Oceanográfica Intergubernamental de la UNESCO - Intercambio Internacional de Datos e Información Oceanográficos"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.331964+00:00"
+        },
+        "createdAt": "2026-09-04T02:19:03.928Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "fr": {
+        "locale": "fr",
+        "title": "IOC-UNESCO IODE",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Commission océanographique intergouvernementale de l'UNESCO - Échange international des données et de l'information océanographiques"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.331668+00:00"
+        },
+        "createdAt": "2026-09-04T02:19:03.928Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "ru": {
+        "locale": "ru",
+        "title": "IOC-UNESCO IODE",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Межправительственная океанографическая комиссия ЮНЕСКО - Международный обмен океанографическими данными и информацией"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.331826+00:00"
+        },
+        "createdAt": "2026-09-04T02:19:03.928Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "zh": {
+        "locale": "zh",
+        "title": "IOC-UNESCO IODE",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "联合国教科文组织政府间海洋学委员会国际海洋数据和信息交换"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.331549+00:00"
+        },
+        "createdAt": "2026-09-04T02:19:03.928Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-ioc-assembly-governs-ioc-unesco-iode",
+        "sourceNodeId": "ioc-assembly",
+        "targetNodeId": "ioc-unesco-iode",
+        "kind": "governs",
+        "note": "IODE recommendations are submitted to the IOC Assembly for adoption.",
+        "properties": {
+          "sourceRefs": [
+            "src-relationship-platform-obis"
+          ]
+        },
+        "sources": {
+          "src-relationship-platform-obis": {
+            "id": "src-relationship-platform-obis",
+            "url": "https://obis.org/about/governance/",
+            "title": {
+              "ar": "حوكمة OBIS",
+              "en": "OBIS governance",
+              "es": "Gobernanza de OBIS",
+              "fr": "Gouvernance d’OBIS",
+              "ru": "Управление OBIS",
+              "zh": "OBIS治理"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-09-09T18:33:22.539Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      },
+      {
+        "id": "rel-ioc-unesco-iode-operates-ocean-biodiversity-information-system",
+        "sourceNodeId": "ioc-unesco-iode",
+        "targetNodeId": "platform-obis",
+        "kind": "operates",
+        "note": "The OBIS Secretariat is hosted at the UNESCO/IOC project office for IODE. Its project manager and data manager operate the central portal and coordinate the independently operated node network; this is not exclusive operation of every contributing node.",
+        "properties": {
+          "scope": "OBIS central Secretariat, portal operation and network coordination",
+          "status": "active documented responsibility",
+          "sourceRefs": [
+            "src-relationship-platform-obis"
+          ]
+        },
+        "sources": {
+          "src-relationship-platform-obis": {
+            "id": "src-relationship-platform-obis",
+            "url": "https://obis.org/about/governance/",
+            "title": {
+              "ar": "حوكمة OBIS",
+              "en": "OBIS governance",
+              "es": "Gobernanza de OBIS",
+              "fr": "Gouvernance d’OBIS",
+              "ru": "Управление OBIS",
+              "zh": "OBIS治理"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-05-26T16:46:26.458Z",
+        "updatedAt": "2026-09-11T02:10:41.496Z"
+      },
+      {
+        "id": "rel-ioc-unesco-iode-operates-ocean-data-and-information-system",
+        "sourceNodeId": "ioc-unesco-iode",
+        "targetNodeId": "odis",
+        "kind": "operates",
+        "note": "IODE coordinates ODIS programme operations and light node curation under IOC-UNESCO. Its catalogue is a product of the UNESCO/IOC Project Office for IODE. Independent participating systems retain their own governance and holdings; operation of ODIS does not transfer that authority.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "status": "current programme operation documented on official ODIS and IODE pages",
+          "sourceRefs": [
+            "src-relationship-odis",
+            "overview",
+            "join",
+            "disclaimer"
+          ]
+        },
+        "sources": {
+          "join": {
+            "id": "join",
+            "url": "https://book.odis.org/gettingStarted.html",
+            "title": {
+              "ar": "اتحاد ODIS: التسجيل ونشر البيانات الوصفية والوصول",
+              "en": "ODIS federation: registration, metadata publication and access",
+              "es": "Federación ODIS: registro, publicación de metadatos y acceso",
+              "fr": "Fédération ODIS : inscription, publication de métadonnées et accès",
+              "ru": "Федерация ODIS: регистрация, публикация метаданных и доступ",
+              "zh": "ODIS联邦：注册、元数据发布与访问"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "overview": {
+            "id": "overview",
+            "url": "https://odis.org/overview/",
+            "title": {
+              "ar": "نظرة عامة على ODIS واتحاده وتاريخه المؤسسي",
+              "en": "ODIS overview, federation and institutional history",
+              "es": "Panorama, federación e historia institucional de ODIS",
+              "fr": "Présentation, fédération et histoire institutionnelle d’ODIS",
+              "ru": "Обзор, федерация и институциональная история ODIS",
+              "zh": "ODIS概况、联邦与机构沿革"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "disclaimer": {
+            "id": "disclaimer",
+            "url": "https://catalogue.odis.org/disclaimer",
+            "title": {
+              "ar": "إخلاء المسؤولية والترخيص في كتالوج ODIS",
+              "en": "ODIS Catalogue disclaimer and licence footer",
+              "es": "Aviso legal y licencia del catálogo ODIS",
+              "fr": "Avertissement et licence du catalogue ODIS",
+              "ru": "Отказ от гарантий и лицензия каталога ODIS",
+              "zh": "ODIS目录免责声明与页脚许可"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "src-relationship-odis": {
+            "id": "src-relationship-odis",
+            "url": "https://oceaninfohub.org/odis/",
+            "title": {
+              "ar": "نظام بيانات ومعلومات المحيطات",
+              "en": "Ocean Data and Information System",
+              "es": "Sistema de Datos e Información Oceánicos",
+              "fr": "Système de données et d’informations océaniques",
+              "ru": "Система океанических данных и информации",
+              "zh": "海洋数据与信息系统"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-05-26T16:46:26.464Z",
+        "updatedAt": "2026-09-11T02:10:49.774Z"
+      },
+      {
+        "id": "rel-ioc-unesco-iode-operates-ocean-infohub",
+        "sourceNodeId": "ioc-unesco-iode",
+        "targetNodeId": "oceaninfohub",
+        "kind": "operates",
+        "note": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-oceaninfohub"
+          ]
+        },
+        "sources": {
+          "src-relationship-oceaninfohub": {
+            "id": "src-relationship-oceaninfohub",
+            "url": "https://oceaninfohub.org/project-overview/",
+            "title": {
+              "ar": "نظرة عامة على مشروع Ocean InfoHub",
+              "en": "Ocean InfoHub project overview",
+              "es": "Descripción general del proyecto Ocean InfoHub",
+              "fr": "Présentation du projet Ocean InfoHub",
+              "ru": "Обзор проекта Ocean InfoHub",
+              "zh": "Ocean InfoHub项目概览"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-05-26T16:46:26.464Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      }
+    ]
+  },
+  {
+    "id": "q-quatics",
+    "kind": "organization",
+    "countryCode": null,
+    "url": null,
+    "recordDepth": "stub",
+    "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+    "summary": null,
+    "availableLocales": [
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "missingLocales": [],
+    "reviewStatesByLocale": {
+      "ar": "needs_revision",
+      "en": "needs_revision",
+      "es": "needs_revision",
+      "fr": "needs_revision",
+      "ru": "needs_revision",
+      "zh": "needs_revision"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-11T02:10:40.182Z",
+    "recordUpdatedAt": "2026-09-11T02:10:40.182Z",
+    "score": 0,
+    "matchedLocale": null,
+    "sourceCompleteness": {
+      "status": "partial",
+      "referencedSources": 3,
+      "resolvedSources": 3,
+      "issues": [
+        {
+          "recordId": "q-quatics",
+          "path": "localizations.ar.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "q-quatics",
+          "path": "localizations.en.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "q-quatics",
+          "path": "localizations.es.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "q-quatics",
+          "path": "localizations.fr.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "q-quatics",
+          "path": "localizations.ru.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        },
+        {
+          "recordId": "q-quatics",
+          "path": "localizations.zh.details.profile.sourceRefs",
+          "message": "profile source references are required"
+        }
+      ]
+    },
+    "record": {
+      "id": "q-quatics",
+      "kind": "organization",
+      "countryCode": null,
+      "url": null,
+      "recordDepth": "stub",
+      "sources": {},
+      "createdAt": "2026-07-21T00:00:00.000Z",
+      "updatedAt": "2026-09-11T02:10:40.182Z"
+    },
+    "localizations": {
+      "ar": {
+        "locale": "ar",
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Q-quatics"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.355626+00:00"
+        },
+        "createdAt": "2026-09-04T02:19:39.353Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "en": {
+        "locale": "en",
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.287112+00:00"
+        },
+        "createdAt": "2026-07-21T00:00:00.000Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "es": {
+        "locale": "es",
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Q-quatics"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.356058+00:00"
+        },
+        "createdAt": "2026-09-04T02:19:39.353Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "fr": {
+        "locale": "fr",
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Q-quatics"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.355856+00:00"
+        },
+        "createdAt": "2026-09-04T02:19:39.353Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "ru": {
+        "locale": "ru",
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Q-quatics"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.355964+00:00"
+        },
+        "createdAt": "2026-09-04T02:19:39.353Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      },
+      "zh": {
+        "locale": "zh",
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": null,
+        "description": null,
+        "details": {
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "aliases": [
+            "Q-quatics"
+          ],
+          "gallery": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T01:58:30.221Z",
+        "review": {
+          "state": "needs_revision",
+          "date": "2026-09-09T18:28:57.355723+00:00"
+        },
+        "createdAt": "2026-09-04T02:19:39.353Z",
+        "updatedAt": "2026-09-11T01:58:30.221Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-q-quatics-member-of-fishbase-consortium",
+        "sourceNodeId": "q-quatics",
+        "targetNodeId": "fishbase-consortium",
+        "kind": "member_of",
+        "note": "Q-quatics is explicitly listed among the current members of the FishBase Consortium on the Q-quatics projects and partners page. Membership does not itself establish governance over FishBase.",
+        "properties": {
+          "scope": "Institutional membership in the FishBase Consortium",
+          "status": "listed current member",
+          "sourceRefs": [
+            "evidence"
+          ]
+        },
+        "sources": {
+          "evidence": {
+            "id": "evidence",
+            "url": "https://www.q-quatics.org/affiliated-projects/",
+            "title": {
+              "ar": "مشروعات Q-quatics وشركاؤها الممولون وعضوية الاتحاد",
+              "en": "Q-quatics projects, funding partners and consortium membership",
+              "es": "Proyectos, socios financiadores y miembros del consorcio de Q-quatics",
+              "fr": "Projets, partenaires financiers et membres du consortium de Q-quatics",
+              "ru": "Проекты, финансовые партнёры и членство в консорциуме Q-quatics",
+              "zh": "Q-quatics项目、资助伙伴与联盟成员"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-10T19:17:32.705Z",
+        "updatedAt": "2026-09-10T19:17:32.705Z"
+      },
+      {
+        "id": "rel-q-quatics-operates-fishbase",
+        "sourceNodeId": "q-quatics",
+        "targetNodeId": "fishbase",
+        "kind": "operates",
+        "note": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "status": "current documented hosting and management",
+          "sourceRefs": [
+            "src-relationship-fishbase"
+          ]
+        },
+        "sources": {
+          "src-relationship-fishbase": {
+            "id": "src-relationship-fishbase",
+            "url": "https://fishbase.se/home.php",
+            "title": {
+              "ar": "الصفحة الرئيسية لـ FishBase",
+              "en": "FishBase homepage",
+              "es": "Página de inicio de FishBase",
+              "fr": "Page d’accueil de FishBase",
+              "ru": "Главная страница FishBase",
+              "zh": "FishBase主页"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-07-21T00:00:00.000Z",
+        "updatedAt": "2026-09-11T02:10:40.036Z"
+      },
+      {
+        "id": "rel-q-quatics-operates-sealifebase",
+        "sourceNodeId": "q-quatics",
+        "targetNodeId": "sealifebase",
+        "kind": "operates",
+        "note": "Q-quatics maintains SeaLifeBase. Embedded AquaMaps maps and MolluscaBase taxonomy do not establish outbound synchronization.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-sealifebase"
+          ]
+        },
+        "sources": {
+          "src-relationship-sealifebase": {
+            "id": "src-relationship-sealifebase",
+            "url": "https://www.sealifebase.ca/home/who_we_are.php",
+            "title": {
+              "ar": "حول SeaLifeBase",
+              "en": "About SeaLifeBase",
+              "es": "Acerca de SeaLifeBase",
+              "fr": "À propos de SeaLifeBase",
+              "ru": "О SeaLifeBase",
+              "zh": "关于SeaLifeBase"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        },
+        "createdAt": "2026-07-22T17:21:46.260Z",
+        "updatedAt": "2026-09-09T19:42:13.505Z"
+      }
+    ]
+  },
+  {
+    "id": "swedish-museum-of-natural-history",
+    "kind": "organization",
+    "countryCode": null,
+    "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+    "recordDepth": "stub",
+    "title": "Swedish Museum of Natural History",
+    "summary": "Natural-history museum and home of FishBase Sweden.",
+    "availableLocales": [
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "missingLocales": [],
+    "reviewStatesByLocale": {
+      "ar": "agent_researched",
+      "en": "agent_researched",
+      "es": "agent_researched",
+      "fr": "agent_researched",
+      "ru": "agent_researched",
+      "zh": "agent_researched"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-11T02:10:40.185Z",
+    "recordUpdatedAt": "2026-09-11T02:10:40.185Z",
+    "score": 0,
+    "matchedLocale": null,
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 4,
+      "resolvedSources": 4,
+      "issues": []
+    },
+    "record": {
+      "id": "swedish-museum-of-natural-history",
+      "kind": "organization",
+      "countryCode": null,
+      "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+      "recordDepth": "stub",
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+          "title": {
+            "ar": "المتحف السويدي للتاريخ الطبيعي",
+            "en": "Swedish Museum of Natural History",
+            "es": "Museo Sueco de Historia Natural",
+            "fr": "Muséum suédois d’histoire naturelle",
+            "ru": "Шведский музей естественной истории",
+            "zh": "瑞典自然历史博物馆"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "createdAt": "2026-09-11T02:07:47.717Z",
+      "updatedAt": "2026-09-11T02:10:40.185Z"
+    },
+    "localizations": {
+      "ar": {
+        "locale": "ar",
+        "title": "المتحف السويدي للتاريخ الطبيعي",
+        "summary": "متحف للتاريخ الطبيعي يستضيف FishBase السويد.",
+        "description": "متحف للتاريخ الطبيعي يستضيف FishBase السويد.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:07:47.717Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:07:47.717491+00:00"
+        },
+        "createdAt": "2026-09-11T02:07:47.717Z",
+        "updatedAt": "2026-09-11T02:07:47.717Z"
+      },
+      "en": {
+        "locale": "en",
+        "title": "Swedish Museum of Natural History",
+        "summary": "Natural-history museum and home of FishBase Sweden.",
+        "description": "Natural-history museum and home of FishBase Sweden.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-11T02:07:47.717Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:07:47.717491+00:00"
+        },
+        "createdAt": "2026-09-11T02:07:47.717Z",
+        "updatedAt": "2026-09-11T02:07:47.717Z"
+      },
+      "es": {
+        "locale": "es",
+        "title": "Museo Sueco de Historia Natural",
+        "summary": "Museo de historia natural que alberga FishBase Suecia.",
+        "description": "Museo de historia natural que alberga FishBase Suecia.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:07:47.717Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:07:47.717491+00:00"
+        },
+        "createdAt": "2026-09-11T02:07:47.717Z",
+        "updatedAt": "2026-09-11T02:07:47.717Z"
+      },
+      "fr": {
+        "locale": "fr",
+        "title": "Muséum suédois d’histoire naturelle",
+        "summary": "Muséum d’histoire naturelle accueillant FishBase Suède.",
+        "description": "Muséum d’histoire naturelle accueillant FishBase Suède.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:07:47.717Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:07:47.717491+00:00"
+        },
+        "createdAt": "2026-09-11T02:07:47.717Z",
+        "updatedAt": "2026-09-11T02:07:47.717Z"
+      },
+      "ru": {
+        "locale": "ru",
+        "title": "Шведский музей естественной истории",
+        "summary": "Музей естественной истории, где работает FishBase Sweden.",
+        "description": "Музей естественной истории, где работает FishBase Sweden.",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:07:47.717Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:07:47.717491+00:00"
+        },
+        "createdAt": "2026-09-11T02:07:47.717Z",
+        "updatedAt": "2026-09-11T02:07:47.717Z"
+      },
+      "zh": {
+        "locale": "zh",
+        "title": "瑞典自然历史博物馆",
+        "summary": "自然历史博物馆及FishBase瑞典团队所在地。",
+        "description": "自然历史博物馆及FishBase瑞典团队所在地。",
+        "details": {
+          "aliases": [],
+          "profile": {
+            "sourceRefs": [
+              "identity"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:07:47.717Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:07:47.717491+00:00"
+        },
+        "createdAt": "2026-09-11T02:07:47.717Z",
+        "updatedAt": "2026-09-11T02:07:47.717Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-swedish-museum-of-natural-history-funds-fishbase",
+        "sourceNodeId": "swedish-museum-of-natural-history",
+        "targetNodeId": "fishbase",
+        "kind": "funds",
+        "note": "Q-quatics’ 2023 annual report records this support for New species and species updates in FishBase. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+        "properties": {
+          "scope": "New species and species updates in FishBase",
+          "period": "2023-01-30/2023-03-31",
+          "status": "completed in 2023",
+          "sourceRefs": [
+            "report"
+          ],
+          "intermediary": "q-quatics"
+        },
+        "sources": {
+          "report": {
+            "id": "report",
+            "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+            "title": {
+              "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+              "en": "Q-quatics annual report 2023: project funding and usage",
+              "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+              "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+              "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование",
+              "zh": "Q-quatics 2023年度报告：项目资助及使用情况"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:40.036Z",
+        "updatedAt": "2026-09-11T02:10:40.036Z"
+      },
+      {
+        "id": "rel-swedish-museum-of-natural-history-operates-fishbase",
+        "sourceNodeId": "swedish-museum-of-natural-history",
+        "targetNodeId": "fishbase",
+        "kind": "operates",
+        "note": "FishBase’s current search page identifies the Swedish Museum of Natural History as serving fishbase.org and locates this mirror in Stockholm. The museum separately documents its FishBase Sweden team. This is scoped mirror/service operation, not exclusive global operation or governance.",
+        "properties": {
+          "scope": "Stockholm mirror and FishBase Sweden service team",
+          "status": "current documented service in June 2026 site release and August 2026 museum page",
+          "sourceRefs": [
+            "mirror",
+            "institution"
+          ]
+        },
+        "sources": {
+          "mirror": {
+            "id": "mirror",
+            "url": "https://fishbase.se/search.php",
+            "title": {
+              "ar": "البحث في FishBase",
+              "en": "FishBase Search",
+              "es": "Búsqueda en FishBase",
+              "fr": "Recherche dans FishBase",
+              "ru": "Поиск в FishBase",
+              "zh": "FishBase搜索"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "institution": {
+            "id": "institution",
+            "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+            "title": {
+              "ar": "FishBase السويد في المتحف السويدي للتاريخ الطبيعي",
+              "en": "FishBase Sweden at the Swedish Museum of Natural History",
+              "es": "FishBase Suecia en el Museo Sueco de Historia Natural",
+              "fr": "FishBase Suède au Muséum suédois d’histoire naturelle",
+              "ru": "FishBase Sweden в Шведском музее естественной истории",
+              "zh": "瑞典自然历史博物馆的FishBase瑞典团队"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:40.036Z",
+        "updatedAt": "2026-09-11T02:10:40.036Z"
+      }
+    ]
+  },
+  {
+    "id": "unep-wcmc",
+    "kind": "organization",
+    "countryCode": null,
+    "url": "https://www.unep-wcmc.org/",
+    "recordDepth": "thin",
+    "title": "UN Environment Programme World Conservation Monitoring Centre",
+    "summary": null,
+    "availableLocales": [
+      "ar",
+      "zh",
+      "en",
+      "fr",
+      "ru",
+      "es"
+    ],
+    "missingLocales": [],
+    "reviewStatesByLocale": {
+      "ar": "agent_researched",
+      "en": "agent_researched",
+      "es": "agent_researched",
+      "fr": "agent_researched",
+      "ru": "agent_researched",
+      "zh": "agent_researched"
+    },
+    "requestedLocale": "en",
+    "displayLocale": "en",
+    "isLocaleFallback": false,
+    "updatedAt": "2026-09-11T02:10:46.191Z",
+    "recordUpdatedAt": "2026-09-11T02:10:46.191Z",
+    "score": 0,
+    "matchedLocale": null,
+    "sourceCompleteness": {
+      "status": "complete",
+      "referencedSources": 4,
+      "resolvedSources": 4,
+      "issues": []
+    },
+    "record": {
+      "id": "unep-wcmc",
+      "kind": "organization",
+      "countryCode": null,
+      "url": "https://www.unep-wcmc.org/",
+      "recordDepth": "thin",
+      "sources": {
+        "pp-ibat": {
+          "id": "pp-ibat",
+          "url": "https://www.ibat-alliance.org/datasets/wdpca",
+          "title": {
+            "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+            "en": "IBAT: World Database on Protected and Conserved Areas",
+            "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+            "fr": "IBAT : base mondiale des aires protégées et conservées",
+            "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+            "zh": "IBAT：世界保护地与保育地数据库"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-management": {
+          "id": "pp-management",
+          "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+          "title": {
+            "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+            "en": "Protected Planet management and Arcadia grant announcement",
+            "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+            "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+            "ru": "Управление Protected Planet и объявление гранта Arcadia",
+            "zh": "Protected Planet管理与Arcadia资助公告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      },
+      "createdAt": "2026-09-11T02:08:04.907Z",
+      "updatedAt": "2026-09-11T02:10:46.191Z"
+    },
+    "localizations": {
+      "ar": {
+        "locale": "ar",
+        "title": "المركز العالمي لرصد حفظ الطبيعة التابع لبرنامج الأمم المتحدة للبيئة",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:08:04.907Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:04.907359+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:04.907Z",
+        "updatedAt": "2026-09-11T02:08:04.907Z"
+      },
+      "en": {
+        "locale": "en",
+        "title": "UN Environment Programme World Conservation Monitoring Centre",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": null,
+        "contentUpdatedAt": "2026-09-11T02:08:04.907Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:04.907359+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:04.907Z",
+        "updatedAt": "2026-09-11T02:08:04.907Z"
+      },
+      "es": {
+        "locale": "es",
+        "title": "Centro Mundial de Vigilancia de la Conservación del PNUMA",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:08:04.907Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:04.907359+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:04.907Z",
+        "updatedAt": "2026-09-11T02:08:04.907Z"
+      },
+      "fr": {
+        "locale": "fr",
+        "title": "Centre mondial de surveillance de la conservation de la nature du PNUE",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:08:04.907Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:04.907359+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:04.907Z",
+        "updatedAt": "2026-09-11T02:08:04.907Z"
+      },
+      "ru": {
+        "locale": "ru",
+        "title": "Всемирный центр мониторинга охраны природы ЮНЕП",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:08:04.907Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:04.907359+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:04.907Z",
+        "updatedAt": "2026-09-11T02:08:04.907Z"
+      },
+      "zh": {
+        "locale": "zh",
+        "title": "联合国环境规划署世界保护监测中心",
+        "summary": null,
+        "description": null,
+        "details": {
+          "aliases": [
+            "UNEP-WCMC"
+          ],
+          "profile": {
+            "sourceRefs": [
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "gallery": [],
+          "data": {
+            "descriptors": []
+          },
+          "access": [],
+          "metrics": []
+        },
+        "translatedFromLocale": "en",
+        "contentUpdatedAt": "2026-09-11T02:08:04.907Z",
+        "review": {
+          "state": "agent_researched",
+          "date": "2026-09-11T02:08:04.907359+00:00"
+        },
+        "createdAt": "2026-09-11T02:08:04.907Z",
+        "updatedAt": "2026-09-11T02:08:04.907Z"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-unep-wcmc-operates-protected-planet",
+        "sourceNodeId": "unep-wcmc",
+        "targetNodeId": "protected-planet",
+        "kind": "operates",
+        "note": "UNEP-WCMC manages the Protected Planet initiative and compiles and manages its protected and conserved area inventory. UNEP and IUCN are joint institutional partners; that wording does not make every contributor an operator.",
+        "properties": {
+          "scope": "Platform management and WDPCA compilation and maintenance",
+          "period": "Management reported in January 2022 and corroborated by current IBAT description",
+          "status": "current documented operation",
+          "sourceRefs": [
+            "pp-management",
+            "pp-ibat"
+          ]
+        },
+        "sources": {
+          "pp-ibat": {
+            "id": "pp-ibat",
+            "url": "https://www.ibat-alliance.org/datasets/wdpca",
+            "title": {
+              "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+              "en": "IBAT: World Database on Protected and Conserved Areas",
+              "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+              "fr": "IBAT : base mondiale des aires protégées et conservées",
+              "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+              "zh": "IBAT：世界保护地与保育地数据库"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "pp-management": {
+            "id": "pp-management",
+            "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+            "title": {
+              "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+              "en": "Protected Planet management and Arcadia grant announcement",
+              "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+              "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+              "ru": "Управление Protected Planet и объявление гранта Arcadia",
+              "zh": "Protected Planet管理与Arcadia资助公告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        },
+        "createdAt": "2026-09-11T02:10:46.070Z",
+        "updatedAt": "2026-09-11T02:10:46.070Z"
+      }
+    ]
+  }
+]

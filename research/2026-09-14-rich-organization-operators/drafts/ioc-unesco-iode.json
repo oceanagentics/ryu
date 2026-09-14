@@ -1,0 +1,388 @@
+{
+  "id": "ioc-unesco-iode",
+  "record": {
+    "kind": "organization",
+    "url": "https://iode.org/",
+    "recordDepth": "rich",
+    "properties": {
+      "established": {
+        "date": "1961",
+        "source": "official-profile"
+      },
+      "metrics": [],
+      "offices": [
+        {
+          "id": "ostend-project-office",
+          "kind": "office",
+          "source": "official-contact"
+        }
+      ]
+    },
+    "sources": {
+      "official-profile": {
+        "id": "official-profile",
+        "url": "https://iode.org/about/",
+        "title": {
+          "ar": "نبذة عن برنامج IODE",
+          "zh": "关于IODE计划",
+          "en": "About the IODE programme",
+          "fr": "À propos de le programme IODE",
+          "ru": "О программе IODE",
+          "es": "Acerca de el programa IODE"
+        },
+        "description": {
+          "ar": "تذكر الصفحة أن IODE أُنشئ في عام 1961؛ ولا تحدد يومًا أو شهرًا، لذلك يسجل التاريخ بالسنة فقط.",
+          "zh": "该页面称IODE成立于1961年；未注明月份或日期，因此记录仅采用年份。",
+          "en": "The page states that IODE was established in 1961; no month or day is given, so the date uses year precision.",
+          "fr": "La page indique que l’IODE a été créé en 1961 ; aucun mois ni jour n’étant précisé, la date est limitée à l’année.",
+          "ru": "Страница сообщает, что IODE создан в 1961 году; месяц и день не указаны, поэтому дата приведена с точностью до года.",
+          "es": "La página indica que IODE se estableció en 1961; no se especifican mes ni día, por lo que la fecha usa precisión anual."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "official-contact": {
+        "id": "official-contact",
+        "url": "https://iode.org/contact/",
+        "title": {
+          "ar": "الاتصال بـ IODE",
+          "zh": "IODE联系方式",
+          "en": "Contact IODE",
+          "fr": "Contacter l’IODE",
+          "ru": "Контакты IODE",
+          "es": "Contacto de IODE"
+        },
+        "description": {
+          "ar": "تحدد الصفحة مكتب مشروع اللجنة الأوقيانوغرافية الحكومية الدولية لـIODE في حرم InnovOcean بأوستنده؛ ويسجل كمكتب برنامج لا كمقر مستقل لليونسكو.",
+          "zh": "该页面将IOC/IODE项目办公室列在奥斯坦德InnovOcean园区；记录将其作为计划办事处，而非联合国教科文组织的独立总部。",
+          "en": "The page locates the IOC Project Office for IODE at the InnovOcean Campus in Ostend; it is recorded as a programme office, not an independent UNESCO headquarters.",
+          "fr": "La page situe le Bureau de projet de la COI pour l’IODE sur le campus InnovOcean à Ostende ; il est enregistré comme bureau de programme, non comme siège autonome de l’UNESCO.",
+          "ru": "Страница размещает Проектный офис МОК для IODE в кампусе InnovOcean в Остенде; он записан как офис программы, а не самостоятельная штаб-квартира ЮНЕСКО.",
+          "es": "La página sitúa la Oficina de Proyectos de la COI para IODE en el campus InnovOcean de Ostende; se registra como oficina del programa, no como sede independiente de la UNESCO."
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "التبادل الدولي للبيانات والمعلومات الأوقيانوغرافية التابع لليونسكو/اللجنة الأوقيانوغرافية الحكومية الدولية",
+      "summary": "برنامج اللجنة الأوقيانوغرافية الحكومية الدولية لتبادل البيانات والمعلومات البحرية بين الدول الأعضاء.",
+      "description": "ينسق برنامج IODE شبكة عالمية من المراكز والوحدات الوطنية والمنتسبة التي تدير بيانات المحيطات ومعلوماتها وتتيحها. ومن مكتب مشروع اللجنة الأوقيانوغرافية الحكومية الدولية في أوستنده، يدعم البرنامج منتجات وخدمات من بينها OBIS وODIS.",
+      "details": {
+        "aliases": [
+          "IODE",
+          "International Oceanographic Data and Information Exchange"
+        ],
+        "profile": {
+          "mission": "تعزيز البحث البحري والتنمية عبر تسهيل تبادل البيانات والمعلومات الأوقيانوغرافية وتلبية احتياجات المستخدمين.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend-project-office",
+            "location": "حرم InnovOcean، أوستنده، بلجيكا"
+          }
+        ],
+        "researchGaps": {
+          "scale": "تنشر IODE أعدادًا منفصلة لأنواع مختلفة من مراكز البيانات والوحدات، ولا تنشر رقمًا واحدًا قابلًا للمقارنة للموظفين أو المنظمات الأعضاء."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "联合国教科文组织政府间海洋学委员会国际海洋学数据与信息交换计划",
+      "summary": "政府间海洋学委员会促进成员国之间海洋数据和信息交换的计划。",
+      "description": "IODE协调由国家海洋数据中心及相关数据和信息单位组成的全球网络，管理并提供海洋数据与信息。该计划从奥斯坦德的政府间海洋学委员会项目办公室支持包括OBIS和ODIS在内的产品与服务。",
+      "details": {
+        "aliases": [
+          "IODE",
+          "International Oceanographic Data and Information Exchange"
+        ],
+        "profile": {
+          "mission": "通过促进海洋学数据和信息交换并满足用户需求，推动海洋研究与发展。",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend-project-office",
+            "location": "比利时奥斯坦德InnovOcean园区"
+          }
+        ],
+        "researchGaps": {
+          "scale": "IODE分别公布不同类型的数据中心和单位数量，但没有发布可比的统一员工数或成员组织数。"
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "IOC-UNESCO International Oceanographic Data and Information Exchange (IODE)",
+      "summary": "IOC programme for exchanging ocean data and information among participating Member States.",
+      "description": "IODE coordinates a global network of national and associate centres and units that manage and make ocean data and information available. From the IOC Project Office in Ostend, the programme supports products and services that include OBIS and ODIS.",
+      "details": {
+        "aliases": [
+          "IODE",
+          "International Oceanographic Data and Information Exchange"
+        ],
+        "profile": {
+          "mission": "Enhance marine research and development by facilitating the exchange of oceanographic data and information and meeting user needs.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend-project-office",
+            "location": "InnovOcean Campus, Ostend, Belgium"
+          }
+        ],
+        "researchGaps": {
+          "scale": "IODE publishes separate counts for unlike categories of data centres and units, not one comparable staff or member-organization total."
+        }
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Échange international des données et de l’information océanographiques de la COI-UNESCO (IODE)",
+      "summary": "Programme de la COI consacré à l’échange de données et d’informations océaniques entre les États membres participants.",
+      "description": "L’IODE coordonne un réseau mondial de centres et d’unités nationaux et associés qui gèrent et mettent à disposition les données et informations océaniques. Depuis le Bureau de projet de la COI à Ostende, le programme soutient des produits et services dont l’OBIS et l’ODIS.",
+      "details": {
+        "aliases": [
+          "IODE",
+          "International Oceanographic Data and Information Exchange"
+        ],
+        "profile": {
+          "mission": "Renforcer la recherche et le développement marins en facilitant l’échange de données et d’informations océanographiques et en répondant aux besoins des utilisateurs.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend-project-office",
+            "location": "Campus InnovOcean, Ostende, Belgique"
+          }
+        ],
+        "researchGaps": {
+          "scale": "L’IODE publie des décomptes séparés pour des catégories différentes de centres et d’unités, et non un total comparable de personnel ou d’organisations membres."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Международный обмен океанографическими данными и информацией МОК-ЮНЕСКО (IODE)",
+      "summary": "Программа МОК по обмену океанскими данными и информацией между участвующими государствами-членами.",
+      "description": "IODE координирует глобальную сеть национальных и ассоциированных центров и подразделений, которые управляют океанскими данными и информацией и предоставляют к ним доступ. Из Проектного офиса МОК в Остенде программа поддерживает продукты и сервисы, включая OBIS и ODIS.",
+      "details": {
+        "aliases": [
+          "IODE",
+          "International Oceanographic Data and Information Exchange"
+        ],
+        "profile": {
+          "mission": "Содействовать морским исследованиям и развитию, облегчая обмен океанографическими данными и информацией и удовлетворяя потребности пользователей.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend-project-office",
+            "location": "Кампус InnovOcean, Остенде, Бельгия"
+          }
+        ],
+        "researchGaps": {
+          "scale": "IODE публикует отдельные числа для разных категорий центров и подразделений, но не единый сопоставимый итог по персоналу или организациям-участникам."
+        }
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Intercambio Internacional de Datos e Información Oceanográficos de la COI-UNESCO (IODE)",
+      "summary": "Programa de la COI para intercambiar datos e información oceánicos entre los Estados miembros participantes.",
+      "description": "IODE coordina una red mundial de centros y unidades nacionales y asociados que gestionan y ponen a disposición datos e información oceánicos. Desde la Oficina de Proyectos de la COI en Ostende, el programa apoya productos y servicios que incluyen OBIS y ODIS.",
+      "details": {
+        "aliases": [
+          "IODE",
+          "International Oceanographic Data and Information Exchange"
+        ],
+        "profile": {
+          "mission": "Mejorar la investigación y el desarrollo marinos facilitando el intercambio de datos e información oceanográficos y atendiendo las necesidades de los usuarios.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend-project-office",
+            "location": "Campus InnovOcean, Ostende, Bélgica"
+          }
+        ],
+        "researchGaps": {
+          "scale": "IODE publica recuentos separados para categorías distintas de centros y unidades, no un total comparable de personal u organizaciones miembros."
+        }
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-ioc-assembly-governs-ioc-unesco-iode",
+      "sourceNodeId": "ioc-assembly",
+      "targetNodeId": "ioc-unesco-iode",
+      "kind": "governs",
+      "note": "IODE recommendations are submitted to the IOC Assembly for adoption.",
+      "properties": {
+        "sourceRefs": [
+          "src-relationship-platform-obis"
+        ]
+      },
+      "sources": {
+        "src-relationship-platform-obis": {
+          "id": "src-relationship-platform-obis",
+          "url": "https://obis.org/about/governance/",
+          "title": {
+            "ar": "حوكمة OBIS",
+            "en": "OBIS governance",
+            "es": "Gobernanza de OBIS",
+            "fr": "Gouvernance d’OBIS",
+            "ru": "Управление OBIS",
+            "zh": "OBIS治理"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    },
+    {
+      "id": "rel-ioc-unesco-iode-operates-ocean-biodiversity-information-system",
+      "sourceNodeId": "ioc-unesco-iode",
+      "targetNodeId": "platform-obis",
+      "kind": "operates",
+      "note": "The OBIS Secretariat is hosted at the UNESCO/IOC project office for IODE. Its project manager and data manager operate the central portal and coordinate the independently operated node network; this is not exclusive operation of every contributing node.",
+      "properties": {
+        "scope": "OBIS central Secretariat, portal operation and network coordination",
+        "status": "active documented responsibility",
+        "sourceRefs": [
+          "src-relationship-platform-obis"
+        ]
+      },
+      "sources": {
+        "src-relationship-platform-obis": {
+          "id": "src-relationship-platform-obis",
+          "url": "https://obis.org/about/governance/",
+          "title": {
+            "ar": "حوكمة OBIS",
+            "en": "OBIS governance",
+            "es": "Gobernanza de OBIS",
+            "fr": "Gouvernance d’OBIS",
+            "ru": "Управление OBIS",
+            "zh": "OBIS治理"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-ioc-unesco-iode-operates-ocean-data-and-information-system",
+      "sourceNodeId": "ioc-unesco-iode",
+      "targetNodeId": "odis",
+      "kind": "operates",
+      "note": "IODE coordinates ODIS programme operations and light node curation under IOC-UNESCO. Its catalogue is a product of the UNESCO/IOC Project Office for IODE. Independent participating systems retain their own governance and holdings; operation of ODIS does not transfer that authority.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "status": "current programme operation documented on official ODIS and IODE pages",
+        "sourceRefs": [
+          "src-relationship-odis",
+          "overview",
+          "join",
+          "disclaimer"
+        ]
+      },
+      "sources": {
+        "join": {
+          "id": "join",
+          "url": "https://book.odis.org/gettingStarted.html",
+          "title": {
+            "ar": "اتحاد ODIS: التسجيل ونشر البيانات الوصفية والوصول",
+            "en": "ODIS federation: registration, metadata publication and access",
+            "es": "Federación ODIS: registro, publicación de metadatos y acceso",
+            "fr": "Fédération ODIS : inscription, publication de métadonnées et accès",
+            "ru": "Федерация ODIS: регистрация, публикация метаданных и доступ",
+            "zh": "ODIS联邦：注册、元数据发布与访问"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "overview": {
+          "id": "overview",
+          "url": "https://odis.org/overview/",
+          "title": {
+            "ar": "نظرة عامة على ODIS واتحاده وتاريخه المؤسسي",
+            "en": "ODIS overview, federation and institutional history",
+            "es": "Panorama, federación e historia institucional de ODIS",
+            "fr": "Présentation, fédération et histoire institutionnelle d’ODIS",
+            "ru": "Обзор, федерация и институциональная история ODIS",
+            "zh": "ODIS概况、联邦与机构沿革"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "disclaimer": {
+          "id": "disclaimer",
+          "url": "https://catalogue.odis.org/disclaimer",
+          "title": {
+            "ar": "إخلاء المسؤولية والترخيص في كتالوج ODIS",
+            "en": "ODIS Catalogue disclaimer and licence footer",
+            "es": "Aviso legal y licencia del catálogo ODIS",
+            "fr": "Avertissement et licence du catalogue ODIS",
+            "ru": "Отказ от гарантий и лицензия каталога ODIS",
+            "zh": "ODIS目录免责声明与页脚许可"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-relationship-odis": {
+          "id": "src-relationship-odis",
+          "url": "https://oceaninfohub.org/odis/",
+          "title": {
+            "ar": "نظام بيانات ومعلومات المحيطات",
+            "en": "Ocean Data and Information System",
+            "es": "Sistema de Datos e Información Oceánicos",
+            "fr": "Système de données et d’informations océaniques",
+            "ru": "Система океанических данных и информации",
+            "zh": "海洋数据与信息系统"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    },
+    {
+      "id": "rel-ioc-unesco-iode-operates-ocean-infohub",
+      "sourceNodeId": "ioc-unesco-iode",
+      "targetNodeId": "oceaninfohub",
+      "kind": "operates",
+      "note": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "sourceRefs": [
+          "src-relationship-oceaninfohub"
+        ]
+      },
+      "sources": {
+        "src-relationship-oceaninfohub": {
+          "id": "src-relationship-oceaninfohub",
+          "url": "https://oceaninfohub.org/project-overview/",
+          "title": {
+            "ar": "نظرة عامة على مشروع Ocean InfoHub",
+            "en": "Ocean InfoHub project overview",
+            "es": "Descripción general del proyecto Ocean InfoHub",
+            "fr": "Présentation du projet Ocean InfoHub",
+            "ru": "Обзор проекта Ocean InfoHub",
+            "zh": "Ocean InfoHub项目概览"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

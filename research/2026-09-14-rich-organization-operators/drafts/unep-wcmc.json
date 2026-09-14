@@ -1,0 +1,339 @@
+{
+  "id": "unep-wcmc",
+  "record": {
+    "kind": "organization",
+    "url": "https://www.unep-wcmc.org/",
+    "recordDepth": "rich",
+    "properties": {
+      "established": {
+        "date": "2000",
+        "source": "collaboration-history"
+      },
+      "metrics": [
+        {
+          "id": "experts-current-undated",
+          "key": "staff_count",
+          "value": 200,
+          "observedAt": null,
+          "source": "official-team"
+        }
+      ],
+      "offices": [
+        {
+          "id": "cambridge",
+          "kind": "headquarters",
+          "source": "official-contact"
+        }
+      ]
+    },
+    "sources": {
+      "pp-ibat": {
+        "id": "pp-ibat",
+        "url": "https://www.ibat-alliance.org/datasets/wdpca",
+        "title": {
+          "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+          "en": "IBAT: World Database on Protected and Conserved Areas",
+          "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+          "fr": "IBAT : base mondiale des aires protégées et conservées",
+          "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+          "zh": "IBAT：世界保护地与保育地数据库"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "pp-management": {
+        "id": "pp-management",
+        "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+        "title": {
+          "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+          "en": "Protected Planet management and Arcadia grant announcement",
+          "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+          "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+          "ru": "Управление Protected Planet и объявление гранта Arcadia",
+          "zh": "Protected Planet管理与Arcadia资助公告"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "official-profile": {
+        "id": "official-profile",
+        "url": "https://www.unep-wcmc.org/en/about",
+        "title": {
+          "ar": "نبذة عن UNEP-WCMC",
+          "zh": "关于UNEP-WCMC",
+          "en": "About UNEP-WCMC",
+          "fr": "À propos de le PNUE-WCMC",
+          "ru": "О UNEP-WCMC",
+          "es": "Acerca de UNEP-WCMC"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "collaboration-history": {
+        "id": "collaboration-history",
+        "url": "https://www.unep-wcmc.org/en/news/jerry-harrison-40-years-of-unep-wcmc-and-global-biodiversity-policy",
+        "title": {
+          "ar": "تاريخ UNEP-WCMC",
+          "zh": "UNEP-WCMC历史",
+          "en": "UNEP-WCMC history",
+          "fr": "Histoire de du PNUE-WCMC",
+          "ru": "История UNEP-WCMC",
+          "es": "Historia de UNEP-WCMC"
+        },
+        "description": {
+          "ar": "تذكر الصفحة أن WCMC دخل في تعاون مع برنامج الأمم المتحدة للبيئة عام 2000؛ يمثل التاريخ بداية شراكة UNEP-WCMC الحالية، لا أقدم المنظمات السابقة.",
+          "zh": "该页面称WCMC于2000年开始与联合国环境规划署合作；该日期代表当前UNEP-WCMC合作关系的开始，而非更早前身机构的成立。",
+          "en": "The page states that WCMC entered into collaboration with UNEP in 2000; the date marks the present UNEP-WCMC partnership, not the founding of older predecessor bodies.",
+          "fr": "La page indique que le WCMC est entré en collaboration avec le PNUE en 2000 ; cette date marque le partenariat actuel PNUE-WCMC, et non la fondation d’organismes antérieurs.",
+          "ru": "Страница сообщает, что WCMC вступил в сотрудничество с ЮНЕП в 2000 году; дата обозначает начало нынешнего партнерства UNEP-WCMC, а не основание более ранних организаций-предшественников.",
+          "es": "La página indica que WCMC inició su colaboración con el PNUMA en 2000; la fecha marca la alianza UNEP-WCMC actual, no la fundación de organismos predecesores anteriores."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "official-team": {
+        "id": "official-team",
+        "url": "https://www.unep-wcmc.org/en/the-team",
+        "title": {
+          "ar": "فريق UNEP-WCMC",
+          "zh": "UNEP-WCMC团队",
+          "en": "UNEP-WCMC team",
+          "fr": "Équipe de du PNUE-WCMC",
+          "ru": "Команда UNEP-WCMC",
+          "es": "Equipo de UNEP-WCMC"
+        },
+        "description": {
+          "ar": "تصف الصفحة فريقًا يضم أكثر من 200 خبير دون تاريخ قياس؛ تسجل القيمة الحد المنشور 200 ولا تعني عددًا دقيقًا أو كاملًا للموظفين.",
+          "zh": "该页面称团队有200多名专家，但未注明统计日期；指标记录公布的门槛值200，并不代表精确或完整的员工人数。",
+          "en": "The page describes a team of over 200 experts without a measurement date; the value records the published threshold of 200, not an exact or exhaustive employee count.",
+          "fr": "La page décrit une équipe de plus de 200 spécialistes sans date de mesure ; la valeur retient le seuil publié de 200, et non un effectif exact ou exhaustif.",
+          "ru": "Страница описывает команду из более чем 200 экспертов без даты измерения; значение фиксирует опубликованный порог 200, а не точную или полную численность персонала.",
+          "es": "La página describe un equipo de más de 200 expertos sin fecha de medición; el valor registra el umbral publicado de 200, no una plantilla exacta ni exhaustiva."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "official-contact": {
+        "id": "official-contact",
+        "url": "https://www.unep-wcmc.org/en/contact",
+        "title": {
+          "ar": "الاتصال بـ UNEP-WCMC",
+          "zh": "UNEP-WCMC联系方式",
+          "en": "Contact UNEP-WCMC",
+          "fr": "Contacter le PNUE-WCMC",
+          "ru": "Контакты UNEP-WCMC",
+          "es": "Contacto de UNEP-WCMC"
+        },
+        "description": {
+          "ar": "تحدد صفحة الاتصال موقع المركز في كامبريدج بالمملكة المتحدة؛ ولا توجد في الصفحة أدلة على مكاتب تنظيمية إضافية.",
+          "zh": "联系页面将该中心列在英国剑桥；页面未提供其他组织办事处的证据。",
+          "en": "The contact page locates the Centre in Cambridge, United Kingdom; it does not document additional organizational offices.",
+          "fr": "La page de contact situe le Centre à Cambridge, au Royaume-Uni, et ne documente pas d’autres bureaux de l’organisation.",
+          "ru": "На странице контактов Центр расположен в Кембридже, Великобритания; дополнительных офисов организации она не документирует.",
+          "es": "La página de contacto sitúa el Centro en Cambridge, Reino Unido, y no documenta otras oficinas de la organización."
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "المركز العالمي لرصد حفظ الطبيعة التابع لبرنامج الأمم المتحدة للبيئة",
+      "summary": "مركز خبرة عالمي في التنوع البيولوجي يعمل بتعاون بين برنامج الأمم المتحدة للبيئة ومؤسسة WCMC الخيرية البريطانية.",
+      "description": "يعمل UNEP-WCMC عند تقاطع العلم والسياسة والتطبيق، ويطور المعرفة والقدرات لتحسين حالة الطبيعة ودعم القرارات الحكومية والتجارية. يدير المركز مبادرة Protected Planet ويجمع مخزوناتها العالمية للمناطق المحمية والمصانة.",
+      "details": {
+        "aliases": [
+          "UNEP-WCMC",
+          "WCMC"
+        ],
+        "profile": {
+          "mission": "تطوير المعرفة والقدرات لتحسين حالة الطبيعة للجميع.",
+          "sourceRefs": [
+            "official-profile",
+            "pp-management",
+            "pp-ibat"
+          ]
+        },
+        "offices": [
+          {
+            "id": "cambridge",
+            "location": "كامبريدج، المملكة المتحدة"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "联合国环境规划署世界保护监测中心",
+      "summary": "由联合国环境规划署与英国慈善机构WCMC合作运营的全球生物多样性专业中心。",
+      "description": "UNEP-WCMC在科学、政策与实践的交汇处开展工作，发展知识与能力，以改善自然状况并支持政府和企业决策。该中心管理Protected Planet项目，并汇编全球保护地和其他有效区域保护措施名录。",
+      "details": {
+        "aliases": [
+          "UNEP-WCMC",
+          "WCMC"
+        ],
+        "profile": {
+          "mission": "发展知识和能力，改善惠及所有人的自然状况。",
+          "sourceRefs": [
+            "official-profile",
+            "pp-management",
+            "pp-ibat"
+          ]
+        },
+        "offices": [
+          {
+            "id": "cambridge",
+            "location": "英国剑桥"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "UN Environment Programme World Conservation Monitoring Centre",
+      "summary": "Global biodiversity centre of expertise operated through collaboration between UNEP and the UK charity WCMC.",
+      "description": "UNEP-WCMC works at the interface of science, policy and practice, developing knowledge and capacity to improve the state of nature and support government and business decisions. The Centre operates Protected Planet and compiles its global protected and conserved area inventories.",
+      "details": {
+        "aliases": [
+          "UNEP-WCMC",
+          "WCMC"
+        ],
+        "profile": {
+          "mission": "Develop knowledge and capacity to improve the state of nature for all.",
+          "sourceRefs": [
+            "official-profile",
+            "pp-management",
+            "pp-ibat"
+          ]
+        },
+        "offices": [
+          {
+            "id": "cambridge",
+            "location": "Cambridge, United Kingdom"
+          }
+        ]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Centre mondial de surveillance de la conservation de la nature du PNUE",
+      "summary": "Centre mondial d’expertise sur la biodiversité exploité par une collaboration entre le PNUE et l’organisme caritatif britannique WCMC.",
+      "description": "Le PNUE-WCMC travaille à l’interface entre science, politiques et pratique, en développant les connaissances et les capacités nécessaires pour améliorer l’état de la nature et éclairer les décisions publiques et privées. Le Centre exploite Protected Planet et compile ses inventaires mondiaux d’aires protégées et conservées.",
+      "details": {
+        "aliases": [
+          "UNEP-WCMC",
+          "WCMC"
+        ],
+        "profile": {
+          "mission": "Développer les connaissances et les capacités afin d’améliorer l’état de la nature pour tous.",
+          "sourceRefs": [
+            "official-profile",
+            "pp-management",
+            "pp-ibat"
+          ]
+        },
+        "offices": [
+          {
+            "id": "cambridge",
+            "location": "Cambridge, Royaume-Uni"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Всемирный центр мониторинга охраны природы ЮНЕП",
+      "summary": "Глобальный экспертный центр по биоразнообразию, работающий в партнерстве ЮНЕП и британской благотворительной организации WCMC.",
+      "description": "UNEP-WCMC работает на стыке науки, политики и практики, развивая знания и потенциал для улучшения состояния природы и поддержки решений государственных органов и бизнеса. Центр эксплуатирует Protected Planet и формирует его глобальные реестры охраняемых и сохраняемых территорий.",
+      "details": {
+        "aliases": [
+          "UNEP-WCMC",
+          "WCMC"
+        ],
+        "profile": {
+          "mission": "Развивать знания и потенциал, чтобы улучшать состояние природы для всех.",
+          "sourceRefs": [
+            "official-profile",
+            "pp-management",
+            "pp-ibat"
+          ]
+        },
+        "offices": [
+          {
+            "id": "cambridge",
+            "location": "Кембридж, Великобритания"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Centro Mundial de Vigilancia de la Conservación del PNUMA",
+      "summary": "Centro mundial de excelencia en biodiversidad operado mediante la colaboración entre el PNUMA y la entidad benéfica británica WCMC.",
+      "description": "UNEP-WCMC trabaja en la interfaz entre ciencia, políticas y práctica, desarrollando conocimiento y capacidad para mejorar el estado de la naturaleza y apoyar decisiones públicas y empresariales. El Centro opera Protected Planet y compila sus inventarios mundiales de áreas protegidas y conservadas.",
+      "details": {
+        "aliases": [
+          "UNEP-WCMC",
+          "WCMC"
+        ],
+        "profile": {
+          "mission": "Desarrollar conocimiento y capacidad para mejorar el estado de la naturaleza para todas las personas.",
+          "sourceRefs": [
+            "official-profile",
+            "pp-management",
+            "pp-ibat"
+          ]
+        },
+        "offices": [
+          {
+            "id": "cambridge",
+            "location": "Cambridge, Reino Unido"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-unep-wcmc-operates-protected-planet",
+      "sourceNodeId": "unep-wcmc",
+      "targetNodeId": "protected-planet",
+      "kind": "operates",
+      "note": "UNEP-WCMC manages the Protected Planet initiative and compiles and manages its protected and conserved area inventory. UNEP and IUCN are joint institutional partners; that wording does not make every contributor an operator.",
+      "properties": {
+        "scope": "Platform management and WDPCA compilation and maintenance",
+        "period": "Management reported in January 2022 and corroborated by current IBAT description",
+        "status": "current documented operation",
+        "sourceRefs": [
+          "pp-management",
+          "pp-ibat"
+        ]
+      },
+      "sources": {
+        "pp-ibat": {
+          "id": "pp-ibat",
+          "url": "https://www.ibat-alliance.org/datasets/wdpca",
+          "title": {
+            "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+            "en": "IBAT: World Database on Protected and Conserved Areas",
+            "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+            "fr": "IBAT : base mondiale des aires protégées et conservées",
+            "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+            "zh": "IBAT：世界保护地与保育地数据库"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-management": {
+          "id": "pp-management",
+          "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+          "title": {
+            "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+            "en": "Protected Planet management and Arcadia grant announcement",
+            "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+            "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+            "ru": "Управление Protected Planet и объявление гранта Arcadia",
+            "zh": "Protected Planet管理与Arcadia资助公告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

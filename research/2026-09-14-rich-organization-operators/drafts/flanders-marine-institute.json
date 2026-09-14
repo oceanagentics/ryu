@@ -1,0 +1,461 @@
+{
+  "id": "flanders-marine-institute",
+  "record": {
+    "kind": "organization",
+    "url": "https://www.vliz.be/en/",
+    "recordDepth": "rich",
+    "properties": {
+      "established": {
+        "date": "1999-10-01",
+        "source": "official-history"
+      },
+      "metrics": [
+        {
+          "id": "staff-2022",
+          "key": "staff_count",
+          "value": 150,
+          "observedAt": "2022",
+          "source": "official-scale"
+        }
+      ],
+      "offices": [
+        {
+          "id": "ostend",
+          "kind": "headquarters",
+          "source": "official-contact"
+        }
+      ]
+    },
+    "sources": {
+      "official-profile": {
+        "id": "official-profile",
+        "url": "https://vliz.be/en/who-we-are/about-vliz/mission-strengths",
+        "title": {
+          "ar": "مهمة معهد فلاندرز البحري ونقاط قوته",
+          "zh": "佛兰德海洋研究所的使命与优势",
+          "en": "Flanders Marine Institute mission and strengths",
+          "fr": "Mission et atouts de l’Institut marin flamand",
+          "ru": "Миссия и сильные стороны Фландрского морского института",
+          "es": "Misión y fortalezas del Instituto Marino de Flandes"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "worms-profile": {
+        "id": "worms-profile",
+        "url": "https://www.vliz.be/en/worms",
+        "title": {
+          "ar": "VLIZ وWoRMS",
+          "zh": "VLIZ与WoRMS",
+          "en": "VLIZ and WoRMS",
+          "fr": "Le VLIZ et WoRMS",
+          "ru": "VLIZ и WoRMS",
+          "es": "VLIZ y WoRMS"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "official-history": {
+        "id": "official-history",
+        "url": "https://vliz.be/en/news/vliz-celebrates-its-20th-birthday-kick-festive-year-2020-ostend-football-stadium",
+        "title": {
+          "ar": "تاريخ معهد فلاندرز البحري",
+          "zh": "佛兰德海洋研究所历史",
+          "en": "the Flanders Marine Institute history",
+          "fr": "Histoire de l’Institut marin flamand",
+          "ru": "История Фландрского морского института",
+          "es": "Historia de el Instituto Marino de Flandes"
+        },
+        "description": {
+          "ar": "تذكر الصفحة أن VLIZ أُنشئ رسميًا في 1 أكتوبر 1999 بدعم من حكومة فلاندرز ومقاطعة فلاندرز الغربية ومؤسسة البحوث الفلمنكية.",
+          "zh": "该页面记载VLIZ在佛兰德政府、西佛兰德省和佛兰德研究基金会支持下，于1999年10月1日正式成立。",
+          "en": "The page states that VLIZ was officially established on 1 October 1999 with support from the Flemish Government, the Province of West Flanders and Research Foundation Flanders.",
+          "fr": "La page indique que le VLIZ a été officiellement créé le 1er octobre 1999 avec le soutien du Gouvernement flamand, de la Province de Flandre-Occidentale et du Fonds de la recherche scientifique de Flandre.",
+          "ru": "Страница сообщает, что VLIZ официально учрежден 1 октября 1999 года при поддержке Правительства Фландрии, провинции Западная Фландрия и Фонда научных исследований Фландрии.",
+          "es": "La página indica que VLIZ se estableció oficialmente el 1 de octubre de 1999 con apoyo del Gobierno de Flandes, la Provincia de Flandes Occidental y la Fundación para la Investigación de Flandes."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "official-scale": {
+        "id": "official-scale",
+        "url": "https://vliz.be/en/150-employees-and-1000-vliz-members",
+        "title": {
+          "ar": "150 موظفًا و1000 عضو في VLIZ",
+          "zh": "VLIZ拥有150名员工和1000名成员",
+          "en": "150 employees and 1,000 VLIZ members",
+          "fr": "150 employés et 1 000 membres du VLIZ",
+          "ru": "150 сотрудников и 1000 членов VLIZ",
+          "es": "150 empleados y 1.000 miembros de VLIZ"
+        },
+        "description": {
+          "ar": "تذكر الصفحة أن عدد موظفي VLIZ بلغ 150 في عام 2022؛ ولا يضاف الموظفون الجدد المذكورون لاحقًا لأن الصفحة لا تنشر مجموعًا محدثًا.",
+          "zh": "该页面称VLIZ员工数在2022年达到150人；由于页面未发布更新总数，随后提到的新员工未另行加总。",
+          "en": "The page states that VLIZ reached 150 employees in 2022; later hires mentioned on the page are not added because it does not publish a revised total.",
+          "fr": "La page indique que le VLIZ a atteint 150 employés en 2022 ; les recrutements ultérieurs mentionnés ne sont pas ajoutés, faute de total révisé publié.",
+          "ru": "Страница сообщает, что в 2022 году штат VLIZ достиг 150 сотрудников; упомянутые позднейшие наймы не прибавлены, поскольку обновленный итог не опубликован.",
+          "es": "La página indica que VLIZ alcanzó 150 empleados en 2022; las contrataciones posteriores mencionadas no se suman porque no publica un total revisado."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "official-contact": {
+        "id": "official-contact",
+        "url": "https://vliz.be/nl/contact",
+        "title": {
+          "ar": "الاتصال بـ معهد فلاندرز البحري",
+          "zh": "佛兰德海洋研究所联系方式",
+          "en": "Contact the Flanders Marine Institute",
+          "fr": "Contacter l’Institut marin flamand",
+          "ru": "Контакты Фландрского морского института",
+          "es": "Contacto de el Instituto Marino de Flandes"
+        },
+        "description": {
+          "ar": "تسرد الصفحة مقر VLIZ في حرم InnovOcean بأوستنده. ولا يسجل المحطة البحرية أو السفينة كمكاتب تنظيمية.",
+          "zh": "该页面列出VLIZ位于奥斯坦德InnovOcean园区的总部；海洋站和研究船不作为机构办事处记录。",
+          "en": "The page lists VLIZ at the InnovOcean Campus in Ostend. The marine station and research vessel are not recorded as organizational offices.",
+          "fr": "La page situe le VLIZ sur le campus InnovOcean à Ostende. La station marine et le navire de recherche ne sont pas enregistrés comme bureaux de l’organisation.",
+          "ru": "На странице VLIZ расположен в кампусе InnovOcean в Остенде. Морская станция и исследовательское судно не записаны как офисы организации.",
+          "es": "La página sitúa VLIZ en el campus InnovOcean de Ostende. La estación marina y el buque de investigación no se registran como oficinas de la organización."
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "معهد فلاندرز البحري",
+      "summary": "معهد بحوث بحرية متعدد التخصصات في فلاندرز يدعم العلم والسياسة والصناعة والجمهور.",
+      "description": "يعالج VLIZ الاحتياجات المجتمعية من خلال البحث وإدارة البيانات والابتكار التكنولوجي وتثمين المعرفة، ويوفر بنية تحتية وخدمات للعلوم البحرية. ومن مقره في أوستنده يشغّل بنى معلوماتية بحرية تشمل WoRMS وMarine Regions وEurOBIS.",
+      "details": {
+        "aliases": [
+          "VLIZ",
+          "Vlaams Instituut voor de Zee"
+        ],
+        "profile": {
+          "mission": "تعزيز معرفة المحيط والتميز في البحث البحري وضمان أن تدعم الأدلة العلمية الإدارة المستدامة للنظم البحرية والساحلية.",
+          "sourceRefs": [
+            "official-profile",
+            "worms-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend",
+            "location": "حرم InnovOcean، أوستنده، بلجيكا"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "佛兰德海洋研究所",
+      "summary": "佛兰德地区的多学科海洋研究机构，为科学、政策、产业和公众提供支持。",
+      "description": "VLIZ通过研究、数据管理、技术创新和知识转化应对社会需求，并为海洋科学提供基础设施和服务。该研究所从奥斯坦德运营包括WoRMS、Marine Regions和EurOBIS在内的海洋信息基础设施。",
+      "details": {
+        "aliases": [
+          "VLIZ",
+          "Vlaams Instituut voor de Zee"
+        ],
+        "profile": {
+          "mission": "增进海洋知识和海洋研究卓越性，并确保科学证据支持海洋与沿海生态系统的可持续管理。",
+          "sourceRefs": [
+            "official-profile",
+            "worms-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend",
+            "location": "比利时奥斯坦德InnovOcean园区"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "Flanders Marine Institute",
+      "summary": "Multidisciplinary marine research institute in Flanders serving science, policy, industry and the public.",
+      "description": "VLIZ addresses societal needs through research, data stewardship, technological innovation and knowledge valorization and provides infrastructure and services for marine science. From Ostend it operates marine information infrastructures including WoRMS, Marine Regions and EurOBIS.",
+      "details": {
+        "aliases": [
+          "VLIZ",
+          "Vlaams Instituut voor de Zee"
+        ],
+        "profile": {
+          "mission": "Advance ocean knowledge and excellence in marine research and ensure scientific evidence supports sustainable management of marine and coastal ecosystems.",
+          "sourceRefs": [
+            "official-profile",
+            "worms-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend",
+            "location": "InnovOcean Campus, Ostend, Belgium"
+          }
+        ]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Institut marin flamand",
+      "summary": "Institut multidisciplinaire de recherche marine en Flandre au service de la science, des politiques, de l’industrie et du public.",
+      "description": "Le VLIZ répond aux besoins de la société par la recherche, la gestion des données, l’innovation technologique et la valorisation des connaissances, et fournit des infrastructures et services aux sciences marines. Depuis Ostende, il exploite des infrastructures d’information marine dont WoRMS, Marine Regions et EurOBIS.",
+      "details": {
+        "aliases": [
+          "VLIZ",
+          "Vlaams Instituut voor de Zee"
+        ],
+        "profile": {
+          "mission": "Faire progresser la connaissance de l’océan et l’excellence de la recherche marine, et veiller à ce que les données scientifiques soutiennent la gestion durable des écosystèmes marins et côtiers.",
+          "sourceRefs": [
+            "official-profile",
+            "worms-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend",
+            "location": "Campus InnovOcean, Ostende, Belgique"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Фландрский морской институт",
+      "summary": "Многопрофильный морской исследовательский институт Фландрии, работающий для науки, политики, промышленности и общества.",
+      "description": "VLIZ отвечает на общественные потребности с помощью исследований, управления данными, технологических инноваций и использования знаний, предоставляя инфраструктуру и сервисы морской науке. Из Остенде он эксплуатирует морские информационные инфраструктуры, включая WoRMS, Marine Regions и EurOBIS.",
+      "details": {
+        "aliases": [
+          "VLIZ",
+          "Vlaams Instituut voor de Zee"
+        ],
+        "profile": {
+          "mission": "Расширять знания об океане и повышать качество морских исследований, обеспечивая использование научных данных для устойчивого управления морскими и прибрежными экосистемами.",
+          "sourceRefs": [
+            "official-profile",
+            "worms-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend",
+            "location": "Кампус InnovOcean, Остенде, Бельгия"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Instituto Marino de Flandes",
+      "summary": "Instituto multidisciplinario de investigación marina de Flandes al servicio de la ciencia, las políticas, la industria y el público.",
+      "description": "VLIZ responde a necesidades sociales mediante investigación, custodia de datos, innovación tecnológica y valorización del conocimiento, y proporciona infraestructuras y servicios para las ciencias marinas. Desde Ostende opera infraestructuras de información marina como WoRMS, Marine Regions y EurOBIS.",
+      "details": {
+        "aliases": [
+          "VLIZ",
+          "Vlaams Instituut voor de Zee"
+        ],
+        "profile": {
+          "mission": "Impulsar el conocimiento del océano y la excelencia en la investigación marina, y asegurar que la evidencia científica apoye la gestión sostenible de los ecosistemas marinos y costeros.",
+          "sourceRefs": [
+            "official-profile",
+            "worms-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "ostend",
+            "location": "Campus InnovOcean, Ostende, Bélgica"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-flanders-marine-institute-operates-emodnet-biology",
+      "sourceNodeId": "flanders-marine-institute",
+      "targetNodeId": "emodnet-biology",
+      "kind": "operates",
+      "note": "VLIZ operates technical infrastructure and data management.",
+      "properties": {
+        "scope": "Technical infrastructure; scientific contributors retain their own roles",
+        "sourceRefs": [
+          "src-relationship-emodnet-biology"
+        ]
+      },
+      "sources": {
+        "src-relationship-emodnet-biology": {
+          "id": "src-relationship-emodnet-biology",
+          "url": "https://emodnet.ec.europa.eu/en/biology",
+          "title": {
+            "ar": "EMODnet: علم الأحياء",
+            "en": "EMODnet Biology",
+            "es": "Biología de EMODnet",
+            "fr": "Biologie d’EMODnet",
+            "ru": "Биология EMODnet",
+            "zh": "EMODnet生物学"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    },
+    {
+      "id": "rel-flanders-marine-institute-operates-eurobis",
+      "sourceNodeId": "flanders-marine-institute",
+      "targetNodeId": "eurobis",
+      "kind": "operates",
+      "note": "VLIZ operates technical infrastructure and data management.",
+      "properties": {
+        "scope": "Technical infrastructure; scientific contributors retain their own roles",
+        "sourceRefs": [
+          "src-relationship-eurobis"
+        ]
+      },
+      "sources": {
+        "src-relationship-eurobis": {
+          "id": "src-relationship-eurobis",
+          "url": "https://www.eurobis.org/about",
+          "title": {
+            "ar": "حول EurOBIS",
+            "en": "About EurOBIS",
+            "es": "Acerca de EurOBIS",
+            "fr": "À propos de EurOBIS",
+            "ru": "О EurOBIS",
+            "zh": "关于EurOBIS"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    },
+    {
+      "id": "rel-flanders-marine-institute-operates-marine-regions",
+      "sourceNodeId": "flanders-marine-institute",
+      "targetNodeId": "marine-regions",
+      "kind": "operates",
+      "note": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "sourceRefs": [
+          "src-relationship-marine-regions"
+        ]
+      },
+      "sources": {
+        "src-relationship-marine-regions": {
+          "id": "src-relationship-marine-regions",
+          "url": "https://www.marineregions.org/about.php",
+          "title": {
+            "ar": "حول Marine Regions",
+            "en": "About Marine Regions",
+            "es": "Acerca de Marine Regions",
+            "fr": "À propos de Marine Regions",
+            "ru": "О Marine Regions",
+            "zh": "关于Marine Regions"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    },
+    {
+      "id": "rel-flanders-marine-institute-operates-molluscabase",
+      "sourceNodeId": "flanders-marine-institute",
+      "targetNodeId": "molluscabase",
+      "kind": "operates",
+      "note": "VLIZ operates technical infrastructure and data management.",
+      "properties": {
+        "scope": "Technical infrastructure; scientific contributors retain their own roles",
+        "sourceRefs": [
+          "src-relationship-molluscabase"
+        ]
+      },
+      "sources": {
+        "src-relationship-molluscabase": {
+          "id": "src-relationship-molluscabase",
+          "url": "https://molluscabase.org/about.php",
+          "title": {
+            "ar": "حول MolluscaBase",
+            "en": "About MolluscaBase",
+            "es": "Acerca de MolluscaBase",
+            "fr": "À propos de MolluscaBase",
+            "ru": "О MolluscaBase",
+            "zh": "关于MolluscaBase"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    },
+    {
+      "id": "rel-flanders-marine-institute-operates-world-register-of-marine-species",
+      "sourceNodeId": "flanders-marine-institute",
+      "targetNodeId": "worms",
+      "kind": "operates",
+      "note": "VLIZ appoints the WoRMS Data Management Team to run the database, maintain online publishing, preserve identifiers, support editors and manage approved exports. The public terms of reference are dated 2015-05-08 and the current About page continues to identify VLIZ as the operational host.",
+      "properties": {
+        "scope": "Technical and scientific data management, hosting and publication support",
+        "period": "2015 terms of reference, reconfirmed by current About page",
+        "status": "current role documented",
+        "sourceRefs": [
+          "src-relationship-worms",
+          "src-worms-about"
+        ]
+      },
+      "sources": {
+        "src-worms-about": {
+          "id": "src-worms-about",
+          "url": "https://www.marinespecies.org/about.php",
+          "title": {
+            "ar": "حول WoRMS",
+            "en": "WoRMS About",
+            "es": "Acerca de WoRMS",
+            "fr": "À propos de WoRMS",
+            "ru": "О WoRMS",
+            "zh": "关于WoRMS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-relationship-worms": {
+          "id": "src-relationship-worms",
+          "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+          "title": {
+            "ar": "اختصاصات WoRMS",
+            "en": "WoRMS terms of reference",
+            "es": "Términos de referencia de WoRMS",
+            "fr": "Mandat de WoRMS",
+            "ru": "Положение о деятельности WoRMS",
+            "zh": "WoRMS职权范围"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-government-of-flanders-funds-flanders-marine-institute",
+      "sourceNodeId": "government-of-flanders",
+      "targetNodeId": "flanders-marine-institute",
+      "kind": "funds",
+      "note": "VLIZ states that it receives an annual grant from the Flemish Region and the Province of West Flanders. This edge records the documented Flemish-government support only; the page does not publish an amount or grant term, and the province is not folded into this relationship.",
+      "properties": {
+        "scope": "Annual institutional grant from the Flemish Region",
+        "status": "Current funding arrangement described on the official organization page; amount and term not published",
+        "sourceRefs": [
+          "official-operation"
+        ]
+      },
+      "sources": {
+        "official-operation": {
+          "id": "official-operation",
+          "url": "https://vliz.be/en/who-we-are/about-vliz/our-operation",
+          "title": {
+            "ar": "عمل معهد فلاندرز البحري وحوكمته",
+            "zh": "佛兰德海洋研究所的运营与治理",
+            "en": "Flanders Marine Institute operation and governance",
+            "fr": "Fonctionnement et gouvernance de l’Institut marin flamand",
+            "ru": "Деятельность и управление Фландрского морского института",
+            "es": "Funcionamiento y gobernanza del Instituto Marino de Flandes"
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

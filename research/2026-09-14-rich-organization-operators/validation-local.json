@@ -1,0 +1,114 @@
+{
+  "checkedAt": "2026-09-14T15:33:26.268Z",
+  "contract": "server/src/recordContracts.ts",
+  "results": [
+    {
+      "valid": true,
+      "recordId": "cbd-secretariat",
+      "issues": [],
+      "warnings": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 6,
+        "resolvedSources": 6,
+        "issues": []
+      }
+    },
+    {
+      "valid": true,
+      "recordId": "international-seabed-authority",
+      "issues": [],
+      "warnings": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 12,
+        "resolvedSources": 12,
+        "issues": []
+      }
+    },
+    {
+      "valid": true,
+      "recordId": "embl-ebi",
+      "issues": [],
+      "warnings": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 7,
+        "resolvedSources": 7,
+        "issues": []
+      }
+    },
+    {
+      "valid": true,
+      "recordId": "q-quatics",
+      "issues": [],
+      "warnings": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 6,
+        "resolvedSources": 6,
+        "issues": []
+      }
+    },
+    {
+      "valid": true,
+      "recordId": "swedish-museum-of-natural-history",
+      "issues": [],
+      "warnings": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 8,
+        "resolvedSources": 8,
+        "issues": []
+      }
+    },
+    {
+      "valid": true,
+      "recordId": "global-fishing-watch-operator",
+      "issues": [],
+      "warnings": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 16,
+        "resolvedSources": 16,
+        "issues": []
+      }
+    },
+    {
+      "valid": true,
+      "recordId": "ioc-unesco-iode",
+      "issues": [],
+      "warnings": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 9,
+        "resolvedSources": 9,
+        "issues": []
+      }
+    },
+    {
+      "valid": true,
+      "recordId": "unep-wcmc",
+      "issues": [],
+      "warnings": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 8,
+        "resolvedSources": 8,
+        "issues": []
+      }
+    },
+    {
+      "valid": true,
+      "recordId": "flanders-marine-institute",
+      "issues": [],
+      "warnings": [],
+      "sourceCompleteness": {
+        "status": "complete",
+        "referencedSources": 12,
+        "resolvedSources": 12,
+        "issues": []
+      }
+    }
+  ]
+}

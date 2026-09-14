@@ -1,0 +1,368 @@
+{
+  "id": "embl-ebi",
+  "record": {
+    "kind": "organization",
+    "url": "https://www.ebi.ac.uk/about/",
+    "recordDepth": "rich",
+    "properties": {
+      "established": {
+        "date": "1994",
+        "source": "official-profile"
+      },
+      "metrics": [
+        {
+          "id": "staff-fte-2025",
+          "key": "staff_count",
+          "value": 646,
+          "observedAt": "2025",
+          "source": "impact-report-2026"
+        }
+      ],
+      "offices": [
+        {
+          "id": "hinxton",
+          "kind": "headquarters",
+          "source": "official-contact"
+        }
+      ]
+    },
+    "sources": {
+      "official-profile": {
+        "id": "official-profile",
+        "url": "https://www.ebi.ac.uk/about/",
+        "title": {
+          "ar": "نبذة عن EMBL-EBI",
+          "zh": "关于EMBL-EBI",
+          "en": "About EMBL-EBI",
+          "fr": "À propos de l’EMBL-EBI",
+          "ru": "О EMBL-EBI",
+          "es": "Acerca de EMBL-EBI"
+        },
+        "description": {
+          "ar": "تذكر الصفحة أن EMBL-EBI أُنشئ في المملكة المتحدة عام 1994؛ ويسجل التاريخ السنة فقط لأن يوم التأسيس القانوني غير منشور.",
+          "zh": "该页面称EMBL-EBI于1994年在英国设立；由于未公布具体法律成立日期，记录仅采用年份。",
+          "en": "The page states that EMBL-EBI was set up in the UK in 1994; the record uses year precision because no legal day is published.",
+          "fr": "La page indique que l’EMBL-EBI a été créé au Royaume-Uni en 1994 ; la date est limitée à l’année car aucun jour de création juridique n’est publié.",
+          "ru": "Страница сообщает, что EMBL-EBI был создан в Великобритании в 1994 году; указана только точность до года, поскольку юридическая дата по дням не опубликована.",
+          "es": "La página indica que EMBL-EBI se estableció en el Reino Unido en 1994; se registra solo el año porque no se publica un día de constitución jurídica."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "impact-report-2026": {
+        "id": "impact-report-2026",
+        "url": "https://www.embl.org/documents/wp-content/uploads/2026/05/EMBL-EBI_impact_report_2026.pdf",
+        "title": {
+          "ar": "تقرير الأثر الاقتصادي لـEMBL-EBI لعام 2026",
+          "zh": "EMBL-EBI 2026年经济影响报告",
+          "en": "EMBL-EBI economic impact report 2026",
+          "fr": "Rapport 2026 sur l’impact économique de l’EMBL-EBI",
+          "ru": "Отчет EMBL-EBI об экономическом воздействии за 2026 год",
+          "es": "Informe de impacto económico 2026 de EMBL-EBI"
+        },
+        "description": {
+          "ar": "يفيد التقرير بأن EMBL-EBI وظّف 646 موظفًا بما يعادل الدوام الكامل في عام 2025؛ وهو قياس FTE وليس عدد الأشخاص الفعليين.",
+          "zh": "报告称EMBL-EBI在2025年雇用了646名全职当量人员；这是FTE口径，并非实际人数。",
+          "en": "The report states that EMBL-EBI employed 646 full-time-equivalent staff in 2025; this is an FTE measure, not a headcount.",
+          "fr": "Le rapport indique que l’EMBL-EBI employait 646 équivalents temps plein en 2025 ; il s’agit d’une mesure en ETP, pas d’un nombre de personnes.",
+          "ru": "В отчете указано, что в 2025 году EMBL-EBI имел 646 штатных единиц в эквиваленте полной занятости; это FTE, а не численность людей.",
+          "es": "El informe señala que EMBL-EBI empleó 646 equivalentes a tiempo completo en 2025; es una medida FTE, no un recuento de personas."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "official-contact": {
+        "id": "official-contact",
+        "url": "https://www.ebi.ac.uk/about/contact/",
+        "title": {
+          "ar": "الاتصال بـ EMBL-EBI",
+          "zh": "EMBL-EBI联系方式",
+          "en": "Contact EMBL-EBI",
+          "fr": "Contacter l’EMBL-EBI",
+          "ru": "Контакты EMBL-EBI",
+          "es": "Contacto de EMBL-EBI"
+        },
+        "description": {
+          "ar": "تسرد الصفحة العنوان الرسمي الوحيد لـEMBL-EBI في حرم ويلكوم للجينوم في هينكستون.",
+          "zh": "该页面列出EMBL-EBI在欣克斯顿Wellcome基因组园区的官方地址。",
+          "en": "The page lists EMBL-EBI’s official address on the Wellcome Genome Campus in Hinxton.",
+          "fr": "La page indique l’adresse officielle de l’EMBL-EBI sur le Wellcome Genome Campus à Hinxton.",
+          "ru": "Страница приводит официальный адрес EMBL-EBI в кампусе Wellcome Genome Campus в Хинкстоне.",
+          "es": "La página indica la dirección oficial de EMBL-EBI en el Wellcome Genome Campus de Hinxton."
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "المعهد الأوروبي للمعلوماتية الحيوية التابع لـEMBL",
+      "summary": "موقع EMBL في المملكة المتحدة ومعهد للمعلوماتية الحيوية يوفر بيانات وخدمات جزيئية مفتوحة.",
+      "description": "يوفر EMBL-EBI موارد بيانات وخدمات معلوماتية حيوية متاحة بحرية، ويجري أبحاثًا حاسوبية، ويقدم التدريب وينسق المعلوماتية الحيوية في أوروبا. وهو يشغّل الأرشيف الأوروبي للنيوكليوتيدات من موقعه في هينكستون.",
+      "details": {
+        "aliases": [
+          "EMBL-EBI",
+          "European Bioinformatics Institute"
+        ],
+        "profile": {
+          "mission": "تمكين علوم الحياة من خلال بيانات وخدمات معلوماتية حيوية مفتوحة، وأبحاث حاسوبية، وتدريب وتعاون دولي.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "hinxton",
+            "location": "هينكستون، كامبريدجشير، المملكة المتحدة"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "EMBL欧洲生物信息学研究所",
+      "summary": "EMBL在英国的研究所，提供开放的分子数据和生物信息学服务。",
+      "description": "EMBL-EBI提供免费开放的数据资源和生物信息学服务，开展计算研究，提供培训，并协调欧洲生物信息学工作。它在欣克斯顿运营欧洲核苷酸档案库。",
+      "details": {
+        "aliases": [
+          "EMBL-EBI",
+          "European Bioinformatics Institute"
+        ],
+        "profile": {
+          "mission": "通过开放的生物信息学数据与服务、计算研究、培训和国际协作推动生命科学。",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "hinxton",
+            "location": "英国剑桥郡欣克斯顿"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "EMBL-EBI",
+      "summary": "EMBL’s UK site and bioinformatics institute providing open molecular data and services.",
+      "description": "EMBL-EBI provides freely available data resources and bioinformatics services, conducts computational research, delivers training and coordinates bioinformatics in Europe. From its Hinxton site it operates the European Nucleotide Archive.",
+      "details": {
+        "aliases": [
+          "EMBL-EBI",
+          "European Bioinformatics Institute"
+        ],
+        "profile": {
+          "mission": "Advance life science through open bioinformatics data and services, computational research, training and international coordination.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "hinxton",
+            "location": "Hinxton, Cambridgeshire, United Kingdom"
+          }
+        ]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Institut européen de bio-informatique de l’EMBL",
+      "summary": "Site britannique de l’EMBL et institut de bio-informatique fournissant des données et services moléculaires ouverts.",
+      "description": "L’EMBL-EBI fournit des ressources de données et des services de bio-informatique en libre accès, mène des recherches computationnelles, assure des formations et coordonne la bio-informatique en Europe. Depuis son site de Hinxton, il exploite l’European Nucleotide Archive.",
+      "details": {
+        "aliases": [
+          "EMBL-EBI",
+          "European Bioinformatics Institute"
+        ],
+        "profile": {
+          "mission": "Faire progresser les sciences de la vie grâce à des données et services bio-informatiques ouverts, à la recherche computationnelle, à la formation et à la coordination internationale.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "hinxton",
+            "location": "Hinxton, Cambridgeshire, Royaume-Uni"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Европейский институт биоинформатики EMBL",
+      "summary": "Британский центр EMBL и институт биоинформатики, предоставляющий открытые молекулярные данные и сервисы.",
+      "description": "EMBL-EBI предоставляет свободно доступные ресурсы данных и биоинформатические сервисы, ведет вычислительные исследования, обучает специалистов и координирует биоинформатику в Европе. В Хинкстоне институт эксплуатирует Европейский нуклеотидный архив.",
+      "details": {
+        "aliases": [
+          "EMBL-EBI",
+          "European Bioinformatics Institute"
+        ],
+        "profile": {
+          "mission": "Развивать науки о жизни с помощью открытых биоинформатических данных и сервисов, вычислительных исследований, обучения и международной координации.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "hinxton",
+            "location": "Хинкстон, Кембриджшир, Великобритания"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Instituto Europeo de Bioinformática del EMBL",
+      "summary": "Sede británica del EMBL e instituto de bioinformática que ofrece datos y servicios moleculares abiertos.",
+      "description": "EMBL-EBI proporciona recursos de datos y servicios bioinformáticos de acceso libre, realiza investigación computacional, imparte formación y coordina la bioinformática en Europa. Desde su sede de Hinxton opera el Archivo Europeo de Nucleótidos.",
+      "details": {
+        "aliases": [
+          "EMBL-EBI",
+          "European Bioinformatics Institute"
+        ],
+        "profile": {
+          "mission": "Impulsar las ciencias de la vida mediante datos y servicios bioinformáticos abiertos, investigación computacional, formación y coordinación internacional.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "hinxton",
+            "location": "Hinxton, Cambridgeshire, Reino Unido"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-embl-ebi-member-of-insdc-members",
+      "sourceNodeId": "embl-ebi",
+      "targetNodeId": "insdc-members",
+      "kind": "member_of",
+      "note": "Institutional member of INSDC; archive operation remains with each member.",
+      "properties": {
+        "sourceRefs": [
+          "src-relationship-insdc"
+        ]
+      },
+      "sources": {
+        "src-relationship-insdc": {
+          "id": "src-relationship-insdc",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    },
+    {
+      "id": "rel-embl-ebi-operates-european-nucleotide-archive",
+      "sourceNodeId": "embl-ebi",
+      "targetNodeId": "ena",
+      "kind": "operates",
+      "note": "EMBL-EBI maintains and operates ENA for nucleotide data submission, archiving and dissemination. Its role is distinct from grant funding and from the scientific advice provided by advisory boards.",
+      "properties": {
+        "scope": "ENA archive and submission/retrieval services",
+        "status": "active; described in 2024 and 2025 updates",
+        "sourceRefs": [
+          "ena-2024"
+        ]
+      },
+      "sources": {
+        "ena-2024": {
+          "id": "ena-2024",
+          "url": "https://academic.oup.com/nar/article/53/D1/D49/7903379",
+          "title": {
+            "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2024",
+            "en": "The European Nucleotide Archive in 2024",
+            "es": "El Archivo Europeo de Nucleótidos en 2024",
+            "fr": "L’Archive européenne des nucléotides en 2024",
+            "ru": "Европейский нуклеотидный архив в 2024 году",
+            "zh": "2024年欧洲核苷酸档案库"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "src-relationship-ena": {
+          "id": "src-relationship-ena",
+          "url": "https://www.insdc.org/about-insdc/",
+          "title": {
+            "ar": "العضوية وتبادل البيانات في INSDC",
+            "en": "INSDC membership and exchange",
+            "es": "Membresía e intercambio de datos de INSDC",
+            "fr": "Adhésion et échange de données au sein de l’INSDC",
+            "ru": "Членство и обмен данными в INSDC",
+            "zh": "INSDC成员与数据交换"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    },
+    {
+      "id": "rel-embl-ebi-operates-mgnify",
+      "sourceNodeId": "embl-ebi",
+      "targetNodeId": "mgnify",
+      "kind": "operates",
+      "note": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "sourceRefs": [
+          "src-relationship-mgnify"
+        ]
+      },
+      "sources": {
+        "src-relationship-mgnify": {
+          "id": "src-relationship-mgnify",
+          "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+          "title": {
+            "ar": "تدفق البيانات في MGnify",
+            "en": "MGnify data flow",
+            "es": "Flujo de datos de MGnify",
+            "fr": "Flux de données de MGnify",
+            "ru": "Поток данных MGnify",
+            "zh": "MGnify数据流程"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    },
+    {
+      "id": "rel-embl-governs-embl-ebi",
+      "sourceNodeId": "embl",
+      "targetNodeId": "embl-ebi",
+      "kind": "governs",
+      "note": "EMBL-EBI is an institute of EMBL under its leadership and Council authority.",
+      "properties": {
+        "sourceRefs": [
+          "src-relationship-ebi-leadership"
+        ]
+      },
+      "sources": {
+        "src-relationship-ebi-leadership": {
+          "id": "src-relationship-ebi-leadership",
+          "url": "https://www.ebi.ac.uk/about/leadership/",
+          "title": {
+            "ar": "قيادة EMBL-EBI",
+            "en": "EMBL-EBI leadership",
+            "es": "Dirección de EMBL-EBI",
+            "fr": "Direction de l’EMBL-EBI",
+            "ru": "Руководство EMBL-EBI",
+            "zh": "EMBL-EBI领导层"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

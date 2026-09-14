@@ -1,0 +1,59 @@
+{
+  "records": [
+    {
+      "id": "cbd-secretariat",
+      "valid": true,
+      "issues": 0,
+      "sourceStatus": "complete"
+    },
+    {
+      "id": "international-seabed-authority",
+      "valid": true,
+      "issues": 0,
+      "sourceStatus": "complete"
+    },
+    {
+      "id": "embl-ebi",
+      "valid": true,
+      "issues": 0,
+      "sourceStatus": "complete"
+    },
+    {
+      "id": "q-quatics",
+      "valid": true,
+      "issues": 0,
+      "sourceStatus": "complete"
+    },
+    {
+      "id": "swedish-museum-of-natural-history",
+      "valid": true,
+      "issues": 0,
+      "sourceStatus": "complete"
+    },
+    {
+      "id": "global-fishing-watch-operator",
+      "valid": true,
+      "issues": 0,
+      "sourceStatus": "complete"
+    },
+    {
+      "id": "ioc-unesco-iode",
+      "valid": true,
+      "issues": 0,
+      "sourceStatus": "complete"
+    },
+    {
+      "id": "unep-wcmc",
+      "valid": true,
+      "issues": 0,
+      "sourceStatus": "complete"
+    },
+    {
+      "id": "flanders-marine-institute",
+      "valid": true,
+      "issues": 0,
+      "sourceStatus": "complete"
+    }
+  ],
+  "valid": true
+}

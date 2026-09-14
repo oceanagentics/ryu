@@ -1,0 +1,437 @@
+{
+  "id": "international-seabed-authority",
+  "record": {
+    "kind": "organization",
+    "url": "https://isa.org.jm/",
+    "recordDepth": "rich",
+    "properties": {
+      "established": {
+        "date": "1994-11-16",
+        "source": "official-profile"
+      },
+      "metrics": [
+        {
+          "id": "member-countries-2026-02",
+          "key": "member_country_count",
+          "value": 171,
+          "observedAt": "2026-02-06",
+          "source": "official-profile"
+        }
+      ],
+      "offices": [
+        {
+          "id": "kingston",
+          "kind": "headquarters",
+          "source": "official-profile"
+        }
+      ]
+    },
+    "sources": {
+      "about": {
+        "id": "about",
+        "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+        "title": {
+          "ar": "حول DeepData",
+          "en": "About DeepData",
+          "es": "Acerca de DeepData",
+          "fr": "À propos de DeepData",
+          "ru": "О DeepData",
+          "zh": "关于DeepData"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "odis-news": {
+        "id": "odis-news",
+        "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+        "title": {
+          "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+          "en": "DeepData joins ODIS, 6 May 2025",
+          "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+          "fr": "DeepData rejoint ODIS, 6 mai 2025",
+          "ru": "DeepData присоединяется к ODIS, 6 мая 2025",
+          "zh": "DeepData于2025年5月6日加入ODIS"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "official-profile": {
+        "id": "official-profile",
+        "url": "https://isa.org.jm/about-isa/",
+        "title": {
+          "ar": "نبذة عن السلطة الدولية لقاع البحار",
+          "zh": "关于国际海底管理局",
+          "en": "About the International Seabed Authority",
+          "fr": "À propos de l’Autorité internationale des fonds marins",
+          "ru": "О Международном органе по морскому дну",
+          "es": "Acerca de la Autoridad Internacional de los Fondos Marinos"
+        },
+        "description": {
+          "ar": "تذكر الصفحة أن السلطة بدأت وجودها في 16 نوفمبر 1994، وأن مقرها في كينغستون، وأنها ضمت في 6 فبراير 2026 عدد 171 دولة عضو والاتحاد الأوروبي؛ يسجل المقياس الدول فقط.",
+          "zh": "该页面记载管理局于1994年11月16日成立、总部设在金斯敦，并称截至2026年2月6日有171个成员国和欧洲联盟；指标仅记录国家数量。",
+          "en": "The page reports that ISA came into existence on 16 November 1994, is headquartered in Kingston, and had 171 Member States plus the European Union on 6 February 2026; the metric records countries only.",
+          "fr": "La page indique que l’Autorité a vu le jour le 16 novembre 1994, a son siège à Kingston et comptait, au 6 février 2026, 171 États membres plus l’Union européenne ; la mesure ne retient que les pays.",
+          "ru": "Страница сообщает, что Орган начал существовать 16 ноября 1994 года, имеет штаб-квартиру в Кингстоне и на 6 февраля 2026 года насчитывал 171 государство-член и Европейский союз; показатель учитывает только страны.",
+          "es": "La página indica que la Autoridad comenzó a existir el 16 de noviembre de 1994, tiene su sede en Kingston y contaba el 6 de febrero de 2026 con 171 Estados miembros más la Unión Europea; la métrica registra solo países."
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "السلطة الدولية لقاع البحار",
+      "summary": "منظمة حكومية دولية مستقلة تنظم الأنشطة المتعلقة بالموارد المعدنية في المنطقة الدولية لقاع البحار وتراقبها.",
+      "description": "أُنشئت السلطة بموجب اتفاقية الأمم المتحدة لقانون البحار واتفاق تنفيذ الجزء الحادي عشر. وهي تنظم أنشطة الموارد المعدنية في المنطقة لصالح البشرية جمعاء، وتحمي البيئة البحرية من آثار تلك الأنشطة، وتدير قاعدة DeepData.",
+      "details": {
+        "aliases": [
+          "ISA"
+        ],
+        "profile": {
+          "mission": "تنظيم الأنشطة المتعلقة بالموارد المعدنية في المنطقة ومراقبتها لصالح البشرية جمعاء مع ضمان حماية البيئة البحرية.",
+          "sourceRefs": [
+            "official-profile",
+            "about",
+            "odis-news"
+          ]
+        },
+        "offices": [
+          {
+            "id": "kingston",
+            "location": "كينغستون، جامايكا"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "国际海底管理局",
+      "summary": "负责组织和控制国际海底区域矿产资源活动的自治政府间组织。",
+      "description": "国际海底管理局依据《联合国海洋法公约》及其第十一部分执行协定设立。它为全人类利益组织和控制“区域”内的矿产资源活动，保护海洋环境免受这些活动的不利影响，并运营DeepData。",
+      "details": {
+        "aliases": [
+          "ISA"
+        ],
+        "profile": {
+          "mission": "为全人类利益组织和控制“区域”内的矿产资源活动，同时确保有效保护海洋环境。",
+          "sourceRefs": [
+            "official-profile",
+            "about",
+            "odis-news"
+          ]
+        },
+        "offices": [
+          {
+            "id": "kingston",
+            "location": "牙买加金斯敦"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "International Seabed Authority",
+      "summary": "Autonomous intergovernmental organization that organizes and controls mineral-resource activities in the international seabed Area.",
+      "description": "ISA was established under the United Nations Convention on the Law of the Sea and its Part XI implementation agreement. It organizes and controls mineral-resource activities in the Area for the benefit of humankind, protects the marine environment from effects of those activities, and operates DeepData.",
+      "details": {
+        "aliases": [
+          "ISA"
+        ],
+        "profile": {
+          "mission": "Organize and control mineral-resource activities in the Area for the benefit of humankind while ensuring effective protection of the marine environment.",
+          "sourceRefs": [
+            "official-profile",
+            "about",
+            "odis-news"
+          ]
+        },
+        "offices": [
+          {
+            "id": "kingston",
+            "location": "Kingston, Jamaica"
+          }
+        ]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Autorité internationale des fonds marins",
+      "summary": "Organisation intergouvernementale autonome qui organise et contrôle les activités relatives aux ressources minérales dans la Zone internationale des fonds marins.",
+      "description": "L’Autorité a été créée en vertu de la Convention des Nations Unies sur le droit de la mer et de l’Accord relatif à l’application de sa partie XI. Elle organise et contrôle les activités liées aux ressources minérales dans la Zone au bénéfice de l’humanité, protège le milieu marin contre les effets de ces activités et exploite DeepData.",
+      "details": {
+        "aliases": [
+          "ISA"
+        ],
+        "profile": {
+          "mission": "Organiser et contrôler les activités relatives aux ressources minérales dans la Zone au bénéfice de l’humanité, tout en assurant une protection efficace du milieu marin.",
+          "sourceRefs": [
+            "official-profile",
+            "about",
+            "odis-news"
+          ]
+        },
+        "offices": [
+          {
+            "id": "kingston",
+            "location": "Kingston, Jamaïque"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Международный орган по морскому дну",
+      "summary": "Автономная межправительственная организация, которая организует и контролирует деятельность, связанную с минеральными ресурсами международного района морского дна.",
+      "description": "Орган учрежден в соответствии с Конвенцией ООН по морскому праву и Соглашением об осуществлении ее Части XI. Он организует и контролирует деятельность с минеральными ресурсами в Районе на благо всего человечества, защищает морскую среду от последствий этой деятельности и эксплуатирует DeepData.",
+      "details": {
+        "aliases": [
+          "ISA"
+        ],
+        "profile": {
+          "mission": "Организовывать и контролировать деятельность с минеральными ресурсами в Районе на благо человечества, обеспечивая эффективную защиту морской среды.",
+          "sourceRefs": [
+            "official-profile",
+            "about",
+            "odis-news"
+          ]
+        },
+        "offices": [
+          {
+            "id": "kingston",
+            "location": "Кингстон, Ямайка"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Autoridad Internacional de los Fondos Marinos",
+      "summary": "Organización intergubernamental autónoma que organiza y controla las actividades relativas a los recursos minerales en la Zona internacional de los fondos marinos.",
+      "description": "La Autoridad fue establecida en virtud de la Convención de las Naciones Unidas sobre el Derecho del Mar y el Acuerdo de aplicación de su Parte XI. Organiza y controla las actividades relativas a los recursos minerales en la Zona en beneficio de la humanidad, protege el medio marino frente a sus efectos y opera DeepData.",
+      "details": {
+        "aliases": [
+          "ISA"
+        ],
+        "profile": {
+          "mission": "Organizar y controlar las actividades relativas a los recursos minerales en la Zona en beneficio de la humanidad, garantizando la protección efectiva del medio marino.",
+          "sourceRefs": [
+            "official-profile",
+            "about",
+            "odis-news"
+          ]
+        },
+        "offices": [
+          {
+            "id": "kingston",
+            "location": "Kingston, Jamaica"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-international-seabed-authority-funds-deepdata",
+      "sourceNodeId": "international-seabed-authority",
+      "targetNodeId": "deepdata",
+      "kind": "funds",
+      "note": "ISA’s July 2023 account identifies DeepData, launched in 2019, as its first database allocated dedicated programmatic funding by ISA Members. This establishes ISA programme funding; no specific member contribution, current annual amount or future mining revenue is inferred.",
+      "properties": {
+        "scope": "Dedicated ISA programme funding for DeepData",
+        "status": "historical funding documented July 2023; current amount not established",
+        "sourceRefs": [
+          "factcheck"
+        ]
+      },
+      "sources": {
+        "factcheck": {
+          "id": "factcheck",
+          "url": "https://isa.org.jm/isa-fact-check-2023-1/",
+          "title": {
+            "ar": "توضيح بيانات DeepData وتمويلها، يوليو 2023",
+            "en": "ISA explanation of DeepData holdings and funding, July 2023",
+            "es": "Explicación de fondos y financiación DeepData, julio de 2023",
+            "fr": "Explication des fonds et du financement DeepData, juillet 2023",
+            "ru": "Разъяснение о данных и финансировании DeepData, июль 2023",
+            "zh": "2023年7月ISA对DeepData馆藏与经费的说明"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-international-seabed-authority-governs-deepdata",
+      "sourceNodeId": "international-seabed-authority",
+      "targetNodeId": "deepdata",
+      "kind": "governs",
+      "note": "ISA controls DeepData data policy and access classification under its exploration framework. Reporting templates and confidentiality rules distinguish public environmental data from confidential mineral-resource information; the Legal and Technical Commission supplies reporting guidance. This edge concerns authority over this database, not authority over all ocean science or the water column.",
+      "properties": {
+        "scope": "ISA database policy, contractor reporting requirements and confidentiality classification",
+        "status": "documented institutional authority; current templates linked in 2026",
+        "sourceRefs": [
+          "about",
+          "templates"
+        ]
+      },
+      "sources": {
+        "about": {
+          "id": "about",
+          "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+          "title": {
+            "ar": "حول DeepData",
+            "en": "About DeepData",
+            "es": "Acerca de DeepData",
+            "fr": "À propos de DeepData",
+            "ru": "О DeepData",
+            "zh": "关于DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "templates": {
+          "id": "templates",
+          "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+          "title": {
+            "ar": "نماذج تقارير DeepData",
+            "en": "DeepData reporting templates",
+            "es": "Plantillas de informes DeepData",
+            "fr": "Modèles de déclaration DeepData",
+            "ru": "Шаблоны отчётности DeepData",
+            "zh": "DeepData报告模板"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-international-seabed-authority-operates-deepdata",
+      "sourceNodeId": "international-seabed-authority",
+      "targetNodeId": "deepdata",
+      "kind": "operates",
+      "note": "ISA’s Secretariat Data Manager receives contractor submissions, manages validation and ingestion, maintains spatial data and administers the DeepData website. The operational workflow is documented in sections 6–6.2 of the linked manual.",
+      "properties": {
+        "scope": "DeepData ingestion, quality control, data maintenance and website administration",
+        "status": "current ISA service; manual workflow documented in 2018",
+        "sourceRefs": [
+          "manual",
+          "about"
+        ]
+      },
+      "sources": {
+        "about": {
+          "id": "about",
+          "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+          "title": {
+            "ar": "حول DeepData",
+            "en": "About DeepData",
+            "es": "Acerca de DeepData",
+            "fr": "À propos de DeepData",
+            "ru": "О DeepData",
+            "zh": "关于DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "manual": {
+          "id": "manual",
+          "url": "https://www.isa.org.jm/wp-content/uploads/2022/04/UserManual_v1.1_20181119.pdf",
+          "title": {
+            "ar": "دليل DeepData الإصدار 1.1 (2018)",
+            "en": "DeepData user manual, version 1.1 (2018)",
+            "es": "Manual de DeepData, versión 1.1 (2018)",
+            "fr": "Manuel DeepData, version 1.1 (2018)",
+            "ru": "Руководство DeepData, версия 1.1 (2018)",
+            "zh": "DeepData用户手册1.1版（2018）"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-international-seabed-authority-publishes-to-odis",
+      "sourceNodeId": "international-seabed-authority",
+      "targetNodeId": "odis",
+      "kind": "publishes_to",
+      "note": "ISA announced the integration of its DeepData database with ODIS on 6 May 2025 to expose environmental and scientific information submitted by exploration contractors. A current ODIS demo JSON record shows the resulting provider-attributed metadata and an ISA download link. This is ISA’s mediated publication through DeepData, not direct publishing by every contractor or transfer of ownership to ODIS.",
+      "properties": {
+        "via": "deepdata",
+        "scope": "ISA environmental and scientific metadata supplied through DeepData",
+        "status": "announced 2025-05-06; downstream demo presence verified 2026-09-10",
+        "sourceRefs": [
+          "isa-integration",
+          "demo-deepdata"
+        ]
+      },
+      "sources": {
+        "demo-deepdata": {
+          "id": "demo-deepdata",
+          "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+          "title": {
+            "ar": "سجل JSON في عرض ODIS لبيانات DeepData الوصفية عن CTD",
+            "en": "ODIS demo JSON record for DeepData CTD metadata",
+            "es": "Registro JSON de demostración ODIS con metadatos CTD de DeepData",
+            "fr": "Notice JSON de démonstration ODIS pour les métadonnées CTD DeepData",
+            "ru": "JSON-запись демонстрационного поиска ODIS с метаданными CTD DeepData",
+            "zh": "ODIS演示中的DeepData CTD元数据JSON记录"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "isa-integration": {
+          "id": "isa-integration",
+          "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+          "title": {
+            "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+            "en": "DeepData joins ODIS, 6 May 2025",
+            "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+            "fr": "DeepData rejoint ODIS, 6 mai 2025",
+            "ru": "DeepData присоединяется к ODIS, 6 мая 2025",
+            "zh": "DeepData于2025年5月6日加入ODIS"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-international-seabed-authority-publishes-to-platform-obis",
+      "sourceNodeId": "international-seabed-authority",
+      "targetNodeId": "platform-obis",
+      "kind": "publishes_to",
+      "note": "ISA supplies publicly indexed environmental biodiversity datasets through the OBIS ISA thematic node. Node metadata identifies ISA and DeepData; underlying contractor data ownership is not transferred to OBIS. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
+      "properties": {
+        "via": "OBIS ISA",
+        "scope": "ISA-node publication of the public DeepData biological subset",
+        "status": "published node datasets",
+        "sourceRefs": [
+          "evidence",
+          "archive"
+        ]
+      },
+      "sources": {
+        "archive": {
+          "id": "archive",
+          "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+          "title": {
+            "ar": "أرشيف NORI البيولوجي 2022: بيانات EML ووصف الأرشيف",
+            "en": "NORI 2022 biological archive: EML and archive metadata",
+            "es": "Archivo biológico NORI 2022: EML y metadatos",
+            "fr": "Archive biologique NORI 2022 : EML et métadonnées",
+            "ru": "Биологический архив NORI 2022: EML и метаданные",
+            "zh": "NORI 2022生物档案：EML和档案元数据"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "evidence": {
+          "id": "evidence",
+          "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+          "title": {
+            "ar": "عقدة OBIS ISA ومصدر DeepData",
+            "en": "OBIS ISA node and DeepData source",
+            "es": "Nodo OBIS ISA y fuente DeepData",
+            "fr": "Nœud OBIS ISA et source DeepData",
+            "ru": "Узел OBIS ISA и источник DeepData",
+            "zh": "OBIS ISA节点与DeepData来源"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

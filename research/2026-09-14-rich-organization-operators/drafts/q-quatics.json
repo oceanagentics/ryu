@@ -1,0 +1,330 @@
+{
+  "id": "q-quatics",
+  "record": {
+    "kind": "organization",
+    "url": "https://www.q-quatics.org/",
+    "recordDepth": "rich",
+    "properties": {
+      "established": {
+        "date": "2017-02-09",
+        "source": "official-profile"
+      },
+      "metrics": [
+        {
+          "id": "regular-staff-2023",
+          "key": "staff_count",
+          "value": 25,
+          "observedAt": "2023",
+          "source": "annual-report-2023"
+        }
+      ],
+      "offices": [
+        {
+          "id": "los-banos",
+          "kind": "headquarters",
+          "source": "official-contact"
+        }
+      ]
+    },
+    "sources": {
+      "official-profile": {
+        "id": "official-profile",
+        "url": "https://www.q-quatics.org/about-us/",
+        "title": {
+          "ar": "نبذة عن Q-quatics",
+          "zh": "关于Q-quatics",
+          "en": "About Q-quatics",
+          "fr": "À propos de Q-quatics",
+          "ru": "О Q-quatics",
+          "es": "Acerca de Q-quatics"
+        },
+        "description": {
+          "ar": "تذكر الصفحة أن Q-quatics منظمة فلبينية غير ربحية مسجلة في 9 فبراير 2017؛ وهذا هو تاريخ التأسيس القانوني المستخدم.",
+          "zh": "该页面称Q-quatics是菲律宾非营利机构，并于2017年2月9日完成证券交易委员会注册；记录采用该法律成立日期。",
+          "en": "The page identifies Q-quatics as a Philippine nonprofit registered with the Securities and Exchange Commission on 9 February 2017; that legal registration date is used.",
+          "fr": "La page présente Q-quatics comme une organisation philippine à but non lucratif enregistrée auprès de la Securities and Exchange Commission le 9 février 2017 ; cette date d’enregistrement juridique est retenue.",
+          "ru": "Страница называет Q-quatics филиппинской некоммерческой организацией, зарегистрированной Комиссией по ценным бумагам и биржам 9 февраля 2017 года; использована эта дата юридической регистрации.",
+          "es": "La página identifica a Q-quatics como una entidad filipina sin fines de lucro registrada ante la Comisión de Bolsa y Valores el 9 de febrero de 2017; se usa esa fecha de registro jurídico."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "annual-report-2023": {
+        "id": "annual-report-2023",
+        "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+        "title": {
+          "ar": "التقرير السنوي لـ Q-quatics لعام 2023",
+          "zh": "Q-quatics2023年年度报告",
+          "en": "Q-quatics 2023 annual report",
+          "fr": "Rapport annuel 2023 de Q-quatics",
+          "ru": "Годовой отчет Q-quatics за 2023 год",
+          "es": "Informe anual 2023 de Q-quatics"
+        },
+        "description": {
+          "ar": "يفيد التقرير بأن الفريق ضم 25 موظفًا منتظمًا في عام 2023؛ ويذكر استشاريًا بصورة منفصلة ولا يضاف إلى المقياس.",
+          "zh": "报告称2023年团队有25名正式员工；另行提到的一名顾问未计入指标。",
+          "en": "The report states that the team comprised 25 regular staff in 2023; a consultant mentioned separately is not added to the metric.",
+          "fr": "Le rapport indique que l’équipe comptait 25 membres réguliers en 2023 ; un consultant mentionné séparément n’est pas ajouté à la mesure.",
+          "ru": "В отчете указано, что в 2023 году команда состояла из 25 штатных сотрудников; отдельно упомянутый консультант в показатель не включен.",
+          "es": "El informe indica que el equipo contaba con 25 empleados regulares en 2023; un consultor mencionado por separado no se suma a la métrica."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "official-contact": {
+        "id": "official-contact",
+        "url": "https://www.q-quatics.org/contact-us/",
+        "title": {
+          "ar": "الاتصال بـ Q-quatics",
+          "zh": "Q-quatics联系方式",
+          "en": "Contact Q-quatics",
+          "fr": "Contacter Q-quatics",
+          "ru": "Контакты Q-quatics",
+          "es": "Contacto de Q-quatics"
+        },
+        "description": {
+          "ar": "تسرد صفحة الاتصال عنوان Q-quatics في Khush Hall بمدينة لوس بانيوس في لاغونا.",
+          "zh": "联系页面列出Q-quatics位于拉古纳省洛斯巴尼奥斯Khush Hall的地址。",
+          "en": "The contact page lists Q-quatics at Khush Hall in Los Baños, Laguna.",
+          "fr": "La page de contact situe Q-quatics à Khush Hall, à Los Baños dans la province de Laguna.",
+          "ru": "На странице контактов указан адрес Q-quatics в Khush Hall, Лос-Баньос, провинция Лагуна.",
+          "es": "La página de contacto sitúa a Q-quatics en Khush Hall, Los Baños, Laguna."
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+      "summary": "منظمة فلبينية غير ربحية تطور وتحافظ على نظم معلومات عالمية عن التنوع البيولوجي ومصايد الأسماك المائية.",
+      "description": "تدعم Q-quatics تجميع بيانات الموارد المائية الحية ونشرها مجانًا، وتطور أدوات للبحث والإدارة والحفظ. وهي تستضيف وتدير FishBase وSeaLifeBase وAquaMaps تحت التوجيه العلمي لاتحاد FishBase.",
+      "details": {
+        "aliases": [
+          "Q-quatics",
+          "Qq"
+        ],
+        "profile": {
+          "mission": "صيانة وتطوير شبكة مفتوحة من نظم معلومات التنوع البيولوجي ومصايد الأسماك لجميع أشكال الحياة المائية.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "los-banos",
+            "location": "لوس بانيوس، لاغونا، الفلبين"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "Quantitative Aquatics, Inc.（Q-quatics）",
+      "summary": "一家菲律宾非营利机构，开发并维护全球水生生物多样性和渔业信息系统。",
+      "description": "Q-quatics支持水生生物资源数据的汇集与免费传播，并开发用于研究、管理和保护的工具。它在FishBase联盟的科学指导下托管和管理FishBase、SeaLifeBase和AquaMaps。",
+      "details": {
+        "aliases": [
+          "Q-quatics",
+          "Qq"
+        ],
+        "profile": {
+          "mission": "维护和发展一个面向所有水生生物的开放生物多样性与渔业信息系统网络。",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "los-banos",
+            "location": "菲律宾拉古纳省洛斯巴尼奥斯"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+      "summary": "Philippine nonprofit that develops and maintains global aquatic biodiversity and fisheries information systems.",
+      "description": "Q-quatics supports the assembly and free dissemination of data on living aquatic resources and develops tools for research, management and conservation. It hosts and manages FishBase, SeaLifeBase and AquaMaps under the scientific guidance of the FishBase Consortium.",
+      "details": {
+        "aliases": [
+          "Q-quatics",
+          "Qq"
+        ],
+        "profile": {
+          "mission": "Maintain and develop an open network of biodiversity and fisheries information systems covering all aquatic life.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "los-banos",
+            "location": "Los Baños, Laguna, Philippines"
+          }
+        ]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+      "summary": "Organisation philippine à but non lucratif qui développe et maintient des systèmes mondiaux d’information sur la biodiversité aquatique et les pêches.",
+      "description": "Q-quatics soutient l’assemblage et la diffusion gratuite de données sur les ressources aquatiques vivantes et développe des outils pour la recherche, la gestion et la conservation. Elle héberge et gère FishBase, SeaLifeBase et AquaMaps sous la direction scientifique du FishBase Consortium.",
+      "details": {
+        "aliases": [
+          "Q-quatics",
+          "Qq"
+        ],
+        "profile": {
+          "mission": "Maintenir et développer un réseau ouvert de systèmes d’information sur la biodiversité et les pêches couvrant toute la vie aquatique.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "los-banos",
+            "location": "Los Baños, Laguna, Philippines"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+      "summary": "Филиппинская некоммерческая организация, развивающая и поддерживающая глобальные информационные системы по водному биоразнообразию и рыболовству.",
+      "description": "Q-quatics поддерживает сбор и бесплатное распространение данных о живых водных ресурсах и разрабатывает инструменты для исследований, управления и охраны природы. Под научным руководством консорциума FishBase организация размещает и управляет FishBase, SeaLifeBase и AquaMaps.",
+      "details": {
+        "aliases": [
+          "Q-quatics",
+          "Qq"
+        ],
+        "profile": {
+          "mission": "Поддерживать и развивать открытую сеть информационных систем по биоразнообразию и рыболовству, охватывающую всю водную жизнь.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "los-banos",
+            "location": "Лос-Баньос, Лагуна, Филиппины"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+      "summary": "Organización filipina sin fines de lucro que desarrolla y mantiene sistemas mundiales de información sobre biodiversidad acuática y pesca.",
+      "description": "Q-quatics apoya la recopilación y difusión gratuita de datos sobre recursos acuáticos vivos y desarrolla herramientas para investigación, gestión y conservación. Aloja y gestiona FishBase, SeaLifeBase y AquaMaps bajo la orientación científica del Consorcio FishBase.",
+      "details": {
+        "aliases": [
+          "Q-quatics",
+          "Qq"
+        ],
+        "profile": {
+          "mission": "Mantener y desarrollar una red abierta de sistemas de información sobre biodiversidad y pesca que abarque toda la vida acuática.",
+          "sourceRefs": [
+            "official-profile"
+          ]
+        },
+        "offices": [
+          {
+            "id": "los-banos",
+            "location": "Los Baños, Laguna, Filipinas"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-q-quatics-member-of-fishbase-consortium",
+      "sourceNodeId": "q-quatics",
+      "targetNodeId": "fishbase-consortium",
+      "kind": "member_of",
+      "note": "Q-quatics is explicitly listed among the current members of the FishBase Consortium on the Q-quatics projects and partners page. Membership does not itself establish governance over FishBase.",
+      "properties": {
+        "scope": "Institutional membership in the FishBase Consortium",
+        "status": "listed current member",
+        "sourceRefs": [
+          "evidence"
+        ]
+      },
+      "sources": {
+        "evidence": {
+          "id": "evidence",
+          "url": "https://www.q-quatics.org/affiliated-projects/",
+          "title": {
+            "ar": "مشروعات Q-quatics وشركاؤها الممولون وعضوية الاتحاد",
+            "en": "Q-quatics projects, funding partners and consortium membership",
+            "es": "Proyectos, socios financiadores y miembros del consorcio de Q-quatics",
+            "fr": "Projets, partenaires financiers et membres du consortium de Q-quatics",
+            "ru": "Проекты, финансовые партнёры и членство в консорциуме Q-quatics",
+            "zh": "Q-quatics项目、资助伙伴与联盟成员"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-q-quatics-operates-fishbase",
+      "sourceNodeId": "q-quatics",
+      "targetNodeId": "fishbase",
+      "kind": "operates",
+      "note": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "status": "current documented hosting and management",
+        "sourceRefs": [
+          "src-relationship-fishbase"
+        ]
+      },
+      "sources": {
+        "src-relationship-fishbase": {
+          "id": "src-relationship-fishbase",
+          "url": "https://fishbase.se/home.php",
+          "title": {
+            "ar": "الصفحة الرئيسية لـ FishBase",
+            "en": "FishBase homepage",
+            "es": "Página de inicio de FishBase",
+            "fr": "Page d’accueil de FishBase",
+            "ru": "Главная страница FishBase",
+            "zh": "FishBase主页"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-q-quatics-operates-sealifebase",
+      "sourceNodeId": "q-quatics",
+      "targetNodeId": "sealifebase",
+      "kind": "operates",
+      "note": "Q-quatics maintains SeaLifeBase. Embedded AquaMaps maps and MolluscaBase taxonomy do not establish outbound synchronization.",
+      "properties": {
+        "scope": "Programme/team operation; no exclusivity inferred",
+        "sourceRefs": [
+          "src-relationship-sealifebase"
+        ]
+      },
+      "sources": {
+        "src-relationship-sealifebase": {
+          "id": "src-relationship-sealifebase",
+          "url": "https://www.sealifebase.ca/home/who_we_are.php",
+          "title": {
+            "ar": "حول SeaLifeBase",
+            "en": "About SeaLifeBase",
+            "es": "Acerca de SeaLifeBase",
+            "fr": "À propos de SeaLifeBase",
+            "ru": "О SeaLifeBase",
+            "zh": "关于SeaLifeBase"
+          },
+          "accessedAt": "2026-09-09"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

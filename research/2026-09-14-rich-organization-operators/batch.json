@@ -1,0 +1,3631 @@
+[
+  {
+    "id": "cbd-secretariat",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.cbd.int/secretariat/",
+      "recordDepth": "rich",
+      "properties": {
+        "established": null,
+        "metrics": [
+          {
+            "id": "staff-current-undated",
+            "key": "staff_count",
+            "value": 110,
+            "observedAt": null,
+            "source": "official-role"
+          }
+        ],
+        "offices": [
+          {
+            "id": "montreal",
+            "kind": "headquarters",
+            "source": "official-role"
+          }
+        ]
+      },
+      "sources": {
+        "abs-modalities": {
+          "id": "abs-modalities",
+          "url": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+          "title": {
+            "ar": "المقرر NP-1/2: طرائق التشغيل",
+            "en": "Decision NP-1/2: operating modalities",
+            "es": "Decisión NP-1/2: modalidades de funcionamiento",
+            "fr": "Décision NP-1/2 : modalités de fonctionnement",
+            "ru": "Решение NP-1/2: условия функционирования",
+            "zh": "NP-1/2号决定：运作方式"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "abs-decision2024": {
+          "id": "abs-decision2024",
+          "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+          "title": {
+            "ar": "المقرر NP-5/4: غرفة تبادل المعلومات وتبادل المعلومات (2024)",
+            "en": "Decision NP-5/4: ABS Clearing-House and information-sharing (2024)",
+            "es": "Decisión NP-5/4: Centro de Intercambio de Información sobre APB e intercambio de información (2024)",
+            "fr": "Décision NP-5/4 : Centre d’échange APA et échange d’informations (2024)",
+            "ru": "Решение NP-5/4: Механизм посредничества и обмен информацией (2024)",
+            "zh": "NP-5/4号决定：信息交换所与信息共享（2024年）"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "official-role": {
+          "id": "official-role",
+          "url": "https://www.cbd.int/secretariat/role",
+          "title": {
+            "ar": "دور أمانة اتفاقية التنوع البيولوجي",
+            "zh": "生物多样性公约秘书处的职责",
+            "en": "Role of the CBD Secretariat",
+            "fr": "Rôle du Secrétariat de la CDB",
+            "ru": "Роль Секретариата КБР",
+            "es": "Función de la Secretaría del CDB"
+          },
+          "description": {
+            "ar": "تصف الصفحة الولاية والموقع في مونتريال منذ عام 1996، وتذكر نحو 110 موظفين، بمن فيهم العاملون لفترات قصيرة والاستشاريون؛ ولا تؤرخ هذا العدد.",
+            "zh": "该页面说明秘书处的职能及其自1996年以来位于蒙特利尔，并称约有110名工作人员，包括短期人员和顾问；该人数未注明统计日期。",
+            "en": "The page describes the mandate and Montreal location since 1996 and reports approximately 110 staff, including short-term staff and consultants; it does not date that count.",
+            "fr": "La page décrit le mandat et l’implantation à Montréal depuis 1996 et indique environ 110 personnes, y compris le personnel de courte durée et les consultants, sans dater ce chiffre.",
+            "ru": "Страница описывает мандат и размещение в Монреале с 1996 года и указывает примерно 110 сотрудников, включая краткосрочный персонал и консультантов; дата подсчета не приведена.",
+            "es": "La página describe el mandato y la ubicación en Montreal desde 1996 e indica aproximadamente 110 personas, incluido personal de corta duración y consultores; no fecha ese recuento."
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    },
+    "localizations": {
+      "ar": {
+        "title": "أمانة اتفاقية التنوع البيولوجي",
+        "summary": "أمانة معاهدة تدعم اتفاقية التنوع البيولوجي وبروتوكولاتها.",
+        "description": "تُعِد الأمانة اجتماعات مؤتمر الأطراف وهيئاته الفرعية وتخدمها، وتنسق مع الهيئات الدولية ذات الصلة. كما تدير بوابة غرفة تبادل المعلومات بشأن الحصول وتقاسم المنافع وقاعدتها المركزية في إطار ولاية الأطراف.",
+        "details": {
+          "aliases": [
+            "SCBD",
+            "CBD Secretariat"
+          ],
+          "profile": {
+            "mission": "دعم أهداف اتفاقية التنوع البيولوجي وتنفيذها من خلال خدمة هيئاتها وتنسيق المعلومات والتعاون.",
+            "sourceRefs": [
+              "official-role",
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "offices": [
+            {
+              "id": "montreal",
+              "location": "مونتريال، كيبك، كندا"
+            }
+          ],
+          "researchGaps": {
+            "established": "توضح المصادر الرسمية الأساس القانوني للأمانة وتاريخ سريان الاتفاقية، لكنها لا تنشر تاريخ تأسيس منفصلًا خاصًا بالأمانة."
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "生物多样性公约秘书处",
+        "summary": "为《生物多样性公约》及其议定书提供支持的条约秘书处。",
+        "description": "秘书处筹备并服务缔约方大会及其附属机构的会议，并与有关国际机构协调。它还在缔约方授权下管理获取与惠益分享信息交换所门户及其中央数据库。",
+        "details": {
+          "aliases": [
+            "SCBD",
+            "CBD Secretariat"
+          ],
+          "profile": {
+            "mission": "通过服务《生物多样性公约》各机构以及协调信息与合作，支持《公约》的目标和实施。",
+            "sourceRefs": [
+              "official-role",
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "offices": [
+            {
+              "id": "montreal",
+              "location": "加拿大魁北克省蒙特利尔"
+            }
+          ],
+          "researchGaps": {
+            "established": "官方资料说明了秘书处的法律依据和《公约》的生效日期，但未公布秘书处自身单独的成立日期。"
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "en": {
+        "title": "Secretariat of the Convention on Biological Diversity",
+        "summary": "Treaty secretariat supporting the Convention on Biological Diversity and its protocols.",
+        "description": "The Secretariat prepares and services meetings of the Conference of the Parties and its subsidiary bodies and coordinates with relevant international bodies. It also administers the Access and Benefit-sharing Clearing-House portal and central database under the Parties’ mandate.",
+        "details": {
+          "aliases": [
+            "SCBD",
+            "CBD Secretariat"
+          ],
+          "profile": {
+            "mission": "Support the goals and implementation of the Convention on Biological Diversity by servicing its bodies and coordinating information and cooperation.",
+            "sourceRefs": [
+              "official-role",
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "offices": [
+            {
+              "id": "montreal",
+              "location": "Montreal, Quebec, Canada"
+            }
+          ],
+          "researchGaps": {
+            "established": "Official sources explain the Secretariat’s legal basis and the Convention’s entry into force, but do not publish a distinct establishment date for the Secretariat itself."
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Secrétariat de la Convention sur la diversité biologique",
+        "summary": "Secrétariat de traité chargé d’appuyer la Convention sur la diversité biologique et ses protocoles.",
+        "description": "Le Secrétariat prépare et dessert les réunions de la Conférence des Parties et de ses organes subsidiaires, et assure la coordination avec les organismes internationaux compétents. Il administre aussi le portail du Centre d’échange sur l’accès et le partage des avantages et sa base centrale, dans le cadre du mandat des Parties.",
+        "details": {
+          "aliases": [
+            "SCBD",
+            "CBD Secretariat"
+          ],
+          "profile": {
+            "mission": "Soutenir les objectifs et la mise en œuvre de la Convention sur la diversité biologique en desservant ses organes et en coordonnant l’information et la coopération.",
+            "sourceRefs": [
+              "official-role",
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "offices": [
+            {
+              "id": "montreal",
+              "location": "Montréal, Québec, Canada"
+            }
+          ],
+          "researchGaps": {
+            "established": "Les sources officielles précisent la base juridique du Secrétariat et l’entrée en vigueur de la Convention, mais ne publient pas de date de création propre au Secrétariat."
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Секретариат Конвенции о биологическом разнообразии",
+        "summary": "Секретариат договора, обеспечивающий работу Конвенции о биологическом разнообразии и ее протоколов.",
+        "description": "Секретариат готовит и обслуживает совещания Конференции Сторон и ее вспомогательных органов и координирует работу с соответствующими международными организациями. В рамках мандата Сторон он также администрирует портал Механизма посредничества по регулированию доступа и совместному использованию выгод и его центральную базу данных.",
+        "details": {
+          "aliases": [
+            "SCBD",
+            "CBD Secretariat"
+          ],
+          "profile": {
+            "mission": "Поддерживать цели и осуществление Конвенции о биологическом разнообразии, обслуживая ее органы и координируя информацию и сотрудничество.",
+            "sourceRefs": [
+              "official-role",
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "offices": [
+            {
+              "id": "montreal",
+              "location": "Монреаль, Квебек, Канада"
+            }
+          ],
+          "researchGaps": {
+            "established": "Официальные источники описывают правовую основу Секретариата и вступление Конвенции в силу, но не публикуют отдельную дату учреждения самого Секретариата."
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Secretaría del Convenio sobre la Diversidad Biológica",
+        "summary": "Secretaría de tratado que apoya el Convenio sobre la Diversidad Biológica y sus protocolos.",
+        "description": "La Secretaría prepara y presta servicios a las reuniones de la Conferencia de las Partes y sus órganos subsidiarios, y coordina con los organismos internacionales pertinentes. También administra el portal del Centro de Intercambio de Información sobre Acceso y Participación en los Beneficios y su base de datos central conforme al mandato de las Partes.",
+        "details": {
+          "aliases": [
+            "SCBD",
+            "CBD Secretariat"
+          ],
+          "profile": {
+            "mission": "Apoyar los objetivos y la aplicación del Convenio sobre la Diversidad Biológica mediante el servicio a sus órganos y la coordinación de información y cooperación.",
+            "sourceRefs": [
+              "official-role",
+              "abs-modalities",
+              "abs-decision2024"
+            ]
+          },
+          "offices": [
+            {
+              "id": "montreal",
+              "location": "Montreal, Quebec, Canadá"
+            }
+          ],
+          "researchGaps": {
+            "established": "Las fuentes oficiales explican la base jurídica de la Secretaría y la entrada en vigor del Convenio, pero no publican una fecha de establecimiento propia de la Secretaría."
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-cbd-secretariat-operates-abs-clearing-house",
+        "sourceNodeId": "cbd-secretariat",
+        "targetNodeId": "abs-clearing-house",
+        "kind": "operates",
+        "note": "The CBD Secretariat administers the Internet portal and central database, supports users and implements development work within the COP-MOP mandate. Decision NP-5/4 requests continued development and administration. National publication decisions remain with national publishing authorities.",
+        "properties": {
+          "scope": "Central portal/database operation and technical support",
+          "period": "2014 modalities; continued mandate in decision NP-5/4 of 30 October 2024",
+          "status": "current documented mandate",
+          "sourceRefs": [
+            "abs-modalities",
+            "abs-decision2024"
+          ]
+        },
+        "sources": {
+          "abs-modalities": {
+            "id": "abs-modalities",
+            "url": "https://www.cbd.int/decision/cop/default.shtml?id=13402",
+            "title": {
+              "ar": "المقرر NP-1/2: طرائق التشغيل",
+              "en": "Decision NP-1/2: operating modalities",
+              "es": "Decisión NP-1/2: modalidades de funcionamiento",
+              "fr": "Décision NP-1/2 : modalités de fonctionnement",
+              "ru": "Решение NP-1/2: условия функционирования",
+              "zh": "NP-1/2号决定：运作方式"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "abs-decision2024": {
+            "id": "abs-decision2024",
+            "url": "https://www.cbd.int/doc/decisions/np-mop-05/np-mop-05-dec-04-en.pdf",
+            "title": {
+              "ar": "المقرر NP-5/4: غرفة تبادل المعلومات وتبادل المعلومات (2024)",
+              "en": "Decision NP-5/4: ABS Clearing-House and information-sharing (2024)",
+              "es": "Decisión NP-5/4: Centro de Intercambio de Información sobre APB e intercambio de información (2024)",
+              "fr": "Décision NP-5/4 : Centre d’échange APA et échange d’informations (2024)",
+              "ru": "Решение NP-5/4: Механизм посредничества и обмен информацией (2024)",
+              "zh": "NP-5/4号决定：信息交换所与信息共享（2024年）"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-cbd-secretariat-publishes-to-abs-clearing-house",
+        "sourceNodeId": "cbd-secretariat",
+        "targetNodeId": "abs-clearing-house",
+        "kind": "publishes_to",
+        "note": "The CBD Secretariat acts as publishing authority for reference records submitted by registered stakeholders, validating them before final publication. This covers reference materials rather than replacing the national authorities who approve national records.",
+        "properties": {
+          "scope": "Validation and publication of stakeholder reference records",
+          "period": "Official stakeholder workflow dated 10 October 2018 and still published at research date",
+          "status": "documented continuing workflow",
+          "sourceRefs": [
+            "abs-stakeholders"
+          ]
+        },
+        "sources": {
+          "abs-stakeholders": {
+            "id": "abs-stakeholders",
+            "url": "https://absch.cbd.int/kb/tags/getting-started/Getting-started-using-the-ABS-Clearing-House-for-Stakeholders/5bbe3a4d64f00600011e20d9",
+            "title": {
+              "ar": "تقديم أصحاب المصلحة للمعلومات ونشر الأمانة لها",
+              "en": "ABSCH stakeholder submission and Secretariat publication",
+              "es": "Presentación por interesados y publicación por la Secretaría",
+              "fr": "Soumission par les parties prenantes et publication par le Secrétariat",
+              "ru": "Подача материалов заинтересованными сторонами и публикация Секретариатом",
+              "zh": "利益攸关方提交与秘书处发布"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      }
+    ],
+    "routes": []
+  },
+  {
+    "id": "international-seabed-authority",
+    "record": {
+      "kind": "organization",
+      "url": "https://isa.org.jm/",
+      "recordDepth": "rich",
+      "properties": {
+        "established": {
+          "date": "1994-11-16",
+          "source": "official-profile"
+        },
+        "metrics": [
+          {
+            "id": "member-countries-2026-02",
+            "key": "member_country_count",
+            "value": 171,
+            "observedAt": "2026-02-06",
+            "source": "official-profile"
+          }
+        ],
+        "offices": [
+          {
+            "id": "kingston",
+            "kind": "headquarters",
+            "source": "official-profile"
+          }
+        ]
+      },
+      "sources": {
+        "about": {
+          "id": "about",
+          "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+          "title": {
+            "ar": "حول DeepData",
+            "en": "About DeepData",
+            "es": "Acerca de DeepData",
+            "fr": "À propos de DeepData",
+            "ru": "О DeepData",
+            "zh": "关于DeepData"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "odis-news": {
+          "id": "odis-news",
+          "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+          "title": {
+            "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+            "en": "DeepData joins ODIS, 6 May 2025",
+            "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+            "fr": "DeepData rejoint ODIS, 6 mai 2025",
+            "ru": "DeepData присоединяется к ODIS, 6 мая 2025",
+            "zh": "DeepData于2025年5月6日加入ODIS"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "official-profile": {
+          "id": "official-profile",
+          "url": "https://isa.org.jm/about-isa/",
+          "title": {
+            "ar": "نبذة عن السلطة الدولية لقاع البحار",
+            "zh": "关于国际海底管理局",
+            "en": "About the International Seabed Authority",
+            "fr": "À propos de l’Autorité internationale des fonds marins",
+            "ru": "О Международном органе по морскому дну",
+            "es": "Acerca de la Autoridad Internacional de los Fondos Marinos"
+          },
+          "description": {
+            "ar": "تذكر الصفحة أن السلطة بدأت وجودها في 16 نوفمبر 1994، وأن مقرها في كينغستون، وأنها ضمت في 6 فبراير 2026 عدد 171 دولة عضو والاتحاد الأوروبي؛ يسجل المقياس الدول فقط.",
+            "zh": "该页面记载管理局于1994年11月16日成立、总部设在金斯敦，并称截至2026年2月6日有171个成员国和欧洲联盟；指标仅记录国家数量。",
+            "en": "The page reports that ISA came into existence on 16 November 1994, is headquartered in Kingston, and had 171 Member States plus the European Union on 6 February 2026; the metric records countries only.",
+            "fr": "La page indique que l’Autorité a vu le jour le 16 novembre 1994, a son siège à Kingston et comptait, au 6 février 2026, 171 États membres plus l’Union européenne ; la mesure ne retient que les pays.",
+            "ru": "Страница сообщает, что Орган начал существовать 16 ноября 1994 года, имеет штаб-квартиру в Кингстоне и на 6 февраля 2026 года насчитывал 171 государство-член и Европейский союз; показатель учитывает только страны.",
+            "es": "La página indica que la Autoridad comenzó a existir el 16 de noviembre de 1994, tiene su sede en Kingston y contaba el 6 de febrero de 2026 con 171 Estados miembros más la Unión Europea; la métrica registra solo países."
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    },
+    "localizations": {
+      "ar": {
+        "title": "السلطة الدولية لقاع البحار",
+        "summary": "منظمة حكومية دولية مستقلة تنظم الأنشطة المتعلقة بالموارد المعدنية في المنطقة الدولية لقاع البحار وتراقبها.",
+        "description": "أُنشئت السلطة بموجب اتفاقية الأمم المتحدة لقانون البحار واتفاق تنفيذ الجزء الحادي عشر. وهي تنظم أنشطة الموارد المعدنية في المنطقة لصالح البشرية جمعاء، وتحمي البيئة البحرية من آثار تلك الأنشطة، وتدير قاعدة DeepData.",
+        "details": {
+          "aliases": [
+            "ISA"
+          ],
+          "profile": {
+            "mission": "تنظيم الأنشطة المتعلقة بالموارد المعدنية في المنطقة ومراقبتها لصالح البشرية جمعاء مع ضمان حماية البيئة البحرية.",
+            "sourceRefs": [
+              "official-profile",
+              "about",
+              "odis-news"
+            ]
+          },
+          "offices": [
+            {
+              "id": "kingston",
+              "location": "كينغستون، جامايكا"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "国际海底管理局",
+        "summary": "负责组织和控制国际海底区域矿产资源活动的自治政府间组织。",
+        "description": "国际海底管理局依据《联合国海洋法公约》及其第十一部分执行协定设立。它为全人类利益组织和控制“区域”内的矿产资源活动，保护海洋环境免受这些活动的不利影响，并运营DeepData。",
+        "details": {
+          "aliases": [
+            "ISA"
+          ],
+          "profile": {
+            "mission": "为全人类利益组织和控制“区域”内的矿产资源活动，同时确保有效保护海洋环境。",
+            "sourceRefs": [
+              "official-profile",
+              "about",
+              "odis-news"
+            ]
+          },
+          "offices": [
+            {
+              "id": "kingston",
+              "location": "牙买加金斯敦"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "en": {
+        "title": "International Seabed Authority",
+        "summary": "Autonomous intergovernmental organization that organizes and controls mineral-resource activities in the international seabed Area.",
+        "description": "ISA was established under the United Nations Convention on the Law of the Sea and its Part XI implementation agreement. It organizes and controls mineral-resource activities in the Area for the benefit of humankind, protects the marine environment from effects of those activities, and operates DeepData.",
+        "details": {
+          "aliases": [
+            "ISA"
+          ],
+          "profile": {
+            "mission": "Organize and control mineral-resource activities in the Area for the benefit of humankind while ensuring effective protection of the marine environment.",
+            "sourceRefs": [
+              "official-profile",
+              "about",
+              "odis-news"
+            ]
+          },
+          "offices": [
+            {
+              "id": "kingston",
+              "location": "Kingston, Jamaica"
+            }
+          ]
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Autorité internationale des fonds marins",
+        "summary": "Organisation intergouvernementale autonome qui organise et contrôle les activités relatives aux ressources minérales dans la Zone internationale des fonds marins.",
+        "description": "L’Autorité a été créée en vertu de la Convention des Nations Unies sur le droit de la mer et de l’Accord relatif à l’application de sa partie XI. Elle organise et contrôle les activités liées aux ressources minérales dans la Zone au bénéfice de l’humanité, protège le milieu marin contre les effets de ces activités et exploite DeepData.",
+        "details": {
+          "aliases": [
+            "ISA"
+          ],
+          "profile": {
+            "mission": "Organiser et contrôler les activités relatives aux ressources minérales dans la Zone au bénéfice de l’humanité, tout en assurant une protection efficace du milieu marin.",
+            "sourceRefs": [
+              "official-profile",
+              "about",
+              "odis-news"
+            ]
+          },
+          "offices": [
+            {
+              "id": "kingston",
+              "location": "Kingston, Jamaïque"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Международный орган по морскому дну",
+        "summary": "Автономная межправительственная организация, которая организует и контролирует деятельность, связанную с минеральными ресурсами международного района морского дна.",
+        "description": "Орган учрежден в соответствии с Конвенцией ООН по морскому праву и Соглашением об осуществлении ее Части XI. Он организует и контролирует деятельность с минеральными ресурсами в Районе на благо всего человечества, защищает морскую среду от последствий этой деятельности и эксплуатирует DeepData.",
+        "details": {
+          "aliases": [
+            "ISA"
+          ],
+          "profile": {
+            "mission": "Организовывать и контролировать деятельность с минеральными ресурсами в Районе на благо человечества, обеспечивая эффективную защиту морской среды.",
+            "sourceRefs": [
+              "official-profile",
+              "about",
+              "odis-news"
+            ]
+          },
+          "offices": [
+            {
+              "id": "kingston",
+              "location": "Кингстон, Ямайка"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Autoridad Internacional de los Fondos Marinos",
+        "summary": "Organización intergubernamental autónoma que organiza y controla las actividades relativas a los recursos minerales en la Zona internacional de los fondos marinos.",
+        "description": "La Autoridad fue establecida en virtud de la Convención de las Naciones Unidas sobre el Derecho del Mar y el Acuerdo de aplicación de su Parte XI. Organiza y controla las actividades relativas a los recursos minerales en la Zona en beneficio de la humanidad, protege el medio marino frente a sus efectos y opera DeepData.",
+        "details": {
+          "aliases": [
+            "ISA"
+          ],
+          "profile": {
+            "mission": "Organizar y controlar las actividades relativas a los recursos minerales en la Zona en beneficio de la humanidad, garantizando la protección efectiva del medio marino.",
+            "sourceRefs": [
+              "official-profile",
+              "about",
+              "odis-news"
+            ]
+          },
+          "offices": [
+            {
+              "id": "kingston",
+              "location": "Kingston, Jamaica"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-international-seabed-authority-funds-deepdata",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "deepdata",
+        "kind": "funds",
+        "note": "ISA’s July 2023 account identifies DeepData, launched in 2019, as its first database allocated dedicated programmatic funding by ISA Members. This establishes ISA programme funding; no specific member contribution, current annual amount or future mining revenue is inferred.",
+        "properties": {
+          "scope": "Dedicated ISA programme funding for DeepData",
+          "status": "historical funding documented July 2023; current amount not established",
+          "sourceRefs": [
+            "factcheck"
+          ]
+        },
+        "sources": {
+          "factcheck": {
+            "id": "factcheck",
+            "url": "https://isa.org.jm/isa-fact-check-2023-1/",
+            "title": {
+              "ar": "توضيح بيانات DeepData وتمويلها، يوليو 2023",
+              "en": "ISA explanation of DeepData holdings and funding, July 2023",
+              "es": "Explicación de fondos y financiación DeepData, julio de 2023",
+              "fr": "Explication des fonds et du financement DeepData, juillet 2023",
+              "ru": "Разъяснение о данных и финансировании DeepData, июль 2023",
+              "zh": "2023年7月ISA对DeepData馆藏与经费的说明"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-international-seabed-authority-governs-deepdata",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "deepdata",
+        "kind": "governs",
+        "note": "ISA controls DeepData data policy and access classification under its exploration framework. Reporting templates and confidentiality rules distinguish public environmental data from confidential mineral-resource information; the Legal and Technical Commission supplies reporting guidance. This edge concerns authority over this database, not authority over all ocean science or the water column.",
+        "properties": {
+          "scope": "ISA database policy, contractor reporting requirements and confidentiality classification",
+          "status": "documented institutional authority; current templates linked in 2026",
+          "sourceRefs": [
+            "about",
+            "templates"
+          ]
+        },
+        "sources": {
+          "about": {
+            "id": "about",
+            "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+            "title": {
+              "ar": "حول DeepData",
+              "en": "About DeepData",
+              "es": "Acerca de DeepData",
+              "fr": "À propos de DeepData",
+              "ru": "О DeepData",
+              "zh": "关于DeepData"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "templates": {
+            "id": "templates",
+            "url": "https://isa.org.jm/deepdata-database/reporting-templates/",
+            "title": {
+              "ar": "نماذج تقارير DeepData",
+              "en": "DeepData reporting templates",
+              "es": "Plantillas de informes DeepData",
+              "fr": "Modèles de déclaration DeepData",
+              "ru": "Шаблоны отчётности DeepData",
+              "zh": "DeepData报告模板"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-international-seabed-authority-operates-deepdata",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "deepdata",
+        "kind": "operates",
+        "note": "ISA’s Secretariat Data Manager receives contractor submissions, manages validation and ingestion, maintains spatial data and administers the DeepData website. The operational workflow is documented in sections 6–6.2 of the linked manual.",
+        "properties": {
+          "scope": "DeepData ingestion, quality control, data maintenance and website administration",
+          "status": "current ISA service; manual workflow documented in 2018",
+          "sourceRefs": [
+            "manual",
+            "about"
+          ]
+        },
+        "sources": {
+          "about": {
+            "id": "about",
+            "url": "https://isa.org.jm/deepdata-database/about-deepdata/",
+            "title": {
+              "ar": "حول DeepData",
+              "en": "About DeepData",
+              "es": "Acerca de DeepData",
+              "fr": "À propos de DeepData",
+              "ru": "О DeepData",
+              "zh": "关于DeepData"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "manual": {
+            "id": "manual",
+            "url": "https://www.isa.org.jm/wp-content/uploads/2022/04/UserManual_v1.1_20181119.pdf",
+            "title": {
+              "ar": "دليل DeepData الإصدار 1.1 (2018)",
+              "en": "DeepData user manual, version 1.1 (2018)",
+              "es": "Manual de DeepData, versión 1.1 (2018)",
+              "fr": "Manuel DeepData, version 1.1 (2018)",
+              "ru": "Руководство DeepData, версия 1.1 (2018)",
+              "zh": "DeepData用户手册1.1版（2018）"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-international-seabed-authority-publishes-to-odis",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "odis",
+        "kind": "publishes_to",
+        "note": "ISA announced the integration of its DeepData database with ODIS on 6 May 2025 to expose environmental and scientific information submitted by exploration contractors. A current ODIS demo JSON record shows the resulting provider-attributed metadata and an ISA download link. This is ISA’s mediated publication through DeepData, not direct publishing by every contractor or transfer of ownership to ODIS.",
+        "properties": {
+          "via": "deepdata",
+          "scope": "ISA environmental and scientific metadata supplied through DeepData",
+          "status": "announced 2025-05-06; downstream demo presence verified 2026-09-10",
+          "sourceRefs": [
+            "isa-integration",
+            "demo-deepdata"
+          ]
+        },
+        "sources": {
+          "demo-deepdata": {
+            "id": "demo-deepdata",
+            "url": "https://search-demo.odis.org/api/v1/records/gleaner%3Adeep-seabed-and-ocean-database-international-seabed-authority%3Ahttps%253A%252F%252Fdata.isa.org.jm%252Fstatic%252Foih%252Fodis_comrapms12014_env_template_ctd2-3.zip.html",
+            "title": {
+              "ar": "سجل JSON في عرض ODIS لبيانات DeepData الوصفية عن CTD",
+              "en": "ODIS demo JSON record for DeepData CTD metadata",
+              "es": "Registro JSON de demostración ODIS con metadatos CTD de DeepData",
+              "fr": "Notice JSON de démonstration ODIS pour les métadonnées CTD DeepData",
+              "ru": "JSON-запись демонстрационного поиска ODIS с метаданными CTD DeepData",
+              "zh": "ODIS演示中的DeepData CTD元数据JSON记录"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "isa-integration": {
+            "id": "isa-integration",
+            "url": "https://isa.org.jm/news/the-international-seabed-authoritys-deepdata-joins-the-ocean-data-and-information-system-advancing-global-ocean-data-sharing/",
+            "title": {
+              "ar": "انضمام DeepData إلى ODIS، 6 مايو 2025",
+              "en": "DeepData joins ODIS, 6 May 2025",
+              "es": "DeepData se une a ODIS, 6 de mayo de 2025",
+              "fr": "DeepData rejoint ODIS, 6 mai 2025",
+              "ru": "DeepData присоединяется к ODIS, 6 мая 2025",
+              "zh": "DeepData于2025年5月6日加入ODIS"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-international-seabed-authority-publishes-to-platform-obis",
+        "sourceNodeId": "international-seabed-authority",
+        "targetNodeId": "platform-obis",
+        "kind": "publishes_to",
+        "note": "ISA supplies publicly indexed environmental biodiversity datasets through the OBIS ISA thematic node. Node metadata identifies ISA and DeepData; underlying contractor data ownership is not transferred to OBIS. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
+        "properties": {
+          "via": "OBIS ISA",
+          "scope": "ISA-node publication of the public DeepData biological subset",
+          "status": "published node datasets",
+          "sourceRefs": [
+            "evidence",
+            "archive"
+          ]
+        },
+        "sources": {
+          "archive": {
+            "id": "archive",
+            "url": "https://datasets.obis.org/hosted/isa/noripmn12022_env_bio/noripmn12022_env_bio.zip",
+            "title": {
+              "ar": "أرشيف NORI البيولوجي 2022: بيانات EML ووصف الأرشيف",
+              "en": "NORI 2022 biological archive: EML and archive metadata",
+              "es": "Archivo biológico NORI 2022: EML y metadatos",
+              "fr": "Archive biologique NORI 2022 : EML et métadonnées",
+              "ru": "Биологический архив NORI 2022: EML и метаданные",
+              "zh": "NORI 2022生物档案：EML和档案元数据"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "evidence": {
+            "id": "evidence",
+            "url": "https://obis.org/node/9d2d95be-32eb-4d81-8911-32cb8bc641c8",
+            "title": {
+              "ar": "عقدة OBIS ISA ومصدر DeepData",
+              "en": "OBIS ISA node and DeepData source",
+              "es": "Nodo OBIS ISA y fuente DeepData",
+              "fr": "Nœud OBIS ISA et source DeepData",
+              "ru": "Узел OBIS ISA и источник DeepData",
+              "zh": "OBIS ISA节点与DeepData来源"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      }
+    ],
+    "routes": []
+  },
+  {
+    "id": "embl-ebi",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.ebi.ac.uk/about/",
+      "recordDepth": "rich",
+      "properties": {
+        "established": {
+          "date": "1994",
+          "source": "official-profile"
+        },
+        "metrics": [
+          {
+            "id": "staff-fte-2025",
+            "key": "staff_count",
+            "value": 646,
+            "observedAt": "2025",
+            "source": "impact-report-2026"
+          }
+        ],
+        "offices": [
+          {
+            "id": "hinxton",
+            "kind": "headquarters",
+            "source": "official-contact"
+          }
+        ]
+      },
+      "sources": {
+        "official-profile": {
+          "id": "official-profile",
+          "url": "https://www.ebi.ac.uk/about/",
+          "title": {
+            "ar": "نبذة عن EMBL-EBI",
+            "zh": "关于EMBL-EBI",
+            "en": "About EMBL-EBI",
+            "fr": "À propos de l’EMBL-EBI",
+            "ru": "О EMBL-EBI",
+            "es": "Acerca de EMBL-EBI"
+          },
+          "description": {
+            "ar": "تذكر الصفحة أن EMBL-EBI أُنشئ في المملكة المتحدة عام 1994؛ ويسجل التاريخ السنة فقط لأن يوم التأسيس القانوني غير منشور.",
+            "zh": "该页面称EMBL-EBI于1994年在英国设立；由于未公布具体法律成立日期，记录仅采用年份。",
+            "en": "The page states that EMBL-EBI was set up in the UK in 1994; the record uses year precision because no legal day is published.",
+            "fr": "La page indique que l’EMBL-EBI a été créé au Royaume-Uni en 1994 ; la date est limitée à l’année car aucun jour de création juridique n’est publié.",
+            "ru": "Страница сообщает, что EMBL-EBI был создан в Великобритании в 1994 году; указана только точность до года, поскольку юридическая дата по дням не опубликована.",
+            "es": "La página indica que EMBL-EBI se estableció en el Reino Unido en 1994; se registra solo el año porque no se publica un día de constitución jurídica."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "impact-report-2026": {
+          "id": "impact-report-2026",
+          "url": "https://www.embl.org/documents/wp-content/uploads/2026/05/EMBL-EBI_impact_report_2026.pdf",
+          "title": {
+            "ar": "تقرير الأثر الاقتصادي لـEMBL-EBI لعام 2026",
+            "zh": "EMBL-EBI 2026年经济影响报告",
+            "en": "EMBL-EBI economic impact report 2026",
+            "fr": "Rapport 2026 sur l’impact économique de l’EMBL-EBI",
+            "ru": "Отчет EMBL-EBI об экономическом воздействии за 2026 год",
+            "es": "Informe de impacto económico 2026 de EMBL-EBI"
+          },
+          "description": {
+            "ar": "يفيد التقرير بأن EMBL-EBI وظّف 646 موظفًا بما يعادل الدوام الكامل في عام 2025؛ وهو قياس FTE وليس عدد الأشخاص الفعليين.",
+            "zh": "报告称EMBL-EBI在2025年雇用了646名全职当量人员；这是FTE口径，并非实际人数。",
+            "en": "The report states that EMBL-EBI employed 646 full-time-equivalent staff in 2025; this is an FTE measure, not a headcount.",
+            "fr": "Le rapport indique que l’EMBL-EBI employait 646 équivalents temps plein en 2025 ; il s’agit d’une mesure en ETP, pas d’un nombre de personnes.",
+            "ru": "В отчете указано, что в 2025 году EMBL-EBI имел 646 штатных единиц в эквиваленте полной занятости; это FTE, а не численность людей.",
+            "es": "El informe señala que EMBL-EBI empleó 646 equivalentes a tiempo completo en 2025; es una medida FTE, no un recuento de personas."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "official-contact": {
+          "id": "official-contact",
+          "url": "https://www.ebi.ac.uk/about/contact/",
+          "title": {
+            "ar": "الاتصال بـ EMBL-EBI",
+            "zh": "EMBL-EBI联系方式",
+            "en": "Contact EMBL-EBI",
+            "fr": "Contacter l’EMBL-EBI",
+            "ru": "Контакты EMBL-EBI",
+            "es": "Contacto de EMBL-EBI"
+          },
+          "description": {
+            "ar": "تسرد الصفحة العنوان الرسمي الوحيد لـEMBL-EBI في حرم ويلكوم للجينوم في هينكستون.",
+            "zh": "该页面列出EMBL-EBI在欣克斯顿Wellcome基因组园区的官方地址。",
+            "en": "The page lists EMBL-EBI’s official address on the Wellcome Genome Campus in Hinxton.",
+            "fr": "La page indique l’adresse officielle de l’EMBL-EBI sur le Wellcome Genome Campus à Hinxton.",
+            "ru": "Страница приводит официальный адрес EMBL-EBI в кампусе Wellcome Genome Campus в Хинкстоне.",
+            "es": "La página indica la dirección oficial de EMBL-EBI en el Wellcome Genome Campus de Hinxton."
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    },
+    "localizations": {
+      "ar": {
+        "title": "المعهد الأوروبي للمعلوماتية الحيوية التابع لـEMBL",
+        "summary": "موقع EMBL في المملكة المتحدة ومعهد للمعلوماتية الحيوية يوفر بيانات وخدمات جزيئية مفتوحة.",
+        "description": "يوفر EMBL-EBI موارد بيانات وخدمات معلوماتية حيوية متاحة بحرية، ويجري أبحاثًا حاسوبية، ويقدم التدريب وينسق المعلوماتية الحيوية في أوروبا. وهو يشغّل الأرشيف الأوروبي للنيوكليوتيدات من موقعه في هينكستون.",
+        "details": {
+          "aliases": [
+            "EMBL-EBI",
+            "European Bioinformatics Institute"
+          ],
+          "profile": {
+            "mission": "تمكين علوم الحياة من خلال بيانات وخدمات معلوماتية حيوية مفتوحة، وأبحاث حاسوبية، وتدريب وتعاون دولي.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "hinxton",
+              "location": "هينكستون، كامبريدجشير، المملكة المتحدة"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "EMBL欧洲生物信息学研究所",
+        "summary": "EMBL在英国的研究所，提供开放的分子数据和生物信息学服务。",
+        "description": "EMBL-EBI提供免费开放的数据资源和生物信息学服务，开展计算研究，提供培训，并协调欧洲生物信息学工作。它在欣克斯顿运营欧洲核苷酸档案库。",
+        "details": {
+          "aliases": [
+            "EMBL-EBI",
+            "European Bioinformatics Institute"
+          ],
+          "profile": {
+            "mission": "通过开放的生物信息学数据与服务、计算研究、培训和国际协作推动生命科学。",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "hinxton",
+              "location": "英国剑桥郡欣克斯顿"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "en": {
+        "title": "EMBL-EBI",
+        "summary": "EMBL’s UK site and bioinformatics institute providing open molecular data and services.",
+        "description": "EMBL-EBI provides freely available data resources and bioinformatics services, conducts computational research, delivers training and coordinates bioinformatics in Europe. From its Hinxton site it operates the European Nucleotide Archive.",
+        "details": {
+          "aliases": [
+            "EMBL-EBI",
+            "European Bioinformatics Institute"
+          ],
+          "profile": {
+            "mission": "Advance life science through open bioinformatics data and services, computational research, training and international coordination.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "hinxton",
+              "location": "Hinxton, Cambridgeshire, United Kingdom"
+            }
+          ]
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Institut européen de bio-informatique de l’EMBL",
+        "summary": "Site britannique de l’EMBL et institut de bio-informatique fournissant des données et services moléculaires ouverts.",
+        "description": "L’EMBL-EBI fournit des ressources de données et des services de bio-informatique en libre accès, mène des recherches computationnelles, assure des formations et coordonne la bio-informatique en Europe. Depuis son site de Hinxton, il exploite l’European Nucleotide Archive.",
+        "details": {
+          "aliases": [
+            "EMBL-EBI",
+            "European Bioinformatics Institute"
+          ],
+          "profile": {
+            "mission": "Faire progresser les sciences de la vie grâce à des données et services bio-informatiques ouverts, à la recherche computationnelle, à la formation et à la coordination internationale.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "hinxton",
+              "location": "Hinxton, Cambridgeshire, Royaume-Uni"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Европейский институт биоинформатики EMBL",
+        "summary": "Британский центр EMBL и институт биоинформатики, предоставляющий открытые молекулярные данные и сервисы.",
+        "description": "EMBL-EBI предоставляет свободно доступные ресурсы данных и биоинформатические сервисы, ведет вычислительные исследования, обучает специалистов и координирует биоинформатику в Европе. В Хинкстоне институт эксплуатирует Европейский нуклеотидный архив.",
+        "details": {
+          "aliases": [
+            "EMBL-EBI",
+            "European Bioinformatics Institute"
+          ],
+          "profile": {
+            "mission": "Развивать науки о жизни с помощью открытых биоинформатических данных и сервисов, вычислительных исследований, обучения и международной координации.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "hinxton",
+              "location": "Хинкстон, Кембриджшир, Великобритания"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Instituto Europeo de Bioinformática del EMBL",
+        "summary": "Sede británica del EMBL e instituto de bioinformática que ofrece datos y servicios moleculares abiertos.",
+        "description": "EMBL-EBI proporciona recursos de datos y servicios bioinformáticos de acceso libre, realiza investigación computacional, imparte formación y coordina la bioinformática en Europa. Desde su sede de Hinxton opera el Archivo Europeo de Nucleótidos.",
+        "details": {
+          "aliases": [
+            "EMBL-EBI",
+            "European Bioinformatics Institute"
+          ],
+          "profile": {
+            "mission": "Impulsar las ciencias de la vida mediante datos y servicios bioinformáticos abiertos, investigación computacional, formación y coordinación internacional.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "hinxton",
+              "location": "Hinxton, Cambridgeshire, Reino Unido"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-embl-ebi-member-of-insdc-members",
+        "sourceNodeId": "embl-ebi",
+        "targetNodeId": "insdc-members",
+        "kind": "member_of",
+        "note": "Institutional member of INSDC; archive operation remains with each member.",
+        "properties": {
+          "sourceRefs": [
+            "src-relationship-insdc"
+          ]
+        },
+        "sources": {
+          "src-relationship-insdc": {
+            "id": "src-relationship-insdc",
+            "url": "https://www.insdc.org/about-insdc/",
+            "title": {
+              "ar": "العضوية وتبادل البيانات في INSDC",
+              "en": "INSDC membership and exchange",
+              "es": "Membresía e intercambio de datos de INSDC",
+              "fr": "Adhésion et échange de données au sein de l’INSDC",
+              "ru": "Членство и обмен данными в INSDC",
+              "zh": "INSDC成员与数据交换"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      },
+      {
+        "id": "rel-embl-ebi-operates-european-nucleotide-archive",
+        "sourceNodeId": "embl-ebi",
+        "targetNodeId": "ena",
+        "kind": "operates",
+        "note": "EMBL-EBI maintains and operates ENA for nucleotide data submission, archiving and dissemination. Its role is distinct from grant funding and from the scientific advice provided by advisory boards.",
+        "properties": {
+          "scope": "ENA archive and submission/retrieval services",
+          "status": "active; described in 2024 and 2025 updates",
+          "sourceRefs": [
+            "ena-2024"
+          ]
+        },
+        "sources": {
+          "ena-2024": {
+            "id": "ena-2024",
+            "url": "https://academic.oup.com/nar/article/53/D1/D49/7903379",
+            "title": {
+              "ar": "الأرشيف الأوروبي للنيوكليوتيدات في 2024",
+              "en": "The European Nucleotide Archive in 2024",
+              "es": "El Archivo Europeo de Nucleótidos en 2024",
+              "fr": "L’Archive européenne des nucléotides en 2024",
+              "ru": "Европейский нуклеотидный архив в 2024 году",
+              "zh": "2024年欧洲核苷酸档案库"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "src-relationship-ena": {
+            "id": "src-relationship-ena",
+            "url": "https://www.insdc.org/about-insdc/",
+            "title": {
+              "ar": "العضوية وتبادل البيانات في INSDC",
+              "en": "INSDC membership and exchange",
+              "es": "Membresía e intercambio de datos de INSDC",
+              "fr": "Adhésion et échange de données au sein de l’INSDC",
+              "ru": "Членство и обмен данными в INSDC",
+              "zh": "INSDC成员与数据交换"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      },
+      {
+        "id": "rel-embl-ebi-operates-mgnify",
+        "sourceNodeId": "embl-ebi",
+        "targetNodeId": "mgnify",
+        "kind": "operates",
+        "note": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-mgnify"
+          ]
+        },
+        "sources": {
+          "src-relationship-mgnify": {
+            "id": "src-relationship-mgnify",
+            "url": "https://docs.mgnify.org/src/docs/dataflow.html",
+            "title": {
+              "ar": "تدفق البيانات في MGnify",
+              "en": "MGnify data flow",
+              "es": "Flujo de datos de MGnify",
+              "fr": "Flux de données de MGnify",
+              "ru": "Поток данных MGnify",
+              "zh": "MGnify数据流程"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      },
+      {
+        "id": "rel-embl-governs-embl-ebi",
+        "sourceNodeId": "embl",
+        "targetNodeId": "embl-ebi",
+        "kind": "governs",
+        "note": "EMBL-EBI is an institute of EMBL under its leadership and Council authority.",
+        "properties": {
+          "sourceRefs": [
+            "src-relationship-ebi-leadership"
+          ]
+        },
+        "sources": {
+          "src-relationship-ebi-leadership": {
+            "id": "src-relationship-ebi-leadership",
+            "url": "https://www.ebi.ac.uk/about/leadership/",
+            "title": {
+              "ar": "قيادة EMBL-EBI",
+              "en": "EMBL-EBI leadership",
+              "es": "Dirección de EMBL-EBI",
+              "fr": "Direction de l’EMBL-EBI",
+              "ru": "Руководство EMBL-EBI",
+              "zh": "EMBL-EBI领导层"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      }
+    ],
+    "routes": []
+  },
+  {
+    "id": "q-quatics",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.q-quatics.org/",
+      "recordDepth": "rich",
+      "properties": {
+        "established": {
+          "date": "2017-02-09",
+          "source": "official-profile"
+        },
+        "metrics": [
+          {
+            "id": "regular-staff-2023",
+            "key": "staff_count",
+            "value": 25,
+            "observedAt": "2023",
+            "source": "annual-report-2023"
+          }
+        ],
+        "offices": [
+          {
+            "id": "los-banos",
+            "kind": "headquarters",
+            "source": "official-contact"
+          }
+        ]
+      },
+      "sources": {
+        "official-profile": {
+          "id": "official-profile",
+          "url": "https://www.q-quatics.org/about-us/",
+          "title": {
+            "ar": "نبذة عن Q-quatics",
+            "zh": "关于Q-quatics",
+            "en": "About Q-quatics",
+            "fr": "À propos de Q-quatics",
+            "ru": "О Q-quatics",
+            "es": "Acerca de Q-quatics"
+          },
+          "description": {
+            "ar": "تذكر الصفحة أن Q-quatics منظمة فلبينية غير ربحية مسجلة في 9 فبراير 2017؛ وهذا هو تاريخ التأسيس القانوني المستخدم.",
+            "zh": "该页面称Q-quatics是菲律宾非营利机构，并于2017年2月9日完成证券交易委员会注册；记录采用该法律成立日期。",
+            "en": "The page identifies Q-quatics as a Philippine nonprofit registered with the Securities and Exchange Commission on 9 February 2017; that legal registration date is used.",
+            "fr": "La page présente Q-quatics comme une organisation philippine à but non lucratif enregistrée auprès de la Securities and Exchange Commission le 9 février 2017 ; cette date d’enregistrement juridique est retenue.",
+            "ru": "Страница называет Q-quatics филиппинской некоммерческой организацией, зарегистрированной Комиссией по ценным бумагам и биржам 9 февраля 2017 года; использована эта дата юридической регистрации.",
+            "es": "La página identifica a Q-quatics como una entidad filipina sin fines de lucro registrada ante la Comisión de Bolsa y Valores el 9 de febrero de 2017; se usa esa fecha de registro jurídico."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "annual-report-2023": {
+          "id": "annual-report-2023",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "ar": "التقرير السنوي لـ Q-quatics لعام 2023",
+            "zh": "Q-quatics2023年年度报告",
+            "en": "Q-quatics 2023 annual report",
+            "fr": "Rapport annuel 2023 de Q-quatics",
+            "ru": "Годовой отчет Q-quatics за 2023 год",
+            "es": "Informe anual 2023 de Q-quatics"
+          },
+          "description": {
+            "ar": "يفيد التقرير بأن الفريق ضم 25 موظفًا منتظمًا في عام 2023؛ ويذكر استشاريًا بصورة منفصلة ولا يضاف إلى المقياس.",
+            "zh": "报告称2023年团队有25名正式员工；另行提到的一名顾问未计入指标。",
+            "en": "The report states that the team comprised 25 regular staff in 2023; a consultant mentioned separately is not added to the metric.",
+            "fr": "Le rapport indique que l’équipe comptait 25 membres réguliers en 2023 ; un consultant mentionné séparément n’est pas ajouté à la mesure.",
+            "ru": "В отчете указано, что в 2023 году команда состояла из 25 штатных сотрудников; отдельно упомянутый консультант в показатель не включен.",
+            "es": "El informe indica que el equipo contaba con 25 empleados regulares en 2023; un consultor mencionado por separado no se suma a la métrica."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "official-contact": {
+          "id": "official-contact",
+          "url": "https://www.q-quatics.org/contact-us/",
+          "title": {
+            "ar": "الاتصال بـ Q-quatics",
+            "zh": "Q-quatics联系方式",
+            "en": "Contact Q-quatics",
+            "fr": "Contacter Q-quatics",
+            "ru": "Контакты Q-quatics",
+            "es": "Contacto de Q-quatics"
+          },
+          "description": {
+            "ar": "تسرد صفحة الاتصال عنوان Q-quatics في Khush Hall بمدينة لوس بانيوس في لاغونا.",
+            "zh": "联系页面列出Q-quatics位于拉古纳省洛斯巴尼奥斯Khush Hall的地址。",
+            "en": "The contact page lists Q-quatics at Khush Hall in Los Baños, Laguna.",
+            "fr": "La page de contact situe Q-quatics à Khush Hall, à Los Baños dans la province de Laguna.",
+            "ru": "На странице контактов указан адрес Q-quatics в Khush Hall, Лос-Баньос, провинция Лагуна.",
+            "es": "La página de contacto sitúa a Q-quatics en Khush Hall, Los Baños, Laguna."
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    },
+    "localizations": {
+      "ar": {
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": "منظمة فلبينية غير ربحية تطور وتحافظ على نظم معلومات عالمية عن التنوع البيولوجي ومصايد الأسماك المائية.",
+        "description": "تدعم Q-quatics تجميع بيانات الموارد المائية الحية ونشرها مجانًا، وتطور أدوات للبحث والإدارة والحفظ. وهي تستضيف وتدير FishBase وSeaLifeBase وAquaMaps تحت التوجيه العلمي لاتحاد FishBase.",
+        "details": {
+          "aliases": [
+            "Q-quatics",
+            "Qq"
+          ],
+          "profile": {
+            "mission": "صيانة وتطوير شبكة مفتوحة من نظم معلومات التنوع البيولوجي ومصايد الأسماك لجميع أشكال الحياة المائية.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "los-banos",
+              "location": "لوس بانيوس، لاغونا، الفلبين"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "Quantitative Aquatics, Inc.（Q-quatics）",
+        "summary": "一家菲律宾非营利机构，开发并维护全球水生生物多样性和渔业信息系统。",
+        "description": "Q-quatics支持水生生物资源数据的汇集与免费传播，并开发用于研究、管理和保护的工具。它在FishBase联盟的科学指导下托管和管理FishBase、SeaLifeBase和AquaMaps。",
+        "details": {
+          "aliases": [
+            "Q-quatics",
+            "Qq"
+          ],
+          "profile": {
+            "mission": "维护和发展一个面向所有水生生物的开放生物多样性与渔业信息系统网络。",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "los-banos",
+              "location": "菲律宾拉古纳省洛斯巴尼奥斯"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "en": {
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": "Philippine nonprofit that develops and maintains global aquatic biodiversity and fisheries information systems.",
+        "description": "Q-quatics supports the assembly and free dissemination of data on living aquatic resources and develops tools for research, management and conservation. It hosts and manages FishBase, SeaLifeBase and AquaMaps under the scientific guidance of the FishBase Consortium.",
+        "details": {
+          "aliases": [
+            "Q-quatics",
+            "Qq"
+          ],
+          "profile": {
+            "mission": "Maintain and develop an open network of biodiversity and fisheries information systems covering all aquatic life.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "los-banos",
+              "location": "Los Baños, Laguna, Philippines"
+            }
+          ]
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": "Organisation philippine à but non lucratif qui développe et maintient des systèmes mondiaux d’information sur la biodiversité aquatique et les pêches.",
+        "description": "Q-quatics soutient l’assemblage et la diffusion gratuite de données sur les ressources aquatiques vivantes et développe des outils pour la recherche, la gestion et la conservation. Elle héberge et gère FishBase, SeaLifeBase et AquaMaps sous la direction scientifique du FishBase Consortium.",
+        "details": {
+          "aliases": [
+            "Q-quatics",
+            "Qq"
+          ],
+          "profile": {
+            "mission": "Maintenir et développer un réseau ouvert de systèmes d’information sur la biodiversité et les pêches couvrant toute la vie aquatique.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "los-banos",
+              "location": "Los Baños, Laguna, Philippines"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": "Филиппинская некоммерческая организация, развивающая и поддерживающая глобальные информационные системы по водному биоразнообразию и рыболовству.",
+        "description": "Q-quatics поддерживает сбор и бесплатное распространение данных о живых водных ресурсах и разрабатывает инструменты для исследований, управления и охраны природы. Под научным руководством консорциума FishBase организация размещает и управляет FishBase, SeaLifeBase и AquaMaps.",
+        "details": {
+          "aliases": [
+            "Q-quatics",
+            "Qq"
+          ],
+          "profile": {
+            "mission": "Поддерживать и развивать открытую сеть информационных систем по биоразнообразию и рыболовству, охватывающую всю водную жизнь.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "los-banos",
+              "location": "Лос-Баньос, Лагуна, Филиппины"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Quantitative Aquatics, Inc. (Q-quatics)",
+        "summary": "Organización filipina sin fines de lucro que desarrolla y mantiene sistemas mundiales de información sobre biodiversidad acuática y pesca.",
+        "description": "Q-quatics apoya la recopilación y difusión gratuita de datos sobre recursos acuáticos vivos y desarrolla herramientas para investigación, gestión y conservación. Aloja y gestiona FishBase, SeaLifeBase y AquaMaps bajo la orientación científica del Consorcio FishBase.",
+        "details": {
+          "aliases": [
+            "Q-quatics",
+            "Qq"
+          ],
+          "profile": {
+            "mission": "Mantener y desarrollar una red abierta de sistemas de información sobre biodiversidad y pesca que abarque toda la vida acuática.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "los-banos",
+              "location": "Los Baños, Laguna, Filipinas"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-q-quatics-member-of-fishbase-consortium",
+        "sourceNodeId": "q-quatics",
+        "targetNodeId": "fishbase-consortium",
+        "kind": "member_of",
+        "note": "Q-quatics is explicitly listed among the current members of the FishBase Consortium on the Q-quatics projects and partners page. Membership does not itself establish governance over FishBase.",
+        "properties": {
+          "scope": "Institutional membership in the FishBase Consortium",
+          "status": "listed current member",
+          "sourceRefs": [
+            "evidence"
+          ]
+        },
+        "sources": {
+          "evidence": {
+            "id": "evidence",
+            "url": "https://www.q-quatics.org/affiliated-projects/",
+            "title": {
+              "ar": "مشروعات Q-quatics وشركاؤها الممولون وعضوية الاتحاد",
+              "en": "Q-quatics projects, funding partners and consortium membership",
+              "es": "Proyectos, socios financiadores y miembros del consorcio de Q-quatics",
+              "fr": "Projets, partenaires financiers et membres du consortium de Q-quatics",
+              "ru": "Проекты, финансовые партнёры и членство в консорциуме Q-quatics",
+              "zh": "Q-quatics项目、资助伙伴与联盟成员"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-q-quatics-operates-fishbase",
+        "sourceNodeId": "q-quatics",
+        "targetNodeId": "fishbase",
+        "kind": "operates",
+        "note": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "status": "current documented hosting and management",
+          "sourceRefs": [
+            "src-relationship-fishbase"
+          ]
+        },
+        "sources": {
+          "src-relationship-fishbase": {
+            "id": "src-relationship-fishbase",
+            "url": "https://fishbase.se/home.php",
+            "title": {
+              "ar": "الصفحة الرئيسية لـ FishBase",
+              "en": "FishBase homepage",
+              "es": "Página de inicio de FishBase",
+              "fr": "Page d’accueil de FishBase",
+              "ru": "Главная страница FishBase",
+              "zh": "FishBase主页"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-q-quatics-operates-sealifebase",
+        "sourceNodeId": "q-quatics",
+        "targetNodeId": "sealifebase",
+        "kind": "operates",
+        "note": "Q-quatics maintains SeaLifeBase. Embedded AquaMaps maps and MolluscaBase taxonomy do not establish outbound synchronization.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-sealifebase"
+          ]
+        },
+        "sources": {
+          "src-relationship-sealifebase": {
+            "id": "src-relationship-sealifebase",
+            "url": "https://www.sealifebase.ca/home/who_we_are.php",
+            "title": {
+              "ar": "حول SeaLifeBase",
+              "en": "About SeaLifeBase",
+              "es": "Acerca de SeaLifeBase",
+              "fr": "À propos de SeaLifeBase",
+              "ru": "О SeaLifeBase",
+              "zh": "关于SeaLifeBase"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      }
+    ],
+    "routes": []
+  },
+  {
+    "id": "swedish-museum-of-natural-history",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.nrm.se/engelska/in-english/about-us",
+      "recordDepth": "rich",
+      "properties": {
+        "established": {
+          "date": "1819",
+          "source": "strategic-plan"
+        },
+        "metrics": [
+          {
+            "id": "staff-2025-12-31",
+            "key": "staff_count",
+            "value": 283,
+            "observedAt": "2025-12-31",
+            "source": "annual-report-2025"
+          }
+        ],
+        "offices": [
+          {
+            "id": "stockholm",
+            "kind": "headquarters",
+            "source": "official-contact"
+          }
+        ]
+      },
+      "sources": {
+        "identity": {
+          "id": "identity",
+          "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+          "title": {
+            "ar": "المتحف السويدي للتاريخ الطبيعي",
+            "en": "Swedish Museum of Natural History",
+            "es": "Museo Sueco de Historia Natural",
+            "fr": "Muséum suédois d’histoire naturelle",
+            "ru": "Шведский музей естественной истории",
+            "zh": "瑞典自然历史博物馆"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "official-profile": {
+          "id": "official-profile",
+          "url": "https://www.nrm.se/engelska/in-english/about-us/vision-and-tasks",
+          "title": {
+            "ar": "رؤية المتحف السويدي للتاريخ الطبيعي ومهامه",
+            "zh": "瑞典自然历史博物馆的愿景与任务",
+            "en": "Swedish Museum of Natural History vision and tasks",
+            "fr": "Vision et missions du Muséum suédois d’histoire naturelle",
+            "ru": "Видение и задачи Шведского музея естественной истории",
+            "es": "Visión y funciones del Museo Sueco de Historia Natural"
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "strategic-plan": {
+          "id": "strategic-plan",
+          "url": "https://www.nrm.se/download/18.49de620c18bcc06edc389d5/1700312133221/strategic-plan-2023-2030-swedish-museum-natural-history.pdf",
+          "title": {
+            "ar": "الخطة الاستراتيجية للمتحف السويدي للتاريخ الطبيعي 2023–2030",
+            "zh": "瑞典自然历史博物馆2023—2030年战略计划",
+            "en": "Swedish Museum of Natural History strategic plan 2023–2030",
+            "fr": "Plan stratégique 2023–2030 du Muséum suédois d’histoire naturelle",
+            "ru": "Стратегический план Шведского музея естественной истории на 2023–2030 годы",
+            "es": "Plan estratégico 2023–2030 del Museo Sueco de Historia Natural"
+          },
+          "description": {
+            "ar": "تذكر الخطة أن المتحف تأسس عام 1819 وأن جذور مجموعاته أقدم؛ يسجل التاريخ تأسيس المتحف لا تاريخ المجموعات السابقة.",
+            "zh": "该计划说明博物馆成立于1819年，而其藏品源流更早；记录的是博物馆本身的成立年份，而非前身藏品的年代。",
+            "en": "The plan states that the museum was founded in 1819 and that its collections have older roots; the date records the museum’s founding, not those predecessor collections.",
+            "fr": "Le plan indique que le Muséum a été fondé en 1819 et que ses collections ont des origines plus anciennes ; la date retenue est celle du Muséum, non celle des collections antérieures.",
+            "ru": "В плане указано, что музей основан в 1819 году, а его коллекции имеют более ранние корни; дата относится к музею, а не к коллекциям-предшественникам.",
+            "es": "El plan indica que el museo fue fundado en 1819 y que sus colecciones tienen raíces anteriores; la fecha corresponde al museo, no a esas colecciones predecesoras."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "annual-report-2025": {
+          "id": "annual-report-2025",
+          "url": "https://www.nrm.se/download/18.4dd0638619c47e72d5963880/1771586822521/arsredovisning-2025-naturhistoriska-riksmuseet.pdf",
+          "title": {
+            "ar": "التقرير السنوي لـ المتحف السويدي للتاريخ الطبيعي لعام 2025",
+            "zh": "瑞典自然历史博物馆2025年年度报告",
+            "en": "Swedish Museum of Natural History 2025 annual report",
+            "fr": "Rapport annuel 2025 de Muséum suédois d’histoire naturelle",
+            "ru": "Годовой отчет Шведского музея естественной истории за 2025 год",
+            "es": "Informe anual 2025 de Museo Sueco de Historia Natural"
+          },
+          "description": {
+            "ar": "يسجل التقرير 283 موظفًا في الوكالة في 31 ديسمبر 2025، منهم 211 دائمًا و72 بعقود محددة المدة.",
+            "zh": "报告记载截至2025年12月31日该机构共有283名员工，其中211名为长期雇员、72名为定期雇员。",
+            "en": "The report records 283 employees at the agency on 31 December 2025, comprising 211 permanent and 72 fixed-term employees.",
+            "fr": "Le rapport comptabilise 283 personnes employées par l’agence au 31 décembre 2025, dont 211 permanentes et 72 sous contrat à durée déterminée.",
+            "ru": "В отчете указано 283 сотрудника ведомства на 31 декабря 2025 года: 211 постоянных и 72 срочных сотрудника.",
+            "es": "El informe registra 283 empleados en la agencia a 31 de diciembre de 2025: 211 permanentes y 72 temporales."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "official-contact": {
+          "id": "official-contact",
+          "url": "https://www.nrm.se/engelska/in-english/about-us/contact-us",
+          "title": {
+            "ar": "الاتصال بـ المتحف السويدي للتاريخ الطبيعي",
+            "zh": "瑞典自然历史博物馆联系方式",
+            "en": "Contact the Swedish Museum of Natural History",
+            "fr": "Contacter le Muséum suédois d’histoire naturelle",
+            "ru": "Контакты Шведского музея естественной истории",
+            "es": "Contacto de el Museo Sueco de Historia Natural"
+          },
+          "description": {
+            "ar": "تسرد الصفحة عنوان الزيارة الرسمي في Frescativägen 40 بستوكهولم.",
+            "zh": "该页面列出位于斯德哥尔摩Frescativägen 40的官方访问地址。",
+            "en": "The page lists the official visiting address at Frescativägen 40 in Stockholm.",
+            "fr": "La page indique l’adresse officielle de visite, Frescativägen 40 à Stockholm.",
+            "ru": "На странице указан официальный адрес для посетителей: Frescativägen 40, Стокгольм.",
+            "es": "La página indica la dirección oficial de visita en Frescativägen 40, Estocolmo."
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    },
+    "localizations": {
+      "ar": {
+        "title": "المتحف السويدي للتاريخ الطبيعي",
+        "summary": "وكالة حكومية ومؤسسة بحثية ومتحف وطني للتاريخ الطبيعي في ستوكهولم.",
+        "description": "يجمع المتحف بين البحث العلمي وإدارة المجموعات والمعارض والتعليم العام، وهو مسؤول وطنيًا عن مجال التاريخ الطبيعي في السويد. ويستضيف فريق FishBase Sweden ويوفر إحدى خدمات FishBase.",
+        "details": {
+          "aliases": [
+            "NRM",
+            "Naturhistoriska riksmuseet"
+          ],
+          "profile": {
+            "mission": "تعزيز الاهتمام والمعرفة والبحث في الكون والأرض والحياة والتنوع البيولوجي والبيئة الطبيعية.",
+            "sourceRefs": [
+              "official-profile",
+              "identity"
+            ]
+          },
+          "offices": [
+            {
+              "id": "stockholm",
+              "location": "فريسكاتي، ستوكهولم، السويد"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "瑞典自然历史博物馆",
+        "summary": "位于斯德哥尔摩的政府机构、研究机构和国家级自然历史博物馆。",
+        "description": "该馆结合科学研究、藏品管理、展览和公众教育，并承担瑞典自然历史领域的国家职责。它是FishBase Sweden团队所在地，并提供FishBase的一项服务。",
+        "details": {
+          "aliases": [
+            "NRM",
+            "Naturhistoriska riksmuseet"
+          ],
+          "profile": {
+            "mission": "促进公众对宇宙、地球、生命、生物多样性和自然环境的兴趣、知识与研究。",
+            "sourceRefs": [
+              "official-profile",
+              "identity"
+            ]
+          },
+          "offices": [
+            {
+              "id": "stockholm",
+              "location": "瑞典斯德哥尔摩Frescati"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "en": {
+        "title": "Swedish Museum of Natural History",
+        "summary": "Government agency, research institution and national natural-history museum in Stockholm.",
+        "description": "The museum combines scientific research, collection stewardship, exhibitions and public education and has national responsibility for natural history in Sweden. It hosts the FishBase Sweden team and serves a FishBase instance.",
+        "details": {
+          "aliases": [
+            "NRM",
+            "Naturhistoriska riksmuseet"
+          ],
+          "profile": {
+            "mission": "Promote interest, knowledge and research concerning the universe, Earth, living organisms, biodiversity and the natural environment.",
+            "sourceRefs": [
+              "official-profile",
+              "identity"
+            ]
+          },
+          "offices": [
+            {
+              "id": "stockholm",
+              "location": "Frescati, Stockholm, Sweden"
+            }
+          ]
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Muséum suédois d’histoire naturelle",
+        "summary": "Agence publique, établissement de recherche et muséum national d’histoire naturelle à Stockholm.",
+        "description": "Le Muséum associe recherche scientifique, gestion des collections, expositions et éducation du public, et assume une responsabilité nationale pour l’histoire naturelle en Suède. Il accueille l’équipe FishBase Sweden et dessert une instance de FishBase.",
+        "details": {
+          "aliases": [
+            "NRM",
+            "Naturhistoriska riksmuseet"
+          ],
+          "profile": {
+            "mission": "Promouvoir l’intérêt, les connaissances et la recherche concernant l’univers, la Terre, le vivant, la biodiversité et l’environnement naturel.",
+            "sourceRefs": [
+              "official-profile",
+              "identity"
+            ]
+          },
+          "offices": [
+            {
+              "id": "stockholm",
+              "location": "Frescati, Stockholm, Suède"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Шведский музей естественной истории",
+        "summary": "Государственное ведомство, исследовательское учреждение и национальный музей естественной истории в Стокгольме.",
+        "description": "Музей объединяет научные исследования, хранение коллекций, выставки и просвещение и несет национальную ответственность за естественную историю в Швеции. Здесь работает команда FishBase Sweden и обслуживается один из экземпляров FishBase.",
+        "details": {
+          "aliases": [
+            "NRM",
+            "Naturhistoriska riksmuseet"
+          ],
+          "profile": {
+            "mission": "Развивать интерес, знания и исследования Вселенной, Земли, живых организмов, биоразнообразия и природной среды.",
+            "sourceRefs": [
+              "official-profile",
+              "identity"
+            ]
+          },
+          "offices": [
+            {
+              "id": "stockholm",
+              "location": "Фрескати, Стокгольм, Швеция"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Museo Sueco de Historia Natural",
+        "summary": "Agencia pública, institución de investigación y museo nacional de historia natural en Estocolmo.",
+        "description": "El museo combina investigación científica, custodia de colecciones, exposiciones y educación pública, y tiene responsabilidad nacional sobre la historia natural en Suecia. Alberga el equipo de FishBase Sweden y sirve una instancia de FishBase.",
+        "details": {
+          "aliases": [
+            "NRM",
+            "Naturhistoriska riksmuseet"
+          ],
+          "profile": {
+            "mission": "Promover el interés, el conocimiento y la investigación sobre el universo, la Tierra, los seres vivos, la biodiversidad y el medio natural.",
+            "sourceRefs": [
+              "official-profile",
+              "identity"
+            ]
+          },
+          "offices": [
+            {
+              "id": "stockholm",
+              "location": "Frescati, Estocolmo, Suecia"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-swedish-museum-of-natural-history-funds-fishbase",
+        "sourceNodeId": "swedish-museum-of-natural-history",
+        "targetNodeId": "fishbase",
+        "kind": "funds",
+        "note": "Q-quatics’ 2023 annual report records this support for New species and species updates in FishBase. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+        "properties": {
+          "scope": "New species and species updates in FishBase",
+          "period": "2023-01-30/2023-03-31",
+          "status": "completed in 2023",
+          "sourceRefs": [
+            "report"
+          ],
+          "intermediary": "q-quatics"
+        },
+        "sources": {
+          "report": {
+            "id": "report",
+            "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+            "title": {
+              "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+              "en": "Q-quatics annual report 2023: project funding and usage",
+              "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+              "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+              "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование",
+              "zh": "Q-quatics 2023年度报告：项目资助及使用情况"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-swedish-museum-of-natural-history-operates-fishbase",
+        "sourceNodeId": "swedish-museum-of-natural-history",
+        "targetNodeId": "fishbase",
+        "kind": "operates",
+        "note": "FishBase’s current search page identifies the Swedish Museum of Natural History as serving fishbase.org and locates this mirror in Stockholm. The museum separately documents its FishBase Sweden team. This is scoped mirror/service operation, not exclusive global operation or governance.",
+        "properties": {
+          "scope": "Stockholm mirror and FishBase Sweden service team",
+          "status": "current documented service in June 2026 site release and August 2026 museum page",
+          "sourceRefs": [
+            "mirror",
+            "institution"
+          ]
+        },
+        "sources": {
+          "mirror": {
+            "id": "mirror",
+            "url": "https://fishbase.se/search.php",
+            "title": {
+              "ar": "البحث في FishBase",
+              "en": "FishBase Search",
+              "es": "Búsqueda en FishBase",
+              "fr": "Recherche dans FishBase",
+              "ru": "Поиск в FishBase",
+              "zh": "FishBase搜索"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "institution": {
+            "id": "institution",
+            "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+            "title": {
+              "ar": "FishBase السويد في المتحف السويدي للتاريخ الطبيعي",
+              "en": "FishBase Sweden at the Swedish Museum of Natural History",
+              "es": "FishBase Suecia en el Museo Sueco de Historia Natural",
+              "fr": "FishBase Suède au Muséum suédois d’histoire naturelle",
+              "ru": "FishBase Sweden в Шведском музее естественной истории",
+              "zh": "瑞典自然历史博物馆的FishBase瑞典团队"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      }
+    ],
+    "routes": []
+  },
+  {
+    "id": "global-fishing-watch-operator",
+    "record": {
+      "kind": "organization",
+      "url": "https://globalfishingwatch.org/",
+      "recordDepth": "rich",
+      "properties": {
+        "established": {
+          "date": "2017-06",
+          "source": "official-profile"
+        },
+        "metrics": [
+          {
+            "id": "staff-2023",
+            "key": "staff_count",
+            "value": 90,
+            "observedAt": "2023",
+            "source": "annual-report-2023"
+          }
+        ],
+        "offices": [
+          {
+            "id": "washington-dc",
+            "kind": "headquarters",
+            "source": "official-address"
+          }
+        ]
+      },
+      "sources": {
+        "jac": {
+          "id": "jac",
+          "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+          "title": {
+            "ar": "الخلية التحليلية المشتركة",
+            "en": "Joint Analytical Cell",
+            "es": "Célula Analítica Conjunta",
+            "fr": "Cellule analytique conjointe",
+            "ru": "Совместная аналитическая группа",
+            "zh": "联合分析小组"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "terms": {
+          "id": "terms",
+          "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+          "title": {
+            "ar": "ترخيص API وحدودها",
+            "en": "API licence and limits",
+            "es": "Licencia y límites API",
+            "fr": "Licence et limites API",
+            "ru": "Лицензия и ограничения API",
+            "zh": "API许可与限额"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "ar": "التقرير السنوي 2025",
+            "en": "Annual report 2025",
+            "es": "Informe anual 2025",
+            "fr": "Rapport annuel 2025",
+            "ru": "Годовой отчёт 2025",
+            "zh": "2025年年度报告"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "coalition": {
+          "id": "coalition",
+          "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+          "title": {
+            "ar": "التزامات شفافية المحيطات، 18 يونيو 2026",
+            "en": "Ocean transparency commitments, 18 June 2026",
+            "es": "Compromisos de transparencia oceánica, 18 junio 2026",
+            "fr": "Engagements de transparence océanique, 18 juin 2026",
+            "ru": "Обязательства по прозрачности океана, 18 июня 2026",
+            "zh": "海洋透明度承诺，2026年6月18日"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "official-profile": {
+          "id": "official-profile",
+          "url": "https://globalfishingwatch.org/a-vision-for-our-global-ocean/",
+          "title": {
+            "ar": "رؤية Global Fishing Watch للمحيط العالمي",
+            "zh": "Global Fishing Watch的全球海洋愿景",
+            "en": "Global Fishing Watch: A vision for our global ocean",
+            "fr": "Global Fishing Watch : une vision pour notre océan mondial",
+            "ru": "Global Fishing Watch: видение мирового океана",
+            "es": "Global Fishing Watch: una visión para nuestro océano global"
+          },
+          "description": {
+            "ar": "تفرق الصفحة بين تأسيس المبادرة في 2015 وإنشاء المنظمة الدولية المستقلة غير الربحية في يونيو 2017؛ يستخدم السجل تاريخ المنظمة المستقلة.",
+            "zh": "该页面区分了2015年创立的合作项目与2017年6月成立的独立国际非营利组织；记录采用后者日期。",
+            "en": "The page distinguishes the collaboration founded in 2015 from establishment of the independent international nonprofit in June 2017; the record uses the latter date.",
+            "fr": "La page distingue la collaboration lancée en 2015 de la création de l’organisation internationale indépendante à but non lucratif en juin 2017 ; la fiche retient cette dernière date.",
+            "ru": "Страница различает сотрудничество, начатое в 2015 году, и учреждение независимой международной некоммерческой организации в июне 2017 года; в записи используется последняя дата.",
+            "es": "La página distingue la colaboración fundada en 2015 del establecimiento de la organización internacional independiente sin fines de lucro en junio de 2017; el registro usa esta última fecha."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "annual-report-2023": {
+          "id": "annual-report-2023",
+          "url": "https://globalfishingwatch.org/annual-report-2023/",
+          "title": {
+            "ar": "التقرير السنوي لـ Global Fishing Watch لعام 2023",
+            "zh": "Global Fishing Watch2023年年度报告",
+            "en": "Global Fishing Watch 2023 annual report",
+            "fr": "Rapport annuel 2023 de Global Fishing Watch",
+            "ru": "Годовой отчет Global Fishing Watch за 2023 год",
+            "es": "Informe anual 2023 de Global Fishing Watch"
+          },
+          "description": {
+            "ar": "يصف التقرير فريقًا يضم قرابة 90 موظفًا في 27 دولة في عام 2023؛ تسجل القيمة الرقم التقريبي المنشور ولا تعني عددًا دقيقًا.",
+            "zh": "报告称2023年团队在27个国家拥有近90名员工；指标记录公布的近似值，并非精确人数。",
+            "en": "The report describes nearly 90 staff across 27 countries in 2023; the value records the published approximation, not an exact headcount.",
+            "fr": "Le rapport décrit près de 90 personnes réparties dans 27 pays en 2023 ; la valeur reprend l’approximation publiée et non un effectif exact.",
+            "ru": "В отчете говорится о почти 90 сотрудниках в 27 странах в 2023 году; значение отражает опубликованное приближение, а не точную численность.",
+            "es": "El informe describe cerca de 90 empleados en 27 países en 2023; el valor recoge la aproximación publicada, no un recuento exacto."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "official-address": {
+          "id": "official-address",
+          "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+          "title": {
+            "ar": "شروط ترخيص Global Fishing Watch وعنوانها",
+            "zh": "Global Fishing Watch许可条款与地址",
+            "en": "Global Fishing Watch licence terms and address",
+            "fr": "Conditions de licence et adresse de Global Fishing Watch",
+            "ru": "Лицензионные условия и адрес Global Fishing Watch",
+            "es": "Condiciones de licencia y dirección de Global Fishing Watch"
+          },
+          "description": {
+            "ar": "تعرض الصفحة العنوان المؤسسي لـGlobal Fishing Watch في واشنطن العاصمة؛ ولا تُعامل أماكن عمل الموظفين الموزعين كفروع.",
+            "zh": "该页面列出Global Fishing Watch在华盛顿特区的机构地址；分布式员工的工作地点不计为办事处。",
+            "en": "The page gives Global Fishing Watch’s organizational address in Washington, D.C.; locations of distributed staff are not treated as offices.",
+            "fr": "La page indique l’adresse institutionnelle de Global Fishing Watch à Washington, D.C. ; les lieux de travail du personnel distribué ne sont pas considérés comme des bureaux.",
+            "ru": "На странице указан адрес организации Global Fishing Watch в Вашингтоне; места работы распределенных сотрудников не считаются офисами.",
+            "es": "La página proporciona la dirección institucional de Global Fishing Watch en Washington, D. C.; las ubicaciones del personal distribuido no se consideran oficinas."
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    },
+    "localizations": {
+      "ar": {
+        "title": "Global Fishing Watch, Inc.",
+        "summary": "منظمة دولية مستقلة غير ربحية تعمل على تعزيز حوكمة المحيطات من خلال شفافية النشاط البشري في البحر.",
+        "description": "تحول Global Fishing Watch بيانات الأقمار الصناعية والسفن إلى خرائط وبيانات وتحليلات عامة مجانية لدعم العلوم والسياسات وإدارة المحيطات. وهي تملك منصة Global Fishing Watch وتشغّل منتجاتها وخدماتها وتشارك في شراكات الشفافية في مصايد الأسماك.",
+        "details": {
+          "aliases": [
+            "GFW",
+            "Global Fishing Watch"
+          ],
+          "profile": {
+            "mission": "تعزيز حوكمة المحيطات بزيادة شفافية النشاط البشري في البحر وإتاحة المعرفة الناتجة للجمهور مجانًا.",
+            "sourceRefs": [
+              "official-profile",
+              "annual",
+              "terms"
+            ]
+          },
+          "offices": [
+            {
+              "id": "washington-dc",
+              "location": "واشنطن العاصمة، الولايات المتحدة"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "Global Fishing Watch, Inc.",
+        "summary": "通过提高海上人类活动透明度来推进海洋治理的独立国际非营利组织。",
+        "description": "Global Fishing Watch将卫星和船舶数据转化为免费公开的地图、数据和分析，以支持科学、政策和海洋管理。该机构拥有并运营Global Fishing Watch平台及其产品和服务，并参与渔业透明度合作。",
+        "details": {
+          "aliases": [
+            "GFW",
+            "Global Fishing Watch"
+          ],
+          "profile": {
+            "mission": "通过提高海上人类活动透明度并免费公开由此产生的知识，推进海洋治理。",
+            "sourceRefs": [
+              "official-profile",
+              "annual",
+              "terms"
+            ]
+          },
+          "offices": [
+            {
+              "id": "washington-dc",
+              "location": "美国华盛顿哥伦比亚特区"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "en": {
+        "title": "Global Fishing Watch, Inc.",
+        "summary": "Independent international nonprofit advancing ocean governance through transparency of human activity at sea.",
+        "description": "Global Fishing Watch turns satellite and vessel data into free public maps, data and analysis that support science, policy and ocean management. The organization owns and operates the Global Fishing Watch platform and its products and services and participates in fisheries-transparency partnerships.",
+        "details": {
+          "aliases": [
+            "GFW",
+            "Global Fishing Watch"
+          ],
+          "profile": {
+            "mission": "Advance ocean governance by increasing transparency of human activity at sea and making the resulting knowledge freely available.",
+            "sourceRefs": [
+              "official-profile",
+              "annual",
+              "terms"
+            ]
+          },
+          "offices": [
+            {
+              "id": "washington-dc",
+              "location": "Washington, D.C., United States"
+            }
+          ]
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Global Fishing Watch, Inc.",
+        "summary": "Organisation internationale indépendante à but non lucratif qui fait progresser la gouvernance de l’océan par la transparence des activités humaines en mer.",
+        "description": "Global Fishing Watch transforme des données satellitaires et de navigation en cartes, données et analyses publiques et gratuites au service de la science, des politiques et de la gestion de l’océan. L’organisation possède et exploite la plateforme Global Fishing Watch ainsi que ses produits et services, et participe à des partenariats de transparence des pêches.",
+        "details": {
+          "aliases": [
+            "GFW",
+            "Global Fishing Watch"
+          ],
+          "profile": {
+            "mission": "Faire progresser la gouvernance de l’océan en renforçant la transparence des activités humaines en mer et en rendant les connaissances produites librement accessibles.",
+            "sourceRefs": [
+              "official-profile",
+              "annual",
+              "terms"
+            ]
+          },
+          "offices": [
+            {
+              "id": "washington-dc",
+              "location": "Washington, D.C., États-Unis"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Global Fishing Watch, Inc.",
+        "summary": "Независимая международная некоммерческая организация, развивающая управление океаном через прозрачность деятельности человека в море.",
+        "description": "Global Fishing Watch преобразует спутниковые и судовые данные в бесплатные общедоступные карты, данные и аналитические материалы для науки, политики и управления океаном. Организация владеет платформой Global Fishing Watch, эксплуатирует ее продукты и сервисы и участвует в партнерствах по прозрачности рыболовства.",
+        "details": {
+          "aliases": [
+            "GFW",
+            "Global Fishing Watch"
+          ],
+          "profile": {
+            "mission": "Совершенствовать управление океаном, повышая прозрачность деятельности человека в море и обеспечивая свободный доступ к полученным знаниям.",
+            "sourceRefs": [
+              "official-profile",
+              "annual",
+              "terms"
+            ]
+          },
+          "offices": [
+            {
+              "id": "washington-dc",
+              "location": "Вашингтон, округ Колумбия, США"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Global Fishing Watch, Inc.",
+        "summary": "Organización internacional independiente sin fines de lucro que impulsa la gobernanza oceánica mediante la transparencia de la actividad humana en el mar.",
+        "description": "Global Fishing Watch convierte datos satelitales y de embarcaciones en mapas, datos y análisis públicos y gratuitos que apoyan la ciencia, las políticas y la gestión oceánica. La organización posee y opera la plataforma Global Fishing Watch, sus productos y servicios, y participa en alianzas de transparencia pesquera.",
+        "details": {
+          "aliases": [
+            "GFW",
+            "Global Fishing Watch"
+          ],
+          "profile": {
+            "mission": "Impulsar la gobernanza oceánica aumentando la transparencia de la actividad humana en el mar y haciendo libremente accesible el conocimiento resultante.",
+            "sourceRefs": [
+              "official-profile",
+              "annual",
+              "terms"
+            ]
+          },
+          "offices": [
+            {
+              "id": "washington-dc",
+              "location": "Washington, D. C., Estados Unidos"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-audacious-project-funds-global-fishing-watch-operator",
+        "sourceNodeId": "audacious-project",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "USD 60 million commitment via the Audacious Project, described by GFW as five-year support for 2023–2028, for mapping human activity and scaling ocean governance. This is a commitment, not USD 60 million disbursed in 2025.",
+        "properties": {
+          "scope": "2023–2028 commitment supporting GFW strategy",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-global-fishing-watch-operator-governs-global-fishing-watch",
+        "sourceNodeId": "global-fishing-watch-operator",
+        "targetNodeId": "global-fishing-watch",
+        "kind": "governs",
+        "note": "GFW Inc. sets service access, licensing and account policies, and reserves service modification and access-revocation authority. This concerns platform policy, not authority over fishing activity or maritime jurisdictions.",
+        "properties": {
+          "scope": "Formal authority over platform terms, access and service policies",
+          "status": "current published terms",
+          "sourceRefs": [
+            "terms"
+          ]
+        },
+        "sources": {
+          "terms": {
+            "id": "terms",
+            "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+            "title": {
+              "ar": "ترخيص API وحدودها",
+              "en": "API licence and limits",
+              "es": "Licencia y límites API",
+              "fr": "Licence et limites API",
+              "ru": "Лицензия и ограничения API",
+              "zh": "API许可与限额"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-global-fishing-watch-operator-member-of-coalition-for-fisheries-transparency",
+        "sourceNodeId": "global-fishing-watch-operator",
+        "targetNodeId": "coalition-for-fisheries-transparency",
+        "kind": "member_of",
+        "note": "GFW identifies itself as a member of the coalition. This is organizational participation, not system hierarchy or unilateral governance.",
+        "properties": {
+          "scope": "Organizational participation in fisheries transparency",
+          "status": "documented June 2026",
+          "sourceRefs": [
+            "coalition"
+          ]
+        },
+        "sources": {
+          "coalition": {
+            "id": "coalition",
+            "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+            "title": {
+              "ar": "التزامات شفافية المحيطات، 18 يونيو 2026",
+              "en": "Ocean transparency commitments, 18 June 2026",
+              "es": "Compromisos de transparencia oceánica, 18 junio 2026",
+              "fr": "Engagements de transparence océanique, 18 juin 2026",
+              "ru": "Обязательства по прозрачности океана, 18 июня 2026",
+              "zh": "海洋透明度承诺，2026年6月18日"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-global-fishing-watch-operator-member-of-joint-analytical-cell",
+        "sourceNodeId": "global-fishing-watch-operator",
+        "targetNodeId": "joint-analytical-cell",
+        "kind": "member_of",
+        "note": "The official JAC page lists GFW among its members. Membership does not assign authority over every member or transfer confidential operational data to the public map.",
+        "properties": {
+          "scope": "Participation in the Joint Analytical Cell",
+          "status": "listed on current official page",
+          "sourceRefs": [
+            "jac"
+          ]
+        },
+        "sources": {
+          "jac": {
+            "id": "jac",
+            "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+            "title": {
+              "ar": "الخلية التحليلية المشتركة",
+              "en": "Joint Analytical Cell",
+              "es": "Célula Analítica Conjunta",
+              "fr": "Cellule analytique conjointe",
+              "ru": "Совместная аналитическая группа",
+              "zh": "联合分析小组"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-global-fishing-watch-operator-operates-global-fishing-watch",
+        "sourceNodeId": "global-fishing-watch-operator",
+        "targetNodeId": "global-fishing-watch",
+        "kind": "operates",
+        "note": "GFW Inc. states that it owns and operates its data products and associated services.",
+        "properties": {
+          "scope": "Ownership and daily operation of the GFW platform and APIs",
+          "status": "current published terms",
+          "sourceRefs": [
+            "terms"
+          ]
+        },
+        "sources": {
+          "terms": {
+            "id": "terms",
+            "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+            "title": {
+              "ar": "ترخيص API وحدودها",
+              "en": "API licence and limits",
+              "es": "Licencia y límites API",
+              "fr": "Licence et limites API",
+              "ru": "Лицензия и ограничения API",
+              "zh": "API许可与限额"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-hans-wilsdorf-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "hans-wilsdorf-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "Three-year USD 5.1 million partnership secured in 2025, supporting marine-protection and fisheries work in West/Central Africa, the Mediterranean and the Pacific. Exact start/end dates are unstated.",
+        "properties": {
+          "scope": "Three-year regional program partnership reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-islas-secas-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "islas-secas-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "Renewed funding for Panama marine-protected-area enforcement reported in 2025; amount and exact dates are unstated.",
+        "properties": {
+          "scope": "Panama program support reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-minderoo-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "minderoo-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "One-year USD 200,000 extension reported in 2025 for reliable models and risk assessment related to forced labour and illegal fishing.",
+        "properties": {
+          "scope": "One-year model and risk-assessment support reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-oceana-funds-global-fishing-watch-operator",
+        "sourceNodeId": "oceana",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "USD 115,000 subgrant at the end of 2025 for Coalition for Fisheries Transparency work supporting the Global Charter for Fisheries Transparency. Founding collaboration does not establish current governance.",
+        "properties": {
+          "scope": "Coalition transparency work, subgrant reported in late 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-sall-family-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "sall-family-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "One-year USD 150,000 unrestricted grant reported in 2025.",
+        "properties": {
+          "scope": "One-year unrestricted organizational support reported in 2025",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-walmart-foundation-funds-global-fishing-watch-operator",
+        "sourceNodeId": "walmart-foundation",
+        "targetNodeId": "global-fishing-watch-operator",
+        "kind": "funds",
+        "note": "Two-year USD 450,000 grant renewed in 2025 for industry Vessel Viewer training and integration with partner platforms. Not assigned in full to generic database operations.",
+        "properties": {
+          "scope": "Vessel Viewer training and partner integrations",
+          "status": "reported in 2025 annual report; final disbursement unverified",
+          "sourceRefs": [
+            "annual"
+          ]
+        },
+        "sources": {
+          "annual": {
+            "id": "annual",
+            "url": "https://globalfishingwatch.org/annual-report-2025/",
+            "title": {
+              "ar": "التقرير السنوي 2025",
+              "en": "Annual report 2025",
+              "es": "Informe anual 2025",
+              "fr": "Rapport annuel 2025",
+              "ru": "Годовой отчёт 2025",
+              "zh": "2025年年度报告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      }
+    ],
+    "routes": []
+  },
+  {
+    "id": "ioc-unesco-iode",
+    "record": {
+      "kind": "organization",
+      "url": "https://iode.org/",
+      "recordDepth": "rich",
+      "properties": {
+        "established": {
+          "date": "1961",
+          "source": "official-profile"
+        },
+        "metrics": [],
+        "offices": [
+          {
+            "id": "ostend-project-office",
+            "kind": "office",
+            "source": "official-contact"
+          }
+        ]
+      },
+      "sources": {
+        "official-profile": {
+          "id": "official-profile",
+          "url": "https://iode.org/about/",
+          "title": {
+            "ar": "نبذة عن برنامج IODE",
+            "zh": "关于IODE计划",
+            "en": "About the IODE programme",
+            "fr": "À propos de le programme IODE",
+            "ru": "О программе IODE",
+            "es": "Acerca de el programa IODE"
+          },
+          "description": {
+            "ar": "تذكر الصفحة أن IODE أُنشئ في عام 1961؛ ولا تحدد يومًا أو شهرًا، لذلك يسجل التاريخ بالسنة فقط.",
+            "zh": "该页面称IODE成立于1961年；未注明月份或日期，因此记录仅采用年份。",
+            "en": "The page states that IODE was established in 1961; no month or day is given, so the date uses year precision.",
+            "fr": "La page indique que l’IODE a été créé en 1961 ; aucun mois ni jour n’étant précisé, la date est limitée à l’année.",
+            "ru": "Страница сообщает, что IODE создан в 1961 году; месяц и день не указаны, поэтому дата приведена с точностью до года.",
+            "es": "La página indica que IODE se estableció en 1961; no se especifican mes ni día, por lo que la fecha usa precisión anual."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "official-contact": {
+          "id": "official-contact",
+          "url": "https://iode.org/contact/",
+          "title": {
+            "ar": "الاتصال بـ IODE",
+            "zh": "IODE联系方式",
+            "en": "Contact IODE",
+            "fr": "Contacter l’IODE",
+            "ru": "Контакты IODE",
+            "es": "Contacto de IODE"
+          },
+          "description": {
+            "ar": "تحدد الصفحة مكتب مشروع اللجنة الأوقيانوغرافية الحكومية الدولية لـIODE في حرم InnovOcean بأوستنده؛ ويسجل كمكتب برنامج لا كمقر مستقل لليونسكو.",
+            "zh": "该页面将IOC/IODE项目办公室列在奥斯坦德InnovOcean园区；记录将其作为计划办事处，而非联合国教科文组织的独立总部。",
+            "en": "The page locates the IOC Project Office for IODE at the InnovOcean Campus in Ostend; it is recorded as a programme office, not an independent UNESCO headquarters.",
+            "fr": "La page situe le Bureau de projet de la COI pour l’IODE sur le campus InnovOcean à Ostende ; il est enregistré comme bureau de programme, non comme siège autonome de l’UNESCO.",
+            "ru": "Страница размещает Проектный офис МОК для IODE в кампусе InnovOcean в Остенде; он записан как офис программы, а не самостоятельная штаб-квартира ЮНЕСКО.",
+            "es": "La página sitúa la Oficina de Proyectos de la COI para IODE en el campus InnovOcean de Ostende; se registra como oficina del programa, no como sede independiente de la UNESCO."
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    },
+    "localizations": {
+      "ar": {
+        "title": "التبادل الدولي للبيانات والمعلومات الأوقيانوغرافية التابع لليونسكو/اللجنة الأوقيانوغرافية الحكومية الدولية",
+        "summary": "برنامج اللجنة الأوقيانوغرافية الحكومية الدولية لتبادل البيانات والمعلومات البحرية بين الدول الأعضاء.",
+        "description": "ينسق برنامج IODE شبكة عالمية من المراكز والوحدات الوطنية والمنتسبة التي تدير بيانات المحيطات ومعلوماتها وتتيحها. ومن مكتب مشروع اللجنة الأوقيانوغرافية الحكومية الدولية في أوستنده، يدعم البرنامج منتجات وخدمات من بينها OBIS وODIS.",
+        "details": {
+          "aliases": [
+            "IODE",
+            "International Oceanographic Data and Information Exchange"
+          ],
+          "profile": {
+            "mission": "تعزيز البحث البحري والتنمية عبر تسهيل تبادل البيانات والمعلومات الأوقيانوغرافية وتلبية احتياجات المستخدمين.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend-project-office",
+              "location": "حرم InnovOcean، أوستنده، بلجيكا"
+            }
+          ],
+          "researchGaps": {
+            "scale": "تنشر IODE أعدادًا منفصلة لأنواع مختلفة من مراكز البيانات والوحدات، ولا تنشر رقمًا واحدًا قابلًا للمقارنة للموظفين أو المنظمات الأعضاء."
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "联合国教科文组织政府间海洋学委员会国际海洋学数据与信息交换计划",
+        "summary": "政府间海洋学委员会促进成员国之间海洋数据和信息交换的计划。",
+        "description": "IODE协调由国家海洋数据中心及相关数据和信息单位组成的全球网络，管理并提供海洋数据与信息。该计划从奥斯坦德的政府间海洋学委员会项目办公室支持包括OBIS和ODIS在内的产品与服务。",
+        "details": {
+          "aliases": [
+            "IODE",
+            "International Oceanographic Data and Information Exchange"
+          ],
+          "profile": {
+            "mission": "通过促进海洋学数据和信息交换并满足用户需求，推动海洋研究与发展。",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend-project-office",
+              "location": "比利时奥斯坦德InnovOcean园区"
+            }
+          ],
+          "researchGaps": {
+            "scale": "IODE分别公布不同类型的数据中心和单位数量，但没有发布可比的统一员工数或成员组织数。"
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "en": {
+        "title": "IOC-UNESCO International Oceanographic Data and Information Exchange (IODE)",
+        "summary": "IOC programme for exchanging ocean data and information among participating Member States.",
+        "description": "IODE coordinates a global network of national and associate centres and units that manage and make ocean data and information available. From the IOC Project Office in Ostend, the programme supports products and services that include OBIS and ODIS.",
+        "details": {
+          "aliases": [
+            "IODE",
+            "International Oceanographic Data and Information Exchange"
+          ],
+          "profile": {
+            "mission": "Enhance marine research and development by facilitating the exchange of oceanographic data and information and meeting user needs.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend-project-office",
+              "location": "InnovOcean Campus, Ostend, Belgium"
+            }
+          ],
+          "researchGaps": {
+            "scale": "IODE publishes separate counts for unlike categories of data centres and units, not one comparable staff or member-organization total."
+          }
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Échange international des données et de l’information océanographiques de la COI-UNESCO (IODE)",
+        "summary": "Programme de la COI consacré à l’échange de données et d’informations océaniques entre les États membres participants.",
+        "description": "L’IODE coordonne un réseau mondial de centres et d’unités nationaux et associés qui gèrent et mettent à disposition les données et informations océaniques. Depuis le Bureau de projet de la COI à Ostende, le programme soutient des produits et services dont l’OBIS et l’ODIS.",
+        "details": {
+          "aliases": [
+            "IODE",
+            "International Oceanographic Data and Information Exchange"
+          ],
+          "profile": {
+            "mission": "Renforcer la recherche et le développement marins en facilitant l’échange de données et d’informations océanographiques et en répondant aux besoins des utilisateurs.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend-project-office",
+              "location": "Campus InnovOcean, Ostende, Belgique"
+            }
+          ],
+          "researchGaps": {
+            "scale": "L’IODE publie des décomptes séparés pour des catégories différentes de centres et d’unités, et non un total comparable de personnel ou d’organisations membres."
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Международный обмен океанографическими данными и информацией МОК-ЮНЕСКО (IODE)",
+        "summary": "Программа МОК по обмену океанскими данными и информацией между участвующими государствами-членами.",
+        "description": "IODE координирует глобальную сеть национальных и ассоциированных центров и подразделений, которые управляют океанскими данными и информацией и предоставляют к ним доступ. Из Проектного офиса МОК в Остенде программа поддерживает продукты и сервисы, включая OBIS и ODIS.",
+        "details": {
+          "aliases": [
+            "IODE",
+            "International Oceanographic Data and Information Exchange"
+          ],
+          "profile": {
+            "mission": "Содействовать морским исследованиям и развитию, облегчая обмен океанографическими данными и информацией и удовлетворяя потребности пользователей.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend-project-office",
+              "location": "Кампус InnovOcean, Остенде, Бельгия"
+            }
+          ],
+          "researchGaps": {
+            "scale": "IODE публикует отдельные числа для разных категорий центров и подразделений, но не единый сопоставимый итог по персоналу или организациям-участникам."
+          }
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Intercambio Internacional de Datos e Información Oceanográficos de la COI-UNESCO (IODE)",
+        "summary": "Programa de la COI para intercambiar datos e información oceánicos entre los Estados miembros participantes.",
+        "description": "IODE coordina una red mundial de centros y unidades nacionales y asociados que gestionan y ponen a disposición datos e información oceánicos. Desde la Oficina de Proyectos de la COI en Ostende, el programa apoya productos y servicios que incluyen OBIS y ODIS.",
+        "details": {
+          "aliases": [
+            "IODE",
+            "International Oceanographic Data and Information Exchange"
+          ],
+          "profile": {
+            "mission": "Mejorar la investigación y el desarrollo marinos facilitando el intercambio de datos e información oceanográficos y atendiendo las necesidades de los usuarios.",
+            "sourceRefs": [
+              "official-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend-project-office",
+              "location": "Campus InnovOcean, Ostende, Bélgica"
+            }
+          ],
+          "researchGaps": {
+            "scale": "IODE publica recuentos separados para categorías distintas de centros y unidades, no un total comparable de personal u organizaciones miembros."
+          }
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-ioc-assembly-governs-ioc-unesco-iode",
+        "sourceNodeId": "ioc-assembly",
+        "targetNodeId": "ioc-unesco-iode",
+        "kind": "governs",
+        "note": "IODE recommendations are submitted to the IOC Assembly for adoption.",
+        "properties": {
+          "sourceRefs": [
+            "src-relationship-platform-obis"
+          ]
+        },
+        "sources": {
+          "src-relationship-platform-obis": {
+            "id": "src-relationship-platform-obis",
+            "url": "https://obis.org/about/governance/",
+            "title": {
+              "ar": "حوكمة OBIS",
+              "en": "OBIS governance",
+              "es": "Gobernanza de OBIS",
+              "fr": "Gouvernance d’OBIS",
+              "ru": "Управление OBIS",
+              "zh": "OBIS治理"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      },
+      {
+        "id": "rel-ioc-unesco-iode-operates-ocean-biodiversity-information-system",
+        "sourceNodeId": "ioc-unesco-iode",
+        "targetNodeId": "platform-obis",
+        "kind": "operates",
+        "note": "The OBIS Secretariat is hosted at the UNESCO/IOC project office for IODE. Its project manager and data manager operate the central portal and coordinate the independently operated node network; this is not exclusive operation of every contributing node.",
+        "properties": {
+          "scope": "OBIS central Secretariat, portal operation and network coordination",
+          "status": "active documented responsibility",
+          "sourceRefs": [
+            "src-relationship-platform-obis"
+          ]
+        },
+        "sources": {
+          "src-relationship-platform-obis": {
+            "id": "src-relationship-platform-obis",
+            "url": "https://obis.org/about/governance/",
+            "title": {
+              "ar": "حوكمة OBIS",
+              "en": "OBIS governance",
+              "es": "Gobernanza de OBIS",
+              "fr": "Gouvernance d’OBIS",
+              "ru": "Управление OBIS",
+              "zh": "OBIS治理"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-ioc-unesco-iode-operates-ocean-data-and-information-system",
+        "sourceNodeId": "ioc-unesco-iode",
+        "targetNodeId": "odis",
+        "kind": "operates",
+        "note": "IODE coordinates ODIS programme operations and light node curation under IOC-UNESCO. Its catalogue is a product of the UNESCO/IOC Project Office for IODE. Independent participating systems retain their own governance and holdings; operation of ODIS does not transfer that authority.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "status": "current programme operation documented on official ODIS and IODE pages",
+          "sourceRefs": [
+            "src-relationship-odis",
+            "overview",
+            "join",
+            "disclaimer"
+          ]
+        },
+        "sources": {
+          "join": {
+            "id": "join",
+            "url": "https://book.odis.org/gettingStarted.html",
+            "title": {
+              "ar": "اتحاد ODIS: التسجيل ونشر البيانات الوصفية والوصول",
+              "en": "ODIS federation: registration, metadata publication and access",
+              "es": "Federación ODIS: registro, publicación de metadatos y acceso",
+              "fr": "Fédération ODIS : inscription, publication de métadonnées et accès",
+              "ru": "Федерация ODIS: регистрация, публикация метаданных и доступ",
+              "zh": "ODIS联邦：注册、元数据发布与访问"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "overview": {
+            "id": "overview",
+            "url": "https://odis.org/overview/",
+            "title": {
+              "ar": "نظرة عامة على ODIS واتحاده وتاريخه المؤسسي",
+              "en": "ODIS overview, federation and institutional history",
+              "es": "Panorama, federación e historia institucional de ODIS",
+              "fr": "Présentation, fédération et histoire institutionnelle d’ODIS",
+              "ru": "Обзор, федерация и институциональная история ODIS",
+              "zh": "ODIS概况、联邦与机构沿革"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "disclaimer": {
+            "id": "disclaimer",
+            "url": "https://catalogue.odis.org/disclaimer",
+            "title": {
+              "ar": "إخلاء المسؤولية والترخيص في كتالوج ODIS",
+              "en": "ODIS Catalogue disclaimer and licence footer",
+              "es": "Aviso legal y licencia del catálogo ODIS",
+              "fr": "Avertissement et licence du catalogue ODIS",
+              "ru": "Отказ от гарантий и лицензия каталога ODIS",
+              "zh": "ODIS目录免责声明与页脚许可"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "src-relationship-odis": {
+            "id": "src-relationship-odis",
+            "url": "https://oceaninfohub.org/odis/",
+            "title": {
+              "ar": "نظام بيانات ومعلومات المحيطات",
+              "en": "Ocean Data and Information System",
+              "es": "Sistema de Datos e Información Oceánicos",
+              "fr": "Système de données et d’informations océaniques",
+              "ru": "Система океанических данных и информации",
+              "zh": "海洋数据与信息系统"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      },
+      {
+        "id": "rel-ioc-unesco-iode-operates-ocean-infohub",
+        "sourceNodeId": "ioc-unesco-iode",
+        "targetNodeId": "oceaninfohub",
+        "kind": "operates",
+        "note": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-oceaninfohub"
+          ]
+        },
+        "sources": {
+          "src-relationship-oceaninfohub": {
+            "id": "src-relationship-oceaninfohub",
+            "url": "https://oceaninfohub.org/project-overview/",
+            "title": {
+              "ar": "نظرة عامة على مشروع Ocean InfoHub",
+              "en": "Ocean InfoHub project overview",
+              "es": "Descripción general del proyecto Ocean InfoHub",
+              "fr": "Présentation du projet Ocean InfoHub",
+              "ru": "Обзор проекта Ocean InfoHub",
+              "zh": "Ocean InfoHub项目概览"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      }
+    ],
+    "routes": []
+  },
+  {
+    "id": "unep-wcmc",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.unep-wcmc.org/",
+      "recordDepth": "rich",
+      "properties": {
+        "established": {
+          "date": "2000",
+          "source": "collaboration-history"
+        },
+        "metrics": [
+          {
+            "id": "experts-current-undated",
+            "key": "staff_count",
+            "value": 200,
+            "observedAt": null,
+            "source": "official-team"
+          }
+        ],
+        "offices": [
+          {
+            "id": "cambridge",
+            "kind": "headquarters",
+            "source": "official-contact"
+          }
+        ]
+      },
+      "sources": {
+        "pp-ibat": {
+          "id": "pp-ibat",
+          "url": "https://www.ibat-alliance.org/datasets/wdpca",
+          "title": {
+            "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+            "en": "IBAT: World Database on Protected and Conserved Areas",
+            "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+            "fr": "IBAT : base mondiale des aires protégées et conservées",
+            "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+            "zh": "IBAT：世界保护地与保育地数据库"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "pp-management": {
+          "id": "pp-management",
+          "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+          "title": {
+            "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+            "en": "Protected Planet management and Arcadia grant announcement",
+            "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+            "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+            "ru": "Управление Protected Planet и объявление гранта Arcadia",
+            "zh": "Protected Planet管理与Arcadia资助公告"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "official-profile": {
+          "id": "official-profile",
+          "url": "https://www.unep-wcmc.org/en/about",
+          "title": {
+            "ar": "نبذة عن UNEP-WCMC",
+            "zh": "关于UNEP-WCMC",
+            "en": "About UNEP-WCMC",
+            "fr": "À propos de le PNUE-WCMC",
+            "ru": "О UNEP-WCMC",
+            "es": "Acerca de UNEP-WCMC"
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "collaboration-history": {
+          "id": "collaboration-history",
+          "url": "https://www.unep-wcmc.org/en/news/jerry-harrison-40-years-of-unep-wcmc-and-global-biodiversity-policy",
+          "title": {
+            "ar": "تاريخ UNEP-WCMC",
+            "zh": "UNEP-WCMC历史",
+            "en": "UNEP-WCMC history",
+            "fr": "Histoire de du PNUE-WCMC",
+            "ru": "История UNEP-WCMC",
+            "es": "Historia de UNEP-WCMC"
+          },
+          "description": {
+            "ar": "تذكر الصفحة أن WCMC دخل في تعاون مع برنامج الأمم المتحدة للبيئة عام 2000؛ يمثل التاريخ بداية شراكة UNEP-WCMC الحالية، لا أقدم المنظمات السابقة.",
+            "zh": "该页面称WCMC于2000年开始与联合国环境规划署合作；该日期代表当前UNEP-WCMC合作关系的开始，而非更早前身机构的成立。",
+            "en": "The page states that WCMC entered into collaboration with UNEP in 2000; the date marks the present UNEP-WCMC partnership, not the founding of older predecessor bodies.",
+            "fr": "La page indique que le WCMC est entré en collaboration avec le PNUE en 2000 ; cette date marque le partenariat actuel PNUE-WCMC, et non la fondation d’organismes antérieurs.",
+            "ru": "Страница сообщает, что WCMC вступил в сотрудничество с ЮНЕП в 2000 году; дата обозначает начало нынешнего партнерства UNEP-WCMC, а не основание более ранних организаций-предшественников.",
+            "es": "La página indica que WCMC inició su colaboración con el PNUMA en 2000; la fecha marca la alianza UNEP-WCMC actual, no la fundación de organismos predecesores anteriores."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "official-team": {
+          "id": "official-team",
+          "url": "https://www.unep-wcmc.org/en/the-team",
+          "title": {
+            "ar": "فريق UNEP-WCMC",
+            "zh": "UNEP-WCMC团队",
+            "en": "UNEP-WCMC team",
+            "fr": "Équipe de du PNUE-WCMC",
+            "ru": "Команда UNEP-WCMC",
+            "es": "Equipo de UNEP-WCMC"
+          },
+          "description": {
+            "ar": "تصف الصفحة فريقًا يضم أكثر من 200 خبير دون تاريخ قياس؛ تسجل القيمة الحد المنشور 200 ولا تعني عددًا دقيقًا أو كاملًا للموظفين.",
+            "zh": "该页面称团队有200多名专家，但未注明统计日期；指标记录公布的门槛值200，并不代表精确或完整的员工人数。",
+            "en": "The page describes a team of over 200 experts without a measurement date; the value records the published threshold of 200, not an exact or exhaustive employee count.",
+            "fr": "La page décrit une équipe de plus de 200 spécialistes sans date de mesure ; la valeur retient le seuil publié de 200, et non un effectif exact ou exhaustif.",
+            "ru": "Страница описывает команду из более чем 200 экспертов без даты измерения; значение фиксирует опубликованный порог 200, а не точную или полную численность персонала.",
+            "es": "La página describe un equipo de más de 200 expertos sin fecha de medición; el valor registra el umbral publicado de 200, no una plantilla exacta ni exhaustiva."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "official-contact": {
+          "id": "official-contact",
+          "url": "https://www.unep-wcmc.org/en/contact",
+          "title": {
+            "ar": "الاتصال بـ UNEP-WCMC",
+            "zh": "UNEP-WCMC联系方式",
+            "en": "Contact UNEP-WCMC",
+            "fr": "Contacter le PNUE-WCMC",
+            "ru": "Контакты UNEP-WCMC",
+            "es": "Contacto de UNEP-WCMC"
+          },
+          "description": {
+            "ar": "تحدد صفحة الاتصال موقع المركز في كامبريدج بالمملكة المتحدة؛ ولا توجد في الصفحة أدلة على مكاتب تنظيمية إضافية.",
+            "zh": "联系页面将该中心列在英国剑桥；页面未提供其他组织办事处的证据。",
+            "en": "The contact page locates the Centre in Cambridge, United Kingdom; it does not document additional organizational offices.",
+            "fr": "La page de contact situe le Centre à Cambridge, au Royaume-Uni, et ne documente pas d’autres bureaux de l’organisation.",
+            "ru": "На странице контактов Центр расположен в Кембридже, Великобритания; дополнительных офисов организации она не документирует.",
+            "es": "La página de contacto sitúa el Centro en Cambridge, Reino Unido, y no documenta otras oficinas de la organización."
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    },
+    "localizations": {
+      "ar": {
+        "title": "المركز العالمي لرصد حفظ الطبيعة التابع لبرنامج الأمم المتحدة للبيئة",
+        "summary": "مركز خبرة عالمي في التنوع البيولوجي يعمل بتعاون بين برنامج الأمم المتحدة للبيئة ومؤسسة WCMC الخيرية البريطانية.",
+        "description": "يعمل UNEP-WCMC عند تقاطع العلم والسياسة والتطبيق، ويطور المعرفة والقدرات لتحسين حالة الطبيعة ودعم القرارات الحكومية والتجارية. يدير المركز مبادرة Protected Planet ويجمع مخزوناتها العالمية للمناطق المحمية والمصانة.",
+        "details": {
+          "aliases": [
+            "UNEP-WCMC",
+            "WCMC"
+          ],
+          "profile": {
+            "mission": "تطوير المعرفة والقدرات لتحسين حالة الطبيعة للجميع.",
+            "sourceRefs": [
+              "official-profile",
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "offices": [
+            {
+              "id": "cambridge",
+              "location": "كامبريدج، المملكة المتحدة"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "联合国环境规划署世界保护监测中心",
+        "summary": "由联合国环境规划署与英国慈善机构WCMC合作运营的全球生物多样性专业中心。",
+        "description": "UNEP-WCMC在科学、政策与实践的交汇处开展工作，发展知识与能力，以改善自然状况并支持政府和企业决策。该中心管理Protected Planet项目，并汇编全球保护地和其他有效区域保护措施名录。",
+        "details": {
+          "aliases": [
+            "UNEP-WCMC",
+            "WCMC"
+          ],
+          "profile": {
+            "mission": "发展知识和能力，改善惠及所有人的自然状况。",
+            "sourceRefs": [
+              "official-profile",
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "offices": [
+            {
+              "id": "cambridge",
+              "location": "英国剑桥"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "en": {
+        "title": "UN Environment Programme World Conservation Monitoring Centre",
+        "summary": "Global biodiversity centre of expertise operated through collaboration between UNEP and the UK charity WCMC.",
+        "description": "UNEP-WCMC works at the interface of science, policy and practice, developing knowledge and capacity to improve the state of nature and support government and business decisions. The Centre operates Protected Planet and compiles its global protected and conserved area inventories.",
+        "details": {
+          "aliases": [
+            "UNEP-WCMC",
+            "WCMC"
+          ],
+          "profile": {
+            "mission": "Develop knowledge and capacity to improve the state of nature for all.",
+            "sourceRefs": [
+              "official-profile",
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "offices": [
+            {
+              "id": "cambridge",
+              "location": "Cambridge, United Kingdom"
+            }
+          ]
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Centre mondial de surveillance de la conservation de la nature du PNUE",
+        "summary": "Centre mondial d’expertise sur la biodiversité exploité par une collaboration entre le PNUE et l’organisme caritatif britannique WCMC.",
+        "description": "Le PNUE-WCMC travaille à l’interface entre science, politiques et pratique, en développant les connaissances et les capacités nécessaires pour améliorer l’état de la nature et éclairer les décisions publiques et privées. Le Centre exploite Protected Planet et compile ses inventaires mondiaux d’aires protégées et conservées.",
+        "details": {
+          "aliases": [
+            "UNEP-WCMC",
+            "WCMC"
+          ],
+          "profile": {
+            "mission": "Développer les connaissances et les capacités afin d’améliorer l’état de la nature pour tous.",
+            "sourceRefs": [
+              "official-profile",
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "offices": [
+            {
+              "id": "cambridge",
+              "location": "Cambridge, Royaume-Uni"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Всемирный центр мониторинга охраны природы ЮНЕП",
+        "summary": "Глобальный экспертный центр по биоразнообразию, работающий в партнерстве ЮНЕП и британской благотворительной организации WCMC.",
+        "description": "UNEP-WCMC работает на стыке науки, политики и практики, развивая знания и потенциал для улучшения состояния природы и поддержки решений государственных органов и бизнеса. Центр эксплуатирует Protected Planet и формирует его глобальные реестры охраняемых и сохраняемых территорий.",
+        "details": {
+          "aliases": [
+            "UNEP-WCMC",
+            "WCMC"
+          ],
+          "profile": {
+            "mission": "Развивать знания и потенциал, чтобы улучшать состояние природы для всех.",
+            "sourceRefs": [
+              "official-profile",
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "offices": [
+            {
+              "id": "cambridge",
+              "location": "Кембридж, Великобритания"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Centro Mundial de Vigilancia de la Conservación del PNUMA",
+        "summary": "Centro mundial de excelencia en biodiversidad operado mediante la colaboración entre el PNUMA y la entidad benéfica británica WCMC.",
+        "description": "UNEP-WCMC trabaja en la interfaz entre ciencia, políticas y práctica, desarrollando conocimiento y capacidad para mejorar el estado de la naturaleza y apoyar decisiones públicas y empresariales. El Centro opera Protected Planet y compila sus inventarios mundiales de áreas protegidas y conservadas.",
+        "details": {
+          "aliases": [
+            "UNEP-WCMC",
+            "WCMC"
+          ],
+          "profile": {
+            "mission": "Desarrollar conocimiento y capacidad para mejorar el estado de la naturaleza para todas las personas.",
+            "sourceRefs": [
+              "official-profile",
+              "pp-management",
+              "pp-ibat"
+            ]
+          },
+          "offices": [
+            {
+              "id": "cambridge",
+              "location": "Cambridge, Reino Unido"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-unep-wcmc-operates-protected-planet",
+        "sourceNodeId": "unep-wcmc",
+        "targetNodeId": "protected-planet",
+        "kind": "operates",
+        "note": "UNEP-WCMC manages the Protected Planet initiative and compiles and manages its protected and conserved area inventory. UNEP and IUCN are joint institutional partners; that wording does not make every contributor an operator.",
+        "properties": {
+          "scope": "Platform management and WDPCA compilation and maintenance",
+          "period": "Management reported in January 2022 and corroborated by current IBAT description",
+          "status": "current documented operation",
+          "sourceRefs": [
+            "pp-management",
+            "pp-ibat"
+          ]
+        },
+        "sources": {
+          "pp-ibat": {
+            "id": "pp-ibat",
+            "url": "https://www.ibat-alliance.org/datasets/wdpca",
+            "title": {
+              "ar": "IBAT: قاعدة البيانات العالمية للمناطق المحمية والمصونة",
+              "en": "IBAT: World Database on Protected and Conserved Areas",
+              "es": "IBAT: Base Mundial de Áreas Protegidas y Conservadas",
+              "fr": "IBAT : base mondiale des aires protégées et conservées",
+              "ru": "IBAT: Всемирная база охраняемых и сохраняемых территорий",
+              "zh": "IBAT：世界保护地与保育地数据库"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "pp-management": {
+            "id": "pp-management",
+            "url": "https://www.unep-wcmc.org/en/news/global-conservation-platform-awarded-5m-in-new-funding",
+            "title": {
+              "ar": "إدارة Protected Planet والإعلان عن منحة Arcadia",
+              "en": "Protected Planet management and Arcadia grant announcement",
+              "es": "Gestión de Protected Planet y anuncio de subvención de Arcadia",
+              "fr": "Gestion de Protected Planet et annonce de subvention Arcadia",
+              "ru": "Управление Protected Planet и объявление гранта Arcadia",
+              "zh": "Protected Planet管理与Arcadia资助公告"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      }
+    ],
+    "routes": []
+  },
+  {
+    "id": "flanders-marine-institute",
+    "record": {
+      "kind": "organization",
+      "url": "https://www.vliz.be/en/",
+      "recordDepth": "rich",
+      "properties": {
+        "established": {
+          "date": "1999-10-01",
+          "source": "official-history"
+        },
+        "metrics": [
+          {
+            "id": "staff-2022",
+            "key": "staff_count",
+            "value": 150,
+            "observedAt": "2022",
+            "source": "official-scale"
+          }
+        ],
+        "offices": [
+          {
+            "id": "ostend",
+            "kind": "headquarters",
+            "source": "official-contact"
+          }
+        ]
+      },
+      "sources": {
+        "official-profile": {
+          "id": "official-profile",
+          "url": "https://vliz.be/en/who-we-are/about-vliz/mission-strengths",
+          "title": {
+            "ar": "مهمة معهد فلاندرز البحري ونقاط قوته",
+            "zh": "佛兰德海洋研究所的使命与优势",
+            "en": "Flanders Marine Institute mission and strengths",
+            "fr": "Mission et atouts de l’Institut marin flamand",
+            "ru": "Миссия и сильные стороны Фландрского морского института",
+            "es": "Misión y fortalezas del Instituto Marino de Flandes"
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "worms-profile": {
+          "id": "worms-profile",
+          "url": "https://www.vliz.be/en/worms",
+          "title": {
+            "ar": "VLIZ وWoRMS",
+            "zh": "VLIZ与WoRMS",
+            "en": "VLIZ and WoRMS",
+            "fr": "Le VLIZ et WoRMS",
+            "ru": "VLIZ и WoRMS",
+            "es": "VLIZ y WoRMS"
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "official-history": {
+          "id": "official-history",
+          "url": "https://vliz.be/en/news/vliz-celebrates-its-20th-birthday-kick-festive-year-2020-ostend-football-stadium",
+          "title": {
+            "ar": "تاريخ معهد فلاندرز البحري",
+            "zh": "佛兰德海洋研究所历史",
+            "en": "the Flanders Marine Institute history",
+            "fr": "Histoire de l’Institut marin flamand",
+            "ru": "История Фландрского морского института",
+            "es": "Historia de el Instituto Marino de Flandes"
+          },
+          "description": {
+            "ar": "تذكر الصفحة أن VLIZ أُنشئ رسميًا في 1 أكتوبر 1999 بدعم من حكومة فلاندرز ومقاطعة فلاندرز الغربية ومؤسسة البحوث الفلمنكية.",
+            "zh": "该页面记载VLIZ在佛兰德政府、西佛兰德省和佛兰德研究基金会支持下，于1999年10月1日正式成立。",
+            "en": "The page states that VLIZ was officially established on 1 October 1999 with support from the Flemish Government, the Province of West Flanders and Research Foundation Flanders.",
+            "fr": "La page indique que le VLIZ a été officiellement créé le 1er octobre 1999 avec le soutien du Gouvernement flamand, de la Province de Flandre-Occidentale et du Fonds de la recherche scientifique de Flandre.",
+            "ru": "Страница сообщает, что VLIZ официально учрежден 1 октября 1999 года при поддержке Правительства Фландрии, провинции Западная Фландрия и Фонда научных исследований Фландрии.",
+            "es": "La página indica que VLIZ se estableció oficialmente el 1 de octubre de 1999 con apoyo del Gobierno de Flandes, la Provincia de Flandes Occidental y la Fundación para la Investigación de Flandes."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "official-scale": {
+          "id": "official-scale",
+          "url": "https://vliz.be/en/150-employees-and-1000-vliz-members",
+          "title": {
+            "ar": "150 موظفًا و1000 عضو في VLIZ",
+            "zh": "VLIZ拥有150名员工和1000名成员",
+            "en": "150 employees and 1,000 VLIZ members",
+            "fr": "150 employés et 1 000 membres du VLIZ",
+            "ru": "150 сотрудников и 1000 членов VLIZ",
+            "es": "150 empleados y 1.000 miembros de VLIZ"
+          },
+          "description": {
+            "ar": "تذكر الصفحة أن عدد موظفي VLIZ بلغ 150 في عام 2022؛ ولا يضاف الموظفون الجدد المذكورون لاحقًا لأن الصفحة لا تنشر مجموعًا محدثًا.",
+            "zh": "该页面称VLIZ员工数在2022年达到150人；由于页面未发布更新总数，随后提到的新员工未另行加总。",
+            "en": "The page states that VLIZ reached 150 employees in 2022; later hires mentioned on the page are not added because it does not publish a revised total.",
+            "fr": "La page indique que le VLIZ a atteint 150 employés en 2022 ; les recrutements ultérieurs mentionnés ne sont pas ajoutés, faute de total révisé publié.",
+            "ru": "Страница сообщает, что в 2022 году штат VLIZ достиг 150 сотрудников; упомянутые позднейшие наймы не прибавлены, поскольку обновленный итог не опубликован.",
+            "es": "La página indica que VLIZ alcanzó 150 empleados en 2022; las contrataciones posteriores mencionadas no se suman porque no publica un total revisado."
+          },
+          "accessedAt": "2026-09-14"
+        },
+        "official-contact": {
+          "id": "official-contact",
+          "url": "https://vliz.be/nl/contact",
+          "title": {
+            "ar": "الاتصال بـ معهد فلاندرز البحري",
+            "zh": "佛兰德海洋研究所联系方式",
+            "en": "Contact the Flanders Marine Institute",
+            "fr": "Contacter l’Institut marin flamand",
+            "ru": "Контакты Фландрского морского института",
+            "es": "Contacto de el Instituto Marino de Flandes"
+          },
+          "description": {
+            "ar": "تسرد الصفحة مقر VLIZ في حرم InnovOcean بأوستنده. ولا يسجل المحطة البحرية أو السفينة كمكاتب تنظيمية.",
+            "zh": "该页面列出VLIZ位于奥斯坦德InnovOcean园区的总部；海洋站和研究船不作为机构办事处记录。",
+            "en": "The page lists VLIZ at the InnovOcean Campus in Ostend. The marine station and research vessel are not recorded as organizational offices.",
+            "fr": "La page situe le VLIZ sur le campus InnovOcean à Ostende. La station marine et le navire de recherche ne sont pas enregistrés comme bureaux de l’organisation.",
+            "ru": "На странице VLIZ расположен в кампусе InnovOcean в Остенде. Морская станция и исследовательское судно не записаны как офисы организации.",
+            "es": "La página sitúa VLIZ en el campus InnovOcean de Ostende. La estación marina y el buque de investigación no se registran como oficinas de la organización."
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    },
+    "localizations": {
+      "ar": {
+        "title": "معهد فلاندرز البحري",
+        "summary": "معهد بحوث بحرية متعدد التخصصات في فلاندرز يدعم العلم والسياسة والصناعة والجمهور.",
+        "description": "يعالج VLIZ الاحتياجات المجتمعية من خلال البحث وإدارة البيانات والابتكار التكنولوجي وتثمين المعرفة، ويوفر بنية تحتية وخدمات للعلوم البحرية. ومن مقره في أوستنده يشغّل بنى معلوماتية بحرية تشمل WoRMS وMarine Regions وEurOBIS.",
+        "details": {
+          "aliases": [
+            "VLIZ",
+            "Vlaams Instituut voor de Zee"
+          ],
+          "profile": {
+            "mission": "تعزيز معرفة المحيط والتميز في البحث البحري وضمان أن تدعم الأدلة العلمية الإدارة المستدامة للنظم البحرية والساحلية.",
+            "sourceRefs": [
+              "official-profile",
+              "worms-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend",
+              "location": "حرم InnovOcean، أوستنده، بلجيكا"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "zh": {
+        "title": "佛兰德海洋研究所",
+        "summary": "佛兰德地区的多学科海洋研究机构，为科学、政策、产业和公众提供支持。",
+        "description": "VLIZ通过研究、数据管理、技术创新和知识转化应对社会需求，并为海洋科学提供基础设施和服务。该研究所从奥斯坦德运营包括WoRMS、Marine Regions和EurOBIS在内的海洋信息基础设施。",
+        "details": {
+          "aliases": [
+            "VLIZ",
+            "Vlaams Instituut voor de Zee"
+          ],
+          "profile": {
+            "mission": "增进海洋知识和海洋研究卓越性，并确保科学证据支持海洋与沿海生态系统的可持续管理。",
+            "sourceRefs": [
+              "official-profile",
+              "worms-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend",
+              "location": "比利时奥斯坦德InnovOcean园区"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "en": {
+        "title": "Flanders Marine Institute",
+        "summary": "Multidisciplinary marine research institute in Flanders serving science, policy, industry and the public.",
+        "description": "VLIZ addresses societal needs through research, data stewardship, technological innovation and knowledge valorization and provides infrastructure and services for marine science. From Ostend it operates marine information infrastructures including WoRMS, Marine Regions and EurOBIS.",
+        "details": {
+          "aliases": [
+            "VLIZ",
+            "Vlaams Instituut voor de Zee"
+          ],
+          "profile": {
+            "mission": "Advance ocean knowledge and excellence in marine research and ensure scientific evidence supports sustainable management of marine and coastal ecosystems.",
+            "sourceRefs": [
+              "official-profile",
+              "worms-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend",
+              "location": "InnovOcean Campus, Ostend, Belgium"
+            }
+          ]
+        },
+        "translatedFromLocale": null
+      },
+      "fr": {
+        "title": "Institut marin flamand",
+        "summary": "Institut multidisciplinaire de recherche marine en Flandre au service de la science, des politiques, de l’industrie et du public.",
+        "description": "Le VLIZ répond aux besoins de la société par la recherche, la gestion des données, l’innovation technologique et la valorisation des connaissances, et fournit des infrastructures et services aux sciences marines. Depuis Ostende, il exploite des infrastructures d’information marine dont WoRMS, Marine Regions et EurOBIS.",
+        "details": {
+          "aliases": [
+            "VLIZ",
+            "Vlaams Instituut voor de Zee"
+          ],
+          "profile": {
+            "mission": "Faire progresser la connaissance de l’océan et l’excellence de la recherche marine, et veiller à ce que les données scientifiques soutiennent la gestion durable des écosystèmes marins et côtiers.",
+            "sourceRefs": [
+              "official-profile",
+              "worms-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend",
+              "location": "Campus InnovOcean, Ostende, Belgique"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "ru": {
+        "title": "Фландрский морской институт",
+        "summary": "Многопрофильный морской исследовательский институт Фландрии, работающий для науки, политики, промышленности и общества.",
+        "description": "VLIZ отвечает на общественные потребности с помощью исследований, управления данными, технологических инноваций и использования знаний, предоставляя инфраструктуру и сервисы морской науке. Из Остенде он эксплуатирует морские информационные инфраструктуры, включая WoRMS, Marine Regions и EurOBIS.",
+        "details": {
+          "aliases": [
+            "VLIZ",
+            "Vlaams Instituut voor de Zee"
+          ],
+          "profile": {
+            "mission": "Расширять знания об океане и повышать качество морских исследований, обеспечивая использование научных данных для устойчивого управления морскими и прибрежными экосистемами.",
+            "sourceRefs": [
+              "official-profile",
+              "worms-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend",
+              "location": "Кампус InnovOcean, Остенде, Бельгия"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      },
+      "es": {
+        "title": "Instituto Marino de Flandes",
+        "summary": "Instituto multidisciplinario de investigación marina de Flandes al servicio de la ciencia, las políticas, la industria y el público.",
+        "description": "VLIZ responde a necesidades sociales mediante investigación, custodia de datos, innovación tecnológica y valorización del conocimiento, y proporciona infraestructuras y servicios para las ciencias marinas. Desde Ostende opera infraestructuras de información marina como WoRMS, Marine Regions y EurOBIS.",
+        "details": {
+          "aliases": [
+            "VLIZ",
+            "Vlaams Instituut voor de Zee"
+          ],
+          "profile": {
+            "mission": "Impulsar el conocimiento del océano y la excelencia en la investigación marina, y asegurar que la evidencia científica apoye la gestión sostenible de los ecosistemas marinos y costeros.",
+            "sourceRefs": [
+              "official-profile",
+              "worms-profile"
+            ]
+          },
+          "offices": [
+            {
+              "id": "ostend",
+              "location": "Campus InnovOcean, Ostende, Bélgica"
+            }
+          ]
+        },
+        "translatedFromLocale": "en"
+      }
+    },
+    "edges": [
+      {
+        "id": "rel-flanders-marine-institute-operates-emodnet-biology",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "emodnet-biology",
+        "kind": "operates",
+        "note": "VLIZ operates technical infrastructure and data management.",
+        "properties": {
+          "scope": "Technical infrastructure; scientific contributors retain their own roles",
+          "sourceRefs": [
+            "src-relationship-emodnet-biology"
+          ]
+        },
+        "sources": {
+          "src-relationship-emodnet-biology": {
+            "id": "src-relationship-emodnet-biology",
+            "url": "https://emodnet.ec.europa.eu/en/biology",
+            "title": {
+              "ar": "EMODnet: علم الأحياء",
+              "en": "EMODnet Biology",
+              "es": "Biología de EMODnet",
+              "fr": "Biologie d’EMODnet",
+              "ru": "Биология EMODnet",
+              "zh": "EMODnet生物学"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      },
+      {
+        "id": "rel-flanders-marine-institute-operates-eurobis",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "eurobis",
+        "kind": "operates",
+        "note": "VLIZ operates technical infrastructure and data management.",
+        "properties": {
+          "scope": "Technical infrastructure; scientific contributors retain their own roles",
+          "sourceRefs": [
+            "src-relationship-eurobis"
+          ]
+        },
+        "sources": {
+          "src-relationship-eurobis": {
+            "id": "src-relationship-eurobis",
+            "url": "https://www.eurobis.org/about",
+            "title": {
+              "ar": "حول EurOBIS",
+              "en": "About EurOBIS",
+              "es": "Acerca de EurOBIS",
+              "fr": "À propos de EurOBIS",
+              "ru": "О EurOBIS",
+              "zh": "关于EurOBIS"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      },
+      {
+        "id": "rel-flanders-marine-institute-operates-marine-regions",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "marine-regions",
+        "kind": "operates",
+        "note": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository.",
+        "properties": {
+          "scope": "Programme/team operation; no exclusivity inferred",
+          "sourceRefs": [
+            "src-relationship-marine-regions"
+          ]
+        },
+        "sources": {
+          "src-relationship-marine-regions": {
+            "id": "src-relationship-marine-regions",
+            "url": "https://www.marineregions.org/about.php",
+            "title": {
+              "ar": "حول Marine Regions",
+              "en": "About Marine Regions",
+              "es": "Acerca de Marine Regions",
+              "fr": "À propos de Marine Regions",
+              "ru": "О Marine Regions",
+              "zh": "关于Marine Regions"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      },
+      {
+        "id": "rel-flanders-marine-institute-operates-molluscabase",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "molluscabase",
+        "kind": "operates",
+        "note": "VLIZ operates technical infrastructure and data management.",
+        "properties": {
+          "scope": "Technical infrastructure; scientific contributors retain their own roles",
+          "sourceRefs": [
+            "src-relationship-molluscabase"
+          ]
+        },
+        "sources": {
+          "src-relationship-molluscabase": {
+            "id": "src-relationship-molluscabase",
+            "url": "https://molluscabase.org/about.php",
+            "title": {
+              "ar": "حول MolluscaBase",
+              "en": "About MolluscaBase",
+              "es": "Acerca de MolluscaBase",
+              "fr": "À propos de MolluscaBase",
+              "ru": "О MolluscaBase",
+              "zh": "关于MolluscaBase"
+            },
+            "accessedAt": "2026-09-09"
+          }
+        }
+      },
+      {
+        "id": "rel-flanders-marine-institute-operates-world-register-of-marine-species",
+        "sourceNodeId": "flanders-marine-institute",
+        "targetNodeId": "worms",
+        "kind": "operates",
+        "note": "VLIZ appoints the WoRMS Data Management Team to run the database, maintain online publishing, preserve identifiers, support editors and manage approved exports. The public terms of reference are dated 2015-05-08 and the current About page continues to identify VLIZ as the operational host.",
+        "properties": {
+          "scope": "Technical and scientific data management, hosting and publication support",
+          "period": "2015 terms of reference, reconfirmed by current About page",
+          "status": "current role documented",
+          "sourceRefs": [
+            "src-relationship-worms",
+            "src-worms-about"
+          ]
+        },
+        "sources": {
+          "src-worms-about": {
+            "id": "src-worms-about",
+            "url": "https://www.marinespecies.org/about.php",
+            "title": {
+              "ar": "حول WoRMS",
+              "en": "WoRMS About",
+              "es": "Acerca de WoRMS",
+              "fr": "À propos de WoRMS",
+              "ru": "О WoRMS",
+              "zh": "关于WoRMS"
+            },
+            "accessedAt": "2026-09-10"
+          },
+          "src-relationship-worms": {
+            "id": "src-relationship-worms",
+            "url": "https://www.marinespecies.org/documents/MoUs_ToUs/WoRMS_Terms_of_Reference.pdf",
+            "title": {
+              "ar": "اختصاصات WoRMS",
+              "en": "WoRMS terms of reference",
+              "es": "Términos de referencia de WoRMS",
+              "fr": "Mandat de WoRMS",
+              "ru": "Положение о деятельности WoRMS",
+              "zh": "WoRMS职权范围"
+            },
+            "accessedAt": "2026-09-10"
+          }
+        }
+      },
+      {
+        "id": "rel-government-of-flanders-funds-flanders-marine-institute",
+        "sourceNodeId": "government-of-flanders",
+        "targetNodeId": "flanders-marine-institute",
+        "kind": "funds",
+        "note": "VLIZ states that it receives an annual grant from the Flemish Region and the Province of West Flanders. This edge records the documented Flemish-government support only; the page does not publish an amount or grant term, and the province is not folded into this relationship.",
+        "properties": {
+          "scope": "Annual institutional grant from the Flemish Region",
+          "status": "Current funding arrangement described on the official organization page; amount and term not published",
+          "sourceRefs": [
+            "official-operation"
+          ]
+        },
+        "sources": {
+          "official-operation": {
+            "id": "official-operation",
+            "url": "https://vliz.be/en/who-we-are/about-vliz/our-operation",
+            "title": {
+              "ar": "عمل معهد فلاندرز البحري وحوكمته",
+              "zh": "佛兰德海洋研究所的运营与治理",
+              "en": "Flanders Marine Institute operation and governance",
+              "fr": "Fonctionnement et gouvernance de l’Institut marin flamand",
+              "ru": "Деятельность и управление Фландрского морского института",
+              "es": "Funcionamiento y gobernanza del Instituto Marino de Flandes"
+            },
+            "accessedAt": "2026-09-14"
+          }
+        }
+      }
+    ],
+    "routes": []
+  }
+]

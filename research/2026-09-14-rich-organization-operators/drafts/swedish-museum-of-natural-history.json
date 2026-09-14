@@ -1,0 +1,350 @@
+{
+  "id": "swedish-museum-of-natural-history",
+  "record": {
+    "kind": "organization",
+    "url": "https://www.nrm.se/engelska/in-english/about-us",
+    "recordDepth": "rich",
+    "properties": {
+      "established": {
+        "date": "1819",
+        "source": "strategic-plan"
+      },
+      "metrics": [
+        {
+          "id": "staff-2025-12-31",
+          "key": "staff_count",
+          "value": 283,
+          "observedAt": "2025-12-31",
+          "source": "annual-report-2025"
+        }
+      ],
+      "offices": [
+        {
+          "id": "stockholm",
+          "kind": "headquarters",
+          "source": "official-contact"
+        }
+      ]
+    },
+    "sources": {
+      "identity": {
+        "id": "identity",
+        "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+        "title": {
+          "ar": "المتحف السويدي للتاريخ الطبيعي",
+          "en": "Swedish Museum of Natural History",
+          "es": "Museo Sueco de Historia Natural",
+          "fr": "Muséum suédois d’histoire naturelle",
+          "ru": "Шведский музей естественной истории",
+          "zh": "瑞典自然历史博物馆"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "official-profile": {
+        "id": "official-profile",
+        "url": "https://www.nrm.se/engelska/in-english/about-us/vision-and-tasks",
+        "title": {
+          "ar": "رؤية المتحف السويدي للتاريخ الطبيعي ومهامه",
+          "zh": "瑞典自然历史博物馆的愿景与任务",
+          "en": "Swedish Museum of Natural History vision and tasks",
+          "fr": "Vision et missions du Muséum suédois d’histoire naturelle",
+          "ru": "Видение и задачи Шведского музея естественной истории",
+          "es": "Visión y funciones del Museo Sueco de Historia Natural"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "strategic-plan": {
+        "id": "strategic-plan",
+        "url": "https://www.nrm.se/download/18.49de620c18bcc06edc389d5/1700312133221/strategic-plan-2023-2030-swedish-museum-natural-history.pdf",
+        "title": {
+          "ar": "الخطة الاستراتيجية للمتحف السويدي للتاريخ الطبيعي 2023–2030",
+          "zh": "瑞典自然历史博物馆2023—2030年战略计划",
+          "en": "Swedish Museum of Natural History strategic plan 2023–2030",
+          "fr": "Plan stratégique 2023–2030 du Muséum suédois d’histoire naturelle",
+          "ru": "Стратегический план Шведского музея естественной истории на 2023–2030 годы",
+          "es": "Plan estratégico 2023–2030 del Museo Sueco de Historia Natural"
+        },
+        "description": {
+          "ar": "تذكر الخطة أن المتحف تأسس عام 1819 وأن جذور مجموعاته أقدم؛ يسجل التاريخ تأسيس المتحف لا تاريخ المجموعات السابقة.",
+          "zh": "该计划说明博物馆成立于1819年，而其藏品源流更早；记录的是博物馆本身的成立年份，而非前身藏品的年代。",
+          "en": "The plan states that the museum was founded in 1819 and that its collections have older roots; the date records the museum’s founding, not those predecessor collections.",
+          "fr": "Le plan indique que le Muséum a été fondé en 1819 et que ses collections ont des origines plus anciennes ; la date retenue est celle du Muséum, non celle des collections antérieures.",
+          "ru": "В плане указано, что музей основан в 1819 году, а его коллекции имеют более ранние корни; дата относится к музею, а не к коллекциям-предшественникам.",
+          "es": "El plan indica que el museo fue fundado en 1819 y que sus colecciones tienen raíces anteriores; la fecha corresponde al museo, no a esas colecciones predecesoras."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "annual-report-2025": {
+        "id": "annual-report-2025",
+        "url": "https://www.nrm.se/download/18.4dd0638619c47e72d5963880/1771586822521/arsredovisning-2025-naturhistoriska-riksmuseet.pdf",
+        "title": {
+          "ar": "التقرير السنوي لـ المتحف السويدي للتاريخ الطبيعي لعام 2025",
+          "zh": "瑞典自然历史博物馆2025年年度报告",
+          "en": "Swedish Museum of Natural History 2025 annual report",
+          "fr": "Rapport annuel 2025 de Muséum suédois d’histoire naturelle",
+          "ru": "Годовой отчет Шведского музея естественной истории за 2025 год",
+          "es": "Informe anual 2025 de Museo Sueco de Historia Natural"
+        },
+        "description": {
+          "ar": "يسجل التقرير 283 موظفًا في الوكالة في 31 ديسمبر 2025، منهم 211 دائمًا و72 بعقود محددة المدة.",
+          "zh": "报告记载截至2025年12月31日该机构共有283名员工，其中211名为长期雇员、72名为定期雇员。",
+          "en": "The report records 283 employees at the agency on 31 December 2025, comprising 211 permanent and 72 fixed-term employees.",
+          "fr": "Le rapport comptabilise 283 personnes employées par l’agence au 31 décembre 2025, dont 211 permanentes et 72 sous contrat à durée déterminée.",
+          "ru": "В отчете указано 283 сотрудника ведомства на 31 декабря 2025 года: 211 постоянных и 72 срочных сотрудника.",
+          "es": "El informe registra 283 empleados en la agencia a 31 de diciembre de 2025: 211 permanentes y 72 temporales."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "official-contact": {
+        "id": "official-contact",
+        "url": "https://www.nrm.se/engelska/in-english/about-us/contact-us",
+        "title": {
+          "ar": "الاتصال بـ المتحف السويدي للتاريخ الطبيعي",
+          "zh": "瑞典自然历史博物馆联系方式",
+          "en": "Contact the Swedish Museum of Natural History",
+          "fr": "Contacter le Muséum suédois d’histoire naturelle",
+          "ru": "Контакты Шведского музея естественной истории",
+          "es": "Contacto de el Museo Sueco de Historia Natural"
+        },
+        "description": {
+          "ar": "تسرد الصفحة عنوان الزيارة الرسمي في Frescativägen 40 بستوكهولم.",
+          "zh": "该页面列出位于斯德哥尔摩Frescativägen 40的官方访问地址。",
+          "en": "The page lists the official visiting address at Frescativägen 40 in Stockholm.",
+          "fr": "La page indique l’adresse officielle de visite, Frescativägen 40 à Stockholm.",
+          "ru": "На странице указан официальный адрес для посетителей: Frescativägen 40, Стокгольм.",
+          "es": "La página indica la dirección oficial de visita en Frescativägen 40, Estocolmo."
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "المتحف السويدي للتاريخ الطبيعي",
+      "summary": "وكالة حكومية ومؤسسة بحثية ومتحف وطني للتاريخ الطبيعي في ستوكهولم.",
+      "description": "يجمع المتحف بين البحث العلمي وإدارة المجموعات والمعارض والتعليم العام، وهو مسؤول وطنيًا عن مجال التاريخ الطبيعي في السويد. ويستضيف فريق FishBase Sweden ويوفر إحدى خدمات FishBase.",
+      "details": {
+        "aliases": [
+          "NRM",
+          "Naturhistoriska riksmuseet"
+        ],
+        "profile": {
+          "mission": "تعزيز الاهتمام والمعرفة والبحث في الكون والأرض والحياة والتنوع البيولوجي والبيئة الطبيعية.",
+          "sourceRefs": [
+            "official-profile",
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "stockholm",
+            "location": "فريسكاتي، ستوكهولم، السويد"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "瑞典自然历史博物馆",
+      "summary": "位于斯德哥尔摩的政府机构、研究机构和国家级自然历史博物馆。",
+      "description": "该馆结合科学研究、藏品管理、展览和公众教育，并承担瑞典自然历史领域的国家职责。它是FishBase Sweden团队所在地，并提供FishBase的一项服务。",
+      "details": {
+        "aliases": [
+          "NRM",
+          "Naturhistoriska riksmuseet"
+        ],
+        "profile": {
+          "mission": "促进公众对宇宙、地球、生命、生物多样性和自然环境的兴趣、知识与研究。",
+          "sourceRefs": [
+            "official-profile",
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "stockholm",
+            "location": "瑞典斯德哥尔摩Frescati"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "Swedish Museum of Natural History",
+      "summary": "Government agency, research institution and national natural-history museum in Stockholm.",
+      "description": "The museum combines scientific research, collection stewardship, exhibitions and public education and has national responsibility for natural history in Sweden. It hosts the FishBase Sweden team and serves a FishBase instance.",
+      "details": {
+        "aliases": [
+          "NRM",
+          "Naturhistoriska riksmuseet"
+        ],
+        "profile": {
+          "mission": "Promote interest, knowledge and research concerning the universe, Earth, living organisms, biodiversity and the natural environment.",
+          "sourceRefs": [
+            "official-profile",
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "stockholm",
+            "location": "Frescati, Stockholm, Sweden"
+          }
+        ]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Muséum suédois d’histoire naturelle",
+      "summary": "Agence publique, établissement de recherche et muséum national d’histoire naturelle à Stockholm.",
+      "description": "Le Muséum associe recherche scientifique, gestion des collections, expositions et éducation du public, et assume une responsabilité nationale pour l’histoire naturelle en Suède. Il accueille l’équipe FishBase Sweden et dessert une instance de FishBase.",
+      "details": {
+        "aliases": [
+          "NRM",
+          "Naturhistoriska riksmuseet"
+        ],
+        "profile": {
+          "mission": "Promouvoir l’intérêt, les connaissances et la recherche concernant l’univers, la Terre, le vivant, la biodiversité et l’environnement naturel.",
+          "sourceRefs": [
+            "official-profile",
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "stockholm",
+            "location": "Frescati, Stockholm, Suède"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Шведский музей естественной истории",
+      "summary": "Государственное ведомство, исследовательское учреждение и национальный музей естественной истории в Стокгольме.",
+      "description": "Музей объединяет научные исследования, хранение коллекций, выставки и просвещение и несет национальную ответственность за естественную историю в Швеции. Здесь работает команда FishBase Sweden и обслуживается один из экземпляров FishBase.",
+      "details": {
+        "aliases": [
+          "NRM",
+          "Naturhistoriska riksmuseet"
+        ],
+        "profile": {
+          "mission": "Развивать интерес, знания и исследования Вселенной, Земли, живых организмов, биоразнообразия и природной среды.",
+          "sourceRefs": [
+            "official-profile",
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "stockholm",
+            "location": "Фрескати, Стокгольм, Швеция"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Museo Sueco de Historia Natural",
+      "summary": "Agencia pública, institución de investigación y museo nacional de historia natural en Estocolmo.",
+      "description": "El museo combina investigación científica, custodia de colecciones, exposiciones y educación pública, y tiene responsabilidad nacional sobre la historia natural en Suecia. Alberga el equipo de FishBase Sweden y sirve una instancia de FishBase.",
+      "details": {
+        "aliases": [
+          "NRM",
+          "Naturhistoriska riksmuseet"
+        ],
+        "profile": {
+          "mission": "Promover el interés, el conocimiento y la investigación sobre el universo, la Tierra, los seres vivos, la biodiversidad y el medio natural.",
+          "sourceRefs": [
+            "official-profile",
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "stockholm",
+            "location": "Frescati, Estocolmo, Suecia"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-swedish-museum-of-natural-history-funds-fishbase",
+      "sourceNodeId": "swedish-museum-of-natural-history",
+      "targetNodeId": "fishbase",
+      "kind": "funds",
+      "note": "Q-quatics’ 2023 annual report records this support for New species and species updates in FishBase. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
+      "properties": {
+        "scope": "New species and species updates in FishBase",
+        "period": "2023-01-30/2023-03-31",
+        "status": "completed in 2023",
+        "sourceRefs": [
+          "report"
+        ],
+        "intermediary": "q-quatics"
+      },
+      "sources": {
+        "report": {
+          "id": "report",
+          "url": "https://www.q-quatics.org/wp-content/uploads/2025/05/Q-quatics_Annual_Report_2023.pdf",
+          "title": {
+            "ar": "تقرير Q-quatics السنوي 2023: تمويل المشاريع والاستخدام",
+            "en": "Q-quatics annual report 2023: project funding and usage",
+            "es": "Informe anual 2023 de Q-quatics: financiación y uso",
+            "fr": "Rapport annuel 2023 de Q-quatics : financements et utilisation",
+            "ru": "Годовой отчёт Q-quatics за 2023 год: финансирование и использование",
+            "zh": "Q-quatics 2023年度报告：项目资助及使用情况"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-swedish-museum-of-natural-history-operates-fishbase",
+      "sourceNodeId": "swedish-museum-of-natural-history",
+      "targetNodeId": "fishbase",
+      "kind": "operates",
+      "note": "FishBase’s current search page identifies the Swedish Museum of Natural History as serving fishbase.org and locates this mirror in Stockholm. The museum separately documents its FishBase Sweden team. This is scoped mirror/service operation, not exclusive global operation or governance.",
+      "properties": {
+        "scope": "Stockholm mirror and FishBase Sweden service team",
+        "status": "current documented service in June 2026 site release and August 2026 museum page",
+        "sourceRefs": [
+          "mirror",
+          "institution"
+        ]
+      },
+      "sources": {
+        "mirror": {
+          "id": "mirror",
+          "url": "https://fishbase.se/search.php",
+          "title": {
+            "ar": "البحث في FishBase",
+            "en": "FishBase Search",
+            "es": "Búsqueda en FishBase",
+            "fr": "Recherche dans FishBase",
+            "ru": "Поиск в FishBase",
+            "zh": "FishBase搜索"
+          },
+          "accessedAt": "2026-09-10"
+        },
+        "institution": {
+          "id": "institution",
+          "url": "https://www.nrm.se/engelska/in-english/research/research-infrastructure/fishbase",
+          "title": {
+            "ar": "FishBase السويد في المتحف السويدي للتاريخ الطبيعي",
+            "en": "FishBase Sweden at the Swedish Museum of Natural History",
+            "es": "FishBase Suecia en el Museo Sueco de Historia Natural",
+            "fr": "FishBase Suède au Muséum suédois d’histoire naturelle",
+            "ru": "FishBase Sweden в Шведском музее естественной истории",
+            "zh": "瑞典自然历史博物馆的FishBase瑞典团队"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}

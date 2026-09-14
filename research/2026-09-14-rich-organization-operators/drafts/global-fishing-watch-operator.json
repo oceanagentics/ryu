@@ -1,0 +1,627 @@
+{
+  "id": "global-fishing-watch-operator",
+  "record": {
+    "kind": "organization",
+    "url": "https://globalfishingwatch.org/",
+    "recordDepth": "rich",
+    "properties": {
+      "established": {
+        "date": "2017-06",
+        "source": "official-profile"
+      },
+      "metrics": [
+        {
+          "id": "staff-2023",
+          "key": "staff_count",
+          "value": 90,
+          "observedAt": "2023",
+          "source": "annual-report-2023"
+        }
+      ],
+      "offices": [
+        {
+          "id": "washington-dc",
+          "kind": "headquarters",
+          "source": "official-address"
+        }
+      ]
+    },
+    "sources": {
+      "jac": {
+        "id": "jac",
+        "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+        "title": {
+          "ar": "الخلية التحليلية المشتركة",
+          "en": "Joint Analytical Cell",
+          "es": "Célula Analítica Conjunta",
+          "fr": "Cellule analytique conjointe",
+          "ru": "Совместная аналитическая группа",
+          "zh": "联合分析小组"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "terms": {
+        "id": "terms",
+        "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+        "title": {
+          "ar": "ترخيص API وحدودها",
+          "en": "API licence and limits",
+          "es": "Licencia y límites API",
+          "fr": "Licence et limites API",
+          "ru": "Лицензия и ограничения API",
+          "zh": "API许可与限额"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "annual": {
+        "id": "annual",
+        "url": "https://globalfishingwatch.org/annual-report-2025/",
+        "title": {
+          "ar": "التقرير السنوي 2025",
+          "en": "Annual report 2025",
+          "es": "Informe anual 2025",
+          "fr": "Rapport annuel 2025",
+          "ru": "Годовой отчёт 2025",
+          "zh": "2025年年度报告"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "coalition": {
+        "id": "coalition",
+        "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+        "title": {
+          "ar": "التزامات شفافية المحيطات، 18 يونيو 2026",
+          "en": "Ocean transparency commitments, 18 June 2026",
+          "es": "Compromisos de transparencia oceánica, 18 junio 2026",
+          "fr": "Engagements de transparence océanique, 18 juin 2026",
+          "ru": "Обязательства по прозрачности океана, 18 июня 2026",
+          "zh": "海洋透明度承诺，2026年6月18日"
+        },
+        "accessedAt": "2026-09-10"
+      },
+      "official-profile": {
+        "id": "official-profile",
+        "url": "https://globalfishingwatch.org/a-vision-for-our-global-ocean/",
+        "title": {
+          "ar": "رؤية Global Fishing Watch للمحيط العالمي",
+          "zh": "Global Fishing Watch的全球海洋愿景",
+          "en": "Global Fishing Watch: A vision for our global ocean",
+          "fr": "Global Fishing Watch : une vision pour notre océan mondial",
+          "ru": "Global Fishing Watch: видение мирового океана",
+          "es": "Global Fishing Watch: una visión para nuestro océano global"
+        },
+        "description": {
+          "ar": "تفرق الصفحة بين تأسيس المبادرة في 2015 وإنشاء المنظمة الدولية المستقلة غير الربحية في يونيو 2017؛ يستخدم السجل تاريخ المنظمة المستقلة.",
+          "zh": "该页面区分了2015年创立的合作项目与2017年6月成立的独立国际非营利组织；记录采用后者日期。",
+          "en": "The page distinguishes the collaboration founded in 2015 from establishment of the independent international nonprofit in June 2017; the record uses the latter date.",
+          "fr": "La page distingue la collaboration lancée en 2015 de la création de l’organisation internationale indépendante à but non lucratif en juin 2017 ; la fiche retient cette dernière date.",
+          "ru": "Страница различает сотрудничество, начатое в 2015 году, и учреждение независимой международной некоммерческой организации в июне 2017 года; в записи используется последняя дата.",
+          "es": "La página distingue la colaboración fundada en 2015 del establecimiento de la organización internacional independiente sin fines de lucro en junio de 2017; el registro usa esta última fecha."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "annual-report-2023": {
+        "id": "annual-report-2023",
+        "url": "https://globalfishingwatch.org/annual-report-2023/",
+        "title": {
+          "ar": "التقرير السنوي لـ Global Fishing Watch لعام 2023",
+          "zh": "Global Fishing Watch2023年年度报告",
+          "en": "Global Fishing Watch 2023 annual report",
+          "fr": "Rapport annuel 2023 de Global Fishing Watch",
+          "ru": "Годовой отчет Global Fishing Watch за 2023 год",
+          "es": "Informe anual 2023 de Global Fishing Watch"
+        },
+        "description": {
+          "ar": "يصف التقرير فريقًا يضم قرابة 90 موظفًا في 27 دولة في عام 2023؛ تسجل القيمة الرقم التقريبي المنشور ولا تعني عددًا دقيقًا.",
+          "zh": "报告称2023年团队在27个国家拥有近90名员工；指标记录公布的近似值，并非精确人数。",
+          "en": "The report describes nearly 90 staff across 27 countries in 2023; the value records the published approximation, not an exact headcount.",
+          "fr": "Le rapport décrit près de 90 personnes réparties dans 27 pays en 2023 ; la valeur reprend l’approximation publiée et non un effectif exact.",
+          "ru": "В отчете говорится о почти 90 сотрудниках в 27 странах в 2023 году; значение отражает опубликованное приближение, а не точную численность.",
+          "es": "El informe describe cerca de 90 empleados en 27 países en 2023; el valor recoge la aproximación publicada, no un recuento exacto."
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "official-address": {
+        "id": "official-address",
+        "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+        "title": {
+          "ar": "شروط ترخيص Global Fishing Watch وعنوانها",
+          "zh": "Global Fishing Watch许可条款与地址",
+          "en": "Global Fishing Watch licence terms and address",
+          "fr": "Conditions de licence et adresse de Global Fishing Watch",
+          "ru": "Лицензионные условия и адрес Global Fishing Watch",
+          "es": "Condiciones de licencia y dirección de Global Fishing Watch"
+        },
+        "description": {
+          "ar": "تعرض الصفحة العنوان المؤسسي لـGlobal Fishing Watch في واشنطن العاصمة؛ ولا تُعامل أماكن عمل الموظفين الموزعين كفروع.",
+          "zh": "该页面列出Global Fishing Watch在华盛顿特区的机构地址；分布式员工的工作地点不计为办事处。",
+          "en": "The page gives Global Fishing Watch’s organizational address in Washington, D.C.; locations of distributed staff are not treated as offices.",
+          "fr": "La page indique l’adresse institutionnelle de Global Fishing Watch à Washington, D.C. ; les lieux de travail du personnel distribué ne sont pas considérés comme des bureaux.",
+          "ru": "На странице указан адрес организации Global Fishing Watch в Вашингтоне; места работы распределенных сотрудников не считаются офисами.",
+          "es": "La página proporciona la dirección institucional de Global Fishing Watch en Washington, D. C.; las ubicaciones del personal distribuido no se consideran oficinas."
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "Global Fishing Watch, Inc.",
+      "summary": "منظمة دولية مستقلة غير ربحية تعمل على تعزيز حوكمة المحيطات من خلال شفافية النشاط البشري في البحر.",
+      "description": "تحول Global Fishing Watch بيانات الأقمار الصناعية والسفن إلى خرائط وبيانات وتحليلات عامة مجانية لدعم العلوم والسياسات وإدارة المحيطات. وهي تملك منصة Global Fishing Watch وتشغّل منتجاتها وخدماتها وتشارك في شراكات الشفافية في مصايد الأسماك.",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch"
+        ],
+        "profile": {
+          "mission": "تعزيز حوكمة المحيطات بزيادة شفافية النشاط البشري في البحر وإتاحة المعرفة الناتجة للجمهور مجانًا.",
+          "sourceRefs": [
+            "official-profile",
+            "annual",
+            "terms"
+          ]
+        },
+        "offices": [
+          {
+            "id": "washington-dc",
+            "location": "واشنطن العاصمة، الولايات المتحدة"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "Global Fishing Watch, Inc.",
+      "summary": "通过提高海上人类活动透明度来推进海洋治理的独立国际非营利组织。",
+      "description": "Global Fishing Watch将卫星和船舶数据转化为免费公开的地图、数据和分析，以支持科学、政策和海洋管理。该机构拥有并运营Global Fishing Watch平台及其产品和服务，并参与渔业透明度合作。",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch"
+        ],
+        "profile": {
+          "mission": "通过提高海上人类活动透明度并免费公开由此产生的知识，推进海洋治理。",
+          "sourceRefs": [
+            "official-profile",
+            "annual",
+            "terms"
+          ]
+        },
+        "offices": [
+          {
+            "id": "washington-dc",
+            "location": "美国华盛顿哥伦比亚特区"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "Global Fishing Watch, Inc.",
+      "summary": "Independent international nonprofit advancing ocean governance through transparency of human activity at sea.",
+      "description": "Global Fishing Watch turns satellite and vessel data into free public maps, data and analysis that support science, policy and ocean management. The organization owns and operates the Global Fishing Watch platform and its products and services and participates in fisheries-transparency partnerships.",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch"
+        ],
+        "profile": {
+          "mission": "Advance ocean governance by increasing transparency of human activity at sea and making the resulting knowledge freely available.",
+          "sourceRefs": [
+            "official-profile",
+            "annual",
+            "terms"
+          ]
+        },
+        "offices": [
+          {
+            "id": "washington-dc",
+            "location": "Washington, D.C., United States"
+          }
+        ]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Global Fishing Watch, Inc.",
+      "summary": "Organisation internationale indépendante à but non lucratif qui fait progresser la gouvernance de l’océan par la transparence des activités humaines en mer.",
+      "description": "Global Fishing Watch transforme des données satellitaires et de navigation en cartes, données et analyses publiques et gratuites au service de la science, des politiques et de la gestion de l’océan. L’organisation possède et exploite la plateforme Global Fishing Watch ainsi que ses produits et services, et participe à des partenariats de transparence des pêches.",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch"
+        ],
+        "profile": {
+          "mission": "Faire progresser la gouvernance de l’océan en renforçant la transparence des activités humaines en mer et en rendant les connaissances produites librement accessibles.",
+          "sourceRefs": [
+            "official-profile",
+            "annual",
+            "terms"
+          ]
+        },
+        "offices": [
+          {
+            "id": "washington-dc",
+            "location": "Washington, D.C., États-Unis"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Global Fishing Watch, Inc.",
+      "summary": "Независимая международная некоммерческая организация, развивающая управление океаном через прозрачность деятельности человека в море.",
+      "description": "Global Fishing Watch преобразует спутниковые и судовые данные в бесплатные общедоступные карты, данные и аналитические материалы для науки, политики и управления океаном. Организация владеет платформой Global Fishing Watch, эксплуатирует ее продукты и сервисы и участвует в партнерствах по прозрачности рыболовства.",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch"
+        ],
+        "profile": {
+          "mission": "Совершенствовать управление океаном, повышая прозрачность деятельности человека в море и обеспечивая свободный доступ к полученным знаниям.",
+          "sourceRefs": [
+            "official-profile",
+            "annual",
+            "terms"
+          ]
+        },
+        "offices": [
+          {
+            "id": "washington-dc",
+            "location": "Вашингтон, округ Колумбия, США"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Global Fishing Watch, Inc.",
+      "summary": "Organización internacional independiente sin fines de lucro que impulsa la gobernanza oceánica mediante la transparencia de la actividad humana en el mar.",
+      "description": "Global Fishing Watch convierte datos satelitales y de embarcaciones en mapas, datos y análisis públicos y gratuitos que apoyan la ciencia, las políticas y la gestión oceánica. La organización posee y opera la plataforma Global Fishing Watch, sus productos y servicios, y participa en alianzas de transparencia pesquera.",
+      "details": {
+        "aliases": [
+          "GFW",
+          "Global Fishing Watch"
+        ],
+        "profile": {
+          "mission": "Impulsar la gobernanza oceánica aumentando la transparencia de la actividad humana en el mar y haciendo libremente accesible el conocimiento resultante.",
+          "sourceRefs": [
+            "official-profile",
+            "annual",
+            "terms"
+          ]
+        },
+        "offices": [
+          {
+            "id": "washington-dc",
+            "location": "Washington, D. C., Estados Unidos"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "rel-audacious-project-funds-global-fishing-watch-operator",
+      "sourceNodeId": "audacious-project",
+      "targetNodeId": "global-fishing-watch-operator",
+      "kind": "funds",
+      "note": "USD 60 million commitment via the Audacious Project, described by GFW as five-year support for 2023–2028, for mapping human activity and scaling ocean governance. This is a commitment, not USD 60 million disbursed in 2025.",
+      "properties": {
+        "scope": "2023–2028 commitment supporting GFW strategy",
+        "status": "reported in 2025 annual report; final disbursement unverified",
+        "sourceRefs": [
+          "annual"
+        ]
+      },
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "ar": "التقرير السنوي 2025",
+            "en": "Annual report 2025",
+            "es": "Informe anual 2025",
+            "fr": "Rapport annuel 2025",
+            "ru": "Годовой отчёт 2025",
+            "zh": "2025年年度报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-global-fishing-watch-operator-governs-global-fishing-watch",
+      "sourceNodeId": "global-fishing-watch-operator",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "governs",
+      "note": "GFW Inc. sets service access, licensing and account policies, and reserves service modification and access-revocation authority. This concerns platform policy, not authority over fishing activity or maritime jurisdictions.",
+      "properties": {
+        "scope": "Formal authority over platform terms, access and service policies",
+        "status": "current published terms",
+        "sourceRefs": [
+          "terms"
+        ]
+      },
+      "sources": {
+        "terms": {
+          "id": "terms",
+          "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+          "title": {
+            "ar": "ترخيص API وحدودها",
+            "en": "API licence and limits",
+            "es": "Licencia y límites API",
+            "fr": "Licence et limites API",
+            "ru": "Лицензия и ограничения API",
+            "zh": "API许可与限额"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-global-fishing-watch-operator-member-of-coalition-for-fisheries-transparency",
+      "sourceNodeId": "global-fishing-watch-operator",
+      "targetNodeId": "coalition-for-fisheries-transparency",
+      "kind": "member_of",
+      "note": "GFW identifies itself as a member of the coalition. This is organizational participation, not system hierarchy or unilateral governance.",
+      "properties": {
+        "scope": "Organizational participation in fisheries transparency",
+        "status": "documented June 2026",
+        "sourceRefs": [
+          "coalition"
+        ]
+      },
+      "sources": {
+        "coalition": {
+          "id": "coalition",
+          "url": "https://globalfishingwatch.org/press-release/at-our-ocean-conference-global-fishing-watch-helps-drive-global-push-for-ocean-transparency/",
+          "title": {
+            "ar": "التزامات شفافية المحيطات، 18 يونيو 2026",
+            "en": "Ocean transparency commitments, 18 June 2026",
+            "es": "Compromisos de transparencia oceánica, 18 junio 2026",
+            "fr": "Engagements de transparence océanique, 18 juin 2026",
+            "ru": "Обязательства по прозрачности океана, 18 июня 2026",
+            "zh": "海洋透明度承诺，2026年6月18日"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-global-fishing-watch-operator-member-of-joint-analytical-cell",
+      "sourceNodeId": "global-fishing-watch-operator",
+      "targetNodeId": "joint-analytical-cell",
+      "kind": "member_of",
+      "note": "The official JAC page lists GFW among its members. Membership does not assign authority over every member or transfer confidential operational data to the public map.",
+      "properties": {
+        "scope": "Participation in the Joint Analytical Cell",
+        "status": "listed on current official page",
+        "sourceRefs": [
+          "jac"
+        ]
+      },
+      "sources": {
+        "jac": {
+          "id": "jac",
+          "url": "https://globalfishingwatch.org/joint-analytical-cell/",
+          "title": {
+            "ar": "الخلية التحليلية المشتركة",
+            "en": "Joint Analytical Cell",
+            "es": "Célula Analítica Conjunta",
+            "fr": "Cellule analytique conjointe",
+            "ru": "Совместная аналитическая группа",
+            "zh": "联合分析小组"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-global-fishing-watch-operator-operates-global-fishing-watch",
+      "sourceNodeId": "global-fishing-watch-operator",
+      "targetNodeId": "global-fishing-watch",
+      "kind": "operates",
+      "note": "GFW Inc. states that it owns and operates its data products and associated services.",
+      "properties": {
+        "scope": "Ownership and daily operation of the GFW platform and APIs",
+        "status": "current published terms",
+        "sourceRefs": [
+          "terms"
+        ]
+      },
+      "sources": {
+        "terms": {
+          "id": "terms",
+          "url": "https://globalfishingwatch.org/our-apis/documentation/docs/license-rate-limits",
+          "title": {
+            "ar": "ترخيص API وحدودها",
+            "en": "API licence and limits",
+            "es": "Licencia y límites API",
+            "fr": "Licence et limites API",
+            "ru": "Лицензия и ограничения API",
+            "zh": "API许可与限额"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-hans-wilsdorf-foundation-funds-global-fishing-watch-operator",
+      "sourceNodeId": "hans-wilsdorf-foundation",
+      "targetNodeId": "global-fishing-watch-operator",
+      "kind": "funds",
+      "note": "Three-year USD 5.1 million partnership secured in 2025, supporting marine-protection and fisheries work in West/Central Africa, the Mediterranean and the Pacific. Exact start/end dates are unstated.",
+      "properties": {
+        "scope": "Three-year regional program partnership reported in 2025",
+        "status": "reported in 2025 annual report; final disbursement unverified",
+        "sourceRefs": [
+          "annual"
+        ]
+      },
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "ar": "التقرير السنوي 2025",
+            "en": "Annual report 2025",
+            "es": "Informe anual 2025",
+            "fr": "Rapport annuel 2025",
+            "ru": "Годовой отчёт 2025",
+            "zh": "2025年年度报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-islas-secas-foundation-funds-global-fishing-watch-operator",
+      "sourceNodeId": "islas-secas-foundation",
+      "targetNodeId": "global-fishing-watch-operator",
+      "kind": "funds",
+      "note": "Renewed funding for Panama marine-protected-area enforcement reported in 2025; amount and exact dates are unstated.",
+      "properties": {
+        "scope": "Panama program support reported in 2025",
+        "status": "reported in 2025 annual report; final disbursement unverified",
+        "sourceRefs": [
+          "annual"
+        ]
+      },
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "ar": "التقرير السنوي 2025",
+            "en": "Annual report 2025",
+            "es": "Informe anual 2025",
+            "fr": "Rapport annuel 2025",
+            "ru": "Годовой отчёт 2025",
+            "zh": "2025年年度报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-minderoo-foundation-funds-global-fishing-watch-operator",
+      "sourceNodeId": "minderoo-foundation",
+      "targetNodeId": "global-fishing-watch-operator",
+      "kind": "funds",
+      "note": "One-year USD 200,000 extension reported in 2025 for reliable models and risk assessment related to forced labour and illegal fishing.",
+      "properties": {
+        "scope": "One-year model and risk-assessment support reported in 2025",
+        "status": "reported in 2025 annual report; final disbursement unverified",
+        "sourceRefs": [
+          "annual"
+        ]
+      },
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "ar": "التقرير السنوي 2025",
+            "en": "Annual report 2025",
+            "es": "Informe anual 2025",
+            "fr": "Rapport annuel 2025",
+            "ru": "Годовой отчёт 2025",
+            "zh": "2025年年度报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-oceana-funds-global-fishing-watch-operator",
+      "sourceNodeId": "oceana",
+      "targetNodeId": "global-fishing-watch-operator",
+      "kind": "funds",
+      "note": "USD 115,000 subgrant at the end of 2025 for Coalition for Fisheries Transparency work supporting the Global Charter for Fisheries Transparency. Founding collaboration does not establish current governance.",
+      "properties": {
+        "scope": "Coalition transparency work, subgrant reported in late 2025",
+        "status": "reported in 2025 annual report; final disbursement unverified",
+        "sourceRefs": [
+          "annual"
+        ]
+      },
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "ar": "التقرير السنوي 2025",
+            "en": "Annual report 2025",
+            "es": "Informe anual 2025",
+            "fr": "Rapport annuel 2025",
+            "ru": "Годовой отчёт 2025",
+            "zh": "2025年年度报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-sall-family-foundation-funds-global-fishing-watch-operator",
+      "sourceNodeId": "sall-family-foundation",
+      "targetNodeId": "global-fishing-watch-operator",
+      "kind": "funds",
+      "note": "One-year USD 150,000 unrestricted grant reported in 2025.",
+      "properties": {
+        "scope": "One-year unrestricted organizational support reported in 2025",
+        "status": "reported in 2025 annual report; final disbursement unverified",
+        "sourceRefs": [
+          "annual"
+        ]
+      },
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "ar": "التقرير السنوي 2025",
+            "en": "Annual report 2025",
+            "es": "Informe anual 2025",
+            "fr": "Rapport annuel 2025",
+            "ru": "Годовой отчёт 2025",
+            "zh": "2025年年度报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    },
+    {
+      "id": "rel-walmart-foundation-funds-global-fishing-watch-operator",
+      "sourceNodeId": "walmart-foundation",
+      "targetNodeId": "global-fishing-watch-operator",
+      "kind": "funds",
+      "note": "Two-year USD 450,000 grant renewed in 2025 for industry Vessel Viewer training and integration with partner platforms. Not assigned in full to generic database operations.",
+      "properties": {
+        "scope": "Vessel Viewer training and partner integrations",
+        "status": "reported in 2025 annual report; final disbursement unverified",
+        "sourceRefs": [
+          "annual"
+        ]
+      },
+      "sources": {
+        "annual": {
+          "id": "annual",
+          "url": "https://globalfishingwatch.org/annual-report-2025/",
+          "title": {
+            "ar": "التقرير السنوي 2025",
+            "en": "Annual report 2025",
+            "es": "Informe anual 2025",
+            "fr": "Rapport annuel 2025",
+            "ru": "Годовой отчёт 2025",
+            "zh": "2025年年度报告"
+          },
+          "accessedAt": "2026-09-10"
+        }
+      }
+    }
+  ],
+  "routes": []
+}
