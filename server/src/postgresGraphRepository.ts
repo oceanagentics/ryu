@@ -113,7 +113,6 @@ function mapPostgresNodeLocalization(row: Record<string, unknown>) {
 function mapPostgresEdge(row: Record<string, unknown>): GraphEdge {
   return mapEdge({
     ...(row as RawEdge),
-    properties_json: jsonText(row.properties_json),
     created_at: timestampText(row.created_at),
     updated_at: timestampText(row.updated_at),
   });
@@ -152,7 +151,7 @@ export class PostgresGraphRepository implements GraphRepository {
     const [nodeRows, localizationRows, edgeRows, routeRows] = await Promise.all([
       this.query("SELECT id, kind, country_code, url, record_depth, properties_json, sources, created_at, updated_at FROM nodes ORDER BY id"),
       this.query("SELECT * FROM node_localizations ORDER BY node_id, locale"),
-      this.query("SELECT id, source_node_id, target_node_id, kind, note, properties_json, sources, created_at, updated_at FROM edges ORDER BY id"),
+      this.query("SELECT id, source_node_id, target_node_id, kind, description, sources, created_at, updated_at FROM edges ORDER BY id"),
       this.query("SELECT * FROM ryu_routes ORDER BY node_id, priority, id"),
     ]);
     const localizationsByNodeId = new Map<string, ReturnType<typeof mapNodeLocalization>[]>();
@@ -699,7 +698,7 @@ export class PostgresGraphRepository implements GraphRepository {
         for (const deletedId of deleted ?? []) if (!rows?.some(row => row.id === deletedId)) validation.issues.push({ recordId: id, path: `${section}.${deletedId}`, message: "row does not belong to this record" });
       }
     }
-    const edgeFields = (rows: RecordEdgeInput[] = []) => rows.map(({ id, kind, sourceNodeId, targetNodeId, note, properties, sources }) => ({ id, kind, sourceNodeId, targetNodeId, note: note ?? null, properties: properties ?? {}, sources: sources ?? {} })).sort((a, b) => a.id.localeCompare(b.id));
+    const edgeFields = (rows: RecordEdgeInput[] = []) => rows.map(({ id, kind, sourceNodeId, targetNodeId, description, sources }) => ({ id, kind, sourceNodeId, targetNodeId, description, sources: sources ?? {} })).sort((a, b) => a.id.localeCompare(b.id));
     for (const [section, supplied, previous] of [
       ["edges", patch ? changes.edges?.upsert : full.edges, before?.edges],
       ["ryu_routes", patch ? routeChanges?.upsert : fullRoutes, before?.routes],
@@ -971,16 +970,15 @@ export class PostgresGraphRepository implements GraphRepository {
             source_node_id,
             target_node_id,
             kind,
-            note,
-            properties_json, sources
+            description,
+            sources
           )
-          VALUES ($1, $2, $3, $4, $5, $6::jsonb, $7::jsonb)
+          VALUES ($1, $2, $3, $4, $5, $6::jsonb)
           ON CONFLICT (id) DO UPDATE
           SET source_node_id = EXCLUDED.source_node_id,
               target_node_id = EXCLUDED.target_node_id,
               kind = EXCLUDED.kind,
-              note = EXCLUDED.note,
-              properties_json = EXCLUDED.properties_json,
+              description = EXCLUDED.description,
               sources = EXCLUDED.sources
         `,
         [
@@ -988,8 +986,7 @@ export class PostgresGraphRepository implements GraphRepository {
           edge.sourceNodeId,
           edge.targetNodeId,
           edge.kind,
-          edge.note ?? null,
-          stringifyJson(edge.properties ?? {}),
+          edge.description,
           JSON.stringify(edge.sources ?? {}),
         ],
       );

@@ -63,7 +63,7 @@ test("organization shape rejects system fields, office counts and misplaced fact
     ["record.sources.annual-report.description.fr", input => { delete (input.record.sources["annual-report"].description as any).fr; }],
     ["localizations.fr", input => { delete (input.localizations as any).fr; }],
     ["edges", input => { input.edges = []; }],
-    ["edges.example-alliance-member-of-coalition.note", input => { input.edges[0].note = null as any; }],
+    ["edges.example-alliance-member-of-coalition.description", input => { input.edges[0].description = ""; }],
       ];
 
   for (const [path, mutate] of failures) {

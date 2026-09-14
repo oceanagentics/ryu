@@ -98,11 +98,11 @@ test("sources stay with their owner through localization writes, search, edge re
     await assert.rejects(db.query("UPDATE node_localizations SET details_json='{\"profile\":{\"sourceRefs\":[\"missing\"]}}' WHERE node_id='a' AND locale='en'"), /missing source/);
     await db.query("INSERT INTO nodes(id,kind) VALUES ('route-system','system')");
     await assert.rejects(db.query("INSERT INTO ryu_routes(id,node_id,status,mode,properties_json) VALUES ('bad','route-system','planned','api','{\"sourceRefs\":[\"missing\"]}')"), /missing source/);
-    await db.query("INSERT INTO edges(id,source_node_id,target_node_id,kind,sources,properties_json) VALUES ('ab','a','b','member_of',$1,'{\"sourceRefs\":[\"docs\"]}')", [JSON.stringify(sources("https://edge.example.org"))]);
+    await db.query("INSERT INTO edges(id,source_node_id,target_node_id,kind,description,sources) VALUES ('ab','a','b','member','A is a documented member of B.',$1)", [JSON.stringify(sources("https://edge.example.org"))]);
     for (const id of ["a", "b"]) assert.equal((await read(id)).edges[0].sources.docs.url, "https://edge.example.org");
     const edgeSources = sources("https://updated-edge.example.org");
     await repo.updateNodeLocalizationReview("a", "en", { reviewState: "human_reviewed" }, "reviewer@example.org", { recordUpdatedAt: await version() });
-    const edgeWrite = await repo.patchRecord("a", { edges: { upsert: [{ id: "ab", kind: "member_of", sourceNodeId: "a", targetNodeId: "b", sources: edgeSources, properties: { sourceRefs: ["docs"] } }] } }, { recordUpdatedAt: await version() });
+    const edgeWrite = await repo.patchRecord("a", { edges: { upsert: [{ id: "ab", kind: "member", sourceNodeId: "a", targetNodeId: "b", description: "A remains a documented member of B.", sources: edgeSources }] } }, { recordUpdatedAt: await version() });
     assert.ok("node" in edgeWrite, JSON.stringify(edgeWrite));
     for (const id of ["a", "b"]) assert.equal((await read(id)).node.localizations.en!.review.state, "needs_revision");
     assert.deepEqual((await repo.getBootstrap()).nodes.find(n => n.id === "a")!.sources, changed);
@@ -116,7 +116,7 @@ test("adding a locale and its source titles is atomic, including incident edge t
     await db.exec(schema);
     const english = { docs: { ...sources().docs, title: { en: "Documentation" } } };
     for (const id of ["a", "b"]) await db.query("INSERT INTO nodes(id,kind,sources) VALUES ($1,'organization',$2)", [id, JSON.stringify(english)]);
-    await db.query("INSERT INTO edges(id,kind,source_node_id,target_node_id,sources) VALUES ('ab','member_of','a','b',$1)", [JSON.stringify(english)]);
+    await db.query("INSERT INTO edges(id,kind,source_node_id,target_node_id,description,sources) VALUES ('ab','member','a','b','A is a documented member of B.',$1)", [JSON.stringify(english)]);
     await assert.rejects(db.query("INSERT INTO node_localizations(node_id,locale,title) VALUES ('a','fr','A')"), /missing title/);
     await db.exec("BEGIN");
     await db.query("INSERT INTO node_localizations(node_id,locale,title) VALUES ('a','fr','A')");

@@ -59,8 +59,7 @@ export type RawEdge = {
   source_node_id: string;
   target_node_id: string;
   kind: GraphEdgeKind;
-  note: string | null;
-  properties_json: string | null;
+  description: string;
   sources: SourceCollection;
   created_at: string;
   updated_at: string;
@@ -239,8 +238,7 @@ export function mapEdge(row: RawEdge): GraphEdge {
     sourceNodeId: row.source_node_id,
     targetNodeId: row.target_node_id,
     kind: row.kind,
-    note: row.note,
-    properties: parseJson(row.properties_json),
+    description: row.description,
     sources: row.sources,
     createdAt: row.created_at,
     updatedAt: row.updated_at,

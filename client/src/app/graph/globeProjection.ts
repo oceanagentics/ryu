@@ -52,10 +52,10 @@ const colorByKind = {
 const colorByLinkType = {
   governs: "#c39b3a",
   operates: "#3b66b0",
-  member_of: "#8b99aa",
+  member: "#8b99aa",
   funds: "#b88a24",
-  publishes_to: "#22a37a",
-  syncs_to: "#7b5ad6",
+  contributes: "#22a37a",
+  transfers: "#7b5ad6",
 } satisfies Record<GraphProjectionEdge["type"], string>;
 
 const altitudeByKind = {

@@ -51,7 +51,7 @@ function shouldUseEdgeForFlatTree(edge: GraphProjectionEdge): boolean {
     edge.type === "governs" ||
     edge.type === "operates" ||
     edge.type === "funds" ||
-    edge.type === "member_of"
+    edge.type === "member"
   );
 }
 

@@ -253,11 +253,11 @@ const organizationFieldDefinitions = withCommonFields<"organization">([
       ]),
   },
   {
-    field: "relationships.note",
-    label: "search.field.relationshipNote",
+    field: "relationships.description",
+    label: "search.field.relationshipDescription",
     weight: 20,
     getValues: (entity, graph) =>
-      getRelationships(entity.id, graph).map((relationship) => relationship.note),
+      getRelationships(entity.id, graph).map((relationship) => relationship.description),
   },
 ]);
 
@@ -375,11 +375,11 @@ const systemFieldDefinitions = withCommonFields<"system">([
       ]),
   },
   {
-    field: "relationships.note",
-    label: "search.field.relationshipNote",
+    field: "relationships.description",
+    label: "search.field.relationshipDescription",
     weight: 20,
     getValues: (entity, graph) =>
-      getRelationships(entity.id, graph).map((relationship) => relationship.note),
+      getRelationships(entity.id, graph).map((relationship) => relationship.description),
   },
   {
     field: "gallery",

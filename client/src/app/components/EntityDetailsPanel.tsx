@@ -816,8 +816,7 @@ function RawRecordFields({
       source_node_id: relationship.sourceNodeId,
       target_node_id: relationship.targetNodeId,
       kind: relationship.kind,
-      note: relationship.note,
-      properties_json: relationship.properties,
+      description: relationship.description,
       sources: relationship.sources,
       created_at: relationship.createdAt,
       updated_at: relationship.updatedAt,
@@ -893,15 +892,8 @@ export function EntityDetailsPanel({
                 );
               })}
               <Typography.Paragraph className="summary-copy">
-                {relationship.note || <EmptyValue />}
+                {relationship.description || <EmptyValue />}
               </Typography.Paragraph>
-              {Object.entries(relationship.properties).filter(([key, value]) =>
-                key !== "sourceRefs" && key !== "source" && value != null,
-              ).map(([key, value]) => (
-                <InlineField key={key} label={humanizeCode(key.replace(/([a-z])([A-Z])/g, "$1 $2"))}>
-                  {typeof value === "object" ? JSON.stringify(value) : String(value)}
-                </InlineField>
-              ))}
             </DetailSection>
             <DetailSection title={t(locale, "common.source")}>
               {Object.keys(relationship.sources).length

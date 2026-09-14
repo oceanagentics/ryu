@@ -82,7 +82,7 @@ guide in the same release.
 | Headings, buttons, empty states and message templates | `uiMessages/`, grouped by UI concern |
 | Language names | `localeNames.ts` |
 | A record's title, profile, descriptor descriptions and access guidance | `node_localizations` |
-| Relationship descriptions, scope, status and citations | `edges.note`, `edges.properties_json` and `edges.sources` |
+| Relationship meaning and its evidence | `edges.description` and `edges.sources` |
 | A source's translated title and optional fact context | That node or edge's `sources[id].title` and `description` maps |
 
 For data descriptors, the neutral `label` field contains an approved ID. Its
@@ -102,7 +102,7 @@ before use.
 
 Catalogs are code released with the app. A label correction does not require a
 record rewrite. Keep URLs, IDs and operational facts language-neutral. Individual
-edge notes and route caveats are not shared catalog entries. Route status, mode
+edge descriptions and route caveats are not shared catalog entries. Route status, mode
 and capability labels still use the existing humanization path; this catalog
 split did not add route translations or translations for those prose fields.
 

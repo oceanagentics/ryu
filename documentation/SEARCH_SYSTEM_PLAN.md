@@ -78,7 +78,7 @@ The search system should have three layers:
   facets: {
     countryCode: ["JPN"],
     kind: ["system"],
-    relationshipType: ["publishes_to"]
+    relationshipType: ["contributes"]
   },
   mode: "strict"
 }
@@ -106,7 +106,7 @@ The API executes search against Postgres data; the browser keeps the bootstrap g
 - Replace loose subsequence fuzzy matching with field-aware matching:
   - high weight: name, aliases, country code, kind
   - medium weight: descriptions, disciplines, data descriptor labels, access labels
-  - low weight: source titles, relationship notes, connected node names
+  - low weight: source titles, relationship descriptions, connected node names
 - Return ranked system records and matching entity ids from the same resolver.
 - Have the Systems pane render the shared filtered/ranked system result set.
 - Have graph projection receive matching entity ids and filter visible nodes.
@@ -211,7 +211,7 @@ Agent-produced intent:
   text: "edna",
   facets: {
     countryCode: ["JPN"],
-    relationshipType: ["publishes_to"]
+    relationshipType: ["contributes"]
   },
   targetKind: ["system"],
   includeRelatedKinds: ["organization"]

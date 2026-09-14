@@ -84,7 +84,7 @@ test("stored rich example enforces content, evidence, localization and allowed g
     ["record.sources.src-fishbase-home", input => { delete input.record.sources["src-fishbase-home"]; }],
     ["record.sources.src-fishbase-home.title.ar", input => { delete input.record.sources["src-fishbase-home"].title.ar; }],
     ["edges", input => { input.edges = []; }],
-    [`edges.${fixture.edges[0].id}.properties.sourceRefs`, input => { input.edges[0].properties = {}; }],
+    [`edges.${fixture.edges[0].id}.sources`, input => { input.edges[0].sources = {}; }],
     ["record.properties.gallery[0].url", input => { input.record.properties.gallery[0].url = "/gallery/missing.png"; }],
     ["routes.example.target", input => { input.routes = [{ id: "example", status: "active", mode: "live_api", properties: { sourceRefs: ["src-fishbase-home"] } }]; }],
   ];
@@ -116,7 +116,6 @@ test("stored rich example enforces content, evidence, localization and allowed g
     for (const input of [
       { record: { propertiesReplace: { access: [{ source: reference }] } } },
       { localizations: { fr: { mode: "patch", detailsReplace: { evidence: { source: reference } } } } },
-      { edges: { upsert: [{ ...fixture.edges[0], properties: { source: reference } }] } },
       { routes: { upsert: [{ id: "route", status: "planned", mode: "api", properties: { source: reference } }] } },
     ]) assert.throws(() => readRecordPatchInput(fixture.id, input), /source must be a string/);
   }
@@ -318,7 +317,9 @@ test("subtype removal preserves records and relationships and is safe to rerun",
         ('institute','organization','research_institute','{}'),
         ('archive','system',NULL,'{}');
       INSERT INTO node_localizations(node_id,locale,title) VALUES ('institute','en','Institute');
-      INSERT INTO edges(id,kind,source_node_id,target_node_id) VALUES ('operator','operates','institute','archive');
+      INSERT INTO edges(id,kind,source_node_id,target_node_id,description,sources) VALUES (
+        'operator','operates','institute','archive','The institute operates the archive.',
+        '{"docs":{"id":"docs","url":"https://example.org/relationship","title":{"en":"Evidence"},"accessedAt":"2026-09-14"}}');
     `);
     const before = await db.query("SELECT to_jsonb(n) - 'subtype' AS node FROM nodes n ORDER BY id");
     const localizations = await db.query("SELECT * FROM node_localizations");

@@ -16,9 +16,9 @@ export const searchMessages = {
   "search.field.relationship": {
     en: "Relationship", fr: "Relation", es: "Relación", ar: "العلاقة", zh: "关系", ru: "Связь",
   },
-  "search.field.relationshipNote": {
-    en: "Relationship note", fr: "Note de relation", es: "Nota de relación", ar: "ملاحظة العلاقة", zh: "关系备注",
-    ru: "Заметка о связи",
+  "search.field.relationshipDescription": {
+    en: "Relationship description", fr: "Description de la relation", es: "Descripción de la relación", ar: "وصف العلاقة", zh: "关系描述",
+    ru: "Описание связи",
   },
   "search.field.containedNode": {
     en: "Contained node", fr: "Noeud contenu", es: "Nodo contenido", ar: "عقدة محتواة", zh: "包含节点", ru: "Содержащийся узел",

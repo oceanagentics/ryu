@@ -464,7 +464,8 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
   }
   for (const edge of input.edges ?? []) {
     if (!isEdgeKind(edge.kind)) issues.push({ recordId: id, path: `edges.${edge.id}.kind`, message: "unknown or retired relationship type" });
-    if (collectSourceIds(edge.properties).size === 0) add(`edges.${edge.id}.properties.sourceRefs`, "relationship evidence is required", true);
+    if (!text(edge.description)) add(`edges.${edge.id}.description`, "a relationship description is required", false, true);
+    if (Object.keys(edge.sources ?? {}).length === 0) add(`edges.${edge.id}.sources`, "relationship evidence is required", true, true);
   }
   let referencedSources = 0;
   let resolvedSources = 0;
@@ -497,7 +498,10 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
     }
   };
   validateSources(sources, [input.record.properties, input.localizations, input.routes], "record.sources");
-  for (const edge of input.edges ?? []) validateSources(edge.sources ?? {}, edge.properties, `edges.${edge.id}.sources`);
+  for (const edge of input.edges ?? []) {
+    const edgeSources = edge.sources ?? {};
+    validateSources(edgeSources, { sourceRefs: Object.keys(edgeSources) }, `edges.${edge.id}.sources`);
+  }
   return {
     valid: issues.length === 0, recordId: id, issues, warnings,
     sourceCompleteness: {
@@ -733,8 +737,7 @@ function mapEdgeDto(edge: GraphEdge): GraphEdge {
     sourceNodeId: edge.sourceNodeId,
     targetNodeId: edge.targetNodeId,
     kind: edge.kind,
-    note: edge.note,
-    properties: edge.properties,
+    description: edge.description,
     sources: edge.sources,
     createdAt: edge.createdAt,
     updatedAt: edge.updatedAt,
@@ -905,14 +908,13 @@ function readEdgeInputs(input: unknown, recordId: string, path: string): RecordE
 
 function readEdgeInput(input: unknown, recordId: string, path: string): RecordEdgeInput {
   const body = readObject(input, path);
-  assertAllowedFields(body, new Set(["id", "sourceNodeId", "targetNodeId", "kind", "note", "properties", "sources"]), path);
+  assertAllowedFields(body, new Set(["id", "sourceNodeId", "targetNodeId", "kind", "description", "sources"]), path);
   const edge = {
     id: readRequiredId(body.id, `${path}.id`),
     sourceNodeId: readRequiredId(body.sourceNodeId, `${path}.sourceNodeId`),
     targetNodeId: readRequiredId(body.targetNodeId, `${path}.targetNodeId`),
     kind: readRequiredEnum(body.kind, isEdgeKind, `${path}.kind`),
-    note: hasOwn(body, "note") ? readNullableString(body.note, `${path}.note`) : undefined,
-    properties: hasOwn(body, "properties") ? readJsonObject(body.properties, `${path}.properties`) : undefined,
+    description: readRequiredString(body.description, `${path}.description`),
     sources: hasOwn(body, "sources") ? readSourceCollection(body.sources, `${path}.sources`) : undefined,
   };
 

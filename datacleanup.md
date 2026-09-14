@@ -149,9 +149,10 @@ Terminology rule: name each item from the Postgres table, column, and JSON path 
 - Acceptance:
   - A reviewer can open the source tooltip for every route-level source ref without switching to `Raw fields`.
 
-### 3. `edges.note` And `edges.properties_json -> $.sourceRefs[]`
+### 3. `edges.description` And `edges.sources`
 
-- Status: pending
+- Status: done in the edge revision; production requires migration 018 and the
+  coordinated application cutover before this shape is live.
 - UI location: selected node -> `User view` -> `Connections`
 - UI labels:
   - connected node name
@@ -159,29 +160,19 @@ Terminology rule: name each item from the Postgres table, column, and JSON path 
 - SQL storage:
   - table: `edges`
   - columns:
-    - `note`
-    - `properties_json`
-  - JSON path: `properties_json -> $.sourceRefs[]`
+    - `description`
+    - `sources`
 - App object:
-  - `GraphEdge.note`
-  - `GraphEdge.properties.sourceRefs`
-- Current SQL example:
-  - `id`: `rel-protomaps-operates-protomaps-basemap`
-  - `kind`: `operates`
-  - `note`: `Protomaps publishes the OpenStreetMap-derived Protomaps Basemap and PMTiles documentation.`
-  - `properties_json.sourceRefs`: `["src-protomaps-docs", "src-protomaps-basemap-downloads"]`
-- Current UI example:
-  - `Protomaps Basemap`
-  - `Operates (outgoing)`
-- Stored data currently hidden in UI:
-  - `edges.note`
-  - `edges.properties_json.sourceRefs`
-  - resolved `sources` rows for those IDs
-- Review problem:
-  - A reviewer can see that a graph relationship exists, but not why it exists or which source records support it.
-- Proposed cleanup:
-  - Show `edges.note` under each connection when present.
-  - Show resolved source refs beneath the note.
+  - `GraphEdge.description`
+  - `GraphEdge.sources`
+- Current rendering:
+  - The relationship details show the description followed by its source links.
+  - Raw fields expose the same two fields and no supplemental property bag.
+- Authoring rule:
+  - Put the complete relationship meaning in `description`.
+  - Treat every entry in `sources` as direct evidence for that description.
+  - Do not author `properties`, `sourceRefs`, `scope`, `status`, or replacement
+    edge vocabularies without a concrete filter, calculation, or automated use.
 - Acceptance:
   - A reviewer can validate graph relationships from `User view` -> `Connections` without switching to `Raw fields`.
 

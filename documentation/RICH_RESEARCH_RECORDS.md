@@ -98,7 +98,8 @@ Before marking a system rich:
    and all six relationship types using primary sources.
 2. Assemble all five neutral sections and all six complete localizations with
    profile citations. Use approved vocabulary IDs and owner-local sources.
-3. Add verified relationships with evidence, scope and time/status on the edges.
+3. Add verified relationships with a complete description and direct evidence on
+   the edges. Include material scope and timing in the description when known.
    Complete material connection research; report specific unresolved candidates.
 4. Record supported metrics or specific Data/Usage gaps, and supported standards
    or a standards gap. Include at least one useful gallery item showing a
@@ -258,7 +259,7 @@ Before marking a country rich:
 3. Record the stable designated focal-point institution or office and official
    directory when published. Treaty signatories and meeting delegates are not
    assumed to be current operational contacts.
-4. Review the country-applicable `governs`, `funds`, and `member_of`
+4. Review the country-applicable `governs`, `funds`, and `member`
    relationships. Keep formal groups and public authorities as sourced graph
    relationships; Party status alone does not establish unilateral governance
    over a treaty body or clearing-house system.
@@ -294,7 +295,7 @@ date beside its state and retain earlier events in revision history.
 The lean graph schema uses:
 
 - `nodes`: one row per country, organization, or system.
-- `edges`: explicit graph relationships: `governs`, `operates`, `funds`, `member_of`, `publishes_to`, and `syncs_to`.
+- `edges`: explicit graph relationships: `governs`, `operates`, `funds`, `member`, `contributes`, and `transfers`.
 - `nodes.sources` and `edges.sources`: source objects owned by each node or relationship, with translated titles.
 - `node_localizations`: per-language user-facing record text, localized details, and review state.
 - `ryu_routes`: compact operational route rows for machine access.
@@ -322,7 +323,7 @@ Do not reintroduce removed tables or fields:
 - No `system_profiles`, `system_data_descriptors`, `system_access_paths`, `system_gallery_items`, `system_metrics`, or `system_identifier_schemes`.
 - No `node_claims` unless a new use case proves it is needed.
 - No identifiers section, confidence fields, duplicate system IDs, or generic evidence-link layer.
-- No hidden parent field or `part_of` edge. Use `member_of` only for documented
+- No hidden parent field or `part_of` edge. Use `member` only for documented
   membership/participation, not service components or a shared operator.
 - No Operator country affiliation. `countryCode` identifies country nodes only;
   organizations and systems express government relationships through edges.
@@ -368,7 +369,9 @@ A rich system must have:
   Units and Data/Usage groups come from `shared/domain.ts`. Rich records require
   a metric or an explicit research gap for each group in every locale's
   `details.researchGaps.data` or `usage`; do not invent numbers to fill a group.
-- Evidence on each relationship and route, using a `source` ID or `properties.sourceRefs` IDs. Relationship references resolve against `edges.sources`; route references resolve against the route node's `nodes.sources`. References contain no duplicate URL.
+- A nonempty description and at least one source on every relationship. An edge's
+  `sources` directly evidence its description; route references continue to resolve
+  against the route node's `nodes.sources`. Sources contain no duplicate URL.
 - Complete the connection research in Relationship Review below for rich systems,
   organizations, and countries. Persist verified material relationships with their
   descriptions and evidence on the edges, and report unsupported or unresolved
@@ -393,7 +396,7 @@ computed from content, not an author-controlled badge or a separate source regis
   supplied scale metric and office location, and asserted relationships. They
   do not need system descriptors, access paths, galleries, or routes.
 - Countries need evidence for identity, treaty participation, official context,
-  and asserted `governs`, `funds`, and `member_of` relationships.
+  and asserted `governs`, `funds`, and `member` relationships.
 - Minimal country/organization records may be source-complete and remain `stub`
   or `thin`. The richer system checklist is not applied to those node kinds.
 
@@ -406,9 +409,10 @@ scope, and qualification of organization dates, scale figures, and office
 locations. No source type, publisher, publication date, local path, note, or
 source audit fields.
 
-Node/localization/route citations resolve against `nodes.sources`; edge citations
-resolve against that edge's `sources`, from either endpoint. Source references
-are strings (`source: "documentation"`) or lists (`sourceRefs: ["documentation"]`).
+Node/localization/route citations resolve against `nodes.sources`; an edge's
+`sources` collection directly supports its description, from either endpoint.
+Node and route source references are strings (`source: "documentation"`) or lists
+(`sourceRefs: ["documentation"]`). Edges do not carry a separate reference list.
 There is no global source registry and no endpoint ownership field on citations.
 Every source needs titles for its node's existing localizations; edge sources
 cover localizations of both endpoints. Rich records require all six node locales.
@@ -505,7 +509,7 @@ service is a system node. A ministry acting on behalf of a state is not
 automatically interchangeable with the legal contractor, dataset creator or
 publisher. Keep each attribution scoped to its source and relationship.
 
-The current `publishes_to` endpoint rule is organization → system. Evidence that
+The current `contributes` endpoint rule is organization → system. Evidence that
 names a country as publisher exposes an endpoint-policy question, not a reason
 to invent an organization for that government or substitute an associated
 ministry. Report it for an explicitly approved contract change; preserve the
@@ -523,9 +527,9 @@ kind/source/target triples, unknown types, and retired `part_of` are rejected.
 | `governs` | country/organization -> organization/system | Formal decision authority, with scope stated. |
 | `operates` | organization -> system | Management or ongoing operation; include every evidenced operator. |
 | `funds` | country/organization -> organization/system | Financial support for the named recipient/activity; state current or historical period when known. |
-| `member_of` | country -> organization; organization -> organization; system -> system | Documented membership or participating service; no automatic component hierarchy. |
-| `publishes_to` | organization -> system | An evidenced publication/submission relationship. |
-| `syncs_to` | system -> system | An evidenced transfer, with direction and active/planned status made clear. |
+| `member` | country -> organization; organization -> organization; system -> system | Documented membership or participating service; no automatic component hierarchy. |
+| `contributes` | organization -> system | An evidenced data contribution, publication, or submission relationship. |
+| `transfers` | system -> system | An evidenced data movement, including synchronization; make direction and current, historical, or planned state clear in the description. |
 
 Well-researched connections are a required part of a rich record. Checking the
 existing operator alone is insufficient. Actively discover
@@ -541,7 +545,7 @@ For each record, agents must:
 1. Read the complete canonical record and its incident edges through the record API;
    inspect connected nodes and search for candidate endpoints to verify identities
    and kinds and reuse existing records. A consortium label does not establish its members.
-2. Research governance, operation, funding, membership, publication, and synchronization
+2. Research governance, operation, funding, membership, contribution, and transfer
    using primary sources beyond the homepage: authority documents, member lists,
    grant and annual reports, contributor documentation, and upstream/downstream
    dataset records or export documentation, as applicable. Follow named partners
@@ -549,8 +553,8 @@ For each record, agents must:
    institutional, and collective authority. Funding a dataset does not necessarily
    fund its repository.
 3. Check every asserted edge's direction, endpoints, meaning, provenance, and time
-   scope. Explain the supported role or data contribution in the edge note/properties
-   and attach supporting source refs to the edge itself. For funding, identify the
+   scope. Explain the supported role or data contribution in the edge description
+   and attach the supporting sources to the edge itself. For funding, identify the
    recipient/activity, any intermediary, and supported period. For transfers, identify
    the data, documented path/method, update cadence and latest observed release when
    available; distinguish live, periodic, historical, planned, and unknown status.
@@ -572,16 +576,20 @@ For each record, agents must:
    verify both endpoints and confirm the final edge set. Reassess the research
    whenever relationships or their supporting evidence change.
 
-Relationship content has one owner: the edge. Put the explanation in `note`,
-structured scope/status and `sourceRefs` in `properties`, and cited sources in the
-edge's `sources` collection. Node properties and localization details contain no
-separate connection summary.
+Relationship content has one owner: the edge. Put the complete explanation in
+`description` and the evidence for that explanation in the edge's `sources`
+collection. Do not author edge `properties`, `sourceRefs`, `scope`, `status`, or
+other supplemental prose fields. Add a structured field only when an actual
+filter, calculation, or automated behavior requires it. Node properties and
+localization details contain no separate connection summary.
 
 The six-type/endpoint constraints were introduced by
-`server/schema/009_relationship_contract.sql`. Its historical rich-record downgrade
-used the former localization review fields; those fields are no longer part of
-the current rich criteria. Promote records through the API only after the current
-criteria pass. Regenerate the public bootstrap from Postgres after graph changes.
+`server/schema/009_relationship_contract.sql`; migration 018 applies the current
+names and the description/sources-only edge shape. Migration 009's historical
+rich-record downgrade used former localization review fields that are no longer
+part of the current rich criteria. Promote records through the API only after the
+current criteria pass. Regenerate the public bootstrap from Postgres after graph
+changes.
 
 ## Disciplines
 
@@ -1006,9 +1014,9 @@ Use multiple methods on one entry when they describe the same useful destination
 
 The approved vocabularies live in `shared/domain.ts`, with all six translations in `shared/vocabularyLabels/access.ts`. Additions require explicit human approval in the authoring chat and a vocabulary/translation release. API validation enforces the shared shape, approved values, source resolution and six-language guidance at every depth. The old singular `method` and `source` fields are rejected for all access entries.
 
-Do not retain outgoing preservation copies or federation plans as Write access. Preserve evidenced transfers on `syncs_to` edges and describe planned or unavailable contribution arrangements in sourced profile prose. Retiring an access row must not remove its source or an existing edge.
+Do not retain outgoing preservation copies or federation plans as Write access. Preserve evidenced data movement on `transfers` edges and describe planned or unavailable contribution arrangements in sourced profile prose. Retiring an access row must not remove its source or an existing edge.
 
-Do not add negative access rows for unavailable access. Describe a limitation on a real path in its guidance or the profile. Endpoint availability does not establish an inter-system relationship: only an evidenced transfer supports a `syncs_to` edge, directed from provider to recipient regardless of who initiates the request. Operational agent route selection remains in `ryu_routes`.
+Do not add negative access rows for unavailable access. Describe a limitation on a real path in its guidance or the profile. Endpoint availability does not establish an inter-system relationship: only evidenced data movement supports a `transfers` edge, directed from provider to recipient regardless of who initiates the request. Operational agent route selection remains in `ryu_routes`.
 
 ## Ryu Routes
 

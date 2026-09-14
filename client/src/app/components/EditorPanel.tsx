@@ -55,8 +55,7 @@ type RelationshipDraft = {
   sourceNodeId: string;
   targetNodeId: string;
   kind: GraphEdge["kind"];
-  note: string;
-  properties: PropertyDraft[];
+  description: string;
 };
 
 const entityKindOptions = ["country", "organization", "system"] as const;
@@ -71,9 +70,8 @@ const blankEntityDraft = (): EntityDraft => ({
 const blankRelationshipDraft = (): RelationshipDraft => ({
   sourceNodeId: "",
   targetNodeId: "",
-  kind: "publishes_to",
-  note: "",
-  properties: [],
+  kind: "contributes",
+  description: "",
 });
 
 function toPropertyDrafts(properties: object): PropertyDraft[] {
@@ -128,8 +126,7 @@ function relationshipToDraft(relationship: GraphEdge): RelationshipDraft {
     sourceNodeId: relationship.sourceNodeId,
     targetNodeId: relationship.targetNodeId,
     kind: relationship.kind,
-    note: relationship.note ?? "",
-    properties: toPropertyDrafts(relationship.properties ?? {}),
+    description: relationship.description,
   };
 }
 
@@ -209,9 +206,6 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
   const viewingRelationship = mode === "relationship" ? selectedRelationship : null;
 
   const entityProperties = viewingEntity ? toPropertyDrafts(viewingEntity.properties ?? {}) : [];
-  const relationshipProperties = viewingRelationship
-    ? toPropertyDrafts(viewingRelationship.properties ?? {})
-    : [];
   const hasSelection = Boolean(viewingEntity || viewingRelationship);
 
   async function refreshGraph() {
@@ -400,12 +394,11 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
                 { key: "type", label: "Type", children: viewingRelationship.kind },
               ]}
             />
-            {viewingRelationship.note ? (
+            {viewingRelationship.description ? (
               <Typography.Paragraph className="summary-copy">
-                {viewingRelationship.note}
+                {viewingRelationship.description}
               </Typography.Paragraph>
             ) : null}
-            <PropertyList properties={relationshipProperties} emptyText="No properties for this edge." />
           </Flex>
         ) : null}
 
@@ -458,10 +451,13 @@ export function EditorPanel({ readOnly = false }: EditorPanelProps) {
                 }))}
               />
             </Form.Item>
-            <Form.Item label="Note" name="note">
+            <Form.Item
+              label="Description"
+              name="description"
+              rules={[{ required: true, whitespace: true, message: "Enter a relationship description." }]}
+            >
               <Input.TextArea rows={3} />
             </Form.Item>
-            <PropertyEditor name="properties" emptyText="No properties for this edge." />
           </Form>
         ) : null}
 

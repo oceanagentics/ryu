@@ -23,14 +23,14 @@ UPDATE nodes SET record_depth = 'thin' WHERE record_depth = 'rich' AND EXISTS (
   SELECT 1 FROM unnest(ARRAY['ar','zh','en','fr','ru','es']) AS required(locale)
   WHERE NOT EXISTS (
     SELECT 1 FROM node_localizations l WHERE l.node_id = nodes.id AND l.locale = required.locale
-      AND l.details_json->'relationshipReview'->'findings' ?& ARRAY['governs','operates','funds','member_of','publishes_to','syncs_to']
+      AND l.details_json->'relationshipReview'->'findings' ?& ARRAY['governs','operates','funds','member','contributes','transfers']
   )
 );
 
 ALTER TABLE nodes DROP CONSTRAINT IF EXISTS nodes_country_identity_check;
 ALTER TABLE nodes ADD CONSTRAINT nodes_country_identity_check CHECK (kind = 'country' OR country_code IS NULL);
 ALTER TABLE edges DROP CONSTRAINT IF EXISTS edges_kind_check;
-ALTER TABLE edges ADD CONSTRAINT edges_kind_check CHECK (kind IN ('governs', 'operates', 'funds', 'member_of', 'publishes_to', 'syncs_to'));
+ALTER TABLE edges ADD CONSTRAINT edges_kind_check CHECK (kind IN ('governs', 'operates', 'funds', 'member', 'contributes', 'transfers'));
 CREATE UNIQUE INDEX IF NOT EXISTS idx_edges_relationship ON edges(kind, source_node_id, target_node_id);
 
 CREATE OR REPLACE FUNCTION valid_edge_endpoints(edge_kind text, source_kind text, target_kind text)
@@ -39,10 +39,10 @@ RETURNS boolean LANGUAGE sql IMMUTABLE AS $$
     WHEN 'governs' THEN source_kind IN ('country','organization') AND target_kind IN ('organization','system')
     WHEN 'operates' THEN source_kind = 'organization' AND target_kind = 'system'
     WHEN 'funds' THEN source_kind IN ('country','organization') AND target_kind IN ('organization','system')
-    WHEN 'member_of' THEN (source_kind IN ('country','organization') AND target_kind = 'organization')
+    WHEN 'member' THEN (source_kind IN ('country','organization') AND target_kind = 'organization')
       OR (source_kind = 'system' AND target_kind = 'system')
-    WHEN 'publishes_to' THEN source_kind = 'organization' AND target_kind = 'system'
-    WHEN 'syncs_to' THEN source_kind = 'system' AND target_kind = 'system'
+    WHEN 'contributes' THEN source_kind = 'organization' AND target_kind = 'system'
+    WHEN 'transfers' THEN source_kind = 'system' AND target_kind = 'system'
     ELSE false END, false);
 $$;
 

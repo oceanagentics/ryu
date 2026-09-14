@@ -116,7 +116,7 @@ BEGIN
   LOCK TABLE sources, sources_localizations IN SHARE ROW EXCLUSIVE MODE;
   UPDATE nodes SET properties_json = pg_temp.rewrite_source_refs(properties_json);
   UPDATE node_localizations SET details_json = pg_temp.rewrite_source_refs(details_json);
-  UPDATE edges SET properties_json = pg_temp.rewrite_source_refs(properties_json);
+  EXECUTE 'UPDATE edges SET properties_json = pg_temp.rewrite_source_refs(properties_json)';
   UPDATE ryu_routes SET properties_json = pg_temp.rewrite_source_refs(properties_json);
   FOR owner IN SELECT id, properties_json FROM nodes LOOP
     refs := source_reference_ids(owner.properties_json);
@@ -132,7 +132,7 @@ BEGIN
       INTO collection FROM sources s WHERE s.id = ANY(refs);
     UPDATE nodes SET sources = collection WHERE id = owner.id;
   END LOOP;
-  FOR owner IN SELECT id, properties_json FROM edges LOOP
+  FOR owner IN EXECUTE 'SELECT id, properties_json FROM edges' LOOP
     refs := source_reference_ids(owner.properties_json);
     IF EXISTS (SELECT 1 FROM unnest(refs) ref WHERE NOT EXISTS (SELECT 1 FROM sources s WHERE s.id = ref)) THEN
       RAISE EXCEPTION 'edge % references a missing legacy source', owner.id;
@@ -152,7 +152,14 @@ ALTER TABLE nodes ADD CONSTRAINT nodes_source_refs_check CHECK (valid_owned_sour
 ALTER TABLE edges DROP CONSTRAINT IF EXISTS edges_sources_check;
 ALTER TABLE edges ADD CONSTRAINT edges_sources_check CHECK (valid_owned_sources(sources));
 ALTER TABLE edges DROP CONSTRAINT IF EXISTS edges_source_refs_check;
-ALTER TABLE edges ADD CONSTRAINT edges_source_refs_check CHECK (valid_owned_source_refs(properties_json,sources));
+DO $$ BEGIN
+  IF EXISTS (
+    SELECT 1 FROM information_schema.columns
+    WHERE table_schema = current_schema() AND table_name = 'edges' AND column_name = 'properties_json'
+  ) THEN
+    EXECUTE 'ALTER TABLE edges ADD CONSTRAINT edges_source_refs_check CHECK (valid_owned_source_refs(properties_json,sources))';
+  END IF;
+END $$;
 
 -- Child writes serialize with owner edits before deferred checks read the final state.
 CREATE OR REPLACE FUNCTION lock_source_owners()

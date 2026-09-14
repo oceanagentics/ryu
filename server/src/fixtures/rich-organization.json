@@ -284,14 +284,8 @@
       "id": "example-alliance-member-of-coalition",
       "sourceNodeId": "example-ocean-alliance",
       "targetNodeId": "example-coalition",
-      "kind": "member_of",
-      "note": "The coalition’s official member directory lists the Alliance as a current member.",
-      "properties": {
-        "status": "current",
-        "sourceRefs": [
-          "membership"
-        ]
-      },
+      "kind": "member",
+      "description": "The coalition’s official member directory lists the Alliance as a current member.",
       "sources": {
         "membership": {
           "id": "membership",

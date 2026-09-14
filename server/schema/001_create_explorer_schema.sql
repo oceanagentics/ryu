@@ -248,11 +248,9 @@ CREATE TABLE IF NOT EXISTS edges (
   id text PRIMARY KEY,
   source_node_id text NOT NULL REFERENCES nodes(id) ON DELETE CASCADE,
   target_node_id text NOT NULL REFERENCES nodes(id) ON DELETE CASCADE,
-  kind text NOT NULL CHECK (kind IN ('governs', 'operates', 'funds', 'member_of', 'publishes_to', 'syncs_to')),
-  note text,
-  properties_json jsonb NOT NULL DEFAULT '{}'::jsonb,
-  sources jsonb NOT NULL DEFAULT '{}'::jsonb CHECK (valid_owned_sources(sources)),
-  CONSTRAINT edges_source_refs_check CHECK (valid_owned_source_refs(properties_json, sources)),
+  kind text NOT NULL CONSTRAINT edges_kind_check CHECK (kind IN ('governs', 'operates', 'funds', 'member', 'contributes', 'transfers')),
+  description text NOT NULL CONSTRAINT edges_description_check CHECK (btrim(description) <> ''),
+  sources jsonb NOT NULL CONSTRAINT edges_sources_check CHECK (sources <> '{}'::jsonb AND valid_owned_sources(sources)),
   created_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CHECK (source_node_id <> target_node_id)
@@ -277,10 +275,10 @@ RETURNS boolean LANGUAGE sql IMMUTABLE AS $$
     WHEN 'governs' THEN source_kind IN ('country','organization') AND target_kind IN ('organization','system')
     WHEN 'operates' THEN source_kind = 'organization' AND target_kind = 'system'
     WHEN 'funds' THEN source_kind IN ('country','organization') AND target_kind IN ('organization','system')
-    WHEN 'member_of' THEN (source_kind IN ('country','organization') AND target_kind = 'organization')
+    WHEN 'member' THEN (source_kind IN ('country','organization') AND target_kind = 'organization')
       OR (source_kind = 'system' AND target_kind = 'system')
-    WHEN 'publishes_to' THEN source_kind = 'organization' AND target_kind = 'system'
-    WHEN 'syncs_to' THEN source_kind = 'system' AND target_kind = 'system'
+    WHEN 'contributes' THEN source_kind = 'organization' AND target_kind = 'system'
+    WHEN 'transfers' THEN source_kind = 'system' AND target_kind = 'system'
     ELSE false END, false);
 $$;
 

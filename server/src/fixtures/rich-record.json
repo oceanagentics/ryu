@@ -1603,13 +1603,7 @@
       "sourceNodeId": "q-quatics",
       "targetNodeId": "fishbase",
       "kind": "operates",
-      "note": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-fishbase"
-        ]
-      },
+      "description": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-fishbase": {
           "id": "src-relationship-fishbase",
@@ -1630,16 +1624,8 @@
       "id": "rel-fishbase-member-of-platform-obis",
       "sourceNodeId": "fishbase",
       "targetNodeId": "platform-obis",
-      "kind": "member_of",
-      "note": "The OBIS Fish OBIS node page explicitly identifies FishBase and FishNet2 as participating systems in the global thematic Fish OBIS node. This represents FishBase participation in OBIS through that node, not organizational membership or component ownership. The page describes intended FishBase contributions; current delivery is assessed separately.",
-      "properties": {
-        "via": "Fish OBIS",
-        "scope": "OBIS network participation through the Fish OBIS thematic node",
-        "status": "listed participant",
-        "sourceRefs": [
-          "evidence"
-        ]
-      },
+      "kind": "member",
+      "description": "The OBIS Fish OBIS node page explicitly identifies FishBase and FishNet2 as participating systems in the global thematic Fish OBIS node. This represents FishBase participation in OBIS through that node, not organizational membership or component ownership. The page describes intended FishBase contributions; current delivery is assessed separately. The documented scope is OBIS network participation through the Fish OBIS thematic node. The documented status is listed participant.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -1660,16 +1646,8 @@
       "id": "rel-fishbase-syncs-to-aquamaps",
       "sourceNodeId": "fishbase",
       "targetNodeId": "aquamaps",
-      "kind": "syncs_to",
-      "note": "AquaMaps uses FishBase FAO-area coverage, distribution bounds and depth ranges as inputs to species distribution modelling. This is a documented input-data transfer; the homepage model description is labelled version 10/2019 and does not establish a current ingestion date or cadence.",
-      "properties": {
-        "scope": "Fish distribution and habitat inputs to predictive range maps",
-        "status": "documented; latest transfer date unverified",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "transferMethod": "Model input extraction from FishBase; cadence unspecified"
-      },
+      "kind": "transfers",
+      "description": "AquaMaps uses FishBase FAO-area coverage, distribution bounds and depth ranges as inputs to species distribution modelling. This is a documented input-data transfer; the homepage model description is labelled version 10/2019 and does not establish a current ingestion date or cadence. The documented scope is Fish distribution and habitat inputs to predictive range maps. The documented status is documented; latest transfer date unverified. The documented transfer method is Model input extraction from FishBase; cadence unspecified.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -1690,20 +1668,8 @@
       "id": "rel-fishbase-syncs-to-gbif",
       "sourceNodeId": "fishbase",
       "targetNodeId": "gbif",
-      "kind": "syncs_to",
-      "note": "FishBase publishes an occurrence dataset through the GBIF-Sweden IPT, registered with GBIF. The publisher lists 731,043 archive records, a latest publication date of 2023-03-23 and irregular updates. The archive count is not a verified count of currently indexed GBIF occurrences.",
-      "properties": {
-        "scope": "FishBase occurrence dataset via GBIF-Sweden",
-        "format": "Darwin Core Archive",
-        "status": "published snapshot; current refresh unverified",
-        "artifact": "https://www.gbif.se/ipt/resource?r=fishbase",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "transferMethod": "GBIF-Sweden IPT Darwin Core Archive publication",
-        "updateFrequency": "irregular",
-        "latestPublishedAt": "2023-03-23"
-      },
+      "kind": "transfers",
+      "description": "FishBase publishes an occurrence dataset through the GBIF-Sweden IPT, registered with GBIF. The publisher lists 731,043 archive records, a latest publication date of 2023-03-23 and irregular updates. The archive count is not a verified count of currently indexed GBIF occurrences. The documented scope is FishBase occurrence dataset via GBIF-Sweden. The documented format is Darwin Core Archive. The documented status is published snapshot; current refresh unverified. The documented artifact is https://www.gbif.se/ipt/resource?r=fishbase. The documented transfer method is GBIF-Sweden IPT Darwin Core Archive publication.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -1724,20 +1690,8 @@
       "id": "rel-fishbase-syncs-to-platform-obis",
       "sourceNodeId": "fishbase",
       "targetNodeId": "platform-obis",
-      "kind": "syncs_to",
-      "note": "OBIS hosts an archive of FishBase occurrence records harvested from the GBIF-Sweden-hosted resource. The available archive was published on 2018-10-10 and lists an unknown update frequency. This records the historical transfer path; an ongoing refresh is not established.",
-      "properties": {
-        "scope": "Historical harvest of FishBase occurrence data via GBIF-Sweden",
-        "format": "Darwin Core Archive",
-        "status": "historical; current refresh unknown",
-        "artifact": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "transferMethod": "OBIS harvest of the GBIF-Sweden-hosted FishBase resource",
-        "updateFrequency": "unknown",
-        "latestPublishedAt": "2018-10-10"
-      },
+      "kind": "transfers",
+      "description": "OBIS hosts an archive of FishBase occurrence records harvested from the GBIF-Sweden-hosted resource. The available archive was published on 2018-10-10 and lists an unknown update frequency. This records the historical transfer path; an ongoing refresh is not established. The documented scope is Historical harvest of FishBase occurrence data via GBIF-Sweden. The documented format is Darwin Core Archive. The documented status is historical; current refresh unknown. The documented artifact is https://ipt.obis.org/nonode/resource?r=fishbase_occurrence. The documented transfer method is OBIS harvest of the GBIF-Sweden-hosted FishBase resource.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -1758,19 +1712,8 @@
       "id": "rel-fishbase-syncs-to-source-cooperative",
       "sourceNodeId": "fishbase",
       "targetNodeId": "source-cooperative",
-      "kind": "syncs_to",
-      "note": "The FishBase team supplies backend MySQL dumps roughly annually to Carl Boettiger, who converts and publishes versioned Parquet snapshots on Source Cooperative for rfishbase. This is periodic redistribution through the named maintainer, not live replication. The dataset README identifies fb/v26.07 as the current FishBase snapshot.",
-      "properties": {
-        "scope": "Versioned FishBase backend table exports",
-        "format": "parquet",
-        "status": "periodic",
-        "artifact": "cboettig/fishbase/fb/v26.07",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "transferMethod": "FishBase team MySQL dump to Carl Boettiger; conversion to Parquet and publication on Source Cooperative",
-        "updateFrequency": "roughly annual"
-      },
+      "kind": "transfers",
+      "description": "The FishBase team supplies backend MySQL dumps roughly annually to Carl Boettiger, who converts and publishes versioned Parquet snapshots on Source Cooperative for rfishbase. This is periodic redistribution through the named maintainer, not live replication. The dataset README identifies fb/v26.07 as the current FishBase snapshot. The documented scope is Versioned FishBase backend table exports. The documented artifact is cboettig/fishbase/fb/v26.07. The documented transfer method is FishBase team MySQL dump to Carl Boettiger; conversion to Parquet and publication on Source Cooperative.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -1791,16 +1734,8 @@
       "id": "rel-fishbase-syncs-to-worms",
       "sourceNodeId": "fishbase",
       "targetNodeId": "worms",
-      "kind": "syncs_to",
-      "note": "WoRMS explicitly identifies FishBase as an external database from which it currently imports information, principally taxonomy. This establishes FishBase-to-WoRMS transfer; no reciprocal transfer or fixed refresh schedule is asserted.",
-      "properties": {
-        "scope": "Fish taxonomy imported into Aphia and presented through WoRMS",
-        "status": "active",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "transferMethod": "External database import; implementation and cadence unspecified"
-      },
+      "kind": "transfers",
+      "description": "WoRMS explicitly identifies FishBase as an external database from which it currently imports information, principally taxonomy. This establishes FishBase-to-WoRMS transfer; no reciprocal transfer or fixed refresh schedule is asserted. The documented scope is Fish taxonomy imported into Aphia and presented through WoRMS. The documented status is active. The documented transfer method is External database import; implementation and cadence unspecified.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -1821,16 +1756,8 @@
       "id": "rel-royal-museum-for-central-africa-publishes-to-fishbase",
       "sourceNodeId": "royal-museum-for-central-africa",
       "targetNodeId": "fishbase",
-      "kind": "publishes_to",
-      "note": "The museum’s 2023 account documents FishBase contributions beginning with digitisation of its African fish collection in 1997 and, from 2001, checking and updating information on African freshwater and brackish-water fishes from published literature. This records evidenced historical contributions; continued activity in 2026 is unverified.",
-      "properties": {
-        "scope": "African fish collection data and curated freshwater/brackish-water fish information",
-        "period": "Collection contributions from 1997 and curated updates from 2001, documented in 2023",
-        "status": "documented historical contribution; current continuation unverified",
-        "sourceRefs": [
-          "evidence"
-        ]
-      },
+      "kind": "contributes",
+      "description": "The museum’s 2023 account documents FishBase contributions beginning with digitisation of its African fish collection in 1997 and, from 2001, checking and updating information on African freshwater and brackish-water fishes from published literature. This records evidenced historical contributions; continued activity in 2026 is unverified. The documented scope is African fish collection data and curated freshwater/brackish-water fish information. The documented period is Collection contributions from 1997 and curated updates from 2001, documented in 2023. The documented status is documented historical contribution; current continuation unverified.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -1852,16 +1779,7 @@
       "sourceNodeId": "university-of-western-australia",
       "targetNodeId": "fishbase",
       "kind": "funds",
-      "note": "Q-quatics identifies a University of Western Australia grant awarded to Q-quatics to improve Australian marine biodiversity coverage in FishBase and SeaLifeBase, described as since 2017. This edge covers the FishBase activity supported through Q-quatics; no amount, exclusive funding role, end date or continuation in 2026 is established.",
-      "properties": {
-        "scope": "Improving Australian marine biodiversity coverage in FishBase; grant also supports SeaLifeBase",
-        "period": "Support described as starting in 2017; end date and continuation in 2026 unverified",
-        "status": "documented funding; current continuation unverified",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "intermediary": "q-quatics"
-      },
+      "description": "Q-quatics identifies a University of Western Australia grant awarded to Q-quatics to improve Australian marine biodiversity coverage in FishBase and SeaLifeBase, described as since 2017. This edge covers the FishBase activity supported through Q-quatics; no amount, exclusive funding role, end date or continuation in 2026 is established. The documented scope is Improving Australian marine biodiversity coverage in FishBase; grant also supports SeaLifeBase. The documented period is Support described as starting in 2017; end date and continuation in 2026 unverified. The documented status is documented funding; current continuation unverified.",
       "sources": {
         "evidence": {
           "id": "evidence",

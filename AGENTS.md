@@ -50,9 +50,9 @@
 - `governs`
 - `operates`
 - `funds`
-- `member_of`
-- `publishes_to`
-- `syncs_to`
+- `member`
+- `contributes`
+- `transfers`
 
 ## Validation Rules
 ### System record contract
@@ -82,11 +82,11 @@
 - `governs`: `country|organization -> organization|system`
 - `operates`: `organization -> system`
 - `funds`: `country|organization -> organization|system`
-- `member_of`: `country -> organization`, `organization -> organization`, or `system -> system`
-- `publishes_to`: `organization -> system`
-- `syncs_to`: `system -> system`
+- `member`: `country -> organization`, `organization -> organization`, or `system -> system`
+- `contributes`: `organization -> system`
+- `transfers`: `system -> system`
 - Use `shared/domain.ts` as the executable edge vocabulary and endpoint contract.
-- `member_of` means documented participation, not component hierarchy. `part_of`,
+- `member` means documented participation, not component hierarchy. `part_of`,
   `manages`, `located_in`, and `advises` are not accepted edge types.
 - `governs` requires formal authority; `operates` includes management and operation;
   `funds` requires evidence of financial support and its scope/period.
@@ -98,7 +98,8 @@
 - Before marking a record rich, review every incident edge and investigate all six
   relationship types. Actively research missing connections beyond the operator,
   using primary sources to establish endpoints, direction, scope, and time/status.
-  Store relationship descriptions, scope, time/status, and citations on the edges.
+  Put the full relationship meaning, including material scope and timing, in the
+  edge `description`; store its evidence directly in the edge `sources` collection.
   Persist verified material connections during authorized backfills and report
   unresolved candidates with reasons. Keep unfinished research thin; there is no
   minimum connection count. Follow `documentation/RICH_RESEARCH_RECORDS.md`.
@@ -108,7 +109,10 @@
 - Store user-facing system prose in `node_localizations`, with source IDs on the relevant localized detail items, resolving against the node's sources. Edge citations resolve against the edge's sources; route citations resolve against the route node's sources.
 - Store language-neutral operational facts in `nodes.properties_json`.
 - Do not add or preserve identifier lists in the record model.
-- Edge metadata such as `transferMethod`, `format`, `standard`, and `artifact` belongs in `edges.properties_json`.
+- Edges have the closed authored shape `id`, `sourceNodeId`, `targetNodeId`, `kind`,
+  `description`, and `sources`. Do not author edge `properties`, `sourceRefs`,
+  `scope`, `status`, or other supplemental prose fields. Add a structured edge
+  field only when a demonstrated filter, calculation, or automated behavior needs it.
 - Keep node/edge edits minimal in the editor; rich research backfills should update the JSON record deliberately.
 - Use only the approved `disciplines` IDs in `shared/domain.ts`. Never add a
   discipline without explicit human approval in the current authoring chat.

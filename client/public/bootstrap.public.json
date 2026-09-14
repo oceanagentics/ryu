@@ -40475,14 +40475,8 @@
       "id": "link-bcodmo-ncei",
       "sourceNodeId": "bco-dmo",
       "targetNodeId": "noaa-ncei-marine",
-      "kind": "syncs_to",
-      "note": "BCO-DMO sends preservation copies to NOAA NCEI.",
-      "properties": {
-        "scope": "Published data preservation copies",
-        "sourceRefs": [
-          "src-relationship-bco-dmo"
-        ]
-      },
+      "kind": "transfers",
+      "description": "BCO-DMO sends preservation copies to NOAA NCEI. The documented scope is Published data preservation copies.",
       "sources": {
         "src-relationship-bco-dmo": {
           "id": "src-relationship-bco-dmo",
@@ -40505,14 +40499,8 @@
       "id": "link-ddbj-ena",
       "sourceNodeId": "ddbj",
       "targetNodeId": "ena",
-      "kind": "syncs_to",
-      "note": "INSDC members exchange sequence data and corrections at regular intervals.",
-      "properties": {
-        "scope": "Sequence archive exchange",
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "transfers",
+      "description": "INSDC members exchange sequence data and corrections at regular intervals. The documented scope is Sequence archive exchange.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -40535,14 +40523,8 @@
       "id": "link-ddbj-genbank",
       "sourceNodeId": "ddbj",
       "targetNodeId": "genbank",
-      "kind": "syncs_to",
-      "note": "INSDC members exchange sequence data and corrections at regular intervals.",
-      "properties": {
-        "scope": "Sequence archive exchange",
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "transfers",
+      "description": "INSDC members exchange sequence data and corrections at regular intervals. The documented scope is Sequence archive exchange.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -40565,14 +40547,8 @@
       "id": "link-ena-genbank",
       "sourceNodeId": "ena",
       "targetNodeId": "genbank",
-      "kind": "syncs_to",
-      "note": "INSDC members exchange sequence data and corrections at regular intervals.",
-      "properties": {
-        "scope": "Sequence archive exchange",
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "transfers",
+      "description": "INSDC members exchange sequence data and corrections at regular intervals. The documented scope is Sequence archive exchange.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -40595,13 +40571,8 @@
       "id": "link-eurobis-obis",
       "sourceNodeId": "eurobis",
       "targetNodeId": "platform-obis",
-      "kind": "syncs_to",
-      "note": "EurOBIS contributes marine species distribution records to OBIS.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-eurobis"
-        ]
-      },
+      "kind": "transfers",
+      "description": "EurOBIS contributes marine species distribution records to OBIS.",
       "sources": {
         "src-relationship-eurobis": {
           "id": "src-relationship-eurobis",
@@ -40625,13 +40596,7 @@
       "sourceNodeId": "algaebase-operator",
       "targetNodeId": "algaebase",
       "kind": "operates",
-      "note": "Research team directed by Michael Guiry; mixed sponsorship is not EU governance.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-algaebase"
-        ]
-      },
+      "description": "Research team directed by Michael Guiry; mixed sponsorship is not EU governance. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-algaebase": {
           "id": "src-relationship-algaebase",
@@ -40655,13 +40620,7 @@
       "sourceNodeId": "aquamaps-collaboration",
       "targetNodeId": "aquamaps",
       "kind": "operates",
-      "note": "Collaborative modelling team. The methodological page documents GBIF and OBIS inputs, but does not establish current automated synchronization.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-aquamaps"
-        ]
-      },
+      "description": "Collaborative modelling team. The methodological page documents GBIF and OBIS inputs, but does not establish current automated synchronization. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-aquamaps": {
           "id": "src-relationship-aquamaps",
@@ -40685,13 +40644,7 @@
       "sourceNodeId": "awi",
       "targetNodeId": "pangaea",
       "kind": "operates",
-      "note": "Joint institutional operation of PANGAEA.",
-      "properties": {
-        "scope": "Joint institutional operation of PANGAEA.",
-        "sourceRefs": [
-          "src-relationship-pangaea"
-        ]
-      },
+      "description": "Joint institutional operation of PANGAEA.",
       "sources": {
         "src-relationship-pangaea": {
           "id": "src-relationship-pangaea",
@@ -40714,13 +40667,8 @@
       "id": "rel-bioinformation-and-ddbj-center-nig-member-of-insdc-members",
       "sourceNodeId": "bioinformation-and-ddbj-center-nig",
       "targetNodeId": "insdc-members",
-      "kind": "member_of",
-      "note": "Institutional member of INSDC; archive operation remains with each member.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "member",
+      "description": "Institutional member of INSDC; archive operation remains with each member.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -40744,13 +40692,7 @@
       "sourceNodeId": "bioinformation-and-ddbj-center-nig",
       "targetNodeId": "ddbj",
       "kind": "operates",
-      "note": "NIG/ROIS operates DDBJ; participating archive in INSDC with reciprocal sequence exchange.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-ddbj"
-        ]
-      },
+      "description": "NIG/ROIS operates DDBJ; participating archive in INSDC with reciprocal sequence exchange. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-ddbj": {
           "id": "src-relationship-ddbj",
@@ -40774,13 +40716,7 @@
       "sourceNodeId": "jpn",
       "targetNodeId": "bioinformation-and-ddbj-center-nig",
       "kind": "governs",
-      "note": "National public institutional authority; international collaboration does not erase this governmental tie.",
-      "properties": {
-        "scope": "National institutional authority, exercised through the responsible public bodies",
-        "sourceRefs": [
-          "src-relationship-nig"
-        ]
-      },
+      "description": "National public institutional authority; international collaboration does not erase this governmental tie. The documented scope is National institutional authority, exercised through the responsible public bodies.",
       "sources": {
         "src-relationship-nig": {
           "id": "src-relationship-nig",
@@ -40804,13 +40740,7 @@
       "sourceNodeId": "bio-oracle-team",
       "targetNodeId": "bio-oracle",
       "kind": "operates",
-      "note": "International research consortium; VLIZ hosts the website. Team affiliations do not establish member-country control.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-bio-oracle"
-        ]
-      },
+      "description": "International research consortium; VLIZ hosts the website. Team affiliations do not establish member-country control. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-bio-oracle": {
           "id": "src-relationship-bio-oracle",
@@ -40833,15 +40763,8 @@
       "id": "rel-bismal-syncs-to-obis",
       "sourceNodeId": "bismal",
       "targetNodeId": "platform-obis",
-      "kind": "syncs_to",
-      "note": "BISMaL distributes Japanese OBIS-node biodiversity records to OBIS.",
-      "properties": {
-        "format": "Darwin Core Archive",
-        "sourceRefs": [
-          "src-relationship-j-obis"
-        ],
-        "transferMethod": "IPT"
-      },
+      "kind": "transfers",
+      "description": "BISMaL distributes Japanese OBIS-node biodiversity records to OBIS. The documented format is Darwin Core Archive. The documented transfer method is IPT.",
       "sources": {
         "src-relationship-j-obis": {
           "id": "src-relationship-j-obis",
@@ -40865,12 +40788,7 @@
       "sourceNodeId": "can",
       "targetNodeId": "fisheries-and-oceans-canada",
       "kind": "governs",
-      "note": "Canadian federal departmental authority.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-cioos"
-        ]
-      },
+      "description": "Canadian federal departmental authority.",
       "sources": {
         "src-relationship-cioos": {
           "id": "src-relationship-cioos",
@@ -40893,14 +40811,8 @@
       "id": "rel-can-member-of-ices",
       "sourceNodeId": "can",
       "targetNodeId": "ices",
-      "kind": "member_of",
-      "note": "ICES member country represented in collective governance.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-ices-data"
-        ],
-        "membershipStatus": "member"
-      },
+      "kind": "member",
+      "description": "ICES member country represented in collective governance.",
       "sources": {
         "src-relationship-ices-data": {
           "id": "src-relationship-ices-data",
@@ -40924,13 +40836,7 @@
       "sourceNodeId": "centre-for-biodiversity-genomics",
       "targetNodeId": "bold",
       "kind": "operates",
-      "note": "Institutional hosting of the BOLD service and team.",
-      "properties": {
-        "scope": "Institutional hosting of the BOLD service and team.",
-        "sourceRefs": [
-          "src-relationship-bold"
-        ]
-      },
+      "description": "Institutional hosting of the BOLD service and team.",
       "sources": {
         "src-relationship-bold": {
           "id": "src-relationship-bold",
@@ -40954,13 +40860,7 @@
       "sourceNodeId": "cern",
       "targetNodeId": "zenodo",
       "kind": "operates",
-      "note": "CERN operates the platform and data centre.",
-      "properties": {
-        "scope": "CERN operates the platform and data centre.",
-        "sourceRefs": [
-          "src-relationship-zenodo"
-        ]
-      },
+      "description": "CERN operates the platform and data centre.",
       "sources": {
         "src-relationship-zenodo": {
           "id": "src-relationship-zenodo",
@@ -40984,13 +40884,7 @@
       "sourceNodeId": "cioos-operator",
       "targetNodeId": "cioos",
       "kind": "operates",
-      "note": "Federated Canadian observing system supported by Fisheries and Oceans Canada; national coordination and regional operations must not be conflated with sole federal control.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-cioos"
-        ]
-      },
+      "description": "Federated Canadian observing system supported by Fisheries and Oceans Canada; national coordination and regional operations must not be conflated with sole federal control. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-cioos": {
           "id": "src-relationship-cioos",
@@ -41013,13 +40907,8 @@
       "id": "rel-ddbj-member-of-insdc",
       "sourceNodeId": "ddbj",
       "targetNodeId": "insdc",
-      "kind": "member_of",
-      "note": "Participating sequence archive in INSDC.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "member",
+      "description": "Participating sequence archive in INSDC.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -41043,13 +40932,7 @@
       "sourceNodeId": "deu",
       "targetNodeId": "embl",
       "kind": "funds",
-      "note": "Member-state contribution to EMBL programmes; no sole control or grant amount inferred.",
-      "properties": {
-        "scope": "Membership contribution",
-        "sourceRefs": [
-          "src-relationship-embl-members"
-        ]
-      },
+      "description": "Member-state contribution to EMBL programmes; no sole control or grant amount inferred. The documented scope is Membership contribution.",
       "sources": {
         "src-relationship-embl-members": {
           "id": "src-relationship-embl-members",
@@ -41072,14 +40955,8 @@
       "id": "rel-deu-member-of-embl",
       "sourceNodeId": "deu",
       "targetNodeId": "embl",
-      "kind": "member_of",
-      "note": "Germany is a full member state.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-embl-members"
-        ],
-        "membershipStatus": "full"
-      },
+      "kind": "member",
+      "description": "Germany is a full member state.",
       "sources": {
         "src-relationship-embl-members": {
           "id": "src-relationship-embl-members",
@@ -41102,14 +40979,8 @@
       "id": "rel-deu-member-of-ices",
       "sourceNodeId": "deu",
       "targetNodeId": "ices",
-      "kind": "member_of",
-      "note": "ICES member country represented in collective governance.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-ices-data"
-        ],
-        "membershipStatus": "member"
-      },
+      "kind": "member",
+      "description": "ICES member country represented in collective governance.",
       "sources": {
         "src-relationship-ices-data": {
           "id": "src-relationship-ices-data",
@@ -41133,13 +41004,7 @@
       "sourceNodeId": "dryad-operator",
       "targetNodeId": "dryad",
       "kind": "operates",
-      "note": "Independent nonprofit with member-elected board; US incorporation is not US government control.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-dryad"
-        ]
-      },
+      "description": "Independent nonprofit with member-elected board; US incorporation is not US government control. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-dryad": {
           "id": "src-relationship-dryad",
@@ -41163,13 +41028,7 @@
       "sourceNodeId": "ec-dg-mare",
       "targetNodeId": "emodnet",
       "kind": "operates",
-      "note": "Programme management of EMODnet, with technical delivery by consortia.",
-      "properties": {
-        "scope": "Programme management of EMODnet, with technical delivery by consortia.",
-        "sourceRefs": [
-          "src-relationship-emodnet"
-        ]
-      },
+      "description": "Programme management of EMODnet, with technical delivery by consortia.",
       "sources": {
         "src-relationship-emodnet": {
           "id": "src-relationship-emodnet",
@@ -41193,13 +41052,7 @@
       "sourceNodeId": "ecotrust",
       "targetNodeId": "ecotrust-oregon-fisheries-uses-values",
       "kind": "operates",
-      "note": "Ecotrust is an independent nonprofit. The fisheries project is not federally governed because it concerns Oregon.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-ecotrust-oregon-fisheries-uses-values"
-        ]
-      },
+      "description": "Ecotrust is an independent nonprofit. The fisheries project is not federally governed because it concerns Oregon. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-ecotrust-oregon-fisheries-uses-values": {
           "id": "src-relationship-ecotrust-oregon-fisheries-uses-values",
@@ -41223,12 +41076,7 @@
       "sourceNodeId": "embl-council",
       "targetNodeId": "embl",
       "kind": "governs",
-      "note": "Council sets EMBL policy and approves its budget.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-embl-governance"
-        ]
-      },
+      "description": "Council sets EMBL policy and approves its budget.",
       "sources": {
         "src-relationship-embl-governance": {
           "id": "src-relationship-embl-governance",
@@ -41246,13 +41094,8 @@
       "id": "rel-embl-ebi-member-of-insdc-members",
       "sourceNodeId": "embl-ebi",
       "targetNodeId": "insdc-members",
-      "kind": "member_of",
-      "note": "Institutional member of INSDC; archive operation remains with each member.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "member",
+      "description": "Institutional member of INSDC; archive operation remains with each member.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -41276,13 +41119,7 @@
       "sourceNodeId": "embl-ebi",
       "targetNodeId": "ena",
       "kind": "operates",
-      "note": "EMBL-EBI operates ENA; participating INSDC archive with reciprocal sequence exchange. EMBL is separate from the EU.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-ena"
-        ]
-      },
+      "description": "EMBL-EBI operates ENA; participating INSDC archive with reciprocal sequence exchange. EMBL is separate from the EU. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-ena": {
           "id": "src-relationship-ena",
@@ -41306,13 +41143,7 @@
       "sourceNodeId": "embl-ebi",
       "targetNodeId": "mgnify",
       "kind": "operates",
-      "note": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-mgnify"
-        ]
-      },
+      "description": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-mgnify": {
           "id": "src-relationship-mgnify",
@@ -41336,12 +41167,7 @@
       "sourceNodeId": "embl",
       "targetNodeId": "embl-ebi",
       "kind": "governs",
-      "note": "EMBL-EBI is an institute of EMBL under its leadership and Council authority.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-ebi-leadership"
-        ]
-      },
+      "description": "EMBL-EBI is an institute of EMBL under its leadership and Council authority.",
       "sources": {
         "src-relationship-ebi-leadership": {
           "id": "src-relationship-ebi-leadership",
@@ -41365,13 +41191,7 @@
       "sourceNodeId": "emodnet-biology-consortium",
       "targetNodeId": "emodnet-biology",
       "kind": "operates",
-      "note": "VLIZ leads coordination, data management and infrastructure for the 2025–2027 consortium. Shared EurOBIS infrastructure and reference vocabularies do not alone prove separate synchronization.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-emodnet-biology"
-        ]
-      },
+      "description": "VLIZ leads coordination, data management and infrastructure for the 2025–2027 consortium. Shared EurOBIS infrastructure and reference vocabularies do not alone prove separate synchronization. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-emodnet-biology": {
           "id": "src-relationship-emodnet-biology",
@@ -41394,13 +41214,8 @@
       "id": "rel-ena-member-of-insdc",
       "sourceNodeId": "ena",
       "targetNodeId": "insdc",
-      "kind": "member_of",
-      "note": "Participating sequence archive in INSDC.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "member",
+      "description": "Participating sequence archive in INSDC.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -41423,13 +41238,8 @@
       "id": "rel-ena-syncs-to-ddbj",
       "sourceNodeId": "ena",
       "targetNodeId": "ddbj",
-      "kind": "syncs_to",
-      "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "transfers",
+      "description": "Reciprocal INSDC sequence archive exchange, including corrections.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -41452,14 +41262,8 @@
       "id": "rel-ena-syncs-to-mgnify",
       "sourceNodeId": "ena",
       "targetNodeId": "mgnify",
-      "kind": "syncs_to",
-      "note": "ENA sequencing data are retrieved for MGnify analysis.",
-      "properties": {
-        "scope": "Analysis inputs; not complete archive mirroring",
-        "sourceRefs": [
-          "src-relationship-mgnify"
-        ]
-      },
+      "kind": "transfers",
+      "description": "ENA sequencing data are retrieved for MGnify analysis. The documented scope is Analysis inputs; not complete archive mirroring.",
       "sources": {
         "src-relationship-mgnify": {
           "id": "src-relationship-mgnify",
@@ -41483,13 +41287,7 @@
       "sourceNodeId": "eur",
       "targetNodeId": "cmems-datastore",
       "kind": "funds",
-      "note": "European Union programme funding.",
-      "properties": {
-        "scope": "Copernicus Marine programme funding",
-        "sourceRefs": [
-          "src-relationship-cmems-datastore"
-        ]
-      },
+      "description": "European Union programme funding. The documented scope is Copernicus Marine programme funding.",
       "sources": {
         "src-relationship-cmems-datastore": {
           "id": "src-relationship-cmems-datastore",
@@ -41513,13 +41311,7 @@
       "sourceNodeId": "eur",
       "targetNodeId": "copernicus-marine",
       "kind": "funds",
-      "note": "European Union programme funding.",
-      "properties": {
-        "scope": "Copernicus Marine programme funding",
-        "sourceRefs": [
-          "src-relationship-copernicus-marine"
-        ]
-      },
+      "description": "European Union programme funding. The documented scope is Copernicus Marine programme funding.",
       "sources": {
         "src-relationship-copernicus-marine": {
           "id": "src-relationship-copernicus-marine",
@@ -41543,13 +41335,7 @@
       "sourceNodeId": "eur",
       "targetNodeId": "emodnet",
       "kind": "funds",
-      "note": "European Union programme funding.",
-      "properties": {
-        "scope": "EMFAF programme funding",
-        "sourceRefs": [
-          "src-relationship-emodnet"
-        ]
-      },
+      "description": "European Union programme funding. The documented scope is EMFAF programme funding.",
       "sources": {
         "src-relationship-emodnet": {
           "id": "src-relationship-emodnet",
@@ -41573,13 +41359,7 @@
       "sourceNodeId": "eur",
       "targetNodeId": "emodnet-biology",
       "kind": "funds",
-      "note": "European Union programme funding.",
-      "properties": {
-        "scope": "EMFAF programme funding",
-        "sourceRefs": [
-          "src-relationship-emodnet"
-        ]
-      },
+      "description": "European Union programme funding. The documented scope is EMFAF programme funding.",
       "sources": {
         "src-relationship-emodnet": {
           "id": "src-relationship-emodnet",
@@ -41603,13 +41383,7 @@
       "sourceNodeId": "euro-argo-eric",
       "targetNodeId": "euro-argo",
       "kind": "operates",
-      "note": "ERIC organization with a member-state Council and national contributions; EU location is not EU governance. Statutes dated November 2023.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-euro-argo"
-        ]
-      },
+      "description": "ERIC organization with a member-state Council and national contributions; EU location is not EU governance. Statutes dated November 2023. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-euro-argo": {
           "id": "src-relationship-euro-argo",
@@ -41633,13 +41407,7 @@
       "sourceNodeId": "fao",
       "targetNodeId": "fao-fishstat",
       "kind": "operates",
-      "note": "FAO is an intergovernmental organization with its own governing bodies. International is not a governing country.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-fao-fishstat"
-        ]
-      },
+      "description": "FAO is an intergovernmental organization with its own governing bodies. International is not a governing country. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-fao-fishstat": {
           "id": "src-relationship-fao-fishstat",
@@ -41662,16 +41430,8 @@
       "id": "rel-fishbase-member-of-platform-obis",
       "sourceNodeId": "fishbase",
       "targetNodeId": "platform-obis",
-      "kind": "member_of",
-      "note": "The OBIS Fish OBIS node page explicitly identifies FishBase and FishNet2 as participating systems in the global thematic Fish OBIS node. This represents FishBase participation in OBIS through that node, not organizational membership or component ownership. The page describes intended FishBase contributions; current delivery is assessed separately.",
-      "properties": {
-        "via": "Fish OBIS",
-        "scope": "OBIS network participation through the Fish OBIS thematic node",
-        "status": "listed participant",
-        "sourceRefs": [
-          "evidence"
-        ]
-      },
+      "kind": "member",
+      "description": "The OBIS Fish OBIS node page explicitly identifies FishBase and FishNet2 as participating systems in the global thematic Fish OBIS node. This represents FishBase participation in OBIS through that node, not organizational membership or component ownership. The page describes intended FishBase contributions; current delivery is assessed separately. The documented scope is OBIS network participation through the Fish OBIS thematic node. The documented status is listed participant.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -41694,16 +41454,8 @@
       "id": "rel-fishbase-syncs-to-aquamaps",
       "sourceNodeId": "fishbase",
       "targetNodeId": "aquamaps",
-      "kind": "syncs_to",
-      "note": "AquaMaps uses FishBase FAO-area coverage, distribution bounds and depth ranges as inputs to species distribution modelling. This is a documented input-data transfer; the homepage model description is labelled version 10/2019 and does not establish a current ingestion date or cadence.",
-      "properties": {
-        "scope": "Fish distribution and habitat inputs to predictive range maps",
-        "status": "documented; latest transfer date unverified",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "transferMethod": "Model input extraction from FishBase; cadence unspecified"
-      },
+      "kind": "transfers",
+      "description": "AquaMaps uses FishBase FAO-area coverage, distribution bounds and depth ranges as inputs to species distribution modelling. This is a documented input-data transfer; the homepage model description is labelled version 10/2019 and does not establish a current ingestion date or cadence. The documented scope is Fish distribution and habitat inputs to predictive range maps. The documented status is documented; latest transfer date unverified. The documented transfer method is Model input extraction from FishBase; cadence unspecified.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -41726,20 +41478,8 @@
       "id": "rel-fishbase-syncs-to-gbif",
       "sourceNodeId": "fishbase",
       "targetNodeId": "gbif",
-      "kind": "syncs_to",
-      "note": "FishBase publishes an occurrence dataset through the GBIF-Sweden IPT, registered with GBIF. The publisher lists 731,043 archive records, a latest publication date of 2023-03-23 and irregular updates. The archive count is not a verified count of currently indexed GBIF occurrences.",
-      "properties": {
-        "scope": "FishBase occurrence dataset via GBIF-Sweden",
-        "format": "Darwin Core Archive",
-        "status": "published snapshot; current refresh unverified",
-        "artifact": "https://www.gbif.se/ipt/resource?r=fishbase",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "transferMethod": "GBIF-Sweden IPT Darwin Core Archive publication",
-        "updateFrequency": "irregular",
-        "latestPublishedAt": "2023-03-23"
-      },
+      "kind": "transfers",
+      "description": "FishBase publishes an occurrence dataset through the GBIF-Sweden IPT, registered with GBIF. The publisher lists 731,043 archive records, a latest publication date of 2023-03-23 and irregular updates. The archive count is not a verified count of currently indexed GBIF occurrences. The documented scope is FishBase occurrence dataset via GBIF-Sweden. The documented format is Darwin Core Archive. The documented status is published snapshot; current refresh unverified. The documented artifact is https://www.gbif.se/ipt/resource?r=fishbase. The documented transfer method is GBIF-Sweden IPT Darwin Core Archive publication.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -41762,20 +41502,8 @@
       "id": "rel-fishbase-syncs-to-platform-obis",
       "sourceNodeId": "fishbase",
       "targetNodeId": "platform-obis",
-      "kind": "syncs_to",
-      "note": "OBIS hosts an archive of FishBase occurrence records harvested from the GBIF-Sweden-hosted resource. The available archive was published on 2018-10-10 and lists an unknown update frequency. This records the historical transfer path; an ongoing refresh is not established.",
-      "properties": {
-        "scope": "Historical harvest of FishBase occurrence data via GBIF-Sweden",
-        "format": "Darwin Core Archive",
-        "status": "historical; current refresh unknown",
-        "artifact": "https://ipt.obis.org/nonode/resource?r=fishbase_occurrence",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "transferMethod": "OBIS harvest of the GBIF-Sweden-hosted FishBase resource",
-        "updateFrequency": "unknown",
-        "latestPublishedAt": "2018-10-10"
-      },
+      "kind": "transfers",
+      "description": "OBIS hosts an archive of FishBase occurrence records harvested from the GBIF-Sweden-hosted resource. The available archive was published on 2018-10-10 and lists an unknown update frequency. This records the historical transfer path; an ongoing refresh is not established. The documented scope is Historical harvest of FishBase occurrence data via GBIF-Sweden. The documented format is Darwin Core Archive. The documented status is historical; current refresh unknown. The documented artifact is https://ipt.obis.org/nonode/resource?r=fishbase_occurrence. The documented transfer method is OBIS harvest of the GBIF-Sweden-hosted FishBase resource.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -41798,19 +41526,8 @@
       "id": "rel-fishbase-syncs-to-source-cooperative",
       "sourceNodeId": "fishbase",
       "targetNodeId": "source-cooperative",
-      "kind": "syncs_to",
-      "note": "The FishBase team supplies backend MySQL dumps roughly annually to Carl Boettiger, who converts and publishes versioned Parquet snapshots on Source Cooperative for rfishbase. This is periodic redistribution through the named maintainer, not live replication. The dataset README identifies fb/v26.07 as the current FishBase snapshot.",
-      "properties": {
-        "scope": "Versioned FishBase backend table exports",
-        "format": "parquet",
-        "status": "periodic",
-        "artifact": "cboettig/fishbase/fb/v26.07",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "transferMethod": "FishBase team MySQL dump to Carl Boettiger; conversion to Parquet and publication on Source Cooperative",
-        "updateFrequency": "roughly annual"
-      },
+      "kind": "transfers",
+      "description": "The FishBase team supplies backend MySQL dumps roughly annually to Carl Boettiger, who converts and publishes versioned Parquet snapshots on Source Cooperative for rfishbase. This is periodic redistribution through the named maintainer, not live replication. The dataset README identifies fb/v26.07 as the current FishBase snapshot. The documented scope is Versioned FishBase backend table exports. The documented artifact is cboettig/fishbase/fb/v26.07. The documented transfer method is FishBase team MySQL dump to Carl Boettiger; conversion to Parquet and publication on Source Cooperative.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -41833,16 +41550,8 @@
       "id": "rel-fishbase-syncs-to-worms",
       "sourceNodeId": "fishbase",
       "targetNodeId": "worms",
-      "kind": "syncs_to",
-      "note": "WoRMS explicitly identifies FishBase as an external database from which it currently imports information, principally taxonomy. This establishes FishBase-to-WoRMS transfer; no reciprocal transfer or fixed refresh schedule is asserted.",
-      "properties": {
-        "scope": "Fish taxonomy imported into Aphia and presented through WoRMS",
-        "status": "active",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "transferMethod": "External database import; implementation and cadence unspecified"
-      },
+      "kind": "transfers",
+      "description": "WoRMS explicitly identifies FishBase as an external database from which it currently imports information, principally taxonomy. This establishes FishBase-to-WoRMS transfer; no reciprocal transfer or fixed refresh schedule is asserted. The documented scope is Fish taxonomy imported into Aphia and presented through WoRMS. The documented status is active. The documented transfer method is External database import; implementation and cadence unspecified.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -41866,13 +41575,7 @@
       "sourceNodeId": "fisheries-and-oceans-canada",
       "targetNodeId": "cioos",
       "kind": "funds",
-      "note": "Departmental support for CIOOS; does not imply sole operational authority.",
-      "properties": {
-        "scope": "CIOOS support; award amount and term not established",
-        "sourceRefs": [
-          "src-relationship-cioos"
-        ]
-      },
+      "description": "Departmental support for CIOOS; does not imply sole operational authority. The documented scope is CIOOS support; award amount and term not established.",
       "sources": {
         "src-relationship-cioos": {
           "id": "src-relationship-cioos",
@@ -41896,13 +41599,7 @@
       "sourceNodeId": "flanders-marine-institute",
       "targetNodeId": "emodnet-biology",
       "kind": "operates",
-      "note": "VLIZ operates technical infrastructure and data management.",
-      "properties": {
-        "scope": "Technical infrastructure; scientific contributors retain their own roles",
-        "sourceRefs": [
-          "src-relationship-emodnet-biology"
-        ]
-      },
+      "description": "VLIZ operates technical infrastructure and data management. The documented scope is Technical infrastructure; scientific contributors retain their own roles.",
       "sources": {
         "src-relationship-emodnet-biology": {
           "id": "src-relationship-emodnet-biology",
@@ -41926,13 +41623,7 @@
       "sourceNodeId": "flanders-marine-institute",
       "targetNodeId": "eurobis",
       "kind": "operates",
-      "note": "VLIZ operates technical infrastructure and data management.",
-      "properties": {
-        "scope": "Technical infrastructure; scientific contributors retain their own roles",
-        "sourceRefs": [
-          "src-relationship-eurobis"
-        ]
-      },
+      "description": "VLIZ operates technical infrastructure and data management. The documented scope is Technical infrastructure; scientific contributors retain their own roles.",
       "sources": {
         "src-relationship-eurobis": {
           "id": "src-relationship-eurobis",
@@ -41956,13 +41647,7 @@
       "sourceNodeId": "flanders-marine-institute",
       "targetNodeId": "marine-regions",
       "kind": "operates",
-      "note": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-marine-regions"
-        ]
-      },
+      "description": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-marine-regions": {
           "id": "src-relationship-marine-regions",
@@ -41986,13 +41671,7 @@
       "sourceNodeId": "flanders-marine-institute",
       "targetNodeId": "molluscabase",
       "kind": "operates",
-      "note": "VLIZ operates technical infrastructure and data management.",
-      "properties": {
-        "scope": "Technical infrastructure; scientific contributors retain their own roles",
-        "sourceRefs": [
-          "src-relationship-molluscabase"
-        ]
-      },
+      "description": "VLIZ operates technical infrastructure and data management. The documented scope is Technical infrastructure; scientific contributors retain their own roles.",
       "sources": {
         "src-relationship-molluscabase": {
           "id": "src-relationship-molluscabase",
@@ -42016,13 +41695,7 @@
       "sourceNodeId": "flanders-marine-institute",
       "targetNodeId": "worms",
       "kind": "operates",
-      "note": "VLIZ operates infrastructure; the elected Steering Committee has scientific policy authority. Advisory and operational roles are distinct.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-worms"
-        ]
-      },
+      "description": "VLIZ operates infrastructure; the elected Steering Committee has scientific policy authority. Advisory and operational roles are distinct. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-worms": {
           "id": "src-relationship-worms",
@@ -42046,13 +41719,7 @@
       "sourceNodeId": "gbif-secretariat",
       "targetNodeId": "gbif",
       "kind": "operates",
-      "note": "GBIF Secretariat runs the infrastructure for an international network of countries and organizations. Secretariat location is not governing nationality.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-gbif"
-        ]
-      },
+      "description": "GBIF Secretariat runs the infrastructure for an international network of countries and organizations. Secretariat location is not governing nationality. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-gbif": {
           "id": "src-relationship-gbif",
@@ -42076,13 +41743,7 @@
       "sourceNodeId": "gebco",
       "targetNodeId": "gebco-web-services",
       "kind": "operates",
-      "note": "GEBCO is a joint IHO/IOC initiative; its web services are supported by the British Oceanographic Data Centre. A programme label is not a sole government.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-gebco-web-services"
-        ]
-      },
+      "description": "GEBCO is a joint IHO/IOC initiative; its web services are supported by the British Oceanographic Data Centre. A programme label is not a sole government. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-gebco-web-services": {
           "id": "src-relationship-gebco-web-services",
@@ -42105,13 +41766,8 @@
       "id": "rel-genbank-member-of-insdc",
       "sourceNodeId": "genbank",
       "targetNodeId": "insdc",
-      "kind": "member_of",
-      "note": "Participating sequence archive in INSDC.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "member",
+      "description": "Participating sequence archive in INSDC.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -42134,13 +41790,8 @@
       "id": "rel-genbank-syncs-to-ddbj",
       "sourceNodeId": "genbank",
       "targetNodeId": "ddbj",
-      "kind": "syncs_to",
-      "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "transfers",
+      "description": "Reciprocal INSDC sequence archive exchange, including corrections.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -42163,13 +41814,8 @@
       "id": "rel-genbank-syncs-to-ena",
       "sourceNodeId": "genbank",
       "targetNodeId": "ena",
-      "kind": "syncs_to",
-      "note": "Reciprocal INSDC sequence archive exchange, including corrections.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "transfers",
+      "description": "Reciprocal INSDC sequence archive exchange, including corrections.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -42193,13 +41839,7 @@
       "sourceNodeId": "geome-collaboration",
       "targetNodeId": "geome",
       "kind": "operates",
-      "note": "A collaborating research team and steering committee develop and direct GEOME. Institution affiliations are not country membership.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-geome"
-        ]
-      },
+      "description": "A collaborating research team and steering committee develop and direct GEOME. Institution affiliations are not country membership. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-geome": {
           "id": "src-relationship-geome",
@@ -42223,13 +41863,7 @@
       "sourceNodeId": "ggbn-executive-committee",
       "targetNodeId": "ggbn-consortium",
       "kind": "governs",
-      "note": "Oversight of the Secretariat and Technical Management Offices.",
-      "properties": {
-        "scope": "Strategy, work programme and budget",
-        "sourceRefs": [
-          "src-relationship-ggbn"
-        ]
-      },
+      "description": "Oversight of the Secretariat and Technical Management Offices. The documented scope is Strategy, work programme and budget.",
       "sources": {
         "src-relationship-ggbn": {
           "id": "src-relationship-ggbn",
@@ -42253,13 +41887,7 @@
       "sourceNodeId": "ggbn-technical-office",
       "targetNodeId": "ggbn",
       "kind": "operates",
-      "note": "Day-to-day operation of the GGBN Data Portal.",
-      "properties": {
-        "scope": "Day-to-day operation of the GGBN Data Portal.",
-        "sourceRefs": [
-          "src-relationship-ggbn"
-        ]
-      },
+      "description": "Day-to-day operation of the GGBN Data Portal.",
       "sources": {
         "src-relationship-ggbn": {
           "id": "src-relationship-ggbn",
@@ -42283,13 +41911,7 @@
       "sourceNodeId": "glodap-community",
       "targetNodeId": "glodap",
       "kind": "operates",
-      "note": "International reference group coordinates the synthesis; release-specific funding must not be presented as permanent exclusive government control.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-glodap"
-        ]
-      },
+      "description": "International reference group coordinates the synthesis; release-specific funding must not be presented as permanent exclusive government control. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-glodap": {
           "id": "src-relationship-glodap",
@@ -42313,13 +41935,7 @@
       "sourceNodeId": "government-of-flanders",
       "targetNodeId": "oceaninfohub",
       "kind": "funds",
-      "note": "Funding of the Ocean InfoHub project.",
-      "properties": {
-        "scope": "Documented project support; continuation terms not established",
-        "sourceRefs": [
-          "src-relationship-oceaninfohub"
-        ]
-      },
+      "description": "Funding of the Ocean InfoHub project. The documented scope is Documented project support; continuation terms not established.",
       "sources": {
         "src-relationship-oceaninfohub": {
           "id": "src-relationship-oceaninfohub",
@@ -42343,12 +41959,7 @@
       "sourceNodeId": "ices-council",
       "targetNodeId": "ices",
       "kind": "governs",
-      "note": "Member countries exercise collective governance through the ICES Council.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-ices-data"
-        ]
-      },
+      "description": "Member countries exercise collective governance through the ICES Council.",
       "sources": {
         "src-relationship-ices-data": {
           "id": "src-relationship-ices-data",
@@ -42372,13 +41983,7 @@
       "sourceNodeId": "ices",
       "targetNodeId": "datras",
       "kind": "operates",
-      "note": "ICES operates the trawl-survey database. Service inclusion within ICES Data is not consortium membership.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-datras"
-        ]
-      },
+      "description": "ICES operates the trawl-survey database. Service inclusion within ICES Data is not consortium membership. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-datras": {
           "id": "src-relationship-datras",
@@ -42402,13 +42007,7 @@
       "sourceNodeId": "ices",
       "targetNodeId": "ices-data",
       "kind": "operates",
-      "note": "ICES is governed collectively by member countries through its Council, and operates its data services.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-ices-data"
-        ]
-      },
+      "description": "ICES is governed collectively by member countries through its Council, and operates its data services. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-ices-data": {
           "id": "src-relationship-ices-data",
@@ -42432,13 +42031,7 @@
       "sourceNodeId": "ices",
       "targetNodeId": "intercatch",
       "kind": "operates",
-      "note": "ICES operates InterCatch; it is an ICES service, not a member organization or consortium participant in ICES Data.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-intercatch"
-        ]
-      },
+      "description": "ICES operates InterCatch; it is an ICES service, not a member organization or consortium participant in ICES Data. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-intercatch": {
           "id": "src-relationship-intercatch",
@@ -42462,13 +42055,7 @@
       "sourceNodeId": "ices",
       "targetNodeId": "rdbes",
       "kind": "operates",
-      "note": "ICES hosts RDBES, with strategic development directed by WGRDBESGOV. It is a service, not a membership child of ICES Data.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-rdbes"
-        ]
-      },
+      "description": "ICES hosts RDBES, with strategic development directed by WGRDBESGOV. It is a service, not a membership child of ICES Data. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-rdbes": {
           "id": "src-relationship-rdbes",
@@ -42492,13 +42079,7 @@
       "sourceNodeId": "ifremer",
       "targetNodeId": "argo-gdac",
       "kind": "operates",
-      "note": "GDAC operation at Coriolis/Brest.",
-      "properties": {
-        "scope": "GDAC operation at Coriolis/Brest.",
-        "sourceRefs": [
-          "src-relationship-argo-gdac"
-        ]
-      },
+      "description": "GDAC operation at Coriolis/Brest.",
       "sources": {
         "src-relationship-argo-gdac": {
           "id": "src-relationship-argo-gdac",
@@ -42522,13 +42103,7 @@
       "sourceNodeId": "insdc-executive-committee",
       "targetNodeId": "insdc-members",
       "kind": "governs",
-      "note": "Sets strategic direction, resolves disputes and establishes membership expectations.",
-      "properties": {
-        "scope": "Sets strategic direction, resolves disputes and establishes membership expectations.",
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "description": "Sets strategic direction, resolves disputes and establishes membership expectations.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -42552,13 +42127,7 @@
       "sourceNodeId": "insdc-implementation-committee",
       "targetNodeId": "insdc-members",
       "kind": "governs",
-      "note": "Adopts common policies and approves infrastructure and membership implementation.",
-      "properties": {
-        "scope": "Adopts common policies and approves infrastructure and membership implementation.",
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "description": "Adopts common policies and approves infrastructure and membership implementation.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -42582,13 +42151,7 @@
       "sourceNodeId": "insdc-members",
       "targetNodeId": "insdc",
       "kind": "operates",
-      "note": "Independent institutional members operate the collaborating archives; Executive and Implementation Committees set common direction and policy.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "description": "Independent institutional members operate the collaborating archives; Executive and Implementation Committees set common direction and policy. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -42612,13 +42175,7 @@
       "sourceNodeId": "international-go-ship-community",
       "targetNodeId": "go-ship",
       "kind": "operates",
-      "note": "International science committee coordinates nationally executed surveys. Published governance evidence is from 2019; current mandates and funding periods need follow-up.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-go-ship"
-        ]
-      },
+      "description": "International science committee coordinates nationally executed surveys. Published governance evidence is from 2019; current mandates and funding periods need follow-up. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-go-ship": {
           "id": "src-relationship-go-ship",
@@ -42642,12 +42199,7 @@
       "sourceNodeId": "ioc-assembly",
       "targetNodeId": "ioc-unesco-iode",
       "kind": "governs",
-      "note": "IODE recommendations are submitted to the IOC Assembly for adoption.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-platform-obis"
-        ]
-      },
+      "description": "IODE recommendations are submitted to the IOC Assembly for adoption.",
       "sources": {
         "src-relationship-platform-obis": {
           "id": "src-relationship-platform-obis",
@@ -42671,13 +42223,7 @@
       "sourceNodeId": "ioc-unesco-iode",
       "targetNodeId": "platform-obis",
       "kind": "operates",
-      "note": "IODE/IOC-UNESCO coordinates OBIS with independently operated nodes. Node contributions do not imply ownership by one government.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-platform-obis"
-        ]
-      },
+      "description": "IODE/IOC-UNESCO coordinates OBIS with independently operated nodes. Node contributions do not imply ownership by one government. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-platform-obis": {
           "id": "src-relationship-platform-obis",
@@ -42701,13 +42247,7 @@
       "sourceNodeId": "ioc-unesco-iode",
       "targetNodeId": "odis",
       "kind": "operates",
-      "note": "IODE coordinates distributed infrastructure under IOC; independent connected systems retain their own governance.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-odis"
-        ]
-      },
+      "description": "IODE coordinates distributed infrastructure under IOC; independent connected systems retain their own governance. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-odis": {
           "id": "src-relationship-odis",
@@ -42731,13 +42271,7 @@
       "sourceNodeId": "ioc-unesco-iode",
       "targetNodeId": "oceaninfohub",
       "kind": "operates",
-      "note": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-oceaninfohub"
-        ]
-      },
+      "description": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-oceaninfohub": {
           "id": "src-relationship-oceaninfohub",
@@ -42761,13 +42295,7 @@
       "sourceNodeId": "jamstec",
       "targetNodeId": "bismal",
       "kind": "operates",
-      "note": "JAMSTEC operates BISMaL and publishes marine biological observations; the Japan OBIS node distributes data to OBIS.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-bismal"
-        ]
-      },
+      "description": "JAMSTEC operates BISMaL and publishes marine biological observations; the Japan OBIS node distributes data to OBIS. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-bismal": {
           "id": "src-relationship-bismal",
@@ -42791,13 +42319,7 @@
       "sourceNodeId": "jpn",
       "targetNodeId": "jamstec",
       "kind": "governs",
-      "note": "National public institutional authority; international collaboration does not erase this governmental tie.",
-      "properties": {
-        "scope": "National institutional authority, exercised through the responsible public bodies",
-        "sourceRefs": [
-          "src-relationship-jamstec"
-        ]
-      },
+      "description": "National public institutional authority; international collaboration does not erase this governmental tie. The documented scope is National institutional authority, exercised through the responsible public bodies.",
       "sources": {
         "src-relationship-jamstec": {
           "id": "src-relationship-jamstec",
@@ -42820,13 +42342,8 @@
       "id": "rel-jamstec-publishes-to-bismal",
       "sourceNodeId": "jamstec",
       "targetNodeId": "bismal",
-      "kind": "publishes_to",
-      "note": "JAMSTEC marine biological observations are disseminated through BISMaL.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-bismal"
-        ]
-      },
+      "kind": "contributes",
+      "description": "JAMSTEC marine biological observations are disseminated through BISMaL.",
       "sources": {
         "src-relationship-bismal": {
           "id": "src-relationship-bismal",
@@ -42850,13 +42367,7 @@
       "sourceNodeId": "kit",
       "targetNodeId": "re3data",
       "kind": "operates",
-      "note": "Joint management and operation of re3data.",
-      "properties": {
-        "scope": "Joint management and operation of re3data.",
-        "sourceRefs": [
-          "src-relationship-re3data"
-        ]
-      },
+      "description": "Joint management and operation of re3data.",
       "sources": {
         "src-relationship-re3data": {
           "id": "src-relationship-re3data",
@@ -42880,13 +42391,7 @@
       "sourceNodeId": "marum",
       "targetNodeId": "pangaea",
       "kind": "operates",
-      "note": "Joint institutional operation of PANGAEA.",
-      "properties": {
-        "scope": "Joint institutional operation of PANGAEA.",
-        "sourceRefs": [
-          "src-relationship-pangaea"
-        ]
-      },
+      "description": "Joint institutional operation of PANGAEA.",
       "sources": {
         "src-relationship-pangaea": {
           "id": "src-relationship-pangaea",
@@ -42910,13 +42415,7 @@
       "sourceNodeId": "meopar",
       "targetNodeId": "cioos",
       "kind": "funds",
-      "note": "Co-funds the national Coordination Office with DFO.",
-      "properties": {
-        "scope": "Coordination Office funding since 2025",
-        "sourceRefs": [
-          "src-relationship-cioos"
-        ]
-      },
+      "description": "Co-funds the national Coordination Office with DFO. The documented scope is Coordination Office funding since 2025.",
       "sources": {
         "src-relationship-cioos": {
           "id": "src-relationship-cioos",
@@ -42940,13 +42439,7 @@
       "sourceNodeId": "meopar",
       "targetNodeId": "cioos",
       "kind": "operates",
-      "note": "MEOPAR hosts the CIOOS Coordination Office.",
-      "properties": {
-        "scope": "National coordination office; regional associations retain their own operations",
-        "sourceRefs": [
-          "src-relationship-cioos"
-        ]
-      },
+      "description": "MEOPAR hosts the CIOOS Coordination Office. The documented scope is National coordination office; regional associations retain their own operations.",
       "sources": {
         "src-relationship-cioos": {
           "id": "src-relationship-cioos",
@@ -42970,13 +42463,7 @@
       "sourceNodeId": "mercator-ocean-international",
       "targetNodeId": "cmems-datastore",
       "kind": "operates",
-      "note": "Entrusted implementation of the Copernicus Marine service.",
-      "properties": {
-        "scope": "Entrusted implementation of the Copernicus Marine service.",
-        "sourceRefs": [
-          "src-relationship-cmems-datastore"
-        ]
-      },
+      "description": "Entrusted implementation of the Copernicus Marine service.",
       "sources": {
         "src-relationship-cmems-datastore": {
           "id": "src-relationship-cmems-datastore",
@@ -43000,13 +42487,7 @@
       "sourceNodeId": "mercator-ocean-international",
       "targetNodeId": "copernicus-marine",
       "kind": "operates",
-      "note": "Entrusted implementation of the Copernicus Marine service.",
-      "properties": {
-        "scope": "Entrusted implementation of the Copernicus Marine service.",
-        "sourceRefs": [
-          "src-relationship-copernicus-marine"
-        ]
-      },
+      "description": "Entrusted implementation of the Copernicus Marine service.",
       "sources": {
         "src-relationship-copernicus-marine": {
           "id": "src-relationship-copernicus-marine",
@@ -43029,13 +42510,8 @@
       "id": "rel-ncbi-united-states-member-of-insdc-members",
       "sourceNodeId": "ncbi-united-states",
       "targetNodeId": "insdc-members",
-      "kind": "member_of",
-      "note": "Institutional member of INSDC; archive operation remains with each member.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "member",
+      "description": "Institutional member of INSDC; archive operation remains with each member.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -43059,13 +42535,7 @@
       "sourceNodeId": "ncbi-united-states",
       "targetNodeId": "genbank",
       "kind": "operates",
-      "note": "NCBI within NLM/NIH operates GenBank; US federal institutional tie coexists with INSDC membership and exchange.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-genbank"
-        ]
-      },
+      "description": "NCBI within NLM/NIH operates GenBank; US federal institutional tie coexists with INSDC membership and exchange. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-genbank": {
           "id": "src-relationship-genbank",
@@ -43089,13 +42559,7 @@
       "sourceNodeId": "usa",
       "targetNodeId": "ncbi-united-states",
       "kind": "governs",
-      "note": "National public institutional authority; international collaboration does not erase this governmental tie.",
-      "properties": {
-        "scope": "National institutional authority, exercised through the responsible public bodies",
-        "sourceRefs": [
-          "src-relationship-genbank"
-        ]
-      },
+      "description": "National public institutional authority; international collaboration does not erase this governmental tie. The documented scope is National institutional authority, exercised through the responsible public bodies.",
       "sources": {
         "src-relationship-genbank": {
           "id": "src-relationship-genbank",
@@ -43119,13 +42583,7 @@
       "sourceNodeId": "noaa-ioos",
       "targetNodeId": "ioos",
       "kind": "operates",
-      "note": "NOAA coordinates US IOOS with federal and non-federal partners. Operation scope is the programme office, not ownership of every regional data source.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-ioos"
-        ]
-      },
+      "description": "NOAA coordinates US IOOS with federal and non-federal partners. Operation scope is the programme office, not ownership of every regional data source. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-ioos": {
           "id": "src-relationship-ioos",
@@ -43149,13 +42607,7 @@
       "sourceNodeId": "usa",
       "targetNodeId": "noaa-ioos",
       "kind": "governs",
-      "note": "National public institutional authority; international collaboration does not erase this governmental tie.",
-      "properties": {
-        "scope": "National institutional authority, exercised through the responsible public bodies",
-        "sourceRefs": [
-          "src-relationship-ioos"
-        ]
-      },
+      "description": "National public institutional authority; international collaboration does not erase this governmental tie. The documented scope is National institutional authority, exercised through the responsible public bodies.",
       "sources": {
         "src-relationship-ioos": {
           "id": "src-relationship-ioos",
@@ -43179,13 +42631,7 @@
       "sourceNodeId": "noaa-ncei",
       "targetNodeId": "noaa-ncei-marine",
       "kind": "operates",
-      "note": "NCEI is a NOAA federal data centre. Archival receipt from BCO-DMO is distinct from BCO-DMO governance.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-noaa-ncei-marine"
-        ]
-      },
+      "description": "NCEI is a NOAA federal data centre. Archival receipt from BCO-DMO is distinct from BCO-DMO governance. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-noaa-ncei-marine": {
           "id": "src-relationship-noaa-ncei-marine",
@@ -43209,13 +42655,7 @@
       "sourceNodeId": "usa",
       "targetNodeId": "noaa-ncei",
       "kind": "governs",
-      "note": "National public institutional authority; international collaboration does not erase this governmental tie.",
-      "properties": {
-        "scope": "National institutional authority, exercised through the responsible public bodies",
-        "sourceRefs": [
-          "src-relationship-noaa-ncei-marine"
-        ]
-      },
+      "description": "National public institutional authority; international collaboration does not erase this governmental tie. The documented scope is National institutional authority, exercised through the responsible public bodies.",
       "sources": {
         "src-relationship-noaa-ncei-marine": {
           "id": "src-relationship-noaa-ncei-marine",
@@ -43239,13 +42679,7 @@
       "sourceNodeId": "noaa-office-for-coastal-management",
       "targetNodeId": "noaa-cetacean-bia",
       "kind": "operates",
-      "note": "NOAA coastal-management infrastructure distributes the data; scientific authorship and portal operation are different roles.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-noaa-cetacean-bia"
-        ]
-      },
+      "description": "NOAA coastal-management infrastructure distributes the data; scientific authorship and portal operation are different roles. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-noaa-cetacean-bia": {
           "id": "src-relationship-noaa-cetacean-bia",
@@ -43269,13 +42703,7 @@
       "sourceNodeId": "noaa-office-of-response-and-restoration",
       "targetNodeId": "noaa-esi-wa-or-marine-mammals",
       "kind": "operates",
-      "note": "NOAA Office of Response and Restoration provides ESI data. Federal operation does not make it sole scientific contributor.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-noaa-esi-wa-or-marine-mammals"
-        ]
-      },
+      "description": "NOAA Office of Response and Restoration provides ESI data. Federal operation does not make it sole scientific contributor. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-noaa-esi-wa-or-marine-mammals": {
           "id": "src-relationship-noaa-esi-wa-or-marine-mammals",
@@ -43299,14 +42727,7 @@
       "sourceNodeId": "nrl-marine-meteorology",
       "targetNodeId": "argo-gdac",
       "kind": "operates",
-      "note": "US GODAE GDAC hosting at NRL Monterey, separate from Argo international coordination.",
-      "properties": {
-        "scope": "US GODAE GDAC hosting at NRL Monterey, separate from Argo international coordination.",
-        "sourceRefs": [
-          "src-relationship-argo-gdac",
-          "src-relationship-nrl-godae"
-        ]
-      },
+      "description": "US GODAE GDAC hosting at NRL Monterey, separate from Argo international coordination.",
       "sources": {
         "src-relationship-argo-gdac": {
           "id": "src-relationship-argo-gdac",
@@ -43343,14 +42764,7 @@
       "sourceNodeId": "nsf",
       "targetNodeId": "bco-dmo",
       "kind": "funds",
-      "note": "NSF supports the programme through award OCE-2421145.",
-      "properties": {
-        "award": "OCE-2421145",
-        "scope": "Programme award; not exclusive funding",
-        "sourceRefs": [
-          "src-relationship-bco-dmo"
-        ]
-      },
+      "description": "NSF supports the programme through award OCE-2421145. The documented scope is Programme award; not exclusive funding.",
       "sources": {
         "src-relationship-bco-dmo": {
           "id": "src-relationship-bco-dmo",
@@ -43374,14 +42788,7 @@
       "sourceNodeId": "nsf",
       "targetNodeId": "ooi-data",
       "kind": "funds",
-      "note": "NSF supports the programme through award 2244833.",
-      "properties": {
-        "award": "2244833",
-        "scope": "Programme award; not exclusive funding",
-        "sourceRefs": [
-          "src-relationship-ooi-data"
-        ]
-      },
+      "description": "NSF supports the programme through award 2244833. The documented scope is Programme award; not exclusive funding.",
       "sources": {
         "src-relationship-ooi-data": {
           "id": "src-relationship-ooi-data",
@@ -43405,13 +42812,7 @@
       "sourceNodeId": "observations-coordination-group",
       "targetNodeId": "oceanops-centre",
       "kind": "governs",
-      "note": "Management oversight of the joint WMO/IOC centre.",
-      "properties": {
-        "scope": "Observing-system coordination",
-        "sourceRefs": [
-          "src-relationship-oceanops"
-        ]
-      },
+      "description": "Management oversight of the joint WMO/IOC centre. The documented scope is Observing-system coordination.",
       "sources": {
         "src-relationship-oceanops": {
           "id": "src-relationship-oceanops",
@@ -43435,13 +42836,7 @@
       "sourceNodeId": "oceanops-centre",
       "targetNodeId": "oceanops",
       "kind": "operates",
-      "note": "Operational support for the joint WMO/IOC observing centre.",
-      "properties": {
-        "scope": "Operational support for the joint WMO/IOC observing centre.",
-        "sourceRefs": [
-          "src-relationship-oceanops"
-        ]
-      },
+      "description": "Operational support for the joint WMO/IOC observing centre.",
       "sources": {
         "src-relationship-oceanops": {
           "id": "src-relationship-oceanops",
@@ -43465,13 +42860,7 @@
       "sourceNodeId": "oceansites-programme",
       "targetNodeId": "oceansites",
       "kind": "operates",
-      "note": "Steering Committee and Data Management Team coordinate distributed observatories; GDACs are at NOAA NDBC and IFREMER. Governance document is historical (2016).",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-oceansites"
-        ]
-      },
+      "description": "Steering Committee and Data Management Team coordinate distributed observatories; GDACs are at NOAA NDBC and IFREMER. Governance document is historical (2016). The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-oceansites": {
           "id": "src-relationship-oceansites",
@@ -43495,13 +42884,7 @@
       "sourceNodeId": "openstreetmap-foundation",
       "targetNodeId": "openstreetmap-standard-raster-tiles",
       "kind": "operates",
-      "note": "OSMF operates the standard tile service. Volunteer map contributors and UK incorporation do not establish UK government control.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-openstreetmap-standard-raster-tiles"
-        ]
-      },
+      "description": "OSMF operates the standard tile service. Volunteer map contributors and UK incorporation do not establish UK government control. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-openstreetmap-standard-raster-tiles": {
           "id": "src-relationship-openstreetmap-standard-raster-tiles",
@@ -43525,13 +42908,7 @@
       "sourceNodeId": "oregon-department-of-fish-and-wildlife",
       "targetNodeId": "odfw-commercial-landings",
       "kind": "operates",
-      "note": "Oregon Department of Fish and Wildlife operates the statistics service. It is a state agency, not a federal agency.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-odfw-commercial-landings"
-        ]
-      },
+      "description": "Oregon Department of Fish and Wildlife operates the statistics service. It is a state agency, not a federal agency. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-odfw-commercial-landings": {
           "id": "src-relationship-odfw-commercial-landings",
@@ -43555,13 +42932,7 @@
       "sourceNodeId": "oregon-dlcd",
       "targetNodeId": "oregon-dlcd-coastal-gis",
       "kind": "operates",
-      "note": "Oregon DLCD/OCMP operates coastal GIS services; state authority must not be substituted with US federal governance.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-oregon-dlcd-coastal-gis"
-        ]
-      },
+      "description": "Oregon DLCD/OCMP operates coastal GIS services; state authority must not be substituted with US federal governance. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-oregon-dlcd-coastal-gis": {
           "id": "src-relationship-oregon-dlcd-coastal-gis",
@@ -43585,12 +42956,7 @@
       "sourceNodeId": "oregon-government",
       "targetNodeId": "oregon-department-of-fish-and-wildlife",
       "kind": "governs",
-      "note": "Oregon state-agency authority; not US federal governance.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-odfw-commercial-landings"
-        ]
-      },
+      "description": "Oregon state-agency authority; not US federal governance.",
       "sources": {
         "src-relationship-odfw-commercial-landings": {
           "id": "src-relationship-odfw-commercial-landings",
@@ -43614,12 +42980,7 @@
       "sourceNodeId": "oregon-government",
       "targetNodeId": "oregon-dlcd",
       "kind": "governs",
-      "note": "Oregon state-agency authority; not US federal governance.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-oregon-dlcd-coastal-gis"
-        ]
-      },
+      "description": "Oregon state-agency authority; not US federal governance.",
       "sources": {
         "src-relationship-oregon-dlcd-coastal-gis": {
           "id": "src-relationship-oregon-dlcd-coastal-gis",
@@ -43643,13 +43004,7 @@
       "sourceNodeId": "oregon-state-university",
       "targetNodeId": "ooi-data",
       "kind": "operates",
-      "note": "OSU manages the data centre, storage and front-facing cyberinfrastructure portal.",
-      "properties": {
-        "scope": "OOI cyberinfrastructure management and hosting",
-        "sourceRefs": [
-          "src-relationship-ooi-ci"
-        ]
-      },
+      "description": "OSU manages the data centre, storage and front-facing cyberinfrastructure portal. The documented scope is OOI cyberinfrastructure management and hosting.",
       "sources": {
         "src-relationship-ooi-ci": {
           "id": "src-relationship-ooi-ci",
@@ -43672,14 +43027,8 @@
       "id": "rel-oregon-state-university-publishes-to-ooi-data",
       "sourceNodeId": "oregon-state-university",
       "targetNodeId": "ooi-data",
-      "kind": "publishes_to",
-      "note": "Array observations are transferred from the institutional operations centre into OOI cyberinfrastructure.",
-      "properties": {
-        "scope": "Array data publication; not portal operation",
-        "sourceRefs": [
-          "src-relationship-ooi-ci"
-        ]
-      },
+      "kind": "contributes",
+      "description": "Array observations are transferred from the institutional operations centre into OOI cyberinfrastructure. The documented scope is Array data publication; not portal operation.",
       "sources": {
         "src-relationship-ooi-ci": {
           "id": "src-relationship-ooi-ci",
@@ -43703,13 +43052,7 @@
       "sourceNodeId": "protomaps",
       "targetNodeId": "protomaps-basemap",
       "kind": "operates",
-      "note": "Independent Protomaps operation; global OpenStreetMap-derived coverage is not international governmental control.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-protomaps-basemap"
-        ]
-      },
+      "description": "Independent Protomaps operation; global OpenStreetMap-derived coverage is not international governmental control. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-protomaps-basemap": {
           "id": "src-relationship-protomaps-basemap",
@@ -43733,13 +43076,7 @@
       "sourceNodeId": "purdue-university-libraries",
       "targetNodeId": "re3data",
       "kind": "operates",
-      "note": "Joint management and operation of re3data.",
-      "properties": {
-        "scope": "Joint management and operation of re3data.",
-        "sourceRefs": [
-          "src-relationship-re3data"
-        ]
-      },
+      "description": "Joint management and operation of re3data.",
       "sources": {
         "src-relationship-re3data": {
           "id": "src-relationship-re3data",
@@ -43762,15 +43099,8 @@
       "id": "rel-q-quatics-member-of-fishbase-consortium",
       "sourceNodeId": "q-quatics",
       "targetNodeId": "fishbase-consortium",
-      "kind": "member_of",
-      "note": "Q-quatics is explicitly listed among the current members of the FishBase Consortium on the Q-quatics projects and partners page. Membership does not itself establish governance over FishBase.",
-      "properties": {
-        "scope": "Institutional membership in the FishBase Consortium",
-        "status": "listed current member",
-        "sourceRefs": [
-          "evidence"
-        ]
-      },
+      "kind": "member",
+      "description": "Q-quatics is explicitly listed among the current members of the FishBase Consortium on the Q-quatics projects and partners page. Membership does not itself establish governance over FishBase. The documented scope is Institutional membership in the FishBase Consortium. The documented status is listed current member.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -43794,13 +43124,7 @@
       "sourceNodeId": "q-quatics",
       "targetNodeId": "fishbase",
       "kind": "operates",
-      "note": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-fishbase"
-        ]
-      },
+      "description": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-fishbase": {
           "id": "src-relationship-fishbase",
@@ -43824,13 +43148,7 @@
       "sourceNodeId": "q-quatics",
       "targetNodeId": "sealifebase",
       "kind": "operates",
-      "note": "Q-quatics maintains SeaLifeBase. Embedded AquaMaps maps and MolluscaBase taxonomy do not establish outbound synchronization.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-sealifebase"
-        ]
-      },
+      "description": "Q-quatics maintains SeaLifeBase. Embedded AquaMaps maps and MolluscaBase taxonomy do not establish outbound synchronization. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-sealifebase": {
           "id": "src-relationship-sealifebase",
@@ -43853,16 +43171,8 @@
       "id": "rel-royal-museum-for-central-africa-publishes-to-fishbase",
       "sourceNodeId": "royal-museum-for-central-africa",
       "targetNodeId": "fishbase",
-      "kind": "publishes_to",
-      "note": "The museum’s 2023 account documents FishBase contributions beginning with digitisation of its African fish collection in 1997 and, from 2001, checking and updating information on African freshwater and brackish-water fishes from published literature. This records evidenced historical contributions; continued activity in 2026 is unverified.",
-      "properties": {
-        "scope": "African fish collection data and curated freshwater/brackish-water fish information",
-        "period": "Collection contributions from 1997 and curated updates from 2001, documented in 2023",
-        "status": "documented historical contribution; current continuation unverified",
-        "sourceRefs": [
-          "evidence"
-        ]
-      },
+      "kind": "contributes",
+      "description": "The museum’s 2023 account documents FishBase contributions beginning with digitisation of its African fish collection in 1997 and, from 2001, checking and updating information on African freshwater and brackish-water fishes from published literature. This records evidenced historical contributions; continued activity in 2026 is unverified. The documented scope is African fish collection data and curated freshwater/brackish-water fish information. The documented period is Collection contributions from 1997 and curated updates from 2001, documented in 2023. The documented status is documented historical contribution; current continuation unverified.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -43886,13 +43196,7 @@
       "sourceNodeId": "sea-around-us-operator",
       "targetNodeId": "sea-around-us",
       "kind": "operates",
-      "note": "Research initiative at UBC and University of Western Australia with charitable support. Canadian-only governance would hide the collaboration.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-sea-around-us"
-        ]
-      },
+      "description": "Research initiative at UBC and University of Western Australia with charitable support. Canadian-only governance would hide the collaboration. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-sea-around-us": {
           "id": "src-relationship-sea-around-us",
@@ -43916,13 +43220,7 @@
       "sourceNodeId": "seadatanet-consortium",
       "targetNodeId": "seadatanet",
       "kind": "operates",
-      "note": "Distributed consortium of national oceanographic data centres and technical partners. Historical project funding and centre affiliation require scoped statements.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-seadatanet"
-        ]
-      },
+      "description": "Distributed consortium of national oceanographic data centres and technical partners. Historical project funding and centre affiliation require scoped statements. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-seadatanet": {
           "id": "src-relationship-seadatanet",
@@ -43946,13 +43244,7 @@
       "sourceNodeId": "seadatanet-consortium",
       "targetNodeId": "seadatanet-cdi",
       "kind": "operates",
-      "note": "CDI is a common discovery and access service; it is not a separate member institution of SeaDataNet.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-seadatanet-cdi"
-        ]
-      },
+      "description": "CDI is a common discovery and access service; it is not a separate member institution of SeaDataNet. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-seadatanet-cdi": {
           "id": "src-relationship-seadatanet-cdi",
@@ -43976,13 +43268,7 @@
       "sourceNodeId": "socat-community",
       "targetNodeId": "socat",
       "kind": "operates",
-      "note": "Regional working groups perform quality control, coordinated globally. Workshop sponsors are not automatically current permanent funders.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-socat"
-        ]
-      },
+      "description": "Regional working groups perform quality control, coordinated globally. Workshop sponsors are not automatically current permanent funders. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-socat": {
           "id": "src-relationship-socat",
@@ -44006,13 +43292,7 @@
       "sourceNodeId": "university-of-colorado-boulder-and-collaborators",
       "targetNodeId": "argovis",
       "kind": "operates",
-      "note": "University research collaboration; a US location does not establish federal governance. Presentation is historical (2024).",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-argovis"
-        ]
-      },
+      "description": "University research collaboration; a US location does not establish federal governance. Presentation is historical (2024). The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-argovis": {
           "id": "src-relationship-argovis",
@@ -44035,14 +43315,8 @@
       "id": "rel-university-of-washington-publishes-to-ooi-data",
       "sourceNodeId": "university-of-washington",
       "targetNodeId": "ooi-data",
-      "kind": "publishes_to",
-      "note": "Array observations are transferred from the institutional operations centre into OOI cyberinfrastructure.",
-      "properties": {
-        "scope": "Array data publication; not portal operation",
-        "sourceRefs": [
-          "src-relationship-ooi-ci"
-        ]
-      },
+      "kind": "contributes",
+      "description": "Array observations are transferred from the institutional operations centre into OOI cyberinfrastructure. The documented scope is Array data publication; not portal operation.",
       "sources": {
         "src-relationship-ooi-ci": {
           "id": "src-relationship-ooi-ci",
@@ -44066,16 +43340,7 @@
       "sourceNodeId": "university-of-western-australia",
       "targetNodeId": "fishbase",
       "kind": "funds",
-      "note": "Q-quatics identifies a University of Western Australia grant awarded to Q-quatics to improve Australian marine biodiversity coverage in FishBase and SeaLifeBase, described as since 2017. This edge covers the FishBase activity supported through Q-quatics; no amount, exclusive funding role, end date or continuation in 2026 is established.",
-      "properties": {
-        "scope": "Improving Australian marine biodiversity coverage in FishBase; grant also supports SeaLifeBase",
-        "period": "Support described as starting in 2017; end date and continuation in 2026 unverified",
-        "status": "documented funding; current continuation unverified",
-        "sourceRefs": [
-          "evidence"
-        ],
-        "intermediary": "q-quatics"
-      },
+      "description": "Q-quatics identifies a University of Western Australia grant awarded to Q-quatics to improve Australian marine biodiversity coverage in FishBase and SeaLifeBase, described as since 2017. This edge covers the FishBase activity supported through Q-quatics; no amount, exclusive funding role, end date or continuation in 2026 is established. The documented scope is Improving Australian marine biodiversity coverage in FishBase; grant also supports SeaLifeBase. The documented period is Support described as starting in 2017; end date and continuation in 2026 unverified. The documented status is documented funding; current continuation unverified.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -44099,13 +43364,7 @@
       "sourceNodeId": "usa",
       "targetNodeId": "noaa-office-for-coastal-management",
       "kind": "governs",
-      "note": "National public institutional authority; international collaboration does not erase this governmental tie.",
-      "properties": {
-        "scope": "National institutional authority, exercised through the responsible public bodies",
-        "sourceRefs": [
-          "src-relationship-noaa-cetacean-bia"
-        ]
-      },
+      "description": "National public institutional authority; international collaboration does not erase this governmental tie. The documented scope is National institutional authority, exercised through the responsible public bodies.",
       "sources": {
         "src-relationship-noaa-cetacean-bia": {
           "id": "src-relationship-noaa-cetacean-bia",
@@ -44129,13 +43388,7 @@
       "sourceNodeId": "usa",
       "targetNodeId": "noaa-office-of-response-and-restoration",
       "kind": "governs",
-      "note": "National public institutional authority; international collaboration does not erase this governmental tie.",
-      "properties": {
-        "scope": "National institutional authority, exercised through the responsible public bodies",
-        "sourceRefs": [
-          "src-relationship-noaa-esi-wa-or-marine-mammals"
-        ]
-      },
+      "description": "National public institutional authority; international collaboration does not erase this governmental tie. The documented scope is National institutional authority, exercised through the responsible public bodies.",
       "sources": {
         "src-relationship-noaa-esi-wa-or-marine-mammals": {
           "id": "src-relationship-noaa-esi-wa-or-marine-mammals",
@@ -44159,12 +43412,7 @@
       "sourceNodeId": "usa",
       "targetNodeId": "nrl-marine-meteorology",
       "kind": "governs",
-      "note": "US Navy institutional authority over its Naval Research Laboratory division.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-nrl-godae"
-        ]
-      },
+      "description": "US Navy institutional authority over its Naval Research Laboratory division.",
       "sources": {
         "src-relationship-nrl-godae": {
           "id": "src-relationship-nrl-godae",
@@ -44188,12 +43436,7 @@
       "sourceNodeId": "usa",
       "targetNodeId": "nsf",
       "kind": "governs",
-      "note": "NSF is an independent US federal agency.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-nsf"
-        ]
-      },
+      "description": "NSF is an independent US federal agency.",
       "sources": {
         "src-relationship-nsf": {
           "id": "src-relationship-nsf",
@@ -44216,14 +43459,8 @@
       "id": "rel-usa-member-of-ices",
       "sourceNodeId": "usa",
       "targetNodeId": "ices",
-      "kind": "member_of",
-      "note": "ICES member country represented in collective governance.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-ices-data"
-        ],
-        "membershipStatus": "member"
-      },
+      "kind": "member",
+      "description": "ICES member country represented in collective governance.",
       "sources": {
         "src-relationship-ices-data": {
           "id": "src-relationship-ices-data",
@@ -44247,13 +43484,7 @@
       "sourceNodeId": "whoi",
       "targetNodeId": "bco-dmo",
       "kind": "operates",
-      "note": "WHOI operates the BCO-DMO office and designated OOI components.",
-      "properties": {
-        "scope": "WHOI operates the BCO-DMO office and designated OOI components.",
-        "sourceRefs": [
-          "src-relationship-bco-dmo"
-        ]
-      },
+      "description": "WHOI operates the BCO-DMO office and designated OOI components.",
       "sources": {
         "src-relationship-bco-dmo": {
           "id": "src-relationship-bco-dmo",
@@ -44276,14 +43507,8 @@
       "id": "rel-whoi-publishes-to-ooi-data",
       "sourceNodeId": "whoi",
       "targetNodeId": "ooi-data",
-      "kind": "publishes_to",
-      "note": "Array observations are transferred from the institutional operations centre into OOI cyberinfrastructure.",
-      "properties": {
-        "scope": "Array data publication; not portal operation",
-        "sourceRefs": [
-          "src-relationship-ooi-ci"
-        ]
-      },
+      "kind": "contributes",
+      "description": "Array observations are transferred from the institutional operations centre into OOI cyberinfrastructure. The documented scope is Array data publication; not portal operation.",
       "sources": {
         "src-relationship-ooi-ci": {
           "id": "src-relationship-ooi-ci",
@@ -44307,13 +43532,7 @@
       "sourceNodeId": "worms-steering-committee",
       "targetNodeId": "worms",
       "kind": "governs",
-      "note": "Scientific policy authority under the terms of reference.",
-      "properties": {
-        "scope": "Scientific policy; VLIZ retains technical operation",
-        "sourceRefs": [
-          "src-relationship-worms"
-        ]
-      },
+      "description": "Scientific policy authority under the terms of reference. The documented scope is Scientific policy; VLIZ retains technical operation.",
       "sources": {
         "src-relationship-worms": {
           "id": "src-relationship-worms",

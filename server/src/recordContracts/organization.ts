@@ -37,7 +37,6 @@ export function validateOrganizationStructure(id: string, input: RecordQualityIn
   };
   const rich = input.record.recordDepth === "rich";
   if (rich && !input.edges?.length) issue("edges", "at least one evidenced incident relationship is required");
-  if (rich) for (const edge of input.edges ?? []) if (!text(edge.note)) issue(`edges.${edge.id}.note`, "a relationship explanation is required");
   const properties = closed(input.record.properties ?? {}, "record.properties", ["established", "metrics", "offices"], rich ? ["established", "metrics", "offices"] : []);
   if (properties.established !== undefined && properties.established !== null) {
     const established = closed(properties.established, "record.properties.established", ["date", "source"], ["date", "source"]);

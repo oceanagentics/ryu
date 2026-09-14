@@ -62,6 +62,37 @@ from Git, Cloud Build uploads and Docker context. Keep private migration snapsho
 there; do not commit them. Automatic releases are serialized in Actions, and a
 publish stops if production traffic changed during its preparation.
 
+## Pending edge revision release
+
+Migration `018_edge_revision.sql` and its matching application image are a
+coordinated, breaking release. The old application reads `note` and
+`properties_json`; the new application reads `description` and the renamed edge
+kinds. Do not move either side independently.
+
+The 14 September pre-migration audit covered all 273 canonical edges: 28
+`governs`, 69 `operates`, 53 `funds`, 26 `member_of`, 45 `publishes_to`, and 52
+`syncs_to`. Every edge had a nonempty note and sources. Migration rehearsal
+retained all 273 edges and every distinct legacy prose value while producing 28
+`governs`, 69 `operates`, 53 `funds`, 26 `member`, 45 `contributes`, and 52
+`transfers` rows. The resulting table contains only identity, endpoints, kind,
+description, sources, and timestamps.
+
+Use the normal coordinated-release controls: commit and prepare the application
+images, obtain a fresh Cloud SQL backup, put public/admin authoring into the
+maintenance window, rehearse migration 018 in a rollback transaction, apply it
+with the schema-capable account, promote the prepared images, run smoke checks,
+and regenerate `client/public/bootstrap.public.json` from canonical Postgres.
+The migration rejects unknown property keys, malformed prose properties,
+unsupported kinds, duplicate relationships after renaming, missing descriptions,
+missing evidence, and invalid endpoints before dropping legacy columns.
+
+The read-only 14 September release preflight currently reports 3,920 aggregate
+issues. Rehearsing the edge conversion removes the edge-contract portion but
+leaves 3,112 pre-existing node/localization contract issues. Migration 018 does
+not rewrite node content, so this application revision must remain unpublished
+until that earlier data-contract work is completed or included in the same
+coordinated release.
+
 ## Completed 2026-09-10 data release
 
 Published on 2026-09-11 UTC (2026-09-10 local) from commit

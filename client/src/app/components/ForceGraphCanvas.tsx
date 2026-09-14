@@ -1094,10 +1094,10 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
     const linkForce = forceGraph.d3Force("link") as D3ForceLink | undefined;
     linkForce
       ?.distance((link) => {
-        if (link.type === "member_of") {
+        if (link.type === "member") {
           return 46;
         }
-        if (link.type === "publishes_to" || link.type === "syncs_to") {
+        if (link.type === "contributes" || link.type === "transfers") {
           return 72;
         }
         return 58;
@@ -1574,7 +1574,7 @@ export function ForceGraphCanvas({ arrangement = "current" }: ForceGraphCanvasPr
         linkColor={linkColor}
         linkDirectionalArrowColor={linkColor}
         linkDirectionalArrowLength={(link) =>
-          arrangement === "globe" || link.isDerivedHierarchy || link.type === "member_of"
+          arrangement === "globe" || link.isDerivedHierarchy || link.type === "member"
             ? 0
             : 2.4
         }

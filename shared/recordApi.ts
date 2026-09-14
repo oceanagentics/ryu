@@ -194,8 +194,7 @@ export interface RecordEdgeInput {
   sourceNodeId: string;
   targetNodeId: string;
   kind: GraphEdgeKind;
-  note?: string | null;
-  properties?: Record<string, unknown>;
+  description: string;
 }
 
 export interface RecordRouteInput {

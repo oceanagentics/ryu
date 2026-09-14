@@ -17,9 +17,9 @@ export const edgeEndpointKinds = {
   governs: ["country/organization", "country/system", "organization/organization", "organization/system"],
   operates: ["organization/system"],
   funds: ["country/organization", "country/system", "organization/organization", "organization/system"],
-  member_of: ["country/organization", "organization/organization", "system/system"],
-  publishes_to: ["organization/system"],
-  syncs_to: ["system/system"],
+  member: ["country/organization", "organization/organization", "system/system"],
+  contributes: ["organization/system"],
+  transfers: ["system/system"],
 } as const satisfies Record<string, readonly `${GraphNodeKind}/${GraphNodeKind}`[]>;
 
 export type GraphEdgeKind = keyof typeof edgeEndpointKinds;
@@ -286,8 +286,7 @@ export interface GraphEdge {
   sourceNodeId: string;
   targetNodeId: string;
   kind: GraphEdgeKind;
-  note: string | null;
-  properties: Record<string, unknown>;
+  description: string;
   createdAt: string;
   updatedAt: string;
 }

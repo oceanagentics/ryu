@@ -19,17 +19,17 @@ export const edgeKindLabels = {
   operates: {
     en: "operates", fr: "exploite", es: "opera", ar: "يشغّل", zh: "运营", ru: "эксплуатирует",
   },
-  member_of: {
-    en: "member of", fr: "membre de", es: "miembro de", ar: "عضو في", zh: "成员属于", ru: "член",
+  member: {
+    en: "member", fr: "membre", es: "miembro", ar: "عضو", zh: "成员", ru: "член",
   },
   funds: {
     en: "funds", fr: "finance", es: "financia", ar: "يموّل", zh: "资助", ru: "финансирует",
   },
-  publishes_to: {
-    en: "publishes to", fr: "publie vers", es: "publica en", ar: "ينشر إلى", zh: "发布到", ru: "публикует в",
+  contributes: {
+    en: "contributes", fr: "contribue", es: "contribuye", ar: "يساهم", zh: "贡献", ru: "вносит вклад",
   },
-  syncs_to: {
-    en: "syncs to", fr: "se synchronise avec", es: "sincroniza con", ar: "يتزامن مع", zh: "同步到", ru: "синхронизируется с",
+  transfers: {
+    en: "transfers", fr: "transfère", es: "transfiere", ar: "ينقل", zh: "传输", ru: "передаёт",
   },
 } satisfies Record<GraphEdgeKind, Record<SupportedLocale, string>>;
 
