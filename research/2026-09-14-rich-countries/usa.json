@@ -3,7 +3,6 @@
   "record": {
     "kind": "country",
     "countryCode": "USA",
-    "url": "https://www.usa.gov/",
     "recordDepth": "rich",
     "properties": {
       "treatyParticipation": [
@@ -15,24 +14,13 @@
           "depositDate": null,
           "effectiveDate": null,
           "focalPointUrl": null,
-          "sourceRefs": ["bbnj-status"]
+          "sourceRefs": [
+            "bbnj-status"
+          ]
         }
       ]
     },
     "sources": {
-      "official-government": {
-        "id": "official-government",
-        "url": "https://www.usa.gov/",
-        "title": {
-          "ar": "الموقع الرسمي لحكومة الولايات المتحدة",
-          "zh": "美国政府官方网站",
-          "en": "Official website of the United States Government",
-          "fr": "Site officiel du Gouvernement des États-Unis",
-          "ru": "Официальный сайт правительства Соединённых Штатов",
-          "es": "Sitio oficial del Gobierno de Estados Unidos"
-        },
-        "accessedAt": "2026-09-14"
-      },
       "bbnj-status": {
         "id": "bbnj-status",
         "url": "https://treaties.un.org/doc/Publication/MTDSG/Volume%20II/Chapter%20XXI/XXI-10.en.xml",
@@ -45,103 +33,165 @@
           "es": "Estado del Acuerdo BBNJ ante el depositario de la ONU"
         },
         "accessedAt": "2026-09-14"
+      },
+      "noaa-mission": {
+        "id": "noaa-mission",
+        "url": "https://prod-01-alb-www-noaa.woc.noaa.gov/our-mission-values-and-vision",
+        "title": {
+          "en": "NOAA: mission, values and vision",
+          "ar": "NOAA: الرسالة والقيم والرؤية",
+          "zh": "NOAA：使命、价值观与愿景",
+          "fr": "NOAA : mission, valeurs et vision",
+          "ru": "NOAA: миссия, ценности и видение",
+          "es": "NOAA: misión, valores y visión"
+        },
+        "accessedAt": "2026-09-14"
       }
     }
   },
   "localizations": {
     "ar": {
       "title": "الولايات المتحدة",
-      "summary": "يعرض ملف الولايات المتحدة في Ryu مؤسساتها الاتحادية المعنية بالمحيطات والعلوم وبعض المشاركات الدولية وحالتها بموجب اتفاق BBNJ.",
-      "description": "تظهر الولايات المتحدة في Ryu من خلال روابط موثقة بوكالات وبرامج اتحادية للمحيطات والسواحل والعلوم وبالمجلس الدولي لاستكشاف البحار. ويسجل وديع الأمم المتحدة توقيعها على اتفاق BBNJ في 20 سبتمبر 2023، لكنه لا يسجل إيداع صك لاحق للتصديق أو القبول أو الموافقة حتى 14 سبتمبر 2026. ولذلك تظل الولايات المتحدة دولة موقعة وليست طرفاً، ولا توجد لها جهة اتصال رسمية مخصصة للأطراف.",
+      "summary": "تجري الولايات المتحدة بحوث المحيطات والسواحل عبر وكالات منها الإدارة الوطنية للمحيطات والغلاف الجوي (NOAA). وتدير هذه الإدارة أيضاً الموارد البحرية وتوفر التنبؤات والرصد البيئي ومعلومات الملاحة.",
       "details": {
-        "aliases": ["الولايات المتحدة الأمريكية", "حكومة الولايات المتحدة"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
-        "treatyParticipation": [{
-          "id": "bbnj-agreement",
-          "title": "اتفاق BBNJ",
-          "description": "وقعت الولايات المتحدة الاتفاق في 20 سبتمبر 2023. ولا يسجل وديع الأمم المتحدة صكاً لاحقاً للتصديق أو القبول أو الموافقة حتى 14 سبتمبر 2026، ولذلك لم يدخل الاتفاق حيز النفاذ بالنسبة إليها.",
-          "focalPoint": null
-        }]
+        "aliases": [
+          "الولايات المتحدة الأمريكية",
+          "حكومة الولايات المتحدة"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "noaa-mission"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "bbnj-agreement",
+            "title": "اتفاق BBNJ",
+            "description": "حتى 14 سبتمبر 2026، وقعت الولايات المتحدة الاتفاق، لكنها لم تصدق عليه أو تقبله أو توافق عليه.",
+            "focalPoint": null
+          }
+        ]
       },
       "translatedFromLocale": "en"
     },
     "zh": {
       "title": "美国",
-      "summary": "美国的Ryu档案记录其联邦海洋与科学机构、部分国际参与以及《BBNJ协定》状态。",
-      "description": "在Ryu中，美国通过有来源支持的关系连接到联邦海洋、沿海与科学机构和项目，并连接到国际海洋考察理事会。联合国保存人记录美国于2023年9月20日签署《BBNJ协定》，但截至2026年9月14日未记录其随后交存批准、接受或核准文书。因此，美国是签署方而非缔约方，也没有仅适用于缔约方的正式联络点记录。",
+      "summary": "美国通过包括国家海洋和大气管理局（NOAA）在内的机构开展海洋与沿海研究。NOAA还管理海洋资源，并提供预报、环境观测和航海信息。",
       "details": {
-        "aliases": ["美利坚合众国", "美国政府"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
-        "treatyParticipation": [{
-          "id": "bbnj-agreement",
-          "title": "BBNJ协定",
-          "description": "美国于2023年9月20日签署该协定。截至2026年9月14日，联合国保存人未列出美国随后交存的批准、接受或核准文书，因此该协定尚未对美国生效。",
-          "focalPoint": null
-        }]
+        "aliases": [
+          "美利坚合众国",
+          "美国政府"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "noaa-mission"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "bbnj-agreement",
+            "title": "BBNJ协定",
+            "description": "截至2026年9月14日，美国已签署该协定，但尚未批准、接受或核准。",
+            "focalPoint": null
+          }
+        ]
       },
       "translatedFromLocale": "en"
     },
     "en": {
       "title": "United States",
-      "summary": "The United States’ Ryu profile records its federal ocean and science institutions, selected international participation, and BBNJ Agreement status.",
-      "description": "The United States is represented in Ryu by sourced links to federal ocean, coastal, and science agencies and programs and to the International Council for the Exploration of the Sea. The United Nations depositary records the United States’ signature of the BBNJ Agreement on 20 September 2023 but no subsequent deposit of an instrument of ratification, acceptance, or approval as of 14 September 2026. The United States is therefore a signatory, not a Party, and no Party focal point is recorded.",
+      "summary": "The United States conducts ocean and coastal research through agencies including NOAA. NOAA also manages marine resources and provides forecasts, environmental observations and navigation information.",
       "details": {
-        "aliases": ["United States of America", "U.S.", "US Government"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
-        "treatyParticipation": [{
-          "id": "bbnj-agreement",
-          "title": "BBNJ Agreement",
-          "description": "The United States signed the Agreement on 20 September 2023. The UN depositary lists no subsequent instrument of ratification, acceptance, or approval as of 14 September 2026, so the Agreement is not yet in force for the United States.",
-          "focalPoint": null
-        }]
+        "aliases": [
+          "United States of America",
+          "U.S.",
+          "US Government"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "noaa-mission"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "bbnj-agreement",
+            "title": "BBNJ Agreement",
+            "description": "As of 14 September 2026, the United States has signed but has not ratified, accepted or approved the Agreement.",
+            "focalPoint": null
+          }
+        ]
       },
       "translatedFromLocale": null
     },
     "fr": {
       "title": "États-Unis",
-      "summary": "Le profil Ryu des États-Unis présente leurs institutions fédérales chargées de l’océan et des sciences, certaines participations internationales et leur statut au regard de l’Accord BBNJ.",
-      "description": "Dans Ryu, les États-Unis sont reliés, avec des sources, à des agences et programmes fédéraux relatifs à l’océan, aux zones côtières et aux sciences, ainsi qu’au Conseil international pour l’exploration de la mer. Le dépositaire des Nations Unies enregistre leur signature de l’Accord BBNJ le 20 septembre 2023, mais aucun dépôt ultérieur d’un instrument de ratification, d’acceptation ou d’approbation au 14 septembre 2026. Les États-Unis sont donc signataires, mais pas Partie, et aucun point focal réservé aux Parties n’est enregistré.",
+      "summary": "Les États-Unis mènent des recherches océaniques et côtières notamment par la NOAA. Celle-ci gère aussi les ressources marines et fournit prévisions, observations environnementales et informations nautiques.",
       "details": {
-        "aliases": ["États-Unis d’Amérique", "Gouvernement des États-Unis"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
-        "treatyParticipation": [{
-          "id": "bbnj-agreement",
-          "title": "Accord BBNJ",
-          "description": "Les États-Unis ont signé l’Accord le 20 septembre 2023. Au 14 septembre 2026, le dépositaire de l’ONU ne mentionne aucun instrument ultérieur de ratification, d’acceptation ou d’approbation; l’Accord n’est donc pas encore en vigueur pour les États-Unis.",
-          "focalPoint": null
-        }]
+        "aliases": [
+          "États-Unis d’Amérique",
+          "Gouvernement des États-Unis"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "noaa-mission"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "bbnj-agreement",
+            "title": "Accord BBNJ",
+            "description": "Au 14 septembre 2026, les États-Unis ont signé l’Accord, sans l’avoir ratifié, accepté ou approuvé.",
+            "focalPoint": null
+          }
+        ]
       },
       "translatedFromLocale": "en"
     },
     "ru": {
       "title": "Соединённые Штаты",
-      "summary": "Профиль Соединённых Штатов в Ryu отражает федеральные учреждения в области океана и науки, отдельные формы международного участия и статус по Соглашению BBNJ.",
-      "description": "В Ryu Соединённые Штаты связаны подтверждёнными источниками с федеральными учреждениями и программами в области океана, побережий и науки, а также с Международным советом по исследованию моря. Депозитарий ООН указывает, что Соединённые Штаты подписали Соглашение BBNJ 20 сентября 2023 года, но по состоянию на 14 сентября 2026 года не зарегистрировали последующую сдачу на хранение документа о ратификации, принятии или одобрении. Поэтому Соединённые Штаты остаются подписантом, но не Стороной, и официальный координатор для Сторон не указан.",
+      "summary": "Соединённые Штаты ведут исследования океана и побережий через ведомства, включая NOAA. NOAA также управляет морскими ресурсами и предоставляет прогнозы, экологические наблюдения и навигационную информацию.",
       "details": {
-        "aliases": ["Соединённые Штаты Америки", "Правительство США"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
-        "treatyParticipation": [{
-          "id": "bbnj-agreement",
-          "title": "Соглашение BBNJ",
-          "description": "Соединённые Штаты подписали Соглашение 20 сентября 2023 года. По состоянию на 14 сентября 2026 года депозитарий ООН не указывает последующего документа о ратификации, принятии или одобрении, поэтому Соглашение ещё не вступило в силу для Соединённых Штатов.",
-          "focalPoint": null
-        }]
+        "aliases": [
+          "Соединённые Штаты Америки",
+          "Правительство США"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "noaa-mission"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "bbnj-agreement",
+            "title": "Соглашение BBNJ",
+            "description": "По состоянию на 14 сентября 2026 года Соединённые Штаты подписали Соглашение, но не ратифицировали, не приняли и не одобрили его.",
+            "focalPoint": null
+          }
+        ]
       },
       "translatedFromLocale": "en"
     },
     "es": {
       "title": "Estados Unidos",
-      "summary": "El perfil de Estados Unidos en Ryu documenta sus instituciones federales oceánicas y científicas, determinadas participaciones internacionales y su situación respecto del Acuerdo BBNJ.",
-      "description": "En Ryu, Estados Unidos está vinculado mediante fuentes con agencias y programas federales oceánicos, costeros y científicos y con el Consejo Internacional para la Exploración del Mar. El depositario de las Naciones Unidas registra la firma del Acuerdo BBNJ por Estados Unidos el 20 de septiembre de 2023, pero no un depósito posterior de un instrumento de ratificación, aceptación o aprobación al 14 de septiembre de 2026. Por tanto, Estados Unidos es signatario, no Parte, y no se registra un punto focal reservado a las Partes.",
+      "summary": "Estados Unidos investiga el océano y las costas mediante organismos como la NOAA. Esta también gestiona recursos marinos y ofrece pronósticos, observaciones ambientales e información náutica.",
       "details": {
-        "aliases": ["Estados Unidos de América", "Gobierno de Estados Unidos"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
-        "treatyParticipation": [{
-          "id": "bbnj-agreement",
-          "title": "Acuerdo BBNJ",
-          "description": "Estados Unidos firmó el Acuerdo el 20 de septiembre de 2023. Al 14 de septiembre de 2026, el depositario de la ONU no registra un instrumento posterior de ratificación, aceptación o aprobación, por lo que el Acuerdo aún no está en vigor para Estados Unidos.",
-          "focalPoint": null
-        }]
+        "aliases": [
+          "Estados Unidos de América",
+          "Gobierno de Estados Unidos"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "noaa-mission"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "bbnj-agreement",
+            "title": "Acuerdo BBNJ",
+            "description": "Al 14 de septiembre de 2026, Estados Unidos ha firmado el Acuerdo, pero no lo ha ratificado, aceptado ni aprobado.",
+            "focalPoint": null
+          }
+        ]
       },
       "translatedFromLocale": "en"
     }

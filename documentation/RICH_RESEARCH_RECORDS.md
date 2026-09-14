@@ -6,13 +6,39 @@ For shared vocabulary labels, UI messages, lookup APIs and translation extension
 checks, see [the shared code guide](../shared/README.md). Record-specific prose
 and source titles continue to follow the ownership rules below.
 
+## Node Contract Boundaries
+
+The three authored records have separate positive contracts in
+`shared/records/country.ts`, `shared/records/organization.ts`, and
+`shared/records/system.ts`. Their API inputs, PATCHes, DTOs, display and search
+types preserve the owning kind. Each runtime validator lives in
+`server/src/recordContracts/<kind>.ts`; shared validation handles sources,
+locales and review metadata.
+
+The tables and Record API endpoints stay shared. `nodes.kind` selects the
+`node_localizations` shape through `node_id`; no second kind column is stored.
+Migration 017 completes the populated-column and route ownership checks after
+014–016. Its audit fails on incompatible content without deleting it. A schema
+release and reviewed data audit are required before deploying this contract.
+
+PATCH uses the stored kind when none is supplied. Every write validates the
+whole resulting aggregate, including untouched locales and incident edges.
+Changing kind is an explicit conversion: replace incompatible properties and
+localizations, and explicitly delete any incompatible routes or relationships.
+A full PUT is required when removing neutral fields such as a former canonical
+URL. Omitted locales, sources and incident edges retain their existing content.
+
+Record search covers all three kinds; the `kind` query filter selects a subset.
+The **Systems** directory remains an explicitly system-only view; absence there
+does not establish absence from the graph.
+
 ## Canonical System Contract
 
 The [FishBase content example](../server/src/fixtures/rich-record.json) is the
 reference for system records. Its [snapshot notes](../server/src/fixtures/README.md)
 identify its provenance and example-only choices. Copy the structure, not its
 claims, IDs, sources, counts, or particular relationships. The approved format
-is enforced by `server/src/recordContracts.ts`, with closed shared types and
+is enforced by `server/src/recordContracts/system.ts`, with closed shared types and
 PostgreSQL structural guards in `server/schema/014_system_record_shape.sql`.
 
 Every depth uses this format. A `stub` identifies a system; `thin` holds partial
@@ -22,8 +48,8 @@ Changing depth never permits unknown keys, wrong types, or mismatched item IDs.
 
 Content PUT bodies contain only `id` (optional, matching the path), `record`,
 `localizations`, `edges`, `routes`, and optional `incomplete`. Record fields are
-`kind`, `url`, `recordDepth`, `properties`, and `sources`; system `countryCode`
-is omitted or null. PATCH uses the documented section replacements/upserts.
+`kind`, `url`, `recordDepth`, `properties`, and `sources`.
+PATCH uses the documented section replacements/upserts.
 Do not send a GET response back unchanged: computed summaries, timestamps,
 localization `locale`, and review/audit metadata are response fields.
 
@@ -45,7 +71,7 @@ The following objects are closed: no additional keys or extension bags.
 | Localized access | `id`, `label`, `description` |
 | Localized gallery item | `id`, `title`, `caption`, optional `altText` |
 | `details.researchGaps` | Optional `data`, `usage`, `standards`, `access` explanations |
-| Owned source | `id`, `url`, `title`, `accessedAt` |
+| Owned source | `id`, `url`, `title`, optional `description`, `accessedAt` |
 
 Array sections use `[]` when empty, never null, strings, or an object keyed by
 item ID. Every supplied data object has a `descriptors` array. IDs are stable
@@ -87,6 +113,165 @@ Change this contract deliberately with shared types, runtime validation, SQL
 guards, example, tests and this guide in one release. Do not automatically
 refresh the fixture from production. Audit existing records before enforcement;
 see [the shape rollout audit](SYSTEM_RECORD_SHAPE_ROLLOUT.md).
+
+## Canonical Organization Contract
+
+Organization records are concise institutional profiles. They explain what an
+organization is, why it exists, when it was established, its documented scale,
+where it maintains offices, and how it relates to the rest of the graph. Their
+positive shape is defined in `shared/records/organization.ts`, illustrated by
+[the synthetic organization example](../server/src/fixtures/rich-organization.json),
+and enforced by `server/src/recordContracts/organization.ts` and
+`server/schema/016_organization_record_shape.sql`.
+
+The following organization objects are closed:
+
+| Object | Fields |
+| --- | --- |
+| `record` | `kind`, `url`, `recordDepth`, `properties`, `sources` |
+| `record.properties` | `established`, `metrics`, `offices` |
+| Established fact | `date`, `source` |
+| Scale metric | `id`, `key`, `value`, `observedAt`, `source` |
+| Neutral office | `id`, `kind`, `source` |
+| Localization content | `title`, `summary`, `description`, `details`, optional `translatedFromLocale` |
+| `details` | `aliases`, `profile`, `offices`, optional `researchGaps` |
+| `details.profile` | `mission`, `sourceRefs` |
+| Localized office | `id`, `location` |
+| `details.researchGaps` | Optional `established`, `scale`, `officeLocations` explanations |
+
+`established.date` uses the most precise supported value (`YYYY`, `YYYY-MM`, or
+`YYYY-MM-DD`). It means the legal or documented establishment represented by
+the cited source; do not silently substitute a predecessor's founding, treaty
+signature, launch, reorganization, or renaming date. Put that qualification in
+the referenced source's localized `description`, not beside the date.
+
+Scale is a list of independently sourced measurements. Approved keys are
+`staff_count`, `member_organization_count`, and `member_country_count`.
+`observedAt` uses the same partial-date format or null. Organization scale does
+not use a reporting `period`, and each measurement's definition and caveats
+(employees versus consultants, current versus authorized posts, and the scope
+of membership) belong in the source's localized `description`. Do not mix
+unlike member categories into a single count.
+
+Offices are a sourced list, never an office count. Each neutral item has a
+stable ID, an approved `kind` (`headquarters` or `office`), and one source. Its
+localized partner has the same ID and a human-readable `location`. Include only
+documented active organizational offices; do not count member institutions,
+project sites, hosted secretariats, mailing addresses, or inferred places.
+Users and clients may derive a count from the list.
+
+Before marking an organization rich:
+
+1. Supply a canonical URL and all six localized titles, summaries,
+   descriptions, aliases, missions, and profile citations.
+2. Research establishment, the applicable scale measures, and active office
+   locations. If an authoritative fact is unavailable, use null or an empty
+   list and give the corresponding specific explanation in every locale's
+   `researchGaps`; never invent a value.
+3. Give every establishment, scale, and office source a nonblank localized
+   `description` in all six languages so users can interpret the fact.
+4. Review every incident edge and all six relationship types. A rich
+   organization needs at least one evidenced incident relationship, and every
+   included relationship needs a clear note plus owner-local citations.
+5. Validate the complete aggregate, apply with a fresh record timestamp, and
+   re-read it. Rich does not imply human review.
+
+Stub and thin organization records may omit unfinished sections, but every
+supplied field must retain this shape. Existing records labeled rich are lowered
+to thin by migration 016 until deliberately backfilled against this contract.
+
+## Canonical Country Contract
+
+Country records are compact ocean-governance profiles. Their positive field
+contracts live in `shared/records/country.ts`, illustrated by
+[the synthetic country example](../server/src/fixtures/rich-country.json), with runtime checks in
+`server/src/recordContracts/country.ts` and storage checks in
+`server/schema/015_country_record_shape.sql`. The owning `nodes.kind` selects
+the localization contract through `node_localizations.node_id`.
+
+| Country object | Authored fields |
+| --- | --- |
+| `record` | `kind`, `countryCode`, `recordDepth`, `properties`, `sources` |
+| `record.properties` | `treatyParticipation` |
+| Localization | `title`, `summary`, `details`, `translatedFromLocale` |
+| Localization `details` | `aliases`, `profile`, `treatyParticipation` |
+| `details.profile` | `sourceRefs` |
+
+IDs, timestamps, and localization review history are managed metadata. Each kind
+has its own localization type; system and organization canonical URLs and extended
+prose belong to their respective contracts. Stub and thin records may omit
+unfinished sections; supplied fields retain the declared shape.
+
+| Object | Fields |
+| --- | --- |
+| Neutral treaty participation | `id`, `status`, `signatureDate`, `consentMethod`, `depositDate`, `effectiveDate`, `focalPointUrl`, `sourceRefs` |
+| Localized treaty participation | `id`, `title`, `description`, `focalPoint` |
+
+Treaty item IDs are stable owner-local slugs and must match across neutral and
+localized arrays. Dates use `YYYY-MM-DD` or null. `focalPointUrl` is an official
+HTTP(S) directory or page, not a copied personal email address. Every neutral
+item has nonempty, unique source references resolving against the country's
+sources. Localized `focalPoint` names the designated institution or office; omit
+the current person's name unless it has clear operational value and the official
+source is maintained.
+
+Use `status` for the current legal position: `party`, `signatory_not_party`,
+`not_party`, or `withdrawn`. Use `consentMethod` for the distinct international
+act: `ratification`, `acceptance`, `approval`, `accession`, or
+`definitive_signature`. Do not reduce these to a `ratified` boolean. Record the
+depositary's date of deposit and the date the treaty became effective for that
+country when the official status source supplies them. Explain reservations,
+declarations, provisional application, or unusual legal history briefly in the
+localized treaty description when material to marine governance or participation.
+
+### Country prose
+
+Write publication-ready, factual prose about the country, its institutions, and
+its treaty participation. Make those entities the subjects of sentences. Internal
+project names belong in internal documentation; provenance and research-process
+information belong in source citations and review history.
+
+- `summary` is the single country introduction: a short paragraph, usually two or
+  three sentences. Give useful geographic or ocean context and concise institutional
+  context. Use concrete, sourced facts and explain agency abbreviations when useful.
+- Treaty `title` uses the recognized treaty name in the selected language, with a
+  familiar abbreviation where helpful.
+- Treaty `description` briefly explains participation and material qualifications.
+  Let structured fields carry routine dates. Explain relevant declarations, the
+  distinction between domestic approval and deposited consent, or entry-into-force
+  context. Include an explicit as-of date for pending or unrecorded actions.
+- Treaty `focalPoint` names the officially designated institution or office, with
+  its official directory as evidence.
+- Translate the same facts and qualifications naturally into all six languages.
+  Review prose for clarity, accuracy, and repetition. Automated checks enforce
+  structure, completeness, vocabulary, dates, and citations; editorial review
+  assesses writing quality.
+
+Before marking a country rich:
+
+1. Supply its uppercase ISO alpha-3 identity code, authoritative profile sources,
+   and all six localized titles, summaries, aliases, and profile citations.
+2. Research every treaty explicitly in scope for that Ryu record. Supply at
+   least one complete treaty item; do not attempt an exhaustive treaty census.
+3. Record the stable designated focal-point institution or office and official
+   directory when published. Treaty signatories and meeting delegates are not
+   assumed to be current operational contacts.
+4. Review the country-applicable `governs`, `funds`, and `member_of`
+   relationships. Keep formal groups and public authorities as sourced graph
+   relationships; Party status alone does not establish unilateral governance
+   over a treaty body or clearing-house system.
+5. Validate the complete aggregate, apply with a fresh record timestamp, and
+   re-read it. After completing a research pass, append an `agent_researched`
+   review event for every researched localization through
+   `PATCH /api/records/:id/review`, even when its state is unchanged. Use a fresh
+   record timestamp for each review write. The API supplies the reviewer and event
+   timestamp. Re-read the current state, date, and history. Human review uses the
+   same dated-event workflow with an authorized reviewer.
+
+Review dates identify completed research or review passes. `contentUpdatedAt`
+identifies content edits. Preserve unknown historical review dates as unknown;
+record a new event when the current pass is complete. Display the current review
+date beside its state and retain earlier events in revision history.
 
 ## Source Of Truth
 
@@ -198,17 +383,22 @@ computed from content, not an author-controlled badge or a separate source regis
 
 - Systems need evidence for their profile, data, access, quantitative claims,
   relationships, and routes.
-- Organizations need evidence for identity, jurisdiction/role, and asserted
-  relationships. They do not need system descriptors, metrics, or galleries.
-- Countries need evidence for identity and asserted governance relationships.
+- Organizations need evidence for identity and mission, establishment, each
+  supplied scale metric and office location, and asserted relationships. They
+  do not need system descriptors, access paths, galleries, or routes.
+- Countries need evidence for identity, treaty participation, official context,
+  and asserted `governs`, `funds`, and `member_of` relationships.
 - Minimal country/organization records may be source-complete and remain `stub`
   or `thin`. The richer system checklist is not applied to those node kinds.
 
 Each node and edge has a dedicated `sources` JSONB object keyed by source ID.
-Each entry has exactly `id`, `url`, `title`, and `accessedAt`. The key equals `id`;
-IDs are local to their owner. `url` is absolute HTTP(S), `accessedAt` is a valid
-`YYYY-MM-DD` date, and `title` maps supported locale codes to non-empty text.
-No source type, publisher, publication date, local path, note, or source audit fields.
+Each entry has `id`, `url`, `title`, optional `description`, and `accessedAt`.
+The key equals `id`; IDs are local to their owner. `url` is absolute HTTP(S),
+`accessedAt` is a valid `YYYY-MM-DD` date, and both localized maps use supported
+locale codes with non-empty text. Source descriptions hold the interpretation,
+scope, and qualification of organization dates, scale figures, and office
+locations. No source type, publisher, publication date, local path, note, or
+source audit fields.
 
 Node/localization/route citations resolve against `nodes.sources`; edge citations
 resolve against that edge's `sources`, from either endpoint. Source references
@@ -300,6 +490,21 @@ Keep organization rows minimal: localized identity and source-backed relationshi
 responsible institutions; split combined operator labels when their members have
 different responsibilities. International collaborations and EU institutions are
 organizations, not placeholder countries.
+
+## Actor Attribution
+
+Model the actor named by the evidence. A sovereign state/government is a country
+node; a ministry, agency or institution is an organization node; its information
+service is a system node. A ministry acting on behalf of a state is not
+automatically interchangeable with the legal contractor, dataset creator or
+publisher. Keep each attribution scoped to its source and relationship.
+
+The current `publishes_to` endpoint rule is organization → system. Evidence that
+names a country as publisher exposes an endpoint-policy question, not a reason
+to invent an organization for that government or substitute an associated
+ministry. Report it for an explicitly approved contract change; preserve the
+country and ministry distinction meanwhile. This node-contract refactor does
+not change the six relationship endpoint rules.
 
 ## Relationship Review
 

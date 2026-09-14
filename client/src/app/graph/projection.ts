@@ -77,7 +77,7 @@ function buildProjectionNode(
     simpleLabel,
     secondaryLabel: secondaryNodeLabel(node, locale, simpleLabel),
     kind: node.kind,
-    countryCode: node.countryCode,
+    countryCode: (node.kind === "country" ? node.countryCode : null),
     governanceBlock,
     layoutBand,
     ...getNodeDimensions(node.kind, label),

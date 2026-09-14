@@ -2,7 +2,6 @@
   "id": "fishbase",
   "record": {
     "kind": "system",
-    "countryCode": null,
     "url": "https://fishbase.se/home.htm",
     "recordDepth": "rich",
     "properties": {

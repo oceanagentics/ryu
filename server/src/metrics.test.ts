@@ -2,20 +2,20 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { test } from "node:test";
 import { PGlite } from "@electric-sql/pglite";
-import { metricDefinitions, type SourcedMetric } from "../../shared/domain";
+import { systemMetricDefinitions, type SourcedMetric } from "../../shared/domain";
 import { formatMetricValue, vocabularyLabel } from "../../shared/i18n";
 import { validateRecordQuality } from "./recordContracts";
-import { normalizeNodeProperties } from "./graphRepositorySupport";
+
 
 const fixture = () => JSON.parse(fs.readFileSync(new URL("./fixtures/rich-record.json", import.meta.url), "utf8"));
 const migration = fs.readFileSync(new URL("../schema/013_system_metrics.sql", import.meta.url), "utf8");
 
 test("metrics accept exactly the ten approved keys and reject malformed observations at every depth", () => {
-  assert.deepEqual(Object.keys(metricDefinitions), ["record_count", "occurrence_count", "sample_count", "sequence_count", "species_count", "storage_size_bytes", "session_count", "download_count", "contributor_count", "citation_count"]);
+  assert.deepEqual(Object.keys(systemMetricDefinitions), ["record_count", "occurrence_count", "sample_count", "sequence_count", "species_count", "storage_size_bytes", "session_count", "download_count", "contributor_count", "citation_count"]);
   for (const depth of ["stub", "thin", "rich"]) {
     const valid = fixture();
     valid.record.recordDepth = depth;
-    valid.record.properties.metrics = Object.keys(metricDefinitions).map((key, i) => ({
+    valid.record.properties.metrics = Object.keys(systemMetricDefinitions).map((key, i) => ({
       id: `metric-${i}`, key, value: i, source: "src-fishbase-home", observedAt: null,
       ...(i >= 6 ? { period: "month" } : {}),
     }));
@@ -52,7 +52,7 @@ test("metrics accept exactly the ten approved keys and reject malformed observat
       assert.ok(!result.valid && result.issues.some(issue => issue.path?.endsWith(`.${field}`)), `${depth}/${field}: ${JSON.stringify(result.issues)}`);
     }
   }
-  assert.throws(() => normalizeNodeProperties({ usage: [] }), /013_system_metrics.sql/);
+
 });
 
 test("metric labels and units are closed; formatting keeps reporting basis separate from units", () => {

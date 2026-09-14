@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import type { GraphNode, NodeLocalization, SupportedLocale } from "../../shared/domain";
+import type { GraphNode, SystemLocalization, SupportedLocale } from "../../shared/domain";
 import { emptyLocalizationDetails, resolveNodeLocalization } from "../../shared/localization";
 
-function localization(locale: SupportedLocale, title: string): NodeLocalization {
+function localization(locale: SupportedLocale, title: string): SystemLocalization {
   return {
     locale,
     title,
@@ -19,11 +19,10 @@ function localization(locale: SupportedLocale, title: string): NodeLocalization 
   };
 }
 
-function node(localizations: GraphNode["localizations"], availableLocales: SupportedLocale[]): GraphNode {
+function node(localizations: GraphNode<"system">["localizations"], availableLocales: SupportedLocale[]): GraphNode<"system"> {
   return {
     id: "node-1",
     kind: "system",
-    countryCode: null,
     url: null,
     recordDepth: "stub",
     properties: {}, sources: {},

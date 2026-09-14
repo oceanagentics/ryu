@@ -4,8 +4,9 @@
 
 This batch upgrades the four country nodes that existed in the canonical graph on
 2026-09-14: Canada (`can`), Germany (`deu`), Japan (`jpn`), and the United States
-(`usa`). Each payload supplies a canonical government URL, a concise profile,
-aliases, and BBNJ Agreement participation in all six supported locales.
+(`usa`). The revised payloads supply one concise, source-backed `summary`,
+aliases, and BBNJ Agreement participation in all six supported locales. Country
+content uses the positive country contract: no main URL or second introduction.
 
 The BBNJ Agreement is the initial treaty scope because it directly concerns the
 conservation and sustainable use of marine biological diversity beyond national
@@ -61,7 +62,7 @@ research but returned HTTP 403 to the command-line URL checker. Its content was
 therefore verified through the official indexed page, and the canonical UN URL is
 retained as the source and focal-point directory link.
 
-## Validation and application
+## Original backfill application
 
 Each payload passed the local country record validator with zero issues and
 complete source resolution. All four then passed `PUT /api/records/:id` with
@@ -85,3 +86,23 @@ system collections (`disciplines`, `gallery`, `data.descriptors`, `access`, and
 deliberately absent from these clean country payloads. The country-contract
 release and migration own removal of those response defaults; this research
 write did not broaden into a code or schema deployment.
+
+## Revised country contract — staged, not applied
+
+The payloads now follow the single-summary country shape. Introductions describe
+the country directly, with official marine-science sources supporting each claim.
+Treaty descriptions add an as-of date or a material qualification rather than
+repeating the structured date fields or explaining how the record is maintained.
+The four payloads pass the revised local validator with no issues and complete
+source resolution.
+
+Production dry-runs rejected all four revised payloads with the old requirement
+`record.url: a canonical HTTP(S) URL is required`. No revised payload was applied.
+The application/schema release (including migration 015) must precede the content
+backfill. Then validate and apply against fresh record timestamps, and submit an
+explicit `agent_researched` review event for each of the six locales. These events
+will record the actual completion dates; legacy undated events remain undated.
+
+The localhost preview overlays these staged country drafts on read-only canonical
+graph responses. It is not a production data update and preserves actual review
+metadata rather than inventing completion dates.

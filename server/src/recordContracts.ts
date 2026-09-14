@@ -1,12 +1,22 @@
+import { validateCountryStructure } from "./recordContracts/country";
+import { validateOrganizationStructure } from "./recordContracts/organization";
+import { validateSystemStructure, validateSystemResearch } from "./recordContracts/system";
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
-import { accessCosts, accessRequirements, isReadAccessMethod, isWriteAccessMethod, isAccessUrl, isSystemMetricKey, metricDefinitions, metricPeriods } from "../../shared/domain";
+
+import {
+  isReadAccessMethod,
+  isWriteAccessMethod,
+  recordContentFields,
+  localizationContentFields,
+} from "../../shared/domain";
 
 import type {
   GraphEdge,
   GraphNode,
+  GraphNodeKind,
+  RecordDepth,
   NodeLocalization,
   NodeLocalizationDetails,
   NodeLocalizationReviewInput,
@@ -268,6 +278,7 @@ export function readRecordAggregateContentInput(
   }
 
   const record = readRecordNeutralContentInput(body.record, "record");
+  if (record.kind !== "system" && hasOwn(body, "routes")) throw new ApiRequestError(400, `routes is not a ${record.kind} record field`);
   const localizations = hasOwn(body, "localizations")
     ? readLocalizationContentMap(body.localizations, "localizations")
     : undefined;
@@ -289,7 +300,7 @@ export function readRecordAggregateContentInput(
     ...(hasOwn(body, "edges") ? { edges: readEdgeInputs(body.edges, recordId, "edges") } : {}),
     ...(hasOwn(body, "routes") ? { routes: readRouteInputs(body.routes, recordId, "routes") } : {}),
     ...(hasOwn(body, "incomplete") ? { incomplete } : {}),
-  };
+  } as RecordAggregateContentInput;
 }
 
 export function readRecordPatchInput(recordId: string, input: unknown): RecordPatchInput {
@@ -309,7 +320,7 @@ export function readRecordPatchInput(recordId: string, input: unknown): RecordPa
     ...(hasOwn(body, "routes")
       ? { routes: readRoutePatchSection(body.routes, recordId, "routes") }
       : {}),
-  };
+  } as RecordPatchInput;
 }
 
 export function readBulkRecordValidationInput(input: unknown): BulkRecordValidationInput {
@@ -367,97 +378,42 @@ export function validateRecordAggregateContentInput(
 }
 
 // Validate the merged, stored shape; PUT/PATCH request fragments are not records.
-export type RecordQualityInput = RecordAggregateContentInput;
+export interface RecordQualityInput {
+  id?: string;
+  record: { kind: GraphNodeKind; recordDepth?: RecordDepth; sources?: SourceCollection } & Record<string, unknown>;
+  localizations?: Partial<Record<SupportedLocale, { translatedFromLocale?: SupportedLocale | null } & Record<string, unknown>>>;
+  edges?: RecordEdgeInput[];
+  routes?: RecordRouteInput[];
+}
 
-// Structure is independent of research depth. Missing sections are allowed on
-// incomplete records; supplied objects never have an open-ended extension bag.
-function validateSystemStructure(id: string, input: RecordQualityInput): RecordValidationIssue[] {
-  if (input.record.kind !== "system") return [];
-  const issues: RecordValidationIssue[] = [];
-  const issue = (path: string, message: string) => issues.push({ recordId: id, path, message });
-  const text = (value: unknown) => typeof value === "string" && value.trim().length > 0;
-  const slug = (value: unknown) => typeof value === "string" && /^[a-z0-9][a-z0-9._:-]*$/.test(value);
-  const closed = (value: unknown, path: string, fields: string[], required = fields) => {
-    if (!isRecord(value)) { issue(path, "must be an object"); return {}; }
-    for (const key of Object.keys(value)) if (!fields.includes(key)) issue(`${path}.${key}`, "unknown system record field");
-    for (const key of required) if (!hasOwn(value, key)) issue(`${path}.${key}`, "field is required");
-    return value;
-  };
-  const strings = (value: unknown, path: string, ids = false) => {
-    if (!Array.isArray(value) || value.some(item => !(ids ? slug(item) : text(item))) || new Set(value).size !== value.length) {
-      issue(path, ids ? "must be an array of unique source IDs" : "must be an array of unique non-empty strings");
+export function validateRecordStructure(id: string, input: RecordQualityInput): RecordValidationIssue[] {
+  const issues = ({
+    country: validateCountryStructure,
+    organization: validateOrganizationStructure,
+    system: validateSystemStructure,
+  })[input.record.kind](id, input);
+  const closed = (value: object, fields: readonly string[], path: string) => {
+    for (const key of Object.keys(value)) if (!fields.includes(key)) {
+      issues.push({ recordId: id, path: `${path}.${key}`, message: `unknown ${input.record.kind} record field` });
     }
   };
-  const rows = (value: unknown, path: string, fields: string[], required = fields) => {
-    if (value === undefined) return [];
-    if (!Array.isArray(value)) { issue(path, "must be an array of objects"); return []; }
-    const ids = new Set<unknown>();
-    return value.map((item, index) => {
-      const field = `${path}[${index}]`;
-      const row = closed(item, field, fields, required);
-      if (!slug(row.id) || ids.has(row.id)) issue(`${field}.id`, "item IDs must be deterministic slugs and unique within the section");
-      ids.add(row.id);
-      return row;
-    });
-  };
-  const rich = input.record.recordDepth === "rich";
-  const keys = ["disciplines", "data", "access", "gallery", "metrics"];
-  const p = closed(input.record.properties === undefined ? {} : input.record.properties, "record.properties", keys, rich ? keys : []);
-  const data = p.data === undefined ? {} : closed(p.data, "record.properties.data", ["descriptors"]);
-  rows(data.descriptors, "record.properties.data.descriptors", ["id", "category", "label", "source"]).forEach((row, i) => {
-    const field = `record.properties.data.descriptors[${i}]`;
-    if (!["type", "format", "standard"].some(category => category === row.category)) issue(`${field}.category`, "invalid descriptor category");
-    if (!text(row.label)) issue(`${field}.label`, "an approved vocabulary ID is required");
-    if (row.source !== null && !slug(row.source)) issue(`${field}.source`, "must be a source ID or null while research is incomplete");
-  });
-  rows(p.access, "record.properties.access", ["id", "type", "methods", "url", "requirements", "cost", "sourceRefs"]);
-  rows(p.metrics, "record.properties.metrics", ["id", "key", "value", "observedAt", "period", "source"], ["id", "key", "value", "observedAt", "source"]);
-  rows(p.gallery, "record.properties.gallery", ["id", "type", "url", "thumbnailUrl", "source", "sortOrder"]).forEach((row, i) => {
-    const field = `record.properties.gallery[${i}]`;
-    if (row.type !== "image" && row.type !== "embed") issue(`${field}.type`, "invalid gallery type");
-    if (!text(row.url)) issue(`${field}.url`, "non-empty text is required");
-    if (row.thumbnailUrl !== null && !text(row.thumbnailUrl)) issue(`${field}.thumbnailUrl`, "must be non-empty text or null");
-    if (!slug(row.source)) issue(`${field}.source`, "a source ID is required");
-    if (!Number.isSafeInteger(row.sortOrder) || Number(row.sortOrder) < 0) issue(`${field}.sortOrder`, "must be a non-negative safe integer");
-  });
-  for (const [locale, l] of Object.entries(input.localizations ?? {})) {
-    if (!l) continue;
-    const field = `localizations.${locale}.details`;
-    const keys = ["aliases", "profile", "data", "access", "gallery", "metrics", "researchGaps"];
-    const d = closed(l.details === undefined ? {} : l.details, field, keys, rich ? keys.filter(key => key !== "researchGaps") : []);
-    if (d.aliases !== undefined) strings(d.aliases, `${field}.aliases`);
-    if (d.profile !== undefined) {
-      const profile = closed(d.profile, `${field}.profile`, ["sourceRefs"]);
-      strings(profile.sourceRefs, `${field}.profile.sourceRefs`, true);
-    }
-    if (d.researchGaps !== undefined) {
-      const gaps = closed(d.researchGaps, `${field}.researchGaps`, ["data", "usage", "standards", "access"], []);
-      for (const [key, value] of Object.entries(gaps)) if (!text(value)) issue(`${field}.researchGaps.${key}`, "a non-empty research explanation is required");
-    }
-    const localizedData = d.data === undefined ? {} : closed(d.data, `${field}.data`, ["descriptors"]);
-    for (const [section, value, fields, required] of [
-      ["data.descriptors", localizedData.descriptors, ["id", "description"], ["id", "description"]],
-      ["access", d.access, ["id", "label", "description"], ["id", "label", "description"]],
-      ["gallery", d.gallery, ["id", "title", "caption", "altText"], ["id", "title", "caption"]],
-      ["metrics", d.metrics, ["id", "description"], ["id", "description"]],
-    ] as const) {
-      rows(value, `${field}.${section}`, [...fields], [...required]).forEach((row, i) => {
-        for (const key of fields) if (key !== "id" && row[key] !== undefined && row[key] !== null && typeof row[key] !== "string") {
-          issue(`${field}.${section}[${i}].${key}`, "must be text or null");
-        }
-      });
-    }
+  closed(input.record, recordContentFields[input.record.kind], "record");
+  for (const [locale, localization] of Object.entries(input.localizations ?? {})) {
+    if (localization) closed(localization, localizationContentFields[input.record.kind], `localizations.${locale}`);
+  }
+  if (input.record.kind !== "system" && input.routes !== undefined) {
+    issues.push({ recordId: id, path: "routes", message: `unknown ${input.record.kind} record field` });
   }
   return issues;
 }
 
+export type AddValidationIssue = (field: string, message: string, evidence?: boolean, always?: boolean) => void;
+
 export function validateRecordQuality(id: string, input: RecordQualityInput): RecordValidationResult {
-  const issues: RecordValidationIssue[] = validateSystemStructure(id, input);
+  const issues = validateRecordStructure(id, input);
   const sourceIssues: RecordValidationIssue[] = [];
-  const warnings: string[] = [];
   const rich = input.record.recordDepth === "rich";
   const sources = input.record.sources ?? {};
-  const refs = collectSourceIds(input.record.properties);
   const add = (field: string, message: string, evidence = false, always = false) => {
     const issue = { recordId: id, path: field, message };
     if (evidence) sourceIssues.push(issue);
@@ -475,220 +431,40 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
   };
   const date = (value: unknown) => text(value) && /^\d{4}(-\d{2})?(-\d{2})?$/.test(value) &&
     !Number.isNaN(Date.parse(value)) && new Date(value).toISOString().startsWith(value);
-  const citation = (value: unknown, field: string) => {
-    if (!text(value)) add(field, "a source ID is required", true);
-    else refs.add(value);
-  };
   const citedProfile = (value: unknown, field: string) => {
     const ids = object(value).sourceRefs;
     if (!Array.isArray(ids) || ids.length === 0 || ids.some(ref => !text(ref))) {
       add(`${field}.sourceRefs`, "profile source references are required", true);
     }
   };
+  const warnings = input.record.kind === "system" ? validateSystemResearch(id, input, add) : [];
   const p = object(input.record.properties);
-  if (input.record.kind !== "country" && input.record.countryCode != null) {
-    issues.push({ recordId: id, path: "record.countryCode", message: "countryCode identifies country nodes only; organization and system country affiliations must use evidenced relationships" });
-  }
-  for (const key of ["role", "disciplineFamily", "geographicScope"]) {
-    if (hasOwn(p, key)) issues.push({ recordId: id, path: `record.properties.${key}`, message: "field removed" });
-  }
-  if (p.disciplines !== undefined && (!Array.isArray(p.disciplines) || p.disciplines.some(value => !isDiscipline(value)) || new Set(p.disciplines).size !== p.disciplines.length)) {
-    issues.push({ recordId: id, path: "record.properties.disciplines", message: "must be an array of unique approved discipline IDs; new disciplines require human approval in the authoring chat and an update to the shared vocabulary" });
-  }
-  const data = object(p.data);
-  const descriptors = array(data.descriptors);
-  const access = array(p.access);
-  const gallery = array(p.gallery);
+  const describedSourceRefs = input.record.kind === "organization" ? collectSourceIds(p) : new Set<string>();
   const metrics = array(p.metrics);
-  const accessError = (field: string, message: string, evidence = false) => add(field, message, evidence, true);
   const metricError = (field: string, message: string, evidence = false) => add(field, message, evidence, true);
-  for (const [field, value] of [["access", p.access], ["gallery", p.gallery], ["data.descriptors", data.descriptors]] as const) {
-    if (value != null && (!Array.isArray(value) || value.some(item => !isRecord(item)))) add(`record.properties.${field}`, "must be an array of objects");
-  }
-  if (p.access !== undefined && (!Array.isArray(p.access) || p.access.some(item => !isRecord(item)))) accessError("record.properties.access", "must be an array of access objects");
-  if (p.metrics !== undefined && (!Array.isArray(p.metrics) || p.metrics.some(item => !isRecord(item)))) metricError("record.properties.metrics", "must be an array of metric objects");
-  if (hasOwn(p, "usage")) metricError("record.properties.usage", "field removed; use metrics");
-  for (const key of ["recordCount", "storageSize"]) {
-    if (hasOwn(data, key)) metricError(`record.properties.data.${key}`, "field removed; use metrics");
-  }
-  if (input.record.kind !== "system" && metrics.length) metricError("record.properties.metrics", "metrics belong on system records");
-  const metricIds = new Set<string>();
   metrics.forEach((item, i) => {
     const field = `record.properties.metrics[${i}]`;
-    for (const key of Object.keys(item)) {
-      if (!["id", "key", "value", "observedAt", "period", "source"].includes(key)) metricError(`${field}.${key}`, "unknown metric field; labels and units come from the shared vocabulary");
-    }
-    if (!text(item.id) || metricIds.has(item.id)) metricError(`${field}.id`, "metric IDs must be present and unique");
-    else metricIds.add(item.id);
-    if (!isSystemMetricKey(item.key)) metricError(`${field}.key`, "must be an approved metric key; new metrics require explicit human approval and a vocabulary/translation release");
     if (typeof item.value !== "number" || !Number.isFinite(item.value) || item.value < 0 || item.value > Number.MAX_SAFE_INTEGER) metricError(`${field}.value`, "a finite non-negative value within the safe numeric range is required");
     if (item.observedAt !== null && !date(item.observedAt)) metricError(`${field}.observedAt`, "use YYYY, YYYY-MM, YYYY-MM-DD, or null when the observation date is unknown", true);
-    if (item.period != null && !metricPeriods.some(period => period === item.period)) metricError(`${field}.period`, "must be day, month, year, cumulative, or null");
-    if (item.period != null && isSystemMetricKey(item.key) && metricDefinitions[item.key].group === "data") metricError(`${field}.period`, "data metrics describe holdings or size; reporting periods apply to usage metrics");
     if (!text(item.source)) metricError(`${field}.source`, "a source ID is required", true);
-    else refs.add(item.source);
   });
-  const asset = (value: unknown, field: string) => {
-    if (text(value) && value.startsWith("/gallery/")) {
-      const root = fileURLToPath(new URL("../../client/public/gallery/", import.meta.url));
-      const target = path.resolve(root, value.slice("/gallery/".length));
-      if (!target.startsWith(root) || !fs.existsSync(target)) add(field, "gallery asset must exist under client/public/gallery", false, true);
-    } else if (!httpUrl(value)) add(field, "a usable HTTP(S) URL or local gallery asset is required", false, true);
-  };
-
-  if (rich && !httpUrl(input.record.url)) add("record.url", "a canonical HTTP(S) URL is required");
-  if (input.record.kind === "system" && input.record.url != null && !httpUrl(input.record.url)) add("record.url", "a canonical HTTP(S) URL is required", false, true);
-  if (input.record.kind === "system") {
-    if (!descriptors.some(item => item.category === "format")) add("record.properties.data.descriptors", "at least one format descriptor is required");
-    if (!access.some(item => item.type === "read")) add("record.properties.access", "at least one actual read access path is required");
-    if (!input.edges?.some(edge => edge.kind === "operates" && edge.targetNodeId === id)) add("edges", "an incoming operates relationship is required");
-  }
-  const assignedDataTypes = new Set<unknown>();
-  const assignedDataFormats = new Set<unknown>();
-  const assignedDataStandards = new Set<unknown>();
-  descriptors.forEach((item, i) => {
-    if (item.category === "type") {
-      if (!isDataType(item.label) || assignedDataTypes.has(item.label)) {
-        issues.push({ recordId: id, path: `record.properties.data.descriptors[${i}].label`, message: "must be a unique approved data type ID; additions require human approval in the authoring chat and an update to the shared vocabulary" });
-      }
-      assignedDataTypes.add(item.label);
-    }
-    if (item.category === "format") {
-      if (!isDataFormat(item.label) || assignedDataFormats.has(item.label)) {
-        issues.push({ recordId: id, path: `record.properties.data.descriptors[${i}].label`, message: "must be a unique approved data format ID; additions require human approval in the authoring chat and an update to the shared vocabulary" });
-      }
-      assignedDataFormats.add(item.label);
-    }
-    if (item.category === "standard") {
-      const field = `record.properties.data.descriptors[${i}]`;
-      if (!isDataStandard(item.label) || assignedDataStandards.has(item.label)) {
-        issues.push({ recordId: id, path: `${field}.label`, message: "must be a unique approved data standard ID; additions require human approval in the authoring chat and an update to the shared vocabulary" });
-      }
-      assignedDataStandards.add(item.label);
-      if (input.record.kind !== "system") issues.push({ recordId: id, path: field, message: "data standards belong on system records" });
-      if (!text(item.source) || !hasOwn(sources, item.source)) issues.push({ recordId: id, path: `${field}.source`, message: "a standard requires a source ID resolving to a source on this system" });
-      for (const locale of supportedLocales) {
-        const translated = array(object(object(input.localizations?.[locale]?.details).data).descriptors).find(row => row.id === item.id);
-        if (!text(translated?.description)) issues.push({ recordId: id, path: `localizations.${locale}.details.data.descriptors.${item.id}.description`, message: "a standard requires a localized description of its documented scope" });
-      }
-    }
-    requireText(item.label, `record.properties.data.descriptors[${i}].label`);
-    if (!["type", "format", "standard"].includes(String(item.category))) add(`record.properties.data.descriptors[${i}].category`, "invalid descriptor category");
-    citation(item.source, `record.properties.data.descriptors[${i}].source`);
-  });
-  const accessIds = new Set(access.map(item => item.id));
-  if (accessIds.size !== access.length || access.some(item => !text(item.id))) accessError("record.properties.access", "access IDs must be present and unique");
-  access.forEach((item, i) => {
-    const field = `record.properties.access[${i}]`;
-    if (item.type !== "read" && item.type !== "write") accessError(`${field}.type`, "use read or write; submit and partner_sync are retired");
-    if (input.record.kind !== "system") accessError(field, "access belongs on system records");
-    for (const key of Object.keys(item)) {
-      if (!["id", "type", "methods", "url", "requirements", "cost", "sourceRefs"].includes(key)) accessError(`${field}.${key}`, "unknown access field; use methods, requirements, cost and sourceRefs");
-    }
-    const methodGuard = item.type === "write" ? isWriteAccessMethod : isReadAccessMethod;
-    if (!Array.isArray(item.methods) || !item.methods.length || item.methods.some(method => !methodGuard(method)) || new Set(item.methods).size !== item.methods.length) accessError(`${field}.methods`, "use a nonempty array of unique approved methods for this direction; additions require human approval and a vocabulary/translation release");
-    if (!isAccessUrl(item.url)) accessError(`${field}.url`, "a usable HTTP(S), FTP(S), SFTP, rsync, S3 or GS address without embedded credentials is required");
-    if (item.requirements !== null && (!Array.isArray(item.requirements) || item.requirements.some(value => !accessRequirements.some(requirement => requirement === value)) || new Set(item.requirements).size !== item.requirements.length)) accessError(`${field}.requirements`, "use unique approved requirements, [] for verified absence, or null when unknown");
-    if (!accessCosts.some(cost => cost === item.cost)) accessError(`${field}.cost`, "use free, paid, mixed or unknown");
-    if (!Array.isArray(item.sourceRefs) || !item.sourceRefs.length || item.sourceRefs.some(ref => !text(ref) || !hasOwn(sources, ref)) || new Set(item.sourceRefs).size !== item.sourceRefs.length) accessError(`${field}.sourceRefs`, "nonempty unique source IDs resolving against this system are required", true);
-  });
-  for (const locale of supportedLocales) {
-    const localizedAccess = object(input.localizations?.[locale]?.details).access;
-    if (localizedAccess !== undefined && (!Array.isArray(localizedAccess) || localizedAccess.some(row => !isRecord(row)))) accessError(`localizations.${locale}.details.access`, "must be an array of localized access objects");
-    const rows = array(localizedAccess);
-    for (const item of access) {
-      const field = `localizations.${locale}.details.access.${item.id}`;
-      const matches = rows.filter(row => row.id === item.id);
-      if (matches.length !== 1) accessError(field, "each access ID requires exactly one localized entry in all six languages");
-      const translated = matches[0] ?? {};
-      for (const key of Object.keys(translated)) if (!["id", "label", "description"].includes(key)) accessError(`${field}.${key}`, "localized access contains only id, label and description; consolidate instructions and caveats into description");
-      for (const key of ["label", "description"]) if (!text(translated[key])) accessError(`${field}.${key}`, "nonempty localized access guidance is required");
-    }
-    if (rows.some(row => !accessIds.has(row.id))) accessError(`localizations.${locale}.details.access`, "localized access IDs must resolve to neutral entries");
-  }
-  gallery.forEach((item, i) => {
-    const field = `record.properties.gallery[${i}]`;
-    if (!["image", "embed"].includes(String(item.type))) add(`${field}.type`, "invalid gallery type");
-    asset(item.url, `${field}.url`);
-    if (item.type === "image" || item.thumbnailUrl != null) asset(item.thumbnailUrl, `${field}.thumbnailUrl`);
-    citation(item.source, `${field}.source`);
-  });
+  if (rich && recordContentFields[input.record.kind].some(field => field === "url") && !httpUrl(input.record.url)) add("record.url", "a canonical HTTP(S) URL is required");
+  if (recordContentFields[input.record.kind].some(field => field === "url") && input.record.url != null && !httpUrl(input.record.url)) add("record.url", "a canonical HTTP(S) URL is required", false, true);
   const locales = rich ? supportedLocales : Object.keys(input.localizations ?? {}) as SupportedLocale[];
   for (const locale of locales) {
     const l = input.localizations?.[locale];
     const field = `localizations.${locale}`;
     if (!l) { add(field, "a complete localization is required"); continue; }
     requireText(l.title, `${field}.title`);
-    if (input.record.kind === "system") {
-      requireText(l.summary, `${field}.summary`);
-      requireText(l.description, `${field}.description`);
-    }
+    requireText(l.summary, `${field}.summary`);
+    if (localizationContentFields[input.record.kind].some(key => key === "description")) requireText(l.description, `${field}.description`);
     if (l.translatedFromLocale === locale || (l.translatedFromLocale && !input.localizations?.[l.translatedFromLocale])) add(`${field}.translatedFromLocale`, "must refer to a different existing localization");
     const details = object(l.details);
-    for (const key of ["role", "disciplineFamily", "geographicScope", "disciplines"]) {
-      if (hasOwn(details, key)) issues.push({ recordId: id, path: `${field}.details.${key}`, message: "field removed or misplaced; disciplines belong in record.properties.disciplines" });
-    }
-    collectSourceIds(details, refs);
     citedProfile(details.profile, `${field}.details.profile`);
-    const localizedData = object(details.data);
-    const sections: [string, Record<string, unknown>[], unknown, string[]][] = [
-      ["data.descriptors", descriptors, localizedData.descriptors, ["label", "description"]],
-      ["access", access, details.access, ["label", "description"]],
-      ["gallery", gallery, details.gallery, ["title", "caption"]],
-      ["metrics", metrics, details.metrics, ["description"]],
-    ];
-    for (const [section, neutral, localized, fields] of sections) {
-      const rows = array(localized);
-      const ids = new Set(neutral.map(item => item.id));
-      if (ids.size !== neutral.length || neutral.some(item => !text(item.id))) add(`record.properties.${section}`, "item IDs must be present and unique", false, true);
-      if ((rich && rows.length !== neutral.length) || new Set(rows.map(item => item.id)).size !== rows.length || rows.some(item => !ids.has(item.id))) add(`${field}.details.${section}`, rich ? "localized item IDs must exactly match neutral item IDs" : "localized item IDs must be unique and resolve to neutral items", false, true);
-      for (const item of neutral) {
-        const translated = rows.find(row => row.id === item.id) ?? {};
-        for (const key of fields) {
-          if (section === "data.descriptors" && key === "label") {
-            if (translated.label != null) issues.push({ recordId: id, path: `${field}.details.${section}.${item.id}.label`, message: `data ${item.category} labels come from the shared vocabulary; use description for record-specific detail` });
-          } else requireText(translated[key], `${field}.details.${section}.${item.id}.${key}`);
-        }
-      }
-    }
-    if (hasOwn(details, "usage")) metricError(`${field}.details.usage`, "field removed; use metrics");
-    for (const key of ["recordCount", "storageSize"]) {
-      if (hasOwn(localizedData, key)) metricError(`${field}.details.data.${key}`, "field removed; use metrics");
-    }
-    const localizedMetrics = array(details.metrics);
-    if (details.metrics !== undefined && (!Array.isArray(details.metrics) || details.metrics.some(item => !isRecord(item)))) metricError(`${field}.details.metrics`, "must be an array of localized metric objects");
-    if (localizedMetrics.length !== metrics.length || new Set(localizedMetrics.map(item => item.id)).size !== localizedMetrics.length || localizedMetrics.some(item => !text(item.id) || !metricIds.has(item.id))) metricError(`${field}.details.metrics`, "localized metric IDs must exactly match neutral metric IDs");
-    localizedMetrics.forEach((item, i) => {
-      for (const key of Object.keys(item)) if (!["id", "description"].includes(key)) metricError(`${field}.details.metrics[${i}].${key}`, "localized metrics contain only id and description; labels and units come from the shared vocabulary");
-      if (item.description !== null && typeof item.description !== "string") metricError(`${field}.details.metrics[${i}].description`, "must be text or null");
-    });
-    for (const key of Object.keys(object(details.researchGaps))) {
-      if (!["data", "usage", "standards", "access"].includes(key)) metricError(`${field}.details.researchGaps.${key}`, "use data, usage, standards, or access for research gaps");
-    }
-    if (input.record.kind === "system") {
-      for (const [key, present] of [["data", metrics.some(item => isSystemMetricKey(item.key) && metricDefinitions[item.key].group === "data")], ["usage", metrics.some(item => isSystemMetricKey(item.key) && metricDefinitions[item.key].group === "usage")], ["standards", descriptors.some(item => item.category === "standard")]] as const) {
-        if (!present && !text(object(details.researchGaps)[key])) add(`${field}.details.researchGaps.${key}`, "document the research gap when this information is unavailable");
-      }
-    }
   }
   for (const edge of input.edges ?? []) {
     if (!isEdgeKind(edge.kind)) issues.push({ recordId: id, path: `edges.${edge.id}.kind`, message: "unknown or retired relationship type" });
     if (collectSourceIds(edge.properties).size === 0) add(`edges.${edge.id}.properties.sourceRefs`, "relationship evidence is required", true);
-  }
-  for (const route of input.routes ?? []) {
-    collectSourceIds(route.properties, refs);
-    if (collectSourceIds(route.properties).size === 0) add(`routes.${route.id}.properties.sourceRefs`, "route evidence is required", true);
-    if (!["active", "planned", "deprecated", "blocked"].includes(route.status)) add(`routes.${route.id}.status`, "invalid route status");
-    if (route.status === "active") {
-      requireText(route.target, `routes.${route.id}.target`);
-      if (!route.capabilities?.length) add(`routes.${route.id}.capabilities`, "active routes require capabilities");
-      requireText(route.contractRef, `routes.${route.id}.contractRef`);
-    }
-    if (route.contractRef && !httpUrl(route.contractRef)) {
-      const root = fileURLToPath(new URL("../../documentation/contracts/", import.meta.url));
-      const target = path.resolve(root, route.contractRef.replace(/^documentation\/contracts\//, ""));
-      if (!route.contractRef.startsWith("documentation/contracts/") || !target.startsWith(root) || !fs.existsSync(target)) add(`routes.${route.id}.contractRef`, "local contracts must resolve under documentation/contracts");
-    }
   }
   let referencedSources = 0;
   let resolvedSources = 0;
@@ -706,6 +482,10 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
         const issue = { recordId: id, path: `${field}.${source.id}.title.${locale}`, message: "source title is required for this localization" };
         issues.push(issue); sourceIssues.push(issue);
       }
+      if (field === "record.sources" && describedSourceRefs.has(source.id) && !text(source.description?.[locale])) {
+        const issue = { recordId: id, path: `${field}.${source.id}.description.${locale}`, message: "a localized source description is required for organization facts" };
+        issues.push(issue); sourceIssues.push(issue);
+      }
     }
     for (const ref of collectSourceIds(content)) {
       referencedSources++;
@@ -718,11 +498,6 @@ export function validateRecordQuality(id: string, input: RecordQualityInput): Re
   };
   validateSources(sources, [input.record.properties, input.localizations, input.routes], "record.sources");
   for (const edge of input.edges ?? []) validateSources(edge.sources ?? {}, edge.properties, `edges.${edge.id}.sources`);
-  if (rich && input.record.kind === "system") {
-    if (!gallery.length) warnings.push("No gallery: acceptable when no useful, accessible capture is available.");
-    if (!input.routes?.length) warnings.push("No approved machine route is recorded.");
-    if (Object.values(input.localizations ?? {}).some(l => Object.keys(l?.details?.researchGaps ?? {}).length)) warnings.push("Documented research gaps remain; omitted values have not been invented.");
-  }
   return {
     valid: issues.length === 0, recordId: id, issues, warnings,
     sourceCompleteness: {
@@ -783,8 +558,7 @@ export function toRecordDetailDto(
     record: {
       id: node.id,
       kind: node.kind,
-      countryCode: node.countryCode,
-      url: node.url,
+      ...(node.kind === "country" ? { countryCode: node.countryCode } : { url: node.url }),
       recordDepth: node.recordDepth,
       ...(includeSet.has("sources") ? { sources: node.sources } : {}),
       ...(scope === "private" ? { properties: node.properties } : {}),
@@ -795,19 +569,25 @@ export function toRecordDetailDto(
       ? { localizations: mapLocalizations(node.localizations, scope, includeSet.has("reviewHistory")) }
       : {}),
     ...(includeSet.has("edges") ? { edges: aggregate.edges.map(mapEdgeDto) } : {}),
-    ...(includeSet.has("routes")
+    ...(includeSet.has("routes") && "routes" in aggregate
       ? { routes: aggregate.routes.map((route) => mapRouteDto(route, scope)) }
       : {}),
-  };
+  } as RecordDetailDto;
 }
 
 export function recordContent(aggregate: RecordAggregate): RecordQualityInput {
+  const node = aggregate.node;
   return {
-    id: aggregate.node.id,
-    record: aggregate.node,
-    localizations: aggregate.node.localizations,
+    id: node.id,
+    record: {
+      kind: node.kind, recordDepth: node.recordDepth, properties: node.properties, sources: node.sources,
+      ...(node.kind === "country" ? { countryCode: node.countryCode } : { url: node.url }),
+    },
+    localizations: Object.fromEntries(Object.entries(node.localizations).map(([locale, localization]) =>
+      [locale, Object.fromEntries(Object.entries(localization).filter(([key]) =>
+        (localizationContentFields[node.kind] as readonly string[]).includes(key)))])),
     edges: aggregate.edges,
-    routes: aggregate.routes,
+    ...("routes" in aggregate ? { routes: aggregate.routes } : {}),
   };
 }
 
@@ -844,8 +624,7 @@ export function toRecordSummaryDto(
   return {
     id: node.id,
     kind: node.kind,
-    countryCode: node.countryCode,
-    url: node.url,
+    ...(node.kind === "country" ? { countryCode: node.countryCode } : { url: node.url }),
     recordDepth: node.recordDepth,
     title: localization.title,
     summary: localization.summary,
@@ -859,7 +638,7 @@ export function toRecordSummaryDto(
     recordUpdatedAt,
     ...(aggregate.score !== undefined ? { score: aggregate.score, matchedLocale: aggregate.matchedLocale } : {}),
     ...(include.includes("matchReasons") ? { matchReasons: aggregate.matchReasons } : {}),
-  };
+  } as RecordSummaryDto;
 }
 
 export function buildRecordUpdatedAt(aggregate: RecordAggregate): string {
@@ -869,7 +648,7 @@ export function buildRecordUpdatedAt(aggregate: RecordAggregate): string {
       .map((localization) => localization?.updatedAt)
       .filter((value): value is string => Boolean(value)),
     ...aggregate.edges.map((edge) => edge.updatedAt),
-    ...aggregate.routes.map((route) => route.updatedAt),
+    ...("routes" in aggregate ? aggregate.routes.map((route) => route.updatedAt) : []),
   ].sort().at(-1) ?? aggregate.node.updatedAt;
 }
 
@@ -904,7 +683,7 @@ function mapLocalizationDto(
     locale: localization.locale,
     title: localization.title,
     summary: localization.summary,
-    description: localization.description,
+    ...("description" in localization ? { description: localization.description } : {}),
     details: localization.details,
     translatedFromLocale: localization.translatedFromLocale,
     contentUpdatedAt: localization.contentUpdatedAt,
@@ -964,12 +743,13 @@ function mapEdgeDto(edge: GraphEdge): GraphEdge {
 
 function readRecordNeutralContentInput(input: unknown, path: string): RecordNeutralContentInput {
   const body = readObject(input, path);
-  assertAllowedFields(body, new Set(["kind", "countryCode", "url", "recordDepth", "properties", "sources"]), path);
+  const kind = readRequiredEnum(body.kind, isNodeKind, `${path}.kind`);
+  assertAllowedFields(body, new Set(recordContentFields[kind]), path);
 
   return {
-    kind: readRequiredEnum(body.kind, isNodeKind, `${path}.kind`),
-    countryCode: hasOwn(body, "countryCode") ? readNullableCountryCode(body.countryCode, `${path}.countryCode`) : undefined,
-    url: hasOwn(body, "url") ? readNullableString(body.url, `${path}.url`) : undefined,
+    kind,
+    ...(hasOwn(body, "countryCode") ? { countryCode: readNullableCountryCode(body.countryCode, `${path}.countryCode`) } : {}),
+    ...(hasOwn(body, "url") ? { url: readNullableString(body.url, `${path}.url`) } : {}),
     recordDepth: hasOwn(body, "recordDepth")
       ? readRequiredEnum(body.recordDepth, isRecordDepth, `${path}.recordDepth`)
       : undefined,
@@ -1041,9 +821,7 @@ function readLocalizationContentInput(input: unknown, path: string): Localizatio
   return {
     title: readRequiredString(body.title, `${path}.title`),
     summary: hasOwn(body, "summary") ? readNullableString(body.summary, `${path}.summary`) : undefined,
-    description: hasOwn(body, "description")
-      ? readNullableString(body.description, `${path}.description`)
-      : undefined,
+    ...(hasOwn(body, "description") ? { description: readNullableString(body.description, `${path}.description`) } : {}),
     details: hasOwn(body, "details")
       ? readJsonObject(body.details, `${path}.details`) as Partial<NodeLocalizationDetails>
       : undefined,
@@ -1108,7 +886,7 @@ function readEdgePatchSection(input: unknown, recordId: string, path: string): N
   };
 }
 
-function readRoutePatchSection(input: unknown, recordId: string, path: string): NonNullable<RecordPatchInput["routes"]> {
+function readRoutePatchSection(input: unknown, recordId: string, path: string): NonNullable<RecordPatchInput<"system">["routes"]> {
   const body = readObject(input, path);
   assertAllowedFields(body, new Set(["upsert", "delete"]), path);
   return {
@@ -1150,7 +928,7 @@ function readSourceCollection(input: unknown, path: string): SourceCollection {
   for (const [key, value] of Object.entries(collection)) {
     const field = `${path}.${key}`;
     const source = readObject(value, field);
-    assertAllowedFields(source, new Set(["id", "url", "title", "accessedAt"]), field);
+    assertAllowedFields(source, new Set(["id", "url", "title", "description", "accessedAt"]), field);
     if (readRequiredId(source.id, `${field}.id`) !== key || source.id !== key) throw new ApiRequestError(400, `${field}.id must match its object key`);
     const url = readRequiredString(source.url, `${field}.url`);
     try {
@@ -1165,6 +943,14 @@ function readSourceCollection(input: unknown, path: string): SourceCollection {
     for (const [locale, text] of Object.entries(title)) {
       if (!isSupportedLocale(locale)) throw new ApiRequestError(400, `${field}.title: unsupported locale ${locale}`);
       readRequiredString(text, `${field}.title.${locale}`);
+    }
+    if (hasOwn(source, "description")) {
+      const description = readObject(source.description, `${field}.description`);
+      if (!Object.keys(description).length) throw new ApiRequestError(400, `${field}.description requires at least one translation`);
+      for (const [locale, text] of Object.entries(description)) {
+        if (!isSupportedLocale(locale)) throw new ApiRequestError(400, `${field}.description: unsupported locale ${locale}`);
+        readRequiredString(text, `${field}.description.${locale}`);
+      }
     }
   }
   return collection as SourceCollection;

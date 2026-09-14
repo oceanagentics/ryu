@@ -10,11 +10,11 @@ import type {
   GraphEdgeKind,
   GraphNode,
   GraphNodeKind,
-  NodeLocalization,
-  LocalizationReview,
+  LocalizationByKind,
+  LocalizationDetailsByKind,
+  LocalizationMetadata,
+  NodeByKind,
   ReviewSnapshot,
-  NodeLocalizationDetails,
-  NodeProperties,
   RecordDepth,
   ReviewState,
   RyuRoute,
@@ -79,14 +79,15 @@ export interface RecordSearchQuery {
   cursor?: RecordSearchCursor;
 }
 
-export interface RecordAggregate {
-  node: GraphNode;
-  edges: GraphEdge[];
-  routes: RyuRoute[];
-  matchReasons: SearchMatchReason[];
-  score?: number;
-  matchedLocale?: SupportedLocale | null;
-}
+export type RecordAggregate<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: {
+    node: GraphNode<Kind>;
+    edges: GraphEdge[];
+    matchReasons: SearchMatchReason[];
+    score?: number;
+    matchedLocale?: SupportedLocale | null;
+  } & (Kind extends "system" ? { routes: RyuRoute[] } : {});
+}[K];
 
 export interface RecordListResult {
   records: RecordAggregate[];
@@ -95,24 +96,15 @@ export interface RecordListResult {
   matchingIds?: string[];
 }
 
-export interface RecordNeutralDto {
-  sources?: SourceCollection;
-  id: string;
-  kind: GraphNodeKind;
-  countryCode: string | null;
-  url: string | null;
-  recordDepth: RecordDepth;
-  properties?: NodeProperties;
-  createdAt: string;
-  updatedAt: string;
-}
+type NeutralContent<K extends GraphNodeKind> = Pick<NodeByKind[K], "kind" | "recordDepth" | "properties" | "sources">
+  & Pick<NodeByKind[K], Extract<"url" | "countryCode", keyof NodeByKind[K]>>;
 
-export interface RecordSummaryDto {
-  id: string;
-  kind: GraphNodeKind;
-  countryCode: string | null;
-  url: string | null;
-  recordDepth: RecordDepth;
+export type RecordNeutralDto<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: Omit<NeutralContent<Kind>, "sources" | "properties"> & Partial<Pick<NeutralContent<Kind>, "sources" | "properties">>
+    & Pick<GraphNode<Kind>, "id" | "createdAt" | "updatedAt">;
+}[K];
+
+interface RecordSummaryMetadata {
   title: string;
   summary: string | null;
   availableLocales: SupportedLocale[];
@@ -128,24 +120,18 @@ export interface RecordSummaryDto {
   matchedLocale?: SupportedLocale | null;
 }
 
-export interface PublicRecordLocalizationDto {
-  locale: SupportedLocale;
-  title: string;
-  summary: string | null;
-  description: string | null;
-  details: NodeLocalizationDetails;
-  translatedFromLocale: SupportedLocale | null;
-  contentUpdatedAt: string;
-  review: Pick<ReviewSnapshot, "state" | "date"> & { history?: Pick<ReviewSnapshot, "state" | "date">[] };
-  createdAt: string;
-  updatedAt: string;
-}
+export type RecordSummaryDto<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: RecordSummaryMetadata & Pick<GraphNode<Kind>, "id" | "kind" | "recordDepth">
+    & Pick<GraphNode<Kind>, Extract<"countryCode" | "url", keyof GraphNode<Kind>>>;
+}[K];
 
-export interface AdminRecordLocalizationDto extends PublicRecordLocalizationDto {
-  review: LocalizationReview;
-}
-
-export type PrivateRecordLocalizationDto = NodeLocalization;
+export type PublicRecordLocalizationDto<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: Omit<LocalizationByKind[Kind], "review"> & {
+    review: Pick<ReviewSnapshot, "state" | "date"> & { history?: Pick<ReviewSnapshot, "state" | "date">[] };
+  };
+}[K];
+export type AdminRecordLocalizationDto<K extends GraphNodeKind = GraphNodeKind> = LocalizationByKind[K];
+export type PrivateRecordLocalizationDto<K extends GraphNodeKind = GraphNodeKind> = LocalizationByKind[K];
 
 export interface PublicRouteDto {
   id: string;
@@ -168,20 +154,21 @@ export interface AdminRouteDto extends PublicRouteDto {
 
 export type PrivateRouteDto = RyuRoute;
 
-export type RecordLocalizationDto =
-  | PublicRecordLocalizationDto
-  | AdminRecordLocalizationDto
-  | PrivateRecordLocalizationDto;
+export type RecordLocalizationDto<K extends GraphNodeKind = GraphNodeKind> =
+  | PublicRecordLocalizationDto<K>
+  | AdminRecordLocalizationDto<K>
+  | PrivateRecordLocalizationDto<K>;
 
 export type RecordRouteDto = PublicRouteDto | AdminRouteDto | PrivateRouteDto;
 
-export interface RecordDetailDto extends RecordSummaryDto {
-  sourceCompleteness?: RecordSourceCompleteness;
-  record: RecordNeutralDto;
-  localizations?: Partial<Record<SupportedLocale, RecordLocalizationDto>>;
-  edges?: GraphEdge[];
-  routes?: RecordRouteDto[];
-}
+export type RecordDetailDto<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: RecordSummaryDto<Kind> & {
+    sourceCompleteness?: RecordSourceCompleteness;
+    record: RecordNeutralDto<Kind>;
+    localizations?: Partial<Record<SupportedLocale, RecordLocalizationDto<Kind>>>;
+    edges?: GraphEdge[];
+  } & (Kind extends "system" ? { routes?: RecordRouteDto[] } : {});
+}[K];
 
 export interface RecordListDto {
   records: RecordSummaryDto[];
@@ -190,22 +177,16 @@ export interface RecordListDto {
   matchingIds?: string[];
 }
 
-export interface LocalizationContentInput {
-  title: string;
-  summary?: string | null;
-  description?: string | null;
-  details?: Partial<NodeLocalizationDetails>;
-  translatedFromLocale?: SupportedLocale | null;
-}
+export type LocalizationContentInput<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: Pick<LocalizationByKind[Kind], "title"> & Partial<Omit<LocalizationByKind[Kind], keyof LocalizationMetadata | "title" | "details">> & {
+    details?: Partial<LocalizationDetailsByKind[Kind]>;
+    translatedFromLocale?: SupportedLocale | null;
+  };
+}[K];
 
-export interface RecordNeutralContentInput {
-  sources?: SourceCollection;
-  kind: GraphNodeKind;
-  countryCode?: string | null;
-  url?: string | null;
-  recordDepth?: RecordDepth;
-  properties?: NodeProperties;
-}
+export type RecordNeutralContentInput<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: Pick<NeutralContent<Kind>, "kind"> & Partial<Omit<NeutralContent<Kind>, "kind">>;
+}[K];
 
 export interface RecordEdgeInput {
   sources?: SourceCollection;
@@ -232,46 +213,36 @@ export interface RecordRouteInput {
   properties?: Record<string, unknown>;
 }
 
-export interface RecordAggregateContentInput {
-  id?: string;
-  record: RecordNeutralContentInput;
-  localizations?: Partial<Record<SupportedLocale, LocalizationContentInput>>;
-  edges?: RecordEdgeInput[];
-  routes?: RecordRouteInput[];
-  incomplete?: boolean;
-}
+export type RecordAggregateContentInput<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: {
+    id?: string;
+    record: RecordNeutralContentInput<Kind>;
+    localizations?: Partial<Record<SupportedLocale, LocalizationContentInput<Kind>>>;
+    edges?: RecordEdgeInput[];
+    incomplete?: boolean;
+  } & (Kind extends "system" ? { routes?: RecordRouteInput[] } : {});
+}[K];
 
-export interface RecordNeutralPatchInput {
-  sourcesReplace?: SourceCollection;
-  kind?: GraphNodeKind;
-  countryCode?: string | null;
-  url?: string | null;
-  recordDepth?: RecordDepth;
-  propertiesReplace?: NodeProperties;
-}
-
-export type LocalizationPatchInput =
-  | ({
-      mode: "patch";
-    } & Partial<Omit<LocalizationContentInput, "details">> & {
-      detailsReplace?: Partial<NodeLocalizationDetails>;
-    })
-  | ({
-      mode: "replace";
-    } & LocalizationContentInput);
-
-export interface RecordPatchInput {
-  record?: RecordNeutralPatchInput;
-  localizations?: Partial<Record<SupportedLocale, LocalizationPatchInput>>;
-  edges?: {
-    upsert?: RecordEdgeInput[];
-    delete?: string[];
+export type RecordNeutralPatchInput<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: Partial<Omit<RecordNeutralContentInput<Kind>, "sources" | "properties">> & {
+    sourcesReplace?: SourceCollection;
+    propertiesReplace?: NodeByKind[Kind]["properties"];
   };
-  routes?: {
-    upsert?: RecordRouteInput[];
-    delete?: string[];
-  };
-}
+}[K];
+
+export type LocalizationPatchInput<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]:
+    | ({ mode: "patch" } & Partial<Omit<LocalizationContentInput<Kind>, "details">> & { detailsReplace?: Partial<LocalizationDetailsByKind[Kind]> })
+    | ({ mode: "replace" } & LocalizationContentInput<Kind>);
+}[K];
+
+export type RecordPatchInput<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: {
+    record?: RecordNeutralPatchInput<Kind>;
+    localizations?: Partial<Record<SupportedLocale, LocalizationPatchInput<Kind>>>;
+    edges?: { upsert?: RecordEdgeInput[]; delete?: string[] };
+  } & (Kind extends "system" ? { routes?: { upsert?: RecordRouteInput[]; delete?: string[] } } : {});
+}[K];
 
 export interface RecordReviewInput {
   locale: SupportedLocale;

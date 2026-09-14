@@ -8,7 +8,6 @@ import type {
   GraphBootstrapPayload,
   GraphEdge,
   GraphNode,
-  NodeLocalization,
   NodeLocalizationReviewInput,
   RyuPortalRoute,
   RyuRoute,
@@ -40,12 +39,12 @@ import {
   isReviewState,
   mapEdge,
   mapNode,
+  mapNodeContent,
   mapNodeLocalization,
   mapPortalRoute,
   mapRyuRoute,
   mapSavedView,
   normalizeString,
-  readStringArray,
   stringifyJson,
   systemSearchScore,
   uniqueStrings,
@@ -60,7 +59,6 @@ import {
   buildDeleteImpactHash,
   encodeRecordCursor,
   validateBulkRecordPayload,
-  recordContent,
   type RecordQualityInput,
   validateRecordQuality,
 } from "./recordContracts";
@@ -87,7 +85,7 @@ function timestampText(value: unknown): string {
 
 function mapPostgresNode(
   row: Record<string, unknown>,
-  localizations: NodeLocalization[] = [],
+  localizations: ReturnType<typeof mapNodeLocalization>[] = [],
   requestedLocale: SupportedLocale = defaultLocale,
 ): GraphNode {
   return mapNode(
@@ -102,7 +100,7 @@ function mapPostgresNode(
   );
 }
 
-function mapPostgresNodeLocalization(row: Record<string, unknown>): NodeLocalization {
+function mapPostgresNodeLocalization(row: Record<string, unknown>) {
   return mapNodeLocalization({
     ...(row as RawNodeLocalization),
     details_json: jsonText(row.details_json),
@@ -157,7 +155,7 @@ export class PostgresGraphRepository implements GraphRepository {
       this.query("SELECT id, source_node_id, target_node_id, kind, note, properties_json, sources, created_at, updated_at FROM edges ORDER BY id"),
       this.query("SELECT * FROM ryu_routes ORDER BY node_id, priority, id"),
     ]);
-    const localizationsByNodeId = new Map<string, NodeLocalization[]>();
+    const localizationsByNodeId = new Map<string, ReturnType<typeof mapNodeLocalization>[]>();
     for (const row of localizationRows) {
       const localization = mapPostgresNodeLocalization(row);
       const nodeId = String(row.node_id);
@@ -286,8 +284,8 @@ export class PostgresGraphRepository implements GraphRepository {
         [
           id,
           input.record.kind,
-          input.record.countryCode ?? null,
-          input.record.url ?? null,
+          input.record.kind === "country" ? input.record.countryCode ?? null : null,
+          input.record.kind === "country" ? null : input.record.url ?? null,
           input.record.recordDepth ?? "stub",
           stringifyJson(input.record.properties ?? {}),
           JSON.stringify(prepared.candidate.record.sources),
@@ -300,7 +298,7 @@ export class PostgresGraphRepository implements GraphRepository {
         }
       }
       await this.upsertEdges(client, prepared.edgeUpserts);
-      await this.upsertRoutes(client, id, input.routes ?? []);
+      await this.upsertRoutes(client, id, ("routes" in input ? input.routes ?? [] : []));
       await this.invalidateContentReviews(client, prepared.invalidations);
       return null;
     });
@@ -320,7 +318,6 @@ export class PostgresGraphRepository implements GraphRepository {
       if (input.record) {
         await this.patchNeutralRecord(client, id, input.record);
       }
-
 
       for (const [locale, patch] of Object.entries(input.localizations ?? {})) {
         if (!patch) {
@@ -348,8 +345,8 @@ export class PostgresGraphRepository implements GraphRepository {
         }
       }
 
-      await this.upsertRoutes(client, id, input.routes?.upsert ?? []);
-      for (const routeId of input.routes?.delete ?? []) {
+      await this.upsertRoutes(client, id, ("routes" in input ? input.routes?.upsert ?? [] : []));
+      for (const routeId of ("routes" in input ? input.routes?.delete ?? [] : [])) {
         const result = await client.query(
           "DELETE FROM ryu_routes WHERE id = $1 AND node_id = $2",
           [routeId, id],
@@ -500,12 +497,14 @@ export class PostgresGraphRepository implements GraphRepository {
       .map(mapPostgresSavedView);
   }
 
+  private getRecordAggregatesByIds(ids: string[], requestedLocale: SupportedLocale, client: Pool | PoolClient, preserveContent: true): Promise<RecordQualityInput[]>;
+  private getRecordAggregatesByIds(ids: string[], requestedLocale: SupportedLocale, client?: Pool | PoolClient): Promise<RecordAggregate[]>;
   private async getRecordAggregatesByIds(
     ids: string[],
     requestedLocale: SupportedLocale,
     client: Pool | PoolClient = this.pool,
     preserveContent = false,
-  ): Promise<RecordAggregate[]> {
+  ): Promise<RecordAggregate[] | RecordQualityInput[]> {
     if (ids.length === 0) {
       return [];
     }
@@ -532,27 +531,36 @@ export class PostgresGraphRepository implements GraphRepository {
         [ids],
       ),
     ]);
-    const localizationsByNodeId = new Map<string, NodeLocalization[]>();
+    const localizationsByNodeId = new Map<string, ReturnType<typeof mapNodeLocalization>[]>();
     for (const row of localizationRows) {
       const nodeId = String(row.node_id);
       // Display defaults must not hide malformed or unknown stored fields from
       // aggregate validation. Database JSON is inspected before accepting edits.
       localizationsByNodeId.set(nodeId, [
         ...(localizationsByNodeId.get(nodeId) ?? []),
-        { ...mapPostgresNodeLocalization(row), ...(preserveContent ? { details: row.details_json as NodeLocalization["details"] } : {}) },
+        mapPostgresNodeLocalization(row),
       ]);
     }
+
+    const edges = edgeRows.map(mapPostgresEdge);
+    const routes = routeRows.map(mapPostgresRoute);
+    if (preserveContent) return nodeRows.map(row => {
+      const content = mapNodeContent({ ...row as RawNode, properties_json: jsonText(row.properties_json) },
+        localizationsByNodeId.get(String(row.id)) ?? []);
+      const ownedRoutes = routes.filter(route => route.nodeId === content.id);
+      return { ...content,
+        edges: edges.filter(edge => edge.sourceNodeId === content.id || edge.targetNodeId === content.id),
+        ...(content.record.kind === "system" || ownedRoutes.length ? { routes: ownedRoutes } : {}),
+      };
+    });
 
     const nodesById = new Map(
       nodeRows.map((row) => [
         String(row.id),
-        { ...mapPostgresNode(row, localizationsByNodeId.get(String(row.id)) ?? [], requestedLocale),
-          ...(preserveContent ? { properties: row.properties_json as GraphNode["properties"] } : {}) },
+        mapPostgresNode(row, localizationsByNodeId.get(String(row.id)) ?? [], requestedLocale),
       ]),
     );
-    const edges = edgeRows.map(mapPostgresEdge);
-    const routes = routeRows.map(mapPostgresRoute);
-    return ids.flatMap((id) => {
+    return ids.flatMap<RecordAggregate>((id) => {
       const node = nodesById.get(id);
       if (!node) {
         return [];
@@ -560,12 +568,12 @@ export class PostgresGraphRepository implements GraphRepository {
 
       const recordEdges = edges.filter((edge) => edge.sourceNodeId === id || edge.targetNodeId === id);
       const recordRoutes = routes.filter((route) => route.nodeId === id);
-      return [{
-        node,
-        edges: recordEdges,
-        routes: recordRoutes,
-        matchReasons: [],
-      }];
+      if (node.kind !== "system" && recordRoutes.length) throw new Error(`invalid stored ${node.kind} ${id}: routes is not part of its contract`);
+      switch (node.kind) {
+        case "system": return [{ node, edges: recordEdges, routes: recordRoutes, matchReasons: [] }];
+        case "country": return [{ node, edges: recordEdges, matchReasons: [] }];
+        case "organization": return [{ node, edges: recordEdges, matchReasons: [] }];
+      }
     });
   }
 
@@ -620,15 +628,16 @@ export class PostgresGraphRepository implements GraphRepository {
     input: RecordAggregateContentInput | RecordPatchInput,
     patch: boolean,
   ) {
-    const [existing] = await this.getRecordAggregatesByIds([id], defaultLocale, client, true);
-    const before = existing ? recordContent(existing) : undefined;
+    const [before] = await this.getRecordAggregatesByIds([id], defaultLocale, client, true);
     const full = input as RecordAggregateContentInput;
     const changes = input as RecordPatchInput;
+    const routeChanges = "routes" in changes ? changes.routes : undefined;
+    const fullRoutes = "routes" in full ? full.routes : undefined;
     const candidate: RecordQualityInput = {
       id,
       record: patch ? { ...before!.record } : {
-        kind: full.record.kind, countryCode: full.record.countryCode ?? null,
-        url: full.record.url ?? null,
+        kind: full.record.kind,
+        ...(full.record.kind === "country" ? { countryCode: full.record.countryCode ?? null } : { url: full.record.url ?? null }),
         sources: full.record.sources ?? before?.record.sources ?? {},
         recordDepth: full.record.recordDepth ?? "stub", properties: full.record.properties ?? {},
       },
@@ -644,6 +653,7 @@ export class PostgresGraphRepository implements GraphRepository {
     const mergeRows = <T extends { id: string }>(old: T[], upsert: T[], deleted: string[] = []) =>
       [...new Map([...old.filter(row => !deleted.includes(row.id)), ...upsert].map(row => [row.id, row])).values()];
     const pendingIssues: RecordValidationResult["issues"] = [];
+    if (patch && routeChanges !== undefined && before?.record.kind !== "system") pendingIssues.push({ recordId: id, path: "routes", message: `routes is not a ${before?.record.kind ?? candidate.record.kind} record section` });
     for (const [locale, value] of Object.entries(input.localizations ?? {})) {
       if (!value) continue;
       const key = locale as SupportedLocale;
@@ -655,13 +665,15 @@ export class PostgresGraphRepository implements GraphRepository {
           ...old, ...Object.fromEntries(Object.entries(content).filter(([, field]) => field !== undefined)),
           ...(detailsReplace !== undefined ? { details: detailsReplace } : {}),
         } as LocalizationContentInput;
-      } else candidate.localizations![key] = value as LocalizationContentInput;
+      } else candidate.localizations![key] = Object.fromEntries(Object.entries(value).filter(([field]) => field !== "mode")) as unknown as LocalizationContentInput;
     }
     const edgeUpserts = (patch ? changes.edges?.upsert ?? [] : full.edges ?? []).map(edge => ({
       ...edge, sources: edge.sources ?? before?.edges?.find(old => old.id === edge.id)?.sources ?? {},
     }));
     candidate.edges = mergeRows(candidate.edges!, edgeUpserts, patch ? changes.edges?.delete : []);
-    candidate.routes = mergeRows(candidate.routes!, patch ? changes.routes?.upsert ?? [] : full.routes ?? [], patch ? changes.routes?.delete : []);
+    const candidateRoutes = mergeRows(candidate.routes!, patch ? routeChanges?.upsert ?? [] : fullRoutes ?? [], patch ? routeChanges?.delete : []);
+    if (candidate.record.kind === "system" || candidateRoutes.length || (patch ? routeChanges?.upsert !== undefined : fullRoutes !== undefined)) candidate.routes = candidateRoutes;
+    else delete candidate.routes;
     const validation = validateRecordQuality(id, candidate);
     validation.issues.push(...pendingIssues);
     validation.recordUpdatedAt = await this.getRecordUpdatedAt(id, client);
@@ -683,14 +695,14 @@ export class PostgresGraphRepository implements GraphRepository {
       }
     }
     if (patch) {
-      for (const [section, deleted, rows] of [["edges", changes.edges?.delete, before?.edges], ["routes", changes.routes?.delete, before?.routes]] as const) {
+      for (const [section, deleted, rows] of [["edges", changes.edges?.delete, before?.edges], ["routes", routeChanges?.delete, before?.routes]] as const) {
         for (const deletedId of deleted ?? []) if (!rows?.some(row => row.id === deletedId)) validation.issues.push({ recordId: id, path: `${section}.${deletedId}`, message: "row does not belong to this record" });
       }
     }
     const edgeFields = (rows: RecordEdgeInput[] = []) => rows.map(({ id, kind, sourceNodeId, targetNodeId, note, properties, sources }) => ({ id, kind, sourceNodeId, targetNodeId, note: note ?? null, properties: properties ?? {}, sources: sources ?? {} })).sort((a, b) => a.id.localeCompare(b.id));
     for (const [section, supplied, previous] of [
       ["edges", patch ? changes.edges?.upsert : full.edges, before?.edges],
-      ["ryu_routes", patch ? changes.routes?.upsert : full.routes, before?.routes],
+      ["ryu_routes", patch ? routeChanges?.upsert : fullRoutes, before?.routes],
     ] as const) {
       const newIds = (supplied ?? []).filter(row => !previous?.some(old => old.id === row.id)).map(row => row.id);
       if (newIds.length) {
@@ -701,11 +713,11 @@ export class PostgresGraphRepository implements GraphRepository {
     const invalidations = new Map<string, Set<SupportedLocale>>();
     const invalidate = (nodeId: string, locales: SupportedLocale[]) => invalidations.set(nodeId, new Set([...(invalidations.get(nodeId) ?? []), ...locales]));
     if (before) {
-      const neutralFields = (record: RecordAggregateContentInput["record"]) => [record.kind, record.countryCode, record.url, record.properties, record.sources];
+      const neutralFields = (record: RecordQualityInput["record"]) => [record.kind, record.countryCode, record.url, record.properties, record.sources];
       const routeFields = (rows: RecordRouteInput[] = []) => rows.map(({ id, status, mode, priority, capabilities, target, upstream, format, contractRef, caveat, properties }) => ({ id, status, mode, priority: priority ?? 1, capabilities: capabilities ?? [], target: target ?? null, upstream: upstream ?? null, format: format ?? null, contractRef: contractRef ?? null, caveat: caveat ?? null, properties: properties ?? {} })).sort((a, b) => a.id.localeCompare(b.id));
       if (!isDeepStrictEqual(neutralFields(before.record), neutralFields(candidate.record)) || !isDeepStrictEqual(edgeFields(before.edges), edgeFields(candidate.edges)) || !isDeepStrictEqual(routeFields(before.routes), routeFields(candidate.routes))) invalidate(id, [...supportedLocales]);
       for (const locale of supportedLocales) {
-        const fields = (l: LocalizationContentInput | undefined) => [l?.title, l?.summary ?? null, l?.description ?? null, l?.details ?? {}, l?.translatedFromLocale ?? null];
+        const fields = (l: NonNullable<RecordQualityInput["localizations"]>[SupportedLocale]) => [l?.title, l?.summary ?? null, (l && "description" in l ? l.description ?? null : null), l?.details ?? {}, l?.translatedFromLocale ?? null];
         if (!isDeepStrictEqual(fields(before.localizations?.[locale]), fields(candidate.localizations?.[locale]))) {
           const affected = new Set<SupportedLocale>([locale]);
           for (const changed of affected) for (const target of supportedLocales) {
@@ -723,13 +735,14 @@ export class PostgresGraphRepository implements GraphRepository {
       await client.query("SELECT id FROM nodes WHERE id = ANY($1::text[]) ORDER BY id FOR UPDATE", [[...relatedIds]]);
       const related = await this.getRecordAggregatesByIds([...relatedIds], defaultLocale, client, true);
       for (const record of related) {
-        invalidate(record.node.id, [...supportedLocales]);
-        if (record.node.id === id) continue;
-        const content = recordContent(record);
+        const relatedId = record.id!;
+        invalidate(relatedId, [...supportedLocales]);
+        if (relatedId === id) continue;
+        const content = record;
         const changedEdgeIds = new Set(changedEdges.map(edge => edge.id));
         content.edges = mergeRows((content.edges ?? []).filter(edge => !changedEdgeIds.has(edge.id)),
-          (candidate.edges ?? []).filter(edge => edge.sourceNodeId === record.node.id || edge.targetNodeId === record.node.id));
-        validation.issues.push(...validateRecordQuality(record.node.id, content).issues);
+          (candidate.edges ?? []).filter(edge => edge.sourceNodeId === relatedId || edge.targetNodeId === relatedId));
+        validation.issues.push(...validateRecordQuality(relatedId, content).issues);
       }
     }
     validation.valid = validation.issues.length === 0;
@@ -836,10 +849,10 @@ export class PostgresGraphRepository implements GraphRepository {
     if (input.kind !== undefined) {
       addField("kind", input.kind);
     }
-    if (input.countryCode !== undefined) {
+    if ("countryCode" in input && input.countryCode !== undefined) {
       addField("country_code", input.countryCode);
     }
-    if (input.url !== undefined) {
+    if ("url" in input && input.url !== undefined) {
       addField("url", input.url);
     }
     if (input.recordDepth !== undefined) {
@@ -896,7 +909,7 @@ export class PostgresGraphRepository implements GraphRepository {
         locale,
         input.title,
         input.summary ?? null,
-        input.description ?? null,
+        "description" in input ? input.description ?? null : null,
         stringifyJson(input.details ?? {}),
         input.translatedFromLocale ?? null,
       ],
@@ -922,7 +935,7 @@ export class PostgresGraphRepository implements GraphRepository {
     if (input.summary !== undefined) {
       addField("summary", input.summary);
     }
-    if (input.description !== undefined) {
+    if ("description" in input && input.description !== undefined) {
       addField("description", input.description);
     }
     if ("detailsReplace" in input && input.detailsReplace !== undefined) {
@@ -1086,21 +1099,16 @@ export class PostgresGraphRepository implements GraphRepository {
             localization.requestedLocale,
           ),
           summary: localization.summary,
-          description: localization.description,
+          description: localization.description ?? null,
           requestedLocale: localization.requestedLocale,
           displayLocale: localization.displayLocale,
           isLocaleFallback: localization.isLocaleFallback,
-          url: node.url,
+          url: node.url ?? null,
           domains: uniqueStrings([
-            ...readStringArray(node.properties, "domains"),
-            ...readStringArray(node.properties, "families"),
             ...node.properties.disciplines ?? [],
           ]),
-          geographies: uniqueStrings([
-            ...readStringArray(node.properties, "geographies"),
-          ]),
+          geographies: [],
           capabilities: uniqueStrings([
-            ...readStringArray(node.properties, "capabilities"),
             ...routeCapabilities,
             ...descriptorLabels,
             ...accessValues,
@@ -1108,10 +1116,7 @@ export class PostgresGraphRepository implements GraphRepository {
           ]),
           routes,
           sources: node.sources,
-          caveats: uniqueStrings([
-            ...readStringArray(details, "caveats"),
-            ...readStringArray(node.properties, "caveats"),
-          ]),
+          caveats: uniqueStrings(routes.flatMap(route => route.caveats)),
           recordDepth: node.recordDepth,
           reviewState: localization.review?.state ?? null,
           updatedAt: node.updatedAt,
@@ -1189,7 +1194,7 @@ export class PostgresGraphRepository implements GraphRepository {
     id: string,
     locale: SupportedLocale,
     client: Pool | PoolClient = this.pool,
-  ): Promise<NodeLocalization> {
+  ): Promise<ReturnType<typeof mapNodeLocalization>> {
     const result = await client.query(
       "SELECT * FROM node_localizations WHERE node_id = $1 AND locale = $2",
       [id, locale],

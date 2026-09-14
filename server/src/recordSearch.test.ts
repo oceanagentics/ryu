@@ -10,16 +10,16 @@ import { buildSystemRecords, getSystemFilterOptions } from "../../shared/searchP
 import { readRecordSearchQuery } from "./recordContracts";
 import { searchRecords } from "./recordSearch";
 
-function node(id: string, kind: GraphNodeKind = "system", title = id): GraphNode {
+function node<K extends GraphNodeKind = "system">(id: string, kind: K = "system" as K, title = id): GraphNode<K> {
   return {
-    id, kind, countryCode: null, url: null, recordDepth: "stub",
+    id, kind, ...(kind === "country" ? { countryCode: null } : { url: null }), recordDepth: "stub",
     createdAt: "2026-09-07", updatedAt: "2026-09-07", properties: {}, sources: {}, availableLocales: ["en"], requestedLocale: "en", displayLocale: "en", isLocaleFallback: false,
-    localizations: { en: { locale: "en", title, summary: null, description: null,
-      details: emptyLocalizationDetails(), translatedFromLocale: null, contentUpdatedAt: "2026-09-07",
+    localizations: { en: { locale: "en", title, summary: null, ...(kind === "country" ? {} : { description: null }),
+      details: { ...emptyLocalizationDetails(), ...(kind === "system" ? { data: { descriptors: [] } } : {}) }, translatedFromLocale: null, contentUpdatedAt: "2026-09-07",
       review: { state: "agent_researched", note: null, reviewer: null, date: null },
       createdAt: "2026-09-07", updatedAt: "2026-09-07",
     } },
-  };
+  } as GraphNode<K>;
 }
 
 function search(nodes: GraphNode[], input: Record<string, unknown>, routes: RyuRoute[] = []) {
@@ -31,7 +31,7 @@ test("metric display and search share typed labels, units and reporting periods 
   record.properties.metrics = [{ id: "sessions", key: "session_count", value: 1200, observedAt: "2026-08", period: "month", source: "stats" }];
   for (const locale of supportedLocales) {
     record.localizations[locale] = { ...structuredClone(record.localizations.en!), locale,
-      details: { ...emptyLocalizationDetails(), metrics: [{ id: "sessions", description: `${locale} measured traffic` }] } };
+      description: null, details: { aliases: [], metrics: [{ id: "sessions", description: `${locale} measured traffic` }] } };
   }
   record.availableLocales = [...supportedLocales];
   for (const locale of supportedLocales) {
@@ -286,4 +286,14 @@ test("route matching respects DTO visibility and route filters", () => {
   assert.equal(search([record], { q: "download", routeStatus: "active", routeCapability: "download" }, [route]).length, 1);
   assert.equal(search([record], { routeStatus: "planned" }, [route]).length, 0);
   assert.equal(search([record], { routeCapability: "upload" }, [route]).length, 0);
+});
+
+test("record search covers all kinds while the systems directory has explicit system scope", () => {
+  const records = [node("state", "country", "Ocean Actor"), node("ministry", "organization", "Ocean Actor"), node("catalogue", "system", "Ocean Actor")];
+  assert.equal(search(records, { q: "Ocean Actor" }).length, 3);
+  for (const kind of ["country", "organization", "system"]) {
+    assert.deepEqual(search(records, { q: "Ocean Actor", kind }).map(result => result.entity.kind), [kind]);
+  }
+  const graph = indexGraph({ nodes: records, edges: [], ryuRoutes: [], savedViews: [] });
+  assert.deepEqual(buildSystemRecords(graph, "en").map(record => record.entity.id), ["catalogue"]);
 });

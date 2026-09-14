@@ -14,7 +14,13 @@ import { dataTypeLabels } from "./vocabularyLabels/dataTypes";
 import { disciplineLabels } from "./vocabularyLabels/disciplines";
 import { edgeKindLabels, nodeKindLabels, relationshipDirectionLabels } from "./vocabularyLabels/graph";
 import { metricKeyLabels, unitLabels, metricPeriodLabels } from "./vocabularyLabels/metrics";
-import { recordDepthLabels, reviewStateLabels } from "./vocabularyLabels/records";
+import { organizationOfficeKindLabels } from "./vocabularyLabels/organizations";
+import {
+  recordDepthLabels,
+  reviewStateLabels,
+  treatyConsentMethodLabels,
+  treatyParticipationStatusLabels,
+} from "./vocabularyLabels/records";
 
 export { localeNativeNames } from "./localeNames";
 
@@ -42,8 +48,11 @@ export const vocabularyLabels = {
   metricKeys: metricKeyLabels,
   metricPeriods: metricPeriodLabels,
   units: unitLabels,
+  organizationOfficeKinds: organizationOfficeKindLabels,
   recordDepths: recordDepthLabels,
   reviewStates: reviewStateLabels,
+  treatyParticipationStatuses: treatyParticipationStatusLabels,
+  treatyConsentMethods: treatyConsentMethodLabels,
 };
 export type VocabularyGroup = keyof typeof vocabularyLabels;
 export type VocabularyValue<Group extends VocabularyGroup> =
@@ -128,5 +137,5 @@ export function formatMetricValue(metric: SourcedMetric, locale: SupportedLocale
   } else {
     value = `${formatNumber(metric.value, locale)} ${vocabularyLabel(locale, "units", unit)}`;
   }
-  return metric.period ? `${value} · ${vocabularyLabel(locale, "metricPeriods", metric.period)}` : value;
+  return "period" in metric && metric.period ? `${value} · ${vocabularyLabel(locale, "metricPeriods", metric.period)}` : value;
 }

@@ -1,4 +1,4 @@
-import type { SupportedLocale, SystemMetricKey, MetricUnit, MetricPeriod } from "../domain";
+import type { SupportedLocale, MetricKey, MetricUnit, MetricPeriod } from "../domain";
 
 export const metricKeyLabels = {
   record_count: {
@@ -31,7 +31,16 @@ export const metricKeyLabels = {
   citation_count: {
     en: "Citations", fr: "Citations", es: "Citas", ar: "الاستشهادات", zh: "引用", ru: "Цитирования",
   },
-} satisfies Record<SystemMetricKey, Record<SupportedLocale, string>>;
+  staff_count: {
+    en: "Staff", fr: "Personnel", es: "Personal", ar: "الموظفون", zh: "员工", ru: "Персонал",
+  },
+  member_organization_count: {
+    en: "Member organizations", fr: "Organisations membres", es: "Organizaciones miembros", ar: "المنظمات الأعضاء", zh: "成员组织", ru: "Организации-участники",
+  },
+  member_country_count: {
+    en: "Member countries", fr: "Pays membres", es: "Países miembros", ar: "الدول الأعضاء", zh: "成员国", ru: "Страны-участницы",
+  },
+} satisfies Record<MetricKey, Record<SupportedLocale, string>>;
 
 export const unitLabels = {
   records: {
@@ -63,6 +72,15 @@ export const unitLabels = {
   },
   citations: {
     en: "citations", fr: "citations", es: "citas", ar: "استشهادات", zh: "次引用", ru: "цитирований",
+  },
+  people: {
+    en: "people", fr: "personnes", es: "personas", ar: "أشخاص", zh: "人", ru: "человек",
+  },
+  organizations: {
+    en: "organizations", fr: "organisations", es: "organizaciones", ar: "منظمات", zh: "个组织", ru: "организаций",
+  },
+  countries: {
+    en: "countries", fr: "pays", es: "países", ar: "دول", zh: "个国家", ru: "стран",
   },
 } satisfies Record<MetricUnit, Record<SupportedLocale, string>>;
 

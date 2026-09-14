@@ -10,7 +10,7 @@ BEGIN
     source := entry.value;
     IF jsonb_typeof(source) IS DISTINCT FROM 'object'
       OR NOT source ?& ARRAY['id','url','title','accessedAt']
-      OR source - ARRAY['id','url','title','accessedAt'] <> '{}'::jsonb
+      OR source - ARRAY['id','url','title','description','accessedAt'] <> '{}'::jsonb
       OR jsonb_typeof(source->'id') IS DISTINCT FROM 'string'
       OR source->>'id' IS DISTINCT FROM entry.key
       OR entry.key !~ '^[a-z0-9][a-z0-9._:-]*$'
@@ -26,6 +26,15 @@ BEGIN
         OR jsonb_typeof(translation.value) IS DISTINCT FROM 'string'
         OR btrim(translation.value #>> '{}') = '' THEN RETURN false; END IF;
     END LOOP;
+    IF source ? 'description' THEN
+      IF jsonb_typeof(source->'description') IS DISTINCT FROM 'object'
+        OR source->'description' = '{}'::jsonb THEN RETURN false; END IF;
+      FOR translation IN SELECT * FROM jsonb_each(source->'description') LOOP
+        IF translation.key NOT IN ('ar','zh','en','fr','ru','es')
+          OR jsonb_typeof(translation.value) IS DISTINCT FROM 'string'
+          OR btrim(translation.value #>> '{}') = '' THEN RETURN false; END IF;
+      END LOOP;
+    END IF;
   END LOOP;
   RETURN true;
 EXCEPTION WHEN invalid_datetime_format OR datetime_field_overflow THEN RETURN false;

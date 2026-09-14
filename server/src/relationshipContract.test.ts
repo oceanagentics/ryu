@@ -67,6 +67,8 @@ test("relationship migration refuses blind renaming, preserves review history, a
   try {
     await db.exec(fs.readFileSync(new URL("../schema/001_create_explorer_schema.sql", import.meta.url), "utf8"));
     await db.exec(`
+      DROP TRIGGER trg_nodes_kind_fields ON nodes;
+      DROP TRIGGER trg_localizations_kind_fields ON node_localizations;
       ALTER TABLE nodes DROP CONSTRAINT nodes_country_identity_check;
       ALTER TABLE edges DROP CONSTRAINT edges_kind_check;
       DROP TRIGGER trg_edges_endpoint_kinds ON edges;

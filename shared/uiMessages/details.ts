@@ -14,6 +14,21 @@ export const detailsMessages = {
   "details.profile": {
     en: "Profile", fr: "Profil", es: "Perfil", ar: "الملف", zh: "档案", ru: "Профиль",
   },
+  "details.organization": {
+    en: "Organization", fr: "Organisation", es: "Organización", ar: "المنظمة", zh: "组织", ru: "Организация",
+  },
+  "details.mission": {
+    en: "Mission", fr: "Mission", es: "Misión", ar: "المهمة", zh: "使命", ru: "Миссия",
+  },
+  "details.established": {
+    en: "Established", fr: "Création", es: "Fundación", ar: "تاريخ التأسيس", zh: "成立时间", ru: "Основана",
+  },
+  "details.organizationScale": {
+    en: "Scale", fr: "Taille", es: "Escala", ar: "الحجم", zh: "规模", ru: "Масштаб",
+  },
+  "details.offices": {
+    en: "Office locations", fr: "Implantations", es: "Ubicaciones de oficinas", ar: "مواقع المكاتب", zh: "办公地点", ru: "Расположение офисов",
+  },
   "details.review": {
     en: "Review", fr: "Révision", es: "Revisión", ar: "المراجعة", zh: "审核", ru: "Проверка",
   },
@@ -66,7 +81,7 @@ export const detailsMessages = {
     ar: "وصول الكتابة / المساهمة", zh: "写入 / 贡献访问", ru: "Доступ для записи / вклада",
   },
   "details.ryu": {
-    en: "Ryu", fr: "Ryu", es: "Ryu", ar: "Ryu", zh: "Ryu", ru: "Ryu",
+    en: "Data access routes", fr: "Voies d’accès aux données", es: "Rutas de acceso a datos", ar: "مسارات الوصول إلى البيانات", zh: "数据访问路径", ru: "Маршруты доступа к данным",
   },
   "details.usage": {
     en: "Usage", fr: "Usage", es: "Uso", ar: "الاستخدام", zh: "使用情况", ru: "Использование",
@@ -113,7 +128,31 @@ export const detailsMessages = {
     ru: "Альтернативные названия",
   },
   "details.country": {
-    en: "Country", fr: "Pays", es: "País", ar: "البلد", zh: "国家", ru: "Страна",
+    en: "Country code", fr: "Code pays", es: "Código de país", ar: "رمز البلد", zh: "国家代码", ru: "Код страны",
+  },
+  "details.treatyParticipation": {
+    en: "Treaty participation", fr: "Participation aux traités", es: "Participación en tratados",
+    ar: "المشاركة في المعاهدات", zh: "条约参与情况", ru: "Участие в договорах",
+  },
+  "details.signatureDate": {
+    en: "Signature date", fr: "Date de signature", es: "Fecha de firma", ar: "تاريخ التوقيع", zh: "签署日期", ru: "Дата подписания",
+  },
+  "details.consentMethod": {
+    en: "Consent method", fr: "Mode de consentement", es: "Método de consentimiento", ar: "طريقة التعبير عن الموافقة",
+    zh: "同意方式", ru: "Способ выражения согласия",
+  },
+  "details.depositDate": {
+    en: "Deposit date", fr: "Date de dépôt", es: "Fecha de depósito", ar: "تاريخ الإيداع", zh: "交存日期", ru: "Дата депонирования",
+  },
+  "details.effectiveDate": {
+    en: "Effective date", fr: "Date d’effet", es: "Fecha de entrada en vigor", ar: "تاريخ النفاذ", zh: "生效日期", ru: "Дата вступления в силу",
+  },
+  "details.focalPoint": {
+    en: "Official focal point", fr: "Point focal officiel", es: "Punto focal oficial", ar: "جهة الاتصال الرسمية",
+    zh: "官方联络点", ru: "Официальный координатор",
+  },
+  "details.officialDirectory": {
+    en: "Official directory", fr: "Répertoire officiel", es: "Directorio oficial", ar: "الدليل الرسمي", zh: "官方名录", ru: "Официальный справочник",
   },
   "details.dataTypes": {
     en: "Data types", fr: "Types de données", es: "Tipos de datos", ar: "أنواع البيانات", zh: "数据类型", ru: "Типы данных",

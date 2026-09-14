@@ -2,6 +2,7 @@ import type { GraphSearchIntent } from "../../../shared/searchPresentation";
 import type {
   GraphBootstrapPayload,
   GraphNode,
+  GraphNodeKind,
   NodeLocalizationReviewInput,
   SupportedLocale,
 } from "../../../shared/domain";
@@ -92,12 +93,12 @@ export function fetchRecord(
   );
 }
 
-export function upsertRecord(
+export function upsertRecord<I extends RecordAggregateContentInput>(
   id: string,
-  input: RecordAggregateContentInput,
+  input: I,
   options: { validateOnly?: boolean; recordUpdatedAt?: string; createOnly?: boolean } = {},
-): Promise<RecordDetailDto | RecordValidationResult> {
-  return request<RecordDetailDto | RecordValidationResult>(
+): Promise<RecordDetailDto<I["record"]["kind"]> | RecordValidationResult> {
+  return request<RecordDetailDto<I["record"]["kind"]> | RecordValidationResult>(
     appPath(`/api/records/${encodeURIComponent(id)}${options.validateOnly ? "?validateOnly=true" : ""}`),
     {
       method: "PUT",
@@ -110,13 +111,13 @@ export function upsertRecord(
   );
 }
 
-export function patchRecord(
-  id: string,
-  input: RecordPatchInput,
+export function patchRecord<K extends GraphNodeKind>(
+  node: { id: string; kind: K },
+  input: RecordPatchInput<NoInfer<K>>,
   options: { validateOnly?: boolean; recordUpdatedAt?: string } = {},
-): Promise<RecordDetailDto | RecordValidationResult> {
-  return request<RecordDetailDto | RecordValidationResult>(
-    appPath(`/api/records/${encodeURIComponent(id)}${options.validateOnly ? "?validateOnly=true" : ""}`),
+): Promise<RecordDetailDto<K> | RecordValidationResult> {
+  return request<RecordDetailDto<K> | RecordValidationResult>(
+    appPath(`/api/records/${encodeURIComponent(node.id)}${options.validateOnly ? "?validateOnly=true" : ""}`),
     {
       method: "PATCH",
       headers: options.recordUpdatedAt
@@ -168,40 +169,16 @@ export function updateRecordReview(
   });
 }
 
-export function updateNodeLocalizationReview(
+export async function updateNodeLocalizationReview(
   id: string,
   locale: SupportedLocale,
   input: NodeLocalizationReviewInput,
 ): Promise<GraphNode> {
-  return updateNodeLocalizationReviewDirect(id, locale, input);
-}
-
-async function updateNodeLocalizationReviewDirect(
-  id: string,
-  locale: SupportedLocale,
-  input: NodeLocalizationReviewInput,
-): Promise<GraphNode> {
-  const params = new URLSearchParams({ include: "localizations,edges,routes" });
-  const current = await fetchRecord(id, params);
-  const updated = await updateRecordReview(id, { locale, ...input }, current.recordUpdatedAt);
-  return recordDetailToGraphNode(updated);
-}
-
-function recordDetailToGraphNode(record: RecordDetailDto): GraphNode {
-  return {
-    id: record.id,
-    kind: record.kind,
-    countryCode: record.countryCode,
-    url: record.url,
-    recordDepth: record.recordDepth,
-    properties: record.record.properties ?? {},
-    sources: record.record.sources ?? {},
-    createdAt: record.record.createdAt,
-    updatedAt: record.record.updatedAt,
-    localizations: (record.localizations as GraphNode["localizations"] | undefined) ?? {},
-    availableLocales: record.availableLocales,
-    requestedLocale: record.requestedLocale,
-    displayLocale: record.displayLocale,
-    isLocaleFallback: record.isLocaleFallback,
-  };
+  const current = await fetchRecord(id);
+  await updateRecordReview(id, { locale, ...input }, current.recordUpdatedAt);
+  // Detail DTOs may omit neutral properties. Refresh the complete typed node
+  // instead of replacing its facts with an empty object after a review edit.
+  const node = (await fetchBootstrap()).nodes.find(node => node.id === id);
+  if (!node) throw new Error(`Record no longer exists: ${id}`);
+  return node;
 }

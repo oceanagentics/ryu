@@ -27,18 +27,24 @@ test("API and database enforce the closed source shape at every record depth", a
   try {
     await db.exec(schema);
     const valid = sources();
+    const described = structuredClone(valid);
+    described.docs.description = Object.fromEntries(supportedLocales.map(locale => [locale, `Context ${locale}`]));
     const bad = [null, [], { docs: null }, { docs: { ...valid.docs, id: "other" } },
       { docs: { ...valid.docs, note: "extra" } }, { docs: { ...valid.docs, url: "relative/path" } },
       { docs: { ...valid.docs, url: "https://" } }, { docs: { ...valid.docs, title: {} } },
       { docs: { ...valid.docs, title: { en: " " } } }, { docs: { ...valid.docs, title: { xx: "Title" } } },
       { docs: { ...valid.docs, title: { en: null } } }, { docs: { ...valid.docs, accessedAt: "2026-02-30" } },
       { docs: { ...valid.docs, accessedAt: "2026-09" } }, { docs: { ...valid.docs, accessedAt: null } },
+      { docs: { ...valid.docs, description: {} } }, { docs: { ...valid.docs, description: { en: " " } } },
+      { docs: { ...valid.docs, description: { xx: "Context" } } }, { docs: { ...valid.docs, description: null } },
       { docs: { id: "docs", url: valid.docs.url, title: valid.docs.title } }];
     for (const collection of bad) {
       assert.throws(() => readRecordPatchInput("a", { record: { sourcesReplace: collection } }), Error, JSON.stringify(collection));
       await assert.rejects(db.query("INSERT INTO nodes(id,kind,sources) VALUES ('invalid','system',$1)", [JSON.stringify(collection)]));
     }
     readRecordPatchInput("a", { record: { sourcesReplace: valid } });
+    readRecordPatchInput("a", { record: { sourcesReplace: described } });
+    await db.query("INSERT INTO nodes(id,kind,sources) VALUES ('described','organization',$1)", [JSON.stringify(described)]);
     await db.query("INSERT INTO nodes(id,kind,sources,properties_json) VALUES ('a','system',$1,$2)", [JSON.stringify(valid), JSON.stringify({
       data: { descriptors: [{ id: "taxonomy", category: "type", label: "taxonomic_records", source: "docs" }] },
     })]);
@@ -56,7 +62,7 @@ test("sources stay with their owner through localization writes, search, edge re
     for (const id of ["a", "b"]) {
       await db.query("INSERT INTO nodes(id,kind,sources) VALUES ($1,'organization',$2)", [id, JSON.stringify(sources(`https://${id}.example.org`))]);
       for (const locale of ["en", "fr"]) await db.query(
-        "INSERT INTO node_localizations(node_id,locale,title,details_json) VALUES ($1,$2,$1,'{\"profile\":{\"sourceRefs\":[\"docs\"]}}')", [id, locale]);
+        "INSERT INTO node_localizations(node_id,locale,title,details_json) VALUES ($1,$2,$1,'{\"profile\":{\"mission\":\"Example mission\",\"sourceRefs\":[\"docs\"]}}')", [id, locale]);
     }
     const read = (id = "a") => repo.getRecord(id, readRecordSearchQuery({}));
     const version = async (id = "a") => buildRecordUpdatedAt(await read(id));
@@ -69,7 +75,9 @@ test("sources stay with their owner through localization writes, search, edge re
     assert.deepEqual(localized.node.sources, before);
     const stale = await version();
     for (const id of ["a", "b"]) await repo.updateNodeLocalizationReview(id, "en", { reviewState: "human_reviewed" }, "reviewer@example.org", { recordUpdatedAt: await version(id) });
-    const changed = structuredClone(before); changed.docs.title.fr = "MarqueurFrançais";
+    const changed = structuredClone(before);
+    changed.docs.title.fr = "MarqueurFrançais";
+    changed.docs.description = { fr: "ContexteInstitutionnelFrançais" };
     await assert.rejects(repo.patchRecord("a", { record: { sourcesReplace: changed } }, { recordUpdatedAt: stale }), /stale/);
     const otherVersion = await version("b");
     const applied = await repo.patchRecord("a", { record: { sourcesReplace: changed } }, { recordUpdatedAt: await version() });
@@ -81,13 +89,15 @@ test("sources stay with their owner through localization writes, search, edge re
     assert.equal((await repo.listRecords(readRecordSearchQuery({ q: "MarqueurFrançais", locale: "fr" }))).records[0].node.id, "a");
     assert.equal((await repo.listRecords(readRecordSearchQuery({ q: "MarqueurFrançais", locale: "en", localeMode: "locale_only" }))).records.length, 0);
     assert.equal((await repo.listRecords(readRecordSearchQuery({ q: "MarqueurFrançais", locale: "en", localeMode: "all_locales" }))).records.length, 1);
+    assert.equal((await repo.listRecords(readRecordSearchQuery({ q: "ContexteInstitutionnelFrançais", locale: "fr" }))).records[0].node.id, "a");
     const missing = structuredClone(changed); delete missing.docs.title.fr;
     const rejected = await repo.patchRecord("a", { record: { sourcesReplace: missing } }, { recordUpdatedAt: await version(), validateOnly: true });
     assert.ok("valid" in rejected && !rejected.valid);
     await assert.rejects(db.query("UPDATE nodes SET sources=$1 WHERE id='a'", [JSON.stringify(missing)]), /missing title/);
     await assert.rejects(db.query("UPDATE nodes SET sources='{}' WHERE id='a'"), /missing source/);
-    await assert.rejects(db.query("UPDATE node_localizations SET details_json='{\"sourceRefs\":[\"missing\"]}' WHERE node_id='a' AND locale='en'"), /missing source/);
-    await assert.rejects(db.query("INSERT INTO ryu_routes(id,node_id,status,mode,properties_json) VALUES ('bad','a','planned','api','{\"sourceRefs\":[\"missing\"]}')"), /missing source/);
+    await assert.rejects(db.query("UPDATE node_localizations SET details_json='{\"profile\":{\"sourceRefs\":[\"missing\"]}}' WHERE node_id='a' AND locale='en'"), /missing source/);
+    await db.query("INSERT INTO nodes(id,kind) VALUES ('route-system','system')");
+    await assert.rejects(db.query("INSERT INTO ryu_routes(id,node_id,status,mode,properties_json) VALUES ('bad','route-system','planned','api','{\"sourceRefs\":[\"missing\"]}')"), /missing source/);
     await db.query("INSERT INTO edges(id,source_node_id,target_node_id,kind,sources,properties_json) VALUES ('ab','a','b','member_of',$1,'{\"sourceRefs\":[\"docs\"]}')", [JSON.stringify(sources("https://edge.example.org"))]);
     for (const id of ["a", "b"]) assert.equal((await read(id)).edges[0].sources.docs.url, "https://edge.example.org");
     const edgeSources = sources("https://updated-edge.example.org");

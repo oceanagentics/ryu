@@ -7,6 +7,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import type {
+  GraphNode,
   GraphBootstrapPayload,
 } from "../../shared/domain";
 import { defaultLocale } from "../../shared/localization";
@@ -110,7 +111,7 @@ export function toPublicBootstrap(payload: GraphBootstrapPayload): GraphBootstra
             : localization,
         ]),
       ) as typeof node.localizations,
-    })),
+    } as GraphNode)),
     ryuRoutes: [],
   };
 }

@@ -76,7 +76,7 @@ const blankRelationshipDraft = (): RelationshipDraft => ({
   properties: [],
 });
 
-function toPropertyDrafts(properties: Record<string, unknown>): PropertyDraft[] {
+function toPropertyDrafts(properties: object): PropertyDraft[] {
   return Object.entries(properties).map(([key, value]) => ({
     key,
     value: typeof value === "string" ? value : JSON.stringify(value),
@@ -118,7 +118,7 @@ function entityToDraft(entity: GraphNode, locale: SupportedLocale): EntityDraft 
   return {
     kind: entity.kind,
     name: nodeTitle(entity, locale),
-    countryCode: entity.countryCode ?? "",
+    countryCode: entity.kind === "country" ? entity.countryCode ?? "" : "",
     properties: toPropertyDrafts(entity.properties ?? {}),
   };
 }

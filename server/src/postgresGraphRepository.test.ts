@@ -199,7 +199,7 @@ test("data types, formats and standards reject invented names, duplicate assignm
         const organization = structuredClone(fixture);
         organization.record.kind = "organization";
         organization.record.recordDepth = recordDepth;
-        assert.ok(validateRecordQuality(organization.id, organization).issues.some(issue => issue.message === "data standards belong on system records"));
+        assert.ok(validateRecordQuality(organization.id, organization).issues.some(issue => issue.path === "record.properties.data"));
       }
     }
   }
@@ -307,9 +307,11 @@ test("subtype removal preserves records and relationships and is safe to rerun",
   try {
     await db.exec(fs.readFileSync(new URL("../schema/001_create_explorer_schema.sql", import.meta.url), "utf8"));
     await db.exec(`
+      DROP TRIGGER trg_nodes_kind_fields ON nodes;
+      DROP TRIGGER trg_localizations_kind_fields ON node_localizations;
       ALTER TABLE nodes ADD COLUMN subtype text;
       INSERT INTO nodes(id,kind,subtype,properties_json) VALUES
-        ('institute','organization','research_institute','{"disciplines":["ecology"]}'),
+        ('institute','organization','research_institute','{}'),
         ('archive','system',NULL,'{}');
       INSERT INTO node_localizations(node_id,locale,title) VALUES ('institute','en','Institute');
       INSERT INTO edges(id,kind,source_node_id,target_node_id) VALUES ('operator','operates','institute','archive');
@@ -500,6 +502,8 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
       assert.ok("node" in applied);
       assert.equal(applied.node.recordDepth, "rich");
       assert.equal("subtype" in applied.node, false);
+      assert.equal(applied.node.kind, "system");
+      assert.equal(fixture.record.kind, "system");
       assert.deepEqual(applied.node.properties.disciplines, fixture.record.properties?.disciplines);
       assert.equal("role" in applied.node.properties, false);
       assert.equal("disciplineFamily" in applied.node.properties, false);
@@ -598,7 +602,9 @@ test("rich record transactions use the real PostgreSQL schema", async t => {
       assert.ok((await read()).node.localizations.en?.summary);
     });
     await t.test("PUT preserves omitted locales and sources while validating the resulting record", async () => {
-      const applied = await repository.upsertRecord("fishbase", { record: fixture.record }, { recordUpdatedAt: await version() });
+      assert.equal(fixture.record.kind, "system");
+      const { sources: _sources, ...record } = fixture.record;
+      const applied = await repository.upsertRecord("fishbase", { record }, { recordUpdatedAt: await version() });
       assert.ok("node" in applied, JSON.stringify(applied));
       assert.equal(applied.node.availableLocales.length, 6);
       assert.equal(Object.keys(applied.node.sources).length, Object.keys(fixture.record.sources!).length);

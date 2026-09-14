@@ -3,7 +3,6 @@
   "record": {
     "kind": "country",
     "countryCode": "CAN",
-    "url": "https://www.canada.ca/en.html",
     "recordDepth": "rich",
     "properties": {
       "treatyParticipation": [
@@ -15,24 +14,13 @@
           "depositDate": null,
           "effectiveDate": null,
           "focalPointUrl": null,
-          "sourceRefs": ["bbnj-status"]
+          "sourceRefs": [
+            "bbnj-status"
+          ]
         }
       ]
     },
     "sources": {
-      "official-government": {
-        "id": "official-government",
-        "url": "https://www.canada.ca/en.html",
-        "title": {
-          "ar": "البوابة الرسمية لحكومة كندا",
-          "zh": "加拿大政府官方网站",
-          "en": "Official website of the Government of Canada",
-          "fr": "Site officiel du gouvernement du Canada",
-          "ru": "Официальный сайт правительства Канады",
-          "es": "Sitio oficial del Gobierno de Canadá"
-        },
-        "accessedAt": "2026-09-14"
-      },
       "bbnj-status": {
         "id": "bbnj-status",
         "url": "https://treaties.un.org/doc/Publication/MTDSG/Volume%20II/Chapter%20XXI/XXI-10.en.xml",
@@ -45,22 +33,40 @@
           "es": "Estado del Acuerdo BBNJ ante el depositario de la ONU"
         },
         "accessedAt": "2026-09-14"
+      },
+      "dfo-mandate": {
+        "id": "dfo-mandate",
+        "url": "https://www.dfo-mpo.gc.ca/about-notre-sujet/mandate-mandat-eng.htm",
+        "title": {
+          "en": "Fisheries and Oceans Canada: mandate and role",
+          "ar": "وزارة مصايد الأسماك والمحيطات الكندية: الولاية والدور",
+          "zh": "加拿大渔业和海洋部：职责与作用",
+          "fr": "Pêches et Océans Canada : mandat et rôle",
+          "ru": "Министерство рыболовства и океанов Канады: мандат и роль",
+          "es": "Pesca y Océanos de Canadá: mandato y función"
+        },
+        "accessedAt": "2026-09-14"
       }
     }
   },
   "localizations": {
     "ar": {
       "title": "كندا",
-      "summary": "يعرض ملف كندا في Ryu سياق الحوكمة البحرية الاتحادية وبعض المشاركات الدولية وحالتها بموجب اتفاق BBNJ.",
-      "description": "تظهر كندا في Ryu من خلال روابط موثقة بمؤسسات بحرية اتحادية وبالمجلس الدولي لاستكشاف البحار. ويسجل وديع الأمم المتحدة توقيع كندا على اتفاق BBNJ في 4 مارس 2024، لكنه لا يسجل إيداع صك لاحق للتصديق أو القبول أو الموافقة حتى 14 سبتمبر 2026. ولذلك تظل كندا دولة موقعة وليست طرفاً، ولا توجد لها جهة اتصال رسمية مخصصة للأطراف.",
+      "summary": "تحمي كندا مصايد الأسماك والنظم البيئية المائية وتديرها عبر وزارة مصايد الأسماك والمحيطات. ويجمع عمل الوزارة بين العلوم البحرية والحفظ والمسوح الهيدروغرافية لدعم الملاحة.",
       "details": {
-        "aliases": ["حكومة كندا"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
+        "aliases": [
+          "حكومة كندا"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "dfo-mandate"
+          ]
+        },
         "treatyParticipation": [
           {
             "id": "bbnj-agreement",
             "title": "اتفاق BBNJ",
-            "description": "وقعت كندا الاتفاق في 4 مارس 2024. ولا يسجل وديع الأمم المتحدة صكاً لاحقاً للتصديق أو القبول أو الموافقة حتى 14 سبتمبر 2026، ولذلك لم يدخل الاتفاق حيز النفاذ بالنسبة إلى كندا.",
+            "description": "حتى 14 سبتمبر 2026، وقعت كندا الاتفاق، لكنها لم تصدق عليه أو تقبله أو توافق عليه.",
             "focalPoint": null
           }
         ]
@@ -69,16 +75,21 @@
     },
     "zh": {
       "title": "加拿大",
-      "summary": "加拿大的Ryu档案记录其联邦海洋治理背景、部分国际参与以及《BBNJ协定》状态。",
-      "description": "在Ryu中，加拿大通过有来源支持的关系连接到联邦海洋机构和国际海洋考察理事会。联合国保存人记录加拿大于2024年3月4日签署《BBNJ协定》，但截至2026年9月14日未记录其随后交存批准、接受或核准文书。因此，加拿大是签署方而非缔约方，也没有仅适用于缔约方的正式联络点记录。",
+      "summary": "加拿大通过渔业和海洋部保护并管理渔业及水生生态系统。该部门的工作涵盖海洋科学、生态保护和支持航行的水文测量。",
       "details": {
-        "aliases": ["加拿大政府"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
+        "aliases": [
+          "加拿大政府"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "dfo-mandate"
+          ]
+        },
         "treatyParticipation": [
           {
             "id": "bbnj-agreement",
             "title": "BBNJ协定",
-            "description": "加拿大于2024年3月4日签署该协定。截至2026年9月14日，联合国保存人未列出加拿大随后交存的批准、接受或核准文书，因此该协定尚未对加拿大生效。",
+            "description": "截至2026年9月14日，加拿大已签署该协定，但尚未批准、接受或核准。",
             "focalPoint": null
           }
         ]
@@ -87,16 +98,21 @@
     },
     "en": {
       "title": "Canada",
-      "summary": "Canada’s Ryu profile records its federal ocean-governance context, selected international participation, and BBNJ Agreement status.",
-      "description": "Canada is represented in Ryu by sourced links to federal marine institutions and the International Council for the Exploration of the Sea. The United Nations depositary records Canada’s signature of the BBNJ Agreement on 4 March 2024 but no subsequent deposit of an instrument of ratification, acceptance, or approval as of 14 September 2026. Canada is therefore a signatory, not a Party, and no Party focal point is recorded.",
+      "summary": "Canada protects and manages fisheries and aquatic ecosystems through Fisheries and Oceans Canada. Its work combines marine science, conservation and hydrographic surveys to support navigation.",
       "details": {
-        "aliases": ["Government of Canada"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
+        "aliases": [
+          "Government of Canada"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "dfo-mandate"
+          ]
+        },
         "treatyParticipation": [
           {
             "id": "bbnj-agreement",
             "title": "BBNJ Agreement",
-            "description": "Canada signed the Agreement on 4 March 2024. The UN depositary lists no subsequent instrument of ratification, acceptance, or approval as of 14 September 2026, so the Agreement is not yet in force for Canada.",
+            "description": "As of 14 September 2026, Canada has signed but has not ratified, accepted or approved the Agreement.",
             "focalPoint": null
           }
         ]
@@ -105,16 +121,21 @@
     },
     "fr": {
       "title": "Canada",
-      "summary": "Le profil Ryu du Canada présente son contexte fédéral de gouvernance des océans, certaines participations internationales et son statut au regard de l’Accord BBNJ.",
-      "description": "Dans Ryu, le Canada est relié, avec des sources, à des institutions marines fédérales et au Conseil international pour l’exploration de la mer. Le dépositaire des Nations Unies enregistre la signature de l’Accord BBNJ par le Canada le 4 mars 2024, mais aucun dépôt ultérieur d’un instrument de ratification, d’acceptation ou d’approbation au 14 septembre 2026. Le Canada est donc signataire, mais pas Partie, et aucun point focal réservé aux Parties n’est enregistré.",
+      "summary": "Le Canada protège et gère les pêches et les écosystèmes aquatiques par Pêches et Océans Canada. Ses activités associent sciences marines, conservation et levés hydrographiques pour la navigation.",
       "details": {
-        "aliases": ["Gouvernement du Canada"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
+        "aliases": [
+          "Gouvernement du Canada"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "dfo-mandate"
+          ]
+        },
         "treatyParticipation": [
           {
             "id": "bbnj-agreement",
             "title": "Accord BBNJ",
-            "description": "Le Canada a signé l’Accord le 4 mars 2024. Au 14 septembre 2026, le dépositaire de l’ONU ne mentionne aucun instrument ultérieur de ratification, d’acceptation ou d’approbation; l’Accord n’est donc pas encore en vigueur pour le Canada.",
+            "description": "Au 14 septembre 2026, le Canada a signé l’Accord, sans l’avoir ratifié, accepté ou approuvé.",
             "focalPoint": null
           }
         ]
@@ -123,16 +144,21 @@
     },
     "ru": {
       "title": "Канада",
-      "summary": "Профиль Канады в Ryu отражает федеральный контекст управления океаном, отдельные формы международного участия и статус по Соглашению BBNJ.",
-      "description": "В Ryu Канада связана подтверждёнными источниками с федеральными морскими учреждениями и Международным советом по исследованию моря. Депозитарий ООН указывает, что Канада подписала Соглашение BBNJ 4 марта 2024 года, но по состоянию на 14 сентября 2026 года не зарегистрировала последующую сдачу на хранение документа о ратификации, принятии или одобрении. Поэтому Канада остаётся подписантом, но не Стороной, и официальный координатор для Сторон не указан.",
+      "summary": "Канада охраняет рыбные ресурсы и водные экосистемы и управляет ими через Министерство рыболовства и океанов. Его работа объединяет морскую науку, охрану природы и гидрографические съёмки для навигации.",
       "details": {
-        "aliases": ["Правительство Канады"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
+        "aliases": [
+          "Правительство Канады"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "dfo-mandate"
+          ]
+        },
         "treatyParticipation": [
           {
             "id": "bbnj-agreement",
             "title": "Соглашение BBNJ",
-            "description": "Канада подписала Соглашение 4 марта 2024 года. По состоянию на 14 сентября 2026 года депозитарий ООН не указывает последующего документа о ратификации, принятии или одобрении, поэтому Соглашение ещё не вступило в силу для Канады.",
+            "description": "По состоянию на 14 сентября 2026 года Канада подписала Соглашение, но не ратифицировала, не приняла и не одобрила его.",
             "focalPoint": null
           }
         ]
@@ -141,16 +167,21 @@
     },
     "es": {
       "title": "Canadá",
-      "summary": "El perfil de Canadá en Ryu documenta su contexto federal de gobernanza oceánica, determinadas participaciones internacionales y su situación respecto del Acuerdo BBNJ.",
-      "description": "En Ryu, Canadá está vinculado mediante fuentes con instituciones marinas federales y con el Consejo Internacional para la Exploración del Mar. El depositario de las Naciones Unidas registra la firma del Acuerdo BBNJ por Canadá el 4 de marzo de 2024, pero no un depósito posterior de un instrumento de ratificación, aceptación o aprobación al 14 de septiembre de 2026. Por tanto, Canadá es signatario, no Parte, y no se registra un punto focal reservado a las Partes.",
+      "summary": "Canadá protege y gestiona la pesca y los ecosistemas acuáticos mediante Pesca y Océanos de Canadá. Su trabajo combina ciencia marina, conservación y levantamientos hidrográficos para la navegación.",
       "details": {
-        "aliases": ["Gobierno de Canadá"],
-        "profile": {"sourceRefs": ["official-government", "bbnj-status"]},
+        "aliases": [
+          "Gobierno de Canadá"
+        ],
+        "profile": {
+          "sourceRefs": [
+            "dfo-mandate"
+          ]
+        },
         "treatyParticipation": [
           {
             "id": "bbnj-agreement",
             "title": "Acuerdo BBNJ",
-            "description": "Canadá firmó el Acuerdo el 4 de marzo de 2024. Al 14 de septiembre de 2026, el depositario de la ONU no registra un instrumento posterior de ratificación, aceptación o aprobación, por lo que el Acuerdo aún no está en vigor para Canadá.",
+            "description": "Al 14 de septiembre de 2026, Canadá ha firmado el Acuerdo, pero no lo ha ratificado, aceptado ni aprobado.",
             "focalPoint": null
           }
         ]

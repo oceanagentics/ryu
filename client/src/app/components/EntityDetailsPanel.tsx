@@ -47,13 +47,18 @@ import {
 } from "../i18n";
 import { operatorNodesForSystem } from "../graph/indexGraph";
 import {
+  countryTreatyParticipation,
   nodeTitle,
+  organizationMetrics,
+  organizationOffices,
   systemMetrics,
   resolveNodeDisplay,
   systemAccessPaths,
   systemDataDescriptors,
   systemGallery,
   type ResolvedSourcedMetric,
+  type ResolvedCountryTreatyParticipation,
+  type ResolvedOrganizationOffice,
   type ResolvedSystemAccessPath,
   type ResolvedSystemDataDescriptor,
   type ResolvedSystemGalleryItem,
@@ -127,10 +132,12 @@ function SourceLink({ source, sources }: { source: SourceRef; sources?: SourceCo
   const locale = useGraphStore((state) => state.locale);
   const nodeSource = useGraphStore((state) => state.selectedEntityId ? state.graph?.nodeById[state.selectedEntityId]?.sources[source] : undefined);
   const fullSource = sources ? sources[source] : nodeSource;
-  const sourceTitle = fullSource?.title[locale] ?? source;
+  const sourceTitle = fullSource?.title[locale] ?? fullSource?.title.en ?? source;
+  const sourceDescription = fullSource?.description?.[locale] ?? fullSource?.description?.en;
   const tooltip = fullSource ? (
     <Flex className="source-record-tooltip" vertical gap={2}>
       <Typography.Text strong>{sourceTitle}</Typography.Text>
+      {sourceDescription ? <Typography.Text>{sourceDescription}</Typography.Text> : null}
       <Typography.Text>{t(locale, "source.id")}: {fullSource.id}</Typography.Text>
       <Typography.Text>{t(locale, "source.accessed")}: {fullSource.accessedAt}</Typography.Text>
       <Typography.Text>{t(locale, "source.url")}: {fullSource.url}</Typography.Text>
@@ -357,15 +364,16 @@ function Gallery({ items }: { items: ResolvedSystemGalleryItem[] }) {
   );
 }
 
-function SystemIntro({
+function EntityIntro({
+  entity,
   operatorNodes,
-  system,
 }: {
+  entity: GraphNode;
   operatorNodes: GraphNode[];
-  system: GraphNode;
 }) {
   const locale = useGraphStore((state) => state.locale);
-  const localization = resolveNodeDisplay(system, locale);
+  const localization = resolveNodeDisplay(entity, locale);
+  const isSystem = entity.kind === "system";
   const operatorNames = operatorNodes.map((operator) => nodeTitle(operator, locale));
 
   return (
@@ -374,11 +382,13 @@ function SystemIntro({
         <Typography.Title className="entity-system-name" level={3}>
           {localization.title}
         </Typography.Title>
-        <Typography.Text className="entity-system-operator">
-          {operatorNames.length > 0
-            ? t(locale, "details.operatedBy", { operator: operatorNames.join(", ") })
-            : t(locale, "details.operatorNotRecorded")}
-        </Typography.Text>
+        {isSystem ? (
+          <Typography.Text className="entity-system-operator">
+            {operatorNames.length > 0
+              ? t(locale, "details.operatedBy", { operator: operatorNames.join(", ") })
+              : t(locale, "details.operatorNotRecorded")}
+          </Typography.Text>
+        ) : null}
         {localization.isLocaleFallback ? (
           <Tag bordered={false}>
             {localization.displayLocale
@@ -388,33 +398,154 @@ function SystemIntro({
               : t(locale, "common.noLocalization")}
           </Tag>
         ) : null}
-        {system.url ? (
+        {entity.kind !== "country" && (entity.url ? (
           <Typography.Link
             className="entity-system-url"
-            href={system.url}
+            href={entity.url}
             target="_blank"
             rel="noreferrer"
           >
-            {system.url}
+            {entity.url}
           </Typography.Link>
         ) : (
           <Typography.Text className="entity-system-url" type="secondary">
             {t(locale, "details.mainUrlNotRecorded")}
           </Typography.Text>
-        )}
+        ))}
       </Flex>
       {localization.summary ? (
         <Typography.Paragraph className="entity-detail-note">
           {localization.summary}
         </Typography.Paragraph>
       ) : null}
-      <Gallery items={systemGallery(system, localization)} />
-      {localization.description ? (
+      {isSystem ? <Gallery items={systemGallery(entity, resolveNodeDisplay(entity, locale))} /> : null}
+      {localization.kind !== "country" && localization.description ? (
         <Typography.Paragraph className="entity-detail-note">
           {localization.description}
         </Typography.Paragraph>
       ) : null}
     </section>
+  );
+}
+
+function treatyDate(value: string, locale: SupportedLocale): string {
+  return new Intl.DateTimeFormat(locale, { dateStyle: "medium", timeZone: "UTC" })
+    .format(new Date(`${value}T00:00:00Z`));
+}
+
+function TreatyParticipationList({ items }: { items: ResolvedCountryTreatyParticipation[] }) {
+  const locale = useGraphStore((state) => state.locale);
+  if (!items.length) return null;
+
+  return (
+    <DetailSection title={t(locale, "details.treatyParticipation")}>
+      <List<ResolvedCountryTreatyParticipation>
+        className="entity-detail-list"
+        dataSource={items}
+        renderItem={(item) => (
+          <List.Item>
+            <Flex vertical gap={6} style={{ width: "100%" }}>
+              <Flex gap={8} align="center" wrap>
+                <Typography.Text strong>{item.title}</Typography.Text>
+                <Tag bordered={false}>{vocabularyLabel(locale, "treatyParticipationStatuses", item.status)}</Tag>
+              </Flex>
+              {item.description ? <Typography.Text>{item.description}</Typography.Text> : null}
+              <div className="entity-detail-grid">
+                {item.signatureDate ? <InlineField label={t(locale, "details.signatureDate")}>{treatyDate(item.signatureDate, locale)}</InlineField> : null}
+                {item.consentMethod ? <InlineField label={t(locale, "details.consentMethod")}>{vocabularyLabel(locale, "treatyConsentMethods", item.consentMethod)}</InlineField> : null}
+                {item.depositDate ? <InlineField label={t(locale, "details.depositDate")}>{treatyDate(item.depositDate, locale)}</InlineField> : null}
+                {item.effectiveDate ? <InlineField label={t(locale, "details.effectiveDate")}>{treatyDate(item.effectiveDate, locale)}</InlineField> : null}
+                {item.focalPoint ? <InlineField label={t(locale, "details.focalPoint")}>{item.focalPoint}</InlineField> : null}
+              </div>
+              {item.focalPointUrl ? (
+                <Typography.Link href={item.focalPointUrl} target="_blank" rel="noreferrer">
+                  {t(locale, "details.officialDirectory")}
+                </Typography.Link>
+              ) : null}
+              <Flex vertical gap={2}>
+                {item.sourceRefs.map(source => <SourceLink key={source} source={source} />)}
+              </Flex>
+            </Flex>
+          </List.Item>
+        )}
+        size="small"
+      />
+    </DetailSection>
+  );
+}
+
+function partialDate(value: string, locale: SupportedLocale): string {
+  if (/^\d{4}$/.test(value)) return value;
+  if (/^\d{4}-\d{2}$/.test(value)) {
+    return new Intl.DateTimeFormat(locale, { month: "long", year: "numeric", timeZone: "UTC" })
+      .format(new Date(`${value}-01T00:00:00Z`));
+  }
+  return treatyDate(value, locale);
+}
+
+function OrganizationProfile({ organization }: { organization: GraphNode<"organization"> }) {
+  const locale = useGraphStore((state) => state.locale);
+  const localization = resolveNodeDisplay(organization, locale);
+  const metrics = organizationMetrics(organization, localization);
+  const offices = organizationOffices(organization, localization);
+  const established = organization.properties.established;
+  const profile = localization.details.profile;
+  const gaps = localization.details.researchGaps;
+
+  return (
+    <>
+      <DetailSection title={t(locale, "details.organization")}>
+        <div className="entity-detail-grid">
+          <InlineField label={t(locale, "details.mission")}>
+            {profile?.mission ? (
+              <Flex vertical gap={2}>
+                <Typography.Text>{profile.mission}</Typography.Text>
+                {profile.sourceRefs.map(source => <SourceLink key={source} source={source} />)}
+              </Flex>
+            ) : <EmptyValue />}
+          </InlineField>
+          <InlineField label={t(locale, "details.established")}>
+            {established ? (
+              <Flex vertical gap={2}>
+                <Typography.Text>{partialDate(established.date, locale)}</Typography.Text>
+                <SourceLink source={established.source} />
+              </Flex>
+            ) : <EmptyValue>{gaps?.established}</EmptyValue>}
+          </InlineField>
+          <InlineField label={t(locale, "details.organizationScale")}>
+            {metrics.length ? (
+              <Flex vertical gap={8}>
+                {metrics.map(metric => (
+                  <Flex key={metric.id} vertical gap={2}>
+                    <Typography.Text className="entity-detail-label">{metric.label}</Typography.Text>
+                    <MetricValue metric={metric} />
+                  </Flex>
+                ))}
+              </Flex>
+            ) : <EmptyValue>{gaps?.scale}</EmptyValue>}
+          </InlineField>
+        </div>
+      </DetailSection>
+      <DetailSection title={t(locale, "details.offices")}>
+        <List<ResolvedOrganizationOffice>
+          className="entity-detail-list"
+          dataSource={offices}
+          locale={{ emptyText: gaps?.officeLocations || t(locale, "common.notRecorded") }}
+          renderItem={(office) => (
+            <List.Item>
+              <Flex vertical gap={2}>
+                <Flex align="center" gap={6} wrap>
+                  <Tag bordered={false}>{vocabularyLabel(locale, "organizationOfficeKinds", office.kind)}</Tag>
+                  <Typography.Text>{office.location}</Typography.Text>
+                </Flex>
+                <SourceLink source={office.source} />
+              </Flex>
+            </List.Item>
+          )}
+          size="small"
+        />
+      </DetailSection>
+    </>
   );
 }
 
@@ -453,7 +584,7 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
     fetchRecord(entity.id, new URLSearchParams({ include: "reviewHistory" }))
       .then((record) => {
         if (active) setReviewHistory(Object.values(record.localizations ?? {}).flatMap(localization =>
-          localization?.review.history?.map(snapshot => ({ ...snapshot, locale: localization.locale })) ?? []));
+          localization?.review.history?.map((snapshot: NonNullable<RecordLocalizationDto["review"]["history"]>[number]) => ({ ...snapshot, locale: localization.locale })) ?? []));
       })
       .catch(() => {
         if (active) setHistoryError(true);
@@ -469,16 +600,13 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
   }, [currentReviewState, entity.id, localization.displayLocale, localization.review?.note]);
 
   const normalizedReviewerNote = reviewerNote.trim() || null;
-  const hasChanges =
-    reviewState !== currentReviewState ||
-    normalizedReviewerNote !== (localization.review?.note ?? null);
   const reviewStateOptions = reviewStates.map((value) => ({
     label: vocabularyLabel(locale, "reviewStates", value),
     value,
   }));
 
   async function saveReview() {
-    if (!hasChanges || !reviewLocale) {
+    if (!reviewLocale) {
       return;
     }
 
@@ -511,6 +639,11 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
               {vocabularyLabel(locale, "reviewStates", localization.review?.state)}
             </Tag>
           ) : <EmptyValue />}
+        </InlineField>
+      ) : null}
+      {!canReviewNodes ? (
+        <InlineField label={t(locale, "details.reviewDate")}>
+          {formatDateTime(localization.review?.date ?? null, locale) ?? <EmptyValue />}
         </InlineField>
       ) : null}
       {canReviewNodes ? <div className="entity-detail-grid">
@@ -551,7 +684,7 @@ function ReviewSection({ entity }: { entity: GraphNode }) {
             <Alert className="entity-review-error" message={error} showIcon type="error" />
           ) : <span />}
           <Button
-            disabled={!hasChanges || !reviewLocale}
+            disabled={!reviewLocale}
             loading={saving}
             size="small"
             type="primary"
@@ -642,8 +775,7 @@ function RawRecordFields({
     nodes: [{
       id: node.id,
       kind: node.kind,
-      country_code: node.countryCode,
-      url: node.url,
+      ...(node.kind === "country" ? { country_code: node.countryCode } : { url: node.url }),
       record_depth: node.recordDepth,
       properties_json: node.properties ?? entity.properties,
       sources: node.sources,
@@ -655,7 +787,7 @@ function RawRecordFields({
       locale: localization.locale,
       title: localization.title,
       summary: localization.summary,
-      description: localization.description,
+      ...(node.kind === "country" ? {} : { description: "description" in localization ? localization.description : null }),
       details_json: localization.details,
       translated_from_locale: localization.translatedFromLocale,
       content_updated_at: localization.contentUpdatedAt,
@@ -663,7 +795,7 @@ function RawRecordFields({
       created_at: localization.createdAt,
       updated_at: localization.updatedAt,
     }] : []),
-    ryu_routes: (record.routes ?? ryuRoutes).map((route) => ({
+    ryu_routes: ("routes" in record ? record.routes ?? ryuRoutes : []).map((route) => ({
       id: route.id,
       node_id: route.nodeId,
       status: route.status,
@@ -810,9 +942,12 @@ export function EntityDetailsPanel({
   const ryuRoutes = system ? graph.ryuRoutesByNodeId[entity.id] ?? [] : [];
   const operatorNodes = system ? operatorNodesForSystem(graph, system.id) : [];
   const isSystem = Boolean(system);
+  const treatyParticipation = entity.kind === "country"
+    ? countryTreatyParticipation(entity, resolveNodeDisplay(entity, locale))
+    : [];
   const userView = (
     <Flex vertical gap={16}>
-      {isSystem && system ? <SystemIntro operatorNodes={operatorNodes} system={system} /> : null}
+      <EntityIntro entity={entity} operatorNodes={operatorNodes} />
 
       <DetailSection title={t(locale, "details.profile")}>
         <div className="entity-detail-grid">
@@ -846,8 +981,17 @@ export function EntityDetailsPanel({
           ) : (
             <>
               {entity.kind === "country" ? (
-                <InlineField label={t(locale, "details.country")}>
-                  {entity.countryCode ?? <EmptyValue />}
+                <>
+                  <InlineField label={t(locale, "details.country")}>
+                    {entity.countryCode ?? <EmptyValue />}
+                  </InlineField>
+                  <InlineField label={t(locale, "details.aliases")}>
+                    {localization.details.aliases.length ? localization.details.aliases.join(", ") : <EmptyValue />}
+                  </InlineField>
+                </>
+              ) : entity.kind === "organization" ? (
+                <InlineField label={t(locale, "details.aliases")}>
+                  {localization.details.aliases.length ? localization.details.aliases.join(", ") : <EmptyValue />}
                 </InlineField>
               ) : null}
             </>
@@ -936,6 +1080,10 @@ export function EntityDetailsPanel({
           ) : null}
         </>
       ) : null}
+
+      {entity.kind === "organization" ? <OrganizationProfile organization={entity} /> : null}
+
+      <TreatyParticipationList items={treatyParticipation} />
 
       <DetailSection title={t(locale, "details.connections")}>
         <List<GraphEdge>

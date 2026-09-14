@@ -1,10 +1,10 @@
-import { readStringArray } from "./graphRepositorySupport";
+
 import { metricDefinitions } from "../../shared/domain";
-import type { GraphNode, ResolvedNodeLocalization, Source, SupportedLocale, SystemDataDescriptorCategory } from "../../shared/domain";
+import type { GraphNode, GraphNodeKind, ResolvedNodeLocalization, Source, SupportedLocale, SystemDataDescriptorCategory } from "../../shared/domain";
 import type { IndexedGraph } from "../../shared/indexGraph";
 import type { RecordSearchQuery } from "../../shared/recordApi";
 import { defaultLocale, supportedLocales } from "../../shared/localization";
-import { nodeTitle, resolveNodeDisplay, systemAccessPaths, systemDataDescriptors, systemGallery, systemMetrics } from "../../shared/recordDisplay";
+import { nodeTitle, organizationMetrics, organizationOffices, resolveNodeDisplay, systemAccessPaths, systemDataDescriptors, systemGallery, systemMetrics } from "../../shared/recordDisplay";
 import { dataDescriptorLabel, vocabularyLabel, t, type UiMessageKey } from "../../shared/i18n";
 import { buildSystemRecords, getRelationships, getConnectedNames, type SearchMatchReason, type SystemSearchRecord } from "../../shared/searchPresentation";
 
@@ -17,15 +17,15 @@ export type EntitySearchResult = {
   reasons: SearchMatchReason[];
 };
 
-type SearchFieldDefinition = {
+type SearchFieldDefinition<K extends GraphNodeKind = GraphNodeKind> = {
   field: string;
   label: UiMessageKey;
   weight: number;
   getValues: (
-    entity: GraphNode,
+    entity: GraphNode<K>,
     graph: IndexedGraph,
     context: SearchContext,
-    localization: ResolvedNodeLocalization,
+    localization: ResolvedNodeLocalization<K>,
   ) => unknown[];
 };
 
@@ -89,7 +89,7 @@ function getCountryValues(
   graph: IndexedGraph,
   locale: SupportedLocale,
 ): string[] {
-  if (!entity.countryCode) {
+  if (entity.kind !== "country" || !entity.countryCode) {
     return [];
   }
 
@@ -111,12 +111,16 @@ function sourceRefs(entity: GraphNode, graph: IndexedGraph): Source[] {
 }
 
 function sourceValues(source: Source, locale: SupportedLocale, mode: RecordSearchQuery["localeMode"]): string[] {
-  return collectText([source.url, mode === "all_locales" ? Object.values(source.title) : source.title[locale]]);
+  return collectText([
+    source.url,
+    mode === "all_locales" ? Object.values(source.title) : source.title[locale],
+    mode === "all_locales" ? Object.values(source.description ?? {}) : source.description?.[locale],
+  ]);
 }
 
 function descriptorValues(
-  system: GraphNode | undefined,
-  localization: ResolvedNodeLocalization,
+  system: GraphNode<"system"> | undefined,
+  localization: ResolvedNodeLocalization<"system">,
   category: SystemDataDescriptorCategory,
   locale: SupportedLocale,
 ): string[] {
@@ -133,9 +137,9 @@ function descriptorValues(
     : [];
 }
 
-function withCommonFields(
-  definitions: SearchFieldDefinition[],
-): SearchFieldDefinition[] {
+function withCommonFields<K extends GraphNodeKind>(
+  definitions: SearchFieldDefinition<K>[],
+): SearchFieldDefinition<K>[] {
   return [
     {
       field: "name",
@@ -177,7 +181,7 @@ function withCommonFields(
     },
     {
       field: "url", label: "search.field.accessDetail", weight: 30,
-      getValues: entity => [entity.url],
+      getValues: entity => entity.kind === "country" ? [] : [entity.url],
     },
     {
       field: "details", label: "search.field.description", weight: 20,
@@ -193,13 +197,44 @@ function withCommonFields(
       field: "description",
       label: "search.field.description",
       weight: 24,
-      getValues: (_entity, _graph, _context, localization) => [localization.description],
+      getValues: (_entity, _graph, _context, localization) => [("description" in localization ? localization.description : null)],
     },
     ...definitions,
   ];
 }
 
-const organizationFieldDefinitions = withCommonFields([
+const organizationFieldDefinitions = withCommonFields<"organization">([
+  {
+    field: "organization.metrics",
+    label: "search.field.metric",
+    weight: 55,
+    getValues: (entity, _graph, context, localization) =>
+      organizationMetrics(entity, localization).flatMap(metric => [
+        metric.key,
+        metric.label,
+        String(metric.value),
+        metricDefinitions[metric.key].unit,
+        vocabularyLabel(context.locale, "units", metricDefinitions[metric.key].unit),
+        metric.observedAt,
+      ]),
+  },
+  {
+    field: "organization.offices",
+    label: "search.field.description",
+    weight: 42,
+    getValues: (entity, _graph, context, localization) =>
+      organizationOffices(entity, localization).flatMap(office => [
+        office.location,
+        office.kind,
+        vocabularyLabel(context.locale, "organizationOfficeKinds", office.kind),
+      ]),
+  },
+  {
+    field: "organization.established",
+    label: "search.field.description",
+    weight: 36,
+    getValues: entity => [entity.properties.established?.date],
+  },
   {
     field: "relationships.connectedNames",
     label: "search.field.connectedNode",
@@ -226,9 +261,9 @@ const organizationFieldDefinitions = withCommonFields([
   },
 ]);
 
-const countryFieldDefinitions = withCommonFields([]);
+const countryFieldDefinitions = withCommonFields<"country">([]);
 
-const systemFieldDefinitions = withCommonFields([
+const systemFieldDefinitions = withCommonFields<"system">([
   {
     field: "operator",
     label: "search.field.operator",
@@ -243,39 +278,38 @@ const systemFieldDefinitions = withCommonFields([
     label: "search.field.discipline",
     weight: 62,
     getValues: (entity, graph, context) => {
-      const values = graph.nodeById[entity.id]?.properties.disciplines ?? [];
+      const values = entity.properties.disciplines ?? [];
       return values.flatMap(value => [value, vocabularyLabel(context.locale, "disciplines", value)]);
     },
   },
-
 
   {
     field: "data.descriptors.type",
     label: "search.field.dataType",
     weight: 74,
     getValues: (entity, graph, context, localization) =>
-      descriptorValues(graph.nodeById[entity.id], localization, "type", context.locale),
+      descriptorValues(entity, localization, "type", context.locale),
   },
   {
     field: "data.descriptors.format",
     label: "search.field.dataFormat",
     weight: 72,
     getValues: (entity, graph, context, localization) =>
-      descriptorValues(graph.nodeById[entity.id], localization, "format", context.locale),
+      descriptorValues(entity, localization, "format", context.locale),
   },
   {
     field: "data.descriptors.standard",
     label: "search.field.dataStandard",
     weight: 68,
     getValues: (entity, graph, context, localization) =>
-      descriptorValues(graph.nodeById[entity.id], localization, "standard", context.locale),
+      descriptorValues(entity, localization, "standard", context.locale),
   },
   {
     field: "data.metrics",
     label: "search.field.metric",
     weight: 55,
     getValues: (entity, graph, context, localization) =>
-      systemMetrics(graph.nodeById[entity.id], localization).flatMap(metric => [
+      systemMetrics(entity, localization).flatMap(metric => [
         metric.key,
         metric.label,
         String(metric.value),
@@ -290,7 +324,7 @@ const systemFieldDefinitions = withCommonFields([
     label: "search.field.accessType",
     weight: 62,
     getValues: (entity, graph, context, localization) => {
-      const system = graph.nodeById[entity.id];
+      const system = entity;
       return systemAccessPaths(system, localization).flatMap((path) => [
         path.type,
         vocabularyLabel(context.locale, "accessTypes", path.type),
@@ -302,7 +336,7 @@ const systemFieldDefinitions = withCommonFields([
     label: "search.field.accessMethod",
     weight: 64,
     getValues: (entity, graph, context, localization) => {
-      const system = graph.nodeById[entity.id];
+      const system = entity;
       return systemAccessPaths(system, localization).flatMap((path) => [
         ...path.methods.flatMap(method => [method, vocabularyLabel(context.locale, "accessMethods", method)]),
         path.label,
@@ -314,7 +348,7 @@ const systemFieldDefinitions = withCommonFields([
     label: "search.field.accessDetail",
     weight: 36,
     getValues: (entity, graph, context, localization) => {
-      const system = graph.nodeById[entity.id];
+      const system = entity;
       return systemAccessPaths(system, localization).flatMap((path) => [
         vocabularyLabel(context.locale, "accessCosts", path.cost),
         ...(path.requirements ?? []).map(value => vocabularyLabel(context.locale, "accessRequirements", value)),
@@ -352,7 +386,7 @@ const systemFieldDefinitions = withCommonFields([
     label: "search.field.gallery",
     weight: 28,
     getValues: (entity, graph, _context, localization) => {
-      const system = graph.nodeById[entity.id];
+      const system = entity;
       return systemGallery(system, localization).flatMap((item) => [
         item.title,
         item.caption,
@@ -381,7 +415,7 @@ const searchFieldDefinitionsByKind = {
   country: countryFieldDefinitions,
   organization: organizationFieldDefinitions,
   system: systemFieldDefinitions,
-} satisfies Record<GraphNode["kind"], SearchFieldDefinition[]>;
+};
 
 function editDistanceWithinOne(left: string, right: string): boolean {
   if (Math.abs(left.length - right.length) > 1) {
@@ -478,8 +512,18 @@ function scoreEntity(
 ): EntitySearchResult | null {
   const bestReasonByToken = new Map<string, SearchMatchReason>();
 
-  for (const definition of searchFieldDefinitionsByKind[entity.kind]) {
-    for (const value of collectText(definition.getValues(entity, graph, context, localization))) {
+  const fieldValues = (() => {
+    switch (entity.kind) {
+      case "country": return localization.kind === "country" ? countryFieldDefinitions.map(definition => ({ definition,
+        values: definition.getValues(entity, graph, context, localization) })) : [];
+      case "organization": return localization.kind === "organization" ? organizationFieldDefinitions.map(definition => ({ definition,
+        values: definition.getValues(entity, graph, context, localization) })) : [];
+      case "system": return localization.kind === "system" ? systemFieldDefinitions.map(definition => ({ definition,
+        values: definition.getValues(entity, graph, context, localization) })) : [];
+    }
+  })();
+  for (const { definition, values } of fieldValues) {
+    for (const value of collectText(values)) {
       for (const token of tokens) {
         const tokenScore = scoreTokenAgainstValue(token, value, context.locale);
         if (tokenScore == null) {
@@ -536,7 +580,7 @@ function matchesAny(values: string[], selected: string[]): boolean {
 }
 
 function matchesFilters(entity: GraphNode, graph: IndexedGraph, query: RecordSearchQuery): boolean {
-  const properties = entity.properties;
+  const properties = entity.kind === "system" ? entity.properties : {};
   const routes = graph.ryuRoutesByNodeId[entity.id] ?? [];
   const localization = resolveNodeDisplay(entity, query.locale);
   const requested = entity.localizations[query.locale];
@@ -551,7 +595,7 @@ function matchesFilters(entity: GraphNode, graph: IndexedGraph, query: RecordSea
     && matchesAny(countryCodes, query.countryCode)
     && matchesAny(properties.disciplines ?? [], query.disciplines)
     && (query.geography.length === 0 || query.geography.some(value =>
-      collectText([entity.countryCode, readStringArray(properties, "geographies")])
+      collectText(countryCodes)
         .some(candidate => normalizeSearchValue(candidate).includes(normalizeSearchValue(value)))))
     && ([["type", query.dataType], ["format", query.dataFormat], ["standard", query.dataStandard]] as const)
       .every(([category, selected]) => matchesAny(

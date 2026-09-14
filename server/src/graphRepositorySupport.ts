@@ -1,3 +1,4 @@
+import { validateRecordStructure } from "./recordContracts";
 import type {
   DataFormat,
   DataStandard,
@@ -7,16 +8,11 @@ import type {
   GraphEdgeKind,
   GraphNode,
   GraphNodeKind,
-  NodeLocalization,
-  NodeLocalizationDetails,
-  NodeProperties,
   RecordDepth,
   ReviewState,
   ReviewSnapshot,
   RyuPortalRoute,
   RyuRoute,
-  RyuSystemOperator,
-  RyuSystemQuery,
   RyuSystemRecord,
   SavedView,
   SourceCollection,
@@ -25,7 +21,6 @@ import type {
 import { dataFormats, dataStandards, dataTypes, disciplines, edgeKinds } from "../../shared/domain";
 import {
   defaultLocale,
-  emptyLocalizationDetails,
   normalizeLocale,
   resolveNodeLocalization,
   supportedLocales,
@@ -96,18 +91,6 @@ const reviewStates = [
   "needs_revision",
 ] as const;
 
-export function emptyNodeProperties(): NodeProperties {
-  return {
-    disciplines: [],
-    gallery: [],
-    data: {
-      descriptors: [],
-    },
-    access: [],
-    metrics: [],
-  };
-}
-
 export function parseJson(value: string | null): JsonValue {
   if (!value) {
     return {};
@@ -142,68 +125,6 @@ export function normalizeString(value: unknown): string | null {
 
 export function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
-}
-
-function normalizeLocalizationDetails(value: unknown): NodeLocalizationDetails {
-  const base = emptyLocalizationDetails();
-  if (!isRecord(value)) {
-    return base;
-  }
-
-  const data = isRecord(value.data) ? value.data : {};
-
-  return {
-    ...value,
-    aliases: Array.isArray(value.aliases) ? value.aliases.filter(isString) : [],
-    gallery: Array.isArray(value.gallery)
-      ? value.gallery as NodeLocalizationDetails["gallery"]
-      : [],
-    data: {
-      descriptors: Array.isArray(data.descriptors)
-        ? data.descriptors as NodeLocalizationDetails["data"]["descriptors"]
-        : [],
-    },
-    access: Array.isArray(value.access)
-      ? value.access as NodeLocalizationDetails["access"]
-      : [],
-    metrics: Array.isArray(value.metrics)
-      ? value.metrics as NodeLocalizationDetails["metrics"]
-      : [],
-  };
-}
-
-export function normalizeNodeProperties(value: unknown): NodeProperties {
-  const base = emptyNodeProperties();
-  if (!isRecord(value)) {
-    return base;
-  }
-
-  const data = isRecord(value.data) ? value.data : {};
-  if (Object.hasOwn(value, "usage") || Object.hasOwn(data, "recordCount") || Object.hasOwn(data, "storageSize")) {
-    throw new Error("Legacy metrics found: apply server/schema/013_system_metrics.sql before starting this version.");
-  }
-  const properties = { ...value };
-  delete properties.operator;
-  delete properties.role;
-  delete properties.disciplineFamily;
-  delete properties.geographicScope;
-
-  return {
-    ...properties,
-    disciplines: Array.isArray(value.disciplines) ? value.disciplines.filter(isDiscipline) : [],
-    gallery: Array.isArray(value.gallery)
-      ? value.gallery as NodeProperties["gallery"]
-      : [],
-    data: {
-      descriptors: Array.isArray(data.descriptors)
-        ? data.descriptors as NonNullable<NodeProperties["data"]>["descriptors"]
-        : [],
-    },
-    access: Array.isArray(value.access)
-      ? value.access as NodeProperties["access"]
-      : [],
-    metrics: Array.isArray(value.metrics) ? value.metrics as NodeProperties["metrics"] : [],
-  };
 }
 
 function isString(value: unknown): value is string {
@@ -247,7 +168,7 @@ function localeSortValue(locale: SupportedLocale): number {
   return index === -1 ? supportedLocales.length : index;
 }
 
-export function mapNodeLocalization(row: RawNodeLocalization): NodeLocalization {
+export function mapNodeLocalization(row: RawNodeLocalization) {
   const locale = normalizeLocale(row.locale);
 
   return {
@@ -255,7 +176,7 @@ export function mapNodeLocalization(row: RawNodeLocalization): NodeLocalization 
     title: row.title,
     summary: row.summary,
     description: row.description,
-    details: normalizeLocalizationDetails(parseJson(row.details_json)),
+    details: parseJson(row.details_json),
     translatedFromLocale: row.translated_from_locale
       ? normalizeLocale(row.translated_from_locale)
       : null,
@@ -266,54 +187,49 @@ export function mapNodeLocalization(row: RawNodeLocalization): NodeLocalization 
   };
 }
 
+// Keep non-null values in inactive SQL columns visible to validation. Null is
+// only the physical representation of a field absent from this node's contract.
+export function mapNodeContent(row: RawNode, localizations: ReturnType<typeof mapNodeLocalization>[]) {
+  return {
+    id: row.id,
+    record: {
+      kind: row.kind, recordDepth: row.record_depth, properties: parseJson(row.properties_json), sources: row.sources,
+      ...(row.kind === "country" || row.country_code !== null ? { countryCode: row.country_code } : {}),
+      ...(row.kind !== "country" || row.url !== null ? { url: row.url } : {}),
+    },
+    localizations: Object.fromEntries(localizations.map(({ locale, title, summary, description, details, translatedFromLocale }) =>
+      [locale, { title, summary, details, translatedFromLocale,
+        ...(row.kind !== "country" || description !== null ? { description } : {}) }])),
+  };
+}
+
 export function mapNode(
   row: RawNode,
-  localizations: NodeLocalization[] = [],
+  localizations: ReturnType<typeof mapNodeLocalization>[] = [],
   requestedLocale: SupportedLocale = defaultLocale,
 ): GraphNode {
   if (!isRecord(row.sources)) throw new Error("nodes.sources is required; apply migration 011_owned_sources.sql before starting");
-  const localizationMap = Object.fromEntries(
-    localizations.map((localization) => [localization.locale, localization]),
-  ) as GraphNode["localizations"];
-  const availableLocales = localizations
-    .map((localization) => localization.locale)
+  const content = mapNodeContent(row, localizations);
+  const issues = validateRecordStructure(row.id, { ...content, record: { ...content.record, recordDepth: "stub" } });
+  if (issues.length) throw new Error(`invalid stored ${row.kind} ${row.id}: ${issues.map(issue => `${issue.path}: ${issue.message}`).join("; ")}`);
+  const localizationMap = Object.fromEntries(localizations.map(localization => {
+    const { description, ...common } = localization;
+    return [localization.locale, {
+      ...common, ...(row.kind === "country" ? {} : { description }),
+      details: { aliases: [], ...localization.details },
+    }];
+  }));
+  const availableLocales = localizations.map(localization => localization.locale)
     .sort((left, right) => localeSortValue(left) - localeSortValue(right));
-  const resolvedLocalization = resolveNodeLocalization(
-    {
-      id: row.id,
-      kind: row.kind,
-      countryCode: row.country_code,
-      url: row.url,
-      recordDepth: row.record_depth,
-      properties: normalizeNodeProperties(parseJson(row.properties_json)),
-      sources: row.sources,
-      createdAt: row.created_at,
-      updatedAt: row.updated_at,
-      localizations: localizationMap,
-      availableLocales,
-      requestedLocale,
-      displayLocale: null,
-      isLocaleFallback: false,
-    },
-    requestedLocale,
-  );
-
-  return {
-    id: row.id,
-    kind: row.kind,
-    countryCode: row.country_code,
-    url: row.url,
-    recordDepth: row.record_depth,
-    properties: normalizeNodeProperties(parseJson(row.properties_json)),
-      sources: row.sources,
-    createdAt: row.created_at,
-    updatedAt: row.updated_at,
-    localizations: localizationMap,
-    availableLocales,
-    requestedLocale,
-    displayLocale: resolvedLocalization.displayLocale,
-    isLocaleFallback: resolvedLocalization.isLocaleFallback,
-  };
+  // SQL decoding is the trust boundary: the selected kind's structure was
+  // checked above; presentation defaults add no content or cross-kind fields.
+  const node = {
+    ...content.record, id: row.id, createdAt: row.created_at, updatedAt: row.updated_at,
+    localizations: localizationMap, availableLocales, requestedLocale,
+    displayLocale: null, isLocaleFallback: false,
+  } as GraphNode;
+  const resolved = resolveNodeLocalization(node, requestedLocale);
+  return { ...node, displayLocale: resolved.displayLocale, isLocaleFallback: resolved.isLocaleFallback };
 }
 
 export function mapEdge(row: RawEdge): GraphEdge {

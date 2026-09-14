@@ -33,3 +33,18 @@ the fixture deliberately with contract changes; never fetch live data in tests.
 
 See [the authoring guide](../../../documentation/RICH_RESEARCH_RECORDS.md) for
 the exact field contract, research requirements and review workflow.
+
+## Country and organization examples
+
+`rich-country.json` and `rich-organization.json` are synthetic, content-only
+examples of the other two contracts, not research findings. Their illustrative
+names, dates, counts and example-domain sources must not be imported into the
+canonical graph. They include all six localization slots for contract tests;
+they do not certify translation quality or human review.
+
+Each example owns only its kind's facts and localized details. Countries have
+one summary and treaty participation. Organizations have an introduction,
+institutional context, mission, establishment, scale and office locations.
+Both share source ownership and review infrastructure with systems. Only systems
+have a routes section or gallery. Empty system galleries remain valid for rich
+records when no useful accessible capture is available.

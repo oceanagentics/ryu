@@ -136,7 +136,7 @@ test("splits legacy node content into neutral properties and English localizatio
   assert.equal(content.localization.detailsJson.access[0]?.label, "Documentation");
   assert.equal(content.localization.detailsJson.access[0]?.description, "Access through documentation.");
   assert.equal(content.propertiesJson.gallery?.[0]?.url, "/gallery/algaebase.png");
-  assert.equal(content.localization.detailsJson.gallery[0]?.caption, "A public record page.");
+  assert.equal(content.localization.detailsJson.gallery?.[0]?.caption, "A public record page.");
   assert.equal(content.propertiesJson.data?.descriptors[0]?.label, "Taxonomy");
   assert.equal(content.propertiesJson.data?.descriptors.length, 1);
   assert.equal(content.localization.detailsJson.data.descriptors[0]?.description, "Taxonomic backbone.");

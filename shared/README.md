@@ -9,7 +9,11 @@ owns the concern; check existing consumers before adding another abstraction.
 
 ```text
 shared/
-├── domain.ts                  # Canonical IDs, graph/record types, SupportedLocale
+├── domain.ts                  # Common metadata, vocabulary, kind-discriminated graph union
+├── records/
+│   ├── country.ts             # Country facts, localization, positive field sets
+│   ├── organization.ts        # Institutional facts, localization, positive field sets
+│   └── system.ts              # System facts, localization, positive field sets
 ├── recordApi.ts               # Record API query, DTO, write and validation types
 ├── indexGraph.ts              # Graph indexes and operator relationship lookup
 ├── localization.ts            # Supported/default locales and record fallback
@@ -41,12 +45,35 @@ same shared lookup.
 
 ## Text ownership and storage
 
-System properties and localized details are closed types in `domain.ts`.
-The runtime contract in `server/src/recordContracts.ts` rejects unknown fields
-and malformed nested objects at every depth; PostgreSQL migration 014 guards
-stored structure. Do not restore index signatures or generic-record unions to
-permit new system fields. Update the contract, SQL guards, FishBase fixture,
-tests and authoring guide together when deliberately changing the shape.
+Country, system, and organization localizations use distinct types selected by
+the owning node kind. Country content has one `summary` introduction and the
+declared `aliases`, `profile.sourceRefs`, and `treatyParticipation` details.
+`recordContentFields` and `localizationContentFields` declare the positive API
+field sets. Country responses omit the main URL and extended-description fields;
+the shared SQL columns remain storage for the other kinds. Migration 015 preserves
+older country prose in the summary before backfill and enforces the complete
+country storage shape. Review dates are retained per event and displayed publicly.
+
+Each kind owns its properties, localization and positive authored field sets in
+`records/<kind>.ts`. `GraphNode` is the `NodeByKind` union, not a shared optional
+property bag. API inputs, patches, DTOs and resolved localizations preserve that
+kind. Narrow by `kind` before reading kind-specific fields; display and search
+helpers take their actual kind. Organization metrics and system metrics have
+separate keys and types.
+
+`server/src/recordContracts/<kind>.ts` owns structural and kind-specific research
+rules. `recordContracts.ts` handles dispatch, envelopes and common evidence,
+localization and review concerns. PATCH without `record.kind` resolves against
+the stored kind and validates all retained content. Explicit kind changes must
+satisfy the destination contract, including retained locales, edges and routes.
+Use a complete PUT plus explicit localization replacements when fields must be
+removed; writes never silently drop incompatible content.
+
+The physical tables stay shared. Migrations 014–016 guard nested shapes; forward
+migration 017 completes kind-specific populated column and route ownership checks.
+It audits before installing guards and does not repair data automatically.
+Contract changes update the matching example, API tests, SQL guards and authoring
+guide in the same release.
 
 | Content | Owner |
 | --- | --- |
@@ -56,7 +83,7 @@ tests and authoring guide together when deliberately changing the shape.
 | Language names | `localeNames.ts` |
 | A record's title, profile, descriptor descriptions and access guidance | `node_localizations` |
 | Relationship descriptions, scope, status and citations | `edges.note`, `edges.properties_json` and `edges.sources` |
-| A source's translated title | That node or edge's `sources[id].title` map |
+| A source's translated title and optional fact context | That node or edge's `sources[id].title` and `description` maps |
 
 For data descriptors, the neutral `label` field contains an approved ID. Its
 localized entry supplies the matching item `id` and scoped `description`, with no
@@ -64,11 +91,14 @@ label override. Use [the rich record guide](../documentation/RICH_RESEARCH_RECOR
 for record authoring, evidence, completeness and vocabulary approval requirements.
 
 System metrics store only an approved key, numeric value, observation date,
-source, optional reporting period, and stable item ID. `metricDefinitions` in
-`domain.ts` derives the Data/Usage group and unit. `recordDisplay.ts` joins localized
-metric descriptions by ID; `i18n.ts` formats the value, derived unit and period.
-Metric labels and units cannot be overridden in records. New metric keys or units
-require human approval and a complete six-language catalog release before use.
+source, optional reporting period, and stable item ID. Organization scale uses
+its three organization-only keys without reporting periods; the source's
+localized description carries the figure's scope and qualifications.
+`metricDefinitions` in `domain.ts` derives the group and unit. `recordDisplay.ts`
+joins system metric descriptions by ID; `i18n.ts` formats the value, derived unit
+and period. Metric labels and units cannot be overridden in records. New metric
+keys or units require human approval and a complete six-language catalog release
+before use.
 
 Catalogs are code released with the app. A label correction does not require a
 record rewrite. Keep URLs, IDs and operational facts language-neutral. Individual
@@ -115,8 +145,10 @@ The vocabulary groups are:
 | `accessTypes` | `vocabularyLabels/access.ts` | `SystemAccessType` |
 | `accessMethods` | `vocabularyLabels/access.ts` | `AccessMethod` (`ReadAccessMethod` / `WriteAccessMethod`) |
 | `accessRequirements`, `accessCosts` | `vocabularyLabels/access.ts` | `AccessRequirement`, `AccessCost` |
-| `metricKeys`, `units`, `metricPeriods` | `vocabularyLabels/metrics.ts` | `SystemMetricKey`, `MetricUnit`, `MetricPeriod` |
+| `metricKeys`, `units`, `metricPeriods` | `vocabularyLabels/metrics.ts` | `MetricKey` (`SystemMetricKey` / `OrganizationMetricKey`), `MetricUnit`, `MetricPeriod` |
+| `organizationOfficeKinds` | `vocabularyLabels/organizations.ts` | `OrganizationOfficeKind` |
 | `recordDepths`, `reviewStates` | `vocabularyLabels/records.ts` | `RecordDepth`, `ReviewState` |
+| `treatyParticipationStatuses`, `treatyConsentMethods` | `vocabularyLabels/records.ts` | `TreatyParticipationStatus`, `TreatyConsentMethod` |
 
 Approved vocabulary lookups reject unknown IDs and missing/blank translations.
 Read and Write methods, requirements, costs, metrics and units are closed vocabularies. Do not broaden a

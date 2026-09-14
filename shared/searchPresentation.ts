@@ -57,11 +57,11 @@ export type SearchMatchReason = {
 };
 
 export type SystemSearchRecord = {
-  entity: GraphNode;
-  system: GraphNode;
+  entity: GraphNode<"system">;
+  system: GraphNode<"system">;
   title: string;
   summary: string | null;
-  localization: ResolvedNodeLocalization;
+  localization: ResolvedNodeLocalization<"system">;
   operatorName: string;
   disciplines: Discipline[];
   dataTypes: DataType[];

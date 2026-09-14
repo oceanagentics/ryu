@@ -65,10 +65,10 @@ function nodeUrlRecords(bootstrap: GraphBootstrapPayload): UrlRecord[] {
   for (const node of bootstrap.nodes.sort((left, right) => left.id.localeCompare(right.id))) {
     const localization = resolveNodeLocalization(node, defaultLocale);
     const localizedAccessById = new Map(
-      localization.details.access.map((accessPath) => [accessPath.id, accessPath]),
+      ("access" in localization.details ? localization.details.access ?? [] : []).map((accessPath) => [accessPath.id, accessPath]),
     );
 
-    const accessPaths = Array.isArray(node.properties.access) ? node.properties.access : [];
+    const accessPaths = node.kind === "system" ? node.properties.access ?? [] : [];
     for (const [index, pathRecord] of accessPaths.entries()) {
       if (!isRecord(pathRecord)) {
         continue;
@@ -86,7 +86,7 @@ function nodeUrlRecords(bootstrap: GraphBootstrapPayload): UrlRecord[] {
       }
     }
 
-    const galleryItems = Array.isArray(node.properties.gallery) ? node.properties.gallery : [];
+    const galleryItems = node.kind === "system" ? node.properties.gallery ?? [] : [];
     for (const [index, itemRecord] of galleryItems.entries()) {
       if (!isRecord(itemRecord)) {
         continue;

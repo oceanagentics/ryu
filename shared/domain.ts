@@ -1,3 +1,13 @@
+import type { CountryNode, CountryLocalization, CountryLocalizationDetails } from "./records/country";
+import type { OrganizationNode, OrganizationLocalization, OrganizationLocalizationDetails, OrganizationMetric } from "./records/organization";
+import type { SystemNode, SystemLocalization, SystemLocalizationDetails, SystemMetric } from "./records/system";
+import { countryRecordFields, countryLocalizationFields } from "./records/country";
+import { organizationRecordFields, organizationLocalizationFields } from "./records/organization";
+import { systemRecordFields, systemLocalizationFields } from "./records/system";
+export type * from "./records/country";
+export type * from "./records/organization";
+export type * from "./records/system";
+
 export type GraphNodeKind =
   | "country"
   | "organization"
@@ -29,6 +39,25 @@ export type ReviewState =
   | "needs_revision";
 
 export type SupportedLocale = "ar" | "zh" | "en" | "fr" | "ru" | "es";
+
+export const treatyParticipationStatuses = [
+  "party",
+  "signatory_not_party",
+  "not_party",
+  "withdrawn",
+] as const;
+
+export type TreatyParticipationStatus = (typeof treatyParticipationStatuses)[number];
+
+export const treatyConsentMethods = [
+  "ratification",
+  "acceptance",
+  "approval",
+  "accession",
+  "definitive_signature",
+] as const;
+
+export type TreatyConsentMethod = (typeof treatyConsentMethods)[number];
 
 // Additions require explicit human approval in the record-authoring chat.
 export const disciplines = [
@@ -75,23 +104,12 @@ export interface Source {
   id: string;
   url: string;
   title: Partial<Record<SupportedLocale, string>>;
+  description?: Partial<Record<SupportedLocale, string>>;
   accessedAt: string;
 }
 
 export type SourceCollection = Record<string, Source>;
 export type SourceRef = string;
-
-export type SystemDataDescriptorCategory = "type" | "format" | "standard";
-
-export type SystemDataDescriptor = {
-  id: string;
-  source: SourceRef | null;
-} & ({ category: "type"; label: DataType } | { category: "format"; label: DataFormat } | { category: "standard"; label: DataStandard });
-
-export interface LocalizedSystemDataDescriptor {
-  id: string;
-  description: string | null;
-}
 
 export type SystemAccessType = "read" | "write";
 
@@ -123,50 +141,8 @@ export function isAccessUrl(value: unknown): value is string {
   } catch { return false; }
 }
 
-interface AccessPathBase {
-  id: string;
-  url: string;
-  requirements: AccessRequirement[] | null;
-  cost: AccessCost;
-  sourceRefs: SourceRef[];
-}
-
-export interface ReadAccessPath extends AccessPathBase {
-  type: "read";
-  methods: ReadAccessMethod[];
-}
-
-export interface WriteAccessPath extends AccessPathBase {
-  type: "write";
-  methods: WriteAccessMethod[];
-}
-
-export type SystemAccessPath = ReadAccessPath | WriteAccessPath;
-
-export interface LocalizedSystemAccessPath {
-  id: string;
-  label: string;
-  description: string;
-}
-
-export interface SystemGalleryItem {
-  id: string;
-  type: "image" | "embed";
-  url: string;
-  thumbnailUrl: string | null;
-  source: SourceRef;
-  sortOrder: number;
-}
-
-export interface LocalizedSystemGalleryItem {
-  id: string;
-  title: string | null;
-  caption: string | null;
-  altText?: string | null;
-}
-
 // New keys, units, or changes of meaning require human approval and a catalog release.
-export const metricDefinitions = {
+export const systemMetricDefinitions = {
   record_count: { group: "data", unit: "records" },
   occurrence_count: { group: "data", unit: "occurrences" },
   sample_count: { group: "data", unit: "samples" },
@@ -179,56 +155,64 @@ export const metricDefinitions = {
   citation_count: { group: "usage", unit: "citations" },
 } as const;
 
-export type SystemMetricKey = keyof typeof metricDefinitions;
-export type MetricUnit = (typeof metricDefinitions)[SystemMetricKey]["unit"];
-export type MetricGroup = (typeof metricDefinitions)[SystemMetricKey]["group"];
+export const organizationMetricDefinitions = {
+  staff_count: { group: "organization", unit: "people" },
+  member_organization_count: { group: "organization", unit: "organizations" },
+  member_country_count: { group: "organization", unit: "countries" },
+} as const;
+
+export const metricDefinitions = {
+  ...systemMetricDefinitions,
+  ...organizationMetricDefinitions,
+} as const;
+
+export type SystemMetricKey = keyof typeof systemMetricDefinitions;
+export type OrganizationMetricKey = keyof typeof organizationMetricDefinitions;
+export type MetricKey = keyof typeof metricDefinitions;
+export type MetricUnit = (typeof metricDefinitions)[MetricKey]["unit"];
+export type MetricGroup = (typeof systemMetricDefinitions)[SystemMetricKey]["group"];
 export const metricPeriods = ["day", "month", "year", "cumulative"] as const;
 export type MetricPeriod = (typeof metricPeriods)[number];
 
 export function isSystemMetricKey(value: unknown): value is SystemMetricKey {
-  return typeof value === "string" && Object.hasOwn(metricDefinitions, value);
+  return typeof value === "string" && Object.hasOwn(systemMetricDefinitions, value);
 }
 
-export interface SourcedMetric {
+export function isOrganizationMetricKey(value: unknown): value is OrganizationMetricKey {
+  return typeof value === "string" && Object.hasOwn(organizationMetricDefinitions, value);
+}
+
+export interface MetricBase {
   id: string;
-  key: SystemMetricKey;
   value: number;
   observedAt: string | null;
-  // Reporting basis, not inferred from observedAt. Exact windows belong in the description.
-  period?: MetricPeriod | null;
   source: SourceRef;
 }
+export type SourcedMetric = SystemMetric | OrganizationMetric;
 
-export interface LocalizedSourcedMetric {
-  id: string;
-  description: string | null;
-}
+export const organizationOfficeKinds = ["headquarters", "office"] as const;
+export type OrganizationOfficeKind = (typeof organizationOfficeKinds)[number];
 
-export interface NodeDataDetails {
-  descriptors: SystemDataDescriptor[];
-}
+export type LocalizationDetailsByKind = {
+  country: CountryLocalizationDetails;
+  system: SystemLocalizationDetails;
+  organization: OrganizationLocalizationDetails;
+};
+export type NodeLocalizationDetails = LocalizationDetailsByKind[GraphNodeKind];
 
-export interface LocalizedNodeDataDetails {
-  descriptors: LocalizedSystemDataDescriptor[];
-}
+// Positive authoring contracts, selected using the owning node's kind.
+export const recordContentFields = {
+  country: countryRecordFields,
+  organization: organizationRecordFields,
+  system: systemRecordFields,
+} as const;
+export const localizationContentFields = {
+  country: countryLocalizationFields,
+  organization: organizationLocalizationFields,
+  system: systemLocalizationFields,
+} as const;
 
-export type NodeLocalizationDetails = {
-  profile?: { sourceRefs: string[] };
-  researchGaps?: Partial<Record<MetricGroup | "standards" | "access", string>>;
-  aliases: string[];
-  gallery: LocalizedSystemGalleryItem[];
-  data: LocalizedNodeDataDetails;
-  access: LocalizedSystemAccessPath[];
-  metrics: LocalizedSourcedMetric[];
-}
-
-export type NodeProperties = {
-  disciplines?: Discipline[];
-  gallery?: SystemGalleryItem[];
-  data?: NodeDataDetails;
-  access?: SystemAccessPath[];
-  metrics?: SourcedMetric[];
-}
+export type NodeProperties<K extends GraphNodeKind = GraphNodeKind> = NodeByKind[K]["properties"];
 
 export interface ReviewSnapshot {
   state: ReviewState;
@@ -241,12 +225,8 @@ export interface LocalizationReview extends ReviewSnapshot {
   history?: ReviewSnapshot[];
 }
 
-export interface NodeLocalization {
+export interface LocalizationMetadata {
   locale: SupportedLocale;
-  title: string;
-  summary: string | null;
-  description: string | null;
-  details: NodeLocalizationDetails;
   translatedFromLocale: SupportedLocale | null;
   contentUpdatedAt: string;
   review: LocalizationReview;
@@ -254,40 +234,51 @@ export interface NodeLocalization {
   updatedAt: string;
 }
 
-export type NodeLocalizationMap = Partial<Record<SupportedLocale, NodeLocalization>>;
+export type LocalizationByKind = {
+  country: CountryLocalization;
+  system: SystemLocalization;
+  organization: OrganizationLocalization;
+};
+export type NodeLocalization<K extends GraphNodeKind = GraphNodeKind> = LocalizationByKind[K];
 
-export interface ResolvedNodeLocalization {
-  requestedLocale: SupportedLocale;
-  displayLocale: SupportedLocale | null;
-  isLocaleFallback: boolean;
-  hasLocalization: boolean;
-  title: string;
-  summary: string | null;
-  description: string | null;
-  details: NodeLocalizationDetails;
-  translatedFromLocale: SupportedLocale | null;
-  contentUpdatedAt: string | null;
-  review: LocalizationReview | null;
-  createdAt: string | null;
-  updatedAt: string | null;
-}
+export type NodeLocalizationMap<K extends GraphNodeKind = GraphNodeKind> = Partial<Record<SupportedLocale, NodeLocalization<K>>>;
 
-export interface GraphNode {
+export type ResolvedNodeLocalization<K extends GraphNodeKind = GraphNodeKind> = {
+  [Kind in K]: {
+    kind: Kind;
+    requestedLocale: SupportedLocale;
+    displayLocale: SupportedLocale | null;
+    isLocaleFallback: boolean;
+    hasLocalization: boolean;
+    title: string;
+    summary: string | null;
+    details: LocalizationDetailsByKind[Kind];
+    translatedFromLocale: SupportedLocale | null;
+    contentUpdatedAt: string | null;
+    review: LocalizationReview | null;
+    createdAt: string | null;
+    updatedAt: string | null;
+  } & Pick<LocalizationByKind[Kind], Extract<"description", keyof LocalizationByKind[Kind]>>
+}[K];
+
+export interface GraphNodeBase {
   id: string;
-  kind: GraphNodeKind;
-  countryCode: string | null;
-  url: string | null;
   recordDepth: RecordDepth;
-  properties: NodeProperties;
   sources: SourceCollection;
   createdAt: string;
   updatedAt: string;
-  localizations: NodeLocalizationMap;
   availableLocales: SupportedLocale[];
   requestedLocale: SupportedLocale;
   displayLocale: SupportedLocale | null;
   isLocaleFallback: boolean;
 }
+
+export interface NodeByKind {
+  country: CountryNode;
+  organization: OrganizationNode;
+  system: SystemNode;
+}
+export type GraphNode<K extends GraphNodeKind = GraphNodeKind> = NodeByKind[K];
 
 export interface GraphEdge {
   sources: SourceCollection;

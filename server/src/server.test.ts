@@ -107,7 +107,8 @@ function sourcePayload(overrides: Partial<Source> = {}): Source {
     title: Object.fromEntries(supportedLocales.map(locale => [locale, "Source"])), ...overrides };
 }
 
-function createFakeNode(overrides: Partial<GraphNode> = {}): GraphNode {
+type FakeNodeOverrides = Partial<Omit<GraphNode, "kind" | "localizations">> & { kind?: GraphNode["kind"]; countryCode?: string | null; url?: string | null; localizations?: GraphNode["localizations"] };
+function createFakeNode(overrides: FakeNodeOverrides = {}): GraphNode {
   const localization = createFakeLocalization();
   return {
     id: "node-1",
@@ -133,7 +134,7 @@ function createFakeNode(overrides: Partial<GraphNode> = {}): GraphNode {
     displayLocale: "en",
     isLocaleFallback: false,
     ...overrides,
-  };
+  } as GraphNode;
 }
 
 class FakeRepository implements GraphRepository {
@@ -204,8 +205,8 @@ class FakeRepository implements GraphRepository {
     this.node = createFakeNode({
       id,
       kind: input.record.kind,
-      countryCode: input.record.countryCode ?? null,
-      url: input.record.url ?? null,
+      countryCode: input.record.kind === "country" ? input.record.countryCode ?? null : undefined,
+      url: input.record.kind === "country" ? undefined : input.record.url ?? null,
       recordDepth: input.record.recordDepth ?? "stub",
       sources: input.record.sources ?? this.node.sources,
       properties: (input.record.properties ?? {}) as GraphNode["properties"],
@@ -227,8 +228,8 @@ class FakeRepository implements GraphRepository {
       ...this.node,
       id,
       kind: input.record?.kind ?? this.node.kind,
-      countryCode: input.record?.countryCode ?? this.node.countryCode,
-      url: input.record?.url ?? this.node.url,
+      countryCode: input.record && "countryCode" in input.record ? input.record.countryCode : this.node.kind === "country" ? this.node.countryCode : undefined,
+      url: input.record && "url" in input.record ? input.record.url : this.node.kind === "country" ? undefined : this.node.url,
       recordDepth: input.record?.recordDepth ?? this.node.recordDepth,
       sources: input.record?.sourcesReplace ?? this.node.sources,
       properties: (input.record?.propertiesReplace ?? this.node.properties) as GraphNode["properties"],
@@ -353,9 +354,12 @@ class FakeRepository implements GraphRepository {
     }
   }
 
-  private recordAggregate(overrides: Partial<GraphNode> = {}): RecordAggregate {
+  private recordAggregate(overrides: FakeNodeOverrides = {}): RecordAggregate {
+    const node = createFakeNode({ ...this.node, ...overrides });
+    if (node.kind === "country") return { node, edges: [], matchReasons: [] };
+    if (node.kind === "organization") return { node, edges: [], matchReasons: [] };
     return {
-      node: createFakeNode({ ...this.node, ...overrides }),
+      node,
       edges: [],
       routes: [
         {

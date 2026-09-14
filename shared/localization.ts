@@ -1,5 +1,6 @@
 import type {
   GraphNode,
+  LocalizationDetailsByKind,
   NodeLocalizationDetails,
   ResolvedNodeLocalization,
   SupportedLocale,
@@ -18,22 +19,16 @@ export function normalizeLocale(value: unknown): SupportedLocale {
   return isSupportedLocale(value) ? value : defaultLocale;
 }
 
-export function emptyLocalizationDetails(): NodeLocalizationDetails {
+export function emptyLocalizationDetails(): Pick<NodeLocalizationDetails, "aliases"> {
   return {
     aliases: [],
-    gallery: [],
-    data: {
-      descriptors: [],
-    },
-    access: [],
-    metrics: [],
   };
 }
 
-export function resolveNodeLocalization(
-  node: GraphNode,
+export function resolveNodeLocalization<N extends GraphNode>(
+  node: N,
   requestedLocale: SupportedLocale = defaultLocale,
-): ResolvedNodeLocalization {
+): ResolvedNodeLocalization<N["kind"]> {
   const displayLocale =
     node.localizations[requestedLocale]?.locale ??
     node.localizations[defaultLocale]?.locale ??
@@ -44,20 +39,21 @@ export function resolveNodeLocalization(
   const localization = displayLocale ? node.localizations[displayLocale] : null;
 
   return {
+    kind: node.kind,
     requestedLocale,
     displayLocale,
     isLocaleFallback: displayLocale !== requestedLocale,
     hasLocalization: Boolean(localization),
     title: localization?.title ?? node.id,
     summary: localization?.summary ?? null,
-    description: localization?.description ?? null,
-    details: localization?.details ?? emptyLocalizationDetails(),
+    ...(node.kind === "country" ? {} : { description: localization && "description" in localization ? localization.description : null }),
+    details: (localization?.details ?? emptyLocalizationDetails()) as LocalizationDetailsByKind[N["kind"]],
     translatedFromLocale: localization?.translatedFromLocale ?? null,
     contentUpdatedAt: localization?.contentUpdatedAt ?? null,
     review: localization?.review ?? null,
     createdAt: localization?.createdAt ?? null,
     updatedAt: localization?.updatedAt ?? null,
-  };
+  } as ResolvedNodeLocalization<N["kind"]>;
 }
 
 export function nodeDisplayTitle(

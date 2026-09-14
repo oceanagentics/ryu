@@ -1,0 +1,181 @@
+{
+  "id": "example-country",
+  "record": {
+    "kind": "country",
+    "countryCode": "XMP",
+    "recordDepth": "rich",
+    "properties": {
+      "treatyParticipation": [
+        {
+          "id": "ocean-agreement",
+          "status": "party",
+          "signatureDate": "2023-09-20",
+          "consentMethod": "ratification",
+          "depositDate": "2025-06-01",
+          "effectiveDate": "2026-01-17",
+          "focalPointUrl": "https://example.gov/ocean-focal-point",
+          "sourceRefs": [
+            "treaty-status"
+          ]
+        }
+      ]
+    },
+    "sources": {
+      "identity": {
+        "id": "identity",
+        "url": "https://example.gov",
+        "title": {
+          "ar": "Official source",
+          "zh": "Official source",
+          "en": "Official source",
+          "fr": "Official source",
+          "ru": "Official source",
+          "es": "Official source"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "treaty-status": {
+        "id": "treaty-status",
+        "url": "https://example.org/treaty",
+        "title": {
+          "ar": "Official source",
+          "zh": "Official source",
+          "en": "Official source",
+          "fr": "Official source",
+          "ru": "Official source",
+          "es": "Official source"
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "Example Country",
+      "summary": "A country participating in an ocean agreement.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "ocean-agreement",
+            "title": "Ocean Agreement",
+            "description": "The country deposited its instrument of ratification and is a Party.",
+            "focalPoint": "Ocean Affairs Office, Ministry of Foreign Affairs"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "Example Country",
+      "summary": "A country participating in an ocean agreement.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "ocean-agreement",
+            "title": "Ocean Agreement",
+            "description": "The country deposited its instrument of ratification and is a Party.",
+            "focalPoint": "Ocean Affairs Office, Ministry of Foreign Affairs"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "Example Country",
+      "summary": "A country participating in an ocean agreement.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "ocean-agreement",
+            "title": "Ocean Agreement",
+            "description": "The country deposited its instrument of ratification and is a Party.",
+            "focalPoint": "Ocean Affairs Office, Ministry of Foreign Affairs"
+          }
+        ]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Example Country",
+      "summary": "A country participating in an ocean agreement.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "ocean-agreement",
+            "title": "Ocean Agreement",
+            "description": "The country deposited its instrument of ratification and is a Party.",
+            "focalPoint": "Ocean Affairs Office, Ministry of Foreign Affairs"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Example Country",
+      "summary": "A country participating in an ocean agreement.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "ocean-agreement",
+            "title": "Ocean Agreement",
+            "description": "The country deposited its instrument of ratification and is a Party.",
+            "focalPoint": "Ocean Affairs Office, Ministry of Foreign Affairs"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Example Country",
+      "summary": "A country participating in an ocean agreement.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "treatyParticipation": [
+          {
+            "id": "ocean-agreement",
+            "title": "Ocean Agreement",
+            "description": "The country deposited its instrument of ratification and is a Party.",
+            "focalPoint": "Ocean Affairs Office, Ministry of Foreign Affairs"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": []
+}

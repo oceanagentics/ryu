@@ -39,7 +39,7 @@ BEGIN
     source := entry.value;
     IF jsonb_typeof(source) IS DISTINCT FROM 'object'
       OR NOT source ?& ARRAY['id','url','title','accessedAt']
-      OR source - ARRAY['id','url','title','accessedAt'] <> '{}'::jsonb
+      OR source - ARRAY['id','url','title','description','accessedAt'] <> '{}'::jsonb
       OR jsonb_typeof(source->'id') IS DISTINCT FROM 'string'
       OR source->>'id' IS DISTINCT FROM entry.key
       OR entry.key !~ '^[a-z0-9][a-z0-9._:-]*$'
@@ -55,6 +55,15 @@ BEGIN
         OR jsonb_typeof(translation.value) IS DISTINCT FROM 'string'
         OR btrim(translation.value #>> '{}') = '' THEN RETURN false; END IF;
     END LOOP;
+    IF source ? 'description' THEN
+      IF jsonb_typeof(source->'description') IS DISTINCT FROM 'object'
+        OR source->'description' = '{}'::jsonb THEN RETURN false; END IF;
+      FOR translation IN SELECT * FROM jsonb_each(source->'description') LOOP
+        IF translation.key NOT IN ('ar','zh','en','fr','ru','es')
+          OR jsonb_typeof(translation.value) IS DISTINCT FROM 'string'
+          OR btrim(translation.value #>> '{}') = '' THEN RETURN false; END IF;
+      END LOOP;
+    END IF;
   END LOOP;
   RETURN true;
 EXCEPTION WHEN invalid_datetime_format OR datetime_field_overflow THEN RETURN false;
@@ -599,5 +608,317 @@ BEGIN
 END;
 $$;
 
+CREATE OR REPLACE FUNCTION valid_country_record_object(value jsonb, section text)
+RETURNS boolean LANGUAGE plpgsql IMMUTABLE AS $$
+DECLARE item jsonb; child jsonb; field text; ids text[] := '{}'; refs text[];
+BEGIN
+  IF jsonb_typeof(value) IS DISTINCT FROM 'object' THEN RETURN false; END IF;
+  IF section IN ('record', 'localization') THEN
+    SELECT coalesce(jsonb_object_agg(key, entry), '{}'::jsonb) INTO value
+    FROM jsonb_each(value) AS fields(key, entry) WHERE entry <> 'null'::jsonb;
+    IF section = 'record' THEN
+      RETURN value - ARRAY['id','kind','country_code','record_depth','properties_json','sources','created_at','updated_at'] = '{}'::jsonb;
+    END IF;
+    RETURN value - ARRAY['node_id','locale','title','summary','details_json','translated_from_locale','content_updated_at','review_json','created_at','updated_at'] = '{}'::jsonb;
+  ELSIF section = 'properties' THEN
+    IF value - 'treatyParticipation' <> '{}'::jsonb THEN RETURN false; END IF;
+  ELSIF section = 'details' THEN
+    IF value - ARRAY['aliases','profile','treatyParticipation'] <> '{}'::jsonb THEN RETURN false; END IF;
+    IF value ? 'aliases' THEN
+      IF jsonb_typeof(value->'aliases') IS DISTINCT FROM 'array' THEN RETURN false; END IF;
+      FOR child IN SELECT * FROM jsonb_array_elements(value->'aliases') LOOP
+        IF jsonb_typeof(child) IS DISTINCT FROM 'string' OR btrim(child #>> '{}') = '' OR child #>> '{}' = ANY(ids) THEN RETURN false; END IF;
+        ids := array_append(ids, child #>> '{}');
+      END LOOP;
+    END IF;
+    IF value ? 'profile' AND NOT valid_system_record_object(value->'profile', 'profile') THEN RETURN false; END IF;
+  ELSE RETURN false;
+  END IF;
+
+  IF value ? 'treatyParticipation' THEN
+    IF jsonb_typeof(value->'treatyParticipation') IS DISTINCT FROM 'array' THEN RETURN false; END IF;
+    ids := '{}';
+    FOR item IN SELECT * FROM jsonb_array_elements(value->'treatyParticipation') LOOP
+      IF section = 'properties' THEN
+        IF jsonb_typeof(item) IS DISTINCT FROM 'object'
+          OR NOT item ?& ARRAY['id','status','signatureDate','consentMethod','depositDate','effectiveDate','focalPointUrl','sourceRefs']
+          OR item - ARRAY['id','status','signatureDate','consentMethod','depositDate','effectiveDate','focalPointUrl','sourceRefs'] <> '{}'::jsonb
+          OR jsonb_typeof(item->'id') IS DISTINCT FROM 'string' OR item->>'id' !~ '^[a-z0-9][a-z0-9._:-]*$'
+          OR item->>'id' = ANY(ids)
+          OR jsonb_typeof(item->'status') IS DISTINCT FROM 'string'
+          OR item->>'status' NOT IN ('party','signatory_not_party','not_party','withdrawn')
+          OR (item->'consentMethod' <> 'null'::jsonb AND (jsonb_typeof(item->'consentMethod') IS DISTINCT FROM 'string'
+            OR item->>'consentMethod' NOT IN ('ratification','acceptance','approval','accession','definitive_signature')))
+          OR (item->'focalPointUrl' <> 'null'::jsonb AND (jsonb_typeof(item->'focalPointUrl') IS DISTINCT FROM 'string'
+            OR item->>'focalPointUrl' !~ '^https?://[^[:space:]/?#]+[^[:space:]]*$'))
+          OR jsonb_typeof(item->'sourceRefs') IS DISTINCT FROM 'array' OR jsonb_array_length(item->'sourceRefs') = 0
+        THEN RETURN false; END IF;
+        FOR field IN SELECT unnest(ARRAY['signatureDate','depositDate','effectiveDate']) LOOP
+          child := item->field;
+          IF child <> 'null'::jsonb AND (jsonb_typeof(child) IS DISTINCT FROM 'string'
+            OR child #>> '{}' !~ '^\d{4}-\d{2}-\d{2}$' OR left(child #>> '{}', 4) = '0000'
+            OR to_char((child #>> '{}')::date, 'YYYY-MM-DD') <> child #>> '{}') THEN RETURN false; END IF;
+        END LOOP;
+        refs := '{}';
+        FOR child IN SELECT * FROM jsonb_array_elements(item->'sourceRefs') LOOP
+          IF jsonb_typeof(child) IS DISTINCT FROM 'string' OR child #>> '{}' !~ '^[a-z0-9][a-z0-9._:-]*$'
+            OR child #>> '{}' = ANY(refs) THEN RETURN false; END IF;
+          refs := array_append(refs, child #>> '{}');
+        END LOOP;
+      ELSE
+        IF jsonb_typeof(item) IS DISTINCT FROM 'object'
+          OR NOT item ?& ARRAY['id','title','description','focalPoint']
+          OR item - ARRAY['id','title','description','focalPoint'] <> '{}'::jsonb
+          OR jsonb_typeof(item->'id') IS DISTINCT FROM 'string' OR item->>'id' !~ '^[a-z0-9][a-z0-9._:-]*$'
+          OR item->>'id' = ANY(ids)
+          OR jsonb_typeof(item->'title') IS DISTINCT FROM 'string' OR btrim(item->>'title') = ''
+          OR jsonb_typeof(item->'description') NOT IN ('string','null')
+          OR (jsonb_typeof(item->'description') = 'string' AND btrim(item->>'description') = '')
+          OR jsonb_typeof(item->'focalPoint') NOT IN ('string','null')
+          OR (jsonb_typeof(item->'focalPoint') = 'string' AND btrim(item->>'focalPoint') = '')
+        THEN RETURN false; END IF;
+      END IF;
+      ids := array_append(ids, item->>'id');
+    END LOOP;
+  END IF;
+  RETURN true;
+EXCEPTION WHEN invalid_datetime_format OR datetime_field_overflow THEN RETURN false;
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION check_country_record_shape()
+RETURNS trigger LANGUAGE plpgsql AS $$
+DECLARE owner_id text; owner record; loc record;
+BEGIN
+  IF TG_TABLE_NAME = 'nodes' THEN owner_id := NEW.id; ELSE owner_id := NEW.node_id; END IF;
+  SELECT * INTO owner FROM nodes WHERE id = owner_id;
+  IF owner.kind = 'country' THEN
+    IF NOT valid_country_record_object(to_jsonb(owner), 'record')
+      OR NOT valid_country_record_object(owner.properties_json, 'properties') THEN
+      RAISE EXCEPTION 'country % properties do not match the canonical record shape', owner_id USING ERRCODE = '23514';
+    END IF;
+    FOR loc IN SELECT * FROM node_localizations WHERE node_id = owner_id LOOP
+      IF NOT valid_country_record_object(to_jsonb(loc), 'localization')
+        OR NOT valid_country_record_object(loc.details_json, 'details') THEN
+        RAISE EXCEPTION 'country %/% details do not match the canonical record shape', owner_id, loc.locale USING ERRCODE = '23514';
+      END IF;
+    END LOOP;
+  END IF;
+  RETURN NULL;
+END;
+$$;
+
+DROP TRIGGER IF EXISTS trg_nodes_country_record_shape ON nodes;
+CREATE CONSTRAINT TRIGGER trg_nodes_country_record_shape AFTER INSERT OR UPDATE ON nodes
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_country_record_shape();
+DROP TRIGGER IF EXISTS trg_localizations_country_record_shape ON node_localizations;
+CREATE CONSTRAINT TRIGGER trg_localizations_country_record_shape AFTER INSERT OR UPDATE ON node_localizations
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_country_record_shape();
+
+CREATE OR REPLACE FUNCTION valid_organization_partial_date(value jsonb)
+RETURNS boolean LANGUAGE plpgsql IMMUTABLE AS $$
+DECLARE text_value text;
+BEGIN
+  IF jsonb_typeof(value) IS DISTINCT FROM 'string' THEN RETURN false; END IF;
+  text_value := value #>> '{}';
+  IF text_value ~ '^\d{4}$' THEN RETURN text_value <> '0000'; END IF;
+  IF text_value ~ '^\d{4}-\d{2}$' THEN
+    RETURN left(text_value, 4) <> '0000' AND substring(text_value, 6, 2)::integer BETWEEN 1 AND 12;
+  END IF;
+  IF text_value ~ '^\d{4}-\d{2}-\d{2}$' THEN
+    RETURN left(text_value, 4) <> '0000' AND to_char(text_value::date, 'YYYY-MM-DD') = text_value;
+  END IF;
+  RETURN false;
+EXCEPTION WHEN invalid_datetime_format OR datetime_field_overflow THEN RETURN false;
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION valid_organization_record_object(value jsonb, section text)
+RETURNS boolean LANGUAGE plpgsql IMMUTABLE AS $$
+DECLARE item jsonb; child jsonb; ids text[] := '{}'; refs text[]; gaps record;
+BEGIN
+  IF jsonb_typeof(value) IS DISTINCT FROM 'object' THEN RETURN false; END IF;
+  IF section = 'properties' THEN
+    IF value - ARRAY['established','metrics','offices'] <> '{}'::jsonb THEN RETURN false; END IF;
+    IF value ? 'established' AND value->'established' <> 'null'::jsonb THEN
+      item := value->'established';
+      IF jsonb_typeof(item) IS DISTINCT FROM 'object'
+        OR NOT item ?& ARRAY['date','source']
+        OR item - ARRAY['date','source'] <> '{}'::jsonb
+        OR NOT valid_organization_partial_date(item->'date')
+        OR jsonb_typeof(item->'source') IS DISTINCT FROM 'string'
+        OR item->>'source' !~ '^[a-z0-9][a-z0-9._:-]*$' THEN RETURN false; END IF;
+    END IF;
+    IF value ? 'metrics' THEN
+      IF jsonb_typeof(value->'metrics') IS DISTINCT FROM 'array' THEN RETURN false; END IF;
+      ids := '{}';
+      FOR item IN SELECT * FROM jsonb_array_elements(value->'metrics') LOOP
+        IF jsonb_typeof(item) IS DISTINCT FROM 'object'
+          OR NOT item ?& ARRAY['id','key','value','observedAt','source']
+          OR item - ARRAY['id','key','value','observedAt','source'] <> '{}'::jsonb
+          OR jsonb_typeof(item->'id') IS DISTINCT FROM 'string'
+          OR item->>'id' !~ '^[a-z0-9][a-z0-9._:-]*$' OR item->>'id' = ANY(ids)
+          OR jsonb_typeof(item->'key') IS DISTINCT FROM 'string'
+          OR item->>'key' NOT IN ('staff_count','member_organization_count','member_country_count')
+          OR jsonb_typeof(item->'value') IS DISTINCT FROM 'number'
+          OR (item->>'value')::numeric < 0 OR (item->>'value')::numeric > 9007199254740991
+          OR (item->'observedAt' <> 'null'::jsonb AND NOT valid_organization_partial_date(item->'observedAt'))
+          OR jsonb_typeof(item->'source') IS DISTINCT FROM 'string'
+          OR item->>'source' !~ '^[a-z0-9][a-z0-9._:-]*$' THEN RETURN false; END IF;
+        ids := array_append(ids, item->>'id');
+      END LOOP;
+    END IF;
+    IF value ? 'offices' THEN
+      IF jsonb_typeof(value->'offices') IS DISTINCT FROM 'array' THEN RETURN false; END IF;
+      ids := '{}';
+      FOR item IN SELECT * FROM jsonb_array_elements(value->'offices') LOOP
+        IF jsonb_typeof(item) IS DISTINCT FROM 'object'
+          OR NOT item ?& ARRAY['id','kind','source']
+          OR item - ARRAY['id','kind','source'] <> '{}'::jsonb
+          OR jsonb_typeof(item->'id') IS DISTINCT FROM 'string'
+          OR item->>'id' !~ '^[a-z0-9][a-z0-9._:-]*$' OR item->>'id' = ANY(ids)
+          OR jsonb_typeof(item->'kind') IS DISTINCT FROM 'string'
+          OR item->>'kind' NOT IN ('headquarters','office')
+          OR jsonb_typeof(item->'source') IS DISTINCT FROM 'string'
+          OR item->>'source' !~ '^[a-z0-9][a-z0-9._:-]*$' THEN RETURN false; END IF;
+        ids := array_append(ids, item->>'id');
+      END LOOP;
+    END IF;
+  ELSIF section = 'details' THEN
+    IF value - ARRAY['aliases','profile','offices','researchGaps'] <> '{}'::jsonb THEN RETURN false; END IF;
+    IF value ? 'aliases' THEN
+      IF jsonb_typeof(value->'aliases') IS DISTINCT FROM 'array' THEN RETURN false; END IF;
+      ids := '{}';
+      FOR child IN SELECT * FROM jsonb_array_elements(value->'aliases') LOOP
+        IF jsonb_typeof(child) IS DISTINCT FROM 'string' OR btrim(child #>> '{}') = ''
+          OR child #>> '{}' = ANY(ids) THEN RETURN false; END IF;
+        ids := array_append(ids, child #>> '{}');
+      END LOOP;
+    END IF;
+    IF value ? 'profile' THEN
+      item := value->'profile';
+      IF jsonb_typeof(item) IS DISTINCT FROM 'object'
+        OR NOT item ? 'sourceRefs'
+        OR item - ARRAY['mission','sourceRefs'] <> '{}'::jsonb
+        OR jsonb_typeof(item->'sourceRefs') IS DISTINCT FROM 'array' THEN RETURN false; END IF;
+      IF item ? 'mission' AND (jsonb_typeof(item->'mission') IS DISTINCT FROM 'string' OR btrim(item->>'mission') = '') THEN RETURN false; END IF;
+      refs := '{}';
+      FOR child IN SELECT * FROM jsonb_array_elements(item->'sourceRefs') LOOP
+        IF jsonb_typeof(child) IS DISTINCT FROM 'string' OR child #>> '{}' !~ '^[a-z0-9][a-z0-9._:-]*$'
+          OR child #>> '{}' = ANY(refs) THEN RETURN false; END IF;
+        refs := array_append(refs, child #>> '{}');
+      END LOOP;
+    END IF;
+    IF value ? 'offices' THEN
+      IF jsonb_typeof(value->'offices') IS DISTINCT FROM 'array' THEN RETURN false; END IF;
+      ids := '{}';
+      FOR item IN SELECT * FROM jsonb_array_elements(value->'offices') LOOP
+        IF jsonb_typeof(item) IS DISTINCT FROM 'object'
+          OR NOT item ?& ARRAY['id','location']
+          OR item - ARRAY['id','location'] <> '{}'::jsonb
+          OR jsonb_typeof(item->'id') IS DISTINCT FROM 'string'
+          OR item->>'id' !~ '^[a-z0-9][a-z0-9._:-]*$' OR item->>'id' = ANY(ids)
+          OR jsonb_typeof(item->'location') IS DISTINCT FROM 'string'
+          OR btrim(item->>'location') = '' THEN RETURN false; END IF;
+        ids := array_append(ids, item->>'id');
+      END LOOP;
+    END IF;
+    IF value ? 'researchGaps' THEN
+      IF jsonb_typeof(value->'researchGaps') IS DISTINCT FROM 'object'
+        OR (value->'researchGaps') - ARRAY['established','scale','officeLocations'] <> '{}'::jsonb THEN RETURN false; END IF;
+      FOR gaps IN SELECT * FROM jsonb_each(value->'researchGaps') LOOP
+        IF jsonb_typeof(gaps.value) IS DISTINCT FROM 'string' OR btrim(gaps.value #>> '{}') = '' THEN RETURN false; END IF;
+      END LOOP;
+    END IF;
+  ELSE RETURN false;
+  END IF;
+  RETURN true;
+EXCEPTION WHEN invalid_text_representation OR numeric_value_out_of_range THEN RETURN false;
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION check_organization_record_shape()
+RETURNS trigger LANGUAGE plpgsql AS $$
+DECLARE owner_id text; owner record; loc record;
+BEGIN
+  IF TG_TABLE_NAME = 'nodes' THEN owner_id := NEW.id; ELSE owner_id := NEW.node_id; END IF;
+  SELECT * INTO owner FROM nodes WHERE id = owner_id;
+  IF owner.kind = 'organization' THEN
+    IF NOT valid_organization_record_object(owner.properties_json, 'properties') THEN
+      RAISE EXCEPTION 'organization % properties do not match the canonical record shape', owner_id USING ERRCODE = '23514';
+    END IF;
+    FOR loc IN SELECT locale, details_json FROM node_localizations WHERE node_id = owner_id LOOP
+      IF NOT valid_organization_record_object(loc.details_json, 'details') THEN
+        RAISE EXCEPTION 'organization %/% details do not match the canonical record shape', owner_id, loc.locale USING ERRCODE = '23514';
+      END IF;
+    END LOOP;
+  END IF;
+  RETURN NULL;
+END;
+$$;
+
+DROP TRIGGER IF EXISTS trg_nodes_organization_record_shape ON nodes;
+CREATE CONSTRAINT TRIGGER trg_nodes_organization_record_shape AFTER INSERT OR UPDATE ON nodes
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_organization_record_shape();
+DROP TRIGGER IF EXISTS trg_localizations_organization_record_shape ON node_localizations;
+CREATE CONSTRAINT TRIGGER trg_localizations_organization_record_shape AFTER INSERT OR UPDATE ON node_localizations
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_organization_record_shape();
+
+
+-- Complete the kind-specific contracts without changing the shared tables.
+CREATE OR REPLACE FUNCTION valid_node_kind_fields(kind text, value jsonb, section text)
+RETURNS boolean LANGUAGE plpgsql IMMUTABLE AS $$
+DECLARE fields text[];
+BEGIN
+  IF jsonb_typeof(value) IS DISTINCT FROM 'object' THEN RETURN false; END IF;
+  IF section = 'record' THEN
+    fields := ARRAY['id','kind','record_depth','properties_json','sources','created_at','updated_at'];
+    CASE kind
+      WHEN 'country' THEN fields := fields || ARRAY['country_code'];
+      WHEN 'organization', 'system' THEN fields := fields || ARRAY['url'];
+      ELSE RETURN false;
+    END CASE;
+  ELSIF section = 'localization' AND kind IN ('country','organization','system') THEN
+    fields := ARRAY['node_id','locale','title','summary','details_json','translated_from_locale','content_updated_at','review_json','created_at','updated_at'];
+    IF kind IN ('organization','system') THEN fields := fields || ARRAY['description']; END IF;
+  ELSE RETURN false;
+  END IF;
+  -- Nulls in shared physical columns do not become fields in a typed record.
+  RETURN NOT EXISTS (SELECT 1 FROM jsonb_each(value) entry
+    WHERE entry.value <> 'null'::jsonb AND NOT entry.key = ANY(fields));
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION check_node_kind_fields()
+RETURNS trigger LANGUAGE plpgsql AS $$
+DECLARE owner_id text; owner record; loc record;
+BEGIN
+  IF TG_TABLE_NAME = 'nodes' THEN owner_id := NEW.id; ELSE owner_id := NEW.node_id; END IF;
+  SELECT * INTO owner FROM nodes WHERE id = owner_id;
+  IF NOT FOUND THEN RETURN NULL; END IF;
+  IF NOT valid_node_kind_fields(owner.kind, to_jsonb(owner), 'record') THEN
+    RAISE EXCEPTION '% % does not match the canonical record fields', owner.kind, owner_id USING ERRCODE = '23514';
+  END IF;
+  FOR loc IN SELECT * FROM node_localizations WHERE node_id = owner_id LOOP
+    IF NOT valid_node_kind_fields(owner.kind, to_jsonb(loc), 'localization') THEN
+      RAISE EXCEPTION '% %/% does not match the canonical localization fields', owner.kind, owner_id, loc.locale USING ERRCODE = '23514';
+    END IF;
+  END LOOP;
+  IF EXISTS (SELECT 1 FROM ryu_routes WHERE node_id = owner_id) AND owner.kind <> 'system' THEN
+    RAISE EXCEPTION '% % does not have a routes section', owner.kind, owner_id USING ERRCODE = '23514';
+  END IF;
+  RETURN NULL;
+END;
+$$;
+
+DROP TRIGGER IF EXISTS trg_nodes_kind_fields ON nodes;
+CREATE CONSTRAINT TRIGGER trg_nodes_kind_fields AFTER INSERT OR UPDATE ON nodes
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_node_kind_fields();
+DROP TRIGGER IF EXISTS trg_localizations_kind_fields ON node_localizations;
+CREATE CONSTRAINT TRIGGER trg_localizations_kind_fields AFTER INSERT OR UPDATE ON node_localizations
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_node_kind_fields();
+DROP TRIGGER IF EXISTS trg_routes_kind_fields ON ryu_routes;
+CREATE CONSTRAINT TRIGGER trg_routes_kind_fields AFTER INSERT OR UPDATE ON ryu_routes
+DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_node_kind_fields();
 
 COMMIT;

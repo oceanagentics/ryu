@@ -1,0 +1,312 @@
+{
+  "id": "example-ocean-alliance",
+  "record": {
+    "kind": "organization",
+    "url": "https://example.org/alliance",
+    "recordDepth": "rich",
+    "properties": {
+      "established": {
+        "date": "1998-06",
+        "source": "history"
+      },
+      "metrics": [
+        {
+          "id": "staff-2026",
+          "key": "staff_count",
+          "value": 84,
+          "observedAt": "2026",
+          "source": "annual-report"
+        },
+        {
+          "id": "members-2026",
+          "key": "member_country_count",
+          "value": 23,
+          "observedAt": "2026",
+          "source": "annual-report"
+        }
+      ],
+      "offices": [
+        {
+          "id": "wellington",
+          "kind": "headquarters",
+          "source": "offices"
+        },
+        {
+          "id": "nairobi",
+          "kind": "office",
+          "source": "offices"
+        }
+      ]
+    },
+    "sources": {
+      "identity": {
+        "id": "identity",
+        "url": "https://example.org/identity",
+        "title": {
+          "ar": "About the Alliance (ar)",
+          "zh": "About the Alliance (zh)",
+          "en": "About the Alliance (en)",
+          "fr": "About the Alliance (fr)",
+          "ru": "About the Alliance (ru)",
+          "es": "About the Alliance (es)"
+        },
+        "description": {
+          "ar": "Defines the current mission and organizational identity. (ar)",
+          "zh": "Defines the current mission and organizational identity. (zh)",
+          "en": "Defines the current mission and organizational identity. (en)",
+          "fr": "Defines the current mission and organizational identity. (fr)",
+          "ru": "Defines the current mission and organizational identity. (ru)",
+          "es": "Defines the current mission and organizational identity. (es)"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "history": {
+        "id": "history",
+        "url": "https://example.org/history",
+        "title": {
+          "ar": "Alliance history (ar)",
+          "zh": "Alliance history (zh)",
+          "en": "Alliance history (en)",
+          "fr": "Alliance history (fr)",
+          "ru": "Alliance history (ru)",
+          "es": "Alliance history (es)"
+        },
+        "description": {
+          "ar": "Reports June 1998 as the organization’s legal establishment date. (ar)",
+          "zh": "Reports June 1998 as the organization’s legal establishment date. (zh)",
+          "en": "Reports June 1998 as the organization’s legal establishment date. (en)",
+          "fr": "Reports June 1998 as the organization’s legal establishment date. (fr)",
+          "ru": "Reports June 1998 as the organization’s legal establishment date. (ru)",
+          "es": "Reports June 1998 as the organization’s legal establishment date. (es)"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "annual-report": {
+        "id": "annual-report",
+        "url": "https://example.org/annual-report",
+        "title": {
+          "ar": "2026 annual report (ar)",
+          "zh": "2026 annual report (zh)",
+          "en": "2026 annual report (en)",
+          "fr": "2026 annual report (fr)",
+          "ru": "2026 annual report (ru)",
+          "es": "2026 annual report (es)"
+        },
+        "description": {
+          "ar": "Reports 84 staff and 23 member countries for calendar year 2026. (ar)",
+          "zh": "Reports 84 staff and 23 member countries for calendar year 2026. (zh)",
+          "en": "Reports 84 staff and 23 member countries for calendar year 2026. (en)",
+          "fr": "Reports 84 staff and 23 member countries for calendar year 2026. (fr)",
+          "ru": "Reports 84 staff and 23 member countries for calendar year 2026. (ru)",
+          "es": "Reports 84 staff and 23 member countries for calendar year 2026. (es)"
+        },
+        "accessedAt": "2026-09-14"
+      },
+      "offices": {
+        "id": "offices",
+        "url": "https://example.org/offices",
+        "title": {
+          "ar": "Contact directory (ar)",
+          "zh": "Contact directory (zh)",
+          "en": "Contact directory (en)",
+          "fr": "Contact directory (fr)",
+          "ru": "Contact directory (ru)",
+          "es": "Contact directory (es)"
+        },
+        "description": {
+          "ar": "Lists the headquarters and active regional office locations as of September 2026. (ar)",
+          "zh": "Lists the headquarters and active regional office locations as of September 2026. (zh)",
+          "en": "Lists the headquarters and active regional office locations as of September 2026. (en)",
+          "fr": "Lists the headquarters and active regional office locations as of September 2026. (fr)",
+          "ru": "Lists the headquarters and active regional office locations as of September 2026. (ru)",
+          "es": "Lists the headquarters and active regional office locations as of September 2026. (es)"
+        },
+        "accessedAt": "2026-09-14"
+      }
+    }
+  },
+  "localizations": {
+    "ar": {
+      "title": "تحالف المحيط النموذجي",
+      "summary": "منظمة بحرية دولية نموذجية.",
+      "description": "تنسق المنظمة العمل البحري بين الأعضاء.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "mission": "تمكين التعاون من أجل محيط صحي.",
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "wellington",
+            "location": "ويلينغتون، نيوزيلندا"
+          },
+          {
+            "id": "nairobi",
+            "location": "نيروبي، كينيا"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "zh": {
+      "title": "示例海洋联盟",
+      "summary": "一个示例性的国际海洋组织。",
+      "description": "该组织协调成员之间的海洋行动。",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "mission": "促进合作，建设健康海洋。",
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "wellington",
+            "location": "新西兰惠灵顿"
+          },
+          {
+            "id": "nairobi",
+            "location": "肯尼亚内罗毕"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "en": {
+      "title": "Example Ocean Alliance",
+      "summary": "An illustrative international ocean organization.",
+      "description": "The organization coordinates marine action among its members.",
+      "details": {
+        "aliases": [
+          "EOA"
+        ],
+        "profile": {
+          "mission": "Enable cooperation for a healthy ocean.",
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "wellington",
+            "location": "Wellington, New Zealand"
+          },
+          {
+            "id": "nairobi",
+            "location": "Nairobi, Kenya"
+          }
+        ]
+      },
+      "translatedFromLocale": null
+    },
+    "fr": {
+      "title": "Alliance océanique exemple",
+      "summary": "Une organisation océanique internationale illustrative.",
+      "description": "L’organisation coordonne l’action marine de ses membres.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "mission": "Favoriser la coopération pour un océan sain.",
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "wellington",
+            "location": "Wellington, Nouvelle-Zélande"
+          },
+          {
+            "id": "nairobi",
+            "location": "Nairobi, Kenya"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "ru": {
+      "title": "Пример океанического альянса",
+      "summary": "Пример международной океанической организации.",
+      "description": "Организация координирует морскую деятельность своих членов.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "mission": "Развивать сотрудничество ради здорового океана.",
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "wellington",
+            "location": "Веллингтон, Новая Зеландия"
+          },
+          {
+            "id": "nairobi",
+            "location": "Найроби, Кения"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    },
+    "es": {
+      "title": "Alianza Oceánica de Ejemplo",
+      "summary": "Una organización oceánica internacional ilustrativa.",
+      "description": "La organización coordina la acción marina entre sus miembros.",
+      "details": {
+        "aliases": [],
+        "profile": {
+          "mission": "Facilitar la cooperación por un océano saludable.",
+          "sourceRefs": [
+            "identity"
+          ]
+        },
+        "offices": [
+          {
+            "id": "wellington",
+            "location": "Wellington, Nueva Zelanda"
+          },
+          {
+            "id": "nairobi",
+            "location": "Nairobi, Kenia"
+          }
+        ]
+      },
+      "translatedFromLocale": "en"
+    }
+  },
+  "edges": [
+    {
+      "id": "example-alliance-member-of-coalition",
+      "sourceNodeId": "example-ocean-alliance",
+      "targetNodeId": "example-coalition",
+      "kind": "member_of",
+      "note": "The coalition’s official member directory lists the Alliance as a current member.",
+      "properties": {
+        "status": "current",
+        "sourceRefs": [
+          "membership"
+        ]
+      },
+      "sources": {
+        "membership": {
+          "id": "membership",
+          "url": "https://example.org/coalition/members",
+          "title": {
+            "ar": "Coalition member directory (ar)",
+            "zh": "Coalition member directory (zh)",
+            "en": "Coalition member directory (en)",
+            "fr": "Coalition member directory (fr)",
+            "ru": "Coalition member directory (ru)",
+            "es": "Coalition member directory (es)"
+          },
+          "accessedAt": "2026-09-14"
+        }
+      }
+    }
+  ]
+}

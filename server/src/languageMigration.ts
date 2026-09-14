@@ -1,7 +1,7 @@
 import type {
   LocalizedSystemGalleryItem,
-  NodeLocalizationDetails,
-  NodeProperties,
+  SystemLocalizationDetails,
+  SystemProperties,
   ReviewState,
   SourceRef,
   SystemDataDescriptor,
@@ -19,7 +19,7 @@ type LegacyAccessPath = { id: string; type: LegacyAccessType; method: string; ur
 type LegacyLocalizedAccessPath = { id: string; label: string | null; description: string | null };
 type LegacyData = { descriptors: SystemDataDescriptor[]; recordCount: SourcedMetric | null; storageSize: SourcedMetric | null };
 type LocalizedNodeDataDetails = { descriptors: { id: string; description: string | null }[]; recordCount: LocalizedSourcedMetric | null; storageSize: LocalizedSourcedMetric | null };
-type LegacyDetails = Pick<NodeLocalizationDetails, "aliases" | "gallery"> & Record<string, unknown> & { data: LocalizedNodeDataDetails; usage: LocalizedSourcedMetric[]; access: LegacyLocalizedAccessPath[] };
+type LegacyDetails = Pick<SystemLocalizationDetails, "aliases" | "gallery"> & Record<string, unknown> & { data: LocalizedNodeDataDetails; usage: LocalizedSourcedMetric[]; access: LegacyLocalizedAccessPath[] };
 
 export const languageMigrationId = "2026-09-01-node-localizations";
 
@@ -37,7 +37,7 @@ export type LegacyNodeRow = {
 };
 
 export type MigratedNodeContent = {
-  propertiesJson: Pick<NodeProperties, "disciplines" | "gallery"> & Record<string, unknown> & { data: LegacyData; usage: SourcedMetric[]; access: LegacyAccessPath[] };
+  propertiesJson: Pick<SystemProperties, "disciplines" | "gallery"> & Record<string, unknown> & { data: LegacyData; usage: SourcedMetric[]; access: LegacyAccessPath[] };
   localization: {
     nodeId: string;
     locale: "en";
@@ -295,7 +295,7 @@ function readReviewString(review: Record<string, unknown>, key: string): string 
 export function splitLegacyNodeContent(row: LegacyNodeRow): MigratedNodeContent {
   const details = isRecord(row.details_json) ? row.details_json : {};
   const properties = isRecord(row.properties_json)
-    ? { ...row.properties_json } as NodeProperties
+    ? { ...row.properties_json } as SystemProperties
     : {};
   const data = splitData(details.data);
   const accessValues = Array.isArray(details.access) ? details.access : [];

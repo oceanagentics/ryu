@@ -1,3 +1,5 @@
+import type { GraphNode, ResolvedNodeLocalization } from "../../shared/domain";
+import type { RecordAggregateContentInput, RecordPatchInput, RecordDetailDto } from "../../shared/recordApi";
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import { test } from "node:test";
@@ -134,13 +136,24 @@ test("PUT, PATCH and SQL cannot persist malformed systems; dry runs match apply 
     }
     assert.deepEqual(await read(), before);
     // Changing kind must not bypass the localization guard.
+    await db.exec("DROP TRIGGER trg_nodes_organization_record_shape ON nodes; DROP TRIGGER trg_localizations_organization_record_shape ON node_localizations;");
     await db.query("INSERT INTO nodes(id,kind) VALUES ('legacy-organization','organization')");
     await db.query("INSERT INTO node_localizations(node_id,locale,title,details_json) VALUES ('legacy-organization','en','Legacy','{\"extra\":true}')");
     await assert.rejects(db.query("UPDATE nodes SET kind='system' WHERE id='legacy-organization'"), /canonical record shape/);
     // Reconstruct a pre-migration record to test audit and unnormalized PATCH validation.
     await db.exec("DROP TRIGGER trg_nodes_record_shape ON nodes; DROP TRIGGER trg_localizations_record_shape ON node_localizations;");
     await db.query("UPDATE node_localizations SET details_json=jsonb_set(details_json,'{data,extra}','true') WHERE node_id='fishbase' AND locale='en'");
-    const result = await repo.patchRecord("fishbase", { localizations: { en: { mode: "patch", summary: "New summary" } } }, { recordUpdatedAt: buildRecordUpdatedAt(await read()), validateOnly: true });
+    await assert.rejects(read(), /invalid stored system fishbase/);
+    const version = (await db.query<{ value: string }>(`
+      SELECT max(updated_at) AS value FROM (
+        SELECT updated_at FROM nodes WHERE id='fishbase'
+        UNION ALL SELECT updated_at FROM node_localizations WHERE node_id='fishbase'
+        UNION ALL SELECT updated_at FROM edges WHERE source_node_id='fishbase' OR target_node_id='fishbase'
+        UNION ALL SELECT updated_at FROM ryu_routes WHERE node_id='fishbase'
+      ) versions
+    `)).rows[0].value;
+    const result = await repo.patchRecord("fishbase", { localizations: { en: { mode: "patch", summary: "New summary" } } },
+      { recordUpdatedAt: new Date(version).toISOString(), validateOnly: true });
     assert.ok("valid" in result && result.issues.some(issue => issue.path === "localizations.en.details.data.extra"));
     await assert.rejects(db.exec(migration), /repair system record shapes before migration 014: fishbase/);
     await db.exec("ROLLBACK");
@@ -150,3 +163,61 @@ test("PUT, PATCH and SQL cannot persist malformed systems; dry runs match apply 
     await db.exec(migration);
   } finally { await db.close(); }
 });
+
+test("kind contract migration audits without deleting content and is safe to rerun", async () => {
+  const db = new PGlite();
+  const migration = fs.readFileSync(new URL("../schema/017_node_kind_contracts.sql", import.meta.url), "utf8");
+  try {
+    await db.exec(schema);
+    await db.exec(`
+      INSERT INTO nodes(id,kind) VALUES ('country','country'),('organization','organization'),('system','system');
+      INSERT INTO node_localizations(node_id,locale,title) VALUES ('organization','en','Organization');
+    `);
+    await db.exec("DROP TRIGGER trg_routes_kind_fields ON ryu_routes");
+    await db.query("INSERT INTO ryu_routes(id,node_id,status,mode) VALUES ('misplaced','organization','planned','api')");
+    const snapshot = async () => Promise.all(["nodes", "node_localizations", "ryu_routes"].map(table => db.query(`SELECT * FROM ${table}`)));
+    const before = await snapshot();
+    await assert.rejects(db.exec(migration), /review node contracts before migration 017: organization/);
+    await db.exec("ROLLBACK");
+    assert.deepEqual(await snapshot(), before);
+    await db.query("DELETE FROM ryu_routes WHERE id='misplaced'");
+    await db.exec(`
+      DROP TRIGGER trg_localizations_organization_record_shape ON node_localizations;
+      UPDATE node_localizations SET details_json='{"data":{"descriptors":[]}}' WHERE node_id='organization';
+    `);
+    const invalidLocalization = await snapshot();
+    await assert.rejects(db.exec(migration), /review localization contracts before migration 017: organization\/en/);
+    await db.exec("ROLLBACK");
+    assert.deepEqual(await snapshot(), invalidLocalization);
+    await db.query("UPDATE node_localizations SET details_json='{}' WHERE node_id='organization'");
+    const valid = await snapshot();
+    await db.exec(migration);
+    await db.exec(migration);
+    assert.deepEqual(await snapshot(), valid);
+    for (const kind of ["country", "organization"]) {
+      await assert.rejects(db.query("INSERT INTO ryu_routes(id,node_id,status,mode) VALUES ('misplaced',$1,'planned','api')", [kind]), /does not have a routes section/);
+    }
+    await db.query("INSERT INTO ryu_routes(id,node_id,status,mode) VALUES ('system-route','system','planned','api')");
+    await assert.rejects(db.query("UPDATE nodes SET kind='organization' WHERE id='system'"), /does not have a routes section/);
+    for (const kind of ["country", "organization", "system"]) {
+      const ownRecord = { id: kind, kind, ...(kind === "country" ? { country_code: "XMP" } : { url: "https://example.org" }) };
+      assert.equal((await db.query<{ valid: boolean }>("SELECT valid_node_kind_fields($1,$2,'record') AS valid", [kind, JSON.stringify(ownRecord)])).rows[0].valid, true);
+      assert.equal((await db.query<{ valid: boolean }>("SELECT valid_node_kind_fields($1,$2,'record') AS valid", [kind, JSON.stringify({ ...ownRecord, invented: "value" })])).rows[0].valid, false);
+    }
+  } finally { await db.close(); }
+});
+
+function systemTypeContract(node: GraphNode<"system">, localized: ResolvedNodeLocalization<"system">, dto: RecordDetailDto<"system">) {
+  const content: RecordAggregateContentInput<"system"> = { record: { kind: node.kind, url: node.url, properties: node.properties }, routes: [] };
+  const patch: RecordPatchInput<"system"> = { record: { propertiesReplace: { gallery: [] } } };
+  // @ts-expect-error System facts do not include organizational offices.
+  node.properties.offices;
+  // @ts-expect-error Institutional mission belongs to organization localization.
+  localized.details.profile?.mission;
+  // @ts-expect-error A system has no country identity.
+  dto.record.countryCode;
+  // @ts-expect-error Systems use system-only metric keys.
+  content.record.properties = { metrics: [{ id: "staff", key: "staff_count", value: 3, observedAt: null, source: "evidence" }] };
+  // @ts-expect-error A system patch cannot replace its prose with treaty content.
+  patch.localizations = { en: { mode: "patch", detailsReplace: { treatyParticipation: [] } } };
+}
