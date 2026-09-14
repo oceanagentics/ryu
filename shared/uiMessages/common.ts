@@ -2,7 +2,7 @@ import type { SupportedLocale } from "../domain";
 
 export const commonMessages = {
   "app.title": {
-    en: "Explorer", fr: "Explorateur", es: "Explorador", ar: "المستكشف", zh: "探索器", ru: "Обозреватель",
+    en: "CHM Explorer", fr: "CHM Explorer", es: "CHM Explorer", ar: "CHM Explorer", zh: "CHM Explorer", ru: "CHM Explorer",
   },
   "app.loadingGraphData": {
     en: "Loading graph data...", fr: "Chargement des données du graphe...", es: "Cargando datos del grafo...",
