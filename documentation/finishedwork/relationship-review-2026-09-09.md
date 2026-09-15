@@ -6,7 +6,8 @@ shape that were live on 9 September. The current contract renames `member_of` to
 replaces edge `note`/`properties` with one `description` directly evidenced by
 the edge's `sources`. See `server/schema/018_edge_revision.sql`.
 
-Status: schema, UI/API deployment, relationship backfill and retirement of all 12 obsolete nodes are applied and verified.
+Status: completed and archived. The schema, UI/API deployment, relationship
+backfill, and retirement of all 12 obsolete nodes are applied and verified.
 
 Scope: all 117 canonical PostgreSQL records (60 systems, 51 organizations, 6 country/context records) and all 139 incident relationships, fetched through the authenticated Record API. This is a dated audit, not another canonical registry.
 

@@ -130,7 +130,7 @@ by this release.
 ### Procedure used for the coordinated cutover
 
 The closed system contract additionally requires the repairs and schema step in
-[the system shape rollout audit](SYSTEM_RECORD_SHAPE_ROLLOUT.md). The previously
+[the system shape rollout audit](finishedwork/SYSTEM_RECORD_SHAPE_ROLLOUT.md). The previously
 prepared data had eight incompatible systems; their metadata-only repairs are
 now live and verified. The runner recognizes them and rehearses migration 014
 locally. Rerun preparation against a fresh read before cutover; earlier snapshots

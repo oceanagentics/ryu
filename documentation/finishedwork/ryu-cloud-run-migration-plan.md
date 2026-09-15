@@ -7,7 +7,7 @@ Status: completed and archived. Phase 0 closed on 2026-09-01 after a signed-in
 IAP session exposed the review controls and successfully saved a review-state
 change. The later Record API refactor replaced the CHM review proxy with direct
 Explorer/IAP authorization for humans and bearer-token authorization for
-agents; see [`API_REFACTOR_PLAN.md`](../API_REFACTOR_PLAN.md).
+agents; see [`API_REFACTOR_PLAN.md`](API_REFACTOR_PLAN.md).
 
 ## Purpose
 

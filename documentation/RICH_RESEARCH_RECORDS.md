@@ -114,8 +114,8 @@ Before marking a system rich:
 Change this contract deliberately with shared types, runtime validation, SQL
 guards, example, tests and this guide in one release. Do not automatically
 refresh the fixture from production. Audit existing records before enforcement;
-see [the shape rollout audit](SYSTEM_RECORD_SHAPE_ROLLOUT.md) and
-[the rich system gallery rollout](RICH_SYSTEM_GALLERY_ROLLOUT.md).
+see [the shape rollout audit](finishedwork/SYSTEM_RECORD_SHAPE_ROLLOUT.md) and
+[the rich system gallery rollout](finishedwork/RICH_SYSTEM_GALLERY_ROLLOUT.md).
 
 ## Canonical Organization Contract
 

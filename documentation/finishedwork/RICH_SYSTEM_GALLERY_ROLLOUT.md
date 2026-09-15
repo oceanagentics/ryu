@@ -1,5 +1,7 @@
 # Rich system gallery rollout
 
+Status: completed and archived.
+
 Rich system records now require at least one useful gallery item showing a
 representative record or data content. The runtime reports the issue at
 `record.properties.gallery` with this message:

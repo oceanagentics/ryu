@@ -4,7 +4,7 @@ Status: completed and archived. Phase 0 closed on 2026-09-01 after the
 signed-in IAP review flow was exercised successfully. This document preserves
 the launch and later migration evidence; use
 [`deployment-recommendations.md`](../deployment-recommendations.md) for current
-publishing guidance and [`API_REFACTOR_PLAN.md`](../API_REFACTOR_PLAN.md) for
+publishing guidance and [`API_REFACTOR_PLAN.md`](API_REFACTOR_PLAN.md) for
 the direct Explorer/IAP and bearer-token API architecture that superseded the
 original CHM review proxy.
 

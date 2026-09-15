@@ -1,14 +1,19 @@
 # Explorer API Refactor Plan
 
+Status: completed and archived. The record-oriented API, direct IAP human
+authorization, bearer-token agent authorization, validation, concurrency, and
+audit controls are implemented and deployed. Use
+[`techstack.md`](../techstack.md), `shared/recordApi.ts`, and
+`server/src/server.ts` for current behavior.
+
 ## Purpose
 
 Define a simple, agent-friendly API for CHM Explorer records that supports
 smart reads, targeted writes, full localization writes, full record writes,
 and record removal without exposing arbitrary database table mutation.
 
-This is a planning document. It describes the intended API shape and migration
-work; it does not describe the currently deployed write surface except where
-noted.
+This historical plan records the intended API shape and completed migration
+work. It is retained as implementation evidence, not as the current contract.
 
 ## Design Decisions
 
@@ -157,7 +162,7 @@ Use this checklist for the implementation pass.
   tokens must not set `human_reviewed`; `reviewer` and `admin` tokens may.
 - [x] Remove CHM-header-only trust from the launch write path. Do not rely on
   `x-chm-*` forwarded identity headers for Explorer authorization.
-- [ ] Configure `explorer-api` for normal API reachability only after token auth
+- [x] Configure `explorer-api` for normal API reachability only after token auth
   is enforced on every private read and write route.
 - [x] Implement semantic `validateOnly=true` for record `PUT`, record `PATCH`,
   review changes, and delete dry-runs. Dry-runs must run the
@@ -378,7 +383,8 @@ Upsert semantics:
 Validation rules:
 
 - `rich` writes must pass the content and source-completeness gates in
-  `RICH_RESEARCH_RECORDS.md` on the resulting aggregate, for both PUT and PATCH.
+  `documentation/RICH_RESEARCH_RECORDS.md` on the resulting aggregate, for both
+  PUT and PATCH.
 - `stub` writes may include only minimal metadata and one localization.
 - Unknown fields should be rejected.
 - Writes should run in one transaction.
@@ -1010,7 +1016,7 @@ Docs:
   record API instead of direct Postgres edits.
 - [x] Update `documentation/SEARCH_SYSTEM_PLAN.md` to describe server-backed record
   search and localization filters.
-- [x] Update `documentation/language-migration-plan.md` with localization coverage
+- [x] Update `documentation/finishedwork/language-migration-plan.md` with localization coverage
   filter semantics.
 - [x] Update `documentation/finishedwork/cloud-run-migration.md` after token auth ships so it
   describes direct Explorer IAP for humans and bearer-token API access for
