@@ -54,11 +54,16 @@ DECLARE invalid text;
 BEGIN
   SELECT string_agg(id, ', ' ORDER BY id) INTO invalid FROM nodes
   WHERE kind = 'organization' AND (
-    properties_json - ARRAY['established','metrics','offices','disciplines','data','access','gallery'] <> '{}'::jsonb
+    properties_json - ARRAY['established','metrics','offices','disciplines','data','access','gallery','priority','sourceRefs','pseudoCountry'] <> '{}'::jsonb
     OR (properties_json ? 'disciplines' AND properties_json->'disciplines' <> '[]'::jsonb)
     OR (properties_json ? 'data' AND properties_json->'data' <> '{"descriptors":[]}'::jsonb)
     OR (properties_json ? 'access' AND properties_json->'access' <> '[]'::jsonb)
     OR (properties_json ? 'gallery' AND properties_json->'gallery' <> '[]'::jsonb)
+    OR (properties_json ? 'priority' AND (jsonb_typeof(properties_json->'priority') IS DISTINCT FROM 'string'
+      OR btrim(properties_json->>'priority') = ''))
+    OR (properties_json ? 'sourceRefs' AND (jsonb_typeof(properties_json->'sourceRefs') IS DISTINCT FROM 'array'
+      OR jsonb_array_length(properties_json->'sourceRefs') = 0))
+    OR (properties_json ? 'pseudoCountry' AND (id <> 'eur' OR properties_json->'pseudoCountry' <> 'true'::jsonb))
   );
   IF invalid IS NOT NULL THEN RAISE EXCEPTION 'review organization properties before migration 016: %', invalid; END IF;
 
@@ -89,7 +94,28 @@ UPDATE node_localizations SET review_json = jsonb_set(
 
 UPDATE nodes SET record_depth = 'thin' WHERE kind = 'organization' AND record_depth = 'rich';
 
-UPDATE nodes SET properties_json = properties_json - ARRAY['disciplines','data','access','gallery']
+-- Preserve legacy owner-level citations as profile evidence before removing the
+-- retired launch-only priority and pseudo-country classifications.
+WITH localized_refs AS (
+  SELECT l.node_id, l.locale, jsonb_agg(DISTINCT ref.value ORDER BY ref.value) AS value
+  FROM node_localizations l
+  JOIN nodes n ON n.id = l.node_id
+  CROSS JOIN LATERAL jsonb_array_elements_text(
+    coalesce(l.details_json->'profile'->'sourceRefs', '[]'::jsonb) || (n.properties_json->'sourceRefs')
+  ) AS ref(value)
+  WHERE n.kind = 'organization' AND n.properties_json ? 'sourceRefs'
+  GROUP BY l.node_id, l.locale
+)
+UPDATE node_localizations l SET details_json = jsonb_set(
+  l.details_json,
+  '{profile}',
+  coalesce(l.details_json->'profile', '{}'::jsonb) || jsonb_build_object('sourceRefs', refs.value)
+)
+FROM localized_refs refs
+WHERE refs.node_id = l.node_id AND refs.locale = l.locale;
+
+UPDATE nodes SET properties_json = properties_json
+  - ARRAY['disciplines','data','access','gallery','priority','sourceRefs','pseudoCountry']
 WHERE kind = 'organization';
 
 UPDATE node_localizations l SET details_json = l.details_json - ARRAY['data','access','gallery','metrics']

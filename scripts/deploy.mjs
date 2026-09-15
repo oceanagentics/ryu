@@ -46,7 +46,7 @@ export function dataIssues(graph) {
       record,
       localizations,
       edges: graph.edges.filter(edge => edge.sourceNodeId === node.id || edge.targetNodeId === node.id),
-      routes: (graph.ryuRoutes ?? []).filter(route => route.nodeId === node.id),
+      ...(node.kind === 'system' ? { routes: (graph.ryuRoutes ?? []).filter(route => route.nodeId === node.id) } : {}),
     }).issues;
   });
 }

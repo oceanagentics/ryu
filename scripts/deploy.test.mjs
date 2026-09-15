@@ -44,6 +44,8 @@ test('preflight rejects malformed graph responses and accepts the complete curre
   graph.nodes[0].createdAt = '2026-09-14T00:00:00.000Z';
   graph.nodes[0].localizations.en.review = { state: 'agent_researched' };
   assert.deepEqual(dataIssues(graph), []);
+  const organization = JSON.parse(fs.readFileSync(new URL('../server/src/fixtures/rich-organization.json', import.meta.url)));
+  assert.deepEqual(dataIssues({ nodes: [{ id: organization.id, ...organization.record, localizations: organization.localizations }], edges: organization.edges, ryuRoutes: [] }), []);
 });
 
 test('preflight catches the pending metrics, access and standards migrations before any builds', () => {

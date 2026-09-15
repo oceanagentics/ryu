@@ -107,11 +107,17 @@ test("reference schema and migration enforce organization shape and normalize on
     assert.equal((await db.query<{ valid: boolean }>("SELECT valid_organization_record_object($1, 'properties') AS valid", [JSON.stringify({ ...valid.record.properties, officeCount: 2 })])).rows[0].valid, false);
 
     await db.exec("DROP TRIGGER trg_nodes_organization_record_shape ON nodes; DROP TRIGGER trg_localizations_organization_record_shape ON node_localizations;");
-    await db.query("INSERT INTO nodes(id,kind,properties_json) VALUES ('legacy-organization','organization',$1)", [JSON.stringify({ disciplines: [], data: { descriptors: [] }, access: [], gallery: [], metrics: [] })]);
+    await db.query("INSERT INTO nodes(id,kind,properties_json,sources) VALUES ('legacy-organization','organization',$1,$2)", [
+      JSON.stringify({ disciplines: [], data: { descriptors: [] }, access: [], gallery: [], metrics: [], priority: "MVP-0", sourceRefs: ["evidence"] }),
+      JSON.stringify({ evidence: { id: "evidence", url: "https://example.org/evidence", title: { en: "Evidence" }, accessedAt: "2026-09-14" } }),
+    ]);
     await db.query("INSERT INTO node_localizations(node_id,locale,title,details_json) VALUES ('legacy-organization','en','Legacy Organization',$1)", [JSON.stringify({ aliases: [], profile: { sourceRefs: [] }, data: { descriptors: [] }, access: [], gallery: [], metrics: [] })]);
+    await db.query("INSERT INTO nodes(id,kind,properties_json) VALUES ('eur','organization','{\"pseudoCountry\":true}')");
+    await db.query("INSERT INTO node_localizations(node_id,locale,title) VALUES ('eur','en','European Union')");
     await db.exec(migration);
     assert.deepEqual((await db.query<{ properties_json: object }>("SELECT properties_json FROM nodes WHERE id='legacy-organization'")).rows[0].properties_json, { metrics: [] });
-    assert.deepEqual((await db.query<{ details_json: object }>("SELECT details_json FROM node_localizations WHERE node_id='legacy-organization'")).rows[0].details_json, { aliases: [], profile: { sourceRefs: [] } });
+    assert.deepEqual((await db.query<{ details_json: object }>("SELECT details_json FROM node_localizations WHERE node_id='legacy-organization'")).rows[0].details_json, { aliases: [], profile: { sourceRefs: ["evidence"] } });
+    assert.deepEqual((await db.query<{ properties_json: object }>("SELECT properties_json FROM nodes WHERE id='eur'")).rows[0].properties_json, {});
     await assert.rejects(db.query("UPDATE nodes SET properties_json='{\"officeCount\":2}' WHERE id='legacy-organization'"), /canonical record shape/);
   } finally {
     await db.close();

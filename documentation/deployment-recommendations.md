@@ -62,9 +62,9 @@ from Git, Cloud Build uploads and Docker context. Keep private migration snapsho
 there; do not commit them. Automatic releases are serialized in Actions, and a
 publish stops if production traffic changed during its preparation.
 
-## Pending edge revision release
+## Pending node and edge contract release
 
-Migration `018_edge_revision.sql` and its matching application image are a
+Migrations `015_country_record_shape.sql` through `018_edge_revision.sql` and their matching application image are a
 coordinated, breaking release. The old application reads `note` and
 `properties_json`; the new application reads `description` and the renamed edge
 kinds. Do not move either side independently.
@@ -79,7 +79,7 @@ description, sources, and timestamps.
 
 Use the normal coordinated-release controls: commit and prepare the application
 images, obtain a fresh Cloud SQL backup, put public/admin authoring into the
-maintenance window, rehearse migration 018 in a rollback transaction, apply it
+maintenance window, rehearse migrations 015–018 in one rollback transaction, apply them
 with the schema-capable account, promote the prepared images, run smoke checks,
 and regenerate `client/public/bootstrap.public.json` from canonical Postgres.
 The migration rejects unknown property keys, malformed prose properties,
