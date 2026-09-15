@@ -3,7 +3,7 @@
 **Applied in production** on 2026-09-11 UTC as part of release `8aa2b8d6c8af`.
 All 60 combined patches passed new-contract API dry runs, timestamped writes and
 full 137-record readback. The public export is refreshed. See
-[release evidence](../../documentation/deployment-recommendations.md#completed-2026-09-10-data-release).
+[release evidence](../../documentation/finishedwork/deployment-release-history.md#2026-09-10-data-release).
 
 [access.json](access.json) replaces 67 legacy contribution entries on 36 systems
 with 47 Write entries on 35 systems. BBNJ CHM has no verified live contribution

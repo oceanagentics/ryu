@@ -203,15 +203,30 @@
 - Explorer owns the app image, runtime behavior, Postgres schema, and graph data model.
 - Browser-facing `explorer` uses read credentials; private `explorer-api` uses write credentials; schema/setup work uses the dedicated schema-capable credentials only when an explicit database change is being applied.
 
-## Cloud Run Publishing
-- Use `scripts/deploy.sh` as the shared local/Actions release entry point. `plan` checks scope and data compatibility; `prepare` stages images without traffic; default `publish` promotes compatible revisions and smoke-tests. Follow `documentation/deployment-recommendations.md` for migration releases and retries.
-- Build one Explorer image with `cloudbuild.yaml`, or build the public/admin image pair with `cloudbuild.release.yaml`, into Artifact Registry repository `chm-apps`; use cache image substitutions so unchanged dependency layers are reused when `package-lock.json` has not changed.
-- Use commit-only updates for review, handoff, and release traceability; commits do not publish by themselves unless an external trigger is explicitly configured.
-- Use routine fast deploys for UI, API, runtime, and other app-only changes: commit, build the affected immutable image, deploy that image to the existing Cloud Run service with `gcloud run deploy --image`, and smoke test.
-- Do not run Terraform for image-only app deploys. Use broader Terraform changes only for shared CHM infrastructure, routing, IAP, service accounts, secrets, Cloud SQL, runtime environment, or schema-change wiring.
-- Public UI image maps to `explorer`, admin UI image maps to `explorer-admin`, and API image maps to `explorer-api`.
-- Do not keep standing Cloud Run jobs for initial database setup or read checks.
-- Handle future schema changes deliberately when they are needed; keep the current SQL as the reference for the production Postgres shape.
+## Production Deployment
+
+### GitHub pathway
+- `.github/workflows/deploy.yml` is the normal production pathway. Every push to `main` and every manual workflow dispatch starts the serialized `explorer-production-release` job; a commit that has not been pushed does not deploy.
+- The workflow checks out full history, installs the Node 24 workspace, runs `scripts/deploy.test.mjs`, authenticates to Google Cloud through Workload Identity Federation as `explorer-build-sa`, runs `scripts/deploy.sh`, and uploads `.release/*/state.json` even on failure.
+- There is currently no separate GitHub environment approval gate. Under the checked-in workflow, pushing a commit to `main` authorizes its production release.
+
+### Shared release runner
+- `scripts/deploy.sh` is the only routine release entry point for GitHub Actions and local publishing. Do not replace it with ad-hoc Cloud Build or `gcloud run deploy` commands.
+- `plan` is read-only. It compares the commit with each service's actual 100%-serving revision, reports affected services, and checks the canonical graph when a runtime release is needed.
+- `prepare` requires a clean worktree, builds or reuses immutable commit images, creates ready Cloud Run revisions with no traffic, and stops there. Use it before a coordinated data or schema migration.
+- `publish` is the default. It performs the same preflight and preparation, rechecks canonical data and unchanged production traffic, moves every affected service to its prepared revision, and then runs smoke checks. Services are promoted concurrently to 100%; the runner does not canary or automatically roll back a failed smoke.
+- `smoke` checks the public page and graph, the admin IAP redirect, missing and invalid API bearer-token denial, and public graph contract validity without building or changing traffic.
+- Scope is derived from the source diff against each serving revision: client implementation changes target `explorer` and `explorer-admin`; server, shared-contract, dependency, Docker/build, and gallery changes target all three services; documentation, research, workflow/release-script, test-only, and public bootstrap-export changes do not by themselves update a runtime. Unknown provenance rebuilds conservatively.
+- `cloudbuild.release.yaml` builds the public/admin image pair; `cloudbuild.yaml` builds `explorer-api`. Images live in Artifact Registry `chm-apps`, and the runner preserves existing service accounts, secrets, routing, environment, and resource settings.
+- Release state is resumable at `.release/<full-commit>/state.json`. A retry reuses completed images and revisions and recomputes remaining work against live traffic.
+
+### Operator pathways
+- Routine production release: commit reviewed changes, push `main`, then inspect the Actions run and its release-state artifact.
+- Local production or recovery: use Node 24, installed dependencies, a valid `gcloud` login, and a clean checkout; run `./scripts/deploy.sh plan`, then `./scripts/deploy.sh`. Use `prepare`, `publish`, or `smoke` explicitly when staging, resuming, or diagnosing a release.
+- Data or schema release: run `plan` and `prepare`, take a Cloud SQL backup, execute the release-specific migration or Record API writes deliberately with the required credentials, verify compatibility, then run `publish`. The shared runner never applies SQL, edits records, or enables maintenance mode automatically; do not return an incompatible old revision to a migrated database.
+- Do not run Terraform for image-only releases. Use the shared CHM infrastructure workflow only for routing, IAP, service accounts, Workload Identity, IAM, secrets, Cloud SQL, runtime environment, or migration wiring.
+- Do not keep standing Cloud Run jobs for setup, migrations, or read checks. Create release-specific jobs only when needed, verify them, and remove them after use.
+- `documentation/deployment-recommendations.md` lists unimplemented deployment work only; it is not the production runbook.
 
 ## Graph View Layers
 - Keep graph view code split into two top-level phases: graph build and graph display.

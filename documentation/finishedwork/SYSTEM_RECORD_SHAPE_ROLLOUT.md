@@ -16,7 +16,7 @@ were applied in the coordinated cutover. Full readback and aggregate validation
 passed for 137 canonical records, including all 61 systems, with preserved
 sources, depth, relationships, routes and reviews. The live API rejects unknown
 system properties, and the public/admin/API services run the same release.
-See [release evidence and checks](../deployment-recommendations.md#completed-2026-09-10-data-release).
+See [release evidence and checks](deployment-release-history.md#2026-09-10-data-release).
 
 ## Reviewed data and completed metadata repairs
 
@@ -107,8 +107,8 @@ and metric localization requirements still apply.
    proof of compatibility. Preparation also rehearses migration 014 twice on
    the converted local snapshot. The eight metadata repairs are already live;
    the metrics, standards, access and schema cutover followed in the release above.
-3. Follow the coordinated maintenance/backup procedure in
-   [deployment recommendations](../deployment-recommendations.md). During cutover,
+3. Follow the archived coordinated maintenance/backup procedure in
+   [the deployment release history](deployment-release-history.md#coordinated-cutover-used). During cutover,
    complete the metrics migration and validated record repairs.
 4. Apply `014_system_record_shape.sql` with schema-capable credentials after the
    content is compatible. It is transactional and repeatable; a failed audit

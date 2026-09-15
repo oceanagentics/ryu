@@ -3,7 +3,7 @@
 **Applied in production** on 2026-09-11 UTC as part of release `8aa2b8d6c8af`.
 All 60 combined patches passed new-contract API dry runs, timestamped writes and
 full 137-record readback. The public export is refreshed. See
-[release evidence](../../documentation/deployment-recommendations.md#completed-2026-09-10-data-release).
+[release evidence](../../documentation/finishedwork/deployment-release-history.md#2026-09-10-data-release).
 
 Implementation commit: `4830a74`. The [canonical system instructions](../../documentation/SYSTEM_RECORDS.md#approved-standards) define the 41-ID vocabulary, evidence requirements, six-language scope descriptions, and Record API write procedure.
 

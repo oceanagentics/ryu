@@ -3,8 +3,8 @@
 Status: completed and archived. Phase 0 closed on 2026-09-01 after the
 signed-in IAP review flow was exercised successfully. This document preserves
 the launch and later migration evidence; use
-[`deployment-recommendations.md`](../deployment-recommendations.md) for current
-publishing guidance and [`API_REFACTOR_PLAN.md`](API_REFACTOR_PLAN.md) for
+[`AGENTS.md`](../../AGENTS.md#production-deployment) for current publishing
+guidance and [`API_REFACTOR_PLAN.md`](API_REFACTOR_PLAN.md) for
 the direct Explorer/IAP and bearer-token API architecture that superseded the
 original CHM review proxy.
 
@@ -146,11 +146,9 @@ Last verified on 2026-09-03:
 
 ## Build Image
 
-Routine publishing uses `scripts/deploy.sh`, shared with GitHub Actions. It selects
-affected services, checks data compatibility before building, and reuses prepared
-images on retries. Use `prepare` for a coordinated migration and `publish` after
-the data is compatible. See [Publishing Explorer](../deployment-recommendations.md).
-The lower-level build examples below remain available for deliberate manual work.
+Routine publishing now uses `scripts/deploy.sh`, shared with GitHub Actions. See
+the [current production deployment pathways](../../AGENTS.md#production-deployment).
+The lower-level examples below are retained only as historical launch evidence.
 
 Build Explorer images into the shared CHM Artifact Registry repo with cache
 image substitutions so unchanged dependency layers are reused when
@@ -196,7 +194,10 @@ The Docker build uses `APP_BASE_PATH` so Vite emits asset URLs under the matchin
 base path: `/explorer/assets/...` for public and `/explorer/admin/assets/...`
 for admin.
 
-## Supported Update Paths
+## Historical Update Paths
+
+These paths describe the launch-era process and are superseded by the current
+production deployment pathways in `AGENTS.md`.
 
 Use these paths for Explorer/Ryu updates:
 
