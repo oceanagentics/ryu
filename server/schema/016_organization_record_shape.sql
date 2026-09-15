@@ -54,7 +54,7 @@ DECLARE invalid text;
 BEGIN
   SELECT string_agg(id, ', ' ORDER BY id) INTO invalid FROM nodes
   WHERE kind = 'organization' AND (
-    properties_json - ARRAY['established','metrics','offices','disciplines','data','access','gallery','priority','sourceRefs','pseudoCountry'] <> '{}'::jsonb
+    properties_json - ARRAY['established','metrics','offices','disciplines','data','access','gallery','priority','sourceRefs','pseudoCountry','operator'] <> '{}'::jsonb
     OR (properties_json ? 'disciplines' AND properties_json->'disciplines' <> '[]'::jsonb)
     OR (properties_json ? 'data' AND properties_json->'data' <> '{"descriptors":[]}'::jsonb)
     OR (properties_json ? 'access' AND properties_json->'access' <> '[]'::jsonb)
@@ -64,6 +64,7 @@ BEGIN
     OR (properties_json ? 'sourceRefs' AND (jsonb_typeof(properties_json->'sourceRefs') IS DISTINCT FROM 'array'
       OR jsonb_array_length(properties_json->'sourceRefs') = 0))
     OR (properties_json ? 'pseudoCountry' AND (id <> 'eur' OR properties_json->'pseudoCountry' <> 'true'::jsonb))
+    OR (properties_json ? 'operator' AND properties_json->'operator' <> 'null'::jsonb)
   );
   IF invalid IS NOT NULL THEN RAISE EXCEPTION 'review organization properties before migration 016: %', invalid; END IF;
 
@@ -115,7 +116,7 @@ FROM localized_refs refs
 WHERE refs.node_id = l.node_id AND refs.locale = l.locale;
 
 UPDATE nodes SET properties_json = properties_json
-  - ARRAY['disciplines','data','access','gallery','priority','sourceRefs','pseudoCountry']
+  - ARRAY['disciplines','data','access','gallery','priority','sourceRefs','pseudoCountry','operator']
 WHERE kind = 'organization';
 
 UPDATE node_localizations l SET details_json = l.details_json - ARRAY['data','access','gallery','metrics']
