@@ -1,5 +1,10 @@
 # Search And Filter System Plan
 
+Status: implemented and archived on 2026-09-15. Shared search state,
+server-side field-aware search, graph filtering, filters, counts, and match
+reasons are shipped. This file records the implemented design; the canonical
+product roadmap now owns the remaining work as `P6-F05` through `P6-F07`.
+
 ## Goal
 
 Build one extensible search and filter system that drives both the Systems pane and graph visibility. The system should support the current directory workflow, richer future node detail pages, and later natural-language query assistance without coupling search behavior to a single UI component.
@@ -130,7 +135,8 @@ The API executes search against Postgres data; the browser keeps the bootstrap g
 - Store them in `useGraphStore`.
 - Keep UI controls in the Systems pane for now.
 - Add selectors/helpers so other panes can read the resolved search intent.
-- Consider URL persistence for search/filter fields once the behavior is stable.
+- URL persistence was not included in this baseline; roadmap item `P6-F05`
+  owns it.
 
 ## Phase 2: Field-Aware Search Extractors
 
@@ -161,20 +167,17 @@ The API executes search against Postgres data; the browser keeps the bootstrap g
 - Apply the filter at the scope/projection boundary.
 - Preserve ancestor chains and visual containers where needed.
 - Keep graph display components unaware of search semantics.
-- Consider a user-facing mode toggle later:
-  - `Matches only`
-  - `Matches + one-hop context`
 
 ## Phase 4: Better UI Feedback
 
 - Show why a result matched.
 - Surface active filters as removable chips.
 - Add count labels for visible graph nodes and matching systems.
-- Make empty states specific:
-  - no text match
-  - no match after filters
-  - match exists outside current view mode
-- Add optional field filters for kind, country, data type, and relationship type.
+- Add field filters for kind, country, data type, and the other implemented
+  record facets.
+
+Relationship-kind filtering, cause-specific empty states, and URL persistence
+were not part of this implementation and are tracked by roadmap item `P6-F05`.
 
 ## Phase 5: Rich Node Page Extensions
 
@@ -190,42 +193,9 @@ The API executes search against Postgres data; the browser keeps the bootstrap g
 - Keep field weights explicit so richer pages do not drown out identity fields.
 - Use narrow per-node boosts only for exceptional cases, such as a canonical/preferred node, not for ordinary field weighting.
 
-## Phase 6: Embedded Agent Query Assistant
+## Work transferred to the roadmap
 
-- Give the agent a schema of supported facets and relationship concepts.
-- Let the agent translate natural language into structured search intent.
-- Do not let the agent directly mutate graph internals.
-- Execute the agent-produced intent through the same deterministic resolver.
-- Return result ids and match reasons so the agent can explain outcomes.
-
-Example:
-
-User asks:
-
-> where do japanese researchers publish edna data?
-
-Agent-produced intent:
-
-```ts
-{
-  text: "edna",
-  facets: {
-    countryCode: ["JPN"],
-    relationshipType: ["contributes"]
-  },
-  targetKind: ["system"],
-  includeRelatedKinds: ["organization"]
-}
-```
-
-The app resolver then determines the visible systems, organizations, and graph edges.
-
-## Deferred Until Needed
-
-- Postgres full-text search indexes.
-- Server-side search endpoint.
-- Cross-session search analytics.
-- Vector embeddings.
-- Agent-only ranking.
-
-These can be added later if the graph becomes large enough or if natural-language discovery requires semantic matching beyond structured fields.
+The embedded agent query assistant is tracked by `P6-F06`. Performance
+benchmarking and the conditional decision on Postgres full-text indexing or
+semantic/vector retrieval are tracked by `P6-F07`. This archived file is not a
+second backlog.

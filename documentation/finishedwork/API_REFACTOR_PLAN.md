@@ -1018,7 +1018,7 @@ Docs:
 - [x] Update the standing node record guides so routine backfills use the record
   API instead of direct Postgres edits. The former combined rich-record guide was
   later split by node kind.
-- [x] Update `documentation/SEARCH_SYSTEM_PLAN.md` to describe server-backed record
+- [x] Update `documentation/finishedwork/SEARCH_SYSTEM_PLAN.md` to describe server-backed record
   search and localization filters.
 - [x] Update `documentation/finishedwork/language-migration-plan.md` with localization coverage
   filter semantics.
