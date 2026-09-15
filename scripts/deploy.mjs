@@ -86,7 +86,7 @@ async function readGraph() {
   } while (cursor);
   return { nodes: records.map(record => ({ ...record.record, localizations: record.localizations })),
     edges: [...new Map(records.flatMap(record => record.edges).map(edge => [edge.id, edge])).values()],
-    ryuRoutes: records.flatMap(record => record.routes) };
+    ryuRoutes: records.flatMap(record => record.routes ?? []) };
 }
 async function smoke() {
   for (const [url, statuses, headers, errorCode] of [

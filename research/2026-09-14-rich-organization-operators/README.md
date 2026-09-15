@@ -33,10 +33,10 @@ The records preserve 37 canonical incident relationships. Research added one mat
 
 Both validation reports contain nine valid records, zero issues, and complete source resolution. The PostgreSQL pass exposed a missing-parentheses bug in the SQL `researchGaps` shape check; the schema, migration, and regression test now cover that case.
 
-The batch is applied with `scripts/releases/2026-09-14-rich-nodes.mjs` only after
-the coordinated node/edge schema release. The runner dry-runs every payload
-before any write, uses fresh record timestamps, verifies readback, and records an
-`agent_researched` event for all six localizations.
+The batch was applied to production after the coordinated node/edge schema
+release with `scripts/releases/2026-09-14-rich-nodes.mjs`. The runner dry-ran
+every payload before any write, used fresh record timestamps, verified readback,
+and recorded an `agent_researched` event for all six localizations.
 
 Generate and serve the read-only static preview from the main checkout:
 

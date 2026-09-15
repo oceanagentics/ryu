@@ -62,12 +62,13 @@ from Git, Cloud Build uploads and Docker context. Keep private migration snapsho
 there; do not commit them. Automatic releases are serialized in Actions, and a
 publish stops if production traffic changed during its preparation.
 
-## Pending node and edge contract release
+## Completed 2026-09-14 node and edge contract release
 
-Migrations `015_country_record_shape.sql` through `018_edge_revision.sql` and their matching application image are a
-coordinated, breaking release. The old application reads `note` and
-`properties_json`; the new application reads `description` and the renamed edge
-kinds. Do not move either side independently.
+Published on 2026-09-15 UTC (2026-09-14 local) from application commit
+`9f53d6dfd02d1da9d209b7904a6837e080354a5a`. Public and admin serve the
+normal-startup `explorer-release-9f53d6d-live` and
+`explorer-admin-release-9f53d6d-live` revisions; API serves
+`explorer-api-release-9f53d6dfd02d`.
 
 The 14 September pre-migration audit covered all 273 canonical edges: 28
 `governs`, 69 `operates`, 53 `funds`, 26 `member_of`, 45 `publishes_to`, and 52
@@ -77,24 +78,26 @@ retained all 273 edges and every distinct legacy prose value while producing 28
 `transfers` rows. The resulting table contains only identity, endpoints, kind,
 description, sources, and timestamps.
 
-Use the normal coordinated-release controls: commit and prepare the application
-images, obtain a fresh Cloud SQL backup, put public/admin authoring into the
-maintenance window, rehearse migrations 015–018 in one rollback transaction, apply them
-with the schema-capable account, promote the prepared images, run smoke checks,
-and regenerate `client/public/bootstrap.public.json` from canonical Postgres.
-Run `server/schema/run-node-edge-migration.mjs` from the prepared API image; its
-default mode rolls back, while `--apply` also requires the successful Cloud SQL
-backup ID in `BACKUP_ID` and records the coordinated release in `schema_migrations`.
-The migration rejects unknown property keys, malformed prose properties,
-unsupported kinds, duplicate relationships after renaming, missing descriptions,
-missing evidence, and invalid endpoints before dropping legacy columns.
+- Cloud SQL backup `1789432999281` completed successfully before cutover.
+- Rollback rehearsal `explorer-node-edge-9f53d6d-rv7tv` and apply execution
+  `explorer-node-edge-9f53d6d-jfsjx` ran migrations 015–018 in one transaction.
+  Both preserved 237 nodes, 1,017 localizations, 273 edges, 10 routes and two
+  saved views, with zero invalid node, localization, route or edge rows. The
+  apply is recorded as `2026-09-14-node-edge-contracts` in `schema_migrations`.
+- The Record API dry-ran, applied and read-verified four rich country records and
+  nine rich organization records. It also recorded 78 dated `agent_researched`
+  events, one for every locale on every released record. The reviewed Flanders
+  funding relationship increased the canonical graph to 274 edges.
+- Final live smoke checks passed for public page/data, admin IAP and API
+  authentication. The public export was regenerated from canonical Postgres and
+  contains 22 rich records: four countries, nine organizations and nine systems.
+- The two one-off migration/diagnostic jobs and the maintenance revisions created
+  for this cutover were deleted after verification.
 
-The read-only 14 September release preflight currently reports 3,920 aggregate
-issues. Rehearsing the edge conversion removes the edge-contract portion but
-leaves 3,112 pre-existing node/localization contract issues. Migration 018 does
-not rewrite node content, so this application revision must remain unpublished
-until that earlier data-contract work is completed or included in the same
-coordinated release.
+The checked-in `server/schema/run-node-edge-migration.mjs` remains the audit
+record of the coordinated schema execution. Its default mode rolls back;
+`--apply` requires a successful backup ID in `BACKUP_ID` and refuses a repeated
+ledger entry.
 
 ## Completed 2026-09-10 data release
 

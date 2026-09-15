@@ -25,10 +25,17 @@ const organizations = JSON.parse(fs.readFileSync(
 const payloads = [...countries, ...organizations];
 
 async function request(url, options = {}) {
-  const response = await fetch(url, { ...options, signal: AbortSignal.timeout(60_000) });
-  const body = await response.json();
-  if (!response.ok) throw new Error(`${options.method ?? 'GET'} ${url}: HTTP ${response.status} ${JSON.stringify(body)}`);
-  return body;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    const response = await fetch(url, { ...options, signal: AbortSignal.timeout(60_000) });
+    const body = await response.json();
+    if (response.status === 429 && attempt < 2) {
+      await new Promise((resolve) => setTimeout(resolve, 60_000));
+      continue;
+    }
+    if (!response.ok) throw new Error(`${options.method ?? 'GET'} ${url}: HTTP ${response.status} ${JSON.stringify(body)}`);
+    return body;
+  }
+  throw new Error(`${options.method ?? 'GET'} ${url}: rate limit retries exhausted`);
 }
 
 const get = (id) => request(`${base}/${encodeURIComponent(id)}?include=localizations,edges,sources,routes,reviewHistory`, { headers });
