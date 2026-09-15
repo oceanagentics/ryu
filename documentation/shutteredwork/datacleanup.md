@@ -1,5 +1,8 @@
 # Ryu SQL-To-UI Cleanup Tracker
 
+Status: shuttered and archived. This historical tracker reflects superseded
+storage and UI shapes and is not a current cleanup plan.
+
 Source-table inventory below is historical: source tooltips now read `id`, `url`, translated `title`, and `accessedAt` from `nodes.sources` or `edges.sources`.
 
 Use this file to track review-facing cleanup where data exists in Postgres, is available in the app object model, but is hidden, renamed unclearly, or only partly rendered in the UI.
