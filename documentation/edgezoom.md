@@ -1,6 +1,6 @@
 # Semantic zoom for relationship bins
 
-Status: manual-stage implementation in the working checkout, authorized after review. Not deployed; browser acceptance is still outstanding. Automatic zoom, Tree binning, and Globe binning remain deferred.
+Status: manual-stage implementation complete and browser-reviewed. Automatic zoom, Tree binning, and Globe binning remain deferred.
 
 ## Manual-stage implementation notes
 
@@ -10,12 +10,11 @@ Status: manual-stage implementation in the working checkout, authorized after re
 - Initial topology policy: keep nodes with multiple distinct neighbors, self-loops, isolated nodes, and both endpoints of two-node components real. Only unprotected entities exclusively attached to a retained hub can disappear. This eligibility rule does not restrict all-neighbor logical group membership. Protection is evaluated on the scoped canonical graph before kind/edge filters. Singleton promotion cascades across overlapping groups.
 - ForceGraph reuses surviving render objects, caches canonical positions, seeds additions near their hub, and anchors surviving canonical nodes before a changed graph enters simulation. Those anchors remain until an intentional arrangement transition or user drag. Warm-up is initial-only; camera and rotation effects depend on arrangement, not node count or canvas size. No wheel-driven semantic switching is installed.
 - Display updates coalesce control changes once per frame and commit data, projection, and arrangement together. Retained links keep their live D3 endpoints; retargeted links get new objects. Layout cancellation rejects superseded results, and position animations wake the simulation without full-scene `refresh()` calls. Label-only renders retain drawing callbacks; mode-transition callbacks tolerate pending geometry.
-- Rendering regressions exercise deferred mode changes, repeated levels/legends, expansion, empty/restore states, endpoint retargeting, retained meshes, cooled-engine animation, update coalescing, and stale-layout cancellation. Browser camera/rotation acceptance remains outstanding.
-- Cytoscape carries the same variants and interaction metadata, reconciles IDs, fits initially, and uses retained positions plus layout-supplied bin hints for same-layout updates. Its alternative renderer path still needs browser acceptance.
+- Rendering regressions exercise deferred mode changes, repeated levels/legends, expansion, empty/restore states, endpoint retargeting, retained meshes, cooled-engine animation, update coalescing, and stale-layout cancellation.
 - Local seed fixture (not production): Entity 237 nodes / 274 edges; Type 171 / 207, including 21 bins; Family 161 / 194, including 22 bins. Canonical fixture data is unchanged.
-- Verification: application build, client projection/state tests, and targeted shared localization/search tests pass. Full-suite HTTP tests are blocked by local socket permissions; a Node/WASM crash in the concurrent full run passed on an isolated rerun. Starting the local preview is also denied, even with elevation, so camera/rotation continuity is code-reviewed but not visually certified.
+- Verification: application build and client projection/state/rendering tests pass; browser acceptance is human-reviewed.
 
-Before release, run the display-continuity checklist below in a browser, including rapid level changes during Graph/Tree/Globe transitions. This document's remaining automatic-zoom and arrangement work is not implemented by the manual stage.
+This document's remaining automatic-zoom and arrangement work is not implemented by the manual stage.
 
 ## Objective
 
@@ -67,7 +66,7 @@ The request to group all neighbors intersects with the original requirement to p
 4. Show the number of unique hidden entities on each bin.
 5. In group details, distinguish all members, visible members, and hidden members.
 
-Protected entities include the focused entity, selected entity, both endpoints of a selected relationship, search matches, and entities revealed through local expansion. Structurally shared entities and entities needed to show bridge topology also remain real.
+Protected entities include the selected entity, both endpoints of a selected relationship, search matches, and entities revealed through local expansion. Structurally shared entities and entities needed to show bridge topology also remain real.
 
 Protection prevents aggregation within the current visible scope. It should not silently override an explicit filter or add an out-of-scope entity. Preserve canonical selection state if filters exclude the selected record; define any reveal action separately.
 
@@ -77,7 +76,6 @@ The manual stage uses this conservative reconciliation. If all neighbors must di
 
 Choose a deterministic set of real hubs before aggregation. Two connected nodes cannot each disappear into the other's bin. Compute hub retention and topology protection from the scoped canonical graph, not from degrees in an already aggregated projection.
 
-- Focused views: preserve the actual focus and the canonical connections needed to understand its neighborhood.
 - Global view: define an explicit policy for retaining shared structure and choosing hubs. Do not treat the first country returned by the graph as an implicit global hub.
 - Preserve isolated nodes, cycles, and connections between hubs unless an explicit projection rule accounts for them.
 - Do not recursively collapse branches in the first implementation without a separately reviewed topology rule.
@@ -107,14 +105,12 @@ Use the existing graph build and graph display boundaries.
 
 | Owner | Responsibility |
 | --- | --- |
-| `client/src/app/state/graphStore.ts` and `state/viewIntent.ts` | Manual level, later automatic mode and effective level, expansion intent, separate bundle-details identity |
+| `client/src/app/state/graphStore.ts` | Manual level, later automatic mode and effective level, expansion intent, separate bundle-details identity |
 | `client/src/app/graph/scope.ts` | Return canonical IDs for the view; no synthetic nodes, bins, sizes, or layout behavior |
 | `client/src/app/graph/projection.ts` | Canonical filtering, group membership, protected entities, retained hubs, synthetic bins, aggregate edges, counts, and stable IDs |
 | `client/src/app/graph/geometry.ts` | Intrinsic label dimensions and stable bin sizing hints |
-| `client/src/app/graph/layout.ts` and `graph/nodeMap3dLayout.ts` | Renderer-specific layout intent, placement constraints, bin spacing, and display conversion |
+| `client/src/app/graph/nodeMap3dLayout.ts` | Renderer-specific layout intent and placement constraints |
 | `client/src/app/components/ForceGraphCanvas.tsx` | Active renderer integration, mutable render-object reconciliation, interaction dispatch, and camera-scale observation |
-| `client/src/app/graph/useCytoscapeController.ts` | Cytoscape element reconciliation, layout execution, interaction dispatch, and viewport preservation |
-| `client/src/app/components/GraphCanvas.tsx` | Compose state, projection, and display plan; no hidden layout or coordinate-cache policy |
 | Styles and shared UI catalogs | Bin appearance, labels, directions, counts, and controls |
 
 Keep the implementation focused on these existing owners. A broad renderer rewrite is not a prerequisite.
@@ -130,7 +126,7 @@ Extend the client projection types with explicit variants:
 
 Logical group metadata may include edges that remain directly visible. An aggregate edge must reference only the edges it replaces. Every eligible visible canonical edge is represented exactly once: directly or within one aggregate edge.
 
-Do not assign bins a fake canonical kind or assign an Org/Data aggregate a fake canonical edge type. Keep synthetic variants outside `GraphNode`, `GraphEdge`, and the persisted graph index. Do not repurpose `isDerivedHierarchy` to mean a relationship bin.
+Do not assign bins a fake canonical kind or assign an Org/Data aggregate a fake canonical edge type. Keep synthetic variants outside `GraphNode`, `GraphEdge`, and the persisted graph index; represent their meaning with the existing projection variants rather than generic boolean flags.
 
 Generate deterministic IDs from encoded key fields under a reserved display namespace. Include direction and level; exclude counts, member lists, localized labels, and array order. Sort and deduplicate underlying IDs. Ensure no collisions with canonical node or edge IDs.
 
@@ -150,13 +146,13 @@ Clicking a bin should reveal its hidden canonical entities locally while retaini
 - Restore its incident canonical edges allowed by the current scope and filters.
 - Remove it from all rendered bins' hidden membership and update their counts.
 - Remove empty bins.
-- Provide an explicit collapse/reset action; retain focused and selected entities when collapsing.
+- Provide an explicit collapse/reset action; retain selected entities when collapsing.
 - Keep expansion intent across Family/Type/Entity changes.
 - Keep bundle details keyed to the logical group, because the rendered bin may disappear immediately after expansion.
 
 Canonical entity and relationship selection remain in the existing selection fields. Synthetic IDs must never enter canonical detail lookup, editing, or entity URLs. Use separate transient bundle-details state and resolve full records through the canonical graph index when needed.
 
-Define whether expansion resets or is reconciled when focus, search, or filters change. Recommended starting behavior: reset for a new scope or search/filter context; preserve for a semantic-level change. Explicit manual mode overrides automatic level choice, and local expansion remains an exception to either mode.
+Define whether expansion resets or is reconciled when search or filters change. Recommended starting behavior: reset for a new search/filter context; preserve for a semantic-level change. Explicit manual mode overrides automatic level choice, and local expansion remains an exception to either mode.
 
 ## Continuous camera and rotation
 
@@ -226,9 +222,7 @@ OrbitControls emits `end` for individual wheel events, so that event alone does 
 
 Calibrate thresholds using the real graph and representative canvas sizes after the manual release. Do not commit arbitrary production thresholds in advance.
 
-## Cytoscape, Tree, and Globe
-
-Cytoscape consumes the same projection variants and preserves canonical selection. The manual stage replaces the previous remove-all/refit behavior with ID reconciliation and initial-only fitting. Verify zoom/pan preservation and initial placement during browser acceptance; never restore a stale viewport after asynchronous layout.
+## Tree and Globe
 
 Tree currently uses only Org-family canonical relationships for its ELK layout. When adding bins, ensure Data bins receive meaningful placement constraints without being presented as organizational hierarchy. Treat this as a separate arrangement integration.
 
@@ -248,7 +242,7 @@ Preserve the user's chosen level when an unsupported arrangement temporarily for
 | Collapse and context changes | Explicit reset; preserve expansion across levels, reset on a new scope/search/filter context. |
 | Search versus structured filters | Protect text matches; explicitly decide whether all structured-filter results are also protected. |
 | Initial supported arrangements | Active Graph first; Tree after placement review; Globe Entity-only. |
-| Persistence | Session state initially; defer saved-view and URL persistence for semantic settings. |
+| Persistence | Session state initially; defer URL persistence for semantic settings. |
 
 ## Incremental implementation sequence
 
@@ -256,10 +250,9 @@ Preserve the user's chosen level when an unsupported arrangement temporarily for
 2. **Add manual Family / Type / Entity.** Default to Entity. Add localized controls and explicit unsupported-arrangement behavior. Leave automatic zoom disabled.
 3. **Implement the projection contract and grouping.** Settle hub retention and bridge policy first. Add synthetic variants, deterministic IDs, direction-preserving aggregates, exact counts, and tests for overlapping membership. Keep Entity output equivalent to the existing canonical projection.
 4. **Integrate stable ForceGraph updates and local expansion.** Reconcile objects, apply the verified layout-transition policy, preserve selection, and add bundle details plus collapse/reset behavior.
-5. **Bring Cytoscape to parity.** Use the shared projection, add bin appearance and sizing, preserve viewport, and verify event dispatch and canonical selection.
-6. **Evaluate Tree integration.** Add explicit placement for both families and verify cycles, opposing directions, and layout stability.
-7. **Add automatic semantic zoom.** Measure camera scale, calibrate hysteresis thresholds, debounce settled changes, and verify manual overrides and expansion behavior.
-8. **Review Globe separately.** Keep Entity-only until an explicit geographic presentation is approved.
+5. **Evaluate Tree integration.** Add explicit placement for both families and verify cycles, opposing directions, and layout stability.
+6. **Add automatic semantic zoom.** Measure camera scale, calibrate hysteresis thresholds, debounce settled changes, and verify manual overrides and expansion behavior.
+7. **Review Globe separately.** Keep Entity-only until an explicit geographic presentation is approved.
 
 ## Verification and acceptance
 

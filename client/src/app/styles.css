@@ -540,8 +540,7 @@ body {
   color: #ffe3b5;
 }
 
-.force-graph-label.is-selected,
-.force-graph-label.is-focused {
+.force-graph-label.is-selected {
   height: 24px;
   border-color: rgba(255, 120, 94, 0.92);
   background: rgba(82, 32, 28, 0.9);
@@ -718,26 +717,6 @@ body {
 
 .workspace-pane-search.is-fill .systems-directory-rail .systems-card-meta {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.graph-surface-globe {
-  background:
-    linear-gradient(180deg, #f8fbfd 0%, #edf5fb 58%, #e7f0f7 100%);
-}
-
-.globe-canvas {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  background:
-    linear-gradient(180deg, #f8fbfd 0%, #edf5fb 58%, #e7f0f7 100%);
-}
-
-.globe-canvas canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 .full-width {

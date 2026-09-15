@@ -3,7 +3,7 @@ import { Button, Card, Checkbox, Flex, Tag, Typography } from "antd";
 import { useState } from "react";
 
 import { edgeKinds, type GraphNodeKind } from "../../../../shared/domain";
-import { nodeMapEdgeColors } from "../graph/cytoscapeStyles";
+import { nodeMapEdgeColors } from "../graph/graphColors";
 import { vocabularyLabel, t } from "../i18n";
 import { useGraphStore } from "../state/graphStore";
 

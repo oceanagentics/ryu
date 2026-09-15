@@ -426,24 +426,6 @@ DROP TRIGGER IF EXISTS trg_routes_source_links ON ryu_routes;
 CREATE CONSTRAINT TRIGGER trg_routes_source_links AFTER INSERT OR UPDATE OR DELETE ON ryu_routes
 DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION check_owned_source_links();
 
-CREATE TABLE IF NOT EXISTS saved_views (
-  id text PRIMARY KEY,
-  name text NOT NULL,
-  scope text NOT NULL,
-  filter_json jsonb NOT NULL DEFAULT '{}'::jsonb,
-  layout_json jsonb NOT NULL DEFAULT '{}'::jsonb,
-  style_json jsonb NOT NULL DEFAULT '{}'::jsonb,
-  created_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  updated_at timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
-
-DROP TRIGGER IF EXISTS trg_saved_views_updated_at ON saved_views;
-CREATE TRIGGER trg_saved_views_updated_at
-BEFORE UPDATE ON saved_views
-FOR EACH ROW
-WHEN (NEW.updated_at = OLD.updated_at)
-EXECUTE FUNCTION set_updated_at_timestamp();
-
 DO $$
 BEGIN
   REVOKE CREATE ON SCHEMA public FROM PUBLIC;

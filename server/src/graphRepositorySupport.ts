@@ -14,7 +14,6 @@ import type {
   RyuPortalRoute,
   RyuRoute,
   RyuSystemRecord,
-  SavedView,
   SourceCollection,
   SupportedLocale,
 } from "../../shared/domain";
@@ -262,34 +261,6 @@ export function mapRyuRoute(row: RawRyuRoute): RyuRoute {
     createdAt: row.created_at,
     updatedAt: row.updated_at,
   };
-}
-
-export function mapSavedView(row: Record<string, unknown>): SavedView {
-  return {
-    id: String(row.id),
-    name: String(row.name),
-    scope: String(row.scope),
-    filter: parseJson((row.filter_json as string | null) ?? "{}"),
-    layout: parseJson((row.layout_json as string | null) ?? "{}"),
-    style: parseJson((row.style_json as string | null) ?? "{}"),
-    createdAt: String(row.created_at),
-    updatedAt: String(row.updated_at),
-  };
-}
-
-export function filterSavedViews(savedViews: SavedView[], nodeIds: Set<string>): SavedView[] {
-  return savedViews.filter((savedView) => {
-    const filter = savedView.filter as { focusEntityId?: string | null };
-    const scopeIsViewMode =
-      savedView.scope === "governance" ||
-      savedView.scope === "country" ||
-      savedView.scope === "technical";
-
-    return (
-      (scopeIsViewMode || nodeIds.has(savedView.scope)) &&
-      (!filter.focusEntityId || nodeIds.has(filter.focusEntityId))
-    );
-  });
 }
 
 export function idPart(value: string): string {

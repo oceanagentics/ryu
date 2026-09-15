@@ -29,7 +29,7 @@ function node<K extends GraphNodeKind = "system">(id: string, kind: K = "system"
 }
 
 function search(nodes: GraphNode[], input: Record<string, unknown>, routes: RyuRoute[] = []) {
-  return searchRecords(indexGraph({ nodes, edges: [], ryuRoutes: routes, savedViews: [] }), readRecordSearchQuery(input));
+  return searchRecords(indexGraph({ nodes, edges: [], ryuRoutes: routes }), readRecordSearchQuery(input));
 }
 
 test("metric display and search share typed labels, units and reporting periods in every language", () => {
@@ -88,7 +88,7 @@ test("search presentation includes country, organization and system records with
   const organization = node("ocean-agency", "organization", "Ocean Agency");
   const system = node("ocean-catalogue", "system", "Ocean Catalogue");
   system.properties.disciplines = ["oceanography"];
-  const graph = indexGraph({ nodes: [country, organization, system], edges: [], ryuRoutes: [], savedViews: [] });
+  const graph = indexGraph({ nodes: [country, organization, system], edges: [], ryuRoutes: [] });
 
   const records = buildSearchRecords(graph, "en");
   assert.deepEqual(records.map(record => record.kind), ["country", "organization", "system"]);
@@ -212,7 +212,7 @@ test("discipline tags are independently searchable and produce localized, dedupl
   const second = node("second");
   second.recordDepth = "thin";
   second.properties.disciplines = ["taxonomy", "marine_biology"];
-  const graph = indexGraph({ nodes: [first, second, node("generalist")], edges: [], ryuRoutes: [], savedViews: [] });
+  const graph = indexGraph({ nodes: [first, second, node("generalist")], edges: [], ryuRoutes: [] });
   const records = buildSystemRecords(graph, "fr");
   assert.deepEqual(records.map(record => record.disciplines), [["ecology", "taxonomy"], ["taxonomy", "marine_biology"], []]);
   assert.deepEqual(getSearchFilterOptions(records, "fr").disciplines, [
@@ -241,7 +241,7 @@ test("data type search and display use canonical translations and preserve recor
   const resolved = systemDataDescriptors(record, resolveNodeLocalization(record, "fr"))[0];
   assert.equal(resolved.localizedLabel, "Registres taxonomiques");
   assert.equal(resolved.description, "Nomenclatural evidence");
-  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [], savedViews: [] });
+  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [] });
   assert.deepEqual(getSearchFilterOptions(buildSearchRecords(graph, "fr"), "fr").dataClaims.type, [
     { value: "taxonomic_records", label: "Registres taxonomiques" },
   ]);
@@ -260,7 +260,7 @@ test("discipline and occurrence labels remain searchable and filterable in every
   record.properties.data = { descriptors: [
     { id: "occurrences", category: "type", label: "occurrence_records", source: null },
   ] };
-  const graph = indexGraph({ nodes: [record], edges: [], ryuRoutes: [], savedViews: [] });
+  const graph = indexGraph({ nodes: [record], edges: [], ryuRoutes: [] });
   for (const locale of supportedLocales) {
     const botany = vocabularyLabel(locale, "disciplines", "botany");
     const occurrences = vocabularyLabel(locale, "dataTypes", "occurrence_records");
@@ -285,7 +285,7 @@ test("format search, details and filters use shared labels with localized descri
   const resolved = systemDataDescriptors(record, resolveNodeLocalization(record, "fr"))[0];
   assert.equal(resolved.localizedLabel, "Fichier plat GenBank");
   assert.equal(resolved.description, "Annotated sequence exports");
-  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [], savedViews: [] });
+  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [] });
   assert.deepEqual(getSearchFilterOptions(buildSearchRecords(graph, "fr"), "fr").dataClaims.format, [
     { value: "genbank_flatfile", label: "Fichier plat GenBank" },
   ]);
@@ -309,7 +309,7 @@ test("standard search and filters use canonical IDs and shared translations", ()
   const resolved = systemDataDescriptors(record, resolveNodeLocalization(record, "fr"))[0];
   assert.equal(resolved.localizedLabel, "Conventions climat et prévisions (CF)");
   assert.equal(resolved.description, "NetCDF product conventions");
-  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [], savedViews: [] });
+  const graph = indexGraph({ nodes: [record, { ...record, id: "duplicate-system" }], edges: [], ryuRoutes: [] });
   assert.deepEqual(getSearchFilterOptions(buildSearchRecords(graph, "fr"), "fr").dataClaims.standard, [
     { value: "cf", label: "Conventions climat et prévisions (CF)" },
   ]);
@@ -326,7 +326,7 @@ test("route matching respects DTO visibility and route filters", () => {
   const route: RyuRoute = { id: "route", nodeId: record.id, status: "active", mode: "live_api", priority: 1,
     target: "secretEndpointMarker", upstream: "privateUpstreamMarker", capabilities: ["download"], format: "netcdf",
     contractRef: null, caveat: null, properties: {}, createdAt: "2026-09-07", updatedAt: "2026-09-07" };
-  const graph = indexGraph({ nodes: [record], edges: [], ryuRoutes: [route], savedViews: [] });
+  const graph = indexGraph({ nodes: [record], edges: [], ryuRoutes: [route] });
   for (const q of ["secretEndpointMarker", "privateUpstreamMarker"]) {
     assert.equal(searchRecords(graph, { ...readRecordSearchQuery({ q }), scope: "public" }).length, 0);
     assert.equal(searchRecords(graph, { ...readRecordSearchQuery({ q }), scope: "admin" }).length, 1);
@@ -342,6 +342,6 @@ test("record search covers all kinds while the systems directory has explicit sy
   for (const kind of ["country", "organization", "system"]) {
     assert.deepEqual(search(records, { q: "Ocean Actor", kind }).map(result => result.entity.kind), [kind]);
   }
-  const graph = indexGraph({ nodes: records, edges: [], ryuRoutes: [], savedViews: [] });
+  const graph = indexGraph({ nodes: records, edges: [], ryuRoutes: [] });
   assert.deepEqual(buildSystemRecords(graph, "en").map(record => record.entity.id), ["catalogue"]);
 });

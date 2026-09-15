@@ -8,7 +8,6 @@ import type {
   NodeLocalizationReviewInput,
   RyuSystemQuery,
   RyuSystemRecord,
-  SavedView,
   Source,
   SupportedLocale,
 } from "../../shared/domain";
@@ -39,7 +38,6 @@ const bootstrap: GraphBootstrapPayload = {
   nodes: [],
   edges: [],
   ryuRoutes: [],
-  savedViews: [],
 };
 const readerToken = "ryu_live_reader";
 const writerToken = "ryu_live_writer";
@@ -250,7 +248,6 @@ class FakeRepository implements GraphRepository {
       inboundEdges: 0,
       outboundEdges: 0,
       routeRows: 0,
-      affectedSavedViews: [],
       impactHash: "impact-1",
     };
   }
@@ -314,10 +311,6 @@ class FakeRepository implements GraphRepository {
     });
 
     return this.node;
-  }
-
-  listSavedViews(): SavedView[] {
-    return [];
   }
 
   private recordUpdatedAt(): string {

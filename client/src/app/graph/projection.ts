@@ -7,25 +7,16 @@ import type {
   GraphNode,
   GraphNodeKind,
   SupportedLocale,
-  ViewMode,
 } from "../../../../shared/domain";
 import { defaultLocale } from "../../../../shared/localization";
 import { formatNumber, t, vocabularyLabel } from "../i18n";
 import { nodeTitle, resolveNodeDisplay } from "../localization";
-import type { CountryDisplayMode } from "../state/graphStore";
 import { buildLabel, getBinDimensions, getLayoutBand, getNodeDimensions, type NodeGeometry } from "./geometry";
 import type { IndexedGraph } from "./indexGraph";
-import {
-  getCountryIds,
-  getGovernanceIds,
-  getTechnicalIds,
-} from "./scope";
+import { getScopeIds } from "./scope";
 
 export interface ProjectionInput {
   graph: IndexedGraph;
-  viewMode: ViewMode;
-  countryDisplayMode: CountryDisplayMode;
-  focusEntityId: string | null;
   locale: SupportedLocale;
   searchEntityIds?: ReadonlySet<string> | null;
   hiddenNodeKinds?: readonly GraphNodeKind[];
@@ -55,15 +46,12 @@ export const relationshipFamily = {
   contributes: "data", transfers: "data",
 } satisfies Record<GraphEdgeKind, RelationshipFamily>;
 
-export type GovernanceBlock = "national" | "international" | null;
-
 interface ProjectionNodeDisplay extends NodeGeometry {
   id: string;
   label: string;
   simpleLabel: string;
   secondaryLabel: string | null;
   countryCode: string | null;
-  governanceBlock: GovernanceBlock;
   layoutBand: number;
 }
 
@@ -79,7 +67,6 @@ export type GraphProjectionEdge = {
   source: string;
   target: string;
   label: string;
-  isDerivedHierarchy: boolean;
 } & (
   | { type: GraphEdgeKind; bundle?: never; edgeIds?: never }
   | { type: GraphProjectionEdgeType; bundle: RelationshipBundle; edgeIds: string[] }
@@ -88,13 +75,11 @@ export type GraphProjectionEdge = {
 export interface GraphProjection {
   nodes: GraphProjectionNode[];
   edges: GraphProjectionEdge[];
-  effectiveFocusEntityId: string | null;
   bundles: RelationshipBundle[];
 }
 
 function buildProjectionNode(
   node: GraphNode,
-  governanceBlock: GovernanceBlock,
   layoutBand: number,
   locale: SupportedLocale,
 ): GraphProjectionNode {
@@ -108,7 +93,6 @@ function buildProjectionNode(
     secondaryLabel: secondaryNodeLabel(node, locale, simpleLabel),
     kind: node.kind,
     countryCode: (node.kind === "country" ? node.countryCode : null),
-    governanceBlock,
     layoutBand,
     ...getNodeDimensions(node.kind, label),
   };
@@ -148,31 +132,13 @@ function edgeLabel(kind: GraphEdgeKind, locale: SupportedLocale): string {
 export function projectGraph(input: ProjectionInput): GraphProjection {
   const {
     graph,
-    viewMode,
-    focusEntityId,
     locale,
     searchEntityIds = null,
     hiddenNodeKinds = [],
     hiddenEdgeKinds = [],
   } = input;
   const hiddenKindSet = new Set(hiddenNodeKinds);
-
-  const defaultCountry = graph.nodes.find((node) => node.kind === "country")?.id ?? null;
-  const defaultSystem = graph.nodes.find((node) => node.kind === "system")?.id ?? null;
-  const effectiveFocusEntityId =
-    viewMode === "governance" ? null :
-      focusEntityId ?? (viewMode === "technical" ? defaultSystem : defaultCountry);
-
-  let includedIds = new Set<string>();
-  if (searchEntityIds) {
-    includedIds = new Set(searchEntityIds);
-  } else if (viewMode === "governance") {
-    includedIds = getGovernanceIds(graph);
-  } else if (viewMode === "country" && effectiveFocusEntityId) {
-    includedIds = getCountryIds(graph, effectiveFocusEntityId);
-  } else if (viewMode === "technical" && effectiveFocusEntityId) {
-    includedIds = getTechnicalIds(graph, effectiveFocusEntityId);
-  }
+  const includedIds = getScopeIds(graph, searchEntityIds);
 
   const includedNodes = graph.nodes.filter(
     (node) => includedIds.has(node.id) && !hiddenKindSet.has(node.kind),
@@ -181,7 +147,6 @@ export function projectGraph(input: ProjectionInput): GraphProjection {
   const nodes = includedNodes.map((node) =>
     buildProjectionNode(
       node,
-      null,
       getLayoutBand(node.kind),
       locale,
     ),
@@ -200,10 +165,9 @@ export function projectGraph(input: ProjectionInput): GraphProjection {
     target: edge.targetNodeId,
     type: edge.kind,
     label: edgeLabel(edge.kind, locale),
-    isDerivedHierarchy: false,
   }));
 
-  return bundleRelationships(input, includedIds, nodes, edges, visibleEdges, effectiveFocusEntityId);
+  return bundleRelationships(input, includedIds, nodes, edges, visibleEdges);
 }
 
 function bundleRelationships(
@@ -212,7 +176,6 @@ function bundleRelationships(
   nodes: GraphProjectionNode[],
   edges: GraphProjectionEdge[],
   visibleEdges: GraphEdge[],
-  effectiveFocusEntityId: string | null,
 ): GraphProjection {
   const { graph, locale, semanticLevel = "entity" } = input;
   // Retention uses the unreduced scoped graph, before kind/edge filters. A filter
@@ -226,7 +189,6 @@ function bundleRelationships(
     }
   }
   const protectedIds = new Set(input.expandedEntityIds);
-  if (effectiveFocusEntityId) protectedIds.add(effectiveFocusEntityId);
   if (input.selectedEntityId) protectedIds.add(input.selectedEntityId);
   const selectedEdge = input.selectedRelationshipId ? graph.edgeById[input.selectedRelationshipId] : null;
   if (selectedEdge) {
@@ -328,19 +290,17 @@ function bundleRelationships(
     const memberKinds = [...new Set(bundle.hiddenMemberIds.map(id => graph.nodeById[id].kind))].sort();
     bins.push({ id: bundle.id, kind: "relationship-bin", bundle, memberKinds, label: `${label}\n${directionLabel}`,
       simpleLabel: label, secondaryLabel: directionLabel, countryCode: null,
-      governanceBlock: null, layoutBand: 3, ...getBinDimensions(label) });
+      layoutBand: 3, ...getBinDimensions(label) });
     const edgeIds = group.incident.filter(item => hiddenIds.has(item.memberId)).map(item => item.edgeId).sort();
     edgeIds.forEach(id => representedEdgeIds.add(id));
     aggregates.push({ id: projectedId(["edge", bundle.hubId, bundle.direction, bundle.level, bundle.groupId]),
       source: bundle.direction === "outgoing" ? bundle.hubId : bundle.id,
       target: bundle.direction === "outgoing" ? bundle.id : bundle.hubId,
-      type: bundle.groupId, label: `${label} · ${directionLabel}`, bundle, edgeIds,
-      isDerivedHierarchy: false });
+      type: bundle.groupId, label: `${label} · ${directionLabel}`, bundle, edgeIds });
   }
   return {
     nodes: [...nodes.filter(node => !hiddenIds.has(node.id)), ...bins.sort((a, b) => a.id.localeCompare(b.id))],
     edges: [...edges.filter(edge => !representedEdgeIds.has(edge.id)), ...aggregates.sort((a, b) => a.id.localeCompare(b.id))],
-    effectiveFocusEntityId,
     bundles: [...groups.values()].map(group => group.bundle).sort((a, b) => a.id.localeCompare(b.id)),
   };
 }

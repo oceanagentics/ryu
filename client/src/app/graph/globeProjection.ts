@@ -1,5 +1,5 @@
 import type { GraphNode } from "../../../../shared/domain";
-import { nodeMapEdgeColors } from "./cytoscapeStyles";
+import { nodeMapEdgeColors } from "./graphColors";
 import type { GraphProjection, GraphProjectionEdge } from "./projection";
 
 export interface GlobeNode {

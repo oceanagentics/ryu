@@ -14,7 +14,6 @@ import type {
   RyuSystemOperator,
   RyuSystemQuery,
   RyuSystemRecord,
-  SavedView,
   SupportedLocale,
 } from "../../shared/domain";
 import { defaultLocale, resolveNodeLocalization, supportedLocales } from "../../shared/localization";
@@ -35,7 +34,6 @@ import type {
 } from "../../shared/recordApi";
 import type { GraphRepository } from "./graphRepository";
 import {
-  filterSavedViews,
   isReviewState,
   mapEdge,
   mapNode,
@@ -43,7 +41,6 @@ import {
   mapNodeLocalization,
   mapPortalRoute,
   mapRyuRoute,
-  mapSavedView,
   normalizeString,
   stringifyJson,
   systemSearchScore,
@@ -129,17 +126,6 @@ function mapPostgresRoute(row: Record<string, unknown>): RyuRoute {
   });
 }
 
-function mapPostgresSavedView(row: Record<string, unknown>): SavedView {
-  return mapSavedView({
-    ...row,
-    filter_json: jsonText(row.filter_json),
-    layout_json: jsonText(row.layout_json),
-    style_json: jsonText(row.style_json),
-    created_at: timestampText(row.created_at),
-    updated_at: timestampText(row.updated_at),
-  });
-}
-
 export class PostgresGraphRepository implements GraphRepository {
   constructor(private readonly pool: Pool) {}
 
@@ -170,16 +156,10 @@ export class PostgresGraphRepository implements GraphRepository {
           resolveNodeLocalization(right, defaultLocale).title,
         ) || left.id.localeCompare(right.id),
       );
-    const savedViews = filterSavedViews(
-      await this.listSavedViews(),
-      new Set(nodes.map((node) => node.id)),
-    );
-
     return {
       nodes,
       edges: edgeRows.map(mapPostgresEdge),
       ryuRoutes: routeRows.map(mapPostgresRoute),
-      savedViews,
     };
   }
 
@@ -377,24 +357,11 @@ export class PostgresGraphRepository implements GraphRepository {
       inboundEdges,
       outboundEdges,
       routeRows,
-      savedViewRows,
     ] = await Promise.all([
       this.countRows("SELECT count(*) AS count FROM node_localizations WHERE node_id = $1", [id]),
       this.countRows("SELECT count(*) AS count FROM edges WHERE target_node_id = $1", [id]),
       this.countRows("SELECT count(*) AS count FROM edges WHERE source_node_id = $1", [id]),
       this.countRows("SELECT count(*) AS count FROM ryu_routes WHERE node_id = $1", [id]),
-      this.query(
-        `
-          SELECT id
-          FROM saved_views
-          WHERE scope = $1
-             OR filter_json::text LIKE $2
-             OR layout_json::text LIKE $2
-             OR style_json::text LIKE $2
-          ORDER BY id
-        `,
-        [id, `%${id}%`],
-      ),
     ]);
     const [aggregate] = await this.getRecordAggregatesByIds([id], defaultLocale);
     const impactWithoutHash = {
@@ -405,7 +372,6 @@ export class PostgresGraphRepository implements GraphRepository {
       inboundEdges,
       outboundEdges,
       routeRows,
-      affectedSavedViews: savedViewRows.map((row) => String(row.id)),
     };
 
     return {
@@ -489,11 +455,6 @@ export class PostgresGraphRepository implements GraphRepository {
     });
 
     return this.getNode(id);
-  }
-
-  async listSavedViews(): Promise<SavedView[]> {
-    return (await this.query("SELECT * FROM saved_views ORDER BY updated_at DESC"))
-      .map(mapPostgresSavedView);
   }
 
   private getRecordAggregatesByIds(ids: string[], requestedLocale: SupportedLocale, client: Pool | PoolClient, preserveContent: true): Promise<RecordQualityInput[]>;

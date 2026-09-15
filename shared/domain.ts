@@ -29,8 +29,6 @@ export function validEdgeEndpoints(kind: GraphEdgeKind, source: string | undefin
   return edgeEndpointKinds[kind]?.some(pair => pair === `${source}/${target}`) ?? false;
 }
 
-export type ViewMode = "governance" | "country" | "technical";
-
 export type RecordDepth = "stub" | "thin" | "rich";
 
 export type ReviewState =
@@ -366,30 +364,10 @@ export interface RyuSystemQuery {
   includeSources?: boolean;
 }
 
-export interface SavedView {
-  id: string;
-  name: string;
-  scope: string;
-  filter: Record<string, unknown>;
-  layout: Record<string, unknown>;
-  style: Record<string, unknown>;
-  createdAt: string;
-  updatedAt: string;
-}
-
 export interface GraphBootstrapPayload {
   nodes: GraphNode[];
   edges: GraphEdge[];
   ryuRoutes: RyuRoute[];
-  savedViews: SavedView[];
-}
-
-export interface SavedViewInput {
-  name: string;
-  scope: string;
-  filter: Record<string, unknown>;
-  layout: Record<string, unknown>;
-  style: Record<string, unknown>;
 }
 
 export interface NodeLocalizationReviewInput {

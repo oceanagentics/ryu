@@ -64,6 +64,31 @@ test("rolls back transactional record upserts when a related row write fails", a
   assert.equal(client.released, true);
 });
 
+test("saved view removal migration drops the obsolete table and is safe to rerun", async () => {
+  const db = new PGlite();
+  try {
+    await db.exec(`
+      CREATE TABLE saved_views(id text PRIMARY KEY, filter_json jsonb NOT NULL DEFAULT '{}');
+      INSERT INTO saved_views(id, filter_json)
+      VALUES ('legacy-focus', '{"viewMode":"technical","focusEntityId":"bismal"}');
+    `);
+    const migration = fs.readFileSync(
+      new URL("../schema/019_remove_saved_views.sql", import.meta.url),
+      "utf8",
+    );
+    await db.exec(migration);
+    await db.exec(migration);
+    const result = await db.query<{ count: number }>(`
+      SELECT count(*)::integer AS count
+      FROM information_schema.tables
+      WHERE table_schema = 'public' AND table_name = 'saved_views'
+    `);
+    assert.equal(result.rows[0].count, 0);
+  } finally {
+    await db.close();
+  }
+});
+
 function richRecordFixture() {
   return JSON.parse(fs.readFileSync(new URL("./fixtures/rich-record.json", import.meta.url), "utf8"));
 }

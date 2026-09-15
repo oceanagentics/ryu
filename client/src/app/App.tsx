@@ -131,10 +131,6 @@ export function App() {
   const setBootstrap = useGraphStore((state) => state.setBootstrap);
   const setError = useGraphStore((state) => state.setError);
   const setLoading = useGraphStore((state) => state.setLoading);
-  const setViewMode = useGraphStore((state) => state.setViewMode);
-  const setDisplayMode = useGraphStore((state) => state.setDisplayMode);
-  const setCountryDisplayMode = useGraphStore((state) => state.setCountryDisplayMode);
-  const setFocusEntityId = useGraphStore((state) => state.setFocusEntityId);
   const setSelectedEntityId = useGraphStore((state) => state.setSelectedEntityId);
   const resetSelection = useGraphStore((state) => state.resetSelection);
 
@@ -187,20 +183,6 @@ export function App() {
       mounted = false;
     };
   }, [setBootstrap, setError, setLoading]);
-
-  useEffect(() => {
-    setViewMode("governance");
-    setDisplayMode("graph");
-    setCountryDisplayMode("node");
-    setFocusEntityId(null);
-    resetSelection();
-  }, [
-    resetSelection,
-    setCountryDisplayMode,
-    setDisplayMode,
-    setFocusEntityId,
-    setViewMode,
-  ]);
 
   useEffect(() => {
     if (!graph) {

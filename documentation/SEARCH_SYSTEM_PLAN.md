@@ -130,7 +130,7 @@ The API executes search against Postgres data; the browser keeps the bootstrap g
 - Store them in `useGraphStore`.
 - Keep UI controls in the Systems pane for now.
 - Add selectors/helpers so other panes can read the resolved search intent.
-- Include search/filter fields in saved views once the behavior is stable.
+- Consider URL persistence for search/filter fields once the behavior is stable.
 
 ## Phase 2: Field-Aware Search Extractors
 

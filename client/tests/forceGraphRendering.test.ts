@@ -7,7 +7,7 @@ import type { GraphData, LinkObject, NodeObject } from "three-forcegraph";
 import ts from "typescript";
 
 import { getNodeMap3dSeed, nodeMap3dGlobeRadius } from "../src/app/graph/nodeMap3dLayout";
-import { nodeMapEdgeColors } from "../src/app/graph/cytoscapeStyles";
+import { nodeMapEdgeColors } from "../src/app/graph/graphColors";
 import { indexGraph } from "../src/app/graph/indexGraph";
 import { projectGraph, type GraphProjection, type ProjectionInput } from "../src/app/graph/projection";
 
@@ -105,8 +105,9 @@ test("live edges survive levels, legends, expansion, empty views and same-ID ret
   ], { getNodeMap3dSeed });
   const canonical = indexGraph(JSON.parse(readFileSync(new URL("../public/bootstrap.public.json", import.meta.url), "utf8")));
   const canonicalSnapshot = JSON.stringify(canonical);
-  const base: ProjectionInput = { graph: canonical, viewMode: "governance", countryDisplayMode: "node",
-    focusEntityId: null, locale: "en", semanticLevel: "entity", selectedEntityId: "fishbase" };
+  const base: ProjectionInput = {
+    graph: canonical, locale: "en", semanticLevel: "entity", selectedEntityId: "fishbase",
+  };
   const family = projectGraph({ ...base, semanticLevel: "family" });
   assert.ok(family.bundles.length > 0);
   const scenarios: Partial<ProjectionInput>[] = [
@@ -348,12 +349,12 @@ test("hidden label kinds neither render nor suppress visible labels through coll
   const cameraPosition = camera.position.clone();
   let measured = 0;
   const graph = { camera: () => camera, graph2ScreenCoords: (x: number) => { measured += 1; return { x: 300 + x, y: 200 }; } };
-  const labels = buildLabelPlacements(graph, nodes, { width: 1000, height: 600 }, "country", null, null,
+  const labels = buildLabelPlacements(graph, nodes, { width: 1000, height: 600 }, "country", null,
     new Set(), ["system", "relationship-bin"]);
   assert.deepEqual(labels.map((label: { id: string }) => label.id).sort(), ["relationship-bin", "system"]);
   assert.equal(measured, 2, "hidden labels are filtered before measuring and collision detection");
   assert.ok(labels.find((label: { id: string }) => label.id === "system").opacity > 0);
-  assert.deepEqual(buildLabelPlacements(graph, nodes, { width: 1000, height: 600 }, null, null, null, new Set(), []), []);
+  assert.deepEqual(buildLabelPlacements(graph, nodes, { width: 1000, height: 600 }, null, null, new Set(), []), []);
   assert.equal(JSON.stringify(nodes), snapshot);
   assert.deepEqual(camera.position, cameraPosition);
 });

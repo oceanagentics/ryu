@@ -41,7 +41,7 @@
 - Agents should run `validateOnly=true` before applying content writes and show validation errors before retrying.
 - Writer tokens may create, update, and delete records but must not set `human_reviewed`; reviewer or admin tokens may set `human_reviewed`.
 - Delete dry-runs and applies require writer access or higher; applies require a dry-run `impactHash` plus the current `recordUpdatedAt` precondition.
-- Do not expose general node, edge, source, saved-view, schema, bulk, or direct database mutation routes as launch APIs.
+- Do not expose general node, edge, source, schema, bulk, or direct database mutation routes as launch APIs.
 
 ## Current Minimal Model
 ### Node kinds
@@ -215,34 +215,31 @@
 
 ## Graph View Layers
 - Keep graph view code split into two top-level phases: graph build and graph display.
-- Graph build decides what Cytoscape elements exist:
-  - `state/viewIntent.ts` and `state/graphStore.ts`: view intent and normalized user state
+- Graph build decides which projected nodes and edges exist:
+  - `state/graphStore.ts`: normalized user state
   - `graph/scope.ts`: scope selection
   - `graph/projection.ts`: structural projection
   - `graph/geometry.ts`: intrinsic node geometry and stable layout hints
-- Graph display decides how those elements are positioned and shown:
-  - `graph/layout.ts`: base Cytoscape layout planning and named post-layout transform definitions
-  - `graph/useCytoscapeController.ts`: Cytoscape execution, enabled transform execution, events, and viewport policy
-  - `components/GraphCanvas.tsx`: composition root only
-  - `graph/cytoscapeStyles.ts`: presentation only
+- Graph display decides how that projection is positioned and shown:
+  - `graph/nodeMap3dLayout.ts`: flat and globe arrangement targets
+  - `components/ForceGraphCanvas.tsx`: renderer integration, interaction events, and camera policy
+  - `components/nodeMap3dGlobeScene.ts`: globe presentation objects
+  - `graph/graphColors.ts` and CSS: presentation only
 
 ## Graph View Code Rules
 - Put new logic in the highest layer that actually owns that concern.
-- Express graph layout intent as graph structure or layout constraints before the layout solve whenever possible. Avoid moving nodes after the solve; post-solve position overrides make the app responsible for collisions, spacing, crossings, and edge routing side effects.
+- Express graph layout intent as graph structure or layout constraints before the layout solve whenever possible.
 - `scope.ts` should decide which ids belong in a view. It should return ids only, not parent containers, sizes, or layout options.
-- `projection.ts` should assemble the drawable graph structure: visible nodes, visible edges, view-specific grouping, and classification such as governance block membership.
+- `projection.ts` should assemble the drawable graph structure: visible nodes, visible edges, relationship grouping, and classification.
 - `geometry.ts` should define intrinsic node facts only: label text, box width and height, text width, and stable hints like `layoutBand`.
-- `layout.ts` should translate projected graph data into Cytoscape elements, base layout behavior, and named post-layout transforms. Put Dagre, ELK, concentric, breadthfirst, multi-phase layout plans, and transform definitions here.
-- `useCytoscapeController.ts` should execute the supplied display plan, run only enabled post-layout transforms after `layoutstop`, wire interactions, and manage fit vs preserve viewport behavior. Do not invent graph semantics here.
-- `GraphCanvas.tsx` should orchestrate the pipeline and pass view intent plus display plans through to the controller. Do not delete fields from display plans, cache coordinates, or add view-specific layout hacks here.
-- `cytoscapeStyles.ts` should stay visual only. Keep colors, borders, labels, arrows, and selection styling here. Do not put semantic geometry or layout behavior here.
-- Post-layout transforms are position-only developer controls. They must not add or remove elements, change labels, change parents, or alter edge inclusion.
+- `nodeMap3dLayout.ts` should calculate arrangement targets without changing graph semantics.
+- `ForceGraphCanvas.tsx` should consume the projection, reconcile renderer objects, wire interactions, and manage camera behavior. Do not invent graph semantics there.
+- `graphColors.ts`, `nodeMap3dGlobeScene.ts`, and CSS should stay visual only.
 
 ## Graph View Change Guide
 - If the change is about which nodes or edges appear in a view, start in `graph/scope.ts`.
 - If the change is about explicit graph grouping or edge projection, start in `graph/projection.ts`.
 - If the change is about box size, label wrapping, or band assignment, start in `graph/geometry.ts`.
-- If the change is about how a specific layout algorithm behaves, start in `graph/layout.ts`.
-- If the change is about a named post-layout position transform, start in `graph/layout.ts` and expose it through the existing transform toggle model.
-- If the change is about camera behavior, fit, preserve zoom, or interaction wiring, start in `graph/useCytoscapeController.ts`.
+- If the change is about flat or globe arrangement positions, start in `graph/nodeMap3dLayout.ts`.
+- If the change is about camera behavior, rotation, or interaction wiring, start in `components/ForceGraphCanvas.tsx`.
 - Prefer changing one layer cleanly over adding a workaround in a lower layer.

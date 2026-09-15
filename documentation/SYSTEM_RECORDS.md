@@ -197,7 +197,6 @@ The lean graph schema uses:
 - `nodes.sources` and `edges.sources`: source objects owned by each node or relationship, with translated titles.
 - `node_localizations`: per-language user-facing record text, localized details, and review state.
 - `ryu_routes`: compact operational route rows for machine access.
-- `saved_views`: app state.
 
 For system nodes:
 

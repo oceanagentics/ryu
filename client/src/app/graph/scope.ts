@@ -1,51 +1,11 @@
-/**
- * Scope selection decides which node ids belong in each high-level view.
- */
+/** Scope selection decides which canonical node ids belong in the graph. */
 import type { IndexedGraph } from "./indexGraph";
 
-export function expandNeighborhood(
+export function getScopeIds(
   graph: IndexedGraph,
-  seedIds: Set<string>,
-  depth: number,
+  searchEntityIds: ReadonlySet<string> | null,
 ): Set<string> {
-  const ids = new Set(seedIds);
-  let frontier = new Set(seedIds);
-
-  for (let step = 0; step < depth; step += 1) {
-    const next = new Set<string>();
-    for (const nodeId of frontier) {
-      const edgeIds = [
-        ...(graph.outgoingByNodeId[nodeId] ?? []),
-        ...(graph.incomingByNodeId[nodeId] ?? []),
-      ];
-
-      for (const edgeId of edgeIds) {
-        const edge = graph.edgeById[edgeId];
-        if (!ids.has(edge.sourceNodeId)) {
-          ids.add(edge.sourceNodeId);
-          next.add(edge.sourceNodeId);
-        }
-        if (!ids.has(edge.targetNodeId)) {
-          ids.add(edge.targetNodeId);
-          next.add(edge.targetNodeId);
-        }
-      }
-    }
-
-    frontier = next;
-  }
-
-  return ids;
-}
-
-export function getGovernanceIds(graph: IndexedGraph): Set<string> {
-  return new Set(graph.nodes.map((node) => node.id));
-}
-
-export function getCountryIds(graph: IndexedGraph, focusNodeId: string): Set<string> {
-  return expandNeighborhood(graph, new Set([focusNodeId]), 3);
-}
-
-export function getTechnicalIds(graph: IndexedGraph, focusNodeId: string): Set<string> {
-  return expandNeighborhood(graph, new Set<string>([focusNodeId]), 3);
+  return searchEntityIds
+    ? new Set(searchEntityIds)
+    : new Set(graph.nodes.map((node) => node.id));
 }

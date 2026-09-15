@@ -69761,37 +69761,5 @@
       "updatedAt": "2026-09-15T01:16:51.826Z"
     }
   ],
-  "ryuRoutes": [],
-  "savedViews": [
-    {
-      "id": "view-japan-country-path",
-      "name": "Japan publication path",
-      "scope": "jpn",
-      "filter": {
-        "viewMode": "country",
-        "focusEntityId": "jpn"
-      },
-      "layout": {
-        "algorithm": "breadthfirst"
-      },
-      "style": {},
-      "createdAt": "2026-04-24T00:00:00.000Z",
-      "updatedAt": "2026-07-24T18:25:59.141Z"
-    },
-    {
-      "id": "view-bismal-technical-path",
-      "name": "BISMaL technical path",
-      "scope": "bismal",
-      "filter": {
-        "viewMode": "technical",
-        "focusEntityId": "bismal"
-      },
-      "layout": {
-        "algorithm": "breadthfirst"
-      },
-      "style": {},
-      "createdAt": "2026-04-24T00:00:00.000Z",
-      "updatedAt": "2026-07-24T18:25:59.141Z"
-    }
-  ]
+  "ryuRoutes": []
 }

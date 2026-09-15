@@ -1,18 +1,15 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import cytoscape from "cytoscape";
-import { Color } from "three";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
 import { edgeKinds, type GraphEdge, type GraphNode } from "../../shared/domain";
 import { emptyLocalizationDetails } from "../../shared/localization";
+import { nodeMapEdgeColors, nodeMapNodeColors } from "../src/app/graph/graphColors";
 import { indexGraph } from "../src/app/graph/indexGraph";
 import { projectGraph, type ProjectionInput, type GraphProjection } from "../src/app/graph/projection";
-import { projectCytoscapeGraph } from "../src/app/graph/layout";
 import { projectGlobeGraph } from "../src/app/graph/globeProjection";
 import { getNodeMap3dSeed } from "../src/app/graph/nodeMap3dLayout";
-import { getCytoscapeStyles, nodeMapEdgeColors, nodeMapNodeColors } from "../src/app/graph/cytoscapeStyles";
 import { useGraphStore } from "../src/app/state/graphStore";
 import { LegendPanel } from "../src/app/components/LegendPanel";
 
@@ -36,9 +33,7 @@ function edge(id: string, sourceNodeId: string, targetNodeId: string, kind: Grap
 function input(edges: GraphEdge[], extraIds: string[] = []): ProjectionInput {
   return { graph: indexGraph({ nodes: [...new Set([...extraIds,
     ...edges.flatMap(edge => [edge.sourceNodeId, edge.targetNodeId])])].map(node),
-    edges, savedViews: [], ryuRoutes: [] }),
-    viewMode: "governance", countryDisplayMode: "node", focusEntityId: null,
-    locale: "en", semanticLevel: "type" };
+    edges, ryuRoutes: [] }), locale: "en", semanticLevel: "type" };
 }
 
 function verifyCoverage(projection: GraphProjection, edgeIds: string[]) {
@@ -60,7 +55,6 @@ test("Entity is canonical and projection never mutates the input graph", () => {
   const projected = projectGraph({ ...source, semanticLevel: "entity" });
   assert.deepEqual(projected.nodes.map(node => node.id), source.graph.nodes.map(node => node.id));
   assert.deepEqual(projected.edges.map(edge => edge.id), ["a", "b"]);
-  assert.equal(projected.effectiveFocusEntityId, null);
   projectGraph(source);
   assert.equal(JSON.stringify(source.graph), snapshot);
 });
@@ -92,15 +86,13 @@ test("family bins show the unique count first, then the family label and nodes",
   const projected = projectGraph({ ...source, semanticLevel: "family" });
   const bins = projected.nodes.filter(node => node.bundle);
   assert.deepEqual(bins.map(node => node.simpleLabel).sort(), ["2 Data nodes", "2 Org nodes"]);
-  const display = projectCytoscapeGraph(projected, "grid", "governance", "node-map");
   for (const bin of bins) {
     assert.equal(bin.label, `${bin.simpleLabel}\noutgoing`);
-    assert.equal(display.elements.find(element => element.data.id === bin.id)!.data.simpleLabel, bin.simpleLabel);
     assert.equal(projected.edges.find(edge => edge.bundle?.id === bin.id)!.label, `${bin.simpleLabel} · outgoing`);
   }
 });
 
-test("canonical and aggregate edges share the node blue/green palette across renderers", () => {
+test("canonical and aggregate edges share the node blue/green palette", () => {
   assert.equal(nodeMapNodeColors.organization, "#9ad29d");
   assert.equal(nodeMapNodeColors.system, "#8fc7ff");
   assert.equal(new Set(Object.values(nodeMapEdgeColors)).size, 2);
@@ -112,22 +104,6 @@ test("canonical and aggregate edges share the node blue/green palette across ren
     edge(`edge-${kind}-${id}`, "hub", `${kind}-${id}`, kind))));
   for (const semanticLevel of ["entity", "type", "family"] as const) {
     const projection = projectGraph({ ...source, semanticLevel });
-    for (const displayMode of ["diagram", "node-map"] as const) {
-      const plan = projectCytoscapeGraph(projection, "grid", "governance", displayMode);
-      const cy = cytoscape({ headless: true, styleEnabled: true, elements: plan.elements,
-        style: getCytoscapeStyles(displayMode) });
-      try {
-        for (const edge of projection.edges) {
-          const displayed = cy.getElementById(edge.id);
-          const color = new Color(nodeMapEdgeColors[edge.type]).getStyle();
-          assert.equal(displayed.style("line-color"), color);
-          assert.equal(displayed.style("target-arrow-color"), color);
-          displayed.addClass("is-connected");
-          assert.equal(displayed.style("line-color"), "rgb(255,120,94)");
-          assert.equal(displayed.style("target-arrow-color"), "rgb(255,120,94)");
-        }
-      } finally { cy.destroy(); }
-    }
     if (semanticLevel === "entity") {
       for (const link of projectGlobeGraph(projection).links) {
         assert.equal(link.color, nodeMapEdgeColors[link.type]);
@@ -160,18 +136,6 @@ test("bin color classification comes from hidden members, not its hub or relatio
       const bin = projected.nodes.find(node => node.bundle)!;
       assert.deepEqual(bin.memberKinds, [kind]);
       assert.equal(bin.kind, "relationship-bin", "display color never changes synthetic identity");
-      for (const displayMode of ["diagram", "node-map"] as const) {
-        const plan = projectCytoscapeGraph(projected, "grid", "governance", displayMode);
-        const cy = cytoscape({ headless: true, styleEnabled: true, elements: [...plan.elements,
-          { data: { id: "reference", kind, label: "Reference", simpleLabel: "Reference",
-            width: 100, height: 60, textMaxWidth: 90 } }], style: getCytoscapeStyles(displayMode) });
-        try {
-          const renderedBin = cy.getElementById(bin.id);
-          assert.equal(renderedBin.data("colorKind"), kind);
-          assert.equal(renderedBin.style("background-color"), cy.getElementById("reference").style("background-color"));
-          assert.equal(renderedBin.style("border-style"), "dashed");
-        } finally { cy.destroy(); }
-      }
     }
   }
 });
@@ -183,15 +147,7 @@ test("mixed-bin classification is deterministic and changes when members are rev
   const mixedProjection = projectGraph({ ...source, semanticLevel: "family" });
   const mixed = mixedProjection.nodes.find(node => node.bundle)!;
   assert.deepEqual(mixed.memberKinds, ["organization", "system"]);
-  const blendedColor = new Color("#9ad29d").lerp(new Color("#8fc7ff"), 0.5).getStyle();
-  for (const displayMode of ["diagram", "node-map"] as const) {
-    const plan = projectCytoscapeGraph(mixedProjection, "grid", "governance", displayMode);
-    const cy = cytoscape({ headless: true, styleEnabled: true, elements: plan.elements,
-      style: getCytoscapeStyles(displayMode) });
-    try {
-      assert.equal(cy.getElementById(mixed.id).style("background-color"), blendedColor);
-    } finally { cy.destroy(); }
-  }
+  assert.equal(nodeMapNodeColors["relationship-bin"], "#95cdd5");
   const revealed = projectGraph({ ...source, semanticLevel: "family", expandedEntityIds: new Set(["three"]) })
     .nodes.find(node => node.bundle)!;
   assert.equal(revealed.id, mixed.id);
@@ -224,13 +180,12 @@ test("global hubs, shared topology, cycles, self-loops, pairs and isolated nodes
   verifyCoverage(projected, edges.map(edge => edge.id));
 });
 
-test("focus, selection, selected edge endpoints, search and expansion protect canonical identities", () => {
+test("selection, selected edge endpoints, search and expansion protect canonical identities", () => {
   const edges = ["one", "two", "three", "four"].map(id => edge(id, "hub", id));
   const source = input(edges);
   for (const overrides of [
     { selectedEntityId: "one" }, { selectedRelationshipId: "one" },
     { expandedEntityIds: new Set(["one"]) },
-    { viewMode: "technical" as const, focusEntityId: "one" },
   ]) {
     const projected = projectGraph({ ...source, ...overrides });
     assert.ok(projected.nodes.some(node => node.id === "one" && !node.bundle));
@@ -270,11 +225,9 @@ test("bin IDs and membership are order/locale/count independent and cannot colli
   verifyCoverage(collision, ["a", "b", "c"]);
 });
 
-test("Cytoscape retains synthetic metadata; Globe rejects non-Entity projections", () => {
+test("Globe rejects non-Entity projections", () => {
   const source = input([edge("a", "hub", "one"), edge("b", "hub", "two")]);
   const projected = projectGraph(source);
-  const converted = projectCytoscapeGraph(projected, "grid", "governance");
-  assert.equal(converted.elements.filter(element => element.data.bundle).length, 2);
   assert.throws(() => projectGlobeGraph(projected), /Entity-level/);
   assert.equal(projectGlobeGraph(projectGraph({ ...source, semanticLevel: "entity" })).nodes.length, 3);
 });
@@ -358,31 +311,4 @@ test("legend label controls default to systems and bins without changing graph o
     const { visibleNodeLabelKinds: __, ...after } = useGraphStore.getState();
     assert.deepEqual(after, unchanged, "labels do not reset filters, expansion, selection, viewport or canonical data");
   } finally { useGraphStore.setState(previous); }
-});
-
-test("Cytoscape label toggles affect text only, including selected nodes and bins", () => {
-  const kinds = ["country", "organization", "system", "relationship-bin"] as const;
-  for (const displayMode of ["diagram", "node-map"] as const) {
-    const cy = cytoscape({ headless: true, styleEnabled: true, layout: { name: "preset" },
-      elements: kinds.map((kind, index) => ({ data: { id: kind, kind, colorKind: kind, label: kind,
-        simpleLabel: kind, width: 100, height: 30, textMaxWidth: 90 }, position: { x: index * 120, y: 0 } })),
-      style: getCytoscapeStyles(displayMode) });
-    cy.zoom(2);
-    cy.pan({ x: 10, y: 20 });
-    cy.$id("organization").addClass("is-selected");
-    const positions = cy.nodes().map(node => ({ ...node.position() }));
-    try {
-      for (const visible of [["system", "relationship-bin"], [], [...kinds]] as (typeof kinds[number])[][]) {
-        cy.style().fromJson(getCytoscapeStyles(displayMode, visible)).update();
-        cy.nodes().forEach(node => {
-          assert.equal(node.style("text-opacity"), visible.some(kind => kind === node.id()) ? "1" : "0");
-          assert.equal(node.style("display"), "element");
-        });
-        assert.equal(cy.nodes().length, 4);
-        assert.deepEqual(cy.nodes().map(node => ({ ...node.position() })), positions);
-        assert.equal(cy.zoom(), 2);
-        assert.deepEqual(cy.pan(), { x: 10, y: 20 });
-      }
-    } finally { cy.destroy(); }
-  }
 });

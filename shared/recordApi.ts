@@ -298,6 +298,5 @@ export interface RecordDeleteImpact {
   inboundEdges: number;
   outboundEdges: number;
   routeRows: number;
-  affectedSavedViews: string[];
   impactHash: string;
 }

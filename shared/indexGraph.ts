@@ -3,7 +3,6 @@ import type {
   GraphEdge,
   GraphNode,
   RyuRoute,
-  SavedView,
 } from "./domain";
 
 export interface IndexedGraph extends GraphBootstrapPayload {
@@ -12,7 +11,6 @@ export interface IndexedGraph extends GraphBootstrapPayload {
   ryuRoutesByNodeId: Record<string, RyuRoute[]>;
   outgoingByNodeId: Record<string, string[]>;
   incomingByNodeId: Record<string, string[]>;
-  savedViewById: Record<string, SavedView>;
 }
 
 export function indexGraph(payload: GraphBootstrapPayload): IndexedGraph {
@@ -36,10 +34,6 @@ export function indexGraph(payload: GraphBootstrapPayload): IndexedGraph {
     incomingByNodeId[edge.targetNodeId].push(edge.id);
   }
 
-  const savedViewById = Object.fromEntries(
-    payload.savedViews.map((savedView) => [savedView.id, savedView]),
-  );
-
   return {
     ...payload,
     nodeById,
@@ -47,7 +41,6 @@ export function indexGraph(payload: GraphBootstrapPayload): IndexedGraph {
     ryuRoutesByNodeId,
     outgoingByNodeId,
     incomingByNodeId,
-    savedViewById,
   };
 }
 

@@ -15,7 +15,7 @@ import ForceGraph3D, {
 } from "react-force-graph-3d";
 import * as THREE from "three";
 
-import { nodeMapEdgeColors, nodeMapNodeColors } from "../graph/cytoscapeStyles";
+import { nodeMapEdgeColors, nodeMapNodeColors } from "../graph/graphColors";
 import {
   createNodeMap3dGlobe,
   disposeNodeMap3dObject,
@@ -46,7 +46,6 @@ type ForceGraphNode = {
   secondaryLabel: string | null;
   kind: GraphProjectionNode["kind"];
   colorKind: GraphProjectionNode["kind"];
-  governanceBlock: GraphProjectionNode["governanceBlock"];
   layoutBand: number;
   degree: number;
   priority: number;
@@ -60,7 +59,6 @@ type ForceGraphLink = {
   target: string;
   type: GraphProjectionEdgeType;
   label: string;
-  isDerivedHierarchy: boolean;
   bundle?: RelationshipBundle;
 };
 
@@ -81,7 +79,6 @@ type LabelPlacement = {
   height: number;
   selected: boolean;
   hovered: boolean;
-  focused: boolean;
   neighbor: boolean;
   kind: ForceGraphNode["kind"];
   colorKind: ForceGraphNode["colorKind"];
@@ -192,9 +189,8 @@ function getNodePriority(
 ): number {
   const kindPriority =
     node.kind === "country" ? 300 : node.kind === "organization" ? 200 : 100;
-  const blockPriority = node.governanceBlock === "international" ? 80 : 0;
 
-  return kindPriority + blockPriority + degree * 8;
+  return kindPriority + degree * 8;
 }
 
 function buildForceGraphData(
@@ -232,7 +228,6 @@ function buildForceGraphData(
         secondaryLabel: node.secondaryLabel,
         kind: node.kind,
         colorKind: node.memberKinds?.length === 1 ? node.memberKinds[0] : node.kind,
-        governanceBlock: node.governanceBlock,
         layoutBand: node.layoutBand,
         degree,
         priority: getNodePriority(node, degree),
@@ -266,8 +261,7 @@ function buildForceGraphData(
         getEndpointId(existing.target) === edge.target
         ? existing
         : { id: edge.id, source: edge.source, target: edge.target } as RenderLink;
-      Object.assign(link, { type: edge.type, label: edge.label,
-        isDerivedHierarchy: edge.isDerivedHierarchy, bundle: edge.bundle });
+      Object.assign(link, { type: edge.type, label: edge.label, bundle: edge.bundle });
       return link;
     }),
   };
@@ -774,7 +768,6 @@ function areLabelPlacementsEqual(
       leftPlacement.height === rightPlacement.height &&
       leftPlacement.selected === rightPlacement.selected &&
       leftPlacement.hovered === rightPlacement.hovered &&
-      leftPlacement.focused === rightPlacement.focused &&
       leftPlacement.neighbor === rightPlacement.neighbor
     );
   });
@@ -785,7 +778,6 @@ function buildLabelPlacements(
   nodes: RenderNode[],
   size: Size,
   selectedEntityId: string | null,
-  focusedEntityId: string | null,
   hoveredEntityId: string | null,
   connectedNodeIds: Set<string>,
   visibleNodeLabelKinds: readonly GraphProjectionNode["kind"][],
@@ -805,15 +797,14 @@ function buildLabelPlacements(
     .map((node) => {
       const nodeId = String(node.id);
       const selected = selectedEntityId === nodeId;
-      const focused = focusedEntityId === nodeId;
       const hovered = hoveredEntityId === nodeId;
       const neighbor = connectedNodeIds.has(nodeId) && !selected;
       const screenPosition = graph.graph2ScreenCoords(node.x, node.y, node.z);
       const cameraDepth = getCameraDepth(camera, node);
-      const expanded = Boolean(node.secondaryLabel && (selected || focused || hovered));
+      const expanded = Boolean(node.secondaryLabel && (selected || hovered));
       const width = estimateLabelWidth(node.label, node.secondaryLabel, expanded);
-      const height = expanded ? 39 : selected || focused ? 24 : 21;
-      const offset = selected || focused ? 14 : 10;
+      const height = expanded ? 39 : selected ? 24 : 21;
+      const offset = selected ? 14 : 10;
       const placeRight = screenPosition.x < size.width * 0.68;
       const rawX = placeRight
         ? screenPosition.x + offset
@@ -839,7 +830,7 @@ function buildLabelPlacements(
           Math.max(6, size.height - height - 6),
         ),
       );
-      const required = selected || focused || hovered;
+      const required = selected || hovered;
       const visible =
         rawRect.right >= 0 &&
         rawRect.left <= size.width &&
@@ -847,7 +838,6 @@ function buildLabelPlacements(
         rawRect.top <= size.height;
 
       return {
-        focused,
         expanded,
         height,
         hovered,
@@ -861,7 +851,6 @@ function buildLabelPlacements(
         priority:
           node.priority +
           (selected ? 10000 : 0) +
-          (focused ? 8000 : 0) +
           (hovered ? 6000 : 0) +
           (neighbor ? 1200 : 0),
         rect: {
@@ -919,7 +908,6 @@ function buildLabelPlacements(
     }
 
     placements.push({
-      focused: candidate.focused,
       expanded: candidate.expanded,
       height: candidate.height,
       hovered: candidate.hovered,
@@ -942,9 +930,6 @@ function buildLabelPlacements(
 
 export function ForceGraphCanvas({ arrangement: requestedArrangement = "current" }: ForceGraphCanvasProps) {
   const graph = useGraphStore((state) => state.graph);
-  const viewMode = useGraphStore((state) => state.viewMode);
-  const countryDisplayMode = useGraphStore((state) => state.countryDisplayMode);
-  const focusEntityId = useGraphStore((state) => state.focusEntityId);
   const locale = useGraphStore((state) => state.locale);
   const searchEntityIds = useGraphStore((state) => state.searchEntityIds);
   const hiddenNodeKinds = useGraphStore((state) => state.hiddenNodeKinds);
@@ -989,9 +974,6 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
 
     return projectGraph({
       graph,
-      viewMode,
-      countryDisplayMode,
-      focusEntityId: viewMode === "governance" ? null : focusEntityId,
       locale,
       hiddenNodeKinds,
       hiddenEdgeKinds,
@@ -1002,14 +984,11 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
       expandedEntityIds,
     });
   }, [
-    countryDisplayMode,
-    focusEntityId,
     graph,
     hiddenNodeKinds,
     hiddenEdgeKinds,
     locale,
     searchEntityIds,
-    viewMode,
     requestedArrangement, semanticLevel, selectedEntityId, selectedRelationshipId, expandedEntityIds,
   ]);
 
@@ -1181,7 +1160,7 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
         }
         return 58;
       })
-      .strength((link) => (link.isDerivedHierarchy ? 0.32 : 0.56));
+      .strength(0.56);
 
     const chargeForce = forceGraph.d3Force("charge") as D3ForceManyBody | undefined;
     chargeForce?.strength((node) => (node.kind === "country" ? -150 : -85));
@@ -1464,7 +1443,6 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
           graphData.nodes,
           size,
           selectedEntityId,
-          focusEntityId,
           hoveredEntityId,
           highlighted.nodeIds,
           visibleNodeLabelKinds,
@@ -1487,7 +1465,6 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
     };
   }, [
     container,
-    focusEntityId,
     graphData.nodes,
     highlighted.nodeIds,
     hoveredEntityId,
@@ -1499,7 +1476,7 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
   const nodeColor = useCallback(
     (node: RenderNode) => {
       const nodeId = String(node.id);
-      if (nodeId === selectedEntityId || nodeId === focusEntityId) {
+      if (nodeId === selectedEntityId) {
         return selectedOrange;
       }
       if (highlighted.nodeIds.has(nodeId)) {
@@ -1507,13 +1484,13 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
       }
       return nodeMapNodeColors[node.colorKind];
     },
-    [focusEntityId, highlighted.nodeIds, selectedEntityId, renderProjection],
+    [highlighted.nodeIds, selectedEntityId, renderProjection],
   );
 
   const nodeValue = useCallback(
     (node: RenderNode) => {
       const nodeId = String(node.id);
-      if (nodeId === selectedEntityId || nodeId === focusEntityId) {
+      if (nodeId === selectedEntityId) {
         return node.val * 2.2;
       }
       if (highlighted.nodeIds.has(nodeId)) {
@@ -1521,7 +1498,7 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
       }
       return node.val;
     },
-    [focusEntityId, highlighted.nodeIds, selectedEntityId, renderProjection],
+    [highlighted.nodeIds, selectedEntityId, renderProjection],
   );
 
   const linkColor = useCallback(
@@ -1563,7 +1540,7 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
   );
 
   const linkArrowLength = useCallback(
-    (link: RenderLink) => arrangement === "globe" || link.isDerivedHierarchy || (link.type === "member" && !link.bundle)
+    (link: RenderLink) => arrangement === "globe" || (link.type === "member" && !link.bundle)
       ? 0 : 2.4,
     [arrangement],
   );
@@ -1733,9 +1710,6 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
             expandRelationshipBundle(link.bundle);
             return;
           }
-          if (link.isDerivedHierarchy) {
-            return;
-          }
           setSelectedRelationshipId(link.id);
         }}
         onNodeClick={(node) => {
@@ -1758,7 +1732,6 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
               `is-${label.kind}`,
               label.colorKind !== label.kind ? `is-${label.colorKind}` : "",
               label.selected ? "is-selected" : "",
-              label.focused ? "is-focused" : "",
               label.expanded ? "is-expanded" : "",
               label.neighbor ? "is-neighbor" : "",
             ]

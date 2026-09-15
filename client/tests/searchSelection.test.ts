@@ -21,12 +21,11 @@ function node(id: string, kind: GraphNodeKind): GraphNode {
 
 test("graph search filtering and selection preserve every node kind", () => {
   const nodes = [node("country", "country"), node("organization", "organization"), node("system", "system")];
-  useGraphStore.getState().setBootstrap({ nodes, edges: [], ryuRoutes: [], savedViews: [] });
+  useGraphStore.getState().setBootstrap({ nodes, edges: [], ryuRoutes: [] });
 
   for (const entity of nodes) {
     const projection = projectGraph({
-      graph: useGraphStore.getState().graph!, viewMode: "governance",
-      countryDisplayMode: "node", focusEntityId: null, locale: "en",
+      graph: useGraphStore.getState().graph!, locale: "en",
       searchEntityIds: new Set([entity.id]),
     });
     assert.deepEqual(projection.nodes.map(projected => projected.id), [entity.id]);
