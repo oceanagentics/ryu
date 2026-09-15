@@ -1,6 +1,19 @@
 # Semantic zoom for relationship bins
 
-Status: manual-stage implementation complete and browser-reviewed. Automatic zoom, Tree binning, and Globe binning remain deferred.
+## Current status
+
+### Done
+
+- Manual Family / Type / Entity relationship detail is implemented for Graph and defaults to Entity.
+- Relationship grouping, topology protection, local expansion and collapse, canonical selection separation, localization, stable scene reconciliation, and camera/rotation continuity are implemented.
+- Client projection, state, and rendering tests pass; the client production build passes; browser acceptance is human-reviewed.
+
+### Pending
+
+- Add automatic semantic zoom, including normalized camera-scale measurement, calibrated hysteresis thresholds, settled-input debouncing, and a manual override.
+- Add relationship-bin placement and behavior for Tree and Globe. Until then, both arrangements intentionally force Entity while preserving the Graph preference.
+- Distinguish individual visible and hidden members in bundle details. The current panel reports aggregate counts but presents one undifferentiated member list.
+- Decide whether structured-filter matches should remain protected from aggregation. Text search and structured filters currently share `searchEntityIds`, so both prevent matching entities from being placed in bins.
 
 ## Manual-stage implementation notes
 
@@ -14,7 +27,7 @@ Status: manual-stage implementation complete and browser-reviewed. Automatic zoo
 - Local seed fixture (not production): Entity 237 nodes / 274 edges; Type 171 / 207, including 21 bins; Family 161 / 194, including 22 bins. Canonical fixture data is unchanged.
 - Verification: application build and client projection/state/rendering tests pass; browser acceptance is human-reviewed.
 
-This document's remaining automatic-zoom and arrangement work is not implemented by the manual stage.
+The pending list above is the remaining implementation scope tracked by this document.
 
 ## Objective
 
