@@ -381,12 +381,6 @@ export function inferConnectorRef(route: RyuRoute): string | null {
   if (route.mode.includes("arcgis") || route.format === "arcgis_rest") {
     return "connector:arcgis-rest";
   }
-  if (route.contractRef?.includes("downloadable-gis-snapshot")) {
-    return "connector:downloadable-gis-snapshot";
-  }
-  if (route.contractRef?.includes("geojson-snapshot")) {
-    return "connector:geojson";
-  }
   if (route.mode.includes("wms") || route.format === "wms") {
     return "connector:wms";
   }

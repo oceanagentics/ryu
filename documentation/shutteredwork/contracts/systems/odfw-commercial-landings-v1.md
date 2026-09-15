@@ -26,7 +26,7 @@ This source is useful for economic and port context. It is not offshore fishing 
   "status": "planned",
   "mode": "self_hosted_snapshot",
   "connectorRef": "connector:csv-geojson-snapshot",
-  "contractRef": "documentation/contracts/downloadable-gis-snapshot-v1.md",
+  "contractRef": "documentation/shutteredwork/contracts/downloadable-gis-snapshot-v1.md",
   "deliveryFormats": ["csv", "geojson"],
   "capabilities": ["port_landings", "fisheries_economics_context"],
   "auth": {

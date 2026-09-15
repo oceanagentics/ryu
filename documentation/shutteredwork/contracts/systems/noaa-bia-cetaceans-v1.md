@@ -28,7 +28,7 @@ Primary route:
   "status": "planned",
   "mode": "external_arcgis_rest",
   "connectorRef": "connector:arcgis-rest",
-  "contractRef": "documentation/contracts/arcgis-rest-mapserver-v1.md",
+  "contractRef": "documentation/shutteredwork/contracts/arcgis-rest-mapserver-v1.md",
   "deliveryFormats": ["arcgis_rest", "geojson"],
   "capabilities": ["whale_habitat_shapes", "important_areas"],
   "auth": {
@@ -45,7 +45,7 @@ Fallback route:
   "status": "planned",
   "mode": "self_hosted_snapshot",
   "connectorRef": "connector:downloadable-gis-snapshot",
-  "contractRef": "documentation/contracts/downloadable-gis-snapshot-v1.md",
+  "contractRef": "documentation/shutteredwork/contracts/downloadable-gis-snapshot-v1.md",
   "deliveryFormats": ["geojson"],
   "capabilities": ["whale_habitat_shapes", "important_areas"]
 }

@@ -26,7 +26,7 @@ This is an oil-spill planning dataset and should not be treated as a whale proba
   "status": "planned",
   "mode": "self_hosted_snapshot",
   "connectorRef": "connector:downloadable-gis-snapshot",
-  "contractRef": "documentation/contracts/downloadable-gis-snapshot-v1.md",
+  "contractRef": "documentation/shutteredwork/contracts/downloadable-gis-snapshot-v1.md",
   "deliveryFormats": ["geojson"],
   "capabilities": ["marine_mammal_shapes", "distribution_areas", "response_planning_context"],
   "auth": {

@@ -253,11 +253,6 @@ export function validateSystemResearch(id: string, input: RecordQualityInput, ad
       if (!route.capabilities?.length) add(`routes.${route.id}.capabilities`, "active routes require capabilities");
       requireText(route.contractRef, `routes.${route.id}.contractRef`);
     }
-    if (route.contractRef && !httpUrl(route.contractRef)) {
-      const root = fileURLToPath(new URL("../../../documentation/contracts/", import.meta.url));
-      const target = path.resolve(root, route.contractRef.replace(/^documentation\/contracts\//, ""));
-      if (!route.contractRef.startsWith("documentation/contracts/") || !target.startsWith(root) || !fs.existsSync(target)) add(`routes.${route.id}.contractRef`, "local contracts must resolve under documentation/contracts");
-    }
   }
   if (rich && input.record.kind === "system") {
     if (!input.routes?.length) warnings.push("No approved machine route is recorded.");

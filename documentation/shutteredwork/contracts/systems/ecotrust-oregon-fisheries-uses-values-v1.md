@@ -26,7 +26,7 @@ These layers are participatory mapping outputs from the Marine Fisheries Uses an
   "status": "planned",
   "mode": "self_hosted_snapshot",
   "connectorRef": "connector:downloadable-gis-snapshot",
-  "contractRef": "documentation/contracts/downloadable-gis-snapshot-v1.md",
+  "contractRef": "documentation/shutteredwork/contracts/downloadable-gis-snapshot-v1.md",
   "deliveryFormats": ["geojson"],
   "capabilities": ["fishery_use_areas", "dungeness_crab_context", "ocean_planning_context"],
   "auth": {

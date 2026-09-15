@@ -1,5 +1,8 @@
 # Ryu Connector Contracts
 
+Status: shuttered and archived with the discontinued Deeptime/Oregon MVP plans.
+These files are historical design references, not current runtime contracts.
+
 Ryu portal routes point Deeptime to system-specific connectors. These contracts define the small shared surface a connector should expose and the source-specific conventions for common delivery patterns.
 
 Ryu itself remains the discovery and routing portal. Connectors own data retrieval, source-specific API behavior, transformation, and layer delivery.

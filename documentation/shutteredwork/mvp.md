@@ -134,7 +134,7 @@ Minimum response shape:
       "auth": {
         "required": false
       },
-      "contractRef": "contracts/arcgis-rest-mapserver-v1",
+      "contractRef": "documentation/shutteredwork/contracts/arcgis-rest-mapserver-v1.md",
       "caveats": ["Verify authoritative metadata per layer before publishing or analysis."]
     }
   ],
@@ -166,7 +166,7 @@ System APIs or connectors should expose their own operations. The common startin
 
 Connectors may add source-specific operations later, but Deeptime should be able to retrieve map-ready layer records through the common layer operations for the MVP.
 
-Connector contracts live in `documentation/contracts/`:
+The shuttered connector contracts live in `documentation/shutteredwork/contracts/`:
 
 - `connector-v1.md`
 - `arcgis-rest-mapserver-v1.md`
@@ -175,7 +175,8 @@ Connector contracts live in `documentation/contracts/`:
 - `pmtiles-basemap-v1.md`
 - `downloadable-gis-snapshot-v1.md`
 
-MVP source-system contracts live under `documentation/contracts/systems/`:
+The shuttered MVP source-system contracts live under
+`documentation/shutteredwork/contracts/systems/`:
 
 - `noaa-bia-cetaceans-v1.md`
 - `noaa-esi-wa-or-marine-mammals-v1.md`

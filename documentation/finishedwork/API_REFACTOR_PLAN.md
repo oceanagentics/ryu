@@ -633,15 +633,15 @@ runtime checks, not in markdown rule tables. Required behavior:
 - route status is one of `active`, `planned`, `deprecated`, or `blocked`
 - active routes include a non-empty `target`, non-empty `capabilities`, and a
   valid `contractRef` when the route depends on a documented contract
-- local `contractRef` paths resolve under `documentation/contracts`
+- local contract-path validation was later retired with the shuttered connector pack
 - owned sources have exactly `id`, `url`, `title` (locale map), and `accessedAt` (YYYY-MM-DD), with object keys matching IDs; references contain source IDs only
 - a provided `recordUpdatedAt` precondition still matches the current record
   version
 
 Synchronous validation should not perform network liveness checks for external
-route targets. Validate URL shape and local contract references in the request
-path; operational liveness checks belong to route-validation tooling, not the
-record write transaction.
+route targets. Active routes require a non-empty contract reference; operational
+contract resolution and liveness checks belong to route-validation tooling, not
+the record write transaction.
 
 ### Optimistic Concurrency
 

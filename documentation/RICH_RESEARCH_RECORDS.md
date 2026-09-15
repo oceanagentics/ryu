@@ -380,8 +380,8 @@ A rich system must have:
 
 Machine routes are optional. No approved route produces a warning; do not invent
 one. Gallery assets must exist or have HTTP(S) URLs.
-Active routes need a target, capabilities, and a contract reference. Local contract
-references must resolve under `documentation/contracts`. Network liveness checks
+Active routes need a target, capabilities, and a contract reference identifying
+the implemented MCP, API, connector, or service contract. Network liveness checks
 remain outside the write transaction; follow URL Validation below.
 
 `sourceCompleteness` is returned with record details when sources are included and
