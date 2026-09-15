@@ -429,13 +429,37 @@ const records = [
 ];
 
 function normalizeEdge(edge) {
+  const prefixes = {
+    scope: "The documented scope is ",
+    status: "The documented status is ",
+    period: "The documented period is ",
+    transferMethod: "The documented transfer method is ",
+    updateFrequency: "The documented update frequency is ",
+    cadence: "The documented cadence is ",
+    intermediary: "The relationship is mediated by ",
+    via: "The relationship passes through ",
+    format: "The documented format is ",
+    artifact: "The documented artifact is ",
+    award: "The documented award is ",
+    membershipStatus: "The documented membership status is ",
+    latestPublishedAt: "The latest documented publication date is ",
+    latestSyncedAt: "The latest documented transfer date is ",
+    sourceIndexReportedAt: "The source index reported the relationship at ",
+  };
+  const note = edge.description?.trim() || edge.note?.trim() || "";
+  const details = Object.entries(prefixes).flatMap(([key, prefix]) => {
+    const value = edge.properties?.[key];
+    if (value === undefined || note.toLowerCase().includes(value.toLowerCase())) return [];
+    return [`${prefix}${value}${/[.!?]$/.test(value) ? "" : "."}`];
+  });
   const result = {
     id: edge.id,
     sourceNodeId: edge.sourceNodeId,
     targetNodeId: edge.targetNodeId,
-    kind: edge.kind,
-    note: edge.note,
-    properties: edge.properties ?? {},
+    kind: edge.kind === "member_of" ? "member"
+      : edge.kind === "publishes_to" ? "contributes"
+        : edge.kind === "syncs_to" ? "transfers" : edge.kind,
+    description: [note, ...details].join(" "),
     sources: structuredClone(edge.sources ?? {}),
   };
   if (edge.id === "rel-embl-council-governs-embl") {
@@ -480,8 +504,7 @@ function buildDraft(definition) {
       sources: nodeSources,
     },
     localizations,
-    edges: [...baseline.edges.map(normalizeEdge), ...(definition.additionalEdges ?? [])],
-    routes: [],
+    edges: [...baseline.edges, ...(definition.additionalEdges ?? [])].map(normalizeEdge),
   };
 }
 

@@ -308,14 +308,7 @@
       "sourceNodeId": "audacious-project",
       "targetNodeId": "global-fishing-watch-operator",
       "kind": "funds",
-      "note": "USD 60 million commitment via the Audacious Project, described by GFW as five-year support for 2023–2028, for mapping human activity and scaling ocean governance. This is a commitment, not USD 60 million disbursed in 2025.",
-      "properties": {
-        "scope": "2023–2028 commitment supporting GFW strategy",
-        "status": "reported in 2025 annual report; final disbursement unverified",
-        "sourceRefs": [
-          "annual"
-        ]
-      },
+      "description": "USD 60 million commitment via the Audacious Project, described by GFW as five-year support for 2023–2028, for mapping human activity and scaling ocean governance. This is a commitment, not USD 60 million disbursed in 2025. The documented scope is 2023–2028 commitment supporting GFW strategy. The documented status is reported in 2025 annual report; final disbursement unverified.",
       "sources": {
         "annual": {
           "id": "annual",
@@ -337,14 +330,7 @@
       "sourceNodeId": "global-fishing-watch-operator",
       "targetNodeId": "global-fishing-watch",
       "kind": "governs",
-      "note": "GFW Inc. sets service access, licensing and account policies, and reserves service modification and access-revocation authority. This concerns platform policy, not authority over fishing activity or maritime jurisdictions.",
-      "properties": {
-        "scope": "Formal authority over platform terms, access and service policies",
-        "status": "current published terms",
-        "sourceRefs": [
-          "terms"
-        ]
-      },
+      "description": "GFW Inc. sets service access, licensing and account policies, and reserves service modification and access-revocation authority. This concerns platform policy, not authority over fishing activity or maritime jurisdictions. The documented scope is Formal authority over platform terms, access and service policies. The documented status is current published terms.",
       "sources": {
         "terms": {
           "id": "terms",
@@ -365,15 +351,8 @@
       "id": "rel-global-fishing-watch-operator-member-of-coalition-for-fisheries-transparency",
       "sourceNodeId": "global-fishing-watch-operator",
       "targetNodeId": "coalition-for-fisheries-transparency",
-      "kind": "member_of",
-      "note": "GFW identifies itself as a member of the coalition. This is organizational participation, not system hierarchy or unilateral governance.",
-      "properties": {
-        "scope": "Organizational participation in fisheries transparency",
-        "status": "documented June 2026",
-        "sourceRefs": [
-          "coalition"
-        ]
-      },
+      "kind": "member",
+      "description": "GFW identifies itself as a member of the coalition. This is organizational participation, not system hierarchy or unilateral governance. The documented scope is Organizational participation in fisheries transparency. The documented status is documented June 2026.",
       "sources": {
         "coalition": {
           "id": "coalition",
@@ -394,15 +373,8 @@
       "id": "rel-global-fishing-watch-operator-member-of-joint-analytical-cell",
       "sourceNodeId": "global-fishing-watch-operator",
       "targetNodeId": "joint-analytical-cell",
-      "kind": "member_of",
-      "note": "The official JAC page lists GFW among its members. Membership does not assign authority over every member or transfer confidential operational data to the public map.",
-      "properties": {
-        "scope": "Participation in the Joint Analytical Cell",
-        "status": "listed on current official page",
-        "sourceRefs": [
-          "jac"
-        ]
-      },
+      "kind": "member",
+      "description": "The official JAC page lists GFW among its members. Membership does not assign authority over every member or transfer confidential operational data to the public map. The documented scope is Participation in the Joint Analytical Cell. The documented status is listed on current official page.",
       "sources": {
         "jac": {
           "id": "jac",
@@ -424,14 +396,7 @@
       "sourceNodeId": "global-fishing-watch-operator",
       "targetNodeId": "global-fishing-watch",
       "kind": "operates",
-      "note": "GFW Inc. states that it owns and operates its data products and associated services.",
-      "properties": {
-        "scope": "Ownership and daily operation of the GFW platform and APIs",
-        "status": "current published terms",
-        "sourceRefs": [
-          "terms"
-        ]
-      },
+      "description": "GFW Inc. states that it owns and operates its data products and associated services. The documented scope is Ownership and daily operation of the GFW platform and APIs. The documented status is current published terms.",
       "sources": {
         "terms": {
           "id": "terms",
@@ -453,14 +418,7 @@
       "sourceNodeId": "hans-wilsdorf-foundation",
       "targetNodeId": "global-fishing-watch-operator",
       "kind": "funds",
-      "note": "Three-year USD 5.1 million partnership secured in 2025, supporting marine-protection and fisheries work in West/Central Africa, the Mediterranean and the Pacific. Exact start/end dates are unstated.",
-      "properties": {
-        "scope": "Three-year regional program partnership reported in 2025",
-        "status": "reported in 2025 annual report; final disbursement unverified",
-        "sourceRefs": [
-          "annual"
-        ]
-      },
+      "description": "Three-year USD 5.1 million partnership secured in 2025, supporting marine-protection and fisheries work in West/Central Africa, the Mediterranean and the Pacific. Exact start/end dates are unstated. The documented scope is Three-year regional program partnership reported in 2025. The documented status is reported in 2025 annual report; final disbursement unverified.",
       "sources": {
         "annual": {
           "id": "annual",
@@ -482,14 +440,7 @@
       "sourceNodeId": "islas-secas-foundation",
       "targetNodeId": "global-fishing-watch-operator",
       "kind": "funds",
-      "note": "Renewed funding for Panama marine-protected-area enforcement reported in 2025; amount and exact dates are unstated.",
-      "properties": {
-        "scope": "Panama program support reported in 2025",
-        "status": "reported in 2025 annual report; final disbursement unverified",
-        "sourceRefs": [
-          "annual"
-        ]
-      },
+      "description": "Renewed funding for Panama marine-protected-area enforcement reported in 2025; amount and exact dates are unstated. The documented scope is Panama program support reported in 2025. The documented status is reported in 2025 annual report; final disbursement unverified.",
       "sources": {
         "annual": {
           "id": "annual",
@@ -511,14 +462,7 @@
       "sourceNodeId": "minderoo-foundation",
       "targetNodeId": "global-fishing-watch-operator",
       "kind": "funds",
-      "note": "One-year USD 200,000 extension reported in 2025 for reliable models and risk assessment related to forced labour and illegal fishing.",
-      "properties": {
-        "scope": "One-year model and risk-assessment support reported in 2025",
-        "status": "reported in 2025 annual report; final disbursement unverified",
-        "sourceRefs": [
-          "annual"
-        ]
-      },
+      "description": "One-year USD 200,000 extension reported in 2025 for reliable models and risk assessment related to forced labour and illegal fishing. The documented scope is One-year model and risk-assessment support reported in 2025. The documented status is reported in 2025 annual report; final disbursement unverified.",
       "sources": {
         "annual": {
           "id": "annual",
@@ -540,14 +484,7 @@
       "sourceNodeId": "oceana",
       "targetNodeId": "global-fishing-watch-operator",
       "kind": "funds",
-      "note": "USD 115,000 subgrant at the end of 2025 for Coalition for Fisheries Transparency work supporting the Global Charter for Fisheries Transparency. Founding collaboration does not establish current governance.",
-      "properties": {
-        "scope": "Coalition transparency work, subgrant reported in late 2025",
-        "status": "reported in 2025 annual report; final disbursement unverified",
-        "sourceRefs": [
-          "annual"
-        ]
-      },
+      "description": "USD 115,000 subgrant at the end of 2025 for Coalition for Fisheries Transparency work supporting the Global Charter for Fisheries Transparency. Founding collaboration does not establish current governance. The documented scope is Coalition transparency work, subgrant reported in late 2025. The documented status is reported in 2025 annual report; final disbursement unverified.",
       "sources": {
         "annual": {
           "id": "annual",
@@ -569,14 +506,7 @@
       "sourceNodeId": "sall-family-foundation",
       "targetNodeId": "global-fishing-watch-operator",
       "kind": "funds",
-      "note": "One-year USD 150,000 unrestricted grant reported in 2025.",
-      "properties": {
-        "scope": "One-year unrestricted organizational support reported in 2025",
-        "status": "reported in 2025 annual report; final disbursement unverified",
-        "sourceRefs": [
-          "annual"
-        ]
-      },
+      "description": "One-year USD 150,000 unrestricted grant reported in 2025. The documented scope is One-year unrestricted organizational support reported in 2025. The documented status is reported in 2025 annual report; final disbursement unverified.",
       "sources": {
         "annual": {
           "id": "annual",
@@ -598,14 +528,7 @@
       "sourceNodeId": "walmart-foundation",
       "targetNodeId": "global-fishing-watch-operator",
       "kind": "funds",
-      "note": "Two-year USD 450,000 grant renewed in 2025 for industry Vessel Viewer training and integration with partner platforms. Not assigned in full to generic database operations.",
-      "properties": {
-        "scope": "Vessel Viewer training and partner integrations",
-        "status": "reported in 2025 annual report; final disbursement unverified",
-        "sourceRefs": [
-          "annual"
-        ]
-      },
+      "description": "Two-year USD 450,000 grant renewed in 2025 for industry Vessel Viewer training and integration with partner platforms. Not assigned in full to generic database operations. The documented scope is Vessel Viewer training and partner integrations. The documented status is reported in 2025 annual report; final disbursement unverified.",
       "sources": {
         "annual": {
           "id": "annual",
@@ -622,6 +545,5 @@
         }
       }
     }
-  ],
-  "routes": []
+  ]
 }

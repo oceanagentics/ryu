@@ -26,14 +26,17 @@ The records preserve 37 canonical incident relationships. Research added one mat
 
 - `canonical-operators.json`: read-only canonical snapshots used as the starting point.
 - `drafts/*.json`: individual Record API content payloads.
-- `batch.json`: the nine payloads as one reviewable batch.
+- `batch.json`: the nine current-contract payloads as one reviewable batch.
 - `validation-local.json`: contract validation produced while generating the drafts.
 - `validation-postgres.json`: validation after each payload was dry-run, applied, read back, and revalidated through `PostgresGraphRepository` against the current PostgreSQL schema in PGlite.
 - `preview-local.ts`: fetches the production public graph, applies the country and organization batches in PGlite, converts edges to the migration 018 contract, validates every rich record, and writes `client/public/bootstrap.preview.json` without writing to production.
 
 Both validation reports contain nine valid records, zero issues, and complete source resolution. The PostgreSQL pass exposed a missing-parentheses bug in the SQL `researchGaps` shape check; the schema, migration, and regression test now cover that case.
 
-The batch has not been applied to the production Cloud SQL graph.
+The batch is applied with `scripts/releases/2026-09-14-rich-nodes.mjs` only after
+the coordinated node/edge schema release. The runner dry-runs every payload
+before any write, uses fresh record timestamps, verifies readback, and records an
+`agent_researched` event for all six localizations.
 
 Generate and serve the read-only static preview from the main checkout:
 

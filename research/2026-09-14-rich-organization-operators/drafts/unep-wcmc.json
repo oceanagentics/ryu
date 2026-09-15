@@ -295,16 +295,7 @@
       "sourceNodeId": "unep-wcmc",
       "targetNodeId": "protected-planet",
       "kind": "operates",
-      "note": "UNEP-WCMC manages the Protected Planet initiative and compiles and manages its protected and conserved area inventory. UNEP and IUCN are joint institutional partners; that wording does not make every contributor an operator.",
-      "properties": {
-        "scope": "Platform management and WDPCA compilation and maintenance",
-        "period": "Management reported in January 2022 and corroborated by current IBAT description",
-        "status": "current documented operation",
-        "sourceRefs": [
-          "pp-management",
-          "pp-ibat"
-        ]
-      },
+      "description": "UNEP-WCMC manages the Protected Planet initiative and compiles and manages its protected and conserved area inventory. UNEP and IUCN are joint institutional partners; that wording does not make every contributor an operator. The documented scope is Platform management and WDPCA compilation and maintenance. The documented status is current documented operation. The documented period is Management reported in January 2022 and corroborated by current IBAT description.",
       "sources": {
         "pp-ibat": {
           "id": "pp-ibat",
@@ -334,6 +325,5 @@
         }
       }
     }
-  ],
-  "routes": []
+  ]
 }

@@ -243,13 +243,8 @@
       "id": "rel-embl-ebi-member-of-insdc-members",
       "sourceNodeId": "embl-ebi",
       "targetNodeId": "insdc-members",
-      "kind": "member_of",
-      "note": "Institutional member of INSDC; archive operation remains with each member.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-insdc"
-        ]
-      },
+      "kind": "member",
+      "description": "Institutional member of INSDC; archive operation remains with each member.",
       "sources": {
         "src-relationship-insdc": {
           "id": "src-relationship-insdc",
@@ -271,14 +266,7 @@
       "sourceNodeId": "embl-ebi",
       "targetNodeId": "ena",
       "kind": "operates",
-      "note": "EMBL-EBI maintains and operates ENA for nucleotide data submission, archiving and dissemination. Its role is distinct from grant funding and from the scientific advice provided by advisory boards.",
-      "properties": {
-        "scope": "ENA archive and submission/retrieval services",
-        "status": "active; described in 2024 and 2025 updates",
-        "sourceRefs": [
-          "ena-2024"
-        ]
-      },
+      "description": "EMBL-EBI maintains and operates ENA for nucleotide data submission, archiving and dissemination. Its role is distinct from grant funding and from the scientific advice provided by advisory boards. The documented scope is ENA archive and submission/retrieval services. The documented status is active; described in 2024 and 2025 updates.",
       "sources": {
         "ena-2024": {
           "id": "ena-2024",
@@ -313,13 +301,7 @@
       "sourceNodeId": "embl-ebi",
       "targetNodeId": "mgnify",
       "kind": "operates",
-      "note": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-mgnify"
-        ]
-      },
+      "description": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-mgnify": {
           "id": "src-relationship-mgnify",
@@ -341,12 +323,7 @@
       "sourceNodeId": "embl",
       "targetNodeId": "embl-ebi",
       "kind": "governs",
-      "note": "EMBL-EBI is an institute of EMBL under its leadership and Council authority.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-ebi-leadership"
-        ]
-      },
+      "description": "EMBL-EBI is an institute of EMBL under its leadership and Council authority.",
       "sources": {
         "src-relationship-ebi-leadership": {
           "id": "src-relationship-ebi-leadership",
@@ -363,6 +340,5 @@
         }
       }
     }
-  ],
-  "routes": []
+  ]
 }

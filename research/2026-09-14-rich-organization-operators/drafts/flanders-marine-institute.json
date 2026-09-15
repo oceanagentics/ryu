@@ -276,13 +276,7 @@
       "sourceNodeId": "flanders-marine-institute",
       "targetNodeId": "emodnet-biology",
       "kind": "operates",
-      "note": "VLIZ operates technical infrastructure and data management.",
-      "properties": {
-        "scope": "Technical infrastructure; scientific contributors retain their own roles",
-        "sourceRefs": [
-          "src-relationship-emodnet-biology"
-        ]
-      },
+      "description": "VLIZ operates technical infrastructure and data management. The documented scope is Technical infrastructure; scientific contributors retain their own roles.",
       "sources": {
         "src-relationship-emodnet-biology": {
           "id": "src-relationship-emodnet-biology",
@@ -304,13 +298,7 @@
       "sourceNodeId": "flanders-marine-institute",
       "targetNodeId": "eurobis",
       "kind": "operates",
-      "note": "VLIZ operates technical infrastructure and data management.",
-      "properties": {
-        "scope": "Technical infrastructure; scientific contributors retain their own roles",
-        "sourceRefs": [
-          "src-relationship-eurobis"
-        ]
-      },
+      "description": "VLIZ operates technical infrastructure and data management. The documented scope is Technical infrastructure; scientific contributors retain their own roles.",
       "sources": {
         "src-relationship-eurobis": {
           "id": "src-relationship-eurobis",
@@ -332,13 +320,7 @@
       "sourceNodeId": "flanders-marine-institute",
       "targetNodeId": "marine-regions",
       "kind": "operates",
-      "note": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-marine-regions"
-        ]
-      },
+      "description": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-marine-regions": {
           "id": "src-relationship-marine-regions",
@@ -360,13 +342,7 @@
       "sourceNodeId": "flanders-marine-institute",
       "targetNodeId": "molluscabase",
       "kind": "operates",
-      "note": "VLIZ operates technical infrastructure and data management.",
-      "properties": {
-        "scope": "Technical infrastructure; scientific contributors retain their own roles",
-        "sourceRefs": [
-          "src-relationship-molluscabase"
-        ]
-      },
+      "description": "VLIZ operates technical infrastructure and data management. The documented scope is Technical infrastructure; scientific contributors retain their own roles.",
       "sources": {
         "src-relationship-molluscabase": {
           "id": "src-relationship-molluscabase",
@@ -388,16 +364,7 @@
       "sourceNodeId": "flanders-marine-institute",
       "targetNodeId": "worms",
       "kind": "operates",
-      "note": "VLIZ appoints the WoRMS Data Management Team to run the database, maintain online publishing, preserve identifiers, support editors and manage approved exports. The public terms of reference are dated 2015-05-08 and the current About page continues to identify VLIZ as the operational host.",
-      "properties": {
-        "scope": "Technical and scientific data management, hosting and publication support",
-        "period": "2015 terms of reference, reconfirmed by current About page",
-        "status": "current role documented",
-        "sourceRefs": [
-          "src-relationship-worms",
-          "src-worms-about"
-        ]
-      },
+      "description": "VLIZ appoints the WoRMS Data Management Team to run the database, maintain online publishing, preserve identifiers, support editors and manage approved exports. The public terms of reference are dated 2015-05-08 and the current About page continues to identify VLIZ as the operational host. The documented scope is Technical and scientific data management, hosting and publication support. The documented status is current role documented. The documented period is 2015 terms of reference, reconfirmed by current About page.",
       "sources": {
         "src-worms-about": {
           "id": "src-worms-about",
@@ -432,14 +399,7 @@
       "sourceNodeId": "government-of-flanders",
       "targetNodeId": "flanders-marine-institute",
       "kind": "funds",
-      "note": "VLIZ states that it receives an annual grant from the Flemish Region and the Province of West Flanders. This edge records the documented Flemish-government support only; the page does not publish an amount or grant term, and the province is not folded into this relationship.",
-      "properties": {
-        "scope": "Annual institutional grant from the Flemish Region",
-        "status": "Current funding arrangement described on the official organization page; amount and term not published",
-        "sourceRefs": [
-          "official-operation"
-        ]
-      },
+      "description": "VLIZ states that it receives an annual grant from the Flemish Region and the Province of West Flanders. This edge records the documented Flemish-government support only; the page does not publish an amount or grant term, and the province is not folded into this relationship. The documented scope is Annual institutional grant from the Flemish Region. The documented status is Current funding arrangement described on the official organization page; amount and term not published.",
       "sources": {
         "official-operation": {
           "id": "official-operation",
@@ -456,6 +416,5 @@
         }
       }
     }
-  ],
-  "routes": []
+  ]
 }

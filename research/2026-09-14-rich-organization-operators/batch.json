@@ -256,16 +256,7 @@
         "sourceNodeId": "cbd-secretariat",
         "targetNodeId": "abs-clearing-house",
         "kind": "operates",
-        "note": "The CBD Secretariat administers the Internet portal and central database, supports users and implements development work within the COP-MOP mandate. Decision NP-5/4 requests continued development and administration. National publication decisions remain with national publishing authorities.",
-        "properties": {
-          "scope": "Central portal/database operation and technical support",
-          "period": "2014 modalities; continued mandate in decision NP-5/4 of 30 October 2024",
-          "status": "current documented mandate",
-          "sourceRefs": [
-            "abs-modalities",
-            "abs-decision2024"
-          ]
-        },
+        "description": "The CBD Secretariat administers the Internet portal and central database, supports users and implements development work within the COP-MOP mandate. Decision NP-5/4 requests continued development and administration. National publication decisions remain with national publishing authorities. The documented scope is Central portal/database operation and technical support. The documented status is current documented mandate. The documented period is 2014 modalities; continued mandate in decision NP-5/4 of 30 October 2024.",
         "sources": {
           "abs-modalities": {
             "id": "abs-modalities",
@@ -299,16 +290,8 @@
         "id": "rel-cbd-secretariat-publishes-to-abs-clearing-house",
         "sourceNodeId": "cbd-secretariat",
         "targetNodeId": "abs-clearing-house",
-        "kind": "publishes_to",
-        "note": "The CBD Secretariat acts as publishing authority for reference records submitted by registered stakeholders, validating them before final publication. This covers reference materials rather than replacing the national authorities who approve national records.",
-        "properties": {
-          "scope": "Validation and publication of stakeholder reference records",
-          "period": "Official stakeholder workflow dated 10 October 2018 and still published at research date",
-          "status": "documented continuing workflow",
-          "sourceRefs": [
-            "abs-stakeholders"
-          ]
-        },
+        "kind": "contributes",
+        "description": "The CBD Secretariat acts as publishing authority for reference records submitted by registered stakeholders, validating them before final publication. This covers reference materials rather than replacing the national authorities who approve national records. The documented scope is Validation and publication of stakeholder reference records. The documented status is documented continuing workflow. The documented period is Official stakeholder workflow dated 10 October 2018 and still published at research date.",
         "sources": {
           "abs-stakeholders": {
             "id": "abs-stakeholders",
@@ -325,8 +308,7 @@
           }
         }
       }
-    ],
-    "routes": []
+    ]
   },
   {
     "id": "international-seabed-authority",
@@ -564,14 +546,7 @@
         "sourceNodeId": "international-seabed-authority",
         "targetNodeId": "deepdata",
         "kind": "funds",
-        "note": "ISA’s July 2023 account identifies DeepData, launched in 2019, as its first database allocated dedicated programmatic funding by ISA Members. This establishes ISA programme funding; no specific member contribution, current annual amount or future mining revenue is inferred.",
-        "properties": {
-          "scope": "Dedicated ISA programme funding for DeepData",
-          "status": "historical funding documented July 2023; current amount not established",
-          "sourceRefs": [
-            "factcheck"
-          ]
-        },
+        "description": "ISA’s July 2023 account identifies DeepData, launched in 2019, as its first database allocated dedicated programmatic funding by ISA Members. This establishes ISA programme funding; no specific member contribution, current annual amount or future mining revenue is inferred. The documented scope is Dedicated ISA programme funding for DeepData. The documented status is historical funding documented July 2023; current amount not established.",
         "sources": {
           "factcheck": {
             "id": "factcheck",
@@ -593,15 +568,7 @@
         "sourceNodeId": "international-seabed-authority",
         "targetNodeId": "deepdata",
         "kind": "governs",
-        "note": "ISA controls DeepData data policy and access classification under its exploration framework. Reporting templates and confidentiality rules distinguish public environmental data from confidential mineral-resource information; the Legal and Technical Commission supplies reporting guidance. This edge concerns authority over this database, not authority over all ocean science or the water column.",
-        "properties": {
-          "scope": "ISA database policy, contractor reporting requirements and confidentiality classification",
-          "status": "documented institutional authority; current templates linked in 2026",
-          "sourceRefs": [
-            "about",
-            "templates"
-          ]
-        },
+        "description": "ISA controls DeepData data policy and access classification under its exploration framework. Reporting templates and confidentiality rules distinguish public environmental data from confidential mineral-resource information; the Legal and Technical Commission supplies reporting guidance. This edge concerns authority over this database, not authority over all ocean science or the water column. The documented scope is ISA database policy, contractor reporting requirements and confidentiality classification. The documented status is documented institutional authority; current templates linked in 2026.",
         "sources": {
           "about": {
             "id": "about",
@@ -636,15 +603,7 @@
         "sourceNodeId": "international-seabed-authority",
         "targetNodeId": "deepdata",
         "kind": "operates",
-        "note": "ISA’s Secretariat Data Manager receives contractor submissions, manages validation and ingestion, maintains spatial data and administers the DeepData website. The operational workflow is documented in sections 6–6.2 of the linked manual.",
-        "properties": {
-          "scope": "DeepData ingestion, quality control, data maintenance and website administration",
-          "status": "current ISA service; manual workflow documented in 2018",
-          "sourceRefs": [
-            "manual",
-            "about"
-          ]
-        },
+        "description": "ISA’s Secretariat Data Manager receives contractor submissions, manages validation and ingestion, maintains spatial data and administers the DeepData website. The operational workflow is documented in sections 6–6.2 of the linked manual. The documented scope is DeepData ingestion, quality control, data maintenance and website administration. The documented status is current ISA service; manual workflow documented in 2018.",
         "sources": {
           "about": {
             "id": "about",
@@ -678,17 +637,8 @@
         "id": "rel-international-seabed-authority-publishes-to-odis",
         "sourceNodeId": "international-seabed-authority",
         "targetNodeId": "odis",
-        "kind": "publishes_to",
-        "note": "ISA announced the integration of its DeepData database with ODIS on 6 May 2025 to expose environmental and scientific information submitted by exploration contractors. A current ODIS demo JSON record shows the resulting provider-attributed metadata and an ISA download link. This is ISA’s mediated publication through DeepData, not direct publishing by every contractor or transfer of ownership to ODIS.",
-        "properties": {
-          "via": "deepdata",
-          "scope": "ISA environmental and scientific metadata supplied through DeepData",
-          "status": "announced 2025-05-06; downstream demo presence verified 2026-09-10",
-          "sourceRefs": [
-            "isa-integration",
-            "demo-deepdata"
-          ]
-        },
+        "kind": "contributes",
+        "description": "ISA announced the integration of its DeepData database with ODIS on 6 May 2025 to expose environmental and scientific information submitted by exploration contractors. A current ODIS demo JSON record shows the resulting provider-attributed metadata and an ISA download link. This is ISA’s mediated publication through DeepData, not direct publishing by every contractor or transfer of ownership to ODIS. The documented scope is ISA environmental and scientific metadata supplied through DeepData. The documented status is announced 2025-05-06; downstream demo presence verified 2026-09-10.",
         "sources": {
           "demo-deepdata": {
             "id": "demo-deepdata",
@@ -722,17 +672,8 @@
         "id": "rel-international-seabed-authority-publishes-to-platform-obis",
         "sourceNodeId": "international-seabed-authority",
         "targetNodeId": "platform-obis",
-        "kind": "publishes_to",
-        "note": "ISA supplies publicly indexed environmental biodiversity datasets through the OBIS ISA thematic node. Node metadata identifies ISA and DeepData; underlying contractor data ownership is not transferred to OBIS. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
-        "properties": {
-          "via": "OBIS ISA",
-          "scope": "ISA-node publication of the public DeepData biological subset",
-          "status": "published node datasets",
-          "sourceRefs": [
-            "evidence",
-            "archive"
-          ]
-        },
+        "kind": "contributes",
+        "description": "ISA supplies publicly indexed environmental biodiversity datasets through the OBIS ISA thematic node. Node metadata identifies ISA and DeepData; underlying contractor data ownership is not transferred to OBIS. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific. The documented scope is ISA-node publication of the public DeepData biological subset. The documented status is published node datasets.",
         "sources": {
           "archive": {
             "id": "archive",
@@ -762,8 +703,7 @@
           }
         }
       }
-    ],
-    "routes": []
+    ]
   },
   {
     "id": "embl-ebi",
@@ -1010,13 +950,8 @@
         "id": "rel-embl-ebi-member-of-insdc-members",
         "sourceNodeId": "embl-ebi",
         "targetNodeId": "insdc-members",
-        "kind": "member_of",
-        "note": "Institutional member of INSDC; archive operation remains with each member.",
-        "properties": {
-          "sourceRefs": [
-            "src-relationship-insdc"
-          ]
-        },
+        "kind": "member",
+        "description": "Institutional member of INSDC; archive operation remains with each member.",
         "sources": {
           "src-relationship-insdc": {
             "id": "src-relationship-insdc",
@@ -1038,14 +973,7 @@
         "sourceNodeId": "embl-ebi",
         "targetNodeId": "ena",
         "kind": "operates",
-        "note": "EMBL-EBI maintains and operates ENA for nucleotide data submission, archiving and dissemination. Its role is distinct from grant funding and from the scientific advice provided by advisory boards.",
-        "properties": {
-          "scope": "ENA archive and submission/retrieval services",
-          "status": "active; described in 2024 and 2025 updates",
-          "sourceRefs": [
-            "ena-2024"
-          ]
-        },
+        "description": "EMBL-EBI maintains and operates ENA for nucleotide data submission, archiving and dissemination. Its role is distinct from grant funding and from the scientific advice provided by advisory boards. The documented scope is ENA archive and submission/retrieval services. The documented status is active; described in 2024 and 2025 updates.",
         "sources": {
           "ena-2024": {
             "id": "ena-2024",
@@ -1080,13 +1008,7 @@
         "sourceNodeId": "embl-ebi",
         "targetNodeId": "mgnify",
         "kind": "operates",
-        "note": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse.",
-        "properties": {
-          "scope": "Programme/team operation; no exclusivity inferred",
-          "sourceRefs": [
-            "src-relationship-mgnify"
-          ]
-        },
+        "description": "EMBL-EBI operates MGnify. Data flow runs from ENA into MGnify analysis, not the reverse. The documented scope is Programme/team operation; no exclusivity inferred.",
         "sources": {
           "src-relationship-mgnify": {
             "id": "src-relationship-mgnify",
@@ -1108,12 +1030,7 @@
         "sourceNodeId": "embl",
         "targetNodeId": "embl-ebi",
         "kind": "governs",
-        "note": "EMBL-EBI is an institute of EMBL under its leadership and Council authority.",
-        "properties": {
-          "sourceRefs": [
-            "src-relationship-ebi-leadership"
-          ]
-        },
+        "description": "EMBL-EBI is an institute of EMBL under its leadership and Council authority.",
         "sources": {
           "src-relationship-ebi-leadership": {
             "id": "src-relationship-ebi-leadership",
@@ -1130,8 +1047,7 @@
           }
         }
       }
-    ],
-    "routes": []
+    ]
   },
   {
     "id": "q-quatics",
@@ -1378,15 +1294,8 @@
         "id": "rel-q-quatics-member-of-fishbase-consortium",
         "sourceNodeId": "q-quatics",
         "targetNodeId": "fishbase-consortium",
-        "kind": "member_of",
-        "note": "Q-quatics is explicitly listed among the current members of the FishBase Consortium on the Q-quatics projects and partners page. Membership does not itself establish governance over FishBase.",
-        "properties": {
-          "scope": "Institutional membership in the FishBase Consortium",
-          "status": "listed current member",
-          "sourceRefs": [
-            "evidence"
-          ]
-        },
+        "kind": "member",
+        "description": "Q-quatics is explicitly listed among the current members of the FishBase Consortium on the Q-quatics projects and partners page. Membership does not itself establish governance over FishBase. The documented scope is Institutional membership in the FishBase Consortium. The documented status is listed current member.",
         "sources": {
           "evidence": {
             "id": "evidence",
@@ -1408,14 +1317,7 @@
         "sourceNodeId": "q-quatics",
         "targetNodeId": "fishbase",
         "kind": "operates",
-        "note": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance.",
-        "properties": {
-          "scope": "Programme/team operation; no exclusivity inferred",
-          "status": "current documented hosting and management",
-          "sourceRefs": [
-            "src-relationship-fishbase"
-          ]
-        },
+        "description": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance. The documented scope is Programme/team operation; no exclusivity inferred. The documented status is current documented hosting and management.",
         "sources": {
           "src-relationship-fishbase": {
             "id": "src-relationship-fishbase",
@@ -1437,13 +1339,7 @@
         "sourceNodeId": "q-quatics",
         "targetNodeId": "sealifebase",
         "kind": "operates",
-        "note": "Q-quatics maintains SeaLifeBase. Embedded AquaMaps maps and MolluscaBase taxonomy do not establish outbound synchronization.",
-        "properties": {
-          "scope": "Programme/team operation; no exclusivity inferred",
-          "sourceRefs": [
-            "src-relationship-sealifebase"
-          ]
-        },
+        "description": "Q-quatics maintains SeaLifeBase. Embedded AquaMaps maps and MolluscaBase taxonomy do not establish outbound synchronization. The documented scope is Programme/team operation; no exclusivity inferred.",
         "sources": {
           "src-relationship-sealifebase": {
             "id": "src-relationship-sealifebase",
@@ -1460,8 +1356,7 @@
           }
         }
       }
-    ],
-    "routes": []
+    ]
   },
   {
     "id": "swedish-museum-of-natural-history",
@@ -1741,16 +1636,7 @@
         "sourceNodeId": "swedish-museum-of-natural-history",
         "targetNodeId": "fishbase",
         "kind": "funds",
-        "note": "Q-quatics’ 2023 annual report records this support for New species and species updates in FishBase. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
-        "properties": {
-          "scope": "New species and species updates in FishBase",
-          "period": "2023-01-30/2023-03-31",
-          "status": "completed in 2023",
-          "sourceRefs": [
-            "report"
-          ],
-          "intermediary": "q-quatics"
-        },
+        "description": "Q-quatics’ 2023 annual report records this support for New species and species updates in FishBase. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted. The documented status is completed in 2023. The documented period is 2023-01-30/2023-03-31.",
         "sources": {
           "report": {
             "id": "report",
@@ -1772,15 +1658,7 @@
         "sourceNodeId": "swedish-museum-of-natural-history",
         "targetNodeId": "fishbase",
         "kind": "operates",
-        "note": "FishBase’s current search page identifies the Swedish Museum of Natural History as serving fishbase.org and locates this mirror in Stockholm. The museum separately documents its FishBase Sweden team. This is scoped mirror/service operation, not exclusive global operation or governance.",
-        "properties": {
-          "scope": "Stockholm mirror and FishBase Sweden service team",
-          "status": "current documented service in June 2026 site release and August 2026 museum page",
-          "sourceRefs": [
-            "mirror",
-            "institution"
-          ]
-        },
+        "description": "FishBase’s current search page identifies the Swedish Museum of Natural History as serving fishbase.org and locates this mirror in Stockholm. The museum separately documents its FishBase Sweden team. This is scoped mirror/service operation, not exclusive global operation or governance. The documented scope is Stockholm mirror and FishBase Sweden service team. The documented status is current documented service in June 2026 site release and August 2026 museum page.",
         "sources": {
           "mirror": {
             "id": "mirror",
@@ -1810,8 +1688,7 @@
           }
         }
       }
-    ],
-    "routes": []
+    ]
   },
   {
     "id": "global-fishing-watch-operator",
@@ -2123,14 +2000,7 @@
         "sourceNodeId": "audacious-project",
         "targetNodeId": "global-fishing-watch-operator",
         "kind": "funds",
-        "note": "USD 60 million commitment via the Audacious Project, described by GFW as five-year support for 2023–2028, for mapping human activity and scaling ocean governance. This is a commitment, not USD 60 million disbursed in 2025.",
-        "properties": {
-          "scope": "2023–2028 commitment supporting GFW strategy",
-          "status": "reported in 2025 annual report; final disbursement unverified",
-          "sourceRefs": [
-            "annual"
-          ]
-        },
+        "description": "USD 60 million commitment via the Audacious Project, described by GFW as five-year support for 2023–2028, for mapping human activity and scaling ocean governance. This is a commitment, not USD 60 million disbursed in 2025. The documented scope is 2023–2028 commitment supporting GFW strategy. The documented status is reported in 2025 annual report; final disbursement unverified.",
         "sources": {
           "annual": {
             "id": "annual",
@@ -2152,14 +2022,7 @@
         "sourceNodeId": "global-fishing-watch-operator",
         "targetNodeId": "global-fishing-watch",
         "kind": "governs",
-        "note": "GFW Inc. sets service access, licensing and account policies, and reserves service modification and access-revocation authority. This concerns platform policy, not authority over fishing activity or maritime jurisdictions.",
-        "properties": {
-          "scope": "Formal authority over platform terms, access and service policies",
-          "status": "current published terms",
-          "sourceRefs": [
-            "terms"
-          ]
-        },
+        "description": "GFW Inc. sets service access, licensing and account policies, and reserves service modification and access-revocation authority. This concerns platform policy, not authority over fishing activity or maritime jurisdictions. The documented scope is Formal authority over platform terms, access and service policies. The documented status is current published terms.",
         "sources": {
           "terms": {
             "id": "terms",
@@ -2180,15 +2043,8 @@
         "id": "rel-global-fishing-watch-operator-member-of-coalition-for-fisheries-transparency",
         "sourceNodeId": "global-fishing-watch-operator",
         "targetNodeId": "coalition-for-fisheries-transparency",
-        "kind": "member_of",
-        "note": "GFW identifies itself as a member of the coalition. This is organizational participation, not system hierarchy or unilateral governance.",
-        "properties": {
-          "scope": "Organizational participation in fisheries transparency",
-          "status": "documented June 2026",
-          "sourceRefs": [
-            "coalition"
-          ]
-        },
+        "kind": "member",
+        "description": "GFW identifies itself as a member of the coalition. This is organizational participation, not system hierarchy or unilateral governance. The documented scope is Organizational participation in fisheries transparency. The documented status is documented June 2026.",
         "sources": {
           "coalition": {
             "id": "coalition",
@@ -2209,15 +2065,8 @@
         "id": "rel-global-fishing-watch-operator-member-of-joint-analytical-cell",
         "sourceNodeId": "global-fishing-watch-operator",
         "targetNodeId": "joint-analytical-cell",
-        "kind": "member_of",
-        "note": "The official JAC page lists GFW among its members. Membership does not assign authority over every member or transfer confidential operational data to the public map.",
-        "properties": {
-          "scope": "Participation in the Joint Analytical Cell",
-          "status": "listed on current official page",
-          "sourceRefs": [
-            "jac"
-          ]
-        },
+        "kind": "member",
+        "description": "The official JAC page lists GFW among its members. Membership does not assign authority over every member or transfer confidential operational data to the public map. The documented scope is Participation in the Joint Analytical Cell. The documented status is listed on current official page.",
         "sources": {
           "jac": {
             "id": "jac",
@@ -2239,14 +2088,7 @@
         "sourceNodeId": "global-fishing-watch-operator",
         "targetNodeId": "global-fishing-watch",
         "kind": "operates",
-        "note": "GFW Inc. states that it owns and operates its data products and associated services.",
-        "properties": {
-          "scope": "Ownership and daily operation of the GFW platform and APIs",
-          "status": "current published terms",
-          "sourceRefs": [
-            "terms"
-          ]
-        },
+        "description": "GFW Inc. states that it owns and operates its data products and associated services. The documented scope is Ownership and daily operation of the GFW platform and APIs. The documented status is current published terms.",
         "sources": {
           "terms": {
             "id": "terms",
@@ -2268,14 +2110,7 @@
         "sourceNodeId": "hans-wilsdorf-foundation",
         "targetNodeId": "global-fishing-watch-operator",
         "kind": "funds",
-        "note": "Three-year USD 5.1 million partnership secured in 2025, supporting marine-protection and fisheries work in West/Central Africa, the Mediterranean and the Pacific. Exact start/end dates are unstated.",
-        "properties": {
-          "scope": "Three-year regional program partnership reported in 2025",
-          "status": "reported in 2025 annual report; final disbursement unverified",
-          "sourceRefs": [
-            "annual"
-          ]
-        },
+        "description": "Three-year USD 5.1 million partnership secured in 2025, supporting marine-protection and fisheries work in West/Central Africa, the Mediterranean and the Pacific. Exact start/end dates are unstated. The documented scope is Three-year regional program partnership reported in 2025. The documented status is reported in 2025 annual report; final disbursement unverified.",
         "sources": {
           "annual": {
             "id": "annual",
@@ -2297,14 +2132,7 @@
         "sourceNodeId": "islas-secas-foundation",
         "targetNodeId": "global-fishing-watch-operator",
         "kind": "funds",
-        "note": "Renewed funding for Panama marine-protected-area enforcement reported in 2025; amount and exact dates are unstated.",
-        "properties": {
-          "scope": "Panama program support reported in 2025",
-          "status": "reported in 2025 annual report; final disbursement unverified",
-          "sourceRefs": [
-            "annual"
-          ]
-        },
+        "description": "Renewed funding for Panama marine-protected-area enforcement reported in 2025; amount and exact dates are unstated. The documented scope is Panama program support reported in 2025. The documented status is reported in 2025 annual report; final disbursement unverified.",
         "sources": {
           "annual": {
             "id": "annual",
@@ -2326,14 +2154,7 @@
         "sourceNodeId": "minderoo-foundation",
         "targetNodeId": "global-fishing-watch-operator",
         "kind": "funds",
-        "note": "One-year USD 200,000 extension reported in 2025 for reliable models and risk assessment related to forced labour and illegal fishing.",
-        "properties": {
-          "scope": "One-year model and risk-assessment support reported in 2025",
-          "status": "reported in 2025 annual report; final disbursement unverified",
-          "sourceRefs": [
-            "annual"
-          ]
-        },
+        "description": "One-year USD 200,000 extension reported in 2025 for reliable models and risk assessment related to forced labour and illegal fishing. The documented scope is One-year model and risk-assessment support reported in 2025. The documented status is reported in 2025 annual report; final disbursement unverified.",
         "sources": {
           "annual": {
             "id": "annual",
@@ -2355,14 +2176,7 @@
         "sourceNodeId": "oceana",
         "targetNodeId": "global-fishing-watch-operator",
         "kind": "funds",
-        "note": "USD 115,000 subgrant at the end of 2025 for Coalition for Fisheries Transparency work supporting the Global Charter for Fisheries Transparency. Founding collaboration does not establish current governance.",
-        "properties": {
-          "scope": "Coalition transparency work, subgrant reported in late 2025",
-          "status": "reported in 2025 annual report; final disbursement unverified",
-          "sourceRefs": [
-            "annual"
-          ]
-        },
+        "description": "USD 115,000 subgrant at the end of 2025 for Coalition for Fisheries Transparency work supporting the Global Charter for Fisheries Transparency. Founding collaboration does not establish current governance. The documented scope is Coalition transparency work, subgrant reported in late 2025. The documented status is reported in 2025 annual report; final disbursement unverified.",
         "sources": {
           "annual": {
             "id": "annual",
@@ -2384,14 +2198,7 @@
         "sourceNodeId": "sall-family-foundation",
         "targetNodeId": "global-fishing-watch-operator",
         "kind": "funds",
-        "note": "One-year USD 150,000 unrestricted grant reported in 2025.",
-        "properties": {
-          "scope": "One-year unrestricted organizational support reported in 2025",
-          "status": "reported in 2025 annual report; final disbursement unverified",
-          "sourceRefs": [
-            "annual"
-          ]
-        },
+        "description": "One-year USD 150,000 unrestricted grant reported in 2025. The documented scope is One-year unrestricted organizational support reported in 2025. The documented status is reported in 2025 annual report; final disbursement unverified.",
         "sources": {
           "annual": {
             "id": "annual",
@@ -2413,14 +2220,7 @@
         "sourceNodeId": "walmart-foundation",
         "targetNodeId": "global-fishing-watch-operator",
         "kind": "funds",
-        "note": "Two-year USD 450,000 grant renewed in 2025 for industry Vessel Viewer training and integration with partner platforms. Not assigned in full to generic database operations.",
-        "properties": {
-          "scope": "Vessel Viewer training and partner integrations",
-          "status": "reported in 2025 annual report; final disbursement unverified",
-          "sourceRefs": [
-            "annual"
-          ]
-        },
+        "description": "Two-year USD 450,000 grant renewed in 2025 for industry Vessel Viewer training and integration with partner platforms. Not assigned in full to generic database operations. The documented scope is Vessel Viewer training and partner integrations. The documented status is reported in 2025 annual report; final disbursement unverified.",
         "sources": {
           "annual": {
             "id": "annual",
@@ -2437,8 +2237,7 @@
           }
         }
       }
-    ],
-    "routes": []
+    ]
   },
   {
     "id": "ioc-unesco-iode",
@@ -2675,12 +2474,7 @@
         "sourceNodeId": "ioc-assembly",
         "targetNodeId": "ioc-unesco-iode",
         "kind": "governs",
-        "note": "IODE recommendations are submitted to the IOC Assembly for adoption.",
-        "properties": {
-          "sourceRefs": [
-            "src-relationship-platform-obis"
-          ]
-        },
+        "description": "IODE recommendations are submitted to the IOC Assembly for adoption.",
         "sources": {
           "src-relationship-platform-obis": {
             "id": "src-relationship-platform-obis",
@@ -2702,14 +2496,7 @@
         "sourceNodeId": "ioc-unesco-iode",
         "targetNodeId": "platform-obis",
         "kind": "operates",
-        "note": "The OBIS Secretariat is hosted at the UNESCO/IOC project office for IODE. Its project manager and data manager operate the central portal and coordinate the independently operated node network; this is not exclusive operation of every contributing node.",
-        "properties": {
-          "scope": "OBIS central Secretariat, portal operation and network coordination",
-          "status": "active documented responsibility",
-          "sourceRefs": [
-            "src-relationship-platform-obis"
-          ]
-        },
+        "description": "The OBIS Secretariat is hosted at the UNESCO/IOC project office for IODE. Its project manager and data manager operate the central portal and coordinate the independently operated node network; this is not exclusive operation of every contributing node. The documented scope is OBIS central Secretariat, portal operation and network coordination. The documented status is active documented responsibility.",
         "sources": {
           "src-relationship-platform-obis": {
             "id": "src-relationship-platform-obis",
@@ -2731,17 +2518,7 @@
         "sourceNodeId": "ioc-unesco-iode",
         "targetNodeId": "odis",
         "kind": "operates",
-        "note": "IODE coordinates ODIS programme operations and light node curation under IOC-UNESCO. Its catalogue is a product of the UNESCO/IOC Project Office for IODE. Independent participating systems retain their own governance and holdings; operation of ODIS does not transfer that authority.",
-        "properties": {
-          "scope": "Programme/team operation; no exclusivity inferred",
-          "status": "current programme operation documented on official ODIS and IODE pages",
-          "sourceRefs": [
-            "src-relationship-odis",
-            "overview",
-            "join",
-            "disclaimer"
-          ]
-        },
+        "description": "IODE coordinates ODIS programme operations and light node curation under IOC-UNESCO. Its catalogue is a product of the UNESCO/IOC Project Office for IODE. Independent participating systems retain their own governance and holdings; operation of ODIS does not transfer that authority. The documented scope is Programme/team operation; no exclusivity inferred. The documented status is current programme operation documented on official ODIS and IODE pages.",
         "sources": {
           "join": {
             "id": "join",
@@ -2802,13 +2579,7 @@
         "sourceNodeId": "ioc-unesco-iode",
         "targetNodeId": "oceaninfohub",
         "kind": "operates",
-        "note": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation.",
-        "properties": {
-          "scope": "Programme/team operation; no exclusivity inferred",
-          "sourceRefs": [
-            "src-relationship-oceaninfohub"
-          ]
-        },
+        "description": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation. The documented scope is Programme/team operation; no exclusivity inferred.",
         "sources": {
           "src-relationship-oceaninfohub": {
             "id": "src-relationship-oceaninfohub",
@@ -2825,8 +2596,7 @@
           }
         }
       }
-    ],
-    "routes": []
+    ]
   },
   {
     "id": "unep-wcmc",
@@ -3125,16 +2895,7 @@
         "sourceNodeId": "unep-wcmc",
         "targetNodeId": "protected-planet",
         "kind": "operates",
-        "note": "UNEP-WCMC manages the Protected Planet initiative and compiles and manages its protected and conserved area inventory. UNEP and IUCN are joint institutional partners; that wording does not make every contributor an operator.",
-        "properties": {
-          "scope": "Platform management and WDPCA compilation and maintenance",
-          "period": "Management reported in January 2022 and corroborated by current IBAT description",
-          "status": "current documented operation",
-          "sourceRefs": [
-            "pp-management",
-            "pp-ibat"
-          ]
-        },
+        "description": "UNEP-WCMC manages the Protected Planet initiative and compiles and manages its protected and conserved area inventory. UNEP and IUCN are joint institutional partners; that wording does not make every contributor an operator. The documented scope is Platform management and WDPCA compilation and maintenance. The documented status is current documented operation. The documented period is Management reported in January 2022 and corroborated by current IBAT description.",
         "sources": {
           "pp-ibat": {
             "id": "pp-ibat",
@@ -3164,8 +2925,7 @@
           }
         }
       }
-    ],
-    "routes": []
+    ]
   },
   {
     "id": "flanders-marine-institute",
@@ -3445,13 +3205,7 @@
         "sourceNodeId": "flanders-marine-institute",
         "targetNodeId": "emodnet-biology",
         "kind": "operates",
-        "note": "VLIZ operates technical infrastructure and data management.",
-        "properties": {
-          "scope": "Technical infrastructure; scientific contributors retain their own roles",
-          "sourceRefs": [
-            "src-relationship-emodnet-biology"
-          ]
-        },
+        "description": "VLIZ operates technical infrastructure and data management. The documented scope is Technical infrastructure; scientific contributors retain their own roles.",
         "sources": {
           "src-relationship-emodnet-biology": {
             "id": "src-relationship-emodnet-biology",
@@ -3473,13 +3227,7 @@
         "sourceNodeId": "flanders-marine-institute",
         "targetNodeId": "eurobis",
         "kind": "operates",
-        "note": "VLIZ operates technical infrastructure and data management.",
-        "properties": {
-          "scope": "Technical infrastructure; scientific contributors retain their own roles",
-          "sourceRefs": [
-            "src-relationship-eurobis"
-          ]
-        },
+        "description": "VLIZ operates technical infrastructure and data management. The documented scope is Technical infrastructure; scientific contributors retain their own roles.",
         "sources": {
           "src-relationship-eurobis": {
             "id": "src-relationship-eurobis",
@@ -3501,13 +3249,7 @@
         "sourceNodeId": "flanders-marine-institute",
         "targetNodeId": "marine-regions",
         "kind": "operates",
-        "note": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository.",
-        "properties": {
-          "scope": "Programme/team operation; no exclusivity inferred",
-          "sourceRefs": [
-            "src-relationship-marine-regions"
-          ]
-        },
+        "description": "VLIZ manages Marine Regions. Referencing its geography vocabulary is not evidence of a synchronized repository. The documented scope is Programme/team operation; no exclusivity inferred.",
         "sources": {
           "src-relationship-marine-regions": {
             "id": "src-relationship-marine-regions",
@@ -3529,13 +3271,7 @@
         "sourceNodeId": "flanders-marine-institute",
         "targetNodeId": "molluscabase",
         "kind": "operates",
-        "note": "VLIZ operates technical infrastructure and data management.",
-        "properties": {
-          "scope": "Technical infrastructure; scientific contributors retain their own roles",
-          "sourceRefs": [
-            "src-relationship-molluscabase"
-          ]
-        },
+        "description": "VLIZ operates technical infrastructure and data management. The documented scope is Technical infrastructure; scientific contributors retain their own roles.",
         "sources": {
           "src-relationship-molluscabase": {
             "id": "src-relationship-molluscabase",
@@ -3557,16 +3293,7 @@
         "sourceNodeId": "flanders-marine-institute",
         "targetNodeId": "worms",
         "kind": "operates",
-        "note": "VLIZ appoints the WoRMS Data Management Team to run the database, maintain online publishing, preserve identifiers, support editors and manage approved exports. The public terms of reference are dated 2015-05-08 and the current About page continues to identify VLIZ as the operational host.",
-        "properties": {
-          "scope": "Technical and scientific data management, hosting and publication support",
-          "period": "2015 terms of reference, reconfirmed by current About page",
-          "status": "current role documented",
-          "sourceRefs": [
-            "src-relationship-worms",
-            "src-worms-about"
-          ]
-        },
+        "description": "VLIZ appoints the WoRMS Data Management Team to run the database, maintain online publishing, preserve identifiers, support editors and manage approved exports. The public terms of reference are dated 2015-05-08 and the current About page continues to identify VLIZ as the operational host. The documented scope is Technical and scientific data management, hosting and publication support. The documented status is current role documented. The documented period is 2015 terms of reference, reconfirmed by current About page.",
         "sources": {
           "src-worms-about": {
             "id": "src-worms-about",
@@ -3601,14 +3328,7 @@
         "sourceNodeId": "government-of-flanders",
         "targetNodeId": "flanders-marine-institute",
         "kind": "funds",
-        "note": "VLIZ states that it receives an annual grant from the Flemish Region and the Province of West Flanders. This edge records the documented Flemish-government support only; the page does not publish an amount or grant term, and the province is not folded into this relationship.",
-        "properties": {
-          "scope": "Annual institutional grant from the Flemish Region",
-          "status": "Current funding arrangement described on the official organization page; amount and term not published",
-          "sourceRefs": [
-            "official-operation"
-          ]
-        },
+        "description": "VLIZ states that it receives an annual grant from the Flemish Region and the Province of West Flanders. This edge records the documented Flemish-government support only; the page does not publish an amount or grant term, and the province is not folded into this relationship. The documented scope is Annual institutional grant from the Flemish Region. The documented status is Current funding arrangement described on the official organization page; amount and term not published.",
         "sources": {
           "official-operation": {
             "id": "official-operation",
@@ -3625,7 +3345,6 @@
           }
         }
       }
-    ],
-    "routes": []
+    ]
   }
 ]

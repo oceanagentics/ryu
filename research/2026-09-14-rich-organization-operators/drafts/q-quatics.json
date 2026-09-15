@@ -243,15 +243,8 @@
       "id": "rel-q-quatics-member-of-fishbase-consortium",
       "sourceNodeId": "q-quatics",
       "targetNodeId": "fishbase-consortium",
-      "kind": "member_of",
-      "note": "Q-quatics is explicitly listed among the current members of the FishBase Consortium on the Q-quatics projects and partners page. Membership does not itself establish governance over FishBase.",
-      "properties": {
-        "scope": "Institutional membership in the FishBase Consortium",
-        "status": "listed current member",
-        "sourceRefs": [
-          "evidence"
-        ]
-      },
+      "kind": "member",
+      "description": "Q-quatics is explicitly listed among the current members of the FishBase Consortium on the Q-quatics projects and partners page. Membership does not itself establish governance over FishBase. The documented scope is Institutional membership in the FishBase Consortium. The documented status is listed current member.",
       "sources": {
         "evidence": {
           "id": "evidence",
@@ -273,14 +266,7 @@
       "sourceNodeId": "q-quatics",
       "targetNodeId": "fishbase",
       "kind": "operates",
-      "note": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "status": "current documented hosting and management",
-        "sourceRefs": [
-          "src-relationship-fishbase"
-        ]
-      },
+      "description": "Q-quatics hosts and manages FishBase. The FishBase Consortium provides scientific advice; this does not by itself establish binding governance. The documented scope is Programme/team operation; no exclusivity inferred. The documented status is current documented hosting and management.",
       "sources": {
         "src-relationship-fishbase": {
           "id": "src-relationship-fishbase",
@@ -302,13 +288,7 @@
       "sourceNodeId": "q-quatics",
       "targetNodeId": "sealifebase",
       "kind": "operates",
-      "note": "Q-quatics maintains SeaLifeBase. Embedded AquaMaps maps and MolluscaBase taxonomy do not establish outbound synchronization.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-sealifebase"
-        ]
-      },
+      "description": "Q-quatics maintains SeaLifeBase. Embedded AquaMaps maps and MolluscaBase taxonomy do not establish outbound synchronization. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-sealifebase": {
           "id": "src-relationship-sealifebase",
@@ -325,6 +305,5 @@
         }
       }
     }
-  ],
-  "routes": []
+  ]
 }

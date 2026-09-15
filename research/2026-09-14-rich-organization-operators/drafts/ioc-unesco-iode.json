@@ -233,12 +233,7 @@
       "sourceNodeId": "ioc-assembly",
       "targetNodeId": "ioc-unesco-iode",
       "kind": "governs",
-      "note": "IODE recommendations are submitted to the IOC Assembly for adoption.",
-      "properties": {
-        "sourceRefs": [
-          "src-relationship-platform-obis"
-        ]
-      },
+      "description": "IODE recommendations are submitted to the IOC Assembly for adoption.",
       "sources": {
         "src-relationship-platform-obis": {
           "id": "src-relationship-platform-obis",
@@ -260,14 +255,7 @@
       "sourceNodeId": "ioc-unesco-iode",
       "targetNodeId": "platform-obis",
       "kind": "operates",
-      "note": "The OBIS Secretariat is hosted at the UNESCO/IOC project office for IODE. Its project manager and data manager operate the central portal and coordinate the independently operated node network; this is not exclusive operation of every contributing node.",
-      "properties": {
-        "scope": "OBIS central Secretariat, portal operation and network coordination",
-        "status": "active documented responsibility",
-        "sourceRefs": [
-          "src-relationship-platform-obis"
-        ]
-      },
+      "description": "The OBIS Secretariat is hosted at the UNESCO/IOC project office for IODE. Its project manager and data manager operate the central portal and coordinate the independently operated node network; this is not exclusive operation of every contributing node. The documented scope is OBIS central Secretariat, portal operation and network coordination. The documented status is active documented responsibility.",
       "sources": {
         "src-relationship-platform-obis": {
           "id": "src-relationship-platform-obis",
@@ -289,17 +277,7 @@
       "sourceNodeId": "ioc-unesco-iode",
       "targetNodeId": "odis",
       "kind": "operates",
-      "note": "IODE coordinates ODIS programme operations and light node curation under IOC-UNESCO. Its catalogue is a product of the UNESCO/IOC Project Office for IODE. Independent participating systems retain their own governance and holdings; operation of ODIS does not transfer that authority.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "status": "current programme operation documented on official ODIS and IODE pages",
-        "sourceRefs": [
-          "src-relationship-odis",
-          "overview",
-          "join",
-          "disclaimer"
-        ]
-      },
+      "description": "IODE coordinates ODIS programme operations and light node curation under IOC-UNESCO. Its catalogue is a product of the UNESCO/IOC Project Office for IODE. Independent participating systems retain their own governance and holdings; operation of ODIS does not transfer that authority. The documented scope is Programme/team operation; no exclusivity inferred. The documented status is current programme operation documented on official ODIS and IODE pages.",
       "sources": {
         "join": {
           "id": "join",
@@ -360,13 +338,7 @@
       "sourceNodeId": "ioc-unesco-iode",
       "targetNodeId": "oceaninfohub",
       "kind": "operates",
-      "note": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation.",
-      "properties": {
-        "scope": "Programme/team operation; no exclusivity inferred",
-        "sourceRefs": [
-          "src-relationship-oceaninfohub"
-        ]
-      },
+      "description": "IODE/IOC-UNESCO implements the project with Government of Flanders funding. Funding is project-scoped; current continuation terms require confirmation. The documented scope is Programme/team operation; no exclusivity inferred.",
       "sources": {
         "src-relationship-oceaninfohub": {
           "id": "src-relationship-oceaninfohub",
@@ -383,6 +355,5 @@
         }
       }
     }
-  ],
-  "routes": []
+  ]
 }

@@ -276,16 +276,7 @@
       "sourceNodeId": "swedish-museum-of-natural-history",
       "targetNodeId": "fishbase",
       "kind": "funds",
-      "note": "Q-quatics’ 2023 annual report records this support for New species and species updates in FishBase. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted.",
-      "properties": {
-        "scope": "New species and species updates in FishBase",
-        "period": "2023-01-30/2023-03-31",
-        "status": "completed in 2023",
-        "sourceRefs": [
-          "report"
-        ],
-        "intermediary": "q-quatics"
-      },
+      "description": "Q-quatics’ 2023 annual report records this support for New species and species updates in FishBase. This edge is limited to the stated FishBase activity and reporting period; no amount or continued support in 2026 is asserted. The documented status is completed in 2023. The documented period is 2023-01-30/2023-03-31.",
       "sources": {
         "report": {
           "id": "report",
@@ -307,15 +298,7 @@
       "sourceNodeId": "swedish-museum-of-natural-history",
       "targetNodeId": "fishbase",
       "kind": "operates",
-      "note": "FishBase’s current search page identifies the Swedish Museum of Natural History as serving fishbase.org and locates this mirror in Stockholm. The museum separately documents its FishBase Sweden team. This is scoped mirror/service operation, not exclusive global operation or governance.",
-      "properties": {
-        "scope": "Stockholm mirror and FishBase Sweden service team",
-        "status": "current documented service in June 2026 site release and August 2026 museum page",
-        "sourceRefs": [
-          "mirror",
-          "institution"
-        ]
-      },
+      "description": "FishBase’s current search page identifies the Swedish Museum of Natural History as serving fishbase.org and locates this mirror in Stockholm. The museum separately documents its FishBase Sweden team. This is scoped mirror/service operation, not exclusive global operation or governance. The documented scope is Stockholm mirror and FishBase Sweden service team. The documented status is current documented service in June 2026 site release and August 2026 museum page.",
       "sources": {
         "mirror": {
           "id": "mirror",
@@ -345,6 +328,5 @@
         }
       }
     }
-  ],
-  "routes": []
+  ]
 }

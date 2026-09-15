@@ -234,14 +234,7 @@
       "sourceNodeId": "international-seabed-authority",
       "targetNodeId": "deepdata",
       "kind": "funds",
-      "note": "ISA’s July 2023 account identifies DeepData, launched in 2019, as its first database allocated dedicated programmatic funding by ISA Members. This establishes ISA programme funding; no specific member contribution, current annual amount or future mining revenue is inferred.",
-      "properties": {
-        "scope": "Dedicated ISA programme funding for DeepData",
-        "status": "historical funding documented July 2023; current amount not established",
-        "sourceRefs": [
-          "factcheck"
-        ]
-      },
+      "description": "ISA’s July 2023 account identifies DeepData, launched in 2019, as its first database allocated dedicated programmatic funding by ISA Members. This establishes ISA programme funding; no specific member contribution, current annual amount or future mining revenue is inferred. The documented scope is Dedicated ISA programme funding for DeepData. The documented status is historical funding documented July 2023; current amount not established.",
       "sources": {
         "factcheck": {
           "id": "factcheck",
@@ -263,15 +256,7 @@
       "sourceNodeId": "international-seabed-authority",
       "targetNodeId": "deepdata",
       "kind": "governs",
-      "note": "ISA controls DeepData data policy and access classification under its exploration framework. Reporting templates and confidentiality rules distinguish public environmental data from confidential mineral-resource information; the Legal and Technical Commission supplies reporting guidance. This edge concerns authority over this database, not authority over all ocean science or the water column.",
-      "properties": {
-        "scope": "ISA database policy, contractor reporting requirements and confidentiality classification",
-        "status": "documented institutional authority; current templates linked in 2026",
-        "sourceRefs": [
-          "about",
-          "templates"
-        ]
-      },
+      "description": "ISA controls DeepData data policy and access classification under its exploration framework. Reporting templates and confidentiality rules distinguish public environmental data from confidential mineral-resource information; the Legal and Technical Commission supplies reporting guidance. This edge concerns authority over this database, not authority over all ocean science or the water column. The documented scope is ISA database policy, contractor reporting requirements and confidentiality classification. The documented status is documented institutional authority; current templates linked in 2026.",
       "sources": {
         "about": {
           "id": "about",
@@ -306,15 +291,7 @@
       "sourceNodeId": "international-seabed-authority",
       "targetNodeId": "deepdata",
       "kind": "operates",
-      "note": "ISA’s Secretariat Data Manager receives contractor submissions, manages validation and ingestion, maintains spatial data and administers the DeepData website. The operational workflow is documented in sections 6–6.2 of the linked manual.",
-      "properties": {
-        "scope": "DeepData ingestion, quality control, data maintenance and website administration",
-        "status": "current ISA service; manual workflow documented in 2018",
-        "sourceRefs": [
-          "manual",
-          "about"
-        ]
-      },
+      "description": "ISA’s Secretariat Data Manager receives contractor submissions, manages validation and ingestion, maintains spatial data and administers the DeepData website. The operational workflow is documented in sections 6–6.2 of the linked manual. The documented scope is DeepData ingestion, quality control, data maintenance and website administration. The documented status is current ISA service; manual workflow documented in 2018.",
       "sources": {
         "about": {
           "id": "about",
@@ -348,17 +325,8 @@
       "id": "rel-international-seabed-authority-publishes-to-odis",
       "sourceNodeId": "international-seabed-authority",
       "targetNodeId": "odis",
-      "kind": "publishes_to",
-      "note": "ISA announced the integration of its DeepData database with ODIS on 6 May 2025 to expose environmental and scientific information submitted by exploration contractors. A current ODIS demo JSON record shows the resulting provider-attributed metadata and an ISA download link. This is ISA’s mediated publication through DeepData, not direct publishing by every contractor or transfer of ownership to ODIS.",
-      "properties": {
-        "via": "deepdata",
-        "scope": "ISA environmental and scientific metadata supplied through DeepData",
-        "status": "announced 2025-05-06; downstream demo presence verified 2026-09-10",
-        "sourceRefs": [
-          "isa-integration",
-          "demo-deepdata"
-        ]
-      },
+      "kind": "contributes",
+      "description": "ISA announced the integration of its DeepData database with ODIS on 6 May 2025 to expose environmental and scientific information submitted by exploration contractors. A current ODIS demo JSON record shows the resulting provider-attributed metadata and an ISA download link. This is ISA’s mediated publication through DeepData, not direct publishing by every contractor or transfer of ownership to ODIS. The documented scope is ISA environmental and scientific metadata supplied through DeepData. The documented status is announced 2025-05-06; downstream demo presence verified 2026-09-10.",
       "sources": {
         "demo-deepdata": {
           "id": "demo-deepdata",
@@ -392,17 +360,8 @@
       "id": "rel-international-seabed-authority-publishes-to-platform-obis",
       "sourceNodeId": "international-seabed-authority",
       "targetNodeId": "platform-obis",
-      "kind": "publishes_to",
-      "note": "ISA supplies publicly indexed environmental biodiversity datasets through the OBIS ISA thematic node. Node metadata identifies ISA and DeepData; underlying contractor data ownership is not transferred to OBIS. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific.",
-      "properties": {
-        "via": "OBIS ISA",
-        "scope": "ISA-node publication of the public DeepData biological subset",
-        "status": "published node datasets",
-        "sourceRefs": [
-          "evidence",
-          "archive"
-        ]
-      },
+      "kind": "contributes",
+      "description": "ISA supplies publicly indexed environmental biodiversity datasets through the OBIS ISA thematic node. Node metadata identifies ISA and DeepData; underlying contractor data ownership is not transferred to OBIS. The inspected NORI 2022 Darwin Core Archive has EML publication date 20 April 2026 and a CC BY 4.0 licence; this licence is dataset-specific. The documented scope is ISA-node publication of the public DeepData biological subset. The documented status is published node datasets.",
       "sources": {
         "archive": {
           "id": "archive",
@@ -432,6 +391,5 @@
         }
       }
     }
-  ],
-  "routes": []
+  ]
 }
