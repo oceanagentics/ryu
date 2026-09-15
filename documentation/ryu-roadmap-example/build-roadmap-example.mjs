@@ -21,67 +21,67 @@ const roadmapRows = [
     "Record backlog triage",
     "Define the near-term record set and review order.",
     "P0",
-    "Ready",
+    "Done",
     "Product",
     new Date("2026-08-24"),
     new Date("2026-08-28"),
     "S",
     "Existing Ryu DB",
-    "Inventory current nodes, classify target systems, assign review depth, and agree on what must be rich versus thin.",
-    "Priority list is approved, each selected record has an owner and target review state, and deferred records are explicitly marked.",
+    "Use the approved priority research queue to inventory existing systems, identify missing main systems and supporting relationship endpoints, assign rich versus thin or stub depth, and record the research order and owner.",
+    "The approved queue names and orders the priority systems, assigns a primary worker, sets the target depth and review state, keeps supporting identities thin or stub, and records removals or deferrals.",
     "Spec Approved",
-    "Use this as the intake gate for content work.",
+    "The approved research queue and current production scope are documented.",
   ],
   [
     "R1-F02",
     "Release 1",
     "Rich record backfill",
-    "Move selected priority systems from thin to rich records.",
+    "Apply the approved priority system batch as validated rich records.",
     "P0",
-    "Not Started",
+    "Done",
     "Research",
     new Date("2026-08-31"),
     new Date("2026-09-11"),
     "L",
     "R1-F01",
-    "Add summaries, operators, descriptions, source-backed access paths, identifiers, caveats, usage metrics, and review metadata.",
-    "At least six priority systems have source-backed rich records and no unresolved source refs in visible user-facing fields.",
+    "Apply complete six-locale rich system aggregates through the Record API, including sourced profiles, approved descriptors, access guidance, metrics or explicit gaps, gallery evidence, and researched incident relationships. Preserve existing content, routes, sources, and review history.",
+    "Every approved main record passes live validateOnly with a fresh precondition, applies and reads back exactly, has six complete agent_researched localizations, complete source-reference coverage, qualifying gallery evidence, and fully evidenced incident relationships; supporting identities remain thin or stub.",
     "QA Passed",
-    "Good first release demo because it makes Ryu visibly more useful.",
+    "Production application and readback completed 2026-09-11; OceanTeacher was later removed from system scope.",
   ],
   [
     "R1-F03",
     "Release 1",
     "Data record visibility",
-    "Make data descriptors auditable from the UI.",
+    "Make approved data descriptors and their evidence auditable from User View.",
     "P1",
-    "Ready",
+    "Done",
     "Frontend",
     new Date("2026-09-02"),
     new Date("2026-09-06"),
     "M",
-    "Data descriptors already exist",
-    "Show descriptor IDs, descriptions, categories, and resolved source records from the existing details_json data descriptors.",
-    "Reviewer can verify every visible data type, format, and standard without opening raw fields.",
+    "Approved system descriptor contract",
+    "Group descriptors by type, format, and standard in User View; show shared-vocabulary labels and localized descriptions with the resolved owner-local source title, URL, and accessed date. Show the localized standards research gap when none is assigned.",
+    "A reviewer can inspect each displayed descriptor's approved label, category, localized description, and resolved source evidence, or the standards gap, without opening Raw Fields.",
     "QA Passed",
-    "Mirrors the current cleanup tracker.",
+    "Production smoke verified FishBase standards and related record details.",
   ],
   [
     "R1-F04",
     "Release 1",
     "Review trail surface",
-    "Expose record depth, review history, and timestamps.",
+    "Expose record depth and locale-scoped review state and history.",
     "P1",
-    "Not Started",
+    "Done",
     "Frontend",
     new Date("2026-09-04"),
     new Date("2026-09-10"),
     "S",
-    "Review metadata",
-    "Add a compact review section for latest agent research, latest human review, created date, and updated date.",
-    "Reviewer can tell whether a record is agent-researched, human-reviewed, stale, or needs revision from User View.",
+    "Deployed localization review contract and Record API",
+    "Show record depth and the resolved locale's current review state and date to all users. Let authenticated reviewers update review state and note and inspect review history across locales; keep reviewer identity and notes out of public responses.",
+    "User View shows record depth plus the displayed locale's review state and date. Authorized reviewers can update state and note and inspect reviewer, date, and note history; public users can inspect state, date, and history without private reviewer identity or notes.",
     "QA Passed",
-    "Useful for team accountability.",
+    "Production smoke verified revision history and review authorization behavior.",
   ],
   [
     "R2-F01",
@@ -222,23 +222,37 @@ const roadmapRows = [
 ];
 
 const releaseRows = [
-  ["Release 1", "Reviewable records", "Make priority systems complete enough for internal review.", "2026-08-24 to 2026-09-13", "Priority list approved", "Rich records and audit-facing UI shipped", "Scope creep in record depth", "Walk through six source-backed systems"],
+  ["Release 1", "Reviewable records", "Make priority systems complete enough for internal review.", "2026-08-24 to 2026-09-13", "Priority research queue and record contract approved", "Approved rich-record batch applied and read-verified; descriptor evidence and locale review history are available in User View", "Scope expansion beyond the approved priority queue", "Walk through a surviving priority system's descriptors, evidence, record depth, and review history"],
   ["Release 2", "Usable route/tool records", "Make Ryu useful for system discovery and operational routing.", "2026-09-09 to 2026-10-04", "Tool record archetype accepted", "Priority route records work through the API", "Ambiguous route status definitions", "Run Deeptime-style discovery prompt"],
   ["Release 3", "Accountable operation", "Add filters, public hosting, and launch process.", "2026-10-01 to 2026-10-25", "Release 1/2 data quality accepted", "Public read-only build and release checklist complete", "Deployment ownership unclear", "Open public build and filter live routes"],
 ];
+
+const releaseOneWorkflowAcceptance = {
+  "R1-F01": "The research queue and current scope identify the main records, supporting identities, primary workers, and removed or deferred items.",
+  "R1-F02": "A reviewer can open a completed system in User View and inspect its localized profile, evidence, gallery, access, metrics, and connections.",
+  "R1-F03": "Keyboard or pointer focus on a descriptor reveals its localized description and source evidence; a missing standard shows the recorded research gap.",
+  "R1-F04": "Public view shows review state and date without private identity or notes; authenticated review view exposes controls and the cross-locale revision history.",
+};
+
+const releaseOneDependencyEvidence = {
+  "R1-F01": "Approved priority research queue and record-shape prerequisite",
+  "R1-F02": "Production application report and validation manifest",
+  "R1-F03": "Shared descriptor contract and production smoke evidence",
+  "R1-F04": "Localization review contract and production smoke evidence",
+};
 
 const acceptanceRows = roadmapRows.map((row) => [
   row[0],
   row[2],
   row[12],
-  "Representative user path is verified manually and no critical UI copy is hidden or clipped.",
-  row[10] ? `Depends on ${row[10]}` : "No dependency",
+  releaseOneWorkflowAcceptance[row[0]] ?? "Representative user path is verified manually and no critical UI copy is hidden or clipped.",
+  releaseOneDependencyEvidence[row[0]] ?? (row[10] ? `Depends on ${row[10]}` : "No dependency"),
   row[13],
 ]);
 
 const riskRows = [
   ["Decision", "Meaning of tool record", "Wrong model could create duplicate concepts.", "Product", new Date("2026-09-09"), "Decide route metadata versus separate tool entity before implementation.", "Open"],
-  ["Risk", "Record scope expansion", "Research work can grow faster than engineering capacity.", "Product", new Date("2026-08-28"), "Cap Release 1 to named priority systems and defer the rest.", "Open"],
+  ["Risk", "Record scope expansion", "Research work can grow faster than engineering capacity.", "Product", new Date("2026-08-28"), "Scope was capped to the approved priority queue; OceanTeacher's removal was recorded and supporting identities remained thin or stub.", "Closed"],
   ["Risk", "Route status inconsistency", "Clients may call planned or broken routes.", "Backend", new Date("2026-09-20"), "Define status meanings and add route validation checks.", "Open"],
   ["Dependency", "Public hosting credentials", "Deploy process may rely on one person's local key.", "DevOps", new Date("2026-10-01"), "Document deploy access, rollback path, and backup owner.", "Open"],
   ["Risk", "Search relevance drift", "Source/provenance text could swamp identity fields.", "Frontend", new Date("2026-10-14"), "Keep weighted field definitions and visible match reasons.", "Watch"],
@@ -314,9 +328,9 @@ summary.getRange("A3:B11").values = [
   ["Ready or in progress", null],
   ["Blocked items", null],
   ["Launch-targeted items", null],
-  ["Next release", "Release 1"],
+  ["Next release", "Release 2"],
   ["Roadmap owner", "Product"],
-  ["Last refreshed", new Date("2026-08-20")],
+  ["Last refreshed", new Date("2026-09-15")],
 ];
 summary.getRange("B4:B8").formulas = [
   ["=COUNTA(Roadmap!A2:A200)"],
@@ -372,6 +386,7 @@ styleBody(roadmap, `A2:O${roadmapRows.length + 1}`);
 roadmap.getRange(`H2:I${roadmapRows.length + 1}`).setNumberFormat("yyyy-mm-dd");
 setWidths(roadmap, [12, 13, 28, 36, 10, 16, 18, 14, 14, 10, 24, 54, 54, 18, 42]);
 roadmap.getRange(`L2:O${roadmapRows.length + 1}`).format.rowHeight = 56;
+roadmap.getRange("A2:O5").format.rowHeight = 84;
 roadmap.freezePanes.freezeRows(1);
 roadmap.showGridLines = false;
 
@@ -392,6 +407,7 @@ styleHeader(acceptance, "A1:F1");
 styleBody(acceptance, `A2:F${acceptanceRows.length + 1}`);
 setWidths(acceptance, [14, 30, 54, 48, 34, 18]);
 acceptance.getRange(`C2:E${acceptanceRows.length + 1}`).format.rowHeight = 54;
+acceptance.getRange("A2:F5").format.rowHeight = 84;
 acceptance.freezePanes.freezeRows(1);
 acceptance.showGridLines = false;
 
@@ -414,6 +430,8 @@ styleBody(definitions, `A2:C${definitionsRows.length + 1}`);
 setWidths(definitions, [16, 22, 70]);
 definitions.freezePanes.freezeRows(1);
 definitions.showGridLines = false;
+
+workbook.recalculate();
 
 for (const sheetName of ["Summary", "Roadmap", "Release Plan", "Acceptance Matrix", "Risks & Decisions", "Definitions"]) {
   const preview = await workbook.render({
