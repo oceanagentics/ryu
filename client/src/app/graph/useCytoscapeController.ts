@@ -12,6 +12,7 @@ import {
   type GraphDisplayMode,
 } from "./cytoscapeStyles";
 import type { CytoscapeProjectionOutput } from "./layout";
+import type { RelationshipBundle } from "./projection";
 import { useGraphStore } from "../state/graphStore";
 
 cytoscape.use(dagre);
@@ -22,6 +23,7 @@ interface UseCytoscapeControllerOptions {
   container: HTMLDivElement | null;
   projection: CytoscapeProjectionOutput;
   structuralKey: string;
+  layoutKey: string;
   focusedEntityId: string | null;
   selectedEntityId: string | null;
   connectedNodeIds: string[];
@@ -33,19 +35,20 @@ export function useCytoscapeController({
   container,
   projection,
   structuralKey,
+  layoutKey,
   focusedEntityId,
   selectedEntityId,
   connectedNodeIds,
   connectedEdgeIds,
   displayMode,
 }: UseCytoscapeControllerOptions): Core | null {
+  const visibleNodeLabelKinds = useGraphStore((state) => state.visibleNodeLabelKinds);
   const cyRef = useRef<Core | null>(null);
   const lastStructuralKeyRef = useRef<string | null>(null);
   const pendingInitialFitRef = useRef(false);
-  const preservedViewportRef = useRef<{
-    zoom: number;
-    pan: { x: number; y: number };
-  } | null>(null);
+  const lastLayoutKeyRef = useRef<string | null>(null);
+  const hasFittedRef = useRef(false);
+  const positionsRef = useRef(new Map<string, cytoscape.Position>());
 
   useEffect(() => {
     if (!container || cyRef.current) {
@@ -55,16 +58,26 @@ export function useCytoscapeController({
     const cy = cytoscape({
       container,
       elements: [],
-      style: getCytoscapeStyles(displayMode),
+      style: getCytoscapeStyles(displayMode, visibleNodeLabelKinds),
     });
 
     cy.on("tap", "node", (event) => {
       const nodeId = event.target.id();
       const state = useGraphStore.getState();
+      const bundle = event.target.data("bundle") as RelationshipBundle | undefined;
+      if (bundle) {
+        state.expandRelationshipBundle(bundle);
+        return;
+      }
       state.setSelectedEntityId(nodeId);
     });
 
     cy.on("tap", "edge", (event) => {
+      const bundle = event.target.data("bundle") as RelationshipBundle | undefined;
+      if (bundle) {
+        useGraphStore.getState().expandRelationshipBundle(bundle);
+        return;
+      }
       if (event.target.data("isDerivedHierarchy")) {
         return;
       }
@@ -92,6 +105,7 @@ export function useCytoscapeController({
             ) {
               cy.fit(cy.elements(), 48);
               pendingInitialFitRef.current = false;
+              hasFittedRef.current = true;
             }
           });
 
@@ -101,6 +115,8 @@ export function useCytoscapeController({
       resizeObserver?.disconnect();
       cy.destroy();
       cyRef.current = null;
+      hasFittedRef.current = false;
+      lastLayoutKeyRef.current = null;
     };
   }, [container]);
 
@@ -110,8 +126,8 @@ export function useCytoscapeController({
       return;
     }
 
-    cy.style().fromJson(getCytoscapeStyles(displayMode)).update();
-  }, [displayMode]);
+    cy.style().fromJson(getCytoscapeStyles(displayMode, visibleNodeLabelKinds)).update();
+  }, [displayMode, visibleNodeLabelKinds]);
 
   const stableElements = useMemo(
     () => projection.elements,
@@ -125,17 +141,35 @@ export function useCytoscapeController({
     }
 
     let cancelled = false;
+    const nextIds = new Set(stableElements.map(element => String(element.data.id)));
+    const positions = positionsRef.current;
+    if (lastLayoutKeyRef.current !== layoutKey) positions.clear();
+    else cy.nodes().forEach(node => { if (!node.data("bundle")) positions.set(node.id(), { ...node.position() }); });
+    const canonicalGraph = useGraphStore.getState().graph;
+    for (const id of positions.keys()) if (!canonicalGraph?.nodeById[id]) positions.delete(id);
+    const seeds = new Map(positions);
+    for (const hint of projection.positionHints ?? []) {
+      const anchor = cy.$id(hint.anchorId);
+      if (anchor.length) {
+        seeds.set(hint.id, { x: anchor.position("x") + hint.offset.x,
+          y: anchor.position("y") + hint.offset.y });
+      }
+    }
 
     cy.batch(() => {
-      cy.elements().remove();
-      cy.add(stableElements);
+      cy.elements().filter(element => !nextIds.has(element.id())).remove();
+      for (const element of stableElements) {
+        const existing = cy.$id(String(element.data.id));
+        if (existing.length) existing.data(element.data);
+        else cy.add({ ...element, position: seeds.get(String(element.data.id)) });
+      }
     });
 
     const didStructureChange = lastStructuralKeyRef.current !== structuralKey;
     lastStructuralKeyRef.current = structuralKey;
-    const shouldPreserveViewport =
-      didStructureChange && preservedViewportRef.current !== null;
-    pendingInitialFitRef.current = didStructureChange && !shouldPreserveViewport;
+    const didLayoutChange = lastLayoutKeyRef.current !== layoutKey;
+    lastLayoutKeyRef.current = layoutKey;
+    pendingInitialFitRef.current = !hasFittedRef.current && cy.nodes().length > 0;
 
     const finishLayout = (padding: number) => {
       if (cancelled) {
@@ -144,30 +178,18 @@ export function useCytoscapeController({
 
       cy.resize();
       if (
-        shouldPreserveViewport &&
-        preservedViewportRef.current &&
-        cy.container()?.clientWidth &&
-        cy.container()?.clientHeight
-      ) {
-        cy.zoom(preservedViewportRef.current.zoom);
-        cy.pan(preservedViewportRef.current.pan);
-        preservedViewportRef.current = null;
-        pendingInitialFitRef.current = false;
-        return;
-      }
-
-      if (
-        didStructureChange &&
+        pendingInitialFitRef.current &&
         cy.container()?.clientWidth &&
         cy.container()?.clientHeight
       ) {
         cy.fit(cy.elements(), padding);
         pendingInitialFitRef.current = false;
+        hasFittedRef.current = true;
       }
     };
 
     const nextLayout = {
-      ...projection.layout,
+      ...(didLayoutChange || !hasFittedRef.current ? projection.layout : { name: "preset" }),
       fit: false,
     } as cytoscape.LayoutOptions & {
       fit?: boolean;
@@ -192,8 +214,9 @@ export function useCytoscapeController({
 
     return () => {
       cancelled = true;
+      layoutRunner.stop();
     };
-  }, [container, projection, stableElements, structuralKey]);
+  }, [container, projection, stableElements, structuralKey, layoutKey]);
 
   useEffect(() => {
     const cy = cyRef.current;

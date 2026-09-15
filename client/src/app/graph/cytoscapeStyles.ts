@@ -2,16 +2,30 @@
  * Cytoscape stylesheet contains visual presentation only; geometry comes from node data.
  */
 import type cytoscape from "cytoscape";
-import type { GraphEdgeKind } from "../../../../shared/domain";
+import type { GraphEdgeKind, GraphNodeKind } from "../../../../shared/domain";
+
+export const nodeMapNodeColors = {
+  country: "#f7d470",
+  organization: "#9ad29d",
+  system: "#8fc7ff",
+  "relationship-bin": "#95cdd5", // 50/50 linear-RGB blend of organization green and system blue.
+} satisfies Record<GraphNodeKind | "relationship-bin", string>;
 
 export const nodeMapEdgeColors = {
-  governs: "#c8dfff",
-  operates: "#9fe3d0",
-  member: "#8fb3db",
-  funds: "#e9c46a",
-  contributes: "#ff6b78",
-  transfers: "#c99cff",
-} satisfies Record<GraphEdgeKind, string>;
+  governs: nodeMapNodeColors.organization,
+  operates: nodeMapNodeColors.organization,
+  member: nodeMapNodeColors.organization,
+  funds: nodeMapNodeColors.organization,
+  contributes: nodeMapNodeColors.system,
+  transfers: nodeMapNodeColors.system,
+  org: nodeMapNodeColors.organization,
+  data: nodeMapNodeColors.system,
+} satisfies Record<GraphEdgeKind | "org" | "data", string>;
+
+const edgeColorStyles: cytoscape.StylesheetJson = Object.entries(nodeMapEdgeColors).map(([type, color]) => ({
+  selector: `edge[type = "${type}"]`,
+  style: { "line-color": color, "target-arrow-color": color },
+}));
 
 const labelFontScale = 2;
 
@@ -38,9 +52,9 @@ const diagramStyles: cytoscape.StylesheetJson = [
       "overlay-opacity": 0,
     },
   },
-  { selector: 'node[kind = "country"]', style: { shape: "round-rectangle", "background-color": "#f7d470", "border-color": "#b28a23" } },
-  { selector: 'node[kind = "organization"]', style: { shape: "round-rectangle", "background-color": "#dcefdc", "border-color": "#5d8b5d" } },
-  { selector: 'node[kind = "system"]', style: { shape: "round-rectangle", "background-color": "#d9ebff", "border-color": "#467ab3" } },
+  { selector: 'node[kind = "country"], node[colorKind = "country"]', style: { shape: "round-rectangle", "background-color": "#f7d470", "border-color": "#b28a23" } },
+  { selector: 'node[kind = "organization"], node[colorKind = "organization"]', style: { shape: "round-rectangle", "background-color": "#dcefdc", "border-color": "#5d8b5d" } },
+  { selector: 'node[kind = "system"], node[colorKind = "system"]', style: { shape: "round-rectangle", "background-color": "#d9ebff", "border-color": "#467ab3" } },
   {
     selector: "edge",
     style: {
@@ -58,12 +72,9 @@ const diagramStyles: cytoscape.StylesheetJson = [
       color: "#2a3950",
     },
   },
-  { selector: 'edge[type = "governs"]', style: { "line-color": "#b28a23", "target-arrow-color": "#b28a23" } },
-  { selector: 'edge[type = "operates"]', style: { "line-color": "#3f8d72", "target-arrow-color": "#3f8d72" } },
-  { selector: 'edge[type = "funds"]', style: { "line-color": "#b88a24", "target-arrow-color": "#b88a24" } },
-  { selector: 'edge[type = "member"]', style: { "line-color": "#7d8797", "target-arrow-color": "#7d8797", "line-style": "dashed", width: 1.8 } },
-  { selector: 'edge[type = "contributes"]', style: { "line-color": "#2d6cc9", "target-arrow-color": "#2d6cc9", width: 3 } },
-  { selector: 'edge[type = "transfers"]', style: { "line-color": "#8a59b7", "target-arrow-color": "#8a59b7", width: 3 } },
+  ...edgeColorStyles,
+  { selector: 'edge[type = "member"]', style: { "line-style": "dashed", width: 1.8 } },
+  { selector: 'edge[type = "contributes"], edge[type = "transfers"]', style: { width: 3 } },
   {
     selector: ".is-focus",
     style: {
@@ -145,11 +156,12 @@ const nodeMapStyles: cytoscape.StylesheetJson = [
       "overlay-opacity": 0,
     },
   },
-  { selector: 'edge[type = "governs"]', style: { "line-color": "#c8dfff", "line-opacity": 0.28 } },
-  { selector: 'edge[type = "operates"]', style: { "line-color": "#9fe3d0", "line-opacity": 0.32 } },
-  { selector: 'edge[type = "member"]', style: { "line-color": "#8fb3db", "line-style": "dotted", "line-opacity": 0.28 } },
-  { selector: 'edge[type = "contributes"]', style: { "line-color": "#ff5f6d", "line-opacity": 0.62, width: 1.2 } },
-  { selector: 'edge[type = "transfers"]', style: { "line-color": "#c99cff", "line-opacity": 0.56, width: 1.2 } },
+  ...edgeColorStyles,
+  { selector: 'edge[type = "governs"]', style: { "line-opacity": 0.28 } },
+  { selector: 'edge[type = "operates"]', style: { "line-opacity": 0.32 } },
+  { selector: 'edge[type = "member"]', style: { "line-style": "dotted", "line-opacity": 0.28 } },
+  { selector: 'edge[type = "contributes"]', style: { "line-opacity": 0.62, width: 1.2 } },
+  { selector: 'edge[type = "transfers"]', style: { "line-opacity": 0.56, width: 1.2 } },
   {
     selector: ".is-focus",
     style: {
@@ -189,6 +201,7 @@ const nodeMapStyles: cytoscape.StylesheetJson = [
     style: {
       "line-color": "#ff785e",
       "line-opacity": 0.9,
+      "target-arrow-color": "#ff785e",
       width: 2,
       "z-index-compare": "manual",
       "z-index": 997,
@@ -198,8 +211,20 @@ const nodeMapStyles: cytoscape.StylesheetJson = [
 
 export function getCytoscapeStyles(
   displayMode: GraphDisplayMode,
+  visibleNodeLabelKinds?: readonly (keyof typeof nodeMapNodeColors)[],
 ): cytoscape.StylesheetJson {
-  return displayMode === "node-map" ? nodeMapStyles : diagramStyles;
+  return [...(displayMode === "node-map" ? nodeMapStyles : diagramStyles),
+    { selector: 'node[kind = "relationship-bin"]', style: { shape: "round-rectangle",
+      "border-style": "dashed", "border-width": 2,
+      ...(displayMode === "node-map" ? { width: 14, height: 14, "border-color": "#f6fbff" } : {}) } },
+    { selector: 'node[kind = "relationship-bin"][colorKind = "relationship-bin"]',
+      style: { "background-color": "#95cdd5", "border-color": "#528390" } },
+    { selector: 'edge[bundle]', style: { "target-arrow-shape": "triangle", "line-style": "dashed", width: 3 } },
+    ...Object.keys(nodeMapNodeColors).filter(kind => visibleNodeLabelKinds &&
+      !visibleNodeLabelKinds.some(visibleKind => visibleKind === kind)).map(kind => ({
+      selector: `node[kind = "${kind}"]`, style: { "text-opacity": 0 },
+    })),
+  ];
 }
 
 export const cytoscapeStyles = diagramStyles;

@@ -284,6 +284,8 @@ body {
   bottom: 16px;
   z-index: 3;
   max-width: min(520px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  overflow-y: auto;
 }
 
 .graph-language-overlay {
@@ -477,6 +479,12 @@ body {
   opacity: 0.78;
 }
 
+.force-graph-label.is-relationship-bin {
+  border: 2px dashed #95cdd5;
+  border-radius: 12px;
+  color: #e3f7f4;
+}
+
 .force-graph-label.is-country {
   border-color: rgba(247, 212, 112, 0.48);
   color: #fff2c3;
@@ -489,7 +497,42 @@ body {
 
 .force-graph-label.is-system {
   border-color: rgba(143, 199, 255, 0.42);
+  color: #dfeeff;
 }
+
+.edgezoom-controls {
+  position: absolute;
+  top: 64px;
+  left: 16px;
+  z-index: 4;
+  width: min(260px, calc(100% - 32px));
+  max-height: calc(100% - 190px);
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid #506078;
+  border-radius: 8px;
+  background: rgba(16, 29, 48, 0.92);
+  color: #dfeeff;
+  font-size: 11px;
+}
+
+.edgezoom-controls button {
+  margin: 2px;
+  padding: 5px 8px;
+  border: 1px solid #506078;
+  border-radius: 5px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.edgezoom-controls button[aria-pressed="true"] { background: #435778; }
+.edgezoom-controls button:disabled { cursor: default; opacity: 0.65; }
+.edgezoom-controls p { margin: 6px 0; }
+.edgezoom-controls summary { margin: 5px 2px; cursor: pointer; }
+.edgezoom-details { margin-top: 8px; border-top: 1px solid #506078; padding-top: 8px; }
+.edgezoom-members { display: flex; flex-direction: column; max-height: 160px; overflow: auto; }
 
 .force-graph-label.is-neighbor {
   border-color: rgba(255, 191, 102, 0.78);

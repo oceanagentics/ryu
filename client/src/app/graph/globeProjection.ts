@@ -1,4 +1,5 @@
 import type { GraphNode } from "../../../../shared/domain";
+import { nodeMapEdgeColors } from "./cytoscapeStyles";
 import type { GraphProjection, GraphProjectionEdge } from "./projection";
 
 export interface GlobeNode {
@@ -48,15 +49,6 @@ const colorByKind = {
   organization: "#6aa6ff",
   system: "#65c4a4",
 } satisfies Record<GraphNode["kind"], string>;
-
-const colorByLinkType = {
-  governs: "#c39b3a",
-  operates: "#3b66b0",
-  member: "#8b99aa",
-  funds: "#b88a24",
-  contributes: "#22a37a",
-  transfers: "#7b5ad6",
-} satisfies Record<GraphProjectionEdge["type"], string>;
 
 const altitudeByKind = {
   country: 0.02,
@@ -127,6 +119,7 @@ export function projectGlobeGraph(projection: GraphProjection): GlobeProjection 
   const groupSeen: Record<string, number> = {};
 
   const nodes = projection.nodes.map((node, index) => {
+    if (node.kind === "relationship-bin") throw new Error("Globe requires an Entity-level projection");
     const code = node.countryCode ?? "unknown";
     const anchor = countryAnchors[code] ?? getFallbackAnchor(index, projection.nodes.length);
     const groupIndex = groupSeen[code] ?? 0;
@@ -149,12 +142,15 @@ export function projectGlobeGraph(projection: GraphProjection): GlobeProjection 
 
   return {
     nodes,
-    links: projection.edges.map((edge) => ({
-      id: edge.id,
-      source: edge.source,
-      target: edge.target,
-      type: edge.type,
-      color: colorByLinkType[edge.type],
-    })),
+    links: projection.edges.map((edge) => {
+      if (edge.bundle) throw new Error("Globe requires canonical relationships");
+      return {
+        id: edge.id,
+        source: edge.source,
+        target: edge.target,
+        type: edge.type,
+        color: nodeMapEdgeColors[edge.type],
+      };
+    }),
   };
 }

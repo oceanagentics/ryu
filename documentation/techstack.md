@@ -117,9 +117,9 @@ The Tree layout currently uses `governs`, `operates`, `funds`, and `member` rela
 | Module | Current responsibility |
 | --- | --- |
 | `scope.ts` | Canonical ID selection: global governance scope or three-hop focused neighborhoods |
-| `projection.ts` | Search/filter application and construction of visible projected canonical nodes and edges |
+| `projection.ts` | Search/filter application, canonical display, and synthetic relationship bins/aggregate edges with retained canonical IDs |
 | `geometry.ts` | Labels, dimensions, and stable kind-based layout bands |
-| `nodeMap3dLayout.ts` | Active renderer's Tree and Globe target positions |
+| `nodeMap3dLayout.ts` | Active renderer's Tree/Globe targets and deterministic local position seeds |
 | `layout.ts` | Conversion to Cytoscape elements and Cytoscape layout options |
 | `useCytoscapeController.ts` | Cytoscape lifecycle, events, layout execution, and viewport behavior |
 | `cytoscapeStyles.ts` | Cytoscape appearance and the edge-color palette also used by ForceGraph |
@@ -128,16 +128,16 @@ The store supports governance, country, and technical view modes. The current ap
 
 `GraphCanvas.tsx` and the separate `GlobeCanvas.tsx` remain as alternate implementations but are not mounted by the current app. Changes to shared projection types still need to keep these consumers compatible.
 
-### Current limitations relevant to semantic zoom
+### Manual relationship detail and remaining limitations
 
-- Projection currently assumes canonical node kinds and canonical edge types; synthetic bins are not implemented.
-- ForceGraph node/link objects are rebuilt when projection changes.
-- Camera setup currently depends on node count and canvas size, so structural updates and pane resizing can reset navigation.
-- Position caching primarily supports arrangement transitions; it is not yet a general semantic-level reconciliation mechanism.
-- The force engine reheats on graph-data changes, and the component currently requests 48 warm-up ticks.
-- Cytoscape currently replaces elements and reruns layout; its viewport-preservation ref is not populated.
+- Graph now offers session-only Family / Type / Entity controls, defaulting to Entity. Display families are `org` and `data`; all bins separate incoming and outgoing relationships.
+- Shared/bridge and protected entities remain canonical on screen. Bin counts represent unique hidden entities, not edge totals; overlapping memberships are allowed. Expansion and bundle details have separate state from canonical selection and URLs.
+- ForceGraph reconciles render objects by ID and caches canonical positions. Surviving canonical nodes are anchored on structural updates, and new nodes receive local seeds. Camera/rotation setup is independent of node count and pane size; only initial data uses 48 warm-up ticks.
+- Cytoscape consumes the synthetic variants, reconciles stable elements, and fits initially. Same-layout updates use retained coordinates and layout-owned bin position hints.
+- Automatic semantic zoom is not enabled. Tree and Globe remain Entity-only and preserve the selected Graph level for later return.
+- Browser-level camera, rotation, and layout continuity still need acceptance testing. Local preview startup was blocked by the execution environment, so source/build checks are not proof of visual behavior.
 
-The companion `documentation/edgezoom.md` proposes relationship bins and stable scene updates. Its `org`/`data` display families, manual levels, local expansion, and automatic hysteresis are planned behavior, not existing runtime features.
+The companion `documentation/edgezoom.md` records the manual implementation, restore point, checks, and deferred automatic hysteresis/arrangement work. These statements describe this checkout, not a deployed production revision. No canonical record or database change is involved.
 
 ## Canonical records and PostgreSQL
 
@@ -251,4 +251,4 @@ For current authoritative contracts and working plans, consult:
 - `documentation/RICH_RESEARCH_RECORDS.md`: authored record structure and research requirements.
 - `documentation/deployment-recommendations.md`: shared release workflow and migration procedures.
 - `documentation/mvp.md` and `documentation/osusources.md`: active portal/source plans; examples are not substitutes for executable contracts.
-- `documentation/edgezoom.md`: proposed semantic zoom, relationship bins, camera continuity, and implementation sequence.
+- `documentation/edgezoom.md`: manual relationship bins, verification status, camera continuity, and remaining implementation sequence.

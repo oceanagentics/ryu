@@ -1,5 +1,5 @@
 import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
-import { Button, Card, Flex, Tag, Typography } from "antd";
+import { Button, Card, Checkbox, Flex, Tag, Typography } from "antd";
 import { useState } from "react";
 
 import { edgeKinds, type GraphNodeKind } from "../../../../shared/domain";
@@ -14,6 +14,8 @@ export function LegendPanel() {
   const locale = useGraphStore((state) => state.locale);
   const hiddenNodeKinds = useGraphStore((state) => state.hiddenNodeKinds);
   const hiddenEdgeKinds = useGraphStore((state) => state.hiddenEdgeKinds);
+  const visibleNodeLabelKinds = useGraphStore((state) => state.visibleNodeLabelKinds);
+  const toggleNodeLabelVisibility = useGraphStore((state) => state.toggleNodeLabelVisibility);
   const toggleNodeKindVisibility = useGraphStore(
     (state) => state.toggleNodeKindVisibility,
   );
@@ -96,6 +98,14 @@ export function LegendPanel() {
               <span className="legend-edge-line" style={{ background: nodeMapEdgeColors[kind] }} />
               <span className="legend-filter-label">{vocabularyLabel(locale, "edgeKinds", kind)}</span>
             </button>
+          ))}
+        </Flex>
+        <Flex vertical gap={8} className="legend-column" role="group" aria-label={t(locale, "graph.nodeLabels")}>
+          <Typography.Text strong>{t(locale, "graph.nodeLabels")}</Typography.Text>
+          {([...nodeItems, "relationship-bin"] as const).map(kind => (
+            <Checkbox key={kind} checked={visibleNodeLabelKinds.includes(kind)} onChange={() => toggleNodeLabelVisibility(kind)}>
+              {kind === "relationship-bin" ? t(locale, "graph.binLabels") : vocabularyLabel(locale, "nodeKinds", kind)}
+            </Checkbox>
           ))}
         </Flex>
         <Tag bordered={false} color="default" className="legend-note">

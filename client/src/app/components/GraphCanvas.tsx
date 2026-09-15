@@ -20,6 +20,9 @@ export function GraphCanvas({ displayMode = "diagram" }: GraphCanvasProps) {
   const countryDisplayMode = useGraphStore((state) => state.countryDisplayMode);
   const focusEntityId = useGraphStore((state) => state.focusEntityId);
   const selectedEntityId = useGraphStore((state) => state.selectedEntityId);
+  const selectedRelationshipId = useGraphStore((state) => state.selectedRelationshipId);
+  const semanticLevel = useGraphStore((state) => state.semanticLevel);
+  const expandedEntityIds = useGraphStore((state) => state.expandedEntityIds);
   const locale = useGraphStore((state) => state.locale);
   const searchEntityIds = useGraphStore((state) => state.searchEntityIds);
   const hiddenNodeKinds = useGraphStore((state) => state.hiddenNodeKinds);
@@ -43,6 +46,7 @@ export function GraphCanvas({ displayMode = "diagram" }: GraphCanvasProps) {
       hiddenNodeKinds,
       hiddenEdgeKinds,
       searchEntityIds,
+      semanticLevel, expandedEntityIds, selectedEntityId, selectedRelationshipId,
     });
   }, [
     countryDisplayMode,
@@ -53,6 +57,7 @@ export function GraphCanvas({ displayMode = "diagram" }: GraphCanvasProps) {
     searchEntityIds,
     structuralFocusEntityId,
     viewMode,
+    semanticLevel, expandedEntityIds, selectedEntityId, selectedRelationshipId,
   ]);
 
   const cytoscapeProjection = useMemo(() => {
@@ -123,6 +128,7 @@ export function GraphCanvas({ displayMode = "diagram" }: GraphCanvasProps) {
     container,
     projection: controllerProjection,
     structuralKey,
+    layoutKey: `${layoutMode}:${viewMode}:${displayMode}`,
     focusedEntityId: focusEntityId,
     selectedEntityId,
     connectedNodeIds: selectedNeighborhood.connectedNodeIds,

@@ -16,6 +16,7 @@ import type {
 } from "../../../../shared/domain";
 import { defaultLocale } from "../../../../shared/localization";
 import { indexGraph, type IndexedGraph } from "../graph/indexGraph";
+import type { GraphProjectionNode, RelationshipBundle, SemanticLevel } from "../graph/projection";
 import { emptySearchFilters, type GraphSearchFilters } from "../search";
 import {
   isFocusAllowedForView,
@@ -41,6 +42,7 @@ export type CountryDisplayMode = "node" | "engulf";
 export type GraphDisplayMode = "graph" | "globe";
 
 const filterableNodeKinds: GraphNodeKind[] = ["country", "organization", "system"];
+const collapsedRelationships = { expandedEntityIds: new Set<string>(), selectedBundleId: null };
 
 function getInitialDisplayMode(): GraphDisplayMode {
   if (typeof window === "undefined") {
@@ -81,6 +83,13 @@ interface GraphState {
   searchError: string | null;
   hiddenNodeKinds: GraphNodeKind[];
   hiddenEdgeKinds: GraphEdgeKind[];
+  visibleNodeLabelKinds: GraphProjectionNode["kind"][];
+  semanticLevel: SemanticLevel;
+  expandedEntityIds: Set<string>;
+  selectedBundleId: string | null;
+  setSemanticLevel: (level: SemanticLevel) => void;
+  expandRelationshipBundle: (bundle: RelationshipBundle) => void;
+  collapseRelationships: () => void;
   setBootstrap: (payload: GraphBootstrapPayload) => void;
   setSavedViews: (savedViews: SavedView[]) => void;
   updateNode: (node: GraphNode) => void;
@@ -100,6 +109,7 @@ interface GraphState {
   setSearchFilters: (searchFilters: GraphSearchFilters) => void;
   toggleNodeKindVisibility: (nodeKind: GraphNodeKind) => void;
   toggleEdgeKindVisibility: (edgeKind: GraphEdgeKind) => void;
+  toggleNodeLabelVisibility: (kind: GraphProjectionNode["kind"]) => void;
   resetKindFilters: () => void;
   resetSearchFilters: () => void;
   resetSearch: () => void;
@@ -129,8 +139,19 @@ export const useGraphStore = create<GraphState>((set) => ({
   searchError: null,
   hiddenNodeKinds: [],
   hiddenEdgeKinds: [],
+  visibleNodeLabelKinds: ["system", "relationship-bin"],
+  semanticLevel: "entity",
+  ...collapsedRelationships,
+  setSemanticLevel: (semanticLevel) => set({ semanticLevel }),
+  expandRelationshipBundle: (bundle) => set((state) => ({
+    selectedBundleId: bundle.id,
+    expandedEntityIds: new Set([...state.expandedEntityIds,
+      ...bundle.hiddenMemberIds.filter(id => state.graph?.nodeById[id])]),
+  })),
+  collapseRelationships: () => set(collapsedRelationships),
   setBootstrap: (payload) =>
     set({
+      ...collapsedRelationships,
       graph: indexGraph(payload),
       savedViews: payload.savedViews,
       loading: false,
@@ -159,6 +180,7 @@ export const useGraphStore = create<GraphState>((set) => ({
   setDisplayMode: (displayMode) => set({ displayMode }),
   setViewMode: (viewMode) =>
     set((state) => ({
+      ...collapsedRelationships,
       viewMode,
       focusEntityId: normalizeFocusForView(state.graph, viewMode, state.focusEntityId),
       selectedEntityId: null,
@@ -170,18 +192,18 @@ export const useGraphStore = create<GraphState>((set) => ({
   setFocusEntityId: (focusEntityId) =>
     set((state) =>
       isFocusAllowedForView(state.graph, state.viewMode, focusEntityId)
-        ? { focusEntityId }
+        ? { focusEntityId, ...collapsedRelationships }
         : {},
     ),
   setSelectedEntityId: (selectedEntityId) =>
-    set({ selectedEntityId, selectedRelationshipId: null }),
+    set({ selectedEntityId, selectedRelationshipId: null, selectedBundleId: null }),
   setSelectedRelationshipId: (selectedRelationshipId) =>
-    set({ selectedRelationshipId, selectedEntityId: null }),
+    set({ selectedRelationshipId, selectedEntityId: null, selectedBundleId: null }),
   setViewport: (viewport) => set({ viewport }),
   setLocale: (locale) => set({ locale }),
-  setSearchQuery: (searchQuery) => set({ searchQuery }),
-  setSearchAllLanguages: (searchAllLanguages) => set({ searchAllLanguages }),
-  setSearchFilters: (searchFilters) => set({ searchFilters }),
+  setSearchQuery: (searchQuery) => set({ searchQuery, ...collapsedRelationships }),
+  setSearchAllLanguages: (searchAllLanguages) => set({ searchAllLanguages, ...collapsedRelationships }),
+  setSearchFilters: (searchFilters) => set({ searchFilters, ...collapsedRelationships }),
   toggleNodeKindVisibility: (nodeKind) =>
     set((state) => {
       const hiddenNodeKinds = new Set(state.hiddenNodeKinds);
@@ -192,6 +214,7 @@ export const useGraphStore = create<GraphState>((set) => ({
       }
 
       return {
+        ...collapsedRelationships,
         hiddenNodeKinds: filterableNodeKinds.filter((kind) =>
           hiddenNodeKinds.has(kind),
         ),
@@ -207,16 +230,23 @@ export const useGraphStore = create<GraphState>((set) => ({
       }
 
       return {
+        ...collapsedRelationships,
         hiddenEdgeKinds: edgeKinds.filter((kind) => hiddenEdgeKinds.has(kind)),
       };
     }),
-  resetKindFilters: () => set({ hiddenNodeKinds: [], hiddenEdgeKinds: [] }),
-  resetSearchFilters: () => set({ searchFilters: emptySearchFilters() }),
+  toggleNodeLabelVisibility: (kind) => set((state) => ({
+    visibleNodeLabelKinds: state.visibleNodeLabelKinds.includes(kind)
+      ? state.visibleNodeLabelKinds.filter(visibleKind => visibleKind !== kind)
+      : [...state.visibleNodeLabelKinds, kind],
+  })),
+  resetKindFilters: () => set({ hiddenNodeKinds: [], hiddenEdgeKinds: [], ...collapsedRelationships }),
+  resetSearchFilters: () => set({ searchFilters: emptySearchFilters(), ...collapsedRelationships }),
   resetSearch: () =>
     set({
+      ...collapsedRelationships,
       searchQuery: "",
       searchAllLanguages: false,
       searchFilters: emptySearchFilters(),
     }),
-  resetSelection: () => set({ selectedEntityId: null, selectedRelationshipId: null }),
+  resetSelection: () => set({ selectedEntityId: null, selectedRelationshipId: null, selectedBundleId: null }),
 }));

@@ -89,3 +89,8 @@ export function getNodeDimensions(kind: GraphNode["kind"], label: string): NodeG
 export function getLayoutBand(kind: GraphNode["kind"]): number {
   return bandByKind[kind];
 }
+
+export function getBinDimensions(label: string): NodeGeometry {
+  const width = Math.max(140, Math.min(236, 36 + label.length * 9));
+  return { width, height: 92, textMaxWidth: width - 32 };
+}

@@ -1,6 +1,21 @@
 # Semantic zoom for relationship bins
 
-Status: proposed implementation plan. Writing this document does not authorize implementation of the graph changes.
+Status: manual-stage implementation in the working checkout, authorized after review. Not deployed; browser acceptance is still outstanding. Automatic zoom, Tree binning, and Globe binning remain deferred.
+
+## Manual-stage implementation notes
+
+- The pre-change restore point is `3182d87` (Document semantic zoom and Explorer architecture).
+- Graph offers localized Family / Type / Entity controls, defaulting to Entity. Tree and Globe temporarily use Entity without changing the Graph preference.
+- Projection creates explicit synthetic variants and direction-specific groups. Group badges count unique hidden entities; clicking a bin or aggregate reveals members locally. Bundle details list canonical members and relationships separately from canonical selection.
+- Initial topology policy: keep nodes with multiple distinct neighbors, self-loops, isolated nodes, and both endpoints of two-node components real. Only unprotected entities exclusively attached to a retained hub can disappear. This eligibility rule does not restrict all-neighbor logical group membership. Protection is evaluated on the scoped canonical graph before kind/edge filters. Singleton promotion cascades across overlapping groups.
+- ForceGraph reuses surviving render objects, caches canonical positions, seeds additions near their hub, and anchors surviving canonical nodes before a changed graph enters simulation. Those anchors remain until an intentional arrangement transition or user drag. Warm-up is initial-only; camera and rotation effects depend on arrangement, not node count or canvas size. No wheel-driven semantic switching is installed.
+- Display updates coalesce control changes once per frame and commit data, projection, and arrangement together. Retained links keep their live D3 endpoints; retargeted links get new objects. Layout cancellation rejects superseded results, and position animations wake the simulation without full-scene `refresh()` calls. Label-only renders retain drawing callbacks; mode-transition callbacks tolerate pending geometry.
+- Rendering regressions exercise deferred mode changes, repeated levels/legends, expansion, empty/restore states, endpoint retargeting, retained meshes, cooled-engine animation, update coalescing, and stale-layout cancellation. Browser camera/rotation acceptance remains outstanding.
+- Cytoscape carries the same variants and interaction metadata, reconciles IDs, fits initially, and uses retained positions plus layout-supplied bin hints for same-layout updates. Its alternative renderer path still needs browser acceptance.
+- Local seed fixture (not production): Entity 237 nodes / 274 edges; Type 171 / 207, including 21 bins; Family 161 / 194, including 22 bins. Canonical fixture data is unchanged.
+- Verification: application build, client projection/state tests, and targeted shared localization/search tests pass. Full-suite HTTP tests are blocked by local socket permissions; a Node/WASM crash in the concurrent full run passed on an isolated rerun. Starting the local preview is also denied, even with elevation, so camera/rotation continuity is code-reviewed but not visually certified.
+
+Before release, run the display-continuity checklist below in a browser, including rapid level changes during Graph/Tree/Globe transitions. This document's remaining automatic-zoom and arrangement work is not implemented by the manual stage.
 
 ## Objective
 
@@ -56,7 +71,7 @@ Protected entities include the focused entity, selected entity, both endpoints o
 
 Protection prevents aggregation within the current visible scope. It should not silently override an explicit filter or add an out-of-scope entity. Preserve canonical selection state if filters exclude the selected record; define any reveal action separately.
 
-This reconciliation remains a product decision. If all neighbors must disappear into bins, including shared entities, the plan needs an explicit alternative for representing their connections, such as visual proxies or connections between bins. Do not silently omit those connections.
+The manual stage uses this conservative reconciliation. If all neighbors must disappear into bins, including shared entities, a later stage needs an explicit alternative for representing their connections, such as visual proxies or connections between bins. Do not silently omit those connections.
 
 ### Retain hubs before collapsing neighbors
 
@@ -67,7 +82,7 @@ Choose a deterministic set of real hubs before aggregation. Two connected nodes 
 - Preserve isolated nodes, cycles, and connections between hubs unless an explicit projection rule accounts for them.
 - Do not recursively collapse branches in the first implementation without a separately reviewed topology rule.
 
-The exact global hub-retention policy must be settled before implementing global collapse.
+The initial global retention policy is recorded in the implementation notes above. Broader collapse of shared entities requires a separately reviewed policy.
 
 ### Multi-role entities and counts
 
@@ -82,7 +97,7 @@ If both entities are hidden, the bins display Org 2 and Data 1. Counts are uniqu
 
 Retain underlying canonical node IDs and edge IDs. Keep entity counts distinct from relationship counts. Several edges to one entity still count as one entity.
 
-Recommend avoiding bins with fewer than two hidden entities, but settle this alongside overlapping membership. If a small group requires revealing an entity, remove that entity from every bin's hidden membership and restore its visible incident relationships. Never leave a partially hidden representation or omit one of its relationships.
+The manual stage avoids bins with fewer than two hidden entities. If a small group requires revealing an entity, remove that entity from every bin's hidden membership and restore its visible incident relationships. Repeat singleton promotion across affected groups until stable. Never leave a partially hidden representation or omit one of its relationships.
 
 Do not assume every level change reduces the number of displayed nodes. Multiple bins, directions, and shared memberships can outweigh the entities hidden. Measure the actual benefit.
 
@@ -156,7 +171,7 @@ Separate four lifecycle operations:
 
 Projection changes must not reset camera position, orientation, field of view, orbit target, auto-rotation state/speed, or damping. Resizing, including opening the details pane, must not reset navigation.
 
-The current ForceGraph camera setup depends on node count and canvas size; its rotation setup also depends on node count. Those dependencies must be separated before bins are enabled.
+Before this implementation, ForceGraph camera setup depended on node count and canvas size; rotation setup also depended on node count. The manual stage separates those dependencies.
 
 Preserve the live camera continuously. Routine snapshot-and-restore after asynchronous layout can rewind rotation or overwrite navigation performed while layout was running. Camera snapshots are useful for verification or intentional view restoration, not as a substitute for independent lifecycles.
 
@@ -176,7 +191,7 @@ Reconcile renderer objects by stable projected ID:
 - Reconcile link endpoints against current renderer objects; avoid stale object references.
 - Remove stale hover targets and cancel obsolete layout results without resetting canonical selection.
 
-The installed force engine reheats when graph data changes, and the app currently requests 48 warm-up ticks. Reusing objects alone therefore does not guarantee a smooth transition. The centering and repulsion forces can also move the entire graph after membership changes.
+The installed force engine reheats when graph data changes. The manual stage requests 48 warm-up ticks only on initial nonempty data, then zero for structural updates. Reusing objects alone does not guarantee a smooth transition; surviving canonical positions are constrained and centering is disabled while positions are fixed.
 
 Use initial warm-up only for initial layout. For semantic transitions, verify a layout policy that holds retained hubs stable while changed regions settle. Express this as layout constraints before simulation rather than correcting positions after the solve. Do not assume `d3ReheatSimulation()` provides a gentle or local update.
 
@@ -213,7 +228,7 @@ Calibrate thresholds using the real graph and representative canvas sizes after 
 
 ## Cytoscape, Tree, and Globe
 
-Cytoscape must consume the same projection variants and preserve canonical selection. Its current controller removes all elements, reruns layout, and can refit; the viewport-preservation ref is not populated. Reconcile stable elements where practical, preserve zoom/pan, and avoid fitting on semantic transitions or overwriting navigation during asynchronous layout.
+Cytoscape consumes the same projection variants and preserves canonical selection. The manual stage replaces the previous remove-all/refit behavior with ID reconciliation and initial-only fitting. Verify zoom/pan preservation and initial placement during browser acceptance; never restore a stale viewport after asynchronous layout.
 
 Tree currently uses only Org-family canonical relationships for its ELK layout. When adding bins, ensure Data bins receive meaningful placement constraints without being presented as organizational hierarchy. Treat this as a separate arrangement integration.
 
@@ -221,12 +236,12 @@ Keep Globe at Entity level initially. The current globe projection assumes canon
 
 Preserve the user's chosen level when an unsupported arrangement temporarily forces Entity, and restore that preference when returning to a supported arrangement.
 
-## Product decisions before implementation
+## Product decisions and starting policies
 
 | Decision | Recommended starting position |
 | --- | --- |
-| Does “all neighbors” require hiding shared/bridge entities? | Group all; keep required entities real; badge counts hidden entities. Confirm this reconciliation. |
-| Which nodes remain hubs globally? | Define a deterministic retained structure before aggregation; do not infer hubs from the reduced graph. |
+| Does “all neighbors” require hiding shared/bridge entities? | Manual stage groups all and keeps required entities real; badge counts hidden entities. Broader hiding needs review. |
+| Which nodes remain hubs globally? | Retain multiple-neighbor nodes and protected/special components using the unreduced scoped graph, as detailed above. |
 | Minimum bin size | Avoid singleton bins; reconcile overlapping groups without partially hiding entities. |
 | Multi-role and opposite-direction membership | Permit multiple logical memberships; count unique entities within each bin and explain overlap. |
 | Bin click | Reveal canonical members locally and retain logical group details. |

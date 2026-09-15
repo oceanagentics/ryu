@@ -4,16 +4,18 @@
  */
 import type cytoscape from "cytoscape";
 
-import type { GraphNode, ViewMode } from "../../../../shared/domain";
+import type { ViewMode } from "../../../../shared/domain";
 import type { GraphLayout } from "../state/graphStore";
 import type { GraphDisplayMode } from "./cytoscapeStyles";
-import type { GovernanceBlock, GraphProjection, GraphProjectionEdgeType } from "./projection";
+import type { GovernanceBlock, GraphProjection, GraphProjectionEdgeType, GraphProjectionNode, RelationshipBundle } from "./projection";
 
 type GraphNodeData = {
   id: string;
   label: string;
   simpleLabel: string;
-  kind: GraphNode["kind"];
+  kind: GraphProjectionNode["kind"];
+  colorKind: GraphProjectionNode["kind"];
+  bundle?: RelationshipBundle;
   countryCode?: string | null;
   governanceBlock?: GovernanceBlock;
   layoutBand: number;
@@ -29,6 +31,8 @@ type GraphEdgeData = {
   type: GraphProjectionEdgeType;
   label: string;
   isDerivedHierarchy?: boolean;
+  bundle?: RelationshipBundle;
+  edgeIds?: string[];
 };
 
 const displayPolicy = {
@@ -44,6 +48,7 @@ type DisplayPolicy = typeof displayPolicy;
 export interface CytoscapeProjectionOutput {
   elements: cytoscape.ElementDefinition[];
   layout: cytoscape.LayoutOptions;
+  positionHints?: Array<{ id: string; anchorId: string; offset: cytoscape.Position }>;
 }
 
 function getCytoscapeLayout(
@@ -189,6 +194,8 @@ export function projectCytoscapeGraph(
       label: node.label,
       simpleLabel: node.simpleLabel,
       kind: node.kind,
+      colorKind: node.memberKinds?.length === 1 ? node.memberKinds[0] : node.kind,
+      bundle: node.bundle,
       countryCode: node.countryCode,
       governanceBlock: node.governanceBlock,
       layoutBand: node.layoutBand,
@@ -206,6 +213,8 @@ export function projectCytoscapeGraph(
       type: edge.type,
       label: edge.label,
       isDerivedHierarchy: edge.isDerivedHierarchy,
+      bundle: edge.bundle,
+      edgeIds: edge.edgeIds,
     } satisfies GraphEdgeData,
   }));
 
@@ -216,8 +225,24 @@ export function projectCytoscapeGraph(
     projection.effectiveFocusEntityId,
   );
 
+  const binsByHub = new Map<string, string[]>();
+  for (const node of projection.nodes) {
+    if (!node.bundle) continue;
+    const siblings = binsByHub.get(node.bundle.hubId) ?? [];
+    siblings.push(node.id);
+    binsByHub.set(node.bundle.hubId, siblings);
+  }
+  const positionHints: NonNullable<CytoscapeProjectionOutput["positionHints"]> = [];
+  for (const [anchorId, siblings] of binsByHub) {
+    siblings.sort().forEach((id, index) => {
+      const angle = index * 2 * Math.PI / siblings.length;
+      positionHints.push({ id, anchorId, offset: { x: 280 * Math.cos(angle), y: 280 * Math.sin(angle) } });
+    });
+  }
+
   return {
     elements: [...nodeElements, ...edgeElements],
     layout: phaseLayout,
+    positionHints,
   };
 }

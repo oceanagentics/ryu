@@ -12,6 +12,14 @@ export type NodeMap3dPosition = {
   z: number;
 };
 
+export function getNodeMap3dSeed(id: string, anchor: NodeMap3dPosition): NodeMap3dPosition {
+  let hash = 2166136261;
+  for (const character of id) hash = Math.imul(hash ^ character.charCodeAt(0), 16777619);
+  const angle = (hash >>> 0) * 2.399963229728653;
+  return { x: anchor.x + 64 * Math.cos(angle), y: anchor.y + 64 * Math.sin(angle),
+    z: anchor.z + 28 * Math.sin(angle * 0.7) };
+}
+
 const flatTreeComponentSpacing = 50;
 const flatTreeDepthScale = 2;
 const flatTreeSiblingSpacing = 12;
