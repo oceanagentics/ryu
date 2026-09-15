@@ -7,6 +7,7 @@
 - Treat `research/*` CSV folders as incremental research/import batches, not as a separate central source of truth.
 
 ## Documentation
+- Treat the [Ryu Product Roadmap](https://docs.google.com/spreadsheets/d/1qrlogYeo5XIO7j7c8qEaAFP_WQmKi6dKLQI_3PjxhTM/edit?usp=sharing) as the canonical product roadmap. When work refers to the product roadmap, a roadmap phase, or a roadmap release, consult this Google Sheet rather than local roadmap examples or project plans.
 - Read [shared/README.md](shared/README.md) before using or extending shared domain contracts, localization, vocabulary labels, UI messages, or search presentation.
 - Follow `documentation/RICH_RESEARCH_RECORDS.md` for standing rich research and record-backfill instructions.
 - Use `documentation/mvp.md` as the current Deeptime/Ryu MCP portal working plan.
