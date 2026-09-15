@@ -5,8 +5,9 @@ completed on 2026-08-31.
 
 Source storage in this historical migration plan is superseded by
 `011_owned_sources.sql`: source collections now live in `nodes.sources` and
-`edges.sources`, with translated `title` maps. Follow
-[`RICH_RESEARCH_RECORDS.md`](../RICH_RESEARCH_RECORDS.md) for current authoring.
+`edges.sources`, with translated `title` maps. Follow the current
+[system](../SYSTEM_RECORDS.md), [country](../COUNTRY_RECORDS.md), or
+[organization](../ORGANIZATION_RECORDS.md) authoring guide as appropriate.
 The completed `migrate:language` runner has been retired.
 
 Draft date: 2026-08-31

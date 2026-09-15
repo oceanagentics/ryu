@@ -31,7 +31,7 @@ Copy the format, never apply this fixture over production FishBase or reuse its
 facts and IDs for another system. Postgres remains the canonical graph. Update
 the fixture deliberately with contract changes; never fetch live data in tests.
 
-See [the authoring guide](../../../documentation/RICH_RESEARCH_RECORDS.md) for
+See [the system authoring guide](../../../documentation/SYSTEM_RECORDS.md) for
 the exact field contract, research requirements and review workflow.
 
 ## Country and organization examples
@@ -48,3 +48,6 @@ institutional context, mission, establishment, scale and office locations.
 Both share source ownership and review infrastructure with systems. Only systems
 have a routes section or gallery. Rich systems require a useful gallery item;
 thin systems may keep the gallery empty while a qualifying capture is unavailable.
+See the [country guide](../../../documentation/COUNTRY_RECORDS.md) and
+[organization guide](../../../documentation/ORGANIZATION_RECORDS.md) for their
+depth definitions, contracts, and research workflows.

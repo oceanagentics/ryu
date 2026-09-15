@@ -9,7 +9,9 @@
 ## Documentation
 - Treat the [Ryu Product Roadmap](https://docs.google.com/spreadsheets/d/1qrlogYeo5XIO7j7c8qEaAFP_WQmKi6dKLQI_3PjxhTM/edit?usp=sharing) as the canonical product roadmap. When work refers to the product roadmap, a roadmap phase, or a roadmap release, consult this Google Sheet rather than local roadmap examples or project plans.
 - Read [shared/README.md](shared/README.md) before using or extending shared domain contracts, localization, vocabulary labels, UI messages, or search presentation.
-- Follow `documentation/RICH_RESEARCH_RECORDS.md` for standing rich research and record-backfill instructions.
+- Follow the node-specific standing research and backfill guides:
+  `documentation/SYSTEM_RECORDS.md`, `documentation/COUNTRY_RECORDS.md`, and
+  `documentation/ORGANIZATION_RECORDS.md`.
 - Use `documentation/finishedwork/cloud-run-migration.md` for the completed Cloud Run, CHM routing, and Cloud SQL launch record.
 - Treat `documentation/shutteredwork/mvp.md` and
   `documentation/shutteredwork/osusources.md` as discontinued historical plans,
@@ -58,9 +60,10 @@
 ## Validation Rules
 ### System record contract
 - Use the content-only FishBase example in `server/src/fixtures/rich-record.json`
-  and the field contract in `documentation/RICH_RESEARCH_RECORDS.md`.
-- All system depths use the same closed structure. `stub` and `thin` may omit
-  unfinished sections; supplied fields must still have the approved shape.
+  and the field contract in `documentation/SYSTEM_RECORDS.md`.
+- All system depths use the same closed structure. `stub` is the minimum ID and
+  kind; `thin` may omit unfinished sections. Supplied fields must still have the
+  approved shape.
   Never invent fields, nested metadata bags, identifiers, or hidden relationships.
 - `rich` requires the complete six-language record, at least one useful gallery
   item showing a representative record or data content, and completed relationship
@@ -96,17 +99,23 @@
   govern its institution. Record the collective authority when evidence supports it.
 - `countryCode` is an identity code for country nodes only. Do not set it on
   organizations or systems, or recreate an Operator country field.
-- Before marking a record rich, review every incident edge and investigate all six
-  relationship types. Actively research missing connections beyond the operator,
-  using primary sources to establish endpoints, direction, scope, and time/status.
+- Before marking a record rich, review every incident edge and investigate every
+  relationship type applicable to that node kind. Actively research missing
+  connections using primary sources to establish endpoints, direction, scope,
+  and time/status.
   Put the full relationship meaning, including material scope and timing, in the
   edge `description`; store its evidence directly in the edge `sources` collection.
   Persist verified material connections during authorized backfills and report
   unresolved candidates with reasons. Keep unfinished research thin; there is no
-  minimum connection count. Follow `documentation/RICH_RESEARCH_RECORDS.md`.
+  minimum connection count. Follow the guide for the record's node kind in
+  `documentation/SYSTEM_RECORDS.md`, `documentation/COUNTRY_RECORDS.md`, or
+  `documentation/ORGANIZATION_RECORDS.md`.
 
 ## Provenance and Metadata
-- Store sources in dedicated `nodes.sources` and `edges.sources` JSONB objects, keyed by owner-local source ID. Each source has exactly `id`, `url`, `title` (supported-locale map), and `accessedAt` (YYYY-MM-DD).
+- Store sources in dedicated `nodes.sources` and `edges.sources` JSONB objects,
+  keyed by owner-local source ID. Each source has `id`, `url`, `title`
+  (supported-locale map), optional `description` (supported-locale map), and
+  `accessedAt` (YYYY-MM-DD), with no other fields.
 - Store user-facing system prose in `node_localizations`, with source IDs on the relevant localized detail items, resolving against the node's sources. Edge citations resolve against the edge's sources; route citations resolve against the route node's sources.
 - Store language-neutral operational facts in `nodes.properties_json`.
 - Do not add or preserve identifier lists in the record model.
@@ -119,7 +128,7 @@
   discipline without explicit human approval in the current authoring chat.
   Explain the uncovered subject and why existing tags do not fit, then wait for
   approval before updating the vocabulary. Follow the discipline rules in
-  `documentation/RICH_RESEARCH_RECORDS.md`; do not recreate `role` or `disciplineFamily`.
+  `documentation/SYSTEM_RECORDS.md`; do not recreate `role` or `disciplineFamily`.
 - Do not author `geographicScope` tags. Structured geographic coverage is deferred;
   include relevant, source-backed geographic context in the profile prose.
 - Use only approved `dataTypes` IDs from `shared/domain.ts` as the label of a
@@ -134,10 +143,11 @@
 
 - Use only approved `dataStandards` IDs from `shared/domain.ts` for `standard`
   descriptors, once per system. Every assignment requires an owner-local source
-  and a scoped description in all six locales, including thin/stub records.
+  and a scoped description in all six locales whenever supplied. A record with
+  a standard descriptor is at least `thin` under the authoring classification.
   Shared vocabulary labels replace localized labels. New standard IDs require
   explicit human approval and a vocabulary/translation release before use.
-  Follow `documentation/RICH_RESEARCH_RECORDS.md`; do not infer standards from
+  Follow `documentation/SYSTEM_RECORDS.md`; do not infer standards from
   formats, connected systems, operators, or planned routes. Keep versions in
   descriptions and document gaps when no assignment is verified.
 
@@ -147,7 +157,7 @@
   New metrics, units, or changes of meaning require explicit human approval in
   the current authoring chat and a vocabulary/translation release before use.
   Put descriptions in each localization's `details.metrics`, with matching IDs.
-  Follow `documentation/RICH_RESEARCH_RECORDS.md` for sources, reporting periods,
+  Follow `documentation/SYSTEM_RECORDS.md` for sources, reporting periods,
   research gaps, and preserving unsupported measurements as sourced prose.
 
 - Read and Write access use approved `readAccessMethods` / `writeAccessMethods`,
@@ -155,13 +165,14 @@
   `accessCosts` from `shared/domain.ts`, with owner-local `sourceRefs` and matching
   labels/descriptions in all six locales at every depth. Additions require human
   approval and a vocabulary/translation release. Keep human and machine access;
-  follow the Access Paths guidance in `documentation/RICH_RESEARCH_RECORDS.md`.
+  follow the Access Paths guidance in `documentation/SYSTEM_RECORDS.md`.
 
 ## Ryu Access Routes
 - Treat `ryu_routes` as the first-class operational route index for agents.
 - Keep `nodes.properties_json.access` as access mechanics and `node_localizations.details_json.access` as localized human guidance; use `ryu_routes` to decide how an agent should actually retrieve data.
 - Use `ryu_routes` only for machine access routes; human lookup, web UI, manual request, researcher-library, and raw-source context stays in the localized access/details surface, not `ryu_routes`.
-- For node/system research and rich record backfills, follow `documentation/RICH_RESEARCH_RECORDS.md` for the full `ryu` shape and research rules.
+- For system research and record backfills, follow
+  `documentation/SYSTEM_RECORDS.md` for the full `ryu` shape and research rules.
 - Keep `ryu_routes` compact: route id, status, mode, priority, capabilities, target, upstream, format, contract_ref, and caveat.
 - Do not store MCP/API tool contracts inline; `contract_ref` points to the relevant MCP, API, or service contract.
 - Treat `status='planned'` as non-live; do not use that route for runtime access unless the requested work is planning or implementation.

@@ -87,8 +87,8 @@ guide in the same release.
 
 For data descriptors, the neutral `label` field contains an approved ID. Its
 localized entry supplies the matching item `id` and scoped `description`, with no
-label override. Use [the rich record guide](../documentation/RICH_RESEARCH_RECORDS.md)
-for record authoring, evidence, completeness and vocabulary approval requirements.
+label override. Use [the system record guide](../documentation/SYSTEM_RECORDS.md)
+for descriptor authoring, evidence, completeness and vocabulary approval requirements.
 
 System metrics store only an approved key, numeric value, observation date,
 source, optional reporting period, and stable item ID. Organization scale uses

@@ -381,10 +381,14 @@ Upsert semantics:
 
 Validation rules:
 
-- `rich` writes must pass the content and source-completeness gates in
-  `documentation/RICH_RESEARCH_RECORDS.md` on the resulting aggregate, for both
-  PUT and PATCH.
-- `stub` writes may include only minimal metadata and one localization.
+- `rich` writes must pass the content and source-completeness gates in the
+  applicable `documentation/SYSTEM_RECORDS.md`,
+  `documentation/COUNTRY_RECORDS.md`, or
+  `documentation/ORGANIZATION_RECORDS.md` guide on the resulting aggregate, for
+  both PUT and PATCH.
+- Under the current authoring classification, `stub` is only the minimal node ID
+  and kind; any persisted optional metadata or localization makes the record
+  `thin` unless it meets the applicable rich contract.
 - Unknown fields should be rejected.
 - Writes should run in one transaction.
 - Request bodies should support `validateOnly=true` for dry runs.
@@ -1011,8 +1015,9 @@ Docs:
 
 - [x] Update `documentation/finishedwork/cloud-run-migration.md` after implementation so
   `RYU_MODE=api` no longer says review-only.
-- [x] Update `documentation/RICH_RESEARCH_RECORDS.md` so routine backfills use the
-  record API instead of direct Postgres edits.
+- [x] Update the standing node record guides so routine backfills use the record
+  API instead of direct Postgres edits. The former combined rich-record guide was
+  later split by node kind.
 - [x] Update `documentation/SEARCH_SYSTEM_PLAN.md` to describe server-backed record
   search and localization filters.
 - [x] Update `documentation/finishedwork/language-migration-plan.md` with localization coverage

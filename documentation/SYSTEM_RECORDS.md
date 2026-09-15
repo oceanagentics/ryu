@@ -1,19 +1,23 @@
-# Rich Research Records For Ryu
+# System Records For Ryu
 
-Use this guide when researching and backfilling rich database records for Ryu. The goal is a record that helps a researcher quickly understand what a database is for, what data it contains, how large it is, how to access or contribute to it, who manages it, and which machine routes Ryu can use.
+Use this guide when creating, researching, or backfilling a Ryu `system` node at
+any record depth. The goal is a record that helps a researcher quickly understand
+what a database or information system is for, what data it contains, how large it
+is, how to access or contribute to it, who manages it, and which machine routes
+Ryu can use.
 
 For shared vocabulary labels, UI messages, lookup APIs and translation extension
 checks, see [the shared code guide](../shared/README.md). Record-specific prose
 and source titles continue to follow the ownership rules below.
 
-## Node Contract Boundaries
+## Contract Authority
 
-The three authored records have separate positive contracts in
-`shared/records/country.ts`, `shared/records/organization.ts`, and
-`shared/records/system.ts`. Their API inputs, PATCHes, DTOs, display and search
-types preserve the owning kind. Each runtime validator lives in
-`server/src/recordContracts/<kind>.ts`; shared validation handles sources,
-locales and review metadata.
+The positive TypeScript contract is `shared/records/system.ts`. Runtime
+validation lives in `server/src/recordContracts/system.ts`; shared validation in
+`server/src/recordContracts.ts` handles sources, locales, edges, and review
+metadata. PostgreSQL structural guards live in
+`server/schema/014_system_record_shape.sql` and
+`server/schema/017_node_kind_contracts.sql`.
 
 The tables and Record API endpoints stay shared. `nodes.kind` selects the
 `node_localizations` shape through `node_id`; no second kind column is stored.
@@ -28,11 +32,63 @@ localizations, and explicitly delete any incompatible routes or relationships.
 A full PUT is required when removing neutral fields such as a former canonical
 URL. Omitted locales, sources and incident edges retain their existing content.
 
-Record search covers all three kinds; the `kind` query filter selects a subset.
-The **Systems** directory remains an explicitly system-only view; absence there
-does not establish absence from the graph.
+Record search covers all three node kinds; the `kind` query filter selects a
+subset. The **Systems** directory is explicitly system-only; absence there does
+not establish absence from the graph. Country authoring follows
+[COUNTRY_RECORDS.md](COUNTRY_RECORDS.md), and organization authoring follows
+[ORGANIZATION_RECORDS.md](ORGANIZATION_RECORDS.md).
 
-## Canonical System Contract
+## Record Depth
+
+`recordDepth` describes research completeness, not review acceptance.
+Localization `review.state` separately records `agent_researched`,
+`human_reviewed`, or `needs_revision`.
+
+### Stub
+
+A stub is the minimum system record accepted by PostgreSQL. It reserves a valid,
+globally unique node ID and identifies its kind. No localization, source, edge,
+route, URL, or researched property is required.
+
+The minimum Record API create payload is:
+
+```json
+{
+  "record": { "kind": "system" }
+}
+```
+
+With `x-ryu-create-only: true`, persistence supplies `recordDepth: "stub"`,
+`url: null`, `properties: {}`, and `sources: {}`. The ID comes from
+`PUT /api/records/:id`. Those materialized defaults are the canonical stub
+shape. Do not add empty localizations or speculative fields merely to make a
+stub look fuller.
+
+### Thin
+
+A thin system is any structurally valid record with more authored content than
+the canonical stub that does not meet every rich requirement in this guide.
+Examples include a title-only localization, a canonical URL, a source, a
+descriptor, an access path, an incident edge, or a route. Set
+`recordDepth: "thin"` as soon as any such optional content is persisted.
+
+The database permits optional, correctly shaped fields at `stub` depth, but that
+is structural tolerance rather than the authoring definition. Do not leave an
+enriched record labeled `stub`. Keep a record thin while research, translation,
+gallery capture, access verification, metrics, or relationship review remains
+incomplete.
+
+### Rich
+
+A rich system satisfies the complete contract and research requirements below:
+all six localizations; a cited profile; a canonical URL; all five neutral
+property sections; verified data formats and read access; a representative
+gallery item; metric findings or explicit gaps; standards findings or an
+explicit gap; an evidenced incoming `operates` edge; and completed research of
+all applicable relationship types. Rich does not mean human-reviewed, and the
+validator cannot establish that evidence is true or that research was adequate.
+
+## Canonical Contract
 
 The [FishBase content example](../server/src/fixtures/rich-record.json) is the
 reference for system records. Its [snapshot notes](../server/src/fixtures/README.md)
@@ -41,10 +97,11 @@ claims, IDs, sources, counts, or particular relationships. The approved format
 is enforced by `server/src/recordContracts/system.ts`, with closed shared types and
 PostgreSQL structural guards in `server/schema/014_system_record_shape.sql`.
 
-Every depth uses this format. A `stub` identifies a system; `thin` holds partial
-research; `rich` means the complete profile and relationship research described
-below. Incomplete work may omit sections, but supplied fields must be valid.
-Changing depth never permits unknown keys, wrong types, or mismatched item IDs.
+Every depth uses this format. The canonical `stub` omits all optional content;
+`thin` holds partial research and may omit unfinished sections; `rich` means the
+complete profile and relationship research described below. Supplied fields must
+always be valid. Changing depth never permits unknown keys, wrong types, or
+mismatched item IDs.
 
 Content PUT bodies contain only `id` (optional, matching the path), `record`,
 `localizations`, `edges`, `routes`, and optional `incomplete`. Record fields are
@@ -116,165 +173,6 @@ guards, example, tests and this guide in one release. Do not automatically
 refresh the fixture from production. Audit existing records before enforcement;
 see [the shape rollout audit](finishedwork/SYSTEM_RECORD_SHAPE_ROLLOUT.md) and
 [the rich system gallery rollout](finishedwork/RICH_SYSTEM_GALLERY_ROLLOUT.md).
-
-## Canonical Organization Contract
-
-Organization records are concise institutional profiles. They explain what an
-organization is, why it exists, when it was established, its documented scale,
-where it maintains offices, and how it relates to the rest of the graph. Their
-positive shape is defined in `shared/records/organization.ts`, illustrated by
-[the synthetic organization example](../server/src/fixtures/rich-organization.json),
-and enforced by `server/src/recordContracts/organization.ts` and
-`server/schema/016_organization_record_shape.sql`.
-
-The following organization objects are closed:
-
-| Object | Fields |
-| --- | --- |
-| `record` | `kind`, `url`, `recordDepth`, `properties`, `sources` |
-| `record.properties` | `established`, `metrics`, `offices` |
-| Established fact | `date`, `source` |
-| Scale metric | `id`, `key`, `value`, `observedAt`, `source` |
-| Neutral office | `id`, `kind`, `source` |
-| Localization content | `title`, `summary`, `description`, `details`, optional `translatedFromLocale` |
-| `details` | `aliases`, `profile`, `offices`, optional `researchGaps` |
-| `details.profile` | `mission`, `sourceRefs` |
-| Localized office | `id`, `location` |
-| `details.researchGaps` | Optional `established`, `scale`, `officeLocations` explanations |
-
-`established.date` uses the most precise supported value (`YYYY`, `YYYY-MM`, or
-`YYYY-MM-DD`). It means the legal or documented establishment represented by
-the cited source; do not silently substitute a predecessor's founding, treaty
-signature, launch, reorganization, or renaming date. Put that qualification in
-the referenced source's localized `description`, not beside the date.
-
-Scale is a list of independently sourced measurements. Approved keys are
-`staff_count`, `member_organization_count`, and `member_country_count`.
-`observedAt` uses the same partial-date format or null. Organization scale does
-not use a reporting `period`, and each measurement's definition and caveats
-(employees versus consultants, current versus authorized posts, and the scope
-of membership) belong in the source's localized `description`. Do not mix
-unlike member categories into a single count.
-
-Offices are a sourced list, never an office count. Each neutral item has a
-stable ID, an approved `kind` (`headquarters` or `office`), and one source. Its
-localized partner has the same ID and a human-readable `location`. Include only
-documented active organizational offices; do not count member institutions,
-project sites, hosted secretariats, mailing addresses, or inferred places.
-Users and clients may derive a count from the list.
-
-Before marking an organization rich:
-
-1. Supply a canonical URL and all six localized titles, summaries,
-   descriptions, aliases, missions, and profile citations.
-2. Research establishment, the applicable scale measures, and active office
-   locations. If an authoritative fact is unavailable, use null or an empty
-   list and give the corresponding specific explanation in every locale's
-   `researchGaps`; never invent a value.
-3. Give every establishment, scale, and office source a nonblank localized
-   `description` in all six languages so users can interpret the fact.
-4. Review every incident edge and all six relationship types. A rich
-   organization needs at least one evidenced incident relationship, and every
-   included relationship needs a clear note plus owner-local citations.
-5. Validate the complete aggregate, apply with a fresh record timestamp, and
-   re-read it. Rich does not imply human review.
-
-Stub and thin organization records may omit unfinished sections, but every
-supplied field must retain this shape. Existing records labeled rich are lowered
-to thin by migration 016 until deliberately backfilled against this contract.
-
-## Canonical Country Contract
-
-Country records are compact ocean-governance profiles. Their positive field
-contracts live in `shared/records/country.ts`, illustrated by
-[the synthetic country example](../server/src/fixtures/rich-country.json), with runtime checks in
-`server/src/recordContracts/country.ts` and storage checks in
-`server/schema/015_country_record_shape.sql`. The owning `nodes.kind` selects
-the localization contract through `node_localizations.node_id`.
-
-| Country object | Authored fields |
-| --- | --- |
-| `record` | `kind`, `countryCode`, `recordDepth`, `properties`, `sources` |
-| `record.properties` | `treatyParticipation` |
-| Localization | `title`, `summary`, `details`, `translatedFromLocale` |
-| Localization `details` | `aliases`, `profile`, `treatyParticipation` |
-| `details.profile` | `sourceRefs` |
-
-IDs, timestamps, and localization review history are managed metadata. Each kind
-has its own localization type; system and organization canonical URLs and extended
-prose belong to their respective contracts. Stub and thin records may omit
-unfinished sections; supplied fields retain the declared shape.
-
-| Object | Fields |
-| --- | --- |
-| Neutral treaty participation | `id`, `status`, `signatureDate`, `consentMethod`, `depositDate`, `effectiveDate`, `focalPointUrl`, `sourceRefs` |
-| Localized treaty participation | `id`, `title`, `description`, `focalPoint` |
-
-Treaty item IDs are stable owner-local slugs and must match across neutral and
-localized arrays. Dates use `YYYY-MM-DD` or null. `focalPointUrl` is an official
-HTTP(S) directory or page, not a copied personal email address. Every neutral
-item has nonempty, unique source references resolving against the country's
-sources. Localized `focalPoint` names the designated institution or office; omit
-the current person's name unless it has clear operational value and the official
-source is maintained.
-
-Use `status` for the current legal position: `party`, `signatory_not_party`,
-`not_party`, or `withdrawn`. Use `consentMethod` for the distinct international
-act: `ratification`, `acceptance`, `approval`, `accession`, or
-`definitive_signature`. Do not reduce these to a `ratified` boolean. Record the
-depositary's date of deposit and the date the treaty became effective for that
-country when the official status source supplies them. Explain reservations,
-declarations, provisional application, or unusual legal history briefly in the
-localized treaty description when material to marine governance or participation.
-
-### Country prose
-
-Write publication-ready, factual prose about the country, its institutions, and
-its treaty participation. Make those entities the subjects of sentences. Internal
-project names belong in internal documentation; provenance and research-process
-information belong in source citations and review history.
-
-- `summary` is the single country introduction: a short paragraph, usually two or
-  three sentences. Give useful geographic or ocean context and concise institutional
-  context. Use concrete, sourced facts and explain agency abbreviations when useful.
-- Treaty `title` uses the recognized treaty name in the selected language, with a
-  familiar abbreviation where helpful.
-- Treaty `description` briefly explains participation and material qualifications.
-  Let structured fields carry routine dates. Explain relevant declarations, the
-  distinction between domestic approval and deposited consent, or entry-into-force
-  context. Include an explicit as-of date for pending or unrecorded actions.
-- Treaty `focalPoint` names the officially designated institution or office, with
-  its official directory as evidence.
-- Translate the same facts and qualifications naturally into all six languages.
-  Review prose for clarity, accuracy, and repetition. Automated checks enforce
-  structure, completeness, vocabulary, dates, and citations; editorial review
-  assesses writing quality.
-
-Before marking a country rich:
-
-1. Supply its uppercase ISO alpha-3 identity code, authoritative profile sources,
-   and all six localized titles, summaries, aliases, and profile citations.
-2. Research every treaty explicitly in scope for that Ryu record. Supply at
-   least one complete treaty item; do not attempt an exhaustive treaty census.
-3. Record the stable designated focal-point institution or office and official
-   directory when published. Treaty signatories and meeting delegates are not
-   assumed to be current operational contacts.
-4. Review the country-applicable `governs`, `funds`, and `member`
-   relationships. Keep formal groups and public authorities as sourced graph
-   relationships; Party status alone does not establish unilateral governance
-   over a treaty body or clearing-house system.
-5. Validate the complete aggregate, apply with a fresh record timestamp, and
-   re-read it. After completing a research pass, append an `agent_researched`
-   review event for every researched localization through
-   `PATCH /api/records/:id/review`, even when its state is unchanged. Use a fresh
-   record timestamp for each review write. The API supplies the reviewer and event
-   timestamp. Re-read the current state, date, and history. Human review uses the
-   same dated-event workflow with an authorized reviewer.
-
-Review dates identify completed research or review passes. `contentUpdatedAt`
-identifies content edits. Preserve unknown historical review dates as unknown;
-record a new event when the current pass is complete. Display the current review
-date beside its state and retain earlier events in revision history.
 
 ## Source Of Truth
 
@@ -351,8 +249,9 @@ A rich system must have:
   incoming `operates` edge from an existing organization.
 - All six supported node localizations, with non-empty title, summary, description,
   and explicit `details.profile.sourceRefs` supporting the prose and shared metadata.
-- Source-backed approved `format` descriptors and justified approved `type` descriptors. Include applicable `standard`
-  descriptors, or explain their absence in `details.researchGaps.standards`.
+- At least one source-backed approved `format` descriptor and any justified
+  approved `type` descriptors. Include applicable `standard` descriptors, or
+  explain their absence in `details.researchGaps.standards`.
 - At least one actual `read` access path, with mechanism, URL, evidence, localized
   label and description. Explain authentication, licensing, restrictions, and
   contribution arrangements in the profile/access prose as applicable.
@@ -372,11 +271,11 @@ A rich system must have:
 - A nonempty description and at least one source on every relationship. An edge's
   `sources` directly evidence its description; route references continue to resolve
   against the route node's `nodes.sources`. Sources contain no duplicate URL.
-- Complete the connection research in Relationship Review below for rich systems,
-  organizations, and countries. Persist verified material relationships with their
-  descriptions and evidence on the edges, and report unsupported or unresolved
-  candidates to the user. The API validates edge evidence references; passing
-  validation alone does not establish adequate research or the truth of a claim.
+- Complete the connection research in Relationship Review below for this system.
+  Persist verified material relationships with their descriptions and evidence
+  on the edges, and report unsupported or unresolved candidates to the user. The
+  API validates edge evidence references; passing validation alone does not
+  establish adequate research or the truth of a claim.
 
 Machine routes are optional. No approved route produces a warning; do not invent
 one. Gallery assets must exist or have HTTP(S) URLs.
@@ -390,24 +289,17 @@ reference/resolution counts, and field-level evidence issues. It measures the
 record's evidence coverage, not completeness of the upstream database. This is
 computed from content, not an author-controlled badge or a separate source registry.
 
-- Systems need evidence for their profile, data, access, quantitative claims,
-  relationships, and routes.
-- Organizations need evidence for identity and mission, establishment, each
-  supplied scale metric and office location, and asserted relationships. They
-  do not need system descriptors, access paths, galleries, or routes.
-- Countries need evidence for identity, treaty participation, official context,
-  and asserted `governs`, `funds`, and `member` relationships.
-- Minimal country/organization records may be source-complete and remain `stub`
-  or `thin`. The richer system checklist is not applied to those node kinds.
+Systems need evidence for their profile, data, access, quantitative claims,
+relationships, and routes. A thin system may be source-complete and still not be
+rich; citation resolution does not establish research depth.
 
 Each node and edge has a dedicated `sources` JSONB object keyed by source ID.
 Each entry has `id`, `url`, `title`, optional `description`, and `accessedAt`.
 The key equals `id`; IDs are local to their owner. `url` is absolute HTTP(S),
 `accessedAt` is a valid `YYYY-MM-DD` date, and both localized maps use supported
-locale codes with non-empty text. Source descriptions hold the interpretation,
-scope, and qualification of organization dates, scale figures, and office
-locations. No source type, publisher, publication date, local path, note, or
-source audit fields.
+locale codes with non-empty text. Source descriptions may hold interpretation,
+scope, and qualifications. No source type, publisher, publication date, local
+path, note, or source audit fields.
 
 Node/localization/route citations resolve against `nodes.sources`; an edge's
 `sources` collection directly supports its description, from either endpoint.
@@ -496,10 +388,10 @@ Use the target `node_localizations` row, usually `locale='en'` for current backf
   research or `needs_revision` for follow-up. Only authorized human acceptance
   should set `human_reviewed`; do not put review metadata in localization content.
 
-Keep organization rows minimal: localized identity and source-backed relationships. Do not assign a country code or `INT`. Use actual
-responsible institutions; split combined operator labels when their members have
-different responsibilities. International collaborations and EU institutions are
-organizations, not placeholder countries.
+Create separate endpoint records for the actual responsible institutions. Split
+combined operator labels when their members have different responsibilities;
+international collaborations and EU institutions are organizations, not
+placeholder countries.
 
 ## Actor Attribution
 
@@ -540,7 +432,7 @@ edge additions remain unfinished. Specific evidence gaps after a completed
 investigation are acceptable; generic "reviewed, no additional relationship
 established" findings do not satisfy this standard.
 
-For each record, agents must:
+For each system, agents must:
 
 1. Read the complete canonical record and its incident edges through the record API;
    inspect connected nodes and search for candidate endpoints to verify identities
@@ -728,7 +620,13 @@ belong in descriptions. Standards may be absent; do not invent an assignment.
 
 1. Read the current record and its sources. Research the system's official technical documentation or an actual data/metadata response. A standard's own website proves its definition, not the system's use.
 2. Select only approved IDs, once each per system. New standards require an explicit human decision on the ID, definition, record and evidence, then shared vocabulary/translation deployment before use. The initial vocabulary above was approved for the 2026-09-10 rollout.
-3. Attach an owner-local source to every standard descriptor, including thin/stub records. Supply a nonempty description in each of the six locales. Each description must identify the affected output, metadata interface, submission workflow or product family, and whether the convention is used, accepted, required, or recommended. A recommendation alone must not be presented as implemented support.
+3. Attach an owner-local source to every standard descriptor whenever supplied;
+   a record carrying a descriptor is at least thin under the authoring
+   classification. Supply a nonempty description in each of the six locales.
+   Each description must identify the affected output, metadata interface,
+   submission workflow or product family, and whether the convention is used,
+   accepted, required, or recommended. A recommendation alone must not be
+   presented as implemented support.
 4. Use source-backed scope. Do not infer CF from NetCDF, Darwin Core from OBIS/GBIF links, or any standard from an operator, member, parent/child system, source dataset, or planned connector. Do not automatically assign underlying standards from a profile name.
 5. Keep versions, extensions/checklists, vocabulary collections and exceptions in the description. Do not make one ID per version or parameter. Assign both a profile and its base only when documentation supports both and the description distinguishes them.
 6. Formats remain encodings/packages, including Darwin Core Archive. Transport protocols stay in access/routes; licensing stays in access/profile guidance; internal reference numbers and taxonomic-reference relationships stay in prose. Do not add discipline, type or format vocabulary entries as part of this rollout.
@@ -1008,7 +906,16 @@ Hosted IPT and other server packages are classified by their offered form/upload
 
 Requirements are `account`, `api_key` (key or access token), `approval`, and `affiliation` (membership of an eligible organization or group). Tag only confirmed prerequisites for the described access. Unknown does not mean unrestricted. `approval` means permission to participate; routine curator review belongs in prose. Cost concerns obtaining data for Read or contributing/publishing it for Write, not opening documentation. Describe conditional requirements and variation in prose; split entries when conditions materially differ. Free access does not establish an unrestricted reuse licence.
 
-Each access entry requires exactly one localized `{ id, label, description }` item in every supported locale, including thin/stub records. Labels name the destination or interface. Descriptions explain what the user receives or contributes, where to start, prerequisites and material limits. For Write, name accepted content, preparation steps, submission versus publication, curation and any upstream repository involved. Include relevant subset, snapshot, quota, licensing, map-image versus feature, and metadata-versus-data distinctions. Consolidate legacy `instructions` and `caveats` into `description`, preserving useful information. Never use boilerplate such as "Access via API."
+Each access entry requires exactly one localized `{ id, label, description }`
+item in every supported locale whenever supplied; a record carrying an access
+entry is at least thin under the authoring classification. Labels name the
+destination or interface. Descriptions explain what the user receives or
+contributes, where to start, prerequisites and material limits. For Write, name
+accepted content, preparation steps, submission versus publication, curation
+and any upstream repository involved. Include relevant subset, snapshot, quota,
+licensing, map-image versus feature, and metadata-versus-data distinctions.
+Consolidate legacy `instructions` and `caveats` into `description`, preserving
+useful information. Never use boilerplate such as "Access via API."
 
 Use multiple methods on one entry when they describe the same useful destination and conditions. The same method may occur on several entries. Consolidate redundant rows, verify destinations from official documentation and actual responses, and preserve distinct useful services. A generic project homepage rarely establishes an API or download route. Do not manufacture access for a planned system; record the gap in localized prose when no current path is verified.
 
@@ -1049,9 +956,10 @@ Research rules:
 ## Gallery Images
 
 Gallery images should be local, stable, and useful. Every rich system requires
-at least one gallery item. `stub` and `thin` systems may keep the neutral and
-localized gallery arrays empty while useful captures are still being researched.
-Countries and organizations do not inherit this system-only requirement.
+at least one gallery item. The canonical stub omits gallery content; thin systems
+may omit it or keep the neutral and localized arrays empty while useful captures
+are still being researched.
+The country and organization contracts do not include gallery fields.
 
 The existing gallery shape carries the necessary meaning without a new category:
 the neutral item identifies the captured asset and source, while each localized

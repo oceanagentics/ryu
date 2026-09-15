@@ -28,7 +28,7 @@ Archive SHA-256: `5b7332e4c0904be11a1e032212338b3606c8869da5ae62068f78fcc1877130
 
 ## Missing vocabulary candidates
 
-These IDs are proposals only. Adding a new canonical standard requires explicit approval under the [authoring rules](../../documentation/RICH_RESEARCH_RECORDS.md#approved-standards).
+These IDs are proposals only. Adding a new canonical standard requires explicit approval under the [system authoring rules](../../documentation/SYSTEM_RECORDS.md#approved-standards).
 
 | Candidate | Finding and recommendation | Evidence |
 | --- | --- | --- |

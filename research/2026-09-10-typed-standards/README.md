@@ -5,7 +5,7 @@ All 60 combined patches passed new-contract API dry runs, timestamped writes and
 full 137-record readback. The public export is refreshed. See
 [release evidence](../../documentation/deployment-recommendations.md#completed-2026-09-10-data-release).
 
-Implementation commit: `4830a74`. The [canonical agent instructions](../../documentation/RICH_RESEARCH_RECORDS.md#approved-standards) define the 41-ID vocabulary, evidence requirements, six-language scope descriptions, and Record API write procedure.
+Implementation commit: `4830a74`. The [canonical system instructions](../../documentation/SYSTEM_RECORDS.md#approved-standards) define the 41-ID vocabulary, evidence requirements, six-language scope descriptions, and Record API write procedure.
 
 ## Audit scope
 
