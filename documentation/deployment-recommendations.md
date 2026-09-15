@@ -82,6 +82,9 @@ images, obtain a fresh Cloud SQL backup, put public/admin authoring into the
 maintenance window, rehearse migrations 015–018 in one rollback transaction, apply them
 with the schema-capable account, promote the prepared images, run smoke checks,
 and regenerate `client/public/bootstrap.public.json` from canonical Postgres.
+Run `server/schema/run-node-edge-migration.mjs` from the prepared API image; its
+default mode rolls back, while `--apply` also requires the successful Cloud SQL
+backup ID in `BACKUP_ID` and records the coordinated release in `schema_migrations`.
 The migration rejects unknown property keys, malformed prose properties,
 unsupported kinds, duplicate relationships after renaming, missing descriptions,
 missing evidence, and invalid endpoints before dropping legacy columns.
