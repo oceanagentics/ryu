@@ -1,5 +1,8 @@
 # Ryu MVP: System Discovery Portal For Deeptime
 
+Status: shuttered and archived. This historical plan is not current project
+direction.
+
 ## Goal
 
 Ryu should act as the system discovery and routing portal for Deeptime. Deeptime asks Ryu which source systems are relevant and how to query them. Deeptime then calls system-specific APIs or connectors to retrieve layers, assets, records, or other data.

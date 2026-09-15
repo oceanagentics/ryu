@@ -10,10 +10,10 @@
 - Treat the [Ryu Product Roadmap](https://docs.google.com/spreadsheets/d/1qrlogYeo5XIO7j7c8qEaAFP_WQmKi6dKLQI_3PjxhTM/edit?usp=sharing) as the canonical product roadmap. When work refers to the product roadmap, a roadmap phase, or a roadmap release, consult this Google Sheet rather than local roadmap examples or project plans.
 - Read [shared/README.md](shared/README.md) before using or extending shared domain contracts, localization, vocabulary labels, UI messages, or search presentation.
 - Follow `documentation/RICH_RESEARCH_RECORDS.md` for standing rich research and record-backfill instructions.
-- Use `documentation/mvp.md` as the current Deeptime/Ryu MCP portal working plan.
-- Use `documentation/osusources.md` as the current Oregon/OSU source plan.
 - Use `documentation/finishedwork/cloud-run-migration.md` for the completed Cloud Run, CHM routing, and Cloud SQL launch record.
-- Treat `documentation/mvp.md` and `documentation/osusources.md` as active project plans for today's Deeptime/Ryu work, not permanent modeling policy.
+- Treat `documentation/shutteredwork/mvp.md` and
+  `documentation/shutteredwork/osusources.md` as discontinued historical plans,
+  not current roadmap or modeling policy.
 
 ## Research Import Workflow
 - Each research job may live in its own dated folder under `research/`.

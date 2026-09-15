@@ -1,5 +1,8 @@
 # OSU MVP Ryu Source Plan
 
+Status: shuttered and archived. This historical plan is not current project
+direction.
+
 ## Purpose
 
 Build the first Oregon-focused Ryu source set for map context, whale ecology, fisheries, and operational access routes. The graph should stay lean: each source system gets a full node only when it represents a distinct dataset, service, catalog, or operational provider that Ryu may query, snapshot, cite, or display independently.

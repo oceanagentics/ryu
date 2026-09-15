@@ -2,8 +2,7 @@
 
 Status: completed and archived. The record-oriented API, direct IAP human
 authorization, bearer-token agent authorization, validation, concurrency, and
-audit controls are implemented and deployed. Use
-[`techstack.md`](../techstack.md), `shared/recordApi.ts`, and
+audit controls are implemented and deployed. Use `shared/recordApi.ts` and
 `server/src/server.ts` for current behavior.
 
 ## Purpose
