@@ -1004,7 +1004,7 @@ CHM:
 
 Docs:
 
-- [x] Update `documentation/cloud-run-migration.md` after implementation so
+- [x] Update `documentation/finishedwork/cloud-run-migration.md` after implementation so
   `RYU_MODE=api` no longer says review-only.
 - [x] Update `documentation/RICH_RESEARCH_RECORDS.md` so routine backfills use the
   record API instead of direct Postgres edits.
@@ -1012,7 +1012,7 @@ Docs:
   search and localization filters.
 - [x] Update `documentation/language-migration-plan.md` with localization coverage
   filter semantics.
-- [x] Update `documentation/cloud-run-migration.md` after token auth ships so it
+- [x] Update `documentation/finishedwork/cloud-run-migration.md` after token auth ships so it
   describes direct Explorer IAP for humans and bearer-token API access for
   agents.
 - [x] Update CHM `docs/deploy.md` and `docs/security-audit.md` after removing

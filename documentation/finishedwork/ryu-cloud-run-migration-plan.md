@@ -3,6 +3,12 @@
 Date: 2026-08-20
 Updated: 2026-08-31
 
+Status: completed and archived. Phase 0 closed on 2026-09-01 after a signed-in
+IAP session exposed the review controls and successfully saved a review-state
+change. The later Record API refactor replaced the CHM review proxy with direct
+Explorer/IAP authorization for humans and bearer-token authorization for
+agents; see [`API_REFACTOR_PLAN.md`](../API_REFACTOR_PLAN.md).
+
 ## Purpose
 
 Launch Explorer, the networking graph application formerly codenamed Ryu, as a CHM app on Google Cloud.
@@ -32,7 +38,7 @@ Use the existing Google Cloud project `chm-network` for CHM, Explorer, the share
 - Primary region: `us-east4`
 - Load balancer IP: `34.110.145.254`
 
-## Live Status
+## Launch Status
 
 As of 2026-08-31, the core launch infrastructure is deployed and matches Terraform state.
 
@@ -316,27 +322,23 @@ Database access:
 - Verified the private Explorer review API write path and denial cases.
 - Verified Terraform drift with current deployed image digests: no pending changes.
 
-## Left To Finish
+## Completion
 
-The launch path is operational for public read access, authenticated admin read
-access, and the private backend review API path. Remaining work is the human
-browser click-through for the signed-in review form:
+Phase 0 closed on 2026-09-01. A signed-in IAP session exposed the review
+controls and successfully saved a review-state change. The logged-out UI hid
+the controls, an unauthenticated protected-route PATCH returned IAP `401`, and
+the public Explorer review endpoint returned `403 writes_disabled`. The server
+tests and production build also passed.
 
-1. Verify CHM-to-Explorer review path after authenticated browser login at
-   `/explorer/admin`:
-   - Exercise a real `PATCH /api/explorer/nodes/:id/localizations/:locale/review` action.
-   - Confirm `explorer-api` receives the call.
-   - Confirm write audit logging includes CHM service account and user identity.
-   - Confirm complete `state`, `note`, `reviewer`, and `date` snapshots append to `node_localizations.review_json.history` through `explorer_write`.
-   - Use only the current review states: `agent_researched`,
-     `human_reviewed`, and `needs_revision`.
+The remaining browser click-through described in the 2026-08-31 status was
+therefore completed the following day. The roadmap records this closure under
+`P0-F06`.
 
-2. Keep likely unused API disablement accepted as low-risk cleanup, not launch work:
-   - Current CHM/Explorer code and Terraform do not need Analytics Hub, the BigQuery family, Dataform, Dataplex, Datastore, Pub/Sub, Cloud Trace, Container Registry, Network Management, or OS Login.
-   - No resources were found behind those services, and no-force disablement is blocked by a Google baseline dependency.
-   - Revisit only if the project scope changes or a later audit finds active resources.
+Potential disablement of unused Google APIs remains optional post-launch
+cleanup, not unfinished Phase 0 work. Revisit it only if the project scope
+changes or a later security audit finds active resources.
 
-## Public Explorer Strategy
+## Historical Public Explorer Strategy
 
 Implemented on 2026-08-31. The safe public model is to make public Explorer
 read-only and keep review writes behind CHM/IAP:
@@ -357,17 +359,12 @@ read-only and keep review writes behind CHM/IAP:
   Cloud Run `invoker_iam_disabled=true`; protected `explorer-admin` remains
   invokable only by the IAP service agent.
 
-## Current Blockers
+## Closure
 
 No Terraform, build, Cloud SQL, Cloud Run deployment, IAP JWT validation,
-authenticated read, private API network, database privilege-separation, or
-backend review-write blocker remains.
-
-The only remaining Phase 0 verification gap is an authenticated browser
-application action through CHM/IAP. CLI checks can prove IAP redirects, service
-readiness, routing, image digests, Cloud SQL access, role privileges, direct
-URL denial, and private API review writes. The in-app browser is still waiting
-at Google sign-in, so the UI form click-through needs a signed-in session.
+authenticated read, private API network, database privilege-separation,
+backend review-write, or signed-in browser verification blocker remained when
+Phase 0 closed on 2026-09-01.
 
 ## Working Tree Reconciliation
 

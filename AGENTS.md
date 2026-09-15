@@ -12,7 +12,7 @@
 - Follow `documentation/RICH_RESEARCH_RECORDS.md` for standing rich research and record-backfill instructions.
 - Use `documentation/mvp.md` as the current Deeptime/Ryu MCP portal working plan.
 - Use `documentation/osusources.md` as the current Oregon/OSU source plan.
-- Use `documentation/cloud-run-migration.md` for Cloud Run, CHM routing, and Cloud SQL launch work.
+- Use `documentation/finishedwork/cloud-run-migration.md` for the completed Cloud Run, CHM routing, and Cloud SQL launch record.
 - Treat `documentation/mvp.md` and `documentation/osusources.md` as active project plans for today's Deeptime/Ryu work, not permanent modeling policy.
 
 ## Research Import Workflow

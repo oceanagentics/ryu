@@ -1,5 +1,13 @@
 # Explorer Cloud Run Launch Notes
 
+Status: completed and archived. Phase 0 closed on 2026-09-01 after the
+signed-in IAP review flow was exercised successfully. This document preserves
+the launch and later migration evidence; use
+[`deployment-recommendations.md`](../deployment-recommendations.md) for current
+publishing guidance and [`API_REFACTOR_PLAN.md`](../API_REFACTOR_PLAN.md) for
+the direct Explorer/IAP and bearer-token API architecture that superseded the
+original CHM review proxy.
+
 Explorer is the graph application formerly codenamed Ryu. CHM owns the shared
 entry, IAP, load balancer, Cloud SQL instance, and path routing. This repo owns
 Explorer runtime behavior, schema, seed data, validation, and the
@@ -141,7 +149,7 @@ Last verified on 2026-09-03:
 Routine publishing uses `scripts/deploy.sh`, shared with GitHub Actions. It selects
 affected services, checks data compatibility before building, and reuses prepared
 images on retries. Use `prepare` for a coordinated migration and `publish` after
-the data is compatible. See [Publishing Explorer](deployment-recommendations.md).
+the data is compatible. See [Publishing Explorer](../deployment-recommendations.md).
 The lower-level build examples below remain available for deliberate manual work.
 
 Build Explorer images into the shared CHM Artifact Registry repo with cache
@@ -279,9 +287,10 @@ bootstrap should return graph JSON with reviewer metadata, raw review JSON,
 and route targets redacted. Source collections contain only public citation fields. Unauthenticated
 `/explorer/admin` should redirect through IAP before reaching Explorer admin.
 
-Agent API verification should use a bearer token against
-`https://chm.oceanagentics.org/api/records`. The signed-in browser check should
-exercise direct Explorer/IAP review at `/explorer/admin`.
+Agent API verification uses a bearer token against
+`https://chm.oceanagentics.org/api/records`. The signed-in browser check
+exercises direct Explorer/IAP review at `/explorer/admin`; that Phase 0 check
+was completed on 2026-09-01.
 
 ## Owned Sources Cutover
 

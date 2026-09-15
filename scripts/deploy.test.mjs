@@ -25,7 +25,7 @@ test('UI changes omit API; runtime, shared contracts and dependencies include ev
 
 test('the entire deployed-to-target diff determines scope, including older pending server changes', () => {
   assert.deepEqual(affectedServices(['server/src/recordContracts.ts', 'client/src/app/components/LegendPanel.tsx']), all);
-  assert.deepEqual(affectedServices(['documentation/cloud-run-migration.md', 'research/batch/data.json', 'AGENTS.md', '.github/workflows/deploy.yml', 'scripts/deploy.mjs', 'client/public/bootstrap.public.json']), []);
+  assert.deepEqual(affectedServices(['documentation/finishedwork/cloud-run-migration.md', 'research/batch/data.json', 'AGENTS.md', '.github/workflows/deploy.yml', 'scripts/deploy.mjs', 'client/public/bootstrap.public.json']), []);
   assert.deepEqual(affectedServices(['unexpected-runtime.config']), all);
 });
 
