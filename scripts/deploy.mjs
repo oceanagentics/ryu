@@ -12,7 +12,7 @@ const project = 'chm-network', region = 'us-east4';
 const registry = `${region}-docker.pkg.dev/${project}/chm-apps`;
 const services = ['explorer', 'explorer-admin', 'explorer-api'];
 const repository = service => service === 'explorer' ? 'explorer-public' : service;
-const base = 'https://chm.oceanagentics.org';
+const base = 'https://chm.oceanagentics.com';
 
 export function affectedServices(files) {
   const affected = new Set();
