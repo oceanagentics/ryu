@@ -61,6 +61,79 @@ async function createEngine() {
   return new ThreeForceGraph<DrawNode, DrawLink>().linkWidth(3);
 }
 
+test("viewport pinch cancellation preserves one camera event and ordinary overlay scrolling", () => {
+  class Element {
+    constructor(private label = false) {}
+    closest() { return this.label ? this : null; }
+  }
+  const label = new Element(true);
+  const overlay = new Element();
+  let listener: ((event: WheelEvent) => void) | undefined;
+  const received: WheelEvent[] = [];
+  const surface = {
+    addEventListener(type: string, callback: typeof listener, options: unknown) {
+      assert.equal(type, "wheel");
+      assert.deepEqual(options, { capture: true, passive: false });
+      listener = callback;
+    },
+    removeEventListener(type: string, callback: typeof listener, capture: boolean) {
+      assert.equal(type, "wheel");
+      assert.equal(callback, listener);
+      assert.equal(capture, true);
+      listener = undefined;
+    },
+  };
+  const canvas = Object.assign(new Element(), {
+    dispatchEvent(event: WheelEvent) {
+      Object.defineProperty(event, "target", { value: canvas });
+      listener?.(event); // A forwarded event re-enters viewport capture.
+      received.push(event);
+      return !event.defaultPrevented;
+    },
+  });
+  const container = { closest: () => surface, querySelector: () => canvas };
+  const makeWheel = (target: Element, ctrlKey: boolean, cancelable = true) => {
+    const event = Object.assign(new Event("wheel", { bubbles: true, cancelable }), {
+      ctrlKey, deltaY: -2, deltaMode: 0, clientX: 25, clientY: 50,
+    });
+    Object.defineProperty(event, "target", { value: target, configurable: true });
+    return event as WheelEvent;
+  };
+  const cleanup = loadEffect("Claim pinch zoom", {
+    container, Element, window: { WheelEvent: function (_type: string, init: WheelEventInit) {
+      return Object.assign(makeWheel(canvas, init.ctrlKey ?? false, init.cancelable), {
+        deltaY: init.deltaY, deltaMode: init.deltaMode, clientX: init.clientX, clientY: init.clientY,
+      });
+    } },
+  })();
+  for (const target of [canvas, label, overlay]) {
+    received.length = 0;
+    const event = makeWheel(target, true);
+    listener!(event);
+    assert.equal(event.defaultPrevented, true, "pinch never falls through to page zoom");
+    assert.equal(received.length, target === canvas ? 0 : 1, "only overlays need forwarding");
+    assert.equal(event.cancelBubble, target !== canvas, "canvas controls receive the original pinch");
+    for (const forwarded of received) {
+      assert.equal(forwarded.ctrlKey, true);
+      assert.equal(forwarded.deltaY, -2);
+      assert.equal(forwarded.defaultPrevented, true);
+    }
+  }
+  for (const target of [canvas, overlay]) {
+    const event = makeWheel(target, false);
+    listener!(event);
+    assert.equal(event.defaultPrevented, false, "ordinary scrolling keeps its existing handler");
+    assert.equal(event.cancelBubble, false);
+  }
+  const labelScroll = makeWheel(label, false);
+  listener!(labelScroll);
+  assert.equal(labelScroll.defaultPrevented, true);
+  assert.equal(received.at(-1)!.ctrlKey, false);
+  assert.doesNotThrow(() => listener!(makeWheel(canvas, true, false)));
+  cleanup();
+  assert.equal(listener, undefined, "unmount removes viewport interception");
+});
+
 test("link drawing survives deferred Graph/Tree/Globe transitions without stale scene objects", async () => {
   const callbacks = (arrangement: string) => loadCode([
     "clamp", "makeGlobeLinkObject", "isGlobeLinkObject", "slerpDirections", "getSphericalArcPoints",

@@ -5,7 +5,6 @@ import {
   useMemo,
   useRef,
   useState,
-  type WheelEvent as ReactWheelEvent,
 } from "react";
 import ForceGraph3D, {
   type ForceGraphMethods,
@@ -1583,38 +1582,44 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
     [arrangement, linkColor],
   );
 
-  const forwardLabelWheel = useCallback(
-    (event: ReactWheelEvent<HTMLButtonElement>) => {
-      const canvas = container?.querySelector("canvas");
-      if (!canvas) {
-        return;
-      }
+  useLayoutEffect(() => {
+    if (!container) return;
+    const surface = container.closest<HTMLElement>(".graph-surface") ?? container;
 
-      event.preventDefault();
+    const handleWheel = (event: WheelEvent) => {
+      const overLabel = event.target instanceof Element && event.target.closest(".force-graph-label");
+      if (!event.ctrlKey && !overLabel) return;
+
+      // Claim pinch zoom across the whole viewport before the browser acts on it.
+      // Ordinary label scrolling also needs native, non-passive cancellation.
+      if (event.cancelable) event.preventDefault();
+      const canvas = container.querySelector("canvas");
+      if (!canvas || event.target === canvas) return;
+
       event.stopPropagation();
-
-      const nativeEvent = event.nativeEvent;
       canvas.dispatchEvent(
         new window.WheelEvent("wheel", {
           bubbles: true,
           cancelable: true,
-          clientX: nativeEvent.clientX,
-          clientY: nativeEvent.clientY,
-          ctrlKey: nativeEvent.ctrlKey,
-          deltaMode: nativeEvent.deltaMode,
-          deltaX: nativeEvent.deltaX,
-          deltaY: nativeEvent.deltaY,
-          deltaZ: nativeEvent.deltaZ,
-          metaKey: nativeEvent.metaKey,
-          screenX: nativeEvent.screenX,
-          screenY: nativeEvent.screenY,
-          shiftKey: nativeEvent.shiftKey,
+          clientX: event.clientX,
+          clientY: event.clientY,
+          ctrlKey: event.ctrlKey,
+          deltaMode: event.deltaMode,
+          deltaX: event.deltaX,
+          deltaY: event.deltaY,
+          deltaZ: event.deltaZ,
+          metaKey: event.metaKey,
+          screenX: event.screenX,
+          screenY: event.screenY,
+          shiftKey: event.shiftKey,
           view: window,
         }),
       );
-    },
-    [container],
-  );
+    };
+
+    surface.addEventListener("wheel", handleWheel, { capture: true, passive: false });
+    return () => surface.removeEventListener("wheel", handleWheel, true);
+  }, [container]);
 
   const projectedNodeById = useMemo(() => new Map(renderProjection?.nodes.map(node => [node.id, node])), [renderProjection]);
   const selectDisplayedNode = (id: string) => {
@@ -1752,7 +1757,6 @@ export function ForceGraphCanvas({ arrangement: requestedArrangement = "current"
             onClick={() => selectDisplayedNode(label.id)}
             onMouseEnter={() => setHoveredEntityId(label.id)}
             onMouseLeave={() => setHoveredEntityId(null)}
-            onWheel={forwardLabelWheel}
             tabIndex={label.opacity > 0.05 ? 0 : -1}
             type="button"
           >
