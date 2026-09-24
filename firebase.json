@@ -1,0 +1,9 @@
+{
+  "hosting": {
+    "site": "ryustatic",
+    "public": "client/dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "predeploy": ["npm run build:static"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  }
+}

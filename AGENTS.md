@@ -2,7 +2,8 @@
 
 ## Temporary Static Hosting
 - The approved cost-reduction migration uses `npm run build:static` to publish
-  the public snapshot without a runtime server. See
+  the public snapshot without a runtime server on Firebase Hosting's Spark plan
+  in project `ryustatic`. Keep that project unbilled. See
   `documentation/static-hosting.md` for migration status and retirement gates.
 - PostgreSQL remains the canonical editable graph. During the temporary static
   period, `client/public/bootstrap.public.json` is the public serving snapshot;

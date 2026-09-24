@@ -14,14 +14,26 @@ npm ci
 npm run build:static
 ```
 
-Publish **only `client/dist`** to Cloudflare Pages, with no Functions, database,
-Worker, or Google Cloud runtime. For Pages Git integration, use repository root,
-build command `npm run build:static`, output directory `client/dist`, and Node 24.
+Publish **only `client/dist`** to Firebase Hosting in project/site `ryustatic`
+(`622994656148`) on the Spark plan. The checked-in `firebase.json` and
+`.firebaserc` configure this target; no `firebase init` or Firebase SDK is needed.
+Use the CLI through `npx` to avoid a system-wide installation:
+
+```sh
+npx firebase-tools@latest login
+npx firebase-tools@latest deploy --only hosting --project ryustatic
+```
+
+The deploy command runs `npm run build:static` before uploading. It publishes to
+`https://ryustatic.web.app`; it does not change the existing CHM domain or deploy
+Cloud Run, Functions, a database, or Firebase App Hosting. Run it from the checkout
+containing this configuration and the reviewed static build changes.
+
 Do not set the existing Cloud Run `APP_BASE_PATH`, `VITE_APP_BASE_PATH`, or
-`VITE_BOOTSTRAP_PATH` environment overrides on this project. The default build
-serves from `/`; Pages' SPA fallback also preserves `/explorer/?node=fishbase`
-links when the whole hostname is eventually moved. Do not add a top-level
-`404.html`, which would disable that fallback.
+`VITE_BOOTSTRAP_PATH` environment overrides when building. The default build
+serves from `/`; the Hosting rewrite to `/index.html` also preserves
+`/explorer/?node=fishbase` links when the whole hostname is eventually moved.
+Existing assets are served before the SPA rewrite.
 
 The static mode forces the public UI, searches the loaded graph in the browser,
 reads record details and galleries from the snapshot/assets, and ignores old CHM
@@ -29,17 +41,18 @@ admin cookies. Review state/date remain visible; review history, online authorin
 and the Record API are unavailable. Existing server/public and local authoring
 builds remain available. `VITE_STATIC_PREVIEW=true` still works for research previews.
 
-Pages' [static requests are free and unlimited](https://developers.cloudflare.com/pages/functions/pricing/).
-The [Free plan limits](https://developers.cloudflare.com/pages/platform/limits/)
-include 500 builds/month, 20,000 files, and 25 MiB per asset. The current public
-assets fit; the largest is approximately 12.2 MiB. Rely on the documented
-[SPA and cache defaults](https://developers.cloudflare.com/pages/configuration/serving-pages/).
-These terms do not eliminate charges from resources retained in Google Cloud.
+Keep `ryustatic` on [Spark](https://firebase.google.com/docs/projects/billing/firebase-pricing-plans)
+with no linked Cloud Billing account. Linking billing automatically upgrades it
+to Blaze. Spark includes custom domains/HTTPS and bounded free Hosting storage
+and transfer; exceeding a quota can block deployment or pause the site rather
+than bill overages. Monitor the [Hosting usage](https://firebase.google.com/docs/hosting/usage-quotas-pricing)
+and current [pricing](https://firebase.google.com/pricing) in the console. These
+terms do not eliminate charges from resources retained in `chm-network`.
 
-Before switching a domain, verify the Pages preview: graph and globe, catalogue,
+Before switching a domain, verify the Firebase site: graph and globe, catalogue,
 search/filtering, record links on direct load and refresh, all six languages,
 gallery images, and no `/api/` requests. Check with an existing `chm_admin_hint`
-cookie too. Host account access and the final hostname remain to be confirmed.
+cookie too. Configure a custom domain only after the shared CHM routing decision.
 
 ## Snapshot and local editing
 
@@ -70,7 +83,7 @@ The existing exporter applies `toPublicBootstrap`, removing review identities,
 notes/history and `ryuRoutes`. Review the snapshot diff and assets before
 publishing. Never copy a private bootstrap or database dump into `client/public`
 or the deploy directory. Commit the reviewed export and republish to update the
-site. No production writer token belongs in a Pages environment.
+site. No production writer token belongs in the static build or Hosting files.
 
 ## Backup and retirement sequence
 
@@ -90,10 +103,10 @@ inventory is the starting point; re-read live dependencies before any deletion.
    open the local author UI. Export its redacted snapshot and compare it to the
    frozen public graph. Keep the dump and restore evidence private. A snapshot
    alone cannot restore the private canonical data.
-3. **Publish and verify Pages.** Deploy the static output to a preview first.
+3. **Publish and verify Firebase Hosting.** Deploy to `ryustatic.web.app` first.
    Refresh the final export if records changed since Sept 24. Merge the reviewed
    branch through a PR; Cloud Run's workflow is manual-only in this change.
-   Configure static publishing in the selected Cloudflare account.
+   Keep `ryustatic` on Spark with billing disabled.
 4. **Resolve shared CHM routes and change DNS.** The load balancer currently owns
    both `chm.oceanagentics.com` and `.org`. `/` and `/login` serve `chm`;
    `/explorer` serves Ryu; `/explorer/admin` serves the admin app; `/api/records`
@@ -132,9 +145,15 @@ In-app browser checks against a static-only localhost server passed direct
 `/explorer/?node=fishbase` loading and refresh, search, system filtering, cards,
 table, globe, gallery display and switching all six languages. The server set
 `chm_admin_hint=1`; the app stayed public and made no `/api/` requests. No browser
-console errors were reported. Hosted Pages verification still remains.
+console errors were reported. Hosted Firebase verification still remains.
 
-Pending: Cloudflare account access, hostname, full private backup and verified local
+Firebase CLI access and the `ryustatic` Hosting site were verified on 2026-09-24.
+Cloud Billing returned `billingEnabled: false` and an empty `billingAccountName`.
+The Firebase local Hosting server passed root and `/explorer/?node=fishbase`
+rewrite checks, returned the exact public snapshot, and served the gallery image
+with its correct content type. The static build passed again after configuration.
+
+Pending: Firebase publication/verification, hostname, full private backup and verified local
 restore, CHM homepage/routing cutover, paid-resource retirement, and subsequent
 billing verification. Billing details and the research-credit application draft
 are maintained privately outside this public repository.
