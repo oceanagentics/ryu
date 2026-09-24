@@ -8,11 +8,13 @@
 - PostgreSQL remains the canonical editable graph. During the temporary static
   period, `client/public/bootstrap.public.json` is the public serving snapshot;
   regenerate it with the existing redacting `export:public` command after edits.
-- Cloud Run deployment is manual while static hosting is being introduced.
-  Do not retire Cloud SQL before a full backup has been restored and verified.
+- Cloud Run, Cloud SQL and the shared load balancer were retired on 2026-09-24
+  after a full database restore was verified. Cloud recovery is deliberate and manual.
 
 ## Canonical Graph Data
-- Treat the Cloud SQL PostgreSQL `explorer` database on the CHM instance `chm` as the production canonical graph.
+- The canonical PostgreSQL `explorer` database is preserved in the private full
+  backup after Cloud SQL retirement. Restore it locally before editing; see
+  `documentation/static-hosting.md`. There is no live production database.
 - Treat `client/public/bootstrap.public.json` as a derived public export, never the canonical editable graph.
 - The initial launch seed may include converted legacy data. The server uses Postgres only; temporary static hosting serves the derived public export.
 - Treat `research/*` CSV folders as incremental research/import batches, not as a separate central source of truth.
@@ -37,6 +39,8 @@
 
 ## Write Surfaces
 ### Record API
+- The hosted Record API and admin app are offline during static hosting; the
+  following production access instructions apply only after an intentional recovery.
 - The canonical agent API is `/api/records`, exposed by the `explorer-api` service through the CHM load balancer.
 - Agents must authenticate with `Authorization: Bearer $RYU_API_TOKEN`.
 - To persist a team member or agent token locally, use

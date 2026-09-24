@@ -1,11 +1,11 @@
 # Temporary static Ryu hosting
 
 Prepared 2026-09-24 to remove recurring Google Cloud hosting costs while funding
-is sought. Firebase is serving the static site. The old Cloud Run apps and Cloud
-SQL are stopped, and the shared load balancer has been removed; remaining storage
-retirement is incomplete. PostgreSQL remains the editable source of truth; the
-static site serves a public export. Read the current status below before any
-deployment or recovery operation.
+is sought. Firebase is serving the static site. The old Cloud Run apps, Cloud
+SQL instance and shared load balancer have been deleted. The verified full
+PostgreSQL backup preserves the editable source of truth; the static site serves
+a public export. Read the current status below before any deployment or recovery
+operation.
 
 ## Build and publish
 
@@ -171,32 +171,36 @@ the full package has not been copied to GitHub.
 
 Completed in `chm-network`:
 
-- `chm`, `explorer`, `explorer-admin` and `explorer-api` use manual scaling with
-  zero instances. Their deletion protection remains enabled.
-- Cloud SQL `chm` is `STOPPED`, with activation policy `NEVER` and deletion
-  protection enabled.
+- `chm`, `explorer`, `explorer-admin` and `explorer-api` were permanently deleted
+  after the owner explicitly approved removing deletion protection.
+- Cloud SQL `chm`, its database/users and Google-hosted backups were deleted.
+  Project-wide instance and backup listings both return zero.
 - The shared load balancer, forwarding rules, backends, serverless NEGs, proxies,
   URL maps, managed certificates and external load-balancer IP were removed.
 - All 122 Artifact Registry image versions were removed after preserving the
   four deployed images with verified original manifest and blob digests.
+- All 113 old Cloud Build source archives were deleted. The buckets' existing
+  seven-day soft-delete policy retains 857,234,598 bytes until October 1, 2026.
+- The three obsolete database secrets and two runtime/load-balancer alerts
+  were removed. Project security alerts remain.
 - The project, OAuth configuration and service identities, including
   `rclone-drive-sync`, were retained. CHM source/infrastructure Git history was
   added to the private recovery backup.
 
-Pending authorization: permanently delete the protected stopped resources and
-113 old Cloud Build source archives. SQL disks/backups and retained bucket
+The versioned Terraform state bucket remains to manage the preserved project
+resources (approximately 11 MB at retirement), along with empty build buckets
+and the empty Artifact Registry repository. Soft-deleted build archives and state
 storage can still incur charges; zero recurring cost has not been established.
-The Terraform state bucket and database secrets remain. Complete the second
-durable backup copy and inspect billing after cleanup and reporting catch up.
+Complete the second durable backup copy and inspect billing after retention
+expires and reporting catches up. The full private backup remains local only.
 
-The owning CHM checkout has a local Terraform retirement override retaining
-manual scaling and the stopped SQL setting. The original infrastructure source
-still defines the removed load balancer: a normal full apply can recreate paid
-hosting. Resume only through an intentional recovery plan. Republish the saved
-image archives, restore infrastructure, create fresh credentials, update any
-recreated IAP backend IDs, verify the database and app, and cut over traffic
-deliberately. The database restore was tested; a full cloud rebuild has not
-been rehearsed.
+The original CHM infrastructure source still defines the deleted hosting
+resources: a normal full apply can recreate paid hosting. Recover only through
+an intentional plan, reviewing the local retirement override first. Republish
+the saved image archives, recreate infrastructure, import the full database,
+create fresh credentials, update any recreated IAP backend IDs, verify the
+database and app, and cut over traffic deliberately. The database restore was
+tested; a full cloud rebuild has not been rehearsed.
 
 Billing details and the research-credit application draft are maintained
 privately outside this public repository.
