@@ -3,7 +3,7 @@ import { ConfigProvider, theme } from "antd";
 import "antd/dist/reset.css";
 
 import { App } from "./app/App";
-import { adminAppBasePath, appBasePath, isPublicApp } from "./app/config";
+import { adminAppBasePath, appBasePath, isPublicApp, isStaticApp } from "./app/config";
 import "./app/styles.css";
 
 function hasCookie(name: string): boolean {
@@ -23,7 +23,7 @@ function currentAdminPath(): string {
 }
 
 function redirectAdminHintToAdmin(): boolean {
-  if (!isPublicApp) {
+  if (!isPublicApp || isStaticApp) {
     return false;
   }
 

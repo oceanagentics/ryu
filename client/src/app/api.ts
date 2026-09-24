@@ -20,7 +20,7 @@ import type {
 import type { IndexedGraph } from "../../../shared/indexGraph";
 import { supportedLocales } from "../../../shared/localization";
 import { resolveNodeDisplay } from "../../../shared/recordDisplay";
-import { appPath, bootstrapPath, isStaticPreview } from "./config";
+import { appPath, bootstrapPath, isStaticApp } from "./config";
 
 async function request<T>(input: RequestInfo, init?: RequestInit): Promise<T> {
   const response = await fetch(input, {
@@ -63,8 +63,8 @@ export async function fetchGraphSearch(
   graph?: IndexedGraph,
 ): Promise<RecordListDto> {
   const filters = intent.filters;
-  if (isStaticPreview) {
-    if (!graph) throw new Error("Static preview search requires the loaded graph.");
+  if (isStaticApp) {
+    if (!graph) throw new Error("Static search requires the loaded graph.");
     const query: RecordSearchQuery = {
       q: intent.query,
       scope: "public",
