@@ -31,6 +31,11 @@ The deploy command runs `npm run build:static` before uploading. It publishes to
 Cloud Run, Functions, a database, or Firebase App Hosting. Run it from the checkout
 containing this configuration and the reviewed static build changes.
 
+Publication is manual: pushing or merging to `main` does not publish the site.
+The old Cloud Run workflow is disabled on GitHub, and its configuration accepts
+manual dispatch only. Re-enable it only for an intentional Cloud Run recovery.
+No GitHub-to-Firebase deployment workflow is configured.
+
 Do not set the existing Cloud Run `APP_BASE_PATH`, `VITE_APP_BASE_PATH`, or
 `VITE_BOOTSTRAP_PATH` environment overrides when building. The default build
 serves from `/`; the Hosting rewrite to `/index.html` also preserves

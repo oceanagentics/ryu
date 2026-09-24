@@ -221,9 +221,9 @@
 ## Production Deployment
 
 ### GitHub pathway
-- `.github/workflows/deploy.yml` is the Cloud Run recovery pathway during temporary static hosting. Only manual workflow dispatch starts the serialized `explorer-production-release` job; pushing `main` does not deploy to Cloud Run.
+- `.github/workflows/deploy.yml` is retained for Cloud Run recovery and is disabled on GitHub. Re-enable it only for an intentional recovery. Its configuration accepts manual dispatch only; pushing `main` does not publish to Cloud Run or Firebase.
 - The workflow checks out full history, installs the Node 24 workspace, runs `scripts/deploy.test.mjs`, authenticates to Google Cloud through Workload Identity Federation as `explorer-build-sa`, runs `scripts/deploy.sh`, and uploads `.release/*/state.json` even on failure.
-- There is no separate GitHub environment approval gate. Manually dispatching the Cloud Run workflow authorizes its production release.
+- There is no separate GitHub environment approval gate. After explicit re-enabling, manually dispatching the Cloud Run workflow authorizes its production release.
 
 ### Shared release runner
 - `scripts/deploy.sh` is the only routine release entry point for GitHub Actions and local publishing. Do not replace it with ad-hoc Cloud Build or `gcloud run deploy` commands.
