@@ -1,9 +1,11 @@
 # Temporary static Ryu hosting
 
 Prepared 2026-09-24 to remove recurring Google Cloud hosting costs while funding
-is sought. This is a staged migration, not a record of completed cloud retirement.
-PostgreSQL remains the editable source of truth; the static site serves a public
-export. No database, DNS, or running service has been changed by this preparation.
+is sought. Firebase is serving the static site. The old Cloud Run apps and Cloud
+SQL are stopped, and the shared load balancer has been removed; remaining storage
+retirement is incomplete. PostgreSQL remains the editable source of truth; the
+static site serves a public export. Read the current status below before any
+deployment or recovery operation.
 
 ## Build and publish
 
@@ -95,7 +97,8 @@ inventory is the starting point; re-read live dependencies before any deletion.
    final export; take a Cloud SQL backup and a full logical PostgreSQL 16 dump
    of `explorer`, including schema, records/localizations, sources, routes, review
    history, and migration state. Save required grants/role definitions separately.
-   Keep an encrypted copy outside GCP, with a checksum and a second durable copy.
+   Keep the full backup privately outside GCP, with a checksum and a second
+   durable copy. The owner chose an unencrypted backup.
    Do not rely on an instance-bound backup surviving instance deletion.
 2. **Prove recovery.** Restore into an empty local PostgreSQL 16 database, apply
    required local roles/grants, compare table counts and record/source/route/review
@@ -107,17 +110,18 @@ inventory is the starting point; re-read live dependencies before any deletion.
    Refresh the final export if records changed since Sept 24. Merge the reviewed
    branch through a PR; Cloud Run's workflow is manual-only in this change.
    Keep `ryustatic` on Spark with billing disabled.
-4. **Resolve shared CHM routes and change DNS.** The load balancer currently owns
-   both `chm.oceanagentics.com` and `.org`. `/` and `/login` serve `chm`;
-   `/explorer` serves Ryu; `/explorer/admin` serves the admin app; `/api/records`
-   serves the writer API. A DNS record moves a whole hostname, not one path.
+4. **Resolve shared CHM routes and change DNS.** Before retirement, the load
+   balancer owned both `chm.oceanagentics.com` and `.org`. `/` and `/login` served
+   `chm`; `/explorer` served Ryu; `/explorer/admin` served the admin app;
+   `/api/records` served the writer API. A DNS record moves a whole hostname,
+   not one path.
    Preserve the CHM homepage on static hosting (or approve replacing it), retire
    its login/admin links, and preserve old Ryu URLs before moving the hostname.
    A new Ryu subdomain by itself does not remove the shared load-balancer bill.
 5. **Retire paid runtimes and routing after the new site and recovery pass.**
    Remove `explorer`, `explorer-admin`, `explorer-api`, and the separately owned
-   `chm` Cloud Run service. `chm` has a minimum instance of one. Remove both global
-   HTTP/HTTPS forwarding rules, target proxies, backend services/serverless NEGs,
+   `chm` Cloud Run service. `chm` formerly kept one minimum instance. Remove both
+   global HTTP/HTTPS forwarding rules, target proxies, backend services/serverless NEGs,
    URL map, unused certificate resources, and reserved load-balancer IP through
    the CHM infrastructure workflow. Check for dependent services/jobs first.
 6. **Remove remaining paid storage deliberately.** Only after verified restoration,
@@ -145,7 +149,8 @@ In-app browser checks against a static-only localhost server passed direct
 `/explorer/?node=fishbase` loading and refresh, search, system filtering, cards,
 table, globe, gallery display and switching all six languages. The server set
 `chm_admin_hint=1`; the app stayed public and made no `/api/` requests. No browser
-console errors were reported. Hosted Firebase verification still remains.
+console errors were reported. These were prepublication checks; hosted
+verification is recorded below.
 
 Firebase CLI access and the `ryustatic` Hosting site were verified on 2026-09-24.
 Cloud Billing returned `billingEnabled: false` and an empty `billingAccountName`.
@@ -153,7 +158,45 @@ The Firebase local Hosting server passed root and `/explorer/?node=fishbase`
 rewrite checks, returned the exact public snapshot, and served the gallery image
 with its correct content type. The static build passed again after configuration.
 
-Pending: Firebase publication/verification, hostname, full private backup and verified local
-restore, CHM homepage/routing cutover, paid-resource retirement, and subsequent
-billing verification. Billing details and the research-credit application draft
-are maintained privately outside this public repository.
+### Shutdown status — 2026-09-24
+
+Firebase serves the app and public graph at `https://ryustatic.web.app` and
+`https://chm.oceanagentics.com`; the existing `/explorer/` URL also responds.
+The final database export was taken after disabling all four old Cloud Run
+services. Its schema and all seven tables exactly match the earlier backup
+restored successfully into local PostgreSQL 16. Its redacted graph also matches
+Firebase: 237 nodes and 274 edges. The full database includes private reviews
+and 10 operational routes. All recovery artifacts remain private, outside Git;
+the full package has not been copied to GitHub.
+
+Completed in `chm-network`:
+
+- `chm`, `explorer`, `explorer-admin` and `explorer-api` use manual scaling with
+  zero instances. Their deletion protection remains enabled.
+- Cloud SQL `chm` is `STOPPED`, with activation policy `NEVER` and deletion
+  protection enabled.
+- The shared load balancer, forwarding rules, backends, serverless NEGs, proxies,
+  URL maps, managed certificates and external load-balancer IP were removed.
+- All 122 Artifact Registry image versions were removed after preserving the
+  four deployed images with verified original manifest and blob digests.
+- The project, OAuth configuration and service identities, including
+  `rclone-drive-sync`, were retained. CHM source/infrastructure Git history was
+  added to the private recovery backup.
+
+Pending authorization: permanently delete the protected stopped resources and
+113 old Cloud Build source archives. SQL disks/backups and retained bucket
+storage can still incur charges; zero recurring cost has not been established.
+The Terraform state bucket and database secrets remain. Complete the second
+durable backup copy and inspect billing after cleanup and reporting catch up.
+
+The owning CHM checkout has a local Terraform retirement override retaining
+manual scaling and the stopped SQL setting. The original infrastructure source
+still defines the removed load balancer: a normal full apply can recreate paid
+hosting. Resume only through an intentional recovery plan. Republish the saved
+image archives, restore infrastructure, create fresh credentials, update any
+recreated IAP backend IDs, verify the database and app, and cut over traffic
+deliberately. The database restore was tested; a full cloud rebuild has not
+been rehearsed.
+
+Billing details and the research-credit application draft are maintained
+privately outside this public repository.
