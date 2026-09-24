@@ -1,8 +1,7 @@
 name: Deploy to Cloud Run
 
 on:
-  push:
-    branches: [main]
+  # Temporary static hosting: Cloud Run releases are explicit recovery actions.
   workflow_dispatch:
 
 concurrency:

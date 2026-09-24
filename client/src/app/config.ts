@@ -1,8 +1,8 @@
-export const appMode = import.meta.env.VITE_APP_MODE === "public" || (
+export const isStaticApp = import.meta.env.MODE === "static" || import.meta.env.VITE_STATIC_PREVIEW === "true";
+export const appMode = isStaticApp || import.meta.env.VITE_APP_MODE === "public" || (
   import.meta.env.DEV && typeof window !== "undefined" && !/\/admin(?:\/|$)/.test(window.location.pathname)
 ) ? "public" : "author";
 export const isPublicApp = appMode === "public";
-export const isStaticPreview = import.meta.env.VITE_STATIC_PREVIEW === "true";
 export const canReviewNodes = import.meta.env.VITE_CAN_REVIEW_NODES === "false"
   ? false
   : !isPublicApp;
@@ -24,4 +24,4 @@ export function appPath(path: string): string {
   return `${appBasePath}/${path.replace(/^\/+/, "")}`;
 }
 
-export const bootstrapPath = import.meta.env.VITE_BOOTSTRAP_PATH || appPath("/api/graph/bootstrap");
+export const bootstrapPath = import.meta.env.VITE_BOOTSTRAP_PATH || appPath(isStaticApp ? "/bootstrap.public.json" : "/api/graph/bootstrap");

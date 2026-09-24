@@ -1,9 +1,22 @@
 # Ryu Agent Notes
 
+## Temporary Static Hosting
+- The approved cost-reduction migration uses `npm run build:static` to publish
+  the public snapshot without a runtime server on Firebase Hosting's Spark plan
+  in project `ryustatic`. Keep that project unbilled. See
+  `documentation/static-hosting.md` for migration status and retirement gates.
+- PostgreSQL remains the canonical editable graph. During the temporary static
+  period, `client/public/bootstrap.public.json` is the public serving snapshot;
+  regenerate it with the existing redacting `export:public` command after edits.
+- Cloud Run, Cloud SQL and the shared load balancer were retired on 2026-09-24
+  after a full database restore was verified. Cloud recovery is deliberate and manual.
+
 ## Canonical Graph Data
-- Treat the Cloud SQL PostgreSQL `explorer` database on the CHM instance `chm` as the production canonical graph.
-- Treat `client/public/bootstrap.public.json` as a launch seed/export artifact, not as a production runtime source of truth.
-- The initial launch seed may include converted legacy data, but production must run on Cloud SQL/Postgres only.
+- The canonical PostgreSQL `explorer` database is preserved in the private full
+  backup after Cloud SQL retirement. Restore it locally before editing; see
+  `documentation/static-hosting.md`. There is no live production database.
+- Treat `client/public/bootstrap.public.json` as a derived public export, never the canonical editable graph.
+- The initial launch seed may include converted legacy data. The server uses Postgres only; temporary static hosting serves the derived public export.
 - Treat `research/*` CSV folders as incremental research/import batches, not as a separate central source of truth.
 
 ## Documentation
@@ -26,6 +39,8 @@
 
 ## Write Surfaces
 ### Record API
+- The hosted Record API and admin app are offline during static hosting; the
+  following production access instructions apply only after an intentional recovery.
 - The canonical agent API is `/api/records`, exposed by the `explorer-api` service through the CHM load balancer.
 - Agents must authenticate with `Authorization: Bearer $RYU_API_TOKEN`.
 - To persist a team member or agent token locally, use
@@ -206,9 +221,9 @@
 ## Production Deployment
 
 ### GitHub pathway
-- `.github/workflows/deploy.yml` is the normal production pathway. Every push to `main` and every manual workflow dispatch starts the serialized `explorer-production-release` job; a commit that has not been pushed does not deploy.
+- `.github/workflows/deploy.yml` is retained for Cloud Run recovery and is disabled on GitHub. Re-enable it only for an intentional recovery. Its configuration accepts manual dispatch only; pushing `main` does not publish to Cloud Run or Firebase.
 - The workflow checks out full history, installs the Node 24 workspace, runs `scripts/deploy.test.mjs`, authenticates to Google Cloud through Workload Identity Federation as `explorer-build-sa`, runs `scripts/deploy.sh`, and uploads `.release/*/state.json` even on failure.
-- There is currently no separate GitHub environment approval gate. Under the checked-in workflow, pushing a commit to `main` authorizes its production release.
+- There is no separate GitHub environment approval gate. After explicit re-enabling, manually dispatching the Cloud Run workflow authorizes its production release.
 
 ### Shared release runner
 - `scripts/deploy.sh` is the only routine release entry point for GitHub Actions and local publishing. Do not replace it with ad-hoc Cloud Build or `gcloud run deploy` commands.
@@ -221,7 +236,7 @@
 - Release state is resumable at `.release/<full-commit>/state.json`. A retry reuses completed images and revisions and recomputes remaining work against live traffic.
 
 ### Operator pathways
-- Routine production release: commit reviewed changes, push `main`, then inspect the Actions run and its release-state artifact.
+- Temporary static release: follow `documentation/static-hosting.md`. For an intentional Cloud Run recovery release, commit reviewed changes, manually dispatch the workflow, then inspect the Actions run and release-state artifact.
 - Local production or recovery: use Node 24, installed dependencies, a valid `gcloud` login, and a clean checkout; run `./scripts/deploy.sh plan`, then `./scripts/deploy.sh`. Use `prepare`, `publish`, or `smoke` explicitly when staging, resuming, or diagnosing a release.
 - Data or schema release: run `plan` and `prepare`, take a Cloud SQL backup, execute the release-specific migration or Record API writes deliberately with the required credentials, verify compatibility, then run `publish`. The shared runner never applies SQL, edits records, or enables maintenance mode automatically; do not return an incompatible old revision to a migrated database.
 - Do not run Terraform for image-only releases. Use the shared CHM infrastructure workflow only for routing, IAP, service accounts, Workload Identity, IAM, secrets, Cloud SQL, runtime environment, or migration wiring.

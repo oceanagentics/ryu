@@ -10,3 +10,5 @@ data/*.sqlite-*
 tmp-bootstrap.json
 .release/
 gha-creds-*.json
+.firebase/
+firebase-debug*.log
