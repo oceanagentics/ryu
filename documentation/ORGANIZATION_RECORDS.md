@@ -231,7 +231,10 @@ Do not add edge `properties`, `sourceRefs`, `scope`, or `status` fields.
 
 ## Record API Workflow
 
-Cloud SQL/Postgres is the canonical editable graph. Research CSVs and
+PostgreSQL is the canonical editable graph. During static hosting, restore it
+locally and use the local Record API; the hosted API is offline. Follow
+[the static hosting runbook](static-hosting.md#snapshot-and-local-editing) to
+export and publish data changes. Research CSVs and
 `client/public/bootstrap.public.json` are import/export artifacts, not alternate
 sources of truth.
 

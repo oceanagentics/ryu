@@ -8,6 +8,11 @@ guidance and [`API_REFACTOR_PLAN.md`](API_REFACTOR_PLAN.md) for
 the direct Explorer/IAP and bearer-token API architecture that superseded the
 original CHM review proxy.
 
+Cloud Run, Cloud SQL, and the shared load balancer were retired on 2026-09-24.
+The environment and commands below are historical; they cannot publish the
+current static site. Use [the Firebase runbook](../static-hosting.md) for current
+production and the last verified status of the retired `chm-network` project.
+
 Explorer is the graph application formerly codenamed Ryu. CHM owns the shared
 entry, IAP, load balancer, Cloud SQL instance, and path routing. This repo owns
 Explorer runtime behavior, schema, seed data, validation, and the
@@ -146,9 +151,40 @@ Last verified on 2026-09-03:
 
 ## Build Image
 
-Routine publishing now uses `scripts/deploy.sh`, shared with GitHub Actions. See
-the [current production deployment pathways](../../AGENTS.md#production-deployment).
+Cloud Run publishing used `scripts/deploy.sh`, shared with GitHub Actions. See
+the [Firebase runbook](../static-hosting.md) for current production publishing.
 The lower-level examples below are retained only as historical launch evidence.
+
+### Retained Cloud Run release runner
+
+The disabled `.github/workflows/deploy.yml` accepts manual dispatch only. It uses
+Node 24, release-runner tests, and Workload Identity Federation as
+`explorer-build-sa` in the old project. Re-enabling it does not rebuild the
+deleted infrastructure or restore credentials. An intentional cloud rebuild
+must establish and verify those dependencies first.
+
+The retained `scripts/deploy.sh` modes describe the former release process:
+
+- `plan` compares source with serving revisions without changing resources.
+- `prepare` requires a clean checkout and creates ready revisions without traffic.
+- `publish` prepares and promotes affected services, then runs smoke checks;
+  it does not canary, apply database changes, or automatically roll back.
+- `smoke` checks the former public page/graph, admin IAP redirect, API token
+  denial, and public graph contract. It is not a Firebase verification command.
+
+Client changes targeted public/admin services; server, shared-contract,
+dependency, build, and gallery changes targeted all three. Documentation,
+research, tests, workflow/release-script, and bootstrap-export changes alone
+did not update runtimes. Unknown image provenance rebuilt conservatively.
+`cloudbuild.release.yaml` built the public/admin pair; `cloudbuild.yaml` built
+the API image. Release state was saved at `.release/<full-commit>/state.json`.
+
+For any future hosted schema release, rehearse backup/restore and compatibility,
+stage app revisions, apply the deliberate migration, and verify before traffic
+promotion. Keep infrastructure changes in the owning CHM Terraform workflow;
+do not use Terraform for image-only releases or retain standing migration jobs.
+
+### Historical image build commands
 
 Build Explorer images into the shared CHM Artifact Registry repo with cache
 image substitutions so unchanged dependency layers are reused when
