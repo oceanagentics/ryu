@@ -1,16 +1,21 @@
 # Deployment Future Work
 
-Status: unimplemented candidates only. The current production pathways are in
-[`AGENTS.md`](../AGENTS.md#production-deployment). Completed release evidence is
+Status: deferred Cloud Run candidates, not current Firebase deployment work.
+The former runtimes and database were retired. Apply none of the infrastructure
+steps below unless a cloud rebuild is explicitly commissioned. Current manual
+Firebase publishing, verification, and rollback are documented in
+[`static-hosting.md`](static-hosting.md). Completed release evidence is
 archived in
 [`finishedwork/deployment-release-history.md`](finishedwork/deployment-release-history.md).
 Remove an item here when it is completed or deliberately rejected.
 
-## Finish the saved-view removal release
+## Reassess saved-view removal after restoring PostgreSQL
 
 Migration `server/schema/019_remove_saved_views.sql` is the planned cleanup
-migration, but it is not yet a production fact. Treat it as a
-backward-incompatible post-deploy cleanup:
+migration; the verified retirement backup still contains `saved_views`.
+Check compatibility with the restored database and chosen app version before
+applying it. If hosted services are rebuilt, treat it as a backward-incompatible
+post-deploy cleanup:
 
 1. Finish and verify the application changes that stop every service from
    querying `saved_views`.
@@ -23,38 +28,37 @@ backward-incompatible post-deploy cleanup:
 
 ## Add a full pre-production test gate
 
-The production workflow currently runs only `scripts/deploy.test.mjs` before it
-authenticates and publishes. Add a pull-request check or a pre-authentication
-deployment step that runs the complete application test suite and build checks.
+The disabled Cloud Run workflow contains only `scripts/deploy.test.mjs` before
+authentication and publishing. Before reintroducing automated deployment,
+consider a pull-request or pre-authentication check for application tests/builds.
 Keep the focused release-runner test, but do not treat it as application coverage.
 
 ## Decide the production approval policy
 
-The current workflow deploys every push to `main` without a GitHub environment
-approval. Either configure a protected production environment with required
-reviewers and an explicit branch policy, or record that reviewed pushes to
-`main` intentionally constitute production approval. Confirm the actual `main`
-branch-protection settings as part of this decision.
+Current publication is an explicit Firebase CLI action. Pushes and merges do
+not publish; the Cloud Run workflow is disabled and manual-only. If automation
+is later requested, choose its release approval and branch-protection policy
+before enabling it.
 
 ## Improve rollout recovery
 
-The runner prepares revisions without traffic, then promotes affected services
-concurrently to 100% and smoke-tests afterward. Decide whether the operational
-risk justifies:
+The retained Cloud Run runner prepares revisions without traffic, then promotes
+affected services concurrently to 100% and smoke-tests afterward. Before using
+it in a rebuilt deployment, decide whether the operational risk justifies:
 
 - a canary or hold point before full traffic;
 - automatic rollback, or a tested one-command manual rollback, when smoke fails;
 - ordered promotion or explicit recovery rules for a partial multi-service
   promotion.
 
-If the current all-at-once model is acceptable, document that decision and
+If the former all-at-once model is acceptable, document that decision and
 discard this item instead of adding unused rollout machinery.
 
 ## Verify infrastructure ownership
 
-The infrastructure source is not present in this checkout, so the old claims
-about missing Terraform resources could not be verified and have been removed.
-Audit the authoritative CHM infrastructure repository for:
+The CHM Terraform source and private recovery package describe retired
+infrastructure. For a newly commissioned cloud deployment, audit the rebuilt
+infrastructure for:
 
 - the GitHub Workload Identity pool/provider and service-account binding;
 - the deployment service account's least-privilege IAM roles;

@@ -176,7 +176,10 @@ see [the shape rollout audit](finishedwork/SYSTEM_RECORD_SHAPE_ROLLOUT.md) and
 
 ## Source Of Truth
 
-- Treat Cloud SQL/Postgres as the canonical editable graph.
+- Treat PostgreSQL as the canonical editable graph. During static hosting,
+  restore it locally and use the local Record API; the hosted API is offline.
+  Follow [the static hosting runbook](static-hosting.md#snapshot-and-local-editing)
+  to export and publish data changes.
 - Do not create a parallel registry, merged CSV, or alternate bootstrap as a new source of truth.
 - Use the Explorer record API for routine content backfills: deterministic
   `PUT /api/records/:id` for full record upserts, `PATCH /api/records/:id` for

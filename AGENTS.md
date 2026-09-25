@@ -4,12 +4,15 @@
 - The approved cost-reduction migration uses `npm run build:static` to publish
   the public snapshot without a runtime server on Firebase Hosting's Spark plan
   in project `ryustatic`. Keep that project unbilled. See
-  `documentation/static-hosting.md` for migration status and retirement gates.
+  `documentation/static-hosting.md` for production status, publishing, verification,
+  rollback, and local data editing.
 - PostgreSQL remains the canonical editable graph. During the temporary static
   period, `client/public/bootstrap.public.json` is the public serving snapshot;
   regenerate it with the existing redacting `export:public` command after edits.
 - Cloud Run, Cloud SQL and the shared load balancer were retired on 2026-09-24
   after a full database restore was verified. Cloud recovery is deliberate and manual.
+- Billing was disconnected from `chm-network`. Complete project shutdown was
+  authorized, but deletion remains unconfirmed; do not assume it is available for recovery.
 
 ## Canonical Graph Data
 - The canonical PostgreSQL `explorer` database is preserved in the private full
@@ -39,16 +42,14 @@
 
 ## Write Surfaces
 ### Record API
-- The hosted Record API and admin app are offline during static hosting; the
-  following production access instructions apply only after an intentional recovery.
-- The canonical agent API is `/api/records`, exposed by the `explorer-api` service through the CHM load balancer.
-- Agents must authenticate with `Authorization: Bearer $RYU_API_TOKEN`.
-- To persist a team member or agent token locally, use
-  `scripts/setup-ryu-api-token.sh --secret <gsm-secret-name> --project chm-network`.
-  The script writes `~/.config/ryu/api.env`, sources it from `~/.zshenv`, and
-  verifies `/api/records` without printing the token.
+- The hosted Record API and admin app are offline during static hosting. Restore
+  the private PostgreSQL backup locally and follow `documentation/static-hosting.md`.
+- Use `/api/records` on the local server for authoring and
+  `http://127.0.0.1:5173/admin` for the local author UI. Local mode grants author
+  access without production authentication; keep it bound to loopback.
+- Bearer-token and IAP access apply only to an intentionally rebuilt hosted API.
+  The old `chm-network` secrets and service identities are not current credentials.
 - Do not use CHM proxy routes or `x-chm-*` forwarded identity headers for Explorer authorization.
-- Human browser authoring goes directly through the IAP-protected Explorer admin app at `/explorer/admin`, which calls its own `/api/records` routes.
 - The details UI shows `recordDepth` plus the resolved localization's `review.state` for all users. Authenticated/author mode renders the review state dropdown and reviewer-note form for that localization.
 - Record reads are `GET /api/records` and `GET /api/records/:id`.
 - Record writes are `PUT /api/records/:id`, `PATCH /api/records/:id`, `PATCH /api/records/:id/review`, and `DELETE /api/records/:id`.
@@ -205,42 +206,23 @@
 - If the in-app Browser or all available capture paths are blocked by login, CAPTCHA, Cloudflare verification, browser-security pages, or other non-content screens, do not add gallery images for that record just to fill the slot.
 - When capture is blocked, keep the system `thin` and report the blocker and target URL back to the human so they can provide access, clear the session, or supply screenshots.
 
-## Startup Behavior
+## Local Server Startup
 - On startup, the server connects to the configured Postgres database.
 - If required Postgres connection settings or schema objects are missing, the server should fail fast instead of creating or reseeding an alternate graph.
 
-## GCP Environment
-- Organization: `oceanagentics.com`
-- Project: `chm-network` (`288836337031`)
-- Region: `us-east4`
-- Public entry: `https://chm.oceanagentics.org/explorer`
-- CHM owns the domain, load balancer, IAP, and path routing.
-- Explorer owns the app image, runtime behavior, Postgres schema, and graph data model.
-- Browser-facing `explorer` uses read credentials; private `explorer-api` uses write credentials; schema/setup work uses the dedicated schema-capable credentials only when an explicit database change is being applied.
+## Production Environment
+- Hosting: Firebase Hosting, project/site `ryustatic` (`622994656148`), Spark plan with billing disabled.
+- Public entry: `https://chm.oceanagentics.com/explorer/`; Firebase URL: `https://ryustatic.web.app/explorer/`.
+- Publish `client/dist`. Production has no runtime server, database, hosted Record API, or author UI.
+- The public graph is the derived export in `client/public/bootstrap.public.json`; PostgreSQL remains the editable source of truth.
 
 ## Production Deployment
 
-### GitHub pathway
-- `.github/workflows/deploy.yml` is retained for Cloud Run recovery and is disabled on GitHub. Re-enable it only for an intentional recovery. Its configuration accepts manual dispatch only; pushing `main` does not publish to Cloud Run or Firebase.
-- The workflow checks out full history, installs the Node 24 workspace, runs `scripts/deploy.test.mjs`, authenticates to Google Cloud through Workload Identity Federation as `explorer-build-sa`, runs `scripts/deploy.sh`, and uploads `.release/*/state.json` even on failure.
-- There is no separate GitHub environment approval gate. After explicit re-enabling, manually dispatching the Cloud Run workflow authorizes its production release.
-
-### Shared release runner
-- `scripts/deploy.sh` is the only routine release entry point for GitHub Actions and local publishing. Do not replace it with ad-hoc Cloud Build or `gcloud run deploy` commands.
-- `plan` is read-only. It compares the commit with each service's actual 100%-serving revision, reports affected services, and checks the canonical graph when a runtime release is needed.
-- `prepare` requires a clean worktree, builds or reuses immutable commit images, creates ready Cloud Run revisions with no traffic, and stops there. Use it before a coordinated data or schema migration.
-- `publish` is the default. It performs the same preflight and preparation, rechecks canonical data and unchanged production traffic, moves every affected service to its prepared revision, and then runs smoke checks. Services are promoted concurrently to 100%; the runner does not canary or automatically roll back a failed smoke.
-- `smoke` checks the public page and graph, the admin IAP redirect, missing and invalid API bearer-token denial, and public graph contract validity without building or changing traffic.
-- Scope is derived from the source diff against each serving revision: client implementation changes target `explorer` and `explorer-admin`; server, shared-contract, dependency, Docker/build, and gallery changes target all three services; documentation, research, workflow/release-script, test-only, and public bootstrap-export changes do not by themselves update a runtime. Unknown provenance rebuilds conservatively.
-- `cloudbuild.release.yaml` builds the public/admin image pair; `cloudbuild.yaml` builds `explorer-api`. Images live in Artifact Registry `chm-apps`, and the runner preserves existing service accounts, secrets, routing, environment, and resource settings.
-- Release state is resumable at `.release/<full-commit>/state.json`. A retry reuses completed images and revisions and recomputes remaining work against live traffic.
-
-### Operator pathways
-- Temporary static release: follow `documentation/static-hosting.md`. For an intentional Cloud Run recovery release, commit reviewed changes, manually dispatch the workflow, then inspect the Actions run and release-state artifact.
-- Local production or recovery: use Node 24, installed dependencies, a valid `gcloud` login, and a clean checkout; run `./scripts/deploy.sh plan`, then `./scripts/deploy.sh`. Use `prepare`, `publish`, or `smoke` explicitly when staging, resuming, or diagnosing a release.
-- Data or schema release: run `plan` and `prepare`, take a Cloud SQL backup, execute the release-specific migration or Record API writes deliberately with the required credentials, verify compatibility, then run `publish`. The shared runner never applies SQL, edits records, or enables maintenance mode automatically; do not return an incompatible old revision to a migrated database.
-- Do not run Terraform for image-only releases. Use the shared CHM infrastructure workflow only for routing, IAP, service accounts, Workload Identity, IAM, secrets, Cloud SQL, runtime environment, or migration wiring.
-- Do not keep standing Cloud Run jobs for setup, migrations, or read checks. Create release-specific jobs only when needed, verify them, and remove them after use.
+- Follow `documentation/static-hosting.md` for the complete publish, verify, and rollback procedure.
+- From the repository root, use Node 24 and publish a clean, reviewed release commit with `npx firebase-tools@latest deploy --only hosting --project ryustatic`. The predeploy hook builds static mode automatically.
+- For data changes, edit restored local PostgreSQL through the Record API, run `npm --workspace server run export:public`, review and commit the redacted export and assets, then publish.
+- Pushing or merging `main` does not publish. Firebase has no GitHub deployment workflow; `.github/workflows/deploy.yml` is disabled and contains only a manual Cloud Run trigger.
+- `scripts/deploy.sh`, Cloud Build, and Terraform belong to the retired infrastructure. Do not use them for Firebase releases or re-enable the old workflow as a shortcut. See `documentation/finishedwork/cloud-run-migration.md` for historical recovery context.
 - `documentation/deployment-recommendations.md` lists unimplemented deployment work only; it is not the production runbook.
 
 ## Graph View Layers
